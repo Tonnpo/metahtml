@@ -1,0 +1,297 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">Kim Jong Un: 'Deranged' Trump will 'pay dearly' for threat | Fort Worth Business Press </p>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="https://fortworthbusiness.com/news/">News</a><ul class="rm-manual">
+<li class="rm-manual"><a href="https://fortworthbusiness.com/featured/">Featured</a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/aviation/">Aviation</a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/banking/">Banking</a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/business/">Business</a></li>
+<li class="rm-manual">
+<a href="https://fortworthbusiness.com/culture/">Culture</a><ul class="rm-manual">
+<li class="rm-manual"><a href="https://fortworthbusiness.com/culture/food/">Food</a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/culture/life/">Life</a></li>
+</ul>
+</li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/education/">Education</a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/energy/">Energy</a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/entertainment/">Entertainment</a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/event-news/">Event News</a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/health-care/">Health Care</a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/human-resources/">Human Resources</a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/management/">Management</a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/manufacturing/">Manufacturing</a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/nonprofit/">Nonprofit</a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/opinion/">Opinion</a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/government/">Government</a></li>
+<li class="rm-manual">
+<a href="https://fortworthbusiness.com/real-estate/">Real Estate</a><ul class="rm-manual">
+<li class="rm-manual"><a href="https://fortworthbusiness.com/real-estate/commerical/">Commerical</a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/real-estate/residential/">Residential</a></li>
+</ul>
+</li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/sports/">Sports</a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/technology/">Technology</a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/transportation/">Transportation</a></li>
+</ul>
+</li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/tag/covid-19/">COVID-19</a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/e-editions/">E-Editions</a></li>
+<li class="rm-manual">
+<a href="https://fortworthbusiness.com/events/">Events</a><ul class="rm-manual">
+<li class="rm-manual"><a href="https://fortworthbusiness.com/nominate/">Nominate</a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/forty-under-forty/">Forty Under Forty</a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="#">Lists</a><ul class="rm-manual">
+<li class="rm-manual"><a href="https://fortworthbusiness.com/purchase-lists/">Purchase Lists</a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/submit-information/">Submit Information</a></li>
+</ul>
+</li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/subscribe/">Subscribe</a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/ccbp/">Collin News</a></li>
+<li class="rm-manual">
+<a href="#">More</a><ul class="rm-manual">
+<li class="rm-manual"><a href="https://fortworthbusiness.com/newsletter-sign-up/">Newsletter – Sign Up</a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/about-us/">About Us</a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/contact-us/">Contact Us</a></li>
+</ul>
+</li>
+</ul>
+<p class="rm-manual">Sign in</p>
+<p class="rm-manual"><span>Welcome!</span>Log into your account</p>
+<p class="rm-manual">your username</p>
+<p class="rm-manual">your password</p>
+<p class="rm-manual"> <a href="#">Forgot your password?</a></p>
+<p class="rm-manual"> <a>Create an account</a></p>
+<p class="rm-manual"><a href="https://fortworthbusiness.com/privacy-policy/">Privacy Policy</a></p>
+<p class="rm-manual">Sign up</p>
+<p class="rm-manual"><span>Welcome!</span>Register for an account</p>
+<p class="rm-manual">your email</p>
+<p class="rm-manual">your username</p>
+<p class="rm-manual">A password will be e-mailed to you.</p>
+<p class="rm-manual"><a href="https://fortworthbusiness.com/privacy-policy/">Privacy Policy</a></p>
+<p class="rm-manual">Password recovery</p>
+<p class="rm-manual">Recover your password</p>
+<p class="rm-manual">your email</p>
+<p class="rm-manual"> <span>Search</span> </p>
+<p class="rm-manual"><a href="https://fortworthbusiness.com/"><span><span>Fort Worth Business Press</span><span>IN PRINT. IN POCKET. IN PERSON.</span></span></a></p>
+<p class="rm-manual">Sign in</p>
+<p class="rm-manual">Welcome! Log into your account</p>
+<p class="rm-manual">your username</p>
+<p class="rm-manual">your password</p>
+<p class="rm-manual"><a href="#">Forgot your password? Get help</a></p>
+<p class="rm-manual"><a>Create an account</a></p>
+<p class="rm-manual"><a href="https://fortworthbusiness.com/privacy-policy/">Privacy Policy</a></p>
+<p class="rm-manual">Create an account</p>
+<p class="rm-manual">Welcome! Register for an account</p>
+<p class="rm-manual">your email</p>
+<p class="rm-manual">your username</p>
+<p class="rm-manual">A password will be e-mailed to you.</p>
+<p class="rm-manual"><a href="https://fortworthbusiness.com/privacy-policy/">Privacy Policy</a></p>
+<p class="rm-manual">Password recovery</p>
+<p class="rm-manual">Recover your password</p>
+<p class="rm-manual">your email</p>
+<p class="rm-manual">A password will be e-mailed to you.</p>
+<p class="rm-manual"> <span>84.1</span> <span>F</span></p>
+<p class="rm-manual">Fort Worth</p>
+<p class="rm-manual">Thursday, June 25, 2020</p>
+<p class="rm-manual"><a href="#login-form"><span>Sign in / Join</span></a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://fortworthbusiness.com/subscribe/"><p class="rm-manual">Subscribe</p></a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/newsletter-sign-up/"><p class="rm-manual">Newsletter</p></a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/advertising-information/"><p class="rm-manual">Advertise</p></a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/submit-information/"><p class="rm-manual">Submit Company</p></a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/press-release/"><p class="rm-manual">Press Release</p></a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/account/"><p class="rm-manual">Account</p></a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/login"><p class="rm-manual">Log In</p></a></li>
+</ul>
+<p class="rm-manual"><a href="https://fortworthbusiness.com/"><span><span>Fort Worth Business Press</span><span>IN PRINT. IN POCKET. IN PERSON.</span></span></a></p>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="https://fortworthbusiness.com/news/"><p class="rm-manual">News</p></a><ul class="rm-manual">
+<li class="rm-manual"><a href="https://fortworthbusiness.com/featured/"><p class="rm-manual">Featured</p></a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/aviation/"><p class="rm-manual">Aviation</p></a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/banking/"><p class="rm-manual">Banking</p></a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/business/"><p class="rm-manual">Business</p></a></li>
+<li class="rm-manual">
+<a href="https://fortworthbusiness.com/culture/"><p class="rm-manual">Culture</p></a><ul class="rm-manual">
+<li class="rm-manual"><a href="https://fortworthbusiness.com/culture/food/"><p class="rm-manual">Food</p></a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/culture/life/"><p class="rm-manual">Life</p></a></li>
+</ul>
+</li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/education/"><p class="rm-manual">Education</p></a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/energy/"><p class="rm-manual">Energy</p></a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/entertainment/"><p class="rm-manual">Entertainment</p></a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/event-news/"><p class="rm-manual">Event News</p></a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/health-care/"><p class="rm-manual">Health Care</p></a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/human-resources/"><p class="rm-manual">Human Resources</p></a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/management/"><p class="rm-manual">Management</p></a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/manufacturing/"><p class="rm-manual">Manufacturing</p></a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/nonprofit/"><p class="rm-manual">Nonprofit</p></a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/opinion/"><p class="rm-manual">Opinion</p></a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/government/"><p class="rm-manual">Government</p></a></li>
+<li class="rm-manual">
+<a href="https://fortworthbusiness.com/real-estate/"><p class="rm-manual">Real Estate</p></a><ul class="rm-manual">
+<li class="rm-manual"><a href="https://fortworthbusiness.com/real-estate/commerical/"><p class="rm-manual">Commerical</p></a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/real-estate/residential/"><p class="rm-manual">Residential</p></a></li>
+</ul>
+</li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/sports/"><p class="rm-manual">Sports</p></a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/technology/"><p class="rm-manual">Technology</p></a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/transportation/"><p class="rm-manual">Transportation</p></a></li>
+</ul>
+</li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/tag/covid-19/"><p class="rm-manual">COVID-19</p></a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/e-editions/"><p class="rm-manual">E-Editions</p></a></li>
+<li class="rm-manual">
+<a href="https://fortworthbusiness.com/events/"><p class="rm-manual">Events</p></a><ul class="rm-manual">
+<li class="rm-manual"><a href="https://fortworthbusiness.com/nominate/"><p class="rm-manual">Nominate</p></a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/forty-under-forty/"><p class="rm-manual">Forty Under Forty</p></a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="#"><p class="rm-manual">Lists</p></a><ul class="rm-manual">
+<li class="rm-manual"><a href="https://fortworthbusiness.com/purchase-lists/"><p class="rm-manual">Purchase Lists</p></a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/submit-information/"><p class="rm-manual">Submit Information</p></a></li>
+</ul>
+</li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/subscribe/"><p class="rm-manual">Subscribe</p></a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/ccbp/"><p class="rm-manual">Collin News</p></a></li>
+<li class="rm-manual">
+<a href="#"><p class="rm-manual">More</p></a><ul class="rm-manual">
+<li class="rm-manual"><a href="https://fortworthbusiness.com/newsletter-sign-up/"><p class="rm-manual">Newsletter – Sign Up</p></a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/about-us/"><p class="rm-manual">About Us</p></a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/contact-us/"><p class="rm-manual">Contact Us</p></a></li>
+</ul>
+</li>
+</ul>
+<p class="rm-manual"><span><a href="https://fortworthbusiness.com/">Home</a></span> <span><a href="https://fortworthbusiness.com/government/">Government</a></span> <span>Kim Jong Un: 'Deranged' Trump will 'pay dearly' for threat</span></p>
+<p class="rm-manual"><a href="https://fortworthbusiness.com/government/"> Government</a></p>
+<h1 class="rm-manual">Kim Jong Un: ‘Deranged’ Trump will ‘pay dearly’ for threat</h1>
+<p class="rm-manual"><span>By </span> <a href="https://fortworthbusiness.com/author/foster-klug-associated-press/">FOSTER KLUG Associated Press</a></p>
+<p class="rm-manual">September 21, 2017</p>
+<p class="rm-manual">Kim Jong Un: Trump will "pay dearly." (Photo by Korean Central News Agency/Korea News Service via AP)</p>
+<p>SEOUL, South Korea (AP) — North Korean leader Kim Jong Un, in an 
+extraordinary and direct rebuke, called President Donald Trump 
+“deranged” and said he will “pay dearly” for his threats, a possible 
+indication of more powerful weapons tests on the horizon.</p>
+<p>Hours later, North Korea’s foreign minister reportedly said that his 
+country may be planning to test a hydrogen bomb in the Pacific Ocean to 
+fulfill Kim’s vow to take the “highest-level” action against the United 
+States.</p>
+<p>Kim, in his statement, said Trump is “unfit to hold the prerogative 
+of supreme command of a country.” He also described the U.S. president 
+as “a rogue and a gangster fond of playing with fire.”</p>
+<p>The dispatch was unusual in that it was written in the first person, 
+albeit filtered through the North’s state media, which are part of 
+propaganda efforts meant to glorify Kim. South Korea’s government said 
+it was the first such direct address to the world by any North Korean 
+leader.</p>
+<p>Some analysts saw a clear sign that North Korea would ramp up its 
+already brisk pace of weapons testing, which has included missiles meant
+ to target U.S. forces throughout Asia and the U.S. mainland.</p>
+<p>“I will make the man holding the prerogative of the supreme command 
+in the U.S. pay dearly for his speech calling for totally destroying the
+ DPRK,” said the statement carried by North’s official Korean Central 
+News Agency on Friday morning.</p>
+<p>DPRK is the abbreviation of the country’s official name, the Democratic People’s Republic of Korea.</p>
+<p>North Korean Foreign Minister Ri Yong Ho told reporters on the 
+sidelines of a United Nations gathering that his country’s response 
+“could be the most powerful detonation of an H-bomb in the Pacific,” 
+according to South Korea’s Yonhap news agency.</p>
+<p>Ri reportedly added that “We have no idea about what actions could be taken as it will be ordered by leader Kim Jong Un.”</p>
+<p>Such a test would be considered a major provocation by Washington and its allies.</p>
+<p>The statement by Kim Jong Un responded to Trump’s combative speech at
+ the U.N. General Assembly on Tuesday where he mocked Kim as a “Rocket 
+Man” on a “suicide mission,” and said that if “forced to defend itself 
+or its allies, we will have no choice but to totally destroy North 
+Korea.”</p>
+<p>Kim characterized Trump’s speech to the world body as “unprecedented rude nonsense.”</p>
+<p>He said Trump’s remarks “have convinced me, rather than frightening 
+or stopping me, that the path I chose is correct and that it is the one I
+ have to follow to the last.”</p>
+<p>Kim said he is “thinking hard” about his response and that he would “tame the mentally deranged U. S. dotard with fire.”</p>
+<p>Kim Dong-yub, a former South Korean military official who is now an 
+analyst at Seoul’s Institute for Far Eastern Studies, said Kim Jong Un’s
+ statement indicated that North Korea will respond to Trump with its 
+most aggressive missile test yet. That might include firing a Hwasong-14
+ intercontinental ballistic missile over Japan to a range of around 
+7,000 kilometers (4,349 miles) to display a capability to reach Hawaii 
+or Alaska.</p>
+<p>The statement will further escalate the war of words between the 
+adversaries as the North moves closer to perfecting a nuclear-tipped 
+missile that could strike America.</p>
+<p>In recent months, the North has launched a pair of 
+still-developmental ICBMs it said were capable of striking the 
+continental United States and a pair of intermediate-range missiles that
+ soared over Japanese territory. Earlier this month, North Korea 
+conducted its sixth and most powerful nuclear test to date drawing 
+stiffer U.N. sanctions.</p>
+<p>South Korea called Kim Jong Un’s rebuke a “reckless provocation” that
+ would deepen his country’s international isolation and lead to its 
+demise.</p>
+<p>South Korea’s Unification Ministry spokesman Baik Tae-hyun told 
+reporters Friday that North Korea must immediately stop such 
+provocations and return to talks on nuclear disarmament.</p>
+<p>___</p>
+<p class="rm-manual">Mat Pennington reported from the United Nations. AP writers Kim Tong-hyung and Hyung-jin Kim contributed from Seoul.</p>
+<ul class="rm-manual">
+<li class="rm-manual"><span>Tags</span></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/tag/government/">government</a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/tag/news/">news</a></li>
+</ul>
+<p class="rm-manual"><span>Previous article</span><a href="https://fortworthbusiness.com/government/are-any-texans-in-congress-ready-to-retire-in-2018-we-asked-them/">Are any Texans in Congress ready to retire in 2018? We asked them.</a></p>
+<p class="rm-manual"><span>Next article</span><a href="https://fortworthbusiness.com/business/jc-penney-to-hire-40000-for-holidays-the-same-as-last-year/">JC Penney to hire 40,000 for holidays, the same as last year</a></p>
+<h4 class="rm-manual"><span>Today’s e-Edition</span></h4>
+<p class="rm-manual">© Fort Worth Business Press, 3509 Hulen St. Suite 200 Fort Worth, TX</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://fortworthbusiness.com/contact-us/">Contact Us</a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/about-us/">About Us</a></li>
+<li class="rm-manual"><a href="https://fortworthbusiness.com/privacy-policy/">Privacy Policy</a></li>
+</ul>
+<p class="rm-manual">You need news and information essential to doing business in Fort Worth. Sign up today.</p>
+<ul class="rm-manual">
+<li class="rm-manual">Email<span>*</span>
+</li>
+<li class="rm-manual">CAPTCHA</li>
+</ul>
+<p class="rm-manual">Will be used in accordance with our <a href="https://fortworthbusiness.com/privacy-policy/">privacy policy</a></p></article>
+</body></html>

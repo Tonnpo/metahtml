@@ -1,0 +1,197 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> U.S. Ambassador to Estonia Resigns in Disgust After Trump Anti-Europe Rants – Foreign Policy </p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/"> <span>Foreign Policy Magazine</span> </a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="#">Sign In</a> </li> <li class="rm-manual"> <a href="file:///subscribe"> <span>Subscribe</span> </a> <a href="file:///subscribe"> <span>Upgrade to Insider</span> </a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///category/latest/">Latest</a> </li> <li class="rm-manual"> <a href="file:///channel/news/">News</a> </li> <li class="rm-manual"> <a href="file:///channel/analysis/">Analysis</a> </li> <li class="rm-manual"> <a href="file:///podcasts/">Podcasts</a> </li> <li class="rm-manual"> <a href="file:///the-magazine/">The Magazine</a> </li> <li class="rm-manual"> <a>Channels</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///channel/economics/">Economics</a></li> <li class="rm-manual"><a href="file:///channel/security-2/">Security</a></li> <li class="rm-manual"><a href="file:///category/elephants-in-the-room/">Elephants in the Room</a></li> <li class="rm-manual"><a href="file:///category/shadow-government/">Shadow Government</a></li> <li class="rm-manual"><a href="file:///channel/her-power/">Her Power</a></li> </ul> <span> Close </span> </li> <li class="rm-manual"> <a href="file:///newsletters/">Newsletters</a> </li> </ul>
+<p class="rm-manual"><a href="file:///fpinsider/"><span>Your </span>FP Insider Access:</a></p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///power-maps">Power Maps</a></li> <li class="rm-manual"><a href="file:///conference-calls">Conference Calls</a></li> <li class="rm-manual"><a href="file:///special-reports">Special Reports</a></li> <li class="rm-manual"><a href="file:///podcasts/ispy">I Spy Plus</a></li> </ul>
+<p class="rm-manual"> Search </p>
+<h2 class="rm-manual">latest</h2>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/24/room-where-it-happened-bolton-is-the-villain-of-his-memoir/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/24/room-where-it-happened-bolton-is-the-villain-of-his-memoir/">Bolton Is the Villain of His Own Memoir</a></h3><a href="https://foreignpolicy.com/2020/06/24/room-where-it-happened-bolton-is-the-villain-of-his-memoir/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual">The former national security advisor wrote a book about an ignorant president—but refuses to learn anything himself.</p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/category/review/"> Review </a> <span>|</span> </p>
+<address class="rm-manual"> <a href="https://foreignpolicy.com/author/jeremi-suri/" rel="author"> Jeremi Suri</a>
+</address>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/24/trump-administration-division-china-deeper-than-ever-trade-deal-peter-navarro-john-bolton-xinjiang-coronavirus/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/24/trump-administration-division-china-deeper-than-ever-trade-deal-peter-navarro-john-bolton-xinjiang-coronavirus/">The Trump Administration’s Divisions Over China Are Deeper Than Ever</a></h3><a href="https://foreignpolicy.com/2020/06/24/trump-administration-division-china-deeper-than-ever-trade-deal-peter-navarro-john-bolton-xinjiang-coronavirus/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual">Contradictions over the status of the U.S.-China 
+trade deal show that the White House isn’t unified in its approach 
+toward Beijing—even amid the pandemic.</p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/category/china-brief/"> China Brief </a> <span>|</span> </p>
+<address class="rm-manual"> <a href="https://foreignpolicy.com/author/james-palmer/" rel="author"> James Palmer</a>
+</address>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/24/kosovo-serbia-summit-white-house-catastrophe-balkans-peace-process/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/24/kosovo-serbia-summit-white-house-catastrophe-balkans-peace-process/">Anatomy of a Kosovo Summit Catastrophe</a></h3><a href="https://foreignpolicy.com/2020/06/24/kosovo-serbia-summit-white-house-catastrophe-balkans-peace-process/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual">The Trump administration is hosting Balkans leaders this week to culminate a peace process that’s gone wrong from the start.</p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/category/analysis/argument/"> Argument </a> <span>|</span> </p>
+<address class="rm-manual"> <a href="https://foreignpolicy.com/author/edward-p-joseph/" rel="author"> Edward P. Joseph</a>
+</address>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/24/america-statues-monuments-washington-jefferson/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/24/america-statues-monuments-washington-jefferson/">If Americans Grappled Honestly With Their History, Would Any Monuments Be Left Standing?</a></h3><a href="https://foreignpolicy.com/2020/06/24/america-statues-monuments-washington-jefferson/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual">The furor over police abuse of Black communities is raising new questions about the original sin of America’s Founding Fathers.</p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/category/essay/"> Essay </a> <span>|</span> </p>
+<address class="rm-manual"> <a href="https://foreignpolicy.com/author/michael-hirsh/" rel="author"> Michael Hirsh</a>
+</address>
+<p class="rm-manual"> <a href="file:///category/latest/">See All Stories</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://foreignpolicy.com/staff/">Meet the Staff</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/events">FP Events</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/fp-analytics/">FP Analytics</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/fp-peacegames/">FP PeaceGames</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://foreignpolicy.com/subscription-services/">Subscription Services</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/reprint-permissions/">Reprint Permissions</a></li> <li class="rm-manual"><a href="https://foreignpolicy.submittable.com/submit">Writer’s Guidelines</a></li> <li class="rm-manual"><a href="file:///employment-opportunities/">Work at FP</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://fpguide.foreignpolicy.com/2020-career">FP Guides – Graduate Education</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/fp-for-education/">FP For Education</a></li> <li class="rm-manual"><a href="file:///magazine">FP Archive</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/buy-back-issues/">Buy Back Issues</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://foreignpolicy.com/advertise-with-foreign-policy/">Advertise with FP</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/privacy/">Privacy Policy</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/contact-us/">Contact Us</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="#">Sign In</a> </li> <li class="rm-manual"> <a href="file:///subscribe"> <span>Subscribe</span> </a> <a href="file:///subscribe"> <span>Upgrade</span> </a> </li> </ul>
+<p class="rm-manual"> Search </p>
+<p class="rm-manual"> <span> Exclusive: </span> <span> U.S. Ambassador to Estonia Resigns in Disgust After Trump Anti-Europe Rants </span> <span> U.S. Ambassador to Estonia Resigns in Dis... </span> </p>
+<p class="rm-manual">DON'T LOSE ACCESS: Your IP access to ForeignPolicy.com will expire on June 15.</p>
+<p class="rm-manual">To ensure uninterrupted reading, please contact Rachel Mines, sales director, at <a href="mailto:rachel.mines@foreignpolicy.com">rachel.mines@foreignpolicy.com</a>.</p>
+<p class="rm-manual"><a href="https://foreignpolicy.com/category/news/exclusive/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/category/news/exclusive/">Exclusive</a></h3> <p class="rm-manual"></p>
+<h1 class="rm-manual">U.S. Ambassador to Estonia Resigns in Disgust After Trump Anti-Europe Rants</h1>
+<h2 class="rm-manual">James Melville is the latest in a string of career diplomat resignations over Trump’s comments and policies.</h2>
+<address class="rm-manual"> <span>By</span> <a href="https://foreignpolicy.com/author/robbie-gramer/" rel="author"> Robbie Gramer</a>
+</address>
+<p class="rm-manual"><span>|</span> June 29, 2018, 5:48 PM </p>
+<p> U.S. President Donald Trump (right) delivers a speech with NATO 
+Secretary-General Jens Stoltenberg at NATO headquarters in Brussels on 
+May 25, 2017. (Mandel Ngan/AFP/Getty Images) </p>
+<p><span>The U.S. ambassador to Estonia, James D. Melville Jr., a career
+ diplomat and member of the senior foreign service ranks, announced to 
+friends Friday that he was resigning amid a string of controversial 
+comments President Donald Trump made about U.S. allies in Europe.</span></p>
+<p><span>Melville, who has served as a diplomat for 33 years and as 
+ambassador to Estonia since 2015, was due to retire soon but said in a 
+private Facebook post announcing his retirement that Trump’s behavior 
+and comments accelerated his decision. </span></p>
+<p><span>“A Foreign Service Officer’s DNA is programmed to support 
+policy and we’re schooled right from the start, that if there ever comes
+ a point where one can no longer do so, particularly if one is in a 
+position of leadership, the honorable course is to resign. Having served
+ under six presidents and 11 secretaries of state, I never really 
+thought it would reach that point for me,” he wrote in the post, which 
+was obtained by <span>Foreign Policy</span>. </span></p>
+<p><span>“For the President to say the EU was ‘set up to take advantage 
+of the United States, to attack our piggy bank,’ or that ‘NATO is as bad
+ as NAFTA’ is not only factually wrong, but proves to me that it’s time 
+to go,” he wrote, citing Trump’s reported comments in recent weeks that 
+have unnerved U.S. allies.</span></p>
+<p><span>The post surprised several State Department officials who 
+worked with Melville, describing him as a consummate professional who 
+never let domestic politics impact his job. </span></p>
+<p><span>The resignation comes ahead of a pivotal NATO summit, where the
+ United States’ closest historic allies fear that Trump will lambast 
+them and further isolate Washington from its allies after heated 
+disputes over trade, defense spending issues, and the U.S. exit from the
+ Iran nuclear deal. Allies fear that the optics of Trump trashing allies
+ in Brussels, followed by a meeting in Finland with Russian President 
+Vladimir Putin, will undercut an already anemic trans-Atlantic 
+partnership.</span></p>
+<p>[<a href="https://foreignpolicy.com/2018/06/27/ahead-of-nato-summit-u-s-president-exhorts-allies-to-pay-up-transatlantic-alliance-trump-brussels-summit-letter-to-allies-burden-sharing-two-percent-defense-spending/">NATO
+ is bracing for impact with Trump’s upcoming visit to Brussels — and 
+Trump isn’t backing down from the fight over European defense spending.</a>]</p>
+<p><span>Melville said he believed in the U.S. support for the European Union and NATO to his “marrow.”</span></p>
+<p><span>“I leave willingly and with deep gratitude for being able to 
+serve my nation with integrity for many years, and with great confidence
+ that America, which is and has always been, great, will someday return 
+to being right,” he added. He said his last day on the job would be July
+ 29, even though the Trump administration has yet to name a replacement.
+ (Trump last month quietly withdrew the name of Edward Masso to be 
+ambassador, though did not explain why.)</span></p>
+<p>The State Department did not immediately respond to a request for comment.</p>
+<p><span>Melville is one of many senior U.S. diplomats who have resigned
+ — some quietly, some not — because of Trump’s policies. In December 
+2017, for example, the U.S. ambassador to Panama, John Feeley, resigned 
+and several months later wrote an </span><a href="https://www.washingtonpost.com/opinions/why-i-could-no-longer-serve-this-president/2018/03/08/f444f086-225c-11e8-86f6-54bfff693d2b_story.html?utm_term=.39c4bf8831aa"><span>op-ed</span></a><span>
+ for the Washington Post slamming the president and his foreign-policy 
+stances. Elizabeth Shackelford, a rising star in the diplomatic corps in
+ Africa, quit with a </span><span>scathing resignation letter</span><span>, also obtained by <span>FP</span>, deriding Trump and former Secretary of State Rex Tillerson for what she saw as their disdain of U.S. diplomacy.</span></p>
+<p>[<a href="https://foreignpolicy.com/2017/12/09/u-s-diplomat-resigns-warning-of-state-departments-diminished-role-diplomacy-national-security-tillerson-africa-somalia-south-sudan/">One diplomat’s stinging resignation letter offers a glimpse into declining morale at the State Department under Trump.</a>]</p>
+<p><span>“It means a lot when someone whose had it all in their career 
+just says, ‘I can’t do this any longer,’” one senior State Department 
+official said of Melville’s retirement. “I just wonder who’s next.”</span></p>
+<p>Robbie Gramer is a diplomacy and national security reporter at Foreign Policy. Twitter: <a href="http://www.twitter.com/RobbieGramer">@RobbieGramer</a></p>
+<p class="rm-manual"> <a href="file:///comments_view/?view_post_comments=https%3A%2F%2Fforeignpolicy.com%2F2018%2F06%2F29%2Fu-s-ambassador-to-estonia-resigns-in-disgust-after-trump-anti-europe-rants-nato-european-union-diplomacy-transatlantic-alliance%2F">View Comments</a> </p>
+<p class="rm-manual"> <span>Tags:</span> <a href="https://foreignpolicy.com/tag/diplomacy/"> Diplomacy</a><span>,</span><a href="https://foreignpolicy.com/tag/exclusive/"> Exclusive</a><span>,</span><a href="https://foreignpolicy.com/tag/nato/"> NATO</a><span>,</span><a href="https://foreignpolicy.com/tag/state-department/"> State Department</a><span>,</span><a href="https://foreignpolicy.com/tag/trump/"> Trump</a></p>
+<p class=""><span>Read More</span></p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2019/05/10/there-is-still-time-for-diplomacy-with-iran-united-states-trump/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2019/05/10/there-is-still-time-for-diplomacy-with-iran-united-states-trump/">There Is Still Time for Diplomacy With Iran</a></h3><a href="https://foreignpolicy.com/2019/05/10/there-is-still-time-for-diplomacy-with-iran-united-states-trump/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual">The risk of war has risen. But a diplomatic solution remains likely.</p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/category/analysis/shadow-government/"> Shadow Government </a> <span>|</span> </p>
+<address class="rm-manual"> <a href="https://foreignpolicy.com/author/ilan-goldenberg/" rel="author"> Ilan Goldenberg</a><span>,</span> <a href="https://foreignpolicy.com/author/elizabeth-rosenberg/" rel="author"> Elizabeth Rosenberg</a>
+</address>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2019/07/22/trump-does-an-about-face-on-pakistan-and-blunders-into-the-kashmir-dispute/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2019/07/22/trump-does-an-about-face-on-pakistan-and-blunders-into-the-kashmir-dispute/">Trump Does an About-Face on Pakistan—and Blunders Into the Kashmir Dispute</a></h3><a href="https://foreignpolicy.com/2019/07/22/trump-does-an-about-face-on-pakistan-and-blunders-into-the-kashmir-dispute/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual">The U.S. president is desperate to salvage peace 
+talks with the Taliban, even if it means cozying up to Pakistan at the 
+expense of America’s newest partner in the Indo-Pacific.</p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/category/news/report/"> Report </a> <span>|</span> </p>
+<address class="rm-manual"> <a href="https://foreignpolicy.com/author/elias-groll/" rel="author"> Elias Groll</a><span>,</span> <a href="https://foreignpolicy.com/author/robbie-gramer/" rel="author"> Robbie Gramer</a>
+</address>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2019/04/02/nato-needs-solidarity-for-its-70th-birthday-trump/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2019/04/02/nato-needs-solidarity-for-its-70th-birthday-trump/">NATO Needs Solidarity for Its 70th Birthday</a></h3><a href="https://foreignpolicy.com/2019/04/02/nato-needs-solidarity-for-its-70th-birthday-trump/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual">Trump should dial back the admonishment and offer allies the chance to unite over common purpose. </p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/category/analysis/shadow-government/"> Shadow Government </a> <span>|</span> </p>
+<address class="rm-manual"> <a href="https://foreignpolicy.com/author/julie-smith/" rel="author"> Julie Smith</a>
+</address>
+<p class="rm-manual">Latest</p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/24/room-where-it-happened-bolton-is-the-villain-of-his-memoir/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/24/room-where-it-happened-bolton-is-the-villain-of-his-memoir/">Bolton Is the Villain of His Own Memoir</a></h3><a href="https://foreignpolicy.com/2020/06/24/room-where-it-happened-bolton-is-the-villain-of-his-memoir/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> June 24, 2020, 5:21 PM </p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/24/trump-administration-division-china-deeper-than-ever-trade-deal-peter-navarro-john-bolton-xinjiang-coronavirus/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/24/trump-administration-division-china-deeper-than-ever-trade-deal-peter-navarro-john-bolton-xinjiang-coronavirus/">The Trump Administration’s Divisions Over China Are Deeper Than Ever</a></h3><a href="https://foreignpolicy.com/2020/06/24/trump-administration-division-china-deeper-than-ever-trade-deal-peter-navarro-john-bolton-xinjiang-coronavirus/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> June 24, 2020, 4:52 PM </p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/24/kosovo-serbia-summit-white-house-catastrophe-balkans-peace-process/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/24/kosovo-serbia-summit-white-house-catastrophe-balkans-peace-process/">Anatomy of a Kosovo Summit Catastrophe</a></h3><a href="https://foreignpolicy.com/2020/06/24/kosovo-serbia-summit-white-house-catastrophe-balkans-peace-process/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> June 24, 2020, 4:32 PM </p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/24/america-statues-monuments-washington-jefferson/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/24/america-statues-monuments-washington-jefferson/">If Americans Grappled Honestly With Their History, Would Any Monuments Be Left Standing?</a></h3><a href="https://foreignpolicy.com/2020/06/24/america-statues-monuments-washington-jefferson/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> June 24, 2020, 3:12 PM </p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/24/george-floyd-united-states-policing-fix/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/24/george-floyd-united-states-policing-fix/">To Fix Policing in the United States, Follow Its Guidelines Abroad</a></h3><a href="https://foreignpolicy.com/2020/06/24/george-floyd-united-states-policing-fix/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> June 24, 2020, 2:44 PM </p>
+<p class="rm-manual"> <a href="file:///category/latest/">See All Stories</a> </p>
+<p class="rm-manual"><span>Trending</span></p>
+<ol class="rm-manual"> <li class="rm-manual"> <p class="rm-manual">1</p> <p class="rm-manual"> <a href="file:///2020/06/23/sweden-coronavirus-failure-anders-tegnell-started-long-before-the-pandemic/">Sweden’s Coronavirus Failure Started Long Before the Pandemic</a> </p> </li> <li class="rm-manual"> <p class="rm-manual">2</p> <p class="rm-manual"> <a href="file:///2020/06/24/kosovo-serbia-summit-white-house-catastrophe-balkans-peace-process/">Anatomy of a Kosovo Summit Catastrophe</a> </p> </li> <li class="rm-manual"> <p class="rm-manual">3</p> <p class="rm-manual"> <a href="file:///2020/06/22/zoom-china-us-cold-war-unsafe/">Silicon Valley Can’t Be Neutral in the U.S.-China Cold War</a> </p> </li> <li class="rm-manual"> <p class="rm-manual">4</p> <p class="rm-manual"> <a href="file:///2020/06/23/india-china-south-asia-relations/">India Is Paying the Price for Neglecting its Neighbors</a> </p> </li> <li class="rm-manual"> <p class="rm-manual">5</p> <p class="rm-manual"> <a href="file:///2020/06/22/the-great-pause-was-an-economic-revolution%E2%80%A8/">The Great Pause Was an Economic Revolution </a> </p> </li> </ol>
+<p class="rm-manual">Voices</p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/23/india-china-south-asia-relations/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/23/india-china-south-asia-relations/">India Is Paying the Price for Neglecting its Neighbors</a></h3><a href="https://foreignpolicy.com/2020/06/23/india-china-south-asia-relations/"> </a> <p class="rm-manual"></p>
+<address class="rm-manual"> <a href="https://foreignpolicy.com/author/sumit-ganguly/" rel="author"> Sumit Ganguly</a> </address>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/18/trump-immigration-h-1b-visas-technology-workers-recovery/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/18/trump-immigration-h-1b-visas-technology-workers-recovery/">Trump’s Anti-Immigration Crusade Is About to Strike at the Heart of the U.S. Economy</a></h3><a href="https://foreignpolicy.com/2020/06/18/trump-immigration-h-1b-visas-technology-workers-recovery/"> </a> <p class="rm-manual"></p>
+<address class="rm-manual"> <a href="https://foreignpolicy.com/author/edward-alden/" rel="author"> Edward Alden</a> </address>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/18/free-world-america-trump-us-democracy/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/18/free-world-america-trump-us-democracy/">The Free World’s Leader Isn’t Free Anymore</a></h3><a href="https://foreignpolicy.com/2020/06/18/free-world-america-trump-us-democracy/"> </a> <p class="rm-manual"></p>
+<address class="rm-manual"> <a href="https://foreignpolicy.com/author/james-traub/" rel="author"> James Traub</a> </address>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://foreignpolicy.com/staff/">Meet the Staff</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/events">FP Events</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/fp-analytics/">FP Analytics</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/fp-peacegames/">FP PeaceGames</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://foreignpolicy.com/subscription-services/">Subscription Services</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/reprint-permissions/">Reprint Permissions</a></li> <li class="rm-manual"><a href="https://foreignpolicy.submittable.com/submit">Writer’s Guidelines</a></li> <li class="rm-manual"><a href="file:///employment-opportunities/">Work at FP</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://fpguide.foreignpolicy.com/2020-career">FP Guides – Graduate Education</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/fp-for-education/">FP For Education</a></li> <li class="rm-manual"><a href="file:///magazine">FP Archive</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/buy-back-issues/">Buy Back Issues</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://foreignpolicy.com/advertise-with-foreign-policy/">Advertise with FP</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/privacy/">Privacy Policy</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/contact-us/">Contact Us</a></li> </ul>
+<p class="rm-manual">Powered by <a href="https://wpvip.com/?utm_source=vip_powered_wpcom&amp;utm_medium=web&amp;utm_campaign=VIP%20Footer%20Credit&amp;utm_term=foreignpolicy.com" rel="generator nofollow">WordPress.com VIP</a></p>
+<p class="rm-manual">© 2020, The Slate Group</p></article>
+</body></html>

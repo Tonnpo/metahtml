@@ -1,0 +1,91 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> A GreaterLakewood Compilation of strange Kim Jong Un 'facts' - Velt News </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://veltnews.com/category/national/">National</a></li> <li class="rm-manual"><a href="https://veltnews.com/category/international/">International</a></li> <li class="rm-manual"><a href="https://veltnews.com/category/opinion/">Opinion</a></li> <li class="rm-manual"><a href="https://veltnews.com/category/video/">Video</a></li> <li class="rm-manual"><a href="https://veltnews.com/contact/">Contact</a></li> </ul>
+<p class="rm-manual"> <span>Search</span> </p>
+<p class="rm-manual"> <span>87.3</span> <span>F</span> </p>
+<p class="rm-manual">New York</p>
+<p class="rm-manual"> Monday, June 29, 2020 </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://veltnews.com/contact/">Contact</a></li> <li class="rm-manual"><a href="https://veltnews.com/about/">About</a></li> </ul>
+<p class="rm-manual"> <a href="https://veltnews.com/"> <span>Velt News</span> </a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://veltnews.com/category/national/">National</a></li> <li class="rm-manual"><a href="https://veltnews.com/category/international/">International</a></li> <li class="rm-manual"><a href="https://veltnews.com/category/opinion/">Opinion</a></li> <li class="rm-manual"><a href="https://veltnews.com/category/video/">Video</a></li> <li class="rm-manual"><a href="https://veltnews.com/contact/">Contact</a></li> </ul>
+<p class="rm-manual"><span><a href="https://veltnews.com/">Home</a></span> <span><a href="https://veltnews.com/category/international/">International</a></span> <span>A GreaterLakewood Compilation of strange Kim Jong Un ‘facts’</span></p>
+<h1 class="rm-manual">A GreaterLakewood Compilation of strange Kim Jong Un ‘facts’</h1>
+<p class="rm-manual"> <span>February 28, 2019</span> </p>
+<p class="rm-manual"><a href="https://veltnews.com/a-greaterlakewood-compilation-of-strange-kim-jong-un-facts/#comments">1</a></p>
+<p class="rm-manual"><span>357</span></p>
+<ul>
+<li>He may be the youngest world leader, but no one is sure of his actual age. Some say he was born in either 1982, 1983 or 1984 </li>
+<li>He smokes – at least as of two days ago</li>
+</ul>
+<ul><li>At 27, he underwent plastic surgery to allegedly resemble his grandfather Kim Il Sung </li></ul>
+<ul><li>In 2015, according to a new curriculum Kim reportedly could 
+drive by the time he was three, was winning yachting races at nine, and 
+was also an expert artist and musical composer at a young age </li></ul>
+<figcaption>Getty</figcaption><ul><li>He loves basketball, and he is friends with Dennis Rodman. He reportedly is ‘obsessed’ with the NBA</li></ul>
+<figcaption class="rm-manual">© Kyodo/FOTOLINK © Kyodo/FOTOLINK </figcaption><ul><li>Not one person voted against Kim Jong-un in his first electoral test – and EVERYBODY voted. He received 100% of the vote</li></ul>
+<figcaption>Election day</figcaption><ul><li>He is scared of barbers.</li></ul>
+<ul><li>Kim loves cheese so much, he imports it by the crate</li></ul>
+<figcaption class="rm-manual">AFP/Getty Images</figcaption><p class="rm-manual"><span><a href="https://veltnews.com/author/dovyr/">Dovi</a></span></p>
+<h4 class="rm-manual"><span>1 COMMENT</span></h4>
+<ol class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> Askonim and Co. <a href="#comment-360"> February 28, 2019 at 10:50 am </a> <p class="rm-manual">He brings his own toilet wherever he goes</p> <p class="rm-manual"> <a rel="nofollow" href="#comment-360">Reply</a> </p> </article> </li> </ol>
+<h3 class="rm-manual">LEAVE A REPLY <a rel="nofollow" href="file:///a-greaterlakewood-compilation-of-strange-kim-jong-un-facts/#respond">Cancel reply</a>
+</h3>
+<p class="rm-manual">Please enter your comment!</p>
+<p class="rm-manual">Please enter your name here</p>
+<p class="rm-manual">You have entered an incorrect email address!</p>
+<p class="rm-manual">Please enter your email address here</p>
+<p class="rm-manual">Save my name, email, and website in this browser for the next time I comment.</p>
+<h4 class="rm-manual"><span>MOST POPULAR</span></h4>
+<p class="rm-manual"><a href=""><span>See All</span></a></p>
+<h3 class="rm-manual"><a href="https://veltnews.com/trump-signs-executive-order-to-protect-american-monuments-memorials-and-statues/" rel="bookmark">Trump signs executive order to protect American monuments, memorials and statues</a></h3>
+<p class="rm-manual"> <span>June 27, 2020</span> </p>
+<h3 class="rm-manual"><a href="https://veltnews.com/are-there-any-new-cases-many-ppl-test-positive-daily-for-6-weeks-but-appear-as-new-cases/" rel="bookmark">ARE THERE ANY NEW CASES? Many ppl test positive DAILY for...</a></h3>
+<p class="rm-manual"> <span>May 31, 2020</span> </p>
+<h3 class="rm-manual"><a href="https://veltnews.com/blm-activist-kelloggs-box-of-rice-krispies-is-racist/" rel="bookmark">BLM Activist: Box of Snap Crackle &amp; POP Cereal is Racist</a></h3>
+<p class="rm-manual"> <span>June 18, 2020</span> </p>
+<h3 class="rm-manual"><a href="https://veltnews.com/massive-oops-the-yated-apologizes-for-horrible-george-floyd-cartoon/" rel="bookmark">MASSIVE OOPS: The YATED Apologizes For Horrible George Floyd Cartoon</a></h3>
+<p class="rm-manual"> <span>June 28, 2020</span> </p>
+<p class="rm-manual"><a href="#">Load more</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://veltnews.com/category/national/">National</a></li> <li class="rm-manual"><a href="https://veltnews.com/category/international/">International</a></li> <li class="rm-manual"><a href="https://veltnews.com/category/opinion/">Opinion</a></li> <li class="rm-manual"><a href="https://veltnews.com/category/video/">Video</a></li> <li class="rm-manual"><a href="https://veltnews.com/contact/">Contact</a></li> </ul>
+<p class="rm-manual"> © VeltNews 2020 </p></article>
+</body></html>

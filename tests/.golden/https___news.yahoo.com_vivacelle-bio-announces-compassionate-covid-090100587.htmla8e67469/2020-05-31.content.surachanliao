@@ -1,0 +1,151 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">Vivacelle Bio Announces Compassionate Use for COVID-19 Patients with Its Sepsis Treatment, VBI-S</p>
+<p class="rm-manual"><a href="https://www.yahoo.com/news">Yahoo</a></p>
+<p class="rm-manual">Search</p>
+<ul class="rm-manual"><li class="rm-manual"><a href="https://mail.yahoo.com/?.intl=us&amp;.lang=en-US&amp;.partner=none&amp;.src=news">Mail</a></li></ul>
+<p class="rm-manual"><a href="file:///"> News</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///coronavirus"> Coronavirus</a></li>
+<li class="rm-manual"><a href="file:///us/"> US</a></li>
+<li class="rm-manual"><a href="file:///world/"> World</a></li>
+<li class="rm-manual"><a href="file:///politics/"> Politics</a></li>
+<li class="rm-manual"><a href="file:///elections"> 2020 Election</a></li>
+<li class="rm-manual"><a href="file:///health/"> Health</a></li>
+<li class="rm-manual"><a href="file:///science/"> Science</a></li>
+<li class="rm-manual"><a href="file:///originals/"> Originals</a></li>
+<li class="rm-manual"><a href="https://yahoo.uservoice.com/forums/204992-us-news"> Contact Us</a></li>
+<li class="rm-manual"><a href="file:///videos"> Videos</a></li>
+</ul>
+<h1 class="rm-manual">Vivacelle Bio Announces Compassionate Use for COVID-19 Patients with Its Sepsis Treatment, VBI-S</h1>
+<p class="rm-manual"><span><span><a href="http://www.prnewswire.com/yahoo/" rel="noopener noreferrer nofollow">PR Newswire</a></span></span>April 21, 2020</p>
+<p>Most COVID patients die of septic shock. In early studies VBI-S 
+improved blood pressure and oxygenation of septic shock patients when 
+all other measures had failed.</p>
+<p><span>CHICAGO</span>, <span>April 21, 2020</span> /PRNewswire/ -- 
+Vivacelle Bio, Inc., a U.S. biotechnology firm that develops products 
+for critically ill patients, will make VBI-S, available for use in 
+COVID-19 patients. Seventy percent of deaths of COVID-19 patients are 
+due to septic shock. While intravenous infusion of VBI-S has 
+demonstrated encouraging preliminary results in a phase IIa clinical 
+study, VBI-S remains an experimental drug. See a listing of our VBI-S 
+IIa clinical trial at the link: <a href="https://c212.net/c/link/?t=0&amp;l=en&amp;o=2781997-1&amp;h=1963715468&amp;u=https%3A%2F%2Fclinicaltrials.gov%2Fct2%2Fshow%2Frecord%2FNCT04257136%3Fcond%3Dseptic%2Bshock%26cntry%3DUS%26state%3DUS%253AIN%26draw%3D2%26rank%3D1&amp;a=https%3A%2F%2Fclinicaltrials.gov%2Fct2%2Fshow%2Frecord%2FNCT04257136%3Fcond%3Dseptic%2Bshock%26cntry%3DUS%26state%3DUS%253AIN%26draw%3D2%26rank%3D1" rel="nofollow noopener">https://clinicaltrials.gov/ct2/show/record/NCT04257136?cond=septic+shock&amp;cntry=US&amp;state=US%3AIN&amp;draw=2&amp;rank=1</a></p>
+<p>VBI-S could rescue lives of COVID patients even when standard 
+treatment has failed by shifting the balance of complex nitric oxide 
+effects toward survival.</p>
+<p>Vivacelle Bio CEO <span>Harven DeShield</span>, JD, PhD, commented, 
+"VBI-S holds the promise of being a compelling and novel technology to 
+address COVID-19 induced sepsis and septic shock and thus the potential 
+to save numerous lives both in the US and globally."</p>
+<p>Cuthbert Simpkins MD inventor of VBI-S and Vivacelle Bio Chief 
+Innovation Officer commented, "It is fulfilling to serve both as a 
+critical care physician providing direct care to COVID patients and as a
+ scientist whose invention could rescue people who are dying of this 
+disease."</p>
+<p><span>Mallory Williams</span> MD, MPH Chief of Trauma and Critical Care and Director of the Surgical Intensive Care Unit at <span>Howard University</span>
+ Hospital stated, "I am greatly encouraged that Vivacelle Bio through 
+its innovative discoveries has proposed therapeutic solutions for the 
+most critically ill patients. Severe sepsis claims the lives of over 
+250,000 Americans and 10 million globally each year and now there is a 
+reason to believe that we are closer to significantly decreasing this 
+number."</p>
+<p><span>Mukesh Kumar</span>, PhD, Vivacelle's Senior VP of Regulatory 
+Affairs stated, "We look to partner with physicians and hospitals to 
+make VBI-S rapidly available to treat COVID-19 patients in dire 
+life-threatening condition."</p>
+<p><span>Jim J. Huang</span>, Ph.D., CEO of Ascendia Pharmaceuticals, a 
+specialty CDMO company, engaged in nanoparticle formulation, is pleased 
+to support Vivacelle Bio in meeting this international crisis.</p>
+<p>This press release may contain certain forward-looking statements. 
+Although the Company believes its expectations are based on reasonable 
+assumptions, all statements other than statements of historical fact 
+included in this press release about future events are subject to (I) 
+change without notice, (ii) factors beyond the Company's control and 
+(iii) the financial capabilities of the Company. These statements may 
+include, without limitation, any statements preceded by, followed by or 
+including words such as "target," "believe," "expect," "aim," "intend," 
+"may," "anticipate," "estimate," "plan," "project," "will," "can have," 
+"likely," "should," "would," "could" and other words and terms of 
+similar meaning or the negative thereof. Forward looking statements are 
+subject to inherent risks and uncertainties beyond the Company's control
+ that could cause the Company's actual results, performance or 
+achievements to be materially different from the expected results, 
+performance or achievements expressed or implied by such forward-looking
+ statements. Except as required by law, the Company assumes no 
+obligation to update these forward-looking statements publicly, or to 
+update the reasons actual results could differ materially from those 
+anticipated in the forward-looking statements, even if new information 
+becomes available in the future.</p>
+<p>About Vivacelle Bio, Inc.</p>
+<p>Vivacelle Bio, Inc. is a clinical stage life science company focused 
+on a new paradigm of nitric oxide redistribution that utilizes 
+biophysical properties of phospholipid nanoparticles. The Company's 
+first product, VBI-S is designed to treat septic shock caused by 
+COVID-19, other viruses, bacteria, parasites or fungi.</p>
+<p class="rm-manual">Press Contact:</p>
+<p class="rm-manual"><span>Harven DeShield</span> 716-830-8932<a href="mailto:harven@vivacellebio.com" rel="nofollow">harven@vivacellebio.com</a>, Website: <a href="https://c212.net/c/link/?t=0&amp;l=en&amp;o=2781997-1&amp;h=1112103430&amp;u=https%3A%2F%2Fvivacellebio.com%2F&amp;a=https%3A%2F%2Fvivacellebio.com" rel="nofollow noopener">https://vivacellebio.com</a></p>
+<p class="rm-manual">Cision</p>
+<p class="rm-manual">View original content to download multimedia:<a rel="nofollow noopener" href="http://www.prnewswire.com/news-releases/vivacelle-bio-announces-compassionate-use-for-covid-19-patients-with-its-sepsis-treatment-vbi-s-301044045.html">http://www.prnewswire.com/news-releases/vivacelle-bio-announces-compassionate-use-for-covid-19-patients-with-its-sepsis-treatment-vbi-s-301044045.html</a></p>
+<p class="rm-manual">SOURCE Vivacelle Bio, Inc.</p>
+<h2 class="rm-manual">What to Read Next</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/video-appears-show-moments-george-floyd-pinned-ground-024800262--abc-news-topstories.html"><span>New video appears to show moments before George Floyd was pinned to ground</span></a></h3><p class="rm-manual">ABC News</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/high-school-graduation-daytona-speedway-210642650.html"><span>High school graduates receive their diplomas by crossing finish line at Daytona International Speedway</span></a></h3><p class="rm-manual">Yahoo Life</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/exclusive-russia-approving-japanese-covid-063356097.html"><span>Exclusive: Russia, after approving Japanese COVID-19 drug, to roll out 'game changer' next week</span></a></h3><p class="rm-manual">Reuters</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sports.yahoo.com/jr-smith-seen-on-video-beating-up-alleged-car-vandal-i-chased-him-down-and-whooped-his-ass-222739527.html"><span>J.R. Smith seen on video beating up alleged truck vandal: 'I chased him down and whooped his ass'</span></a></h3><p class="rm-manual">Yahoo Sports</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/trump-took-shelter-white-house-020928976.html"><span>Trump took shelter in White House bunker as protests raged</span></a></h3><p class="rm-manual">Associated Press</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/yahoo-news-you-gov-poll-most-americans-say-race-was-a-major-factor-in-george-floyds-death-but-opinions-on-protests-are-split-193951336.html"><span>Yahoo News/YouGov poll: Most Americans say race was a 'major factor' in George Floyd's death, but opinions on protests are split</span></a></h3><p class="rm-manual">Yahoo News</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/video/black-brown-people-being-killed-145710599.html"><span>'Black and brown people are being killed for no reason'</span></a></h3><p class="rm-manual">Yahoo News Video</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/honestly-caffeine-shampoos-really-stop-063000455.html"><span>Honestly, Do Caffeine Shampoos Really Stop Us Going Bald?</span></a></h3><p class="rm-manual">Esquire</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/minneapolis-police-fire-residents-porch-043505064.html"><span>'Light ’Em Up': Minneapolis Cops Appear To Fire Paint Rounds At People On Their Porch</span></a></h3><p class="rm-manual">HuffPost</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/george-floyd-protests-looting-lead-target-to-temporarily-close-and-adjust-hours-at-200-stores-185306802.html"><span>George Floyd protests, looting lead Target to temporarily close and adjust hours at 200 stores</span></a></h3><p class="rm-manual">Yahoo Finance</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/no-blame-abc-news-finds-36-cases-invoking-080100960--abc-news-topstories.html"><span>'No Blame?' ABC News finds 54 cases invoking 'Trump' in connection with violence, threats, alleged assaults</span></a></h3><p class="rm-manual">Good Morning America</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/on-all-sides-fears-of-outside-agitators-in-floyd-protests-184606899.html"><span>On all sides, fears of 'outside agitators' in Floyd protests </span></a></h3><p class="rm-manual">Yahoo News</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/video/protesters-tear-d-c-national-125802221.html"><span>Protesters tear through D.C. after National Guard troops and Secret Service keep them from the White House</span></a></h3><p class="rm-manual">Yahoo News Video</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/rdif-chemrar-deliver-60-000-063000960.html"><span>RDIF
+ and ChemRar to Deliver 60,000 Courses of the First COVID-19 Drug 
+Registered in Russia, Avifavir, to the Country's Hospitals in June</span></a></h3><p class="rm-manual">PR Newswire</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/coronavirus-losing-potency-top-italian-184358113.html"><span>New coronavirus losing potency, top Italian doctor says</span></a></h3><p class="rm-manual">Reuters</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/le-bron-james-twitter-amid-george-floyd-protests-why-doesnt-america-love-us-180816192.html"><span>LeBron James takes to Twitter amid protests: 'Why doesn't America love us'</span></a></h3><p class="rm-manual">Yahoo Sports</p><p class="rm-manual"></p></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/mass-gatherings-erosion-trust-upend-050633872.html"><span>Mass gatherings, erosion of trust upend coronavirus control</span></a></h3><p class="rm-manual">Associated Press</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/minneapolis-mayor-and-police-chief-deal-with-a-crisis-years-in-the-making-172744849.html"><span>Minneapolis mayor and police chief deal with a crisis years in the making</span></a></h3><p class="rm-manual">Yahoo News</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/video/elon-musks-spacex-rocket-launches-201646089.html"><span> Elon Musk's SpaceX rocket launches into space</span></a></h3><p class="rm-manual">Yahoo News Video</p><p></p></li>
+</ul></article>
+</body></html>

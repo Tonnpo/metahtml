@@ -1,0 +1,77 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Kim Jong-un Reappears After Six Week Absence Sporting Cane and Smile </p>
+<h5 class="rm-manual">Related Blogs</h5>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://antiviral.gawker.com/">Antiviral</a></li> <li class="rm-manual"><a href="http://art.gawker.com/">Art</a></li> <li class="rm-manual"><a href="http://bestrestaurant.gawker.com/">The Best Restaurant in New York</a></li> <li class="rm-manual"><a href="http://blackbag.gawker.com/">Blackbag</a></li> <li class="rm-manual"><a href="http://defamer.gawker.com/">Defamer</a></li> <li class="rm-manual"><a href="http://disputations.gawker.com/">Disputations</a></li> <li class="rm-manual"><a href="http://documents.gawker.com/">Documents</a></li> <li class="rm-manual"><a href="http://dodgeandburn.gawker.com/">Dodgeandburn</a></li> <li class="rm-manual"><a href="http://dog.gawker.com/">Dog</a></li> <li class="rm-manual"><a href="http://domesticity.gawker.com/">Domesticity</a></li> <li class="rm-manual"><a href="http://drugs.gawker.com/">Drugs</a></li> <li class="rm-manual"><a href="http://finevining.gawker.com/">Fine Vining</a></li> <li class="rm-manual"><a href="http://fortressamerica.gawker.com/">Fortress America</a></li> <li class="rm-manual"><a href="http://frenchgawker.gawker.com/">FrenchGawker</a></li> <li class="rm-manual"><a href="http://internet.gawker.com/">Weird Internet</a></li> <li class="rm-manual"><a href="http://interviews.gawker.com/">Interviews</a></li> <li class="rm-manual"><a href="http://justice.gawker.com/">Justice</a></li> <li class="rm-manual"><a href="http://morningafter.gawker.com/">Morning After</a></li> <li class="rm-manual"><a href="http://phasezero.gawker.com/">PhaseZero</a></li> <li class="rm-manual"><a href="http://politburo.gawker.com/">Politburo</a></li> <li class="rm-manual"><a href="http://rankings.gawker.com/">Rankings</a></li> <li class="rm-manual"><a href="http://review.gawker.com/">Gawker Review of Books</a></li> <li class="rm-manual"><a href="http://sausage.gawker.com/">Sausage</a></li> <li class="rm-manual"><a href="http://slow.gawker.com/">Slowgawker</a></li> <li class="rm-manual"><a href="http://sonyhack.gawker.com/">Sony Hack</a></li> <li class="rm-manual"><a href="http://takes.gawker.com/">One Man's Take</a></li> <li class="rm-manual"><a href="http://thecuck.gawker.com/">The Cuck</a></li> <li class="rm-manual"><a href="http://themachines.gawker.com/">Themachines</a></li> <li class="rm-manual"><a href="http://thevane.gawker.com/">The Vane</a></li> <li class="rm-manual"><a href="http://thewest.gawker.com/">The West</a></li> <li class="rm-manual"><a href="http://tktk.gawker.com/">tktk</a></li> <li class="rm-manual"><a href="http://truestories.gawker.com/">True Stories</a></li> <li class="rm-manual"><a href="http://valleywag.gawker.com/">Valleywag</a></li> </ul>
+<h1 class="rm-manual">Kim Jong-un Reappears After Six Week Absence Sporting Cane and Smile</h1>
+<p class="rm-manual">28.80K</p>
+<p class="rm-manual">Aleksander Chan</p>
+<p class="rm-manual"> 10/14/14 07:10AM </p>
+<p class="rm-manual">Filed to: <span>Kim Jong-un</span></p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///tag/kim-jong-un">Kim Jong-un</a></li> <li class="rm-manual"><a href="file:///tag/north-korea">North Korea</a></li> </ul>
+<p class="">North Korean leader Kim Jong-un, who has been a no-show at 
+public events in the country since Sept. 3, appeared to return to the 
+public eye Tuesday with photos of him touring building projects running 
+on the front page of North Korea's daily, Rodong Sinmun. His limp of 
+mysterious provenance was also back, along with a cane that only fuels 
+speculation that the head of the totalitarian regime is unwell. </p>
+<aside class="rm-manual"><a href="http://gawker.com/kim-jong-un-has-a-mysterious-limp-1601639567"><h6 class="rm-manual">Kim Jong-un Has a Mysterious Limp</h6>
+<p class="rm-manual">Kim Jong-un limped his way on stage at his grandfather's memorial ceremony today. It'sâ€¦</p></a></aside><p>Cheong
+ Seong-chang, of the Sejong Institute in South Korea, told the 
+Associated Press that, compared to photos of Kim from May, the leader 
+appears to have lost about 20 pounds and that he might be walking with a
+ cane after ankle surgery. </p>
+<p>But as the BBC's Stephen Evans, who is stationed in Seoul, points 
+out, based purely on these new photos of Kim, it's "impossible to know 
+how easily Kim Jong-un is walking - did he walk for long, was he 
+standing simply for the photographer?" </p>
+<p>According to the Korean Central News Agency, Kim toured a number of 
+housing developments in Pyongyang, grinning for photos. From the New 
+York Times: </p>
+<p>The photos showed Mr. Kim looking around brand-new eight-story 
+apartment buildings and top military generals and party secretaries 
+taking notes while he spoke â€” a scene typical of such a visit by the 
+top leader.</p>
+<p>During the trip, Mr. Kim also inspected a newly completed building 
+for an energy research institute, the agency said. He later posed for a 
+group picture before the statues of his father and grandfather, the 
+agency said.</p>
+<p>Speculation swirled that Kim was suffering from illness when state media reported last month that he was feeling "discomfort." </p>
+<p class="rm-manual">[Image via AP]</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://gawker.com/terms.html">Terms of Service</a></li> <li class="rm-manual"><a href="http://gawker.com/privacy.html">Privacy Policy</a></li> </ul></article>
+</body></html>

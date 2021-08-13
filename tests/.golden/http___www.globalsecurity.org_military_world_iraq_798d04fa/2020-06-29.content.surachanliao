@@ -1,0 +1,64 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article class="rm-manual"><p class="rm-manual"> Iraq Military and Country Guide </p>
+<p class="rm-manual"> ï»¿ </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///subscribe/index.html"> Subscribe Now ! </a></li> <li class="rm-manual"> <a href="#">Sign In</a> <a href="#">Sign Out</a> </li> </ul>
+<p class="rm-manual"><a href="file:///index.html">Home</a> :: <a href="file:///military/index.html">Military</a> :: <a href="file:///military/world/index.html">World</a> :: </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://sitrep.globalsecurity.org/">SITREP</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a>Military Menu </a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///military/intro/index.html">Introduction</a></li> <li class="rm-manual"><a href="file:///military/systems/index.html">Systems</a></li> <li class="rm-manual"><a href="file:///military/facility/index.html">Facilities</a></li> <li class="rm-manual"><a href="file:///military/agency/index.html">Agencies</a></li> <li class="rm-manual"><a href="file:///military/industry/index.html">Industry</a></li> <li class="rm-manual"><a href="file:///military/ops/index.html">Operations</a></li> <li class="rm-manual"><a href="file:///military/world/index.html">Countries</a></li> <li class="rm-manual"><a href="file:///military/hotdocs.htm">Hot Documents</a></li> <li class="rm-manual"><a href="file:///military/library/news/index.html">News</a></li> <li class="rm-manual"><a href="file:///military/library/report/index.html">Reports</a></li> <li class="rm-manual"><a href="file:///military/library/policy/index.html">Policy</a></li> <li class="rm-manual"><a href="file:///military/library/budget/index.html">Budget</a></li> <li class="rm-manual"><a href="file:///military/library/congress/index.html">Congress</a></li> <li class="rm-manual"><a href="file:///military/links.htm">Links</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///wmd/index.html">WMD</a></li> <li class="rm-manual"><a href="file:///intell/index.html">Intelligence</a></li> <li class="rm-manual"><a href="file:///security/index.html">Homeland Security</a></li> <li class="rm-manual"><a href="file:///space/index.html">Space</a></li> </ul>
+<h1 class="rm-manual">Military</h1>
+<h2 class="rm-manual">Further Reading</h2>
+ &gt; <table class="rm-manual"> <tbody><tr class=""> <td class=""><h1 class="">Iraq Military Guide </h1></td> </tr> <tr class=""> <td class="rm-manual">
+ “the winds of change that blew into the region this year emanated from 
+Iraq” Khudayer al-Khuza’ie, Dawa Tanzim Party Vice Presisent of Iraq 10 
+July 2011 </td> </tr> <tr class="rm-manual"> <td class="rm-manual"><h3 class="rm-manual"> <a href="file:///var/folders/q2/d22qjbd926jdgdt0jz3m375h0000gn/T/overview.htm">Overview</a> <a href="file:///var/folders/q2/d22qjbd926jdgdt0jz3m375h0000gn/T/maps.htm">Maps</a> <a href="file:///var/folders/q2/d22qjbd926jdgdt0jz3m375h0000gn/T/budget.htm">Security Budget</a> </h3></td> </tr> <tr class="rm-manual"> <td class="rm-manual"> <h3 class="rm-manual"><a href="file:///var/folders/q2/d22qjbd926jdgdt0jz3m375h0000gn/T/defense.htm">Ministry of Defense</a></h3> <h3 class="rm-manual"><a href="file:///var/folders/q2/d22qjbd926jdgdt0jz3m375h0000gn/T/nia.htm">New Iraqi Army</a></h3> <h3 class="rm-manual"><a href="file:///var/folders/q2/d22qjbd926jdgdt0jz3m375h0000gn/T/ing.htm">Iraqi National Guard</a></h3> <h3 class="rm-manual"><a href="file:///var/folders/q2/d22qjbd926jdgdt0jz3m375h0000gn/T/cdf.htm">Iraqi Navy</a></h3> <h3 class="rm-manual"><a href="file:///var/folders/q2/d22qjbd926jdgdt0jz3m375h0000gn/T/iqaf.htm">Iraqi Air Force </a></h3> <h3 class="rm-manual"><a href="file:///var/folders/q2/d22qjbd926jdgdt0jz3m375h0000gn/T/icdc.htm">Civil Defense Corps</a></h3> <h3 class="rm-manual"><a href="file:///military/world/para/hashd-al-shaabi.htm">Popular Mobilization Units</a></h3> <h3 class="rm-manual"><a href="file:///var/folders/q2/d22qjbd926jdgdt0jz3m375h0000gn/T/counter-terrorism.htm">National Counter-Terrorism Force</a></h3> <h3 class="rm-manual"><a href="file:///intell/world/iraq/fp.htm">Federal Police (FP)</a></h3> <h3 class="rm-manual">
+<a href="file:///intell/world/iraq/index.html">Other Security Agencies</a> </h3>
+</td> </tr> <tr class="rm-manual"> <td class="rm-manual">
+<h3 class="rm-manual"> <a href="file:///var/folders/q2/d22qjbd926jdgdt0jz3m375h0000gn/T/airfields.htm">Airbases</a>
+</h3> <h3 class="rm-manual"><a href="file:///var/folders/q2/d22qjbd926jdgdt0jz3m375h0000gn/T/navy-base.htm">Navy Bases</a></h3> <h3 class="rm-manual"><a href="file:///var/folders/q2/d22qjbd926jdgdt0jz3m375h0000gn/T/orbat-ground.htm">Ground Forces</a></h3> <h3 class="rm-manual"><a href="file:///var/folders/q2/d22qjbd926jdgdt0jz3m375h0000gn/T/command.htm">Leadership Facilities</a></h3> <h3 class="rm-manual"><a href="file:///var/folders/q2/d22qjbd926jdgdt0jz3m375h0000gn/T/city.htm">Urban Areas</a></h3> </td> </tr> <tr class="rm-manual"> <td class="rm-manual"> <a href="file:///military/world/war/iraq-civil-war.htm"> Iraq Civil War</a> </td> </tr> <tr class="rm-manual"> <td class="rm-manual">
+<a href="file:///var/folders/q2/ops/iraq_reconstruction.htm"> Occupation</a> </td> </tr> <tr class="rm-manual"> <td class="rm-manual">
+<a href="file:///var/folders/q2/ops/iraq.htm"> Major Combat</a> </td> </tr> <tr class="rm-manual"> <td class="rm-manual"><h2 class="rm-manual"> <a href="file:///wmd/world/iraq/index.html">WMD</a> </h2></td> </tr><tr class="rm-manual"><td class="rm-manual"><h1 class="rm-manual"> <a href="file:///wmd/library/news/iraq/index.html">News</a> </h1></td> </tr></tbody></table>
+<table class="rm-manual"> <tbody><tr class="rm-manual">
+<td class="rm-manual"> <p class="rm-manual"> NEWSLETTER </p> </td> </tr> <tr class="rm-manual"><td class="rm-manual"> Join the GlobalSecurity.org mailing list </td></tr> <tr class="rm-manual"><td class="rm-manual"> Enter Your Email Address </td></tr> </tbody></table>
+<p class="rm-manual"><a href="file:///org/advertise.htm">Advertise with Us</a> <span>|</span> <a href="file:///org/index.html">About Us</a> <span>|</span> <a href="file:///org/news/index.html">GlobalSecurity.org In the News</a> <span>|</span> <a href="file:///sitemap.htm">Site Map</a> <span>|</span> <a href="file:///privacy.htm">Privacy</a></p>
+<p class="rm-manual"><a href="http://www.globalsecurity.org/copyright.htm">Copyright</a> © 2000-2020 GlobalSecurity.org All rights reserved.</p>
+<p class="rm-manual"> Site maintained by: <a href="http://www.globalsecurity.org/org/staff/pike.htm">John Pike</a></p>
+<p class="rm-manual">Page last modified: 17-08-2016 17:29:56 ZULU </p></article>
+</body></html>

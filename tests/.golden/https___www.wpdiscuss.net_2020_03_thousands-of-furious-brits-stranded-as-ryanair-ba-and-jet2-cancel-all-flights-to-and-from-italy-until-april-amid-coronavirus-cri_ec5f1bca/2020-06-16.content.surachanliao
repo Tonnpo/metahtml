@@ -1,0 +1,80 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">You are here: <span><a href="https://www.wpdiscuss.net/"><span>Home</span></a></span> <span>/</span>
+ Thousands of furious Brits stranded as Ryanair, BA and Jet2 cancel ALL 
+flights to and from Italy until April amid coronavirus crisis – so how 
+ARE UK passengers going to get home?</p>
+<h1 class="rm-manual">Thousands of furious Brits stranded as Ryanair, BA
+ and Jet2 cancel ALL flights to and from Italy until April amid 
+coronavirus crisis – so how ARE UK passengers going to get home?</h1>
+<p class="rm-manual">March 10, 2020 by <a href="file:///go?url=aHR0cHM6Ly93d3cuZGFpbHltYWlsLmNvLnVrL25ld3MvYXJ0aWNsZS04MDk1MjM1L0JyaXRpc2gtQWlyd2F5cy1jYW5jZWxzLWZsaWdodHMtSXRhbHktQXByaWwtNC1hbWlkLWNvcm9uYXZpcnVzLWNyaXNpcy5odG1s">www.dailymail.co.uk</a> </p>
+<p>Ryanair, British Airways and Jet2 have today cancelled hundreds of 
+flights to and from Italy until April at the earliest and easyJet has 
+also grounded most of its services leaving thousands of customers 
+stranded in the coronavirus-hit country. BA has axed its 60 flights a 
+day to cities including Milan, Venice and Rome while Jet2 has gone even 
+further and cancelled all its Italian trips for almost seven weeks until
+ April 26 with Easter holiday plans for thousands likely to be in ruins.
+ But there were farcical scenes at UK airports as people on the final 
+flights from Italy today walked through arrivals unchecked with many 
+completely unaware they should now self-isolate for the next 14 days. 
+Ryanair announced it had cancelled all flights from March 14 until April
+ 9, but has told thousands of Brits trapped in Italy they can switch 
+their return flight to come home before Saturday as Britain lost its 
+sixth victim to coronavirus today and Italy’s death toll increased by 97
+ in 24 hours to 463. Other airlines appear likely to put on 
+‘repatriation’ flights this week while the Government may also step in 
+and send rescue planes like the ones dispatched to bring home Britons… <a href="file:///go?url=aHR0cHM6Ly93d3cuZGFpbHltYWlsLmNvLnVrL25ld3MvYXJ0aWNsZS04MDk1MjM1L0JyaXRpc2gtQWlyd2F5cy1jYW5jZWxzLWZsaWdodHMtSXRhbHktQXByaWwtNC1hbWlkLWNvcm9uYXZpcnVzLWNyaXNpcy5odG1s" rel="nofollow">Read full this story</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.sportbreakingnews.com/2012/02/kinect-star-wars-to-release-on-april-3-in-the-uk-features-galactic-dance-off-mode/">Kinect Star Wars to release on April 3 in the UK, features “Galactic Dance Off mode”</a></li>
+<li class="rm-manual"><a href="https://www.sportbreakingnews.com/2011/02/shift-2-unleashed-delayed-now-releasing-april-1-in-the-uk/">Shift 2: Unleashed delayed, now releasing April 1 in the UK</a></li>
+<li class="rm-manual"><a href="https://www.wpdiscuss.net/2010/11/report-ignition-closes-up-shop-in-florida-70-employees-told-to-go-home/">Report: Ignition closes up shop in Florida, 70 employees told to “go home”</a></li>
+<li class="rm-manual"><a href="https://www.wpdiscuss.net/2009/04/ubisoft-officially-announces-rabbids-go-home/">Ubisoft officially announces Rabbids Go Home</a></li>
+<li class="rm-manual"><a href="https://www.wpdiscuss.net/2009/12/splinter-cell-conviction-go-big-or-go-home/">Splinter Cell Conviction – Go Big or Go Home!</a></li>
+<li class="rm-manual"><a href="https://www.wpdiscuss.net/2010/03/interview-starcraft-iis-dustin-browder-on-the-beta-gdc-and-finally-going-home/">Interview: StarCraft II’s Dustin Browder on the beta, GDC, and finally going home</a></li>
+<li class="rm-manual"><a href="https://www.wpdiscuss.net/2009/10/ubisoft-preorder-deals-at-gamestop-for-red-steel-2-rabbids-go-home/">Ubisoft: Preorder deals at GameStop for Red Steel 2, Rabbids Go Home</a></li>
+<li class="rm-manual"><a href="https://www.wpdiscuss.net/2009/07/rabbids-go-home-finds-new-home-on-the-ds/">Rabbids Go Home finds new home on the DS</a></li>
+<li class="rm-manual"><a href="https://www.wpdiscuss.net/2009/02/rabbids-go-home-still-in-development/">Rabbids Go Home still in development</a></li>
+<li class="rm-manual"><a href="https://www.wpdiscuss.net/2009/04/rabbids-go-home-detailed-in-nintendo-power/">Rabbids Go Home detailed in Nintendo Power</a></li>
+</ul>
+<blockquote class="rm-manual"> Thousands of furious Brits stranded as 
+Ryanair, BA and Jet2 cancel ALL flights to and from Italy until April 
+amid coronavirus crisis – so how ARE UK passengers going to get home? 
+have 301 words, post on <a href="file:///go?url=aHR0cHM6Ly93d3cuZGFpbHltYWlsLmNvLnVrL25ld3MvYXJ0aWNsZS04MDk1MjM1L0JyaXRpc2gtQWlyd2F5cy1jYW5jZWxzLWZsaWdodHMtSXRhbHktQXByaWwtNC1hbWlkLWNvcm9uYXZpcnVzLWNyaXNpcy5odG1s" rel="nofollow">www.dailymail.co.uk</a> at March 10, 2020. This is cached page on Wordpress. If you want remove this page, <a href="file:///contact/" rel="nofollow">please contact us</a>.</blockquote>
+<p class="rm-manual"><span>Filed Under: <a href="https://www.wpdiscuss.net/category/news/" rel="category tag">News</a></span> <span><a href="https://www.wpdiscuss.net/tag/dailymail/" rel="tag">dailymail</a>, <a href="https://www.wpdiscuss.net/tag/news/" rel="tag">News</a>, <a href="https://www.wpdiscuss.net/tag/italy/" rel="tag">Italy</a>, <a href="https://www.wpdiscuss.net/tag/british-airways/" rel="tag">British Airways</a>, <a href="https://www.wpdiscuss.net/tag/british-airways-cancels-flights-italy-april-4-amid-coronavirus-crisis/" rel="tag">British Airways cancels flights Italy April 4 amid coronavirus crisis</a>, <a href="https://www.wpdiscuss.net/tag/ryanair-cancelled-flights-how-to-check/" rel="tag">ryanair cancelled flights how to check</a>, <a href="https://www.wpdiscuss.net/tag/compensation-cancelled-flight-ryanair/" rel="tag">compensation cancelled flight ryanair</a>, <a href="https://www.wpdiscuss.net/tag/compensation-cancelled-flight-norwegian/" rel="tag">compensation cancelled flight norwegian</a>, <a href="https://www.wpdiscuss.net/tag/ba-cancelled-flights-tomorrow/" rel="tag">ba cancelled flights tomorrow</a>, <a href="https://www.wpdiscuss.net/tag/ba-cancel-flight-24-hours/" rel="tag">ba cancel flight 24 hours</a>, <a href="https://www.wpdiscuss.net/tag/monday-cancelled-flights/" rel="tag">monday cancelled flights</a>, <a href="https://www.wpdiscuss.net/tag/ryanair-why-are-they-cancelling-flights/" rel="tag">ryanair why are they cancelling flights</a>, <a href="https://www.wpdiscuss.net/tag/why-ryanair-cancel-flights/" rel="tag">why ryanair cancel flights</a>, <a href="https://www.wpdiscuss.net/tag/why-does-ryanair-cancel-flights/" rel="tag">why does ryanair cancel flights</a>, <a href="https://www.wpdiscuss.net/tag/ryanair-why-is-my-flight-cancelled/" rel="tag">ryanair why is my flight cancelled</a>, <a href="https://www.wpdiscuss.net/tag/why-ryanair-is-canceling-flights/" rel="tag">why ryanair is canceling flights</a>, <a href="https://www.wpdiscuss.net/tag/where-are-ryanair-cancelling-flights/" rel="tag">where are ryanair cancelling flights</a>, <a href="https://www.wpdiscuss.net/tag/delays-cancellations-flight/" rel="tag">delays cancellations flight</a>, <a href="https://www.wpdiscuss.net/tag/ba-787-cancellations/" rel="tag">ba 787 cancellations</a>, <a href="https://www.wpdiscuss.net/tag/vienna-cancelled-flights/" rel="tag">vienna cancelled flights</a>, <a href="https://www.wpdiscuss.net/tag/nyc-cancelled-flights/" rel="tag">nyc cancelled flights</a>, <a href="https://www.wpdiscuss.net/tag/crisis-uk-address/" rel="tag">crisis uk address</a>, <a href="https://www.wpdiscuss.net/tag/saa-cancelled-flights-today/" rel="tag">saa cancelled flights today</a>, <a href="https://www.wpdiscuss.net/tag/canceled-flights-schiphol/" rel="tag">canceled flights schiphol</a>, <a href="https://www.wpdiscuss.net/tag/ryanair-list-on-cancelled-flights/" rel="tag">ryanair list on cancelled flights</a>, <a href="https://www.wpdiscuss.net/tag/jet2-com-flights/" rel="tag">jet2.com flights</a>, <a href="https://www.wpdiscuss.net/tag/jet2-flights-promo-code/" rel="tag">jet2 flights promo code</a>, <a href="https://www.wpdiscuss.net/tag/when-will-jet2-release-flights-for-2019/" rel="tag">when will jet2 release flights for 2019</a>, <a href="https://www.wpdiscuss.net/tag/jet2-how-to-cancel-flight/" rel="tag">jet2 how to cancel flight</a>, <a href="https://www.wpdiscuss.net/tag/ryanair-under-10-pound-flights/" rel="tag">ryanair under 10 pound flights</a>, <a href="https://www.wpdiscuss.net/tag/arent-you-about-ready-to-go-home-now/" rel="tag">aren't you about ready to go home now</a>, <a href="https://www.wpdiscuss.net/tag/canceled-flights-737-max/" rel="tag">canceled flights 737 max</a>, <a href="https://www.wpdiscuss.net/tag/ryanair-which-cancelled-flights/" rel="tag">ryanair which cancelled flights</a>, <a href="https://www.wpdiscuss.net/tag/crisis-hit-jet-airways-suspends-flights-to-13-international-flights/" rel="tag">crisis-hit jet airways suspends flights to 13 international flights</a>, <a href="https://www.wpdiscuss.net/tag/ba-4-qualifying-flights/" rel="tag">ba 4 qualifying flights</a></span></p></article>
+</body></html>
