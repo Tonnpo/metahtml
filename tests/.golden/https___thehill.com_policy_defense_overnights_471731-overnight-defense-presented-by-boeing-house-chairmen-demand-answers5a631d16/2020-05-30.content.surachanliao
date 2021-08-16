@@ -1,0 +1,273 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Overnight Defense — 
+Presented by Boeing — House chairmen demand answers on Open Skies Treaty
+ | China warns US to stay out of South China Sea | Army conducting 
+security assessment of TikTok | TheHill </p>
+<p class="rm-manual"> <a href="#main-content">Skip to main content</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///signup">sign up for newsletters</a></li> <li class="rm-manual"><a href="file:///">Home</a></li> <li class="rm-manual">
+<a href="file:///">News</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///homenews/senate">Senate</a></li> <li class="rm-manual"><a href="file:///homenews/house">House</a></li> <li class="rm-manual"><a href="file:///homenews/campaign">Campaign</a></li> <li class="rm-manual"><a href="file:///homenews/administration">Administration</a></li> <li class="rm-manual"><a href="file:///business-a-lobbying">Business</a></li> <li class="rm-manual"><a href="file:///regulation">Regulation</a></li> <li class="rm-manual"><a href="file:///homenews/media">Media</a></li> <li class="rm-manual"><a href="file:///blogs/blog-briefing-room">Briefing Room</a></li> <li class="rm-manual"><a href="file:///homenews/state-watch">State Watch</a></li> <li class="rm-manual"><a href="file:///latino">Latino</a></li> <li class="rm-manual"><a href="file:///blogs/ballot-box/polls">Polls</a></li> <li class="rm-manual"><a href="file:///homenews/1230-report">12:30 Report</a></li> <li class="rm-manual"><a href="file:///homenews/coronavirus-report">Coronavirus Report</a></li> <li class="rm-manual"><a href="file:///homenews/politics-101">Politics 101</a></li> <li class="rm-manual"><a href="file:///blogs/floor-action">Floor Action</a></li> <li class="rm-manual"><a href="file:///blogs/in-the-know">In The Know</a></li> <li class="rm-manual"><a href="file:///homenews/sunday-talk-shows">Sunday Talk Shows</a></li> </ul>
+</li> <li class="rm-manual">
+<a href="file:///policy">Policy</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///policy/defense">Defense</a></li> <li class="rm-manual"><a href="file:///policy/energy-environment">Energy &amp; Environment</a></li> <li class="rm-manual"><a href="file:///policy/finance">Finance</a></li> <li class="rm-manual"><a href="file:///policy/healthcare">Healthcare</a></li> <li class="rm-manual"><a href="file:///policy/technology">Technology</a></li> <li class="rm-manual"><a href="file:///policy/transportation">Transportation</a></li> <li class="rm-manual"><a href="file:///policy/international">International</a></li> <li class="rm-manual"><a href="file:///policy/cybersecurity">Cybersecurity</a></li> <li class="rm-manual"><a href="file:///policy/national-security">National Security</a></li> </ul>
+</li> <li class="rm-manual">
+<a href="file:///regulation">Regulation</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///regulation/defense">Defense</a></li> <li class="rm-manual"><a href="file:///regulation/energy-environment">Energy &amp; Environment</a></li> <li class="rm-manual"><a href="file:///regulation/finance">Finance</a></li> <li class="rm-manual"><a href="file:///regulation/healthcare">Healthcare</a></li> <li class="rm-manual"><a href="file:///regulation/technology">Technology</a></li> <li class="rm-manual"><a href="file:///regulation/transportation">Transportation</a></li> <li class="rm-manual"><a href="file:///regulation/international">International</a></li> <li class="rm-manual"><a href="file:///regulation/cybersecurity">Cybersecurity</a></li> <li class="rm-manual"><a href="file:///regulation/national-security">National Security</a></li> </ul>
+</li> <li class="rm-manual">
+<a href="file:///opinion">Opinion</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///opinion">Contributors</a></li> <li class="rm-manual"><a href="file:///opinion/columnists">Columnists</a></li> <li class="rm-manual"><a href="file:///contributor-application-form">Become a contributor</a></li> <li class="rm-manual"><a href="file:///blogs/congress-blog">Congress Blog</a></li> </ul>
+</li> <li class="rm-manual"><a href="file:///hilltv">Hill.TV</a></li> <li class="rm-manual">
+<a href="file:///video">Video</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///video/campaign">Campaign</a></li> <li class="rm-manual"><a href="file:///video/defense">Defense</a></li> <li class="rm-manual"><a href="file:///video/energy-environment">Energy &amp; Environment</a></li> <li class="rm-manual"><a href="file:///video/finance">Finance</a></li> <li class="rm-manual"><a href="file:///video/healthcare">Healthcare</a></li> <li class="rm-manual"><a href="file:///video/technology">Technology</a></li> <li class="rm-manual"><a href="file:///video/transportation">Transportation</a></li> <li class="rm-manual"><a href="file:///video/international">International</a></li> <li class="rm-manual"><a href="file:///video/cybersecurity">Cybersecurity</a></li> <li class="rm-manual"><a href="file:///video/national-security">National Security</a></li> <li class="rm-manual"><a href="file:///video/sunday-shows">Sunday Shows</a></li> <li class="rm-manual"><a href="file:///video/events">Events</a></li> <li class="rm-manual"><a href="file:///video/lawmaker-interviews">Lawmaker Interviews</a></li> </ul>
+</li> <li class="rm-manual">
+<a href="file:///podcasts">Podcasts</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///podcasts/hillcast">HillCast</a></li> <li class="rm-manual"><a href="file:///podcasts/history-cast">HistoryCast</a></li> </ul>
+</li> <li class="rm-manual"><a href="http://edition.pagesuite-professional.co.uk/html5/reader/production/default.aspx?pubname=&amp;pubid=4fa6205e-3dd2-4d07-9a10-85dbaa7c0079">Print Edition</a></li> <li class="rm-manual">
+<a href="file:///events">Events</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///events">Upcoming Events</a></li> <li class="rm-manual"><a href="file:///events/past">Past Events</a></li> <li class="rm-manual"><a href="file:///events/about">About</a></li> </ul>
+</li> <li class="rm-manual"><a href="file:///people">People</a></li> <li class="rm-manual"><a href="file:///homenews/campaign">Campaign</a></li> </ul>
+<p class="rm-manual">Follow Us</p>
+<p class="rm-manual"><a href="https://twitter.com/intent/follow?screen_name=thehill">Twitter</a> </p>
+<p class="rm-manual"><a href="https://www.linkedin.com/company/the-hill">LinkedIn</a> </p>
+<p class="rm-manual"><a href="file:///">TheHill.com</a></p>
+<p class="rm-manual"> © 1996-2020 News Communication </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///terms-and-conditions">Terms &amp; Conditions</a></li> <li class="rm-manual"><a href="file:///privacy-policy">Privacy Policy</a></li> </ul>
+<h2 class="rm-manual">Top menu</h2>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="file:///">News</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///homenews/senate">Senate</a></li> <li class="rm-manual"><a href="file:///homenews/house">House</a></li> <li class="rm-manual"><a href="file:///homenews/administration">Administration</a></li> <li class="rm-manual"><a href="file:///homenews/campaign">Campaign</a></li> <li class="rm-manual"><a href="file:///business-a-lobbying">Business</a></li> <li class="rm-manual"><a href="file:///regulation">Regulation</a></li> <li class="rm-manual"><a href="file:///homenews/media">Media</a></li> <li class="rm-manual"><a href="file:///blogs/blog-briefing-room">Briefing Room</a></li> <li class="rm-manual"><a href="file:///homenews/state-watch">State Watch</a></li> <li class="rm-manual"><a href="file:///latino">Latino</a></li> <li class="rm-manual"><a href="file:///blogs/ballot-box/polls">Polls</a></li> <li class="rm-manual"><a href="file:///homenews/1230-report">12:30 Report</a></li> <li class="rm-manual"><a href="file:///homenews/coronavirus-report">Coronavirus Report</a></li> <li class="rm-manual"><a href="file:///homenews/politics-101">Politics 101</a></li> <li class="rm-manual"><a href="file:///blogs/floor-action">Floor Action</a></li> <li class="rm-manual"><a href="file:///blogs/in-the-know">In The Know</a></li> <li class="rm-manual"><a href="file:///homenews/sunday-talk-shows">Sunday Talk Shows</a></li> </ul>
+</li> <li class="rm-manual">
+<a href="file:///policy">Policy</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///policy/defense">Defense</a></li> <li class="rm-manual"><a href="file:///policy/energy-environment">Energy &amp; Environment</a></li> <li class="rm-manual"><a href="file:///policy/finance">Finance</a></li> <li class="rm-manual"><a href="file:///policy/healthcare">Healthcare</a></li> <li class="rm-manual"><a href="file:///policy/technology">Technology</a></li> <li class="rm-manual"><a href="file:///policy/transportation">Transportation</a></li> <li class="rm-manual"><a href="file:///policy/international">International</a></li> <li class="rm-manual"><a href="file:///policy/cybersecurity">Cybersecurity</a></li> <li class="rm-manual"><a href="file:///policy/national-security">National Security</a></li> </ul>
+</li> <li class="rm-manual">
+<a href="file:///opinion">Opinion</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///opinion/columnists">Columnists</a></li> <li class="rm-manual"><a href="file:///blogs/congress-blog">Congress Blog</a></li> </ul>
+<p class="rm-manual"> <a href="file:///opinion">All Contributors</a> </p><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///opinion/campaign">- Campaign</a></li> <li class="rm-manual"><a href="file:///opinion/civil-rights">- Civil Rights</a></li> <li class="rm-manual"><a href="file:///opinion/criminal-justice">- Criminal Justice</a></li> <li class="rm-manual"><a href="file:///opinion/education">- Education</a></li> <li class="rm-manual"><a href="file:///opinion/energy-environment">- Energy &amp; Environment</a></li> <li class="rm-manual"><a href="file:///opinion/finance">- Finance</a></li> <li class="rm-manual"><a href="file:///opinion/healthcare">- Healthcare</a></li> <li class="rm-manual"><a href="file:///opinion/immigration">- Immigration</a></li> <li class="rm-manual"><a href="file:///opinion/international">- International</a></li> <li class="rm-manual"><a href="file:///opinion/judiciary">- Judiciary</a></li> <li class="rm-manual"><a href="file:///opinion/technology">- Technology</a></li> <li class="rm-manual"><a href="file:///opinion/white-house">- White House</a></li> <li class="rm-manual"><a href="file:///contributor-application-form">- Become A Contributor</a></li> </ul> <p class="rm-manual"></p>
+</li> <li class="rm-manual">
+<a href="file:///events">Events</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///events">Upcoming Events</a></li> <li class="rm-manual"><a href="file:///events/about">About</a></li> </ul>
+</li> <li class="rm-manual"><a href="file:///resources/classifieds/employer">Jobs</a></li> <li class="rm-manual"><a href="file:///hilltv">HILL.TV</a></li> <li class="rm-manual">
+<a href="file:///changing-america">Changing America </a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///changing-america/respect">Respect</a></li> <li class="rm-manual"><a href="file:///changing-america/sustainability">Sustainability</a></li> <li class="rm-manual"><a href="file:///changing-america/enrichment">Enrichment</a></li> <li class="rm-manual"><a href="file:///changing-america/resilience">Resilience</a></li> <li class="rm-manual"><a href="file:///changing-america/well-being">Well-Being</a></li> </ul>
+</li> <li class="rm-manual"><a href="file:///coronavirus-report">Coronavirus Report</a></li> </ul>
+<h2 class="rm-manual">Search form</h2>
+<p class="rm-manual"> Search </p>
+<h2 class="rm-manual">TRENDING:</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///social-tags/coronavirus">Coronavirus</a></li> <li class="rm-manual"><a href="file:///person/donald-trump">Donald Trump</a></li> <li class="rm-manual"><a href="file:///person/joe-biden">Joe Biden</a></li> <li class="rm-manual"><a href="file:///person/george-floyd">George Floyd</a></li> </ul>
+<h1 class="rm-manual">Overnight Defense — Presented by Boeing — House 
+chairmen demand answers on Open Skies Treaty | China warns US to stay 
+out of South China Sea | Army conducting security assessment of TikTok</h1>
+<p class="rm-manual"> <span> By <a href="file:///author/ellen-mitchell">Ellen Mitchell</a> - <span>11/22/19 05:30 PM EST</span> </span> </p>
+<p class="rm-manual">© Getty Images</p>
+<p>Happy Friday and welcome to Overnight Defense. I'm Ellen Mitchell, 
+and here's your nightly guide to the latest developments at the 
+Pentagon, on Capitol Hill and beyond. <a href="http://www.email.thehill.com/thehillreg/thehillreg/pref.action?lid=3">CLICK HERE to subscribe to the newsletter.</a></p>
+<p>THE TOPLINE: A pair of top House Democrats is demanding answers on 
+the administration’s reported plans to withdraw from a multilateral 
+treaty that proponents argue is integral to keeping watch on Russia.</p>
+<p>House Armed Services Committee Chairman <span><a href="file:///people/adam-smith">Adam Smith</a><span><span><span><a href="file:///people/adam-smith">David (Adam) Adam Smith</a><a href="file:///policy/defense/499994-bipartisan-senate-panel-leaders-back-fund-to-deter-china">Bipartisan Senate panel leaders back fund to deter China</a> <a href="file:///opinion/national-security/499211-boosting-military-deterrence-in-the-indo-pacific-region">Boosting military deterrence in the Indo-Pacific region</a> <a href="file:///policy/defense/499164-house-chairmen-demand-explanation-on-trumps-illegal-withdrawal-from-open-skies">House chairmen demand explanation on Trump's 'illegal' withdrawal from Open Skies Treaty</a> <a href="file:///people/adam-smith">MORE</a></span></span></span></span> (D-Wash.) and House Foreign Affairs Committee Chairman <span><a href="file:///people/eliot-engel">Eliot Engel</a><span><span><span><a href="file:///people/eliot-engel">Eliot Lance Engel</a><a href="file:///policy/defense/overnights/500188-overnight-defense-democrats-expand-probe-into-state-igs-firing">Overnight
+ Defense: Democrats expand probe into State IG's firing | House 
+schedules late June votes with defense bill on deck | New Navy secretary
+ sworn in</a> <a href="file:///homenews/senate/500111-democrats-broaden-probe-into-firing-of-state-department-watchdog">Democrats broaden probe into firing of State Department watchdog</a> <a href="file:///policy/international/499521-house-chairman-slams-pompeo-for-suggesting-us-could-disconnect-from">House chairman slams Pompeo for suggesting US could 'disconnect' from Australia over China deal</a> <a href="file:///people/eliot-engel">MORE</a></span></span></span></span>
+ (D-N.Y.) in a letter released Friday accused the administration of 
+“stonewalling” questions on the fate of the Open Skies Treaty.</p>
+<p>“Congress has a constitutional duty to provide rigorous oversight of 
+the executive branch’s operations, and the administration should not 
+seek to hide information from Congress or otherwise prevent us from 
+performing appropriate oversight,” Smith and Engel wrote to national 
+security adviser Robert O’Brien.</p>
+<p>“This stonewalling only serves to undermine collaboration between the
+ executive and legislative branches of our government on matters of 
+national security," they continued.</p>
+<p>About the treaty: The 2002 treaty allows the pact’s 34 signatories, 
+including the United States and Russia, to fly unarmed observation 
+flights over the entire territory of other signatories. The intention is
+ to increase transparency and reduce the risk of military 
+miscalculation.</p>
+<p>Earlier: Engel previously wrote a letter to O’Brien in October 
+warning against withdrawing from the Open Skies Treaty. A day later, 
+Engel, Smith, Senate Foreign Relations Committee ranking member Sen. <span><a href="file:///people/robert-menendez">Bob Menendez</a><span><span><span><a href="file:///people/robert-menendez">Robert (Bob) Menendez</a><a href="file:///policy/national-security/500060-government-watchdog-no-evidence-pompeo-violated-hatch-act-with">Government watchdog: 'No evidence' Pompeo violated Hatch Act with Kansas trips</a> <a href="file:///opinion/national-security/499969-no-time-to-be-selling-arms-to-the-philippines">No time to be selling arms to the Philippines</a> <a href="file:///homenews/senate/499105-senate-panel-approves-trump-nominee-under-investigation">Senate panel approves Trump nominee under investigation</a> <a href="file:///people/robert-menendez">MORE</a></span></span></span></span> (D-N.J.) and Senate Armed Services Committee ranking member Sen. <span><a href="file:///people/jack-reed">Jack Reed</a><span><span><span><a href="file:///people/jack-reed">John (Jack) Francis Reed</a><a href="file:///policy/defense/499994-bipartisan-senate-panel-leaders-back-fund-to-deter-china">Bipartisan Senate panel leaders back fund to deter China</a> <a href="file:///homenews/coronavirus-report/499768-coronavirus-daily-update">The
+ Hill's Coronavirus Report: National Portrait Gallery's Kim Sajet says 
+this era rewiring people's relationship with culture, art; Trump's war 
+with Twitter heats up </a> <a href="file:///policy/defense/overnights/499069-overnight-defense-trump-to-withdraw-us-from-open-skies-treaty">Overnight
+ Defense: Trump to withdraw US from Open Skies Treaty | Pentagon drops 
+ban on recruits who had virus | FBI says Corpus Christi shooting 
+terror-related</a> <a href="file:///people/jack-reed">MORE</a></span></span></span></span> (D-R.I.) penned a similar letter to Secretary of State <span><a href="file:///people/mike-pompeo">Mike Pompeo</a><span><span><span><a href="file:///people/mike-pompeo">Michael (Mike) Richard Pompeo</a><a href="file:///homenews/senate/500193-schumer-slams-trumps-rose-garden-briefing-on-china-as-pathetic">Schumer slams Trump's Rose Garden briefing on China as 'pathetic'</a> <a href="file:///policy/international/europe/500187-britain-mulls-offering-pathway-to-citizenship-for-over-3-million">Britain mulls pathway to citizenship for more than 3M inhabitants of Hong Kong</a> <a href="file:///policy/defense/overnights/500188-overnight-defense-democrats-expand-probe-into-state-igs-firing">Overnight
+ Defense: Democrats expand probe into State IG's firing | House 
+schedules late June votes with defense bill on deck | New Navy secretary
+ sworn in</a> <a href="file:///people/mike-pompeo">MORE</a></span></span></span></span> and Defense Secretary <span><a href="file:///people/mark-esper">Mark Esper</a><span><span><span><a href="file:///people/mark-esper">Mark Esper</a><a href="file:///homenews/administration/500242-pentagon-orders-active-duty-military-police-units-on-ready-to-deploy">Pentagon orders active-duty police units on ready to deploy to Minneapolis: AP</a> <a href="file:///policy/defense/overnights/500042-overnight-defense-trump-extends-deployment-of-national-guard-troops">Overnight
+ Defense: Trump extends deployment of National Guard troops to aid with 
+coronavirus response | Pentagon considers reducing quarantine to 10 days
+ | Lawmakers push for removal of Nazi headstones from VA cemeteries</a> <a href="file:///opinion/national-security/499969-no-time-to-be-selling-arms-to-the-philippines">No time to be selling arms to the Philippines</a> <a href="file:///people/mark-esper">MORE</a></span></span></span></span>.</p>
+<p>The Wall Street Journal has reported that <span><a href="file:///people/donald-trump">President Trump</a><span><span><span><a href="file:///people/donald-trump">Donald John Trump</a><a href="file:///opinion/judiciary/500247-michael-flynn-transcripts-reveal-plenty-except-crime-or-collusion">Michael Flynn transcripts reveal plenty except crime or collusion</a> <a href="file:///homenews/state-watch/500252-50-people-arrested-in-minneapolis-as-hundreds-more-national-guard-troops">50 people arrested in Minneapolis as hundreds more National Guard troops deployed</a> <a href="file:///homenews/state-watch/500250-missouri-state-lawmaker-sparks-backlash-by-tweeting-looters-deserve-to">Missouri state lawmaker sparks backlash by tweeting 'looters deserve to be shot'</a> <a href="file:///people/donald-trump">MORE</a></span></span></span></span> signed a document signaling his intent to withdraw from the treaty at the urging of former national security adviser <span><a href="file:///people/john-bolton">John Bolton</a><span><span><span><a href="file:///people/john-bolton">John Bolton</a><a href="file:///opinion/international/498463-have-the-courage-to-recognize-taiwan">Have the courage to recognize Taiwan</a> <a href="file:///homenews/senate/497910-mcconnell-says-obama-administration-did-leave-behind-pandemic-plan">McConnell says Obama administration 'did leave behind' pandemic plan</a> <a href="file:///regulation/court-battles/495713-trump-company-lawyer-warned-michael-cohen-not-to-write-tell-all-book">Trump company lawyer warned Michael Cohen not to write 'tell-all' book: report</a> <a href="file:///people/john-bolton">MORE</a></span></span></span></span> before he left the administration.</p>
+<p>The two viewpoints: Republicans for years have accused Russia of 
+violating the treaty by blocking flights over some of its territory, 
+including Kaliningrad and areas near its border with the Georgian 
+regions of South Ossetia and Abkhazia.</p>
+<p>Democrats, meanwhile, argue that Russia’s actions, while concerning, 
+do not constitute a material breach of the treaty and that they should 
+be addressed while the United States remains in the agreement. They have
+ also argued that the pact provides an invaluable tool to monitor 
+Russian military capabilities and signal resolve to U.S. allies, such as
+ flights over Ukraine following Russia’s seizure of a naval ship in 2018
+ and invasion of Crimea in 2014.</p>
+<p>‘Disturbed by reports’: At his confirmation hearing to become U.S. 
+ambassador to Russia, Deputy Secretary of State John Sullivan said he’s 
+been assured that the United States has not withdrawn from the treaty. 
+He also said a withdrawal would require “substantial evidence” 
+supporting the national security case for leaving and pledged to consult
+ with Congress and U.S. allies before any withdrawal.</p>
+<p>In their letter, Smith and Engel highlighted Sullivan’s comments and 
+said they have yet to receive any analysis supporting a withdrawal.</p>
+<p>“We are specifically disturbed by reports indicating that both the 
+State Department and the Department of Defense have been ordered by the 
+White House not to discuss the Open Skies Treaty with Congress,” they 
+wrote.</p>
+<p>“We are also concerned that the White House may have used biased 
+analysis as it pertains to potential treaty withdrawal, failing to 
+ensure an objective process and neglecting to properly coordinate with 
+the departments and agencies responsible for the treaty’s 
+implementation.”</p>
+<p>What Dems want: The chairman asked for written responses, followed by
+ a briefing, no later than Dec. 13 on an analysis of Open Skies flights 
+conducted by the United States and allies in 2018 and 2019; details on 
+efforts to mitigate risks to U.S. assets based on information collected 
+during flights; and communications from NATO allies and partners on 
+their views of a potential U.S. withdrawal.</p>
+<p>CHINA URGES US TO STOP ‘PROVOCATIVE ACTIONS’ AFTER NAVY SHIPS SAIL IN
+ SOUTH CHINA SEA: China has urged the U.S. to stop what it described as 
+"provocative actions" in the South China Sea after Navy ships sailed 
+near islands China has claimed.</p>
+<p>China's military told Reuters that two U.S. warships sailed through the area.</p>
+<p>“We urge [the United States] to stop these provocative actions to 
+avoid any unforeseeable accidents,” a spokesperson for China’s Southern 
+Theatre Command said in a statement, according to the wire service.</p>
+<p>“China has indisputable sovereignty over the South China Sea islands and its surrounding area,” the spokesperson added. </p>
+<p>Also taking issue…: China's Ministry of Foreign Affairs also took 
+issue with the action, saying it harms the country's safety and 
+sovereignty, according to Reuters. </p>
+<p>“The U.S. actions severely damage China’s sovereignty and safety, 
+destroy the peace and stability in the South China Sea, and we express 
+our resolute opposition,” spokesman Geng Shuang told reporters Friday. </p>
+<p>The US military’s side: The U.S. military also told Reuters that the 
+ships sailed near the islands in the South China Sea in recent days, but
+ said the action was based "in the rule of law."</p>
+<p>“These missions are based in the rule of law and demonstrate our 
+commitment to upholding the rights, freedoms, and lawful uses of the sea
+ and airspace guaranteed to all nations,” U.S. Navy’s Seventh Fleet 
+spokeswoman, Cmdr. Reann Mommsen, told Reuters. </p>
+<p>The wire service reported that the U.S. has accused China of 
+militarizing the waterway and trying to intimidate other countries. </p>
+<p>ARMY CONDUCTING SECURITY ASSESSMENT OF TIKTOP AFTER SCHUMER WARNING: 
+The Army is conducting a security assessment of the social media app 
+TikTok after Senate Minority Leader Charles Schumer (D-N.Y) raised 
+concerns about the Chinese company.</p>
+<p>Army Secretary <span><a href="file:///people/ryan-mccarthy">Ryan McCarthy</a><span><span><span><a href="file:///people/ryan-mccarthy">Ryan McCarthy</a><a href="file:///opinion/national-security/495759-congress-must-stop-the-attempt-to-dismantle-military-medicine">Congress must stop the attempt to dismantle military medicine</a> <a href="file:///policy/defense/495762-defense-budget-brawl-looms-after-pandemic"> Defense budget brawl looms after pandemic</a> <a href="file:///policy/defense/overnights/495583-overnight-defense-sexual-assaults-increase-across-military-army">Overnight
+ Defense: Reports of sexual assaults increase across military | Army 
+defends bringing cadets back for Trump graduation speech</a> <a href="file:///people/ryan-mccarthy">MORE</a></span></span></span></span>
+ told reporters Thursday that he ordered the assessment after Schumer 
+asked him to probe potential risks associated with the video-sharing 
+app, according to Reuters.</p>
+<p>Schumer recently wrote to McCarthy, specifically expressing concern 
+about Army personnel use of the app, including as a tactic to recruit 
+new soldiers.</p>
+<p>"While I recognize that the Army must adapt its recruiting techniques
+ in order to attract young Americans to serve, I urge you to assess the 
+potential national security risks posed by China-owned technology 
+companies before choosing to utilize certain platforms," the senator 
+wrote.</p>
+<p>Prior warnings: The top Democrat and others have also previously expressed concerns about the social media platform.</p>
+<p>Last month, Schumer and Sen. <span><a href="file:///people/tom-cotton">Tom Cotton</a><span><span><span><a href="file:///people/tom-cotton">Thomas (Tom) Bryant Cotton</a><a href="file:///policy/cybersecurity/499970-democrats-call-on-ftc-to-investigate-potential-tiktok-child-privacy">Democrats call on FTC to investigate allegations of TikTok child privacy violations</a> <a href="file:///homenews/senate/499788-gop-senators-urge-trump-not-to-restrict-guest-worker-visas">GOP senators urge Trump not to restrict guest worker visas</a> <a href="file:///policy/international/china/499383-chinese-official-accuses-us-of-pushing-our-two-countries-to-the">Chinese official accuses US of 'pushing our two countries to the brink of a new Cold War'</a> <a href="file:///people/tom-cotton">MORE</a></span></span></span></span> (R-Ark.) asked intelligence officials to look into whether TikTok poses "national security risks.”</p>
+<p>"Security experts have voiced concerns that China’s vague patchwork 
+of intelligence, national security, and cybersecurity laws compel 
+Chinese companies to support and cooperate with intelligence work 
+controlled by the Chinese Communist Party," the lawmakers wrote to 
+acting Director of National Intelligence <span><a href="file:///people/joseph-maguire">Joseph Maguire</a><span><span><span><a href="file:///people/joseph-maguire">Joseph Maguire</a><a href="file:///policy/national-security/496909-top-intel-official-leaving-post">Top intel official leaving post</a> <a href="file:///policy/cybersecurity/496874-grenell-announces-creation-of-intelligence-community-cyber-executive">Grenell announces creation of intelligence community 'cyber executive' </a> <a href="file:///policy/cybersecurity/496141-ratcliffe-refuses-to-say-whether-russian-election-interference-favored">Ratcliffe refuses to say whether Russian election interference favored Trump</a> <a href="file:///people/joseph-maguire">MORE</a></span></span></span></span>.</p>
+<p>​​​​​​​</p>
+<p>TikTok is an immensely popular app among young people in the U.S. and
+ worldwide. The Hill has reached out to the platform for comment. </p>
+<p class="rm-manual">ICYMI</p>
+<p class="rm-manual">-- The Hill: Senate Democrats ask Pompeo to <a href="https://thehill.com/homenews/senate/471674-foreign-relations-democrats-ask-pompeo-to-recuse-himself-from-ukraine-matters">recuse himself from Ukraine matters</a></p>
+<p class="rm-manual">-- The Hill: Pompeo asks Iranian protesters to <a href="https://thehill.com/policy/international/471634-pompeo-calls-on-iranian-protesters-to-send-us-videos-photos-of">send US videos, photos of Tehran crackdown</a></p>
+<p class="rm-manual">-- The Hill: Intel officials told senators <a href="https://thehill.com/policy/national-security/471692-intel-officials-told-senators-russia-wanted-to-pin-election-meddling">Russia wanted to pin election meddling on Ukraine</a>: report</p>
+<p class="rm-manual">--The Hill: <a href="https://thehill.com/homenews/administration/471627-trump-repeats-debunked-ukraine-claim-a-day-after-hills-tough">Trump repeats debunked Ukraine claim</a> a day after Hill's tough testimony</p>
+<p class="rm-manual">-- The Hill: House GOP <a href="https://thehill.com/regulation/cybersecurity/471699-house-gop-criticizes-impeachment-drive-as-distracting-from-national">criticizes impeachment drive</a> as distracting from national security issues</p>
+<p class="rm-manual"> <span>Tags</span> <a href="file:///person/joseph-maguire">Joseph Maguire</a> <a href="file:///person/ryan-mccarthy">Ryan McCarthy</a> <a href="file:///person/donald-trump">Donald Trump</a> <a href="file:///person/bob-menendez">Bob Menendez</a> <a href="file:///person/eliot-engel">Eliot Engel</a> <a href="file:///person/john-bolton">John Bolton</a> <a href="file:///person/mike-pompeo">Mike Pompeo</a> <a href="file:///person/mark-esper">Mark Esper</a> <a href="file:///person/adam-smith">Adam Smith</a> <a href="file:///person/tom-cotton">Tom Cotton</a> <a href="file:///person/jack-reed">Jack Reed</a> <a href="file:///social-tags/defense">Defense</a> <a href="file:///social-tags/open-skies-treaty">Open Skies Treaty</a> <a href="file:///social-tags/video-surveillance">Video surveillance</a> <a href="file:///social-tags/china">China</a> <a href="file:///social-tags/russia">Russia</a> <a href="file:///social-tags/tiktok">TikTok</a> </p>
+<p class="rm-manual"><a href="http://thehill-v4.disqus.com/?url=https%3A%2F%2Fthehill.com%2Fpolicy%2Fdefense%2Fovernights%2F471731-overnight-defense-presented-by-boeing-house-chairmen-demand-answers">View the discussion thread.</a></p>
+<h2 class="rm-manual">Most Popular</h2>
+<h2 class="rm-manual">Video</h2>
+<p class="rm-manual"> <span><a href="file:///hilltv/rising/500129-mcconnell-challenger-on-how-yang-endorsement-could-help-him">McConnell challenger on how Yang endorsement could help him</a></span> </p>
+<p class="rm-manual">Rising</p>
+<p class="rm-manual"> <span><a href="file:///changing-america/well-being/mental-health/481650-inspired-by-metoo-some-men-are-trying-to-redefine">Inspired by #MeToo, some men are trying to redefine masculinity</a></span> </p>
+<p class="rm-manual">Changing America</p>
+<p class="rm-manual"> <span><a href="file:///hilltv/rising/500134-david-sirota-on-the-unrest-in-minneapolis">David Sirota on 'looting' and the unrest in Minneapolis</a></span> </p>
+<p class="rm-manual">Rising</p>
+<h2 class="rm-manual">More From The Web</h2>
+<h2 class="rm-manual">News</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///homenews/senate">Senate</a></li> <li class="rm-manual"><a href="file:///homenews/house">House</a></li> <li class="rm-manual"><a href="file:///homenews/campaign">Campaign</a></li> <li class="rm-manual"><a href="file:///homenews/administration">Administration</a></li> <li class="rm-manual"><a href="file:///regulation">Regulation</a></li> <li class="rm-manual"><a href="file:///homenews/media">Media</a></li> <li class="rm-manual"><a href="file:///blogs/blog-briefing-room">Briefing Room</a></li> <li class="rm-manual"><a href="file:///latino">Latino</a></li> <li class="rm-manual"><a href="file:///homenews/1230-report">12:30 Report</a></li> <li class="rm-manual"><a href="file:///homenews/coronavirus-report">Coronavirus Report</a></li> <li class="rm-manual"><a href="file:///blogs/floor-action">Floor Action</a></li> <li class="rm-manual"><a href="file:///blogs/in-the-know">In The Know</a></li> <li class="rm-manual"><a href="file:///homenews/sunday-talk-shows">Sunday Talk Shows</a></li> <li class="rm-manual"><a href="file:///">More</a></li> </ul>
+<h2 class="rm-manual">Policy</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///policy/defense">Defense</a></li> <li class="rm-manual"><a href="file:///policy/energy-environment">Energy &amp; Environment</a></li> <li class="rm-manual"><a href="file:///policy/finance">Finance</a></li> <li class="rm-manual"><a href="file:///policy/healthcare">Healthcare</a></li> <li class="rm-manual"><a href="file:///policy/technology">Technology</a></li> <li class="rm-manual"><a href="file:///policy/international">International</a></li> <li class="rm-manual"><a href="file:///policy/transportation">Transportation</a></li> <li class="rm-manual"><a href="file:///policy/cybersecurity">Cybersecurity</a></li> <li class="rm-manual"><a href="file:///policy/national-security">National Security</a></li> <li class="rm-manual"><a href="file:///policy">More</a></li> </ul>
+<h2 class="rm-manual">Video</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///video/in-the-news">Latest</a></li> <li class="rm-manual"><a href="file:///video/defense">Defense</a></li> <li class="rm-manual"><a href="file:///video/energy-environment">Energy &amp; Environment</a></li> <li class="rm-manual"><a href="file:///video/finance">Finance</a></li> <li class="rm-manual"><a href="file:///video/healthcare">Healthcare</a></li> <li class="rm-manual"><a href="file:///video/technology">Technology</a></li> <li class="rm-manual"><a href="file:///video/transportation">Transportation</a></li> <li class="rm-manual"><a href="file:///video/international">International</a></li> <li class="rm-manual"><a href="file:///video/cybersecurity">Cybersecurity</a></li> <li class="rm-manual"><a href="file:///video/national-security">National Security</a></li> <li class="rm-manual"><a href="file:///video/sunday-shows">Sunday Shows</a></li> <li class="rm-manual"><a href="file:///video/events">Events</a></li> <li class="rm-manual"><a href="file:///hill-tube">More</a></li> </ul>
+<h2 class="rm-manual">Opinion</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///opinion/columnists/brent-budowsky">Brent Budowsky</a></li> <li class="rm-manual"><a href="file:///opinion/columnists">Columnists</a></li> <li class="rm-manual"><a href="file:///blogs/congress-blog">Congress Blog</a></li> <li class="rm-manual"><a href="file:///blogs/pundits-blog">Contributors</a></li> <li class="rm-manual"><a href="file:///opinion">More</a></li> </ul>
+<h2 class="rm-manual">TheHill.com</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///privacy-policy">Privacy Policy</a></li> <li class="rm-manual"><a href="file:///terms-and-conditions">Terms &amp; Conditions</a></li> <li class="rm-manual"><a href="file:///contact">Contact</a></li> <li class="rm-manual"><a href="file:///contact/subscriptions">Subscriptions</a></li> <li class="rm-manual"><a href="file:///contact/advertise">Advertise</a></li> </ul>
+<h2 class="rm-manual">Resources</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///hill-apps">The Hill Apps</a></li> <li class="rm-manual"><a href="file:///people/">People</a></li> <li class="rm-manual"><a href="file:///resources/rss-feeds">RSS</a></li> </ul>
+<h2 class="rm-manual">Contributors</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///contributor-application-form">Become a Contributor</a></li> </ul>
+<h2 class="rm-manual">Other Areas</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///special-reports/special-reports">Special Reports</a></li> <li class="rm-manual"><a href="file:///galleries">Galleries</a></li> <li class="rm-manual"><a href="file:///classifieds">Classifieds</a></li> <li class="rm-manual"><a href="file:///resources/classifieds/employer">Jobs</a></li> </ul>
+<p class="rm-manual">The Hill 1625 K Street, NW Suite 900 Washington DC 20006 | 202-628-8500 tel | 202-628-8503 fax</p>
+<p class="rm-manual">The contents of this site are ©2020 Capitol Hill Publishing Corp., a subsidiary of News Communications, Inc.</p></article>
+</body></html>

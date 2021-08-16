@@ -1,0 +1,194 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> The corporations profiting from North Korean belligerence – Foreign Policy </p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/"> <span>Foreign Policy Magazine</span> </a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="#">Sign In</a> </li> <li class="rm-manual"> <a href="file:///subscribe"> <span>Subscribe</span> </a> <a href="file:///subscribe"> <span>Upgrade to Insider</span> </a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///category/latest/">Latest</a> </li> <li class="rm-manual"> <a href="file:///channel/news/">News</a> </li> <li class="rm-manual"> <a href="file:///channel/analysis/">Analysis</a> </li> <li class="rm-manual"> <a href="file:///podcasts/">Podcasts</a> </li> <li class="rm-manual"> <a href="file:///the-magazine/">The Magazine</a> </li> <li class="rm-manual"> <a>Channels</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///channel/economics/">Economics</a></li> <li class="rm-manual"><a href="file:///channel/security-2/">Security</a></li> <li class="rm-manual"><a href="file:///category/elephants-in-the-room/">Elephants in the Room</a></li> <li class="rm-manual"><a href="file:///category/shadow-government/">Shadow Government</a></li> <li class="rm-manual"><a href="file:///channel/her-power/">Her Power</a></li> </ul> <span> Close </span> </li> <li class="rm-manual"> <a href="file:///newsletters/">Newsletters</a> </li> </ul>
+<p class="rm-manual"><a href="file:///fpinsider/"><span>Your </span>FP Insider Access:</a></p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///power-maps">Power Maps</a></li> <li class="rm-manual"><a href="file:///conference-calls">Conference Calls</a></li> <li class="rm-manual"><a href="file:///special-reports">Special Reports</a></li> <li class="rm-manual"><a href="file:///podcasts/ispy">I Spy Plus</a></li> </ul>
+<p class="rm-manual"> Search </p>
+<h2 class="rm-manual">latest</h2>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/06/china-united-states-george-floyd-protests/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/06/china-united-states-george-floyd-protests/">Our Top Weekend Reads</a></h3><a href="https://foreignpolicy.com/2020/06/06/china-united-states-george-floyd-protests/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual">China condemns America's human rights record, the 
+United States is sliding into illiberalism, and workers will be the most
+ vulnerable when businesses reopen.</p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/category/five-reads/"> 5 Top Reads </a> <span>|</span> </p>
+<address class="rm-manual"> <a href="https://foreignpolicy.com/author/dan-haverty/" rel="author"> Dan Haverty</a>
+</address>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/05/india-police-brutality-george-floyd-protests-united-states/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/05/india-police-brutality-george-floyd-protests-united-states/">Indians Are Supporting George Floyd—and Ignoring Police Brutality in Their Own Country</a></h3><a href="https://foreignpolicy.com/2020/06/05/india-police-brutality-george-floyd-protests-united-states/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual">There are no protests to mark the systematic 
+mistreatment of the country’s poor, lower-caste communities, or other 
+minority groups.</p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/category/analysis/argument/"> Argument </a> <span>|</span> </p>
+<address class="rm-manual"> <a href="https://foreignpolicy.com/author/raksha-kumar/" rel="author"> Raksha Kumar</a>
+</address>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/05/nypd-sees-coordination-protests-counterintelligence-police-brutality/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/05/nypd-sees-coordination-protests-counterintelligence-police-brutality/">The NYPD Sees Coordination in Protests. It’s Incentivized To.</a></h3><a href="https://foreignpolicy.com/2020/06/05/nypd-sees-coordination-protests-counterintelligence-police-brutality/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual">Since 9/11, federal funding for counterintelligence has shifted the way New York and other cities are policed.</p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/category/analysis/argument/"> Argument </a> <span>|</span> </p>
+<address class="rm-manual"> <a href="https://foreignpolicy.com/author/jake-bittle/" rel="author"> Jake Bittle</a>
+</address>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/05/coronavirus-vladimir-putin-russia/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/05/coronavirus-vladimir-putin-russia/">The Coronavirus Could Hit Putin Most of All</a></h3><a href="https://foreignpolicy.com/2020/06/05/coronavirus-vladimir-putin-russia/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual">New surveys show a surprising decline in the 
+Russian president’s popularity. The pandemic will accelerate a trend of 
+mistrust in the Kremlin.</p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/category/analysis/argument/"> Argument </a> <span>|</span> </p>
+<address class="rm-manual"> <a href="https://foreignpolicy.com/author/maria-snegovaya/" rel="author"> Maria Snegovaya</a><span>,</span> <a href="https://foreignpolicy.com/author/denis-volkov/" rel="author"> Denis Volkov</a><span>,</span> <a href="https://foreignpolicy.com/author/stepan-goncharov/" rel="author"> Stepan Goncharov</a>
+</address>
+<p class="rm-manual"> <a href="file:///category/latest/">See All Stories</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://foreignpolicy.com/staff/">Meet the Staff</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/events">FP Events</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/fp-analytics/">FP Analytics</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/fp-peacegames/">FP PeaceGames</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://foreignpolicy.com/subscription-services/">Subscription Services</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/reprint-permissions/">Reprint Permissions</a></li> <li class="rm-manual"><a href="https://foreignpolicy.submittable.com/submit">Writer’s Guidelines</a></li> <li class="rm-manual"><a href="file:///employment-opportunities/">Work at FP</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://fpguide.foreignpolicy.com/2020-career">FP Guides – Graduate Education</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/fp-for-education/">FP For Education</a></li> <li class="rm-manual"><a href="file:///magazine">FP Archive</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/buy-back-issues/">Buy Back Issues</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://foreignpolicy.com/advertise-with-foreign-policy/">Advertise with FP</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/privacy/">Privacy Policy</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/contact-us/">Contact Us</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="#">Sign In</a> </li> <li class="rm-manual"> <a href="file:///subscribe"> <span>Subscribe</span> </a> <a href="file:///subscribe"> <span>Upgrade</span> </a> </li> </ul>
+<p class="rm-manual"> Search </p>
+<p class="rm-manual"> <span> Passport: </span> <span> The corporations profiting from North Korean belligerence </span> <span> The corporations profiting from North Kore... </span> </p>
+<p class="rm-manual">DON'T LOSE ACCESS: Your IP access to ForeignPolicy.com will expire on June 15.</p>
+<p class="rm-manual">To ensure uninterrupted reading, please contact Rachel Mines, sales director, at <a href="mailto:rachel.mines@foreignpolicy.com">rachel.mines@foreignpolicy.com</a>.</p>
+<p class="rm-manual"><a href="https://foreignpolicy.com/channel/passport-2/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/channel/passport-2/">Passport</a></h3> <p class="rm-manual"></p>
+<h1 class="rm-manual">The corporations profiting from North Korean belligerence</h1>
+<h2 class="rm-manual">North Korean aggression is a drain on South 
+Korea’s economy, but it’s a boon for the defense contractors looking to 
+flood the peninsula with new weapons systems. As Seoul awaits a possible
+ North Korean missile launch this week, the country is watching its 
+benchmark KOSPI become Asia’s worst-performing index this year. At the 
+same time, ...</h2>
+<address class="rm-manual"> <span>By</span> <a href="https://foreignpolicy.com/author/john-hudson/" rel="author"> John Hudson</a>
+</address>
+<p class="rm-manual"><span>|</span> April 12, 2013, 4:30 PM </p>
+<p> North Korean aggression is a <a href="http://www.foxbusiness.com/markets/2013/04/05/south-korean-stocks-slammed-by-north-korea-jitters-boj-policy/">drain on</a> South Korea’s economy, but it’s a boon for the defense contractors looking to flood the peninsula with new weapons systems. </p>
+<p> As Seoul awaits a possible North Korean missile launch this week, the country is watching its benchmark KOSPI become Asia’s <a href="http://www.ft.com/intl/cms/s/0/72e10336-a273-11e2-9b70-00144feabdc0.html#axzz2QAVRKdxD">worst-performing index this year</a>. At the same time, stocks for defense contractors with existing business ties with Seoul are surging. </p>
+<p> These firms are currently vying to equip South Korea with a mix of 
+radar systems, fighter jets, drones, and missile defense systems, and 
+include everyone from Boeing to Lockheed Martin to Northrop Grumman to 
+Raytheon to BAE Systems. While the South’s major acquisition decisions 
+are made with a long-term view, Pyongyang’s apocalyptic rhetoric doesn’t
+ exactly hurt the efforts of silver-tongued weapons salesmen. We took a 
+quick glance at the market valuation of the firms we’re talking about on
+ Thursday. </p>
+<p> Not bad. And how about the stock peformance since Pyongyang’s belligerence began in March? </p>
+<p> Even better. The below graph features a blue line representing the 
+above defense stocks and a red line representing the S&amp;P 500. 
+Despite the fact that the S&amp;P is having a <a href="http://www.money.cnn.com/2013/04/11/investing/stocks-markets/">record-breaking month</a>, it’s no match for surging investor interest in defense stocks in the wake of Pyongyang threats: </p>
+<p> So what do these companies have to gain? Here’s a breakdown of the 
+existing and future bids these firms are trying to lock down with South 
+Korea: </p>
+<p> Fighter Jets </p>
+<p> Currently the biggest names in defense contracting are vying to 
+provide Seoul with 60 new fighter jets in a global competition worth 
+billions of dollars. Last week, the Pentagon <a href="http://www.reuters.com/article/2013/04/03/us-korea-usa-fighters-idUSBRE93210220130403">approved</a>
+ the potential sale of Lockheed Martin’s F-35 stealth fighter and 
+Boeing’s F-15 Silent Eagle fighter to Korea. But Lockheed and Boeing 
+don’t just have themselves to compete with: The pan-European aerospace 
+and defence corporation EADS and BAE Systems are also offering the 
+Eurofighter Typhoon. To get a sense of the kind of coin we’re talking 
+about, the Pentagon says the proposed sale of Lockheed’s F-35 fighters 
+would be worth as much as $10.8 billion. On Tuesday, Dave Scott, a 
+senior Lockheed executive, <a href="http://english.yonhapnews.co.kr/national/2013/04/09/30/0301000000AEN20130409011000315F.HTML">renewed his pitch</a>
+ for the F-35 in light of Pyongyang’s belligerence, saying the actions 
+of the regime “have reinforced the need to be strong and to be 
+recognized.” </p>
+<p> According to <a href="http://www.reuters.com/article/2013/04/03/us-korea-usa-fighters-idUSBRE93210220130403">Reuters</a>, Seoul will announce the winner of the competition sometime between June and November. </p>
+<p> Drones </p>
+<p> Though a proposed deal between Seoul and Northrop Grumman for a fleet of $215 million Global Hawk drones is still at an “<a href="http://blogs.reuters.com/great-debate/2013/04/01/a-spy-plane-alliance/">early stage</a>,”
+ the contract could pay off hugely for the Virginia-based contractor. 
+The drone is the size of an airliner and, according to weapons expert<a href="http://blogs.reuters.com/great-debate/2013/04/01/a-spy-plane-alliance/"> David Axe</a>,
+ could become a lynchpin of the “burgeoning robotic alliance” between 
+Tokyo, Washington, Seoul, and Canberra. It’s also quite a valuable 
+contract: In December, the Pentagon pegged the <a href="http://www.nytimes.com/2012/12/30/opinion/sunday/drones-for-south-korea.html?_r=0">proposed</a> sale of four Global Hawks by Northrop at a cool $1.2 billion. </p>
+<p> Radar </p>
+<p> Hot off the presses, Massachusetts-based contractor Raytheon <a href="http://www.upi.com/Business_News/Security-Industry/2013/04/11/South-Korea-picks-Raytheon-radar/UPI-44901365691129/?spt=hs&amp;or=si">announced</a>
+ the sale of its Raytheon Advanced Combat Radar (RACR) to South Korea on
+ Thursday. The radar, an “active electronically scanned array system,” 
+is built specifically for use on F-16 Fighting Falcons, and is part of a
+ planned <a href="http://www.fool.com/investing/general/2013/04/10/raytheon-wins-part-of-11-billion-south-korean-cont.aspx">$1.1 billion upgrade</a>
+ to South Korea’s fighter jet fleet. “RACR will keep the Republic of 
+Korea’s KF-16 combat-relevant in a constantly evolving threat 
+environment,” said Raytheon Space and Airborne Systems President Rick 
+Yuse. Previously, South Korea has also made<a href="http://www.haaretz.com/news/south-korea-to-buy-israeli-radar-system-in-215-million-deal-1.270231"> large purchases</a> of radar equipment from Israel Aerospace Industries. </p>
+<p> Missiles and Missile Defense </p>
+<p> In terms of raw missiles, Raytheon also benefits from a South Korean
+ defensive buying spree. Seoul is a major customer of Raytheon’s newest 
+incarnation of the Advanced Medium-Range Air-to-Air Missile (AMRAAM). As
+ recently as December, South Korea <a href="http://www.bloomberg.com/news/2012-12-21/raytheon-storing-missiles-awaiting-motors-air-force-says.html">ordered</a>
+ AMRAAM missiles from Raytheon, although the shipment was delayed 
+because the missiles were missing their motors. Additionally, the 
+Israeli defense firm Rafael has expressed a strong interest in selling 
+its sometimes vaunted, sometimes pooh-poohed Iron Dome technology to 
+South Korea. But as <a href="http://e-ring.foreignpolicy.com/posts/2013/04/09/why_doesn_t_seoul_have_iron_dome">Kevin Baron reported</a>
+ on Monday, previous deals have met with resistance due to the system’s 
+steep price tag among other things: Each Iron Dome battery costs an 
+estimated $50 million and the interceptor rockets cost between $50,000 
+and $80,000 each. In sum, there’s a lot of money to be made on the 
+Korean Peninsula. </p>
+<p class="rm-manual"> <a href="file:///comments_view/?view_post_comments=https%3A%2F%2Fforeignpolicy.com%2F2013%2F04%2F12%2Fthe-corporations-profiting-from-north-korean-belligerence%2F">View Comments</a> </p>
+<p class="rm-manual">Latest</p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/06/china-united-states-george-floyd-protests/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/06/china-united-states-george-floyd-protests/">Our Top Weekend Reads</a></h3><a href="https://foreignpolicy.com/2020/06/06/china-united-states-george-floyd-protests/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> June 6, 2020, 7:00 AM </p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/05/india-police-brutality-george-floyd-protests-united-states/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/05/india-police-brutality-george-floyd-protests-united-states/">Indians Are Supporting George Floyd—and Ignoring Police Brutality in Their Own Country</a></h3><a href="https://foreignpolicy.com/2020/06/05/india-police-brutality-george-floyd-protests-united-states/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> June 5, 2020, 10:03 PM </p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/05/nypd-sees-coordination-protests-counterintelligence-police-brutality/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/05/nypd-sees-coordination-protests-counterintelligence-police-brutality/">The NYPD Sees Coordination in Protests. It’s Incentivized To.</a></h3><a href="https://foreignpolicy.com/2020/06/05/nypd-sees-coordination-protests-counterintelligence-police-brutality/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> June 5, 2020, 9:13 PM </p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/05/coronavirus-vladimir-putin-russia/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/05/coronavirus-vladimir-putin-russia/">The Coronavirus Could Hit Putin Most of All</a></h3><a href="https://foreignpolicy.com/2020/06/05/coronavirus-vladimir-putin-russia/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> June 5, 2020, 6:12 PM </p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/05/pandemic-protests-trump-national-security-interview-kori-schake-jake-sullivan/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/05/pandemic-protests-trump-national-security-interview-kori-schake-jake-sullivan/">The Pandemic and the Protests</a></h3><a href="https://foreignpolicy.com/2020/06/05/pandemic-protests-trump-national-security-interview-kori-schake-jake-sullivan/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> June 5, 2020, 5:01 PM </p>
+<p class="rm-manual"> <a href="file:///category/latest/">See All Stories</a> </p>
+<p class="rm-manual"><span>Trending</span></p>
+<ol class="rm-manual"> <li class="rm-manual"> <p class="rm-manual">1</p> <p class="rm-manual"> <a href="file:///2020/06/03/trump-military-george-floyd-protests/">A Moment of National Shame and Peril—and Hope</a> </p> </li> <li class="rm-manual"> <p class="rm-manual">2</p> <p class="rm-manual"> <a href="file:///2020/06/05/coronavirus-vladimir-putin-russia/">The Coronavirus Could Hit Putin Most of All</a> </p> </li> <li class="rm-manual"> <p class="rm-manual">3</p> <p class="rm-manual"> <a href="file:///2020/06/05/india-police-brutality-george-floyd-protests-united-states/">Indians Are Supporting George Floyd—and Ignoring Police Brutality in Their Own Country</a> </p> </li> <li class="rm-manual"> <p class="rm-manual">4</p> <p class="rm-manual"> <a href="file:///2020/06/05/china-globalization-weaponizing-trade-communist-party/">China Is Weaponizing Globalization</a> </p> </li> <li class="rm-manual"> <p class="rm-manual">5</p> <p class="rm-manual"> <a href="file:///2020/06/05/trump-george-floyd-protests-letter-military-leaders/">Hundreds of Former National Security Officials Condemn Trump’s Response to Protests</a> </p> </li> </ol>
+<p class="rm-manual">Voices</p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/05/coronavirus-pandemic-covid-lessons-united-states-9-11/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/05/coronavirus-pandemic-covid-lessons-united-states-9-11/">The United States Will Learn Nothing From the Pandemic</a></h3><a href="https://foreignpolicy.com/2020/06/05/coronavirus-pandemic-covid-lessons-united-states-9-11/"> </a> <p class="rm-manual"></p>
+<address class="rm-manual"> <a href="https://foreignpolicy.com/author/micah-zenko/" rel="author"> Micah Zenko</a> </address>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/04/george-floyd-protests-arab-spring-parallels-tahrir-square/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/04/george-floyd-protests-arab-spring-parallels-tahrir-square/">Yes, Lafayette Square Is Tahrir Square</a></h3><a href="https://foreignpolicy.com/2020/06/04/george-floyd-protests-arab-spring-parallels-tahrir-square/"> </a> <p class="rm-manual"></p>
+<address class="rm-manual"> <a href="https://foreignpolicy.com/author/steven-a-cook/" rel="author"> Steven A. Cook</a> </address>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/01/travel-bubbles-borders-flights-coronavirus-uk-france-air-bridge/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/01/travel-bubbles-borders-flights-coronavirus-uk-france-air-bridge/">Welcome to a World of Bubbles</a></h3><a href="https://foreignpolicy.com/2020/06/01/travel-bubbles-borders-flights-coronavirus-uk-france-air-bridge/"> </a> <p class="rm-manual"></p>
+<address class="rm-manual"> <a href="https://foreignpolicy.com/author/james-crabtree/" rel="author"> James Crabtree</a> </address>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://foreignpolicy.com/staff/">Meet the Staff</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/events">FP Events</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/fp-analytics/">FP Analytics</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/fp-peacegames/">FP PeaceGames</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://foreignpolicy.com/subscription-services/">Subscription Services</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/reprint-permissions/">Reprint Permissions</a></li> <li class="rm-manual"><a href="https://foreignpolicy.submittable.com/submit">Writer’s Guidelines</a></li> <li class="rm-manual"><a href="file:///employment-opportunities/">Work at FP</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://fpguide.foreignpolicy.com/2020-career">FP Guides – Graduate Education</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/fp-for-education/">FP For Education</a></li> <li class="rm-manual"><a href="file:///magazine">FP Archive</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/buy-back-issues/">Buy Back Issues</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://foreignpolicy.com/advertise-with-foreign-policy/">Advertise with FP</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/privacy/">Privacy Policy</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/contact-us/">Contact Us</a></li> </ul>
+<p class="rm-manual">Powered by <a href="https://wpvip.com/?utm_source=vip_powered_wpcom&amp;utm_medium=web&amp;utm_campaign=VIP%20Footer%20Credit&amp;utm_term=foreignpolicy.com" rel="generator nofollow">WordPress.com VIP</a></p>
+<p class="rm-manual">© 2020, The Slate Group</p></article>
+</body></html>

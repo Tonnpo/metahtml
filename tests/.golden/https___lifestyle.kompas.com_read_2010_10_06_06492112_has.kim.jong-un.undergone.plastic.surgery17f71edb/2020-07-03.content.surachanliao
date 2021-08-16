@@ -1,0 +1,190 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Has Kim Jong-Un Undergone Plastic Surgery? </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="http://kompas.id/">Harian Kompas</a> </li> <li class="rm-manual"> <a href="http://www.kompas.tv/">Kompas TV</a> </li> <li class="rm-manual"> <a href="">Live Radio</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="http://www.kompasiana.com/">Kompasiana.com</a> </li> <li class="rm-manual"> <a href="http://www.kompaskarier.com/">Kompaskarier.com</a> </li> <li class="rm-manual"> <a href="https://www.gramedia.com/">Gramedia.com</a> </li> <li class="rm-manual"> <a href="https://ebooks.gramedia.com/">Gramedia Digital</a> </li> <li class="rm-manual"> <a href="http://www.gridoto.com/">GridOto.com</a> </li> <li class="rm-manual"> <a href="http://www.bolasport.com/">Bolasport.com</a> </li> <li class="rm-manual"> <a href="http://www.grid.id/">Grid.id</a> </li> <li class="rm-manual"> <a href="http://www.kontan.co.id/">Kontan.co.id</a> </li> <li class="rm-manual"> <a href="https://www.kgmedia.id/">Kgmedia.id</a> </li> </ul>
+<p class="rm-manual"> <a href="https://info.kompas.com/promo/epaper-kompasid?source=buttonpremium">Epaper gratis</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://sso.kompas.com/login/a29tcGFz/aHR0cDovL2xpZmVzdHlsZS5rb21wYXMuY29tL3JlYWQvMjAxMC8xMC8wNi8wNjQ5MjExMi9oYXMua2ltLmpvbmctdW4udW5kZXJnb25lLnBsYXN0aWMuc3VyZ2VyeQ==">MASUK</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://news.kompas.com/">News</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://nasional.kompas.com/">Nasional</a> </li> <li class="rm-manual"> <a href="https://megapolitan.kompas.com/">Megapolitan</a> </li> <li class="rm-manual"> <a href="https://www.kompas.com/global">Global</a> </li> <li class="rm-manual"> <a href="https://inside.kompas.com/suratpembaca">Surat Pembaca</a> </li> <li class="rm-manual"> <a href="https://kilasdaerah.kompas.com/">Kilas Daerah</a> </li> <li class="rm-manual"> <a href="https://kilaskorporasi.kompas.com/">Kilas Korporasi</a> </li> <li class="rm-manual"> <a href="https://kilaskementerian.kompas.com/">Kilas Kementerian</a> </li> <li class="rm-manual"> <a href="https://sorotpolitik.kompas.com/">Sorot Politik</a> </li> <li class="rm-manual"> <a href="https://kilasbadannegara.kompas.com/">Kilas Badan Negara</a> </li> <li class="rm-manual"> <a href="https://kilasparlemen.kompas.com/">Kilas Parlemen</a> </li> <li class="rm-manual"> <a href="https://news.kompas.com/search">Indeks</a> </li> <li class="rm-manual"> <a href="https://regional.kompas.com/">Regional</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://medan.kompas.com/">Medan</a></li> <li class="rm-manual"><a href="https://palembang.kompas.com/">Palembang</a></li> <li class="rm-manual"><a href="https://surabaya.kompas.com/">Surabaya</a></li> <li class="rm-manual"><a href="https://makassar.kompas.com/">Makassar</a></li> <li class="rm-manual"><a href="https://balikpapan.kompas.com/">Balikpapan</a></li> <li class="rm-manual"><a href="https://samarinda.kompas.com/">Samarinda</a></li> </ul> </li> </ul> </li> <li class="rm-manual"> <a href="https://www.kompas.com/tren">Tren</a> </li> <li class="rm-manual"> <a href="https://www.kompas.com/hype">Hype</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.kompas.com/hype/seleb">Seleb</a> </li> <li class="rm-manual"> <a href="https://www.kompas.com/hype/musik">Musik</a> </li> <li class="rm-manual"> <a href="https://www.kompas.com/hype/film">Film</a> </li> <li class="rm-manual"> <a href="https://www.kompas.com/hype/hits">Hits</a> </li> <li class="rm-manual"> <a href="https://entertainment.kompas.com/">Ent!</a> </li> <li class="rm-manual"> <a href="https://www.kompas.com/hype/search">Indeks</a> </li> </ul> </li> <li class="rm-manual"> <a href="https://www.kompas.com/food">Food</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.kompas.com/food/resep">Resep</a> </li> <li class="rm-manual"> <a href="https://www.kompas.com/food/tips-kuliner">Tips Kuliner</a> </li> <li class="rm-manual"> <a href="https://www.kompas.com/food/food-news">Food News</a> </li> <li class="rm-manual"> <a href="https://www.kompas.com/food/food-story">Food Story</a> </li> <li class="rm-manual"> <a href="https://www.kompas.com/food/gallery">Galeri</a> </li> </ul> </li> <li class="rm-manual"> <a href="https://money.kompas.com/">Money</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://money.kompas.com/whatsnew">Whats New</a> </li> <li class="rm-manual"> <a href="https://money.kompas.com/earnsmart">Earn Smart</a> </li> <li class="rm-manual"> <a href="https://money.kompas.com/worksmart">Work Smart</a> </li> <li class="rm-manual"> <a href="https://money.kompas.com/spendsmart">Spend Smart</a> </li> <li class="rm-manual"> <a href="https://kilasbumn.kompas.com/">Kilas BUMN</a> </li> <li class="rm-manual"> <a href="https://kilasbadan.kompas.com/">Kilas Badan</a> </li> <li class="rm-manual"> <a href="https://kilastransportasi.kompas.com/">Kilas Transportasi</a> </li> <li class="rm-manual"> <a href="https://kilasfintech.kompas.com/">Kilas Fintech</a> </li> <li class="rm-manual"> <a href="https://money.kompas.com/search">Indeks</a> </li> </ul> </li> <li class="rm-manual"> <a href="https://bola.kompas.com/">Bola</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://bola.kompas.com/liga-indonesia">Liga Indonesia</a> </li> <li class="rm-manual"> <a href="https://bola.kompas.com/liga-italia">Liga Italia</a> </li> <li class="rm-manual"> <a href="https://bola.kompas.com/liga-champions">Liga Champions</a> </li> <li class="rm-manual"> <a href="https://bola.kompas.com/liga-lain">Liga Lain</a> </li> <li class="rm-manual"> <a href="https://bola.kompas.com/liga-inggris">Liga Inggris</a> </li> <li class="rm-manual"> <a href="https://bola.kompas.com/liga-spanyol">Liga Spanyol</a> </li> <li class="rm-manual"> <a href="https://bola.kompas.com/internasional">Internasional</a> </li> <li class="rm-manual"> <a href="https://bola.kompas.com/bundesliga">Bundesliga</a> </li> <li class="rm-manual"> <a href="https://www.kompas.com/motogp">Motogp</a> </li> <li class="rm-manual"> <a href="https://www.kompas.com/badminton">Badminton</a> </li> <li class="rm-manual"> <a href="https://www.kompas.com/sports">Sports</a> </li> <li class="rm-manual"> <a href="https://indeks.kompas.com/?site=bola">Indeks</a> </li> </ul> </li> <li class="rm-manual"> <a href="https://tekno.kompas.com/">Tekno</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://tekno.kompas.com/apps-os">APPS &amp; OS</a> </li> <li class="rm-manual"> <a href="https://tekno.kompas.com/gadget">Gadget</a> </li> <li class="rm-manual"> <a href="https://tekno.kompas.com/internet">Internet</a> </li> <li class="rm-manual"> <a href="https://tekno.kompas.com/hardware">Hardware</a> </li> <li class="rm-manual"> <a href="https://tekno.kompas.com/business">Business</a> </li> <li class="rm-manual"> <a href="https://tekno.kompas.com/galeri">Galeri</a> </li> <li class="rm-manual"> <a href="https://tekno.kompas.com/search">Indeks</a> </li> </ul> </li> <li class="rm-manual"> <a href="https://www.kompas.com/sains">Sains</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.kompas.com/sains/fenomena">Fenomena</a> </li> <li class="rm-manual"> <a href="https://www.kompas.com/sains/kita">Kita</a> </li> <li class="rm-manual"> <a href="https://www.kompas.com/sains/oh-begitu">Oh Begitu</a> </li> <li class="rm-manual"> <a href="https://www.kompas.com/sains/halo-prof">Halo Prof</a> </li> <li class="rm-manual"> <a href="https://www.kompas.com/sains/prof-cilik">Prof Cilik</a> </li> <li class="rm-manual"> <a href="https://www.kompas.com/sains/search">Indeks</a> </li> </ul> </li> <li class="rm-manual"> <a href="https://otomotif.kompas.com/">Otomotif</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://otomotif.kompas.com/motor">Motor</a> </li> <li class="rm-manual"> <a href="https://otomotif.kompas.com/mobil">Mobil</a> </li> <li class="rm-manual"> <a href="https://otomotif.kompas.com/sport">Sport</a> </li> <li class="rm-manual"> <a href="https://otomotif.kompas.com/niaga">Niaga</a> </li> <li class="rm-manual"> <a href="https://otomotif.kompas.com/komunitas">Komunitas</a> </li> </ul> </li> <li class="rm-manual"> <a href="https://lifestyle.kompas.com/">Lifestyle</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://lifestyle.kompas.com/eat-good">Eat Good</a> </li> <li class="rm-manual"> <a href="https://lifestyle.kompas.com/look-good">Look Good</a> </li> <li class="rm-manual"> <a href="https://lifestyle.kompas.com/feel-good">Feel Good</a> </li> <li class="rm-manual"> <a href="https://genbest.kompas.com/">Sadar Stunting</a> </li> </ul> </li> <li class="rm-manual"> <a href="https://health.kompas.com/">Health</a> </li> <li class="rm-manual"> <a href="https://properti.kompas.com/">Properti</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://properti.kompas.com/umum">News</a> </li> <li class="rm-manual"> <a href="https://properti.kompas.com/hunian">Hunian</a> </li> <li class="rm-manual"> <a href="https://properti.kompas.com/arsitektur">Arsitektur</a> </li> <li class="rm-manual"> <a href="https://properti.kompas.com/beranda">Beranda</a> </li> <li class="rm-manual"> <a href="https://properti.kompas.com/konsultasi">Konsultasi</a> </li> <li class="rm-manual"> <a href="https://properti.kompas.com/figur">Figur</a> </li> <li class="rm-manual"> <a href="https://properti.kompas.com/tips">Tips</a> </li> <li class="rm-manual"> <a href="https://properti.kompas.com/galeri-360">Galeri 360</a> </li> <li class="rm-manual"> <a href="https://properti.kompas.com/search">Indeks</a> </li> <li class="rm-manual"> <a href="https://sorot.kompas.com/">Sorot Properti</a> </li> </ul> </li> <li class="rm-manual"> <a href="https://travel.kompas.com/">Travel</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://travel.kompas.com/jalan-jalan">Jalan Jalan</a> </li> <li class="rm-manual"> <a href="https://travel.kompas.com/makan-makan">Makan Makan</a> </li> <li class="rm-manual"> <a href="https://travel.kompas.com/travel-tips">Travel Tips</a> </li> <li class="rm-manual"> <a href="https://travel.kompas.com/promo-diskon">Promo &amp; Diskon</a> </li> <li class="rm-manual"> <a href="https://travel.kompas.com/whats-hot">Whats Hot</a> </li> <li class="rm-manual"> <a href="https://travel.kompas.com/galeri">Galeri</a> </li> <li class="rm-manual"> <a href="https://pesonaindonesia.kompas.com/">Pesona Indonesia</a> </li> <li class="rm-manual"> <a href="https://superapps.kompas.com/">Superapp</a> </li> <li class="rm-manual"> <a href="https://ohayojepang.kompas.com/">Ohayo Jepang</a> </li> <li class="rm-manual"> <a href="https://travel.kompas.com/search">Indeks</a> </li> </ul> </li> <li class="rm-manual"> <a href="https://edukasi.kompas.com/">Edukasi</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://edukasi.kompas.com/sekolah">Sekolah</a> </li> <li class="rm-manual"> <a href="https://edukasi.kompas.com/perguruan-tinggi">Perguruan Tinggi</a> </li> <li class="rm-manual"> <a href="https://edukasi.kompas.com/pendidikan-khusus">Pendidikan Khusus</a> </li> <li class="rm-manual"> <a href="https://edukasi.kompas.com/beasiswa">Beasiswa</a> </li> </ul> </li> <li class="rm-manual"> <a href="https://jeo.kompas.com/">JEO</a> </li> <li class="rm-manual"> <a href="https://kolom.kompas.com/">Kolom</a> </li> <li class="rm-manual"> <a href="https://foto.kompas.com/">Images</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://foto.kompas.com/photo">Foto</a> </li> <li class="rm-manual"> <a href="https://foto.kompas.com/video">Video</a> </li> </ul> </li> <li class="rm-manual"> <a href="https://vik.kompas.com/">VIK</a> </li> </ul>
+<p class="rm-manual"> <span>Bagikan:</span> </p>
+<p class="rm-manual">Has Kim Jong-Un Undergone Plastic Surgery?</p>
+<p class="rm-manual"> <span>Komentar: </span> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.kompas.com/"><span>Home</span></a></li> <li class="rm-manual"><a href="https://lifestyle.kompas.com/"><span>Kompas.com</span></a></li> <li class="rm-manual"><a href="https://lifestyle.kompas.com/national"><span>National</span></a></li> </ul>
+<h1 class="rm-manual">Has Kim Jong-Un Undergone Plastic Surgery?</h1>
+<p class="rm-manual">Kompas.com - 06/10/2010, 06:49 WIB</p>
+<p class="rm-manual"> <span>Bagikan:</span> </p>
+<p class="rm-manual"> <a href="file:///var/folders/q2/d22qjbd926jdgdt0jz3m375h0000gn/T/~National">Komentar </a> </p>
+<p class="rm-manual"><span>Editor</span>Jimmy Hitipeuw</p>
+<p>KOMPAS.com - Most people look to plastic surgery as a way of turning 
+back time. But Kim Jong-un, the 27-year-old heir to the North Korean 
+regime, has reportedly taken the opposite tack by going under the knife 
+to look more like his grandfather.</p>
+<p> Speculation is rife in North and South Korea over the striking 
+similarity between Kim Jong-un and Kim Il-sung, the founder of the 
+family dynasty.</p>
+<p> Gone is the slender youth shown in earlier pictures of the youngest son of ailing North Korean leader Kim Jong-il.</p>
+<p> His first official photographs reveal an unmistakable resemblance 
+with his deeply respected grandfather, with the same chubby jowls, 
+double chin and down-turned mouth. He also favours the family's 
+trademark swept-back hairstyle.</p>
+<p> South Korean newspapers suggest the new look is all part of a 
+concerted effort to raise the hitherto unknown prospective leader’s 
+standing with the public.</p>
+<p> He has had a dizzying rise to prominence. Until the past few weeks, 
+he had never even been named by the North Korean media and before a 
+recent Worker’s Party conference, when he was promoted to senior 
+positions within the government and the military, only a few grainy 
+images of him had been seen.</p>
+<p> It is no surprise, then, that his handlers feel that he may need a little help to make his mark.</p>
+<p> The Dong-A Ilbo newspaper in South Korea said the Pyongyang regime 
+was hoping to cement Kim’s position as the country’s next leader through
+ ‘a reincarnation of North Korea’s late founder.’</p>
+<p> Another report said North Koreans were also speculating that Kim may have had some cosmetic help with his new look.</p>
+<p> ‘A lot of people in South Korea have pointed out that Kim’s face is 
+very different from when he was young, particularly the shape of his 
+chin,’ said Professor Toshimitsu Shigemura, an expert on North Korea at 
+Tokyo’s Waseda University.</p>
+<p> ‘From previous photos, everyone had remarked that he looked nothing 
+like his grandfather, so the change is quite dramatic,’ he said in an 
+interview.</p>
+<p> Kim Il-Sung, officially referred to as the ‘Great Leader’ in North 
+Korea, ran the country from its founding in 1948 until his death in 
+1994, when his son, Kim Jong-il took over the reins of power.</p>
+<p> <a href="https://lifestyle.kompas.com/komentar/2010/10/06/06492112/has.kim.jong-un.undergone.plastic.surgery"> </a></p><p class="rm-manual"><a href="https://lifestyle.kompas.com/komentar/2010/10/06/06492112/has.kim.jong-un.undergone.plastic.surgery"> Komentar </a></p><a href="https://lifestyle.kompas.com/komentar/2010/10/06/06492112/has.kim.jong-un.undergone.plastic.surgery"> </a> <p></p>
+<p class="rm-manual"> Dapatkan Voucher Belanja jutaan rupiah, dengan #JernihBerkomentar di bawah ini! <a href="https://jmd.kompas.com/jernihberkomentar">*S&amp;K berlaku</a> </p>
+<p class="rm-manual"> <span>Kolom komentar masih kosong</span> </p>
+<p class="rm-manual">Berkomentarlah secara bijaksana dan bertanggung 
+jawab. Komentar sepenuhnya menjadi tanggung jawab komentator seperti 
+diatur dalam UU ITE</p>
+<p class="rm-manual">Laporkan Komentar</p>
+<p class="rm-manual">Iklan atau spam</p>
+<p class="rm-manual">Porno atau asusila</p>
+<p class="rm-manual">Ujaran kebencian atau SARA</p>
+<p class="rm-manual">Perundungan atau pelecehan</p>
+<p class="rm-manual">Lainnya</p>
+<p class="rm-manual">Terima kasih. Kami sudah menerima laporan Anda. 
+Kami akan menghapus komentar yang bertentangan dengan Panduan Komunitas 
+dan UU ITE.</p>
+<h2 class="rm-manual">Terkini Lainnya</h2>
+<h3 class="rm-manual"><a href="https://lifestyle.kompas.com/read/2020/07/03/235821520/bagaimana-menjaga-kesehatan-bayi-dari-infeksi-virus-dan-bakteri">Bagaimana Menjaga Kesehatan Bayi dari Infeksi Virus dan Bakteri?</a></h3>
+<p class="rm-manual">Feel Good</p>
+<p class="rm-manual">03/07/2020, 23:58 WIB</p>
+<h3 class="rm-manual"><a href="https://lifestyle.kompas.com/read/2020/07/03/231433020/5-cara-mencegah-sembelit-pada-anak">5 Cara Mencegah Sembelit pada Anak</a></h3>
+<p class="rm-manual">Feel Good</p>
+<p class="rm-manual">03/07/2020, 23:14 WIB</p>
+<h3 class="rm-manual"><a href="https://lifestyle.kompas.com/read/2020/07/03/223044820/benarkah-teh-hitam-juga-bisa-membantu-turunkan-berat-badan">Benarkah Teh Hitam Juga Bisa Membantu Turunkan Berat Badan?</a></h3>
+<p class="rm-manual">Eat Good</p>
+<p class="rm-manual">03/07/2020, 22:30 WIB</p>
+<h3 class="rm-manual"><a href="https://lifestyle.kompas.com/read/2020/07/03/215259620/jeff-bezos-orang-terkaya-di-dunia-memakai-sepatu-dan-jam-tangan-apa">Jeff Bezos, Orang Terkaya di Dunia Memakai Sepatu dan Jam Tangan Apa?</a></h3>
+<p class="rm-manual">Look Good</p>
+<p class="rm-manual">03/07/2020, 21:52 WIB</p>
+<h3 class="rm-manual"><a href="https://lifestyle.kompas.com/read/2020/07/03/210526520/new-balance-kembali-produksi-masker-wajah-untuk-perangi-covid-19">New Balance Kembali Produksi Masker Wajah untuk Perangi Covid-19</a></h3>
+<p class="rm-manual">Look Good</p>
+<p class="rm-manual">03/07/2020, 21:05 WIB</p>
+<h3 class="rm-manual"><a href="https://lifestyle.kompas.com/read/2020/07/03/202029120/berapa-ukuran-penis-ideal-untuk-memuaskan-pasangan">Berapa Ukuran Penis Ideal untuk Memuaskan Pasangan?</a></h3>
+<p class="rm-manual">Feel Good</p>
+<p class="rm-manual">03/07/2020, 20:20 WIB</p>
+<h3 class="rm-manual"><a href="https://lifestyle.kompas.com/read/2020/07/03/200652320/cara-baru-untuk-berpelukan-di-tengah-pandemi">Cara Baru untuk Berpelukan di Tengah Pandemi</a></h3>
+<p class="rm-manual">Feel Good</p>
+<p class="rm-manual">03/07/2020, 20:06 WIB</p>
+<h3 class="rm-manual"><a href="https://lifestyle.kompas.com/read/2020/07/03/184637320/jangan-takut-pap-smear-tak-menimbulkan-rasa-sakit">Jangan Takut, Pap Smear Tak Menimbulkan Rasa Sakit</a></h3>
+<p class="rm-manual">Feel Good</p>
+<p class="rm-manual">03/07/2020, 18:46 WIB</p>
+<h3 class="rm-manual"><a href="https://lifestyle.kompas.com/read/2020/07/03/182505220/hal-hal-yang-tidak-boleh-dilakukan-sebelum-pap-smear">Hal-Hal yang Tidak Boleh Dilakukan Sebelum Pap Smear </a></h3>
+<p class="rm-manual">Feel Good</p>
+<p class="rm-manual">03/07/2020, 18:25 WIB</p>
+<h3 class="rm-manual"><a href="https://lifestyle.kompas.com/read/2020/07/03/162910920/tom-hanks-pun-kesal-pada-orang-yang-malas-pakai-masker">Tom Hanks Pun Kesal pada Orang yang Malas Pakai Masker</a></h3>
+<p class="rm-manual">Feel Good</p>
+<p class="rm-manual">03/07/2020, 16:29 WIB</p>
+<h3 class="rm-manual"><a href="https://lifestyle.kompas.com/read/2020/07/03/162315820/studi-semakin-tua-orang-makin-peduli-lingkungan">Studi: Semakin Tua, Orang Makin Peduli Lingkungan</a></h3>
+<p class="rm-manual">Feel Good</p>
+<p class="rm-manual">03/07/2020, 16:23 WIB</p>
+<h3 class="rm-manual"><a href="https://lifestyle.kompas.com/read/2020/07/03/160243420/amankah-kembali-berolahraga-di-gym-ini-tipsnya">Amankah Kembali Berolahraga di Gym? Ini Tipsnya</a></h3>
+<p class="rm-manual">Feel Good</p>
+<p class="rm-manual">03/07/2020, 16:02 WIB</p>
+<h3 class="rm-manual"><a href="https://lifestyle.kompas.com/read/2020/07/03/135801820/new-normal-tak-semua-perawatan-bisa-dilakukan-di-klinik-kecantikan">"New Normal", Tak Semua Perawatan Bisa Dilakukan di Klinik Kecantikan</a></h3>
+<p class="rm-manual">Look Good</p>
+<p class="rm-manual">03/07/2020, 13:58 WIB</p>
+<h3 class="rm-manual"><a href="https://lifestyle.kompas.com/read/2020/07/03/134255420/makan-durian-saat-hamil-ini-yang-perlu-kamu-tahu">Makan Durian Saat Hamil? Ini yang Perlu Kamu Tahu...</a></h3>
+<p class="rm-manual">Eat Good</p>
+<p class="rm-manual">03/07/2020, 13:42 WIB</p>
+<h3 class="rm-manual"><a href="https://lifestyle.kompas.com/read/2020/07/03/130514120/akankah-william-dan-kate-langgar-tradisi-kerajaan-soal-sekolah-anak">Akankah William dan Kate Langgar Tradisi Kerajaan soal Sekolah Anak?</a></h3>
+<p class="rm-manual">Look Good</p>
+<p class="rm-manual">03/07/2020, 13:05 WIB</p>
+<p class="rm-manual"><a href="">1</a></p>
+<p class="rm-manual"><a href="https://indeks.kompas.com/?site=lifestyle&amp;page=2">2</a></p>
+<p class="rm-manual"><a href="https://indeks.kompas.com/?site=lifestyle&amp;page=3">3</a></p>
+<p class="rm-manual"><a href="https://indeks.kompas.com/?site=lifestyle&amp;page=2" rel="next">Next</a></p>
+<h2 class="rm-manual">Terpopuler</h2>
+<p class="rm-manual">1</p>
+<p class="rm-manual"><a href="https://lifestyle.kompas.com/read/2020/07/03/085149220/bmkg-ingatkan-untuk-menghindari-paparan-sinar-uv-hari-ini-mengapa"> </a></p><h4 class="rm-manual"><a href="https://lifestyle.kompas.com/read/2020/07/03/085149220/bmkg-ingatkan-untuk-menghindari-paparan-sinar-uv-hari-ini-mengapa">BMKG Ingatkan untuk Menghindari Paparan Sinar UV Hari ini, Mengapa?</a></h4><a href="https://lifestyle.kompas.com/read/2020/07/03/085149220/bmkg-ingatkan-untuk-menghindari-paparan-sinar-uv-hari-ini-mengapa"> <p class="rm-manual">Dibaca 56.385 kali</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual">2</p>
+<p class="rm-manual"><a href="https://lifestyle.kompas.com/read/2020/07/03/123301820/turunkan-berat-badan-59-kg-kurang-dari-2-tahun-mau-tahu-rahasianya"> </a></p><h4 class="rm-manual"><a href="https://lifestyle.kompas.com/read/2020/07/03/123301820/turunkan-berat-badan-59-kg-kurang-dari-2-tahun-mau-tahu-rahasianya">Turunkan Berat Badan 59 Kg Kurang dari 2 Tahun, Mau Tahu Rahasianya?</a></h4><a href="https://lifestyle.kompas.com/read/2020/07/03/123301820/turunkan-berat-badan-59-kg-kurang-dari-2-tahun-mau-tahu-rahasianya"> <p class="rm-manual">Dibaca 13.316 kali</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual">3</p>
+<p class="rm-manual"><a href="https://lifestyle.kompas.com/read/2020/07/03/202029120/berapa-ukuran-penis-ideal-untuk-memuaskan-pasangan"> </a></p><h4 class="rm-manual"><a href="https://lifestyle.kompas.com/read/2020/07/03/202029120/berapa-ukuran-penis-ideal-untuk-memuaskan-pasangan">Berapa Ukuran Penis Ideal untuk Memuaskan Pasangan?</a></h4><a href="https://lifestyle.kompas.com/read/2020/07/03/202029120/berapa-ukuran-penis-ideal-untuk-memuaskan-pasangan"> <p class="rm-manual">Dibaca 7.484 kali</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual">4</p>
+<p class="rm-manual"><a href="https://lifestyle.kompas.com/read/2020/07/03/110953120/bernie-ecclestone-jadi-ayah-lagi-di-usia-89-tahun"> </a></p><h4 class="rm-manual"><a href="https://lifestyle.kompas.com/read/2020/07/03/110953120/bernie-ecclestone-jadi-ayah-lagi-di-usia-89-tahun">Bernie Ecclestone Jadi Ayah Lagi di Usia 89 Tahun</a></h4><a href="https://lifestyle.kompas.com/read/2020/07/03/110953120/bernie-ecclestone-jadi-ayah-lagi-di-usia-89-tahun"> <p class="rm-manual">Dibaca 4.523 kali</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual">5</p>
+<p class="rm-manual"><a href="https://lifestyle.kompas.com/read/2020/07/03/073908520/5-cara-menurunkan-berat-badan-setelah-berusia-40-tahun"> </a></p><h4 class="rm-manual"><a href="https://lifestyle.kompas.com/read/2020/07/03/073908520/5-cara-menurunkan-berat-badan-setelah-berusia-40-tahun">5 Cara Menurunkan Berat Badan Setelah Berusia 40 Tahun</a></h4><a href="https://lifestyle.kompas.com/read/2020/07/03/073908520/5-cara-menurunkan-berat-badan-setelah-berusia-40-tahun"> <p class="rm-manual">Dibaca 4.036 kali</p> </a> <p class="rm-manual"></p>
+<h2 class="rm-manual">Now Trending</h2>
+<h4 class="rm-manual"><a href="https://nasional.kompas.com/read/2020/07/03/23320581/jadi-tersangka-bupati-dan-ketua-dprd-kutai-timur-ditahan-kpk">Jadi Tersangka, Bupati dan Ketua DPRD Kutai Timur Ditahan KPK</a></h4>
+<h4 class="rm-manual"><a href="https://regional.kompas.com/read/2020/07/03/23492001/ini-sosok-bupati-kutai-timur-ismunandar-yang-jadi-tersangka-kpk-bersama">Ini Sosok Bupati Kutai Timur Ismunandar yang Jadi Tersangka KPK Bersama Istri </a></h4>
+<h4 class="rm-manual"><a href="https://regional.kompas.com/read/2020/07/03/21225731/sisir-desa-di-madina-polisi-tak-temukan-satu-pun-laki-laki-diduga-semua">Sisir Desa di Madina, Polisi Tak Temukan Satu Pun Laki-laki, Diduga Semua Melarikan Diri</a></h4>
+<p class="rm-manual">Sponsored Headline</p>
+<h4 class="rm-manual"><a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/31800665/KOMPAS.COM/home&amp;sz=740x500&amp;t=Pos=HL4&amp;c=20191115">Fakta: Jumlah Kasus Akibat Virus Ini Kalahkan Kasus Covid-19 di Indonesia</a></h4>
+<h4 class="rm-manual"><a href="https://regional.kompas.com/read/2020/07/03/12055371/video-viral-3-wanita-bermain-tiktok-di-jembatan-suramadu-ini-kata-polisi">Video Viral 3 Wanita Bermain TikTok di Jembatan Suramadu, Ini Kata Polisi</a></h4>
+<h4 class="rm-manual"><a href="https://nasional.kompas.com/read/2020/07/03/15433371/update-kasus-covid-19-ri-lewati-60000-setelah-bertambah-1301-pasien">UPDATE: Kasus Covid-19 RI Lewati 60.000 Setelah Bertambah 1.301 Pasien</a></h4>
+<h4 class="rm-manual"><a href="https://regional.kompas.com/read/2020/07/03/18054221/almarhum-hilmi-aminuddin-positif-corona-sempat-menolak-berobat-istri-dan">Almarhum Hilmi Aminuddin Positif Corona, Sempat Menolak Berobat, Istri dan Anak Juga Terinfeksi Covid-19</a></h4>
+<h4 class="rm-manual"><a href="https://otomotif.kompas.com/read/2020/07/03/140100315/deretan-mobil-bekas-mpv-captain-seat-harga-di-bawah-rp-100-juta">Deretan Mobil Bekas MPV Captain Seat Harga di Bawah Rp 100 Juta</a></h4>
+<p class="rm-manual">komentar di artikel lainnya</p>
+<p class="rm-manual"> <a href="#">Close Ads X</a> </p>
+<p class="rm-manual">Jelajahi</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.kompas.com/">Kompas.com</a></li> <li class="rm-manual"><a href="https://bola.kompas.com/">Bola</a></li> <li class="rm-manual"><a href="https://tekno.kompas.com/">Tekno</a></li> <li class="rm-manual"><a href="https://otomotif.kompas.com/">Otomotif</a></li> <li class="rm-manual"><a href="https://internasional.kompas.com/">Internasional</a></li> <li class="rm-manual"><a href="https://news.kompas.com/">News</a></li> <li class="rm-manual"><a href="https://nasional.kompas.com/">Nasional</a></li> <li class="rm-manual"><a href="https://megapolitan.kompas.com/">Megapolitan</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://entertainment.kompas.com/">Entertainment</a></li> <li class="rm-manual"><a href="https://money.kompas.com/">Money</a></li> <li class="rm-manual"><a href="https://sains.kompas.com/">Sains</a></li> <li class="rm-manual"><a href="https://regional.kompas.com/">Regional</a></li> <li class="rm-manual"><a href="https://properti.kompas.com/">Properti</a></li> <li class="rm-manual"><a href="https://lifestyle.kompas.com/">Lifestyle</a></li> <li class="rm-manual"><a href="https://travel.kompas.com/">Travel</a></li> <li class="rm-manual"><a href="https://edukasi.kompas.com/">Edukasi</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://foto.kompas.com/">Images</a></li> <li class="rm-manual"><a href="https://vik.kompas.com/">VIK</a></li> <li class="rm-manual"><a href="https://ohayojepang.kompas.com/">Ohayo Jepang</a></li> <li class="rm-manual"><a href="https://pesonaindonesia.kompas.com/">Pesona Indonesia</a></li> <li class="rm-manual"><a href="https://kolom.kompas.com/">Kolom</a></li> <li class="rm-manual"><a href="https://jeo.kompas.com/">JEO</a></li> <li class="rm-manual"><a href="https://foto.kompas.com/video">Kompas Video</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://indeks.kompas.com/terpopuler">Artikel Terpopuler</a></li> <li class="rm-manual"><a href="https://indeks.kompas.com/">Artikel Terkini</a></li> <li class="rm-manual"><a href="https://www.kompas.com/topik-pilihan">Topik Pilihan</a></li> <li class="rm-manual"><a href="https://indeks.kompas.com/headline">Artikel Headline</a></li> </ul>
+<p class="rm-manual">Penghargaan dan sertifikat:</p>
+<p class="rm-manual"> <a href="https://www.kompas.com/topik-pilihan/list/3361/kabar.palmerah">Kabar Palmerah</a> </p>
+<p class="rm-manual"> <a href="https://inside.kompas.com/about-us">About Us</a> </p>
+<p class="rm-manual"> <a href="http://www.meetkcm.com/">Advertise</a> </p>
+<p class="rm-manual"> <a href="https://inside.kompas.com/policy">Policy</a> </p>
+<p class="rm-manual"> <a href="https://inside.kompas.com/pedoman">Pedoman Media Siber</a> </p>
+<p class="rm-manual"> <a href="https://jobs.kompas.com/">Career</a> </p>
+<p class="rm-manual"> <a href="https://inside.kompas.com/about-us#meet">Contact Us</a> </p>
+<p class="rm-manual">Copyright 2008 - 2020 PT. Kompas Cyber Media (<a href="http://www.kompasgramedia.com/">Kompas Gramedia Digital Group</a>). All rights reserved.</p></article>
+</body></html>

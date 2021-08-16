@@ -1,0 +1,61 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Xi Jinping, Kim Jong Un hold talks in Beijing - Xinhua | English.news.cn </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/index.htm">Home</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/china/index.htm">China</a></li> <li class="rm-manual">
+<a href="http://www.xinhuanet.com/english/world/index.htm">World</a> </li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/business/index.htm">Business</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/culture/index.htm">Culture</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/sports/index.htm">Sports</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/sci/index.htm">Sci &amp; Tech</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/indepth/index.htm">In-depth</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/entertainment/index.htm">Entertainment</a></li> <li class="rm-manual"> <a href="">More<span>∨</span></a> <ul class="rm-manual"> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/photo/index.htm">Photos</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/video/index.htm">Video</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/health/index.htm">Health</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/list/latestnews.htm">Latest</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/newchina/">New China</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/special/index.htm">Special Reports</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/silkroad/english/index.htm">B&amp;R Initiative</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/weekly.htm">Biz China Weekly</a></li> </ul> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/mobile2017/index.htm">Home</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/mobile2017/latest.htm">Latest News</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/mobile2017/china.htm">China</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/mobile2017/world.htm">World</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/mobile2017/business.htm">Business</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/mobile2017/photos.htm">Photos</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/mobile2017/video.htm">Video</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/mobile2017/culture.htm">Culture &amp; Edu</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/mobile2017/sports.htm">Sports</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/mobile2017/scitech.htm">Sci &amp; Tech</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/mobile2017/health.htm">Health</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/mobile2017/special.htm">Special Reports</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/mobile2017/entertainment.htm">Entertainment</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/newchina/">New China</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual">Editions</li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/asiapacific/index.htm">Asia &amp; Pacific</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/europe/">Europe</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/africa/">Africa</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/northamerica/index.htm">North America</a></li> <li class="rm-manual"><a href="http://news.cn/">ä¸­æ–‡</a></li> <li class="rm-manual"><a href="http://french.xinhuanet.com/jo2016/index.htm">FranÃ§ais</a></li> <li class="rm-manual"><a href="http://russian.news.cn/olympics2016/index.htm">Ð ÑƒÑÑÐºÐ¸Ð¹</a></li> <li class="rm-manual"><a href="http://german.xinhuanet.com/Olympiaderio/index.htm">Deutsch</a></li> <li class="rm-manual"><a href="http://spanish.xinhuanet.com/temas/jjoo2016/index.htm">EspaÃ±ol</a></li> <li class="rm-manual"><a href="http://arabic.news.cn/2016liyueaoyunhui/index.htm">Ø¹Ø±Ø¨ÙŠ</a></li> <li class="rm-manual"><a href="http://kr.xinhuanet.com/specials/pt/2016/ly/index.htm">í•œêµ­ì–´</a></li> <li class="rm-manual"><a href="http://jp.xinhuanet.com/2016liyueaoyun/index.htm">æ—¥æœ¬èªž</a></li> <li class="rm-manual"><a href="http://portuguese.xinhuanet.com/index.htm">PortuguÃªs</a></li> </ul>
+<h1 class="rm-manual"> Xi Jinping, Kim Jong Un hold talks in Beijing </h1>
+<p class="rm-manual"> Source: Xinhua| 2018-03-28 07:43:07|Editor: Xiang Bo </p>
+<p class="rm-manual"><span>Video Player</span><span>Close</span></p>
+<p>Xi Jinping (2nd R), general secretary of the Central Committee of the
+ Communist Party of China (CPC) and Chinese president, and his wife Peng
+ Liyuan (1st R) meet with Kim Jong Un (2nd L), chairman of the Workers' 
+Party of Korea (WPK) and chairman of the State Affairs Commission of the
+ Democratic People's Republic of Korea (DPRK), and his wife Ri Sol Ju at
+ the Great Hall of the People in Beijing, capital of China. At the 
+invitation of Xi, Kim paid an unofficial visit to China from March 25 to
+ 28. During the visit, Xi held talks with Kim. (Xinhua/Ju Peng)</p>
+<p class="rm-manual"> <a href="http://www.xinhuanet.com/english/2018-03/28/c_137070598.htm">Prev</a> <a href="http://www.xinhuanet.com/english/2018-03/28/c_137070598.htm">1</a> <span>2</span> <a href="http://www.xinhuanet.com/english/2018-03/28/c_137070598_3.htm">3</a> <a href="http://www.xinhuanet.com/english/2018-03/28/c_137070598_4.htm">4</a> <a href="http://www.xinhuanet.com/english/2018-03/28/c_137070598_3.htm">Next</a> </p>
+<p class="rm-manual"> <a href="http://www.xinhuanet.com/english/2018-03/28/c_137070598.htm">Prev</a> <a href="http://www.xinhuanet.com/english/2018-03/28/c_137070598.htm">1</a> <span>2</span> <a href="http://www.xinhuanet.com/english/2018-03/28/c_137070598_3.htm">3</a> <a href="http://www.xinhuanet.com/english/2018-03/28/c_137070598_4.htm">4</a> <a href="http://www.xinhuanet.com/english/2018-03/28/c_137070598_3.htm">Next</a> </p>
+<p class="rm-manual"> <span>KEY WORDS:</span> China </p>
+<p class="rm-manual">YOU MAY LIKE</p>
+<p class="rm-manual"> EXPLORE XINHUANET </p>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual">News</p> <ul class="rm-manual"> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/china/index.htm">China</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/world/index.htm">World</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/business/index.htm">Business</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/culture/index.htm">Culture Edu</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/sports/index.htm">Sports</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/sci">Sci Tech</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/health/index.htm">Health</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/entertainment">Entertainment</a></li> </ul> </li> <li class="rm-manual"> <p class="rm-manual">Regions</p> <ul class="rm-manual"> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/asiapacific/index.htm">Asia &amp; Pacific</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/list/World-americas.htm">Americas</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/europe">Europe</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/africa">Africa</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/list/World-organizations.htm">Organizations</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/northamerica/index.htm">North America</a></li> </ul> </li> <li class="rm-manual"> <p class="rm-manual">Services</p> <ul class="rm-manual"> <li class="rm-manual"><a href="http://english.gov.cn/services/investment">Investment</a></li> <li class="rm-manual"><a href="http://english.gov.cn/services/doingbusiness">Doing Business</a></li> <li class="rm-manual"><a href="http://english.gov.cn/services/workinchina">Work in China</a></li> <li class="rm-manual"><a href="http://english.gov.cn/services/studyinchina">Study in China</a></li> <li class="rm-manual"><a href="http://english.gov.cn/services/visitchina">Visit in China</a></li> <li class="rm-manual"><a href="http://english.gov.cn/services/liveinchina">Live in China</a></li> <li class="rm-manual"><a href="http://english.gov.cn/services/2014/09/02/content_281474985233720.htm">Emergency</a></li> <li class="rm-manual"><a href="http://www.cma.gov.cn/en2014">Weather</a></li> </ul> </li> <li class="rm-manual"> <p class="rm-manual">More</p> <ul class="rm-manual"> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/photo">Photos</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/video/index.htm">Video</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/indepth/index.htm">In-depth</a></li> <li class="rm-manual"><a href="http://www.xinhuanet.com/english/special">Special Reports</a></li> <li class="rm-manual"><a href="http://news.xinhuanet.com/english/2017-04/19/c_136220748.htm">Corrections</a></li> </ul> </li> </ul>
+<p class="rm-manual">010020070750000000000000011100001370705981</p></article>
+</body></html>

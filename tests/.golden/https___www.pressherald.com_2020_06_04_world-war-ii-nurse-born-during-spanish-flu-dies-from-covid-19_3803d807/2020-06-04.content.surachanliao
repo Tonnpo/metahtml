@@ -1,0 +1,218 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> World War II nurse born during Spanish flu dies from COVID-19 - Portland Press Herald </p>
+<p class="rm-manual"> <span> <a href="https://www.pressherald.com/login">Sign in</a> or <a href="https://myaccount.pressherald.com/order/?ref=paywall-stub">Subscribe</a> </span> <span>See Offers</span> </p>
+<h3 class="rm-manual">Sign In:</h3>
+<p class="rm-manual"><a href="https://www.pressherald.com/forgot-password">Forgot password?</a> | <a href="https://www.pressherald.com/subscribe">Subscribe now</a></p>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="https://www.pressherald.com/news/">News</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.pressherald.com/news/">All News</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/times-record/">Times Record</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/forecaster/">The Forecaster</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/american-journal/">American Journal</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/lakes-region-weekly/">Lakes Region Weekly</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/mainely-media/">Southern Maine Weeklies</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/news/localstate/">Local &amp; State</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/news/mainecrime/">Cops &amp; Courts</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/news/new-england/">New England</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/politics/">Politics</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/news/nationworld/">Nation &amp; World</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/news/healthcare/">Health care</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/news/schools/">Schools</a></li> <li class="rm-manual"><a href="http://pressherald.com/lost">Lost: Maine’s Opioid Crisis</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/scene-heard/">Society Notebook</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://www.pressherald.com/sports/">Sports</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.pressherald.com/sports/">All Sports</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/sports/highschoolsports/">Varsity Maine</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/sports/outdoors/">Outdoors</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/sports/college/">Colleges</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/sports/seadogs/">Portland Sea Dogs</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/sports/redsox/">Boston Red Sox</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/sports/patriots/">New England Patriots</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://www.pressherald.com/opinion/">Opinion</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.pressherald.com/opinion/">All Opinion</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/opinion/meetinghouse/">Meetinghouse</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/opinion/editorials/">Editorials</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/letters/">Letters</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/opinion/bill-nemitz-opinion/">Bill Nemitz</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/opinion/greg-kesich-opinion/">Greg Kesich</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://www.pressherald.com/business/">Business</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.pressherald.com/business/">All Business</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/business/cannabis-report/">Maine Cannabis Report</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/business/people-on-the-move/">People on the Move</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/news/events/like-a-boss/">Like A Boss Events</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/making-it-work/">Making It Work Events</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://www.pressherald.com/life/audience/">A&amp;E</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.pressherald.com/life/arts-entertainment/">All A&amp;E</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/life/books/">Books</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/sudoku/">Sudoku</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/crossword/">Crossword</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://www.pressherald.com/foodanddining/">Food</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.pressherald.com/foodanddining/">All Food</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/foodanddining/restaurant-reviews/">Restaurant reviews</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/foodanddining/cookbook-reviews/">Cookbook Reviews</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/foodanddining/recipes/">Recipes</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/foodanddining/vegan-kitchen/">Vegan Kitchen</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/source/green-plate-special/">Green Plate Special</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/source/maine-gardener/">Maine Gardener</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://www.pressherald.com/things-to-do/">Do This</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.pressherald.com/things-to-do/">All Do This</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/life/maine-street/">Maine Street</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/things-to-do/out-and-about/">Out &amp; About</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/things-to-do/guides/">Guides</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/news/events/maine-voices-live/">Maine Voices Live Events</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/news/events/like-a-boss/">Like A Boss Events</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/making-it-work/">Making It Work Events</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/things-to-do/do-this-calendar/#!/">Event Calendar</a></li> </ul> </li> <li class="rm-manual"><a href="file:///obituaries">Obits</a></li> <li class="rm-manual">
+<a href="#">Classifieds</a> <ul class="rm-manual"> <li class="rm-manual"><a href="http://mainejobs.com/">MaineJobs</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/realestate/">Real Estate</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/auto/">Auto</a></li> </ul> </li> <li class="rm-manual"><a href="http://www.mainenotices.com/?utm_source=pressherald.com&amp;utm_medium=referral&amp;utm_campaign=menu">Notices</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/signature-events/">PPH Events</a></li> <li class="rm-manual"><a href="http://centralmaine.com/">CentralMaine.com</a></li> <li class="rm-manual"><a href="https://www.sunjournal.com/">Sunjournal.com</a></li> <li class="rm-manual"><a href="https://pressherald.com/e-edition">ePaper</a></li> <li class="rm-manual"><a href="http://pressherald.com/newsletters">Newsletters and Alerts</a></li> <li class="rm-manual">
+<a href="#">Support</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.pressherald.com/reader-services/">Reader Services</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/reader-services/home-delivery-help/">Home Delivery Help</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/faqs/">FAQs</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/contact/">Contact</a></li> </ul> </li> <li class="rm-manual"><a href="file:///subscribe">Subscribe</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/contact-advertising/">Contact Advertising</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/career-opportunities/">Work Here!</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="https://www.pressherald.com/news/">News</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.pressherald.com/news/">All News</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/times-record/">Times Record</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/forecaster/">The Forecaster</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/american-journal/">American Journal</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/lakes-region-weekly/">Lakes Region Weekly</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/mainely-media/">Southern Maine Weeklies</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/news/localstate/">Local &amp; State</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/news/mainecrime/">Cops &amp; Courts</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/news/new-england/">New England</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/politics/">Politics</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/news/nationworld/">Nation &amp; World</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/news/healthcare/">Health care</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/news/schools/">Schools</a></li> <li class="rm-manual"><a href="http://pressherald.com/lost">Lost: Maine’s Opioid Crisis</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/scene-heard/">Society Notebook</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://www.pressherald.com/sports/">Sports</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.pressherald.com/sports/">All Sports</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/sports/highschoolsports/">Varsity Maine</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/sports/outdoors/">Outdoors</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/sports/college/">Colleges</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/sports/seadogs/">Portland Sea Dogs</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/sports/redsox/">Boston Red Sox</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/sports/patriots/">New England Patriots</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://www.pressherald.com/opinion/">Opinion</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.pressherald.com/opinion/">All Opinion</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/opinion/meetinghouse/">Meetinghouse</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/opinion/editorials/">Editorials</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/letters/">Letters</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/opinion/bill-nemitz-opinion/">Bill Nemitz</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/opinion/greg-kesich-opinion/">Greg Kesich</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://www.pressherald.com/business/">Business</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.pressherald.com/business/">All Business</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/business/cannabis-report/">Maine Cannabis Report</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/business/people-on-the-move/">People on the Move</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/news/events/like-a-boss/">Like A Boss Events</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/making-it-work/">Making It Work Events</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://www.pressherald.com/life/audience/">A&amp;E</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.pressherald.com/life/arts-entertainment/">All A&amp;E</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/life/books/">Books</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/sudoku/">Sudoku</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/crossword/">Crossword</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://www.pressherald.com/foodanddining/">Food</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.pressherald.com/foodanddining/">All Food</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/foodanddining/restaurant-reviews/">Restaurant reviews</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/foodanddining/cookbook-reviews/">Cookbook Reviews</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/foodanddining/recipes/">Recipes</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/foodanddining/vegan-kitchen/">Vegan Kitchen</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/source/green-plate-special/">Green Plate Special</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/source/maine-gardener/">Maine Gardener</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://www.pressherald.com/things-to-do/">Do This</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.pressherald.com/things-to-do/">All Do This</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/life/maine-street/">Maine Street</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/things-to-do/out-and-about/">Out &amp; About</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/things-to-do/guides/">Guides</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/news/events/maine-voices-live/">Maine Voices Live Events</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/news/events/like-a-boss/">Like A Boss Events</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/making-it-work/">Making It Work Events</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/things-to-do/do-this-calendar/#!/">Event Calendar</a></li> </ul> </li> <li class="rm-manual"><a href="file:///obituaries">Obits</a></li> <li class="rm-manual">
+<a href="#">Classifieds</a> <ul class="rm-manual"> <li class="rm-manual"><a href="http://mainejobs.com/">MaineJobs</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/realestate/">Real Estate</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/auto/">Auto</a></li> </ul> </li> <li class="rm-manual"><a href="http://www.mainenotices.com/?utm_source=pressherald.com&amp;utm_medium=referral&amp;utm_campaign=menu">Notices</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/signature-events/">PPH Events</a></li> <li class="rm-manual"><a href="http://centralmaine.com/">CentralMaine.com</a></li> <li class="rm-manual"><a href="https://www.sunjournal.com/">Sunjournal.com</a></li> <li class="rm-manual"><a href="https://pressherald.com/e-edition">ePaper</a></li> <li class="rm-manual"><a href="http://pressherald.com/newsletters">Newsletters and Alerts</a></li> <li class="rm-manual">
+<a href="#">Support</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.pressherald.com/reader-services/">Reader Services</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/reader-services/home-delivery-help/">Home Delivery Help</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/faqs/">FAQs</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/contact/">Contact</a></li> </ul> </li> <li class="rm-manual"><a href="file:///subscribe">Subscribe</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/contact-advertising/">Contact Advertising</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/career-opportunities/">Work Here!</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="https://www.pressherald.com/news/">News</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.pressherald.com/news/">All News</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/times-record/">Times Record</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/news/localstate/">Local &amp; State</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/forecaster/">The Forecaster</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/news/mainecrime/">Cops &amp; Courts</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/american-journal/">American Journal</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/news/new-england/">New England</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/lakes-region-weekly/">Lakes Region Weekly</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/politics/">Politics</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/mainely-media/">Southern Maine Weeklies</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/news/nationworld/">Nation &amp; World</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/news/healthcare/">Health care</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/news/schools/">Schools</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/news/community-news/">Community News</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/scene-heard/">Society Notebook</a></li> <li class="rm-manual"><a href="http://pressherald.com/lost">Lost: Maine’s Opioid Crisis</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://www.pressherald.com/business/">Business</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.pressherald.com/business/">All Business</a></li> <li class="rm-manual"><a href="file:///business/cannabis-report">Maine Cannabis Report</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/making-it-work/">Making It Work Events</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/news/events/like-a-boss/">Like A Boss Events</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/business/people-on-the-move/">People on the Move</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/maine-commercial-real-estate/">Commercial Real Estate</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://www.pressherald.com/opinion/">Opinion</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.pressherald.com/opinion/">All Opinion</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/opinion/meetinghouse/">Meetinghouse</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/opinion/editorials/">Editorials</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/letters/">Letters</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/opinion/columnists-opinion/">Columns</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/opinion/bill-nemitz-opinion/">Bill Nemitz</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/opinion/greg-kesich-opinion/">Greg Kesich</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://www.pressherald.com/sports/">Sports</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.pressherald.com/sports">All Sports</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/sports/highschoolsports/">Varsity Maine</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/sports/college/">Colleges</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/sports/outdoors/">Outdoors</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/sports/seadogs/">Portland Sea Dogs</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/sports/redsox/">Boston Red Sox</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/sports/patriots/">New England Patriots</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://www.pressherald.com/arts-entertainment/">A&amp;E</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.pressherald.com/life/arts-entertainment/">All A&amp;E</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/life/books/">Books</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/sudoku/">Sudoku</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/crossword/">Crossword</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://www.pressherald.com/foodanddining/">Food</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.pressherald.com/foodanddining/">All Food</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/foodanddining/restaurant-reviews/">Restaurant reviews</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/foodanddining/cookbook-reviews/">Cookbook Reviews</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/foodanddining/recipes/">Recipes</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/foodanddining/vegan-kitchen/">Vegan Kitchen</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/source/green-plate-special/">Green Plate Special</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/source/maine-gardener/">Maine Gardener</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://www.pressherald.com/things-to-do/">Do This</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.pressherald.com/things-to-do/">All Do This</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/life/maine-street/">Maine Street</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/news/events/maine-voices-live/">Maine Voices Live Events</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/making-it-work/">Making It Work Events</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/news/events/like-a-boss/">Like A Boss Events</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/news/events/">All PPH Events</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/things-to-do/out-and-about/">Out &amp; About</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/things-to-do/guides/">Guides</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/things-to-do/do-this-calendar/#!/">Event Calendar</a></li> </ul> </li> <li class="rm-manual"><a href="file:///obituaries/">Obits</a></li> <li class="rm-manual">
+<a href="https://www.pressherald.com/realestate/">Homes</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.pressherald.com/realestate/">All Real Estate</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="https://homes.pressherald.com/search">Homes for Sale</a></li> <li class="rm-manual"><a href="https://homes.pressherald.com/search/open_house_dates=next_14_days">Open Houses</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/realestate/places-to-love/">Maine Places to Love</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/realestate/premier-property/">Premier Property</a></li> </ul> </li> <li class="rm-manual"><a rel="noopener noreferrer" href="http://www.mainenotices.com/?utm_source=pressherald.com&amp;utm_medium=referral&amp;utm_campaign=menu">Notices</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="http://mainejobs.com/">Jobs</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/auto/">Auto</a></li> </ul>
+<p class="rm-manual"> <a href="https://www.pressherald.com/subscribe">Subscribe</a> <a href="https://www.pressherald.com/login">Login</a> </p>
+<p class="rm-manual"> <a href="https://www.pressherald.com/feature-obituary/"> </a></p><p class="rm-manual"><a href="https://www.pressherald.com/feature-obituary/"> Feature Obituary </a></p><a href="https://www.pressherald.com/feature-obituary/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> Posted 5:45 PM </p>
+<p class="rm-manual"> Updated <span>10 mins ago</span> </p>
+<p class="rm-manual"> <span>increase font size</span> </p>
+<h1 class="rm-manual"><span>World War II nurse born during Spanish flu dies from COVID-19</span></h1>
+<p> Frances Banks, who was 101 years old, grew up in Cape Elizabeth and was a descendant of the early settlers. </p>
+<p class="rm-manual"> <span>By </span><a href="https://www.pressherald.com/author/melanie-creamer">Melanie Creamer</a><span>Staff Writer</span> </p>
+<p>Frances Banks, a World War II Army nurse who became a respected 
+nursing director, had a remarkable life that began and ended with a 
+pandemic.</p>
+<p>Banks was born during the Spanish flu in 1918. And she died of 
+COVID-19 on March 30 at Maine Medical Center in Portland. She was 101.</p>
+<p>Frances Bank, who was born during the Spanish flu pandemic and served
+ as a nurse in World War II, died in her hometown of Cape Elizabeth from
+ COVID-19. <span> Courtesy of the Jordan family</span> </p>
+<p>Banks was a longtime Cape Elizabeth resident and a direct descendant of the town’s original 17th century settlers.</p>
+<p>She was born July 15, 1918, a daughter of Raymond and Vesta Jordan.</p>
+<p>Banks was remembered this week as a strong, independent and resilient woman, and a matriarch of the Jordan family.</p>
+<p>“We all looked up to her,” said her nephew, Kevin Jordan of Cape 
+Elizabeth. “She was a woman, a person that just had an aurora of royalty
+ about her. You could tell there was something special and important 
+about her. Everyone kind of revered and idolized her for that.”</p>
+<p>Banks grew up in Cape Elizabeth, the oldest of seven children. Her 
+nephew shared stories of Banks childhood, noting his grandmother may 
+have had the Spanish flu when his aunt was born. More than 4,500 Mainers
+ died during that pandemic, which lasted into 1919.</p>
+<p>“She didn’t live with her parents for a while after her birth,” her 
+nephew said. “Vesta had some illness that prevented her from taking care
+ of Frances.”</p>
+<p>She grew up on the Jordan family farm and attended Cape Elizabeth schools.</p>
+<p>“She had a very fond memory as a small girl riding with her 
+grandfather around the farm,” her nephew said. “Apparently, they would 
+go out frequently and just inspect the property and see how things were 
+growing. She talked about catching some women red handed stealing apples
+ from the apple trees. They tucked them into their shirts and claimed 
+they didn’t. My great-grandfather accused them of stealing apples, and 
+they denied it even though they could clearly see their shirts were 
+stuffed with apples. She used to tell that story with a chuckle.”</p>
+<p>Banks graduated from Cape Elizabeth High School in 1936 and State Street School of Nursing in Portland in 1939.</p>
+<p>Banks enlisted in the Army with dreams of traveling the world and was
+ initially stationed at Fort Williams, right in her hometown. She was 
+commissioned as a lieutenant and served during World War II with four of
+ her younger brothers.</p>
+<p>After nine months, she was transferred to India near Calcutta. She 
+served at the 94th Station Hospital as head nurse supporting the 462nd 
+Bombardment Group that was flying B-29 Superfortress missions over the 
+“Burma Hump” into China and Japan.</p>
+<p>“She told me one fond memory of taking off with a pilot for a weekend
+ to Cashmere,” her nephew said. “She said it was paradise. She was proud
+ of her service, but she was modest about it as well.”</p>
+<p>Banks served as director of nursing at the Maine Eye and Ear 
+Infirmary in Portland. She also served as director of a state-wide 
+program for practical nursing based in Augusta.</p>
+<p>She went on to become director of the licensed practical nursing 
+program at Aroostook State Teachers College in Presque Isle. She also 
+served as chief administrator of the Aroostook Health Center and skilled
+ nursing facility in Mars Hill.</p>
+<p>“She had a distinguished nursing career,” her nephew said. “She was a true leader.”</p>
+<p>Frances Banks at her 100th birthday party. <span> Courtesy of the Jordan family</span> </p>
+<p>While living in Aroostook County, she met Athill Banks, a well-known 
+potato farmer. They were married in 1958 and lived in Mars Hill. He died
+ in 1978 after 20 years of marriage.</p>
+<p>“They seemed to have a very good life together,” her nephew said. 
+“They were fishing companions and hunting companions. They seemed to 
+genuinely respect and like each other’s company.”</p>
+<p>Banks was active in the Mars Hill community and lived independently 
+there into her 90s. She was a member of United Methodist Church of Mars 
+Hill and a driving force behind establishment of the Mars Hill Community
+ Cupboard. She was recognized more than once as “Woman of the Year,” her
+ nephew said.</p>
+<p>Banks, who was the only Jordan in her family to leave Cape Elizabeth, had a close relationship with her siblings.</p>
+<p>“She always showed truly genuine interest in family,” her nephew 
+said. “She always knew what her nieces and nephews were up to. She was 
+always asking about others.”</p>
+<p>Her brother, Lester Jordan of Cape Elizabeth, who shares the same 
+birthday as Banks, said Wednesday he’ll miss celebrating his birthday 
+with her.</p>
+<p>“The whole family was proud of her for what she did in the service 
+and her nursing career,” her brother said. “I loved her. I’m going to 
+miss her.”</p>
+<p>Banks moved back to Cape Elizabeth about ten years ago to live with 
+her younger sister, Clara Appleton. Earlier this year, the sisters went 
+to live at Cape Memory Care in Cape Elizabeth. Appleton has dementia.</p>
+<p>Banks, who was just shy of her 102nd birthday, had a Skype call with her nephew and brother every Tuesday.</p>
+<p>“She was one of the sharpest people you would ever meet,” his nephew 
+said. “She was still very sharp right to the end. She had the full 
+faculties of her mind. She did have a stubborn streak, but it was sort 
+of affectionate, though.”</p>
+<p>Banks and Appleton are among the 60 residents and 23 staff at Cape 
+Memory Care, who tested positive for COVID-19, the disease caused by the
+ coronavirus. Six residents, including Banks, have died. Appleton is 
+recovering from the virus and is doing well, Lester Jordan said.</p>
+<p>Bank’s cousin, Norman Jordan Jr., also died of COVID-19 on April 19 at the Maine Veterans’ Home in Scarborough.</p>
+<p>Dr. Nirav Shah, director of the Maine Center for Disease Control and 
+Prevention, noted Banks death during a televised briefing this week, 
+although he did not identify her by name.</p>
+<p>“I wanted to take a moment to share her story as a reminder to us 
+that each and every statistic is a person,” Dr. Shah said. “Behind each 
+and every one of those statistics is a story.”</p>
+<p class="rm-manual"> Banks full obituary is scheduled to appear in the Maine Sunday Telegram.</p>
+<p class="rm-manual">Comments are not available on this story.</p>
+<p class="rm-manual"> <a href="file:///feedback-form/">Send questions/comments</a> to the editors. </p>
+<p class="rm-manual"> filed under: </p>
+<p class="rm-manual"> <a href="file:///tag/cape-elizabeth">Cape Elizabeth</a>, <a href="file:///tag/coronavirus">coronavirus</a> </p>
+<p class="rm-manual"> This iframe contains the logic required to handle Ajax powered Gravity Forms. </p>
+<p class="rm-manual">Related Stories</p>
+<p class="rm-manual">Latest Articles</p>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual">Feature Obituary</p> <h2 class="rm-manual"> <a href="https://www.pressherald.com/2020/06/04/world-war-ii-nurse-born-during-spanish-flu-dies-from-covid-19/">World War II nurse born during Spanish flu dies from COVID-19</a> </h2> </li> <li class="rm-manual"> <p class="rm-manual">News</p> <h2 class="rm-manual"> <a href="https://www.pressherald.com/2020/06/04/pickup-mack-truck-collide-head-on-in-shapleigh/">Pickup, Mack truck collide head-on in Shapleigh</a> </h2> </li> <li class="rm-manual"> <p class="rm-manual">Times Record</p> <h2 class="rm-manual"> <a href="https://www.pressherald.com/2020/06/04/lisbon-weighing-options-for-outdoor-businesses/">Lisbon weighing options for outdoor businesses</a> </h2> </li> <li class="rm-manual"> <p class="rm-manual">Nation &amp; World</p> <h2 class="rm-manual"> <a href="https://www.pressherald.com/2020/06/04/testimony-shooter-used-racist-slur-as-ahmaud-arbery-lay-dying/">Testimony: Shooter used racist slur as Ahmaud Arbery lay dying</a> </h2> </li> <li class="rm-manual"> <p class="rm-manual">Business</p> <h2 class="rm-manual"> <a href="https://www.pressherald.com/2020/06/04/wall-street-pauses-and-sp-500s-4-day-winning-streak-snaps/">Wall Street pauses, and S&amp;P 500’s 4-day winning streak snaps</a> </h2> </li> </ul>
+<ul class="rm-manual"> <p class="rm-manual"> Most Read Stories </p> <ul class="rm-manual"> <li class="rm-manual"> <h3 class="rm-manual"> <a href="https://www.pressherald.com/2020/06/01/portland-police-chief-offers-to-meet-protesters/"> Over 1,000 protesters demonstrate in Portland, some clash with police as tensions flare later in the night </a> </h3> </li> <li class="rm-manual"> <h3 class="rm-manual"> <a href="https://www.pressherald.com/2020/06/02/maine-reports-5-more-deaths-28-new-covid-19-cases/"> Maine reports 5 more deaths, 28 new COVID-19 cases </a> </h3> </li> <li class="rm-manual"> <h3 class="rm-manual"> <a href="https://www.pressherald.com/2020/06/01/trump-may-be-heading-to-maine-to-visit-maker-of-medical-swabs/"> Mills raises security concerns about Trump’s plan to visit maker of test swabs in Maine </a> </h3> </li> <li class="rm-manual"> <h3 class="rm-manual"> <a href="https://www.pressherald.com/2020/05/31/protesters-engage-in-standoff-outside-portland-police-station/"> Protesters block traffic, demand to meet with Portland police chief </a> </h3> </li> <li class="rm-manual"> <h3 class="rm-manual"> <a href="https://www.pressherald.com/2020/06/01/listen-to-the-exchange-between-pres-trump-and-gov-mills/"> Listen to the exchange between President Trump and Gov. Mills </a> </h3> </li> </ul> </ul>
+<h2 class="rm-manual">Contact Us</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.pressherald.com/staff-directory/">Staff Directory</a></li> <li class="rm-manual"><a href="file:///contact#story-ideas">Send a Story Tip</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/reader-services/letters-editor/">Letters to the Editor</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/faqs/">FAQs</a></li> </ul>
+<h2 class="rm-manual">Subscribers</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.pressherald.com/subscription-plans/">Subscribe</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/benefits">Subscriber Benefits</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/reader-services/home-delivery-help/">Home Delivery Help</a></li> <li class="rm-manual"><a href="https://myaccount.pressherald.com/">Manage Account</a></li> <li class="rm-manual"><a href="https://myaccount.pressherald.com/payments">Pay my Bill</a></li> <li class="rm-manual"><a href="http://pressherald.com/e-edition">Access ePaper</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/mobile-products/">Mobile Apps</a></li> </ul>
+<h2 class="rm-manual">Connect with Us</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.pressherald.com/newsletters/">Email Newsletters</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/podcasts/">Podcasts</a></li> <li class="rm-manual"><a href="https://www.facebook.com/pressherald">Facebook</a></li> <li class="rm-manual"><a href="https://twitter.com/PressHerald">Twitter</a></li> <li class="rm-manual"><a href="https://www.linkedin.com/company-beta/27063/">Linked In</a></li> <li class="rm-manual"><a href="https://www.instagram.com/portlandpressherald/">Instagram</a></li> <li class="rm-manual"><a href="https://www.pinterest.com/pressherald/?eq=press&amp;etslf=3383">Pinterest</a></li> </ul>
+<h2 class="rm-manual">Advertise</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><a rel="noopener noreferrer" href="http://masthead.me/">Media Kit</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/contact-advertising/">Contact Advertising</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="http://mainejobs.com/post-a-job/">Help Wanted Ads</a></li> <li class="rm-manual"><a href="file:///contact#place-obit">Place an Obituary</a></li> </ul>
+<h2 class="rm-manual">Press Herald Events</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///bizforum">Business Breakfast Forums</a></li> <li class="rm-manual"><a href="http://likeaboss.pressherald.com/">Like a Boss</a></li> <li class="rm-manual"><a href="http://mainevoices.pressherald.com/">Maine Voices Live</a></li> <li class="rm-manual"><a href="file:///sourceawards">Source Maine Sustainability Awards</a></li> </ul>
+<h2 class="rm-manual">Network</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.pressherald.com/career-opportunities/">Work Here</a></li> <li class="rm-manual"><a href="http://www.centralmaine.com/">CentralMaine.com</a></li> <li class="rm-manual"><a href="http://sunjournal.com/">SunJournal.com</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/times-record/">TimesRecord.com</a></li> <li class="rm-manual"><a href="http://theforecaster.net/">The Forecasters</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/mainely-media/">Southern Maine Weeklies</a></li> <li class="rm-manual"><a href="http://mainejobs.com/">Jobs</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/highschoolsports/">Varsity Maine</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.pressherald.com/privacy-policy/">Privacy Policy</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/cookie-policy/">Cookie Policy</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/terms-service/">Terms of Service</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/commenting-terms/">Commenting Terms</a></li> <li class="rm-manual"><a href="http://www.mainenotices.com/">Public Notices</a></li> <li class="rm-manual"><a href="https://www.pressherald.com/reader-services/archive-search/">Archive Search</a></li> <li class="rm-manual"><a href="http://mainetoday.mycapture.com/mycapture/index.asp">Purchase a Photo</a></li> <li class="rm-manual"><a href="https://myaccount.pressherald.com/order">Subscribe</a></li> </ul>
+<p class="rm-manual"> <span>© 2020</span> | <span>All Rights Reserved</span> | Press Herald </p>
+<p class="rm-manual">close x</p>
+<p class="rm-manual">INFORMATION </p>
+<p class="rm-manual">YOU CAN ACT ON</p>
+<p class="rm-manual">Sign up for free access to our coronavirus coverage. Supported by our subscribers.</p>
+<ul class="rm-manual">
+<li class="rm-manual">Email<span>*</span>
+</li>
+<li class="rm-manual">Email<p class="rm-manual">This field is for validation purposes and should be left unchanged.</p>
+</li> </ul>
+<p class="rm-manual"> This iframe contains the logic required to handle Ajax powered Gravity Forms. </p>
+<p class="rm-manual">Not a subscriber? <a href="https://www.pressherald.com/subscribe">Please consider becoming one.</a></p>
+<p class="rm-manual"><a href="#">Next time</a></p>
+<p class="rm-manual">By providing your email address you consent to receive emails and offers from MaineToday Media</p></article>
+</body></html>
