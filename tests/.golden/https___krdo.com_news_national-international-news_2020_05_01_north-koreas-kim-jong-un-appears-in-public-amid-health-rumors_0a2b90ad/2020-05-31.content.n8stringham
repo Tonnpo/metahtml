@@ -1,0 +1,107 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> North Korea's Kim 
+Jong Un appears in public amid health rumors - KRDO circle-arrow Play 
+Button Stop Button chevron-right chevron-left chevron-up search warning 
+chevron-left-skinny chevron-right-skinny x clock calendar play-button 
+cancel-circle user email linkedin </p>
+<ul class="rm-manual">
+<li><a href="https://krdo.com/">Home</a></li> <li>
+<a href="https://krdo.com/news/">News</a> <ul> <li><a href="https://krdo.com/health/coronavirus/">COVID-19</a></li> <li><a href="https://krdo.com/absolutely-colorado/">Absolutely Colorado</a></li> <li><a href="https://krdo.com/category/news/investigations/">News Channel 13 Investigates</a></li> <li><a href="https://krdo.com/category/news/colorado-springs/">Colorado Springs</a></li> <li><a href="https://krdo.com/category/news/pueblo/">Pueblo</a></li> <li><a href="https://krdo.com/category/news/state-regional-news/">Colorado</a></li> <li><a href="https://krdo.com/category/news/national-world/">US/World</a></li> <li><a href="https://krdo.com/category/news/crime/">Crime</a></li> <li><a href="https://krdo.com/category/money/">Money</a></li> <li><a href="https://krdo.com/category/news/politics/">Politics</a></li> <li><a href="https://krdo.com/category/news/military/">Military</a></li> <li><a href="https://krdo.com/news/hiding-in-plain-sight/">Hiding in Plain Sight</a></li> <li><a href="https://krdo.com/livestream/">Live Newscasts</a></li> </ul> </li> <li>
+<a href="https://krdo.com/weather/">Weather</a> <ul> <li><a href="https://krdo.com/closures-delays/">Closures &amp; Delays</a></li> <li><a href="https://krdo.com/weather/weather-maps-and-forecasts/">Weather Maps and Forecasts</a></li> <li><a href="https://krdo.com/weather/live-hd-doppler/">Live HD Doppler</a></li> <li><a href="https://krdo.com/weather/neighborhood-weather-network/">Neighborhood Weather Network</a></li> <li><a href="https://krdo.com/weather/viaero-wireless-network-cameras/">Viaero Wireless Network Cameras</a></li> <li><a href="https://krdo.com/category/video/weather-video/">Weather Video</a></li> <li><a href="https://krdo.com/category/weather/photo-galleries/">Weather Photo Galleries</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://krdo.com/traffic/">Traffic</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://krdo.com/traffic/distracted-driving/">Distracted Driving</a></li> <li class="rm-manual"><a href="https://krdo.com/gas-prices/">Gas Prices</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://krdo.com/sports/">Sports</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://krdo.com/friday-night-blitz/">Friday Night Blitz</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://krdo.com/radio/">Radio</a> <ul class="rm-manual"> <li class="rm-manual"><a href="http://radio.securenetsystems.net/v5/KRDO">Listen Live</a></li> <li class="rm-manual"><a href="https://krdonewsradio.podbean.com/">Podcasts</a></li> <li class="rm-manual"><a href="https://krdo.com/radio-contests/">Radio Contests</a></li> <li class="rm-manual"><a href="https://krdo.com/life/pets/pet-of-the-week/">Pet of the Week</a></li> <li class="rm-manual"><a href="https://krdo.com/radio/ask-the-doctors/">Ask the Doctors</a></li> <li class="rm-manual"><a href="https://krdo.com/radio/ask-the-estate-attorney/">Ask The Estate Attorney</a></li> <li class="rm-manual"><a href="https://krdo.com/radio/ask-the-mayor/">KRDO NewsRadio Traffic</a></li> <li class="rm-manual"><a href="https://krdo.com/radio/ask-the-tax-pro/">Ask The Tax Pro</a></li> <li class="rm-manual"><a href="https://krdo.com/radio/tom-martino-the-troubleshooter/">Troubleshooter Show</a></li> <li class="rm-manual"><a href="https://krdo.com/radio/program-guide/">Radio Program Guide</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://krdo.com/videos-and-galleries/">Videos and Galleries</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://krdo.com/category/video/must-see/">Must See Videos</a></li> <li class="rm-manual"><a href="https://krdo.com/category/news/must-see-photo-galleries/">Must-See Photo Galleries</a></li> <li class="rm-manual"><a href="https://krdo.com/livestream/">Live Newscasts</a></li> <li class="rm-manual"><a href="https://krdo.com/event-livestreams/">Event/Breaking Livestreams</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://krdo.com/your-voice-your-vote/">Your Voice Your Vote</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://krdo.com/election-results/">Election Results</a></li> <li class="rm-manual"><a href="https://krdo.com/category/news/politics/">Politics</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://krdo.com/telemundo/">Telemundo</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://krdo.com/telemundo-programacion/">Telemundo Programacion</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://krdo.com/life/">Life</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://krdo.com/back-to-business/">Back to Business</a></li> <li class="rm-manual"><a href="https://krdo.com/house-home/">House &amp; Home</a></li> <li class="rm-manual"><a href="https://krdo.com/your-money/">Your Money</a></li> <li class="rm-manual"><a href="https://krdo.com/safe-at-home/">Safe at Home</a></li> <li class="rm-manual"><a href="https://krdo.com/life/class-of-2020/">Class of 2020</a></li> <li class="rm-manual"><a href="https://krdo.com/events/">Events</a></li> <li class="rm-manual"><a href="https://krdo.com/jobs/">Southern Colorado Jobs</a></li> <li class="rm-manual"><a href="https://krdo.com/life/pets/">Pets</a></li> <li class="rm-manual"><a href="https://krdo.com/life/pets/pet-of-the-week/">Pet of the Week</a></li> <li class="rm-manual"><a href="https://krdo.com/category/lifestyle/travel/">Travel</a></li> <li class="rm-manual"><a href="https://krdo.com/category/lifestyle/red-friday/">Wear Red Friday Hero</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://krdo.com/shop/">Shop</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://coloradosprings.open4biz.us/">Open4Biz</a></li> <li class="rm-manual"><a href="http://www.buylocalcs.com/">Buy Local</a></li> <li class="rm-manual"><a href="https://csphilharmonic.org/concerts/">Symphony Tickets</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://krdo.com/health/">Health</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://krdo.com/health/">HealthTracker</a></li> <li class="rm-manual"><a href="https://krdo.com/guerra-dental/">Guerra Dental</a></li> <li class="rm-manual"><a href="https://krdo.com/penrad-imaging/">PENRAD Imaging</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://krdo.com/play/">Play</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://krdo.com/play/">Contests</a></li> <li class="rm-manual"><a href="https://krdo.com/radio-contests/">Radio Contests</a></li> <li class="rm-manual"><a href="https://krdo.com/category/entertainment/">Entertainment</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://krdo.com/share/">Share</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://krdo.com/share/">Submit Tips, Pics and Video</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://krdo.com/about-us/">About Us</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://krdo.com/about-us/advertise-with-us/">Advertise with Us</a></li> <li class="rm-manual"><a href="https://krdo.com/about-us/contact-krdo/">Contact KRDO</a></li> <li class="rm-manual"><a href="https://krdo.com/meet-the-team/">Meet the Team</a></li> <li class="rm-manual"><a href="https://krdo.com/about-us/closed-captioning/">Closed Captioning</a></li> <li class="rm-manual"><a href="https://krdo.com/about-us/download-our-apps/">Download our Apps</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="https://s3.us-east-1.wasabisys.com/krdo.com/2019/11/KRDO-TV-AM-FM-2019-EEO-Public-File-Report.pdf">EEO Public Filing</a></li> <li class="rm-manual"><a href="https://krdo.com/about-us/fcc-public-file/">FCC Public File</a></li> <li class="rm-manual"><a href="https://recruiting.adp.com/srccar/public/RTI.home?c=1059541&amp;d=External-Corporate&amp;city=%22Colorado%20Springs%22">KRDO Jobs and Internships</a></li> <li class="rm-manual"><a href="https://krdo.com/newsletters-alerts/">Newsletters/Alerts</a></li> <li class="rm-manual"><a href="https://krdo.com/radio/program-guide/">Radio Program Guide</a></li> <li class="rm-manual"><a href="https://krdo.com/tv-listings/">TV Listings</a></li> </ul> </li> </ul>
+<p class="rm-manual"><a href="#primary">Skip to Content</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://krdo.com/news/">News</a></li> <li class="rm-manual"><a href="https://krdo.com/weather/">Weather</a></li> <li class="rm-manual"><a href="https://krdo.com/traffic/">Traffic</a></li> <li class="rm-manual"><a href="https://coloradosprings.open4biz.us/">Open4Biz</a></li> <li class="rm-manual"><a href="https://krdo.com/radio/">Radio</a></li> <li class="rm-manual"><a href="https://krdo.com/life/">Life</a></li> <li class="rm-manual"><a href="https://krdo.com/health/">Health</a></li> <li class="rm-manual"><a href="https://krdo.com/play/">Play</a></li> <li class="rm-manual"><a href="https://krdo.com/share/">Share</a></li> <li class="rm-manual"> <a href="https://krdo.com/livestream/">Watch</a> </li>
+</ul>
+<p class="rm-manual"> <a href="http://krdo.com/weather"> </a></p><p class="rm-manual"><a href="http://krdo.com/weather"> Colorado Springs </a></p><a href="http://krdo.com/weather"> <p class="rm-manual"> 75° </p> </a> <p class="rm-manual"></p>
+<h3 class="rm-manual"> <a href="https://krdo.com/about-us/download-our-apps/"> Download Our Apps </a> </h3>
+<h3 class="rm-manual">Recent Stories</h3>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://krdo.com/news/national-world/2020/05/31/coronavirus-pandemic-updates-from-around-the-world/">Coronavirus pandemic: Updates from around the world</a> </li> <li class="rm-manual"> <a href="https://krdo.com/news/national-world/2020/05/31/2-atlanta-officers-fired-after-video-shows-them-tasing-man-and-using-excessive-force-on-woman-mayor-says/">2 Atlanta officers fired after video shows them tasing man and using ‘excessive force’ on woman, mayor says</a> </li> <li class="rm-manual"> <a href="https://krdo.com/news/national-world/2020/05/31/george-floyd-protests-spread-nationwide/">George Floyd protests spread nationwide</a> </li> <li class="rm-manual"> <a href="https://krdo.com/telemundo/noticias/2020/05/31/protestas-por-george-floyd-minuto-a-minuto-manifestantes-desafian-toques-de-queda/">Protestas por George Floyd, minuto a minuto: manifestantes desafían toques de queda</a> </li> <li class="rm-manual"> <a href="https://krdo.com/news/politics/2020/05/31/while-trump-shelters-in-the-white-house-america-cries-out-for-leadership/">While Trump shelters in the White House, America cries out for leadership</a> </li> </ul>
+<h3 class="rm-manual">Search:</h3>
+<h3 class="rm-manual">More Local News</h3>
+<h3 class="rm-manual"> <a href="https://krdo.com/news/2020/05/31/8th-street-walmart-evacuated-after-a-fire/" rel="bookmark"> 8th Street Walmart evacuated after a fire </a> </h3>
+<h3 class="rm-manual"> <a href="https://krdo.com/home/2020/05/30/local-business-woman-hands-out-free-graduation-gift-baskets/" rel="bookmark"> Colorado Springs business woman hands out free graduation gift baskets </a> </h3>
+<h3 class="rm-manual"> <a href="https://krdo.com/news/top-stories/2020/05/31/colorado-springs-police-on-priority-dispatch-status-sunday-due-to-more-planned-protests/" rel="bookmark"> Colorado Springs Police on priority dispatch, accident alert status Sunday due to more planned protests </a> </h3>
+<h3 class="rm-manual"> <a href="https://krdo.com/news/top-stories/2020/05/30/police-disperse-protesters-with-tear-gas-in-downtown-colorado-springs/" rel="bookmark"> Police disperse protesters with tear gas in downtown Colorado Springs </a> </h3>
+<h3 class="rm-manual"> <a href="https://krdo.com/news/2020/05/30/protesters-outside-of-the-police-operations-center-in-colorado-springs/" rel="bookmark"> Protesters outside of the Police Operations Center in Colorado Springs </a> </h3>
+<h3 class="rm-manual"> <a href="https://krdo.com/news/2020/05/30/colorado-springs-restaurants-maneuver-first-weekend-at-50-capacity/" rel="bookmark"> Colorado Springs restaurants maneuver first weekend at 50% capacity </a> </h3>
+<p class="rm-manual"> National &amp; International News </p>
+<p class="rm-manual"> By <a href="https://krdo.com/author/associated-press/" rel="author">Associated Press</a> </p>
+<p class="rm-manual"> <span>Published</span> <span> <a href="https://krdo.com/2020/05/"> May 1, 2020 </a> </span> <span> 5:46 pm </span> </p>
+<h1 class="rm-manual">North Korea’s Kim Jong Un appears in public amid health rumors</h1>
+<p>SEOUL, South Korea (AP) - North Korean state media says leader Kim 
+Jong Un has appeared in public for the first time in 20 days after his 
+absence triggered global rumors that he may be seriously ill.</p>
+<p>The Korean Central News Agency said Saturday that he attended a 
+ceremony marking the completion of a fertilizer factory near Pyongyang 
+with other senior officials, including his sister, Kim Yo Jong. State 
+media published several photos of Kim at the factory, smiling as he 
+looks around the facilities and cuts a red ribbon.</p>
+<p>Speculation about his health swirled after he missed the April 15 celebration of the birthday of his late grandfather.</p>
+<p class="rm-manual">(Copyright 2020 The Associated Press. All rights 
+reserved. This material may not be published, broadcast, rewritten or 
+redistributed without permission.)</p>
+<p class="rm-manual">News</p>
+<h3 class="rm-manual">Associated Press</h3>
+<p class="rm-manual">This article was provided by the Associated Press.</p>
+<h2 class="rm-manual">Related Articles</h2>
+<h3 class="rm-manual"> <a href="https://krdo.com/news/top-stories/2020/05/31/protesters-walking-towards-the-police-operations-center-in-colorado-springs/" rel="bookmark"> Protesters walking towards the Police Operations Center in Colorado Springs </a> </h3>
+<h3 class="rm-manual"> <a href="https://krdo.com/news/2020/05/31/8th-street-walmart-evacuated-after-a-fire/" rel="bookmark"> 8th Street Walmart evacuated after a fire </a> </h3>
+<h3 class="rm-manual"> <a href="https://krdo.com/news/national-world/2020/05/31/coronavirus-pandemic-updates-from-around-the-world/" rel="bookmark"> Coronavirus pandemic: Updates from around the world </a> </h3>
+<h3 class="rm-manual"> <a href="https://krdo.com/news/politics/2020/05/31/protests-put-trump-and-bidens-leadership-to-the-test/" rel="bookmark"> Protests put Trump and Biden’s leadership to the test </a> </h3>
+<p class="rm-manual"><a href="file:///terms-of-use">Terms of Service</a> | <a href="file:///privacy-policy">Privacy Policy</a> |</p>
+<p class="rm-manual"><a href="file:///about-us/fcc-public-file/">KRDO FCC Public File</a> |</p>
+<p class="rm-manual"><a href="https://donotsell.npg.digital/">Do Not Sell My Personal Information</a></p>
+<h3 class="rm-manual">Subscribe to our Email Alerts</h3>
+<p class="rm-manual"><a href="file:///newsletters-alerts/#//">Breaking News Severe Weather Morning Forecast Daily Briefing Contests &amp; Promotions</a></p>
+<h3 class="rm-manual">Download Our Apps</h3>
+<p class="rm-manual"> Available for iOS and Android </p>
+<p class="rm-manual"> © 2020, Pikes Peak Television, Inc. Colorado Springs, CO, USA </p></article>
+</body></html>

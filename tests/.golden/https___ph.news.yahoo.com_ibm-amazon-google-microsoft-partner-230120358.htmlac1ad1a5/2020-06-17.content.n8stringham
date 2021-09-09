@@ -1,0 +1,155 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">IBM, Amazon, Google and Microsoft partner with White House to provide compute resources for COVID-19 research</p>
+<p class="rm-manual"><a href="https://ph.news.yahoo.com/">Yahoo</a></p>
+<p class="rm-manual">Search</p>
+<ul class="rm-manual"><li class="rm-manual"><a href="https://mail.yahoo.com/?.intl=ph&amp;.lang=en-PH&amp;.partner=none&amp;.src=news">Mail</a></li></ul>
+<p class="rm-manual"><a href="https://ph.news.yahoo.com/"> News</a></p>
+<p class="rm-manual"><span>Follow Us</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://ph.news.yahoo.com/philippines"> Philippines</a></li>
+<li class="rm-manual"><a href="https://sg.news.yahoo.com/esports/"> Esports</a></li>
+<li class="rm-manual"><a href="https://ph.news.yahoo.com/sports"> Sports</a></li>
+<li class="rm-manual"><a href="https://ph.news.yahoo.com/sports/nbafantasy"> NBA Fantasy</a></li>
+<li class="rm-manual"><a href="https://ph.news.yahoo.com/finance"> Finance</a></li>
+<li class="rm-manual"><a href="https://ph.news.yahoo.com/tech"> Tech</a></li>
+<li class="rm-manual"><a href="https://ph.news.yahoo.com/autos"> Autos</a></li>
+<li class="rm-manual"><a href="https://ph.news.yahoo.com/lifestyle"> Lifestyle</a></li>
+<li class="rm-manual"><a href="https://ph.news.yahoo.com/celebrity"> Celebrity</a></li>
+<li class="rm-manual"><a href="https://ph.news.yahoo.com/movies"> Movies</a></li>
+<li class="rm-manual"><a href="https://ph.news.yahoo.com/videos"> Videos</a></li>
+</ul>
+<h1 class="rm-manual">IBM, Amazon, Google and Microsoft partner with White House to provide compute resources for COVID-19 research</h1>
+<p class="rm-manual">Frederic Lardinois</p>
+<p class="rm-manual"><span><span><a href="https://techcrunch.com/" rel="noopener noreferrer nofollow">TechCrunch</a></span></span>22 March 2020</p>
+<p>During today's White House coronavirus task force press conference, 
+President Trump announced the launch of a new public/private consortium 
+to "unleash the power of American supercomputing resources." The members
+ of this consortium are the White House, the Department of Energy and <a href="https://crunchbase.com/organization/ibm" rel="nofollow noopener">IBM </a>.
+ Other companies, including Google, Amazon and Microsoft, as well as a 
+number of academic institutions, are also "contributing lots of 
+different things," the president said.</p>
+<p>While Trump's comments were characteristically unclear, IBM <a href="https://newsroom.ibm.com/IBM-helps-bring-supercomputers-into-the-global-fight-against-COVID-19" rel="nofollow noopener">provided more details</a>,
+ noting that it is working with a number of national labs and other 
+institutions to offer a total of 330 petaflops of compute to various 
+projects in epidemiology, bioinformatics and molecular modeling. Amazon,
+ Google and Microsoft are also part of the consortium, which is being 
+led by IBM, the White House Office of Science and Technology Policy, and
+ the Department of Energy.</p>
+<p>IBM and its partners will coordinate the efforts to evaluate 
+proposals and provide access to high-performance computing resources to 
+those that are most likely to have an immediate impact.</p>
+<p>"How can supercomputers help us fight this virus? These 
+high-performance computing systems allow researchers to run very large 
+numbers of calculations in epidemiology, bioinformatics, and molecular 
+modeling. These experiments would take years to complete if worked by 
+hand, or months if handled on slower, traditional computing platforms," 
+writes Dario Gil, IBM's Director of Research.</p>
+<p>AWS has already <a href="https://blog.aboutamazon.com/innovation/aws-launches-initiative-to-accelerate-covid-19-diagnostics-research-and-testing?utm_source=social&amp;amp;utm_medium=tw&amp;amp;utm_term=amznnews&amp;amp;utm_content=COVID-19_AWSResearch" rel="nofollow noopener">dedicated</a>
+ $20 million to support COVID-19 research while Microsoft has already 
+announced a number of different initiatives, though mostly around 
+helping businesses cope with the fallout of this crisis. Google has now 
+launched its own <a href="https://techcrunch.com/2020/03/21/google-launches-covid-19-page-and-search-portal-with-safety-tips-official-stats-and-more-us-only-for-now/" rel="nofollow noopener">coronavirus website</a>
+ (though it's very different from the one Trump once promised) and 
+Alphabet's Verily is helping Bay Area residents find testing sites if 
+needed.</p>
+<p>After today's announcement, the White House shared statements from <a href="https://crunchbase.com/organization/microsoft" rel="nofollow noopener">Microsoft, </a>
+ Google and other partners. "We know that high performance computing can
+ reduce the time it takes to process massive data sets and perform 
+complex simulations from days to hours," said Mike Daniels, Vice 
+President, Global Public Sector at <a href="https://crunchbase.com/organization/google" rel="nofollow noopener">Google </a>
+ Cloud, in his statement. "We look forward to participating in this 
+initiative alongside leaders in technology, academia and the public 
+sector to make more resources available to COVID-19 researchers and to 
+apply Google Cloud computing capabilities toward the development of 
+potential treatments and vaccines.”</p>
+<p>Similarly, Microsoft's global head for its AI for Health Program, 
+John Kahan, notes that Microsoft wants to "make sure researchers working
+ to combat COVID-19 have access to the tools they need" by expanding 
+access to its Azure cloud and by creating more opportunities for 
+researchers to collaborate with the company's data scientists.</p>
+<p>"Today I'm also announcing the launch of a new public/private 
+consortium organized by the White House, the Department of Energy and 
+IBM to unleash the power of American supercomputing resources to fight 
+the Chinese virus," Trump, who continues to insist on calling COVID-19 
+'the Chinese virus,' said in today's press briefing.</p>
+<p>"The following leaders from private industries, academia and 
+government will be contributing and they are gonna be contributing a lot
+ of different things, but compute primarily -- computing resources to 
+help researchers discover new treatments and vaccine. They will be 
+working along with NIH and all of the people working on this. But 
+tremendous help from IBM, Google, <a href="https://crunchbase.com/organization/amazon" rel="nofollow noopener">Amazon, </a> Microsoft, MIT, Rensselaer Polytechnic Institute, the Department of Energy's, the <a href="https://crunchbase.com/organization/national-science-foundation" rel="nofollow noopener">National Science Foundation </a> and NASA. They are all contributing to this effort."</p>
+<p class="rm-manual">Update (4:45pm PT): we updated the post with statements from Google and Microsoft.</p>
+<h2 class="rm-manual">What to Read Next</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://techcrunch.com/2020/06/17/fcc-commissioner-disparages-trumps-social-media-order-the-decision-is-ours-alone/"><span>FCC Commissioner disparages Trump's social media order: 'The decision is ours alone'</span></a></h3><p class="rm-manual">TechCrunch</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/pompeo-meets-chinese-officials-amid-203545230.html"><span>Pompeo meets Chinese officials amid Bolton book revelations</span></a></h3><p class="rm-manual">Associated Press</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/trump-oks-bill-punish-china-203113326.html"><span>Trump OKs bill to punish China over ethnic crackdown</span></a></h3><p class="rm-manual">Associated Press</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://techcrunch.com/2020/06/17/google-lays-out-a-spate-of-changes-designed-to-diversify-its-management-its-products-and-startups/"><span>Google lays out a spate of changes designed to diversify its management, its products, and startups</span></a></h3><p class="rm-manual">TechCrunch</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ph.news.yahoo.com/k-pop-yohan-death-094515200.html"><span>K-pop boyband star Yohan dies aged 28</span></a></h3><p class="rm-manual">Yahoo Celebrity UK</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ph.news.yahoo.com/video/ohio-police-citing-heightened-scrutiny-204451340.html"><span>Ohio Police, Citing 'Heightened Scrutiny,' Release Footage Showing Taser Used on Black Man</span></a></h3><p class="rm-manual">Storyful</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://finance.yahoo.com/news/connect-joy-cons-nintendo-switch-204639612.html"><span>How to connect Joy-Cons to the Nintendo Switch Lite</span></a></h3><p class="rm-manual">Digital Trends</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ph.news.yahoo.com/india-says-three-soldiers-killed-clash-chinese-border-081657097.html"><span>India says 20 troops killed in deadliest clash with China in decades</span></a></h3><p class="rm-manual">AFP News</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/sorry-china-u-aircraft-carriers-110000648.html"><span>Sorry, China: U.S. Aircraft Carriers Are Far From Obsolete</span></a></h3><p class="rm-manual">The National Interest</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ph.news.yahoo.com/video/squirrel-rides-severe-leicestershire-weather-203807352.html"><span>Squirrel Rides Out Severe Leicestershire Weather in Bird Feeder</span></a></h3><p class="rm-manual">Storyful</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://finance.yahoo.com/news/save-hundreds-best-cheap-macbook-163632129.html"><span>These are the best cheap MacBook deals for June 2020</span></a></h3><p class="rm-manual">Digital Trends</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ph.news.yahoo.com/aftermath-india-china-deadly-border-042809331.html"><span>China, India disavow clash but pledge to end border standoff</span></a></h3><p class="rm-manual">Associated Press</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ph.news.yahoo.com/taiwan-jets-drive-away-intruding-082311461.html"><span>Taiwan jets 'drive away' intruding Chinese fighter plane, third intrusion in days</span></a></h3><p class="rm-manual">Reuters</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ph.news.yahoo.com/abs-cbns-pamilya-ko-announces-041000596.html"><span>ABS-CBN's "Pamilya Ko" announces cancellation</span></a></h3><p class="rm-manual">The Hive Asia</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ph.news.yahoo.com/coronavirus-leaves-more-americans-dead-wwi-014924376.html"><span>Coronavirus leaves more Americans dead than WWI</span></a></h3><p class="rm-manual">AFP News</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ph.news.yahoo.com/video/severe-weather-brings-flooding-nottinghamshire-201617719.html"><span>Severe Weather Brings Flooding to Nottinghamshire</span></a></h3><p class="rm-manual">Storyful</p><p class="rm-manual"></p></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://finance.yahoo.com/news/best-cheap-ssd-deals-june-212506130.html"><span>These are the best cheap SSD deals for June 2020</span></a></h3><p class="rm-manual">Digital Trends</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ph.news.yahoo.com/ombudman-investigate-duque-other-health-060007858.html"><span>Ombudsman to investigate Duque, other health officials for ‘alleged irregularities’</span></a></h3><p class="rm-manual">Coconuts Manila</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ph.news.yahoo.com/malacanang-reminds-critics-cyberlibel-act-065507998.html"><span>Malacanang reminds critics: Cyberlibel Act passed under Aquino Administration</span></a></h3><p class="rm-manual">UNTV News</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sports.yahoo.com/nba-disney-world-hotels-gran-destino-grand-floridian-yacht-club-233256582.html"><span>Here's what the NBA's stay at Disney World is going to look like</span></a></h3><p class="rm-manual">Yahoo Sports</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ph.news.yahoo.com/zealand-military-oversee-borders-virus-bungle-023630055.html"><span>New Zealand military to control borders after virus bungle</span></a></h3><p class="rm-manual">AFP News</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ph.news.yahoo.com/video/person-struck-car-firearm-pulled-201419103.html"><span>Person Struck by Car, Firearm Pulled During Altercation Amid Louisville Protest</span></a></h3><p class="rm-manual">Storyful</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://finance.yahoo.com/news/save-much-480-fall-6-192045276.html"><span>Best smartphone deals for June 2020: iPhone, Samsung, and Google Pixel</span></a></h3><p class="rm-manual">Digital Trends</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ph.news.yahoo.com/vienna-man-fined-500-euros-deliberate-massive-flatulence-000649234.html"><span>Vienna man fined 500 euros for deliberate 'massive flatulence'</span></a></h3><p class="rm-manual">AFP News</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/u-must-maintain-defense-agreement-103056025.html"><span>The U.S. Must Maintain Its Defense Agreement with the Philippines</span></a></h3><p class="rm-manual">National Review</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/survive-nuclear-war-moscow-prepared-010000324.html"><span>To Survive Nuclear War, Moscow Is Prepared To Live Underground</span></a></h3><p class="rm-manual">The National Interest</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.style.yahoo.com/lea-salonga-trends-twitter-ranting-084600482.html"><span>Lea Salonga trends on Twitter after ranting frustration with politics</span></a></h3><p class="rm-manual">The Hive Asia</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ph.news.yahoo.com/video/mississippi-flag-removed-gulfport-municipal-193230113.html"><span>Mississippi Flag Removed From Gulfport Municipal Buildings Due to Confederate Emblem</span></a></h3><p class="rm-manual">Storyful</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://finance.yahoo.com/news/shoot-macro-photography-210526092.html"><span>How to shoot macro photography</span></a></h3><p class="rm-manual">Digital Trends</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/india-china-clash-two-sides-033033940.html"><span>India-China clash: Diplomats 'strongly protest' over border clashes</span></a></h3><p class="rm-manual">BBC</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sports.yahoo.com/kyrie-irving-proposed-players-start-a-new-league-in-group-chat-with-nets-teammates-010518519.html"><span>Report: Kyrie Irving proposed players start a new league in group chat with Nets teammates</span></a></h3><p class="rm-manual">Yahoo Sports</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ph.news.yahoo.com/controversial-business-magnate-politician-danding-015443669.html"><span>Controversial business magnate and politician Danding Cojuangco dies at 85</span></a></h3><p class="rm-manual">Coconuts Manila</p><p></p></li>
+</ul></article>
+</body></html>

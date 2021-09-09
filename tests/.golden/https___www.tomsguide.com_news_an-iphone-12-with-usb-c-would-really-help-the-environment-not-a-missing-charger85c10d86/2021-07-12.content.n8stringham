@@ -1,0 +1,245 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> An iPhone 12 with USB-C would really help the environment — not a missing charger | Tom's Guide </p>
+<p class="rm-manual"><a href="#main">Skip to main content</a> </p>
+<p class="rm-manual"> <a href="https://www.tomsguide.com/"> <span> logo Created with Sketch. </span> <span>Tom's Guide</span> </a> </p>
+<p class="rm-manual"><span>Search</span> </p>
+<p class="rm-manual"> <a href="https://www.tomsguide.com/feeds/all"> RSS </a> </p>
+<p class="rm-manual"><a></a></p><p class="rm-manual"><a><span>UK</span></a></p><a><p class="rm-manual"><span>US</span></p></a><a><p class="rm-manual"><span>Australia</span></p></a><a><p class="rm-manual"><span>Canada</span></p></a><p class="rm-manual"></p>
+<p class="rm-manual">Please deactivate your ad blocker in order to see our subscription offer</p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.tomsguide.com/best-picks"> <span>Best Picks</span> </a> </li> <li class="rm-manual"> <a href="https://www.tomsguide.com/news"> <span>News</span> </a> </li> <li class="rm-manual"> <a href="https://www.tomsguide.com/reviews"> <span>Reviews</span> </a> </li> <li class="rm-manual"> <a href="https://www.tomsguide.com/how-to"> <span>How Tos</span> </a> </li> <li class="rm-manual"> <a href="https://www.tomsguide.com/topics/smartphones"> <span>Phones</span> </a> </li> <li class="rm-manual"> <a href="https://www.tomsguide.com/topics/tv"> <span>TVs</span> </a> </li> <li class="rm-manual"> <a href="https://www.tomsguide.com/topics/streaming"> <span>Streaming</span> </a> </li> <li class="rm-manual"> More <ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.tomsguide.com/us/best-antivirus,review-2588.html">Antivirus</a> </li> <li class="rm-manual"> <a href="https://www.tomsguide.com/topics/audio">Audio</a> </li> <li class="rm-manual"> <a href="https://www.tomsguide.com/topics/cameras">Cameras</a> </li> <li class="rm-manual"> <a href="https://www.tomsguide.com/topics/gaming">Gaming</a> </li> <li class="rm-manual"> <a href="https://www.tomsguide.com/topics/smart-home">Smart Home</a> </li> <li class="rm-manual"> <a href="https://www.tomsguide.com/topics/software">Software</a> </li> <li class="rm-manual"> <a href="https://www.tomsguide.com/topics/streaming">Streaming</a> </li> <li class="rm-manual"> <a href="https://www.tomsguide.com/best-picks/best-vpn">Best VPN</a> </li> <li class="rm-manual"> <a href="https://www.tomsguide.com/topics/wearables">Wearables</a> </li> <li class="rm-manual"> <a href="https://www.tomsguide.com/buying-guide/best-web-hosting-services">Web hosting</a> </li> <li class="rm-manual"> <a href="https://www.tomsguide.com/topics/what-to-watch">What To Watch</a> </li> <li class="rm-manual"> <a href="https://www.tomsguide.com/how-to">How To</a> </li> <li class="rm-manual"> <a href="https://www.tomsguide.com/buying-guide/best-cloud-storage">Cloud Storage</a> </li> <li class="rm-manual"> <a href="https://www.tomsguide.com/best-picks/best-cloud-backup">Cloud Backup</a> </li> <li class="rm-manual"> <a href="https://www.tomsguide.com/topics">All Topics</a> </li> </ul> </li> </ul>
+<p class="rm-manual"> <a href="https://forums.tomsguide.com/">Forums</a> </p>
+<p class="rm-manual"> Trending </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.tomsguide.com/news/toms-guide-awards-2021-all-the-big-winners-as-theyre-announced">Tom's Guide Awards</a>
+</li> <li class="rm-manual"> <a href="https://www.tomsguide.com/news/iphone-13-release-date-price-specs-leaks">iPhone 13</a>
+</li> <li class="rm-manual"> <a href="https://www.tomsguide.com/news/nintendo-switch-oled">Nintendo Switch OLED</a>
+</li> <li class="rm-manual"> <a href="https://www.tomsguide.com/news/ps5-restock-update">PS5 restock</a>
+</li> <li class="rm-manual"> <a href="https://www.tomsguide.com/news/ios-15-release-date-beta-and-all-the-new-iphone-features">iOS 15</a>
+</li> <li class="rm-manual"> <a href="https://www.tomsguide.com/best-picks/best-vpn">Best VPN</a>
+</li> </ul>
+<p class="rm-manual">Tom's Guide is supported by its audience. When you purchase through links on our site, we may earn an affiliate commission. <a href="https://www.futureplc.com/terms-conditions/">Learn more</a></p>
+<ol class="rm-manual"> <li class="rm-manual"><a href="https://www.tomsguide.com/">Home</a></li> <li class="rm-manual"><a href="https://www.tomsguide.com/news">News</a></li> </ol>
+<h1 class="rm-manual">An iPhone 12 with USB-C would really help the environment — not a missing charger</h1>
+<p class="rm-manual"> By <span><a href="https://www.tomsguide.com/author/imad-khan" rel="author"><span>Imad Khan</span></a></span> 18 October 2020 </p>
+<p>A good step forward, but Apple could do more</p>
+<figcaption class="rm-manual"> <span>(Image credit: Apple)</span> </figcaption><p>During
+ last week’s Apple’s iPhone 12 event, the Cupertino-based company was 
+proud to tout its environmental initiatives. Its offices, data centers 
+and stores currently run on 100% renewable energy and the company is 
+aiming for net zero “climate impact” by 2030. </p>
+<p>Apple’s environmentally conscious redesign has extended beyond 
+corporate offices and malls. This year’s iPhones will not ship with 
+earbuds or a charger, all in the name of lowering needless waste. This 
+allows 70% more iPhones to be shipped on pallets and, according to Lisa 
+Jackson, VP of environment, policy and social initiatives at Apple, 
+“it’s like removing 450,000 cars from the road per year.” </p>
+<ul>
+<li class="rm-manual">New <a href="https://www.tomsguide.com/reviews/iphone-12">iPhone 12</a> release date, price, specs, colors and news</li>
+<li class="rm-manual">
+<a href="https://www.tomsguide.com/news/iphone-12-vs-mini-vs-pro-vs-pro-max">iPhone 12 vs iPhone 12 mini vs iPhone 12 Pro vs Pro Max</a>: What to buy?</li>
+<li class="rm-manual">Just in: <a href="https://www.tomsguide.com/news/yikes-apple-watch-se-owners-reporting-scary-overheating-problem">Apple Watch SE owners reporting scary overheating problem</a>
+</li>
+</ul>
+<p>“This could not only help to reduce waste but also would prevent 
+upstream environmental impacts linked to the extraction of primary raw 
+materials, manufacturing and distribution of products,” <a href="https://www.cnbc.com/2020/10/14/apple-praised-for-removing-earpods-and-charger-from-iphone-12-box.html">said</a>
+ Dr. Teresa Domenech, a lecturer in industrial ecology at the University
+ College London’s Institute for Sustainable Resources, to CNBC.</p>
+<p>Even then, there’s a dissonance in Apple’s newly public ecological 
+approach. For all the good the company is purporting to do, there’s one 
+dogged design quirk that continues to remain, flying in the face of its 
+corporate activism. Apple is still sticking with its proprietary 
+Lightning charge port. If the company really did care about the 
+environment, it would have switched to USB Type-C. </p>
+<h2>The iPhone 12’s hidden costs </h2>
+<figcaption class="rm-manual"><span>(Image credit: Apple)</span></figcaption><p>According
+ to Apple, there are currently 2 billion iPhone charging adapters out in
+ the world, and that’s not including third-party ones. Many of these 
+adapters use the standard rectangular USB Type-A port. But included with
+ the iPhone 12 will be a USB Type-C to Lightning cable, making old 
+adapters incompatible.</p>
+<p>Across Apple stores later this month, sales reps will likely ask 
+shoppers if they have a charge adapter that’s USB Type-C compatible. 
+Some might, many won’t. Of course, these users could use their old 5W 
+adapters and Type-A to lightning cables as well. But the new iPhone has 
+fast charging, and for $19, users can upgrade to the latest charge 
+adapters for speedy electrical fuel up. This curtails some of those 
+environmental benefits.</p>
+<p>At this moment, most of the tech world has moved on to USB Type-C. 
+All Android phones are currently on the standard and have been so for 
+years. Even the latest iPads and Macbooks currently use Type-C, so it’s 
+not as if the connection standard is foreign to Apple. It leaves the 
+iPhone as the rogue outlier, stubbornly sticking to outdated electrical 
+pins as a means to keep iPhone users tied to a proprietary port. </p>
+<p>If Apple had switched to Type-C, it could have allowed the existing 
+ecosystem of cables and adapters to be folded into the iPhone 12. Users 
+with the new iPad or MacBook could roll over their existing charging 
+accessories to keep iPhone 12s charged. Android users jumping to iPhone 
+could have continued to use the charging adapters included with their 
+old phones. Or anyone who knows someone with an Android device could 
+have piggybacked off their existing power setup. </p>
+<p>Given the potential waste-saving advantages, Apple’s decision to 
+stick to Lightning is all the more baffling. And let’s not forget that 
+Apple will still need to ship tiny Type-C power adapters across the 
+world to accommodate the new cable included with the iPhone 12. While 
+these new adapters will have a long shelf life, it will cut back on the 
+emissions savings that Apple so proudly publicizes. </p>
+<h2>Why Apple won’t kill the Lightning port </h2>
+<figcaption class="rm-manual"><span>(Image credit: Apple)</span></figcaption><p>So, why has Apple chosen not to adopt Type-C for iPhone when the waste-saving advantages are seemingly obvious?</p>
+<p>It likely comes down to profit. It’s hard to say exactly why 
+Lightning remains, especially when Apple has already switched over to 
+USB-C on iPad and Macbook, but one can surmise that with iPhone being 
+Apple’s most popular product category, downstream accessory sales tied 
+to lightning are powerful.</p>
+<p>Cables and charging adapters are cheap to make. While Apple hasn’t 
+revealed manufacturing costs, generally charger production at high scale
+ is only a couple of cents. So, even assuming the production, boxing, 
+and shipping of adapters and cables comes out to a dollar, with a price 
+tag of $19 a piece, it’s easy money. </p>
+<p>At the moment, Apple <a href="https://www.cnbc.com/2020/01/28/apple-wearables-home-and-accessories-segment-now-bigger-than-mac.html">reports</a>
+ sales of cables and chargers along with other accessories like Airpods 
+and the Apple Watch. This segment of Apple’s business accounts for $10 
+billion in quarterly revenue. It’s outperforming the Mac line by almost 
+$3 billion. The financial incentive to switch to USB Type-C for iPhone 
+12 could rob Apple of the overwhelming gains from accessory sales. </p>
+<h2> Outlook </h2>
+<p>Overall, Apple’s move to not include a charge adapter with this 
+year’s phone is good for the environment. Apple is often a trend setter,
+ with the rest of the tech world following suit. Don’t be surprised if 
+Samsung, LG, and others start removing accessories and making boxes 
+slimmer (though probably not right away in <a href="https://www.tomsguide.com/news/samsung-galaxy-s21-will-have-the-iphone-12s-biggest-missing-feature">Samsung’s case</a>). And of course, not having to include accessories will also increase profit margins. </p>
+<p>But don’t assume that Apple is being altruistic about any of this. If
+ it were, it would have killed Lightning years ago, instead of clinging 
+to it with a death grip to keep iPhone users from buying elsewhere.</p>
+<ul class="rm-manual"><li class="rm-manual">Next: <a href="https://www.tomsguide.com/reviews/iphone-12">iPhone 12 — 5 reasons to buy and 3 reasons to skip</a>
+</li></ul>
+<p class="rm-manual">Today's best Apple AirPods Pro deals</p>
+<p class="rm-manual">Reduced Price</p>
+<p class="rm-manual"><a href="https://www.awin1.com/pclick.php?p=28881554483&amp;a=103504&amp;m=6037&amp;clickref=tomsguide-us-9121711231559540000" rel="nofollow noopener"></a></p><p class="rm-manual"><a href="https://www.awin1.com/pclick.php?p=28881554483&amp;a=103504&amp;m=6037&amp;clickref=tomsguide-us-9121711231559540000" rel="nofollow noopener">AirPods Pro + with Wireless...</a></p><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://www.awin1.com/pclick.php?p=28881554483&amp;a=103504&amp;m=6037&amp;clickref=tomsguide-us-9121711231559540000" rel="nofollow noopener"></a></p><p class="rm-manual"><a href="https://www.awin1.com/pclick.php?p=28881554483&amp;a=103504&amp;m=6037&amp;clickref=tomsguide-us-9121711231559540000" rel="nofollow noopener">Zavvi</a></p><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://www.awin1.com/pclick.php?p=28881554483&amp;a=103504&amp;m=6037&amp;clickref=tomsguide-us-9121711231559540000" rel="nofollow noopener"></a></p><p class="rm-manual"><a href="https://www.awin1.com/pclick.php?p=28881554483&amp;a=103504&amp;m=6037&amp;clickref=tomsguide-us-9121711231559540000" rel="nofollow noopener"><span>$307.99</span></a></p><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://www.awin1.com/pclick.php?p=28881554483&amp;a=103504&amp;m=6037&amp;clickref=tomsguide-us-9121711231559540000" rel="nofollow noopener"></a></p><p class="rm-manual"><a href="https://www.awin1.com/pclick.php?p=28881554483&amp;a=103504&amp;m=6037&amp;clickref=tomsguide-us-9121711231559540000" rel="nofollow noopener"><span>$269.99</span></a></p><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://www.awin1.com/pclick.php?p=28881554483&amp;a=103504&amp;m=6037&amp;clickref=tomsguide-us-9121711231559540000" rel="nofollow noopener">View</a></p>
+<p class="rm-manual"><a href="https://target.georiot.com/Proxy.ashx?tsid=45724&amp;GR_URL=https%3A%2F%2Fwww.amazon.com%2Fs%3Fk%3DApple+AirPods+Pro%26tag%3Dhawk-future-20%26ascsubtag%3Dtomsguide-us-2772507311012335000-20" rel="nofollow noopener"></a></p><p class="rm-manual"><a href="https://target.georiot.com/Proxy.ashx?tsid=45724&amp;GR_URL=https%3A%2F%2Fwww.amazon.com%2Fs%3Fk%3DApple+AirPods+Pro%26tag%3Dhawk-future-20%26ascsubtag%3Dtomsguide-us-2772507311012335000-20" rel="nofollow noopener">View Similar Amazon US</a></p><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://target.georiot.com/Proxy.ashx?tsid=45724&amp;GR_URL=https%3A%2F%2Fwww.amazon.com%2Fs%3Fk%3DApple+AirPods+Pro%26tag%3Dhawk-future-20%26ascsubtag%3Dtomsguide-us-2772507311012335000-20" rel="nofollow noopener"></a></p><p class="rm-manual"><a href="https://target.georiot.com/Proxy.ashx?tsid=45724&amp;GR_URL=https%3A%2F%2Fwww.amazon.com%2Fs%3Fk%3DApple+AirPods+Pro%26tag%3Dhawk-future-20%26ascsubtag%3Dtomsguide-us-2772507311012335000-20" rel="nofollow noopener">Amazon</a></p><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://target.georiot.com/Proxy.ashx?tsid=45724&amp;GR_URL=https%3A%2F%2Fwww.amazon.com%2Fs%3Fk%3DApple+AirPods+Pro%26tag%3Dhawk-future-20%26ascsubtag%3Dtomsguide-us-2772507311012335000-20" rel="nofollow noopener"></a></p><p class="rm-manual"><a href="https://target.georiot.com/Proxy.ashx?tsid=45724&amp;GR_URL=https%3A%2F%2Fwww.amazon.com%2Fs%3Fk%3DApple+AirPods+Pro%26tag%3Dhawk-future-20%26ascsubtag%3Dtomsguide-us-2772507311012335000-20" rel="nofollow noopener"><span>No price information</span></a></p><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://target.georiot.com/Proxy.ashx?tsid=45724&amp;GR_URL=https%3A%2F%2Fwww.amazon.com%2Fs%3Fk%3DApple+AirPods+Pro%26tag%3Dhawk-future-20%26ascsubtag%3Dtomsguide-us-2772507311012335000-20" rel="nofollow noopener">Check Amazon</a></p>
+<p class="rm-manual">We check over 250 million products every day for the best prices</p>
+<p class="rm-manual"> <span>6 Comments</span> <a href="https://forums.tomsguide.com/threads/an-iphone-12-with-usb-c-would-really-help-the-environment-%E2%80%94-not-a-missing-charger.475411/"> <span>Comment from the forums</span> </a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <span>Bookly</span> </p><p class="rm-manual">
+ "This year’s iPhones will not ship with earbuds or a charger, all in 
+the name of lowering needless waste. This allows 70% more iPhones to be 
+shipped on pallets and, according to Lisa Jackson, VP of environment, 
+policy and social initiatives at Apple, “it’s like removing 450,000 cars
+ from the road per year.” </p><p class="rm-manual"> How many cars a year would be removed from the road if Apple stopped including an actual phone in the iPhone box? </p><p class="rm-manual"></p> <span> <a href="https://forums.tomsguide.com/threads/an-iphone-12-with-usb-c-would-really-help-the-environment-%E2%80%94-not-a-missing-charger.475411/"> <span>Reply</span> </a> </span> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> <span>luxetlibertas</span> </p><p class="rm-manual">
+ Virtually all existing Apple users already have at least one charger 
+with USB-A to Lightning cable. That accounts for most of the people 
+buying one of the new iPhone 12 models. Tom's guide claim about "making 
+old adapters incompatible" is a clear error. Changing to USB-C would 
+inconvenience almost the whole of Apple's customer base, leading to many
+ unnecessary cable (or charger) purchases. And those that have an USB-C 
+charger (or plan to switch to USB-C) get the cable. So the article is 
+really misguided. </p> <span> <a href="https://forums.tomsguide.com/threads/an-iphone-12-with-usb-c-would-really-help-the-environment-%E2%80%94-not-a-missing-charger.475411/"> <span>Reply</span> </a> </span> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> <span>wollman</span> </p><p class="rm-manual">
+ What's really bad for the environment is when people create ewaste by 
+dumping their old phones. USB-C ports break much more easily than 
+Lightning. If anything, I wish USB-C would be replaced by Lightning (not
+ that I think that would actually happen). </p> <span> <a href="https://forums.tomsguide.com/threads/an-iphone-12-with-usb-c-would-really-help-the-environment-%E2%80%94-not-a-missing-charger.475411/"> <span>Reply</span> </a> </span> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> <span>Steadyzach</span> </p><blockquote class="rm-manual">
+<p class="rm-manual"><span>Bookly</span> said:</p>"This year’s iPhones 
+will not ship with earbuds or a charger, all in the name of lowering 
+needless waste. This allows 70% more iPhones to be shipped on pallets 
+and, according to Lisa Jackson, VP of environment, policy and social 
+initiatives at Apple, “it’s like removing 450,000 cars from the road per
+ year.” How many cars a year would be removed from the road if Apple 
+stopped including an actual phone in the iPhone box?</blockquote><p class="rm-manual"> Interesting thought. I wonder how many cars a year would be removed if you didn’t buy a single electronic.</p><p class="rm-manual">
+ Apple is trying to help the environment but they are still a business 
+who provides electronics that billions of people use. They need to make 
+money to continue to do that so they will continue to include the iPhone
+ in the box ;) </p> <span> <a href="https://forums.tomsguide.com/threads/an-iphone-12-with-usb-c-would-really-help-the-environment-%E2%80%94-not-a-missing-charger.475411/"> <span>Reply</span> </a> </span> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> <span>Steadyzach</span> </p><p class="rm-manual"> </p><blockquote class="rm-manual">
+<p class="rm-manual"><span>admin</span> said:</p>This year's iPhone 12 
+will help eliminate waste, but a move to USB-C charging would go even 
+further. An iPhone 12 with USB-C would really help the environment — not
+ a missing charger : Read more</blockquote>This article is not exactly 
+correct in many ways. Let’s start with the fact that Apple has billions 
+of phones out in the world rn, and many more devices that use lightning.
+ If they decided to stop using lightning all together they would create 
+more waste than they would save by switching to USB C.<p class="rm-manual">
+ I think it unfortunate that the uninformed like to hate on a company 
+who actually is trying to worry about the environment. A company who 
+inform the public on actual shit they do and what they give back.</p><p class="rm-manual"> But oh well, let’s pull out the pitch forks and join the android users you need every phone to be USB C </p><p class="rm-manual"></p> <span> <a href="https://forums.tomsguide.com/threads/an-iphone-12-with-usb-c-would-really-help-the-environment-%E2%80%94-not-a-missing-charger.475411/"> <span>Reply</span> </a> </span> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> <span>nawnp</span> </p><blockquote class="rm-manual">
+<p class="rm-manual"><span>luxetlibertas</span> said:</p>Virtually all 
+existing Apple users already have at least one charger with USB-A to 
+Lightning cable. That accounts for most of the people buying one of the 
+new iPhone 12 models. Tom's guide claim about "making old adapters 
+incompatible" is a clear error. Changing to USB-C would inconvenience 
+almost the whole of Apple's customer base, leading to many unnecessary 
+cable (or charger) purchases. And those that have an USB-C charger (or 
+plan to switch to USB-C) get the cable. So the article is really 
+misguided.</blockquote><p class="rm-manual"> If they switched the port 
+to USB C, and included a USB C to USB A cable in the box, it would be 
+compatible with all those older USB A charging bricks most phones have 
+come with in the past, and make it convenient when people inevitably buy
+ USB C accessories over time as all other devices will have. The only 
+excess waste would be those buying lightning to USB C adapters that they
+ would no doubt come out alongside the move, and is probably going to be
+ about the same excess spending as those that now have to buy USB C 
+chargers or USB A to lightning cables as the old ones are degraded but 
+the charging bricks still work. </p><p class="rm-manual"> Instead they 
+have only increased the need for people to buy lightning accessories, 
+when chances are a usb c accessory would be much easier to come by(and 
+not needed to be produced in two versions), and there will still be a 
+need for two versions and or one plus an adapter for people having an 
+iPhone and iPad or Mac setup. </p> <span> <a href="https://forums.tomsguide.com/threads/an-iphone-12-with-usb-c-would-really-help-the-environment-%E2%80%94-not-a-missing-charger.475411/"> <span>Reply</span> </a> </span> <p class="rm-manual"></p> </li> </ul>
+<p class="rm-manual"> Show more comments </p>
+<ol class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><p class="rm-manual"><span>1</span></p><p class="rm-manual"><a href="https://www.tomsguide.com/how-to/how-to-scan-a-qr-code-on-android">How to scan a QR code on Android</a></p><p class="rm-manual"></p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"><span>2</span></p><p class="rm-manual"><a href="https://www.tomsguide.com/news/ios-15-widgets-heres-all-the-new-widgets-coming-to-your-iphone">iOS 15 widgets: Here’s all the new widgets coming to your iPhone</a></p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"><span>3</span></p><p class="rm-manual"><a href="https://www.tomsguide.com/news/most-anticipated-phones-iphone-13-galaxy-z-fold-3-pixel-6-and-more">Most anticipated phones — iPhone 13, Galaxy Z Fold 3, Pixel 6 and more </a></p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"><span>4</span></p><p class="rm-manual"><a href="https://www.tomsguide.com/news/im-skipping-nintendo-switch-oled-and-waiting-for-a-switch-pro-heres-why">I’m skipping Nintendo Switch OLED and waiting for a Switch Pro — here’s why</a></p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"><span>5</span></p><p class="rm-manual"><a href="https://www.tomsguide.com/news/how-to-watch-rick-and-morty-season-5-episode-4-online-start-time-channel-and-more">How to watch Rick and Morty season 5 episode 4 online, start time, channel and more</a></p><p class="rm-manual"></p></li>
+</ol>
+<ol class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><p class="rm-manual"><span>1</span></p><p class="rm-manual"><a href="https://www.tomsguide.com/reviews/samsung-odyssey-g9-review-ridiculous-in-the-best-possible-way">Samsung Odyssey G9 monitor review: Ridiculous in the best possible way</a></p><p class="rm-manual"></p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"><span>2</span></p><p class="rm-manual"><a href="https://www.tomsguide.com/how-to/how-to-scan-a-qr-code-on-android">How to scan a QR code on Android</a></p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"><span>3</span></p><p class="rm-manual"><a href="https://www.tomsguide.com/news/ios-15-widgets-heres-all-the-new-widgets-coming-to-your-iphone">iOS 15 widgets: Here’s all the new widgets coming to your iPhone</a></p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"><span>4</span></p><p class="rm-manual"><a href="https://www.tomsguide.com/news/most-anticipated-phones-iphone-13-galaxy-z-fold-3-pixel-6-and-more">Most anticipated phones — iPhone 13, Galaxy Z Fold 3, Pixel 6 and more </a></p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"><span>5</span></p><p class="rm-manual"><a href="https://www.tomsguide.com/news/im-skipping-nintendo-switch-oled-and-waiting-for-a-switch-pro-heres-why">I’m skipping Nintendo Switch OLED and waiting for a Switch Pro — here’s why</a></p><p class="rm-manual"></p></li>
+</ol>
+<p class="rm-manual">Tom's Guide is part of Future US Inc, an international media group and leading digital publisher. <a href="http://www.futureplc.com/">Visit our corporate site</a>.</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://www.futureplc.com/terms-conditions/">Terms and conditions</a></li> <li class="rm-manual"><a href="http://www.futureplc.com/privacy-policy/">Privacy policy</a></li> <li class="rm-manual"><a href="http://www.futureplc.com/cookies-policy/">Cookies policy</a></li> <li class="rm-manual"><a href="https://www.futureplc.com/accessibility-statement/">Accessibility Statement</a></li> <li class="rm-manual"><a href="https://www.futureplc.com/services/advertising/">Advertise</a></li> <li class="rm-manual"><a href="https://www.tomsguide.com/us/toms-guide-who-we-are,review-4166.html">About us</a></li> <li class="rm-manual"><a href="https://www.futureplc.com/brand/toms-guide/">Contact us</a></li> <li class="rm-manual"><a href="https://www.tomsguide.com/archives">Archives</a></li> </ul>
+<p class="rm-manual">© Future US, Inc. 11 West 42nd Street, 15th Floor, New York, NY 10036. </p></article>
+</body></html>

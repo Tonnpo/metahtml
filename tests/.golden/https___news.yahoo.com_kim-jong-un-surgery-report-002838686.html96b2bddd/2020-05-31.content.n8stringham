@@ -1,0 +1,168 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">Mystery Surrounds Kim Jong Un’s Health After Surgery Reports</p>
+<p class="rm-manual"><a href="https://www.yahoo.com/news">Yahoo</a></p>
+<p class="rm-manual">Search</p>
+<ul class="rm-manual"><li class="rm-manual"><a href="https://mail.yahoo.com/?.intl=us&amp;.lang=en-US&amp;.partner=none&amp;.src=news">Mail</a></li></ul>
+<p class="rm-manual"><a href="file:///"> News</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///coronavirus"> Coronavirus</a></li>
+<li class="rm-manual"><a href="file:///us/"> US</a></li>
+<li class="rm-manual"><a href="file:///world/"> World</a></li>
+<li class="rm-manual"><a href="file:///politics/"> Politics</a></li>
+<li class="rm-manual"><a href="file:///elections"> 2020 Election</a></li>
+<li class="rm-manual"><a href="file:///health/"> Health</a></li>
+<li class="rm-manual"><a href="file:///science/"> Science</a></li>
+<li class="rm-manual"><a href="file:///originals/"> Originals</a></li>
+<li class="rm-manual"><a href="https://yahoo.uservoice.com/forums/204992-us-news"> Contact Us</a></li>
+<li class="rm-manual"><a href="file:///videos"> Videos</a></li>
+</ul>
+<h1 class="rm-manual">Mystery Surrounds Kim Jong Un’s Health After Surgery Reports</h1>
+<p class="rm-manual">Jennifer Jacobs and Shinhye Kang</p>
+<p class="rm-manual"><span><span><a href="https://www.bloomberg.com/" rel="noopener noreferrer nofollow">Bloomberg</a></span></span>April 21, 2020</p>
+<p class="rm-manual">(Bloomberg) --</p>
+<p class="">Mystery surrounded Kim Jong Un’s health after U.S. and South
+ Korean officials gave differing accounts of the North Korean leader’s 
+condition following his unusual absence from recent holiday 
+celebrations.</p>
+<p>Kim was in critical condition after undergoing cardiovascular surgery
+ last week and the Trump administration wasn’t sure of his current 
+health, said U.S. officials, who asked not to be identified. One of the 
+officials said the White House was told that Kim took a turn for the 
+worse after the procedure, while CNN earlier cited a U.S. official with 
+direct knowledge saying the 36-year-old leader may be in “grave danger.”</p>
+<p>Meanwhile, South Korean President Moon Jae-in’s office said that Kim 
+was conducting “normal activities” in a rural part of the country 
+assisted by close aides and no special movements were detected. Moon 
+spokesman Kang Min-seok said earlier there was nothing to confirm on the
+ speculation over Kim’s health.</p>
+<p>North Korea’s state-run news broadcast at 6:30 p.m. local time made 
+no mention of Kim, and the official Korean Central News Agency didn’t 
+provide an update on his condition. Kim Min-ki, head of the intelligence
+ committee in South Korea’s parliament, told Yonhap News Agency he 
+believes there’s no unusual signs regarding Kim’s health after he was 
+briefed by the country’s spy agency.</p>
+<p>The news around Kim’s health spurred the benchmark Kospi gauge to 
+extend losses to as much as 3% while the won slid as much as 1.7% 
+against the dollar. The Kospi closed 1% lower.</p>
+<p>The health of Kim, overweight and a heavy smoker, is one of North 
+Korea’s most closely guarded secrets, typically only known by a handful 
+of people in the inner circle of leadership. While North Korea had 
+scaled down major events as it battles the coronavirus pandemic, 
+speculation about Kim had been growing since his unprecedented absence 
+from April 15 celebrations for the birthday of his grandfather and state
+ founder Kim Il Sung, one of the biggest days on the country’s calendar.</p>
+<p>Even the most well-informed North Korea experts find it hard to tell 
+what’s happening in the secretive state. The Daily NK, a Seoul-based 
+website that gathers information from informants inside the isolated 
+nation, separately reported that Kim underwent a “cardiovascular 
+surgical procedure” and was now mostly recovered. Reuters cited an 
+official with the Chinese Communist Party’s International Liaison 
+Department saying that Kim wasn’t believed to be critically ill.</p>
+<p>“I saw some reports, but I don’t know what these sources are,” 
+Chinese foreign ministry spokesman Geng Shuang told reporters in Beijing
+ Tuesday afternoon.</p>
+<p>U.S. National Security Advisor Robert O’Brien told reporters on 
+Tuesday morning that the Trump administration is “watching the reports 
+closely.” “It’s just hard to know, we’re keeping a close eye on it,” he 
+said.</p>
+<p>Any leadership crisis in North Korea could potentially have serious 
+ramifications for regional stability, as well as for talks with the U.S.
+ over the country’s nuclear arsenal. Kim, who took power in 2011 
+following his father’s 17-year reign, developed the capability to 
+deliver a nuclear warhead to any part of the U.S. before engaging in 
+direct talks with President Donald Trump over his arsenal and sanctions 
+imposed on the state.</p>
+<p>“When Kim Jong Un came to power, his path to leadership had been 
+carefully cultivated by his father’s guidance and maneuvering,” said 
+Mintaro Oba, a former U.S. diplomat who was specialized in Korean 
+Peninsula issues. “Now, there is no clear transition plan and no clear 
+future leader.”</p>
+<p>White Horse</p>
+<p>Kim has been shown in state media in recent months appearing at 
+military drills and riding a white horse on the country’s revered Mt. 
+Paektu, where state propaganda says his grandfather used as a guerrilla 
+base to fight Japanese colonial occupiers. North Korea’s state media 
+reported on April 11 that Kim attended a Politburo meeting of the ruling
+ Workers’ Party. The next day it said he inspected a military unit, but 
+didn’t reveal the date of that visit.</p>
+<p>The South Korean Unification Ministry said Friday it was 
+“inappropriate” to speculate about the reasons for Kim’s absence. Kim 
+has made 17 public appearances this year that were mentioned in state 
+media -- at a pace of a little more than one a week -- the ministry 
+said. That’s slightly down from 84 public appearances last year.</p>
+<p>South Korean intelligence said Kim Jong Un married Ri Sol Ju, a 
+former singer, in 2009. They are thought to have three children, but 
+there is no official mention of their offspring. Dennis Rodman, the 
+offbeat basketball great who visited Kim in North Korea, said in 2013 he
+ held the leader’s baby girl in his arms, a daughter named Ju Ae.While 
+there’s been little time for him to groom a successor, Kim raised the 
+status of his younger sister Kim Yo Jong as a key player in the 
+secretive state. She was thrust into the global spotlight when she 
+served as envoy to the 2018 Winter Olympics in Pyeongchang, South Korea,
+ and became the first member of the immediate ruling family to visit 
+Seoul.</p>
+<p class="rm-manual">(Updates with U.S. comment in ninth paragraph)</p>
+<p class="rm-manual">For more articles like this, please visit us at <a href="https://www.bloomberg.com/" rel="nofollow noopener">bloomberg.com</a></p>
+<p class="rm-manual"><a href="https://www.bloomberg.com/subscriptions/67obqkd5zdp5lj8/?utm_source=yahoo_usn" rel="nofollow noopener">Subscribe now</a> to stay ahead with the most trusted business news source.</p>
+<p class="rm-manual">©2020 Bloomberg L.P.</p>
+<h2 class="rm-manual">What to Read Next</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/joe-biden-george-floyd-protest-wilmington-064212758.html"><span>Biden Visits George Floyd Protest Site, Urges Americans To Turn 'Anguish Into Purpose'</span></a></h3><p class="rm-manual">HuffPost</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/states-cities-plead-virus-aid-063948656.html"><span>States, cities plead for virus aid as Congress faces crises</span></a></h3><p class="rm-manual">Associated Press</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/video-appears-show-moments-george-floyd-pinned-ground-024800262--abc-news-topstories.html"><span>New video appears to show moments before George Floyd was pinned to ground</span></a></h3><p class="rm-manual">ABC News</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/high-school-graduation-daytona-speedway-210642650.html"><span>High school graduates receive their diplomas by crossing finish line at Daytona International Speedway</span></a></h3><p class="rm-manual">Yahoo Life</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/indias-cautious-states-open-even-062524820.html"><span>India's cautious states open up even as virus cases rise</span></a></h3><p class="rm-manual">Associated Press</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sports.yahoo.com/jr-smith-seen-on-video-beating-up-alleged-car-vandal-i-chased-him-down-and-whooped-his-ass-222739527.html"><span>J.R. Smith seen on video beating up alleged truck vandal: 'I chased him down and whooped his ass'</span></a></h3><p class="rm-manual">Yahoo Sports</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/trump-took-shelter-white-house-020928976.html"><span>Trump took shelter in White House bunker as protests raged</span></a></h3><p class="rm-manual">Associated Press</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/yahoo-news-you-gov-poll-most-americans-say-race-was-a-major-factor-in-george-floyds-death-but-opinions-on-protests-are-split-193951336.html"><span>Yahoo News/YouGov poll: Most Americans say race was a 'major factor' in George Floyd's death, but opinions on protests are split</span></a></h3><p class="rm-manual">Yahoo News</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/video/black-brown-people-being-killed-145710599.html"><span>'Black and brown people are being killed for no reason'</span></a></h3><p class="rm-manual">Yahoo News Video</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/south-africa-partly-lifts-lockdown-062059745.html"><span>South Africa partly lifts lockdown to try to fix battered economy</span></a></h3><p class="rm-manual">Reuters</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/minneapolis-police-fire-residents-porch-043505064.html"><span>'Light ’Em Up': Minneapolis Cops Appear To Fire Paint Rounds At People On Their Porch</span></a></h3><p class="rm-manual">HuffPost</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/george-floyd-protests-looting-lead-target-to-temporarily-close-and-adjust-hours-at-200-stores-185306802.html"><span>George Floyd protests, looting lead Target to temporarily close and adjust hours at 200 stores</span></a></h3><p class="rm-manual">Yahoo Finance</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/no-blame-abc-news-finds-36-cases-invoking-080100960--abc-news-topstories.html"><span>'No Blame?' ABC News finds 54 cases invoking 'Trump' in connection with violence, threats, alleged assaults</span></a></h3><p class="rm-manual">Good Morning America</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/minneapolis-mayor-and-police-chief-deal-with-a-crisis-years-in-the-making-172744849.html"><span>Minneapolis mayor and police chief deal with a crisis years in the making</span></a></h3><p class="rm-manual">Yahoo News</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/video/protesters-tear-d-c-national-125802221.html"><span>Protesters tear through D.C. after National Guard troops and Secret Service keep them from the White House</span></a></h3><p class="rm-manual">Yahoo News Video</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/coronavirus-losing-potency-top-italian-184358113.html"><span>New coronavirus losing potency, top Italian doctor says</span></a></h3><p class="rm-manual">Reuters</p><p class="rm-manual"></p></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/le-bron-james-twitter-amid-george-floyd-protests-why-doesnt-america-love-us-180816192.html"><span>LeBron James takes to Twitter amid protests: 'Why doesn't America love us'</span></a></h3><p class="rm-manual">Yahoo Sports</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/mass-gatherings-erosion-trust-upend-050633872.html"><span>Mass gatherings, erosion of trust upend coronavirus control</span></a></h3><p class="rm-manual">Associated Press</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/no-one-can-breathe-the-view-from-the-streets-of-brooklyn-ny-as-protests-roil-the-nation-152019123.html"><span>No one can breathe: The view from the streets of Brooklyn, N.Y., as protests roil the nation</span></a></h3><p class="rm-manual">Yahoo News</p><p></p></li>
+</ul></article>
+</body></html>

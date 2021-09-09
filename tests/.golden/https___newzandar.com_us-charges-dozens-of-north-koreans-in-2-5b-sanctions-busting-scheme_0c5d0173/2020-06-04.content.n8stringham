@@ -1,0 +1,136 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> US charges dozens of North Koreans in $2.5B sanctions-busting scheme - Newzandar News </p>
+<p class="rm-manual"> <a href="https://newzandar.com/" rel="home"> </a></p><h2 class="rm-manual"><a href="https://newzandar.com/" rel="home">Newzandar News</a></h2><a href="https://newzandar.com/" rel="home"> <h3 class="rm-manual">All News In One Place.</h3> </a> <p class="rm-manual"></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://newzandar.com/category/headline/">Headline</a></li> <li class="rm-manual"><a href="https://newzandar.com/category/opinion/">Opinion</a></li> <li class="rm-manual"><a href="https://newzandar.com/category/crime/">Crime</a></li> <li class="rm-manual"><a href="https://newzandar.com/category/politics/">Politics</a></li> <li class="rm-manual">
+<a href="https://newzandar.com/tag/sports/">Sports</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://newzandar.com/category/ronaldo/">Ronaldo</a></li> <li class="rm-manual"><a href="https://newzandar.com/category/fifa/">FIFA</a></li> <li class="rm-manual"><a href="https://newzandar.com/category/leicester-city/">Leicester City</a></li> <li class="rm-manual"><a href="https://newzandar.com/category/manchester-united/">Manchester United</a></li> </ul> </li> <li class="rm-manual"><a href="https://newzandar.com/tag/5g/">5G</a></li> <li class="rm-manual">
+<a href="https://newzandar.com/tag/biafra-news/">Biafra News</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://newzandar.com/category/nnamdi-kanu/">Nnamdi Kanu</a></li> <li class="rm-manual"><a href="https://newzandar.com/category/ipob/">IPOB</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://newzandar.com/category/coronavirus/">coronavirus</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://newzandar.com/category/china/">China</a></li> <li class="rm-manual"><a href="https://newzandar.com/category/bill-gate/">Bill Gate</a></li> <li class="rm-manual"><a href="https://newzandar.com/category/face-mask/">Face mask</a></li> <li class="rm-manual">
+<a href="https://newzandar.com/category/ncdc/">NCDC</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://newzandar.com/category/covid-19-palliative/">COVID-19 palliative</a></li> <li class="rm-manual"><a href="https://newzandar.com/category/covid-19-lockdown/">COVID-19 lockdown</a></li> </ul> </li> </ul> </li> <li class="rm-manual"><a href="https://newzandar.com/category/celebrity-entertainment/">Entertainment</a></li> <li class="rm-manual">
+<a href="https://newzandar.com/category/celebrities/">CELEBRITIES</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://newzandar.com/category/funke-akindele/">Funke Akindele</a></li> <li class="rm-manual"><a href="https://newzandar.com/category/davido/">Davido</a></li> <li class="rm-manual"><a href="https://newzandar.com/category/don-jazzy/">Don Jazzy</a></li> </ul> </li> <li class="rm-manual"><a href="https://newzandar.com/category/jobs/">Jobs</a></li> <li class="rm-manual"><a href="https://newzandar.com/about-us/">About Newzandar News</a></li> <li class="rm-manual"><a href="https://newzandar.com/contact/">Contact Newzandar News</a></li> </ul>
+<h1 class="rm-manual">US charges dozens of North Koreans in $2.5B sanctions-busting scheme</h1>
+<p class="rm-manual"> <span><a href="https://newzandar.com/2020/05/">May 29, 2020</a></span> <span><a href="https://newzandar.com/author/admin/">Newzandar Editor</a></span> <span><a href="https://newzandar.com/category/news/" rel="category tag">News</a></span> <span><a href="https://newzandar.com/us-charges-dozens-of-north-koreans-in-2-5b-sanctions-busting-scheme/#mh-comments">0</a></span> </p>
+<p>The Justice Department has accused a network of North Korean and 
+Chinese citizens of secretly advancing North Korea’s nuclear weapons 
+program by channeling at least $2.5 billion in illicit payments through 
+hundreds of front companies.</p>
+<p>The indictment, unsealed Thursday in Washington’s federal court, is 
+believed to be the largest criminal enforcement action ever brought 
+against North Korea.</p>
+<p>The 33 defendants include executives of North Korea’s state-owned 
+Foreign Trade Bank, which in 2013 was added to a Treasury Department 
+list of sanctioned institutions for transactions that facilitated the 
+nuclear proliferation network, and cut off from the U.S. financial 
+system.</p>
+<p>According to the indictment, the bank officials — one of whom had 
+served in North Korea’s primary intelligence bureau — set up branches in
+ countries around the world, including Thailand, Russia and Kuwait, and 
+used more than 250 front companies to process U.S. dollar payments to 
+further the country’s nuclear proliferation program.</p>
+<p>The defendants used a variety of tactics to cover their tracks, 
+including coded conversations; listing false destinations and customers 
+on contracts and invoices; and creating new front companies after the 
+banks caught onto the association with North Korea, the indictment says.
+ Banks were routinely tricked into processing transactions they wouldn’t
+ have ordinarily done, according to prosecutors.</p>
+<p>Five of the defendants are Chinese citizens who operated covert 
+branches in either China or Libya. Others who were charged include 
+individuals who served at times as the bank’s president or vice 
+president.</p>
+<p>“Through this indictment, the United States has signified its 
+commitment to hampering North Korea’s ability to illegally access the 
+U.S. financial system and (to limiting) its ability to use proceeds from
+ illicit actions to enhance its illegal WMD and ballistic missile 
+programs,” acting U.S. Attorney Michael Sherwin for the District of 
+Columbia said in a statement.</p>
+<p>The U.S. has frozen and seized about $63 million from the scheme since 2015, according to the indictment.</p>
+<p>The case was filed at a time of delicate relations between the U.S. 
+and North Korea. The rapprochement that President Donald Trump has tried
+ to engineer over the past two years has stalled badly, with the last 
+face-to-face meeting between senior officials from the two countries 
+taking place in October in Stockholm.</p>
+<p>Apart from recent speculation over North Korean leader Kim Jong Un’s 
+health, which prompted public expressions of concern from Trump, the 
+administration has been almost completely silent on North Korea. U.S. 
+officials say they remain eager to restart negotiations but have gotten 
+no indication from the North that any resumption is imminent.</p>
+<p>The indictment also reflects ongoing concerns about sanctions 
+violations related to North Korea. Last month, for instance, United 
+Nations experts recommended blacklisting 14 vessels for violating 
+sanctions against North Korea, accusing the country in a report of 
+increasing illegal coal exports and imports of petroleum products and 
+continuing with cyber attacks on financial institutions and 
+cryptocurrency exchanges to gain illicit revenue.</p>
+<p class="rm-manual"><a href="https://nypost.com/2020/05/29/us-charges-north-koreans-in-2-5b-sanctions-busting-scheme/">Source</a></p>
+<p class="rm-manual">Eyewitness? Submit your stories now via WhatsApp: +2348034798719. Email: newsdesk@newzandar.com.</p>
+<p class="rm-manual"><a href="https://newzandar.com/contact/">Contact Us</a> <a href="https://newzandar.com/advertise/">Advertise</a></p>
+<h4 class="rm-manual">What will make you commit suicide?</h4>
+<h4 class="rm-manual">Recent Posts</h4>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://newzandar.com/police-have-nothing-to-do-with-soldier-who-attempted-suicide/">‘Police have nothing to do with soldier who attempted suicide’</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/astrazeneca-doubles-coronavirus-vaccine-production-capacity/">AstraZeneca doubles coronavirus vaccine production capacity</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/actresswunmi-toriolas-birthday-message-to-seyi-edun-raises-suspicion-about-their-friendship/">Actress,Wunmi Toriola’s birthday message to Seyi Edun raises suspicion about their friendship</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/national-park-service-shares-creative-new-signs-to-promote-social-distancing/">National Park Service shares creative new signs to promote social distancing</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/nana-ama-mcbrown-cries-like-a-baby-as-she-mourns-the-death-of-kwadwo-wiafe-her-colleague-at-despite-media/">Nana Ama Mcbrown cries like a baby as she mourns the death of Kwadwo Wiafe her colleague at Despite media</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/elon-musk-tweets-that-its-time-to-break-up-amazon/">Elon Musk tweets that it’s ‘time to break up Amazon’</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/8-policemen-one-civilian-feared-killed-in-kogi-bank-robbery/">8 Policemen, one civilian feared killed in Kogi bank robbery</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/kanye-west-launches-college-fund-for-george-floyds-daughter/">Kanye West launches college fund for George Floyd’s daughter</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/nypd-using-undercover-yellow-cabs-during-george-floyd-protests/">NYPD using undercover yellow cabs during George Floyd protests</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/florida-states-mike-norvell-makes-amends-with-players-after-lie/">Florida State’s Mike Norvell makes amends with players after ‘lie’</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/george-floyds-brother-tells-brooklyn-protesters-he-is-proud-of-them/">George Floyd’s brother tells Brooklyn protesters he is proud of them</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/mike-tyson-accused-of-taking-drugs-ahead-of-comeback-against-evander-holyfield/">Mike Tyson accused of taking drugs ahead of comeback against Evander Holyfield</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/wisconsin-cops-draw-guns-handcuff-black-man-over-false-burglary-report/">Wisconsin cops draw guns, handcuff black man over false burglary report</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/former-manager-of-castro-confirmed-dead/">Former manager of Castro confirmed dead.</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/just-infg-appoints-prof-regina-ogali-as-acting-vc-uniport/">JUST IN:FG appoints Prof. Regina Ogali as acting VC UNIPORT</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/the-nba-is-coming-back/">The NBA is coming back</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/gov-ugwuanyi-a-wonderful-leader-ooni-of-ife/">Gov. Ugwuanyi a wonderful leader – Ooni of Ife</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/pdp-drags-oyetola-others-to-court-over-amotekun-appointment/">PDP drags Oyetola, others to court over Amotekun appointment</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/man-who-filmed-ahmaud-arbery-shooting-admitted-he-tried-to-block-him-in/">Man who filmed Ahmaud Arbery shooting admitted he tried to block him in</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/10000-apc-members-defect-to-pdp-in-kwara/">10,000 APC members defect to PDP in Kwara</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/de-blasio-booed-off-stage-protesters-turn-their-backs-at-george-floyd-rally/">De Blasio booed off stage, protesters turn their backs at George Floyd rally</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/ncdc-releases-new-guidelines-on-covid-19-patients-treatment-discharge/">NCDC releases new guidelines on COVID-19 patients’ treatment, discharge</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/plastic-surgeon-in-florida-offering-drive-thru-botox-to-quarantined-residents/">Plastic surgeon in Florida offering drive-thru Botox to quarantined residents</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/dc-mayor-ends-curfew-asks-out-of-state-national-guard-troops-to-leave/">DC mayor ends curfew, asks out-of-state National Guard troops to leave</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/covid-19-imf-disburses-10b-to-africa-countries/">COVID-19: IMF disburses $10b to Africa countries</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/judge-sets-750k-bail-for-three-ex-officers-involved-in-george-floyds-death/">Judge sets $750K bail for three ex-officers involved in George Floyd’s death</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/insecurity-president-buhari-told-to-sack-service-chiefs-immediately/">Insecurity: President Buhari told to sack service chiefs immediately</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/covid-19-patients-to-be-discharged-without-testing-negative-ncdc/">COVID-19: Patients to be discharged without testing negative – NCDC</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/lawyer-busted-in-molotov-cocktail-attack-on-nypd-suspended-from-law-firm/">Lawyer busted in molotov cocktail attack on NYPD suspended from law firm</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/25-year-old-arrested-for-raping-85-year-old-grandma-details/">25 year old arrested for raping 85 year old Grandma | Details</a> </li> </ul>
+<h4 class="rm-manual">Trending Now</h4>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://newzandar.com/black-man-knocks-out-racist-white-guy-for-using-the-f-word-on-protesters-video/">Black Man Knocks Out Racist White Guy For Using The “F” Word On Protesters (video)</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/breaking-seast-psc-rep-jumbo-offor-dies/">BREAKING: S’East PSC rep, Jumbo Offor, dies</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/nafdac-cries-out-over-fake-covid-19-drugs-in-nigeria/">NAFDAC cries out over fake COVID-19 drugs in Nigeria</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/god-of-the-disqualified-tacha-praises-god-as-she-makes-7-5-million-in-2-hours/">‘God of the disqualified’, Tacha praises God as she makes 7.5 million in 2 hours</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/bobrisky-reveals-he-will-snitch-on-tonto-dikeh-for-3-million-naira/">Bobrisky reveals he will ‘snitch’ on Tonto Dikeh for 3 million naira</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/nigeria-wont-beg-saka-to-play-for-eagles/">Nigeria won’t beg Saka to play for Eagles</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/george-floyd-family-happy-with-new-charges-against-officers-involved-in-fatal-arrest-attorney/">George Floyd family happy with new charges against officers involved in fatal arrest – Attorney</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/update-george-floyd-real-cause-of-death-revealed/">Update: George Floyd real cause of death revealed</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/akpabio-got-n300-million-contract-from-nddc-senator-nwabaoshi/">Akpabio Got N300 Million Contract From NDDC – Senator Nwabaoshi</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/uti-nwachukwu-is-bisexual-and-treats-men-with-more-respect/">“Uti Nwachukwu is bisexual and treats men with more respect”</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/carragher-offers-arsenal-advice-over-aubameyangs-future/">Carragher offers Arsenal advice over Aubameyang’s future</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/police-others-shut-down-edo-road-over-apc-primary/">Police, others shut down Edo road over APC primary</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/breaking-former-governor-of-ondo-state-bamidele-olumilua-dies-at-80/">BREAKING: Former Governor Of Ondo State, Bamidele Olumilua Dies At 80</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/i-dont-want-any-sabotage-now-that-we-have-gotten-new-weapons-to-fight-terrorists-buratai-warns-soldiers/">I don’t want any sabotage now that we have Gotten New Weapons To Fight Terrorists – Buratai warns Soldiers</a> </li> <li class="rm-manual"> <a href="https://newzandar.com/knife-attack-in-chinese-primary-school-wounds-37-children-2-adults/">Knife attack in Chinese primary school wounds 37 children, 2 adults</a> </li> </ul>
+<p class="rm-manual"> <a href="https://newzandar.com/dj-cuppy-is-apple-musics-show-host/" rel="prev"><span>Previous</span></a></p><p class="rm-manual"><a href="https://newzandar.com/dj-cuppy-is-apple-musics-show-host/" rel="prev">DJ Cuppy is Apple Music’s show host</a></p><p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://newzandar.com/nssf-supports-athletes-on-childrens-day/" rel="next"><span>Next</span></a></p><p class="rm-manual"><a href="https://newzandar.com/nssf-supports-athletes-on-childrens-day/" rel="next">NSSF supports athletes on Children’s Day</a></p><p class="rm-manual"></p>
+<h4 class="rm-manual"> <span> Be the first to comment </span> </h4>
+<h3 class="rm-manual">
+<span>Leave a Reply</span> <a href="file:///us-charges-dozens-of-north-koreans-in-2-5b-sanctions-busting-scheme/#respond">Cancel reply</a>
+</h3>
+<p class="rm-manual">Your email address will not be published.</p>
+<p class="rm-manual">Comment</p>
+<p class="rm-manual">Name </p>
+<p class="rm-manual">Email </p>
+<p class="rm-manual">Save my name, email, and website in this browser for the next time I comment.</p>
+<p class="rm-manual"> Notify me of follow-up comments by email.</p>
+<p class="rm-manual"> Notify me of new posts by email.</p>
+<p class="rm-manual">{{#message}}{{{message}}}{{/message}}{{^message}}Your
+ submission failed. The server responded with {{status_text}} (code 
+{{status_code}}). Please contact the developer of this form processor to
+ improve this message. <a href="https://amp-wp.org/?p=5463">Learn More</a>{{/message}}</p>
+<p class="rm-manual">{{#message}}{{{message}}}{{/message}}{{^message}}It
+ appears your submission was successful. Even though the server 
+responded OK, it is possible the submission was not processed. Please 
+contact the developer of this form processor to improve this message. <a href="https://amp-wp.org/?p=5463">Learn More</a>{{/message}}</p>
+<p class="rm-manual">Submitting…</p>
+<p class="rm-manual"> <span>Search for:</span> </p>
+<h4 class="rm-manual"><span>Trending Now</span></h4>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://newzandar.com/nollywood-actor-chinedu-ikedieze-popularly-known-as-aki-opens-up-about-how-he-was-helped-by-former-president-goodluck-jonathan/">Nollywood Actor Chinedu Ikedieze popularly known as Aki opens up about how he was helped by Former President Goodluck Jonathan</a> <span><span>posted on June 3, 2020</span></span> </li> <li class="rm-manual"> <a href="https://newzandar.com/theres-need-for-hausa-to-join-biafra-oduduwa-republic-to-secede-from-nigeria-nnamdi-kanu/">There’s need for Hausa to join Biafra, Oduduwa Republic to secede from Nigeria – Nnamdi Kanu</a> <span><span>posted on June 3, 2020</span></span> </li> <li class="rm-manual"> <a href="https://newzandar.com/pdp-chairman-12-others-killed-in-fresh-herders-attack-in-benue/">PDP Chairman, 12 others killed in fresh herders attack in Benue</a> <span><span>posted on June 4, 2020</span></span> </li> <li class="rm-manual"> <a href="https://newzandar.com/house-moves-to-strip-igp-of-power-to-appoint-deploy-cps/">House moves to strip IGP of power to appoint, deploy CPs</a> <span><span>posted on June 4, 2020</span></span> </li> <li class="rm-manual"> <a href="https://newzandar.com/insecurity-s-east-houses-of-assembly-move-to-enact-laws-for-regional-security/">Insecurity: S-East Houses of Assembly move to enact laws for Regional Security</a> <span><span>posted on June 4, 2020</span></span> </li> <li class="rm-manual"> <a href="https://newzandar.com/model-halima-aden-designs-hijab-face-mask-sets-that-give-back/">Model Halima Aden designs hijab face mask sets that give back</a> <span><span>posted on June 3, 2020</span></span> </li> <li class="rm-manual"> <a href="https://newzandar.com/apc-guber-primary-group-raises-alarm-over-alleged-fake-membership-cards-in-ondo/">APC Guber Primary: Group raises alarm over alleged fake membership cards in Ondo</a> <span><span>posted on June 4, 2020</span></span> </li> <li class="rm-manual"> <a href="https://newzandar.com/nans-threatens-mass-protestdemands-justice-for-uwailabarakat/">NANS threatens mass protest,demands justice for Uwaila,Barakat</a> <span><span>posted on June 3, 2020</span></span> </li> <li class="rm-manual"> <a href="https://newzandar.com/black-man-knocks-out-racist-white-guy-for-using-the-f-word-on-protesters-video/">Black Man Knocks Out Racist White Guy For Using The “F” Word On Protesters (video)</a> <span><span>posted on June 4, 2020</span></span> </li> <li class="rm-manual"> <a href="https://newzandar.com/breaking-seast-psc-rep-jumbo-offor-dies/">BREAKING: S’East PSC rep, Jumbo Offor, dies</a> <span><span>posted on June 4, 2020</span></span> </li> <li class="rm-manual"> <a href="https://newzandar.com/chelsea-forward-pedros-new-club-revealed/">Chelsea forward, Pedro’s new club revealed</a> <span><span>posted on June 4, 2020</span></span> </li> <li class="rm-manual"> <a href="https://newzandar.com/george-floyd-death-nnamdi-kanu-reacts-strikes-nigeria-again/">George Floyd Death: Nnamdi Kanu Reacts, strikes Nigeria again</a> <span><span>posted on June 3, 2020</span></span> </li> <li class="rm-manual"> <a href="https://newzandar.com/two-ekiti-health-workers-three-patients-test-positive-for-covid-19/">Two Ekiti health workers, three patients test positive for COVID-19</a> <span><span>posted on June 3, 2020</span></span> </li> </ul>
+<h6 class="rm-manual"><span>Pages</span></h6>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://newzandar.com/about-us/">About Newzandar News</a></li> <li class="rm-manual"><a href="https://newzandar.com/advertise/">Advertise With Us</a></li> <li class="rm-manual"><a href="https://newzandar.com/contact/">Contact Newzandar News</a></li> <li class="rm-manual"><a href="https://newzandar.com/privacy-policy-2/">Privacy Policy</a></li> </ul>
+<p class="rm-manual">Copyright © 2020 | <a href="https://www.newzandar.com/" rel="nofollow">Newzandar News</a></p></article>
+</body></html>

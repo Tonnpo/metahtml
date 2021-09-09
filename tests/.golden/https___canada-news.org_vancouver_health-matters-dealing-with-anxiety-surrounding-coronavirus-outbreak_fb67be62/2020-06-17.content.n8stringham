@@ -1,0 +1,65 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual">Health Matters: Dealing with anxiety surrounding coronavirus outbreak</h1>
+<p class="rm-manual"> <span>Posted on <a href="https://canada-news.org/vancouver/health-matters-dealing-with-anxiety-surrounding-coronavirus-outbreak/" rel="bookmark">March 17, 2020</a></span><span> by <span><a rel="author" href="https://canada-news.org/author/cannuck/">Cannuck</a></span></span> </p>
+<p class="rm-manual"> March 17 2020 11:10am </p>
+<p>Registered clinical counselor Glen Grigg shares tips on how people 
+can manage anxiety and stress they may be feeling as they deal with the 
+fallout from COVID 19.</p>
+<p class="rm-manual">‘ }); } else { var rel_id = 
+svp.releaseInfo.contentId+””; if( typeof 
+gnca_social_share_collection[rel_id] != “object” ) { var resp = 
+jQuery.parseJSON( jQuery.ajax({ url: 
+“/gnca-ajax/videoshare-links/{\”id\”:\”” + svp.releaseInfo.contentId + 
+“\”}/”, async: false }).responseText); 
+gnca_social_share_collection[rel_id] = resp; } 
+jQuery(‘#videoContainer’).gnca_socialVideoShare(‘init’, 
+gnca_social_share_collection[rel_id] ); } }; // don’t do on IE, doesn’t 
+work yet if ( !gNews.Common.isIE &amp;&amp; !gNews.Common.isTrident 
+&amp;&amp; gNews.Common.isFlash ) { var gnca_videoShareCallbackInterval =
+ window.setInterval( function() { //console.log(‘ !!! 
+gnca_shareVideoCallback REGISTRATION !!! ‘); // exit if required obj 
+isn’t set yet try { if ( !svp || !svp.setShareFunction || 
+!svp.flashPlayerObjectId ) return; // still here?? svp object must 
+exist, register share-button callback svp.setShareFunction( 
+gnca_videoShareCallback); // remove interval window.clearInterval( 
+gnca_videoShareCallbackInterval ); gnca_videoShareCallbackInterval = 
+false; } catch (e) {}; }, 1000 ); }; <a href="https://globalnews.ca/video/6689477/health-matters-dealing-with-anxiety-surrounding-coronavirus-outbreak/">Source</a></p>
+<p class="rm-manual"><span>Posted in <a href="https://canada-news.org/vancouver/" rel="category tag">Vancouver</a></span></p>
+<p class="rm-manual"><span>Tagged <a href="https://canada-news.org/tag/anxiety/" rel="tag">Anxiety</a>, <a href="https://canada-news.org/tag/canada/" rel="tag">Canada</a>, <a href="https://canada-news.org/tag/coronavirus/" rel="tag">Coronavirus</a>, <a href="https://canada-news.org/tag/covid-19/" rel="tag">COVID-19</a>, <a href="https://canada-news.org/tag/glen-grigg/" rel="tag">Glen Grigg</a>, <a href="https://canada-news.org/tag/health/" rel="tag">Health</a>, <a href="https://canada-news.org/tag/lifestyle/" rel="tag">Lifestyle</a>, <a href="https://canada-news.org/tag/outbreak/" rel="tag">Outbreak</a>, <a href="https://canada-news.org/tag/registered-clinical-counselor/" rel="tag">Registered Clinical Counselor</a>, <a href="https://canada-news.org/tag/stress/" rel="tag">Stress</a></span> </p></article>
+</body></html>

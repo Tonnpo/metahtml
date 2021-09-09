@@ -1,0 +1,260 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.dreamstime.com/blog"><span>Blog</span></a></li> <li class="rm-manual"><a href="https://www.dreamstime.com/blog/keep-calm-fight-virus-53594"><span>Keep calm and fight the virus</span></a></li> </ul>
+<h1 class="rm-manual">Keep calm and fight the virus</h1>
+<p class="rm-manual">by <a rel="author" href="https://www.dreamstime.com/achilles_info">Serban Enache</a></p>
+<p class="rm-manual"> March 17, 2020</p>
+<p class="rm-manual"> <a href="https://www.dreamstime.com/blog/author/achilles">User archive</a> </p>
+<p>Dear Dreamstimers,</p>
+<p>2020 has presented us with a unique challenge, which few of us can 
+compare to previous experiences. The global extension of Covid-19 seems 
+to underscore how one virus can contaminate countries and continents 
+based solely on our social organisms and connections. But while it may 
+seem, these days, that our weakness is in our numbers, we know that to 
+be false.</p>
+<p>We are and will continue to be, stronger together. It is also 
+together that we will overcome this crisis, and learn how to better care
+ for ourselves and those near us.</p>
+<p>We each have a distinct and important role to play these days and we 
+know you, our community, are graphic, video, written and social 
+communicators. That is why your impact can be extraordinary and your 
+contribution hugely positive.</p>
+<p>It’s not only essential to wash our hands, but it’s also vital to 
+communicate kindly and accurately. Here's how we can make the world a 
+calmer place.</p>
+<p>Relay timely information</p>
+<p>Timelines are important, especially in a context like ours. As events
+ are unfolding day by day, hour by hour, it’s vital that everybody knows
+ the correct date for any &amp; all information. This helps us all keep 
+an accurate track of what’s changing and what our “now” is like.</p>
+<p>This isn’t a good time to recycle outdated content and present it as current information.</p>
+<p>Present trustworthy information</p>
+<p>We’re all specialized in a particular craft or business, but we’re 
+not all specialists. When it comes to guiding and saving lives, advice 
+should come from experts - exactly as it was shared by them. Too many 
+opinions and biases can not only clutter a fast-moving environment, they
+ can also trigger effects that you may never anticipate.</p>
+<p>Mental fortitude is as important and as vulnerable as physical 
+fortitude right now. Help your audience with facts from reputable 
+sources and name your sources. One vetted source is <a href="https://www.worldometers.info/coronavirus/#countries" rel="nofollow"> Worldometers</a></p>
+<p>Help your government and local authorities broadcast official information</p>
+<p>Each country is facing different circumstances and challenges. Each 
+nation needs guidance and assurance now. Use your communication skills 
+for the greater good and resort to governmental sources for public 
+health announcements and recommended actions.</p>
+<p>Your greatest help now, reaching thousands and millions of people 
+around the world, can be to make official information user-friendly and 
+compelling for everybody in the room.</p>
+<p>You can do that by using clear, informative graphics and turning stats into actionable bits of wisdom.</p>
+<p>Say no to fake news</p>
+<p>Fake news is the covid-19 of our global conversations. It’s weakening
+ our faith, our trust in those who can actually bring positive change, 
+and ultimately isolating us on conflicting sides. More than ever, we 
+need a common and factual ground.</p>
+<p>Fight for your right and our right to honest information and guides.</p>
+<p>Keep calm and keep your audience calm too</p>
+<p>Uncertainty is something we will probably never get used to. An 
+overflow of exaggerated headlines or graphics, severely pessimistic 
+infographics or content that’s screaming instead of discussing can 
+double the negative effects of our actual problems.</p>
+<p>Each of us is a broadcaster in our family, group of friends or 
+neighbors. We all impact the noise and it’s only up to us to make that 
+impact a good one. Choose your words, your photographs, illustrations or
+ graphics wisely and think about how you want your readers to feel. Be 
+responsible, be positive, be an active part of the solutions we all need
+ right now.</p>
+<p>Covid-19 continues to ravage nations and to dramatically change our 
+way of life and our self-reliance. Countries like China and Italy are 
+examples of the extent to which this virus can impact our daily lives. 
+It takes a common effort to prevent and heal the body, the mind, and the
+ spirit of an entire world.</p>
+<p>Join us in honest, positive communications with the world and let’s start dreaming again soon.</p>
+<p>Yours truly,</p>
+<p>Team Dreamstime</p>
+<p class="rm-manual"> Photo credits: <a href="https://www.dreamstime.com/nadiaforkosh_info">Nadiaforkosh</a>. </p>
+<p class="rm-manual">Tags</p>
+<p class="rm-manual"><a href="https://www.dreamstime.com/blog/search-tag-coronavirus">coronavirus</a> </p>
+<p class="rm-manual"><a href="https://www.dreamstime.com/blog/search-tag-covid">covid</a> </p>
+<p class="rm-manual"><a href="https://www.dreamstime.com/blog/search-tag-dreamstime">dreamstime</a> </p>
+<p class="rm-manual"><a href="https://www.dreamstime.com/blog/search-tag-dreamstimers">dreamstimers</a> </p>
+<p class="rm-manual"><a href="https://www.dreamstime.com/blog/search-tag-letter">letter</a> </p>
+<p class="rm-manual"><a href="https://www.dreamstime.com/blog/search-tag-message">message</a> </p>
+<p class="rm-manual"> 19 Comments</p>
+<p class="rm-manual"><a href="">You have to be logged in to comment.</a></p>
+<p class="rm-manual">Your post must be written in English</p>
+<p class="rm-manual"><a href="#">Publish</a> </p>
+<p class="rm-manual"> <span>April 14, 2020</span> </p>
+<p class="rm-manual"><a href="https://www.dreamstime.com/sanjeevnanda6_info" rel="nofollow">Sanjeevnanda6</a></p>
+<p class="rm-manual">Thanks for this, would love to see more articles like these very soon.~Sanjeev Nanda</p>
+<p class="rm-manual"> <span>April 13, 2020</span> </p>
+<p class="rm-manual"><a href="https://www.dreamstime.com/photodynamx_info" rel="nofollow">Photodynamx</a></p>
+<p class="rm-manual">Good sensible advice to follow to keep safe and 
+well...a good time to reflect on what matters most in our lives and to 
+find new ways to explore our creativity!</p>
+<p class="rm-manual"> <span>April 09, 2020</span> </p>
+<p class="rm-manual"><a href="https://www.dreamstime.com/abhinav5manish_info" rel="nofollow">Abhinav5manish</a></p>
+<p class="rm-manual">social distancing is a very effective strategy against COVID-19.Stay home stay safe.</p>
+<p class="rm-manual"> <span>April 02, 2020</span> </p>
+<p class="rm-manual"><a href="https://www.dreamstime.com/blog/author/chimezie2000easter" rel="nofollow">Chimezie2000easter</a></p>
+<p class="rm-manual">Thank you, the write up calms fraying nerves. 
+Positive information will help all, in this time of world crisis. 
+Negative info. will do more harm, and no good at all.</p>
+<p class="rm-manual"> <span>April 01, 2020</span> </p>
+<p class="rm-manual"><a href="https://www.dreamstime.com/sanjeevnanda6_info" rel="nofollow">Sanjeevnanda6</a></p>
+<p class="rm-manual">In the past two days, all I've been receiving on my
+ social media accounts, are alarming news about the Covid pandemic. The 
+clutter has gotten to such an extent that my family members have begun 
+becoming paranoid about the entire situation. We have taken precautions,
+ have stopped visiting the outside, and are obeying a strict lockdown - 
+yet, a level of apprehension still manifests ("What will happen to my 
+family?" "Am I possibly infested?" "What will become of my family after I
+ pass?")Simply put, If you have taken the required precautions, you 
+would most likely be fine. If you have the coronavirus, panicking wont 
+help. One must maintain a sense of levelheadedness through all of this 
+no matter what. </p>
+<p class="rm-manual"> <span>March 30, 2020</span> </p>
+<p class="rm-manual"><a href="https://www.dreamstime.com/olena1_info" rel="nofollow">Olena1</a></p>
+<p class="rm-manual">Decreasing the earning withdrawal threshold to 50 
+USD would demonstrate that Dreamstime agency really cares of its 
+contributors. </p>
+<p class="rm-manual"> <span>March 28, 2020</span> </p>
+<p class="rm-manual"><a href="https://www.dreamstime.com/mani33_info" rel="nofollow">Mani33</a></p>
+<p class="rm-manual">It's a global effort! All for one &amp; one for all! Stay safe everyone, stay home!</p>
+<p class="rm-manual"> <span>March 27, 2020</span> </p>
+<p class="rm-manual"><a href="https://www.dreamstime.com/sanjeevnanda6_info" rel="nofollow">Sanjeevnanda6</a></p>
+<p class="rm-manual">Your appeal to "keep calm" really hits it home for 
+me. People have started panic buying and fighting each other for basic 
+necessities during this coronavirus (Covid-19) pandemic - makes me long 
+for a time when things were normal. A part of me wonders if this is the 
+new normal!~Sanjeev Nanda</p>
+<p class="rm-manual"> <span>March 22, 2020</span> </p>
+<p class="rm-manual"><a href="https://www.dreamstime.com/cacrov_info" rel="nofollow">Cacrov</a></p>
+<p class="rm-manual">If you can : stay home and work your portfolio - it might save lifes (the staying at home part). Take care !</p>
+<p class="rm-manual"> <span>March 21, 2020</span> </p>
+<p class="rm-manual"><a href="https://www.dreamstime.com/blog/author/amiladhamma" rel="nofollow">Amiladhamma</a></p>
+<p class="rm-manual">Thank for your information for protection of corona
+ virus. I hope every body follow these instruction for prevent the fight
+ of corona virus.ThanksP. RajakarunaSri Lanka</p>
+<p class="rm-manual"> <span>March 21, 2020</span> </p>
+<p class="rm-manual"><a href="https://www.dreamstime.com/rbrucew_info" rel="nofollow">Rbrucew</a></p>
+<p class="rm-manual">Very thoughtful; thanks.</p>
+<p class="rm-manual"> <span>March 20, 2020</span> </p>
+<p class="rm-manual"><a href="https://www.dreamstime.com/blog/author/pattjustice" rel="nofollow">Pattjustice</a></p>
+<p class="rm-manual">Thank you for making meaningful and touching 
+communication is easier. I'm starting a campaign to post 3 pictures a 
+day to encourage people to meditate, have a laugh and appreciate life. 
+Our biggest challenge is to reduce anxiety and deal with issues of 
+isolation. The pictures will help.</p>
+<p class="rm-manual"> <span>March 20, 2020</span> </p>
+<p class="rm-manual"><a href="https://www.dreamstime.com/blog/author/manueljoseperez" rel="nofollow">Manueljoseperez</a></p>
+<p class="rm-manual">all they have to do is STOP spaying the sky with 
+that white smoke and im sure no one will have allergies,,, I live in 
+Miami little Havana and I have few videos of the plane spraying trails 
+of that fake clouds.. I told my wife "SHUT THE A/C OFF SO THE 
+CONTAMINATED AIR DOESNT COME IN THE HOUSE AND I BET YOU YOU WILL STOP 
+SNEEZING" ,,,,,,few minutes later sneezing left the house ;)</p>
+<p class="rm-manual"> <span>March 19, 2020</span> </p>
+<p class="rm-manual"><a href="https://www.dreamstime.com/dpbyklum_info" rel="nofollow">Dpbyklum</a></p>
+<p class="rm-manual">Good post. Thank you.</p>
+<p class="rm-manual"> <span>March 19, 2020</span> </p>
+<p class="rm-manual"><a href="https://www.dreamstime.com/hel080808_info" rel="nofollow">Hel080808</a></p>
+<p class="rm-manual">Thanks for your warm and correct words, Serban! We 
+in Europe are badly affected. And it gets worser day by day. So it's 
+necessary to pay attention to everybody and follow the instructions. So 
+Dreamstimer, take good care of yourselves!</p>
+<p class="rm-manual"> <span>March 19, 2020</span> </p>
+<p class="rm-manual"><a href="https://www.dreamstime.com/keremgo_info" rel="nofollow">Keremgo</a></p>
+<p class="rm-manual">Thank you Serban for your heartening and truthful message, gives me hope. I truly appreciate! </p>
+<p class="rm-manual"> <span>March 19, 2020</span> </p>
+<p class="rm-manual"><a href="https://www.dreamstime.com/sanjeevnanda6_info" rel="nofollow">Sanjeevnanda6</a></p>
+<p class="rm-manual">As we know, Novel Coronavirus (Covid-19) pandemic, 
+according to the WHO (as of this writing), globally, has claimed more 
+than 8000 people - a shroud of doubt has thus appeared over the medical 
+infrastructure of major developed countries of the world! Indian 
+Pharmaceutical Industry, one of the biggest in the field, has also 
+braced for a deadlier impact in the weeks to come. According to 
+statistics provided by The Wall Street Journal, a major publication, 
+based in the US, the world has almost 3 months of stocked medicines and 
+API (Active Pharmaceutical Ingredients) to run on. Many industry 
+leaders, like Sanjeev Nanda, and his Pharmaceutical enterprises, based 
+in Russia, Singapore, and the UAE, are projected to show a sharp decline
+ in medical output, within the first two months.Market Indicators, such 
+as the DOW, NIFTY, etc. suggest that the global Pharma industry is 
+steadily developing cold feet under the threat of the novel coronavirus.
+ Quoting ISHVAN Pharmaceuticals CEO, Sanjeev Nanda - "Things would get 
+bad, before they turn any good."</p>
+<p class="rm-manual"> <span>March 18, 2020</span> </p>
+<p class="rm-manual"><a href="https://www.dreamstime.com/williamwise1_info" rel="nofollow">Williamwise1</a></p>
+<p class="rm-manual">Thanks for some great, common sense tips in this 
+time. To put a light note on things: as photographers, at least during 
+our time at home we can catch up on editing and posting photos from the 
+last several months that have piled up. Or, we can concentrate on 
+shooting the plants and animals in our own backyard. Take up 
+macrophotography during this time at home. And pray for others. William </p>
+<p class="rm-manual"> <span>March 18, 2020</span> </p>
+<p class="rm-manual"><a href="https://www.dreamstime.com/helenadobre_info" rel="nofollow">Helenadobre</a></p>
+<p class="rm-manual">thanks for your thoughts 👏 </p>
+<p class="rm-manual"> <a href="https://www.dreamstime.com/blog/hot" rel="nofollow">Hot articles</a> </p>
+<p class="rm-manual">Latest articles</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.dreamstime.com/blog/10-questions-to-ask-yourself-if-you-want-to-become-freelance-photographer-54197">10 Questions to Ask Yourself if You Want to Become a Freelance Photographer </a></li>
+<li class="rm-manual"><a href="https://www.dreamstime.com/blog/tip-week-iso-invariance-54195">Tip of the week: ISO invariance</a></li>
+<li class="rm-manual"><a href="https://www.dreamstime.com/blog/birth-photograph-54184">The Birth of a Photograph</a></li>
+<li class="rm-manual"><a href="https://www.dreamstime.com/blog/what-s-bugging-me-54173">What's Bugging Me</a></li>
+<li class="rm-manual"><a href="https://www.dreamstime.com/blog/tip-week-how-to-fill-model-release-property-release-54169">Tip of the week: How to fill in model release/property release</a></li>
+<li class="rm-manual"><a href="https://www.dreamstime.com/blog/capture-essence-authentic-fatherhood-photos-54165">Capture the Essence of Authentic Fatherhood in Photos</a></li>
+<li class="rm-manual"><a href="https://www.dreamstime.com/blog/how-to-portray-fatherhood-stock-photography-54164">How to Portray Fatherhood in Stock Photography</a></li>
+<li class="rm-manual"><a href="https://www.dreamstime.com/blog/tips-to-customize-generic-greeting-card-template-to-make-your-own-father-s-day-card-54163">Tips to Customize a Generic Greeting Card Template to Make Your Own Father’s Day Card</a></li> </ul>
+<p class="rm-manual"><a href="https://www.dreamstime.com/blog/archive" rel="nofollow">more articles</a></p>
+<p class="rm-manual">Related image searches</p>
+<p class="rm-manual"> <a href="https://www.dreamstime.com/photos-images/coronavirus.html">coronavirus</a> <a href="https://www.dreamstime.com/photos-images/covid.html">covid</a> <a href="https://www.dreamstime.com/photos-images/dreamstime.html">dreamstime</a> <a href="https://www.dreamstime.com/photos-images/dreamstimers.html">dreamstimers</a> <a href="https://www.dreamstime.com/photos-images/letter.html">letter</a> <a href="https://www.dreamstime.com/photos-images/message.html">message</a> </p>
+<p class="rm-manual">Letter related image searches</p>
+<p class="rm-manual">Support Center</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.dreamstime.com/about-stock-image-licenses" rel="nofollow">About our photos</a></li> <li class="rm-manual"><a href="https://www.dreamstime.com/terms" rel="nofollow">Legal / Terms of use</a></li> <li class="rm-manual"><a href="https://www.dreamstime.com/contact">Contact Us</a></li> <li class="rm-manual"><a href="https://www.dreamstime.com/faq">FAQ</a></li> <li class="rm-manual"><a href="https://www.dreamstime.com/sitemap">Sitemap</a></li> <li class="rm-manual"><a href="https://www.dreamstime.com/privacy" rel="nofollow">Privacy policy</a></li> <li class="rm-manual"><a href="https://www.dreamstime.com/credits">Plans &amp; Pricing</a></li> </ul>
+<p class="rm-manual">Dreamstime</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.dreamstime.com/new-stock-photos-images">Latest images</a></li> <li class="rm-manual"><a href="https://www.dreamstime.com/extended-stock-photography-licenses" rel="nofollow">Exclusive rights</a></li> <li class="rm-manual"><a href="https://www.dreamstime.com/about">About us</a></li> <li class="rm-manual"><a href="https://www.dreamstime.com/media-room">Media Room</a></li> <li class="rm-manual"><a href="https://www.dreamstime.com/careers" rel="nofollow">Careers</a></li> <li class="rm-manual"><a href="https://www.dreamstime.com/merchandise" rel="nofollow">Merchandise</a></li> </ul>
+<p class="rm-manual">Community</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.dreamstime.com/sell-stock-photos-images">Sell your images</a></li> <li class="rm-manual"><a href="https://www.dreamstime.com/blog">Blog</a></li> <li class="rm-manual"><a href="https://www.dreamstime.com/boards" rel="nofollow">Message boards</a></li> <li class="rm-manual"><a href="https://www.dreamstime.com/social-networking" rel="nofollow">Social hub</a></li> <li class="rm-manual"><a href="https://www.dreamstime.com/uploadfile" rel="nofollow">Upload image</a></li> <li class="rm-manual">
+<a href="https://www.dreamstime.com/dreamstime-api" rel="nofollow">API</a> / <a href="https://www.dreamstime.com/affiliate-referral-program" rel="nofollow">Referral program</a>
+</li> <li class="rm-manual"><a href="https://www.dreamstime.com/contest" rel="nofollow">Contest</a></li> </ul>
+<p class="rm-manual">Tools</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.dreamstime.com/corporate" rel="nofollow">Corporate accounts</a></li> <li class="rm-manual"><a href="https://www.dreamstime.com/world-stock-photos" rel="nofollow">Photo map</a></li> <li class="rm-manual"><a href="https://www.dreamstime.com/free-photos">Free photos</a></li> <li class="rm-manual"><a href="https://www.dreamstime.com/free-public-domain-images">Public Domain Images</a></li> <li class="rm-manual"><a href="https://www.dreamstime.com/collections">Collections</a></li> <li class="rm-manual"><a href="https://www.dreamstime.com/photographers">Our photographers</a></li> <li class="rm-manual"><a href="https://www.dreamstime.com/photo-tools">Photo Tools</a></li> </ul>
+<p class="rm-manual"> <a href="https://www.dreamstime.com/affiliate-referral-program" rel="nofollow"> <span>Affiliate / Reseller</span> </a> <a href="https://www.dreamstime.com/uploadfile" rel="nofollow"> <span>Upload &amp; sell photos</span> </a> </p>
+<p class="rm-manual"> <a href="https://www.facebook.com/dreamstime" rel="noopener noreferrer"><span>Dreamstime Facebook</span></a> <a href="https://twitter.com/dreamstime" rel="noopener noreferrer"><span>Dreamstime Twitter</span></a> <a href="https://www.pinterest.com/dreamstime/" rel="noopener noreferrer"><span>Dreamstime Pinterest</span></a> <a href="https://www.instagram.com/dreamstime/" rel="noopener noreferrer"><span>Dreamstime Instagram</span></a> <a href="https://www.linkedin.com/company/dreamstime" rel="noopener noreferrer"><span>Dreamstime Linkedin</span></a> <a href="https://www.youtube.com/user/dreamstime" rel="noopener noreferrer"><span>Dreamstime YouTube</span></a> </p>
+<p class="rm-manual">Copyright © 2000-2020 Dreamstime. All rights reserved. </p></article>
+</body></html>

@@ -1,0 +1,205 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual"> Haley: Kim Jong Un ‘Begging for War’ </h1>
+<p class="rm-manual"> <a href="https://fox40.com/news/national-and-world-news/">National and World News</a> </p>
+<p class="rm-manual">by: <a href="https://fox40.com/author/cnn-wire/" rel="author">CNN Wire</a></p>
+<p class="rm-manual"> Posted: Sep 4, 2017 / 02:32 PM PDT </p>
+<p class="rm-manual"><span> / </span>Updated: Sep 4, 2017 / 02:31 PM PDT </p>
+<p class="rm-manual"> This is an archived article and the information in
+ the article may be outdated. Please look at the time stamp on the story
+ to see when it was last updated.</p>
+<p>NEW YORK — US Ambassador to the United Nations Nikki Haley said 
+Monday that North Korean leader Kim Jong Un was “begging for war” as she
+ urged the UN Security Council to adopt the strongest sanctions measures
+ possible to stop Pyongyang’s nuclear program.</p>
+<p>Speaking at a Security Council emergency meeting, Haley said North 
+Korea’s sixth nuclear test was a clear sign that “the time for half 
+measures” from the UN had to end.</p>
+<p>“Enough is enough,” Haley said. “We have taken an incremental approach, and despite the best of intentions, it has not worked.”</p>
+<p>Haley began her statement by ticking through all of the resolutions 
+the Security Council has passed in response to North Korea’s 
+provocations over the past two-plus decades, making the point that the 
+UN has been united condemning Pyongyang but the efforts have not managed
+ to stop its nuclear progress.</p>
+<p>She said the US does not want war but will defend itself when North 
+Korea is issuing threats with missiles pointed at US territories.</p>
+<p>“War is never something the Unites States wants — we don’t want it 
+now,” Haley said. “But our country’s patience is not unlimited. We will 
+defend our allies and our territory.”</p>
+<p>At the conclusion of the meeting, Haley said that the US would 
+circulate a resolution in response to the nuclear test, with plans for a
+ vote on it next week.</p>
+<p>“I think that North Korea has basically slapped everyone in the face 
+in the international community that has asked them to stop,” Haley said.</p>
+<p>While details of a resolution weren’t discussed on Monday, South 
+Korea’s Ambassador to the UN Cho Tae-yul said it had to be “truly 
+biting.”</p>
+<p>“Now is the time to take measures that are strong and robust enough 
+to compel North Korea to seriously engage in dialogue,” he said. “The 
+new resolution must include not only additional measures to further 
+block funds that could possibly flow into North Korea’s illegal nuclear 
+program, but also truly biting and robust measures that Pyongyang finds 
+very painful.”</p>
+<h3>South Korea’s response</h3>
+<p>South Korea launched a major military show of force on Monday in response to the latest nuclear test from the North, including <a href="http://www.cnn.com/2017/09/04/asia/north-korea-nuclear-test/index.html" rel="noopener">live-fire drills</a> simulating an attack on Pyongyang’s nuclear testing site.</p>
+<p>South Korea’s defense ministry said Monday the drills were intended 
+to demonstrate Seoul’s willingness to “wipe out” the regime of Kim Jong 
+Un, while South Korean defense officials also noted there were signs 
+North Korea was preparing for another launch of an intercontinental 
+ballistic missile (ICBM).</p>
+<p>Seoul said that it would activate four Terminal High Altitude Area 
+Defense (THAAD) launch pads, the US missile defense system intended to 
+shoot down potential missiles shot from Pyongyang.</p>
+<p>The THAAD deployment, however, has sparked criticisms from Russia and
+ China, and Russian Deputy Foreign Minister Sergey Ryabkov said Monday 
+that Moscow might increase its missile presence in the Pacific to 
+respond to the THAAD deployment. Neither Russia nor China mentioned the 
+missile defense deployment at the Security Council meeting, however.</p>
+<h3>Leaders discussing next steps</h3>
+<p>US President Donald Trump <a href="http://www.cnn.com/2017/09/04/politics/donald-trump-south-korea/index.html" rel="noopener">spoke by phone</a>
+ Monday with South Korean President Moon Jae-in in a 40-minute phone 
+call, according to Park Soo-hyun, a spokesman for South Korea’s 
+presidential office. They discussed responses to North Korea’s nuclear 
+test and agreed to lift restrictions on the payload weight of South 
+Korea’s ballistic missiles.</p>
+<p>The phone call came after Trump issued a tweet Sunday criticizing the
+ new South Korean leader’s approach to North Korea. “South Korea is 
+finding, as I have told them, that their talk of appeasement with North 
+Korea will not work, they only understand one thing!” Trump wrote.</p>
+<p>The White House statement on the call noted the lifting of payload 
+restrictions on South Korean missiles, as well as Trump providing his 
+“conceptual approval for the purchase of many billions of dollars’ worth
+ of military weapons and equipment from the United States by South 
+Korea.”</p>
+<p>The call was one of a number of conversations Monday between world leaders in the wake of North Korea’s nuclear test.</p>
+<p>Moon also spoke by phone with Russian President Vladimir Putin, in 
+which Seoul said the two leaders discussed cutting off Pyongyang’s crude
+ oil supplies and sources for foreign currency.</p>
+<p>And Trump also spoke with German Chancellor Angela Merkel on Monday. 
+Merkel’s spokesman said the German leader confirmed to Trump that 
+Germany would work with the European Union for new and stricter 
+sanctions against North Korea.</p>
+<h3>US, China tensions over Pyongyang</h3>
+<p>Monday’s Security Council meeting was convened in response to North 
+Korea’s latest nuclear test, but it’s the 10th time that the council has
+ met on North Korea this year — and the second time in less than a week,
+ according to Jeffrey Feltman, UN undersecretary for political affairs.</p>
+<p>In addition to his appeasement tweet, Trump has said in recent days 
+that “talking is not the answer,” and Defense Secretary James Mattis 
+warned on Sunday of a “massive military response” to any threat from 
+North Korea against the US or its allies.</p>
+<p>But Trump has also targeted China as complicit in allowing North 
+Korea’s nuclear program to march on. On Sunday, Trump tweeted that the 
+US was considering “stopping all trade with any country doing business 
+with North Korea,” which would include China.</p>
+<p>At the UN meeting Monday, Chinese Ambassador to the UN Liu Jieyi said
+ the situation was “falling into a vicious circle” and urged North Korea
+ to “stop taking actions that are wrong.”</p>
+<p>“We strongly urge the DPRK to face up squarely to the firm will of 
+the international community on the issue of the denuclearization of the 
+peninsula and earnestly abide by the relevant resolutions of the 
+council.”</p>
+<p>At the same time, Liu cautioned against any military option.</p>
+<p>“The peninsula issue must be resolved peacefully,” he said. “China will never allow chaos and war on the peninsula.”</p>
+<p>Liu touted a proposal from China and Russia of a “suspension for 
+suspension,” also known as “freeze for freeze,” where Pyongyang would 
+freeze its nuclear program in exchange for the US and South Korea 
+suspending joint military exercises.</p>
+<p>But before he spoke, Haley called such a proposal “insulting.”</p>
+<p>“The idea that some have suggested a so-called ‘freeze for freeze’ is
+ insulting,” she said. “When a rogue regime has a nuclear weapon and an 
+ICBM pointed at you, you do not take steps to lower your guard. No one 
+would do that. We certainly won’t.”</p>
+<p>Asked after the Security Council meeting about Haley’s “insulting” 
+comment, Russian Ambassador to the UN Vassily Nebenzia told reporters he
+ was “wondering” what was insulting about their proposal.</p>
+<p>“This is the only proposal for a political way out,” Nebenzia said.</p>
+<p>Haley also indirectly called out China for its trade with North 
+Korea, saying the United States would look at every country that does 
+business with Pyongyang “as a country that is giving aid to their 
+reckless and dangerous intentions.”</p>
+<p>She said that quickly enacting the strongest possible sanctions in 
+the Security Council was the only way to resolve the issue 
+diplomatically.</p>
+<p>“We’ve kicked the can down the road long enough,” Haley said. “There is no more road left.”</p>
+<h3 class="rm-manual">Suggest a Correction</h3>
+<p class="rm-manual"> Your name<span>(required)</span> </p>
+<p class="rm-manual"> Your email<span>(required)</span> </p>
+<p class="rm-manual"> Report a typo or grammatical error<span>(required)</span> </p>
+<p class="rm-manual">Trademark and Copyright 2020 <a href="http://www.cnn.com/" rel="nofollow">Cable News Network</a>, Inc., a Time Warner Company. All rights reserved.</p>
+<h2 class="rm-manual">Share this story</h2>
+<h2 class="rm-manual"> More National and World News Stories </h2>
+<p class="rm-manual"> <a href="https://fox40.com/news/national-and-world-news/reddit-twitch-clamp-down-trumpist-forums-for-hate-speech/"> </a></p><article class="rm-manual"><a href="https://fox40.com/news/national-and-world-news/reddit-twitch-clamp-down-trumpist-forums-for-hate-speech/"> <p class="rm-manual"> </p><h3 class="rm-manual"> Reddit, Twitch clamp down Trumpist forums for hate speech </h3> by Associated Press <span>/</span> Jun 29, 2020 <p class="rm-manual">Reddit,
+ an online comment forum that is one of the internet's most popular 
+websites, on Monday banned a forum that supported President-Donald Trump
+ as part of a crackdown on hate speech.</p> <p class="rm-manual">The 
+Trump forum, called The_Donald, was banned because it encouraged 
+violence, regularly broke other Reddit rules, and defiantly 
+“antagonized” both Reddit and other forums, the company said in a 
+statement. Reddit had previously tried to discipline the forum.</p> <p class="rm-manual"> <span> Read the Full Article </span> </p> <p class="rm-manual"></p> </a></article><a href="https://fox40.com/news/national-and-world-news/reddit-twitch-clamp-down-trumpist-forums-for-hate-speech/"> </a> <a href="https://fox40.com/news/national-and-world-news/enough-1-killed-in-shooting-in-seattles-protest-zone/"> <article class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"> ‘Enough’: 1 killed in shooting in Seattle’s protest zone </h3> by Associated Press <span>/</span> Jun 29, 2020 <p class="rm-manual">SEATTLE
+ (AP) — A 16-year-old boy was killed and a younger teenager was wounded 
+early Monday in Seattle's “occupied” protest zone — the second deadly 
+shooting in the area that local officials have vowed to change after 
+business complaints and criticism from President Donald Trump.</p> <p class="rm-manual">The
+ violence that came just over a week after another shooting in the zone 
+left one person dead and another wounded was “dangerous and 
+unacceptable" police Chief Carmen Best said.</p> <p class="rm-manual"> <span> Read the Full Article </span> </p> <p class="rm-manual"></p> </article> </a> <a href="https://fox40.com/news/nm-man-freed-from-jail-then-sexually-assaults-same-woman-3-days-later-police-say/"> <article class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"> NM man freed from jail, then sexually assaults same woman 3 days later, police say </h3> by Andrea Chacon and Nexstar Media Wire <span>/</span> Jun 29, 2020 <p class="rm-manual">EL
+ PASO, Texas (KTSM) -- A New Mexico man is accused of breaking into a 
+woman's home and sexually assaulting her three days after he was 
+released from jail in an incident involving the same woman. </p> <p class="rm-manual">According to police, the suspect entered the woman's home uninvited and sexually assaulted her. </p> <p class="rm-manual"> <span> Read the Full Article </span> </p> <p class="rm-manual"></p> </article> </a> <p class="rm-manual"></p>
+<h2 class="rm-manual"> Top Stories </h2>
+<h3 class="rm-manual"> <a href="https://fox40.com/news/california-connection/newsom-further-restrictions-possible-if-virus-threat-rises/"> Newsom: Further restrictions possible if virus threat rises </a> </h3>
+<h3 class="rm-manual"> <a href="https://fox40.com/news/local-news/bars-must-close-in-sacramento-county-as-virus-cases-climb-health-officer-says/"> Bars must close in Sacramento County as virus cases climb, health officer says </a> </h3>
+<h3 class="rm-manual"> <a href="https://fox40.com/news/business/facebook-boycott-view-the-list-of-companies-pulling-ads/"> Facebook boycott: View the list of companies pulling ads </a> </h3>
+<h3 class="rm-manual"> <a href="https://fox40.com/news/national-and-world-news/reddit-twitch-clamp-down-trumpist-forums-for-hate-speech/"> Reddit, Twitch clamp down Trumpist forums for hate speech </a> </h3>
+<h3 class="rm-manual"> <a href="https://fox40.com/news/national-and-world-news/enough-1-killed-in-shooting-in-seattles-protest-zone/"> ‘Enough’: 1 killed in shooting in Seattle’s protest zone </a> </h3>
+<h3 class="rm-manual"> <a href="https://fox40.com/news/nm-man-freed-from-jail-then-sexually-assaults-same-woman-3-days-later-police-say/"> NM man freed from jail, then sexually assaults same woman 3 days later, police say </a> </h3>
+<h2 class="rm-manual"> <a href="https://fox40.com/news/national-and-world-news/more-than-200-people-are-advised-to-quarantine-after-possible-covid-19-exposure-at-gym-in-west-virginia/"> More than 200 people are advised to quarantine after possible COVID-19 exposure at gym in West Virginia </a> </h2>
+<h2 class="rm-manual"> <a href="https://fox40.com/news/business/costco-quietly-stops-selling-half-sheet-cake-across-u-s-amid-pandemic/"> Costco quietly stops selling half-sheet cake across U.S. amid pandemic </a> </h2>
+<h2 class="rm-manual"> <a href="https://fox40.com/news/entertainment/netflix-series-to-dramatize-kaepernicks-path-to-activism/"> Netflix series to dramatize Kaepernick’s path to activism </a> </h2>
+<h2 class="rm-manual"> <a href="https://fox40.com/news/national-and-world-news/couple-draw-guns-at-crowd-heading-to-st-louis-mayors-home/"> Couple draw guns at crowd heading to St. Louis mayor’s home </a> </h2>
+<h2 class="rm-manual"> <a href="https://fox40.com/news/california-connection/alleged-golden-state-killer-set-to-plead-guilty-in-sacramento/"> Watch Live: Golden State Killer admits to dozens of rapes, murders </a> </h2>
+<figure class="rm-manual"> <a href="https://fox40.com/news/california-connection/alleged-golden-state-killer-set-to-plead-guilty-in-sacramento/"> <p class="rm-manual"> <span> <span>Live</span> </span> </p> </a> </figure><h2 class="rm-manual"> <a href="https://fox40.com/news/coronavirus/gileads-2340-price-for-coronavirus-drug-draws-criticism/"> Gilead’s $2,340 price for coronavirus drug draws criticism </a> </h2>
+<p class="rm-manual"> <a href="file:///news/"> Read more stories </a> </p>
+<h2 class="rm-manual"> More Stories </h2>
+<h3 class="rm-manual"> <a href="https://fox40.com/news/local-news/fox40-podcast-exposed-explores-east-area-rapist-case/"> FOX40 podcast ‘Exposed’ explores East Area Rapist case </a> </h3>
+<figure class="rm-manual"> <a href="https://fox40.com/news/local-news/fox40-podcast-exposed-explores-east-area-rapist-case/"> <p class="rm-manual"> <span> <span>Video</span> </span> </p> </a> </figure><h3 class="rm-manual"> <a href="https://fox40.com/news/national-and-world-news/stimulus-check-round-2-where-we-stand-on-more-relief-money-for-americans/"> Stimulus check round 2: Where we stand on more relief money for Americans </a> </h3>
+<h3 class="rm-manual"> <a href="https://fox40.com/news/political-connection/supreme-court-strikes-down-louisiana-abortion-clinic-law/"> Supreme Court strikes down Louisiana abortion clinic law </a> </h3>
+<h3 class="rm-manual"> <a href="https://fox40.com/news/national-and-world-news/iran-issues-arrest-warrant-for-trump-asks-interpol-to-help/"> Iran issues arrest warrant for Trump that Interpol rejects </a> </h3>
+<p class="rm-manual"> <a href="file:///news/"> Read more stories </a> </p></article>
+</body></html>

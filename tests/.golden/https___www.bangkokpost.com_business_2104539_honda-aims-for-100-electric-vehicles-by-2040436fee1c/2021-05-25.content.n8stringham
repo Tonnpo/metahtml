@@ -1,0 +1,154 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Honda aims for 100% electric vehicles by 2040 </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///subscription">SUBSCRIBE</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///thailand">THAILAND</a></li> <li class="rm-manual"><a href="file:///world">WORLD</a></li> <li class="rm-manual"><a href="file:///business">BUSINESS</a></li> <li class="rm-manual"><a href="file:///opinion">OPINION</a></li> <li class="rm-manual"><a href="file:///auto">AUTO</a></li> <li class="rm-manual"><a href="file:///life">LIFE</a></li> <li class="rm-manual"><a href="file:///learning">LEARNING</a></li> <li class="rm-manual"><a href="file:///vdo">VIDEO</a></li> <li class="rm-manual">
+<a href="">MORE+</a> <p class="rm-manual"><span>Other Services</span></p> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///">PROPERTY SEARCH</a></li> <li class="rm-manual"><a href="file:///">JOBS</a></li> <li class="rm-manual"><a href="file:///marketplace">MARKETPLACE</a></li> <li class="rm-manual"><a href="file:///subscribe">HOME DELIVERY</a></li> </ul> <p class="rm-manual"><span>Digital products</span></p> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///epaper">EPAPER</a></li> <li class="rm-manual"><a href="file:///sms">SMS</a></li> <li class="rm-manual"><a href="file:///archive">DIGITAL ARCHIVE</a></li> </ul> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///sports">SPORTS</a></li> <li class="rm-manual"><a href="file:///travel">TRAVEL</a></li> <li class="rm-manual"><a href="file:///tech">TECH</a></li> <li class="rm-manual"><a href="file:///property">PROPERTY</a></li> <li class="rm-manual"><a href="file:///photo">PHOTOS</a></li> <li class="rm-manual"><a href="file:///asiafocus">ASIA FOCUS</a></li> </ul> </li> </ul>
+<p class="rm-manual"><span>Section</span></p>
+<ul class="rm-manual"> <li class="rm-manual">
+<a href="file:///thailand">Thailand</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///thailand/general">General</a></li> <li class="rm-manual"><a href="file:///thailand/politics">Politics</a></li> <li class="rm-manual"><a href="file:///thailand/special-reports">Special Report</a></li> <li class="rm-manual"><a href="file:///thailand/pr">PR News</a></li> </ul> </li> <li class="rm-manual"><a href="file:///world">World</a></li> <li class="rm-manual">
+<a href="file:///business">Business</a> </li> <li class="rm-manual">
+<a href="file:///opinion">Opinion</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///opinion/columnist">Columnists</a></li> <li class="rm-manual"><a href="file:///opinion/postbag">Postbag</a></li> </ul> </li> <li class="rm-manual"><a href="file:///sports">Sports</a></li> <li class="rm-manual">
+<a href="file:///auto">Auto</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///auto/news">News</a></li> <li class="rm-manual"><a href="file:///auto/review">Review</a></li> </ul> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///sports">Sports</a></li> <li class="rm-manual">
+<a href="file:///auto">Auto</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///auto/news">News</a></li> <li class="rm-manual"><a href="file:///auto/review">Review</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///life">Life</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///life/arts-and-entertainment">Arts &amp; Entertainment</a></li> <li class="rm-manual"><a href="file:///life/social-and-lifestyle">Social &amp; Lifestyle</a></li> </ul> </li> <li class="rm-manual"><a href="file:///learning">Learning</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual">
+<a href="file:///vdo">Video</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///vdo/thailand">Thailand</a></li> <li class="rm-manual"><a href="file:///vdo/world">World</a></li> <li class="rm-manual"><a href="file:///vdo/travel-and-lifestyle">Travel &amp; Lifestyle</a></li> <li class="rm-manual"><a href="file:///vdo/business">Business</a></li> </ul> </li> <li class="rm-manual"><a href="file:///travel">Travel</a></li> <li class="rm-manual"><a href="file:///tech">Tech</a></li> <li class="rm-manual"><a href="file:///property">Property</a></li> <li class="rm-manual"><a href="file:///photo">Photos</a></li> <li class="rm-manual"><a href="file:///asiafocus">Asia Focus</a></li> </ul>
+<p class="rm-manual"><span>Other Services</span></p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///">PROPERTY SEARCH</a></li> <li class="rm-manual"><a href="file:///">JOBS</a></li> <li class="rm-manual"><a href="file:///marketplace">MARKETPLACE</a></li> <li class="rm-manual"><a href="file:///subscribe">HOME DELIVERY</a></li> </ul>
+<p class="rm-manual"><span>About Us</span></p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.bangkokpost.co.th/post_contact">CONTACT US</a></li> <li class="rm-manual"><a href="file:///mediainfo/solution">ONLINE ADVERTISING</a></li> <li class="rm-manual"><a href="file:///send-suggestions">TELL US WHAT YOU THINK</a></li> </ul>
+<p class="rm-manual"><a href="file:///subscription">SUBSCRIBE</a></p>
+<p class="rm-manual"><span>Digital Products</span></p>
+<p class="rm-manual">TODAY’S PAPER</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///epaper">EPAPER</a></li> <li class="rm-manual"><a href="file:///sms">SMS</a></li> <li class="rm-manual"><a href="file:///archive">DIGITAL ARCHIVE</a></li> </ul>
+<p class="rm-manual"> <span>Honda aims for 100% electric vehicles by 2040</span> </p>
+<p class="rm-manual"><a href="file:///auto"> Auto</a></p>
+<p class="rm-manual"><a href="file:///auto/news"> News</a></p>
+<h2 class="rm-manual"> Honda aims for 100% electric vehicles by 2040 </h2>
+<p class="rm-manual">published : 23 Apr 2021 at 17:52 </p>
+<p class="rm-manual">writer: <a href="http://search.bangkokpost.com/search/result_advanced?category=news&amp;columnistName=Reuters"><span> Reuters</span></a></p>
+<figcaption class="rm-manual"> Honda Motors' new CEO Toshihiro Mibe at his inaugural news conference in Tokyo on Friday. (Photo: Reuters) </figcaption><p>TOKYO:
+ Honda Motor Co is aiming to increase its ratio of electric vehicles 
+(EVs) and fuel cell vehicles (FCVs) to 100% of all sales by 2040, chief 
+executive Toshihiro Mibe said on Friday.</p>
+<p>Speaking at his first news conference since taking the helm of 
+Japan's second-largest automaker at the beginning of April, Mibe said 
+the company supported the government's green goals.</p>
+<p>"I believe it is the responsibility of an automaker to achieve our carbon-free goal on a 'tank-to-wheel' basis," Mibe said.</p>
+<p>The company expects EVs and FCVs to account for 40% of sales by 2030 
+and 80% by 2035 in all major markets, including North America and China.</p>
+<p>Honda's announcement of its electrification strategy comes after 
+Prime Minister Yoshihide Suga vowed Japan would aim for a 46% cut in 
+emissions by 2030 and look for ways to go even further, nearly doubling 
+from its previous target.</p>
+<p>The target set by the government is "feasible", Mibe said.</p>
+<p>"While the government's target is extremely difficult, I believe it 
+is a feasible target from the viewpoint of Japan becoming carbon neutral
+ in 2050," he said.</p>
+<p>"As for Honda, we are in full support of this target - 46% -and we'd 
+like to put all our efforts towards achieving the goal," he added.</p>
+<p>Mibe began his leadership amid a growing shift in automobile 
+technology to electric vehicles and autonomous driving. Traditionally 
+known for its fuel-efficient internal-combustion engines, Honda launched
+ its first mass-produced all-battery vehicle last August.</p>
+<p>Mibe said Honda will invest a total of about 5 trillion yen ($46.3 
+billion) in research and development initiatives, including 
+electrification, over the next six years, regardless of sales revenue 
+fluctuations.</p>
+<p>In North America, Honda and GM will introduce two jointly-developed 
+large-sized EV models using GM's Ultium batteries in 2024, and will 
+launch a series of new EV models which feature a new EV platform dubbed 
+e:Architecture.</p>
+<p>In Japan, Mibe said it was aiming for EVs and FCVs to account for 20%
+ of sales by 2030 and 80% by 2035. Meanwhile, he said Honda will include
+ hybrid vehicles in its 2040 target, citing that changing conventional 
+cars to hybrid is a "realistic solution" for the domestic market.</p>
+<p>Mibe said the company also aimed to include advanced driver-assistance systems in all of its models in major markets by 2030.</p>
+<p class="rm-manual"> Do you like the content of this article? </p>
+<p class="rm-manual"> <a href=""> COMMENT <span>(6)</span> </a> </p>
+<p class="rm-manual"> <a href="file:///most-recent">MOST RECENT </a> </p>
+<p class="rm-manual"><a href="file:///thailand">Thailand</a></p>
+<h3 class="rm-manual"><a href="file:///thailand/general/2121487/senators-take-aim-at-vaccine-rollout-plan">Senators take aim at vaccine rollout plan</a></h3>
+<p class="rm-manual">Senators on Tuesday called on the government to 
+improve its vaccine distribution plan as the third wave of the 
+coronavirus pandemic shows no sign of abating.</p>
+<p class="rm-manual"> <span>25 May 2021 </span> </p>
+<p class="rm-manual"><a href="file:///business">Business</a></p>
+<h3 class="rm-manual"><a href="file:///business/2121483/cp-denies-links-with-sinovac-purchases">CP denies links with Sinovac purchases</a></h3>
+<p class="rm-manual">The Charoen Pokphand group says it has nothing to 
+do with the purchases of the Covid-19 vaccine made by Sinovac Biotech by
+ the Thai government.</p>
+<p class="rm-manual"> <span>25 May 2021 </span> </p>
+<p class="rm-manual"><a href="file:///thailand">Thailand</a></p>
+<h3 class="rm-manual"><a href="file:///thailand/general/2121463/park-dwellers-prosecution-likely-to-be-delayed">Park dwellers' prosecution likely to be delayed</a></h3>
+<p class="rm-manual">Deputy Agriculture and Cooperatives Minister 
+Thamanat Prompow on Tuesday agreed to ask the prosecution to delay legal
+ proceedings against 28 villagers living in Kaeng Krachan National Park.</p>
+<p class="rm-manual"> <span>25 May 2021 </span> </p>
+<p class="rm-manual">MORE IN SECTION</p>
+<h3 class="rm-manual"><a href="file:///business/2121483/cp-denies-links-with-sinovac-purchases">CP denies links with Sinovac purchases</a></h3>
+<h3 class="rm-manual"><a href="file:///business/2121383/huawei-to-unveil-new-os-push-into-software-to-weather-us-pressure">Huawei to unveil new OS, push into software to weather US pressure</a></h3>
+<h3 class="rm-manual"><a href="file:///business/2121355/b500bn-covid-borrowing-bill-takes-effect">B500bn tonic</a></h3>
+<h3 class="rm-manual"><a href="file:///business/2121319/april-exports-up-13-1-y-y">April exports up 13.1% y/y</a></h3>
+<h3 class="rm-manual"><a href="file:///business/2121291/tires-from-thailand-3-other-countries-dumped-at-below-market-rates-in-us">Tires from Thailand, 3 other countries dumped at below-market rates in US</a></h3>
+<ul class="rm-manual"> <li class="rm-manual">
+<a href="file:///thailand">THAILAND</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///thailand/general">General</a></li> <li class="rm-manual"><a href="file:///thailand/politics">Politics</a></li> <li class="rm-manual"><a href="file:///thailand/special-reports">Special Report</a></li> <li class="rm-manual"><a href="file:///thailand/pr">PR News</a></li> </ul> </li> <li class="rm-manual"><a href="file:///world">WORLD</a></li> <li class="rm-manual">
+<a href="file:///business">BUSINESS</a> </li> <li class="rm-manual">
+<a href="file:///opinion">OPINION</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///opinion/columnist">Columnists</a></li> <li class="rm-manual"><a href="file:///opinion/postbag">Postbag</a></li> </ul> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///sports">SPORTS</a></li> <li class="rm-manual">
+<a href="file:///auto">AUTO</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///auto/news">News</a></li> <li class="rm-manual"><a href="file:///auto/review">Review</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///life">LIFE</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///life/arts-and-entertainment">Arts &amp; Entertainment</a></li> <li class="rm-manual">
+<a href="file:///life/social-and-lifestyle">Social &amp; Lifestyle</a> </li> <li class="rm-manual">
+<a href="http://search.bangkokpost.com/search/result_advanced?q=&amp;category=news&amp;refinementFilter=&amp;sort=newest&amp;xDateSearchRadio=&amp;searchedField=all&amp;xChannel=&amp;xNewsSection=Guru&amp;xColumn=&amp;columnistName=">Guru</a> </li> <li class="rm-manual">
+<a href="http://search.bangkokpost.com/search/result_advanced?q=&amp;category=news&amp;refinementFilter=&amp;sort=newest&amp;xDateSearchRadio=&amp;searchedField=all&amp;xChannel=&amp;xNewsSection=B+Magazine&amp;xColumn=&amp;columnistName=">B Magazine</a> </li> </ul> </li> <li class="rm-manual"><a href="file:///learning">LEARNING</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual">
+<a href="file:///life">LIFE</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///life/arts-and-entertainment">Arts &amp; Entertainment</a></li> <li class="rm-manual">
+<a href="file:///life/social-and-lifestyle">Social &amp; Lifestyle</a> </li> <li class="rm-manual">
+<a href="http://search.bangkokpost.com/search/result_advanced?q=&amp;category=news&amp;refinementFilter=&amp;sort=newest&amp;xDateSearchRadio=&amp;searchedField=all&amp;xChannel=&amp;xNewsSection=Guru&amp;xColumn=&amp;columnistName=">Guru</a> </li> <li class="rm-manual">
+<a href="http://search.bangkokpost.com/search/result_advanced?q=&amp;category=news&amp;refinementFilter=&amp;sort=newest&amp;xDateSearchRadio=&amp;searchedField=all&amp;xChannel=&amp;xNewsSection=B+Magazine&amp;xColumn=&amp;columnistName=">B Magazine</a> </li> </ul> </li> <li class="rm-manual"><a href="file:///learning">LEARNING</a></li> <li class="rm-manual">
+<a href="file:///vdo">VIDEO</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///vdo/thailand">Thailand</a></li> <li class="rm-manual"><a href="file:///vdo/world">World</a></li> <li class="rm-manual">
+<a href="file:///vdo/travel-and-lifestyle">Travel &amp; Lifestyle</a> </li> </ul> </li> <li class="rm-manual"><a href="file:///travel">TRAVEL</a></li> <li class="rm-manual"><a href="file:///tech">TECH</a></li> <li class="rm-manual"><a href="file:///property">PROPERTY</a></li> <li class="rm-manual"><a href="file:///photo">PHOTOS</a></li> <li class="rm-manual"><a href="file:///asiafocus">ASIA FOCUS</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual">
+<span>DIGITAL PRODUCTS &amp; SERVICES</span> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///epaper">EPaper</a></li> <li class="rm-manual"><a href="file:///sms">SMS</a></li> <li class="rm-manual"><a href="file:///archive">Digital Archive</a></li> <li class="rm-manual"><a href="file:///">Property Search</a></li> <li class="rm-manual"><a href="file:///">Jobs</a></li> <li class="rm-manual"><a href="file:///marketplace">Marketplace</a></li> <li class="rm-manual"><a href="file:///subscribe">Home Delivery </a></li> </ul> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual">
+<span>OUR NETWORK</span> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///">Post Today</a></li> <li class="rm-manual"><a href="file:///">Post Books</a></li> </ul> </li> </ul>
+<p class="rm-manual"> ©2021 Bangkok Post Public Company Limited </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///policy">Terms of use</a></li> <li class="rm-manual"><a href="file:///republishingpolicy">Republishing permission</a></li> <li class="rm-manual"><a href="file:///mediainfo/solution">Online advertising</a></li> <li class="rm-manual"><a href="https://www.bangkokpost.co.th/post_contact">Contact us</a></li> <li class="rm-manual"><a href="file:///send-suggestions">Tell us what you think</a></li> <li class="rm-manual"><a href="file:///partner">Partnership</a></li> </ul></article>
+</body></html>

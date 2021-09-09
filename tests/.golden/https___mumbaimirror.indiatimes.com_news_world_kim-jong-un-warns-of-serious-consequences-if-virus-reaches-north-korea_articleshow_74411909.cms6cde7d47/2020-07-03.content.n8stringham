@@ -1,0 +1,357 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">Kim Jong Un warns of 'serious consequences' if coronavirus reaches North Korea </p>
+<p class="rm-manual"><span>WELCOME,</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a rel="nofollow noopener noreferrer" href="https://mytimes.indiatimes.com/">My Times</a></li>
+<li class="rm-manual"><span>LOGOUT</span></li>
+</ul>
+<p class="rm-manual"><span><span>SIGN IN</span></span></p>
+<p class="rm-manual"><span>Fri ,Jul 03, 2020</span><a href="https://bangaloremirror.indiatimes.com/" rel="nofollow noopener noreferrer">Bangalore Mirror</a><span>|</span><a href="https://ahmedabadmirror.indiatimes.com/" rel="nofollow noopener noreferrer">Ahmedabad Mirror</a><span>|</span><a href="https://punemirror.indiatimes.com/" rel="nofollow noopener noreferrer">Pune Mirror</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///">Home</a></li>
+<li class="rm-manual"><a href="file:///coronavirus">Coronavirus</a></li>
+<li class="rm-manual">
+<a href="file:///mumbai">Mumbai</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///mumbai-speaks/articlelist/55817845.cms">Mumbai Speaks</a></li>
+<li class="rm-manual"><a href="file:///mumbai/cover-story">Cover Story</a></li>
+<li class="rm-manual"><a href="file:///mumbai/crime">Crime</a></li>
+<li class="rm-manual"><a href="file:///mumbai/civic">Civic</a></li>
+<li class="rm-manual"><a href="file:///maharashtra-assembly-elections">Assembly Elections</a></li>
+<li class="rm-manual"><a href="file:///mumbai/other/articlelist/12439006.cms">Other</a></li>
+<li class="rm-manual"><a href="file:///26-11/listview/1166732323.cms">26/11</a></li>
+<li class="rm-manual"><a href="file:///operationkhataara">Operation Khataara</a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="file:///entertainment/section/15600944.cms">Entertainment</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///entertainment/movie-review/articlelist/47612992.cms">Movie Review</a></li>
+<li class="rm-manual"><a href="file:///entertainment/bollywood/articlelist/12438966.cms">Bollywood</a></li>
+<li class="rm-manual"><a href="file:///entertainment/hollywood/articlelist/12438964.cms">Hollywood</a></li>
+<li class="rm-manual"><a href="file:///entertainment/tv">TV</a></li>
+<li class="rm-manual"><a href="file:///entertainment/music">Music</a></li>
+<li class="rm-manual"><a href="file:///entertainment/art-theatre/articlelist/12438963.cms">Art &amp; Theatre</a></li>
+<li class="rm-manual"><a href="file:///entertainment/books">Books</a></li>
+</ul>
+</li>
+<li class="rm-manual"><a href="file:///videos">Videos</a></li>
+<li class="rm-manual">
+<a href="file:///photolist/15571400.cms">Photos</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///photos/entertainment/photolist/15567338.cms">Entertainment</a></li>
+<li class="rm-manual"><a href="file:///photos/news/photolist/15518196.cms">News</a></li>
+<li class="rm-manual"><a href="file:///photos/sports/photolist/15567599.cms">Sports</a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="file:///sports">Sports</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///sport/cricket">Cricket</a></li>
+<li class="rm-manual"><a href="file:///sport/tennis/articlelist/17371511.cms">Tennis</a></li>
+<li class="rm-manual"><a href="file:///sport/badminton/articlelist/57930062.cms">Badminton</a></li>
+<li class="rm-manual"><a href="file:///sport/others/articlelist/12438952.cms">Others</a></li>
+<li class="rm-manual"><a href="file:///sport/football/articlelist/17371519.cms">Football</a></li>
+<li class="rm-manual"><a href="file:///sport/olympics/articlelist/53551120.cms">Olympics</a></li>
+<li class="rm-manual"><a href="file:///sport/hockey/articlelist/50036791.cms">Hockey</a></li>
+<li class="rm-manual"><a href="file:///sports/ipl">IPL 2020</a></li>
+<li class="rm-manual"><a href="file:///sports/icc-cricket-world-cup-2019">ICC WC</a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="file:///news/section/15600715.cms">News</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///news/india/articlelist/13049961.cms">India</a></li>
+<li class="rm-manual"><a href="file:///news/world/articlelist/13049964.cms">World</a></li>
+<li class="rm-manual"><a href="file:///news/business/articlelist/13049967.cms">Business</a></li>
+<li class="rm-manual"><a href="file:///news/fact-check/articlelist/66917001.cms">Fact Check</a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="file:///opinion/section/15600667.cms">Opinion</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///opinion/city-columns/articlelist/52259838.cms">City Columns</a></li>
+<li class="rm-manual"><a href="file:///opinion/blogs/blogview/17780496.cms">Blogs</a></li>
+<li class="rm-manual"><a href="file:///opinion/pilgrim-nation/articlelist/52259748.cms">Pilgrim Nation</a></li>
+<li class="rm-manual"><a href="file:///opinion/columnists/articlelist/17886447.cms">Columnists</a></li>
+<li class="rm-manual"><a href="file:///opinion/the-informer/articlelist/17372353.cms">The Informer</a></li>
+<li class="rm-manual"><a href="file:///opinion/ask-the-sexpert/articlelist/12439005.cms">Ask the Sexpert</a></li>
+</ul>
+</li>
+<li class="rm-manual"><a href="">All </a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///news/india/articlelist/13049961.cms">India</a></li>
+<li class="rm-manual"><a href="file:///news/world/articlelist/13049964.cms">World</a></li>
+<li class="rm-manual"><a href="file:///news/business/articlelist/13049967.cms">Business</a></li>
+<li class="rm-manual"><a href="file:///news/fact-check/articlelist/66917001.cms">Fact Check</a></li>
+</ul>
+<p class="rm-manual"><a href="file:///mumbai">Mumbai</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///mumbai/mumbai-speaks/articlelist/55817845.cms">Mumbai Speaks</a></li>
+<li class="rm-manual"><a href="file:///mumbai/cover-story">Cover Story</a></li>
+<li class="rm-manual"><a href="file:///mumbai/crime">Crime</a></li>
+<li class="rm-manual"><a href="file:///mumbai/civic">Civic</a></li>
+<li class="rm-manual"><a href="file:///mumbai/other/articlelist/12439006.cms">Other</a></li>
+</ul>
+<p class="rm-manual"><a href="file:///entertainment/section/15600944.cms">Entertainment</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///entertainment/movie-review/articlelist/47612992.cms">Movie Review</a></li>
+<li class="rm-manual"><a href="file:///entertainment/bollywood/articlelist/12438966.cms">Bollywood</a></li>
+<li class="rm-manual"><a href="file:///entertainment/hollywood/articlelist/12438964.cms">Hollywood</a></li>
+<li class="rm-manual"><a href="file:///entertainment/tv">TV</a></li>
+<li class="rm-manual"><a href="file:///entertainment/music">Music</a></li>
+<li class="rm-manual"><a href="file:///entertainment/art-theatre/articlelist/12438963.cms">Art &amp; Theatre</a></li>
+<li class="rm-manual"><a href="file:///entertainment/books">Books</a></li>
+</ul>
+<p class="rm-manual"><a href="file:///photolist/15571400.cms">Photos</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///photos/entertainment/photolist/15567338.cms">Entertainment</a></li>
+<li class="rm-manual"><a href="file:///photos/news/photolist/15518196.cms">News</a></li>
+<li class="rm-manual"><a href="file:///photos/sports/photolist/15567599.cms">Sports</a></li>
+</ul>
+<p class="rm-manual"><a href="file:///sports">Sport</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///sport/tennis/articlelist/17371511.cms">Tennis</a></li>
+<li class="rm-manual"><a href="file:///sport/cricket">Cricket</a></li>
+<li class="rm-manual"><a href="file:///sport/badminton/articlelist/57930062.cms">Badminton</a></li>
+<li class="rm-manual"><a href="file:///sport/others/articlelist/12438952.cms">Others</a></li>
+<li class="rm-manual"><a href="file:///sport/football/articlelist/17371519.cms">Football</a></li>
+<li class="rm-manual"><a href="file:///sport/olympics/articlelist/53551120.cms">Olympics</a></li>
+<li class="rm-manual"><a href="file:///sport/hockey/articlelist/50036791.cms">Hockey</a></li>
+<li class="rm-manual"><a href="file:///sports/ipl">IPL 2020</a></li>
+</ul>
+<p class="rm-manual"><a href="file:///news/section/15600715.cms">News</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///news/india/articlelist/13049961.cms">India</a></li>
+<li class="rm-manual"><a href="file:///news/world/articlelist/13049964.cms">World</a></li>
+<li class="rm-manual"><a href="file:///news/business/articlelist/13049967.cms">Business</a></li>
+<li class="rm-manual"><a href="file:///news/fact-check/articlelist/66917001.cms">Fact Check</a></li>
+</ul>
+<p class="rm-manual"><a href="file:///opinion/section/15600667.cms">Opinion</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///opinion/city-columns/articlelist/52259838.cms">City Columns</a></li>
+<li class="rm-manual"><a href="file:///opinion/blogs/blogview/17780496.cms">Blogs</a></li>
+<li class="rm-manual"><a href="file:///opinion/pilgrim-nation/articlelist/52259748.cms">Pilgrim Nation</a></li>
+<li class="rm-manual"><a href="file:///opinion/columnists/articlelist/17886447.cms">Columnists</a></li>
+<li class="rm-manual"><a href="file:///opinion/the-informer/articlelist/17372353.cms">The Informer</a></li>
+<li class="rm-manual"><a href="file:///opinion/ask-the-sexpert/articlelist/12439005.cms">Ask the Sexpert</a></li>
+</ul>
+<p class="rm-manual"><a href="file:///others/articlelist/17371530.cms">Others</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///others/things-to-do/articlelist/49270441.cms">Things To Do</a></li>
+<li class="rm-manual"><a href="file:///others/sunday-read/articlelist/12438793.cms">Sunday Read</a></li>
+<li class="rm-manual"><a href="file:///others/health-lifestyle/articlelist/12438785.cms">Health &amp; Lifestyle</a></li>
+<li class="rm-manual"><a href="file:///others/sci-tech/articlelist/12438475.cms">Sci Tech</a></li>
+<li class="rm-manual"><a href="file:///others/leisure/articlelist/17371621.cms">Leisure</a></li>
+</ul>
+<p class="rm-manual"><a href="file:///loksabha-elections">Loksabha Elections</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///loksabha-elections/photos">Photos</a></li>
+<li class="rm-manual"><a href="file:///loksabha-elections/videos">Videos</a></li>
+</ul>
+<p class="rm-manual"><a href="file:///videos">Videos</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///videos/top-videos">Top Videos</a></li>
+<li class="rm-manual"><a href="file:///videos/mumbai">Mumbai</a></li>
+<li class="rm-manual"><a href="file:///videos/bollywood">Bollywood</a></li>
+<li class="rm-manual"><a href="file:///videos/viral-videos">Viral Videos</a></li>
+<li class="rm-manual"><a href="file:///videos/news">News</a></li>
+<li class="rm-manual"><a href="file:///videos/horoscope">Horoscope</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://mumbaimirror.indiatimes.com/"><span>Home</span></a></li>/<li class="rm-manual"><a href="https://mumbaimirror.indiatimes.com/news/section/15600715.cms"><span>News</span></a></li>/<li class="rm-manual"><a href="https://mumbaimirror.indiatimes.com/news/world/articlelist/13049964.cms"><span>World</span></a></li>/<li class="rm-manual"><span>Kim Jong Un warns of 'serious consequences' if coronavirus reaches North Korea</span></li>
+</ul>
+<p class="rm-manual"><a href="">You are in an offline mode</a></p>
+<h1 class="rm-manual">Kim Jong Un warns of 'serious consequences' if coronavirus reaches North Korea</h1>
+<p class="rm-manual"><span><span>AFP</span> <span>/</span> Updated: Feb 29, 2020, 11:25 IST</span></p>
+<p class="rm-manual"><a href="file:///articleshowprint/74411909.cms?prtpage=1"><span><span>Print this article</span></span></a></p>
+<p class="rm-manual"><a href=""><span><span>Reduce font size</span></span></a></p>
+<p class="rm-manual"><a href=""><span><span>Increase font size</span></span></a></p>
+<p class="rm-manual">File photo of Kim Jong Un. Photo: AP</p>
+<p>Seoul: North Korean leader <span>Kim</span> <span>Jong</span> <span>Un</span>
+ warned top party officials of the "serious consequences" of failing to 
+prevent an outbreak of the new coronavirus in the country, state media 
+reported Saturday. </p>
+<p>The impoverished nation, with a weak and ill-equipped healthcare 
+system, has closed its borders to prevent the spread of the disease into
+ its territory. </p>
+<p> <span>Kim</span> told a meeting of the ruling Workers' Party of 
+Korea that the fight against the virus was a "crucial state affair for 
+the defence of the people" that required maximum discipline, according 
+to the official Korean Central News Agency (KCNA). </p>
+<p> "In case the infectious disease spreading beyond control finds its 
+way into our country, it will entail serious consequences," KCNA quoted <span>Kim</span> as saying. </p>
+<p class="rm-manual"> Untitled Carousel </p>
+<p class="rm-manual"><a href="https://mumbaimirror.indiatimes.com/news/world/coronavirus-crash-wipes-5-trillion-off-global-stocks/articleshow/74409097.cms"></a></p><h4 class="rm-manual"><a href="https://mumbaimirror.indiatimes.com/news/world/coronavirus-crash-wipes-5-trillion-off-global-stocks/articleshow/74409097.cms">Coronavirus crash wipes $5 trillion off global stocks</a></h4><p></p>
+<p>The markets have compounded their worst week since 2008 global 
+financial crisis. Economists warn the impact of the outbreak could 
+trigger global recession as Covid-19 could become a global pandemic</p>
+<p>Two senior officials -- party vice-chairmen Ri Man Gon and Pak Thae 
+Dok -- were sacked, and a party unit disbanded for corruption, the 
+report said, indicating that they might have been involved in graft 
+linked with the anti-epidemic measures. </p>
+<p>"No special cases must be allowed," <span>Kim</span> added and ordered officials to "seal off all the channels and space through which the infectious disease may find its way". </p>
+<p>Pyongyang has not reported a single case of COVID-19, which has 
+killed more than 2,800 people and infected over 84,000 people in dozens 
+of countries since it emerged in neighbouring China. </p>
+<p>North Korea has banned tourists, suspended international trains and 
+flights and placed hundreds of foreigners in quarantine to prevent an 
+outbreak. It has also reportedly postponed the new school term. </p>
+<p>With loudspeakers blaring hygiene messages, ambassadors locked in 
+their compounds, and state media demanding "absolute obedience", North 
+Korea's anti-coronavirus measures have been described as "unprecedented"
+ by diplomats. </p>
+<p class="rm-manual"> Untitled Carousel </p>
+<p><a href="https://mumbaimirror.indiatimes.com/news/world/first-british-national-dies-from-coronavirus-in-japan/articleshow/74399906.cms"></a></p><h4 class="rm-manual"><a href="https://mumbaimirror.indiatimes.com/news/world/first-british-national-dies-from-coronavirus-in-japan/articleshow/74399906.cms">First British national dies from Coronavirus in Japan</a></h4><p></p>
+<p>A man who had been a passenger on the Diamond Princess cruise ship 
+has died, the first British national to die from the Coronavirus.</p>
+<p>South Korea, meanwhile, is battling a major outbreak of the virus 
+with more than 2,300 cases -- the highest number outside mainland China.
+ </p>
+<p>Germany's ambassador to the United Nations has said the Security 
+Council would adopt humanitarian exemptions to the sanctions imposed on 
+Pyongyang over its weapons programmes, and allow the export of equipment
+ to help North Korea fight the coronavirus. </p>
+<p>But "the problem is that right now the North Koreans closed the 
+borders," Christoph Heusgen said Thursday after a closed-door Security 
+Council meeting about the reclusive state. </p>
+<p>The members of the Security Council called on North Korea "to allow 
+this equipment in. So the population can be protected," he added, 
+without elaborating on the type of equipment. </p>
+<h4 class="rm-manual">RELATED NEWS</h4>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://mumbaimirror.indiatimes.com/opinion/columnists/supriya-nair/a-marriage-story-set-in-north-korea/articleshow/76433684.cms?utm_source=Articleshow&amp;utm_medium=Organic&amp;utm_campaign=Related_Stories"><p class="rm-manual"><span>A marriage story, set in North Korea</span></p><p class="rm-manual">Jun 18, 2020</p><p class="rm-manual"></p></a></li>
+<li class="rm-manual"><a href="https://mumbaimirror.indiatimes.com/news/world/north-korea-blows-up-inter-korea-liaison-office-raising-tensions/articleshow/76402579.cms?utm_source=Articleshow&amp;utm_medium=Organic&amp;utm_campaign=Related_Stories"><p class="rm-manual"><span>North Korea blows up inter-Korea liaison office, raising tensions</span></p><p class="rm-manual">Jun 16, 2020</p><p class="rm-manual"></p></a></li>
+<li class="rm-manual"><a href="https://mumbaimirror.indiatimes.com/news/world/kim-jong-un-appears-in-public-after-weeks/articleshow/75513146.cms?utm_source=Articleshow&amp;utm_medium=Organic&amp;utm_campaign=Related_Stories"><p class="rm-manual"><span>Kim Jong Un appears in public after weeks</span></p><p class="rm-manual">May 03, 2020</p><p class="rm-manual"></p></a></li>
+</ul>
+<p class="rm-manual"><span>GALLERIES <a href="file:///photolist/15571400.cms">View more photos</a></span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><span><a href="file:///in-photos-a-rainy-day-in-mumbais-worli-koliwada/Right-out-of-a-painting/photostory/76770460.cms">Right out of a painting</a></span></li>
+<li class="rm-manual"><span><a href="file:///photos/news/in-photos-heavy-rains-lash-mumbai-usual-complaints-of-water-logging-resurface/Mumbai-Rains/photostory/76770173.cms">Mumbai Rains</a></span></li>
+<li class="rm-manual"><span><a href="file:///in-photos-street-art-outside-mahim-station-dedicated-to-frontline-covid-workers/Street-art-dedicated-to-frontline-workers/photostory/76770055.cms">Street art dedicated to frontline workers</a></span></li>
+</ul>
+<p class="rm-manual"><a>Most Popular</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a>Most Read</a></li>
+<li class="rm-manual"><a>Most commented</a></li>
+</ul>
+<li class="rm-manual"><a href="file:///entertainment/tv/khatron-ke-khiladi-fame-rani-chatterjee-seeks-help-from-mumbai-police-says-i-will-end-my-life-because-of-depression/articleshow/76728328.cms"><span>Khatron Ke Khiladi fame Rani Chatterjee... <span>Khatron Ke Khiladi fame Rani Chatterjee seeks help from Mumbai Police; says 'I will end my life because of depression'</span></span></a></li>
+<li class="rm-manual"><a href="file:///mumbai/other/imd-issues-orange-alert-heavy-to-very-heavy-rain-predicted-in-mumbai-on-july-3-4/articleshow/76750674.cms"><span>IMD issues orange alert: Heavy to very ... <span>IMD issues orange alert: Heavy to very heavy rain predicted in Mumbai on July 3-4</span></span></a></li>
+<li class="rm-manual"><a href="file:///coronavirus/news/pvt-schools-ignore-govt-order-threaten-parents-over-fees/articleshow/76760427.cms"><span>Pvt schools ignore govt order, threaten... <span>Pvt schools ignore govt order, threaten parents over fees</span></span></a></li>
+<li class="rm-manual"><a href="file:///mumbai/other/anil-ambani-has-time-till-july-20-to-reveal-assets/articleshow/76740098.cms"><span>Anil Ambani has time till July 20 to re... <span>Anil Ambani has time till July 20 to reveal assets; failure to meet the deadline could result in jail</span></span></a></li>
+<li class="rm-manual"><a href="file:///coronavirus/news/mumbai-section-144-imposed-mumbai-police-prohibits-movement-of-persons/articleshow/76727513.cms"><span>Mumbai: Section 144 imposed, Mumbai pol... <span>Mumbai: Section 144 imposed, Mumbai police prohibits movement of persons</span></span></a></li>
+<li class="rm-manual"><a href="file:///coronavirus/news/10-day-total-lockdown-in-thane-city-mira-bhayandar-and-kalyan-dombivali/articleshow/76720920.cms"><span>10-day total lockdown in Thane city, Mi... <span>10-day total lockdown in Thane city, Mira-Bhayandar and Kalyan-Dombivali</span></span></a></li>
+<li class="rm-manual"><a href="file:///coronavirus/news/new-treatment-advice-says-infection-cycle-28-days-not-14/articleshow/76739594.cms"><span>COVID-19: New treatment advice says inf... <span>COVID-19: New treatment advice says infection cycle 28 days not 14</span></span></a></li>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///coronavirus/news/pvt-schools-ignore-govt-order-threaten-parents-over-fees/articleshow/76760427.cms"><span>Pvt schools ignore govt order, threaten... <span>Pvt schools ignore govt order, threaten parents over fees</span></span></a></li>
+<li class="rm-manual"><a href="file:///coronavirus/news/a-brutal-lockdown-first-jobless-now-homeless/articleshow/76740162.cms"><span>A brutal lockdown: First jobless, now h... <span>A brutal lockdown: First jobless, now homeless</span></span></a></li>
+<li class="rm-manual"><a href="file:///mumbai/other/anil-ambani-has-time-till-july-20-to-reveal-assets/articleshow/76740098.cms"><span>Anil Ambani has time till July 20 to re... <span>Anil Ambani has time till July 20 to reveal assets; failure to meet the deadline could result in jail</span></span></a></li>
+<li class="rm-manual"><a href="file:///entertainment/tv/khatron-ke-khiladi-fame-rani-chatterjee-seeks-help-from-mumbai-police-says-i-will-end-my-life-because-of-depression/articleshow/76728328.cms"><span>Khatron Ke Khiladi fame Rani Chatterjee... <span>Khatron Ke Khiladi fame Rani Chatterjee seeks help from Mumbai Police; says 'I will end my life because of depression'</span></span></a></li>
+<li class="rm-manual"><a href="file:///coronavirus/news/mumbai-section-144-imposed-mumbai-police-prohibits-movement-of-persons/articleshow/76727513.cms"><span>Mumbai: Section 144 imposed, Mumbai pol... <span>Mumbai: Section 144 imposed, Mumbai police prohibits movement of persons</span></span></a></li>
+<li class="rm-manual"><a href="file:///coronavirus/news/new-treatment-advice-says-infection-cycle-28-days-not-14/articleshow/76739594.cms"><span>COVID-19: New treatment advice says inf... <span>COVID-19: New treatment advice says infection cycle 28 days not 14</span></span></a></li>
+<li class="rm-manual"><a href="file:///coronavirus/news/mira-bhayandar-highest-single-day-spike-with-171-new-covid-19-positive-cases-4-deaths/articleshow/76757208.cms"><span>Mira Bhayandar: Highest single-day spik... <span>Mira Bhayandar: Highest single-day spike with 171 new COVID-19 positive cases; 4 deaths</span></span></a></li>
+</ul>
+<p class="rm-manual"><a> From News</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a>Most Read</a></li>
+<li class="rm-manual"><a>Most commented</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///coronavirus/news/pvt-schools-ignore-govt-order-threaten-parents-over-fees/articleshow/76760427.cms"><span>Pvt schools ignore govt order, threaten... <span>Pvt schools ignore govt order, threaten parents over fees</span></span></a></li>
+<li class="rm-manual"><a href="file:///coronavirus/news/mumbai-section-144-imposed-mumbai-police-prohibits-movement-of-persons/articleshow/76727513.cms"><span>Mumbai: Section 144 imposed, Mumbai pol... <span>Mumbai: Section 144 imposed, Mumbai police prohibits movement of persons</span></span></a></li>
+<li class="rm-manual"><a href="file:///coronavirus/news/10-day-total-lockdown-in-thane-city-mira-bhayandar-and-kalyan-dombivali/articleshow/76720920.cms"><span>10-day total lockdown in Thane city, Mi... <span>10-day total lockdown in Thane city, Mira-Bhayandar and Kalyan-Dombivali</span></span></a></li>
+<li class="rm-manual"><a href="file:///coronavirus/news/new-treatment-advice-says-infection-cycle-28-days-not-14/articleshow/76739594.cms"><span>COVID-19: New treatment advice says inf... <span>COVID-19: New treatment advice says infection cycle 28 days not 14</span></span></a></li>
+<li class="rm-manual"><a href="file:///coronavirus/news/six-people-including-three-best-workers-booked-for-not-following-social-distancing-norms/articleshow/76743114.cms"><span>Mumbai: Six people including three BEST... <span>Mumbai: Six people including three BEST workers booked for not following social distancing norms</span></span></a></li>
+<li class="rm-manual"><a href="file:///coronavirus/news/hyderabad-amid-fresh-lockdown-hints-from-kcr-people-leave-for-hometowns/articleshow/76735570.cms"><span>Hyderabad: Amid fresh lockdown hints fr... <span>Hyderabad: Amid fresh lockdown hints from KCR, people leave for hometowns</span></span></a></li>
+<li class="rm-manual"><a href="file:///coronavirus/news/bmc-to-buy-27-lakh-favipiravir-tablets-opposition-cries-scam/articleshow/76740251.cms"><span>BMC to buy 27 lakh Favipiravir tablets ... <span>BMC to buy 27 lakh Favipiravir tablets to save lives; Opposition cries scam</span></span></a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///coronavirus/news/pvt-schools-ignore-govt-order-threaten-parents-over-fees/articleshow/76760427.cms"><span>Pvt schools ignore govt order, threaten... <span>Pvt schools ignore govt order, threaten parents over fees</span></span></a></li>
+<li class="rm-manual"><a href="file:///coronavirus/news/a-brutal-lockdown-first-jobless-now-homeless/articleshow/76740162.cms"><span>A brutal lockdown: First jobless, now h... <span>A brutal lockdown: First jobless, now homeless</span></span></a></li>
+<li class="rm-manual"><a href="file:///coronavirus/news/mira-bhayandar-highest-single-day-spike-with-171-new-covid-19-positive-cases-4-deaths/articleshow/76757208.cms"><span>Mira Bhayandar: Highest single-day spik... <span>Mira Bhayandar: Highest single-day spike with 171 new COVID-19 positive cases; 4 deaths</span></span></a></li>
+<li class="rm-manual"><a href="file:///coronavirus/news/mumbai-section-144-imposed-mumbai-police-prohibits-movement-of-persons/articleshow/76727513.cms"><span>Mumbai: Section 144 imposed, Mumbai pol... <span>Mumbai: Section 144 imposed, Mumbai police prohibits movement of persons</span></span></a></li>
+<li class="rm-manual"><a href="file:///coronavirus/news/new-treatment-advice-says-infection-cycle-28-days-not-14/articleshow/76739594.cms"><span>COVID-19: New treatment advice says inf... <span>COVID-19: New treatment advice says infection cycle 28 days not 14</span></span></a></li>
+<li class="rm-manual"><a href="file:///coronavirus/news/transferred-over-covid-pardeshi-gets-un-crisis-response-offer/articleshow/76720443.cms"><span>Transferred over COVID-19, Ex-BMC chief... <span>Transferred over COVID-19, Ex-BMC chief Pravin Pardeshi gets UN ‘crisis response’ offer</span></span></a></li>
+<li class="rm-manual"><a href="file:///coronavirus/news/mira-bhayandar-112-new-covid-19-positive-cases-no-deaths-on-wednesday/articleshow/76737300.cms"><span>Mira Bhayandar: 112 new COVID-19 positi... <span>Mira Bhayandar: 112 new COVID-19 positive cases; no deaths on Wednesday</span></span></a></li>
+</ul>
+<p class="rm-manual"><span>POLL</span>Do you think Mumbai Police's 2-Km rule is effective?</p>
+<p class="rm-manual">Can't Say</p>
+<p class="rm-manual">No</p>
+<p class="rm-manual">Yes</p>
+<h6 class="rm-manual">Pick your favorite and click vote</h6>
+<p class="rm-manual"><span>6</span><span>4 + 2 =</span></p>
+<p class="rm-manual"><a href="file:///mumbai-talking/opinion-poll/pollslist/12438932.cms">MORE POLLS</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a rel="nofollow noopener noreferrer" href="https://bangaloremirror.indiatimes.com/?utm_source=MumbaiMirror&amp;utm_medium=footer&amp;utm_campaign=ref">Bangalore Mirror</a></li>
+<li class="rm-manual"><a rel="nofollow noopener noreferrer" href="https://ahmedabadmirror.indiatimes.com/?utm_source=MumbaiMirror&amp;utm_medium=footer&amp;utm_campaign=ref">Ahmedabad Mirror</a></li>
+<li class="rm-manual"><a rel="nofollow noopener noreferrer" href="https://punemirror.indiatimes.com/?utm_source=MumbaiMirror&amp;utm_medium=footer&amp;utm_campaign=ref">Pune Mirror</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a rel="nofollow noopener noreferrer" href="https://timesofindia.indiatimes.com/?utm_source=MumbaiMirror&amp;utm_medium=footer&amp;utm_campaign=ref">Times of India</a></li>
+<li class="rm-manual"><a rel="nofollow noopener noreferrer" href="https://economictimes.indiatimes.com/?utm_source=MumbaiMirror&amp;utm_medium=footer&amp;utm_campaign=ref">Economic Times</a></li>
+<li class="rm-manual"><a rel="nofollow noopener noreferrer" href="http://www.bombaytimes.com/?utm_source=MumbaiMirror&amp;utm_medium=footer&amp;utm_campaign=ref">Bombay Times</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a rel="nofollow noopener noreferrer" href="http://epaper.timesofindia.com/index.asp?utm_source=MumbaiMirror&amp;utm_medium=footer&amp;utm_campaign=ref">E-paper</a></li>
+<li class="rm-manual"><a rel="nofollow noopener noreferrer" href="http://epaper.timesofindia.com/daily/mpaper/index.html?utm_source=MumbaiMirror&amp;utm_medium=footer&amp;utm_campaign=ref">M-Paper</a></li>
+<li class="rm-manual"><a rel="nofollow noopener noreferrer" href="http://www.cricbuzz.com/?utm_source=MumbaiMirror&amp;utm_medium=footer&amp;utm_campaign=ref">Cricbuzz</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a rel="nofollow noopener noreferrer" href="http://maharashtratimes.indiatimes.com/?utm_source=MumbaiMirror&amp;utm_medium=footer&amp;utm_campaign=ref">Marathi News</a></li>
+<li class="rm-manual"><a rel="nofollow noopener noreferrer" href="http://www.misskyra.com/?utm_source=MumbaiMirror&amp;utm_medium=footer&amp;utm_campaign=ref">Miss Kyra</a></li>
+<li class="rm-manual"><a rel="nofollow noopener noreferrer" href="http://www.happytrips.com/?utm_source=MumbaiMirror&amp;utm_medium=footer&amp;utm_campaign=ref">HappyTrips</a></li>
+<li class="rm-manual"><a rel="nofollow" href="https://subscribe.timesgroup.com/">Order Newspaper</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a rel="nofollow noopener noreferrer" href="http://www.happytrips.com/mumbai/travel-guide/18-weekend-getaways-mumbaikars-love/gs27682879.cms?utm_source=MumbaiMirror&amp;utm_medium=footer&amp;utm_campaign=ref">Weekend Getaways from Mumbai</a></li>
+<li class="rm-manual"><a rel="nofollow noopener noreferrer" href="https://baazinow.onelink.me/6g4c?pid=mumbai_mirror_footer&amp;af_mweb_dp=http%3A%2F%2Fwww.baazinow.com">Games App</a></li>
+<li class="rm-manual"><a href="https://www.mxplayer.in/" rel="nofollow noopener noreferrer">MX Player</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a rel="nofollow noopener noreferrer" href="https://timesofindia.indiatimes.com/live-tv/times-now/video">Times Now</a></li>
+<li class="rm-manual"><a rel="nofollow noopener noreferrer" href="https://timesofindia.indiatimes.com/live-tv/et-now/video">ET Now</a></li>
+<li class="rm-manual"><a rel="nofollow noopener noreferrer" href="https://timesofindia.indiatimes.com/live-tv/zoom-tv/video">Zoom TV</a></li>
+<li class="rm-manual"><a rel="nofollow noopener noreferrer" href="https://timesofindia.indiatimes.com/live-tv/mirror-now/video">Mirror Now</a></li>
+<li class="rm-manual"><a rel="nofollow noopener noreferrer" href="https://timesofindia.indiatimes.com/live-tv/times-now/audio">Times Now</a></li>
+<li class="rm-manual"><a rel="nofollow noopener noreferrer" href="https://timesofindia.indiatimes.com/live-tv/et-now/audio">ET Now</a></li>
+</ul>
+<p class="rm-manual"> Get the app </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///aboutus.cms">About Us</a></li>
+<li class="rm-manual"><a href="file:///advertisewithus.cms">Advertise with us</a></li>
+<li class="rm-manual"><a href="file:///termsofuse.cms">Terms of Use and Grievance Redressal Policy</a></li>
+<li class="rm-manual"><a href="file:///privacy-policy">Privacy Policy</a></li>
+</ul>
+<p class="rm-manual">Copyright © Bennett, Coleman &amp; Co. Ltd. All rights reserved. For reprint rights:Times Syndication Service</p></article>
+</body></html>

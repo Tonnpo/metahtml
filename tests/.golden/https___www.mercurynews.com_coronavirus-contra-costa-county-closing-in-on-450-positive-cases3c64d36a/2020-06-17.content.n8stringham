@@ -1,0 +1,88 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h6 class="rm-manual"><a href="https://www.mercurynews.com/news/">News</a></h6>
+<h6 class="rm-manual"><a href="https://www.mercurynews.com/news/health/">Health</a></h6>
+<h1 class="rm-manual"> <span> Coronavirus: Contra Costa County closing in on 450 positive cases </span> </h1>
+<h2 class="rm-manual">Health officials add 25 COVID-19 confirmations to list</h2>
+<p class="rm-manual">By <a href="https://www.mercurynews.com/author/rick-hurd/" rel="author">Rick Hurd</a> | <a href="mailto:rhurd@bayareanewsgroup.com">rhurd@bayareanewsgroup.com</a> | Bay Area News Group</p>
+<p class="rm-manual">PUBLISHED: April 7, 2020 at 12:48 p.m. | UPDATED: April 8, 2020 at 4:45 a.m.</p>
+<p>The spread of the coronavirus in Contra Costa County added 25 more patients to its list Tuesday, health officials there said.</p>
+<p>The Contra Costa County Health Services Department put the number of 
+confirmed cases at 442 in its daily update Tuesday morning. It listed 
+417 confirmed cases on Monday.</p>
+<p>The county added 31 confirmed cases to its list on Monday, 43 on 
+Sunday and 46 on Saturday, the three largest one-day leaps since the 
+pandemic began. The county reported the first positive case of COVID-19 
+on March 4.</p>
+<p>Overall, the county has tested 5,831 patients.</p>
+<p>No new deaths have been added to the county’s total. The coronavirus is responsible for seven deaths during the pandemic.</p>
+<p>Health officials also said 29 people were in a hospital with COVID-19 on Tuesday, down one from on Monday.</p>
+<p>In a breakdown of the confirmed positive cases in each city, 
+officials said of the 442 cases, 39 were in Richmond, 36 in Concord, 33 
+in Orinda and 33 in Pittsburg. None of those cities added any additional
+ cases to the total Tuesday.</p>
+<h2 class="rm-manual">Related Articles</h2>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="https://www.mercurynews.com/2020/06/17/biden-accuses-trump-of-surrendering-to-coronavirus/"> <span> Biden accuses Trump of ‘surrendering’ to coronavirus </span> </a> </li>
+<li class="rm-manual"> <a href="https://www.mercurynews.com/2020/06/17/fremont-changing-locks-after-youth-baseball-scofflaws-take-over-field/"> <span> Fremont changing locks after youth baseball scofflaws take over field </span> </a> </li>
+<li class="rm-manual"> <a href="https://www.mercurynews.com/2020/06/17/oxford-college-wants-to-remove-statue-of-rhodes/"> <span> Oxford college wants to remove statue of Rhodes </span> </a> </li>
+<li class="rm-manual"> <a href="https://www.mercurynews.com/2020/06/17/atlanta-officer-who-shot-rayshard-brooks-will-be-charged/"> <span> Atlanta officer who shot Rayshard Brooks will be charged </span> </a> </li>
+<li class="rm-manual"> <a href="https://www.mercurynews.com/2020/06/17/white-officer-accused-of-hitting-black-suspect-with-suv-is-charged/"> <span> White officer accused of hitting black suspect with SUV is charged </span> </a> </li>
+</ul>
+<p class="rm-manual">Those numbers are expected to change, especially with <a href="https://www.eastbaytimes.com/2020/04/06/coronavirus-positive-cases-at-san-jose-nursing-home-surges-to-20/" rel="noopener noreferrer">COVID-19 apparently spreading through an Orinda senior care facility</a>.</p>
+<p class="rm-manual">Officials also said that of the first 417 patients positively diagnosed with coronavirus, 239 were women.</p>
+<p class="rm-manual">Approximately 1.14 million people live in Contra 
+Costa County. They remain under a stay-at-home order that has been 
+extended at least through May 3.</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.mercurynews.com/report-an-error/">Report an error</a></li> <li class="rm-manual"><a href="https://www.mercurynews.com/policies-and-standards/">Policies and Standards</a></li> <li class="rm-manual"><a href="https://www.mercurynews.com/contact-us/">Contact Us</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual">Tags: </li>
+<li class="rm-manual"><a href="https://www.mercurynews.com/tag/coronavirus/" rel="tag">Coronavirus</a></li>
+<li class="rm-manual"><a href="https://www.mercurynews.com/tag/contra-costa-county-coronavirus-cases/" rel="tag">Coronavirus - Contra Costa County Cases</a></li>
+</ul>
+<h3 class="rm-manual"> <span> <a href="https://www.mercurynews.com/author/rick-hurd/">Rick Hurd</a> </span> <span>| Night cops reporter</span> </h3>
+<p class="rm-manual"> Rick Hurd has covered breaking news, crime and 
+public safety since 2011 after spending 16 years covering sports, 
+including the A's and Sharks. He has worked with the Bay Area News Group
+ since 1995. </p>
+<p class="rm-manual"> <a href="https://checkout.mercurynews.com/Basic?&amp;pid=289"> Subscribe Today! <span>All Access Digital offer for just 99 cents!</span> </a> </p>
+<p class="rm-manual"> <a href="http://disqus.com/">blog comments powered by <span>Disqus</span></a> </p>
+<h2 class="rm-manual"> <span>Most Popular</span> </h2>
+<ol class="rm-manual"> <li class="rm-manual"> <a href="http://www.mercurynews.com/2020/06/17/melania-trumps-spray-tan-mess-ex-servants-detail-domestic-travails-in-new-book/"> <span> Melania Trump’s spray tan mess: Book shares domestic secrets </span> </a> </li> <li class="rm-manual"> <a href="http://www.mercurynews.com/2020/06/17/3-6-magnitude-earthquake-shakes-san-jose/"> <span> 3.4 magnitude earthquake shakes San Jose </span> </a> </li> <li class="rm-manual"> <a href="http://www.mercurynews.com/2020/06/17/watch-santa-clara-county-public-health-department-gives-updates-on-covid-19-and-salons-and-gyms-june-17/"> <span> Watch: Santa Clara County Public Health Department gives updates on COVID-19 and salons and gyms , June 17 </span> </a> </li> <li class="rm-manual"> <a href="http://www.mercurynews.com/2020/06/17/pokemon-go-galarian-farfetchd-and-mega-evolution-coming-to-game/"> <span> ‘Pokemon Go’: Galarian Farfetch’d and Mega Evolution coming to game </span> </a> </li> <li class="rm-manual"> <a href="http://www.mercurynews.com/2020/06/17/former-giant-aubrey-huff-id-rather-die-from-coronavirus-than-live-the-rest-of-my-life-in-fear-and-wear-a-mask/"> <span> Ex-Giant Huff would rather die from virus than wear a mask </span> </a> </li> </ol></article>
+</body></html>

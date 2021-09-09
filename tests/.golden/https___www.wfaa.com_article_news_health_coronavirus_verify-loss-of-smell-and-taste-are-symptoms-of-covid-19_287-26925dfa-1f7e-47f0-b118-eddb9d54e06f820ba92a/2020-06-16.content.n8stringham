@@ -1,0 +1,84 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual">Dallas's Leading Local News: Weather, Traffic, Sports and more | Dallas, Texas | WFAA.com</h1>
+<article class="rm-manual"> <a href="file:///section/coronavirus">coronavirus</a> </article><h1 class="rm-manual">VERIFY: Loss of smell and taste are symptoms of COVID-19</h1>
+<p class="rm-manual">The evidence has been building and new research of U.S. patients makes the strongest connection yet</p>
+<p class="rm-manual"> <span>Author:</span> David Schechter </p>
+<p class="rm-manual"> <span>Published:</span> 10:09 PM CDT April 7, 2020 </p>
+<p class="rm-manual"> <span>Updated:</span> 10:09 PM CDT April 7, 2020 </p>
+<p>DALLAS — According to the Centers for Disease Control, there are <a href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fabout%2Fsymptoms.html">three symptoms</a>
+ of COVID19: fever, cough and shortness of breath. But we’ve been 
+hearing a lot about loss of sense of smell and taste. Should those be 
+recognized symptoms too?</p>
+<p>The anecdotal evidence and a growing body of research suggests there 
+is a correlation but scientifically, the answer has not yet been proven.
+ However, now there's a new study that aims to answer the question.</p>
+<p>It's from <a href="https://www.entnet.org/content/reporting-tool-patients-anosmia-related-covid-19">American Academy of Otolaryngology</a> or Ear, Nose and Throat doctors. <a href="https://www.entnet.org/content/Next_EVP_CEO_Named">Dr. James C. Denneny</a> is the CEO of the Academy. The study will be published Wednesday and Dr. Denneny told WFAA about the findings.</p>
+<p>“Can a loss of sense of smell and taste be a symptom of COVID-19?” I asked.</p>
+<p>“Yeah, I believe the evidence is quite clear that is true,” he said.</p>
+<p>And here's the evidence. </p>
+<p>The Academy has collected data from 237 patients who reported a loss 
+of smell and later tested positive for COVID-19. It found 70% of them 
+reported loss of smell as one of their symptoms before their diagnosis. 
+For 25%, it was their only early symptom.</p>
+<p>“So, if that turns out to follow a pattern, it may well be that this 
+is kind of a red flag or trigger that even though they don't have the 
+other major symptoms, these progressed on to get the COVID19 virus 
+positive,” Dr. Denneny said.</p>
+<p>These new findings are consistent with other studies around the world, including one from <a href="https://www.koreatimes.co.kr/www/nation/2020/03/119_286790.html">South Korea</a> that found 15% of patients lost their sense of smell or taste. Another in <a href="https://news.yahoo.com/loss-smell-could-reveal-hidden-virus-cases-experts-111224454.html">Germany</a> found loss of smell to be common among 100 patients that were interviewed.</p>
+<p>In England, their academy of <a href="https://www.entuk.org/sites/default/files/files/ENTUK%20_%20BRS%20update%20-%20Anosmia%20as%20a%20potential%20marker%20of%20COVID-19%20infection.pdf">ENT</a>
+ doctors say patients who've lost a sense of smell "should be considered
+ likely to have COVID-19 infection. Patients should be advised to 
+self-isolate."</p>
+<p>“I would say this, in addition to several of the others I mentioned, 
+the preponderance of these studies together, this confirms that and has a
+ little more detail then some of the others,” Denneny said.</p>
+<p>So, should a loss of sense of smell and taste symptoms be recognized 
+symptoms of COVID-19? Officially, that has not happened. But the 
+evidence suggests they are symptoms and it’s critical that people have 
+them, take appropriate action.</p>
+<p class="rm-manual">Got something you want verified? Send me an <a href="mailto:david@Verifytv.com">email</a>.</p>
+<h3 class="rm-manual">More on WFAA: </h3>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///article/news/verify/verify-the-stimulus-checks-wont-impact-your-tax-refund-next-year/287-ae057c01-2800-46c4-91fd-c693a5286f0d">VERIFY: The stimulus checks won't impact your tax refund next year</a></li>
+<li class="rm-manual"><a href="file:///article/news/verify/verify-no-evidence-to-support-woody-harrelsons-claim-that-5g-and-covid-19-are-linked/287-2a560cb3-080d-47d4-8c81-56440ce0e88e">VERIFY: No evidence to support Woody Harrelson's claim that 5G and COVID-19 are linked</a></li>
+<li class="rm-manual"><a href="file:///article/news/verify/verify-coronavirus-victims-cannot-donate-organs/287-5a813384-013c-4406-b887-3534d5d4de3a">VERIFY: Coronavirus victims cannot donate organs</a></li>
+<li class="rm-manual"><a href="file:///article/news/health/coronavirus/verify-answering-more-of-your-coronavirus-questions/287-36ad405a-abc8-4464-8a76-39d32811c7b9">VERIFY: Answering more of your coronavirus questions</a></li>
+<li class="rm-manual"><a href="file:///article/news/verify/verify-fact-checking-this-weeks-coronavirus-claims/287-ab4ba889-7815-4a1f-949f-d1ad24e37ba8">VERIFY: Fact-checking this week's coronavirus claims</a></li>
+</ul></article>
+</body></html>

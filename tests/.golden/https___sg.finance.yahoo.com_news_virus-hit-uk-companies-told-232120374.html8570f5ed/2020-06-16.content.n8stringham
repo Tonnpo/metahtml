@@ -1,0 +1,199 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">Virus hit UK companies told to delay financial statements</p>
+<p class="rm-manual"><a href="https://sg.finance.yahoo.com/">Yahoo</a></p>
+<p class="rm-manual">Search</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="#Navigation">Skip to Navigation</a></li>
+<li class="rm-manual"><a href="#market-summary">Skip to Market Summary</a></li>
+<li class="rm-manual"><a href="#Main">Skip to Main Content</a></li>
+<li class="rm-manual"><a href="#Aside">Skip to Related Content</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://login.yahoo.com/config/login?.intl=sg&amp;.lang=en-SG&amp;.src=finance&amp;.done=https%3A%2F%2Fsg.finance.yahoo.com%2Fnews%2Fvirus-hit-uk-companies-told-232120374.html">Sign in</a></li>
+<li class="rm-manual"><a href="https://mail.yahoo.com/?.intl=sg&amp;.lang=en-SG&amp;.partner=none&amp;.src=finance">Mail</a></li>
+</ul>
+<p class="rm-manual"><a href="https://finance.yahoo.com/"> Finance</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://sg.finance.yahoo.com/topic/sgbudget2020"> Budget 2020</a></li>
+<li class="rm-manual"><a href="https://sg.finance.yahoo.com/watchlists"> Watchlists</a></li>
+<li class="rm-manual"><a href="https://sg.finance.yahoo.com/portfolios"> My Portfolio</a></li>
+<li class="rm-manual"><a href="https://sg.finance.yahoo.com/screener"> My Screeners</a></li>
+<li class="rm-manual"><p href="#" class="rm-manual"> Industries</p></li>
+<li class="rm-manual"><p href="#" class="rm-manual"> Markets</p></li>
+<li class="rm-manual"><a href="https://sg.finance.yahoo.com/topic/latestnews"> News</a></li>
+<li class="rm-manual"><a href="https://sg.finance.yahoo.com/currencies/converter/#from=SGD;to=USD;amt=1"> Currency Converter</a></li>
+<li class="rm-manual"><a href="https://sg.finance.yahoo.com/personal-finance"> Money</a></li>
+<li class="rm-manual"><a href="https://livemore.feature.yahoo.com/tagged/Money%20Matters?utm_source=yfinance" rel="noopener noreferrer"> Live More</a></li>
+</ul>
+<p class="rm-manual"><span>Singapore markets closed</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><h3 class="rm-manual">
+<a href="https://sg.finance.yahoo.com/quote/%5ESTI?p=%5ESTI">Straits Times Index</a><span>2,666.85</span><p class="rm-manual"><span>+52.97</span><span> (<span>+2.03%</span> )</span></p>
+</h3></li>
+<li class="rm-manual"><h3 class="rm-manual">
+<a href="https://sg.finance.yahoo.com/quote/%5EGSPC?p=%5EGSPC">S&amp;P 500</a><span>3,148.27</span><p class="rm-manual"><span>+81.68</span><span> (<span>+2.66%</span> )</span></p>
+</h3></li>
+<li class="rm-manual"><h3 class="rm-manual">
+<a href="https://sg.finance.yahoo.com/quote/%5EDJI?p=%5EDJI">Dow</a><span>26,529.73</span><p class="rm-manual"><span>+766.57</span><span> (<span>+2.98%</span> )</span></p>
+</h3></li>
+<li class="rm-manual"><h3 class="rm-manual">
+<a href="https://sg.finance.yahoo.com/quote/%5EIXIC?p=%5EIXIC">Nasdaq</a><span>9,948.08</span><p class="rm-manual"><span>+222.06</span><span> (<span>+2.28%</span> )</span></p>
+</h3></li>
+<li class="rm-manual"><h3 class="rm-manual">
+<a href="https://sg.finance.yahoo.com/quote/BTC-USD?p=BTC-USD">BTC-USD</a><span>9,535.80</span><p class="rm-manual"><span>+86.28</span><span> (<span>+0.91%</span> )</span></p>
+</h3></li>
+<li class="rm-manual"><h3 class="rm-manual">
+<a href="https://sg.finance.yahoo.com/quote/%5ECMC200?p=%5ECMC200">CMC Crypto 200</a><span>193.88</span><p class="rm-manual"><span>-0.16</span><span> (<span>-0.08%</span> )</span></p>
+</h3></li>
+<li class="rm-manual"><h3 class="rm-manual">
+<a href="https://sg.finance.yahoo.com/quote/%5EFTSE?p=%5EFTSE">FTSE 100</a><span>6,279.00</span><p class="rm-manual"><span>+214.30</span><span> (<span>+3.53%</span> )</span></p>
+</h3></li>
+<li class="rm-manual"><h3 class="rm-manual">
+<a href="https://sg.finance.yahoo.com/quote/GC=F?p=GC=F">Gold</a><span>1,730.40</span><p class="rm-manual"><span>+3.20</span><span> (<span>+0.19%</span> )</span></p>
+</h3></li>
+</ul>
+<h1 class="rm-manual">Virus hit UK companies told to delay financial statements</h1>
+<p class="rm-manual">By Huw Jones</p>
+<p class="rm-manual"><span><span><a href="http://www.reuters.com/" rel="noopener noreferrer nofollow">Reuters</a></span></span>21 March 2020</p>
+<p class="rm-manual">A usually crowded Canary Wharf is seen at lunchtime in London</p>
+<p class="rm-manual">By Huw Jones</p>
+<p>LONDON (Reuters) - Companies should not publish preliminary financial
+ statements for at least two weeks to better assess how the coronavirus 
+epidemic is affecting their business, Britain's Financial Conduct 
+Authority said on Saturday.</p>
+<p>"The FCA will be writing tonight to companies it is aware were 
+intending to publish preliminary financial statements in the next few 
+days to delay their planned publications," the watchdog said in a 
+statement.</p>
+<p>The watchdog said it wants them to announce delays to statements as soon as Monday and will come forward with further measures.</p>
+<p>"The FCA strongly requests all listed companies observe a moratorium 
+on the publication of preliminary financial statements for at least two 
+weeks."</p>
+<p>The practice of issuing preliminary financial statements earlier than
+ required is adding unnecessarily to the pressure on auditors and listed
+ companies, it said.</p>
+<p>The FCA, the Financial Reporting Council, which regulates auditors, 
+and the Prudential Regulation Authority, the Bank of England arm that 
+regulates banks, will soon announce details of a package to ensure that 
+listed companies take time to prepare appropriate disclosures, the 
+watchdog said.</p>
+<p>Stocks markets have already tumbled as investors dump shares in 
+companies they expect to be badly hit by the virus after the government 
+told shops, restaurants and other public places to shut, and advised 
+people to avoid all non-essential travel.</p>
+<p>Britain said on Friday it will pay a massive share of private sector 
+wage bills to discourage bosses from firing staff as it resorts to 
+war-time levels of borrowing to prop up the economy during its 
+coronavirus shutdown. The FCA's interim chief executive Christopher 
+Woolard told companies in a letter on Saturday that they should look to 
+announce delays in statements as soon as Monday.</p>
+<p>"I would be grateful if you could give this request urgent 
+consideration, discuss with your board if appropriate, and indicate 
+today or tomorrow whether you will delay publication," Woolard said in 
+his letter.</p>
+<p>"Please could you also indicate if you intend to announce delay on Monday morning," Woolard wrote.</p>
+<p>Markets rely on trustworthy information for trading shares in 
+companies, but the basis on which companies are reporting and planning 
+is changing rapidly as the epidemic evolves and more time was needed to 
+make appropriate disclosures, the FCA said,</p>
+<p>"Observing timetables set before this crisis arose may not give companies the necessary time to do this," the FCA said.</p>
+<p>Many companies opt to issue preliminary statements to update markets 
+in advance of disclosures that have been checked by outside auditors. 
+The main requirement is to publish full audited financial statements 
+within four months of the end of their financial year.</p>
+<p class="rm-manual">(Reporting by Huw Jones; Editing by Chris Reese and Daniel Wallis)</p>
+<p class="rm-manual"><span><a href="file:///recent-quotes"><span>Recently Viewed</span></a></span></p>
+<p class="rm-manual"><span>Your list is empty.</span></p>
+<h2 class="rm-manual">What to read next</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/5-things-know-uob-233032118.html"><span>5 Things You Should Know About UOB</span></a></h3><p class="rm-manual">The Smart Investor</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/home-is-where-singapores-new-casino-is-063854538.html"><span>Home is where Singapore’s new casino is</span></a></h3><p class="rm-manual">Bloomberg</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/stock-market-news-live-june-16-2020-222206832.html"><span>Stock market news live updates: Stocks rise after record retail sales jump, reports of more stimulus</span></a></h3><p class="rm-manual">Yahoo Finance</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/bee-must-kaplan-hexco-team-141000935.html"><span>The Bee Must Go On: Kaplan and Hexco Team Up to Hold Live, Online National Spelling Bee During Week of July 26</span></a></h3><p class="rm-manual">Business Wire</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/global-network-configuration-change-management-140900568.html"><span>Global
+ Network Configuration &amp; Change Management (NCCM) Markets to 2028, 
+Featuring Leading Players SolarWinds, ManageEngine, IBM, Hewlett 
+Packard, EMC Corporation, and More - ResearchAndMarkets.com</span></a></h3><p class="rm-manual">Business Wire</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/capitaland-banks-capitastar-recover-residential-054035500.html"><span>CapitaLand banks on CapitaStar to recover residential, retail businesses</span></a></h3><p class="rm-manual">EdgeProp</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/global-paper-cups-market-2028-140900325.html"><span>Global Paper Cups Market to 2028 - Analysis &amp; Trends - ResearchAndMarkets.com</span></a></h3><p class="rm-manual">Business Wire</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/coroanvirus-covid-may-2020-retail-sales-171911895.html"><span>Retail sales jump 17.7% in May amid COVID-19 pandemic</span></a></h3><p class="rm-manual">Yahoo Finance</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/patient-safety-risk-management-software-140800811.html"><span>Patient Safety and Risk Management Software - Global Market Insights and Outlook Through 2017-2028 - ResearchAndMarkets.com</span></a></h3><p class="rm-manual">Business Wire</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/steroid-dexamethasone-reduces-deaths-among-120549860.html"><span>Scientists hail dexamethasone as 'major breakthrough' in treating COVID-19</span></a></h3><p class="rm-manual">Reuters</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/unicare-health-plan-west-virginia-140500352.html"><span>UniCare Health Plan of West Virginia Awarded Contract to Serve Medicaid Individuals in Mountain Health Trust Program</span></a></h3><p class="rm-manual">Business Wire</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/singapore-diversifies-food-supplies-with-saudi-shrimps-and-polish-eggs-023102505.html"><span>Singapore diversifies food supplies with Saudi shrimps and Polish eggs</span></a></h3><p class="rm-manual">Bloomberg</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/univision-unveils-2020-21-content-140500900.html"><span>Univision Unveils 2020-21 Content Slate Designed to Continue Driving Momentum for Fastest Growing Media Group in the U.S.</span></a></h3><p class="rm-manual">Business Wire</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://finance.yahoo.com/video/band-aid-adds-skin-tones-201651353.html"><span>Band-Aid adds skin tones amid America’s diversity push</span></a></h3><p class="rm-manual">Yahoo Finance Video</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/ea-sports-reveals-madden-nfl-140500344.html"><span>EA SPORTS Reveals Madden NFL 21 With NFL MVP Lamar Jackson on the Cover</span></a></h3><p class="rm-manual">Business Wire</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/exclusive-u-allow-companies-huawei-161051878.html"><span>U.S. companies can work with Huawei on 5G, other standards - Commerce Dept</span></a></h3><p class="rm-manual">Reuters</p><p class="rm-manual"></p></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/los-angeles-based-childcare-co-140436416.html"><span>Los Angeles-based childcare and co-working startup Bümo adds more virtual classes for kids at home</span></a></h3><p class="rm-manual">TechCrunch</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/monogram-health-banner-university-health-140400073.html"><span>Monogram Health and Banner – University Health Plans Announce Innovative Kidney Care Partnership</span></a></h3><p class="rm-manual">Business Wire</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/high-street-centre-collective-sale-054537683.html"><span>High Street Centre up for collective sale at $800 mil</span></a></h3><p class="rm-manual">EdgeProp</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/citi-program-collaboration-consortium-launches-140400675.html"><span>CITI Program, in Collaboration with Consortium, Launches Free Online Course "COVID-19: Back to Campus"</span></a></h3><p class="rm-manual">Business Wire</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/phase-2-post-circuit-breaker-013957994.html"><span>Phase 2 Post-Circuit Breaker: What Reopens And What’s Allowed</span></a></h3><p class="rm-manual">SingSaver</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/chinas-giant-canton-fair-goes-042334892.html"><span>China's giant Canton Fair goes virtual, with teething pains</span></a></h3><p class="rm-manual">Reuters</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/exclusive-tencent-aims-become-biggest-081021589.html"><span>Exclusive: Tencent aims to become biggest shareholder of video streaming rival iQIYI - sources</span></a></h3><p class="rm-manual">Reuters</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/july-looming-economic-risk-enhanced-unemployment-benefits-morning-brief-101139856.html"><span>July's looming economic risk: Morning Brief</span></a></h3><p class="rm-manual">Yahoo Finance</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/u-secretary-agriculture-sonny-perdue-212500967.html"><span>U.S. Secretary of Agriculture Sonny Perdue and Pairwise Leaders Discuss Food Solutions to Health Challenges</span></a></h3><p class="rm-manual">Business Wire</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/wall-street-set-jump-record-132500668.html"><span>Wall Street surges after record rise in May retail sales</span></a></h3><p class="rm-manual">Reuters</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/softbank-backed-ride-hailing-firm-042514095.html"><span>SoftBank-backed ride-hailing firm Grab cuts staff to cope with virus impact</span></a></h3><p class="rm-manual">Reuters</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/fastly-baidu-microsoft-home-depot-140102999.html"><span>Fastly, Baidu, Microsoft, Home Depot and Apple highlighted as Zacks Bull and Bear of the Day</span></a></h3><p class="rm-manual">Zacks</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/financial-sector-safely-transition-phase-181445918.html"><span>Financial sector to safely transition to Phase 2 of Circuit Breaker</span></a></h3><p class="rm-manual">iCompareLoan.com</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/tsx-futures-advance-higher-oil-120949373.html"><span>TSX opens higher as energy stocks gain</span></a></h3><p class="rm-manual">Reuters</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/european-airlines-face-longer-haul-134222722.html"><span>European airlines face longer haul to recovery</span></a></h3><p class="rm-manual">Reuters</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/5-tech-growth-stocks-buy-120212313.html"><span>5 Tech Growth Stocks to Buy as Nasdaq Stages Comeback</span></a></h3><p class="rm-manual">Zacks</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/how-to-think-about-this-market-phase-el-erian-170634713.html"><span>How to think about what's happening in the stock market right now</span></a></h3><p class="rm-manual">Yahoo Finance</p><p class="rm-manual"></p></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/citi-program-collaboration-consortium-launches-140400675.html"><span>CITI Program, in Collaboration with Consortium, Launches Free Online Course "COVID-19: Back to Campus"</span></a></h3><p class="rm-manual">Business Wire</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/phase-2-post-circuit-breaker-013957994.html"><span>Phase 2 Post-Circuit Breaker: What Reopens And What’s Allowed</span></a></h3><p class="rm-manual">SingSaver</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/chinas-giant-canton-fair-goes-042334892.html"><span>China's giant Canton Fair goes virtual, with teething pains</span></a></h3><p class="rm-manual">Reuters</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/exclusive-tencent-aims-become-biggest-081021589.html"><span>Exclusive: Tencent aims to become biggest shareholder of video streaming rival iQIYI - sources</span></a></h3><p class="rm-manual">Reuters</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/july-looming-economic-risk-enhanced-unemployment-benefits-morning-brief-101139856.html"><span>July's looming economic risk: Morning Brief</span></a></h3><p class="rm-manual">Yahoo Finance</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/u-secretary-agriculture-sonny-perdue-212500967.html"><span>U.S. Secretary of Agriculture Sonny Perdue and Pairwise Leaders Discuss Food Solutions to Health Challenges</span></a></h3><p class="rm-manual">Business Wire</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/wall-street-set-jump-record-132500668.html"><span>Wall Street surges after record rise in May retail sales</span></a></h3><p class="rm-manual">Reuters</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/softbank-backed-ride-hailing-firm-042514095.html"><span>SoftBank-backed ride-hailing firm Grab cuts staff to cope with virus impact</span></a></h3><p class="rm-manual">Reuters</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/fastly-baidu-microsoft-home-depot-140102999.html"><span>Fastly, Baidu, Microsoft, Home Depot and Apple highlighted as Zacks Bull and Bear of the Day</span></a></h3><p class="rm-manual">Zacks</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/financial-sector-safely-transition-phase-181445918.html"><span>Financial sector to safely transition to Phase 2 of Circuit Breaker</span></a></h3><p class="rm-manual">iCompareLoan.com</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/tsx-futures-advance-higher-oil-120949373.html"><span>TSX opens higher as energy stocks gain</span></a></h3><p class="rm-manual">Reuters</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/european-airlines-face-longer-haul-134222722.html"><span>European airlines face longer haul to recovery</span></a></h3><p class="rm-manual">Reuters</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/5-tech-growth-stocks-buy-120212313.html"><span>5 Tech Growth Stocks to Buy as Nasdaq Stages Comeback</span></a></h3><p class="rm-manual">Zacks</p><p></p></li>
+</ul></article>
+</body></html>

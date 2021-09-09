@@ -1,0 +1,101 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual">Not so novel: numbers: around COVID-19 and SARS-CoV-2</h1>
+<p class="rm-manual"><span><span>Posted on</span><a href="https://virologydownunder.com/not-so-novel-numbers-around-covid-19-and-sars-cov-2/" rel="bookmark">February 20, 2020March 28, 2020</a></span><span><span><span>Author</span><a href="https://virologydownunder.com/author/vdu2017/">Ian M Mackay, PhD (EIC)</a></span></span><span><a href="https://virologydownunder.com/not-so-novel-numbers-around-covid-19-and-sars-cov-2/#comments">2 Comments</a></span></p>
+<p>A mammoth overview was just released by researchers from the China 
+Center for Disease Control and Prevention (their website is a bit slow 
+right now so have patience).[1] It broke down important details of 
+44,672 RT-PCR confirmed cases from among 72,314 unique records that 
+spanned from close to the known start of the emergence in early 
+December, to February 11, 2020.</p>
+<p>I’ve taken some of the key findings and put them into an infographic 
+below. Keep in mind that although 80.9% of cases are described as mild, 
+that leaves nearly a fifth (18.5%) of all cases in China defined as 
+severe or critical. The critical group include all those who go on to 
+die. Hospitalisation among more severe disease can last between 2 and 6 
+weeks. It has been predicted via media reports that 60% or more of a 
+population could be infected during the initial spread of SARS-CoV-2 
+(the virus; see below).</p>
+<figcaption>Data from the recent distillation characteristics from among 44,672 lab-confirmed cases of COVID-19 due to SARS-CoV-2.[1]</figcaption><p>While
+ you’re here and because I really haven’t much time to spare for more 
+blogs right now, let’s jam in a bit of info about the latest – and 
+hopefully last – naming system so I have something to reference for 
+people who ask.</p>
+<h2>What’s in a coronavirus name?</h2>
+<p>As we all now know and have committed to memory – riiiiIIiight??? – the virus and disease got new names on January 11th.</p>
+<p>On February 12th AEST, the coronavirus first discovered in Wuhan, 
+Hubei Province, China was at last given a permanent name. Up until then,
+ it had simply been called a <a href="https://www.who.int/csr/don/12-january-2020-novel-coronavirus-china/en/">novel coronavirus (nCoV)</a> and then the 2019 novel coronavirus (2019-nCoV). </p>
+<p class="">BREAKING: WHO has received the genetic sequences for the novel <a href="https://twitter.com/hashtag/coronavirus?src=hash&amp;ref_src=twsrc%5Etfw">#coronavirus</a> (2019-nCoV) from the Chinese authorities. We expect them to be made publicly available as soon as possible. <a href="https://t.co/h1w7A0jBm2">pic.twitter.com/h1w7A0jBm2</a></p>
+<p class="">— World Health Organization (WHO) (@WHO) </p>
+<p class=""><a href="https://twitter.com/WHO/status/1216108498188230657?ref_src=twsrc%5Etfw">January 11, 2020</a></p>
+<p>After lengthy consideration of the genetic sequence of the virus and 
+how it related to already known coronaviruses, a specific coronavirus 
+study group (CSG) from the International Committee on Taxonomy of 
+Viruses (ICTV), the global authority on the designation and naming of 
+viruses, designated this virus as severe acute respiratory syndrome 
+coronavirus 2 (SARS-CoV-2). This will be the name used in all scientific
+ literature from now on. </p>
+<p>At the same time, the World Health Organization gave the disease in 
+those infected by SARS-CoV-2 a distinct name as well, corona virus 
+disease 2019 (COVID-19).[3-4] </p>
+<p>These two names are not interchangeable as one names the infectious agent and the other the outcome from infection by it.</p>
+<h2 class="rm-manual">References</h2>
+<ol class="rm-manual">
+<li class="rm-manual">Vital Surveillances: The Epidemiological 
+Characteristics of an Outbreak of 2019 Novel Coronavirus Diseases 
+(COVID-19) — China, 2020<a href="http://weekly.chinacdc.cn/en/article/id/e53946e2-c6c4-41e9-9a9b-fea8db1a8f51">http://weekly.chinacdc.cn/en/article/id/e53946e2-c6c4-41e9-9a9b-fea8db1a8f51</a>
+</li>
+<li class="rm-manual">Severe acute respiratory syndrome-related coronavirus: The species and its viruses – a statement of the Coronavirus Study Group<a href="https://www.biorxiv.org/content/10.1101/2020.02.07.937862v1">https://www.biorxiv.org/content/10.1101/2020.02.07.937862v1</a>
+</li>
+<li class="rm-manual">WHO Director-General’s remarks at the media briefing on 2019-nCoV on 11 February 2020<a href="https://www.who.int/dg/speeches/detail/who-director-general-s-remarks-at-the-media-briefing-on-2019-ncov-on-11-february-2020">https://www.who.int/dg/speeches/detail/who-director-general-s-remarks-at-the-media-briefing-on-2019-ncov-on-11-february-2020</a>
+</li>
+<li class="rm-manual">Novel Coronavirus(2019-nCoV) Situation Report – 22<a href="https://www.who.int/docs/default-source/coronaviruse/situation-reports/20200211-sitrep-22-ncov.pdf?sfvrsn=fb6d49b1_2">https://www.who.int/docs/default-source/coronaviruse/situation-reports/20200211-sitrep-22-ncov.pdf?sfvrsn=fb6d49b1_2</a>
+</li>
+<li class="rm-manual">What’s in a Name? Why WHO’s Formal Name for the New Coronavirus Disease Matters<a href="https://time.com/5782284/who-name-coronavirus-covid-19/">https://time.com/5782284/who-name-coronavirus-covid-19/</a>
+</li>
+</ol>
+<p class="rm-manual">Hits: 1575</p>
+<p class="rm-manual"><span><span>Categories</span><a href="https://virologydownunder.com/category/coronavirus/" rel="category tag">Coronavirus</a>, <a href="https://virologydownunder.com/category/sars-cov-2/" rel="category tag">SARS-CoV-2</a>, <a href="https://virologydownunder.com/category/virus-discovery/" rel="category tag">Virus discovery</a></span></p>
+<h2 class="rm-manual">Post navigation</h2>
+<p class="rm-manual"><a href="https://virologydownunder.com/flight-of-the-aerosol/" rel="prev"><span>← Previous</span> <span>Previous post:</span> <span>Flight of the aerosol</span></a></p>
+<p class="rm-manual"><a href="https://virologydownunder.com/past-time-to-tell-the-public-it-will-probably-go-pandemic-and-we-should-all-prepare-now/" rel="next"><span>Next →</span> <span>Next post:</span> <span>Past Time to Tell the Public: “It Will Probably Go Pandemic, and We Should All Prepare Now”</span></a></p>
+<h2 class="rm-manual"> 2 thoughts on “Not so novel: numbers: around COVID-19 and SARS-CoV-2” </h2>
+<ol class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> Good Samaritan <span>says:</span> </p> <p class="rm-manual"> <a href="https://virologydownunder.com/not-so-novel-numbers-around-covid-19-and-sars-cov-2/#comment-24730"> February 24, 2020 at 10:25 am </a> </p> <p class="rm-manual">First footnote may be incorrect – should it be <a href="http://weekly.chinacdc.cn/en/article/id/e53946e2-c6c4-41e9-9a9b-fea8db1a8f51" rel="nofollow ugc">http://weekly.chinacdc.cn/en/article/id/e53946e2-c6c4-41e9-9a9b-fea8db1a8f51</a> (?)</p> <p class="rm-manual"><a rel="nofollow" href="#comment-24730">Reply</a></p> </article> <ol class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> Ian M Mackay, PhD (EIC) <span>says:</span> </p> <p class="rm-manual"> <a href="https://virologydownunder.com/not-so-novel-numbers-around-covid-19-and-sars-cov-2/#comment-25234"> March 28, 2020 at 1:43 pm </a> </p> <p class="rm-manual">Thankyou!! 🙏 My major mistake. Oof.</p> <p class="rm-manual"><a rel="nofollow" href="#comment-25234">Reply</a></p> </article> </li> </ol> </li> </ol>
+<h3 class="rm-manual">Leave a Reply <a rel="nofollow" href="file:///not-so-novel-numbers-around-covid-19-and-sars-cov-2/#respond">Cancel reply</a> </h3></article>
+</body></html>

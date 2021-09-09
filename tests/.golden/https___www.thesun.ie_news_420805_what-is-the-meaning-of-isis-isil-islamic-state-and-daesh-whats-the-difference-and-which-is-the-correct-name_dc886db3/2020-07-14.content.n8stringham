@@ -1,0 +1,243 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">What does ISIS stand for, what does Daesh mean and what is the right name for the terrorist organisation? </p>
+<p class="rm-manual"><a href="#main-content">Jump directly to the content</a></p>
+<h2 class="rm-manual">Your Sun</h2>
+<ul class="rm-manual"><li class="rm-manual"><a href="https://login.thesun.co.uk/">Sign in</a></li></ul>
+<h2 class="rm-manual">Editions</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.the-sun.com/">US Edition</a></li>
+<li class="rm-manual"><a href="https://www.thesun.co.uk/">UK Edition</a></li>
+<li class="rm-manual"><a href="https://www.thescottishsun.co.uk/">Scottish Sun</a></li>
+<li class="rm-manual"><a href="https://www.dreamteamfc.com/c/">Dream Team</a></li>
+</ul>
+<p class="rm-manual">News Corp is a network of leading companies in the worlds of diversified media, news, education, and information services.</p>
+<h2 class="rm-manual">Follow The Sun</h2>
+<h2 class="rm-manual">The Sun</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.thesun.co.uk/">The Sun</a></li>
+<li class="rm-manual"><a href="https://www.thescottishsun.co.uk/">The Scottish Sun</a></li>
+<li class="rm-manual"><a href="https://www.dreamteamfc.com/">Dream Team</a></li>
+<li class="rm-manual"><a href="http://www.thesun.co.uk/fabulous">Fabulous</a></li>
+<li class="rm-manual"><a href="http://favourite.thesun.co.uk/">Sun Favourite</a></li>
+<li class="rm-manual"><a href="http://www.sunmotors.co.uk/">Sun Motors</a></li>
+<li class="rm-manual"><a href="http://www.sunbingo.co.uk/">Sun Bingo</a></li>
+<li class="rm-manual"><a href="http://thesun.inthepaper.co.uk/">Sun Gifts</a></li>
+</ul>
+<h2 class="rm-manual">News Corp</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="http://www.wsj.com/">WSJ.com</a></li>
+<li class="rm-manual"><a href="http://nypost.com/">New York Post</a></li>
+<li class="rm-manual"><a href="http://www.theaustralian.com.au/">The Australian</a></li>
+<li class="rm-manual"><a href="http://www.news.com.au/">News.com.au</a></li>
+<li class="rm-manual"><a href="https://storyful.com/">Storyful</a></li>
+<li class="rm-manual"><a href="https://www.harpercollins.co.uk/">Harper Collins</a></li>
+<li class="rm-manual"><a href="https://www.realtor.com/">Realtor.com</a></li>
+</ul>
+<h2 class="rm-manual">Services</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.thesun.co.uk/sign-up-to-the-sun/">Sign Up To The Sun</a></li>
+<li class="rm-manual"><a href="https://www.thesun.co.uk/terms-and-conditions/">Terms and Conditions</a></li>
+<li class="rm-manual"><a href="https://www.thesun.ie/editorial-complaints/">Editorial Complaints</a></li>
+<li class="rm-manual"><a href="https://www.thesun.co.uk/admin/clarifications/">Clarifications and Corrections</a></li>
+<li class="rm-manual"><a href="https://www.thesun.co.uk/syndication/">Syndication</a></li>
+<li class="rm-manual"><a href="http://www.newsukadvertising.co.uk/">Advertising</a></li>
+<li class="rm-manual"><a href="https://www.thesun.ie/contact-us/">Contact Us</a></li>
+<li class="rm-manual"><a href="http://help.thesun.co.uk/">Help Hub</a></li>
+<li class="rm-manual"><a href="#">Cookie Settings</a></li>
+<li class="rm-manual"><a href="https://mypreferences.thesun.co.uk/">Contact Preferences</a></li>
+</ul>
+<p class="rm-manual"><a href="https://login.thesun.co.uk/">Sign in</a></p>
+<p class="rm-manual"><a href="#">Irish Sun </a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.the-sun.com/">US Edition</a></li>
+<li class="rm-manual"><a href="https://www.thesun.co.uk/">UK Edition</a></li>
+<li class="rm-manual"><a href="https://www.thescottishsun.co.uk/">Scottish Sun</a></li>
+<li class="rm-manual"><a href="https://www.dreamteamfc.com/c/">Dream Team</a></li>
+</ul>
+<p class="rm-manual"><a href="#">Search</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///">Home</a></li>
+<li class="rm-manual"><a href="https://www.thesun.ie/sport/football/">Football</a></li>
+<li class="rm-manual"><a href="https://www.thesun.ie/sport/">Sport</a></li>
+<li class="rm-manual"><a href="https://www.thesun.ie/tvandshowbiz/">Showbiz</a></li>
+<li class="rm-manual"><a href="https://www.thesun.ie/news/">News</a></li>
+<li class="rm-manual"><a href="https://www.thesun.ie/fabulous/">Fabulous</a></li>
+<li class="rm-manual"><a href="https://www.thesun.ie/money/">Money</a></li>
+<li class="rm-manual"><a href="https://www.thesun.ie/motors/">Motors</a></li>
+<li class="rm-manual"><a href="https://www.thesun.ie/travel/">Travel</a></li>
+<li class="rm-manual"><a href="https://www.thesun.ie/tech/">Tech</a></li>
+<li class="rm-manual"><a href="https://www.thesun.ie/dear-deidre/">Dear Deidre</a></li>
+<li class="rm-manual"><a href="https://www.thesun.ie/puzzles/">Puzzles</a></li>
+<li class="rm-manual"><a href="https://www.thesun.ie/index/">Topics A-Z</a></li>
+</ul>
+<p class="rm-manual"><span>All Football</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///news/">All News</a></li>
+<li class="rm-manual"><a href="https://www.thesun.ie/news/irish-news/">Irish News</a></li>
+<li class="rm-manual"><a href="https://www.thesun.ie/news/world-news/">World News</a></li>
+<li class="rm-manual"><a href="https://www.thesun.ie/tech/">Tech &amp; Science</a></li>
+<li class="rm-manual"><a href="https://www.thesun.ie/news/opinion/">Opinion</a></li>
+<li class="rm-manual"><a href="https://www.thesun.ie/news/health-news/">Health News</a></li>
+</ul>
+<section class="rm-manual"><span>TERROR SAVAGES </span></section><h1 class="rm-manual">What does ISIS stand for, what does Daesh mean and what is the right name for the terrorist organisation?</h1>
+<p class="rm-manual">The twisted terror thugs who rampaged across Iraq and Syria and orchestrated attacks worldwide go under several guises</p>
+<ul class="rm-manual">
+<li class="rm-manual"><span>Becky Pemberton</span></li>
+<li class="rm-manual"><span>Patrick Knox</span></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual">
+<span>28 Feb 2019, </span><span>15:52</span>
+</li>
+<li class="rm-manual">
+<span><span>Updated</span>: 28 Feb 2019, </span><span>16:02</span>
+</li>
+</ul>
+<p class="rm-manual">THE terrorist group is widely referred to Islamic State has slaughtered thousands and has inflicted terror across the globe.</p>
+<p class="rm-manual">The group is fighting for survival after 
+humiliating military defeats and the debate continues over the official 
+name of ISIS, Isil or Islamic State.</p>
+<p class="rm-manual"><span>5</span></p>
+<figcaption class="rm-manual"><span> There is much confusion surrounding the official name of the terror group</span><span>Credit: Getty Images</span></figcaption><h2>What does ISIS stand for?</h2>
+<p>Many people have heard of the term ISIS, which is an acronym for the Islamic State in Iraq and Syria.</p>
+<p>It can also mean the Islamic State in al-Sham, the Arabic name for 
+the region, and the group have said its goal is to create a caliphate in
+ this region.</p>
+<p>The name ISIS has proved an issue for many companies and brands, as it also belongs to an ancient Egyptian goddess.</p>
+<p>The murderous network – known for its barbaric public executions – 
+was originally part of al-Qaeda before splitting with the group over 
+differences in ideology and methods.</p>
+<p>It believes all Muslims should unite into a worldwide caliphate.</p>
+<p><span>5</span></p>
+<figcaption><span> A propaganda photograph of an ISIS militant in Syria</span><span>Credit: Alamy</span></figcaption><h2>What is the meaning of Isil?</h2>
+<p>Isil is an acronym standing for Islamic State of Iraq and the Levant.</p>
+<p>This name was given to the group as it was thought to be more 
+accurate to their geographical location as the Levant includes Syria, 
+Palestine, Lebanon, Israel and Jordan.</p>
+<p>Many governments and leaders, including Barack Obama and David 
+Cameron, have used the term Isil as it is thought to be a better 
+translation for al-Sham, which is the Arabic name for the area.</p>
+<p>In a statement released following the brutal beheading of American 
+photojournalist James Foley, Mr Cameron’s office said: “The Prime 
+Minister has condemned the barbaric and brutal murder of James Foley by 
+Isil (Islamic State of Iraq and the Levant) in Syria.</p>
+<p>“This will not change our commitment to tackling this appalling 
+organisation and doing everything we can to keep our country safe.”</p>
+<p><span>5</span></p>
+<figcaption><span> ISIS militants parade in 2014 in Raqqa, Syria</span><span>Credit: Alamy</span></figcaption><h2>What is the meaning of Daesh?</h2>
+<p>The word Daesh is an acronym for al-Dawla al-Islamiya fi al-Iraq wa al-Sham.</p>
+<p>The term is derived from a rough translation of Arabic words, 
+including Arabic verb دعس, which means to tread underfoot or crush.</p>
+<p>It can also be spelt DAIISH, Da'esh or Daech, and is a name which members of the terror group despise.</p>
+<p>According to the <a href="https://blog.ap.org/announcements/now-we-say-the-islamic-state-group-instead-of-isil" rel="noopener noreferrer">Associated Press</a> in 2014, ISIS threatened "to cut the tongue of anyone who publicly used the acronym Daesh".</p>
+<p>Following the attacks in France, the French government started adopting this term instead of ISIS or Isil.</p>
+<p>Former French Foreign Minister Laurent Fabius said: “This is a terrorist group and not a state.</p>
+<p>“I do not recommend using the term Islamic State because it blurs the lines between Islam, Muslims and Islamists.”</p>
+<p><span>5</span></p>
+<figcaption><span> The caliph of the self-proclaimed Islamic State, Abu Bakr al-Baghdadi. He is believed to have been killed.</span><span>Credit: ISLAMIC STATE</span></figcaption><h2>Which is the correct name?</h2>
+<p>The four competing names are just a few of the those used by the 
+terror group, which started in 1999 when it was formed by Jordanian 
+militant Abu Musab al-Zarqawi.</p>
+<p>As far as they are concerned, the correct term is the Islamic State -
+ but the British and US Governments are among those preferring to use 
+the name Isil.</p>
+<p>The term ISIS is more commonly used within international news 
+publications, and has been used as a label in official United Nations 
+reports.</p>
+<p>Counter-terrorism expert Dr Anne Aly, a research fellow at Curtin 
+University, said it is neither "here or there" what you call the terror 
+group.</p>
+<p>She said it is more important to note that they call themselves the 
+Islamic State, as it shows they are trying to create a state does not 
+respect the borders of Iraq and Syria.</p>
+<p>In 2015 the BBC's Director General refused to drop the term Islamic State from the corporation's coverage.</p>
+<p>All BBC broadcasts and reports refer to the group as the "so-called Islamic State".</p>
+<p>At the time a BBC spokesman said the corporation had no choice but to refer to the group by the name it uses itself.</p>
+<p><span>Russia Defence Ministry look like fools after Tweeting video of a computer game and claiming it was US military assisting ISIS</span></p>
+<h3 class="rm-manual">MOST READ IN NEWS</h3>
+<p class="rm-manual"><span>Breaking</span></p>
+<h3 class="rm-manual">BYE BYE BARRY</h3>
+<p class="rm-manual">Barry Cowen 'surprised' as Taoiseach sacks him over drink-drive controversy</p>
+<h3 class="rm-manual">COVID UPDATE</h3>
+<p class="rm-manual">No new deaths recorded for third day in row as 32 new cases diagnosed</p>
+<h3 class="rm-manual">sunny spells</h3>
+<p class="rm-manual">Temperatures to reach 22C later this week as rainy and cloudy day predicted</p>
+<h3 class="rm-manual">SPIDEY SENSE</h3>
+<p class="rm-manual">'World's most venomous spider that kill in just 2hrs found in Tesco bananas'</p>
+<h3 class="rm-manual">pub talk</h3>
+<p class="rm-manual">NPHET discuss entering final phase as pubs unsure about reopening</p>
+<h3 class="rm-manual">criminal damage</h3>
+<p class="rm-manual">Accused Luke Kelly statue vandal gets bail and told stay away from statue</p>
+<h2 class="rm-manual">Have they been defeated?</h2>
+<p class="rm-manual">What is being hailed as the "final battle" against ISIS is set to clear the village of Baghouz in Syria on February 11.</p>
+<p class="rm-manual">Fighters supported by British and US special forces are closing in on the kill.</p>
+<p class="rm-manual">The Kurdish-led Syrian Democratic Forces, with help
+ from British and US special forces, have advanced over the area in the 
+past few days.</p>
+<p class="rm-manual">US-led coalition drones are helping troops on the ground by giving a top-down perspective of the battle to commadners.</p>
+<p class="rm-manual">Warplanes have been dropping huge bombs after being called in by SDF troops, according to reports.</p>
+<p class="rm-manual">SDF spokesman Mustafa Bali said: "We will launch an attack to end the Daesh (ISIS) presence or they will turn themselves in.</p>
+<p class="rm-manual">“There are no other options for them. We confirm there are no negotiations and no intention to have negotiations.”</p>
+<p class="rm-manual"><span>5</span></p>
+<figcaption class="rm-manual"><span> How times of changed... ISIS control has waned away into nothing</span></figcaption><p class="rm-manual">Topics</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///topic/explainers/">Explainers</a></li>
+<li class="rm-manual"><a href="file:///topic/isis/">ISIS</a></li>
+<li class="rm-manual"><a href="file:///topic/terrorism/">Terrorism</a></li>
+</ul>
+<p class="rm-manual">Comments are subject to our community guidelines, which can be viewed <a href="https://www.thesun.co.uk/community-guidelines/?utm_campaign=communityguidelines&amp;utm_medium=none&amp;utm_source=thesun">here</a>.</p>
+<h3 class="rm-manual">Services</h3>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.thesun.co.uk/sign-up-to-the-sun/">Sign Up To The Sun</a></li>
+<li class="rm-manual"><a href="https://www.thesun.co.uk/terms-and-conditions/">Terms and Conditions</a></li>
+<li class="rm-manual"><a href="https://www.thesun.ie/editorial-complaints/">Editorial Complaints</a></li>
+<li class="rm-manual"><a href="https://www.thesun.co.uk/admin/clarifications/">Clarifications and Corrections</a></li>
+<li class="rm-manual"><a href="https://www.thesun.co.uk/syndication/">Syndication</a></li>
+<li class="rm-manual"><a href="http://www.newsukadvertising.co.uk/">Advertising</a></li>
+<li class="rm-manual"><a href="https://www.thesun.ie/contact-us/">Contact Us</a></li>
+<li class="rm-manual"><a href="http://help.thesun.co.uk/">Help Hub</a></li>
+<li class="rm-manual"><a href="#">Cookie Settings</a></li>
+<li class="rm-manual"><a href="https://mypreferences.thesun.co.uk/">Contact Preferences</a></li>
+</ul>
+<p class="rm-manual">©News Group Newspapers Limited in England No. 
+679215 Registered office: 1 London Bridge Street, London, SE1 9GF. "The 
+Sun", "Sun", "Sun Online" are registered trademarks or trade names of 
+News Group Newspapers Limited. This service is provided on News Group 
+Newspapers' Limited's <a href="https://www.thesun.co.uk/terms-and-conditions/">Standard Terms and Conditions</a> in accordance with our <a href="http://www.newsprivacy.co.uk/">Privacy &amp; Cookie Policy</a>. To inquire about a licence to reproduce material, visit our <a href="https://www.thesun.co.uk/syndication/">Syndication</a> site. View our online Press Pack. For other inquiries <a href="https://www.thesun.ie/contact-us/">Contact Us</a>. To see all content on The Sun, please use the Site Map. The Sun website is regulated by the <a href="https://www.thesun.co.uk/editorial-complaints/">Independent Press Standards Organisation (IPSO)</a></p></article>
+</body></html>

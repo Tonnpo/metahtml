@@ -1,0 +1,150 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">Shock, fear and sadness grip Australia's 'bushfire refugees'</p>
+<p class="rm-manual"><a href="https://sg.news.yahoo.com/">Yahoo</a></p>
+<p class="rm-manual">Search</p>
+<ul class="rm-manual"><li class="rm-manual"><a href="https://mail.yahoo.com/?.intl=sg&amp;.lang=en-SG&amp;.partner=none&amp;.src=news">Mail</a></li></ul>
+<p class="rm-manual"><a href="https://sg.news.yahoo.com/"> News</a></p>
+<p class="rm-manual"><span>Follow us</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://sg.news.yahoo.com/singapore"> Singapore</a></li>
+<li class="rm-manual"><a href="https://sg.news.yahoo.com/health/"> Coronavirus Updates</a></li>
+<li class="rm-manual"><a href="https://sg.news.yahoo.com/commentary"> Commentary</a></li>
+<li class="rm-manual"><a href="https://sg.news.yahoo.com/esports/"> Esports</a></li>
+<li class="rm-manual"><a href="https://sg.news.yahoo.com/world/"> World</a></li>
+<li class="rm-manual"><a href="https://sg.news.yahoo.com/video/"> Videos</a></li>
+<li class="rm-manual"><a href="https://sg.news.yahoo.com/sports/"> Sports</a></li>
+<li class="rm-manual"><a href="https://sg.weather.yahoo.com/"> Weather</a></li>
+</ul>
+<h1 class="rm-manual">Shock, fear and sadness grip Australia's 'bushfire refugees'</h1>
+<p class="rm-manual">Holly ROBERTSON</p>
+<p class="rm-manual"><span><span><a href="http://www.afp.com/" rel="noopener noreferrer nofollow">AFP News</a></span></span>4 January 2020</p>
+<p class="rm-manual"><span>1 / 4</span></p>
+<p>Prime Minister Scott Morrison has called up 3,000 military reservists to tackle Australia's relentless bushfire crisis</p>
+<p>Thousands of Australians forced from their homes by rampaging 
+bushfires now find themselves stuck in makeshift camps, fearful for the 
+future and turned refugees in their own country.</p>
+<p>On golf courses, cricket ovals and showgrounds -- anywhere with a 
+minimal amount of combustible tree cover -- Australians are sheltering 
+from a climate-fuelled disaster.</p>
+<p>At the Catalina Country Club in Batemans Bay, New South Wales, rows 
+of caravans, 4x4s, pick-up trucks and tents are pitched cheek by jowl.</p>
+<p>The golf club's dining room has been converted into an evacuation centre.</p>
+<p>Instead of players supping a beer after a summer's day of play, 
+elderly displaced ladies huddle around cups of tea and play cards to 
+pass the time.</p>
+<p>Stacks of donations -- food, clothing, water -- are piled high and there is a steady stream of people walking in and out.</p>
+<p>Some new arrivals quip that they are refugees.</p>
+<p>But even in a country accustomed to bushfires and which prides itself
+ on resilience in extreme conditions, the last few days, weeks and 
+months have been shocking.</p>
+<p>Towering blazes have turned the sky black and choking smoke has 
+covered whole cities -- as well as parts of neighbouring New Zealand and
+ New Caledonia -- amid searing images of families forced to wade into 
+the ocean for safety.</p>
+<p>For many, the future is riddled with uncertainty: about whether their
+ homes still stand, when they can return and -- with months of summer 
+still to go -- about when all this will end.</p>
+<p>Many are facing this uncertainty while dealing with the trauma of what they have lived through.</p>
+<p>Narelle Coady, 54, took refuge at a Batemans Bay beach on Saturday 
+when her home came under threat for the second time in five days.</p>
+<p>"We defended on Tuesday and it was just too scary," she told AFP. "Really bad, couldn't breathe. Oxygen gone. It was horrible."</p>
+<p>"That was my first and last time."</p>
+<p>Batemans Bay motel owner Justine Donald, 40, evacuated her home on 
+New Year's Eve in a scene she described as looking like "the end of the 
+world".</p>
+<p>"The town went black," she said. "It was black, orange and so thick 
+that to breathe it in, you thought you were going to suffocate."</p>
+<p>"That frightened me so much for my life that now I don't even think about the properties."</p>
+<p>"It's devastating," she said, at times becoming tearful. "My main 
+thing is I just want to be alive and for all of us to be safe."</p>
+<p>"If that's going to happen again today, I'm going to need a good big 
+bottle of wine and hopefully be stuck inside with towels under my doors 
+because I'm not going to go outside into that again."</p>
+<p>Mick Cummins, 57, also recalled New Year's Eve when he left his home as fires tore up the east coast.</p>
+<p>"Hellfire came over the hill," he said. "We just sat there and 
+watched explosion after explosion, the bowling club went up, the houses 
+down the street went up."</p>
+<p>He remembered the fires from 1994 as particularly bad. But compared with this year, they were "just a barbeque", he said.</p>
+<p>"We're here until we can go home," said his wife Ulla. "They're 
+saying we're probably not going to have power until next week. And if 
+we've got no power, we've got no phone service either. We're stuck."</p>
+<p>Wes Moreton, a 30-year-old father of five left his home, but then was
+ forced to leave his place of refuge as the fire front moved north.</p>
+<p>He took no chances and headed with his family to Sydney. Like so 
+many, he is unsure whether they will have a home when they return.</p>
+<p>"Fingers crossed it's still standing," he said.</p>
+<h2 class="rm-manual">What to read next</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.news.yahoo.com/covid-19-phase-2-reopening-to-start-on-friday-social-groups-and-household-visitors-capped-at-5-111600945.html"><span>COVID-19: Phase 2 reopening to start on Friday, social groups and household visitors capped at 5</span></a></h3><p class="rm-manual">Yahoo News Singapore</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.news.yahoo.com/teacher-took-upskirt-videos-of-blindfolded-student-in-empty-classroom-145524378.html"><span>Teacher took upskirt videos of blindfolded student in empty classroom</span></a></h3><p class="rm-manual">Yahoo News Singapore</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.news.yahoo.com/bangladeshi-imported-case-allowed-into-singapore-on-medical-grounds-moh-081937584.html"><span>COVID-19: Bangladeshi case allowed into Singapore 'on medical grounds' – MOH</span></a></h3><p class="rm-manual">Yahoo News Singapore</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.news.yahoo.com/covid-19-retail-businesses-can-reopen-physical-outlets-on-friday-with-safety-measures-in-place-112311934.html"><span>COVID-19: Retail businesses can reopen physical outlets on Friday with safety measures in place</span></a></h3><p class="rm-manual">Yahoo News Singapore</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.news.yahoo.com/ok-lets-go-podcasters-should-apologise-for-misogynistic-remarks-halimah-050108057.html"><span>OkLetsGo podcasters apologise following message by President Halimah</span></a></h3><p class="rm-manual">Yahoo News Singapore</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.style.yahoo.com/model-actress-nozomi-sasaki-breaks-082000746.html"><span>Model-actress Nozomi Sasaki breaks silence on husband's affair</span></a></h3><p class="rm-manual">From Cinema Online Exclusively for Yahoo Newsroom</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.news.yahoo.com/japan-police-arrest-chinese-national-060947419.html"><span>Japan police arrest Chinese national after woman’s body found stuffed in suitcase</span></a></h3><p class="rm-manual">South China Morning Post</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.news.yahoo.com/covid-19-singapore-residents-urged-to-defer-all-travel-abroad-amid-phase-2-reopening-134655803.html"><span>COVID-19: Singapore residents still urged to defer all travel abroad amid Phase 2 reopening</span></a></h3><p class="rm-manual">Yahoo News Singapore</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.news.yahoo.com/man-charged-for-drugging-female-colleague-to-molest-her-033507847.html"><span>Man charged for drugging female colleague to molest her</span></a></h3><p class="rm-manual">Yahoo News Singapore</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.news.yahoo.com/hong-kong-protests-tycoons-went-160621104.html"><span>Hong Kong protests: how tycoons went from trusted advisers to Beijing’s ‘bogeymen’ who refused to step up</span></a></h3><p class="rm-manual">South China Morning Post</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.news.yahoo.com/one-man-dies-three-others-141255301.html"><span>One man dies, three others are stabbed and a teenager is raped during illegal Manchester raves</span></a></h3><p class="rm-manual">The Telegraph</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.news.yahoo.com/salma-hayek-makeup-free-selfie-174939238.html"><span>Salma Hayek, 53, wows fans with makeup-free selfie: 'The most beautiful woman on the planet ever'</span></a></h3><p class="rm-manual">Yahoo Celebrity</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.news.yahoo.com/michael-kors-is-slashing-their-prices-on-hundreds-of-items-starting-as-low-as-s-49-104622209.html"><span>Michael Kors is slashing their prices on hundreds of items - starting as low as S$49</span></a></h3><p class="rm-manual">Yahoo Lifestyle SEA</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.news.yahoo.com/first-covid-19-lawsuit-filed-154622813.html"><span>First Covid-19 lawsuit filed against Chinese government in latest sign of bubbling unrest</span></a></h3><p class="rm-manual">The Telegraph</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.news.yahoo.com/5-things-know-uob-233032118.html"><span>5 Things You Should Know About UOB</span></a></h3><p class="rm-manual">The Smart Investor</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.news.yahoo.com/coronavirus-beijing-lockdown-spreads-race-025603327.html"><span>Beijing battles ‘explosive coronavirus outbreak’ as food market cases mount</span></a></h3><p class="rm-manual">South China Morning Post</p><p class="rm-manual"></p></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.news.yahoo.com/oklahoma-city-asks-trump-rally-keep-over-virus-142312623.html"><span>Trump rejects Oklahoma rally health concerns, saying will triple crowd</span></a></h3><p class="rm-manual">AFP News</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.news.yahoo.com/record-spikes-coronavirus-cases-hospitalizations-144342716.html"><span>Record spikes in new coronavirus cases, hospitalizations sweep parts of U.S.</span></a></h3><p class="rm-manual">Reuters</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.news.yahoo.com/travel-bosses-lose-confidence-priti-180209472.html"><span>Travel bosses 'lose confidence' in Priti Patel as they demand she quit if she loses court case over quarantine</span></a></h3><p class="rm-manual">The Telegraph</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.news.yahoo.com/singapore-may-home-sales-jump-75-as-virtual-viewings-take-hold-063248618.html"><span>Singapore May home sales jump 75% as virtual viewings take hold</span></a></h3><p class="rm-manual">Bloomberg</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.news.yahoo.com/york-governor-threatens-reopening-rollback-over-street-drinking-192518352.html"><span>New York governor threatens reopening rollback over street drinking</span></a></h3><p class="rm-manual">AFP News</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.news.yahoo.com/dogs-gonna-freak-back-heres-210000559.html"><span>Your Dog's Gonna Freak Out When You Go Back to Work, but Here's How to Prevent It, According to Experts</span></a></h3><p class="rm-manual">PureWow</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.news.yahoo.com/australian-pm-concerned-over-china-death-sentence-oz-061207472.html"><span>Australian PM 'concerned' over China death sentence for Oz actor</span></a></h3><p class="rm-manual">AFP News</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.news.yahoo.com/non-essential-shops-reopen-shops-204855221.html"><span>Non-essential shops to reopen: Which shops are included and what safety precautions are there?</span></a></h3><p class="rm-manual">The Independent</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.news.yahoo.com/no-singapore-residents-among-214-new-covid-19-infections-3-community-cases-072253637.html"><span>No Singapore residents among 214 new COVID-19 infections; 3 community cases all Bangladeshi men</span></a></h3><p class="rm-manual">Yahoo News Singapore</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.news.yahoo.com/brad-pitt-matched-jennifer-anistons-180100824.html"><span>Brad Pitt Matched Jennifer Aniston's Color of Change Donation</span></a></h3><p class="rm-manual">Marie Claire</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.news.yahoo.com/5-ways-divorce-proof-marriage-130300642.html"><span>5 Ways to Divorce-Proof Your Marriage, According to Relationship Expert Esther Perel</span></a></h3><p class="rm-manual">PureWow</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/mutation-allows-coronavirus-infect-more-141030397.html"><span>Mutation Allows Coronavirus to Infect More Cells, Study Finds. Scientists Urge Caution.</span></a></h3><p class="rm-manual">The New York Times</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.news.yahoo.com/woman-apologizes-backlash-confronting-homeowner-225706992.html"><span>Woman apologizes after backlash from confronting homeowner</span></a></h3><p class="rm-manual">Associated Press</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.news.yahoo.com/infamous-pet-hotel-platinium-dogs-clubs-owner-charged-in-court-064219194.html"><span>Infamous pet hotel Platinium Dogs Club's owner charged in court</span></a></h3><p class="rm-manual">Yahoo News Singapore</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.news.yahoo.com/asian-stocks-oil-sell-off-010519225.html"><span>Stocks rebound on Fed debt program, oil recovers</span></a></h3><p class="rm-manual">Reuters</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.news.yahoo.com/henderson-manchester-uniteds-no-1-075234810.html"><span>Henderson will be Manchester United's No.1 keeper in the future, says Solskjaer</span></a></h3><p class="rm-manual">Goal.com</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.news.yahoo.com/indonesian-air-force-plane-reported-051849128.html"><span>Indonesian Air Force Plane Crashes Into Residential Area</span></a></h3><p class="rm-manual">Storyful</p><p></p></li>
+</ul></article>
+</body></html>

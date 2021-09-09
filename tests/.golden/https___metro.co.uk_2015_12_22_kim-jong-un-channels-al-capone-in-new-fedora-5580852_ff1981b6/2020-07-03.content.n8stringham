@@ -1,0 +1,100 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Kim Jong-un channels Al Capone in new fedora in Pyongyang | Metro News </p>
+<p class="rm-manual">News... but not as you know it</p>
+<p class="rm-manual"><a href="file:///news/">News</a> </p>
+<p class="rm-manual"><a href="file:///sport/">Sport</a> </p>
+<p class="rm-manual"><a href="file:///covid-free-zone/" rel="nofollow">Covid-Free Zone</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="file:///news/">News</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://metro.co.uk/tag/coronavirus/">Coronavirus</a></li> <li class="rm-manual"><a href="file:///news/uk/">UK</a></li> <li class="rm-manual"><a href="file:///news/us/">US</a></li> <li class="rm-manual"><a href="file:///news/world/">World</a></li> <li class="rm-manual"><a href="file:///news/weird/">Weird</a></li> <li class="rm-manual"><a href="file:///news/tech/">Tech</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///sport/">Sport</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///sport/football/">Football</a></li> <li class="rm-manual"><a href="file:///sport/tennis/">Tennis</a></li> <li class="rm-manual"><a href="file:///sport/cricket/">Cricket</a></li> <li class="rm-manual"><a href="file:///sport/boxing/">Boxing</a></li> <li class="rm-manual"><a href="file:///sport/ufc/">UFC</a></li> <li class="rm-manual"><a href="https://metro.co.uk/tag/snooker/">Snooker</a></li> <li class="rm-manual"><a href="https://metro.co.uk/tag/darts/">Darts</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///entertainment/">Entertainment</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///entertainment/showbiz/">Showbiz</a></li> <li class="rm-manual"><a href="file:///entertainment/tv/">TV</a></li> <li class="rm-manual"><a href="file:///entertainment/film/">Film</a></li> <li class="rm-manual"><a href="file:///entertainment/music/">Music</a></li> <li class="rm-manual"><a href="file:///entertainment/gaming/">Gaming</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///tv-soaps/">Soaps</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///tv-soaps/eastenders/">EastEnders</a></li> <li class="rm-manual"><a href="file:///tv-soaps/emmerdale/">Emmerdale</a></li> <li class="rm-manual"><a href="file:///tv-soaps/coronation-street/">Coronation Street</a></li> <li class="rm-manual"><a href="file:///tv-soaps/hollyoaks/">Hollyoaks</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///lifestyle/">Lifestyle</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///lifestyle/sex/">Sex</a></li> <li class="rm-manual"><a href="file:///lifestyle/health/">Health</a></li> <li class="rm-manual"><a href="file:///lifestyle/property/">Property</a></li> <li class="rm-manual"><a href="file:///lifestyle/fashion/">Fashion</a></li> <li class="rm-manual"><a href="file:///lifestyle/food/">Food</a></li> <li class="rm-manual"><a href="file:///lifestyle/travel/">Travel</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://metro.co.uk/blogs/">Platform</a> <ul> <li><a href="https://metro.co.uk/tag/metro-lifeline/">Lifeline Campaign</a></li> </ul> </li> <li><a href="file:///video/">Video</a></li> <li>
+<a rel="nofollow" href="https://metro.co.uk/covid-free-zone/">Covid-Free Zone</a> <ul> <li><a rel="nofollow" href="https://metro.co.uk/covid-free-zone/feel-good/">Feel Good</a></li> <li><a rel="nofollow" href="https://metro.co.uk/covid-free-zone/news/">News</a></li> <li><a rel="nofollow" href="https://metro.co.uk/covid-free-zone/sport/">Sport</a></li> <li><a rel="nofollow" href="https://metro.co.uk/covid-free-zone/entertainment/">Entertainment</a></li> <li><a rel="nofollow" href="https://metro.co.uk/covid-free-zone/soaps/">Soaps</a></li> <li><a rel="nofollow" href="https://metro.co.uk/covid-free-zone/lifestyle/">Lifestyle</a></li> <li><a rel="nofollow" href="https://metro.co.uk/covid-free-zone/platform/">Platform</a></li> </ul> </li> <li>
+<a href="#">More</a> <ul> <li><a href="https://metro.co.uk/trending/">Trending</a></li> <li><a href="file:///lifestyle/">Lifestyle</a></li> <li><a rel="follow" href="https://discountcode.metro.co.uk/">Discounts</a></li> <li><a href="https://metro.co.uk/submit-stuff/">Submit Stuff</a></li> <li><a href="https://metro.co.uk/competitions/">Competitions</a></li> <li><a href="https://metro.co.uk/jobs">Jobs</a></li> <li><a rel="noopener" href="http://www.mailadvertising.co.uk/brand/metro-co-uk/">Advertise</a></li> <li><a href="https://metro.co.uk/weather/">Weather</a></li> </ul> </li> <li><a href="https://metro.co.uk/trending/">Trending</a></li> <li><a href="file:///search/">Search Metro</a></li> <li> <span>Follow us</span> </li>
+</ul>
+<p class="rm-manual"> <a href="http://www.facebook.com/metrouk" rel="noopener"> <span>Follow Metro.co.uk on Facebook</span> </a> <a href="http://www.twitter.com/metrouk" rel="noopener"> <span>Follow Metro.co.uk on Twitter</span> </a> <a href="https://uk.pinterest.com/metrouk" rel="noopener"> <span>Follow Metro.co.uk on Pinterest</span> </a> <a href="https://www.instagram.com/metro.co.uk" rel="noopener"> <span>Follow Metro.co.uk on Instagram</span> </a> </p>
+<h1 class="rm-manual">Kim Jong-un channels Al Capone in new fedora</h1>
+<p class="rm-manual"><span><a href="https://metro.co.uk/author/harry-readhead/" rel="author">Harry Readhead</a></span><span>Tuesday 22 Dec 2015 3:41 pm</span></p>
+<figcaption>Powerful new look (Picture: EPA)</figcaption><p>Now we don’t normally write fashion pieces, but for the <a href="https://metro.co.uk/2014/10/01/for-the-love-of-emmental-cheese-a-look-at-north-korean-leader-kim-jong-uns-love-to-cheese-in-pictures-4888824/">cheese-loving leader</a> of everyone’s favourite hermit kingdom we’ll make an exception.</p>
+<p>North Korean leader Kim Jong-un was spotted sporting a new fedora as 
+he inspected a machinery plant in Pyongyang this weekend in what has 
+been described as a ‘hipster-style power move’ by <a href="http://www.gq.com/story/kim-jong-un-hipster-style-fedora-hats" rel="noopener noreferrer">GQ </a>and the beginning of a ‘glorious new trend’ by <a href="http://www.esquire.com/style/mens-fashion/news/a40669/kim-jong-un-fedora/" rel="noopener noreferrer">Esquire</a>.</p>
+<p>As we’re sure Mr Kim knows, a true villain is only as villainous as 
+their outfit, and the North Korean leader seems to be channelling 
+Chicago crime boss Al Capone with this latest sartorial decision.</p>
+<p class="rm-manual"><span>MORE: <a href="https://metro.co.uk/2015/12/22/woman-leaves-2million-fortune-to-homeless-in-her-will-5580604/">Woman leaves £2million fortune to homeless in her will</a></span></p>
+<figcaption class="rm-manual">Al Capone was fond of the fedora (Picture: REX Shutterstock)</figcaption><p class="rm-manual">Incidentally, Kim was very pleased with the machinery plant, reports the North Korean Central News Agency.</p>
+<p class="rm-manual">He apparently remarked that the renovations were so fresh that traces of the past could hardly be found.</p>
+<p class="rm-manual">But no one cares about that.</p>
+<p class="rm-manual"><span>MORE: <a href="https://metro.co.uk/2015/12/22/hunter-forces-dying-wolf-to-pose-for-photo-before-strangling-it-5580655/">Hunter forces dying wolf to ‘pose’ for photo before strangling it</a></span></p>
+<p class="rm-manual"><span>More</span></p>
+<p class="rm-manual"><a href="https://metro.co.uk/tag/kim-jong-un/" rel="tag">Kim Jong Un</a></p>
+<p class="rm-manual"><a href="https://metro.co.uk/tag/north-korea/" rel="tag">North Korea</a></p>
+<p class="rm-manual"><a href="https://metro.co.uk/tag/pyongyang/" rel="tag">Pyongyang</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://metro.co.uk/2020/06/29/imprisoned-tortured-sold-sex-slave-north-korea-defector-7961359/"><h3 class="rm-manual"><span>I was imprisoned, tortured and sold as a slave before my escape from North Korea</span></h3></a></li>
+<li class="rm-manual"><a href="https://metro.co.uk/2020/06/26/armed-forces-fight-coronavirus-12887970/"><h3 class="rm-manual"><span>This is how our Armed Forces have been helping fight coronavirus on the frontline</span></h3></a></li>
+<li class="rm-manual"><a href="https://metro.co.uk/2020/06/17/north-korea-calls-south-mongrel-dog-releases-video-liaison-office-bombing-12864138/"><h3 class="rm-manual"><span>North Korea calls South 'mongrel dog' as it releases video of liaison office bombing</span></h3></a></li>
+<li class="rm-manual"><a href="https://metro.co.uk/2020/06/16/north-korea-blows-joint-liaison-office-south-korea-12857554/"><h3 class="rm-manual"><span>North Korea 'blows up' joint liaison office with South Korea</span></h3></a></li>
+</ul>
+<p class="rm-manual"><span>Must read</span></p>
+<p class="rm-manual"> <span>What's trending now</span> </p>
+<p class="rm-manual"><a href="file:///trending"> More trending stories <span>»</span></a> </p>
+<ol class="rm-manual"> <li class="rm-manual"> <a href="https://metro.co.uk/2020/07/02/groom-dies-111-guests-test-positive-coronavirus-wedding-12932292/"> <p class="rm-manual"> </p><h3 class="rm-manual"> <span>Groom dead and 111 guests test positive when family refused to cancel wedding over cost</span> </h3> <p class="rm-manual"></p> </a> </li> <li class="rm-manual"> <a href="https://metro.co.uk/2020/07/02/stanley-johnson-ignores-lockdown-travel-rule-fly-greek-holiday-home-12932960/"> <p class="rm-manual"> </p><h3 class="rm-manual"> <span>BoJo’s dad bypassed travel rules by flying to Bulgaria to get to Greek villa</span> </h3> <p class="rm-manual"></p> </a> </li> <li class="rm-manual"> <a href="https://metro.co.uk/2020/07/02/former-girlfriend-jeffrey-epstein-arrested-fbi-12935242/"> <p class="rm-manual"> </p><h3 class="rm-manual"> <span>Jeffrey Epstein ex-girlfriend Ghislaine Maxwell to be charged over sex abuse and exploitation of minors</span> </h3> <p class="rm-manual"></p> </a> </li> <li class="rm-manual"> <a href="https://metro.co.uk/2020/06/24/black-lives-matter-protests-havent-caused-spike-covid-cases-12899049/"> <p class="rm-manual"> </p><h3 class="rm-manual"> <span>Black Lives Matter protests ‘haven’t caused any spike in coronavirus cases’</span> </h3> <p class="rm-manual"></p> </a> </li> <li class="rm-manual"> <a href="https://metro.co.uk/2020/06/29/portugal-excluded-uks-quarantine-free-holiday-destination-list-12918078/"> <p class="rm-manual"> </p><h3 class="rm-manual"> <span>Portugal ‘excluded from’ UK’s quarantine-free holiday destination list</span> </h3> <p class="rm-manual"></p> </a> </li> </ol>
+<p class="rm-manual"> <span>Video</span> </p>
+<p class="rm-manual"><a href="file:///video/">More videos <span>»</span></a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///video/bird-plucks-shark-ocean-flies-just-because-2203614/"> <p class="rm-manual"> </p><h2 class="rm-manual"><span> Bird plucks shark out of the ocean and flies around with it just because </span></h2> <p class="rm-manual"></p> </a> </li> <li class="rm-manual"> <a href="file:///video/pm-says-gyms-able-reopen-couple-weeks-2203686/"> <p class="rm-manual"> </p><h2 class="rm-manual"><span> PM says gyms will be able to reopen 'in a couple of weeks' </span></h2> <p class="rm-manual"></p> </a> </li> <li class="rm-manual"> <a href="file:///video/man-flees-scene-slashing-face-two-year-old-2203986/"> <p class="rm-manual"> </p><h2 class="rm-manual"><span> Man flees scene after slashing the face of two year-old </span></h2> <p class="rm-manual"></p> </a> </li> <li class="rm-manual"> <a href="file:///video/horrific-moment-woman-holds-black-family-gunpoint-car-park-2203570/"> <p class="rm-manual"> </p><h2 class="rm-manual"><span> Horrific moment woman holds black family at gunpoint in car park </span></h2> <p class="rm-manual"></p> </a> </li> </ul>
+<p class="rm-manual"><a href="file:///video/">More videos <span>»</span></a> </p>
+<p class="rm-manual"><span><a href="https://metro.co.uk/"><span>Home</span></a><span> › </span><a href="https://metro.co.uk/news/"><span>News</span></a><span> › </span><a href="https://metro.co.uk/news/world/"><span>World</span></a></span></p>
+<p class="rm-manual"> <span>Today's Best Discounts</span> </p>
+<p class="rm-manual"><a href="https://discountcode.metro.co.uk/">More discounts</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="https://discountcode.metro.co.uk/groupon" rel="noopener"> Experiences and days out Find exclusive discounts on local deals </a> </li>
+<li class="rm-manual"> <a href="https://discountcode.metro.co.uk/asos" rel="noopener"> Women &amp; Men's fashion Score 10% off your first order </a> </li>
+<li class="rm-manual"> <a href="https://discountcode.metro.co.uk/adidas" rel="noopener"> Best adidas deals Upgrade your style with these discounts </a> </li>
+<li class="rm-manual"> <a href="https://discountcode.metro.co.uk/nordvpn" rel="noopener"> Software for laptops Find exclusive discounts on subscriptions </a> </li>
+<li class="rm-manual"> <a href="https://discountcode.metro.co.uk/ao-com" rel="noopener"> Electronics and appliances Discover discounts on home appliances </a> </li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///">Home</a></li> <li class="rm-manual"><a href="file:///news/">News</a></li> <li class="rm-manual"><a href="file:///sport/">Sport</a></li> <li class="rm-manual"><a href="file:///lifestyle/">Lifestyle</a></li> <li class="rm-manual"><a href="file:///entertainment/">Entertainment</a></li> <li class="rm-manual"><a href="https://metro.co.uk/blogs/">Platform</a></li> <li class="rm-manual"><a href="file:///search/">Search Metro</a></li> </ul>
+<p class="rm-manual"><a href="file:///covid-free-zone/" rel="nofollow">Covid-Free Zone </a> </p></article>
+</body></html>

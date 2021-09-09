@@ -1,0 +1,93 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p>After spending much of the past year 
+suppressing information related to the Wuhan lab leak, it has now 
+emerged that Google funded virus research carried out by Wuhan-linked 
+scientist Peter Daszak.</p>
+<p>Yes, really.</p>
+<p>Until recently, those who dared voice their contention that the virus
+ leaked from the Wuhan Institute of Virology found themselves being 
+censored and in some cases banned by Google-owned YouTube.</p>
+<p>Now we realize why.</p>
+<p>Google had been funding the Wuhan lab-linked organization led by Daszak – EcoHealth Alliance – for over a decade.</p>
+<p>“The tech giant’s charity arm, Google.org, has repeatedly provided 
+financial backing for research and studies carried out by scandal-hit 
+Daszak and his New York-based EcoHealth Alliance,” reports the Daily 
+Mail.</p>
+<p>“The financial ties, which were first reported by The National Pulse,
+ are disclosed in various scientific studies dating back to at least 
+2010.”</p>
+<p>A 2010 study on bat flaviviruses that lists Daszak as a co-author credits Google.org for an unspecified amount of funding.</p>
+<p>That study was also funded by the National Institutes of Health and 
+the United States Agency for International Development’s emerging 
+pandemic threat program.</p>
+<p>Similarly, a 2015 paper on herpes lists Daszak and also credits Google.org for its support.</p>
+<p>More recently, EcoHealth Alliance researchers authored a report on a 
+2018 study that looked at ‘perceptions associated with transmission of 
+pathogens with pandemic potential in highly exposed human populations at
+ the animal-human interface’.</p>
+<p>The report noted it was ‘made possible’ by Google.org’s funding.</p>
+<p>According to political advisor Steve Hilton, the story represents “one of the biggest scandals for…a hundred years.”</p>
+<p>Daszak had previously <a href="https://summit.news/2021/06/02/email-researcher-who-funded-wuhan-lab-admitted-to-manipulating-coronaviruses-thanked-fauci-for-dismissing-lab-leak-theory/">sent an email</a> to Dr. Anthony Fauci at the start of the pandemic thanking him for dismissing claims that the virus had escaped from the lab.</p>
+<p>Daszak’s EcoHealth Alliance group had long term extensive financial ties to gain of function research carried out at the lab.</p>
+<p>Despite this, the scientist was later appointed to lead a WHO 
+investigation into the lab which lasted for just 3 hours before Daszak’s
+ team poured cold water on the lab leak hypothesis.</p>
+<p>Dr. Daszak was also appointed as a COVID-19 fact-checker by Facebook,
+ further empowering him to censor information and blacklist those who 
+spoke out about the lab leak theory.</p>
+<p>So in other words, major social media networks conspired to bury the 
+issue while dishonestly claiming they were countering ‘medical 
+misinformation’.</p>
+<p>As we <a href="https://summit.news/2021/06/22/finally-daszak-is-fired-from-commission-investigating-covid-origins/">highlighted</a>
+ earlier, despite Daszak’s glaring conflict of interest, he was also 
+tapped to head up the Lancet’s UN backed commission to investigate the 
+origins of the coronavirus, although he has now been dismissed from that
+ role.</p>
+<p>———————————————————————————————————————</p>
+<p class="rm-manual">ALERT!</p>
+<p class="rm-manual">In the age of mass Silicon Valley censorship It is crucial that we stay in touch.</p>
+<p class="rm-manual">I need you to sign up for my free newsletter <a href="http://summit.news/newsletter">here</a>.</p>
+<p class="rm-manual">Support my sponsor – <a href="https://bit.ly/TURBOFORCE">Turbo Force</a> – a supercharged boost of clean energy without the comedown.</p>
+<p class="rm-manual">Also, I urgently need your financial support <a href="https://www.subscribestar.com/paul-joseph-watson">here</a>.</p>
+<p class="rm-manual">———————————————————————————————————————</p>
+<h4 class="rm-manual">WATCH ALL SHOWS</h4>
+<h4 class="rm-manual">AUDIO</h4>
+<p class="rm-manual"> Your browser does not support the audio element. </p>
+<p class="rm-manual"> <a href="http://xml.nfowars.net/Alex.rss">Podcast</a> | <a href="https://play.google.com/store/apps/details?id=com.infowars.official">Google Play</a> | <a href="file:///stream/live">Radio</a> </p></article>
+</body></html>

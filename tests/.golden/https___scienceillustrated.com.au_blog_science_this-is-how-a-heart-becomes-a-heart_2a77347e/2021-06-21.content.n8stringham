@@ -1,0 +1,118 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> This is how a heart becomes a heart | Science Illustrated </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="http://www.scienceillustrated.com.au/">Home</a></li> <li class="rm-manual">
+<a href="https://scienceillustrated.com.au/blog/category/science/">Science</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://scienceillustrated.com.au/blog/category/science/palaeontology/">Palaeontology</a></li> <li class="rm-manual"><a href="https://scienceillustrated.com.au/blog/category/science/physics/">Physics</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://scienceillustrated.com.au/blog/category/nature/">Nature</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://scienceillustrated.com.au/blog/category/nature/conservation/">Conservation</a></li> <li class="rm-manual"><a href="https://scienceillustrated.com.au/blog/category/nature/environment/">Environment</a></li> <li class="rm-manual"><a href="https://scienceillustrated.com.au/blog/category/nature/insects/">Insects</a></li> <li class="rm-manual"><a href="https://scienceillustrated.com.au/blog/category/nature/marine-biology/">Marine Biology</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://scienceillustrated.com.au/blog/category/technology/">Technology</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://scienceillustrated.com.au/blog/category/technology/robotics/">Robotics</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://scienceillustrated.com.au/blog/category/science/space/">Space</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://scienceillustrated.com.au/blog/category/science/space/night-sky/">Night Sky</a></li> <li class="rm-manual"><a href="https://scienceillustrated.com.au/blog/category/science/space/nasa/">NASA</a></li> <li class="rm-manual"><a href="https://scienceillustrated.com.au/blog/category/science/space/mars/">Mars</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://scienceillustrated.com.au/blog/category/culture/">Culture</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://scienceillustrated.com.au/blog/category/history/">History</a></li> <li class="rm-manual"><a href="https://scienceillustrated.com.au/blog/category/archaeology-2/">Archaeology</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://scienceillustrated.com.au/blog/category/medicine/">Medicine</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://scienceillustrated.com.au/blog/category/science/health/">Health</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://scienceillustrated.com.au/blog/about/">Magazine</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.mymagazines.com.au/magazine/science-illustrated?utm_source=scienceillustrated&amp;utm_medium=menu&amp;utm_campaign=house%20ads">Subscribe</a></li> </ul> </li> </ul>
+<h1 class="rm-manual">This is how a heart becomes a heart</h1>
+<p class="rm-manual">Posted by <a href="https://scienceillustrated.com.au/blog/author/gabrielamunoz/">Gabriela Munoz</a> on September 15, 2012 in <a href="https://scienceillustrated.com.au/blog/category/science/health/" rel="category tag">Health</a>, <a href="https://scienceillustrated.com.au/blog/category/science/news/" rel="category tag">News</a>, <a href="https://scienceillustrated.com.au/blog/category/science/" rel="category tag">Science</a> · <a href="#comments">1 Comments</a></p>
+<p class="rm-manual">Heart development requires the presence of endothelial and smooth muscle cells as well as cardiomyocytes. Image: Shutterstock</p>
+<p class="">A “synchronised dance” of thousands of genes generates a 
+healthy heart, but one faux pas may result in congenital heart defects.</p>
+<p>Congenital heart defects (CHD) are one of the most common birth 
+abnormalities in the world. In Australia six babies are born with a 
+heart disease every day and more than 32,000 children under the age of 
+18 live with a CHD, but a team of researchers at the Gladstone 
+Institutes have found the genetic switches that translate as a 
+functional heart.</p>
+<p>Using next-generation DNA sequencing and stem cell technology, the 
+researchers were able to decipher the genomic blueprint (the instruction
+ manual) of a heart. The finding will help understand how certain CHDs 
+such as holes in the heart (septal defects) are formed. “Congenital 
+heart defects are the most common type of birth defects,” said 
+Gladstone Senior Investigator Benoit Bruneau to UCFS news. “But how 
+these defects develop at the genetic level has been difficult to 
+pinpoint because research has focused on a small set of genes. Here, we 
+approach heart formation with a wide-angle lens by looking at the 
+entirety of the genetic material that gives heart cells their unique 
+identity.”</p>
+<p>During the third trimester of pregnancy, the heart and other organs 
+begin to form. By week six, the heart will be pumping blood and by week 
+eight the heart will be fully formed. It is in this crucial period, that
+ congenital heart defects may be coded into the cell’s genetic makeup — 
+and some will remain quiescent until adulthood.</p>
+<p>To find the heart’s genomic blueprint, the researchers took embryonic
+ stem cells from mice and reprogrammed them into beating heart cells. 
+Then they extracted DNA from developing and mature heart cells to assess
+ each epigenetic instructions.</p>
+<p>Epigenetic signatures are coded in specific DNA sequences and set off
+ changes in our gene expression by turning on and off certain genes — 
+this modifies our cells. Finding them, as the researchers suggest, was 
+just half the battle. To decode them, the team used the Gladstone 
+Bioinformatics Core to untangle the date collected and translate it into
+ a readable blueprint of how a heart becomes a heart.</p>
+<p>As a result, the team discovered new genes involved in heart 
+formation and were able to decode their interactions. “Our works reveals
+ a detailed picture of how gene expression programs may be coordinated 
+during lineage commitment and provides novel insight into the key 
+principles that underpin heart development and disease,” wrote the 
+researchers in the paper recently published in the journal <a href="http://www.cell.com/home">Cell</a>.</p>
+<p>The team hopes to examine patients with congenital diseases. Those 
+results combined with the heart’s blueprint may help them pinpoint the 
+specific genetic disruptions that cause CHD — around 20% of <a href="https://scienceillustrated.com.au/blog/science/fixing-a-broken-heart/">heart defects</a>
+ are gene-linked abnormalities. “Once we identify that disruption, we 
+can begin to exploring ways to restore normal gene function during early
+ heart formation — and reduce the number of babies born with 
+debilitating, and sometimes fatal, congenital heart defects.”</p>
+<h3 class="rm-manual">You may also like…</h3>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://scienceillustrated.com.au/blog/medicine/mapping-our-microbes/">Mapping our microbes</a></li> <li class="rm-manual"><a href="https://scienceillustrated.com.au/blog/science/happiness-is-the-key-to-a-healthy-heart/">Happiness is the key to a healthy heart</a></li> <li class="rm-manual"><a href="https://scienceillustrated.com.au/blog/medicine/another-genetic-key-to-breast-cancer-identified/">Another genetic key to breast cancer identified</a></li> <li class="rm-manual"><a href="https://scienceillustrated.com.au/blog/nature/animals/aussie-lungfish-has-largest-animal-genome-known-to-science/">Aussie lungfish has largest animal genome known to science</a></li> </ul>
+<p class="rm-manual">Tags: <a href="https://scienceillustrated.com.au/blog/tag/disease/" rel="tag">disease</a>, <a href="https://scienceillustrated.com.au/blog/tag/genetics-2/" rel="tag">genetics</a>, <a href="https://scienceillustrated.com.au/blog/tag/health-2/" rel="tag">health</a>, <a href="https://scienceillustrated.com.au/blog/tag/heart/" rel="tag">Heart</a></p>
+<p class="rm-manual"> <a href="https://scienceillustrated.com.au/blog/science/blueberries-could-be-key-to-martian-life/"> Previous Post <span>"Blueberries" could be key to Martian life</span> </a> <a href="https://scienceillustrated.com.au/blog/nature/new-bat-species-found-in-malaysia/"> Next Post <span>New bat species found in Malaysia</span> </a> </p>
+<p class="rm-manual">1 comment on this post<a href="#respond">Submit yours</a></p>
+<ol class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <table class="rm-manual"> <tbody><tr class="rm-manual"> <td class="rm-manual"> <p class="rm-manual">eamonn</p> <p class="rm-manual">January 10, 2014</p> </td> <td class="rm-manual"> <p class="rm-manual">Article on heart formation should say it</p><p class="rm-manual"> develops in first not ‘third’</p><p class="rm-manual"> trimester</p><p class="rm-manual"></p> </td> </tr> </tbody></table> </p> </li> </ol>
+<h3 class="rm-manual">Current Issue</h3>
+<h3 class="rm-manual">Newsletter</h3>
+<ul class="rm-manual"><li class="rm-manual">Recent</li></ul>
+<p class="rm-manual"><span>Recent</span></p>
+<ul class="rm-manual"> <li class="rm-manual"> <span><a href="https://scienceillustrated.com.au/blog/category/science/climate/" rel="category tag">Climate</a>, <a href="https://scienceillustrated.com.au/blog/category/climate-3/" rel="category tag">Climate</a>, <a href="https://scienceillustrated.com.au/blog/category/nature/environment/" rel="category tag">Environment</a></span> <span><a href="https://scienceillustrated.com.au/blog/nature/environment/could-we-use-solar-power-to-purify-drinking-water/">Could we use solar power to purify drinking water?</a></span> </li> <li class="rm-manual"> <span><a href="https://scienceillustrated.com.au/blog/category/science/" rel="category tag">Science</a>, <a href="https://scienceillustrated.com.au/blog/category/whats-on/" rel="category tag">What's On</a></span> <span><a href="https://scienceillustrated.com.au/blog/science/national-science-week-14-24-august-2021/">National Science Week 14-24 August 2021</a></span> </li> <li class="rm-manual"> <span><a href="https://scienceillustrated.com.au/blog/category/science/biology/" rel="category tag">Biology</a>, <a href="https://scienceillustrated.com.au/blog/category/climate-3/" rel="category tag">Climate</a>, <a href="https://scienceillustrated.com.au/blog/category/nature/conservation/" rel="category tag">Conservation</a>, <a href="https://scienceillustrated.com.au/blog/category/science/ecology/" rel="category tag">Ecology</a>, <a href="https://scienceillustrated.com.au/blog/category/nature/environment/" rel="category tag">Environment</a>, <a href="https://scienceillustrated.com.au/blog/category/video/" rel="category tag">Video</a></span> <span><a href="https://scienceillustrated.com.au/blog/video/australias-new-leader-in-botanical-science/">Australia’s new leader in botanical science</a></span> </li> <li class="rm-manual"> <span><a href="https://scienceillustrated.com.au/blog/category/science/biology/" rel="category tag">Biology</a>, <a href="https://scienceillustrated.com.au/blog/category/features/" rel="category tag">Features</a>, <a href="https://scienceillustrated.com.au/blog/category/science/health/" rel="category tag">Health</a>, <a href="https://scienceillustrated.com.au/blog/category/medicine/" rel="category tag">Medicine</a>, <a href="https://scienceillustrated.com.au/blog/category/science/" rel="category tag">Science</a></span> <span><a href="https://scienceillustrated.com.au/blog/features/your-vaccines-are-ready-how-they-did-it-in-under-a-year/">Your vaccines are ready – how they did it in under a year</a></span> </li> <li class="rm-manual"> <span><a href="https://scienceillustrated.com.au/blog/category/ask-us/" rel="category tag">Ask Us</a>, <a href="https://scienceillustrated.com.au/blog/category/science/biology/" rel="category tag">Biology</a></span> <span><a href="https://scienceillustrated.com.au/blog/ask-us/why-do-our-eyes-water-when-we-chop-up-onions/">Why do our eyes water when we chop up onions?</a></span> </li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://scienceillustrated.com.au/blog/category/science/news/">News</a></li> <li class="rm-manual"><a href="https://scienceillustrated.com.au/blog/category/features/">Features</a></li> <li class="rm-manual"><a href="https://scienceillustrated.com.au/blog/category/bulls-eye/">Bull’s-Eye</a></li> <li class="rm-manual"><a href="https://scienceillustrated.com.au/blog/category/ask-us/">Ask Us</a></li> <li class="rm-manual"><a href="https://scienceillustrated.com.au/blog/category/video/">Video</a></li> </ul>
+<p class="rm-manual"> //php unspoken_get_tags(); ?&gt; </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://scienceillustrated.com.au/blog/about/">About Us</a></li> <li class="rm-manual"><a href="https://www.nextmedia.com.au/brand/science-illustrated/#contact">Advertise</a></li> <li class="rm-manual"><a href="https://www.nextmedia.com.au/brand/science-illustrated/#contact">Contact Us</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///sitemap">Sitemap</a></li> <li class="rm-manual"><a href="https://www.mymagazines.com.au/magazine/science-illustrated?utm_source=scienceillustrated&amp;utm_medium=footer&amp;utm_campaign=house%20ads">Subscribe</a></li> <li class="rm-manual"><a href="http://www.nextmedia.com.au/terms-conditions/">Terms of Use</a></li> <li class="rm-manual"><a href="http://www.nextmedia.com.au/privacy-policy/">Privacy Policy</a></li> </ul>
+<p class="rm-manual"><a href="https://www.nextmedia.com.au/">nextmedia Pty Ltd</a> © 2021 All Rights Reserved</p>
+<p class="rm-manual"> <span>Powered By</span> </p></article>
+</body></html>

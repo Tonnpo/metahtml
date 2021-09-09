@@ -1,0 +1,70 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><ol class="rm-manual"> <li class="rm-manual"> <a href="https://www.snopes.com/"> Home </a> </li> <li class="rm-manual"> <a href="https://www.snopes.com/fact-check/"> Fact Checks </a> </li> <li class="rm-manual"> <a href="https://www.snopes.com/fact-check/category/politics/"> Politics </a> </li> <li class="rm-manual"> <a href="https://www.snopes.com/fact-check/ayatollah-khamenei-share-picture-reading-fire-fury/"> Did Ayatollah Khamenei Share a Picture of Himself Reading ‘Fire and Fury’? </a> </li> </ol>
+<h1 class="rm-manual">Did Ayatollah Khamenei Share a Picture of Himself Reading ‘Fire and Fury’?</h1>
+<h2 class="rm-manual">An image apparently showing Iran's Supreme Leader 
+reading Michael Wolff’s controversial book about U.S. President Donald 
+Trump is authentic.</h2>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.snopes.com/author/alex/">Alex Kasprak</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <span>Published</span> <span>11 May 2018</span> </li> </ul>
+<figcaption class="rm-manual"> Image via <a href="https://www.instagram.com/p/Bio-EWqnIIv/">Instagram</a> </figcaption><h3 class="rm-manual">Claim</h3>
+<p>Ayatollah Ali Khamenei shared a photo of himself reading Michael Wolff’s "Fire and Fury."</p>
+<h3>Rating</h3>
+<h5 class="">True</h5>
+<p class="rm-manual"><a href="https://www.snopes.com/fact-check/rating/true/">About this rating </a> </p>
+<p class="rm-manual"><a href="https://www.snopes.com/projects/founding-members/?utm_source=snopes-fact-check-rating-support-button&amp;utm_medium=native&amp;utm_campaign=fm2020&amp;utm_content=support-snopes"> </a></p><p class="rm-manual"><a href="https://www.snopes.com/projects/founding-members/?utm_source=snopes-fact-check-rating-support-button&amp;utm_medium=native&amp;utm_campaign=fm2020&amp;utm_content=support-snopes"> </a></p><h4 class="rm-manual"><a href="https://www.snopes.com/projects/founding-members/?utm_source=snopes-fact-check-rating-support-button&amp;utm_medium=native&amp;utm_campaign=fm2020&amp;utm_content=support-snopes">Do you rely on Snopes reporting? Become a member today.</a></h4><a href="https://www.snopes.com/projects/founding-members/?utm_source=snopes-fact-check-rating-support-button&amp;utm_medium=native&amp;utm_campaign=fm2020&amp;utm_content=support-snopes"> <p></p> </a> <p></p>
+<h3>Origin</h3>
+<p>On 11 May 2018, Ayatollah Ali Khamenei, the Supreme leader of Iran, 
+posted a picture of himself reading a Persian translation of Michael 
+Wolff’s Fire and Fury — a famously damaging account of the first year of
+ the Trump presidency:</p>
+<p><a href="https://www.instagram.com/p/Bio-EWqnIIv/" rel="noopener">‌‌ امروز؛ رهبر انقلاب در حال تورق کتابی درباره #ترامپ رئیس جمهور آمریکا در جریان حضور در #نمایشگاه_کتاب تهران. ۹۷/۲/۲۱</a></p>
+<p>A post shared by <a href="https://www.instagram.com/khamenei_ir/" rel="noopener"> Ayatollah Seyed Ali Khamenei</a> (@khamenei_ir) on May 11, 2018 at 7:15am PDT</p>
+<p>Foreign leaders reading copies of the book have, in the past, been <a href="https://www.snopes.com/fact-check/kim-jong-un-reading-fire-fury/" rel="noopener">fabricated</a>. This photograph, however, is apparently authentic. The pictures, according to both the Ayatollah’s <a href="http://archive.is/w88aM" rel="noopener">web site</a> and the <a href="http://www.tehrantimes.com/news/423440/Leader-visits-Tehran-Intl-Book-Fair" rel="noopener">Tehran Times</a>, come from the leader’s visit to the 31st International Book Fair of Tehran on 11 May 2018:</p>
+<p>Minister of Culture and Islamic Guidance Abbas Salehi and a number of
+ his colleagues accompanied the Leader during the visit, which lasted 
+for an hour and a half.</p>
+<p>He had brief chats with representatives of publishers, who also 
+talked about their concerns for the business. They also briefed the 
+Leader about their latest offerings.</p>
+<p>The Instagram account is the official one used by Khamenei, and the 
+image shared on Instagram also appears on the official government <a href="http://archive.is/LSR77" rel="noopener">web site</a> of the Ayatollah.</p>
+<ul class="rm-manual"> <li class="rm-manual"> <span>Published</span> <span>11 May 2018</span> </li> <li class="rm-manual"> <p class="rm-manual"><span>By</span></p> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.snopes.com/author/alex/">Alex Kasprak</a> </li> </ul> </li> <li class="rm-manual"> <p class="rm-manual"><span>Filed Under</span></p> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.snopes.com/tag/ali-khamenei/">ali khamenei</a> </li> <li class="rm-manual"> <a href="https://www.snopes.com/tag/ayatollah-khamenei/">Ayatollah Khamenei</a> </li> <li class="rm-manual"> <a href="https://www.snopes.com/tag/fire-and-fury/">fire and fury</a> </li> </ul> </li> <li class="rm-manual"> <a> <h5 class="rm-manual"> <span>Sources</span> </h5> </a> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual">Khamenei.ir. “Visit of the Revolutionary Leader of the 31st International Book Fair of Tehran.”</p><p class="rm-manual"> 11 May 2018.</p><p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual">Tehran Times. “Leader Visits Tehran Intl. Book Fair.”</p><p class="rm-manual"> 11 May 2018.</p><p class="rm-manual"></p> </li> </ul> </li> </ul>
+<h3 class="rm-manual">Editors' Picks</h3>
+<article class="rm-manual"> <a href="https://www.snopes.com/news/2020/07/01/antifascist-rumors-home-gettysburg/"> <p class="rm-manual"> </p><h5 class="rm-manual">Rumors Swirl About Antifa, Gettysburg, and July Fourth … Again</h5> <ul class="rm-manual"> <li class="rm-manual"> 1 July 2020 </li> <li class="rm-manual"> News </li> </ul> <p class="rm-manual">Rumors about antifa plotting violence have coincided with the month of July and Gettysburg before.</p> <p class="rm-manual"></p> </a> </article><article class="rm-manual"> <a href="https://www.snopes.com/news/2020/07/02/blm-activists-attack-catholics/"> <p class="rm-manual"> </p><h5 class="rm-manual">Were Catholics Attacked by Black Lives Matter Protesters in St. Louis?</h5> <ul class="rm-manual"> <li class="rm-manual"> 2 July 2020 </li> <li class="rm-manual"> News </li> </ul> <p class="rm-manual">A complete story is rarely told in a headline.</p> <p class="rm-manual"></p> </a> </article><article class="rm-manual"> <a href="https://www.snopes.com/fact-check/911-wwii-memorial-vandalized/"> <p class="rm-manual"> </p><h5 class="rm-manual">Were 9/11 and WWII Memorials Vandalized During Protests?</h5> <ul class="rm-manual"> <li class="rm-manual"> 1 July 2020 </li> <li class="rm-manual"> Fact Check </li> </ul> <p class="rm-manual">Social media rumors that two memorials in New York were vandalized proved misleading.</p> <p class="rm-manual"></p> </a> </article><article class="rm-manual"> <a href="https://www.snopes.com/fact-check/elijah-mcclains-last-words/"> <p class="rm-manual"> </p><h5 class="rm-manual">Are These Elijah McClain’s Last Words on Police Video?</h5> <ul class="rm-manual"> <li class="rm-manual"> 26 June 2020 </li> <li class="rm-manual"> Fact Check </li> </ul> <p class="rm-manual">In August 2019, a 23-year-old unarmed Black man died after an encounter with police officers in Aurora, Colorado. </p> <p class="rm-manual"></p> </a> </article><article class="rm-manual"> <a href="https://www.snopes.com/fact-check/ken-karen-weapons-protesters/"> <p class="rm-manual"> </p><h5 class="rm-manual">Did a Couple Dubbed ‘Ken and Karen’ Point Guns at Protesters?</h5> <ul class="rm-manual"> <li class="rm-manual"> 29 June 2020 </li> <li class="rm-manual"> Fact Check </li> </ul> <p class="rm-manual">A chaotic scene in St. Louis sparked outrage, memes, and confusion. </p> <p></p> </a> </article></article>
+</body></html>

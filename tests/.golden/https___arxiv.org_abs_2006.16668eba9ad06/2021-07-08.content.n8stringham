@@ -1,0 +1,127 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual">Computer Science &gt; Computation and Language</h1>
+<p class="rm-manual"> arXiv:2006.16668 (cs) </p>
+<p class="rm-manual"> [Submitted on 30 Jun 2020]</p>
+<h1 class="rm-manual">
+<span>Title:</span>GShard: Scaling Giant Models with Conditional Computation and Automatic Sharding</h1>
+<p class="rm-manual"><span>Authors:</span><a href="https://arxiv.org/search/cs?searchtype=author&amp;query=Lepikhin%2C+D">Dmitry Lepikhin</a>, <a href="https://arxiv.org/search/cs?searchtype=author&amp;query=Lee%2C+H">HyoukJoong Lee</a>, <a href="https://arxiv.org/search/cs?searchtype=author&amp;query=Xu%2C+Y">Yuanzhong Xu</a>, <a href="https://arxiv.org/search/cs?searchtype=author&amp;query=Chen%2C+D">Dehao Chen</a>, <a href="https://arxiv.org/search/cs?searchtype=author&amp;query=Firat%2C+O">Orhan Firat</a>, <a href="https://arxiv.org/search/cs?searchtype=author&amp;query=Huang%2C+Y">Yanping Huang</a>, <a href="https://arxiv.org/search/cs?searchtype=author&amp;query=Krikun%2C+M">Maxim Krikun</a>, <a href="https://arxiv.org/search/cs?searchtype=author&amp;query=Shazeer%2C+N">Noam Shazeer</a>, <a href="https://arxiv.org/search/cs?searchtype=author&amp;query=Chen%2C+Z">Zhifeng Chen</a></p>
+<p class="rm-manual"><a href="file:///pdf/2006.16668">Download PDF</a> </p>
+<blockquote> <span>Abstract:</span> Neural network scaling has been 
+critical for improving the model quality in many real-world machine 
+learning applications with vast amounts of training data and compute. 
+Although this trend of scaling is affirmed to be a sure-fire approach 
+for better model quality, there are challenges on the path such as the 
+computation cost, ease of programming, and efficient implementation on 
+parallel devices. GShard is a module composed of a set of lightweight 
+annotation APIs and an extension to the XLA compiler. It provides an 
+elegant way to express a wide range of parallel computation patterns 
+with minimal changes to the existing model code. GShard enabled us to 
+scale up multilingual neural machine translation Transformer model with 
+Sparsely-Gated Mixture-of-Experts beyond 600 billion parameters using 
+automatic sharding. We demonstrate that such a giant model can 
+efficiently be trained on 2048 TPU v3 accelerators in 4 days to achieve 
+far superior quality for translation from 100 languages to English 
+compared to the prior art. </blockquote>
+<table class="rm-manual">
+<tbody><tr class="rm-manual"> <td class="rm-manual">Subjects:</td> <td class="rm-manual"> <span>Computation and Language (cs.CL)</span>; Machine Learning (cs.LG); Machine Learning (stat.ML)</td> </tr>
+<tr class="rm-manual"> <td class="rm-manual">Cite as:</td> <td class="rm-manual"><span><a href="https://arxiv.org/abs/2006.16668">arXiv:2006.16668</a> [cs.CL]</span></td> </tr> <tr class="rm-manual"> <td class="rm-manual">(or <span> <a href="https://arxiv.org/abs/2006.16668v1">arXiv:2006.16668v1</a> [cs.CL]</span> for this version) </td> </tr> </tbody></table>
+<h2 class="rm-manual">Submission history</h2>
+<p class="rm-manual"> From: Orhan Firat [</p>
+<p class="rm-manual"><a href="file:///show-email/b27e9780/2006.16668">view email</a>] </p>
+<p class="rm-manual">[v1] Tue, 30 Jun 2020 10:42:02 UTC (3,323 KB)</p>
+<p class="rm-manual"> <span>Full-text links:</span> </p>
+<h2 class="rm-manual">Download:</h2>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///pdf/2006.16668">PDF</a></li> <li class="rm-manual"><a href="file:///format/2006.16668">Other formats</a></li>
+</ul>
+<p class="rm-manual">(<a href="http://arxiv.org/licenses/nonexclusive-distrib/1.0/">license</a>)</p>
+<p class="rm-manual"> Current browse context: </p>
+<p class="rm-manual">cs.CL</p>
+<p class="rm-manual"> <span> <a href="file:///prevnext?id=2006.16668&amp;function=prev&amp;context=cs.CL">&lt; prev</a> </span> <span> | </span> <span> <a href="file:///prevnext?id=2006.16668&amp;function=next&amp;context=cs.CL">next &gt;</a> </span></p>
+<p class="rm-manual"> <a href="file:///list/cs.CL/new">new</a> <span> | </span> <a href="file:///list/cs.CL/recent">recent</a> <span> | </span> <a href="file:///list/cs.CL/2006">2006</a> </p>
+<p class="rm-manual"> Change to browse by: </p>
+<p class="rm-manual"> <a href="file:///abs/2006.16668?context=cs">cs</a></p>
+<p class="rm-manual"> <a href="file:///abs/2006.16668?context=cs.LG">cs.LG</a></p>
+<p class="rm-manual"> <a href="file:///abs/2006.16668?context=stat">stat</a></p>
+<p class="rm-manual"> <a href="file:///abs/2006.16668?context=stat.ML">stat.ML</a></p>
+<h3 class="rm-manual">References &amp; Citations</h3>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://ui.adsabs.harvard.edu/abs/arXiv:2006.16668">NASA ADS</a></li>
+<li class="rm-manual"><a href="https://scholar.google.com/scholar_lookup?title=GShard%3A%20Scaling%20Giant%20Models%20with%20Conditional%20Computation%20and%20Automatic%20Sharding&amp;author=Dmitry%20Lepikhin&amp;author=HyoukJoong%20Lee&amp;publication_date=2020/06/30&amp;arxiv_id=2006.16668" rel="noopener">Google Scholar</a></li> <li class="rm-manual"><a href="https://api.semanticscholar.org/arXiv:2006.16668" rel="noopener">Semantic Scholar</a></li> </ul>
+<h3 class="rm-manual"><a href="file:///tb/2006.16668"> 1 blog link</a></h3>
+<p class="rm-manual"> (</p>
+<p class="rm-manual"><a href="https://arxiv.org/help/trackback">what is this?</a>) </p>
+<h3 class="rm-manual">
+<a href="https://dblp.uni-trier.de/">DBLP</a> - CS Bibliography</h3>
+<p class="rm-manual"> <a href="https://dblp.uni-trier.de/db/journals/corr/corr2006.html#abs-2006-16668">listing</a> | <a href="https://dblp.uni-trier.de/rec/bibtex/journals/corr/abs-2006-16668">bibtex</a> </p>
+<p class="rm-manual"> <a href="https://dblp.uni-trier.de/search/author?author=Dmitry%20Lepikhin">Dmitry Lepikhin</a></p>
+<p class="rm-manual"><a href="https://dblp.uni-trier.de/search/author?author=HyoukJoong%20Lee">HyoukJoong Lee</a></p>
+<p class="rm-manual"><a href="https://dblp.uni-trier.de/search/author?author=Dehao%20Chen">Dehao Chen</a></p>
+<p class="rm-manual"><a href="https://dblp.uni-trier.de/search/author?author=Orhan%20Firat">Orhan Firat</a></p>
+<p class="rm-manual"><a href="https://dblp.uni-trier.de/search/author?author=Yanping%20Huang">Yanping Huang</a> </p>
+<p class="rm-manual">…</p>
+<p class="rm-manual"> <a href="https://static.arxiv.org/static/browse/0.3.2.7/css/cite.css">a</a> <span>export bibtex citation</span> <span>Loading...</span> </p>
+<h2 class="rm-manual">Bibtex formatted citation</h2>
+<p class="rm-manual"><span>×</span> </p>
+<p class="rm-manual"> <span>Data provided by: </span> </p>
+<h3 class="rm-manual">Bookmark</h3>
+<p class="rm-manual"> Bibliographic Tools </p>
+<h1 class="rm-manual">Bibliographic and Citation Tools</h1>
+<p class="rm-manual"> <span>Bibliographic Explorer Toggle</span> </p>
+<p class="rm-manual"> <span>Bibliographic Explorer</span> (<a href="https://labs.arxiv.org/">What is the Explorer?</a>) </p>
+<p class="rm-manual"> <span>Litmaps Toggle</span> </p>
+<p class="rm-manual"> <span>Litmaps</span> (<a href="https://www.litmaps.co/">What is Litmaps?</a>) </p>
+<p class="rm-manual"> Code &amp; Data </p>
+<h1 class="rm-manual">Code and Data Associated with this Article</h1>
+<p class="rm-manual"> <span>arXiv Links to Code Toggle</span> </p>
+<p class="rm-manual"> <span>arXiv Links to Code &amp; Data</span> (<a href="https://labs.arxiv.org/">What is Links to Code &amp; Data?</a>) </p>
+<p class="rm-manual"> Related Papers </p>
+<h1 class="rm-manual">Recommenders and Search Tools</h1>
+<p class="rm-manual"> <span>Connected Papers Toggle</span> </p>
+<p class="rm-manual"> <span>Connected Papers</span> (<a href="https://www.connectedpapers.com/about">What is Connected Papers?</a>) </p>
+<p class="rm-manual"> <span>Core recommender toggle</span> </p>
+<p class="rm-manual"> <span>CORE Recommender</span> (<a href="https://labs.arxiv.org/">What is CORE?</a>) </p>
+<p class="rm-manual"> About arXivLabs </p>
+<h1 class="rm-manual">arXivLabs: experimental projects with community collaborators</h1>
+<p class="rm-manual">arXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.</p>
+<p class="rm-manual">Both individuals and organizations that work with 
+arXivLabs have embraced and accepted our values of openness, community, 
+excellence, and user data privacy. arXiv is committed to these values 
+and only works with partners that adhere to them.</p>
+<p class="rm-manual">Have an idea for a project that will add value for arXiv's community? <a href="https://labs.arxiv.org/">Learn more about arXivLabs</a> and <a href="https://arxiv.org/about/people/developers">how to get involved</a>.</p>
+<p class="rm-manual"> <a href="file:///auth/show-endorsers/2006.16668">Which authors of this paper are endorsers?</a> | <a href="">Disable MathJax</a> (<a href="https://arxiv.org/help/mathjax">What is MathJax?</a>) </p></article>
+</body></html>

@@ -1,0 +1,202 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual"> Leader of Iran’s elite Quds Force killed in US airstrike near Baghdad airport </h1>
+<p class="rm-manual"> <a href="https://www.wtnh.com/news/international/">International</a> </p>
+<p class="rm-manual">by: ABC News, WTNH.com staff</p>
+<p class="rm-manual"> Posted: Jan 2, 2020 / 09:26 PM EST </p>
+<p class="rm-manual"><span> / </span>Updated: Jan 3, 2020 / 10:09 AM EST </p>
+<p>BAGHDAD, Iraq (ABC News) — Qassem Soleimani, the leader of Iran’s 
+elite Quds Force, was killed late Thursday in an airstrike that targeted
+ a convoy near the airport in Baghdad.</p>
+<p>Iraqi militia commander Abu Mahdi al-Muhandis also died in the 
+airstrike, Ahmed al-Assadi, a spokesman for Iraq’s Popular Mobilization 
+Forces umbrella grouping of Iran-backed militias, confirmed to <a rel="noreferrer noopener" href="https://abcnews.go.com/Politics/leader-irans-elite-quds-force-killed-airstrike-reports/story?id=68039918">ABC News</a>.</p>
+<p>“The proud commander of Islam, Haj Qassim Suleimani, was killed in 
+the attack on American helicopters today after a long day of mourning,” 
+the Revolutionary Guards said in a statement.</p>
+<p>The Department of Defense took responsibility, saying the airstrike was carried out at the direction of President Donald Trump.</p>
+<p>The following statement was issued Thursday night:</p>
+<p> At the direction of the President, the U.S. military has taken 
+decisive defensive action to protect U.S. personnel abroad by killing 
+Qasem Soleimani, the head of the Iranian Revolutionary Guard Corps-Quds 
+Force, a U.S.-designated Foreign Terrorist Organization. </p>
+<p>General Soleimani was actively developing plans to attack American 
+diplomats and service members in Iraq and throughout the region. General
+ Soleimani and his Quds Force were responsible for the deaths of 
+hundreds of American and coalition service members and the wounding of 
+thousands more. He had orchestrated attacks on coalition bases in Iraq 
+over the last several months – including the attack on December 27th – 
+culminating in the death and wounding of additional American and Iraqi 
+personnel. General Soleimani also approved the attacks on the U.S. 
+Embassy in Baghdad that took place this week. </p>
+<p> This strike was aimed at deterring future Iranian attack plans. The 
+United States will continue to take all necessary action to protect our 
+people and our interests wherever they are around the world. </p>
+<p>Following the strike, the U.S. State Department issued an alert early
+ Friday morning urging U.S. citizens to leave Iraq and to avoid the U.S.
+ embassy in Baghdad. </p>
+<p> “Due to heightened tensions in Iraq and the region, we urge U.S. 
+citizens to depart Iraq immediately,” the alert said. “Due to 
+Iranian-backed militia attacks at the U.S. Embassy compound, all 
+consular operations are suspended. U.S. citizens should not approach the
+ Embassy.” </p>
+<p> Soleimani and the Quds Force “were responsible for the deaths of 
+hundreds of American and coalition service members and the wounding of 
+thousands more,” said the Department of Defense statement explaining the
+ strike. “He had orchestrated attacks on coalition bases in Iraq over 
+the last several months — including the attack on December 27th — 
+culminating in the death and wounding of additional American and Iraqi 
+personnel.” </p>
+<p> One U.S. civilian contractor was killed and several service members 
+were wounded in the Dec. 27 rocket attack on the K1 military base used 
+by U.S. and coalition forces in northern Iraq. The attack led to 
+retaliatory U.S. military strikes in Iraq and Syria Sunday against the 
+Iranian-backed militia the U.S. blamed for the Dec. 27 attack, which in 
+turn led hundreds of pro-Iranian protesters to attempt to storm the U.S.
+ embassy in Baghdad on New Year’s Eve. </p>
+<p>Thursday’s strike against Soleimani “was aimed at deterring future 
+Iranian attack plans,” the U.S. statement continued. “The United States 
+will continue to take all necessary action to protect our people and our
+ interests wherever they are around the world.” </p>
+<p>Trump tweeted an American flag after the strike. It went viral within seconds.</p>
+<p><a href="https://t.co/VXeKiVzpTf">pic.twitter.com/VXeKiVzpTf</a></p>
+<p>— Donald J. Trump (@realDonaldTrump) </p>
+<p><a href="https://twitter.com/realDonaldTrump/status/1212924762827046918?ref_src=twsrc%5Etfw">January 3, 2020</a></p>
+<p>On Friday morning, he Tweeted, “Iran never won a war, but never lost a negotiation!”</p>
+<p>Iran never won a war, but never lost a negotiation!</p>
+<p>— Donald J. Trump (@realDonaldTrump) </p>
+<p><a href="https://twitter.com/realDonaldTrump/status/1213078681750573056?ref_src=twsrc%5Etfw">January 3, 2020</a></p>
+<p>Connecticut leaders quickly criticized and questioned the decision.</p>
+<p>Senator Chris Murphy reacted to the news on Twitter, saying: 
+“Soleimani was an enemy of the United States. That’s not a question. The
+ question is this – as reports suggest, did America just assassinate, 
+without any congressional authorization, the second most powerful person
+ in Iran, knowingly setting off a potential massive regional war?”</p>
+<p>Soleimani was an enemy of the United States. That’s not a question.</p>
+<p>The question is this – as reports suggest, did America just 
+assassinate, without any congressional authorization, the second most 
+powerful person in Iran, knowingly setting off a potential massive 
+regional war?</p>
+<p>— Chris Murphy (@ChrisMurphyCT) </p>
+<p><a href="https://twitter.com/ChrisMurphyCT/status/1212913952436445185?ref_src=twsrc%5Etfw">January 3, 2020</a></p>
+<p>Senator Murphy also released a statement Friday morning saying,</p>
+<p>“No matter how good it may feel that Qasem Soleimani is no longer 
+alive, he likely will end up being more dangerous to the United States, 
+our troops, and our allies, as a martyr than as a living, breathing 
+military adversary. There will be reprisals, and Iran will likely target
+ American troops and even our own political and military leaders. This 
+is why the United States does not assassinate leaders of foreign 
+nations-in the end such action risks getting more, not less, Americans 
+killed in the long run.</p>
+<p>“President Trump’s disastrous approach to Iran has, from the 
+beginning, been all tactics and no strategy. They make it up day by day.
+ The assassination of Soleimani fits this pattern. I hope I am wrong, 
+but I suspect this White House is totally unprepared for the cascade of 
+consequences that will follow last night’s actions. I pray for the 
+Americans who, today, are in harm’s way. </p>
+<p>“Now, it is up to Congress to press the president to disclose his 
+legal basis for this action and the plan for how our nation manages the 
+fallout. I doubt there is congressional authority for this strike, and I
+ doubt the president has a plan for what comes next. But these are 
+questions Congress must now ask.”</p>
+<p>Senator Richard Blumenthal also questioned the action’s consequences of a possible war.</p>
+<p>Trump Admin owes a full explanation of airstrike reports—all the 
+facts—to Congress&amp;the American people. The present authorizations 
+for use of military force in no way cover starting a possible new war. 
+This step could bring the most consequential military confrontation in 
+decades</p>
+<p>— Richard Blumenthal (@SenBlumenthal) </p>
+<p><a href="https://twitter.com/SenBlumenthal/status/1212929176220708864?ref_src=twsrc%5Etfw">January 3, 2020</a></p>
+<p>Congressman Joe Courtney (CT-02) released a statement Friday morning saying,</p>
+<p>“The unilateral decision by President Trump to strike down a bad 
+actor such as Soleimani unfortunately does not close the book on the 
+threat Iran poses to America. Not consulting with the American people, 
+Congressional leadership and our allies before taking this escalatory 
+action in a part of the world where we have been entangled for eighteen 
+long years is the wrong way to isolate Iranian bad behavior and wind 
+down our involvement in the Middle East.”</p>
+<p class="rm-manual">Copyright 2020 Nexstar Broadcasting, Inc. All 
+rights reserved. This material may not be published, broadcast, 
+rewritten, or redistributed.</p>
+<h2 class="rm-manual">Share this story</h2>
+<p class="rm-manual"><span><a href="https://www.wtnh.com/report-a-typo/" rel="noopener noreferrer">📝 Report a Typo</a></span><span><a href="https://www.wtnh.com/suggest-a-story-to-news-8/" rel="noopener noreferrer">📮 Submit a News Tip</a></span><span><a href="https://www.wtnh.com/dont-miss/get-the-news-8-app-free/" rel="noopener noreferrer">📱Download the WTNH Apps</a></span></p>
+<h2 class="rm-manual"> More International Stories </h2>
+<p class="rm-manual"> <a href="https://www.wtnh.com/news/international/the-latest-s-korea-baseball-fans-will-have-to-wear-masks/"> </a></p><article class="rm-manual"><a href="https://www.wtnh.com/news/international/the-latest-s-korea-baseball-fans-will-have-to-wear-masks/"> <p class="rm-manual"> </p><h3 class="rm-manual"> The Latest: Australian city Melbourne to lock down suburbs </h3> by The Associated Press <span>/</span> Jun 30, 2020 <p class="rm-manual">MELBOURNE,
+ Australia — Australia’s second-largest city will lock down dozens of 
+suburbs for a month in a bid to contain the spread of coronavirus.</p> <p class="rm-manual">Victoria
+ state Premier Daniel Andrews said Tuesday that 233 positive tests for 
+COVID-19 in Melbourne since Thursday was unacceptably high.</p> <p class="rm-manual"> <span> Read the Full Article </span> </p> <p class="rm-manual"></p> </a></article><a href="https://www.wtnh.com/news/international/the-latest-s-korea-baseball-fans-will-have-to-wear-masks/"> </a> <a href="https://www.wtnh.com/news/international/seoul-police-say-theyre-questioning-anti-north-activists/"> <article class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"> Seoul police say they’re questioning anti-North activists </h3> by HYUNG-JIN KIM, Associated Press <span>/</span> Jun 30, 2020 <p class="rm-manual">SEOUL,
+ South Korea (AP) — South Korean police said Tuesday that they’ve 
+summoned two activists accused of raising tensions with North Korea by 
+sending propaganda balloons or plastic bottles filled with rice across 
+the border. </p> <p class="rm-manual">Park Sang-hak, a North Korean 
+refugee who has floated anti-Pyongyang leaflets by balloon across the 
+land border, and his brother Park Jung-oh, who has floated plastic 
+bottles filled with rice across the sea boundary, were being questioned 
+at the Seoul Metropolitan Police Agency, an agency officer with direct 
+knowledge of the cases said.</p> <p class="rm-manual"> <span> Read the Full Article </span> </p> <p class="rm-manual"></p> </article> </a> <a href="https://www.wtnh.com/news/international/reports-china-passes-national-security-law-for-hong-kong/"> <article class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"> China approves contentious Hong Kong national security law </h3> by ZEN SOO and KEN MORITSUGU, Associated Press <span>/</span> Jun 30, 2020 <p class="rm-manual">HONG
+ KONG (AP) — China has approved a contentious law that would allow 
+authorities to crack down on subversive and secessionist activity in 
+Hong Kong, sparking fears that it would be used to curb opposition 
+voices in the semi-autonomous territory.</p> <p class="rm-manual">Tam 
+Yiu-Chung, Hong Kong’s sole representative to the Standing Committee of 
+the National People’s Congress, confirmed in an interview with reporters
+ Tuesday that the law had been passed. He said punishments would not 
+include the death penalty, but did not elaborate on further details such
+ as whether the law could be applied retroactively.</p> <p class="rm-manual"> <span> Read the Full Article </span> </p> <p class="rm-manual"></p> </article> </a> <p class="rm-manual"></p>
+<h2 class="rm-manual"> Top Stories </h2>
+<h3 class="rm-manual"> <a href="https://www.wtnh.com/on-air/connecticut-families/road-trips-many-families-are-hitting-the-road-for-a-simpler-sort-of-summer-vacation/"> Road trips: Many families are hitting the road for a simpler sort of summer vacation </a> </h3>
+<figure class="rm-manual"> <a href="https://www.wtnh.com/on-air/connecticut-families/road-trips-many-families-are-hitting-the-road-for-a-simpler-sort-of-summer-vacation/"> <p class="rm-manual"> <span> <span>Video</span> </span> </p> </a> </figure><h3 class="rm-manual"> <a href="https://www.wtnh.com/news/connecticut/new-london/new-london-businesses-deal-with-impact-of-summer-festivals-going-virtual/"> New London businesses deal with impact of summer festivals going virtual </a> </h3>
+<figure class="rm-manual"> <a href="https://www.wtnh.com/news/connecticut/new-london/new-london-businesses-deal-with-impact-of-summer-festivals-going-virtual/"> <p class="rm-manual"> <span> <span>Video</span> </span> </p> </a> </figure><h3 class="rm-manual"> <a href="https://www.wtnh.com/news/health/coronavirus/yale-infectious-disease-doctor-weighs-in-on-hiv-drugs-promise-for-covid-19-and-mask-safety/"> Yale infectious disease doctor weighs in on HIV drug’s promise for Covid-19 and mask safety </a> </h3>
+<figure class="rm-manual"> <a href="https://www.wtnh.com/news/health/coronavirus/yale-infectious-disease-doctor-weighs-in-on-hiv-drugs-promise-for-covid-19-and-mask-safety/"> <p class="rm-manual"> <span> <span>Video</span> </span> </p> </a> </figure><h3 class="rm-manual"> <a href="https://www.wtnh.com/news/connecticut/protests-at-pair-of-ct-prisons-call-for-better-protection-from-covid-19-for-inmates/"> Protests at pair of CT prisons call for better protection from COVID-19 for inmates </a> </h3>
+<figure class="rm-manual"> <a href="https://www.wtnh.com/news/connecticut/protests-at-pair-of-ct-prisons-call-for-better-protection-from-covid-19-for-inmates/"> <p class="rm-manual"> <span> <span>Video</span> </span> </p> </a> </figure><h3 class="rm-manual"> <a href="https://www.wtnh.com/news/connecticut/hartford/rentschler-field-now-serving-as-covid-19-testing-site-along-with-foodshare-distribution/"> Rentschler Field now serving as Covid-19 testing site along with Foodshare distribution </a> </h3>
+<figure class="rm-manual"> <a href="https://www.wtnh.com/news/connecticut/hartford/rentschler-field-now-serving-as-covid-19-testing-site-along-with-foodshare-distribution/"> <p class="rm-manual"> <span> <span>Video</span> </span> </p> </a> </figure><h3 class="rm-manual"> <a href="https://www.wtnh.com/news/health/coronavirus/experts-discuss-recognizing-healthcare-heroes-at-travelers-championship-covid-19-surge-in-other-states/"> Experts discuss recognizing healthcare heroes at Travelers Championship, Covid-19 surge in other states </a> </h3>
+<figure class="rm-manual"> <a href="https://www.wtnh.com/news/health/coronavirus/experts-discuss-recognizing-healthcare-heroes-at-travelers-championship-covid-19-surge-in-other-states/"> <p class="rm-manual"> <span> <span>Video</span> </span> </p> </a> </figure><h2 class="rm-manual"> <a href="https://www.wtnh.com/news/washington/washington-dc/iran-issues-arrest-warrant-for-trump-asks-interpol-to-help/"> Iran issues arrest warrant for Trump, asks Interpol to help </a> </h2>
+<h2 class="rm-manual"> <a href="https://www.wtnh.com/entertainment-news/beyonces-message-epic-performances-stand-out-at-bet-awards/"> Beyoncé’s message, epic performances stand out at BET Awards </a> </h2>
+<h2 class="rm-manual"> <a href="https://www.wtnh.com/news/national/supreme-court-strikes-down-louisiana-abortion-clinic-law/"> Supreme Court strikes down Louisiana abortion clinic law </a> </h2>
+<h2 class="rm-manual"> <a href="https://www.wtnh.com/news/connecticut/new-haven/person-rescued-after-falling-through-floor-into-deep-well-inside-historic-guilford-home/"> Person rescued after falling through floor, into deep well inside historic Guilford home </a> </h2>
+<figure class="rm-manual"> <a href="https://www.wtnh.com/news/connecticut/new-haven/person-rescued-after-falling-through-floor-into-deep-well-inside-historic-guilford-home/"> <p class="rm-manual"> <span> <span>Video</span> </span> </p> </a> </figure><h2 class="rm-manual"> <a href="https://www.wtnh.com/news/national/starbucks-latest-to-say-it-will-pause-social-media-ads/"> Starbucks latest to say it will pause social media ads </a> </h2>
+<figure class="rm-manual"> <a href="https://www.wtnh.com/news/national/starbucks-latest-to-say-it-will-pause-social-media-ads/"> <p class="rm-manual"> <span> <span>Video</span> </span> </p> </a> </figure><h2 class="rm-manual"> <a href="https://www.wtnh.com/news/national/state-department-of-labor-to-send-reminds-for-workers-to-file-for-extended-unemployment-benefits/"> State Department of Labor to send reminds for workers to file for extended unemployment benefits </a> </h2>
+<figure class="rm-manual"> <a href="https://www.wtnh.com/news/national/state-department-of-labor-to-send-reminds-for-workers-to-file-for-extended-unemployment-benefits/"> <p class="rm-manual"> <span> <span>Video</span> </span> </p> </a> </figure><p class="rm-manual"> <a href="file:///news/"> Read more stories </a> </p>
+<h2 class="rm-manual"> More Stories </h2>
+<h3 class="rm-manual"> <a href="https://www.wtnh.com/news/connecticut/advocates-calling-on-gov-lamont-to-protect-renters-during-the-covid-19-pandemic/"> Advocates calling on Gov. Lamont to protect renters during the COVID-19 pandemic </a> </h3>
+<figure class="rm-manual"> <a href="https://www.wtnh.com/news/connecticut/advocates-calling-on-gov-lamont-to-protect-renters-during-the-covid-19-pandemic/"> <p class="rm-manual"> <span> <span>Video</span> </span> </p> </a> </figure><h3 class="rm-manual"> <a href="https://www.wtnh.com/news/international/communities-around-the-world-continue-to-spread-love-and-hope-amid-pandemic/"> Communities around the world continue to spread love and hope amid pandemic </a> </h3>
+<figure class="rm-manual"> <a href="https://www.wtnh.com/news/international/communities-around-the-world-continue-to-spread-love-and-hope-amid-pandemic/"> <p class="rm-manual"> <span> <span>Video</span> </span> </p> </a> </figure><h3 class="rm-manual"> <a href="https://www.wtnh.com/on-air/stretch-your-dollar/stretch-your-dollar-ways-to-save-this-4th-of-july/"> Stretch Your Dollar: Ways to save this 4th of July </a> </h3>
+<figure class="rm-manual"> <a href="https://www.wtnh.com/on-air/stretch-your-dollar/stretch-your-dollar-ways-to-save-this-4th-of-july/"> <p class="rm-manual"> <span> <span>Video</span> </span> </p> </a> </figure><h3 class="rm-manual"> <a href="https://www.wtnh.com/news/connecticut/new-london/mother-of-the-late-eric-garner-coming-to-new-london-to-discuss-police-violence-reform/"> Mother of the late Eric Garner coming to New London to discuss police violence, reform </a> </h3>
+<figure class="rm-manual"> <a href="https://www.wtnh.com/news/connecticut/new-london/mother-of-the-late-eric-garner-coming-to-new-london-to-discuss-police-violence-reform/"> <p class="rm-manual"> <span> <span>Video</span> </span> </p> </a> </figure><p class="rm-manual"> <a href="file:///news/"> Read more stories </a> </p></article>
+</body></html>

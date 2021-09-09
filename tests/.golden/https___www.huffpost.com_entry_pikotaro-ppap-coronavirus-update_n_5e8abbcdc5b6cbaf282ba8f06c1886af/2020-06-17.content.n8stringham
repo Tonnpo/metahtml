@@ -1,0 +1,112 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> The Pen Pineapple Apple Pen Guy Gives His 'PPAP' Song A Coronavirus Update | HuffPost </p>
+<p class="rm-manual">U.S.</p>
+<p class="rm-manual"><a href="https://www.huffingtonpost.ca/?country=CA">Canada</a> </p>
+<p class="rm-manual"><a href="https://www.huffingtonpost.co.uk/?country=UK">U.K.</a> </p>
+<p class="rm-manual"><a href="https://www.huffingtonpost.com.au/?country=AU">Australia</a> </p>
+<p class="rm-manual"><a href="https://www.huffpostbrasil.com/?country=BR">Brazil</a> </p>
+<p class="rm-manual"><a href="https://www.huffingtonpost.es/?country=ES">España</a> </p>
+<p class="rm-manual"><a href="https://www.huffingtonpost.fr/?country=FR">France</a> </p>
+<p class="rm-manual"><a href="https://www.huffingtonpost.gr/?country=GR">Ελλάδα (Greece)</a> </p>
+<p class="rm-manual"><a href="https://www.huffingtonpost.in/?country=IN">India</a> </p>
+<p class="rm-manual"><a href="https://www.huffingtonpost.it/?country=IT">Italia</a> </p>
+<p class="rm-manual"><a href="https://www.huffingtonpost.jp/?country=JP">日本 (Japan)</a> </p>
+<p class="rm-manual"><a href="https://www.huffingtonpost.kr/?country=KR">한국 (Korea)</a> </p>
+<p class="rm-manual"><a href="https://quebec.huffingtonpost.ca/?country=QC">Quebec</a> </p>
+<p class="rm-manual">CLOSE</p>
+<p class="rm-manual"> <a href="https://www.huffpost.com/feature/coronavirus">Coronavirus</a> <a href="https://www.huffpost.com/news/">News</a> <a href="https://www.huffpost.com/section/us-news">U.S. News</a> <a href="https://www.huffpost.com/section/world-news">World News</a> <a href="https://www.huffpost.com/impact/business">Business</a> <a href="https://www.huffpost.com/impact/green">Environment</a> <a href="https://www.huffpost.com/section/health">Health</a> <a href="https://www.huffpost.com/impact/topic/social-justice">Social Justice</a> </p>
+<p class="rm-manual"> <a href="https://www.huffpost.com/news/politics">Politics</a> <a href="https://www.huffpost.com/news/topic/us-congress">Congress</a> <a href="https://www.huffpost.com/news/topic/donald-trump">Donald Trump</a> <a href="https://www.huffpost.com/elections">2020 Election Tracker</a> <a href="https://www.huffpost.com/news/topic/extremism">Extremism</a> </p>
+<p class="rm-manual"> <a href="https://www.huffpost.com/entertainment/">Entertainment</a> <a href="https://www.huffpost.com/entertainment/arts">Culture &amp; Arts</a> <a href="https://www.huffpost.com/news/media">Media</a> <a href="https://www.huffpost.com/entertainment/celebrity">Celebrity</a> <a href="https://www.huffpost.com/entertainment/tv">TV &amp; Film</a> </p>
+<p class="rm-manual"> <a href="https://www.huffpost.com/life/">Life</a> <a href="https://www.huffpost.com/life/style">Style &amp; Beauty</a> <a href="https://www.huffpost.com/life/taste">Food &amp; Drink</a> <a href="https://www.huffpost.com/life/parents">Parenting</a> <a href="https://www.huffpost.com/life/travel">Travel</a> <a href="https://www.huffpost.com/life/topic/finds">Finds</a> <a href="https://www.huffpost.com/life/healthy-living">Wellness</a> <a href="https://www.huffpost.com/life/relationships">Relationships</a> <a href="https://www.huffpost.com/life/money">Money</a> <a href="https://www.huffpost.com/life/huffpost-home">Home &amp; Living</a> <a href="https://www.huffpost.com/life/worklife">Work/Life</a> </p>
+<p class="rm-manual"> <a href="https://www.huffpost.com/voices/">Communities</a> <a href="https://www.huffpost.com/voices/queer-voices">Queer Voices</a> <a href="https://www.huffpost.com/voices/women">Women</a> <a href="https://www.huffpost.com/voices/black-voices">Black Voices</a> <a href="https://www.huffpost.com/voices/latino-voices">Latino Voices</a> <a href="https://www.huffpost.com/voices/asian-voices">Asian Voices</a> </p>
+<p class="rm-manual"> <span>Special Projects</span> <a href="https://www.huffpost.com/voices/topic/pride-2020">Pride 2020</a> <a href="https://www.huffpost.com/impact/topic/impact-business">Work In Progress</a> <a href="https://www.huffpost.com/impact/topic/this-new-world">Impact: This New World</a> <a href="https://highline.huffingtonpost.com/">Highline</a> <a href="https://www.huffpost.com/feature/listen-to-america">Listen to America</a> <a href="https://www.huffpost.com/entertainment/topic/podcasts">Podcasts</a> </p>
+<p class="rm-manual"> <a href="https://www.huffpost.com/section/huffpost-personal">HuffPost Personal</a> <a href="https://www.huffpost.com/section/video">Video</a> <a href="https://www.huffpost.com/horoscopes">Horoscopes</a> </p>
+<p class="rm-manual"> <span>From Our Partners</span> <a href="https://www.huffpost.com/feature/womenswork">Women's Work</a> <a href="https://www.huffpost.com/impact/topic/purpose-profit">What's Working: Purpose + Profit</a> </p>
+<p class="rm-manual"> <a href="https://www.huffpost.com/newsletters">Newsletters</a> <a href="https://coupons.huffpost.com/">Coupons</a> </p>
+<p class="rm-manual"> <span>International</span> <a href="https://www.huffingtonpost.com.au/">Australia</a> <a href="https://www.huffpostbrasil.com/">Brazil</a> <a href="https://www.huffingtonpost.ca/">Canada</a> <a href="https://www.huffingtonpost.es/">España</a> <a href="https://www.huffingtonpost.fr/">France</a> <a href="https://www.huffingtonpost.gr/">Ελλάδα (Greece)</a> <a href="https://www.huffingtonpost.in/">India</a> <a href="https://www.huffingtonpost.it/">Italia</a> <a href="https://www.huffingtonpost.jp/">日本 (Japan)</a> <a href="https://www.huffingtonpost.kr/">한국 (Korea)</a> <a href="https://quebec.huffingtonpost.ca/">Quebec</a> <a href="https://www.huffingtonpost.co.uk/">U.K.</a> <a href="https://www.huffpost.com/">U.S.</a> </p>
+<p class="rm-manual">Follow us</p>
+<p class="rm-manual"> <a href="https://www.verizonmedia.com/policies/us/en/verizonmedia/terms/otos/index.html">Terms</a> <span>|</span> <a href="https://www.verizonmedia.com/policies/us/en/verizonmedia/privacy/index.html">Privacy Policy</a> </p>
+<p class="rm-manual"> Part of HuffPost Entertainment. ©2020 Verizon Media. All rights reserved. Huffington Post. </p>
+<p class="rm-manual">BREAKING NEWS</p>
+<p class="rm-manual">Tap here to turn on desktop notifications to get the news sent straight to you.</p>
+<p class="rm-manual"> <a href="https://oidc.huffpost.com/login?dest=https%3A%2F%2Fwww.huffpost.com%2Fentry%2Fpikotaro-ppap-coronavirus-update_n_5e8abbcdc5b6cbaf282ba8f0">Log In</a> <a href="https://www.huffpost.com/subscribe?ncid=huffpost_globaldesk_ct6htebthyu">Join HuffPost Plus</a> </p>
+<p class="rm-manual">The Pen Pineapple Apple Pen Guy Gives His 'PPAP' Song A Coronavirus Update</p>
+<p class="rm-manual"> <a href="file:///news/">NEWS</a> <a href="https://www.huffpost.com/feature/coronavirus">CORONAVIRUS</a> <a href="file:///news/politics">POLITICS</a> <a href="file:///elections">2020 ELECTIONS</a> <a href="file:///entertainment/">ENTERTAINMENT</a> <a href="file:///life/">LIFE</a> <a href="file:///section/huffpost-personal">PERSONAL</a> <a href="file:///section/video">VIDEO</a> <a href="file:///life/topic/finds">SHOPPING</a> </p>
+<p class="rm-manual">U.S.</p>
+<p class="rm-manual"><a href="https://www.huffingtonpost.ca/?country=CA">Canada</a> </p>
+<p class="rm-manual"><a href="https://www.huffingtonpost.co.uk/?country=UK">U.K.</a> </p>
+<p class="rm-manual"><a href="https://www.huffingtonpost.com.au/?country=AU">Australia</a> </p>
+<p class="rm-manual"><a href="https://www.huffpostbrasil.com/?country=BR">Brazil</a> </p>
+<p class="rm-manual"><a href="https://www.huffingtonpost.es/?country=ES">España</a> </p>
+<p class="rm-manual"><a href="https://www.huffingtonpost.fr/?country=FR">France</a> </p>
+<p class="rm-manual"><a href="https://www.huffingtonpost.gr/?country=GR">Ελλάδα (Greece)</a> </p>
+<p class="rm-manual"><a href="https://www.huffingtonpost.in/?country=IN">India</a> </p>
+<p class="rm-manual"><a href="https://www.huffingtonpost.it/?country=IT">Italia</a> </p>
+<p class="rm-manual"><a href="https://www.huffingtonpost.jp/?country=JP">日本 (Japan)</a> </p>
+<p class="rm-manual"><a href="https://www.huffingtonpost.kr/?country=KR">한국 (Korea)</a> </p>
+<p class="rm-manual"><a href="https://quebec.huffingtonpost.ca/?country=QC">Quebec</a> </p>
+<article class="rm-manual"> <span> <span> <a href="https://www.huffpost.com/feature/coronavirus">CORONAVIRUS </a></span> </span> </article><p class="rm-manual"> <span> <span>04/06/2020 03:27 am ET</span> </span> </p>
+<h1 class="rm-manual">The Pen Pineapple Apple Pen Guy Gives His 'PPAP' Song A Coronavirus Update</h1>
+<p class="rm-manual">Pikotaro has created a new message for his 2016 record-breaking hit.</p>
+<p class="rm-manual"><span>By </span><a href="https://www.huffpost.com/author/ed-mazza"><span>Ed Mazza</span></a></p>
+<p>“<a href="https://www.youtube.com/watch?v=0E00Zuayv9Q" rel="noopener noreferrer">PPAP</a>” is back ― with a twist.</p>
+<p>Japanese comic Daimaou Kosaka, better known as Pikotaro, has given his 2016 music sensation a makeover for the <a href="https://www.huffpost.com/news/topic/coronavirus" rel="noopener noreferrer">coronavirus</a> era. </p>
+<p>“In a hurry, I made a new version of PPAP,” <a href="https://twitter.com/pikotaro_ppap/status/1246474947498618880" rel="noopener noreferrer">he wrote on Twitter</a>. “What I want to tell the whole world is ... Wash! Laugh! Pray!</p>
+<p>The song is no longer about pens, pineapples, apples and pens, but 
+clean hands and overcoming the pandemic. Even PPAP stands for something 
+else:</p>
+<p class="">For old time’s sake, here’s the original, which Guinness World Records recognized as the <a href="https://www.guinnessworldrecords.com/news/2016/10/video-pikotaro-performs-pen-pineapple-apple-pen-at-certificate-ceremony-as-song-449045?fb_comment_id=1259238420765663_1262202220469283" rel="noopener noreferrer">shortest song to enter the Billboard Hot 100</a>.</p>
+<p class="rm-manual"> <a href="https://app.appsflyer.com/%7B%7Bid%7D%7D?pid=Acquisition&amp;c=US_Internal_YMktg_HuffPostMobileWebBP_House_Users&amp;af_sub1=Internal&amp;af_sub2=US_YMktg_US_YMktg&amp;af_sub3=Mid_Evergreen_v2">Download</a> </p>
+<p class="rm-manual"><a href="https://www.huffpost.com/author/ed-mazza"><span>Ed Mazza</span></a></p>
+<p class="rm-manual">Overnight Editor, HuffPost</p>
+<p class="rm-manual"> <a href="">Suggest a correction</a> </p>
+<h4 class="rm-manual">MORE:</h4>
+<p class="rm-manual"><a href="https://www.huffpost.com/entertainment/topic/pop-of-culture"> Pop of Culture </a> </p>
+<p class="rm-manual"><a href="https://www.huffpost.com/topic/coronavirus"> Coronavirus </a> </p>
+<p class="rm-manual"><a href="https://www.huffpost.com/topic/covid-19"> COVID-19 </a> </p>
+<p class="rm-manual"><a href="https://www.huffpost.com/topic/daimaou-kosaka"> Daimaou Kosaka </a> </p>
+<h5 class="rm-manual">CONVERSATIONS</h5>
+<p class="rm-manual">Today is National Voter Registration Day!</p>
+<p class="rm-manual">We made it easy for you to exercise your right to vote!</p>
+<p class="rm-manual"><a href="https://huffpost.turbovote.org/">Register Now!</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.huffpost.com/news/">News</a> </li> <li class="rm-manual"> <a href="https://www.huffpost.com/news/politics">Politics</a> </li> <li class="rm-manual"> <a href="https://www.huffpost.com/entertainment/">Entertainment</a> </li> <li class="rm-manual"> <a href="https://www.huffpost.com/life/">Life</a> </li> <li class="rm-manual"> <a href="https://www.huffpost.com/voices/">Communities</a> </li> <li class="rm-manual"> <a href="https://www.huffpost.com/section/huffpost-personal">HuffPost Personal</a> </li> <li class="rm-manual"> <a href="https://www.huffpost.com/section/video">Video</a> </li> <li class="rm-manual"> <a href="https://www.huffpost.com/newsletters">Newsletters</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///">HuffPost</a> </li> <li class="rm-manual"> <a href="https://www.huffpost.com/static/about-us">About Us</a> </li> <li class="rm-manual"> <a href="https://www.oath.com/brands/huffpost/">Advertise</a> </li> <li class="rm-manual"> <a href="https://policies.oath.com/us/en/oath/privacy/adinfo/index.html">About Our Ads</a> </li> <li class="rm-manual"> <a href="https://www.huffpost.com/static/contact-us">Contact Us</a> </li> <li class="rm-manual"> <a href="https://www.huffpost.com/syndication">RSS</a> </li> <li class="rm-manual"> <a href="https://www.huffpost.com/static/faq">FAQ</a> </li> <li class="rm-manual"> <a href="https://www.oath.com/careers/job-openings?q=&amp;jobDepartment=&amp;jobBrand=huff+post&amp;jobCity=">Careers</a> </li> <li class="rm-manual"> <a href="https://www.huffpost.com/archive">Archive</a> </li> <li class="rm-manual"> <a href="https://policies.oath.com/us/en/oath/terms/otos/index.html">User Agreement</a> </li> <li class="rm-manual"> <a href="https://policies.oath.com/us/en/oath/privacy/index.html">Privacy Policy</a> </li> <li class="rm-manual"> <a href="https://www.huffpost.com/static/comment-policy">Comment Policy</a> </li> <li class="rm-manual"> <a href="https://www.huffpost.com/news/topic/press-room">HuffPost Press Room</a> </li> <li class="rm-manual"> <a href="https://coupons.huffpost.com/">Coupons</a> </li> </ul>
+<p class="rm-manual"><a href="https://guce.huffpost.com/manage-selling-my-info?locale=en-US">Do not sell my info</a> </p>
+<p class="rm-manual">Part of HuffPost Entertainment. ©2020 Verizon Media. All rights reserved. Huffington Post.</p></article>
+</body></html>

@@ -1,0 +1,128 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">Wuhan virus: Scoot, SIA and SilkAir to cut flights to China</p>
+<p class="rm-manual"><a href="https://malaysia.yahoo.com/news">Yahoo</a></p>
+<p class="rm-manual">Search</p>
+<ul class="rm-manual"><li class="rm-manual"><a href="https://mail.yahoo.com/?.intl=my&amp;.lang=en-MY&amp;.partner=none&amp;.src=news">Mail</a></li></ul>
+<p class="rm-manual"><a href="https://malaysia.news.yahoo.com/"> News</a></p>
+<p class="rm-manual"><span>Follow us</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://malaysia.news.yahoo.com/malaysia/"> Malaysia</a></li>
+<li class="rm-manual"><a href="https://sg.news.yahoo.com/esports/"> Esports</a></li>
+<li class="rm-manual"><a href="https://malaysia.news.yahoo.com/sports/"> Sports</a></li>
+<li class="rm-manual"><a href="https://malaysia.news.yahoo.com/finance/"> Finance</a></li>
+<li class="rm-manual"><a href="https://malaysia.news.yahoo.com/tech/"> Tech</a></li>
+<li class="rm-manual"><a href="https://malaysia.news.yahoo.com/lifestyle/"> Lifestyle</a></li>
+<li class="rm-manual"><a href="https://malaysia.news.yahoo.com/celebrity/"> Celebrity</a></li>
+<li class="rm-manual"><a href="https://malaysia.news.yahoo.com/movies/"> Movies</a></li>
+<li class="rm-manual"><a href="https://malaysia.news.yahoo.com/videos/"> Videos</a></li>
+</ul>
+<h1 class="rm-manual">Wuhan virus: Scoot, SIA and SilkAir to cut flights to China</h1>
+<p class="rm-manual"><a href="https://www.yahoo.com/author/staff-writer--singapore">Staff Writer, Singapore</a></p>
+<p class="rm-manual">Editorial Team</p>
+<p class="rm-manual"><span><span><a href="https://sg.style.yahoo.com/">Yahoo Lifestyle SEA</a></span></span>30 January 2020</p>
+<p>The Boeing 787-9 Dreamliner aircraft of Scoot on 30 January 2020. (PHOTO: AFP via Getty Images)</p>
+<p>UPDATE: Singapore Airlines and SilkAir have also announced that they are reducing their flights to China from next month.</p>
+<p>SINGAPORE — Scoot said it will suspend, cancel and cut flights to a 
+number of cities in Greater China due to weak demand amid the Wuhan 
+virus outbreak.</p>
+<p>In a post on Facebook on Friday morning (31 January), the 
+Singapore-based low cost airline said it will suspend flights between 
+Singapore and 11 cities in mainland China - Harbin, Hangzhou, Shenyang, 
+Xi’an, Changsha, Nanchang, Zhengzhou, Ningbo, Jinan, Nanning and Wuxi - 
+from early February until end March 2020.</p>
+<p>Affected customers booked on these flights will receive full refund via original mode of payment.</p>
+<p>Scoot will also cut frequencies to eight cities - Fuzhou, Guangzhou, 
+Haikou, Kunming, Nanjing, Qingdao, Tianjin and Macau - from 1 February 
+to 28 March 2020.</p>
+<p>In addition, Scoot will cancel some flights between Singapore and Guangzhou, Nanjing, Macau and Hong Kong.</p>
+<p>Affected customers affected by the cut in flight frequencies and 
+cancellations will be informed about refunds and rebooking options via 
+emails from Scoot.</p>
+<h2>Affected SIA, SilkAir flights</h2>
+<p>Meanwhile, SIA also put up a Facebook post providing details of 
+affected SIA and SilkAir flights. It added that affected customers will 
+be notified and re-accommodated onto other flights.</p>
+<p>Customers can contact their travel agents or email the Singapore reservations team if they require assistance.</p>
+<p>SIA has flights to three China cities (Beijing, Shanghai and 
+Guangzhou), while SilkAir has four (Shenzhen, Xiamen, Chengdu and 
+Chongqing).</p>
+<p class="rm-manual">READ MORE:</p>
+<p class="rm-manual"><a href="https://sg.style.yahoo.com/wuhan-coronavirus-jetstar-to-stop-flying-to-hefei-guiyang-and-xuzhou-china-102647271.html">Wuhan virus: Jetstar to suspend flights to Hefei, Guiyang and Xuzhou</a></p>
+<p class="rm-manual"><a href="https://sg.news.yahoo.com/wuhan-virus-scoot-cancels-all-wuhan-flights-until-end-of-march-051415985.html">Wuhan virus: Scoot cancels all Wuhan flights until end of March</a></p>
+<h2 class="rm-manual">What to read next</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///syed-saddiq-congratulates-singapore-youngest-112142325.html"><span>Syed Saddiq congratulates Singapore’s youngest MP Raeesah Khan</span></a></h3><p class="rm-manual">Malay Mail</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/york-man-protests-goya-foods-222250778.html"><span>New York Man Protests Goya Foods by Tossing Cans in the Trash</span></a></h3><p class="rm-manual">Storyful</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///turbulent-parliament-sitting-triggers-masakita-221528207.html"><span>Turbulent
+ Parliament sitting triggers #MasaKita movement among youth as they push
+ to vote in a younger generation of more courteous, respectful lawmakers</span></a></h3><p class="rm-manual">Malay Mail</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///nothing-personal-says-anwar-apparent-140948804.html"><span>‘Nothing personal’, says Anwar of apparent differences with Dr Mahathir</span></a></h3><p class="rm-manual">Malay Mail</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///dr-mahathir-speaker-must-neutral-043843410.html"><span>Dr Mahathir: Speaker must be neutral, not chosen to back government</span></a></h3><p class="rm-manual">Malay Mail</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/cincinnati-zoos-fiona-bibi-kiss-210839804.html"><span>Cincinnati Zoo's Fiona, Bibi 'Kiss Crash' Under Water in Adorable Display of Affection</span></a></h3><p class="rm-manual">Storyful</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///naya-rivera-former-glee-star-175241481.html"><span>Naya Rivera, Former ‘Glee’ Star, Found Dead at 33</span></a></h3><p class="rm-manual">The Wrap</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///art-harun-named-speaker-without-070814035.html"><span>Art Harun named new Speaker without a vote, boots Amanah MP Khalid Samad out of Parliament</span></a></h3><p class="rm-manual">Malay Mail</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///morning-vote-parliament-shows-one-095810205.html"><span>This morning’s vote in Parliament shows one thing: Muhyiddin won</span></a></h3><p class="rm-manual">Malay Mail</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/firefighters-continue-battle-blaze-uss-203713880.html"><span>Firefighters Continue to Battle Blaze on USS Bonhomme Richard</span></a></h3><p class="rm-manual">Storyful</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///galapagos-reopens-tourist-sites-virus-lockdown-214537174.html"><span>Galapagos reopens tourist sites after virus lockdown</span></a></h3><p class="rm-manual">AFP News</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///pop-smoke-4-charged-rapper-214116392.html"><span>4 Charged With Rapper Pop Smoke’s Murder</span></a></h3><p class="rm-manual">The Wrap</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///naya-rivera-death-no-indication-213041361.html"><span>Naya Rivera’s Death: No Indication of Foul Play or Suicide, Sheriffs Say</span></a></h3><p class="rm-manual">The Wrap</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///anwar-shafee-why-no-debate-030944281.html"><span>Anwar, Shafie question why Putrajaya blocking debate on Prihatin stimulus</span></a></h3><p class="rm-manual">Malay Mail</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/timelapse-shows-neowise-comet-moving-175320828.html"><span>Timelapse Shows Neowise Comet Moving Over Devon, England</span></a></h3><p class="rm-manual">Storyful</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://www.housebeautiful.com/lifestyle/a33266686/barbados-12-month-welcome-stamp-remote-work/"><span>Barbados Wants You to Continue Remotely Working for Your Employer but From Its Gorgeous Islands</span></a></h3><p class="rm-manual">House Beautiful</p><p class="rm-manual"></p></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///nga-kor-ming-quits-deputy-073447791.html"><span>Nga Kor Ming quits as deputy Dewan Rakyat Speaker before motion to remove him tabled</span></a></h3><p class="rm-manual">Malay Mail</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///dissolve-parliament-motion-replace-speaker-013037501.html"><span>Dissolve Parliament if motion to replace Speaker fails, Umno Youth chief tells PM</span></a></h3><p class="rm-manual">Malay Mail</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///ghislaine-maxwell-wrapped-her-cellphone-214539590.html"><span>Ghislaine Maxwell Wrapped Her Cellphone in Tin Foil to ‘Evade Detection,’ Government Says</span></a></h3><p class="rm-manual">The Wrap</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/sea-foam-covers-cape-town-172313192.html"><span>Sea Foam Covers Cape Town as Winds Lash South African Coast</span></a></h3><p class="rm-manual">Storyful</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///disney-shut-hong-kong-disneyland-162345604.html"><span>Disney to shut Hong Kong Disneyland again as coronavirus cases rise</span></a></h3><p class="rm-manual">Reuters</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///igp-pdrm-reject-accusation-adib-142409598.html"><span>IGP, PDRM reject accusation by Adib’s family, say police not bound by decision of Coroner’s Court</span></a></h3><p class="rm-manual">Malay Mail</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///former-dewan-rakyat-speaker-refutes-101806209.html"><span>Former Dewan Rakyat Speaker refutes Takiyuddin’s remark that motion to remove him was ‘flawless’</span></a></h3><p class="rm-manual">Malay Mail</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///art-harun-says-no-more-084727769.html"><span>Art Harun says no more sexist remarks in Dewan Rakyat under his watch</span></a></h3><p class="rm-manual">Malay Mail</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/portland-protesters-set-fire-elk-170450790.html"><span>Portland Protesters Set Fire to Base of Elk Statue During 46th Consecutive Night of Demonstrations</span></a></h3><p class="rm-manual">Storyful</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///chaos-marks-end-first-day-083808825.html"><span>Chaos marks end to first day of Parliament sitting, merely an hour after new Speaker Art Harun took charge</span></a></h3><p class="rm-manual">Malay Mail</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///kj-apa-sofia-carson-lead-190059523.html"><span>KJ Apa and Sofia Carson to Lead Cast of Michael Bay-Produced Pandemic Thriller ‘Songbird’</span></a></h3><p class="rm-manual">The Wrap</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/officials-urge-social-distancing-large-163031740.html"><span>Officials Urge Social Distancing as Large Crowds Reported at Jersey Shore</span></a></h3><p class="rm-manual">Storyful</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://uk.style.yahoo.com/temperature-guns-visors-gloves-luxury-160058517.html"><span>Will temperature guns, visors and gloves take the luxury out of a spa trip?</span></a></h3><p class="rm-manual">The Telegraph</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///trump-former-chief-staff-mick-181110634.html"><span>Trump’s Former Chief of Staff Mick Mulvaney Warns Republicans: ‘We Still Have a Testing Problem’ With COVID-19</span></a></h3><p class="rm-manual">The Wrap</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///parliament-reconvened-today-netizens-found-113155416.html"><span>Parliament reconvened today and netizens found some behavior ‘sickening’</span></a></h3><p class="rm-manual">Coconuts KL</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///bloc-voting-bid-remove-speaker-051726100.html"><span>After bloc voting, bid to remove Speaker succeeds in Parliament by two-vote majority</span></a></h3><p class="rm-manual">Malay Mail</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/lightning-illuminates-supercell-cloud-melville-161713636.html"><span>Lightning Illuminates Supercell Cloud in Melville, Saskatchewan</span></a></h3><p class="rm-manual">Storyful</p><p></p></li>
+</ul></article>
+</body></html>

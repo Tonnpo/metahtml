@@ -1,0 +1,191 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">US Cyber Command exercise will help shape new tactics for changing threats </p>
+<p class="rm-manual"><span> <a href="file:///artificial-intelligence/">Artificial Intelligence</a></span><span> <a href="file:///unmanned/">Unmanned</a></span><span> <a href="file:///battlefield-tech/">Battlefield Tech</a></span><span> <a href="file:///battlefield-tech/space/">Space</a></span><span> <a href="file:///electronic-warfare/">Electronic Warfare</a></span><span> <a href="file:///cyber/">Cyber</a></span><span> <a href="file:///industry/">Industry</a></span><span> <a href="file:///thought-leadership/">Thought Leadership</a></span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///artificial-intelligence/">Artificial Intelligence</a></li>
+<li class="rm-manual">
+<p class="rm-manual"><a href="file:///unmanned/">Unmanned</a></p>
+<ul class="rm-manual"><li class="rm-manual"><a href="file:///unmanned/robotics/">Robotics</a></li></ul>
+</li>
+<li class="rm-manual">
+<p class="rm-manual"><a href="file:///battlefield-tech/">Battlefield Tech</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///battlefield-tech/c2-comms/">C2/Comms</a></li>
+<li class="rm-manual"><a href="file:///battlefield-tech/it-networks/">IT/Networks</a></li>
+<li class="rm-manual"><a href="file:///battlefield-tech/space/">Space</a></li>
+</ul>
+</li>
+<li class="rm-manual"><a href="file:///information-warfare/">Information Warfare</a></li>
+<li class="rm-manual"><a href="file:///electronic-warfare/">Electronic Warfare</a></li>
+<li class="rm-manual"><a href="file:///cyber/">Cyber</a></li>
+<li class="rm-manual"><a href="file:///industry/">Industry</a></li>
+<li class="rm-manual"><a href="file:///videos/">Videos</a></li>
+<li class="rm-manual">
+<p class="rm-manual"><a href="file:///thought-leadership/">Thought Leadership</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///opinion/">Opinion</a></li>
+<li class="rm-manual"><a href="file:///special-reports/">Special Reports</a></li>
+<li class="rm-manual"><a href="file:///events/">Events</a></li>
+<li class="rm-manual"><a href="file:///show-reporter/">Show Reporter</a></li>
+</ul>
+</li>
+<li class="rm-manual"><a href="file:///native/">Native</a></li>
+</ul>
+<p class="rm-manual"><span><a href="file:///cyber">Cyber</a></span></p>
+<h1 class="rm-manual">US Cyber Command exercise will help shape new tactics for changing threats</h1>
+<p class="rm-manual"><span>By </span><span><a href="file:///author/mark-pomerleau" rel="_new">Mark Pomerleau</a></span></p>
+<p class="rm-manual">Wed Jun 23 2021 06:38 PM</p>
+<figcaption class="rm-manual">For the first time this year, Cyber 
+Command is using it's premier annual exercise to reevaluate some of its 
+cyber teams. (Aiyana Paschal/U.S Cyber Command) </figcaption><p class="">WASHINGTON
+ — U.S. Cyber Command is using its annual training exercise this week to
+ codify best practices for defensive cyber teams.</p>
+<p>Cyber Flag, the command’s premier annual training event, is happening
+ on the heels of Cyber Command’s budget request that proposes <a href="https://www.c4isrnet.com/cyber/2021/06/14/air-force-would-contribute-bulk-of-new-cyber-mission-force-teams/">adding more teams and potentially altering their composition</a> to adapt to a rapidly changing threat landscape.</p>
+<p>For the first time, the exercise will help identify characteristics of successful <a href="https://www.c4isrnet.com/cyber/2021/01/29/hand-to-hand-combat-on-computer-networks-how-cyber-threat-hunters-work/">cyber protection teams</a>, which conduct defensive cyberspace operations.</p>
+<p>This year’s exercise, Cyber Flag 21-2, includes over 430 individuals 
+from 17 teams from the U.S., UK, Canada, National Guard, House of 
+Representatives and U.S. Postal Service and is taking place across eight
+ time zones. The event uses the Persistent Cyber Training Environment — 
+an online client that allows Cyber Command warriors to log on from 
+anywhere for training and mission rehearsal.</p>
+<p>The exercise was set in the Pacific region at a fictitious allied 
+logistics support depot where teams had to contend with attacks from two
+ adversaries: One was more advanced and focused on denial and 
+disruption, while the other was less sophisticated and focused on theft 
+of intellectual property and personally identifiable information.</p>
+<p>In the past, Cyber Command used the exercise to <a href="https://www.c4isrnet.com/home/2017/07/03/cyber-flag-exclusive-what-goes-into-validating-a-cyber-team/">validate teams</a>, but as the threat has evolved, leaders wanted to test concepts and codify new team structures to optimize success.</p>
+<p>“We’re continuously evaluating the proficiency of our force. We’re 
+evaluating where the gaps are. We’re evaluating the new TTPs [tactics, 
+techniques and procedures] that the adversary presents,” Coast Guard 
+Rear Adm. Christopher Bartz, chief of exercises and training at Cyber 
+Command, told reporters June 22. “We are evolving our training at the 
+speed that the adversary is evolving their TTPs.”</p>
+<p>The exercise will allow Cyber Command, which sets <a href="https://www.c4isrnet.com/cyber/2021/05/05/air-force-cyber-school-will-add-online-training-tool/">general standards</a> across all the services for <a href="https://www.c4isrnet.com/dod/2020/01/10/pentagon-gets-big-win-on-cyber-forces/">cyber teams’ training</a> and the <a href="https://www.c4isrnet.com/dod/2017/09/07/cyber-command-moves-toward-standardized-cyber-kits/">equipment they use</a>, to extract best practices and spread those through the cyberspace community, officials explained.</p>
+<p>Bartz equated the effort to other constructs within the military, 
+such as aviation stand teams that go to various units and communicate 
+best practices through the broader aviation community.</p>
+<p>With broader domestic participation, officials said they can observe 
+how others conduct defensive cyber operations, contributing to a more 
+holistic governmentwide approach for national security and defense.</p>
+<p>Also for the first time this year, teams competed against each other 
+with an overall winner to be selected at the conclusion of the exercise 
+June 25. Assessors will observe how teams identify threats and the 
+techniques defenders use to eject threats from the network or deny 
+further compromise.</p>
+<p>In written testimony to Congress this year, Gen. Paul Nakasone, 
+commander of Cyber Command, outlined one of the command’s top 
+priorities: realigning cyber protection teams.</p>
+<p>“USCYBERCOM is working with the combatant commands to ensure they 
+have dependable defensive support for their missions while we retain 
+forces to deal with global challenges to the DoDIN [Department of 
+Defense Information Network],” he wrote.</p>
+<p>Expanded scope</p>
+<p>Cyber Command’s expanded use of <a href="https://www.c4isrnet.com/cyber/2021/01/28/latest-version-of-cyber-training-to-roll-out-in-coming-months/">PCTE</a> allowed the exercise to grow significantly. The range itself was five times larger than last year, <a href="https://www.c4isrnet.com/dod/cybercom/2020/06/15/for-the-first-time-cyber-commands-major-exercise-will-use-new-training-platform/">the first year Cyber Command used the platform for its largest exercise</a>.</p>
+<p>The PCTE team even established a custom help desk for Cyber Flag — 
+capable of assisting with everything from forgotten passwords to major 
+engineering fixes.</p>
+<p>The team applies lessons from the exercise to future events and 
+versions of the platform. For example, the team improved the chat 
+function in the platform after users found it hard to use last year, and
+ they’re awaiting feedback.</p>
+<p>The platform and program team have grown to be able to support 
+thousands of activities daily, even last week supporting two major 
+exercises simultaneously: Cyber Flag and <a href="https://www.c4isrnet.com/cyber/2021/06/23/guardsmen-train-for-real-world-cyber-disruptions/">Cyber Yankee</a>, a National Guard-focused exercise that took place in New England.</p>
+<p>The platform supported the cyber operations kit for UK operators 
+during Cyber Flag, making their experience more realistic. “We want the 
+experience of our foreign allies to be just as valuable and meaningful 
+as any other CMF [cyber mission force] user on PCTE,” said W. Cory 
+Bogler, lead PCTE operations engineer for Product Manager Cyber 
+Resiliency &amp; Training in the Army Program Executive Office 
+Simulation, Training and Instrumentation.</p>
+<p>Officials from the PCTE team said the next Cyber Flag — Cyber Flag 
+21-3 in October — will include participation from all the Five Eyes 
+intelligence alliance nations: the U.S., UK, Canada, <a href="https://www.c4isrnet.com/cyber/2020/12/04/dod-and-australia-ink-first-ever-cyber-training-partnership/">Australia</a> and New Zealand.</p>
+<p class="rm-manual"><span>About </span><span><a href="file:///author/mark-pomerleau" rel="_new">Mark Pomerleau</a></span></p>
+<p class="rm-manual">Mark Pomerleau is a reporter for C4ISRNET, covering information warfare and cyberspace.</p>
+<h6 class="rm-manual">More In Cyber</h6>
+<p class="rm-manual"><a href="file:///cyber/2021/06/23/guardsmen-train-for-real-world-cyber-disruptions/"></a></p><h6 class="rm-manual"><a href="file:///cyber/2021/06/23/guardsmen-train-for-real-world-cyber-disruptions/">Guardsmen train for real-world cyber disruptions </a></h6><p class="rm-manual"></p>
+<h6 class="rm-manual">National Guardsman from across the New England 
+states worked to build important relationships in the event of a 
+real-world cyber crisis during a recent exercise.</h6>
+<p class="rm-manual"><a href="file:///smr/nato-priorities/2021/06/18/nato-soliciting-industry-to-beef-up-internal-cyber-defenses/"></a></p><h6 class="rm-manual"><a href="file:///smr/nato-priorities/2021/06/18/nato-soliciting-industry-to-beef-up-internal-cyber-defenses/">NATO soliciting industry to beef up internal cyber defenses</a></h6><p class="rm-manual"></p>
+<h6 class="rm-manual">The alliance plans to procure new cyber defense 
+systems to replace aging platforms, with contracts worth tens of 
+millions of euros coming online before the end of 2021.</h6>
+<p class="rm-manual"><a href="file:///news/your-military/2021/06/17/even-generals-must-learn-new-skills-in-tech-dominated-special-operations-future/"></a></p><h6 class="rm-manual"><a href="file:///news/your-military/2021/06/17/even-generals-must-learn-new-skills-in-tech-dominated-special-operations-future/">Even generals must learn new skills in tech-dominated special operations future</a></h6><p class="rm-manual"></p>
+<h6 class="rm-manual">Both a new way of recruiting while updating current operator skills are needed.</h6>
+<p class="rm-manual"><a href="file:///cyber/2021/06/14/air-force-would-contribute-bulk-of-new-cyber-mission-force-teams/"></a></p><h6 class="rm-manual"><a href="file:///cyber/2021/06/14/air-force-would-contribute-bulk-of-new-cyber-mission-force-teams/">Air Force would contribute bulk of new cyber mission force teams</a></h6><p class="rm-manual"></p>
+<h6 class="rm-manual">The Air Force would provide nearly half of 14 additional cyber mission force teams under a proposed two-year phased approach.</h6>
+<h6 class="rm-manual">In Other News</h6>
+<p class="rm-manual"><a href="file:///battlefield-tech/it-networks/2021/06/23/just-like-your-iphone-marines-need-to-connect-battlefield-to-larger-network-for-future-conflicts/"></a></p><h6 class="rm-manual"><a href="file:///battlefield-tech/it-networks/2021/06/23/just-like-your-iphone-marines-need-to-connect-battlefield-to-larger-network-for-future-conflicts/">‘Just like your iPhone’: Marines need to connect battlefield to larger network for future conflicts</a></h6><p class="rm-manual"></p>
+<h6 class="rm-manual">As the Marines grapple with advances for the 
+future battlefield, a top IT leader stressed that Marines in tactical 
+environments need to access the service's enterprise network.</h6>
+<p class="rm-manual"><a href="file:///artificial-intelligence/2021/06/23/northrop-ceo-to-beat-china-us-must-step-up-investments-in-advanced-computing/"></a></p><h6 class="rm-manual"><a href="file:///artificial-intelligence/2021/06/23/northrop-ceo-to-beat-china-us-must-step-up-investments-in-advanced-computing/">Northrop CEO: To beat China, US must step up investments in advanced computing</a></h6><p class="rm-manual"></p>
+<h6 class="rm-manual">Chinese advances in the areas of artificial 
+intelligence and processing data is "particularly problematic," says 
+Northrop's chief executive.</h6>
+<p class="rm-manual"><a href="file:///battlefield-tech/space/2021/06/23/air-forces-experimental-football-field-sized-satellite-ends-operations/"></a></p><h6 class="rm-manual"><a href="file:///battlefield-tech/space/2021/06/23/air-forces-experimental-football-field-sized-satellite-ends-operations/">Air Force’s experimental football field-sized satellite ends operations</a></h6><p class="rm-manual"></p>
+<h6 class="rm-manual">The Air Force Research Laboratory Demonstration 
+and Science Experiments (DSX) spacecraft was used to study radiation in 
+medium Earth orbit.</h6>
+<p class="rm-manual"><a href="file:///opinion/2021/06/23/its-more-than-chips-the-us-has-a-dangerous-reliance-on-defense-electronics/"></a></p><h6 class="rm-manual"><a href="file:///opinion/2021/06/23/its-more-than-chips-the-us-has-a-dangerous-reliance-on-defense-electronics/">It’s more than chips: Other risks exist in defense electronics supply chain</a></h6><p class="rm-manual"></p>
+<h6 class="rm-manual">America’s dependence on other nations for many of 
+the most crucial links in the defense electronics supply chain is a 
+long-term problem that requires industry-government collaboration now on
+ an unprecedented scale.</h6>
+<p class="rm-manual"><a href="file:///artificial-intelligence/2021/06/22/pentagon-launches-artificial-intelligence-effort-to-prep-combatant-commands-for-jadc2/"></a></p><h6 class="rm-manual"><a href="file:///artificial-intelligence/2021/06/22/pentagon-launches-artificial-intelligence-effort-to-prep-combatant-commands-for-jadc2/">Pentagon launches artificial intelligence effort to prep combatant commands for JADC2</a></h6><p class="rm-manual"></p>
+<h6 class="rm-manual">A initiative announced by the deputy secretary of 
+defense will send technical data and AI experts to combatant commands to
+ learn more about their needs for JADC2.</h6>
+<h6 class="rm-manual">Featured Video</h6>
+<p class="rm-manual"><a href="file:///video/2021/06/23/is-critical-race-theory-ok-for-us-military-be-open-minded-and-widely-read-says-top-general/"></a></p><h6 class="rm-manual"><a href="file:///video/2021/06/23/is-critical-race-theory-ok-for-us-military-be-open-minded-and-widely-read-says-top-general/">Is critical race theory OK for U.S. military? "Be open-minded and widely read," says top general</a></h6><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///video/2021/06/22/raise-your-hand-dear-young-american-harvey-barnum/"></a></p><h6 class="rm-manual"><a href="file:///video/2021/06/22/raise-your-hand-dear-young-american-harvey-barnum/">"Raise your hand" | Dear Young American — Harvey Barnum</a></h6><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///video/2021/06/21/ka-boom-ford-undergoes-shock-trials/"></a></p><h6 class="rm-manual"><a href="file:///video/2021/06/21/ka-boom-ford-undergoes-shock-trials/">Ka-Boom! Ford undergoes 'shock trials'</a></h6><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///video/2021/06/21/centcom-commander-eyes-future-of-middle-east-military-times-reports/"></a></p><h6 class="rm-manual"><a href="file:///video/2021/06/21/centcom-commander-eyes-future-of-middle-east-military-times-reports/">CENTCOM commander eyes future of Middle East | Military Times Reports</a></h6><p class="rm-manual"></p>
+<h6 class="rm-manual">Trending Now</h6>
+<p class="rm-manual"><a href="https://www.c4isrnet.com/artificial-intelligence/2021/06/22/pentagon-launches-artificial-intelligence-effort-to-prep-combatant-commands-for-jadc2/"></a></p><h6 class="rm-manual"><a href="https://www.c4isrnet.com/artificial-intelligence/2021/06/22/pentagon-launches-artificial-intelligence-effort-to-prep-combatant-commands-for-jadc2/">Pentagon launches artificial intelligence effort to prep combatant commands for JADC2</a></h6><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://www.c4isrnet.com/artificial-intelligence/2021/06/23/northrop-ceo-to-beat-china-us-must-step-up-investments-in-advanced-computing/"></a></p><h6 class="rm-manual"><a href="https://www.c4isrnet.com/artificial-intelligence/2021/06/23/northrop-ceo-to-beat-china-us-must-step-up-investments-in-advanced-computing/">Northrop CEO: To beat China, US must step up investments in advanced computing</a></h6><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://www.c4isrnet.com/battlefield-tech/space/2021/06/23/air-forces-experimental-football-field-sized-satellite-ends-operations/"></a></p><h6 class="rm-manual"><a href="https://www.c4isrnet.com/battlefield-tech/space/2021/06/23/air-forces-experimental-football-field-sized-satellite-ends-operations/">Air Force’s experimental football field-sized satellite ends operations</a></h6><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://www.c4isrnet.com/battlefield-tech/space/2021/06/16/the-space-force-wants-to-use-directed-energy-weapons-for-space-superiority/"></a></p><h6 class="rm-manual"><a href="https://www.c4isrnet.com/battlefield-tech/space/2021/06/16/the-space-force-wants-to-use-directed-energy-weapons-for-space-superiority/">The Space Force wants to use directed-energy systems for space superiority</a></h6><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://www.c4isrnet.com/cyber/2021/06/23/us-cyber-command-exercise-will-help-shape-new-tactics-for-changing-threats/"></a></p><h6 class="rm-manual"><a href="https://www.c4isrnet.com/cyber/2021/06/23/us-cyber-command-exercise-will-help-shape-new-tactics-for-changing-threats/">US Cyber Command exercise will help shape new tactics for changing threats</a></h6><p class="rm-manual"></p>
+<p class="rm-manual">C4ISRNet © 2021</p>
+<p class="rm-manual">C4ISRNet © 2021</p></article>
+</body></html>
