@@ -1,0 +1,166 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> <span><a href="file:///middle-east/voa-news-iran">VOA News on Iran</a></span> </p>
+<h1 class="rm-manual">
+<span>What is Iran’s Islamic Revolutionary Guard?</span> </h1>
+<p class="rm-manual"> <span>By</span> <span>Rikar Hussein</span>, <span>Mehdi Jedinia</span> </p>
+<p class="rm-manual"> January 03, 2020 05:24 AM </p>
+<p class="rm-manual">Sorry, but your browser cannot support embedded video of this type, you can <a href="https://voamedia.voanews.com/p/2446332/sp/244633200/download/entry_id/1_or8o3cku/flavor/1_fuv3knws">download this video</a> to view it offline.</p>
+<p class="rm-manual"><a href="https://voamedia.voanews.com/p/2446332/sp/244633200/download/entry_id/1_or8o3cku/flavor/1_fuv3knws/ks/djJ8MjQ0NjMzMnz9wEmySuE4biB722cX5E2rzvZTdQMtnxsrD-Twh0xTk0Dp1Bc4WMwki8aIAEh7HLhqY0pGG_PiKu-gxGZFeefQF9EBVcA4QCtlP1X9xDEX3y-NQI36gHyLS0X9L0fJNQnRgEgT2R1qHoWA9BQPc_ynT-Po3zIoVay-voNOKtJGvRS2K9Sn20Gen7kQ8RAHFWcCCM5TSojIr-StRUAmxpCC">360p | 3 MB</a></p>
+<p class="rm-manual"><a href="https://voamedia.voanews.com/p/2446332/sp/244633200/download/entry_id/1_or8o3cku/flavor/1_7668q5ki/ks/djJ8MjQ0NjMzMnxSFuLF3SHxbjhCXkl7XAb-4GisWFYoj9rJXNLOdOlfNLrvpbFrqf1sQNGWfEG_Cjav0vXqXBS0DHwyUigS9XNu2DIdE7xwtm486-Iym5hi-saXzycTA-GH56KwBk0P-yZZVPEc5dNjCeCktr_yU3EvInAI5e-mXobDS0w2S2E6AjAG4VpjgHKBWDalHsBfYsgNXtw0iLUEKSutO_WaCldE">480p | 4 MB</a></p>
+<p class="rm-manual"><a href="https://voamedia.voanews.com/p/2446332/sp/244633200/download/entry_id/1_or8o3cku/flavor/1_cwxl1smk/ks/djJ8MjQ0NjMzMnwZFANQTWMUsnrQXkGdjUEwr6xKktGQ78AMqOKjzCnqViM1XNyWEvWfn742ycmG1B3BWLbfpbepyN9iCW4baNgn9DUGhqsmnX9E-9cpRr5ulWNxAMAoKpUVzdHWDR0Dj73G9vOMPD3np_iY3EByXV7LY_6zgY6jzzplW0jPKcAYjumTMG3aUY0dLdBbjipM4oHUxvcnhgVCBOZ7pEh-AqMK">540p | 3 MB</a></p>
+<p class="rm-manual"><a href="https://voamedia.voanews.com/p/2446332/sp/244633200/download/entry_id/1_or8o3cku/flavor/1_d41btcvm/ks/djJ8MjQ0NjMzMnymWqwNehnb5RDeAtxzG5x6snYnP0lGEycnribVrBpQ0L-T6R5oUMmzm8y9CHjxu32SLutLi1f2vs5hMmAr5yIZjlbXsxXcZmlpZ70WfHfcj81blyo868jyS0MgHyh7675FCJhlh99odV_18x7G7SfHPjsQUJ7G8m65fzaq2vzmXQr6mS0Uy3AKCvY3499EeGtWlCQL931w_0B5D5S6h_kt">1080p | 8 MB</a></p>
+<p class="rm-manual"><a href="https://voamedia.voanews.com/p/2446332/sp/244633200/download/entry_id/1_or8o3cku/flavor/1_y9fxufvd/ks/djJ8MjQ0NjMzMnxjOJb_tE0A_mjtAttBW3sBbezsulgyannPdjEjvIDpocUMvOFcClJD9RZxa-GR1RXPOEHxWsgtoT8XYeJm-dlnUkLSXAxOSVhQXU2BBtIIVi0D3k_blVHAE4WYTEPvW8e4n3Vo14uZxnRU-uIAD5soGXYPBIbL6vfirl7EElwIZsygM4nmi1nw7k_cuf273Ymb0AqGTk2KUSqiFBreo887">Original | 44 MB</a></p>
+<p class="rm-manual"> <a href="https://voamedia.voanews.com/p/2446332/sp/244633200/download/entry_id/1_or8o3cku/flavor/1_9os387kv/ks/djJ8MjQ0NjMzMnwBJ-TNbNMJ4Frfs14wc-wB5zy06ipnkNE1F9BZQlDWMwCqdvprbFzVG3WK0dC5rRG5Mzg05zI6ShdXGEuYISaxFY9K4RYpQnr3ZRNn7-OO2yEFy2QOQaw31mpTn8oDHQplmh_0XGwi7I191KY6bgI40QUuaKKa3UHfdMvtF-jMOkRzGbfXlUrbhZ6qzdfGo-OcEjtJpj4LQQvPKFWH0Xj6"> Download Audio</a> </p>
+<p>Last year, U.S. President Donald Trump labeled Iran’s elite Islamic 
+Revolutionary Guard Corps (IRGC) a foreign terrorist organization, an 
+unprecedented move that marked the first time the United States had 
+formally named another country’s military terrorists. Experts said then 
+that the decision would likely raise to a higher level the strained 
+relationship between the two countries.</p>
+<p>Here is a look at the history of the IRGC:</p>
+<p>Iran’s Revolutionary Guard Corps, known in Iran as Pasdaran, was 
+founded in April 1979 shortly after the Islamic Revolution and the 
+overthrow of Iran’s pro-Western monarch Mohammad Reza Shah Pahlavi.</p>
+<figcaption>FILE - A man holds a picture of Ayatollah Ruhollah Khomeini,
+ founder of the Islamic Republic, as government supporters protest 
+against opposition demonstrations during the holy day of Ashura, in 
+Tehran, Dec. 30 2009.</figcaption><p>The IRGC’s core task, as mandated 
+by the late Supreme Leader Ayatollah Khomeini, is to protect the 
+country’s Islamic system and revolutionary values.</p>
+<p>“In principle, the Iranian state could eventually reform itself 
+outside the bounds envisioned by that revolution, in spite of the 
+numerous constitutional safeguards Khomeini set up, to include clerical 
+oversight of the elected government,” said Brad Patty, a former U.S. 
+army adviser and analyst. “In practice, the IRGC exists to ensure that 
+never happens. The population of Iran may wish what it will, but they 
+are meant to live in terror of the IRGC.”</p>
+<figcaption>FILE - Supreme Leader Ayatollah Ali Khamenei talks to clerics in his Islamic thoughts class in Tehran, Iran, Nov. 17, 2019.</figcaption><p>Structure</p>
+<p>The IRGC today has become a major military, political and economic 
+player in Iran, with an estimated 150,000-strong military consisting of 
+ground forces, navy and air units. It is also in charge of the country’s
+ ballistic missiles and nuclear programs.</p>
+<p>Organizationally, the IRGC falls under the Joint Armed Forces General
+ Staff as a part of the Ministry of Defense. But the military remains 
+subordinate to Supreme Leader Ali Khamenei, with elected civilian 
+authorities exercising no real control, according to the international 
+policy organization Counter Extremism Project.</p>
+<p>Internally, the IRGC also commands the Basij Resistance Force, a 
+religious volunteer group that channels popular support to the regime 
+and suppresses domestic dissent. The paramilitary force monitors 
+compliance with the country’s strict customs, such as arresting women 
+who violate the regime’s public dress codes and raiding Western-style 
+parties where alcohol may be served.</p>
+<p>Externally, the IRGC uses its shadowy Quds Force, that was led by 
+Maj. Gen. Qassem Soleimani, and proxy Shi’ite militias, such as the 
+Lebanese Hezbollah, to extend its influence across the Middle East and 
+beyond.</p>
+<p>International activities and ties</p>
+<p>The elite Quds Force was created during the Iran-Iraq War in 1980 and has about 15,000 personnel.</p>
+<p>The group has been involved in Middle East conflicts for decades 
+either directly or by providing support to pro-Iranian militias and 
+governments, particularly in Lebanon, Syria, Iraq, Yemen, the 
+Palestinian territories and Afghanistan.</p>
+<p>More recently, the Quds Force was crucial to the Syrian civil war by supporting President Bashar al-Assad against the rebels.</p>
+<p>In Iraq, the group played a key role in helping the Shiite-dominated 
+government in the fight against IS and thwarting a Kurdish bid for 
+independence.</p>
+<p>The Quds Force is also considered the lifeline of Houthi rebels in 
+their struggle against the internationally recognized government in 
+Yemen.</p>
+<p>World designations</p>
+<p>The U.S. designated the Quds Force as a supporter of terrorism as 
+early as 2007, followed by Canada in 2012. Saudi Arabia and Bahrain, two
+ key neighboring rivals to Iran, designated IRGC a terror entity in 
+2018.</p>
+<p>The United Nations and the European Union have refrained from 
+designating the IRGC as a terror entity but have blacklisted key 
+individuals of the force, including its leader Qassem Soleimani.</p>
+<h2 class="rm-manual">Related Stories</h2>
+<p class="rm-manual"> <a href="file:///middle-east">Middle East</a> </p>
+<p class="rm-manual"> <a href="file:///world-news/middle-east/irans-supreme-leader-picks-new-revolutionary-guard-chief"><span>Iran's Supreme Leader Picks New Revolutionary Guard Chief</span> </a> </p>
+<p class="rm-manual"> Iran's supreme leader has appointed a new head to 
+the country's powerful Revolutionary Guard, just after the U.S. 
+designated the paramilitary force a terrorist group. State-run Iranian 
+media gave no reason for Ayatollah Ali Khamenei's decision to replace 
+the Guard's commander. Taking over will be Gen. Hossein Salami, a 
+59-year-old who had been serving as a deputy commander in the Guard. He 
+replaces Gen… </p>
+<p class="rm-manual"> <a href="file:///middle-east">Middle East</a> </p>
+<p class="rm-manual"> <a href="file:///world-news/middle-east/us-terror-label-iran-revolutionary-guard-takes-effect"><span>US Terror Label for Iran Revolutionary Guard Takes Effect</span> </a> </p>
+<p class="rm-manual"> The U.S. terrorism label for Iran's Revolutionary 
+Guard formally took effect on Monday, amid a battle between the Trump 
+administration and some in Congress over waivers on oil and nuclear 
+sanctions that are due to expire or be extended early next month. The 
+Guard's formal designation as a "foreign terrorist organization" — the 
+first-ever for an entire division of another government — kicked in with
+ a notice published in the Federal… </p>
+<p class="rm-manual"> <span>00:02:00</span> </p>
+<p class="rm-manual"> <a href="file:///usa">USA</a> </p>
+<p class="rm-manual"> <a href="file:///episode/irans-revolutionary-guard-joins-hezbollah-al-qaida-us-terror-list-3846706"><span>Iran's Revolutionary Guard Joins Hezbollah, IS, al-Qaida On US Terror List</span> </a> </p>
+<p class="rm-manual"> By <a href="file:///author/zlatica-hoke">Zlatica Hoke</a> </p>
+<p class="rm-manual"> Tue, 04/09/2019 - 04:57 </p>
+<p class="rm-manual"> <a href="file:///middle-east">Middle East</a> </p>
+<p class="rm-manual"> <a href="file:///middle-east/ap-explains-long-reach-irans-revolutionary-guard"><span>AP Explains: Long Reach of Iran's Revolutionary Guard</span> </a> </p>
+<p class="rm-manual"> Iran's Revolutionary Guard, designated a "foreign 
+terrorist organization" by the Trump administration on Monday, evolved 
+from a paramilitary, domestic security force with origins in the 1979 
+Islamic Revolution to a transnational force that has come to the aid of 
+Tehran's allies in the Mideast, from Syria and Lebanon to Iraq.The force
+ answers only to Iran's supreme leader, operates independently of the 
+regular military and has vast economic interests across the country. </p>
+<p class="rm-manual"> <span>By</span> </p>
+<p class="rm-manual"> <a href="file:///author/rikar-hussein">Rikar Hussein</a> </p>
+<p class="rm-manual"> <span>By</span> </p>
+<p class="rm-manual"> <a href="file:///author/mehdi-jedinia">Mehdi Jedinia</a> </p>
+<p class="rm-manual"> <a href="file:///middle-east/voa-news-iran">VOA News on Iran</a> </p>
+<p class="rm-manual"><a href="file:///middle-east/voa-news-iran/iranian-journalist-sentenced-death-role-protests"> </a></p><h2 class="rm-manual"><a href="file:///middle-east/voa-news-iran/iranian-journalist-sentenced-death-role-protests">
+<span>Iranian Journalist Sentenced to Death for Role in Protests </span> </a></h2><a href="file:///middle-east/voa-news-iran/iranian-journalist-sentenced-death-role-protests"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///middle-east">Middle East</a> </p>
+<p class="rm-manual"><a href="file:///middle-east/iran-issues-arrest-warrant-trump-interpol-rejects"> </a></p><h2 class="rm-manual"><a href="file:///middle-east/iran-issues-arrest-warrant-trump-interpol-rejects">
+<span>Iran Issues Arrest Warrant for Trump That Interpol Rejects</span> </a></h2><a href="file:///middle-east/iran-issues-arrest-warrant-trump-interpol-rejects"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///middle-east">Middle East</a> </p>
+<p class="rm-manual"><a href="file:///middle-east/iran-would-be-arms-dealer-choice-terrorists-if-un-embargo-expires-us-expert-says"> </a></p><h2 class="rm-manual"><a href="file:///middle-east/iran-would-be-arms-dealer-choice-terrorists-if-un-embargo-expires-us-expert-says">
+<span>Iran Would Be 'Arms Dealer of Choice' for Terrorists, if UN Embargo Expires, US Expert Says</span> </a></h2><a href="file:///middle-east/iran-would-be-arms-dealer-choice-terrorists-if-un-embargo-expires-us-expert-says"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///middle-east/voa-news-iran">VOA News on Iran</a> </p>
+<p class="rm-manual"><a href="file:///middle-east/voa-news-iran/iran-internet-activist-defies-summons-prison-criticizing-government"> </a></p><h2 class="rm-manual"><a href="file:///middle-east/voa-news-iran/iran-internet-activist-defies-summons-prison-criticizing-government">
+<span>Iran Internet Activist Defies Summons to Prison for Criticizing Government </span> </a></h2><a href="file:///middle-east/voa-news-iran/iran-internet-activist-defies-summons-prison-criticizing-government"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///usa">USA</a> </p>
+<p class="rm-manual"><a href="file:///usa/iran-warns-against-us-led-efforts-extend-arms-embargo"> </a></p><h2 class="rm-manual"><a href="file:///usa/iran-warns-against-us-led-efforts-extend-arms-embargo">
+<span>Iran Warns Against US-led Efforts to Extend Arms Embargo </span> </a></h2><a href="file:///usa/iran-warns-against-us-led-efforts-extend-arms-embargo"> </a> <p></p></article>
+</body></html>

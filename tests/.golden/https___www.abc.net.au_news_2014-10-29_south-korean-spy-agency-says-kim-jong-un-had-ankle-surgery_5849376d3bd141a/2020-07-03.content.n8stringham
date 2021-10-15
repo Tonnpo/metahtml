@@ -1,0 +1,177 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual">Kim Jong-un had ankle surgery, leading to disappearance from public view, South Korean spy agency believes</h1>
+<p class="rm-manual"><span>Posted </span><span>28 <span>Oct<span>October</span></span> 2014</span><span><span>Tue<span>Tuesday</span></span> 28 <span>Oct<span>October</span></span> 2014 at 2:41pm</span>, <span>updated </span><span>29 <span>Oct<span>October</span></span> 2014</span><span><span>Wed<span>Wednesday</span></span> 29 <span>Oct<span>October</span></span> 2014 at 12:29am</span></p>
+<p class="rm-manual"><span>Share</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.abc.net.au%2Fnews%2F2014-10-29%2Fsouth-korean-spy-agency-says-kim-jong-un-had-ankle-surgery%2F5849376" rel="noopener noreferrer"><span>Facebook</span></a></li>
+<li class="rm-manual"><a href="https://twitter.com/share?url=https%3A%2F%2Fwww.abc.net.au%2Fnews%2F2014-10-29%2Fsouth-korean-spy-agency-says-kim-jong-un-had-ankle-surgery%2F5849376&amp;text=Kim%20Jong-un%20had%20ankle%20surgery%2C%20leading%20to%20disappearance%20from%20public%20view%2C%20South%20Korean%20spy%20agency%20believes" rel="noopener noreferrer"><span>Twitter</span></a></li>
+<li class="rm-manual"><p class="rm-manual"></p><p class="rm-manual"></p><h2 class="rm-manual">Article share options</h2><h3 class="rm-manual">Share this on</h3><ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.abc.net.au%2Fnews%2F2014-10-29%2Fsouth-korean-spy-agency-says-kim-jong-un-had-ankle-surgery%2F5849376" rel="noopener noreferrer"><span>Facebook</span></a></li>
+<li class="rm-manual"><a href="https://twitter.com/share?url=https%3A%2F%2Fwww.abc.net.au%2Fnews%2F2014-10-29%2Fsouth-korean-spy-agency-says-kim-jong-un-had-ankle-surgery%2F5849376&amp;text=Kim%20Jong-un%20had%20ankle%20surgery%2C%20leading%20to%20disappearance%20from%20public%20view%2C%20South%20Korean%20spy%20agency%20believes&amp;via=ABCaustralia" rel="noopener noreferrer"><span>Twitter</span></a></li>
+<li class="rm-manual"><a href="https://linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwww.abc.net.au%2Fnews%2F2014-10-29%2Fsouth-korean-spy-agency-says-kim-jong-un-had-ankle-surgery%2F5849376&amp;title=Kim%20Jong-un%20had%20ankle%20surgery%2C%20leading%20to%20disappearance%20from%20public%20view%2C%20South%20Korean%20spy%20agency%20believes&amp;summary=North%20Korean%20leader%20Kim%20Jong-un%2C%20who%20recently%20dropped%20out%20of%20public%20view%20for%20nearly%20six%20weeks%2C%20had%20surgery%20to%20remove%20a%20cyst%20from%20his%20ankle%2C%20South%20Korean%20spies%20believe." rel="noopener noreferrer"><span>LinkedIn</span></a></li>
+</ul><h3 class="rm-manual">Send this by</h3><ul class="rm-manual">
+<li class="rm-manual"><a href="mailto:?body=https%3A%2F%2Fwww.abc.net.au%2Fnews%2F2014-10-29%2Fsouth-korean-spy-agency-says-kim-jong-un-had-ankle-surgery%2F5849376%3Futm_source%3Dabc_news%26utm_medium%3Dcontent_shared%26utm_content%3Dmail%26utm_campaign%3Dabc_news&amp;subject=Kim%20Jong-un%20had%20ankle%20surgery%2C%20leading%20to%20disappearance%20from%20public%20view%2C%20South%20Korean%20spy%20agency%20believes" rel="noopener noreferrer"><span>Email</span></a></li>
+<li class="rm-manual"><a href="fb-messenger://share?link=https%3A%2F%2Fwww.abc.net.au%2Fnews%2F2014-10-29%2Fsouth-korean-spy-agency-says-kim-jong-un-had-ankle-surgery%2F5849376%3Futm_source%3Dabc_news%26utm_medium%3Dcontent_shared%26utm_content%3Dmessenger%26utm_campaign%3Dabc_news" rel="noopener noreferrer"><span>Messenger</span></a></li>
+<li class="rm-manual"><a href="#" rel="noopener noreferrer"><span>Copy link</span></a></li>
+<li class="rm-manual"><a href="https://api.whatsapp.com/send?text=Kim%20Jong-un%20had%20ankle%20surgery%2C%20leading%20to%20disappearance%20from%20public%20view%2C%20South%20Korean%20spy%20agency%20believes%20%0A%20https%3A%2F%2Fwww.abc.net.au%2Fnews%2F2014-10-29%2Fsouth-korean-spy-agency-says-kim-jong-un-had-ankle-surgery%2F5849376%3Futm_source%3Dabc_news%26utm_medium%3Dcontent_shared%26utm_content%3Dwhatsapp%26utm_campaign%3Dabc_news" rel="noopener noreferrer"><span>WhatsApp</span></a></li>
+</ul><p class="rm-manual"></p><p class="rm-manual"></p></li>
+</ul>
+<p class="rm-manual">Print content</p>
+<p class="rm-manual">Print with images and other media</p>
+<p class="rm-manual">Print text only</p>
+<p>South Korea's spy agency believes North Korean leader Kim Jong-un, 
+who recently dropped out of public view for nearly six weeks, had 
+surgery to remove a cyst from his ankle.</p>
+<p>The intelligence, shared by the National Intelligence Service (NIS) 
+in a legislators briefing on Tuesday, suggested that a cyst had been 
+found in Mr Kim's ankle joint back in May.</p>
+<p>Foreign medical experts were flown to Pyongyang to carry out an 
+operation to remove the cyst sometime in September or October, the 
+agency said.</p>
+<p>Mr Kim dropped out of sight after attending a music concert with his wife in early September.</p>
+<p>His prolonged and unexplained absence fuelled rampant speculation 
+about his health and even rumours of a coup in the nuclear-armed state.</p>
+<p>He finally reappeared in mid-October, with state media showing him 
+using a walking stick as he conducted a series on inspection visits to 
+new residential complexes in Pyongyang.</p>
+<p>Competing theories for his absence had ranged widely from an extended
+ rest period to a leadership coup, via a long list of possible illnesses
+ and ailments including broken ankles, gout and diabetes.</p>
+<p>Mr Kim, a heavy smoker, has shown striking weight gain since coming 
+to power and TV footage just prior to his "disappearance" had shown him 
+walking with a pronounced limp.</p>
+<p>The NIS intelligence suggested that Mr Kim's weight problem could hamper his recovery from ankle surgery.</p>
+<p>The NIS also says it has information that Mr Kim has demoted around 
+200 military officers and that 50 executions have been carried out in 
+the North so far this year.</p>
+<p>Of the 50 executions carried out this year, the NIS said a number 
+were related to an ongoing purge of those close to Mr Kim's uncle and 
+one-time political mentor Jang Song-Thaek.</p>
+<p>Mr Jang was executed last December on charges of treason and corruption.</p>
+<p>On the demotion of the 200 military officers, the NIS said the 
+apparent reason was under-performance in strategic artillery drills.</p>
+<p class="rm-manual">AFP</p>
+<p class="rm-manual"><span>Posted </span><span>28 <span>Oct<span>October</span></span> 2014</span><span><span>Tue<span>Tuesday</span></span> 28 <span>Oct<span>October</span></span> 2014 at 2:41pm</span>, <span>updated </span><span>29 <span>Oct<span>October</span></span> 2014</span><span><span>Wed<span>Wednesday</span></span> 29 <span>Oct<span>October</span></span> 2014 at 12:29am</span></p>
+<p class="rm-manual"><span>Share</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.abc.net.au%2Fnews%2F2014-10-29%2Fsouth-korean-spy-agency-says-kim-jong-un-had-ankle-surgery%2F5849376" rel="noopener noreferrer"><span>Facebook</span></a></li>
+<li class="rm-manual"><a href="https://twitter.com/share?url=https%3A%2F%2Fwww.abc.net.au%2Fnews%2F2014-10-29%2Fsouth-korean-spy-agency-says-kim-jong-un-had-ankle-surgery%2F5849376&amp;text=Kim%20Jong-un%20had%20ankle%20surgery%2C%20leading%20to%20disappearance%20from%20public%20view%2C%20South%20Korean%20spy%20agency%20believes" rel="noopener noreferrer"><span>Twitter</span></a></li>
+<li class="rm-manual"><p></p><p></p><h2 class="rm-manual">Article share options</h2><h3 class="rm-manual">Share this on</h3><ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.abc.net.au%2Fnews%2F2014-10-29%2Fsouth-korean-spy-agency-says-kim-jong-un-had-ankle-surgery%2F5849376" rel="noopener noreferrer"><span>Facebook</span></a></li>
+<li class="rm-manual"><a href="https://twitter.com/share?url=https%3A%2F%2Fwww.abc.net.au%2Fnews%2F2014-10-29%2Fsouth-korean-spy-agency-says-kim-jong-un-had-ankle-surgery%2F5849376&amp;text=Kim%20Jong-un%20had%20ankle%20surgery%2C%20leading%20to%20disappearance%20from%20public%20view%2C%20South%20Korean%20spy%20agency%20believes&amp;via=ABCaustralia" rel="noopener noreferrer"><span>Twitter</span></a></li>
+<li class="rm-manual"><a href="https://linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwww.abc.net.au%2Fnews%2F2014-10-29%2Fsouth-korean-spy-agency-says-kim-jong-un-had-ankle-surgery%2F5849376&amp;title=Kim%20Jong-un%20had%20ankle%20surgery%2C%20leading%20to%20disappearance%20from%20public%20view%2C%20South%20Korean%20spy%20agency%20believes&amp;summary=North%20Korean%20leader%20Kim%20Jong-un%2C%20who%20recently%20dropped%20out%20of%20public%20view%20for%20nearly%20six%20weeks%2C%20had%20surgery%20to%20remove%20a%20cyst%20from%20his%20ankle%2C%20South%20Korean%20spies%20believe." rel="noopener noreferrer"><span>LinkedIn</span></a></li>
+</ul><h3 class="rm-manual">Send this by</h3><ul class="rm-manual">
+<li class="rm-manual"><a href="mailto:?body=https%3A%2F%2Fwww.abc.net.au%2Fnews%2F2014-10-29%2Fsouth-korean-spy-agency-says-kim-jong-un-had-ankle-surgery%2F5849376%3Futm_source%3Dabc_news%26utm_medium%3Dcontent_shared%26utm_content%3Dmail%26utm_campaign%3Dabc_news&amp;subject=Kim%20Jong-un%20had%20ankle%20surgery%2C%20leading%20to%20disappearance%20from%20public%20view%2C%20South%20Korean%20spy%20agency%20believes" rel="noopener noreferrer"><span>Email</span></a></li>
+<li class="rm-manual"><a href="fb-messenger://share?link=https%3A%2F%2Fwww.abc.net.au%2Fnews%2F2014-10-29%2Fsouth-korean-spy-agency-says-kim-jong-un-had-ankle-surgery%2F5849376%3Futm_source%3Dabc_news%26utm_medium%3Dcontent_shared%26utm_content%3Dmessenger%26utm_campaign%3Dabc_news" rel="noopener noreferrer"><span>Messenger</span></a></li>
+<li class="rm-manual"><a href="#" rel="noopener noreferrer"><span>Copy link</span></a></li>
+<li class="rm-manual"><a href="https://api.whatsapp.com/send?text=Kim%20Jong-un%20had%20ankle%20surgery%2C%20leading%20to%20disappearance%20from%20public%20view%2C%20South%20Korean%20spy%20agency%20believes%20%0A%20https%3A%2F%2Fwww.abc.net.au%2Fnews%2F2014-10-29%2Fsouth-korean-spy-agency-says-kim-jong-un-had-ankle-surgery%2F5849376%3Futm_source%3Dabc_news%26utm_medium%3Dcontent_shared%26utm_content%3Dwhatsapp%26utm_campaign%3Dabc_news" rel="noopener noreferrer"><span>WhatsApp</span></a></li>
+</ul><p class="rm-manual"></p><p class="rm-manual"></p></li>
+</ul>
+<h2 class="rm-manual">Related Stories</h2>
+<p class="rm-manual"><a href="file:///news/2014-10-28/north-korean-leader-kim-jong-un/5849384"></a></p><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/2014-10-28/north-korean-leader-kim-jong-un/5849384"><span>Kim Jong-Un</span></a></h3><p class="rm-manual"></p><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///news/2014-10-14/kim-jong-un-sighted/5811392"></a></p><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/2014-10-14/kim-jong-un-sighted/5811392"><span>Kim Jong-un seen for first time since September 3</span></a></h3><p class="rm-manual"></p><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///news/2014-10-13/no-firm-indication-of-transfer-of-power-in-n.-korea---u.s.-offi/5808092"></a></p><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/2014-10-13/no-firm-indication-of-transfer-of-power-in-n.-korea---u.s.-offi/5808092"><span>No firm indication of transfer of power in North Korea</span></a></h3><p class="rm-manual"></p><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///news/2014-10-10/kim-jong-un-nowhere-to-be-seen-at-anniversary-celebration/5804924"></a></p><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/2014-10-10/kim-jong-un-nowhere-to-be-seen-at-anniversary-celebration/5804924"><span>Kim Jong-un missing from anniversary celebration</span></a></h3><p class="rm-manual"></p><p class="rm-manual"></p>
+<p class="rm-manual">More on:</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.abc.net.au/news/topic/korea-democratic-peoples-republic-of">Korea, Democratic People's Republic Of</a></li>
+<li class="rm-manual"><a href="https://www.abc.net.au/news/topic/korea-republic-of">Korea, Republic Of</a></li>
+<li class="rm-manual"><a href="https://www.abc.net.au/news/topic/communism">Communism</a></li>
+<li class="rm-manual"><a href="https://www.abc.net.au/news/topic/government-and-politics">Government and Politics</a></li>
+<li class="rm-manual"><a href="https://www.abc.net.au/news/topic/world-politics">World Politics</a></li>
+</ul>
+<h3 class="rm-manual">Top Stories</h3>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"><a href="file:///news/2020-07-03/victoria-coronavirus-cases-in-postcode-3031/12420884"></a></p><h3 class="rm-manual"><a href="file:///news/2020-07-03/victoria-coronavirus-cases-in-postcode-3031/12420884"><span>Melbourne's 3031 postcode is in the top four for COVID-19 cases this week, but isn't a 'hotspot'</span></a></h3><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///news/2020-07-03/victoria-kidd-mikakos-coronavirus-case-growth/12421848"></a></p><h3 class="rm-manual"><a href="file:///news/2020-07-03/victoria-kidd-mikakos-coronavirus-case-growth/12421848"><span>Federal health authorities say it's too early to know if coronavirus cases are stabilising in Victoria</span></a></h3><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///news/2020-07-03/victoria-coronavirus-cases-rise-by-66/12419538"></a></p><h3 class="rm-manual"><a href="file:///news/2020-07-03/victoria-coronavirus-cases-rise-by-66/12419538"><span>Health authorities investigating Melbourne 'super spreader' theory</span></a></h3><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///news/2020-07-03/jean-castex-named-france-new-prime-minister/12422252"></a></p><h3 class="rm-manual"><a href="file:///news/2020-07-03/jean-castex-named-france-new-prime-minister/12422252"><span>Jean Castex named as France's new Prime Minister</span></a></h3><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///news/2020-07-03/liberate-hong-kong,-revolution-of-our-times-slogan-is-illegal/12420998"></a></p><h3 class="rm-manual"><a href="file:///news/2020-07-03/liberate-hong-kong,-revolution-of-our-times-slogan-is-illegal/12420998"><span>Flag-wielding man becomes first charged with inciting terrorism under new Hong Kong laws</span></a></h3><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///news/2020-07-03/nsw-woolworths-coronavirus-case-triggers-mass-testing-in-sydney/12420046"></a></p><h3 class="rm-manual"><a href="file:///news/2020-07-03/nsw-woolworths-coronavirus-case-triggers-mass-testing-in-sydney/12420046"><span>Man from coronavirus hotspot arrives in Sydney on train as locals queue for tests after Woolworths scare</span></a></h3><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///news/2020-07-03/ghislaine-maxwel-jeffrey-epstein-new-hampshire-hiding-spot/12421358"></a></p><h3 class="rm-manual"><a href="file:///news/2020-07-03/ghislaine-maxwel-jeffrey-epstein-new-hampshire-hiding-spot/12421358"><span>Ghislaine Maxwell was hiding out in a secluded $US1 million hilltop home. Then the FBI came knocking</span></a></h3><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///news/2020-07-03/who-is-ghislaine-maxwell-connection-to-jeffrey-epstein/12419116"></a></p><h3 class="rm-manual"><a href="file:///news/2020-07-03/who-is-ghislaine-maxwell-connection-to-jeffrey-epstein/12419116"><span>Who is Ghislaine Maxwell? How does she link Jeffrey Epstein to Prince Andrew?</span></a></h3><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///news/2020-07-03/nrl-parramatta-thrashes-cowboys-canberra-beats-dragons/12422142"></a></p><h3 class="rm-manual"><a href="file:///news/2020-07-03/nrl-parramatta-thrashes-cowboys-canberra-beats-dragons/12422142"><span>Sivo claims four-try haul in Eels' thrashing of Cowboys as Raiders stave off Dragons</span></a></h3><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///news/2020-07-03/sa-police-defend-heavily-armed-new-unit-after-backlash/12421132"></a></p><h3 class="rm-manual"><a href="file:///news/2020-07-03/sa-police-defend-heavily-armed-new-unit-after-backlash/12421132"><span>Heavily armed SA Police unit prompts backlash and 'gun culture' concern</span></a></h3><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///news/2020-07-03/coronavirus-victoria-live-new-cases-melbourne-qld-restrictions/12417900"></a></p><h3 class="rm-manual"><a href="file:///news/2020-07-03/coronavirus-victoria-live-new-cases-melbourne-qld-restrictions/12417900"><span>Concerns over coronavirus hospitalisation trend</span></a></h3><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///news/2020-07-03/afl-essendon-bombers-beat-collingwood-magpies-by-15-points/12422226"></a></p><h3 class="rm-manual"><a href="file:///news/2020-07-03/afl-essendon-bombers-beat-collingwood-magpies-by-15-points/12422226"><span>Essendon sees off Collingwood challenge to post 15-point victory</span></a></h3><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///news/2020-07-03/bitten-by-science-fieldwork-fails/12361506"></a></p><h3 class="rm-manual"><a href="file:///news/2020-07-03/bitten-by-science-fieldwork-fails/12361506"><span>'Gangrene was setting in': Epic scientist fails from the field when studying animals goes wrong</span></a></h3><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///news/2020-07-03/jeffrey-bishop-guilty-of-sexually-abusing-girl-as-he-babysat-her/12421200"></a></p><h3 class="rm-manual"><a href="file:///news/2020-07-03/jeffrey-bishop-guilty-of-sexually-abusing-girl-as-he-babysat-her/12421200"><span>Babysitter who abused girl got away with it after calling her 'touchy feely'</span></a></h3><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///news/2020-07-03/black-lives-matter-rally-stops-traffic-in-kempsey/12421186"></a></p><h3 class="rm-manual"><a href="file:///news/2020-07-03/black-lives-matter-rally-stops-traffic-in-kempsey/12421186"><span>Hundreds rally behind mother whose son died after being restrained for eating a biscuit</span></a></h3><p class="rm-manual"></p></li>
+</ul>
+<h3 class="rm-manual">Most Popular</h3>
+<ol class="rm-manual">
+<li class="rm-manual">
+<span>1.</span><p class="rm-manual"><a href="file:///news/2020-07-03/victoria-coronavirus-cases-in-postcode-3031/12420884"></a></p><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/2020-07-03/victoria-coronavirus-cases-in-postcode-3031/12420884"><span>Melbourne's 3031 postcode is in the top four for COVID-19 cases this week, but isn't a 'hotspot'</span></a></h3><p class="rm-manual"></p><p class="rm-manual"></p>
+</li>
+<li class="rm-manual">
+<span>2.</span><p class="rm-manual"><a href="file:///news/2020-07-03/ghislaine-maxwel-jeffrey-epstein-new-hampshire-hiding-spot/12421358"></a></p><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/2020-07-03/ghislaine-maxwel-jeffrey-epstein-new-hampshire-hiding-spot/12421358"><span>Ghislaine Maxwell was hiding out in a secluded $US1 million hilltop home. Then the FBI came knocking</span></a></h3><p class="rm-manual"></p><p class="rm-manual"></p>
+</li>
+<li class="rm-manual">
+<span>3.</span><p class="rm-manual"><a href="file:///news/2020-07-03/victoria-coronavirus-cases-rise-by-66/12419538"></a></p><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/2020-07-03/victoria-coronavirus-cases-rise-by-66/12419538"><span>Health authorities investigating Melbourne 'super spreader' theory</span></a></h3><p class="rm-manual"></p><p class="rm-manual"></p>
+</li>
+<li class="rm-manual">
+<span>4.</span><p class="rm-manual"><span>analysis</span><a href="file:///news/2020-07-03/independence-day-could-worsen-americas-coronavirus-outbreak/12416802"></a></p><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/2020-07-03/independence-day-could-worsen-americas-coronavirus-outbreak/12416802"><span>In the age of coronavirus, 'live free or die' is now a real choice for Americans</span></a></h3><p class="rm-manual"></p><p class="rm-manual"></p>
+</li>
+<li class="rm-manual">
+<span>5.</span><p class="rm-manual"><a href="file:///news/2020-07-03/jean-castex-named-france-new-prime-minister/12422252"></a></p><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/2020-07-03/jean-castex-named-france-new-prime-minister/12422252"><span>Jean Castex named as France's new Prime Minister</span></a></h3><p class="rm-manual"></p><p class="rm-manual"></p>
+</li>
+<li class="rm-manual">
+<span>6.</span><p class="rm-manual"><a href="file:///news/2020-07-03/jeffrey-bishop-guilty-of-sexually-abusing-girl-as-he-babysat-her/12421200"></a></p><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/2020-07-03/jeffrey-bishop-guilty-of-sexually-abusing-girl-as-he-babysat-her/12421200"><span>Babysitter who abused girl got away with it after calling her 'touchy feely'</span></a></h3><p class="rm-manual"></p><p class="rm-manual"></p>
+</li>
+</ol>
+<h2 class="rm-manual">Top Stories</h2>
+<p class="rm-manual"><a href="file:///news/2020-07-03/victoria-coronavirus-cases-in-postcode-3031/12420884"></a></p><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/2020-07-03/victoria-coronavirus-cases-in-postcode-3031/12420884"><span>Melbourne's 3031 postcode is in the top four for COVID-19 cases this week, but isn't a 'hotspot'</span></a></h3><p class="rm-manual"></p><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///news/2020-07-03/victoria-kidd-mikakos-coronavirus-case-growth/12421848"></a></p><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/2020-07-03/victoria-kidd-mikakos-coronavirus-case-growth/12421848"><span>Federal health authorities say it's too early to know if coronavirus cases are stabilising in Victoria</span></a></h3><p class="rm-manual"></p><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///news/2020-07-03/victoria-coronavirus-cases-rise-by-66/12419538"></a></p><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/2020-07-03/victoria-coronavirus-cases-rise-by-66/12419538"><span>Health authorities investigating Melbourne 'super spreader' theory</span></a></h3><p class="rm-manual"></p><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///news/2020-07-03/jean-castex-named-france-new-prime-minister/12422252"></a></p><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/2020-07-03/jean-castex-named-france-new-prime-minister/12422252"><span>Jean Castex named as France's new Prime Minister</span></a></h3><p class="rm-manual"></p><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///news/2020-07-03/liberate-hong-kong,-revolution-of-our-times-slogan-is-illegal/12420998"></a></p><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/2020-07-03/liberate-hong-kong,-revolution-of-our-times-slogan-is-illegal/12420998"><span>Flag-wielding man becomes first charged with inciting terrorism under new Hong Kong laws</span></a></h3><p class="rm-manual"></p><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///news/2020-07-03/nsw-woolworths-coronavirus-case-triggers-mass-testing-in-sydney/12420046"></a></p><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/2020-07-03/nsw-woolworths-coronavirus-case-triggers-mass-testing-in-sydney/12420046"><span>Man from coronavirus hotspot arrives in Sydney on train as locals queue for tests after Woolworths scare</span></a></h3><p class="rm-manual"></p><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///news/2020-07-03/ghislaine-maxwel-jeffrey-epstein-new-hampshire-hiding-spot/12421358"></a></p><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/2020-07-03/ghislaine-maxwel-jeffrey-epstein-new-hampshire-hiding-spot/12421358"><span>Ghislaine Maxwell was hiding out in a secluded $US1 million hilltop home. Then the FBI came knocking</span></a></h3><p class="rm-manual"></p><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///news/2020-07-03/who-is-ghislaine-maxwell-connection-to-jeffrey-epstein/12419116"></a></p><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/2020-07-03/who-is-ghislaine-maxwell-connection-to-jeffrey-epstein/12419116"><span>Who is Ghislaine Maxwell? How does she link Jeffrey Epstein to Prince Andrew?</span></a></h3><p class="rm-manual"></p><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///news/2020-07-03/nrl-parramatta-thrashes-cowboys-canberra-beats-dragons/12422142"></a></p><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/2020-07-03/nrl-parramatta-thrashes-cowboys-canberra-beats-dragons/12422142"><span>Sivo claims four-try haul in Eels' thrashing of Cowboys as Raiders stave off Dragons</span></a></h3><p class="rm-manual"></p><p class="rm-manual"></p>
+<h2 class="rm-manual">Just In</h2>
+<p class="rm-manual"><a href="file:///news/2020-07-04/prince-andrews-lawyers-bewildered-by-claims-hes-evading-probe/12422352"></a></p><h3 class="rm-manual"><a href="file:///news/2020-07-04/prince-andrews-lawyers-bewildered-by-claims-hes-evading-probe/12422352"><span>Prince Andrew's lawyers 'bewildered' by claims he's evading US authorities</span></a></h3><span><span>Posted </span><span>20<span>m<span>minutes</span></span> ago</span><span><span>Fri<span>Friday</span></span> 3 <span>Jul<span>July</span></span> 2020 at 5:06pm</span><span> / </span><span>Updated </span><span>4<span>m<span>minutes</span></span> ago</span><span><span>Fri<span>Friday</span></span> 3 <span>Jul<span>July</span></span> 2020 at 5:22pm</span></span><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///news/2020-07-04/coronavirus-update-covid-19-us-trump-fourth-of-july-south-africa/12422058"></a></p><h3 class="rm-manual"><a href="file:///news/2020-07-04/coronavirus-update-covid-19-us-trump-fourth-of-july-south-africa/12422058"><span>Coronavirus update: Trump plans huge Independence Day fireworks display despite record COVID-19 tally</span></a></h3><span><span>Posted </span><span>31<span>m<span>minutes</span></span> ago</span><span><span>Fri<span>Friday</span></span> 3 <span>Jul<span>July</span></span> 2020 at 4:55pm</span><span> / </span><span>Updated </span><span>4<span>m<span>minutes</span></span> ago</span><span><span>Fri<span>Friday</span></span> 3 <span>Jul<span>July</span></span> 2020 at 5:22pm</span></span><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///news/2020-07-03/jean-castex-named-france-new-prime-minister/12422252"></a></p><h3 class="rm-manual"><a href="file:///news/2020-07-03/jean-castex-named-france-new-prime-minister/12422252"><span>Jean Castex named as France's new Prime Minister</span></a></h3><span><span>Posted </span><span>4<span>h<span>hours</span></span> ago</span><span><span>Fri<span>Friday</span></span> 3 <span>Jul<span>July</span></span> 2020 at 1:25pm</span></span><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///news/2020-07-03/afl-essendon-bombers-beat-collingwood-magpies-by-15-points/12422226"></a></p><h3 class="rm-manual"><a href="file:///news/2020-07-03/afl-essendon-bombers-beat-collingwood-magpies-by-15-points/12422226"><span>Essendon sees off Collingwood challenge to post 15-point victory</span></a></h3><span><span>Posted </span><span>4<span>h<span>hours</span></span> ago</span><span><span>Fri<span>Friday</span></span> 3 <span>Jul<span>July</span></span> 2020 at 12:57pm</span></span><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///news/2020-07-03/super-rugby-au-queensland-reds-down-nsw-waratahs/12422150"></a></p><h3 class="rm-manual"><a href="file:///news/2020-07-03/super-rugby-au-queensland-reds-down-nsw-waratahs/12422150"><span>Reds break seven-year drought against Waratahs to launch Super Rugby AU</span></a></h3><span><span>Posted </span><span>4<span>h<span>hours</span></span> ago</span><span><span>Fri<span>Friday</span></span> 3 <span>Jul<span>July</span></span> 2020 at 12:27pm</span></span><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///news/2020-07-03/nrl-parramatta-thrashes-cowboys-canberra-beats-dragons/12422142"></a></p><h3 class="rm-manual"><a href="file:///news/2020-07-03/nrl-parramatta-thrashes-cowboys-canberra-beats-dragons/12422142"><span>Sivo claims four-try haul in Eels' thrashing of Cowboys as Raiders stave off Dragons</span></a></h3><span><span>Posted </span><span>6<span>h<span>hours</span></span> ago</span><span><span>Fri<span>Friday</span></span> 3 <span>Jul<span>July</span></span> 2020 at 10:59am</span><span> / </span><span>Updated </span><span>3<span>h<span>hours</span></span> ago</span><span><span>Fri<span>Friday</span></span> 3 <span>Jul<span>July</span></span> 2020 at 1:30pm</span></span><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///news/justin"><span>More Just In</span></a></p>
+<p class="rm-manual"><a href="#top"><span>Back to top</span></a></p></article>
+</body></html>

@@ -1,0 +1,128 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> <a href="https://www.thoughtco.com/humanities-4133358">Humanities</a> <a href="https://www.thoughtco.com/issues-4133022"> <span> ›</span> Issues</a> </p>
+<h1 class="rm-manual"> State Sponsored Terrorism in Iran </h1>
+<figcaption class="rm-manual"> Keith Binns / Getty Images </figcaption><p class="rm-manual"> <span> <a href="https://www.thoughtco.com/issues-4133022">Issues</a> </span> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.thoughtco.com/terrorism-4132985"> Terrorism </a> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.thoughtco.com/terrorism-history-and-causes-4132984"> History &amp; Causes </a> </li> <li class="rm-manual"> <a href="https://www.thoughtco.com/terrorism-groups-and-tactics-4132983"> Groups &amp; Tactics </a> </li> </ul> </li> <li class="rm-manual"> <a href="https://www.thoughtco.com/us-government-4133021"> The U. S. Government </a> </li> <li class="rm-manual"> <a href="https://www.thoughtco.com/us-foreign-policy-4133010"> U.S. Foreign Policy </a> </li> <li class="rm-manual"> <a href="https://www.thoughtco.com/us-liberal-politics-4133009"> U.S. Liberal Politics </a> </li> <li class="rm-manual"> <a href="https://www.thoughtco.com/us-conservative-politics-4133006"> U.S. Conservative Politics </a> </li> <li class="rm-manual"> <a href="https://www.thoughtco.com/womens-issues-4133002"> Women's Issues </a> </li> <li class="rm-manual"> <a href="https://www.thoughtco.com/civil-liberties-4132996"> Civil Liberties </a> </li> <li class="rm-manual"> <a href="https://www.thoughtco.com/middle-east-4132989"> The Middle East </a> </li> <li class="rm-manual"> <a href="https://www.thoughtco.com/race-relations-4132982"> Race Relations </a> </li> <li class="rm-manual"> <a href="https://www.thoughtco.com/immigration-4132977"> Immigration </a> </li> <li class="rm-manual"> <a href="https://www.thoughtco.com/crime-and-punishment-4132972"> Crime &amp; Punishment </a> </li> <li class="rm-manual"> <a href="https://www.thoughtco.com/animal-rights-4132965"> Animal Rights </a> </li> <li class="rm-manual"> <a href="https://www.thoughtco.com/canadian-government-4132959"> Canadian Government </a> </li> </ul>
+<p class="rm-manual"><a href="https://www.thoughtco.com/issues-4133022"> <span>View More</span> </a></p>
+<p class="rm-manual"> <span> By</span> </p>
+<p class="rm-manual"> <a href="https://www.thoughtco.com/amy-zalman-ph-d-3208994"><span>Amy Zalman, Ph.D.</span></a> </p>
+<p class="rm-manual"> <span> Global Security Expert</span> </p>
+<ul class="rm-manual"> <li class="rm-manual"> Ph.D., Middle Eastern Studies, New York University</li> <li class="rm-manual"> B.A., English Literature, Columbia University</li> </ul>
+<p class="rm-manual"> Amy Zalman, Ph.D., is a global security expert and
+ the CEO of Prescient, a management consulting firm that helps 
+organizational leaders anticipate and manage critical global changes.</p>
+<p class="rm-manual"> <a href="file:///about-us#EditorialGuidelines"><span>our editorial process</span></a> </p>
+<p class="rm-manual"><a href="https://www.thoughtco.com/amy-zalman-ph-d-3208994"><span>Amy Zalman, Ph.D.</span></a> </p>
+<p class="rm-manual"> Updated July 03, 2019 </p>
+<h2> <span> Iran has consistently been described by the United States as
+ the world's foremost state sponsor of terrorism. It actively supports 
+terrorist groups, most prominently the Lebanese group Hezbollah. The 
+Iranian relationship with Hezbollah demonstrates one accepted 
+explanation of why states sponsor terrorism: to indirectly influence 
+politics elsewhere. </span> </h2>
+<p>According to Michael Scheuer, the former CIA officer:</p>
+<blockquote>State-sponsored terrorism came in the middle-1970s, and ... 
+its heyday was in the 1980s and early-'90s. And typically, the 
+definition of a state sponsor of terrorism is a country that uses 
+surrogates as its weapon to attack other people. The primary example to 
+this day is Iran and Lebanese Hezbollah. Hezbollah, in the nomenclature 
+of the discussion, would be the surrogate of Iran.</blockquote>
+<ul><li class="rm-manual">State Sponsored Terrorism Thrives, says Michale Scheuer</li></ul>
+<h2> <span> Islamic Revolutionary Guard Corps </span> </h2>
+<p>The Islamic Revolutionary Guard Corps (IRGC) was created following 
+the 1979 revolution to protect and promote the objectives of the 
+revolution. As a foreign force, they have also exported that revolution,
+ by training Hezbollah, Islamic Jihad, and other groups. There is 
+evidence that that IRGC is playing an active role to undermine Iraq, by 
+funneling funds and arms to Shiite militias, engaging directly in 
+military activity and gathering intelligence. The extent of Iranian 
+involvement is not clear.​</p>
+<p>Iran and Hezbollah</p>
+<p>Hezbollah (which means Party of God, in Arabic), an Islamist Shiite 
+militia based in Lebanon, is a direct product of Iran. It was formally 
+established in 1982 following the Israeli invasion of Lebanon, aimed at 
+uprooting the PLO (Palestinian Liberation Organization) bases there. 
+Iran sent Revolutionary Guard Corps members to assist in the war. A 
+generation later, the relationship between Iran and Hezbollah is not 
+entirely transparent, so it is not clear whether Hezbollah should be 
+considered a full proxy for Iranian intentions. However, Iran funds, 
+arms, and trains Hezbollah, in large part through the IRGC.</p>
+<p>According to the New York Sun, Iranian Revolutionary Guard soldiers 
+fought alongside Hezbollah in the Israel-Hezbollah summer 2006 war by 
+supplying intelligence on Israeli targets and manning and firing 
+missiles.</p>
+<ul>
+<li class="rm-manual">Profile of Hezbollah</li>
+<li class="rm-manual"><a href="https://www.thoughtco.com/terrorism-4132985">Israel Concludes Serious Errors Made in 2006 War with Hezbollah</a></li>
+<li class="rm-manual"><a href="http://www.nysun.com/foreign/war-dead-flown-to-iran/36557/" rel="nofollow">NY Sun: Iranian Revolutionary Guards helped Hezbollah in 2006 War</a></li>
+</ul>
+<h2> <span> Iran and Hamas </span> </h2>
+<p>Iran's relationship with the Palestinian Islamist group Hamas has not
+ been constant over time. It has, rather, waxed and waned according to 
+the interests of Iran and Hamas at different times since the late 1980s.
+ Hamas is the dominant political party in the Palestinian territories 
+that has long relied on terrorist tactics, including suicide bombing, to
+ register a protest against Israeli policies.</p>
+<p>According to Cambridge University Professor George Joffe, Iran's 
+relationship with Hamas began in the 1990s; it was around this time that
+ Iran's interest in exporting revolution coincided with Hamas' rejection
+ of compromise with Israel. Iran has been alleged to provide funding and
+ training for Hamas since the 1990s, but the extent of either is 
+unknown. However, Iran did pledge to help fund the Hamas-led Palestinian
+ government after its parliamentary win in January 2006.</p>
+<ul>
+<li class="rm-manual"><a href="https://www.thoughtco.com/middle-east-basics-4132988">Profile of Hamas</a></li>
+<li class="rm-manual"><a href="https://www.rferl.org/a/1065130.html">George Joffe discusses Iran-Hamas relations</a></li>
+</ul>
+<h2> <span> Iran and Palestinian Islamic Jihad </span> </h2>
+<p>The Iranians and PIJ first made extended contact in the late 1980s in
+ Lebanon. Subsequently, Islamic Revolutionary Guard Corps trained PIJ 
+members at Hezbollah camps in Lebanon and Iran commenced funding PIJ.​​</p>
+<p>Iran and Nuclear Weapons</p>
+<p>The creation of WMD is not itself a criterion for being a state 
+sponsor of terrorism, however, when already designated state sponsors to
+ appear to have manufacturing or acquisition capabilities, the U.S. 
+grows especially worried because could be transferred to terrorist 
+groups. At the end of 2006, the United Nations adopted Resolution 1737 
+and imposed sanctions on Iran for failing to halt its uranium 
+enrichment. Iran has contended that it has that right, in order to 
+create a civil nuclear program</p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.thoughtco.com/hezbollah-history-organization-and-ideology-4846003"> <p class="rm-manual"><span>Hezbollah: History, Organization, and Ideology</span></p> </a> </li> <li class="rm-manual"> <a href="https://www.thoughtco.com/current-situation-in-iran-2353079"> <p class="rm-manual"><span>Current Situation in Iran</span></p> </a> </li> <li class="rm-manual"> <a href="https://www.thoughtco.com/iran-hostage-crisis-4845968"> <p class="rm-manual"><span>Iran Hostage Crisis: Events, Causes, and Aftermath</span></p> </a> </li> <li class="rm-manual"> <a href="https://www.thoughtco.com/leaders-of-the-middle-east-gallery-4122953"> <p class="rm-manual"><span>Leaders of the Middle East: A Photo Gallery</span></p> </a> </li> <li class="rm-manual"> <a href="https://www.thoughtco.com/terrorist-groups-a-list-of-terrorist-groups-by-type-3209111"> <p class="rm-manual"><span>A List of Terrorist Groups by Type</span></p> </a> </li> <li class="rm-manual"> <a href="https://www.thoughtco.com/the-iran-contra-affair-4175920"> <p class="rm-manual"><span>The Iran-Contra Affair: Ronald Reagan’s Arms Sales Scandal</span></p> </a> </li> <li class="rm-manual"> <a href="https://www.thoughtco.com/us-and-middle-east-since-1945-2353681"> <p class="rm-manual"><span>U.S. Policy in the Middle East: 1945 to 2008</span></p> </a> </li> <li class="rm-manual"> <a href="https://www.thoughtco.com/why-iran-supports-the-syrian-regime-2353082"> <p class="rm-manual"><span>Why Iran Supports the Syrian Regime</span></p> </a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.thoughtco.com/saudi-arabia-and-syrian-uprising-2353552"> <p class="rm-manual"><span>Saudi Arabia and the Syrian Uprising Explained</span></p> </a> </li> <li class="rm-manual"> <a href="https://www.thoughtco.com/a-history-of-u-s-sanctions-against-iran-3310088"> <p class="rm-manual"><span>A History Of U.S. Sanctions Against Iran</span></p> </a> </li> <li class="rm-manual"> <a href="https://www.thoughtco.com/the-history-of-terrorism-3209374"> <p class="rm-manual"><span>The History of Terrorism</span></p> </a> </li> <li class="rm-manual"> <a href="https://www.thoughtco.com/plo-the-palestine-liberation-organization-2353155"> <p class="rm-manual"><span>An Overview of the Palestine Liberation Organization</span></p> </a> </li> <li class="rm-manual"> <a href="https://www.thoughtco.com/syrian-civil-war-explained-2353569"> <p class="rm-manual"><span>Syrian Civil War Explained</span></p> </a> </li> <li class="rm-manual"> <a href="https://www.thoughtco.com/timeline-of-the-lebanese-civil-war-2353188"> <p class="rm-manual"><span>Timeline of the Lebanese Civil War From 1975 to 1990</span></p> </a> </li> <li class="rm-manual"> <a href="https://www.thoughtco.com/reasons-for-us-intervention-in-syria-2353550"> <p class="rm-manual"><span>Reasons for US intervention in Syria</span></p> </a> </li> <li class="rm-manual"> <a href="https://www.thoughtco.com/irans-complex-government-195529"> <p class="rm-manual"><span>The Islamic Republic of Iran's Complex Government</span></p> </a> </li> </ul></article>
+</body></html>

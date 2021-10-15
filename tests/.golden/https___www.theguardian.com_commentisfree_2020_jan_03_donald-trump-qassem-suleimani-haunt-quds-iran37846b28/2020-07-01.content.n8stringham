@@ -1,0 +1,169 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Donald Trump’s assassination of Qassem Suleimani will come back to haunt him | Mohammad Ali Shabani | Opinion | The Guardian </p>
+<p class="rm-manual"><a href="#maincontent">Skip to main content</a> </p>
+<p class="rm-manual"> <a href="https://www.theguardian.com/us"> <span>The Guardian - Back to home</span> </a> </p>
+<p class="rm-manual"> Support The Guardian </p>
+<p class="rm-manual"> Available for everyone, funded by readers </p>
+<p class="rm-manual"><a href="https://support.theguardian.com/contribute?INTCMP=header_support_contribute&amp;acquisitionData=%7B%22componentType%22:%22ACQUISITIONS_HEADER%22,%22componentId%22:%22header_support_contribute%22,%22source%22:%22GUARDIAN_WEB%22%7D"> Contribute </a> </p>
+<p class="rm-manual"><a href="https://support.theguardian.com/subscribe?INTCMP=header_support_subscribe&amp;acquisitionData=%7B%22componentType%22:%22ACQUISITIONS_HEADER%22,%22componentId%22:%22header_support_subscribe%22,%22source%22:%22GUARDIAN_WEB%22%7D"> Subscribe </a> </p>
+<p class="rm-manual"><a href="https://support.theguardian.com/contribute?INTCMP=header_support_contribute&amp;acquisitionData=%7B%22componentType%22:%22ACQUISITIONS_HEADER%22,%22componentId%22:%22header_support_contribute%22,%22source%22:%22GUARDIAN_WEB%22%7D"> Contribute </a> </p>
+<p class="rm-manual"> <a href="https://jobs.theguardian.com/?INTCMP=jobs_us_web_newheader"> Search jobs </a> </p>
+<p class="rm-manual"> <a href="https://profile.theguardian.com/signin?INTCMP=DOTCOM_NEWHEADER_SIGNIN"> Sign in </a> My account </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://manage.theguardian.com/"> Account overview </a> </li> <li class="rm-manual"> <a href="https://manage.theguardian.com/public-settings"> Profile </a> </li> <li class="rm-manual"> <a href="https://manage.theguardian.com/email-prefs"> Emails &amp; marketing </a> </li> <li class="rm-manual"> <a href="https://manage.theguardian.com/account-settings"> Settings </a> </li> <li class="rm-manual"> <a href="https://manage.theguardian.com/help"> Help </a> </li> <li class="rm-manual"> <a> Comments &amp; replies </a> </li> <li class="rm-manual"> <a href="https://profile.theguardian.com/signout"> Sign out </a> </li> </ul>
+<p class="rm-manual"><a href="https://www.google.co.uk/advanced_search?q=site:www.theguardian.com"> Search </a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.theguardian.com/preference/edition/us"> <span>switch to the </span> US edition </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/preference/edition/uk"> <span>switch to the </span> UK edition </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/preference/edition/au"> <span>switch to the </span> Australia edition </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/preference/edition/int"> <span>switch to the </span> International edition </a> </li> </ul>
+<p class="rm-manual"><span>current edition: </span> US edition </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.theguardian.com/us"> News </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/us/commentisfree"> Opinion </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/us/sport"> Sport </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/us/culture"> Culture </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/us/lifeandstyle"> Lifestyle </a> </li> </ul>
+<p class="rm-manual"><span> <span>Show</span> More </span> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.theguardian.com/us-news"> US news </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/us-news/us-elections-2020"> Elections 2020 </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/world"> World news </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/us/environment"> Environment </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/football"> Soccer </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/us-news/us-politics"> US politics </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/us/business"> Business </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/us/technology"> Tech </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/science"> Science </a> </li> </ul> </li> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.theguardian.com/profile/editorial"> The Guardian view </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/index/contributors"> Columnists </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/tone/letters"> Letters </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/type/video+tone/comment"> Opinion videos </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/cartoons/archive"> Cartoons </a> </li> </ul> </li> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.theguardian.com/football"> Soccer </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/sport/nfl"> NFL </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/sport/tennis"> Tennis </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/sport/mlb"> MLB </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/football/mls"> MLS </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/sport/nba"> NBA </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/sport/nhl"> NHL </a> </li> </ul> </li> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.theguardian.com/us/film"> Film </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/books"> Books </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/music"> Music </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/artanddesign"> Art &amp; design </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/us/tv-and-radio"> TV &amp; radio </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/stage"> Stage </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/music/classicalmusicandopera"> Classical </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/games"> Games </a> </li> </ul> </li> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.theguardian.com/fashion"> Fashion </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/food"> Food </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/tone/recipes"> Recipes </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/lifeandstyle/love-and-sex"> Love &amp; sex </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/lifeandstyle/home-and-garden"> Home &amp; garden </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/lifeandstyle/health-and-wellbeing"> Health &amp; fitness </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/lifeandstyle/family"> Family </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/us/travel"> Travel </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/us/money"> Money </a> </li> </ul> </li> </ul>
+<p class="rm-manual"> <span>What term do you want to search?</span> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://support.theguardian.com/contribute?INTCMP=side_menu_support_contribute&amp;acquisitionData=%7B%22componentType%22:%22ACQUISITIONS_HEADER%22,%22componentId%22:%22side_menu_support_contribute%22,%22source%22:%22GUARDIAN_WEB%22%7D"> Make a contribution </a> </li> <li class="rm-manual"> <a href="https://support.theguardian.com/subscribe?INTCMP=side_menu_support_subscribe&amp;acquisitionData=%7B%22componentType%22:%22ACQUISITIONS_HEADER%22,%22componentId%22:%22side_menu_support_subscribe%22,%22source%22:%22GUARDIAN_WEB%22%7D"> Subscribe </a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.theguardian.com/preference/edition/uk"> <span>switch to the </span> UK edition </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/preference/edition/au"> <span>switch to the </span> Australia edition </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/preference/edition/int"> <span>switch to the </span> International edition </a> </li> </ul> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://jobs.theguardian.com/?INTCMP=jobs_us_web_newheader_dropdown"> Search jobs </a> </li> <li class="rm-manual"> <a href="https://theguardian.newspapers.com/"> Digital Archive </a> </li> <li class="rm-manual"> <a href="https://discountcode.theguardian.com/"> Coupons </a> </li> <li class="rm-manual"> <a href="https://puzzles.theguardian.com/download"> Guardian Puzzles app </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/mobile/2014/may/29/the-guardian-for-mobile-and-tablet"> The Guardian app </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/video"> Video </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/podcasts"> Podcasts </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/inpictures"> Pictures </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/email-newsletters"> Newsletters </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/membership"> Inside the Guardian </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/weekly?INTCMP=gdnwb_mawns_editorial_gweekly_GW_TopNav_US"> Guardian Weekly </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/crosswords"> Crosswords </a> </li> <li class="rm-manual"> <a href="https://www.facebook.com/theguardian"> Facebook </a> </li> <li class="rm-manual"> <a href="https://twitter.com/guardian"> Twitter </a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://jobs.theguardian.com/?INTCMP=jobs_us_web_newheader_dropdown"> Search jobs </a> </li> <li class="rm-manual"> <a href="https://theguardian.newspapers.com/"> Digital Archive </a> </li> <li class="rm-manual"> <a href="https://discountcode.theguardian.com/"> Coupons </a> </li> <li class="rm-manual"> <a href="https://puzzles.theguardian.com/download"> Guardian Puzzles app </a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.theguardian.com/world"> World </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/world/europe-news"> Europe </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/us-news"> US </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/world/americas"> Americas </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/world/asia"> Asia </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/australia-news"> Australia </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/world/middleeast"> Middle East </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/world/africa"> Africa </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/inequality"> Inequality </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/global-development"> Global development </a> </li> </ul>
+<p class="rm-manual"> <a href="https://www.theguardian.com/us/commentisfree"> <span> Opinion </span> </a> </p>
+<p class="rm-manual"> <a href="https://www.theguardian.com/world/iran"> <span> Iran </span> </a> </p>
+<p class="rm-manual"> This article is more than 5 months old </p>
+<h1 class="rm-manual"> Donald Trump’s assassination of Qassem Suleimani will come back to haunt him </h1>
+<p class="rm-manual"> This article is more than 5 months old </p>
+<p class="rm-manual"><span><span> <a rel="author" href="https://www.theguardian.com/profile/mohammad-ali-shabani"><span>Mohammad Ali Shabani</span></a></span></span> </p>
+<p class="rm-manual"> The Quds force leader had the status of national hero even among secular Iranians. His death could act as a rallying cry </p>
+<p class="rm-manual"> Fri 3 Jan 2020 <span>08.52 EST</span> Last modified on Fri 3 Jan 2020 <span>12.10 EST</span> </p>
+<p class="rm-manual"> Play Video </p>
+<p class="rm-manual"> 1:08 </p>
+<figcaption> 'Down with USA': protests sweep Iran after assassination of Qassem Suleimani – video </figcaption><p><span><span>T</span></span>he US has <a href="https://www.theguardian.com/world/2020/jan/03/baghdad-airport-iraq-attack-deaths-iran-us-tensions">assassinated</a>
+ Qassem Suleimani, the famed leader of Iran’s Quds force, alongside a 
+senior commander of Iraq’s Popular Mobilisation Units, Abu Mahdi 
+al-Muhandis. To grasp what may come next, it is vital to understand not 
+only who these men were but also the system that produced them.</p>
+<p>Nicknamed the “shadow commander” in the popular press, Suleimani spent his <a href="https://www.theguardian.com/world/2020/jan/03/who-is-qassem-suleimani-profile-iran">formative years</a>
+ on the battlefields of the Iran-Iraq war during the 1980s, when Saddam 
+Hussein – who at the time enjoyed the support of western and Arab powers
+ – was attempting to destroy the emerging Islamic Republic.</p>
+<p>But few people remember that his first major mission as commander of 
+the Quds force – the extraterritorial branch of Iran’s Revolutionary 
+Guards – involved implicit coordination with the United States as the US
+ invaded Afghanistan in 2001. The Taliban were, and to some extent 
+remain, a mutual enemy. That alliance of convenience ended in 2002 when 
+the US president George W Bush notoriously branded <a href="https://www.theguardian.com/world/iran">Iran</a> a member of the “axis of evil”.</p>
+<p>In the years after, Suleimani laboured to bleed the US military in 
+places like Iraq. He succeeded. After having spent trillions of dollars 
+and lost thousands of troops, Washington withdrew from <a href="https://www.theguardian.com/world/iraq">Iraq</a> in 2011 – partly as a result of Iranian pressure on the Iraqi government.</p>
+<p>Suleimani had little time to celebrate, however. His attention was 
+turned to containing fallout from the Arab spring, propping up the 
+Syrian president, Bashar al-Assad. That development saw the creation of a
+ region-wide network of Iranian-backed militias numbering more than 
+100,000 men, unprecedented Iranian military collaboration with Russia, 
+and the transformation of Hezbollah into a force capable of operating on
+ significant scale outside Lebanon’s borders. By 2014, when he 
+successfully halted Islamic State’s attempt to overrun Iraq, Suleimani 
+was being feted as a hero among Iraqis alongside the local commanders, 
+including al-Muhandis. The same response was evident in Iran, where he 
+quickly became a household name and was rumoured to be a potential 
+future president – a trend that was strengthened by the Trump 
+administration’s unilateral withdrawal from the Iran nuclear deal in 
+2018.</p>
+<p>So the US has not merely killed an Iranian military commander but 
+also a highly popular figure, viewed as a guardian of Iran even among 
+secular-minded Iranians. And with the assassination of al-Muhandis, the 
+Trump administration has put itself in the position of having killed the
+ operational commander of a large branch of the Iraqi armed forces.</p>
+<p>Some will characterise the deaths as a huge blow to Iran’s proxy 
+capabilities and wider policy in the region. But such an approach 
+ignores how the Iranian system is structured.</p>
+<p>Suleimani’s successor as Quds force leader – his long-time deputy, 
+Esmail Qaani – was announced within 12 hours of his death. And while 
+Suleimani was charismatic and played a personal role in cultivating many
+ of Iran’s relationships in the region, those ties do not rely on him 
+alone. Rather, they are the product of extensive and deep bonds that 
+often go back decades and in many instances involve family ties.</p>
+<p>Suleimani was well aware of the dangers of the job, as was his 
+singular boss, Ayatollah Ali Khamenei, who in years past deemed him a 
+“living martyr”. So succession planning was never far from his mind. 
+Indeed, 62-year-old Suleimani gave his younger lieutenants considerable 
+operational authority. In practice, this has meant the elevation of a 
+new generation of Quds force operatives, some of whom Suleimani had 
+already begun positioning in vital posts: a case in point is Iraj 
+Masjedi, the current Iranian ambassador to Iraq.</p>
+<p>So what comes next? Predictably, the Iranian authorities have 
+promised “severe retaliation”. How that unfolds in practice is anyone’s 
+guess. There is certainly no shortage of US targets in the region. But 
+Suleimani may, with his death, have already achieved the greatest 
+revenge of all, and without firing a single bullet: namely, his ultimate
+ objective of ending the US military presence in Iraq.</p>
+<p>If he was indeed behind the attack on the US military base that 
+ultimately precipitated his own assassination, then he has probably 
+succeeded in trapping the US into initiating its own ejection from Iraq.
+ So far, most Iraqi decision-makers, from the caretaker prime minister 
+to the country’s highest spiritual authority, have condemned in no 
+uncertain terms the violation of sovereignty that the assassination 
+entailed.</p>
+<p>As for Trump, he is stuck with the same problem he faced before Friday’s strike.</p>
+<h2 class="rm-manual">US citizens in Iraq: tell us about your situation</h2>
+<p class="rm-manual"> Read more </p>
+<p>The United States is no closer to the much-touted “new deal” with 
+Iran, which the president boasted would eclipse that negotiated by his 
+predecessor. Whatever remaining diplomatic off-ramps there were are 
+rapidly crumbling.</p>
+<p>Meanwhile, at a time when his unprecedented sanctions had stirred 
+unrest inside Iran, the political elite has just been handed a rallying 
+cry. The strike on Suleimani, whose status approached that of national 
+icon, will harden popular sentiment against the US while simultaneously 
+shoring up the regime.</p>
+<p>For all his crowing about the decisive blow dealt to an insolent 
+enemy, Trump may be about to discover that the problem with martyrs is 
+that they live forever.</p>
+<p><span>•</span> Mohammad Ali Shabani is a researcher at Soas University of London, where he focuses on Iranian foreign policy</p>
+<p class="rm-manual"> <span>Topics</span> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.theguardian.com/world/iran"> Iran </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/us/commentisfree"> Opinion </a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.theguardian.com/world/middleeast"> Middle East and North Africa </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/world/iraq"> Iraq </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/us-news/donaldtrump"> Donald Trump </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/tone/comment"> comment </a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://syndication.theguardian.com/automation/?url=https%3A%2F%2Fwww.theguardian.com%2Fcommentisfree%2F2020%2Fjan%2F03%2Fdonald-trump-qassem-suleimani-haunt-quds-iran&amp;type=blog&amp;internalpagecode=6969937"> <span>Reuse this content</span> </a> </li> </ul>
+<h2 class="rm-manual"> <a href="https://www.theguardian.com/most-read/commentisfree">Most popular</a> </h2>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.theguardian.com/world"> World </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/world/europe-news"> Europe </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/us-news"> US </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/world/americas"> Americas </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/world/asia"> Asia </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/australia-news"> Australia </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/world/middleeast"> Middle East </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/world/africa"> Africa </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/inequality"> Inequality </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/global-development"> Global development </a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.theguardian.com/us"> News </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/us/commentisfree"> Opinion </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/us/sport"> Sport </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/us/culture"> Culture </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/us/lifeandstyle"> Lifestyle </a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.theguardian.com/info/about-guardian-us"> About us </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/info/about-guardian-us/contact"> Contact us </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/info/complaints-and-corrections"> Complaints &amp; corrections </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/securedrop"> SecureDrop </a> </li> <li class="rm-manual"> <a href="https://workforus.theguardian.com/"> Work for us </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/info/privacy"> Privacy policy </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/info/cookies"> Cookie policy </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/help/terms-of-service"> Terms &amp; conditions </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/help"> Help </a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.theguardian.com/index/subjects/a"> All topics </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/index/contributors"> All writers </a> </li> <li class="rm-manual"> <a href="https://theguardian.newspapers.com/"> Digital newspaper archive </a> </li> <li class="rm-manual"> <a href="https://www.facebook.com/theguardian"> Facebook </a> </li> <li class="rm-manual"> <a href="https://twitter.com/guardian"> Twitter </a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://advertising.theguardian.com/us/advertising"> Advertise with us </a> </li> <li class="rm-manual"> <a href="https://www.theguardian.com/guardian-labs-us"> Guardian Labs </a> </li> <li class="rm-manual"> <a href="https://jobs.theguardian.com/?INTCMP=NGW_FOOTER_US_GU_JOBS"> Search jobs </a> </li> <li class="rm-manual"> <a href="https://discountcode.theguardian.com/"> Discount Codes </a> </li> </ul>
+<p class="rm-manual"> Support The Guardian </p>
+<p class="rm-manual"> Available for everyone, funded by readers </p>
+<p class="rm-manual"><a href="https://support.theguardian.com/contribute?INTCMP=footer_support_contribute&amp;acquisitionData=%7B%22componentType%22:%22ACQUISITIONS_FOOTER%22,%22componentId%22:%22footer_support_contribute%22,%22source%22:%22GUARDIAN_WEB%22%7D"> Contribute </a> </p>
+<p class="rm-manual"><a href="https://support.theguardian.com/subscribe?INTCMP=footer_support_subscribe&amp;acquisitionData=%7B%22componentType%22:%22ACQUISITIONS_FOOTER%22,%22componentId%22:%22footer_support_subscribe%22,%22source%22:%22GUARDIAN_WEB%22%7D"> Subscribe </a> </p>
+<p class="rm-manual"> © 2020 Guardian News &amp; Media Limited or its affiliated companies. All rights reserved. </p></article>
+</body></html>

@@ -1,0 +1,98 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><article class="rm-manual"> <span>National Security</span> </article><h1 class="rm-manual">CNN: Kim Jong-un Fears for His Life Amid Assassination Rumors</h1>
+<p class="rm-manual"><span><a href="https://freebeacon.com/author/jack-heretik/" rel="author">Jack Heretik</a> <span>-</span></span> October 21, 2016 4:26 PM</p>
+<p>North Korean leader Kim Jong-Un is fearing for his life as rumors of an assassination plot swirl, CNN reported Friday.</p>
+<p>The dictator is possibly being targeted by an elite team from South 
+Korea and by some within the elite circles of the communist regime.</p>
+<h4 class="rm-manual">Recent Stories in National Security</h4>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://freebeacon.com/national-security/trump-admin-blocks-visas-for-chinese-communist-party-officials/">Trump Admin Blocks Visas for Chinese Communist Party Officials</a> </li> <li class="rm-manual"> <a href="https://freebeacon.com/national-security/navy-warns-of-increase-in-personnel-taking-lsd/">Navy Warns of Increase in Personnel Taking LSD</a> </li> <li> <a href="https://freebeacon.com/national-security/china-russia-rank-as-worst-offenders-in-human-trafficking/">China, Russia Rank as Worst Offenders in Human Trafficking</a> </li> </ul>
+<p>"Is Kim Jong-un an assassination target? South Korea wants you to 
+think he is," CNN correspondent Paula Hancocks reported. "The defense 
+minister says an elite team is on standby to take him out if there's an 
+imminent nuclear threat. The intelligence agency backing him up this 
+week telling lawmakers they believe Kim Jong-un himself is worried about
+ his personal safety, changing venues and schedules at short notice and 
+buying explosives and poison detectors from overseas."</p>
+<p>Hancocks also talked with a defector from North Korea, Kang Myung-do,
+ a former member of North Korea's small elite and the son-in-law of a 
+former prime minister. He said that he still communicates with North 
+Korean officials, who are worried about Kim's behavior.</p>
+<p>Hancock said that Kang told her many believe it is possible someone 
+will try to kill Kim to save their own life since the North Korean 
+leader is known for having important members of the elite executed in 
+brutal fashion, including his <a href="http://worldnews.nbcnews.com/_news/2014/01/03/22156917-kim-jong-uns-executed-uncle-was-eaten-alive-by-120-hungry-dogs-report">own uncle</a>.</p>
+<p>It has recently been <a href="http://www.dailymail.co.uk/news/article-3857548/Kim-Jong-64-traitors-executed-2016.html">reported</a> that Kim has had 64 "traitors" publicly executed this year alone.</p>
+<p class="rm-manual">This entry was posted in <a href="https://freebeacon.com/national-security/">National Security</a> and tagged <a href="https://freebeacon.com/tag/kim-jong-un/">Kim Jong Un</a>, <a href="https://freebeacon.com/tag/north-korea/">North Korea</a>. Bookmark the <a href="https://freebeacon.com/national-security/cnn-kim-jong-un-fears-his-life-amid-assassination-rumors/">permalink</a>.</p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://twitter.com/share?url=https%3A%2F%2Ffreebeacon.com%2Fnational-security%2Fcnn-kim-jong-un-fears-his-life-amid-assassination-rumors%2F&amp;text=CNN%3A+Kim+Jong-un+Fears+for+His+Life+Amid+Assassination+Rumors"> <span>Tweet</span> </a> </li> <li class="rm-manual"> <a href="https://www.facebook.com/share.php?u=https%3A%2F%2Ffreebeacon.com%2Fnational-security%2Fcnn-kim-jong-un-fears-his-life-amid-assassination-rumors%2F"> <span>Share</span> </a> </li> <li class="rm-manual"> <a href="mailto:?to=&amp;body=Please%20read%20this%20article%20from%20the%20Washington%20Free%20Beacon.%20https%3A%2F%2Ffreebeacon.com%2Fnational-security%2Fcnn-kim-jong-un-fears-his-life-amid-assassination-rumors%2F&amp;subject=CNN:%20Kim%20Jong-un%20Fears%20for%20His%20Life%20Amid%20Assassination%20Rumors"> <span>MAIL</span> </a> </li> <li class="rm-manual"> <a href="#"> <span>PRINT</span> </a> </li> </ul>
+<h3 class="rm-manual">Related Articles</h3>
+<h4 class="rm-manual"><a href="https://freebeacon.com/national-security/speculation-about-kims-death-could-be-a-sign-of-waning-relations-between-north-korea-china/" rel="bookmark">Speculation About Kim’s Death Could Be a Sign of Waning Relations Between North Korea, China</a></h4>
+<h4 class="rm-manual"><a href="https://freebeacon.com/issues/u-s-monitors-reports-of-kim-jong-uns-illness-amid-doubts-from-south-korea-china/" rel="bookmark">U.S. Monitors Reports of Kim Jong Un’s Illness Amid Doubts From South Korea, China</a></h4>
+<h4 class="rm-manual"><a href="https://freebeacon.com/national-security/report-kim-jong-un-in-worsening-condition-after-undergoing-cardiovascular-procedure/" rel="bookmark">Report: Kim Jong Un in Worsening Condition After Undergoing Cardiovascular Procedure</a></h4>
+<h4 class="rm-manual"><a href="https://freebeacon.com/politics/chris-matthews-compares-gop-applause-during-sotu-to-north-koreans-praising-dear-leader/" rel="bookmark">Chris Matthews Compares GOP Applause During SOTU to North Koreans Praising Dear Leader</a></h4>
+<h4 class="rm-manual"><a href="https://freebeacon.com/national-security/south-koreas-moon-cites-desperate-need-for-ways-to-improve-ties-with-north/" rel="bookmark">South Korea’s Moon Cites ‘Desperate Need’ for Ways to Improve Ties With North</a></h4>
+<h4 class="rm-manual"><a href="https://freebeacon.com/national-security/north-korea-fires-ballistic-missile-possibly-from-submarine-days-before-talks/" rel="bookmark">North Korea Fires Ballistic Missile, Possibly From Submarine, Days Before Talks</a></h4>
+<h4 class="rm-manual"><a href="https://freebeacon.com/national-security/south-korea-to-scrap-intelligence-sharing-pact-with-japan-amid-row-over-history/" rel="bookmark">South Korea to Scrap Intelligence-Sharing Pact With Japan Amid Row Over History</a></h4>
+<h4 class="rm-manual"><a href="https://freebeacon.com/national-security/north-koreas-kim-oversaw-the-test-firing-of-new-weapon-again/" rel="bookmark">North Korea’s Kim Oversaw the Test-Firing of New Weapon Again</a></h4>
+<p class="rm-manual"> Jack is a media analyst for the Washington Free 
+Beacon. He is from Northern Ohio and graduated from the Catholic 
+University of America in 2011. Prior to joining the Free Beacon, Jack 
+was a Production Assistant for EWTN's The World Over and worked on Sen. 
+Bill Cassidy's 2014 campaign. </p>
+<h6 class="rm-manual">Advertisement</h6>
+<h6 class="rm-manual">Advertisement</h6>
+<h3 class="rm-manual">Popular Stories in Politics</h3>
+<h4 class="rm-manual"><a href="https://freebeacon.com/politics/left-wing-activist-shaun-king-demands-removal-of-white-jesus-statues/" rel="bookmark">Left-Wing Activist Shaun King Demands Removal of ‘White’ Jesus Statues</a></h4>
+<h4 class="rm-manual"><a href="https://freebeacon.com/politics/sexy-joe-biden-coloring-book/" rel="bookmark">REVIEW: ‘Hot Cup of Joe,’ The Sexy Biden Coloring Book</a></h4>
+<h4 class="rm-manual"><a href="https://freebeacon.com/politics/continetti-trump-could-make-up-ground-by-backing-bipartisan-police-reform/" rel="bookmark">Continetti: Trump Could Make Up Ground by Backing Bipartisan Police Reform</a></h4>
+<h4 class="rm-manual"><a href="https://freebeacon.com/politics/cindy-mccain-disappointed-in-amy-mcgraths-attack-ad-using-john-mccains-image/" rel="bookmark">Cindy McCain ‘Disappointed’ in Amy McGrath’s Use of John McCain’s Image in Attack Ad</a></h4>
+<h6 class="rm-manual">Advertisement</h6>
+<h3 class="rm-manual">Today's Stories</h3>
+<h4 class="rm-manual"><a href="https://freebeacon.com/democrats/obama-two-volume-memoir/" rel="bookmark">Barack Obama Can’t Stop Trashing His Wife’s Writing Ability</a></h4>
+<p class="rm-manual"><span><a href="https://freebeacon.com/author/andrew-stiles/" rel="author">Andrew Stiles</a> </span> June 29, 2020 4:45 PM</p>
+<h4 class="rm-manual"><a href="https://freebeacon.com/2020-election/joe-biden-brain-disease/" rel="bookmark">POLL: 38 Percent of Americans Think Joe Biden Has Dementia</a></h4>
+<p class="rm-manual"><span><a href="https://freebeacon.com/author/andrew-stiles/" rel="author">Andrew Stiles</a> </span> June 29, 2020 2:15 PM</p>
+<h4 class="rm-manual"><a href="https://freebeacon.com/media/wapo-opinions-editor-deletes-tweet-floating-revenge-against-white-women/" rel="bookmark">WaPo Opinion Editor Deletes Tweet Floating ‘Revenge’ Against White Women</a></h4>
+<p class="rm-manual"><span><a href="https://freebeacon.com/author/graham-piro/" rel="author">Graham Piro</a> </span> June 29, 2020 2:00 PM</p>
+<h4 class="rm-manual"><a href="https://freebeacon.com/culture/critics-blast-jon-stewart-movie-inspired-by-ossoff-race-ham-fisted-and-insulting/" rel="bookmark">Critics Blast Jon Stewart Movie Inspired by Ossoff Race: ‘Ham-Fisted and Insulting’</a></h4>
+<p class="rm-manual"><span><a href="https://freebeacon.com/author/rutz/" rel="author">David Rutz</a> </span> June 29, 2020 1:30 PM</p>
+<h4 class="rm-manual"><a href="https://freebeacon.com/courts/roberts-joins-liberals-to-deliver-abortion-rights-victory/" rel="bookmark">Roberts Joins Liberals To Deliver Abortion Rights Victory</a></h4>
+<p class="rm-manual"><span><a href="https://freebeacon.com/author/kevin-daley/" rel="author">Kevin Daley</a> </span> June 29, 2020 10:21 AM</p>
+<h4 class="rm-manual"><a href="https://freebeacon.com/2020-election/dem-iowa-senate-candidate-takes-thousands-from-corporate-funded-pacs/" rel="bookmark">Iowa Senate Candidate Takes Thousands From Corporate-Funded PACs</a></h4>
+<p class="rm-manual"><span><a href="https://freebeacon.com/author/collin-anderson/" rel="author">Collin Anderson</a> </span> June 29, 2020 5:00 AM</p></article>
+</body></html>

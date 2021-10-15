@@ -1,0 +1,143 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">WPP CEO on how businesses are handling advertising amid coronavirus crisis [Video]</p>
+<p class="rm-manual"><a href="https://ca.finance.yahoo.com/">Yahoo</a></p>
+<p class="rm-manual">Search</p>
+<p class="rm-manual"><span>No matching results for ''</span></p>
+<p class="rm-manual"><span>Tip: Try a valid symbol or a specific company name for relevant results</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://login.yahoo.com/config/login?.intl=ca&amp;.lang=en-CA&amp;.src=finance&amp;.done=https%3A%2F%2Fca.finance.yahoo.com%2Fvideo%2Fwpp-ceo-businesses-handling-advertising-144710263.html">Sign in</a></li>
+<li class="rm-manual"><a href="https://mail.yahoo.com/?.intl=ca&amp;.lang=en-CA&amp;.partner=none&amp;.src=finance">Mail</a></li>
+</ul>
+<p class="rm-manual"><a href="https://finance.yahoo.com/"> Finance</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://ca.finance.yahoo.com/watchlists"> Watchlists</a></li>
+<li class="rm-manual"><a href="https://ca.finance.yahoo.com/portfolios"> My Portfolio</a></li>
+<li class="rm-manual"><a href="https://ca.finance.yahoo.com/screener"> My Screeners</a></li>
+<li class="rm-manual"><a href="https://ca.finance.yahoo.com/topic/yahoo-originals"> Yahoo Originals</a></li>
+<li class="rm-manual"><a href="https://ca.finance.yahoo.com/personal-finance"> Personal Finance</a></li>
+<li class="rm-manual"><a href="https://ca.finance.yahoo.com/topic/technology"> Tech</a></li>
+<li class="rm-manual"><p href="#" class="rm-manual"> Market Data</p></li>
+<li class="rm-manual"><p href="#" class="rm-manual"> Industry News</p></li>
+</ul>
+<p class="rm-manual"><span>Canada markets close in 1 hour 5 minutes</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><h3 class="rm-manual">
+<a href="https://ca.finance.yahoo.com/quote/%5EGSPTSE?p=%5EGSPTSE">S&amp;P/TSX</a><span>15,498.54</span><p class="rm-manual"><span>+24.34</span><span> (<span>+0.16%</span> )</span></p>
+</h3></li>
+<li class="rm-manual"><h3 class="rm-manual">
+<a href="https://ca.finance.yahoo.com/quote/%5EGSPC?p=%5EGSPC">S&amp;P 500</a><span>3,117.02</span><p class="rm-manual"><span>+19.28</span><span> (<span>+0.62%</span> )</span></p>
+</h3></li>
+<li class="rm-manual"><h3 class="rm-manual">
+<a href="https://ca.finance.yahoo.com/quote/%5EDJI?p=%5EDJI">DOW</a><span>26,020.18</span><p class="rm-manual"><span>+148.72</span><span> (<span>+0.57%</span> )</span></p>
+</h3></li>
+<li class="rm-manual"><h3 class="rm-manual">
+<a href="https://ca.finance.yahoo.com/quote/CADUSD=X?p=CADUSD=X">CAD/USD</a><span>0.7392</span><p class="rm-manual"><span>+0.0041</span><span> (<span>+0.55%</span> )</span></p>
+</h3></li>
+<li class="rm-manual"><h3 class="rm-manual">
+<a href="https://ca.finance.yahoo.com/quote/CL=F?p=CL=F">CRUDE OIL</a><span>40.60</span><p class="rm-manual"><span>+0.85</span><span> (<span>+2.14%</span> )</span></p>
+</h3></li>
+<li class="rm-manual"><h3 class="rm-manual">
+<a href="https://ca.finance.yahoo.com/quote/BTC-CAD?p=BTC-CAD">BTC-CAD</a><span>12,896.89</span><p class="rm-manual"><span>+237.48</span><span> (<span>+1.88%</span> )</span></p>
+</h3></li>
+<li class="rm-manual"><h3 class="rm-manual">
+<a href="https://ca.finance.yahoo.com/quote/%5ECMC200?p=%5ECMC200">CMC Crypto 200</a><span>194.80</span><p class="rm-manual"><span>+3.46</span><span> (<span>+1.81%</span> )</span></p>
+</h3></li>
+<li class="rm-manual"><h3 class="rm-manual">
+<a href="https://ca.finance.yahoo.com/quote/GC=F?p=GC=F">GOLD FUTURES</a><span>1,767.90</span><p class="rm-manual"><span>+14.90</span><span> (<span>+0.85%</span> )</span></p>
+</h3></li>
+</ul>
+<h1 class="rm-manual">WPP CEO on how businesses are handling advertising amid coronavirus crisis</h1>
+<p class="rm-manual"><span><span><a href="https://finance.yahoo.com/">Yahoo Finance Video</a></span></span>April 17, 2020</p>
+<p class="">WPP CEO Mark Read joins Yahoo Finance’s Alexis 
+Christoforous, Brian Sozzi and Heidi Chung to discuss how companies are 
+changing their marketing amid the coronavirus outbreak.</p>
+<h2 class="rm-manual">What to Read Next</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/collecting-cerb-cra-says-190-130653788.html"><span>Collecting CERB? The CRA Says 190,000 Canadians Are Making This Mistake!</span></a></h3><p class="rm-manual">The Motley Fool</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/macklem-sees-long-road-ahead-150017855.html"><span>Macklem Sees Long Road Ahead for Canada’s Economic Recovery</span></a></h3><p class="rm-manual">Bloomberg</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/spam-corned-beef-sales-canned-130249359.html"><span>Spam Sales Are Booming With Consumers Seeking Out Comfort</span></a></h3><p class="rm-manual">Bloomberg</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/canopy-growth-sees-70-b-pot-market-by-2023-driven-by-us-legalization-163623970.html"><span>Canopy Growth sees $70B pot market by 2023, driven by U.S. legalization</span></a></h3><p class="rm-manual">Yahoo Finance Canada</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/apple-watch-sleep-tracking-181657797.html"><span>Apple Watch finally gets sleep tracking, plus hand-washing feature</span></a></h3><p class="rm-manual">Yahoo Finance</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/virus-cases-surge-us-worldwide-060137387.html"><span>Surging US virus cases raise fear that progress is slipping</span></a></h3><p class="rm-manual">The Canadian Press</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/boston-fed-rosengren-second-half-2020-more-difficult-than-anticipated-171504896.html"><span>Boston Fed's Rosengren: Second half of 2020 will be 'more difficult' than anticipated</span></a></h3><p class="rm-manual">Yahoo Finance</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/consumer-covid-19-hangover-means-a-slow-return-to-normal-for-businesses-115208524.html"><span>Consumer ‘COVID-19 hangover’ means a slow return to normal for businesses</span></a></h3><p class="rm-manual">Yahoo Finance Canada</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/air-canada-tsx-ac-ceo-141725078.html"><span>Air Canada (TSX:AC) CEO Begs for Help</span></a></h3><p class="rm-manual">The Motley Fool</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/grocery-executives-called-to-testify-over-pandemic-pay-cuts-182747696.html"><span>Grocery executives called to testify over pandemic pay cuts</span></a></h3><p class="rm-manual">Yahoo Finance Canada</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/why-stock-market-so-expensive-morning-brief-100136405.html"><span>Why the stock market has gotten so expensive: Morning Brief</span></a></h3><p class="rm-manual">Yahoo Finance</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/toke-meets-tech-pot-shops-are-copying-amazon-and-uber-eats-201548075.html"><span>Toke meets tech: Pot shops take a page from Amazon and Uber Eats</span></a></h3><p class="rm-manual">Yahoo Finance Canada</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/more-canadians-refusing-due-covid-080000079.html"><span>More Canadians are refusing work due to COVID-19 — but it's tough to get authorities to agree</span></a></h3><p class="rm-manual">CBC</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/apple-ios-14-174705402.html"><span>Apple debuts iOS 14, hitting iPhones later this year</span></a></h3><p class="rm-manual">Yahoo Finance</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/trudeau-announces-voluntary-contact-tracing-app-to-slow-spread-of-covid-19-152712343.html"><span>Trudeau announces contact tracing app to track spread of COVID-19</span></a></h3><p class="rm-manual">Yahoo Finance Canada</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/china-pauses-imports-tyson-plant-181751942.html"><span>China pauses imports from Tyson plant over coronavirus fears</span></a></h3><p class="rm-manual">Yahoo Finance Video</p><p class="rm-manual"></p></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/telus-has-fastest-internet-speed-in-2020-pc-mag-144717934.html"><span>Telus has fastest internet speed in 2020: PC Mag</span></a></h3><p class="rm-manual">Yahoo Finance Canada</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/canadians-working-home-permanently-expect-140004651.html"><span>Canadians working from home permanently should expect salary changes: experts</span></a></h3><p class="rm-manual">The Canadian Press</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/we-are-going-to-see-a-down-in-the-gutter-type-campaign-between-trump-and-biden-analyst-175500282.html"><span>'We are going to see a down in the gutter type' Trump and Biden presidential campaigns: analyst</span></a></h3><p class="rm-manual">Yahoo Finance</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/shopify-partnering-with-walmart-positive-not-sole-driving-force-for-surging-stock-analysts-say-155402836.html"><span>Shopify partnering with Walmart positive, not sole driving force for surging stock, analysts say</span></a></h3><p class="rm-manual">Yahoo Finance Canada</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/next-wave-toronto-businesses-allowed-180747708.html"><span>Next Wave of Toronto Businesses Allowed to Reopen Wednesday</span></a></h3><p class="rm-manual">Bloomberg</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/covid-19-business-questions-232131976.html"><span>Tell us: What questions do you have about COVID-19's impact on business?</span></a></h3><p class="rm-manual">Yahoo Finance Canada</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/gold-drives-toward-highest-since-043031981.html"><span>Gold Drives Toward Highest Since 2012 on Virus Resurgence Concern</span></a></h3><p class="rm-manual">Bloomberg</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/cn-rail-sees-eastern-network-153949944.html"><span>CN Rail sees eastern network revival on supply chain diversity, ports</span></a></h3><p class="rm-manual">Reuters</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/high-art-banksy-and-warhol-works-to-adorn-toronto-pot-shop-221339989.html"><span>High art: Banksy and Warhol works to adorn Toronto pot shop</span></a></h3><p class="rm-manual">Yahoo Finance Canada</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/credit-suisse-delisting-etn-made-151439642.html"><span>Credit Suisse Is Delisting an ETN That’s Made 200% This Year</span></a></h3><p class="rm-manual">Bloomberg</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/aussie-slips-early-trading-yen-205729792.html"><span>U.S. Stocks Advance on Tech Surge; Treasuries Rise: Markets Wrap</span></a></h3><p class="rm-manual">Bloomberg</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/buy-alert-top-reasons-buy-180016115.html"><span>BUY ALERT: Top Reasons to Buy Air Canada Stock Right Now</span></a></h3><p class="rm-manual">The Motley Fool</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/stock-market-news-live-june-22-2020-222006226.html"><span>Stock market news live updates: Stocks rise, investors eye uptick in virus cases</span></a></h3><p class="rm-manual">Yahoo Finance</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/500-emergency-oas-gis-boost-182041739.html"><span>$500 Emergency OAS and GIS Boost: Can You Get It?</span></a></h3><p class="rm-manual">The Motley Fool</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/u-cases-1-2-dutch-213210769.html"><span>Latin America Leads Surge; LAX to Scan for Fevers: Virus Update</span></a></h3><p class="rm-manual">Bloomberg</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/d-invested-1-000-shopify-120047247.html"><span>If You’d Invested $1,000 in Shopify’s IPO, This Is How Much Money You’d Have Now</span></a></h3><p class="rm-manual">The Motley Fool</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/biden-surpasses-trump-may-fundraising-181244620.html"><span>Biden surpasses Trump in May fundraising haul </span></a></h3><p class="rm-manual">Yahoo Finance Video</p><p class="rm-manual"></p></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/shopify-partnering-with-walmart-positive-not-sole-driving-force-for-surging-stock-analysts-say-155402836.html"><span>Shopify partnering with Walmart positive, not sole driving force for surging stock, analysts say</span></a></h3><p class="rm-manual">Yahoo Finance Canada</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/next-wave-toronto-businesses-allowed-180747708.html"><span>Next Wave of Toronto Businesses Allowed to Reopen Wednesday</span></a></h3><p class="rm-manual">Bloomberg</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/covid-19-business-questions-232131976.html"><span>Tell us: What questions do you have about COVID-19's impact on business?</span></a></h3><p class="rm-manual">Yahoo Finance Canada</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/gold-drives-toward-highest-since-043031981.html"><span>Gold Drives Toward Highest Since 2012 on Virus Resurgence Concern</span></a></h3><p class="rm-manual">Bloomberg</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/cn-rail-sees-eastern-network-153949944.html"><span>CN Rail sees eastern network revival on supply chain diversity, ports</span></a></h3><p class="rm-manual">Reuters</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/high-art-banksy-and-warhol-works-to-adorn-toronto-pot-shop-221339989.html"><span>High art: Banksy and Warhol works to adorn Toronto pot shop</span></a></h3><p class="rm-manual">Yahoo Finance Canada</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/credit-suisse-delisting-etn-made-151439642.html"><span>Credit Suisse Is Delisting an ETN That’s Made 200% This Year</span></a></h3><p class="rm-manual">Bloomberg</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/aussie-slips-early-trading-yen-205729792.html"><span>U.S. Stocks Advance on Tech Surge; Treasuries Rise: Markets Wrap</span></a></h3><p class="rm-manual">Bloomberg</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/buy-alert-top-reasons-buy-180016115.html"><span>BUY ALERT: Top Reasons to Buy Air Canada Stock Right Now</span></a></h3><p class="rm-manual">The Motley Fool</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/stock-market-news-live-june-22-2020-222006226.html"><span>Stock market news live updates: Stocks rise, investors eye uptick in virus cases</span></a></h3><p class="rm-manual">Yahoo Finance</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/500-emergency-oas-gis-boost-182041739.html"><span>$500 Emergency OAS and GIS Boost: Can You Get It?</span></a></h3><p class="rm-manual">The Motley Fool</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/u-cases-1-2-dutch-213210769.html"><span>Latin America Leads Surge; LAX to Scan for Fevers: Virus Update</span></a></h3><p class="rm-manual">Bloomberg</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news/d-invested-1-000-shopify-120047247.html"><span>If You’d Invested $1,000 in Shopify’s IPO, This Is How Much Money You’d Have Now</span></a></h3><p class="rm-manual">The Motley Fool</p><p></p></li>
+</ul></article>
+</body></html>

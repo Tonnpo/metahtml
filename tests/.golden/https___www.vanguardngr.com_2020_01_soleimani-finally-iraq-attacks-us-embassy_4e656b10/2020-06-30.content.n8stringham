@@ -1,0 +1,77 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual">ICYMI: Soleimani: Finally Iraq attacks US Embassy</h1>
+<p class="rm-manual"> <span>On <a href="https://www.vanguardngr.com/2020/01/soleimani-finally-iraq-attacks-us-embassy/" rel="bookmark">January 8, 2020</a><span>9:35 am</span></span><span>In <a href="https://www.vanguardngr.com/category/foreign/" rel="category tag">Foreign</a>, <a href="https://www.vanguardngr.com/category/trending/" rel="category tag">Trending</a></span><span>by <a href="https://www.vanguardngr.com/author/polycarp/" rel="author">Nwafor</a></span> </p>
+<p>The United States Embassy in Baghdad, Iraq, came under attack on Sunday as multiple rockets were launched at it.</p>
+<p>Daily Mail reports that the rockets fired at the Embassy hit an apartment complex instead, killing civilians.</p>
+<p>According to residents, three explosions rang out, heard inside the 
+heavily-fortified Green Zone, home to the US Embassy and the seat of 
+Iraq’s government.</p>
+<p>This is following growing tension between the United States and Iran over the killing of Iranian General Qassem Soleimani.</p>
+<p>Reports say that Soleimani, the head of the Iranian Revolutionary 
+Guards’ elite Quds Force, was killed by the United States forces.</p>
+<h2><a href="https://www.vanguardngr.com/2019/12/as-roma-on-verge-of-getting-new-owner/" rel="noopener noreferrer">AS Roma on verge of getting new owner</a></h2>
+<p>The top Iranian General was killed “at the direction” of Donald Trump, the United States President.</p>
+<p>Speaking on Soleimani’s death, a Pentagon statement said, “At the 
+direction of the President, the US military has taken decisive defensive
+ action to protect US personnel abroad by killing Qasem Soleimani.”</p>
+<p>The statement added that General Soleimani approved the attacks on the embassy.</p>
+<p>“This strike was aimed at deterring future Iranian attack plans.</p>
+<p>“The United States will continue to take all necessary action to 
+protect our people and our interests wherever they are around the 
+world,” the statement added.</p>
+<h2><a href="https://www.vanguardngr.com/2019/12/putin-thanks-trump-for-intel-that-helped-foil-attacks-on-russian-soil/" rel="noopener noreferrer">Putin thanks Trump for intel that helped foil attacks on Russian soil</a></h2>
+<p>Iran’s Supreme Leader Ayatollah Ali Khamenei had vowed to revenge 
+Soleimani’s killing, while President Donald Trump warned that the US 
+would target 52 sites in the Islamic Republic if Tehran retaliates. <a href="https://www.nan.ng/news/iraq-attacks-u-s-embassy/">NAN</a></p>
+<p class="rm-manual"><a href="http://vanguardngr.com/">Vanguard</a></p>
+<h3 class="rm-manual">Related</h3>
+<p class="rm-manual"> All rights reserved. This material and any other 
+digital content on this platform may not be reproduced, published, 
+broadcast, written or distributed in full or in part, without written 
+permission from <span>VANGUARD NEWS</span>. </p>
+<p class="rm-manual"> <a href="https://play.google.com/store/apps/details?id=com.goodbarber.vanguardngrnews" rel="nofollow"> Download Vanguard News App. </a> Technical Feedback: whatsapp 08023469027 <a href="https://www.vanguardngr.com/about/mobile-app-privacy-policy/" rel="nofollow"> READ our Privacy-policy and cookie policy. </a> </p>
+<h2 class="rm-manual">Nwafor</h2>
+<p class="rm-manual"> <a href="https://www.vanguardngr.com/author/polycarp/" rel="author">View all posts by Nwafor <span>→</span></a> </p>
+<p class="rm-manual"> <a href="https://www.vanguardngr.com/2020/01/breaking-us-denies-iranian-foreign-minister-visa-to-attend-un-meeting/">Previous Post</a></p>
+<h4 class="rm-manual"><a href="https://www.vanguardngr.com/2020/01/breaking-us-denies-iranian-foreign-minister-visa-to-attend-un-meeting/">US denies Iranian Foreign Minister visa to attend UN meeting</a></h4>
+<p class="rm-manual"> <a href="https://www.vanguardngr.com/2020/01/edo-govt-presco-to-collaborate-on-high-yielding-oil-palm-seedling/">Next Post</a></p>
+<h4 class="rm-manual"><a href="https://www.vanguardngr.com/2020/01/edo-govt-presco-to-collaborate-on-high-yielding-oil-palm-seedling/">N69bn oil palm programme: Edo govt, PRESCO to collaborate on high-yielding oil palm seedling</a></h4>
+<h2 class="rm-manual">Disclaimer</h2>
+<p class="rm-manual"> Comments expressed here do not reflect the opinions of vanguard newspapers or any employee thereof. </p></article>
+</body></html>

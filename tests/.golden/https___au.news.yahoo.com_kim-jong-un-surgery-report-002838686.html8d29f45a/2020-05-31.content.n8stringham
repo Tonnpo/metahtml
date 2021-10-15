@@ -1,0 +1,182 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">Mystery Surrounds Kim Jong Un’s Health After Surgery Reports</p>
+<p class="rm-manual"><a href="https://au.yahoo.com/news">Yahoo</a></p>
+<p class="rm-manual">Search</p>
+<ul class="rm-manual"><li class="rm-manual"><a href="https://mail.yahoo.com/?.intl=au&amp;.lang=en-AU&amp;.partner=none&amp;.src=news">Mail</a></li></ul>
+<p class="rm-manual"><a href="https://www.yahoo.com/news/"> News</a></p>
+<p class="rm-manual"><span>Follow us</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://au.news.yahoo.com/latest"> Latest</a></li>
+<li class="rm-manual"><a href="https://au.yahoo.com/topics/coronavirus/"> Coronavirus</a></li>
+<li class="rm-manual"><p href="#" class="rm-manual"> National</p></li>
+<li class="rm-manual"><a href="https://au.news.yahoo.com/world/"> World</a></li>
+<li class="rm-manual"><a href="https://au.news.yahoo.com/good-news"> Good News</a></li>
+<li class="rm-manual"><a href="https://au.news.yahoo.com/ever-wondered"> Ever Wondered</a></li>
+<li class="rm-manual"><a href="https://au.tv.yahoo.com/au-in-the-know"> In The Know</a></li>
+<li class="rm-manual"><a href="https://au.tv.yahoo.com/au-news-video-national-playlist-new"> Watch</a></li>
+</ul>
+<h1 class="rm-manual">Mystery Surrounds Kim Jong Un’s Health After Surgery Reports</h1>
+<p class="rm-manual">Jennifer Jacobs and Shinhye Kang</p>
+<p class="rm-manual"><span><span><a href="https://www.bloomberg.com/" rel="noopener noreferrer nofollow">Bloomberg</a></span></span>21 April 2020</p>
+<p class="rm-manual">(Bloomberg) --</p>
+<p>Mystery surrounded Kim Jong Un’s health after U.S. and South Korean 
+officials gave differing accounts of the North Korean leader’s condition
+ following his unusual absence from recent holiday celebrations.</p>
+<p>Kim was in critical condition after undergoing cardiovascular surgery
+ last week and the Trump administration wasn’t sure of his current 
+health, said U.S. officials, who asked not to be identified. One of the 
+officials said the White House was told that Kim took a turn for the 
+worse after the procedure, while CNN earlier cited a U.S. official with 
+direct knowledge saying the 36-year-old leader may be in “grave danger.”</p>
+<p>Meanwhile, South Korean President Moon Jae-in’s office said that Kim 
+was conducting “normal activities” in a rural part of the country 
+assisted by close aides and no special movements were detected. Moon 
+spokesman Kang Min-seok said earlier there was nothing to confirm on the
+ speculation over Kim’s health.</p>
+<p>North Korea’s state-run news broadcast at 6:30 p.m. local time made 
+no mention of Kim, and the official Korean Central News Agency didn’t 
+provide an update on his condition. Kim Min-ki, head of the intelligence
+ committee in South Korea’s parliament, told Yonhap News Agency he 
+believes there’s no unusual signs regarding Kim’s health after he was 
+briefed by the country’s spy agency.</p>
+<p>The news around Kim’s health spurred the benchmark Kospi gauge to 
+extend losses to as much as 3% while the won slid as much as 1.7% 
+against the dollar. The Kospi closed 1% lower.</p>
+<p>The health of Kim, overweight and a heavy smoker, is one of North 
+Korea’s most closely guarded secrets, typically only known by a handful 
+of people in the inner circle of leadership. While North Korea had 
+scaled down major events as it battles the coronavirus pandemic, 
+speculation about Kim had been growing since his unprecedented absence 
+from April 15 celebrations for the birthday of his grandfather and state
+ founder Kim Il Sung, one of the biggest days on the country’s calendar.</p>
+<p>Even the most well-informed North Korea experts find it hard to tell 
+what’s happening in the secretive state. The Daily NK, a Seoul-based 
+website that gathers information from informants inside the isolated 
+nation, separately reported that Kim underwent a “cardiovascular 
+surgical procedure” and was now mostly recovered. Reuters cited an 
+official with the Chinese Communist Party’s International Liaison 
+Department saying that Kim wasn’t believed to be critically ill.</p>
+<p>“I saw some reports, but I don’t know what these sources are,” 
+Chinese foreign ministry spokesman Geng Shuang told reporters in Beijing
+ Tuesday afternoon.</p>
+<p>U.S. National Security Advisor Robert O’Brien told reporters on 
+Tuesday morning that the Trump administration is “watching the reports 
+closely.” “It’s just hard to know, we’re keeping a close eye on it,” he 
+said.</p>
+<p>Any leadership crisis in North Korea could potentially have serious 
+ramifications for regional stability, as well as for talks with the U.S.
+ over the country’s nuclear arsenal. Kim, who took power in 2011 
+following his father’s 17-year reign, developed the capability to 
+deliver a nuclear warhead to any part of the U.S. before engaging in 
+direct talks with President Donald Trump over his arsenal and sanctions 
+imposed on the state.</p>
+<p>“When Kim Jong Un came to power, his path to leadership had been 
+carefully cultivated by his father’s guidance and maneuvering,” said 
+Mintaro Oba, a former U.S. diplomat who was specialized in Korean 
+Peninsula issues. “Now, there is no clear transition plan and no clear 
+future leader.”</p>
+<p>White Horse</p>
+<p>Kim has been shown in state media in recent months appearing at 
+military drills and riding a white horse on the country’s revered Mt. 
+Paektu, where state propaganda says his grandfather used as a guerrilla 
+base to fight Japanese colonial occupiers. North Korea’s state media 
+reported on April 11 that Kim attended a Politburo meeting of the ruling
+ Workers’ Party. The next day it said he inspected a military unit, but 
+didn’t reveal the date of that visit.</p>
+<p>The South Korean Unification Ministry said Friday it was 
+“inappropriate” to speculate about the reasons for Kim’s absence. Kim 
+has made 17 public appearances this year that were mentioned in state 
+media -- at a pace of a little more than one a week -- the ministry 
+said. That’s slightly down from 84 public appearances last year.</p>
+<p>South Korean intelligence said Kim Jong Un married Ri Sol Ju, a 
+former singer, in 2009. They are thought to have three children, but 
+there is no official mention of their offspring. Dennis Rodman, the 
+offbeat basketball great who visited Kim in North Korea, said in 2013 he
+ held the leader’s baby girl in his arms, a daughter named Ju Ae.While 
+there’s been little time for him to groom a successor, Kim raised the 
+status of his younger sister Kim Yo Jong as a key player in the 
+secretive state. She was thrust into the global spotlight when she 
+served as envoy to the 2018 Winter Olympics in Pyeongchang, South Korea,
+ and became the first member of the immediate ruling family to visit 
+Seoul.</p>
+<p class="rm-manual">(Updates with U.S. comment in ninth paragraph)</p>
+<p class="rm-manual">For more articles like this, please visit us at <a href="https://www.bloomberg.com/" rel="nofollow noopener">bloomberg.com</a></p>
+<p class="rm-manual"><a href="https://www.bloomberg.com/subscriptions/67obqkd5zdp5lj8/?utm_source=yahoo_usn" rel="nofollow noopener">Subscribe now</a> to stay ahead with the most trusted business news source.</p>
+<p class="rm-manual">©2020 Bloomberg L.P.</p>
+<h2 class="rm-manual">What to read next</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/us-anti-racism-protests-stretch-distant-zealand-062705801--spt.html"><span>US anti-racism protests stretch to distant New Zealand</span></a></h3><p class="rm-manual">Agence-France Presse</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/very-disturbing-truck-driver-who-sped-into-protesters-hauled-from-his-rig-and-beaten-043126701.html"><span>Truck driver who sped into protesters hauled from his rig and beaten</span></a></h3><p class="rm-manual">Yahoo News Australia</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/one-off-bonus-appease-nsw-pay-freeze-203340395--spt.html"><span>One-off bonus an 'insult' for NSW workers</span></a></h3><p class="rm-manual">Australian Associated Press</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/40000-cash-grants-fourth-coronavirus-stimulus-incoming-000304784.html"><span>$40,000 cash grants: Fourth coronavirus stimulus incoming</span></a></h3><p class="rm-manual">Yahoo Finance AU</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/coronavirus-australia-easing-social-distancing-061415940.html"><span>Coronavirus In Australia: Easing Of Social Distancing Restrictions Puts Businesses Back In Action</span></a></h3><p class="rm-manual">HuffPost</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/supercars-will-davison-reana-crehan-struck-road-rage-jogging-035651897.html"><span>'Swerved intentionally': Supercars driver hit by van on morning run</span></a></h3><p class="rm-manual">Yahoo Sport Australia</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/channel-9-reporter-australia-police-brutality-015124460.html"><span>‘I’m
+ Embarrassed’: Indigenous Activists Call Out Channel 9 Reporter Who 
+Claimed Australia Can’t Relate To Black Deaths In Custody</span></a></h3><p class="rm-manual">Huffpost Australia</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/robert-irwin-involved-massive-crash-mountain-bike-044140751.html"><span>Robert Irwin involved in 'massive crash' on mountain bike</span></a></h3><p class="rm-manual">Yahoo Lifestyle</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/afl-2020-patrick-dangerfield-recalls-death-phil-walsh-031109443.html"><span>'Total disbelief': Patrick Dangerfield revisits tragic death of Phil Walsh</span></a></h3><p class="rm-manual">Yahoo Sport Australia</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/princess-mary-danish-royals-royal-exit-prince-joachim-princess-marie-025433984.html"><span>Princess Mary fears 'royal feud' could tear family apart</span></a></h3><p class="rm-manual">Yahoo Lifestyle</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/new-security-measure-woolworths-self-checkout-033531505.html"><span>Woolworths customer spots unusual change to self-checkout</span></a></h3><p class="rm-manual">Yahoo News Australia</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/italian-doctor-claims-coronavirus-is-losing-potency-230358136.html"><span>'Clinically no longer exists': Doctor claims coronavirus is losing potency</span></a></h3><p class="rm-manual">Yahoo News Australia</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/live-blog-george-floyd-protests-sweep-across-america-225028377.html"><span>Live blog: George Floyd protests sweep across US</span></a></h3><p class="rm-manual">Yahoo News Australia</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/new-footage-emerges-of-george-floyds-last-moments-061403259.html"><span>Harrowing new footage emerges of George Floyd's last moments</span></a></h3><p class="rm-manual">Yahoo News Australia</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/aldi-shoppers-crowd-special-buys-amid-restrictions-053929765.html"><span>'People don't care anymore': Outrage over photo of queuing Aldi customers</span></a></h3><p class="rm-manual">Yahoo News Australia</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/scientist-warns-virus-linked-chickens-worse-than-coronavirus-232536621.html"><span>Scientist's daunting prophecy about bird virus that could wipe out half the world</span></a></h3><p class="rm-manual">Yahoo News Australia</p><p class="rm-manual"></p></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/kmart-mum-laundry-hack-divides-opinions-233041072.html"><span>Mum's Kmart laundry hack divides opinions</span></a></h3><p class="rm-manual">Yahoo Lifestyle</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/what-you-can-and-cant-do-from-june-1-102748612.html"><span>Coronavirus: What you can and can't do from June 1</span></a></h3><p class="rm-manual">Yahoo News Australia</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/nrl-2020-josh-reynolds-ex-girlfriend-admits-fake-ultrasound-210022466.html"><span>Ex-girlfriend's huge admission in Josh Reynolds 'fake pregnancy' saga</span></a></h3><p class="rm-manual">Yahoo Sport Australia</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/mississippi-mayor-refuses-step-down-tweet-george-floyds-death-013649831.html"><span>Mayor forced to apologise for 'horrible' tweet after George Floyd death</span></a></h3><p class="rm-manual">Yahoo News Australia</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/woolworths-deliver-drivers-heroic-act-locked-out-mum-012018196.html"><span>Woolworths delivery driver's 'heroic' act for locked-out mum</span></a></h3><p class="rm-manual">Yahoo News Australia</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/the-real-reason-delta-goodrem-isnt-married-230053318.html"><span>Everything you need to know about Delta Goodrem</span></a></h3><p class="rm-manual">Yahoo Lifestyle</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/kate-middleton-prince-william-sue-tatler-magazine-cruel-story-212112897.html"><span>Kate and William take legal action over 'cruel and disgusting' magazine story</span></a></h3><p class="rm-manual">Yahoo Lifestyle</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/iranian-girl-14-allegedly-beheaded-dad-honour-killing-081433603.html"><span>Girl, 14, allegedly beheaded by father in 'honour killing'</span></a></h3><p class="rm-manual">Yahoo News Australia</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/journalist-blinded-eye-explodes-protests-george-floyd-010304583.html"><span>Journalist blinded after eye 'explodes' during protests</span></a></h3><p class="rm-manual">Yahoo News Australia</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/house-prices-may-000723929.html"><span>House prices fall for the first time in 11 months</span></a></h3><p class="rm-manual">Yahoo Finance AU</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/jennifer-lopez-a-rod-reportedly-pursuing-new-york-mets-021959912.html"><span>Jennifer Lopez and A-Rod in $3 billion sporting takeover</span></a></h3><p class="rm-manual">Yahoo Sport Australia</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.sports.yahoo.com/ufc-paige-vanzant-posts-latest-naked-photo-lockdown-214656409.html"><span>Fans spot concerning detail in UFC star's latest risque photo</span></a></h3><p class="rm-manual">Yahoo Sport Australia</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/kmarts-4-retro-bath-pearls-a-big-hit-002101062.html"><span>Kmart's $4 retro bathtime treat hits big</span></a></h3><p class="rm-manual">Yahoo Lifestyle</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/boys-panicked-call-to-triple-0-after-dad-seizures-230454078.html"><span>Boy's panicked call to Triple-0 after dad collapses with seizures</span></a></h3><p class="rm-manual">Yahoo News Australia</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/police-officer-joins-george-floyd-protesters-flint-michigan-225920052.html"><span>'Walk with us': Police officer's act of solidarity amid protests</span></a></h3><p class="rm-manual">Yahoo News Australia</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/liz-hurley-isolation-topless-instagram-photo-060731393.html"><span>'Hasn't aged a day!': 54-year-old Liz Hurley strips off in bold isolation snap</span></a></h3><p class="rm-manual">Yahoo Lifestyle</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/tragedy-girl-12-swallows-lithium-battery-and-coughs-up-blood-081701840.html"><span>Coughing up blood: Girl, 12, dies after swallowing everyday object</span></a></h3><p class="rm-manual">Yahoo News Australia</p><p></p></li>
+</ul></article>
+</body></html>

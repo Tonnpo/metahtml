@@ -1,0 +1,103 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Twin-seat variation &amp; domestic engine-equipped version of J-20 make official appearances - Global Times </p>
+<p class="rm-manual"><span><a href="https://www.globaltimes.cn/china/">CHINA</a></span> / <span><a href="https://www.globaltimes.cn/china/military/">MILITARY</a></span></p>
+<p class="rm-manual">Twin-seat variation &amp; domestic engine-equipped version of J-20 make official appearances</p>
+<div class="rm-manual">By </div>
+<p class="rm-manual"> <a href="file:///author/Reporter-Liu-Xuanzun.html">Liu Xuanzun</a> </p>
+<p class="rm-manual">Defense reporter at the Global Times covering weapons and military development.</p>
+<p class="rm-manual"><a href="file:///author/Reporter-Liu-Xuanzun.html">Liu Xuanzun</a> </p>
+<p class="rm-manual"><span>Published: Jan 10, 2021 06:43 PM</span> </p>
+<p>The twin-seat variation of the J-20 fighter jet, depicted by 
+computer-generated imagery, is seen in a video released by AVIC 
+celebrating the 10th anniversary of the aircraft's maiden flight in 
+2021. Photo: Screenshot from the AVIC video</p>
+<p>A twin-seat variation of China's J-20 stealth fighter jet and a J-20 
+version equipped with a domestically made engine have been spotted for 
+the first time in official videos recently released by its developer and
+ the People's Liberation Army (PLA) Air Force, only days before the 10th
+ anniversary on Monday of the aircraft's maiden flight.</p>
+<p>The twin-seat variation of the J-20 could be used for electronic 
+warfare, command of wingman drones or bombing, and the domestic engine 
+means the J-20 is no longer reliant on Russian engines, analysts said on
+ Sunday.</p>
+<p>Depicted by computer-generated imagery, four twin-seat J-20 
+variations were seen flying in formation in a video released by 
+state-owned Aviation Industry Corp of China (AVIC), the developer of the
+ aircraft, on Friday, in celebration of the 10th anniversary on Monday 
+of the original aircraft's maiden flight.</p>
+<p>This is the first time the twin-seat J-20 has been featured in an 
+official promotional source, although media reports had speculated about
+ its existence for years. It will also make the J-20 variation the 
+world's first twin-seat stealth fighter jet, media reported.</p>
+<p>By adding another seat to the cockpit, the aircraft could, in 
+exchange for some level of stealth capability and maneuverability, carry
+ a second pilot designated for more complicated tasks such as electronic
+ warfare, command of wingman drones or tactical bombing, a Chinese 
+military analyst told the Global Times on Sunday, requesting anonymity.</p>
+<p>This means the twin-seat J-20 could spawn more variations that are 
+equipped with devices corresponding to these tasks, the analyst 
+predicted. </p>
+<p>AVIC's video did not elaborate on the twin-seat J-20 or its designed functions.</p>
+<p>In a separate video, released on Tuesday by the People's Liberation 
+Army (PLA) Air Force for its pilot recruitment program, Chinese media 
+outlets identified a J-20 that is equipped with domestically developed 
+WS-10C engines instead of imported Russian engines.</p>
+<p>This is also the first time the PLA Air Force has confirmed that a 
+J-20 equipped with a domestically made engine has entered service, 
+Passion News, a media outlet under k618.cn, a news portal run by the 
+Communist Youth League of China Central Committee, reported on Friday.</p>
+<p>Designed with stealth capability, the WS-10C engines provide more 
+powerful thrust than the Russian engines previously used on the J-20, 
+since the Chinese engines use full authority digital engine control 
+technology and improved afterburners, the Passion News report said.</p>
+<p>Domestic engines will not only let the J-20 become stronger, but also
+ enable the mass production of the aircraft without the limitation of 
+imported engines, analysts said, noting that the J-20 will eventually 
+use the WS-15, an even more powerful domestically developed engine.</p>
+<p class="rm-manual">RELATED ARTICLES</p>
+<p class="rm-manual"><a href="https://www.globaltimes.cn/page/202101/1212196.shtml"> PLAâ€™s new reconnaissance robot debuts in exercises</a></p>
+<p class="rm-manual">A new reconnaissance robot in service with the Chinese Peopleâ€™s Liberation Army (PLA) recently made its debut in ...</p>
+<p class="rm-manual"><a href="https://www.globaltimes.cn/page/202101/1212172.shtml"> China's Z-20 helicopter variations for anti-submarine warfare, assault spotted </a></p>
+<p class="rm-manual">Two new variations of China's Z-20 utility helicopter for anti-submarine warfare and assault were recently reported by media.</p>
+<p class="rm-manual"><a href="https://www.globaltimes.cn/page/202101/1211986.shtml"> China's long-range stealth bomber outlined in PLA Air Force recruitment video</a></p>
+<p class="rm-manual">The Chinese People's Liberation Army (PLA) Air Force for the first time gave a hint on the design ...</p>
+<p class="rm-manual"> Please enable JavaScript to view the </p>
+<p class="rm-manual"><a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a> </p>
+<p class="rm-manual"><a href="https://disqus.com/">blog comments powered by <span>Disqus</span></a> </p></article>
+</body></html>

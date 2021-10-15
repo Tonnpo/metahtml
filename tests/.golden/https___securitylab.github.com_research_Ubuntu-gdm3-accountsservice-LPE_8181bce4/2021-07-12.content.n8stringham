@@ -1,0 +1,215 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p>I am a fan of Ubuntu, so I would like 
+to help make it as secure as possible. I have recently spent quite a bit
+ of time looking for security vulnerabilities in Ubuntu’s system 
+services, and it has mostly been an exercise in frustration. I have 
+found (and reported) a few issues, but the majority have been low 
+severity. Ubuntu is open source, which means that many people have 
+looked at the source code before me, and it seems like all the easy bugs
+ have already been found. In other words, I don’t want this blog post to
+ give you the impression that Ubuntu is full of trivial security bugs; 
+that’s not been my impression so far.</p>
+<p>This blog post is about an astonishingly straightforward way to 
+escalate privileges on Ubuntu. With a few simple commands in the 
+terminal, and a few mouse clicks, a standard user can create an 
+administrator account for themselves. I have made a short <a href="https://youtu.be/8IjTq7GBupw">demo video</a>, to show how easy it is.</p>
+<p>It’s unusual for a vulnerability on a modern operating system to be 
+this easy to exploit. I have, on some occasions, written thousands of 
+lines of code to exploit a vulnerability. Most modern exploits involve 
+complicated trickery, like using a memory corruption vulnerability to 
+forge fake objects in the heap, or replacing a file with a symlink with 
+microsecond accuracy to exploit a <a href="https://en.wikipedia.org/wiki/Time-of-check_to_time-of-use">TOCTOU</a>
+ vulnerability. So these days it’s relatively rare to find a 
+vulnerability that doesn’t require coding skills to exploit. I also 
+think the vulnerability is easy to understand, even if you have no prior
+ knowledge of how Ubuntu works or any security research experience.</p>
+<p>Disclaimer: For someone to exploit this vulnerability, they need 
+access to the graphical desktop session of the system, so this issue 
+affects desktop users only.</p>
+<h1>Exploitation steps</h1>
+<p>Here is a description of the exploitation steps, as shown in the <a href="https://youtu.be/8IjTq7GBupw">demo video</a>.</p>
+<p>First, open a terminal and create a <a href="https://en.wikipedia.org/wiki/Symbolic_link">symlink</a> in your home directory:</p>
+<code>ln -s /dev/zero .pam_environment </code><p>(If that doesn’t work because a file named </p>
+<code>.pam_environment</code><p> already exists, then just temporarily rename the old file so that you can restore it later.)</p>
+<p>Next, open “Region &amp; Language” in the system settings and try to 
+change the language. The dialog box will freeze, so just ignore it and 
+go back to the terminal. At this point, a program named accounts-daemon 
+is consuming 100% of a CPU core, so your computer may become sluggish 
+and start to get hot.</p>
+<p>In the terminal, delete the symlink. Otherwise you might lock yourself out of your own account!</p>
+<code>rm .pam_environment </code><p>The next step is to send a SIGSTOP 
+signal to accounts-daemon to stop it from thrashing that CPU core. But 
+to do that, you first need to know accounts-daemon’s process identifier 
+(PID). In the video, I do that by running <a href="https://manpages.ubuntu.com/manpages/focal/en/man1/top.1.html">top</a>,
+ which is a utility for monitoring the running processes. Because 
+accounts-daemon is stuck in an infinite loop, it quickly goes to the top
+ of the list. Another way to find the PID is with the <a href="https://manpages.ubuntu.com/manpages/focal/en/man8/pidof.8.html">pidof</a> utility:</p>
+<code>$ pidof accounts-daemon 597 </code><p>Armed with accounts-daemon’s PID, you can use <a href="https://manpages.ubuntu.com/manpages/focal/en/man1/kill.1.html">kill</a> to send the SIGSTOP signal:</p>
+<code>kill -SIGSTOP 597 </code><p>Your computer can take a breather now.</p>
+<p>Here is the crucial step. You’re going to log out of your account, 
+but first you need to set a timer to reset accounts-daemon after you 
+have logged out. Otherwise you’ll just be locked out and the exploit 
+will fail. (Don’t worry if this happens: everything will be back to 
+normal after a reboot.) This is how to set the timer:</p>
+<code>nohup bash -c "sleep 30s; kill -SIGSEGV 597; kill -SIGCONT 597" </code><p>The <a href="https://manpages.ubuntu.com/manpages/focal/en/man1/nohup.1posix.html">nohup</a> utility is a simple way to leave a script running after you have logged out. This command tells it to run a <a href="https://manpages.ubuntu.com/manpages/focal/en/man1/bash.1.html">bash</a> script that does three things:</p>
+<ol> <li>Sleep for 30 seconds. (You just need to give yourself enough time to log out. I set it to 10 seconds for the video.)</li> <li>Send accounts-daemon a SIGSEGV signal, which will make it crash.</li> <li>Send
+ accounts-daemon a SIGCONT signal to deactivate the SIGSTOP, which you 
+sent earlier. The SIGSEGV won’t take effect until the SIGCONT is 
+received.</li> </ol>
+<p>Once completed, log out and wait a few seconds for the SIGSEGV to 
+detonate. If the exploit is successful, then you will be presented with a
+ series of dialog boxes which let you create a new user account. The new
+ user account is an administrator account. (In the video, I run <a href="https://manpages.ubuntu.com/manpages/focal/en/man1/id.1.html">id</a> to show that the new user is a member of the sudo group, which means that it has root privileges.)</p>
+<h1>How does it work?</h1>
+<p>Stay with me! Even if you have no prior knowledge of how Ubuntu (or 
+more specifically, GNOME) works, I reckon I can explain this 
+vulnerability to you. There are actually two bugs involved. The first is
+ in <a href="https://launchpad.net/ubuntu/+source/accountsservice">accountsservice</a>, which is a service that manages user accounts on the computer. The second is in <a href="https://wiki.gnome.org/Projects/GDM">GNOME Display Manager</a> (gdm3), which, among other things, handles the login screen. I’ll explain each of these bugs separately below.</p>
+<h2>accountsservice denial of service (GHSL-2020-187, GHSL-2020-188 / CVE-2020-16126, CVE-2020-16127)</h2>
+<p>The accountsservice daemon (accounts-daemon) is a system service that
+ manages user accounts on the machine. It can do things like create a 
+new user account or change a user’s password, but it can also do less 
+security-sensitive things like change a user’s icon or their preferred 
+language. Daemons are programs that run in the background and do not 
+have their own user interface. However, the systems settings dialog box 
+can communicate with accounts-daemon via a message system known as <a href="https://www.freedesktop.org/wiki/Software/dbus/">D-Bus</a>.</p>
+<p>In the exploit, I use the systems settings dialog box to change the 
+language. A standard user is allowed to change that setting on their own
+ account - administrator privileges are not required. Under the hood, 
+the systems services dialog box sends the <a href="https://git.launchpad.net/ubuntu/+source/accountsservice/tree/data/org.freedesktop.Accounts.User.xml?h=ubuntu/focal-updates&amp;id=e0347185d4c5554b026c13ccca691577c239afd5#n114">org.freedesktop.Accounts.User.SetLanguage</a> command to accounts-daemon, via D-Bus.</p>
+<p>It turns out that Ubuntu uses a modified version of accountsservice that includes some <a href="https://git.launchpad.net/ubuntu/+source/accountsservice/tree/debian/patches/0010-set-language.patch?h=ubuntu/focal-updates&amp;id=e0347185d4c5554b026c13ccca691577c239afd5">extra code</a> that doesn’t exist in the upstream version maintained by <a href="https://gitlab.freedesktop.org/accountsservice/accountsservice">freedesktop</a>. Ubuntu’s patch adds a function named <a href="https://git.launchpad.net/ubuntu/+source/accountsservice/tree/debian/patches/0010-set-language.patch?h=ubuntu/focal-updates&amp;id=e0347185d4c5554b026c13ccca691577c239afd5#n367"><code>is_in_pam_environment</code></a>, which looks for a file named </p>
+<code>.pam_environment</code><p> in the user’s home directory and reads it. The denial of service vulnerability works by making </p>
+<code>.pam_environment</code><p> a </p>
+<p><a href="https://en.wikipedia.org/wiki/Symbolic_link">symlink</a> to </p>
+<code>/dev/zero</code><p>. </p>
+<p><a href="https://en.wikipedia.org/wiki//dev/zero"><code>/dev/zero</code></a>
+ is a special file that doesn’t actually exist on disk. It is provided 
+by the operating system and behaves like an infinitely long file in 
+which every byte is zero. When </p>
+<code>is_in_pam_environment</code><p> tries to read </p>
+<code>.pam_environment</code><p>, it gets redirected to </p>
+<code>/dev/zero</code><p> by the symlink, and then gets stuck in an infinite loop because </p>
+<code>/dev/zero</code><p> is infinitely long.</p>
+<p>There’s a second part to this bug. The exploit involves crashing 
+accounts-daemon by sending it a SIGSEGV. Surely a standard user 
+shouldn’t be allowed to crash a system service like that? They 
+shouldn’t, but accounts-daemon inadvertently allows it by <a href="https://git.launchpad.net/ubuntu/+source/accountsservice/tree/debian/patches/0010-set-language.patch?h=ubuntu/focal-updates&amp;id=e0347185d4c5554b026c13ccca691577c239afd5#n384">dropping privileges</a> just before it starts reading the user’s </p>
+<code>.pam_environment</code><p>. Dropping privileges means that the 
+daemon temporarily forfeits its root privileges, adopting instead the 
+lower privileges of the user. Ironically, that’s intended to be a 
+security precaution, the goal of which is to protect the daemon from a 
+malicious user who does something like symlinking their </p>
+<code>.pam_environment</code><p> to </p>
+<code>/etc/shadow</code><p>, which is a highly sensitive file that 
+standard users aren’t allowed to read. Unfortunately, when done 
+incorrectly, it also grants the user permission to send the daemon 
+signals, which is why we’re able to send accounts-daemon a SIGSEGV.</p>
+<h2>gdm3 privilege escalation due to unresponsive accounts-daemon (GHSL-2020-202 / CVE-2020-16125)</h2>
+<p><a href="https://wiki.gnome.org/Projects/GDM">GNOME Display Manager</a>
+ (gdm3) is a fundamental component of Ubuntu’s user interface. It 
+handles things like starting and stopping user sessions when they log in
+ and out. It also manages the login screen.</p>
+<p>Another thing handled by gdm3 is the initial setup of a new computer.
+ When you install Ubuntu on a new computer, one of the first things that
+ you need to do is create a user account. The initial user account needs
+ to be an administrator so that you can continue setting up the machine,
+ doing things like configuring the wifi and installing applications. 
+Here is a screenshot of the initial setup screen (taken from the exploit
+ video):</p>
+<p>The dialog box that you see in the screenshot is a separate application, called <a href="https://gitlab.gnome.org/GNOME/gnome-initial-setup">gnome-initial-setup</a>.
+ It is triggered by gdm3 when there are zero user accounts on the 
+system, which is the expected scenario during the initial setup of a new
+ computer. How does gdm3 check how many users there are on the system? 
+You probably already guessed it: by asking accounts-daemon! So what 
+happens if accounts-daemon is unresponsive? The relevant code is <a href="https://gitlab.gnome.org/GNOME/gdm/-/blob/3.36.3/daemon/gdm-display.c#L513">here</a>.</p>
+<p>It uses D-Bus to ask accounts-daemon how many users there are, but 
+since accounts-daemon is unresponsive, the D-Bus method call fails due 
+to a timeout. (In my testing, the timeout took around 20 seconds.) Due 
+to the timeout error, the code does not set the value of </p>
+<code>priv-&gt;have_existing_user_accounts</code><p>. Unfortunately, the default value of </p>
+<code>priv-&gt;have_existing_user_accounts</code><p> is </p>
+<code>false</code><p>, not </p>
+<code>true</code><p>, so now gdm3 thinks that there are zero user accounts and it launches </p>
+<code>gnome-initial-setup</code><p>.</p>
+<h1>How did I find it?</h1>
+<p>I have a confession to make: I found this bug completely by accident.
+ This is the message that I sent to my colleagues at approximately 10pm 
+BST on October 14:</p>
+<code>I just got LPE by accident, but I am not quite sure how to reproduce it. 🤦 </code><p>Here’s
+ what happened: I had found a couple of denial-of-service 
+vulnerabilities in accountsservice. I considered them low severity, but 
+was writing them up for a vulnerability report to send to Ubuntu. Around
+ 6pm, I stopped work and closed my laptop lid. Later in the evening, I 
+opened the laptop lid and discovered that I was locked out of my 
+account. I had been experimenting with the </p>
+<code>.pam_environment</code><p> symlink and had forgotten to delete it before closing the lid. No big deal: I used Ctrl-Alt-F4 to open a </p>
+<p><a href="https://wiki.debian.org/Console">console</a>, logged in (the
+ console login was not affected by the accountsservice DOS), and killed 
+accounts-daemon with a SIGSEGV. I didn’t need to use </p>
+<p><a href="https://manpages.ubuntu.com/manpages/focal/en/man8/sudo.8.html">sudo</a>
+ due to the privilege dropping vulnerability. The next thing I knew, I 
+was looking at the gnome-initial-setup dialog boxes, and was amazed to 
+discover that I was able to create a new user with administrator 
+privileges.</p>
+<p>Unfortunately, when I tried to reproduce the same sequence of steps, I
+ couldn’t get it to work again. I checked the system logs for clues, but
+ there wasn’t much information because I didn’t have gdm’s debug 
+messages enabled. The exploit that I have since developed requires the 
+user to log out of their account, but I definitely didn’t do that on the
+ evening of October 14. So it remains a mystery how I accidentally 
+triggered the bug that evening.</p>
+<p>Later that evening, I sent further messages to my (US-based) 
+colleagues describing what had happened. Talking about the dialog boxes 
+helped to jog my memory about something that I had noticed recently. 
+Many of the system services that I have been looking at use <a href="https://www.freedesktop.org/software/polkit/docs/latest/polkit.8.html">policykit</a> to check whether the client is authorized to request an action. I had noticed a file called <a href="https://git.launchpad.net/ubuntu/+source/gnome-initial-setup/tree/debian/gnome-initial-setup.pkla?h=applied/ubuntu/focal-updates&amp;id=2b3933f055f28d52b4dd39b9a405d528a9c20a29"><code>gnome-initial-setup.pkla</code></a>,
+ which is a policykit configuration file that grants a user named 
+gnome-initial-setup the ability to do a number of security-sensitive 
+things, such as mounting filesystems and creating new user accounts. So I
+ said to my colleagues: “I wonder if it has something to do with 
+gnome-initial-setup,” and <a href="https://github.com/anticomputer">Bas Alberts</a>
+ almost immediately jumped in with a hypothesis that turned out to be 
+right on the money: “You tricked gdm into launching gnome-initial-setup,
+ I reckon, which maybe happens if a gdm session can’t verify that an 
+account already exists.”</p>
+<p>After that, it was just a matter of finding the code in gdm3 that 
+triggers gnome-initial-setup and figuring out how to trigger it while 
+accounts-daemon is unresponsive. I found that the relevant code is 
+triggered when a user logs out.</p>
+<p>And that’s the story of how the end of my workday was the start of an 0-day!</p></article>
+</body></html>

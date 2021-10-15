@@ -1,0 +1,156 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Kim Jong Un was in critical condition after surgery, U.S. official says | The Japan Times </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.japantimes.co.jp/guide-japan-times-jobs-network/" rel="external">JOBS <span>転職</span></a> </li> <li class="rm-manual"> <a href="http://info.japantimes.co.jp/universities" rel="external">STUDY IN JAPAN</a> </li> <li class="rm-manual"> <a href="http://showcase.japantimes.co.jp/" rel="external">Japan Showcase</a> </li> <li class="rm-manual"> <a href="file:///n2u/">News Releases</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual">
+<a href="https://www.japantimes.co.jp/sub/">SUBSCRIBE</a><span> | </span>
+</li> <li class="rm-manual">
+<a href="https://members.japantimes.co.jp/login/?mode=login">Login</a><span> | </span>
+</li> <li class="rm-manual"><a href="file:///about-us/japan-times-faq-index/">SUPPORT</a></li> </ul>
+<p class="rm-manual"> <a href="https://www.japantimes.co.jp/weather/"> </a></p><p class="rm-manual"><a href="https://www.japantimes.co.jp/weather/">23</a></p><a href="https://www.japantimes.co.jp/weather/"> <p class="rm-manual">CLOUDY</p> <h2 class="rm-manual">TOKYO (4 a.m.)</h2> </a> <p class="rm-manual"></p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.japantimes.co.jp/market-moves"> Markets</a></li> <li class="rm-manual">109.08 ¥/$ (5 p.m.) </li> </ul>
+<h2 class="rm-manual"> <a href="https://www.japantimes.co.jp/news/">News</a> </h2>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.japantimes.co.jp/sub/index_ja.html">購読の申し込み</a> <a href="https://www.japantimes.co.jp/sub/">SUBSCRIBE</a> </li> <li class="rm-manual"><a href="https://members.japantimes.co.jp/login/?mode=login">Login ≫</a></li> <li class="rm-manual"> <a href="https://members.japantimes.co.jp/membership/summary/">FREE MEMBERSHIP</a> </li> <li class="rm-manual"> <a href="https://www.japantimes.co.jp/2020/06/05">Today's Stories</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="#footer_menu"> MENU </a> </li> <li class="rm-manual"><a href="file:///events/">City Guide</a></li> <li class="rm-manual"> <a href="#"> <span>Search</span> </a> </li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///news/">News</a></li> <li class="rm-manual"><a href="file:///opinion/">Opinion</a></li> <li class="rm-manual"><a href="file:///life/">Life</a></li> <li class="rm-manual"><a href="file:///community/">Community</a></li> <li class="rm-manual"><a href="file:///culture/">Culture</a></li> <li class="rm-manual"><a href="file:///sports/">Sports</a></li> <li class="rm-manual"><a href="file:///events/">City Guide</a></li> <li class="rm-manual"><a href="file:///about-us/japan-times-faq-index/">Support</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="#"> <span>Search</span> </a> </li> </ul>
+<p class="rm-manual"> Search </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.japantimes.co.jp/news/national/">National</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/news/asia-pacific/">Asia Pacific</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/news/business/">Business</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/news/world/">World</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/news/reference/">Reference</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/news/columns/">Columns</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/multimedia_category/news/">Multimedia</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="file:///news/">News</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.japantimes.co.jp/news_category/national/">National</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/news_category/world/">World</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/news_category/business/">Business</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/news_category/asia-pacific/">Asia Pacific</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/news_category/reference/">Reference</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/news-columns/">Columns</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/multimedia_category/news/">Multimedia</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///opinion/">Opinion</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.japantimes.co.jp/opinion_category/editorials/">Editorials</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/opinion_category/commentary/">Commentary</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/opinion_category/reader-mail/">Reader Mail</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/opinion_category/cartoons/">Cartoons</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///life/">Life</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.japantimes.co.jp/life_category/travel/">Travel</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/life_category/digital/">Digital</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/life_category/food/">Food &amp; Drink</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/life_category/environment/">Environment</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/life_category/style/">Style &amp; Design</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/life_category/language/">Language</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/life_category/lifestyle/">Lifestyle</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/life_category/people/">People</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/life-columns/">Columns</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/multimedia_category/life/">Multimedia</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///community/">Community</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.japantimes.co.jp/community_category/voices/">Voices</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/community_category/issues/">Issues</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/community_category/our-lives/">Our Lives</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/event-listings/">Event Listings</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/community_category/how-tos/">How-tos</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/community-columns/">Columns</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///culture/">Culture</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.japantimes.co.jp/culture_category/films/">Film</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/culture_category/music/">Music</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/culture_category/arts/">Art</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/culture_category/stage/">Stage</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/culture_category/events/">Events</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/festival-listings/">Festivals</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/culture_category/books/">Books</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/culture_category/tv/">TV</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/culture-columns/">Columns</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/multimedia_category/culture-3/">Multimedia</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///sports/">Sports</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.japantimes.co.jp/sports_category/rugby/">Rugby</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/sports_category/baseball/">Baseball</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/sports_category/soccer/">Soccer</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/sports_category/basketball/">Basketball</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/sports_category/sumo/">Sumo</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/sports_category/figure-skating/">Figure Skating</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/sports_category/tennis/">Tennis</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/sports_category/more-sports/">More Sports</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/sports-columns/">Columns</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/multimedia_category/sports/">Multimedia</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///events/">City Guide</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///events/">Events</a></li> <li class="rm-manual"><a href="file:///restaurants/">Restaurants</a></li> <li class="rm-manual"><a href="file:///films/">Films</a></li> <li class="rm-manual"><a href="file:///places/">Places</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///about-us/japan-times-faq-index/">Support</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///about-us/">About us</a></li> <li class="rm-manual"><a href="file:///about-us/japan-times-faq-index/">Faqs</a></li> </ul> </li> </ul>
+<p class="rm-manual"> <span> Sorry, but your browser needs Javascript to use this site. </span> <span> If you're not sure how to activate it, please refer to this site: <a href="https://www.enable-javascript.com/">https://www.enable-javascript.com/</a> </span> </p>
+<h3 class="rm-manual"> <a href="https://www.japantimes.co.jp/news_category/asia-pacific/">Asia Pacific</a> </h3>
+<h1 class="rm-manual">Kim Jong Un was in critical condition after surgery, U.S. official says</h1>
+<figcaption class="rm-manual">North Korean leader Kim Jong Un observes a military drill on Feb. 28. | KCNA / VIA KNS / VIA AP</figcaption><p class="rm-manual">Bloomberg</p>
+<ul class="rm-manual"> <li class="rm-manual"> Apr 21, 2020 <p class="rm-manual"> <span><a href="#article_history">Article history</a></span> </p><ul class="rm-manual"> <li class="rm-manual"> Online: Apr 21, 2020 </li> <li class="rm-manual"> Last Modified: Apr 21, 2020 </li> </ul> <p class="rm-manual"></p> </li> <li class="rm-manual"> <a href=""><span>PRINT</span></a> </li> </ul>
+<p>The U.S. is seeking details about Kim Jong Un’s health after 
+receiving information that the North Korean leader was in critical 
+condition after undergoing cardiovascular surgery last week, a U.S. 
+official said.</p>
+<p>The Trump administration wasn’t sure whether Kim was dead or alive, 
+said the official, who asked not to be identified. CNN had earlier 
+reported, citing a U.S. official with direct knowledge of the matter, 
+that Kim may be in “grave danger” after the surgery. The White House 
+declined to comment on the CNN report.</p>
+<p>The Daily NK, a Seoul-based website that gathers information from 
+informants inside the isolated nation, separately reported that Kim 
+underwent a “cardiovascular surgical procedure” and was now mostly 
+recovered. It was impossible to immediately verify the report, which the
+ Daily NK said was based on one person inside North Korea.</p>
+<p>The health of North Korea’s leader is one of the state’s most closely
+ guarded secrets, typically only known by a handful of people in the 
+inner circle of leadership. Speculation about Kim had been growing since
+ his unprecendented absence from April 15 celebrations for the birthday 
+of his grandfather and state founder Kim Il Sung, one of the biggest 
+days on the North Korean calendar.</p>
+<p>Kim, 36 and a heavy smoker, has been shown in state media in recent 
+months appearing at military drills and riding a white horse on the 
+country’s revered Mount Paektu, where state propaganda says his 
+grandfather used as a guerrilla base to fight Japanese colonial 
+occupiers.</p>
+<p>The Unification Ministry said Friday it was “inappropriate” to 
+speculate about the reasons for Kim’s absence. Kim has made 17 public 
+appearances this year that were mentioned in state media — at a pace of a
+ little more than one a week — the ministry said. That’s slightly down 
+from 84 public appearances last year.</p>
+<p>North Korea has been battling to prevent a coronavirus outbreak, 
+which has led to cutting back on celebrations and some other major 
+events and for cadres to appear in protective masks in public events 
+with Kim.</p>
+<p>The Daily NK is part of a group of not-for-profit agencies affiliated
+ with the Unification Ministry, and has occasionally been contacted by 
+Seoul officials for information. The outlet’s backers include the U.S.’s
+ National Endowment for Democracy, which awarded it $400,000 last year 
+to “raise awareness and understanding of the conditions in North Korea 
+by disseminating accurate, timely and relevant news and information 
+about the country.”</p>
+<p>“Given the difficulty of verifying intelligence about North Korea and
+ our mixed track record of predicting exactly what North Korea’s actions
+ signify, we need to avoid jumping to any hasty conclusions just yet,” 
+said Mintaro Oba, a former U.S. diplomat who worked on Korean Peninsula 
+issues.</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///contact-us/reader-mail/">Mail the editor</a></li> <li class="rm-manual"><a href="file:///error-report/">Error Report</a></li> <li class="rm-manual"><a href="file:///about-us/republishing/">Republishing</a></li> <li class="rm-manual"><a href="file:///about-us/commenting-policy/">Commenting Policy</a></li> </ul>
+<p class="rm-manual"><a href="">JOIN THE CONVERSATION</a></p>
+<p class="rm-manual"> <a href="https://mailchi.mp/japantimes.co.jp/take5signup"> <span> <span> GET THE BEST OF THE JAPAN TIMES </span> IN FIVE EASY PIECES WITH TAKE 5 </span> </a> </p>
+<h2 class="rm-manual">PHOTOS</h2>
+<p class="rm-manual"> Click to enlarge </p>
+<h2 class="rm-manual">KEYWORDS</h2>
+<p class="rm-manual"> <a href="https://www.japantimes.co.jp/tag/u-s/" rel="tag">U.S.</a>, <a href="https://www.japantimes.co.jp/tag/north-korea/" rel="tag">North Korea</a>, <a href="https://www.japantimes.co.jp/tag/kim-jong-un/" rel="tag">Kim Jong Un</a>, <a href="https://www.japantimes.co.jp/tag/south-korea/" rel="tag">South Korea</a> </p>
+<ul class="rm-manual"> <li class="rm-manual">WHAT’S TRENDING</li> <li class="rm-manual">EDITORS’ PICKS</li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.japantimes.co.jp/news/2020/06/02/national/tokyo-tuesday-coronavirus-cases/"> <p class="rm-manual">Tokyo issues coronavirus alert after 34 new daily cases reported </p> </a> </li> <li class="rm-manual"> <a href="https://www.japantimes.co.jp/culture/2020/05/30/books/book-reviews/hold-your-breath-china-review/"> <p class="rm-manual">‘Hold Your Breath, China’ review: China is once again the center of mystery and intrigue </p> </a> </li> <li class="rm-manual"> <a href="https://www.japantimes.co.jp/news/2020/06/01/world/science-health-world/russia-japan-avigan-drug/"> <p class="rm-manual">After fast-tracking Japanese COVID-19 drug, Russia to roll out ‘game changer’ next week </p> </a> </li> <li class="rm-manual"> <a href="https://www.japantimes.co.jp/opinion/2020/06/01/commentary/far-two-strikes-china/"> <p class="rm-manual">So far it’s two strikes for China </p> </a> </li> <li class="rm-manual"> <a href="https://www.japantimes.co.jp/opinion/2020/06/02/commentary/world-commentary/chinas-border-invasion-will-push-india-toward-u-s/"> <p class="rm-manual">China’s border invasion will push India toward the U.S. </p> </a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.japantimes.co.jp/news/2020/05/30/business/japanese-business-culture-coronavirus/"> <p class="rm-manual">Not just another day at the office: Rethinking Japan’s business culture amid the COVID-19 pandemic </p> </a> </li> <li class="rm-manual"> <a href="https://www.japantimes.co.jp/news/2020/05/31/national/japan-contact-tracing-app-privacy-effectiveness/"> <p class="rm-manual">Japan's new contact-tracing app: 'security blanket' or effective tool? </p> </a> </li> <li class="rm-manual"> <a href="https://www.japantimes.co.jp/news/2020/05/30/national/media-national/online-harrassment/"> <p class="rm-manual">Public begins to wake up to sheer volume of harassment online </p> </a> </li> <li class="rm-manual"> <a href="https://www.japantimes.co.jp/podcast/japan-foreign-residents-are-trapped/"> <p class="rm-manual">Episode 51: Japan's foreign residents are trapped </p> </a> </li> <li class="rm-manual"> <a href="https://www.japantimes.co.jp/life/2020/05/31/lifestyle/zen-bread-coronavirus/"> <p class="rm-manual">Finding a slice of creativity during a global pandemic </p> </a> </li> </ul>
+<h2 class="rm-manual">PODCAST</h2>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.japantimes.co.jp/podcast/japan-foreign-residents-are-trapped/"> <p class="rm-manual">DEEP DIVE </p> <p class="rm-manual">Episode 51: Japan’s foreign residents are trapped </p> <p class="rm-manual">LAST UPDATED: May 28, 2020 </p> </a> </li> </ul>
+<h2 class="rm-manual">DEEP DIVE FEATURES</h2>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://features.japantimes.co.jp/sneakers/"> <p class="rm-manual">Just for kicks: Japan’s sneaker obsession rebounds</p> <p class="rm-manual">LAST UPDATED: Feb 29, 2020</p> </a> </li> </ul>
+<h2 class="rm-manual">JAPAN NETWORK UPDATES</h2>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.japantimes.co.jp/jnu/2020/05/25/jnu-company/others/global-perspectives/gavin-dixon/"> <p class="rm-manual"> Directory of who’s who in the world of business in Japan </p> <p class="rm-manual">LAST UPDATED: May 25, 2020 </p> </a> </li> </ul>
+<h2 class="rm-manual"><span>SPECIAL SUPPLEMENTS</span></h2>
+<p class="rm-manual">Sponsored contents planned and edited by JT Media Enterprise Division.</p>
+<p class="rm-manual"> <a href="http://info.japantimes.co.jp/solutions/">広告出稿に関するおといあわせはこちらまで</a> </p>
+<p class="rm-manual"> <a href="http://info.japantimes.co.jp/"><span>Read more</span></a> </p>
+<h2 class="rm-manual">SUPPLEMENTS BINDER</h2>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="http://info.japantimes.co.jp/international-reports/sms/">Synergy Media Specialists</a> </li> <li class="rm-manual"> <a href="http://info.japantimes.co.jp/international-reports/global_insight/">Global Insight</a> </li> <li class="rm-manual"> <a href="http://info.japantimes.co.jp/international-reports/gmi/">Nihon Global Media</a> </li> <li class="rm-manual"> <a href="http://info.japantimes.co.jp/international-reports/wer/">World Eye Reports</a> </li> </ul>
+<p class="rm-manual"> <a href="http://info.japantimes.co.jp/archives/">JT Digital Archives</a> <a href="https://alpha.japantimes.co.jp/">The Japan Times Alpha</a> <a href="http://job.japantimes.com/index_e.php">Jobs</a> <a href="http://info.japantimes.co.jp/universities/japanese_universities.html">Study in Japan </a> <a href="http://women.japantimes.co.jp/">JT for Women</a> <a href="http://bookclub.japantimes.co.jp/">JT Bookclub</a> <a href="http://info.japantimes.co.jp/info/japanese-language-school-directory/">Japanese School Directory</a> </p>
+<ul class="rm-manual"> <li class="rm-manual">
+<a href="https://members.japantimes.co.jp/membership/summary/">FREE MEMBERSHIP</a><span> | </span>
+</li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/sub/#print_subscribe_wrap">HOME DELIVERY</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="file:///news/">News</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.japantimes.co.jp/news_category/national/">National</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/news_category/world/">World</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/news_category/business/">Business</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/news_category/asia-pacific/">Asia Pacific</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/news_category/reference/">Reference</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/news-columns/">Columns</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/multimedia_category/news/">Multimedia</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///opinion/">Opinion</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.japantimes.co.jp/opinion_category/editorials/">Editorials</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/opinion_category/commentary/">Commentary</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/opinion_category/reader-mail/">Reader Mail</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/opinion_category/cartoons/">Cartoons</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///life/">Life</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.japantimes.co.jp/life_category/travel/">Travel</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/life_category/digital/">Digital</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/life_category/food/">Food &amp; Drink</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/life_category/environment/">Environment</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/life_category/style/">Style &amp; Design</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/life_category/language/">Language</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/life_category/lifestyle/">Lifestyle</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/life_category/people/">People</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/life-columns/">Columns</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/multimedia_category/life/">Multimedia</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///community/">Community</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.japantimes.co.jp/community_category/voices/">Voices</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/community_category/issues/">Issues</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/community_category/our-lives/">Our Lives</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/event-listings/">Event Listings</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/community_category/how-tos/">How-tos</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/community-columns/">Columns</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///culture/">Culture</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.japantimes.co.jp/culture_category/films/">Film</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/culture_category/music/">Music</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/culture_category/arts/">Art</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/culture_category/stage/">Stage</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/culture_category/events/">Events</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/festival-listings/">Festivals</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/culture_category/books/">Books</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/culture_category/tv/">TV</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/culture-columns/">Columns</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/multimedia_category/culture-3/">Multimedia</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///sports/">Sports</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.japantimes.co.jp/sports_category/rugby/">Rugby</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/sports_category/baseball/">Baseball</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/sports_category/soccer/">Soccer</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/sports_category/basketball/">Basketball</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/sports_category/sumo/">Sumo</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/sports_category/figure-skating/">Figure Skating</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/sports_category/tennis/">Tennis</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/sports_category/more-sports/">More Sports</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/sports-columns/">Columns</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/multimedia_category/sports/">Multimedia</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///events/">City Guide</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///events/">Events</a></li> <li class="rm-manual"><a href="file:///restaurants/">Restaurants</a></li> <li class="rm-manual"><a href="file:///films/">Films</a></li> <li class="rm-manual"><a href="file:///places/">Places</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///about-us/japan-times-faq-index/">Support</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///about-us/">About us</a></li> <li class="rm-manual"><a href="file:///about-us/japan-times-faq-index/">Faqs</a></li> </ul> </li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.japantimes.co.jp/about-us/">About us</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/contact-us/">Contact us</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/about-us/privacy/">Privacy Policy</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/about-us/link-policy/">Link Policy</a></li> <li class="rm-manual"><a href="http://info.japantimes.co.jp/info/reprints/permissions-and-policies.html">Reprints</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/about-us/japan-times-faq-index/">FAQs</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/about-us/site-support/">Support</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/about-us/press/">Press</a></li> <li class="rm-manual"><a href="https://www.japantimes.co.jp/about-us/sitemap/">Sitemap</a></li> <li class="rm-manual"><a href="http://info.japantimes.co.jp/info/ads.html">Advertise</a></li> </ul>
+<p class="rm-manual">The Japan Times LTD. All rights reserved.</p></article>
+</body></html>

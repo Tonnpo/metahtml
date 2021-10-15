@@ -1,0 +1,223 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Meet the women morticians caring for Harlem's dead amid coronavirus </p>
+<p class="rm-manual"><a href="#content-wrapper">Skip to main content</a> </p>
+<p class="rm-manual">Thanks for contacting us. We've received your submission.</p>
+<p class="rm-manual"><a href="#">Back to Reading</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///news/">News</a></li> <li class="rm-manual"><a href="file:///metro/">Metro</a></li> <li class="rm-manual"><a href="https://pagesix.com/">Page Six</a></li> <li class="rm-manual"><a href="file:///sports/">Sports</a></li> <li class="rm-manual"><a href="file:///business/">Business</a></li> <li class="rm-manual"><a href="file:///opinion/">Opinion</a></li> <li class="rm-manual"><a href="file:///entertainment/">Entertainment</a></li> <li class="rm-manual"><a href="file:///fashion/">Fashion</a></li> <li class="rm-manual"><a href="https://nypost.com/shopping/">NY Post Shopping</a></li> <li class="rm-manual"><a href="file:///living/">Living</a></li> <li class="rm-manual"><a href="file:///media/">Media</a></li> <li class="rm-manual"><a href="file:///tech/">Tech</a></li> <li class="rm-manual"><a href="file:///real-estate/">Real Estate</a></li> <li class="rm-manual"><a href="file:///video/">Video</a></li> <li class="rm-manual"><a href="file:///photos/">Photos</a></li> <li class="rm-manual">
+<a href="#">Sub Menu 1</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://nypost.com/covers/">Covers</a></li> <li class="rm-manual"><a href="https://nypost.com/columnists/">Columnists</a></li> <li class="rm-manual"><a href="https://nypost.com/horoscopes/">Horoscopes</a></li> <li class="rm-manual"><a href="https://nypost.com/odds/">Sports Odds</a></li> <li class="rm-manual"><a href="https://email.nypost.com/">Email Newsletters</a></li> <li class="rm-manual"><a href="https://store.nypost.com/">Store</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="https://subscribe.nypost.com/">Home Delivery</a></li> </ul> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="#">Sign in</a></li> </ul>
+<p class="rm-manual"><a href="https://nypost.com/search/"> <span>Search</span> </a> </p>
+<p class="rm-manual"> Type to Search </p>
+<p class="rm-manual"> <a href="https://nypost.com/tips/"> <span>Tips</span> </a> <a href="https://email.nypost.com/"> <span>Sign Up</span> </a> </p>
+<p class="rm-manual"> <a href="https://nypost.com/"> New York Post <span>New York Post</span> </a> </p>
+<p class="rm-manual"> <span>Lily Sage Weinrieb, 25, a resident funeral 
+director at International Funeral &amp; Cremation Services in Harlem, 
+retrieves a deceased person from a hospital morgue during NYC's 
+coronavirus outbreak.</span> <span>Reuters</span> </p>
+<p class="rm-manual"> <a href="file:///metro/">Metro</a> </p>
+<h1 class="rm-manual"> Meet the women morticians caring for Harlem’s dead amid coronavirus crisis </h1>
+<p class="rm-manual">By Reuters</p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://nypost.com/author/reuters/"> <span>View author archive</span> </a> </li> <li class="rm-manual"> <a href="https://nypost.com/author/reuters/feed/"> <span>Get author RSS feed</span> </a> </li> </ul>
+<h4 class="rm-manual"> <span>Most Popular Today</span> </h4>
+<p class="rm-manual"><a href="https://nypost.com/2020/05/31/mayor-de-blasios-daughter-chiara-arrested-at-manhattan-protest/"> <span>1</span> <span>Mayor Bill de Blasio's daughter, Chiara, arrested at Manhattan protest</span> </a> </p>
+<p class="rm-manual"><a href="https://nypost.com/2020/05/31/accused-molotov-cocktail-hurler-is-ivy-league-educated-lawyer/"> <span>2</span> <span>Accused Molotov cocktail hurler is Ivy League-educated lawyer, community board member</span> </a> </p>
+<p class="rm-manual"><a href="https://nypost.com/2020/06/01/josina-anderson-is-out-at-espn/"> <span>3</span> <span>Josina Anderson is out at ESPN</span> </a> </p>
+<p class="rm-manual"><a href="https://nypost.com/2020/06/01/president-trump-mobilizing-us-military-to-end-george-floyd-riots/"> <span>4</span> <span>Trump mobilizes US military to end unprecedented riots</span> </a> </p>
+<p class="rm-manual"><a href="https://nypost.com/2020/06/01/molotov-cocktail-tossing-lawyers-tried-to-pass-out-explosives-cops/"> <span>5</span> <span>Molotov cocktail-tossing lawyers tried to pass out firebombs to protesters: feds</span> </a> </p>
+<p class="rm-manual"> Name<span>(required)</span> </p>
+<p class="rm-manual"> Email<span>(required)</span> </p>
+<p class="rm-manual"> Comment<span>(required)</span> </p>
+<p class="rm-manual"> April 21, 2020 <span>|</span> 10:57pm </p>
+<h4 class="rm-manual">More On:</h4>
+<h3 class="rm-manual"><a href="https://nypost.com/tag/coronavirus-in-ny/">Coronavirus in NY</a></h3>
+<h2 class="rm-manual"><a href="https://nypost.com/2020/06/01/lawmakers-council-stunned-by-nyc-by-curfew-announcement/">Lawmakers, Council stunned by NYC curfew announcement</a></h2>
+<h2 class="rm-manual"><a href="https://nypost.com/2020/06/01/feds-tally-nearly-26k-nursing-home-deaths-from-covid-19-report/">Feds count nearly 26K nursing home deaths from coronavirus, report says</a></h2>
+<h2 class="rm-manual"><a href="https://nypost.com/2020/06/01/retailers-cancel-reopenings-amid-protests-over-george-floyds-killing/">Retailers cancel reopenings amid protests over George Floyd's killing</a></h2>
+<h2 class="rm-manual"><a href="https://nypost.com/2020/06/01/new-yorkers-fleeing-coronavirus-shunned-by-pissed-off-locals/">New Yorkers fleeing coronavirus shunned by 'pissed-off' locals in vacation towns</a></h2>
+<p>NEW YORK — There are 48 bodies in the basement of the funeral home in
+ Harlem. Forty are in cardboard boxes, ready for cremation. The other 
+eight are in the refrigerator, to be embalmed and buried. It will be 
+weeks or months before they get either.</p>
+<p>As health officials began burying COVID-19 victims <a href="https://nypost.com/2020/04/10/de-blasio-admits-coronavirus-victims-are-buried-on-hart-island/">in a mass grave on Hart Island</a>
+ during New York’s worst week of death, the four female undertakers at 
+the International Funeral &amp; Cremation Service started turning bodies
+ away.</p>
+<p>This band of women morticians in heeled boots began to feel like they
+ were failing. The way they see it, a person should get what they want 
+in death, even if that was never possible in life.</p>
+<p>“That’s our thing,” says Lily Sage Weinrieb. “You want six limos and 
+you want them painted pink? Yes. Now, we’re like: you want a cremation? 
+I’m sorry, no. You want a burial and you already have a plot and 
+everything? Sorry, no. We don’t have any room.”</p>
+<p>“You see tons of body bags and tons of people and they’re labeled COVID-19, COVID-19, COVID-19. It’s like a horror show.”</p>
+<p><span> - Nicole Warring</span></p>
+<p>“We’re being told that we’re heroes for being on the front lines of this but I feel like I’m failing families every day.”</p>
+<p>On the front lines of the coronavirus pandemic, nurses and doctors are caring for the living. But there is <a href="https://nypost.com/2020/04/11/nyc-funeral-directors-bemoan-red-tape-amid-coronavirus-pandemic/">another front line of those caring for the dead</a>.
+ They fear they can also get infected and die. Some of them have sent 
+their own children to live with relatives. And because American cities 
+like New York were never designed to dispose of so many dead, their call
+ of duty will last much longer.</p>
+<figcaption><span>Manager Alisha Narvaez, 36, and Nicole Warring, 33, a 
+resident funeral director at International Funeral &amp; Cremation 
+Services in Harlem, carry a deceased person into the basement area, 
+where bodies are stored and prepared for funeral services.</span><span>Reuters</span></figcaption><p>Single moms and daughters</p>
+<p>At the beginning of the pandemic, Alisha Narvaez, 36, sent her 
+17-year-old daughter to live with her twin sister, but after two weeks 
+the distance was too much. “It’s always just been me and her and she 
+wanted to come home,” says Alisha.</p>
+<h4 class="rm-manual">see also</h4>
+<article class="rm-manual"> <a href="https://nypost.com/2020/04/11/nyc-funeral-directors-bemoan-red-tape-amid-coronavirus-pandemic/"> </a><p class="rm-manual"><a href="https://nypost.com/2020/04/11/nyc-funeral-directors-bemoan-red-tape-amid-coronavirus-pandemic/"> </a><a href="https://nypost.com/2020/04/11/nyc-funeral-directors-bemoan-red-tape-amid-coronavirus-pandemic/"> </a></p><h3 class="rm-manual"><a href="https://nypost.com/2020/04/11/nyc-funeral-directors-bemoan-red-tape-amid-coronavirus-pandemic/"> Red tape adding to NYC funeral directors' woes amid coronavirus pandemic </a></h3><a href="https://nypost.com/2020/04/11/nyc-funeral-directors-bemoan-red-tape-amid-coronavirus-pandemic/"> </a> <p class="rm-manual"></p>  </article><p class="rm-manual"> Frazzled funeral home directors are complaining about the invasion of... </p>
+<p class="rm-manual">Alisha showers at the funeral home after embalmings
+ and before going home, then removes all of her clothes in the hallway 
+and showers again when she gets home. She sprays her bag with Lysol and 
+rinses her mouth out with Listerine.</p>
+<p class="rm-manual">“I gotta make sure I keep healthy just not to harm 
+her,” says Alisha. “Although she’s been in quarantine for several weeks,
+ every day I come home from work is Day Zero for her.”</p>
+<p class="rm-manual">Jenny Adames sent her daughter to live with her mother. She recently caught herself snapping at her in a text exchange.</p>
+<p class="rm-manual">“Today kind of broke my heart,” says Jenny, 36. “She needs her mom. She don’t need Jenny the funeral director.”</p>
+<p class="rm-manual">Nicole Warring, 33, worries about dying, or 
+infecting her 10-year-old son. Her boyfriend who works for the casket 
+company got the virus. Fortunately, he recovered. She was off of work 
+for a week for heart palpitations from anxiety.</p>
+<figcaption class="rm-manual"><span>Reuters</span></figcaption><p class="rm-manual">“It’s traumatizing for everyone,” she says. “No mortuary school can prepare you for what we’re seeing now.”</p>
+<p class="rm-manual">Lily moved out of a shared house with friends in 
+Philadelphia because she didn’t think it was right to constantly expose 
+her housemates to the virus. Her parents let her move home but she says 
+no one has hugged her for more than a month.</p>
+<p class="rm-manual">“That sucks,” she says.</p>
+<p class="rm-manual">Several nights each week Lily, 25, sleeps in the chapel at the funeral home.</p>
+<p class="rm-manual">Buying time</p>
+<p class="rm-manual">Jenny doesn’t remember the first body she turned 
+away in the pandemic but she does remember the first one that made her 
+cry. A man called — every hour, at least four times in one day — about 
+his friend lying dead in a nursing home.</p>
+<p class="rm-manual">“I need help,” she recalls him saying. “I don’t 
+know what to do. I don’t want to leave him to be thrown in a potter’s 
+field. Please, you gotta help me Jenny.”</p>
+<p class="rm-manual">“I really couldn’t do anything and that broke my 
+heart,” says Jenny. “It’s not that we are turning you away. We just need
+ to buy time.”</p>
+<p class="rm-manual">The death toll in the United States is now the 
+highest in the world. A third of U.S. deaths, more than 13,000, have 
+been in New York City.</p>
+<p class="rm-manual">New York, the most-populous city in the United States, has just four crematories.</p>
+<p class="rm-manual">Death in a pandemic isn’t pretty. The <a href="https://nypost.com/2020/04/18/coronavirus-in-ny-some-trucks-storing-bodies-are-dark-dirty-packed/">refrigerated trailers outside of the hospitals</a>
+ don’t have enough shelving and bodies are sometimes stacked on top of 
+each other and on the floor. Some trailers don’t have lights.</p>
+<p class="rm-manual">Hospitals, which used to store bodies for 14 days now sometimes will only keep them for six.</p>
+<p class="rm-manual">“You have 20 other funeral directors ahead of you that have to get bodies out,” says Nicole.</p>
+<p class="rm-manual">“You see tons of body bags and tons of people and they’re labeled COVID-19, COVID-19, COVID-19. It’s like a horror show.”</p>
+<p class="rm-manual">And little stands between the women and the risks their work carries. No one even knows if the bodies of victims are contagious.</p>
+<p class="rm-manual">Two weeks ago, the women ran out of gloves.</p>
+<figcaption class="rm-manual"><span>Jenny Adames, 36, applies makeup to 
+her aunt, a suspected COVID-19 victim, with the assistance of her cousin
+ Vanessa Fernandez, before her aunt’s viewing service.</span><span>Reuters</span></figcaption><p class="rm-manual">In
+ that shortage, Jenny found an unexpected detente with the father of her
+ daughter. “We hate each other,” she explains, but says she turned to 
+him for help because he works in a hospital. He brought her gloves, a 
+box of masks and an apron.</p>
+<p class="rm-manual">“I don’t really like you much but you’re my daughter’s mother. Here you go,” he told her.</p>
+<p class="rm-manual">The phones in the funeral parlor ring constantly, 
+punctuated by ambulance sirens. Suppliers say they are running out of 
+caskets and urns. Jenny says she no longer hands families the casket 
+catalog; she just asks what color.</p>
+<h4 class="rm-manual">see also</h4>
+<article class="rm-manual"> <a href="https://nypost.com/2020/04/20/mortician-says-coronavirus-overflow-is-dark-right-now/"> </a><p class="rm-manual"><a href="https://nypost.com/2020/04/20/mortician-says-coronavirus-overflow-is-dark-right-now/"> </a><a href="https://nypost.com/2020/04/20/mortician-says-coronavirus-overflow-is-dark-right-now/"> </a></p><h3 class="rm-manual"><a href="https://nypost.com/2020/04/20/mortician-says-coronavirus-overflow-is-dark-right-now/"> Stressed mortician describes coronavirus overflow: 'It is dark right now' </a></h3><a href="https://nypost.com/2020/04/20/mortician-says-coronavirus-overflow-is-dark-right-now/"> </a> <p class="rm-manual"></p>  </article><p class="rm-manual"> "We're overloaded. It's unprecedented and unanticipated." </p>
+<p class="rm-manual">Last goodbyes</p>
+<p class="rm-manual">Most COVID-19 victims die alone, and when they die,
+ their families are told to quarantine. The women try to find ways for 
+them to say goodbye.</p>
+<p class="rm-manual">Jenny gives families her mobile number. They text her late into the night.</p>
+<p class="rm-manual">For those who are cremated, Lily offers to let the families pour the ashes into the urn and say a few words.</p>
+<p class="rm-manual">The funeral home in Harlem is one of the few 
+allowing viewings for COVID-19 victims. Because of the pandemic, only 10
+ people can gather at a time; most families are bigger so the women 
+offer four-hour viewings, 10 people per hour. Families have to bring 
+their own gloves and masks.</p>
+<p class="rm-manual">Jenny says the women have to watch each other right
+ now. The message, she says, is “limit your compassion please, because 
+we gotta move onto the next one. There’s no time to stop.”</p>
+<p class="rm-manual">Jenny’s grandfather died of the coronavirus on 
+April 6. A week later, on Good Friday, her aunt died. “Suspected 
+COVID-19,” her death certificate read. They were family so Jenny took 
+care of both of them herself.</p>
+<p class="rm-manual">“I’m not the emotional type to tell you the truth,” she says. “I don’t want to sound heartless but it’s a job. It’s what I do.”</p>
+<p class="rm-manual"> <span>Filed under</span> <a href="file:///coronavirus/" rel="tag">Coronavirus</a> <span>, </span> <a href="https://nypost.com/tag/coronavirus-in-ny/" rel="tag">Coronavirus in NY</a> <span>, </span> <a href="https://nypost.com/tag/funeral-homes/" rel="tag">funeral homes</a> <span>, </span> <a href="https://nypost.com/tag/funerals/" rel="tag">funerals</a> <span>, </span> <a href="https://nypost.com/tag/harlem/" rel="tag">harlem</a> <span>, </span> <a href="https://nypost.com/tag/hart-island/" rel="tag">hart island</a> <span>, </span> <a href="https://nypost.com/2020/04/21/">4/21/20</a> </p>
+<p class="rm-manual"> <a href="https://nypost.com/2020/04/21/tv-anchor-apologizes-after-saying-recovered-coronavirus-patient-died/">Read Next</a> </p>
+<p class="rm-manual"> <a href="https://nypost.com/2020/04/21/tv-anchor-apologizes-after-saying-recovered-coronavirus-patient-died/"> 'I feel horrible': TV anchor accidentally says recovered c... </a> </p>
+<h4 class="rm-manual">Coronavirus</h4>
+<p class="rm-manual">Stay informed with our <a href="https://email.nypost.com/?newsletter=coronavirus-updates" rel="noopener noreferrer">Coronavirus Daily Update</a> newsletter.</p>
+<p class="rm-manual"><a href="https://email.nypost.com/?newsletter=coronavirus-updates" rel="noopener noreferrer">SUBSCRIBE NOW</a></p>
+<p class="rm-manual"><a href="https://nypost.com/coronavirus/">Read Latest Updates</a></p>
+<h4 class="rm-manual"> <span>Trending Now</span> </h4>
+<ol class="rm-manual"> <li class="rm-manual"> <a href="https://nypost.com/2020/06/01/president-trump-mobilizing-us-military-to-end-george-floyd-riots/"> <span>Trump mobilizes US military to end unprecedented riots</span> </a> </li> <li class="rm-manual"> <a href="https://nypost.com/2020/06/01/josina-anderson-is-out-at-espn/"> Josina Anderson is out at ESPN </a> </li> <li class="rm-manual"> <a href="https://nypost.com/2020/06/01/nyc-looters-clash-with-protesters-as-another-night-of-chaos-erupts/"> Looters clash with protesters as another night of chaos erupts in NYC </a> </li> <li class="rm-manual"> <a href="https://nypost.com/2020/06/01/florida-police-chief-encourages-residents-to-shoot-looters/"> Florida sheriff encourages residents to shoot looters breaking into homes </a> </li> </ol>
+<h4 class="rm-manual"> <span>Video</span> </h4>
+<p class="rm-manual"> <a href="https://nypost.com/video/washington-protesters-tackle-man-ripping-up-sidewalk-with-a-hammer/"> <span> <span> Video length 41 seconds </span> <span>:41</span> </span> </a> </p>
+<h5 class="rm-manual"> <a href="https://nypost.com/video/washington-protesters-tackle-man-ripping-up-sidewalk-with-a-hammer/"> Washington protesters tackle man ripping up sidewalk with a hammer </a> </h5>
+<h4 class="rm-manual">More Stories</h4>
+<h4 class="rm-manual"> page six </h4>
+<h5 class="rm-manual"><a href="https://pagesix.com/2020/06/01/cole-sprouse-arrested-at-los-angeles-black-lives-matter-protest/">Cole Sprouse arrested at Los Angeles Black Lives Matter protest</a></h5>
+<h4 class="rm-manual"> nypost </h4>
+<h5 class="rm-manual"><a href="https://nypost.com/2020/06/01/president-trump-mobilizing-us-military-to-end-george-floyd-riots/">Trump mobilizes US military to end unprecedented riots</a></h5>
+<p class="rm-manual"> <a href="https://nypost.com/"> <span>New York Post</span> </a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://email.nypost.com/">Email Newsletters</a></li> <li class="rm-manual"><a href="https://nypost.com/mobile-apps/">Mobile Apps</a></li> <li class="rm-manual"><a href="https://nypost.com/contact/">Contact Us</a></li> <li class="rm-manual"><a href="https://nypost.com/tips/">Tips</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="#">Sections &amp; Features</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///news/">News</a></li> <li class="rm-manual"><a href="file:///tech/">Tech</a></li> <li class="rm-manual"><a href="file:///metro/">Metro</a></li> <li class="rm-manual"><a href="file:///real-estate/">Real Estate</a></li> <li class="rm-manual"><a href="https://pagesix.com/">Page Six</a></li> <li class="rm-manual"><a href="file:///video/">Video</a></li> <li class="rm-manual"><a href="file:///sports/">Sports</a></li> <li class="rm-manual"><a href="file:///photos/">Photos</a></li> <li class="rm-manual"><a href="file:///business/">Business</a></li> <li class="rm-manual"><a href="file:///alexa/">Alexa</a></li> <li class="rm-manual"><a href="file:///opinion/">Opinion</a></li> <li class="rm-manual"><a href="file:///covers/">Covers</a></li> <li class="rm-manual"><a href="file:///entertainment/">Entertainment</a></li> <li class="rm-manual"><a href="file:///horoscopes/">Horoscopes</a></li> <li class="rm-manual"><a href="file:///fashion/">Fashion</a></li> <li class="rm-manual"><a href="https://nypost.com/shopping/">NY Post Shopping</a></li> <li class="rm-manual"><a href="https://nypost.com/odds/">Sports Odds</a></li> <li class="rm-manual"><a href="file:///living/">Living</a></li> <li class="rm-manual"><a href="file:///classifieds/">Classifieds</a></li> <li class="rm-manual"><a href="file:///media/">Media</a></li> </ul> </li> <li class="rm-manual">
+<a href="#">Newsletters &amp; More</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://email.nypost.com/">Email Newsletters</a></li> <li class="rm-manual"><a href="https://nypost.com/rssfeeds/">RSS Feeds</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="https://store.nypost.com/">Store</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="https://goo.gl/5X7xvh">Post Headliners</a></li> <li class="rm-manual">
+<a href="#">Home Delivery</a> <ul class="rm-manual"> <li class="rm-manual"><a rel="noopener noreferrer" href="https://subscribe.nypost.com/">Subscribe</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="https://my.nypost.com/account/">Manage Subscription</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="https://nypost.com/home-delivery/">Delivery Help</a></li> </ul> </li> </ul> </li> <li class="rm-manual">
+<a href="#">Help/Support</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://nypost.com/customer-service/">Customer Service</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="http://nypost.help/">App FAQ &amp; Help</a></li> <li class="rm-manual">
+<a href="#">Contact Us</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://nypost.com/tips/">Tips</a></li> <li class="rm-manual"><a href="https://nypost.com/contact/">Newsroom</a></li> <li class="rm-manual"><a href="https://nypost.com/contact/">Letters to the Editor</a></li> <li class="rm-manual"><a href="http://www.nypostreprints.com/">Reprints</a></li> <li class="rm-manual"><a href="file:///careers/">Careers</a></li> </ul> </li> </ul> </li> <li class="rm-manual">
+<a href="#">Apps</a> <ul class="rm-manual"> <li class="rm-manual"><a rel="noopener noreferrer" href="https://itunes.apple.com/us/app/new-york-post-iphone-edition/id410094240?mt=8">iPhone App</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="https://itunes.apple.com/us/app/new-york-post-ipad-edition/id378590820?mt=8">iPad App</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=br.com.golmobile.nypost&amp;hl=en">Android Phone</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.nypost.tablet&amp;hl=en">Android Tablet</a></li> <li class="rm-manual">
+<a href="#">Advertise</a> <ul class="rm-manual"> <li class="rm-manual"><a rel="noopener noreferrer" href="http://advertising.nypost.com/">Media Kit</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="http://advertising.nypost.com/#contact">Contact</a></li> </ul> </li> </ul> </li> </ul>
+<h2 class="rm-manual">Post Digital Network</h2>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://pagesix.com/"> Page Six </a> </li> <li class="rm-manual"> <a href="https://pagesix.com/style"> Page Six Style </a> </li> <li class="rm-manual"> <a href="https://decider.com/"> Decider </a> </li> </ul>
+<p class="rm-manual"> <span>© 2020 NYP Holdings, Inc. All Rights Reserved</span> <a href="https://nypost.com/terms/">Terms of Use</a> <a href="https://nypost.com/privacy/">Privacy Notice</a> <a href="https://nypost.com/privacy/#adchoices">Your Ad Choices</a> <a href="https://nypost.com/sitemap/">Sitemap</a> </p>
+<p class="rm-manual"> <a href="https://nypost.com/ca-privacy-rights/">Your California Privacy Rights</a> </p>
+<p class="rm-manual"> New York Post </p>
+<p class="rm-manual"> Would you like to receive desktop browser notifications about breaking news and other major stories? </p>
+<p class="rm-manual"> Send to Email Address Your Name Your Email Address <a rel="nofollow" href="#cancel">Cancel</a> </p>
+<p class="rm-manual"> Post was not sent - check your email addresses! </p>
+<p class="rm-manual"> Email check failed, please try again </p>
+<p class="rm-manual"> Sorry, your blog cannot share posts by email. </p>
+<p class="rm-manual"> <span>click to copy</span> </p></article>
+</body></html>

@@ -1,0 +1,133 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> The Drone Papers: Secret documents detail the U.S. assassination program. </p>
+<p class="rm-manual"><a href="file:///"><span> The Intercept_</span></a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///">English</a></li>
+<li class="rm-manual"><a href="file:///brasil/">Português</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://theintercept.com/politics/">Politics</a></li>
+<li class="rm-manual"><a href="https://theintercept.com/justice/">Justice</a></li>
+<li class="rm-manual"><a href="https://theintercept.com/national-security/">National Security</a></li>
+<li class="rm-manual"><a href="https://theintercept.com/world/">World</a></li>
+<li class="rm-manual"><a href="https://theintercept.com/technology/">Technology</a></li>
+<li class="rm-manual"><a href="https://theintercept.com/environment/">Environment</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://theintercept.com/special-investigations/">Special Investigations</a></li>
+<li class="rm-manual"><a href="file:///voices/">Voices</a></li>
+<li class="rm-manual"><a href="file:///podcasts/">Podcasts</a></li>
+<li class="rm-manual"><a href="https://theintercept.com/videos/">Videos</a></li>
+<li class="rm-manual"><a href="file:///documents/">Documents</a></li>
+<li class="rm-manual"><a href="https://join.theintercept.com/donate/now/?source=web_intercept_20200514_hamburger_spring-campaign"><p class="rm-manual"> Become A Member</p></a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///about/">About</a></li>
+<li class="rm-manual"><a href="file:///policies/">Editorial Policies</a></li>
+<li class="rm-manual"><a href="https://theintercept.com/source/">Become a Source</a></li>
+<li class="rm-manual"><a href="file:///newsletter/?source=web_hamburger">Join Newsletter</a></li>
+</ul>
+<p class="rm-manual">The Intercept is a First Look Media Company.</p>
+<p class="rm-manual"> © First Look Media. </p>
+<p class="rm-manual"><span>All rights reserved</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///terms-use/"><span>Terms of use</span></a></li>
+<li class="rm-manual"><a href="file:///privacy-policy/"><span>Privacy</span></a></li>
+</ul>
+<p class="rm-manual"><a href="file:///"><span> The Intercept_</span></a></p>
+<h1>The Drone Papers</h1>
+<p><span>The Intercept has obtained a cache of secret documents 
+detailing the inner workings of the U.S. military’s assassination 
+program in Afghanistan, Yemen, and Somalia. The documents, provided by a
+ whistleblower, offer an unprecedented glimpse into Obama’s drone wars.</span></p>
+<p class="rm-manual">Illustration by The Intercept</p>
+<p class="rm-manual">Continue reading The Drone Papers</p>
+<ol class="rm-manual">
+<li class="rm-manual">
+<span>01.</span><a href="file:///drone-papers/the-assassination-complex/"><p class="rm-manual"></p><h2 class="rm-manual">The Assassination Complex</h2><p class="rm-manual">Jeremy Scahill</p><p class="rm-manual">The
+ whistleblower who leaked the drone papers believes the public is 
+entitled to know how people are placed on kill lists and assassinated on
+ orders from the president.</p><p class="rm-manual"></p></a>
+</li>
+<li class="rm-manual">
+<span>02.</span><a href="file:///drone-papers/a-visual-glossary/"><p class="rm-manual"></p><h2 class="rm-manual">A Visual Glossary</h2><p class="rm-manual">Josh Begley</p><p class="rm-manual">Decoding the language of covert warfare.</p><p class="rm-manual"></p></a>
+</li>
+<li class="rm-manual">
+<span>03.</span><a href="file:///drone-papers/the-kill-chain/"><p class="rm-manual"></p><h2 class="rm-manual">The Kill Chain</h2><p class="rm-manual">Cora Currier</p><p class="rm-manual">New details about the secret criteria for drone strikes and how the White House approves targets.</p><p class="rm-manual"></p></a>
+</li>
+<li class="rm-manual">
+<span>04.</span><a href="file:///drone-papers/find-fix-finish/"><p class="rm-manual"></p><h2 class="rm-manual">Find, Fix, Finish</h2><p class="rm-manual">Jeremy Scahill</p><p class="rm-manual">The
+ tip of the spear in the Obama administration’s ramped up wars in 
+Somalia and Yemen was a special operations task force called TF 48-4.</p><p class="rm-manual"></p></a>
+</li>
+<li class="rm-manual">
+<span>05.</span><a href="file:///drone-papers/manhunting-in-the-hindu-kush/"><p class="rm-manual"></p><h2 class="rm-manual">Manhunting in the Hindu Kush</h2><p class="rm-manual">Ryan Devereaux</p><p class="rm-manual">Leaked
+ documents detailing a multi-year U.S. military campaign in Afghanistan 
+reveal the strategic limits and startling human costs of drone warfare.</p><p class="rm-manual"></p></a>
+</li>
+<li class="rm-manual">
+<span>06.</span><a href="file:///drone-papers/firing-blind/"><p class="rm-manual"></p><h2 class="rm-manual">Firing Blind</h2><p class="rm-manual">Cora Currier, Peter Maass</p><p class="rm-manual">A secret Pentagon study highlights the chronic flaws in intelligence used for drone strikes in Yemen and Somalia.</p><p class="rm-manual"></p></a>
+</li>
+<li class="rm-manual">
+<span>07.</span><a href="file:///drone-papers/the-life-and-death-of-objective-peckham/"><p class="rm-manual"></p><h2 class="rm-manual">The Life and Death of Objective Peckham</h2><p class="rm-manual">Ryan Gallagher</p><p class="rm-manual">For
+ years Bilal el-Berjawi traveled freely from the U.K. to Somalia under 
+the watchful eyes of intelligence services. Then the U.S. killed him 
+with a drone strike.</p><p class="rm-manual"></p></a>
+</li>
+<li class="rm-manual">
+<span>08.</span><a href="file:///drone-papers/target-africa/"><p class="rm-manual"></p><h2 class="rm-manual">Target Africa</h2><p class="rm-manual">Nick Turse</p><p class="rm-manual">To reduce the “tyranny of distance,” drones fly from bases in Djibouti, Ethiopia, Kenya, and Navy ships.</p><p class="rm-manual"></p></a>
+</li>
+<li class="rm-manual">
+<span>09.</span><h3 class="rm-manual">Glossary</h3>
+<a href="file:///drone-papers-alphabet-of-assassination/"><h2 class="rm-manual">The Alphabet of Assassination</h2>
+<p class="rm-manual">A guide to the acronyms, abbreviations, and initialisms used in The Drone Papers.</p></a>
+</li>
+<li class="rm-manual">
+<span>10.</span><h3 class="rm-manual">Documents</h3>
+<a href="file:///document/2015/10/15/small-footprint-operations-2-13/"><h2 class="rm-manual">Small Footprint Operations 2/13</h2></a><a href="file:///document/2015/10/15/small-footprint-operations-5-13/"><h2 class="rm-manual">Small Footprint Operations 5/13</h2></a><a href="file:///document/2015/10/15/operation-haymaker/"><h2 class="rm-manual">Operation Haymaker</h2></a><a href="file:///document/2015/10/15/geolocation-watchlist/"><h2 class="rm-manual">Geolocation Watchlist</h2></a>
+</li>
+</ol>
+<p class="rm-manual">Editor-in-Chief: Betsy Reed. Series Editor: Roger 
+Hodge. Additional Editing: Rubina Madan Fillion, Charlotte Greensit, 
+Andrea Jones, Peter Maass. Research: Alleen Brown, John Thomason, Margot
+ Williams, Spencer Woodman. Art Direction: Stephane Elbaz and Philipp 
+Hubert. Additional Photo Editing: Connie Yu. Development: Tom Conroy and
+ Raby Yuson.</p>
+<p class="rm-manual"> Filters SVG </p></article>
+</body></html>

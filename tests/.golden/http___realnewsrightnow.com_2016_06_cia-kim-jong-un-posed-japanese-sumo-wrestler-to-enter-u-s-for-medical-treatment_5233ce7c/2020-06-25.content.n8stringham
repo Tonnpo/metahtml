@@ -1,0 +1,164 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Kim Jong-Un Posed as Sumo Wrestler to Enter U.S. for Medical Care </p>
+<p class="rm-manual"> <a href="#">×</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="http://realnewsrightnow.com/">Home</a></li> <li class="rm-manual"><a href="http://realnewsrightnow.com/us-news/">U.S. News</a></li> <li class="rm-manual"><a href="http://realnewsrightnow.com/world-news/">World News</a></li> <li class="rm-manual"><a href="http://realnewsrightnow.com/politics/">Politics</a></li> <li class="rm-manual"><a href="http://realnewsrightnow.com/sciencetechnology/">Science &amp; Technology</a></li> <li class="rm-manual"><a href="http://realnewsrightnow.com/entertainment/">Entertainment</a></li> <li class="rm-manual"><a href="http://realnewsrightnow.com/sports/">Sports</a></li> <li class="rm-manual"><a href="http://realnewsrightnow.com/about/">About</a></li> </ul>
+<h6 class="rm-manual">CIA: Kim Jong-un Posed as Japanese Sumo...</h6>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="http://realnewsrightnow.com/">Home</a></li> <li class="rm-manual"><a href="http://realnewsrightnow.com/us-news/">U.S. News</a></li> <li class="rm-manual"><a href="http://realnewsrightnow.com/world-news/">World News</a></li> <li class="rm-manual"><a href="http://realnewsrightnow.com/politics/">Politics</a></li> <li class="rm-manual"><a href="http://realnewsrightnow.com/sciencetechnology/">Science &amp; Technology</a></li> <li class="rm-manual"><a href="http://realnewsrightnow.com/entertainment/">Entertainment</a></li> <li class="rm-manual"><a href="http://realnewsrightnow.com/sports/">Sports</a></li> <li class="rm-manual"><a href="http://realnewsrightnow.com/about/">About</a></li> </ul>
+<aside class="rm-manual"><a href="http://realnewsrightnow.com/category/world-news/" rel="category tag">World News</a></aside><h1 class="rm-manual">CIA: Kim Jong-un Posed as Japanese Sumo Wrestler to Enter U.S. for Medical Treatment</h1>
+<aside class="rm-manual"> June 13, 2016 by <a href="http://realnewsrightnow.com/author/hobbus/" rel="author">R. Hobbus J.D.</a> </aside><p>NEW
+ YORK, Ny. – A cache of top-secret documents published by the 
+controversial whistle-blower website Wikileaks on Monday revealed that 
+in September of 2014, North Korea’s Supreme Leader Kim Jong-un traveled 
+in secret to the United States where, posing as a Japanese sumo 
+wrestler, he underwent ankle surgery at one of New York City’s most 
+prestigious hospitals.</p>
+<p>In October of 2014, South Korea’s National Intelligence Service 
+reported in a briefing to lawmakers that a cyst had been found on the 
+North Korean dictator’s right ankle. Intelligence analysts believed at 
+the time that due to possible muscle or nerve damage, Kim had undergone 
+surgery to remove the cyst at the hands of several “European experts” 
+that were flown to Pyongyang.</p>
+<p>However, according to internal CIA communications obtained by 
+Wikileaks, Kim and a small entourage, all carrying forged Japanese 
+passports and identification papers, flew from Beijing International 
+Airport on a direct flight to New York’s JFK International Airport. 
+“From the moment they landed, they were under intense surveillance,” a 
+U.S. intelligence official speaking on condition of anonymity told The 
+New York Times. </p>
+<p>Kim Jong-un, accompanied by a handful of high-ranking North Korean 
+officials, checked into the Plaza, a five-star luxury hotel opposite 
+Central Park on Fifth Avenue. According to hotel records obtained by The
+ New York Times, Kim was registered under the name ‘Keito Kamatsu’ and 
+prior to his arrival, hotel staff were briefed on Kim’s fictitious 
+status as a world-renowned sumo champion.</p>
+<p>“We were absolutely delighted to host Mr. Keito,” Grace Baldwin, a 
+concierge at the Plaza hotel, told the New York Daily News. Ms. Baldwin 
+described Kim as jovial yet reserved. He reminded her of “an over-sized 
+teddy bear, like the kind they used to sell at FAO Schwarz.” Baldwin 
+went on to say that Kim and his entourage racked up more than $26,000 in
+ room service charges during their three-week stay. “Most of it was 
+spent on desserts,” she admitted.</p>
+<p>However, splurging on lavish desserts wasn’t all the autocratic 
+dictator did while visiting the Big Apple. On September 19, 2014, Kim 
+Jong-un checked into the New York-Presbyterian Hospital where he 
+underwent surgery to remove the cyst on his ankle. According to a 
+document marked TOP SECRET//SCI//NOFORN, meaning sensitive 
+compartmentalized information that should not be viewed by foreign 
+nationals, two members of the CIA’s Special Activities Division were 
+present and posing as hospital staff during the procedure.</p>
+<p>Wikileaks founder Julian Assange, who reviewed the classified 
+material in full, said it’s not clear what role – if any – the CIA 
+agents might have played during Kim’s operation at New 
+York-Presbyterian. “Were they merely there to observe or was there a 
+more sinister purpose behind their presence?” Assange speculated as to 
+whether the CIA may have implanted a tracking device in the North Korean
+ leader’s ankle before doctors had a chance to sew him up and send him 
+on his way.</p>
+<p class="rm-manual"> Tags: </p>
+<p class="rm-manual"><a href="http://realnewsrightnow.com/tag/central-park/">central park</a>, </p>
+<p class="rm-manual"><a href="http://realnewsrightnow.com/tag/cia/">CIA</a>, </p>
+<p class="rm-manual"><a href="http://realnewsrightnow.com/tag/classified-material/">classified material</a>, </p>
+<p class="rm-manual"><a href="http://realnewsrightnow.com/tag/julian-assange/">julian assange</a>, </p>
+<p class="rm-manual"><a href="http://realnewsrightnow.com/tag/kim-jong-un/">KIM JONG UN</a>, </p>
+<p class="rm-manual"><a href="http://realnewsrightnow.com/tag/leaks/">leaks</a>, </p>
+<p class="rm-manual"><a href="http://realnewsrightnow.com/tag/new-york-presbyterian-hospital/">new york Presbyterian hospital</a>, </p>
+<p class="rm-manual"><a href="http://realnewsrightnow.com/tag/north-korea/">NORTH KOREA</a>, </p>
+<p class="rm-manual"><a href="http://realnewsrightnow.com/tag/real-news-right-now/">real news right now</a>, </p>
+<p class="rm-manual"><a href="http://realnewsrightnow.com/tag/realnewsrightnow/">realnewsrightnow</a>, </p>
+<p class="rm-manual"><a href="http://realnewsrightnow.com/tag/realnewsrightnow-com/">realnewsrightnow.com</a>, </p>
+<p class="rm-manual"><a href="http://realnewsrightnow.com/tag/sumo-wrestler/">sumo wrestler</a>, </p>
+<p class="rm-manual"><a href="http://realnewsrightnow.com/tag/supreme-leader/">supreme leader</a>, </p>
+<p class="rm-manual"><a href="http://realnewsrightnow.com/tag/surgery/">surgery</a>, </p>
+<p class="rm-manual"><a href="http://realnewsrightnow.com/tag/the-plaza/">the plaza</a>, </p>
+<p class="rm-manual"><a href="http://realnewsrightnow.com/tag/whistle-blower/">whistle blower</a>, </p>
+<p class="rm-manual"><a href="http://realnewsrightnow.com/tag/wikileaks/">WIKILEAKS</a> </p>
+<h1 class="rm-manual"><a href="http://realnewsrightnow.com/author/hobbus/">R. Hobbus J.D.</a></h1>
+<h4 class="rm-manual">Investigative Journalist</h4>
+<p class="rm-manual">R. Hobbus J.D. is an internationally acclaimed 
+independent investigative journalist specializing in international 
+politics, health, business, science, conflict resolution, history, 
+geography, mathematics, social issues, feminism, space travel, civil 
+rights, human rights... <a href="http://realnewsrightnow.com/index.php/about/">more</a></p>
+<p class="rm-manual"> <a href="#"> No Comments Yet </a> </p>
+<h3 class="rm-manual">Leave a Reply <a rel="nofollow" href="file:///2016/06/cia-kim-jong-un-posed-japanese-sumo-wrestler-to-enter-u-s-for-medical-treatment/#respond">Cancel reply</a>
+</h3>
+<p class="rm-manual">Your email address will not be published.</p>
+<p class="rm-manual">You may use these HTML tags and attributes: </p>
+<code class="rm-manual">&lt;a href="" title=""&gt; &lt;abbr title=""&gt;
+ &lt;acronym title=""&gt; &lt;b&gt; &lt;blockquote cite=""&gt; 
+&lt;cite&gt; &lt;code&gt; &lt;del datetime=""&gt; &lt;em&gt; &lt;i&gt; 
+&lt;q cite=""&gt; &lt;s&gt; &lt;strike&gt; &lt;strong&gt; </code><p class="rm-manual"> Save my name, email, and website in this browser for the next time I comment.</p>
+<p class="rm-manual"> Notify me of follow-up comments by email.</p>
+<p class="rm-manual"> Notify me of new posts by email.</p>
+<h4 class="rm-manual">Related News</h4>
+<h6 class="rm-manual"><a href="http://realnewsrightnow.com/2019/06/pope-francis-god-cant-see-prayers-on-facebook-unless-privacy-settings-disabled/">Pope Francis: God Can’t See Prayers on Facebook Unless Privacy Settings Disabled</a></h6>
+<h6 class="rm-manual"><a href="http://realnewsrightnow.com/2016/06/cdc-cigarettes-tonic-water-may-help-prevent-spread-zika-virus/">CDC: Cigarettes and Tonic Water May Help Prevent the Spread of Zika</a></h6>
+<h6 class="rm-manual"><a href="http://realnewsrightnow.com/2017/11/report-canadian-officials-offered-american-defectors-free-healthcare/">Report: Canadian Officials Offered American Defectors Free Healthcare</a></h6>
+<p class="rm-manual"><span>Trending Articles</span></p>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <a href="http://realnewsrightnow.com/2016/05/portland-city-council-votes-to-allow-furries-to-defecate-mate-in-dog-parks/">Portland's City Council Votes to Give Furries the Right to Defecate, Mate in Dog Parks</a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="http://realnewsrightnow.com/2020/06/catholic-church-to-alter-image-of-jesus-over-allegations-of-white-privilege/">Catholic Church to Alter Image of Jesus Over Allegations of White Privilege</a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="http://realnewsrightnow.com/2017/02/pope-francis-orders-vatican-archives-reveal-gods-name-ending-centuries-secrecy/">Pope Francis Orders Vatican Archives to Reveal God's Name Ending Centuries of Secrecy</a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="http://realnewsrightnow.com/2020/03/congress-considers-repealing-13th-amendment-to-help-stimulate-us-economy/">Congress Considers Repealing 13th Amendment to Help Stimulate US Economy</a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="http://realnewsrightnow.com/2016/12/bolivian-military-torches-300-acres-rainforest-spider-deaths-continue-climb/">Bolivian Military Torches 300 Acres of Rainforest as Spider Deaths Continue to Climb</a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="http://realnewsrightnow.com/2017/06/scientists-warn-pink-cows-verge-extinction/">Scientists Warn Pink Cows on the Verge of Extinction</a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="http://realnewsrightnow.com/2017/02/pentagon-propose-sending-ground-troops-syria-contain-refugee-problem/">Pentagon to Propose Sending Ground Troops into Syria to Contain Refugee Problem</a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="http://realnewsrightnow.com/2017/02/nevada-man-survived-ufo-abduction-says-aliens-asked-jesus-christ/">Nevada Man Who Survived UFO Abduction Says Aliens Asked Him About Jesus Christ</a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="http://realnewsrightnow.com/2017/09/white-house-says-trump-in-frequent-contact-with-extraterrestrials/">White House Says Trump in 'Frequent' Contact with Extraterrestrials</a> </p> </li> </ul>
+<p class="rm-manual"><span>What People are Saying</span></p>
+<ul class="rm-manual">
+<li class="rm-manual">
+<span><a href="http://none/" rel="external nofollow ugc">Leo Grizzaffi</a></span> on <a href="http://realnewsrightnow.com/2020/06/catholic-church-to-alter-image-of-jesus-over-allegations-of-white-privilege/#comment-109026">Catholic Church to Alter Image of Jesus Over Allegations of White Privilege</a>
+</li>
+<li class="rm-manual">
+<span>Kathy Petersen</span> on <a href="http://realnewsrightnow.com/2020/06/catholic-church-to-alter-image-of-jesus-over-allegations-of-white-privilege/#comment-108994">Catholic Church to Alter Image of Jesus Over Allegations of White Privilege</a>
+</li>
+<li class="rm-manual">
+<span><a href="https://hornsandhaloblog.wordpress.com/2020/06/20/federalizing-mistakes/" rel="external nofollow ugc">Federalizing Mistakes – hornsandhaloblog</a></span> on <a href="http://realnewsrightnow.com/2016/07/trump-announces-plan-federalize-american-police-departments/#comment-108912">Trump Announces Plan to Federalize American Police Departments</a>
+</li>
+<li class="rm-manual">
+<span>Lauri Rogers</span> on <a href="http://realnewsrightnow.com/2019/05/barr-appoints-special-counsel-to-determine-validity-of-obamas-birth-certificate/#comment-108686">Barr Appoints Special Counsel to Determine Validity of Obama’s Birth Certificate</a>
+</li>
+<li class="rm-manual">
+<span>Dean Eshelman</span> on <a href="http://realnewsrightnow.com/2015/07/pope-francis-god-has-instructed-me-to-revise-the-ten-commandments/#comment-108611">Pope Francis: God Has Instructed Me to Revise the Ten Commandments</a>
+</li>
+<li class="rm-manual">
+<span><a href="https://barendrechtinhetnieuws.nl/" rel="external nofollow ugc">Mike</a></span> on <a href="http://realnewsrightnow.com/2017/08/nasa-high-probability-aliens-speak-english/#comment-108579">NASA: High Probability That Aliens Would Speak English</a>
+</li>
+</ul>
+<p class="rm-manual">Real News Right Now, LLC.</p>
+<p class="rm-manual"><a rel="nofollow" href="http://realnewsrightnow.com/?blackhole=e1c9028ab9">Do NOT follow this link or you will be banned from the site!</a> </p>
+<p class="rm-manual"> Send to Email Address Your Name Your Email Address <a rel="nofollow" href="#cancel">Cancel</a> </p>
+<p class="rm-manual"> Post was not sent - check your email addresses! </p>
+<p class="rm-manual"> Email check failed, please try again </p>
+<p class="rm-manual"> Sorry, your blog cannot share posts by email. </p></article>
+</body></html>

@@ -1,0 +1,160 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">Cheap $1 petrol prices set for Australia after coronavirus sparks price war </p>
+<dl class="rm-manual">
+<dt class="rm-manual">Skip to:</dt>
+<dd><a href="#page">Main Content</a></dd>
+<dd><a href="#nav">Site Navigation</a></dd>
+<dd><a href="#footer">Site footer</a></dd>
+<dd><a href="file:///more-information/site-map">Site Map</a></dd>
+</dl>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="#">Log in</a> </li> <li class="rm-manual"> <a href="#">Sign up. </a> <a href="https://www.news.com.au/features/v3/dnac-988/when-you-register-with-news-com-au-you-unlock-all-the-special-features-on-Australias-largest-news-website-for-free/">Why?</a> </li> <li class="rm-manual"> <a href="#">Log out</a> </li> </ul>
+<p class="rm-manual"> <a href="https://www.news.com.au/">news.com.au — Australia’s #1 news site</a> </p>
+<ul class="rm-manual"><li class="rm-manual"><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///">News.com.au</a></li>
+<li class="rm-manual"><a href="file:///national">National</a></li>
+<li class="rm-manual"><a href="file:///world">World</a></li>
+<li class="rm-manual"><a href="file:///lifestyle">Lifestyle</a></li>
+<li class="rm-manual"><a href="file:///travel">Travel</a></li>
+<li class="rm-manual"><a href="file:///entertainment">Entertainment</a></li>
+<li class="rm-manual"><a href="file:///technology">Technology</a></li>
+<li class="rm-manual"><a href="file:///finance">Finance</a></li>
+<li class="rm-manual"><a href="file:///sport">Sport</a></li>
+<li class="rm-manual"><a href="#">Search</a></li>
+</ul></li></ul>
+<ul class="rm-manual"><li class="rm-manual"><h2 class="rm-manual"><a href="file:///finance">finance</a></h2></li></ul>
+<h1 class="rm-manual">Petrol prices to drop after coronavirus fears sparks price war</h1>
+<p class="rm-manual">Petrol could drop to $1 a litre in Australia after a price war ignited between Saudi Arabia and Russia amid coronavirus fears. </p>
+<p class="rm-manual">Charis Chang and wires</p>
+<p class="rm-manual"><span><a href="https://www.news.com.au/">news.com.au</a></span><span>March 9, 2020<span>2:32pm</span></span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="#">Video</a></li>
+<li class="rm-manual"><a href="#">Image</a></li>
+</ul>
+<h3>Petrol prices: How to save at the pump</h3>
+<p>A weak Aussie dollar has sent petrol prices soaring but there is a way you can still save big at the pump.</p>
+<p>Motorists should be able to get cheaper petrol amid a price war between Saudi Arabia and Russia.<span>Source:Supplied</span></p>
+<p>Petrol prices in Australia are expected to drop — possibly as low as 
+$1 a litre — after Saudi Arabia started a price war with Russia on 
+Monday.</p>
+<p>Oil prices plunged by more than 20 per cent amid concerns that the 
+coronavirus outbreak will see demand for energy falling as people cut 
+back on travel.</p>
+<p>Prices are falling as Saudi Arabia, Russia and other oil-producing 
+countries argue about how much to cut production in order to prop up 
+prices.</p>
+<p>The Organisation of the Petroleum Exporting Countries (OPEC) 
+suggested cutting back oil production to stabilise falling prices but 
+Russia, the world’s second-largest producer, did not seem to be on 
+board.</p>
+<p>It led to Saudi Arabia, the world’s biggest oil exporter, slashing 
+its official selling prices and pledging to release more supply onto the
+ market in an attempt to punish Russia.</p>
+<p>The price war saw prices for brent crude, which is the international 
+standard, fall by 25.3 per cent to $33.83 per barrel, and the benchmark 
+US crude drop by 26.1 per cent to $30.49.</p>
+<p>It’s the biggest price fall for oil since 1991.</p>
+<p>The price drop is expected to flow through to cheaper petrol prices in Australia.</p>
+<p>CommSec chief economist Craig James predicting petrol prices could drop to $1 a litre.</p>
+<p>“The ready-reckoner is that every US$1 a barrel fall in the oil price
+ leads to a 1.0 cent fall at the petrol bowser. Provided the Aussie 
+dollar is reasonably stable, motorists may be able to look forward to 
+filling up for near $1 a litre,” he wrote in a research note.</p>
+<p>Fuel prices in Australia’s capital cities on Sunday ranged from an 
+average of $1.19 a litre in Adelaide to $1.536 in Hobart, according to 
+Motormouth.com.au. In Sydney, petrol was selling for $1.248, while it 
+cost an average of $1.239 in Melbourne.</p>
+<p class="rm-manual">RELATED: <a href="https://www.news.com.au/finance/markets/australian-markets/australian-share-market-to-fall-to-fresh-horrific-depths-as-coronavirus-fears-escalate/news-story/728c50e2f64e5c5b089e417f4f13e217">Australian share market plunges to ‘horrific’ depths</a></p>
+<p class="rm-manual">RELATED: <a href="https://www.news.com.au/lifestyle/health/health-problems/coronavirus-across-the-country-infected-man-visited-sydney-emergency-department/live-coverage/d422aa4299b1b05aa163c463b925b199">Two Sydney schools closed after three students infected</a></p>
+<p class="rm-manual"> RELATED: <a href="https://www.news.com.au/finance/business/retail/toilet-paper-is-like-gold-coronavirus-fears-create-queues-out-the-door-at-grocery-shops/news-story/a72a3789ac5fbf6881b1e5f9b446c2ca">Toilet paper is ‘like gold’ as coronavirus fears spread</a></p>
+<p>Motorists should be able to get cheaper petrol amid a price war between Saudi Arabia and Russia.<span>Source:News Limited</span></p>
+<p>Treasurer Josh Frydenberg today urged consumer watchdog Australian 
+Competition and Consumer Commission (ACCC) to ensure lower oil prices 
+were passed on at petrol pumps.</p>
+<p>Mr Frydenberg said he had spoken to ACCC chair Rod Sims on Monday 
+about the organisation’s role in monitoring prices at the bowser.</p>
+<p>“I wanted to re-emphasise to the ACCC the importance of holding the 
+oil retailers to account in ensuring that Australians get the benefit 
+from the lower oil prices,” he told reporters in Canberra.</p>
+<p>“They have assured me that they will not only maintain their monitoring role and the vigilance that that involves.</p>
+<p>“They’ll also be calling out any energy companies that don’t pass on 
+the reduction in the wholesale price to the Australian consumer.”</p>
+<p class="rm-manual">RELATED: <a href="https://www.news.com.au/topics/coronavirus">Follow the latest updates on coronavirus</a></p>
+<p>Saudi Arabia, Russia, and other major producers last battled for 
+market share like this between 2014 and 2016 to try to squeeze out 
+production from the United States, now the world’s biggest oil producer 
+as flows from shale oil fields doubled the country’s output during the 
+last decade.</p>
+<p>“Saudi Arabia and Russia are entering into an oil price war that is 
+likely to be limited and tactical,” Eurasia Group said in a note.</p>
+<p>“The most likely outcome of this crisis is entrenchment into a 
+painful process that lasts several weeks or months, until prices are low
+ enough to … some form of compromise on resumed OPEC+ production 
+restraint,” Eurasia said.</p>
+<p class="rm-manual">Comments</p>
+<p class="rm-manual"><a href="#">Show comments</a></p>
+<h3 class="rm-manual">Add your comment to this story</h3>
+<p class="rm-manual">To join the conversation, please <a href="#">Log in</a>. Don't have an account? <a href="#">Sign up</a></p>
+<p class="rm-manual"><span>Join the conversation, you are commenting as </span> <a href="#">Logout</a></p>
+<h2 class="rm-manual"> MORE IN finance</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.news.com.au/finance/business/retail/aldi-toilet-paper-mum-spots-bizarre-detail-after-the-panic-buying-shortage/news-story/31f0457d9fbc133e9b28627d9184610d"><p class="rm-manual"></p><h4 class="rm-manual">Photo sparks Aldi loo roll debate</h4><p class="rm-manual"></p></a></li>
+<li class="rm-manual"><a href="https://www.news.com.au/finance/markets/australian-markets/aussie-share-market-plunges-deep-into-red-following-concerning-rise-in-us-coronavirus-cases/news-story/cfe6b24640d09d027138e4422becab6a"><p class="rm-manual"></p><h4 class="rm-manual">Bank bloodbath as ASX plunges</h4><p class="rm-manual"></p></a></li>
+<li class="rm-manual"><a href="https://www.news.com.au/finance/money/tax/eofy-2020-how-to-not-fall-for-tax-time-trap-at-end-of-financial-year/news-story/abbf2300061effea7e310ca2177e2833"><p class="rm-manual"></p><h4 class="rm-manual">Expert’s grim tax trap warning</h4><p class="rm-manual"></p></a></li>
+<li class="rm-manual"><a href="https://www.news.com.au/finance/work/careers/australian-employment-job-advertisements-have-risen-dramatically-across-country/news-story/5cbfa7c0cdccfaa885a5ff4b720f5090"><p class="rm-manual"></p><h4 class="rm-manual">Huge spike in new job ads</h4><p class="rm-manual"></p></a></li>
+<li class="rm-manual"><a href="https://www.news.com.au/finance/markets/world-markets/wall-street-plunges-as-virus-fears-return/news-story/82c8ca91523d0dc321e254cf5f104668"><p class="rm-manual"></p><h4 class="rm-manual">Wall Street plummets as fears return</h4><p class="rm-manual"></p></a></li>
+<li class="rm-manual"><a href="https://www.news.com.au/finance/economy/australian-economy/absolute-joke-towns-on-queenslandnsw-border-left-reeling-by-closure/news-story/f90ec3940db902d97e9708b37073fb09"><p class="rm-manual"></p><h4 class="rm-manual">‘Absolute joke’: Town’s 79 days of pain</h4><p class="rm-manual"></p></a></li>
+<li class="rm-manual"><a href="https://www.news.com.au/finance/business/retail/amazon-to-set-up-multimillion-dollar-hub-in-brisbane/news-story/3218dd6b94c69ceceae7553f95f94cda"><p class="rm-manual"></p><h4 class="rm-manual">Amazon’s multi-million dollar Aussie hub</h4><p class="rm-manual"></p></a></li>
+<li class="rm-manual"><a href="https://www.news.com.au/finance/markets/australian-markets/australian-share-market-asx-plunges-more-than-3-per-cent/news-story/124e392c174375a08ae8f24185bd59dc"><p class="rm-manual"></p><h4 class="rm-manual">Cold water poured on market’s $500b run</h4><p class="rm-manual"></p></a></li>
+</ul>
+<p class="rm-manual"><a href="https://www.newscorpaustralia.com/brand/newscomau/"></a></p><p class="rm-manual"><a href="https://www.newscorpaustralia.com/brand/newscomau/">Advertise</a></p><a href="https://www.news.com.au/more-information"><p class="rm-manual">About Us</p></a><p class="rm-manual"></p>
+<p class="rm-manual">Download the App</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://preferences.news.com.au/privacy">Privacy Policy</a></li>
+<li class="rm-manual"><a href="https://preferences.news.com.au/privacy">Relevant Ad Opt-Out</a></li>
+<li class="rm-manual"><a href="https://preferences.news.com.au/cookies">Cookie Policy</a></li>
+<li class="rm-manual"><a href="https://www.news.com.au/more-information/terms-and-conditions">Terms &amp; Conditions</a></li>
+<li class="rm-manual"><a href="https://www.news.com.au/the-team">Our Team</a></li>
+</ul>
+<p class="rm-manual">A NOTE ABOUT RELEVANT ADVERTISING: We collect 
+information about the content (including ads) you use across this site 
+and use it to make both advertising and content more relevant to you on 
+our network and other sites.<a href="https://preferences.news.com.au/##collect"> Find out more about our policy and your choices, including how to opt-out.</a></p>
+<p class="rm-manual">News Pty Limited Copyright © 2020. <span>All times AEST (GMT +10).</span></p>
+<p class="rm-manual">Powered by <a href="https://vip.wordpress.com/" rel="nofollow">WordPress.com VIP</a></p></article>
+</body></html>

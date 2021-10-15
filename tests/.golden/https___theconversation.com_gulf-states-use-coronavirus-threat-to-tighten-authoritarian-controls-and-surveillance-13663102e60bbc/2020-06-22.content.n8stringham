@@ -1,0 +1,160 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Gulf states use coronavirus threat to tighten authoritarian controls and surveillance </p>
+<h3 class="rm-manual">Editions</h3>
+<h3 class="rm-manual">Sections</h3>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///us">Home</a> </li> <li class="rm-manual"> <a href="file:///us/covid-19">COVID-19</a> </li> <li class="rm-manual"> <a href="file:///us/arts">Arts <span><span>+</span> Culture</span></a> </li> <li class="rm-manual"> <a href="file:///us/business">Economy <span><span>+</span> Business</span></a> </li> <li class="rm-manual"> <a href="file:///us/education">Education</a> </li> <li class="rm-manual"> <a href="file:///us/environment">Environment <span><span>+</span> Energy</span></a> </li> <li class="rm-manual"> <a href="file:///us/ethics">Ethics <span><span>+</span> Religion</span></a> </li> <li class="rm-manual"> <a href="file:///us/health">Health</a> </li> <li class="rm-manual"> <a href="file:///us/politics">Politics <span><span>+</span> Society</span></a> </li> <li class="rm-manual"> <a href="file:///us/technology">Science <span><span>+</span> Technology</span></a> </li> <li class="rm-manual"><a href="file:///us/espanol"><span>En Español</span></a></li> </ul>
+<h3 class="rm-manual">Search</h3>
+<h3 class="rm-manual">Services</h3>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///us/newsletters"> Newsletter </a> </li> <li class="rm-manual"> <a href="http://google.com/newsstand/s/CBIwr8WNoC4">Read on Play Newsstand</a> </li> <li class="rm-manual"> <a href="https://apple.news/TwTJF4g8lTJGKVT-OWib5Tw">Read on Apple News</a> </li> <li class="rm-manual"> <a href="https://flipboard.com/@ConversationUS">Read on Flipboard</a> </li> </ul>
+<h3 class="rm-manual">Information</h3>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///us/who-we-are"><span>Who we are</span></a></li> <li class="rm-manual"><a href="file:///us/charter"><span>Our charter</span></a></li> <li class="rm-manual"><a href="file:///us/team"><span>Our team</span></a></li> <li class="rm-manual"><a href="file:///us/partners"><span>Partners and funders</span></a></li> <li class="rm-manual"><a href="file:///us/republishing-guidelines"><span>Republishing guidelines</span></a></li> <li class="rm-manual"><a href="file:///us/contact-us"><span>Contact us</span></a></li> <li class="rm-manual"> <a href="https://donate.theconversation.com/us?utm_source=theconversation.com&amp;utm_medium=website&amp;utm_campaign=mobile-sidebar"><span>Donate</span></a> </li> <li class="rm-manual"><a href="file:///us/friends"><span>Friends of The Conversation</span></a></li> <li class="rm-manual"><a href="file:///us/privacy-policy"><span>Privacy policy</span></a></li> <li class="rm-manual"><a href="file:///us/terms-and-conditions"><span>Terms and conditions</span></a></li> <li class="rm-manual"><a href="file:///us/corrections"><span>Corrections</span></a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual">Edition:</li> </ul>
+<p class="rm-manual"><a href="file:///us">Available editions</a> </p>
+<p class="rm-manual"> <span> <span>United States</span> </span> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///africa">Africa</a> </li> <li class="rm-manual"> <a href="file:///au">Australia</a> </li> <li class="rm-manual"> <a href="file:///ca">Canada</a> </li> <li class="rm-manual"> <a href="file:///ca-fr">Canada (français)</a> </li> <li class="rm-manual"> <a href="file:///es">España</a> </li> <li class="rm-manual"> <a href="file:///fr">France</a> </li> <li class="rm-manual"> <a href="file:///global">Global Perspectives</a> </li> <li class="rm-manual"> <a href="file:///id">Indonesia</a> </li> <li class="rm-manual"> <a href="file:///nz">New Zealand</a> </li> <li class="rm-manual"> <a href="file:///uk">United Kingdom</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://donate.theconversation.com/us?utm_source=theconversation.com&amp;utm_medium=website&amp;utm_campaign=topbar">Donate</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///become-an-author">Become an author</a> </li> <li class="rm-manual"> <a href="file:///sign_up?return_to=%2Fgulf-states-use-coronavirus-threat-to-tighten-authoritarian-controls-and-surveillance-136631">Sign up as a reader</a> </li> <li class="rm-manual"> <a href="file:///sign_in?return_to=%2Fgulf-states-use-coronavirus-threat-to-tighten-authoritarian-controls-and-surveillance-136631">Sign in</a> </li> </ul>
+<p class="rm-manual"> Search </p>
+<p class="rm-manual"> Academic rigor, journalistic flair </p>
+<ol class="rm-manual"> <li class="rm-manual"> <a href="file:///us/covid-19">COVID-19</a> </li> <li class="rm-manual"> <a href="file:///us/arts">Arts <span><span>+</span> Culture</span></a> </li> <li class="rm-manual"> <a href="file:///us/business">Economy <span><span>+</span> Business</span></a> </li> <li class="rm-manual"> <a href="file:///us/education">Education</a> </li> <li class="rm-manual"> <a href="file:///us/environment">Environment <span><span>+</span> Energy</span></a> </li> <li class="rm-manual"> <a href="file:///us/ethics">Ethics <span><span>+</span> Religion</span></a> </li> <li class="rm-manual"> <a href="file:///us/health">Health</a> </li> <li class="rm-manual"> <a href="file:///us/politics">Politics <span><span>+</span> Society</span></a> </li> <li class="rm-manual"> <a href="file:///us/technology">Science <span><span>+</span> Technology</span></a> </li> </ol>
+<h1 class="rm-manual"> Gulf states use coronavirus threat to tighten authoritarian controls and surveillance </h1>
+<p class="rm-manual"> April 21, 2020 9.11am EDT </p>
+<p class="rm-manual"> <a href="#"> <span>Matthew Hedges</span>, Durham University </a> </p>
+<h3 class="rm-manual">Author</h3>
+<ol class="rm-manual"> <li class="rm-manual"> <a rel="author" href="file:///profiles/matthew-hedges-719888"> <span> Matthew Hedges </span> </a> <p class="rm-manual"> Doctoral Research Candidate in the School of Government and International Affairs, Durham University </p> </li> </ol>
+<h3 class="rm-manual">Disclosure statement</h3>
+<p class="rm-manual"><span>Matthew Hedges does not work for, consult, 
+own shares in or receive funding from any company or organization that 
+would benefit from this article, and has disclosed no relevant 
+affiliations beyond their academic appointment.</span></p>
+<h3 class="rm-manual">Partners</h3>
+<p class="rm-manual"><a href="https://theconversation.com/institutions/durham-university-867">Durham University</a> provides funding as a founding partner of The Conversation UK.</p>
+<p class="rm-manual"><a href="file:///us/partners">View all partners</a></p>
+<figcaption> A man is tested for coronavirus at a drive-through facility in Dubai, the United Arab Emirates. <span><span>Mahmoud Khaled/EPA</span></span> </figcaption><p>Governments
+ across the Middle East have moved to upgrade their surveillance 
+capabilities under the banner of combatting COVID-19, the disease linked
+ to the new coronavirus.</p>
+<p>Overtly <a href="https://books.google.co.uk/books/about/Political_Military_Relations_and_the_Sta.html?id=Ac3cAAAAQBAJ&amp;source=kp_book_description&amp;redir_esc=y">repressive policies</a>
+ have been commonplace across the Middle East for years, notably in 
+Egypt, Iraq and Syria, where violent measures have been taken to control
+ populations. </p>
+<p>As a result of technological advances, an increase in political 
+engagement and changes of leadership, the states of the Gulf Cooperation
+ Council (GCC) – Bahrain, Kuwait, Oman, Qatar, Saudi Arabia and the 
+United Arab Emirates (UAE) – have also <a href="https://www.brookings.edu/wp-content/uploads/2016/06/10arabworld.pdf">upgraded their form of authoritarianism</a>
+ in recent years. This has seen policies of partial economic 
+liberalisation and market-based reforms used to obscure an increase in 
+repression and surveillance, for example by containing the work of civil
+ society groups. </p>
+<p>Following the pattern in which authoritarian states tend to exploit 
+common threats, some of the GCC states are now manipulating the current 
+pandemic to enhance their social power and control – as I’ve explored in
+ a recent <a href="https://pomeps.org/authoritarian-exploitation-of-covid-19-in-the-gcc">article</a> as part of a contribution for the Project on Middle East Political Science at George Washington University. </p>
+<h2>New controls</h2>
+<p>In Dubai, nationwide curfews have been put in place and enforced by the <a href="http://www.dxbpermit.gov.ae/">security services</a> and <a href="https://www.cnbc.com/2020/04/16/countries-in-the-middle-east-are-using-ai-to-fight-coronavirus.html">surveillance</a>. Authorities in the UAE have also introduced criminal <a href="https://gulfnews.com/uae/crime/covid-19-temporary-imprisonment-for-spreading-rumours-in-uae-1.1585722668466">penalties</a> for the dissemination of information about the virus deemed to be false. Meanwhile, Bahrain introduced <a href="https://www.thenational.ae/world/gcc/coronavirus-bahrain-to-use-electronic-tags-for-people-in-quarantine-1.1001903">electronic tags</a> for patients who had tested positive for COVID-19. In Saudi Arabia, people have been arrested for <a href="https://gulfnews.com/world/gulf/saudi/covid-19-34-curfew-violators-nabbed-in-saudi-arabia-1.1587299810053">violating strict curfew laws</a>. </p>
+<p>Beijing’s recent <a href="https://www.bbc.co.uk/news/world-asia-china-52321529">admission</a>
+ that more people had died than originally reported in Wuhan, the 
+original epicentre of the pandemic, shows the fragile nature of 
+information and truth within authoritarian states. Likewise, it’s 
+difficult to assess the scale of who has been affected so far across the
+ GCC. According to official government statistics as <a href="https://coronavirus.jhu.edu/map.html">of April 21</a>,
+ there were 10,484 reported cases in Saudi Arabia and 103 deaths from 
+COVID-19. The UAE had reported 7,265 cases and 43 deaths, Qatar 6,105 
+ases and nine deaths and Kuwait 2,080 cases and 11 deaths.</p>
+<p>China’s <a href="https://theconversation.com/chinas-coronavirus-cover-up-how-censorship-and-propaganda-obstructed-the-truth-133095">handling of its own early COVID-19 whistleblowers</a>
+ showed how authoritarian states often react promptly to the 
+dissemination of news which could undermine their authority. Of course, 
+the curtailing of “fake news” during this time is important to prevent 
+hysteria and panic. </p>
+<p>But <a href="https://www.theatlantic.com/international/archive/2019/01/matthew-hedges-uae-held-me-spy-west-complicit/581200/">from my own experience</a>
+ of being forcibly detained for six months and falsely accused of spying
+ charges in the UAE, I know full well how these laws can be abused and 
+twisted for ulterior purposes. The real test will be to see if all of 
+these preventative laws are relaxed once the pandemic is under control.</p>
+<figcaption> <span>A market in Salmiya, Kuwait, is disinfected in early April.</span> <span><span>Noufal Ibrahim/EPA</span></span> </figcaption><p>The
+ inherent weaknesses of GCC states are also being further exposed 
+through this pandemic. GCC citizens only inadvertently hold the power of
+ accountability over their monarchies, due to the lack of formal 
+political mechanisms that generate and provide legitimacy in 
+democracies. In essence, the monarchs hold power until they don’t.</p>
+<p>In response, Middle Eastern states have introduced programmes in 
+recent years that emphasise cultural traditions in an attempt to further
+ centralise power using key figures within their regime. A recent 
+anti-corruption drive in Saudi Arabia, which climaxed with the <a href="https://www.theguardian.com/world/2017/nov/06/how-saudi-elite-became-five-star-prisoners-at-the-riyadh-ritz-carlton">Ritz-Carlton incident</a>
+ in which more than 30 elite figures were detained in a luxury hotel, 
+highlighted the ascendancy of Mohammed Bin Salman, the crown prince. </p>
+<p>In the UAE, the security state has been intensified through the creation of <a href="https://u.ae/en/information-and-services/social-affairs/preserving-the-emirati-national-identity/initiatives-to-preserve-the-national-identity-of-the-uae/the-uae-national-service-law">conscription</a> programmes which emphasise national identity under the patronage of Abu Dhabi Crown Prince Mohammed bin Zayed. </p>
+<h2>Biopolitics</h2>
+<p>Central to the current messaging around COVID-19 is the heightened 
+value of “purity” within the nation. This notion has been promoted 
+through the prism of the family, with the region’s rulers extending the 
+meaning to include the nation in an attempt to retain cohesiveness. In 
+the current context, for example, only one member of a family is allowed
+ to pick up food during the lockdown in some Gulf states, and there have
+ been greater protections imposed for nationals than non-nationals, many
+ of whom <a href="https://www.ft.com/content/b4f3c258-7ec9-477c-92f7-5607203f77fc">have been deported</a>.</p>
+<p>But this comes at a moment when the so-called purity of the family 
+unit is under threat as dowry costs, marriages to foreigners and divorce
+ rates are <a href="https://www.researchgate.net/publication/331436638_Tribe_and_Tribalism_The_Trojan_Horse_of_GCC_States_The_Anatomy_of_a_Crisis">all increasing across the GCC</a>. This has helped maintain a heightened significance of the family within GCC politics. As a result, issues such as <a href="https://www.reuters.com/article/us-saudi-women/saudi-promo-video-labels-feminism-atheism-homosexuality-as-extremist-ideas-idUSKBN1XL29Z">homosexuality</a>, marriage to foreigners and now even COVID-19 are seen as a threat which has the potential to dilute the national gene pool. </p>
+<p>The GCC states are also capitalising on a new vein of conservative 
+nationalism across the region that is highly personalised and driven by 
+security concerns. An era of assertive foreign policy from Riyadh, Abu 
+Dhabi and Doha is now playing out as a matter of principle and survival.
+ As a result, Saudi Arabia and the UAE have fortified their political 
+and military engagements. Their closer ties with regional players such 
+as Libya’s <a href="https://www.theguardian.com/world/2020/mar/11/suspected-military-supplies-libya-un-cargo">General Khalifa Haftar</a> and pro-government Yemeni <a href="https://www.hrw.org/news/2020/03/25/yemen-saudi-forces-torture-disappear-yemenis">forces</a> have helped keep these conflicts alive within a reduced footprint. </p>
+<p>Back home, the GCC states have exploited the underlying threats of 
+the virus to bolster their own survival strategies. In the past, 
+authoritarian states such as the former Soviet Union often relied on 
+crude illustrations of force alongside state propaganda. But the modern 
+authoritarians in the GCC take a more co-optive route to manage their 
+populations. They have been able to enact policies which undermine civil
+ liberties, perpetuating their current political designs and generating 
+no protest from their populations. So it’s crucial to understand how 
+these practices are maintained, why they have the population’s consent, 
+and upon what basis they will continue to be applied.</p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///topics/saudi-arabia-1591">Saudi Arabia</a> </li> <li class="rm-manual"> <a href="file:///topics/coronavirus-5830">Coronavirus</a> </li> <li class="rm-manual"> <a href="file:///topics/bahrain-12477">Bahrain</a> </li> <li class="rm-manual"> <a href="file:///topics/united-arab-emirates-17017">United Arab Emirates</a> </li> <li class="rm-manual"> <a href="file:///topics/gulf-cooperation-council-gcc-18703">Gulf Cooperation Council (GCC)</a> </li> <li class="rm-manual"> <a href="file:///topics/gulf-states-20720">Gulf states</a> </li> <li class="rm-manual"> <a href="file:///topics/dubai-27288">Dubai</a> </li> </ul>
+<h3 class="rm-manual">Want to write?</h3>
+<p class="rm-manual"> Write an article and join a growing community of more than 107,700 academics and researchers from 3,511 institutions. </p>
+<p class="rm-manual"> <a href="file:///become-an-author">Register now</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///us/community-standards">Community standards</a> </li> <li class="rm-manual"> <a href="file:///us/republishing-guidelines">Republishing guidelines</a> </li> <li class="rm-manual"> <a href="file:///us/friends">Friends of The Conversation</a> </li> <li class="rm-manual"> <a href="https://analytics.theconversation.com/us">Analytics</a> </li> <li class="rm-manual"> <a href="file:///us/feeds">Our feeds</a> </li> <li class="rm-manual"> <a href="https://donate.theconversation.com/us?utm_source=theconversation.com&amp;utm_medium=website&amp;utm_campaign=footer">Donate</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///us/who-we-are">Who we are</a> </li> <li class="rm-manual"> <a href="file:///us/charter">Our charter</a> </li> <li class="rm-manual"> <a href="file:///us/team">Our team</a> </li> <li class="rm-manual"> <a href="file:///us/partners">Partners and funders</a> </li> <li class="rm-manual"> <a href="file:///us/resources-for-media">Resource for media</a> </li> <li class="rm-manual"> <a href="file:///us/contact-us">Contact us</a> </li> <li class="rm-manual"> <a href="file:///us/espanol">En Español</a> </li> </ul>
+<p class="rm-manual"> <a href="file:///us/privacy-policy">Privacy policy</a> <a href="file:///us/terms-and-conditions">Terms and conditions</a> <a href="file:///us/corrections">Corrections</a> </p>
+<p class="rm-manual"> <span>Copyright © 2010–2020</span><span>, </span><span><a href="file:///us/who-we-are">The Conversation US, Inc.</a></span> </p></article>
+</body></html>

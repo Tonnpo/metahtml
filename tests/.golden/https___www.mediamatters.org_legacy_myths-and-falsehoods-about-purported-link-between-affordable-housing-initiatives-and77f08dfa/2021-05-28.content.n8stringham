@@ -1,0 +1,411 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual"> <span>Myths and falsehoods about the purported link between affordable housing initiatives and the financial crisis</span> </h1>
+<p class="rm-manual"><span>Written by</span> <a href="file:///author/jeremy-holden">Jeremy Holden</a></p>
+<p class="rm-manual"> <span>Published</span> 10/10/08 9:24 PM EDT </p>
+<p>Conservative and other media figures -- echoing a reported strategy 
+on the part of Republicans -- have attempted to lay blame for the 
+financial crisis on proponents of the expansion of affordable housing. 
+Those attacks are premised on several myths and falsehoods.</p>
+<p>Conservative and other media figures, echoing a reported strategy on 
+the part of Republicans, have attempted to deflect blame for the 
+financial crisis onto proponents of the expansion of affordable housing 
+and legislation and institutions created to effect that expansion.</p>
+<p>Newsweek senior editor Daniel Gross wrote in an October 7 Slate <a href="http://www.slate.com/id/2201641">commentary</a>:</p>
+<p>On the Republican side of Congress, in the right-wing financial media
+ (which is to say the financial media), and in certain parts of the 
+op-ed-o-sphere, there's a consensus emerging that the whole mess should 
+be laid at the feet of Fannie Mae and Freddie Mac, the failed mortgage 
+giants, and the Community Reinvestment Act, a law passed during the 
+Carter administration. The CRA, which was amended in the 1990s and this 
+decade, requires banks -- which had a long, distinguished history of not
+ making loans to minorities -- to make more efforts to do so.</p>
+<p>Recent attacks have turned personal, with conservative media -- along
+ with congressional Republicans and Sen. John McCain -- targeting Rep. 
+Barney Frank (D-MA) directly as a purported culprit in the financial 
+crisis, falsely representing his decades-long advocacy of increased 
+affordable housing as advocacy of lax oversight over Fannie and Freddie.</p>
+<p>The attacks are premised on several myths and falsehoods and, in the 
+case of CRA and attacks on minority lending, have taken on a racial 
+tinge.</p>
+<p> MYTH: The 1977 Community Reinvestment Act forced lenders into irresponsible lending</p>
+<p>In a September 28 Boston Globe column, Jeff Jacoby <a href="http://www.boston.com/bostonglobe/editorial_opinion/oped/articles/2008/09/28/franks_fingerprints_are_all_over_the_financial_fiasco/">asserted</a>:</p>
+<p>The roots of this crisis go back to the Carter administration. That 
+was when government officials, egged on by left-wing activists, began 
+accusing mortgage lenders of racism and “redlining” because urban blacks
+ were being denied mortgages at a higher rate than suburban whites.</p>
+<p>The pressure to make more loans to minorities (read: to borrowers 
+with weak credit histories) became relentless. Congress passed the 
+Community Reinvestment Act, empowering regulators to punish banks that 
+failed to 'meet the credit needs' of 'low-income, minority, and 
+distressed neighborhoods.' Lenders responded by loosening their 
+underwriting standards and making increasingly shoddy loans."</p>
+<p>Jacoby is not alone in his reference to “minority” lending. On the 
+September 18 edition of Fox News' Your World, host Neil Cavuto <a href="https://www.mediamatters.org/video/2008/09/19/cavuto-suggests-congress-should-have-warned-tha/145132">asked</a>
+ Rep. Xavier Becerra (D-CA), "[W]hen you and many of your colleagues 
+were pushing for more minority lending and more expanded lending to 
+folks who heretofore couldn't get mortgages, when you were pushing 
+homeownership ... Are you totally without culpability here?" Cavuto 
+later said, “I'm just saying, I don't remember a clarion call that said,
+ 'Fannie and Freddie are a disaster. Loaning to minorities and risky 
+folks is a disaster.' ”</p>
+<p>But the suggestion that the financial crisis was caused by banks lending irresponsibly to comply with the <a href="http://www.ffiec.gov/cra/history.htm">CRA</a> is widely <a href="https://www.mediamatters.org/research/2008/09/30/media-conservatives-baselessly-blame-community/145327">discredited</a>. According to housing <a href="http://74.125.45.104/search?q=cache:TcA9Tzx4aqgJ:www.house.gov/apps/list/hearing/financialsvcs_dem/barr021308.pdf+subprime+University+of+Michigan%27s+Michael+Barr&amp;hl=en&amp;ct=clnk%252">experts</a>,
+ a large number of subprime loans were not made under the CRA, which 
+applies only to depository institutions. A study released earlier this 
+year by a law firm specializing in CRA compliance <a href="http://www.traigerlaw.com/publications/addendum_to_traiger_hinckley_llp_cra_foreclosure_study_1-14-08.pdf#page=2">estimated</a>
+ that in the 15 most populous metropolitan areas, 84.3 percent of 
+subprime loans in 2006 were made by financial institutions not governed 
+by the CRA. Moreover, Janet Yellen, president and CEO of the Federal 
+Reserve Bank of San Francisco, stated in a March 2008 <a href="http://www.frbsf.org/news/speeches/2008/0331.html">speech</a>
+ that “studies have shown that the CRA has increased the volume of 
+responsible lending to low- and moderate-income households” [emphasis 
+added].</p>
+<p>In testimony before the House Financial Services Committee, University of Michigan law professor Michael Barr <a href="http://www.house.gov/apps/list/hearing/financialsvcs_dem/barr021308.pdf">stated</a>:</p>
+<p>Despite the fact that CRA appears to have increased bank and thrift 
+lending in low- and moderate-income communities, such institutions are 
+not the only ones operating in these areas. In fact, with new and 
+lower-cost sources of funding available from the secondary market 
+through securitization, and with advances in financial technology, 
+subprime lending exploded in the late 1990s, reaching over $600 billion 
+and 20% of all originations by 2005. More than half of subprime loans 
+were made by independent mortgage companies not subject to comprehensive
+ federal supervision; another 30 percent of such originations were made 
+by affiliates of banks or thrifts, which are not subject to routine 
+examination or supervision, and the remaining 20 percent were made by 
+banks and thrifts. Although reasonable people can disagree about how to 
+interpret the evidence, my own judgment is that the worst and most 
+widespread abuses occurred in the institutions with the least federal 
+oversight.</p>
+<p>The housing crisis we face today, driven by serious problems in the 
+subprime lending, suggests that our system of home mortgage regulation, 
+including CRA, is seriously deficient. We need to fill what my friend, 
+the late Federal Reserve Board Governor Ned Gramlich aptly termed, “the 
+giant hole in the supervisory safety net.” Banks and thrifts are subject
+ to comprehensive federal regulation and supervision; their affiliates 
+far less so; and independent mortgage companies, not at all. Moreover, 
+many market-based systems designed to ensure sound practices in this 
+sector-broker reputational risk, lender oversight of brokers, investor 
+oversight of lenders, rating agency oversight of securitizations, and so
+ on -- simply did not work. Conflicts of interest, lax regulation, and 
+“boom times” covered up the extent of the abuses -- at least for a 
+while, at least for those not directly affected by abusive practices. 
+But no more.</p>
+<p>Others who have advanced this or similar claims <a href="https://www.mediamatters.org/research/2008/09/30/media-conservatives-baselessly-blame-community/145327">include</a> guest <a href="https://www.mediamatters.org/issues_topics/tags/jonathan_hoenig?sort=audio">Jonathan Hoenig</a>
+ during the September 25 edition of The Radio Factor with Bill O'Reilly,
+ radio host Laura Ingraham during the September 25 edition of Fox News' 
+The O'Reilly Factor, and a September 25 Investor's Business Daily <a href="http://www.investors.com/editorial/editorialcontent.asp?secid=1501&amp;status=article&amp;id=307234949613274">editorial</a> claiming that the CRA “forced banks to make many more subprime loans.”</p>
+<p> MYTH: Excessive lending to undocumented immigrants is responsible for the financial crisis</p>
+<p>On the October 9 edition of CNN's Lou Dobbs Tonight, San Diego radio host Roger Hedgecock <a href="https://www.mediamatters.org/research/2008/10/10/on-dobbs-radio-host-claimed-hud-said-about-5-mi/145592">claimed</a>
+ that "[w]e have a situation where today HUD [the Department of Housing 
+and Urban Development] was talking about 5 million illegal alien home 
+mortgage loans that have gone bad." Radio host Joe Madison responded, 
+“You see, this really angers me, because I'm sitting here ... and 
+wondering, how is it that people who are illegal get loans when people 
+in my community who are legal have a difficulty getting loans, and if 
+they do get them, they're often from predators?” Neither Hedgecock nor 
+Madison cited a source for the purported HUD statistic. On October 9, 
+the Drudge Report linked to an <a href="https://www.mediamatters.org/static/images/item/20081010-hudsnap.jpg">article</a> on the Phoenix radio station KFYI website under the <a href="http://www.drudgereportarchives.com/data/2008/10/09/20081009_170743.htm">headline</a>, “HUD: Five Million Fraudulent Mortgages Held by Illegals...” However, according to an October 9 Phoenix Business Journal <a href="http://www.bizjournals.com/phoenix/stories/2008/10/06/daily54.html?ana=from_rss">article</a>
+ posted at 3:15 pm MT (more than an hour before Lou Dobbs Tonight 
+aired), HUD “says there is no basis to news reports that more than 5 
+million bad mortgages are held by illegal immigrants” and “a HUD 
+spokesman said ... his agency has no data showing the number of illegal 
+immigrants holding foreclosed or bad mortgages.”</p>
+<p>Other media figures advancing the claim that lending to undocumented 
+immigrants is responsible for the mortgage crisis include syndicated 
+columnist Michelle Malkin, who <a href="http://michellemalkin.com/2008/09/24/illegal-immigration-and-the-mortgage-mess/">wrote</a>
+ in her September 24 column that “there's one giant paternal elephant in
+ the room that has slipped notice: How illegal immigration, 
+crime-enabling banks, and open-borders Bush policies fueled the mortgage
+ crisis.</p>
+<p>MYTH: Congressional Democrats, led by Barney Frank, opposed strengthening oversight over Fannie and Freddie</p>
+<p>In a September 18 <a href="http://www.billoreilly.com/newslettercolumn?pid=24288">column</a>, Fox News host Bill O'Reilly falsely <a href="https://www.mediamatters.org/research/2008/09/21/oreilly-falsely-claimed-that-rep-frank-sat-by-w/145145">claimed</a>
+ that Frank “sat by as mortgage brokers Fannie Mae and Freddie Mac made 
+bad loans” and asserted that "[i]nstead of demanding responsible 
+business practices from Fannie and Freddie, Frank continued to pound the
+ table to extend even more credit to 'low income' families." In fact, 
+Frank did not “s[i]t by.” Frank's efforts to enhance regulatory 
+oversight on Fannie Mae and Freddie Mac include:</p>
+<ul>
+<li> In 2005, Frank, then the ranking Democrat on the House Financial 
+Services Committee, worked with committee chairman Rep. Michael Oxley 
+(R-OH) on the Federal Housing Finance Reform Act of 2005, which would 
+have <a href="http://frwebgate.access.gpo.gov/cgi-bin/getdoc.cgi?dbname=109_cong_reports&amp;docid=f:hr171p1.109.pdf">established</a>
+ the Federal Housing Finance Agency (FHFA) to replace the Office of 
+Federal Housing Enterprise Oversight (OFHEO) as overseer of the 
+activities of Fannie Mae and Freddie Mac. After <a href="http://thomas.loc.gov/cgi-bin/cpquery/?&amp;dbname=cp109&amp;sid=cp109PfdOE&amp;refer=&amp;r_n=hr171p1.109&amp;item=&amp;sel=TOC_414931&amp;">voting</a> for the bill in committee, Frank <a href="http://clerk.house.gov/evs/2005/roll547.xml">voted</a> against final passage of the bill on the House floor, <a href="http://frwebgate.access.gpo.gov/cgi-bin/getpage.cgi?dbname=2005_record&amp;page=H9176&amp;position=all">stating</a> that he was doing so because an <a href="http://frwebgate.access.gpo.gov/cgi-bin/getpage.cgi?dbname=2005_record&amp;page=H9172&amp;position=all">amendment</a> to the bill <a href="http://clerk.house.gov/evs/2005/roll541.xml">on the House floor</a> imposed restrictions on the kinds of nonprofit organizations that could receive funding under the bill.</li> </ul>
+<ul>
+<li> In early 2007, as chairman of the House Financial Services Committee, Frank <a href="https://www.mediamatters.org/research/2008/09/21/oreilly-falsely-claimed-that-rep-frank-sat-by-w/145145">sponsored</a> <a href="http://thomas.loc.gov/cgi-bin/bdquery/z?d110:h.r.01427:">H.R. 1427</a>,
+ a bill to create the FHFA, granting that agency “general supervisory 
+and regulatory authority over” Fannie Mae and Freddie Mac, and directing
+ it to reform the companies' business practices and regulate their 
+exposure to credit and market risk. Among other things, Frank's 
+legislation, titled the "<a href="http://frwebgate.access.gpo.gov/cgi-bin/getdoc.cgi?dbname=110_cong_bills&amp;docid=f:h1427eh.txt.pdf">Federal Housing Finance Reform Act</a> of 2007," <a href="http://frwebgate.access.gpo.gov/cgi-bin/getdoc.cgi?dbname=110_cong_bills&amp;docid=f:h1427eh.txt.pdf#page=14">directed</a>
+ the FHFA director to “ensure” that Fannie Mae and Freddie Mac 
+“operate[] in a safe and sound manner, including maintenance of adequate
+ capital and internal controls” and to <a href="http://frwebgate.access.gpo.gov/cgi-bin/getdoc.cgi?dbname=110_cong_bills&amp;docid=f:h1427eh.txt.pdf#page=17">establish</a>
+ standards for “management of credit and counterparty risk” and 
+“management of market risk.” The FHFA was eventually created after 
+Congress incorporated <a href="http://frwebgate.access.gpo.gov/cgi-bin/getdoc.cgi?dbname=110_cong_bills&amp;docid=f:h3221enr.txt.pdf">provisions</a> that House Speaker Nancy Pelosi (D-CA) <a href="http://frwebgate.access.gpo.gov/cgi-bin/getpage.cgi?dbname=2008_record&amp;page=H7003&amp;position=all">said</a> were "<a href="http://frwebgate.access.gpo.gov/cgi-bin/getpage.cgi?dbname=2008_record&amp;page=H7004&amp;position=all">similar</a>" to those of H.R. 1427 into the Housing and Economic Recovery Act of 2008, which the president signed into law on <a href="http://thomas.loc.gov/cgi-bin/bdquery/z?d110:HR03221:@@@R">July 30</a>.</li> </ul>
+<p>Some in the conservative media have taken the charge further, 
+suggesting that in the 1990s, Frank allowed his relationship with Fannie
+ Mae executive Herb Moses to affect his responsibility as a senior 
+member of the House Financial Services Committee to conduct oversight 
+over Fannie Mae. For <a href="https://www.mediamatters.org/research/2008/10/08/fox-news-sammon-ignores-contrary-evidence-in-su/145538">example</a>,
+ in an October 3 article, Fox News deputy Washington Managing editor 
+Bill Sammon asserted, in a charge he later echoed on Fox News' The 
+O'Reilly Factor, “Unqualified home buyers were not the only ones who 
+benefitted from Massachusetts Rep. Barney Frank's efforts to deregulate 
+Fannie Mae throughout the 1990s. So did Frank's partner, a Fannie Mae 
+executive at the forefront of the agency's push to relax lending 
+restrictions.”</p>
+<p>In his article, however, Sammon cited only two sources: an anonymous 
+Republican congressional staffer and Dan Gainor, who, Sammon did not 
+note, is an employee of the conservative Media Research Center. 
+Moreover, Sammon misrepresented Frank's record by reporting in his 
+article that Frank “spent years blocking GOP lawmakers from imposing 
+tougher regulations” on Fannie Mae and Freddie Mac. Sammon did not note 
+in his article or during an October 6 appearance on The O'Reilly Factor 
+that in the early 1990s, while Frank's Democratic Party still held the 
+majority in Congress, and while Moses was at Fannie Mae, Frank supported
+ bills to increase regulation of Fannie Mae and create a government 
+regulatory agency that would supervise and have authority over some 
+aspects of the company:</p>
+<ul>
+<li> On September 30, 1991, Frank <a href="http://clerk.house.gov/evs/1991/roll278.xml">voted for</a> a <a href="http://thomas.loc.gov/cgi-bin/bdquery/z?d102:h.r.02900:">bill</a>
+ to create a new regulatory agency to oversee Fannie and Freddie that 
+would have "[r]equire[d] the [agency's] Director to establish by 
+regulation a risk-based capital test for the enterprises," "[r]equire[d]
+ the Director to establish risk-based capital levels for each enterprise
+ according to statutory guidelines," "[e]stablishe[d] minimum capital 
+levels, critical capital levels, and enforcement levels," and "[s]et[] 
+forth mandatory supervisory actions for the enterprises at various 
+capital levels, including mandatory conservatorship."</li> </ul>
+<ul>
+<li> In October 1992, Frank <a href="http://clerk.house.gov/evs/1992/roll476.xml">voted for</a> the <a href="http://thomas.loc.gov/cgi-bin/bdquery/z?d102:h.r.05334:">Housing and Community Development Act of 1992</a>,
+ creating OFHEO, which was tasked with “ensur[ing] that Fannie Mae and 
+Freddie Mac (the enterprises) and their affiliates are adequately 
+capitalized and operating safely.” As with the bill Frank voted for in 
+September 1991, the new law gave OFHEO authority to set, monitor, and 
+enforce risk-based capital requirements for Fannie and Freddie.</li> </ul>
+<p>Neal Boortz also advanced this claim about Frank and his former partner <a href="https://www.mediamatters.org/research/2008/10/10/back-to-back-guests-on-boyles-repeated-discredi/145594">during</a> the October 8 edition of his nationally syndicated radio show. On October 8, The Wall Street Journal <a href="http://online.wsj.com/article/SB122342367451513361.html">reported</a>
+ that "[a] conservative political organization will begin airing 
+nationwide TV advertisements Wednesday that criticize congressional 
+Democrats for their ties to mortgage giants Freddie Mac and Fannie Mae."</p>
+<p> MYTH: Fannie Mae and Freddie Mac caused the “current financial mess”</p>
+<p>In a September 19 Huffington Post blog post, Center for American Progress senior fellow David Abramowitz <a href="http://www.huffingtonpost.com/david-m-abromowitz/when-in-doubt-yell-fannie_b_127688.html">wrote</a>:</p>
+<p>“There must be a Republican playbook circulating widely with a 
+chapter entitled, 'What to say if asked who's to blame for the 
+foreclosure mess.' Because an awful lot of Republican candidates are all
+ suddenly yelling 'Fannie Mae, Fannie Mae, Fannie Mae' whenever plunging
+ home prices and the housing crisis comes up. [...] So their plan seems 
+to be to chant Fannie Mae often and loudly enough, and hope the public 
+will get confused about who really caused this huge national calamity. 
+It is always a good political story to just blame a bad guy who has 
+something to do with the same topic.</p>
+<p>Indeed, during the September 24 edition of Fox News' Special Report, host Brit Hume <a href="https://www.mediamatters.org/%E2%80%9D/research/2008/10/01/special-report-falsely-suggested-fannie-and-fre/145362%22">said</a>,
+ “Many financial analysts are saying that if mortgage giants Fannie Mae 
+and Freddie Mac had been effectively regulated years ago, the 
+supercharged subprime mortgage meltdown that led to the current 
+financial mess would either never have happened or would have been 
+nowhere near as severe.” But <a href="https://www.mediamatters.org/research/2008/10/01/special-report-falsely-suggested-fannie-and-fre/145362">rebutting</a>
+ the suggestion that the subprime mortgage purchasing activities of 
+Fannie Mae and Freddie Mac caused the “current financial mess,” 
+economist Dean Baker recently <a href="http://www.prospect.org/csnc/blogs/beat_the_press_archive?month=09&amp;year=2008&amp;base_name=market_place_misleads_the_publ">stated</a>:</p>
+<p>Fannie and Freddie got into subprime junk and helped fuel the housing
+ bubble, but they were trailing the irrational exuberance of the private
+ sector. They lost market share in the years 2002-2007, as the volume of
+ private issue mortgage backed securities exploded. In short, while 
+Fannie and Freddie were completely irresponsible in their lending 
+practices, the claim that they were responsible for the financial 
+disaster is absurd on its face -- kind of like the claim that the earth 
+is flat.</p>
+<p>Indeed, in a 2006 Securities and Exchange Commission filing (available <a href="http://phx.corporate-ir.net/phoenix.zhtml?c=108360&amp;p=irol-secAnnual&amp;control_SelectGroup=Annual%20Filings">here</a>)
+ covering its activities in 2004, Fannie Mae stated: “We did not 
+participate in large amounts of these non-traditional mortgages in 2004 
+and 2005.” In the report, Fannie Mae also noted the growth of subprime 
+lending and reported, “These trends and our decision not to participate 
+in large amounts of these non-traditional mortgages contributed to a 
+significant loss in our share of new single-family mortgage-related 
+securities issuances to private-label issuers during this period.”</p>
+<p>Gross wrote in Slate that Fannie Mae and Freddie Mac were an 
+“integral part” of a “culture of stupid, reckless lending.” But, he 
+wrote, they are not the primary culprits in the current financial 
+crisis. He wrote:</p>
+<p>Investment banks created a demand for subprime loans because they saw
+ it as a new asset class that they could dominate. They made subprime 
+loans for the same reason they made other loans: They could get paid for
+ making the loans, for turning them into securities, and for trading 
+them-frequently using borrowed capital.</p>
+<p>As an example, he noted that the following happened during testimony 
+by Lehman Brothers CEO Richard Fuld before the House Committee on 
+Oversight and Government Reform:</p>
+<p>At Monday's hearing, Rep. John Mica, R-Fla., gamely tried to pin 
+Lehman's demise on Fannie and Freddie. After comparing Lehman's small 
+political contributions with Fannie and Freddie's much larger ones, Mica
+ asked Fuld what role Fannie and Freddie's failure played in Lehman's 
+demise. Fuld's <a href="http://thehill.com/leading-the-news/barbs-traded--at-hearing-on-lehmans-fall-2008-10-06_2.html">response</a>: “De minimis.”</p>
+<p>From Fuld's testimony:</p>
+<p>MICA: And one of your big com -- well, one of the big packagers, or 
+the competitor, so to speak, was Fannie Mae, which was deep into this. 
+And you were -- you were dealing in some of the paper, I think, for 
+secondary markets and other securitized mortgage paper, to basically 
+package it and make money off it. Is that right?</p>
+<p>FULD: Yes, sir.</p>
+<p>MICA: What was Lehman Brothers' exposure to the debt of Fannie Mae 
+and Freddie Mac, and what role did their collapse play in precipitating 
+some of your financial troubles?</p>
+<p>FULD: Our --</p>
+<p>MICA: It didn't matter or you --</p>
+<p>FULD: Our exposure to both Fannie Mae and Freddie Mac was de minimis, sir.</p>
+<p>MYTH: Sen. Barack Obama's campaign has significantly more ties to Fannie Mae and Freddie Mac than does John McCain's</p>
+<p>In articles about the presidential candidates' responses to the economic crisis, the <a href="http://www.guardian.co.uk/uslatest/story/0,,-7809719,00.html">Associated Press</a>, the <a href="http://www.jsonline.com/story/index.aspx?id=796668">Milwaukee Journal Sentinel</a>, the <a href="http://www.sfgate.com/cgi-bin/article.cgi?f=/c/a/2008/09/19/MNUB130FRV.DTL">San Francisco Chronicle</a>, and <a href="http://www.washingtonpost.com/wp-dyn/content/article/2008/09/18/AR2008091803822.html">The Washington Post</a>
+ reported that the McCain campaign criticized Sen. Barack Obama for, in 
+the words of McCain spokesman Tucker Bounds, “his ties to spiraling 
+lenders like Fannie Mae, Freddie Mac and their jet-set CEOs.” But those 
+articles did not note that several senior McCain campaign aides have 
+served as lobbyists for Fannie Mae, Freddie Mac, or both. According to a
+ Media Matters for America <a href="https://www.mediamatters.org/research/2008/09/19/print-media-reported-mccain-attacks-on-obama-fo/145122">search</a> of the Senate Office of Public Records' <a href="http://soprweb.senate.gov/index.cfm?event=choosefields">Lobbying Disclosure Act Database</a>, they include:</p>
+<ul>
+<li> Political adviser Charlie Black, who lobbied for Freddie Mac from 1999 to 2004;</li> </ul>
+<ul>
+<li> National finance co-chairman Wayne Berman, who lobbied for Fannie Mae from 2004 to 2008 and for Freddie Mac in 2004;</li> </ul>
+<ul>
+<li> Congressional liaison John Green, who lobbied for Fannie Mae from 2004 to 2007 and for Freddie Mac in 2003;</li> </ul>
+<ul>
+<li> Arthur Culvahouse, who <a href="http://thehill.com/campaign-2008/mccain-selects-former-reagan-official-to-head-vp-search-2008-05-23.html">reportedly</a> headed McCain's vice-presidential search team, lobbied for Fannie Mae in 1999, 2003, and 2004; and</li> </ul>
+<ul>
+<li> William E. Timmons Sr., who <a href="http://www.time.com/time/nation/article/0,8599,1840722,00.html?imw=Y">reportedly</a>
+ “has been tapped by the McCain campaign to conduct a study in 
+preparation for the presidential transition,” lobbied for Freddie Mac 
+from 2000 to 2008.</li> </ul>
+<p>Additionally, <a href="http://ap.google.com/article/ALeqM5hzKch7oo69rIHFkesZT2Akm6h3iAD93DBF601">several</a> <a href="http://www.usnews.com/blogs/the-inside-job/2008/09/19/mccains-campaign-manager-was-for-it-before-he-was-against-it.html">media</a> <a href="http://www.washingtonpost.com/wp-dyn/content/article/2008/09/23/AR2008092303359.html">outlets</a>
+ have reported that McCain campaign manager Rick Davis previously served
+ as president of the Homeownership Alliance, a Washington-based advocacy
+ group whose founding members included Fannie Mae and Freddie Mac, which
+ Media Matters has <a href="https://www.mediamatters.org/research/2008/09/20/cbs-reid-aired-mccain-attacking-obama-for-purpo/145138">noted</a>.</p>
+<p> MYTH: Democrats sought to divert funding in the Emergency Economic Stabilization Act to ACORN</p>
+<p>On the September 29 <a href="http://transcripts.cnn.com/TRANSCRIPTS/0809/29/ldt.01.html">edition</a>
+ of CNN's Lou Dobbs Tonight, host Lou Dobbs claimed: “ACORN [Association
+ of Community Organizations for Reform Now] stands to reap hundreds of 
+millions of dollars from a government bailout of Wall Street.” Dobbs 
+added later: “This is a straightforward deal for ACORN and other groups,
+ left-wing groups, set up by the Democratic leadership of Congress. 
+They're not interested in the bailout per se. They want to spread this 
+out, and many people believe that this bailout in part is dear to the 
+Democratic leadership because they want to advance a social agenda here 
+as much as much as an economic bailout of Wall Street.” Numerous other 
+media figures also <a href="https://www.mediamatters.org/research/2008/10/10/wsjs-fund-falsely-claimed-that-acorn-almost-got/145580">reported</a> the <a href="https://www.mediamatters.org/research/2008/10/01/media-figures-falsely-accuse-democrats-of-attem/145369">false claim</a> that Democrats were trying to steer money to ACORN. In fact, neither the <a href="http://banking.senate.gov/public/_files/LegislativeTextofChairmansDoddsproposalfortheTreasuryBailoutplanAYO08B68_xml.pdf">draft proposal</a> nor the <a href="http://www.govtrack.us/special/econstimbill/pdf/AMEND001.pdf">final version</a> of the bill contained any language mentioning ACORN. Those making the false claim were misrepresenting a provision -- <a href="http://www.politico.com/blogs/thecrypt/0908/ACORN_outrage_removes_affordable_housing_provision.html">since removed</a>
+ -- that would have directed 20 percent of any profits realized on 
+troubled assets purchased under the plan into two previously established
+ funds: the Housing Trust Fund and the Capital Magnet Fund, which, under
+ <a href="http://frwebgate.access.gpo.gov/cgi-bin/getdoc.cgi?dbname=110_cong_public_laws&amp;docid=f:publ289.110">the law</a> authorizing them, distribute funds through state block grants and through competitive application processes, respectively.</p>
+<p>On the October 9 edition of Fox News' Hannity &amp; Colmes, Wall Street Journal columnist John Fund <a href="https://www.mediamatters.org/research/2008/10/10/wsjs-fund-falsely-claimed-that-acorn-almost-got/145580">similarly made</a> the false claim that ACORN “almost got a slush fund in the housing bailout bill a few weeks ago.”</p>
+<p>MYTH: Former President Clinton has blamed Democrats for the financial crisis</p>
+<p>In a September 30 post on Time.com's Swampland <a href="http://www.time-blog.com/swampland/2008/09/bill_clinton_stars_in_mccain_a.html">blog</a>, Washington bureau chief Jay Carney <a href="https://www.mediamatters.org/research/2008/10/01/times-carney-falsely-suggested-clinton-pinned-t/145366">claimed</a>
+ that comments former President Bill Clinton made during a September 25 
+interview on ABC's Good Morning America that were subsequently featured 
+in a McCain campaign ad “could undercut Democratic arguments that Bush 
+and the Republicans are primarily responsible” for the financial crisis.
+ During that interview, Clinton said, “I think the responsibility that 
+the Democrats have may rest more in resisting any efforts by Republicans
+ in the Congress or by me when I was president to put some standards and
+ tighten up a little on Fannie Mae and Freddie Mac.” But in reporting on
+ the ad, Carney failed to point out that in the very same interview, 
+Clinton also said, “I think the biggest mistake, by the way, that 
+contributed to the current circumstance that almost nobody talks about, 
+is the repeal after decades of something called the uptick rule, which 
+allowed the hedge funds, heavily leveraged, and others to just drive 
+down the market without any kind of automatic stoppers.” In a separate 
+interview aired that day with Matt Lauer, co-host of NBC's Today, 
+Clinton stated of the financial situation: "[T]his thing really took off
+ when the SEC, under this administration, exercised less oversight and 
+they got rid of something called the uptick rule, which enabled betting 
+down on housing stocks to go crazy."</p>
+<p>The uptick rule, which was created in 1938, was a securities trading rule that regulated market <a href="http://www.investopedia.com/university/shortselling/shortselling1.asp">short selling</a>,
+ the act of selling a stock that an investor does not own (but borrows 
+from a broker or someone else) in anticipation that the stock's price 
+will decrease. After a June 13, 2007, decision that became effective 
+July 3, 2007, the SEC issued a <a href="http://www.sec.gov/rules/final/2007/34-55970.pdf">final rule</a> that repealed the uptick rule.</p>
+<p>From C-SPAN's October 6 coverage of the House Oversight Reform Committee:</p>
+<p>MICA: Again, you -- when you opened your statement, you said that 
+Lehman Brothers -- and it was around for what, 150 years -- dealt in 
+some pretty hard assets and some secure investments. You've been around a
+ while. What turned the corner for you to get into some of the more 
+speculative ventures, like subprime and some of the other, again, 
+riskier investments?</p>
+<p>FULD: As I said in my verbal testimony, our participation in the 
+mortgage-related businesses was clearly a natural for us, given our 
+dominance in fixed income. That was something that went back a number of
+ years.</p>
+<p>And even as I listened, as I say, to the panel before me, they 
+correctly pointed out that this was a goal of the government to provide 
+funding and mortgages to a number of people that typically would not or 
+could not have received a mortgage.</p>
+<p>MICA: And one of your big com -- well, one of the big packagers, or 
+the competitor, so to speak, was Fannie Mae, which was deep into this. 
+And you were -- you were dealing in some of the paper, I think, for 
+secondary markets and other securitized mortgage paper, to basically 
+package it and make money off it. Is that right?</p>
+<p>FULD: Yes, sir.</p>
+<p>MICA: What was Lehman Brothers' exposure to the debt of Fannie Mae 
+and Freddie Mac, and what role did their collapse play in precipitating 
+some of your financial troubles?</p>
+<p>FULD: Our --</p>
+<p>MICA: It didn't matter or you --</p>
+<p>FULD: Our exposure to both Fannie Mae and Freddie Mac was de minimis, sir.</p>
+<p>MICA: OK, but their collapse -- did that help precipitate any problems with your firm?</p>
+<p>FULD: It certainly set the stage for an environment, as I talked 
+about loss of confidence and credit-crisis mentality that permeated our 
+market, clearly set the stage for investors losing confidence, 
+counterparties asking for additional collateral, and clearly an 
+environment that lost liquidity --</p>
+<p>MICA: I notice you --</p>
+<p>FULD : -- which is the lifeblood of the capital market system.</p>
+<h3 class="rm-manual">The Latest</h3>
+<ol class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <h3 class="rm-manual"> <a href="file:///diversity-discrimination/fox-news-next-target-attack-anti-racism-measures-us-military"> <span>Fox News’ next target to attack anti-racism measures: the U.S. military</span> </a> </h3> <p class="rm-manual"> <span> Article </span> 05/27/21 6:22 PM EDT </p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <h3 class="rm-manual"> <a href="file:///sean-hannity/sean-hannity-tells-audience-get-second-job-instead-accepting-government-assistance"> <span>Sean Hannity tells audience to get a second job instead of accepting government assistance </span> </a> </h3> <p class="rm-manual"> <span> Video &amp; Audio </span> 05/27/21 5:53 PM EDT </p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <h3 class="rm-manual"> <a href="file:///fox-news/fox-news-disingenuously-blames-rising-crime-police-reform-efforts"> <span>Fox News disingenuously blames rising crime on police reform efforts</span> </a> </h3> <p class="rm-manual"> <span> Article </span> 05/27/21 4:49 PM EDT </p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <h3 class="rm-manual"> <a href="file:///qanon-conspiracy-theory/rep-kat-cammack-appeared-qanon-program-and-asked-viewers-follow-her-social"> <span>Rep. Kat Cammack appeared on a QAnon program and asked viewers to follow her on social media</span> </a> </h3> <p class="rm-manual"> <span> Article </span> 05/27/21 1:11 PM EDT </p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <h3 class="rm-manual"> <a href="file:///tucker-carlson/60-minutes-segment-trans-health-care-becomes-ammo-right-wing-media-attacks"> <span>60 Minutes segment on trans health care becomes ammo for right-wing media attacks</span> </a> </h3> <p class="rm-manual"> <span> Article </span> 05/27/21 10:53 AM EDT </p> </article> </li> </ol>
+<h4 class="rm-manual">Pagination</h4>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpirmj1dyu.html?page=0"> <span> Current page </span>1</a> </li> <li class="rm-manual"> <span>…</span> </li> <li class="rm-manual"> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpirmj1dyu.html?page=1" rel="next"> <span>Next page</span> ›› </a> </li> </ul>
+<h3 class="rm-manual">In This Article</h3>
+<ul class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <a href="file:///legacy"> <h3 class="rm-manual"> <span>Legacy</span> </h3> </a> </article> </li> </ul>
+<p class="rm-manual"> Comments </p>
+<p class="rm-manual"> <span>0 Comments</span> </p>
+<h2 class="rm-manual"> Related </h2>
+<ol class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <h3 class="rm-manual"> <a href="file:///legacy/media-matters-new-look"> <span>Media Matters’ new look</span> </a> </h3> <p class="rm-manual"> <span> Article </span> 08/03/19 10:00 AM EDT </p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <h3 class="rm-manual"> <a href="file:///legacy/new-bureau-land-management-head-william-perry-pendley-complained-federal-employees-arent"> <span>New
+ Bureau of Land Management head complained that federal employees aren’t
+ held “personally responsible for the harm that they do”</span> </a> </h3> <p class="rm-manual"> <span> Article </span> 08/02/19 8:43 AM EDT </p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <h3 class="rm-manual"> <a href="file:///legacy/new-interior-department-senior-adviser-christian-palich-climate-denier-and-former-coal-group"> <span>New Interior Department senior adviser Christian Palich is a climate denier and former coal group president</span> </a> </h3> <p class="rm-manual"> <span> Article </span> 07/30/19 3:17 PM EDT </p> </article> </li> </ol></article>
+</body></html>

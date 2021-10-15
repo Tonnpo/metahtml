@@ -1,0 +1,238 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Tag team action set for tonight | The Union Journal </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://theunionjournal.com/category/entertainment/">Entertainment</a></li>
+<li class="rm-manual">
+<a href="https://theunionjournal.com/category/world/">World</a><ul class="rm-manual">
+<li class="rm-manual"><a href="https://theunionjournal.com/category/world/africa/">Africa</a></li>
+<li class="rm-manual"><a href="https://theunionjournal.com/category/world/asia/">Asia</a></li>
+<li class="rm-manual"><a href="https://theunionjournal.com/category/world/europe/">Europe</a></li>
+<li class="rm-manual"><a href="https://theunionjournal.com/category/world/middle-east/">Middle East</a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="https://theunionjournal.com/category/technology/">Technology</a><ul class="rm-manual"><li class="rm-manual"><a href="https://theunionjournal.com/category/technology/troubleshooting/">Troubleshooting</a></li></ul>
+</li>
+<li class="rm-manual">
+<a href="https://theunionjournal.com/category/sports/">Sports</a><ul class="rm-manual">
+<li class="rm-manual"><a href="https://theunionjournal.com/category/sports/american-football/">American football</a></li>
+<li class="rm-manual"><a href="https://theunionjournal.com/category/sports/baseball-mlb/">Baseball (MLB)</a></li>
+<li class="rm-manual"><a href="https://theunionjournal.com/category/sports/basketball/">Basketball</a></li>
+<li class="rm-manual"><a href="https://theunionjournal.com/category/sports/football/">Football</a></li>
+<li class="rm-manual"><a href="https://theunionjournal.com/category/sports/golf/">Golf</a></li>
+<li class="rm-manual"><a href="https://theunionjournal.com/category/sports/ice-hockey-nhl/">Ice Hockey (NHL)</a></li>
+<li class="rm-manual"><a href="https://theunionjournal.com/category/sports/motor-sports/">Motor Sports</a></li>
+<li class="rm-manual"><a href="https://theunionjournal.com/category/sports/tennis/">Tennis</a></li>
+<li class="rm-manual"><a href="https://theunionjournal.com/category/sports/wwe/">WWE</a></li>
+</ul>
+</li>
+<li class="rm-manual"><a href="https://theunionjournal.com/category/politics/">Politics</a></li>
+<li class="rm-manual"><a href="https://theunionjournal.com/category/education/">Education</a></li>
+<li class="rm-manual"><a href="https://theunionjournal.com/covid19/">COVID19 Live</a></li>
+<li class="rm-manual"><a href="https://theunionjournal.com/contact-us/">Contact us</a></li>
+</ul>
+<p class="rm-manual">Sign in</p>
+<p class="rm-manual"><span>Welcome!</span>Log into your account</p>
+<p class="rm-manual">your username</p>
+<p class="rm-manual">your password</p>
+<p class="rm-manual"> <a href="#">Forgot your password?</a></p>
+<p class="rm-manual">Password recovery</p>
+<p class="rm-manual">Recover your password</p>
+<p class="rm-manual">your email</p>
+<p class="rm-manual"> <span>Search</span> </p>
+<p class="rm-manual"> <span>20.7</span> <span>C</span></p>
+<p class="rm-manual">New York</p>
+<p class="rm-manual"> Tuesday, June 16, 2020</p>
+<p class="rm-manual">Sign in</p>
+<p class="rm-manual">Welcome! Log into your account</p>
+<p class="rm-manual">your username</p>
+<p class="rm-manual">your password</p>
+<p class="rm-manual"><a href="#">Forgot your password? Get help</a></p>
+<p class="rm-manual">Password recovery</p>
+<p class="rm-manual">Recover your password</p>
+<p class="rm-manual">your email</p>
+<p class="rm-manual">A password will be e-mailed to you.</p>
+<p class="rm-manual"> <a href="https://theunionjournal.com/"> <span>The Union Journal</span> </a></p>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="https://theunionjournal.com/category/entertainment/">Entertainment</a><ul class="rm-manual"><li class="rm-manual">
+<p class="rm-manual"></p><h3 class="rm-manual"><a href="https://theunionjournal.com/tupac-shakurs-birthday-celebrate-with-these-tracks/" rel="bookmark">Tupac Shakur’s birthday: Celebrate with these tracks</a></h3><p class="rm-manual"></p>
+<p class="rm-manual"></p><h3 class="rm-manual"><a href="https://theunionjournal.com/elon-musk-and-grimes-named-baby-x-ae-a-xii-on-birth-certificate/" rel="bookmark">Elon Musk and Grimes Named Baby X AE A-XII On Birth…</a></h3><p class="rm-manual"></p>
+<p class="rm-manual"></p><h3 class="rm-manual"><a href="https://theunionjournal.com/former-40s-star-veronica-lake-wrote-she-had-to-get-out-of-hollywood-before-her-tragic-death/" rel="bookmark">Former ‘40s star Veronica Lake wrote she ‘had to get out…</a></h3><p class="rm-manual"></p>
+<p class="rm-manual"></p><h3 class="rm-manual"><a href="https://theunionjournal.com/husband-of-woman-who-called-cops-on-filipino-man-over-black-lives-matter-stencil-has-been-fired/" rel="bookmark">Husband Of Woman Who Called Cops On Filipino Man Over Black…</a></h3><p class="rm-manual"></p>
+<p class="rm-manual"></p><h3 class="rm-manual"><a href="https://theunionjournal.com/bet-awards-2020-nominees-announced/" rel="bookmark">BET Awards 2020 nominees announced</a></h3><p class="rm-manual"></p>
+</li></ul>
+</li>
+<li class="rm-manual">
+<a href="https://theunionjournal.com/category/world/">World</a><ul class="rm-manual"><li class="rm-manual">
+<p class="rm-manual"><a href="https://theunionjournal.com/category/world/">All</a><a href="https://theunionjournal.com/category/world/africa/">Africa</a><a href="https://theunionjournal.com/category/world/asia/">Asia</a><a href="https://theunionjournal.com/category/world/europe/">Europe</a><a href="https://theunionjournal.com/category/world/middle-east/">Middle East</a></p>
+<p class="rm-manual"></p><h3 class="rm-manual"><a href="https://theunionjournal.com/apple-faces-two-eu-anti-competition-probes/" rel="bookmark">Apple faces two EU anti-competition probes</a></h3><p class="rm-manual"></p>
+<p class="rm-manual"></p><h3 class="rm-manual"><a href="https://theunionjournal.com/iraq-army-slams-turkey-for-violating-its-airspace-middle-east-monitor/" rel="bookmark">Iraq army slams Turkey for violating its airspace – Middle East…</a></h3><p class="rm-manual"></p>
+<p class="rm-manual"></p><h3 class="rm-manual"><a href="https://theunionjournal.com/indro-montanelli-statue-of-italian-war-journalist-who-married-12-year-old-in-eritrea-targeted-by-protesters/" rel="bookmark">Indro Montanelli: Statue of Italian war journalist who married 12-year-old in…</a></h3><p class="rm-manual"></p>
+<p class="rm-manual"></p><h3 class="rm-manual"><a href="https://theunionjournal.com/north-korea-confirms-terrific-explosion-that-destroyed-inter-korean-liaison-office-blaming-seoul-for-sheltering-defectors-rt-world-news/" rel="bookmark">North Korea confirms ‘terrific explosion’ that destroyed inter-Korean liaison office, blaming…</a></h3><p class="rm-manual"></p>
+</li></ul>
+</li>
+<li class="rm-manual">
+<a href="https://theunionjournal.com/category/technology/">Technology</a><ul class="rm-manual"><li class="rm-manual">
+<p class="rm-manual"><a href="https://theunionjournal.com/category/technology/">All</a><a href="https://theunionjournal.com/category/technology/troubleshooting/">Troubleshooting</a></p>
+<p class="rm-manual"></p><h3 class="rm-manual"><a href="https://theunionjournal.com/redmi-k40-or-mi-cc10-spotted-at-the-3c-with-33-w-fast-charger/" rel="bookmark">Redmi K40 (or Mi CC10) spotted at the 3C with 33…</a></h3><p class="rm-manual"></p>
+<p class="rm-manual"></p><h3 class="rm-manual"><a href="https://theunionjournal.com/amazons-ai-powered-distance-assistants-will-warn-workers-when-they-get-too-close/" rel="bookmark">Amazon’s AI-powered ‘distance assistants’ will warn workers when they get too…</a></h3><p class="rm-manual"></p>
+<p class="rm-manual"></p><h3 class="rm-manual"><a href="https://theunionjournal.com/google-assistant-voice-match-feature-coming-to-android-tv-report/" rel="bookmark">Google Assistant Voice Match Feature Coming to Android TV: Report</a></h3><p class="rm-manual"></p>
+<p class="rm-manual"></p><h3 class="rm-manual"><a href="https://theunionjournal.com/htc-u20-5g-and-desire-20-pro-also-announced/" rel="bookmark">HTC U20 5G and Desire 20 Pro also announced</a></h3><p class="rm-manual"></p>
+</li></ul>
+</li>
+<li class="rm-manual">
+<a href="https://theunionjournal.com/category/sports/">Sports</a><ul class="rm-manual"><li class="rm-manual">
+<p class="rm-manual"><a href="https://theunionjournal.com/category/sports/">All</a><a href="https://theunionjournal.com/category/sports/american-football/">American football</a><a href="https://theunionjournal.com/category/sports/baseball-mlb/">Baseball (MLB)</a><a href="https://theunionjournal.com/category/sports/basketball/">Basketball</a><a href="https://theunionjournal.com/category/sports/football/">Football</a><a href="https://theunionjournal.com/category/sports/golf/">Golf</a><a href="https://theunionjournal.com/category/sports/ice-hockey-nhl/">Ice Hockey (NHL)</a><a href="https://theunionjournal.com/category/sports/motor-sports/">Motor Sports</a><a href="https://theunionjournal.com/category/sports/tennis/">Tennis</a><a href="https://theunionjournal.com/category/sports/wwe/">WWE</a></p>
+<p class="rm-manual"></p><h3 class="rm-manual"><a href="https://theunionjournal.com/pyledriver-powers-to-victory-in-king-edward-vii-racing-news/" rel="bookmark">Pyledriver powers to victory in King Edward VII | Racing News</a></h3><p class="rm-manual"></p>
+<p class="rm-manual"></p><h3 class="rm-manual"><a href="https://theunionjournal.com/each-nfl-teams-best-draft-pick-of-the-last-decade/" rel="bookmark">Each NFL team’s best draft pick of the last decade</a></h3><p class="rm-manual"></p>
+<p class="rm-manual"></p><h3 class="rm-manual"><a href="https://theunionjournal.com/sending-wendel-clark-to-quebec-for-mats-sundin-theleafsnation/" rel="bookmark">Sending Wendel Clark to Quebec for Mats Sundin – TheLeafsNation</a></h3><p class="rm-manual"></p>
+<p class="rm-manual"></p><h3 class="rm-manual"><a href="https://theunionjournal.com/call-of-duty-warzone-vote-now-morgan-or-renard/" rel="bookmark">Call of Duty: Warzone | Vote now: Morgan or Renard?</a></h3><p class="rm-manual"></p>
+</li></ul>
+</li>
+<li class="rm-manual">
+<a href="https://theunionjournal.com/category/politics/">Politics</a><ul class="rm-manual"><li class="rm-manual">
+<p class="rm-manual"></p><h3 class="rm-manual"><a href="https://theunionjournal.com/kayleigh-mcenany-hammers-media-hypocrites-criticizing-trump-rallies/" rel="bookmark">Kayleigh McEnany Hammers Media Hypocrites Criticizing Trump Rallies</a></h3><p class="rm-manual"></p>
+<p class="rm-manual"></p><h3 class="rm-manual"><a href="https://theunionjournal.com/the-fbi-and-department-of-justice-will-investigate-the-hanging-deaths-of-two-black-men-in-california/" rel="bookmark">The FBI and Department of Justice will investigate the hanging deaths…</a></h3><p class="rm-manual"></p>
+<p class="rm-manual"></p><h3 class="rm-manual"><a href="https://theunionjournal.com/tulsa-oklahoma-father-arrested-after-2-children-die-in-hot-truck/" rel="bookmark">Tulsa, Oklahoma: Father arrested after 2 children die in hot truck</a></h3><p class="rm-manual"></p>
+<p class="rm-manual"></p><h3 class="rm-manual"><a href="https://theunionjournal.com/texas-sends-brutal-message-to-protesters-wanting-to-destroy-the-alamo/" rel="bookmark">Texas Sends Brutal Message To Protesters Wanting To Destroy The Alamo</a></h3><p class="rm-manual"></p>
+<p class="rm-manual"></p><h3 class="rm-manual"><a href="https://theunionjournal.com/tessa-majors-teen-involved-in-stabbing-of-barnard-student-sentenced-to-18-months-in-custody/" rel="bookmark">Tessa Majors: Teen involved in stabbing of Barnard student sentenced to…</a></h3><p class="rm-manual"></p>
+</li></ul>
+</li>
+<li class="rm-manual">
+<a href="https://theunionjournal.com/category/education/">Education</a><ul class="rm-manual"><li class="rm-manual">
+<p class="rm-manual"></p><h3 class="rm-manual"><a href="https://theunionjournal.com/how-can-american-students-make-their-voices-heard/" rel="bookmark">How Can American Students Make Their Voices Heard </a></h3><p class="rm-manual"></p>
+<p class="rm-manual"></p><h3 class="rm-manual"><a href="https://theunionjournal.com/revealed-children-beg-to-go-back-to-school-after-being-locked-down-in-abusive-homes/" rel="bookmark">Revealed: Children Beg To Go Back To School After Being Locked…</a></h3><p class="rm-manual"></p>
+<p class="rm-manual"></p><h3 class="rm-manual"><a href="https://theunionjournal.com/teacher-ousts-west-virginia-state-senate-leader-in-gop-primary/" rel="bookmark">Teacher Ousts West Virginia State Senate Leader In GOP Primary</a></h3><p class="rm-manual"></p>
+<p class="rm-manual"></p><h3 class="rm-manual"><a href="https://theunionjournal.com/boris-johnson-dumps-plan-for-all-primary-school-pupils-to-return-before-summer/" rel="bookmark">Boris Johnson Dumps Plan For All Primary School Pupils To Return…</a></h3><p class="rm-manual"></p>
+<p class="rm-manual"></p><h3 class="rm-manual"><a href="https://theunionjournal.com/schitts-creek-cast-shocked-when-mariah-carey-crashes-their-commencement-video/" rel="bookmark">‘Schitt’s Creek’ Cast Shocked When Mariah Carey Crashes Their Commencement Video</a></h3><p class="rm-manual"></p>
+</li></ul>
+</li>
+<li class="rm-manual"><a href="https://theunionjournal.com/covid19/">COVID19 Live</a></li>
+<li class="rm-manual"><a href="https://theunionjournal.com/contact-us/">Contact us</a></li>
+</ul>
+<p class="rm-manual"><span><a href="https://theunionjournal.com/">Home</a></span> <span><a href="https://theunionjournal.com/category/sports/">Sports</a></span> <span><a href="https://theunionjournal.com/category/sports/wwe/">WWE</a></span> <span>Tag team action set for tonight</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://theunionjournal.com/category/sports/">Sports</a></li>
+<li class="rm-manual"><a href="https://theunionjournal.com/category/sports/wwe/">WWE</a></li>
+</ul>
+<h1 class="rm-manual">Tag team action set for tonight</h1>
+<p class="rm-manual">By</p>
+<p class="rm-manual"><a href="https://theunionjournal.com/author/miriam-jackson/">Miriam Jackson</a></p>
+<p class="rm-manual"> -</p>
+<p class="rm-manual"><span>March 7, 2020</span></p>
+<p>Oney Lorcan and Danny Burch look to hit exhausting and settle the 
+rating with The Brian Kendrick and Ariya Daivari in a No 
+Disqualification Match. Catch WWE action on WWE Network, FOX, USA 
+Network, Sony India and extra.</p>
+<p> Tonight on WWE 205 Live, the hard-hitting Oney Lorcan and Danny 
+Burch are set to sq. off towards Tony Nese and Mike Kanellis. Both duos 
+are set to battle in subsequent week’s 10-Man Tag Team Elimination 
+Match, and every tandem additionally desires to show they’re dominant 
+team within the Cruiserweight division.</p>
+<p> For the brand new tag team of Nese and Kanellis, a battle towards 
+the at all times intense Lorcan and Burch is definitely a stress take a 
+look at of their alliance. They’ll must show they’re centered and on the
+ identical web page or else they’ll each be met with resounding European
+ Uppercuts and drowned out by the sounds of Lorcan’s rageful battle cry.</p>
+<p> Nese and Kanellis can even look to showcase their skills and declare
+ a giant win en path to subsequent week’s Captain’s Challenge.</p>
+<p class="rm-manual"> <span>drupal-entity</span> widget</p>
+<p class="rm-manual"><a href="http://www.wwe.com/shows/wwe-205-live/2020-03-06/article/tag-team-action-set-for-tonight">Source link </a></p>
+<p class="rm-manual"> <span>Post Views: </span> <span>140</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><span>TAGS</span></li>
+<li class="rm-manual"><a href="https://theunionjournal.com/tag/action/">action</a></li>
+<li class="rm-manual"><a href="https://theunionjournal.com/tag/set/">set</a></li>
+<li class="rm-manual"><a href="https://theunionjournal.com/tag/tag/">tag</a></li>
+<li class="rm-manual"><a href="https://theunionjournal.com/tag/team/">team</a></li>
+<li class="rm-manual"><a href="https://theunionjournal.com/tag/tonight/">Tonight</a></li>
+</ul>
+<p class="rm-manual"><span>Previous article</span><a href="https://theunionjournal.com/lebron-james-i-aint-playing-if-fans-are-banned-amid-coronavirus-outbreak/">LeBron James: ‘I Ain’t Playing’ If Fans Are Banned Amid Coronavirus Outbreak</a></p>
+<p class="rm-manual"><span>Next article</span><a href="https://theunionjournal.com/mourinho-not-expecting-spurs-to-punish-dier-after-fan-altercation/">Mourinho not expecting Spurs to punish Dier after fan altercation</a></p>
+<p class="rm-manual"><span><a href="https://theunionjournal.com/author/miriam-jackson/">Miriam Jackson</a></span></p>
+<p class="rm-manual"><a href="https://theunionjournal.com/">https://theunionjournal.com</a></p>
+<h4 class="rm-manual"><span>COVID-19 Live</span></h4>
+<h4 class="rm-manual">USA</h4>
+<p class="rm-manual">2,183,617</p>
+<p class="rm-manual">Confirmed</p>
+<p class="rm-manual">118,344</p>
+<p class="rm-manual">Deaths</p>
+<p class="rm-manual">890,015</p>
+<p class="rm-manual">Recovered</p>
+<h4 class="rm-manual"><span>Like Us On Facebook</span></h4>
+<h4 class="rm-manual"><span>Most Popular</span></h4>
+<h3 class="rm-manual"><a href="https://theunionjournal.com/apple-faces-two-eu-anti-competition-probes/" rel="bookmark">Apple faces two EU anti-competition probes</a></h3>
+<h3 class="rm-manual"><a href="https://theunionjournal.com/iraq-army-slams-turkey-for-violating-its-airspace-middle-east-monitor/" rel="bookmark">Iraq army slams Turkey for violating its airspace – Middle East Monitor</a></h3>
+<p class="rm-manual"> The Iraqi Joint Operations Command yesterday 
+denounced Turkey’s “violations” of its air space, after 18 Turkish 
+warplanes bombed alleged websites belonging to the...</p>
+<h3 class="rm-manual"><a href="https://theunionjournal.com/indro-montanelli-statue-of-italian-war-journalist-who-married-12-year-old-in-eritrea-targeted-by-protesters/" rel="bookmark">Indro Montanelli: Statue of Italian war journalist who married 12-year-old in Eritrea targeted by...</a></h3>
+<p class="rm-manual"> While serving in the army in 1935-1936, during 
+Italy's war in Eritrea, the 26-year-old Montanelli bought and married a 
+12-year-old girl. During a...</p>
+<h3 class="rm-manual"><a href="https://theunionjournal.com/north-korea-confirms-terrific-explosion-that-destroyed-inter-korean-liaison-office-blaming-seoul-for-sheltering-defectors-rt-world-news/" rel="bookmark">North Korea confirms ‘terrific explosion’ that destroyed inter-Korean liaison office, blaming Seoul for sheltering...</a></h3>
+<p class="rm-manual"> Pyongyang has confirmed the destruction of an office used to facilitate diplomacy using its southern...</p>
+<h3 class="rm-manual"><a href="https://theunionjournal.com/yemen-coronavirus-death-rates-aden-could-exceed-its-wartime-fatalities/" rel="bookmark">Yemen coronavirus: Death rates Aden could exceed its wartime fatalities</a></h3>
+<p class="rm-manual"> The Al Radwan cemetery has quickly expanded within
+ the last few months, with new graves creeping nearer to the residential
+ buildings that border...</p>
+<h3 class="rm-manual"><a href="https://theunionjournal.com/amid-the-pandemic-a-group-of-asylum-seekers-were-moved-to-a-small-rural-irish-town-then-they-started-testing-positive-for-covid-19/" rel="bookmark">Amid the pandemic, a group of asylum seekers were moved to a small, rural...</a></h3>
+<p class="rm-manual"> She had been waiting months for a decision to be produced on her asylum status. But the letter wasn't about this. "I was...</p>
+<h3 class="rm-manual"><a href="https://theunionjournal.com/africa-urges-un-probe-of-us-systemic-racism-police-violence/" rel="bookmark">Africa urges UN probe of US ‘systemic racism’, police violence</a></h3>
+<p class="rm-manual"> Geneva (AFP) - African countries are pushing for 
+the UN's top rights human anatomy to launch a high-level investigation 
+in to "systemic racism"...</p>
+<h4 class="rm-manual"><span>Recent Posts</span></h4>
+<h3 class="rm-manual"><a href="https://theunionjournal.com/jordan-klepper-hits-an-iowa-trump-rally-and-uncovers-his-nightmare/" rel="bookmark">Jordan Klepper Hits An Iowa Trump Rally And Uncovers His ‘Nightmare’</a></h3>
+<h3 class="rm-manual"><a href="https://theunionjournal.com/we-have-all-these-marches-and-protests-whats-next-young-leaders-in-new-york-put-out-demands-for-police-and-community-reform/" rel="bookmark">‘We have all these marches and protests, what’s next?’: Young leaders in New York...</a></h3>
+<h3 class="rm-manual"><a href="https://theunionjournal.com/victoria-derbyshire-show-is-being-axed-by-bbc-because-costs-are-too-high-when-savings-are-needed/" rel="bookmark">Victoria Derbyshire Show ‘is being axed by BBC because costs are too high when...</a></h3>
+<h3 class="rm-manual"><a href="https://theunionjournal.com/upcoming-vote-could-extend-putins-rule-some-russians-might-not-know-that/" rel="bookmark">Upcoming vote could extend Putin’s rule. Some Russians might not know that.</a></h3>
+<h3 class="rm-manual"><a href="https://theunionjournal.com/roger-federer-rafael-nadal-to-play-match-in-africa-6-on-friday-atp-tour/" rel="bookmark">Roger Federer &amp; Rafael Nadal To Play Match In Africa 6 On Friday |...</a></h3>
+<p class="rm-manual"><span>ABOUT US</span></p>
+<p class="rm-manual">The Union Journal provide you with the latest local and national news, sports, entertainment, finance, technology, and more</p>
+<p class="rm-manual">Contact us: <a href="file:///cdn-cgi/l/email-protection#34575b5a4055574074405c51415a5d5b5a5e5b41465a55581a575b59"><span>[email protected]</span></a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://theunionjournal.com/contact-us/">Contact Us</a></li>
+<li class="rm-manual"><a href="https://theunionjournal.com/disclaimer/">Disclaimer</a></li>
+<li class="rm-manual"><a href="https://theunionjournal.com/about-us/">About Us</a></li>
+<li class="rm-manual"><a href="https://theunionjournal.com/privacy-policy/">Privacy Policy</a></li>
+</ul>
+<p class="rm-manual"> © Copyright 2019 - theunionjournal.com</p></article>
+</body></html>

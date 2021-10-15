@@ -1,0 +1,157 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> North Korea on high alert to contain Wuhan coronavirus </p>
+<p class="rm-manual"><a href="#;">Back To Top</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://kpopherald.koreaherald.com/">K-Pop Herald</a></li> <li class="rm-manual"><a href="http://www.theinvestor.co.kr/">The Investor</a></li> <li class="rm-manual"><a href="http://biz.heraldcorp.com/">The Herald Business</a></li> <li class="rm-manual"><a href="http://pop.heraldcorp.com/">The Herald POP</a></li> <li class="rm-manual"><a href="http://www.realfoods.co.kr/">Real Foods</a></li> <li class="rm-manual"><a href="http://www.minspire.co.kr/">Inspire</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://biz.heraldcorp.com/custom/newsletter.php">Newsletter</a></li> <li class="rm-manual"><a href="https://emember.heraldcorp.com/member/login.php?returl=http%3A%2F%2Fwww.koreaherald.com%2Fview.php%3Fud%3D20200128000708">Sign in</a></li> </ul>
+<dl class="rm-manual"> <dt class="rm-manual"><a href="file:///list.php?ct=020100000000">National</a></dt> <dd><a href="file:///list.php?ct=020101000000">Politics</a></dd> <dd><a href="file:///list.php?ct=020102000000">Social Affairs</a></dd> <dd><a href="file:///list.php?ct=020103000000">Foreign Affairs</a></dd> <dd><a href="file:///list.php?ct=020106000000">Defense</a></dd> <dd><a href="file:///list.php?ct=020104000000">North Korea</a></dd> <dd><a href="file:///list.php?ct=020107000000">Science</a></dd> <dd><a href="file:///list.php?ct=020112000000">Diplomatic Circuit</a></dd> <dd><a href="file:///list.php?ct=020109000000">Education</a></dd> </dl>
+<dl class="rm-manual"> <dt class="rm-manual"><a href="file:///list.php?ct=020200000000">Business</a></dt> <dd><a href="file:///list.php?ct=020203000000">Industry</a></dd> <dd><a href="file:///list.php?ct=020206000000">Technology</a></dd> <dd><a href="file:///list.php?ct=020205000000">Transport</a></dd> <dd><a href="file:///list.php?ct=020210000000">Retail</a></dd> </dl>
+<dl class="rm-manual"> <dt class="rm-manual"><a href="file:///list.php?ct=021900000000">Finance</a></dt> <dd><a href="file:///list.php?ct=021901000000">Economy</a></dd> <dd><a href="file:///list.php?ct=021902000000">Market</a></dd> <dd><a href="file:///list.php?ct=021903000000">Money</a></dd> </dl>
+<dl class="rm-manual"> <dt class="rm-manual"><a href="file:///list.php?ct=020300000000">Life&amp;Style</a></dt> <dd><a href="file:///list.php?ct=020307000000">Culture</a></dd> <dd><a href="file:///list.php?ct=020301000000">Travel</a></dd> <dd><a href="file:///list.php?ct=020302000000">Fashion</a></dd> <dd><a href="file:///list.php?ct=020303000000">Food &amp; Beverage</a></dd> <dd><a href="file:///list.php?ct=020304000000">Books</a></dd> <dd><a href="file:///list.php?ct=020305000000">People</a></dd> <dd><a href="file:///list.php?ct=020306000000">Expat Living</a></dd> <dd><a href="file:///list.php?ct=020308000000">Arts &amp; Design</a></dd> <dd><a href="file:///list.php?ct=020309000000">Health</a></dd> </dl>
+<dl class="rm-manual"> <dt class="rm-manual"><a href="file:///list.php?ct=020400000000">Entertainment</a></dt> <dd><a href="file:///list.php?ct=020401000000">Film</a></dd> <dd><a href="file:///list.php?ct=020402000000">Television</a></dd> <dd><a href="file:///list.php?ct=020403000000">Music</a></dd> <dd><a href="file:///list.php?ct=020404000000">Theater</a></dd> <dd><a href="file:///kpop">K-pop</a></dd> </dl>
+<dl class="rm-manual"> <dt class="rm-manual"><a href="file:///list.php?ct=020500000000">Sports</a></dt> <dd><a href="file:///list.php?ct=020501000000">Soccer</a></dd> <dd><a href="file:///list.php?ct=020502000000">Baseball</a></dd> <dd><a href="file:///list.php?ct=020503000000">Golf</a></dd> <dd><a href="file:///list.php?ct=020504000000">More Sports</a></dd> </dl>
+<dl class="rm-manual"> <dt class="rm-manual"><a href="file:///list.php?ct=021200000000">World</a></dt> <dd><a href="file:///list.php?ct=021201000000">World News</a></dd> <dd><a href="file:///list.php?ct=021202000000">World Business</a></dd> <dd><a href="file:///list.php?ct=021204000000">Asia News Network</a></dd> </dl>
+<dl class="rm-manual"> <dt class="rm-manual"><a href="file:///list.php?ct=020600000000">Opinion</a></dt> <dd><a href="file:///list.php?ct=020601000000">Editorial</a></dd> <dd><a href="file:///list.php?ct=020603000000">Viewpoints</a></dd> </dl>
+<dl class="rm-manual"> <dt class="rm-manual"><a href="file:///list.php?ct=021000000000">English Eye</a></dt> <dd><a href="file:///list.php?ct=021001000000">Podcast</a></dd> <dd><a href="file:///list.php?ct=021007000000">English Cafe</a></dd> </dl>
+<dl class="rm-manual"> <dt class="rm-manual"><a href="file:///list.php?ctv=12">Weekender</a></dt> </dl>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///subscribe/?sv=1"> Subscribe </a> </li> <li class="rm-manual"> <a href="http://biz.heraldcorp.com/mobile/"> Mobile App </a> </li> <li class="rm-manual"> <a href="file:///paoin/"> PDF </a> </li> <li class="rm-manual"> <a href="file:///subscribe/?sv=4"> RSS </a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///index_kr.php"> Go to<span> 한국어판</span> </a> </li> <li class="rm-manual"> <a href="http://m.koreaherald.com/?cpv=1"> Go to<span> Mobile Version</span> </a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://twitter.com/TheKoreaHerald"> Twitter </a> </li> <li class="rm-manual"> <a href="http://facebook.com/thekoreaherald"> Facebook </a> </li> <li class="rm-manual"> <a href="http://youtube.com/thekoreaherald"> YouTube </a> </li> <li class="rm-manual"> <a href="https://www.instagram.com/koreaherald/"> Instagram </a> </li> </ul>
+<p class="rm-manual">National</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///list.php?ct=020100000000">All</a></li>
+<li class="rm-manual"><a href="file:///list.php?ct=020101000000">Politics</a></li>
+<li class="rm-manual"><a href="file:///list.php?ct=020102000000">Social Affairs</a></li>
+<li class="rm-manual"><a href="file:///list.php?ct=020103000000">Foreign Affairs</a></li>
+<li class="rm-manual"><a href="file:///list.php?ct=020106000000">Defense</a></li>
+<li class="rm-manual"><a href="file:///list.php?ct=020104000000">North Korea</a></li>
+<li class="rm-manual"><a href="file:///list.php?ct=020107000000">Science</a></li>
+<li class="rm-manual"><a href="file:///list.php?ct=020112000000">Diplomatic Circuit</a></li>
+<li class="rm-manual"><a href="file:///list.php?ct=020109000000">Education</a></li> </ul>
+<h1 class="rm-manual">North Korea on high alert to contain Wuhan coronavirus</h1>
+<p class="rm-manual"><a href="file:///search/list_name.php?byline=Ahn+Sung-mi">By Ahn Sung-mi</a></p>
+<p class="rm-manual">Published : Jan 28, 2020 - 16:00 Updated : Jan 28, 2020 - 18:48</p>
+<ul class="rm-manual"> <li class="rm-manual"> | </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///list.php?ct=020104000000"><span>◀</span> Back to List</a></li> <li class="rm-manual"><a href="file:///search/list_name.php?byline=Ahn+Sung-mi">More article by this Writer</a></li> </ul>
+<table class="rm-manual"><tbody><tr class="rm-manual"><td class="rm-manual"><p class="rm-manual">North Korea`s Korea Central TV shows preventive measures for Wuhan coronavirus. (Yonhap)</p></td></tr></tbody></table>
+<p>North Korea is on high alert to contain the spread of the Wuhan 
+coronavirus and is stepping up quarantine efforts, as the deadly 
+respiratory virus that originated in China continues to spread across 
+Asia and the world. </p>
+<p>Pyongyang’s official newspaper, the Rodong Sinmun on Tuesday said the
+ government has taken emergency measures to prevent the virus from 
+spreading in the country, as it shares a border with China. The newly 
+identified respiratory virus has killed over 100 people in mainland 
+China as of Tuesday, and infected more than 4,000 people around the 
+world since it first emerged in the city of Wuhan in December.</p>
+<p>North Korea, however, has yet to report a confirmed case of its own. </p>
+<p>According to the report, health authorities have been dispatched to 
+all regions across North Korea to promote public hygiene, while the 
+government has stepped up quarantine efforts at borders, ports and 
+airports to prevent “the virus from entering the country.” </p>
+<p>Health authorities have been medically monitoring those who traveled 
+abroad. They have also prepared a quarantine system, if a suspected case
+ is detected. </p>
+<p>The doctors are visiting patients with fever and those who are 
+suffering from pneumonia under their jurisdiction to check for the 
+coronavirus infection, it added. North Korea is also putting all-out 
+efforts to expand production of anti-viral drugs. </p>
+<p>“With the devoted efforts of health personnel, we are setting up 
+thorough quarantine measures to prevent this new coronavirus from 
+entering the country,” it reported. </p>
+<p>The paper also reported on the number of confirmed cases and death 
+toll of the global outbreak. It reported that South Korea had confirmed 
+an additional case. </p>
+<p>Following the outbreak, North Korea has temporarily closed its 
+borders to all foreign tourists, as most its tourists are Chinese or 
+have traveled via China. </p>
+<p>The ministry said it is closely monitoring the situation in North 
+Korea as well, as Seoul is enhancing quarantine efforts to prevent 
+further spread of the illness here. South Korea confirmed its fourth 
+case of the Wuhan coronavirus, amid mounting fears about further spread 
+of the epidemic. </p>
+<p>Pyongyang on Tuesday requested South Korean officials working at 
+their joint liaison office in Kaesong to wear masks, according to the 
+ministry. Seoul’s health officials began checking the temperature of 
+workers heading to the North. Previously, authorities just checked their
+ temperatures when they returned to the South. They are also providing 
+workers with masks and hand sanitizers. </p>
+<p>“As for now, chances of the Wuhan coronavirus spreading from 
+human-to-human interaction between the two Koreas seem low,” a ministry 
+official said. “But we will closely monitor the situation here as well 
+as in the North.”</p>
+<p class="rm-manual">By Ahn Sung-mi (<a href="mailto:sahn@heraldcorp.com">sahn@heraldcorp.com</a>) </p>
+<ul class="rm-manual"> <li class="rm-manual"> | </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///list.php?ct=020104000000"><span>◀</span> Back to List</a></li> <li class="rm-manual"><a href="file:///search/list_name.php?byline=Ahn+Sung-mi">More article by this Writer</a></li> </ul>
+<p class="rm-manual">MOST POPULAR</p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///view.php?ud=20200615000265"> <p class="rm-manual">South Korea sees rise in untraceable COVID-19 cases: KCDC</p> </a> </li> <li class="rm-manual"> <a href="file:///view.php?ud=20200615000762"> <p class="rm-manual">[Herald Interview] Meet the couple behind BTS and TXT’s latest hits</p> </a> </li> <li class="rm-manual"> <a href="file:///view.php?ud=20200615000198"> <p class="rm-manual">BTS' 'Bang Bang Con' becomes world's biggest paid online concert: company</p> </a> </li> <li class="rm-manual"> <a href="file:///view.php?ud=20200614000192"> <p class="rm-manual">As NK continues to raise tensions, Seoul vows to honor agreements</p> </a> </li> <li class="rm-manual"> <a href="file:///view.php?ud=20200615000831"> <p class="rm-manual">Moon calls on North to uphold inter-Korean agreements, joint projects</p> </a> </li> <li class="rm-manual"> <a href="file:///view.php?ud=20200614000038"> <p class="rm-manual">Elderly COVID-19 patients surge in S. Korea</p> </a> </li> <li class="rm-manual"> <a href="file:///view.php?ud=20200614000171"> <p class="rm-manual">Mahindra hints at giving up on SsangYong Motor amid COVID-19 losses</p> </a> </li> <li class="rm-manual"> <a href="file:///view.php?ud=20200615000217"> <p class="rm-manual">NK's paper warns of continued retaliatory action against S. Korea on summit anniv.</p> </a> </li> </ul>
+<p class="rm-manual"> <a href="file:///list.php?ct=020000000000">LATEST NEWS</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///view.php?ud=20200616000118"> <p class="rm-manual">&gt;</p> <p class="rm-manual">Vice minister to visit border region to monitor policing against anti-Pyongyang leaflets</p> </a> </li>
+<li class="rm-manual"> <a href="file:///view.php?ud=20200616000115"> <p class="rm-manual">&gt;</p> <p class="rm-manual">S. Korean Im Sung-jae becomes top-ranked Asian man in world golf rankings</p> </a> </li>
+<li class="rm-manual"> <a href="file:///view.php?ud=20200616000098"> <p class="rm-manual">&gt;</p> <p class="rm-manual">N. Korea's military threatens to reenter disarmed border areas</p> </a> </li>
+<li class="rm-manual"> <a href="file:///view.php?ud=20200616000080"> <p class="rm-manual">&gt;</p> <p class="rm-manual">Esper lists S. Korea among partners standing up to China</p> </a> </li>
+<li class="rm-manual"> <a href="file:///view.php?ud=20200616000075"> <p class="rm-manual">&gt;</p> <p class="rm-manual">N. Korea's threats aimed at testing S. Korea-US alliance: ex-US official</p> </a> </li>
+<li class="rm-manual"> <a href="file:///view.php?ud=20200614000249"> <p class="rm-manual">&gt;</p> <p class="rm-manual">[Peter Singer] Is age discrimination acceptable?</p> </a> </li>
+<li class="rm-manual"> <a href="file:///view.php?ud=20200614000248"> <p class="rm-manual">&gt;</p> <p class="rm-manual">[Yoon Young-kwan] The shape of Asia’s new Cold War</p> </a> </li>
+<li class="rm-manual"> <a href="file:///view.php?ud=20200615000610"> <p class="rm-manual">&gt;</p> <p class="rm-manual">[Editorial] Renewed brinkmanship</p> </a> </li>
+<li class="rm-manual"> <a href="file:///view.php?ud=20200615000977"> <p class="rm-manual">&gt;</p> <p class="rm-manual">Hanhwa Life accelerates digital transformation</p> </a> </li>
+<li class="rm-manual"> <a href="file:///view.php?ud=20200615001025"> <p class="rm-manual">&gt;</p> <p class="rm-manual">Ruling partly elects standing committee heads in unilateral voting</p> </a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://company.heraldcorp.com/content.php?lang=eng">ABOUT KOREA HERALD</a></li> <li class="rm-manual"><a href="http://company.heraldcorp.com/index.php?lang=eng">ABOUT HERALD CORPORATION</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///board/index.php">ANNOUNCEMENT</a></li> <li class="rm-manual"><a href="http://biz.heraldcorp.com/custom/index.php">CS CENTER</a></li> <li class="rm-manual"><a href="file:///custom/contact.php">CONTACT US</a></li> <li class="rm-manual"><a href="http://company.heraldcorp.com/location.php?lang=eng">LOCATION</a></li> </ul>
+<dl class="rm-manual"> <dt class="rm-manual"><a href="file:///list.php?ct=020100000000">National</a></dt> <dd><a href="file:///list.php?ct=020101000000">Politics</a></dd> <dd><a href="file:///list.php?ct=020102000000">Social Affairs</a></dd> <dd><a href="file:///list.php?ct=020103000000">Foreign Affairs</a></dd> <dd><a href="file:///list.php?ct=020106000000">Defense</a></dd> <dd><a href="file:///list.php?ct=020104000000">North Korea</a></dd> <dd><a href="file:///list.php?ct=020107000000">Science</a></dd> <dd><a href="file:///list.php?ct=020112000000">Diplomatic Circuit</a></dd> <dd><a href="file:///list.php?ct=020109000000">Education</a></dd> </dl>
+<dl class="rm-manual"> <dt class="rm-manual"><a href="file:///list.php?ct=020200000000">Business</a></dt> <dd><a href="file:///list.php?ct=020203000000">Industry</a></dd> <dd><a href="file:///list.php?ct=020206000000">Technology</a></dd> <dd><a href="file:///list.php?ct=020205000000">Transport</a></dd> <dd><a href="file:///list.php?ct=020210000000">Retail</a></dd> </dl>
+<dl class="rm-manual"> <dt class="rm-manual"><a href="file:///list.php?ct=021900000000">Finance</a></dt> <dd><a href="file:///list.php?ct=021901000000">Economy</a></dd> <dd><a href="file:///list.php?ct=021902000000">Market</a></dd> <dd><a href="file:///list.php?ct=021903000000">Money</a></dd> </dl>
+<dl class="rm-manual"> <dt class="rm-manual"><a href="file:///list.php?ct=020300000000">Life&amp;Style</a></dt> <dd><a href="file:///list.php?ct=020307000000">Culture</a></dd> <dd><a href="file:///list.php?ct=020301000000">Travel</a></dd> <dd><a href="file:///list.php?ct=020302000000">Fashion</a></dd> <dd><a href="file:///list.php?ct=020303000000">Food &amp; Beverage</a></dd> <dd><a href="file:///list.php?ct=020304000000">Books</a></dd> <dd><a href="file:///list.php?ct=020305000000">People</a></dd> <dd><a href="file:///list.php?ct=020306000000">Expat Living</a></dd> <dd><a href="file:///list.php?ct=020308000000">Arts &amp; Design</a></dd> <dd><a href="file:///list.php?ct=020309000000">Health</a></dd> </dl>
+<dl class="rm-manual"> <dt class="rm-manual"><a href="file:///list.php?ct=020400000000">Entertainment</a></dt> <dd><a href="file:///list.php?ct=020401000000">Film</a></dd> <dd><a href="file:///list.php?ct=020402000000">Television</a></dd> <dd><a href="file:///list.php?ct=020403000000">Music</a></dd> <dd><a href="file:///list.php?ct=020404000000">Theater</a></dd> <dd><a href="file:///kpop">K-pop</a></dd> </dl>
+<dl class="rm-manual"> <dt class="rm-manual"><a href="file:///list.php?ct=020500000000">Sports</a></dt> <dd><a href="file:///list.php?ct=020501000000">Soccer</a></dd> <dd><a href="file:///list.php?ct=020502000000">Baseball</a></dd> <dd><a href="file:///list.php?ct=020503000000">Golf</a></dd> <dd><a href="file:///list.php?ct=020504000000">More Sports</a></dd> </dl>
+<dl class="rm-manual"> <dt class="rm-manual"><a href="file:///list.php?ct=021200000000">World</a></dt> <dd><a href="file:///list.php?ct=021201000000">World News</a></dd> <dd><a href="file:///list.php?ct=021202000000">World Business</a></dd> <dd><a href="file:///list.php?ct=021204000000">Asia News Network</a></dd> </dl>
+<dl class="rm-manual"> <dt class="rm-manual"><a href="file:///list.php?ct=020600000000">Opinion</a></dt> <dd><a href="file:///list.php?ct=020601000000">Editorial</a></dd> <dd><a href="file:///list.php?ct=020603000000">Viewpoints</a></dd> </dl>
+<dl class="rm-manual"> <dt class="rm-manual"><a href="file:///list.php?ct=021000000000">English Eye</a></dt> <dd><a href="file:///list.php?ct=021001000000">Podcast</a></dd> <dd><a href="file:///list.php?ct=021007000000">English Cafe</a></dd> </dl>
+<dl class="rm-manual"> <dt class="rm-manual"><a href="file:///list.php?ctv=12">Weekender</a></dt> </dl>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///subscribe/?sv=1"> Subscribe </a> </li> <li class="rm-manual"> <a href="http://biz.heraldcorp.com/mobile/"> Mobile App </a> </li> <li class="rm-manual"> <a href="file:///paoin/"> PDF </a> </li> <li class="rm-manual"> <a href="file:///subscribe/?sv=4"> RSS </a> </li> </ul>
+<p class="rm-manual"> <a href="file:///custom/privacy.php">PRIVACY STATEMENT</a> <a href="file:///custom/cpprivacy.php">COPYRIGHT POLICY</a> <a href="file:///custom/ombudsman.php">HERALD OMBUDSMAN</a> </p>
+<p class="rm-manual">Our Site</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://kpopherald.koreaherald.com/">K-POP HERALD</a></li> <li class="rm-manual"><a href="http://www.theinvestor.co.kr/">THE INVESTOR</a></li> <li class="rm-manual"><a href="http://biz.heraldcorp.com/">THE HERALD BUSINESS</a></li> <li class="rm-manual"><a href="http://pop.heraldcorp.com/">THE HERALD POP</a></li> <li class="rm-manual"><a href="http://www.realfoods.co.kr/">REAL FOODS</a></li> <li class="rm-manual"><a href="http://www.minspire.co.kr/">INSPIRE</a></li> </ul>
+<p class="rm-manual"> The Korea Herald by Herald Corporation</p>
+<p class="rm-manual"> Copyright Herald Corporation. All Rights Reserved.</p>
+<p class="rm-manual"> Address : Huam-ro 4-gil 10, Yongsan-gu,Seoul, Korea</p>
+<p class="rm-manual"> Online newspaper registration No : Seoul 아03711</p>
+<p class="rm-manual"> Date of registration : 2015.04.28</p>
+<p class="rm-manual"> Publisher. Editor : Kwon Chung-won</p>
+<p class="rm-manual"> Juvenile Protection Manager: Shin Chang Hoon</p>
+<p class="rm-manual"> Tel : 02.727.0114 </p></article>
+</body></html>

@@ -1,0 +1,176 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"><span><span><a href="file:///contributor/andy-greenberg">Andy Greenber<span>g</span></a></span></span></p>
+<p class="rm-manual"><a href="file:///category/security">Securit<span>y</span></a></p>
+<p class="rm-manual">01.03.2020 02:30 PM</p>
+<h1 class="rm-manual">How Iran's Hackers Might Strike Back After Soleimani's Assassination</h1>
+<p>From data-destroying wipers to industrial control system hacking, Iran has a potent arsenal of cyberattacks at its disposal.</p>
+<figcaption><span>After the assassination of Islamic Revolutionary Guard
+ Corp leader Qasem Soleimani, experts caution that Iran is 
+well-positioned to respond with disruptive cyberattacks.</span><span>Photograph: Getty Images</span></figcaption><p><span>For years, US</span>
+ tensions with Iran have held to a kind of brinksmanship. But the drone 
+assassination of Iranian general Qasem Soleimani, widely understood to 
+be the second most powerful figure in Iran, has dangerously escalated 
+tensions. The world now awaits Iran's response, which seems likely to 
+make new use of a tool that the country has already been deploying for 
+years: its brigades of military hackers. </p>
+<p>In the wake of Thursday's strike, military and cybersecurity analysts
+ caution Iran's response could include, among other possibilities, a 
+wave of disruptive cyberattacks. The country has spent years building 
+the capability to execute not only the mass-destruction of computers but
+ potentially more advanced—albeit far less likely—attacks on Western 
+critical infrastructure like power grids and water systems.</p>
+<p>"Cyber is certainly an option, and it’s a viable and likely one for 
+Iran," says Ariane Tabatabai, a political scientist at the RAND think 
+tank who focuses on Iran. Tabatabai points to the asymmetric nature of a
+ conflict between Iran and the US: Iran's military resources are 
+depleted, she argues, and it has no nuclear weapons or powerful state 
+allies. That means it will most likely resort to the weapons that weak 
+actors typically use to fight strong ones, like non-state terrorists and
+ militias—and hacking. "If it’s going to be able to match the US, and 
+compete with and deter it, it has to do it in a realm that’s more equal,
+ and that's cyber."</p>
+<p>"They have the capability to cause serious damage."</p>
+<p>Peter Singer, New America Foundation</p>
+<p>Iran has ramped up its cyberwar capabilities ever since a joint US-Israeli intelligence operation deployed <a href="https://www.wired.com/2014/11/countdown-to-zero-day-stuxnet/">the malware known as Stuxnet</a>
+ in the Natanz uranium enrichment facility in 2007, destroying 
+centrifuges and crippling the country's nuclear efforts. Iran has since 
+put serious resources into advancing its own hacking, though it deploys 
+them more for espionage and mass disruption than Stuxnet-like surgical 
+strikes.</p>
+<p>"After Stuxnet, they built up multiple units across government and 
+proxies, including the Quds that Soleimani led," says Peter Singer, a 
+cybersecurity-focused strategist at the New America Foundation. Singer 
+argues that while Iran's hackers had previously been restrained by the 
+need for stealth or deniability, they may now instead seek to send a 
+very public message. "Those forces aren't equal to those of the US, 
+certainly, but they have the capability to cause serious damage, 
+especially if they're not worried about attribution, which they may 
+indeed now want."</p>
+<p>The most likely form of cyberattack to expect from Iran will be the 
+one it has launched repeatedly against its neighbors in recent years: 
+so-called wiper malware designed to destroy as many computers as 
+possible inside target networks. Iran has used wipers like Shamoon and 
+Stone Drill to inflict waves of disruption across neighboring countries 
+in the Middle East, starting with an attack in 2012 that destroyed 
+30,000 Saudi Aramco computers. In 2014, Iranian <a href="https://www.bloomberg.com/news/articles/2014-12-11/iranian-hackers-hit-sheldon-adelsons-sands-casino-in-las-vegas" rel="nofollow noopener">hackers hit the Las Vegas Sands corporation</a>
+ with a wiper after owner Sheldon Adelson suggested a nuclear strike 
+against the country. More recently, Iran's hackers have hit 
+private-sector targets in neighboring Gulf states like the UAE, Qatar, 
+and Kuwait, <a href="https://www.wired.com/story/iran-hacks-nuclear-deal-shamoon-charming-kitten/">as well as Saipem, an Italian oil firm</a> for whom Saudi Aramco is a major customer.</p>
+<p>"From what we know to date of their capabilities, they're still 
+really focused on IT-targeted wipers." says Joe Slowik, an analyst at 
+industrial cybersecurity firm Dragos who formerly led the Computer 
+Security and Incident Response Team at the US Department of Energy.</p>
+<p>Aside from the Sands incident, Iran has largely restrained itself 
+from launching those wiper attacks on the US itself. But the Soleimani 
+assassination may change that calculus. "Iran has been reluctant to go 
+after Americans and US allied forces such as Australia or NATO," says 
+RAND's Tabatabai. "Given the scale of last night's attack, I wouldn't be
+ surprised if that's changed."</p>
+<p>While arguably the most likely form of attack, wipers aren't the only
+ potential threat. Dragos and other cybersecurity firms like FireEye and
+ CrowdStrike have recently observed Iranian hacking groups like APT33, 
+known also as Magnallium or Refined Kitten, <a href="https://www.wired.com/story/iran-hackers-us-phishing-tensions/">looking for points of ingress into potential targets in the US, including the Department of Energy and US National Labs</a>.
+ Those attempted intrusions may well have been intended for espionage, 
+but could also be used for disruption. "We're not sure if it's 
+intelligence collection, gathering information on the conflict, or if 
+it's the most dire concern we’ve always had, which is preparation for an
+ attack," FireEye's director of threat intelligence John Hultquist <a href="https://www.wired.com/story/iran-hackers-us-phishing-tensions/">told WIRED in June</a>.</p>
+<p>"Taking out a leader like Soleimani is such a grave act, it’s going to warrant a very public response."</p>
+<p>Chris Meserole, Brookings Institution</p>
+<p>Some security researchers have also warned that Iran appears to be 
+developing hacking abilities that could directly target industrial 
+control systems—rather than merely attacking computers, reaching out to 
+disrupt physical systems as Stuxnet did in Natanz. Microsoft noted in 
+November that APT33 had <a href="https://www.wired.com/story/iran-apt33-industrial-control-systems/">attempted to gain access to the networks of industrial control system suppliers</a>,
+ a possible first step in a supply chain attack that could be used for 
+acts of sabotage. "They’ve been trying to get their foot in the door in a
+ lot of places," says Dragos' Joe Slowik.</p>
+<p>Slowik also points to a leak of Iranian documents carried out by mysterious hackers that <a href="https://www.clearskysec.com/wp-content/uploads/2019/05/Iranian-Nation-State-APT-Leak-Analysis-and-Overview.pdf" rel="nofollow noopener">seemed to reveal</a>
+ an attempt to create malware for the kind of industrial control systems
+ used in power grids and water systems, though the project appears to 
+have been shelved.</p>
+<p>Despite the signals Iran has ambitions of targeting industrial 
+control systems, Slowik argues they're likely still not ready to carry 
+out attacks of that sophistication. "It would be a significant 
+escalation in terms of patience, capability, and long-term targeting," 
+Slowik says. That makes simpler but nonetheless highly disruptive wiper 
+attacks far more likely.</p>
+<p>Regardless, Iran-watchers warn that any cyberattack designed as 
+payback for Soleimani's assassination likely won't be the end of the 
+story. While cyberattacks may offer a quick, low-stakes option for a 
+response, Iran will likely see the killing of an official as powerful as
+ Soleimani as requiring a more dramatic, physical counterattack.</p>
+<p>"Taking out a leader like Soleimani is such a grave act, it’s going 
+to warrant a very public response," says Chris Meserole, a fellow at the
+ Brookings Institution's Foreign Policy Program. "Cyberattacks will 
+allow them to immediately show they won't sit idly by. But I can't 
+imagine it's the sole way they'll respond." Rather than turning to 
+cyberwar as a substitute for bombs and bullets, as Iran sometimes has in
+ the past, it may now use all of the above.</p>
+<p class="rm-manual">More Great WIRED Stories</p>
+<ul class="rm-manual">
+<li class="rm-manual">The mad scientist who wrote the book <a href="https://www.wired.com/story/meet-the-mad-scientist-who-wrote-the-book-on-how-to-hunt-hackers/?itm_campaign=BottomRelatedStories_Sections_2">on how to hunt hackers</a>
+</li>
+<li class="rm-manual">Why Ring doorbells perfectly exemplify <a href="https://www.wired.com/story/ring-hacks-exemplify-iot-security-crisis/?itm_campaign=BottomRelatedStories_Sections_2">the IoT security crisis</a>
+</li>
+<li class="rm-manual">Bing Maps make the revived <a href="https://www.wired.com/story/microsoft-flight-simulator-2020/?itm_campaign=BottomRelatedStories_Sections_2">Flight Simulator eerily realistic</a>
+</li>
+<li class="rm-manual">Diss tech Buddhists all you want—<a href="https://www.wired.com/story/buddhas-office-dan-zigmond/?itm_campaign=BottomRelatedStories_Sections_2">but read this book first</a>
+</li>
+<li class="rm-manual">A remote Tanzanian village <a href="https://www.wired.com/story/tanzania-internet-photography/?itm_campaign=BottomRelatedStories_Sections_2">logs onto the internet</a>
+</li>
+<li class="rm-manual">👁 Will AI as a field <a href="https://www.wired.com/story/facebooks-ai-says-field-hit-wall/?itm_campaign=BottomRelatedStories_Sections_2">"hit the wall" soon</a>? Plus, the <a href="https://www.wired.com/category/business/artificial-intelligence/?itm_campaign=BottomRelatedStories_Sections_2">latest news on artificial intelligence</a>
+</li>
+<li class="rm-manual">✨ Optimize your home life with our Gear team’s best picks, from <a href="https://www.wired.com/gallery/best-robot-vacuums/?itm_campaign=BottomRelatedStories">robot vacuums</a> to <a href="https://www.wired.com/gallery/best-mattresses/?itm_campaign=BottomRelatedStories">affordable mattresses</a> to <a href="https://www.wired.com/gallery/best-google-speakers-buying-guide/?itm_campaign=BottomRelatedStories">smart speakers</a>.</li>
+</ul>
+<p class="rm-manual"><a href="file:///contributor/andy-greenberg">Andy Greenberg</a> is a senior writer for WIRED, covering security, privacy, information freedom, and hacker culture. He’s the author of the book <a href="https://www.amazon.com/Sandworm-Cyberwar-Kremlins-Dangerous-Hackers/dp/0385544405">Sandworm: A New Era of Cyberwar and the Hunt for the Kremlin's Most Dangerous Hackers</a>. The book and excerpts from it published in WIRED won a Gerald Loeb... <a href="file:///contributor/andy-greenberg">Read more</a></p>
+<p class="rm-manual"><span>Senior Writer</span></p>
+<p class="rm-manual">Featured Video</p>
+<p class="rm-manual">Cybersecurity Expert Answers Hacking Questions From Twitter </p>
+<p class="rm-manual">Facebook Offensive Security Engineer Amanda 
+Rousseau aka "Malware Unicorn" uses the power of Twitter to answer 
+common questions about hacking. As an offensive security engineer, 
+Amanda has seen just about everything when it comes computer hacking. 
+What exactly is the difference between a black hat and a white hat 
+hacker? Is there such thing as a red hat hacker? What's the point of 
+malware, is it just to be annoying? Amanda answers all these Twitter 
+questions, and much more! </p>
+<p class="rm-manual"><span>Topics</span><a href="file:///tag/iran"><span>Iran</span></a><a href="file:///tag/cybersecurity"><span>cybersecurity</span></a><a href="file:///tag/war"><span>war</span></a><a href="file:///tag/cyberwar"><span>cyberwar</span></a></p></article>
+</body></html>

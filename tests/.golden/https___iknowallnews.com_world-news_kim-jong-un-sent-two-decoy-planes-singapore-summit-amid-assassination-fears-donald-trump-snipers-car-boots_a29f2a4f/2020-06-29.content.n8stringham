@@ -1,0 +1,98 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"><span><span><a href="https://iknowallnews.com/">Home</a> » <span><a href="https://iknowallnews.com/category/world-news/">World News</a> » <span>Kim Jong-un sent TWO decoy planes to Singapore summit amid assassination fears… while Donald Trump has snipers in CAR BOOTS</span></span></span></span></p>
+<h1 class="rm-manual"><span>Kim Jong-un sent TWO decoy planes to Singapore summit amid assassination fears… while Donald Trump has snipers in CAR BOOTS</span></h1>
+<p class="rm-manual"> <span> Posted on : <a href="https://iknowallnews.com/world-news/kim-jong-un-sent-two-decoy-planes-singapore-summit-amid-assassination-fears-donald-trump-snipers-car-boots/">June 11, 2018</a> </span></p>
+<p>The two leaders fear being assassinated so much they've a small army 
+dedicated to keeping them alive as they meet face-to-face in a bid to 
+avert nuclear war.</p>
+<p>Kim is reportedly terrified he will be assassinated while overseas on
+ what will be his longest ever trip abroad as North Korean leader.</p>
+<p>As he arrived, it transpired crafty Kim used two decoy jets, 
+including his outdated Soviet-era Ilyushin-62 dubbed Air Force Un, which
+ flew from Pyongyang to the south-east Asian city state.</p>
+<p><span>And after slyly touching down in a third plane in Changi 
+Airport last night, the pint-sized despot was ushered into a waiting 
+black Mercedes.</span></p>
+<p><span>His infamous suit-clad security detail was then spring into action, with f</span>ootage showing the minders keeping pace with Kim’s official car.</p>
+<p>Tellingly the 20-vehicle convoy included an ambulance.</p>
+<p>But it was not just Kim fears assassination.</p>
+<p>Trump has a crack team of secret service agents protecting him where ever he goes.</p>
+<p><span>At the swanky Shangri-La Hotel, Secret Service officers were seen huddling in preparation for the President's movements.</span></p>
+<p>Trump and the North Korean leader will meet at the five-star Capella 
+Hotel on the island of Sentosa on Tuesday to discuss the rogue state’s 
+nuclear weapons programme.</p>
+<p>The meeting will be the first time a sitting US President has met with a member of the Kim dynasty.</p>
+<p>Around a dozen delegates from the rogue state – many of whom looked 
+to be of fighting aged in their 20s – were also seen getting off a bus 
+before the crunch nuclear talks.</p>
+<p>Before flying out to south-east Asia, Trump said he was on a "peace 
+mission" while insisting he will know if he can strike a deal with the 
+dictator “within the first minute” of their meeting.</p>
+<p>The brash New Yorker flew to Singapore last night to prepare for the showdown summit.</p>
+<p>As he left the G7 summit in Canada, Trump called on the diminutive 
+despot to seize on his “one-time shot” to make history and agree to 
+disarm in exchange for economic prosperity.</p>
+<p>Boasting of his deal making prowess, the US President insisted on the
+ chances of success: “I’ll know within the first minute. My touch, my 
+feel, that’s what I do.</p>
+<p>“You know how they say you know whether you’re going to like someone in the first five seconds?</p>
+<p>“Very quickly I think I’ll know if something positive is going to happen”.</p>
+<p>After a choppy run up to their meeting, Republican firebrand refused 
+to put odds on the chances of winning a peace deal for North Korea to 
+disarm.</p>
+<p>He explained: “There has not been done before. Very little is known 
+about him, but I think he is going to surprise on the upside.</p>
+<p>“We’re going in with a very positive attitude, and I think it will be fine.</p>
+<p>But who knows? Maybe it won’t work out.</p>
+<p>“But at the minimum, but at least we would have met each other.”</p>
+<p>Despite agreeing to the summit, Kim is still widely believed to think
+ the US has a "hostile policy" against him and would welcome a regime 
+change.</p>
+<p>There have also been reports of countries, including China, looking into ways of removing the leader by force.</p>
+<p>Trump expressed his desire to invite the North Korean leader to the 
+White House if the meeting at the £8,000-a-night luxury resort in 
+Singapore goes smoothly.</p>
+<p>The former reality TV star, 71, said he would prefer to welcome Kim 
+to the White House over his luxury Mar-a-Lago club in Palm Beach, 
+Florida.</p>
+<p>"Maybe we'll start with the White House," he told reporters at a press conference alongside Japanese Prime Minister Shinzo Abe.</p>
+<p class="rm-manual">Source: <a href="https://www.thesun.co.uk/news/6492841/singapore-summit-kim-jong-un-two-decoy-planes-donald-trump-snipers-car-boot/" rel="noopener">Read Full Article</a></p>
+<p class="rm-manual"><a href="https://iknowallnews.com/world-news/woman-kicks-morality-police-try-make-wear-hijab-iran/" rel="prev">Woman kicks morality police who try to make her wear hijab in Iran</a></p>
+<p class="rm-manual"><a href="https://iknowallnews.com/world-news/driver-caught-speeding-tried-evade-justice-faking-images-van/" rel="next">Driver caught speeding tried to evade justice by faking images of van</a></p></article>
+</body></html>

@@ -1,0 +1,97 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Development quotes of the week [LWN.net] </p>
+<p class="rm-manual"><a href="file:///"> LWN .net News from the source</a> </p>
+<ul class="rm-manual"> <li class="rm-manual">
+<a href="#t">Content</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///current/">Weekly Edition</a></li>
+<li class="rm-manual"><a href="file:///Archives/">Archives</a></li>
+<li class="rm-manual"><a href="file:///Search/">Search</a></li>
+<li class="rm-manual"><a href="file:///Kernel/">Kernel</a></li>
+<li class="rm-manual"><a href="file:///Security/">Security</a></li>
+<li class="rm-manual"><a href="file:///Distributions/">Distributions</a></li>
+<li class="rm-manual"><a href="file:///Calendar/">Events calendar</a></li>
+<li class="rm-manual"><a href="file:///Comments/unread">Unread comments</a></li>
+<li class="rm-manual"><a href="file:///op/FAQ.lwn">LWN FAQ</a></li>
+<li class="rm-manual"><a href="file:///op/AuthorGuide.lwn">Write for us</a></li>
+</ul>
+</li> </ul>
+<p class="rm-manual"> User: Password: | | </p>
+<p class="rm-manual"> <a href="file:///subscribe/">Subscribe</a> / <a href="file:///Login/">Log in</a> / <a href="file:///Login/newaccount">New account</a> </p>
+<h1 class="rm-manual">Development quotes of the week</h1>
+<h2 class="rm-manual">Development quotes of the week</h2>
+<p class="rm-manual"> Posted Aug 19, 2020 22:57 UTC (Wed) by flussence (subscriber, #85566)</p>
+<p class="rm-manual"> In reply to: <a href="file:///Articles/828903/">Development quotes of the week</a> by mathstuf</p>
+<p class="rm-manual"> Parent article: <a href="file:///Articles/828310/">Development quotes of the week</a> </p>
+<p> The software industry is currently going through the “disposable 
+plastic” crisis the physical world went through in the mid-20th century 
+(and is still paying down the debt for). You can run software from 1980 
+or 2005 on a modern desktop without too much hassle, but anything 
+between there and 2-3 years ago? Black hole of fad frameworks and 
+brittle dependencies. Computer Archaeology is going to become a 
+full-time job.</p>
+<p class="rm-manual"> (</p>
+<p class="rm-manual"><a href="https://lwn.net/Login/?target=/Articles/829123/">Log in</a> to post comments) </p>
+<h3 class="rm-manual">Development quotes of the week</h3>
+<p class="rm-manual">Posted Aug 20, 2020 23:38 UTC (Thu) by rietta (subscriber, #133698) [<a href="file:///Articles/829232/">Link</a>] </p>
+<p> I really find this perspective intriguing. 1980 to 2005 was the 
+golden age of standalone software. Get the emulation right and you can 
+run it. 2006 to 2020 is the age of SaaS, meaning that the life 
+expectancy of the software is the period of time its financially 
+beneficial to the original developer to provide an ongoing service. This
+ even applies to open source, where maintainers loose interest and 
+leave. It's not reasonable to expect an entire graph of dependencies to 
+remain stable for the long term.</p>
+<h3 class="rm-manual">Development quotes of the week</h3>
+<p class="rm-manual">Posted Aug 21, 2020 1:00 UTC (Fri) by Cyberax (✭ supporter ✭, #52523) [<a href="file:///Articles/829238/">Link</a>] </p>
+<p> That's not so different from hardware. Given full blueprints, you 
+can reasonably rebuild any machine from 19-th century from scratch, no 
+matter how complicated. Even if you start from raw materials. </p>
+<p> It's not feasible anymore. You won't be able to just take Apollo 
+project blueprints and build your own rocket. You'll likely find that 
+there are no modern alloys that perfectly replace the ones used back 
+then, that some substances might be banned entirely (e.g. carbon tet 
+fire extinguishers or PCBs in transformers), or that some tools are no 
+longer produced.</p>
+<p> The solution here is to move forward and standardize ever larger 
+components, so it would be easier to keep them working. E.g. HTML for UI
+ description is becoming such a standard.</p>
+<p class="rm-manual"> Copyright © 2021, Eklektix, Inc. Comments and 
+public postings are copyrighted by their creators. Linux is a registered
+ trademark of Linus Torvalds </p></article>
+</body></html>

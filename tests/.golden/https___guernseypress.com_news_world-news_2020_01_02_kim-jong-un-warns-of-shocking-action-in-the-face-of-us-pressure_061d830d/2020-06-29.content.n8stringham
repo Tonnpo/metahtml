@@ -1,0 +1,162 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Kim Jong Un warns of ‘shocking’ action in the face of US pressure | Guernsey Press </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="http://jobs.guernseypress.com/">Jobs</a> </li> <li class="rm-manual"> <a href="file:///login/">Login</a> </li> <li class="rm-manual"> <a href="#"> More </a> </li> <li class="rm-manual"> <a href="http://property.guernseypress.com/">Property</a> </li> <li class="rm-manual"> <a href="http://motors.guernseypress.com/">Motoring</a> </li> <li class="rm-manual"> <a href="http://www.bisi.gg/">BiSi</a> </li> <li class="rm-manual"> <a href="https://www.familynotices.gg/">Family Notices</a> </li> <li class="rm-manual"> <a href="http://guernseypress.e-printphoto.co.uk/">Picture Store</a> </li> <li class="rm-manual"> <a href="http://prideofguernsey.com/">Pride of Guernsey</a> </li> <li class="rm-manual"> <a href="https://www.gpdigital.gg/">Digital Editions</a> </li> <li class="rm-manual"> <a href="file:///login/">Login</a> </li> </ul>
+<p class="rm-manual"> <a href="file:///"> </a></p><h1 class="rm-manual"><a href="file:///"> Guernsey Press </a></h1><a href="file:///"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="#"> Menu </a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///"> <span>Home</span> </a> </li> <li class="rm-manual"> <a href="file:///news/">News</a> </li> <li class="rm-manual"> <a href="file:///sport/">Sport</a> </li> <li class="rm-manual"> <a href="file:///weather/">Weather</a> </li> <li class="rm-manual"> <a href="file:///services/">Services</a> </li> </ul>
+<h2 class="rm-manual"> <a href="file:///news/"> News </a> </h2>
+<p class="rm-manual"> <a href="#"> All News </a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///news/business/">Business</a> </li> <li class="rm-manual"> <a href="file:///news/politics/">Politics</a> </li> <li class="rm-manual"> <a href="file:///news/news-from-the-islands/">News from the Islands</a> </li> <li class="rm-manual"> <a href="file:///news/travel/">Travel</a> </li> <li class="rm-manual"> <a href="file:///news/voices/">Voices</a> </li> <li class="rm-manual"> <a href="file:///news/education/">Education</a> </li> <li class="rm-manual"> <a href="file:///news/campaigns/">Pride of Guernsey</a> </li> <li class="rm-manual"> <a href="file:///news/features/">Features</a> </li> <li class="rm-manual"> <a href="file:///news/coronavirus/">Coronavirus</a> </li> <li class="rm-manual"> <a href="#">More</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///news/property/">Property</a> </li> <li class="rm-manual"> <a href="file:///news/uk-news/">UK News</a> </li> <li class="rm-manual"> <a href="file:///news/world-news/">World News</a> </li> <li class="rm-manual"> <a href="file:///news/viral-news/">Viral News</a> </li> <li class="rm-manual"> <a href="file:///news/motors/">Motors</a> </li> </ul> </li> </ul>
+<h1 class="rm-manual">Kim Jong Un warns of ‘shocking’ action in the face of US pressure</h1>
+<p class="rm-manual"> <a href="file:///news/world-news/">World News</a> | Published: Jan 2, 2020 </p>
+<p>The North Korean leader has ramped up his rhetoric against Washington over nuclear negotiations.</p>
+<p>Expressing deep frustration over stalled nuclear talks, North Korean 
+leader Kim Jong Un warned of unspecified “shocking” action and said his 
+country would soon reveal a new “strategic weapon” to the world as its 
+bolstered its nuclear deterrent in face of “gangster-like” US pressure.</p>
+<p>Mr Kim also said North Korea was no longer obliged to maintain a 
+self-imposed suspension on the testing of nuclear weapons and 
+intercontinental ballistic missiles, which President Donald Trump has 
+touted as a major diplomatic accomplishment.</p>
+<p>But Mr Kim gave no clear indication a resumption of such tests was 
+impending and appeared to leave the door open for eventual negotiations.</p>
+<p>Mr Kim has used the diplomatic stalemate to expand his military 
+capabilities by intensifying tests of shorter-range weapons. His arsenal
+ is now estimated to include 40-50 nuclear bombs and various delivery 
+systems, including solid-fuel missiles designed to beat missile-defence 
+systems, and developmental ICBMs potentially capable of reaching the US 
+mainland.</p>
+<p>Mr Kim has also strengthened his negotiating position, moving the 
+diplomacy closer to an arms reduction negotiation between nuclear states
+ rather than talks that would culminate in a unilateral surrender of the
+ weapons he sees as his strongest guarantee of survival.</p>
+<p>Lee Sang-min, spokesman for South Korea’s Unification Ministry, said 
+North Korea carrying out its threat to showcase a new strategic weapon 
+would be unhelpful for diplomacy.</p>
+<p>Strategic weapons usually refer to nuclear-capable delivery systems 
+such as ICBMs, but North Korea otherwise has been vague about what new 
+arms it would display.</p>
+<p>It announced in December it had performed two “crucial” tests at its 
+long-range rocket launch site that would further strengthen its nuclear 
+deterrent.</p>
+<p>Mr Kim’s latest comments, published in state media on Wednesday, were
+ made at a four-day meeting of the ruling Workers’ Party’s Central 
+Committee as talks between Washington and Pyongyang have faltered over 
+disagreements on disarmament steps and the removal of sanctions.</p>
+<figcaption>People in the South Korean capital Seoul watch a TV screen 
+showing Kim Jong Un on Wednesday. Some experts believe Pyongyang will 
+monitor Donald Trump’s impeachment trial before taking its next 
+substantive step in denuclearisation talks (Ahn Young-joon/AP)</figcaption><p>Mr
+ Kim may instead seek to strengthen his leverage by promoting a united 
+front with Beijing and Moscow, Pyongyang’s traditional supporters, which
+ seek to establish themselves as major stakeholders in North Korean 
+diplomacy. Both have called for the UN Security Council to consider 
+easing sanctions on the North to spur progress in nuclear negotiations.</p>
+<p>UN spokesman Stephane Dujarric said Secretary-General António 
+Guterres “very much hopes that the tests will not resume,” citing 
+existing Security Council resolutions. “Non-proliferation remains a 
+fundamental pillar of global nuclear security and must be preserved,” 
+the spokesman said.</p>
+<p>Mr Kim last year had said the North would pursue a “new way” if the 
+Trump administration did not make concessions to salvage the 
+negotiations by the end of December.</p>
+<p>His defiant words entering 2020 indicate his “new way” could look 
+very much like the old one — a patient determination to wait out 
+sanctions and pressure, which will possibly weaken over time, while 
+cementing the country’s status as a nuclear state.</p>
+<p>At the party meeting, Mr Kim declared the North would never give up 
+its security for economic benefits in the face of what he described as 
+increasing US hostility and nuclear threats, the Korean Central News 
+Agency said.</p>
+<p>“(Mr Kim) said that we will never allow the impudent US to abuse the 
+DPRK-US dialogue for meeting its sordid aim but will shift to a shocking
+ actual action to make it pay for the pains sustained by our people so 
+far and for the development so far restrained,” the agency said, 
+referring to the North by its formal name, the Democratic People’s 
+Republic of Korea.</p>
+<p>Mr Kim added that “if the US persists in its hostile policy toward 
+the DPRK, there will never be the denuclearisation on the Korean 
+Peninsula and the DPRK will steadily develop necessary and prerequisite 
+strategic weapons for the security of the state until the US rolls back 
+its hostile policy,” KCNA said.</p>
+<p>“(Mr Kim) confirmed that the world will witness a new strategic 
+weapon to be possessed by the DPRK in the near future, declaring that we
+ cannot give up the security of our future just for the visible economic
+ results … now that hostile acts and nuclear threat against us are 
+increasing,” it said.</p>
+<p>Mr Trump on Tuesday urged Mr Kim to stick to his alleged commitment 
+to denuclearise. After their first summit in Singapore in June 2018 the 
+two leaders issued a vague statement on a nuclear-free Korean Peninsula 
+without saying when and how it would occur.</p>
+<p>“Look, he likes me, I like him, we get along,” Mr Trump said as he 
+entered a New Year’s party at his Mar-a-Lago resort in Florida.</p>
+<p>“But he did sign a contract, he did sign an agreement talking about 
+denuclearisation … I think he’s a man of his word so we’re going to find
+ out, but I think he’s a man of his word.”</p>
+<p class="rm-manual">North Korea has held to its self-imposed moratorium
+ on nuclear and ICBM testing since 2018, though last year it ended a 
+17-month pause in ballistic activity by testing a slew of solid-fuel 
+weapons that potentially expanded its capabilities to strike targets in 
+South Korea and Japan, including US military bases there.</p>
+<p class="rm-manual"> <a href="file:///news/world-news/">World News</a> </p>
+<h2 class="rm-manual">Most Read</h2>
+<p class="rm-manual"> <a href="file:///news/2020/06/29/support-us-or-lose-us-say-local-businesses-post-crisis/"> </a></p><h4 class="rm-manual"><a href="file:///news/2020/06/29/support-us-or-lose-us-say-local-businesses-post-crisis/">‘Support us or lose us’ say local businesses post-crisis</a></h4><a href="file:///news/2020/06/29/support-us-or-lose-us-say-local-businesses-post-crisis/"> <span> <span>News</span> | <span> 15 hours ago </span> </span> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///news/2020/06/29/student-builds-homes-fit-for-barn-owls-during-lockdown/"> </a></p><h4 class="rm-manual"><a href="file:///news/2020/06/29/student-builds-homes-fit-for-barn-owls-during-lockdown/">Student builds homes fit for barn owls during lockdown</a></h4><a href="file:///news/2020/06/29/student-builds-homes-fit-for-barn-owls-during-lockdown/"> <span> <span>News</span> | <span> 9 hours ago </span> </span> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///news/2020/06/29/leaders-confident-of-avoiding-second-wave/"> </a></p><h4 class="rm-manual"><a href="file:///news/2020/06/29/leaders-confident-of-avoiding-second-wave/">Leaders confident of avoiding second wave</a></h4><a href="file:///news/2020/06/29/leaders-confident-of-avoiding-second-wave/"> <span> <span>News</span> | <span> 16 hours ago </span> </span> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///news/2019/06/20/states-of-alderney-denies-cover-up-on-wartime-deaths/"> </a></p><h4 class="rm-manual"><a href="file:///news/2019/06/20/states-of-alderney-denies-cover-up-on-wartime-deaths/">States of Alderney denies cover up on wartime deaths</a></h4><a href="file:///news/2019/06/20/states-of-alderney-denies-cover-up-on-wartime-deaths/"> <span> <span>News</span> | <span> Jun 20, 2019 </span> </span> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///news/2020/06/29/camp-out-event-pitches-up-at-peninsula/"> </a></p><h4 class="rm-manual"><a href="file:///news/2020/06/29/camp-out-event-pitches-up-at-peninsula/">‘Camp Out’ event pitches up at Peninsula</a></h4><a href="file:///news/2020/06/29/camp-out-event-pitches-up-at-peninsula/"> <span> <span>News</span> | <span> 14 hours ago </span> </span> </a> <p class="rm-manual"></p>
+<p class="rm-manual">Sorry, we are not accepting comments on this article.</p>
+<h2 class="rm-manual">Top Stories</h2>
+<article class="rm-manual"> <a href="file:///news/2020/06/29/student-builds-homes-fit-for-barn-owls-during-lockdown/"> <p class="rm-manual"> </p><h4 class="rm-manual">Student builds homes fit for barn owls during lockdown</h4> <p class="rm-manual"></p> <p class="rm-manual"> <span> <span>News</span> | <span> Last updated: 9 hours ago </span> </span> </p> </a> </article><article class="rm-manual"> <a href="file:///news/2020/06/29/recognition-is-more-important-now-than-ever/"> <p class="rm-manual"> </p><h4 class="rm-manual">Recognition is more important now than ever</h4> <p class="rm-manual"></p> <p class="rm-manual"> <span> <span>News</span> | <span> Last updated: 13 hours ago </span> </span> </p> </a> </article><article class="rm-manual"> <a href="file:///news/2020/06/29/july-brings-new-challenge-for-fundraiser/"> <p class="rm-manual"> </p><h4 class="rm-manual">July brings new challenge for fundraiser </h4> <p class="rm-manual"></p> <p class="rm-manual"> <span> <span>News</span> | <span> Last updated: 14 hours ago </span> </span> </p> </a> </article><article class="rm-manual"> <a href="file:///news/2020/06/29/pr-president-rules-out-large-tax-rises-next-year/"> <p class="rm-manual"> </p><h4 class="rm-manual">P&amp;R president rules out large tax rises next year</h4> <p class="rm-manual"></p> <p class="rm-manual"> <span> <span>News</span> | <span> Last updated: 15 hours ago </span> </span> </p> </a> </article><article class="rm-manual"> <a href="file:///news/2020/06/29/support-us-or-lose-us-say-local-businesses-post-crisis/"> <p class="rm-manual"> </p><h4 class="rm-manual">‘Support us or lose us’ say local businesses post-crisis</h4> <p class="rm-manual"></p> <p class="rm-manual"> <span> <span>News</span> | <span> Last updated: 15 hours ago </span> </span> </p> </a> </article><article class="rm-manual"> <a href="file:///news/2020/06/29/guernsey-waste-records-14m-deficit-in-first-year-of-strategy/"> <p class="rm-manual"> </p><h4 class="rm-manual">Guernsey Waste records £1.4m. deficit in first year of strategy </h4> <p class="rm-manual"></p> <p class="rm-manual"> <span> <span>News</span> | <span> Last updated: 15 hours ago </span> </span> </p> </a> </article><article class="rm-manual"> <a href="file:///news/2020/06/29/leaders-confident-of-avoiding-second-wave/"> <p class="rm-manual"> </p><h4 class="rm-manual">Leaders confident of avoiding second wave</h4> <p class="rm-manual"></p> <p class="rm-manual"> <span> <span>News</span> | <span> Last updated: 16 hours ago </span> </span> </p> </a> </article><article class="rm-manual"> <a href="file:///news/2020/06/29/spirit-of-guernsey-lifeboat-set-to-return-to-local-waters/"> <p class="rm-manual"> </p><h4 class="rm-manual">Spirit of Guernsey lifeboat set to return to local waters </h4> <p class="rm-manual"></p> <p class="rm-manual"> <span> <span>News</span> | <span> Last updated: 16 hours ago </span> </span> </p> </a> </article><h2 class="rm-manual">More from the Guernsey Press</h2>
+<h3 class="rm-manual"> <a href="file:///news/">News</a> </h3>
+<article class="rm-manual"> <a href="file:///news/2020/06/29/student-builds-homes-fit-for-barn-owls-during-lockdown/"> <p class="rm-manual"> </p><h4 class="rm-manual">Student builds homes fit for barn owls during lockdown</h4> <p class="rm-manual"></p> <span> <span>News</span> | <span> Last updated: 9 hours ago </span> </span> </a> </article><article class="rm-manual"> <a href="file:///news/2020/06/29/recognition-is-more-important-now-than-ever/"> <p class="rm-manual"> </p><h4 class="rm-manual">Recognition is more important now than ever</h4> <p class="rm-manual"></p> <span> <span>News</span> | <span> Last updated: 13 hours ago </span> </span> </a> </article><article class="rm-manual"> <a href="file:///news/2020/06/29/july-brings-new-challenge-for-fundraiser/"> <p class="rm-manual"> </p><h4 class="rm-manual">July brings new challenge for fundraiser </h4> <p class="rm-manual"></p> <span> <span>News</span> | <span> Last updated: 14 hours ago </span> </span> </a> </article><h3 class="rm-manual"> <a href="file:///news/politics/">Politics</a> </h3>
+<article class="rm-manual"> <a href="file:///news/voices/nick-mann/2019/11/05/states-is-at-a-crossroads-with-the-budget-debate/"> <p class="rm-manual"> </p><h4 class="rm-manual">States is at a crossroads with the Budget debate</h4> <p class="rm-manual"></p> <span> <span>Nick Mann</span> | <span> Last updated: Nov 7, 2019 </span> </span> </a> </article><article class="rm-manual"> <a href="file:///news/politics/2019/10/22/no-deal-brexit-could-be-good-for-guernsey/"> <p class="rm-manual"> </p><h4 class="rm-manual">'No-deal Brexit could be good for Guernsey'</h4> <p class="rm-manual"></p> <span> <span>Politics</span> | <span> Last updated: Oct 24, 2019 </span> </span> </a> </article><article class="rm-manual"> <a href="file:///news/politics/2019/10/15/participatory-budget-process-would-bridge-expectation-gap/"> <p class="rm-manual"> </p><h4 class="rm-manual">Participatory budget process would bridge expectation gap</h4> <p class="rm-manual"></p> <span> <span>Politics</span> | <span> Last updated: Oct 15, 2019 </span> </span> </a> </article><h3 class="rm-manual"> <a href="file:///news/campaigns/">Pride of Guernsey</a> </h3>
+<article class="rm-manual"> <a href="file:///news/2020/06/29/recognition-is-more-important-now-than-ever/"> <p class="rm-manual"> </p><h4 class="rm-manual">Recognition is more important now than ever</h4> <p class="rm-manual"></p> <span> <span>News</span> | <span> Last updated: 13 hours ago </span> </span> </a> </article><article class="rm-manual"> <a href="file:///news/2019/12/19/prize-winnings-go-towards-refurbishment-of-staffroom/"> <p class="rm-manual"> </p><h4 class="rm-manual">Prize winnings go towards refurbishment of staffroom</h4> <p class="rm-manual"></p> <span> <span>News</span> | <span> Last updated: Dec 19, 2019 </span> </span> </a> </article><article class="rm-manual"> <a href="file:///news/2019/11/27/final-ceremony-to-mark-guernseys-finest-hour/"> <p class="rm-manual"> </p><h4 class="rm-manual">Final ceremony to mark Guernsey’s finest hour</h4> <p class="rm-manual"></p> <span> <span>News</span> | <span> Last updated: Nov 27, 2019 </span> </span> </a> </article><h3 class="rm-manual"> <a href="file:///news/business/">Business</a> </h3>
+<article class="rm-manual"> <a href="file:///news/2020/06/26/presss-owner-to-buy-creative-digital-agency/"> <p class="rm-manual"> </p><h4 class="rm-manual">Press’s owner to buy creative digital agency</h4> <p class="rm-manual"></p> <span> <span>News</span> | <span> Last updated: Jun 26, 2020 </span> </span> </a> </article><article class="rm-manual"> <a href="file:///news/business/2020/06/26/phenomenal-rise-in-blue-diamond-sales/"> <p class="rm-manual"> </p><h4 class="rm-manual">‘Phenomenal’ rise in Blue Diamond sales</h4> <p class="rm-manual"></p> <span> <span>Business</span> | <span> Last updated: Jun 26, 2020 </span> </span> </a> </article><article class="rm-manual"> <a href="file:///news/2020/06/26/measures-allow-blue-diamond-group-to-gain-breathing-space/"> <p class="rm-manual"> </p><h4 class="rm-manual">Measures allow Blue Diamond Group to gain ‘breathing space’</h4> <p class="rm-manual"></p> <span> <span>News</span> | <span> Last updated: Jun 26, 2020 </span> </span> </a> </article><h2 class="rm-manual">UK &amp; International News</h2>
+<h3 class="rm-manual"> <a href="file:///news/uk-news/">UK News</a> </h3>
+<article class="rm-manual"> <a href="file:///news/uk-news/2020/06/29/johnson-to-promise-new-deal-to-rebuild-after-coronavirus-crisis/"> <p class="rm-manual"> </p><h4 class="rm-manual">Johnson to promise New Deal to rebuild after coronavirus crisis</h4> <p class="rm-manual"></p> <span> <span>UK News</span> | <span> Last updated: Less than an hour ago </span> </span> </a> </article><article class="rm-manual"> <a href="file:///news/uk-news/2020/06/29/lockdown-restrictions-on-leicester-after-spike-in-coronavirus-cases/"> <p class="rm-manual"> </p><h4 class="rm-manual">Lockdown extended for Leicester after spike in Covid-19 cases</h4> <p class="rm-manual"></p> <span> <span>UK News</span> | <span> Last updated: 1 hour ago </span> </span> </a> </article><article class="rm-manual"> <a href="file:///news/uk-news/2020/06/29/hiv-drug-ineffective-at-treating-covid-19-major-study-suggests/"> <p class="rm-manual"> </p><h4 class="rm-manual">HIV drug ineffective at treating Covid-19, major study suggests</h4> <p class="rm-manual"></p> <span> <span>UK News</span> | <span> Last updated: 1 hour ago </span> </span> </a> </article><article class="rm-manual"> <a href="file:///news/uk-news/2020/06/29/it-wont-make-any-difference-leicester-businesses-react-to-lockdown-extension/"> <p class="rm-manual"> </p><h4 class="rm-manual">‘It won’t make any difference’ – Leicester businesses react to lockdown extension</h4> <p class="rm-manual"></p> <span> <span>UK News</span> | <span> Last updated: 1 hour ago </span> </span> </a> </article><article class="rm-manual"> <a href="file:///news/uk-news/2020/06/29/johnny-depp-awaits-decision-on-whether-libel-trial-against-the-sun-will-go-ahead/"> <p class="rm-manual"> </p><h4 class="rm-manual">Johnny Depp awaits decision on whether libel trial against The Sun will go ahead</h4> <p class="rm-manual"></p> <span> <span>UK News</span> | <span> Last updated: 2 hours ago </span> </span> </a> </article><h3 class="rm-manual"> <a href="file:///news/viral-news/">Viral News</a> </h3>
+<article class="rm-manual"> <a href="file:///news/viral-news/2020/06/29/102-year-old-great-grandmother-survives-the-coronavirus/"> <p class="rm-manual"> </p><h4 class="rm-manual">102-year-old great-grandmother survives coronavirus</h4> <p class="rm-manual"></p> <span> <span>Viral News</span> | <span> Last updated: 6 hours ago </span> </span> </a> </article><article class="rm-manual"> <a href="file:///news/viral-news/2020/06/29/graphic-designer-creates-bespoke-jane-austen-monopoly-for-superfan-girlfriend/"> <p class="rm-manual"> </p><h4 class="rm-manual">Graphic designer creates bespoke Jane Austen Monopoly for superfan girlfriend</h4> <p class="rm-manual"></p> <span> <span>Viral News</span> | <span> Last updated: 7 hours ago </span> </span> </a> </article><article class="rm-manual"> <a href="file:///news/viral-news/2020/06/29/neighbours-throw-surprise-prom-for-teen-with-cerebral-palsy/"> <p class="rm-manual"> </p><h4 class="rm-manual">Neighbours throw surprise prom for teen with cerebral palsy</h4> <p class="rm-manual"></p> <span> <span>Viral News</span> | <span> Last updated: 9 hours ago </span> </span> </a> </article><article class="rm-manual"> <a href="file:///news/viral-news/2020/06/28/dublin-pride-one-to-remember-as-festival-goes-online-amid-coronavirus-pandemic/"> <p class="rm-manual"> </p><h4 class="rm-manual">Dublin Pride ‘one to remember’ as festival goes online amid coronavirus pandemic</h4> <p class="rm-manual"></p> <span> <span>Viral News</span> | <span> Last updated: Jun 28, 2020 </span> </span> </a> </article><article class="rm-manual"> <a href="file:///news/viral-news/2020/06/26/glastonbury-fans-recreate-festival-at-home-ahead-of-50th-anniversary-weekend/"> <p class="rm-manual"> </p><h4 class="rm-manual">Glastonbury fans recreate festival at home ahead of 50th anniversary weekend</h4> <p class="rm-manual"></p> <span> <span>Viral News</span> | <span> Last updated: Jun 26, 2020 </span> </span> </a> </article><h3 class="rm-manual"> <a href="file:///news/world-news/">World News</a> </h3>
+<article class="rm-manual"> <a href="file:///news/world-news/2020/06/29/reddit-and-twitch-clamp-down-on-trump-backing-forums-over-hate-speech/"> <p class="rm-manual"> </p><h4 class="rm-manual">Reddit and Twitch clamp down on Trump-backing forums over hate speech</h4> <p class="rm-manual"></p> <span> <span>World News</span> | <span> Last updated: 2 hours ago </span> </span> </a> </article><h4 class="rm-manual">Get involved</h4>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="mailto:newseditor@guernseypress.com">Send us your news</a> </li> <li class="rm-manual"> <a href="http://edition.pagesuite-professional.co.uk/digitaleditions.aspx?tab=0&amp;pid=366fcaa9-c70d-401f-b42c-77bcbf24c9db">Subscribe to the Guernsey Press</a> </li> </ul>
+<h4 class="rm-manual">Useful links</h4>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///advertising/">Advertise with us</a> </li> <li class="rm-manual"> <a href="file:///complaints/">Making a complaint</a> </li> <li class="rm-manual"> <a href="https://www.jerseyeveningpost.com/">Jersey Evening Post</a> </li> <li class="rm-manual"> <a href="https://www.airport.gg/arrivals-departures">Guernsey Airport</a> </li> <li class="rm-manual"> <a href="http://www.harbours.gg/article/151766/Arrivals--Departures-scheduled-for-today--tomorrow">Guernsey Harbours</a> </li> </ul>
+<h4 class="rm-manual">About the website</h4>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///about-us/">About us</a> </li> <li class="rm-manual"> <a href="file:///contact-us/">Contact us</a> </li> <li class="rm-manual"> <a href="file:///terms-of-website-use/">Terms of website use</a> </li> <li class="rm-manual"> <a href="file:///privacy-policy/">Privacy Policy</a> </li> <li class="rm-manual"> <a href="file:///">Homepage</a> </li> <li class="rm-manual"> <a href="">Update your cookie preferences</a> </li> </ul>
+<p class="rm-manual"> © 2020 Guernsey Press. All rights reserved </p></article>
+</body></html>

@@ -1,0 +1,239 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual"> Zig Makes Go Cross Compilation Just Work </h1>
+<p class="rm-manual"> <a href="file:///t/zig"><span>#</span>zig</a> <a href="file:///t/go"><span>#</span>go</a> <a href="file:///t/cpp"><span>#</span>cpp</a> <a href="file:///t/systems"><span>#</span>systems</a> </p>
+<p class="rm-manual"> <a href="file:///kristoff"> <span>Loris Cro</span> </a> </p>
+<p class="rm-manual"> <a href="file:///kristoff"> <span>Loris Cro</span> </a> </p>
+<p class="rm-manual"> VP of Community @ Zig Software Foundation </p>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> Work </p> <p class="rm-manual"> Creator and Host <span> at </span> <a href="https://zig.show/" rel="noopener">Zig SHOWTIME</a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> Location </p> <p class="rm-manual"> Italy </p> </li> <li class="rm-manual"> <p class="rm-manual"> Education </p> <p class="rm-manual"> Bioinformatics </p> </li> <li class="rm-manual"> <p class="rm-manual"> Joined </p> <p class="rm-manual"> Sep 13, 2019 </p> </li> </ul>
+<p class="rm-manual"><span> Jan 24 <span>・6 min read</span> </span> </p>
+<p>For the last couple of months I worked on a redesign of <a href="https://ziglang.org/">https://ziglang.org</a>. <a href="https://kristoff.it/blog/first-zig-website-redesign/">Among other things</a>,
+ the site was ported to Hugo, a popular static site generator written in
+ Go. Everything went smoothly, but I did encounter a snag when setting 
+up the deploy pipeline: I could not build Hugo for x86_64 Linux from my 
+Apple Silicon Mac mini! </p>
+<p> The failed build. </p>
+<h2> How could this be? </h2>
+<p>Go does have the ability to compile a project for another platform, you just need to specify </p>
+<code>GOOS</code><p> and </p>
+<code>GOARCH</code><p> when running </p>
+<code>go build</code><p>, like I did in the screenshot above. The problem is the remaining environment variable: </p>
+<code>CGO_ENABLED</code><p>, which caused the build command to fail.</p>
+<h3> Hugo C extensions </h3>
+<p>It just so happens that Hugo can be built with or without a set of C 
+extensions used to manipulate CSS and other assets. If you want the C 
+extensions (like in my case), you need to enable <a href="https://golang.org/cmd/cgo/">cgo</a>, a piece of the Go toolchain that handles compilation and linking of C code.</p>
+<h2> Pesky C code </h2>
+<p>Compiling C code has always been a bit of a nuisance, and especially so when it comes to cross compilation. If you search for </p>
+<code>how to cross compile cgo</code><p> you will find a long list of 
+suffering and hopelessness. This is what Dave Cheney replied to one of 
+such questions on Stack Overflow:</p>
+<p>Well, a few years plus a lot of collective effort later, I'm happy to show you how to cross compile trivially :)</p>
+<h2> Say hello to Zig </h2>
+<p>Zig is a new programming language that has no runtime, no macros, <a href="https://kristoff.it/blog/what-is-zig-comptime/">a radical compile-time metaprogramming system</a>,
+ and seamless C interoperability. You can even import C header files 
+directly and immediately use all the definitions in your Zig code, 
+without needing any glue / bindgen. </p>
+<p>Even better, Zig is a full-fledged C/C++ cross compiler that 
+leverages LLVM. The crucial detail here is what Zig includes to make 
+cross compilation possible: Zig bundles standard libraries for all major
+ platforms (GNU libc, musl libc, ...), an advanced artifact caching 
+system, and it has a flag-compatible interface for both clang and gcc.</p>
+<p>This means that Zig is a dependency-free, in-place replacement for 
+your current C/C++ compiler that allows cross compilation 
+out-of-the-box. Just download a Zig tarball, extract it somewhere, and 
+boom: you can now cross compile to your heart's content.</p>
+<p>Let's see how to use Zig from Go.</p>
+<h1> How to use Zig to cross compile Hugo (with C extensions) </h1>
+<p>First of all, <a href="https://ziglang.org/">you need to download Zig</a>.
+ You can either get a tarball as mentioned above, or have your favorite 
+package manager install everything for you. You can even find Zig in <a href="https://formulae.brew.sh/formula/zig#default">Homebrew</a> (Mac) and <a href="https://chocolatey.org/packages/zig">Chocolatey</a> (Windows).</p>
+<p>You also need to make sure </p>
+<code>zig</code><p> is present in your </p>
+<code>PATH</code><p>, so that you can call the compiler from any directory. If you're not sure how to do it, </p>
+<p><a href="https://ziglang.org/learn/getting-started/">check out the Getting Started</a> guide. Package managers should take care of </p>
+<code>PATH</code><p> for you, if you decide to go that route.</p>
+<p>To test if you have setup Zig correctly, run </p>
+<code>zig version</code><p> in a terminal, it should reply with 
+something similar (i.e. it should not error out, but the version might 
+be different of course):</p>
+<code>0.7.1 </code><p> Enter fullscreen mode Exit fullscreen mode </p>
+<h3> Invoking Zig from Go </h3>
+<p>We're finally at the climax! How hard is it to call into Zig when compiling a cgo project?</p>
+<p>If you have Go version 1.17 or above (NOTE: at the moment of writing 
+this version is not out yet), then you only have to tell Go to use Zig 
+to compile C/C++ code.</p>
+<p>If you want to cross compile for x86_64 Linux, for example, all you need to do is add </p>
+<code>CC="zig cc -target x86_64-linux" CXX="zig c++ -target x86_64-linux"</code><p> to the list of env variables when invoking </p>
+<code>go build</code><p>. In the case of Hugo, this is the complete command line:</p>
+<code>CGO_ENABLED=1 GOOS=linux GOARCH=amd64 CC="zig cc -target 
+x86_64-linux" CXX="zig c++ -target x86_64-linux" go build --tags 
+extended </code><p> Enter fullscreen mode Exit fullscreen mode </p>
+<p>That's it! Really. Trivial cross compilation indeed.</p>
+<h3> Important notes </h3>
+<p>As you probably noted, we've repeated the cross compilation target multiple times. </p>
+<p>Unfortunately, Go doesn't provide this information to the C/C++ 
+compiler, so it's up to us to provide that little bit of glue. This 
+means that if you want a different target, you will have to change both 
+Zig invocations and the </p>
+<code>GOOS</code><p>/</p>
+<code>GOARCH</code><p> variables.</p>
+<p>Another important detail is that Zig calls </p>
+<code>x86_64</code><p> what Go calls </p>
+<code>amd64</code><p>. That's the most notable difference in naming conventions, so keep that in mind.</p>
+<p>Finally, you may be interested in knowing that Zig can also accept a 
+third option when specifying the target architecture: the libc ABI.</p>
+<p>For Windows, you want gnu (e.g. </p>
+<code>x86_64-windows-gnu</code><p>) because that will use Zig's bundled 
+MinGW-w64 instead of trying to find an MSVC installation. Note: there's a
+ problem with targeting Windows, tracked in </p>
+<p><a href="https://github.com/ziglang/zig/issues/7874">this</a> issue (</p>
+<p><a href="https://github.com/golang/go/issues/43886#issuecomment-766483975">downstream issue</a>).</p>
+<p>For Linux, you probably want musl (e.g. </p>
+<code>x86_64-linux-musl</code><p>) because your resulting binary will be
+ statically linked and thus work on all Linux distributions. However, if
+ you prefer to interact with the system glibc, such as on Ubuntu, you 
+can specify gnu (e.g. </p>
+<code>x86_64-linux-gnu</code><p>).</p>
+<p>The Zig language reference contains <a href="https://ziglang.org/documentation/master/#Targets">the full list of supported targets</a>.</p>
+<h2> For older versions of Go </h2>
+<p>For versions of Go lower than 1.17, you need a workaround for <a href="https://go-review.googlesource.com/c/go/+/276412/">this bug</a> (<a href="https://github.com/golang/go/issues/43078">relative GH issue</a>).</p>
+<p>This workaround consists of 2 bash scripts that wrap the two Zig 
+commands into single-argument commands (it might seem silly, but that's 
+what the bug is about). </p>
+<p>Here are the steps:</p>
+<h3> 1. Create the scripts </h3>
+<p>zcc</p>
+<code><span>#!/bin/sh</span> <span>ZIG_LOCAL_CACHE_DIR</span><span>=</span><span>"</span><span>$HOME</span><span>/tmp"</span> zig cc <span>-target</span> x86_64-linux <span>$@</span> </code><p> Enter fullscreen mode Exit fullscreen mode </p>
+<p>zxx</p>
+<code><span>#!/bin/sh</span> <span>ZIG_LOCAL_CACHE_DIR</span><span>=</span><span>"</span><span>$HOME</span><span>/tmp"</span> zig c++ <span>-target</span> x86_64-linux <span>$@</span> </code><p> Enter fullscreen mode Exit fullscreen mode </p>
+<h3> 2. Make the scripts executable </h3>
+<code><span>$ </span><span>chmod</span> +x zcc zxx </code><p> Enter fullscreen mode Exit fullscreen mode </p>
+<h3> 3. Add the scripts to </h3>
+<code>PATH</code><p>If you don't know how to do it, it's the same procedure explained in the <a href="https://ziglang.org/learn/getting-started/">Getting Started</a> guide: you want to add to </p>
+<code>PATH</code><p> the directory containing </p>
+<code>zcc</code><p> and </p>
+<code>zxx</code><p>.</p>
+<h3> 4. Use the scripts as your C/C++ compiler </h3>
+<p>Just specify </p>
+<code>CC="zcc" CXX="zxx"</code><p> when building and you're good to go! Here's the full command line for Hugo:</p>
+<code>CGO_ENABLED=1 GOOS=linux GOARCH=amd64 CC="zcc" CXX="zxx" go build --tags extended </code><p> Enter fullscreen mode Exit fullscreen mode </p>
+<p>This is what I did in my case and, well, it just worked.</p>
+<p> The successful build. </p>
+<h2> Conclusion </h2>
+<p>I think Andrew (the creator of Zig) captured the conclusion perfectly in this Tweet.</p>
+<p> Andrew Kelley </p>
+<p> @andy_kelley </p>
+<p> Don't worry, Zig is here to spoil Go users too ♥️ <a href="https://t.co/sSBorngQek">twitter.com/croloris/statu…</a> </p>
+<p> 23:40 PM - 14 Jan 2021 </p>
+<p> <span> Loris Cro ⚡ </span> @croloris </p>
+<p> Whelp, can't crosscompile Hugo from Apple Silicon. Zig spoiled me. https://t.co/sm3t5cHtE1 </p>
+<h3> Is this solution Go-only? </h3>
+<p>This should be easy to infer, but to be absolutely clear: no, this is not a feature designed specifically for Go.</p>
+<p>Zig can be used as a C/C++ cross compiler directly or from other toolchains. </p>
+<p>Zig can also be used by <a href="https://crates.io/crates/cc">cc-rs</a>, a Rust crate used for shelling out to a C/C++ compiler, for example.</p>
+<p>If you want a more detailed explanation <a href="https://andrewkelley.me/post/zig-cc-powerful-drop-in-replacement-gcc-clang.html">read this blog post by Andrew</a>.</p>
+<h3> Couldn't you just download a prebuilt Hugo executable? </h3>
+<p>I have my own <a href="https://kristoff.it/blog/first-zig-website-redesign/#implementation-details">small fork of Hugo</a>
+ where I added a custom integration with zig-doctest, a tool that both 
+tests and renders to html the real output of most of the code snippets 
+present on the website.</p>
+<h2> <a href="https://github.com/kristoff-it"> kristoff-it </a> / <a href="https://github.com/kristoff-it/zig-doctest"> zig-doctest </a> </h2>
+<h3> A tool for testing snippets of code, useful for websites and books that talk about Zig. </h3>
+<p>In other words, I had to build my own executable.</p>
+<p> Originally <a href="https://github.com/ziglang/www.ziglang.org">the CI on GitHub</a>
+ would build Hugo every run, but that took 4 mins out of a 5 mins total 
+runtime. After this change, we can now deploy in about 1 minute, with 
+most of the time spent testing Zig code snippets, as should be.</p>
+<h3> Oh no, it doesn't work! </h3>
+<p>You tried but got blasted with errors anyway? </p>
+<p>There are two possibilities: either you did something wrong, or we 
+did (i.e. there's a bug somewhere or a particular C/C++ feature that's 
+not yet supported). </p>
+<p>Here's how to fix that:</p>
+<ol> <li> <a href="https://github.com/ziglang/zig/wiki/Community">Join a Zig Community and ask for help</a>. People will be able to help you fix common mistakes. If this doesn't work, goto step 2.</li> <li> <a href="https://github.com/ziglang/zig/issues">Open an Issue on GitHub</a>.
+ Make sure to explain in detail your setup and share the full error 
+message you received. We'll do our best to help you, especially if you 
+did your due diligence with step 1. </li> </ol>
+<p> Now it's your turn to get out there and cross compile for great justice!</p>
+<h2 class="rm-manual">Discussion <span>(3)</span>
+</h2>
+<p class="rm-manual"> <span>Subscribe</span> </p>
+<p class="rm-manual"> <a href="file:///p/editor_guide" rel="noopener"> Editor guide </a> </p>
+<p class="rm-manual"> <a rel="noopener nofollow" href="file:///settings/response-templates"> Create template </a> </p>
+<p class="rm-manual">Templates let you quickly answer FAQs or store snippets for re-use.</p>
+<p class="rm-manual"> <a href="file:///404.html">Dismiss</a> </p>
+<p class="rm-manual"> <span> Collapse Expand </span> </p>
+<p class="rm-manual"> <a href="https://dev.to/nektro"> <span>Meghan (she/her)</span> </a> </p>
+<p class="rm-manual"> <a href="file:///nektro"> <span>Meghan (she/her)</span> </a> </p>
+<p class="rm-manual"> 24. Local trans witch who prefers to do magic with
+ a keyboard. she/her. Currently hacking away at making the Web less 
+centralized. </p>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> Email </p> <p class="rm-manual"> <a href="mailto:hello@nektro.net">hello@nektro.net</a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> Location </p> <p class="rm-manual"> Massachusetts, USA </p> </li> <li class="rm-manual"> <p class="rm-manual"> Education </p> <p class="rm-manual"> B.S. CS @ UMass Dartmouth </p> </li> <li class="rm-manual"> <p class="rm-manual"> Joined </p> <p class="rm-manual"> Mar 13, 2017 </p> </li> </ul>
+<p class="rm-manual"><span>•</span> </p>
+<p class="rm-manual"><a href="https://dev.to/nektro/comment/1anm7"> Jan 25 </a> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://dev.to/nektro/comment/1anm7">Copy link</a></li> <li class="rm-manual"> <a href="#"> Hide </a> </li> </ul>
+<p class="rm-manual">Woah! The more I learn about what Zig is capable of, the more it continues to amaze me.</p>
+<p class="rm-manual"><a href="#/kristoff/zig-makes-go-cross-compilation-just-work-29ho/comments/new/1anm7" rel="nofollow"> Comment button <span>Reply</span> </a> </p>
+<p class="rm-manual"><span> Collapse Expand </span> </p>
+<p class="rm-manual"> <a href="https://dev.to/fahmifan"> <span>fahmi irfan</span> </a> </p>
+<p class="rm-manual"> <a href="file:///fahmifan"> <span>fahmi irfan</span> </a> </p>
+<p class="rm-manual"> A short bio </p>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> Joined </p> <p class="rm-manual"> Jan 3, 2021 </p> </li> </ul>
+<p class="rm-manual"><span>•</span> </p>
+<p class="rm-manual"><a href="https://dev.to/fahmifan/comment/1ao7n"> Jan 25 </a> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://dev.to/fahmifan/comment/1ao7n">Copy link</a></li> <li class="rm-manual"> <a href="#"> Hide </a> </li> </ul>
+<p class="rm-manual">This is nice</p>
+<p class="rm-manual"><a href="#/kristoff/zig-makes-go-cross-compilation-just-work-29ho/comments/new/1ao7n" rel="nofollow"> Comment button <span>Reply</span> </a> </p>
+<p class="rm-manual"><span> Collapse Expand </span> </p>
+<p class="rm-manual"> <a href="https://dev.to/fr3fou"> <span>fr3fou!! 🎀</span> </a> </p>
+<p class="rm-manual"> <a href="file:///fr3fou"> <span>fr3fou!! 🎀</span> </a> </p>
+<p class="rm-manual"> 18 y/o weeb dev, loves post rock~ </p>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> Email </p> <p class="rm-manual"> <a href="mailto:me@simo.sh">me@simo.sh</a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> Work </p> <p class="rm-manual"> full stack developer </p> </li> <li class="rm-manual"> <p class="rm-manual"> Location </p> <p class="rm-manual"> Ruse, Bulgaria </p> </li> <li class="rm-manual"> <p class="rm-manual"> Education </p> <p class="rm-manual"> MG Baba Tonka </p> </li> <li class="rm-manual"> <p class="rm-manual"> Joined </p> <p class="rm-manual"> Jul 21, 2019 </p> </li> </ul>
+<p class="rm-manual"><span>•</span> </p>
+<p class="rm-manual"><a href="https://dev.to/fr3fou/comment/1b4hf"> Feb 2 </a> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://dev.to/fr3fou/comment/1b4hf">Copy link</a></li> <li class="rm-manual"> <a href="#"> Hide </a> </li> </ul>
+<p class="rm-manual">this is quite nice!</p>
+<p class="rm-manual"><a href="#/kristoff/zig-makes-go-cross-compilation-just-work-29ho/comments/new/1b4hf" rel="nofollow"> Comment button <span>Reply</span> </a> </p>
+<p class="rm-manual"> <a href="file:///code-of-conduct">Code of Conduct</a> <span>•</span> <a href="file:///report-abuse">Report abuse</a> </p>
+<h2 class="rm-manual">Read next</h2>
+<p class="rm-manual"><a href="file:///hedlund/google-cloud-functions-with-private-go-dependencies-38ib"> </a></p><p class="rm-manual"><a href="file:///hedlund/google-cloud-functions-with-private-go-dependencies-38ib"> </a></p><p class="rm-manual"><a href="file:///hedlund/google-cloud-functions-with-private-go-dependencies-38ib"> </a></p><h3 class="rm-manual"><a href="file:///hedlund/google-cloud-functions-with-private-go-dependencies-38ib">Google Cloud Functions with private Go dependencies</a></h3><a href="file:///hedlund/google-cloud-functions-with-private-go-dependencies-38ib"> <p class="rm-manual"> Henrik Hedlund - May 26 </p> <p class="rm-manual"></p> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///altiano/cnator-channel-based-subscriptions-in-go-4een"> </a></p><p class="rm-manual"><a href="file:///altiano/cnator-channel-based-subscriptions-in-go-4een"> </a></p><p class="rm-manual"><a href="file:///altiano/cnator-channel-based-subscriptions-in-go-4een"> </a></p><h3 class="rm-manual"><a href="file:///altiano/cnator-channel-based-subscriptions-in-go-4een">Cnator: channel-based subscriptions in Go</a></h3><a href="file:///altiano/cnator-channel-based-subscriptions-in-go-4een"> <p class="rm-manual"> Altiano Gerung - May 26 </p> <p class="rm-manual"></p> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///apoorvtyagi/generating-unique-ids-in-a-large-scale-distributed-environment-257d"> </a></p><p class="rm-manual"><a href="file:///apoorvtyagi/generating-unique-ids-in-a-large-scale-distributed-environment-257d"> </a></p><p class="rm-manual"><a href="file:///apoorvtyagi/generating-unique-ids-in-a-large-scale-distributed-environment-257d"> </a></p><h3 class="rm-manual"><a href="file:///apoorvtyagi/generating-unique-ids-in-a-large-scale-distributed-environment-257d">Generating unique IDs in a Large scale Distributed environment</a></h3><a href="file:///apoorvtyagi/generating-unique-ids-in-a-large-scale-distributed-environment-257d"> <p class="rm-manual"> Apoorv Tyagi - May 25 </p> <p class="rm-manual"></p> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///ninemic/go-package-github-go-mod-39p5"> </a></p><p class="rm-manual"><a href="file:///ninemic/go-package-github-go-mod-39p5"> </a></p><p class="rm-manual"><a href="file:///ninemic/go-package-github-go-mod-39p5"> </a></p><h3 class="rm-manual"><a href="file:///ninemic/go-package-github-go-mod-39p5">ลองเล่น go package จาก GitHub แบบไม่ง้อ go.mod </a></h3><a href="file:///ninemic/go-package-github-go-mod-39p5"> <p class="rm-manual"> Mic Pantakan - Apr 26 </p> <p></p> <p></p> </a> <p></p></article>
+</body></html>

@@ -1,0 +1,136 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Measuring an economy’s openness | FRED Blog </p>
+<p class="rm-manual"><a href="#content-container">Skip to main content</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="#"> <span>Economic Research Resources </span> </a> <p class="rm-manual">Explore resources provided by the Research Division at the Federal Reserve Bank of St. Louis</p> <p class="rm-manual"> <a rel="noopener" href="https://research.stlouisfed.org/">research.stlouisfed.org </a> </p> <ul class="rm-manual"> <li class="rm-manual"> <a rel="noopener" href="https://research.stlouisfed.org/publications/research-news/">Research News</a> </li> <li class="rm-manual"> <a rel="noopener" href="https://research.stlouisfed.org/econ/">Economists</a> </li> <li class="rm-manual"> <a rel="noopener" href="https://research.stlouisfed.org/publications/">Publications</a> </li> <li class="rm-manual"> <a rel="noopener" href="https://research.stlouisfed.org/wp/">Working Papers</a> </li> <li class="rm-manual"> <a rel="noopener" href="https://research.stlouisfed.org/info-services.html">Information Services</a> </li> </ul> </li> <li class="rm-manual"> <a href="#"> <span> Switch Products </span> </a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///"> <span>FRED</span> </a> </li> <li class="rm-manual"> <a rel="noopener" href="file:///"> <span>AL</span> <span>FRED</span> </a> </li> <li class="rm-manual"> <a rel="noopener" href="file:///"> <span>GEO</span> <span>FRED</span> </a> </li> <li class="rm-manual"> <a rel="noopener" href="https://fraser.stlouisfed.org/"> <span>FRASER</span> </a> </li> <li class="rm-manual"> <a rel="noopener" href="https://www.econlowdown.org/"> <span>ECON LOWDOWN</span> </a> </li> </ul> </li> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://fred.stlouisfed.org/releases/calendar">Release Calendar</a> </li> <li class="rm-manual"> <a href="#">FRED Tools <span>Switch Products </span></a> </li> <li class="rm-manual"> <a href="https://fredblog.stlouisfed.org/">FRED Blog</a> </li> <li class="rm-manual"> <a href="https://news.research.stlouisfed.org/category/fred-announcements/">FRED News</a> </li> <li class="rm-manual"> <a href="#">About FRED </a> </li> <li class="rm-manual"> <a href="https://research.stlouisfed.org/useraccount/">My Account</a> </li> </ul> <ul class="rm-manual"> <li class="rm-manual"> <a href="#"> Switch Products </a> </li> <li class="rm-manual"> <a href="#"> Economic Research Resources </a> <p class="rm-manual">Explore resources provided by the Research Division at the Federal Reserve Bank of St. Louis.</p> </li> </ul> <ul class="rm-manual"> <li class="rm-manual"> About FRED </li> <li class="rm-manual"> <a href="https://fredhelp.stlouisfed.org/fred/about/about-fred/what-is-fred/"> What is FRED</a> </li> <li class="rm-manual"> <a href="https://fredhelp.stlouisfed.org/"> Tutorials</a> </li> <li class="rm-manual"> <a href="https://fred.stlouisfed.org/contactus/"> Contact Us</a> </li> </ul> <ul class="rm-manual"> <li class="rm-manual"> FRED Tools </li> <li class="rm-manual"> <a href="https://fred.stlouisfed.org/fred-addin"> FRED Add-in for Excel</a> </li> <li class="rm-manual"> <a href="https://fred.stlouisfed.org/docs/api/fred"> FRED API</a> </li> <li class="rm-manual"> <a href="https://fred.stlouisfed.org/fred-mobile"> FRED Mobile Apps</a> </li> </ul> <ul class="rm-manual"> <li class="rm-manual"> <span> Economic Research Resources </span> </li> <li class="rm-manual"> <a rel="noopener" href="https://research.stlouisfed.org/publications/research-news"> Research News</a> </li> <li class="rm-manual"> <a rel="noopener" href="https://research.stlouisfed.org/econ/"> Economists</a> </li> <li class="rm-manual"> <a rel="noopener" href="https://research.stlouisfed.org/publications/"> Publications</a> </li> <li class="rm-manual"> <a rel="noopener" href="https://research.stlouisfed.org/wp/"> Working Papers</a> </li> <li class="rm-manual"> <a rel="noopener" href="https://research.stlouisfed.org/info-services.html"> Information Services</a> </li> </ul> <ul class="rm-manual"> <li class="rm-manual"> Switch Products </li> </ul> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///"> <span>FRED</span> </a> </li> <li class="rm-manual"> <a rel="noopener" href="file:///"> <span>AL</span> <span>FRED</span> </a> </li> <li class="rm-manual"> <a rel="noopener" href="file:///"> <span>GEO</span> <span>FRED</span> </a> </li> <li class="rm-manual"> <a rel="noopener" href="https://fraser.stlouisfed.org/"> <span>FRASER</span> </a> </li> <li class="rm-manual"> <a rel="noopener" href="https://www.econlowdown.org/"> <span>ECON LOWDOWN</span> </a> </li> </ul> </li> </ul>
+<p class="rm-manual"> Your trusted data source since 1991. </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://fred.stlouisfed.org/releases/calendar">Release Calendar</a> </li> <li class="rm-manual"> <a href="#"> <span>FRED Tools </span> </a> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://fred.stlouisfed.org/fred-addin">FRED Add-in for Excel</a> </li> <li class="rm-manual"> <a href="https://fred.stlouisfed.org/docs/api/fred">FRED API</a> </li> <li class="rm-manual"> <a href="https://fred.stlouisfed.org/fred-mobile">FRED Mobile Apps</a> </li> </ul> </li> <li class="rm-manual"> <a href="https://news.research.stlouisfed.org/category/fred-announcements/">FRED News</a> </li> <li class="rm-manual"> <a href="https://fredblog.stlouisfed.org/">FRED Blog</a> </li> <li class="rm-manual"> <a href="#"> <span>About FRED </span> </a> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://fredhelp.stlouisfed.org/fred/about/about-fred/what-is-fred/"> What is FRED </a> </li> <li class="rm-manual"> <a href="https://fredhelp.stlouisfed.org/"> Tutorials </a> </li> <li class="rm-manual"> <a href="https://fred.stlouisfed.org/contactus/"> Contact Us </a> </li> </ul> </li> </ul>
+<p class="rm-manual"><a href="file:///">The FRED® Blog</a></p>
+<h1 class="rm-manual"><a href="https://fredblog.stlouisfed.org/2021/07/measuring-an-economys-openness/" rel="bookmark">Measuring an economy’s openness</a></h1>
+<h2 class="rm-manual">Comparing global trade for Canada, Mexico, and the U.S.</h2>
+<p class="rm-manual"> <span>Posted on</span> <a href="https://fredblog.stlouisfed.org/2021/07/measuring-an-economys-openness/" rel="bookmark">July 8, 2021</a> </p>
+<p>The more an economy trades with the rest of the world, the more open 
+it is. Another way to put it: The more integrated an economy is in the 
+world economy, the more open it is. So how do you measure openness? One 
+way is to look at the ratio of imports plus exports to GDP.</p>
+<p>By the way, the size of the economy matters. The U.S. is a large and 
+well-diversified economy, so it doesn’t need to trade that much. The 
+Bahamas are much smaller and much less diversified, and so it needs to 
+trade more.</p>
+<p>The FRED graph above shows what our measure of openness looks like 
+for the three North American trading partners: Canada in blue, Mexico in
+ green, and the U.S. in red. The vertical lines correspond to the 
+Canada-U.S. free trade agreement in 1989 and NAFTA in 1994.</p>
+<p>For a more nuanced (and complicated) graph, we could examine trade 
+among just these three countries and not their trade with the entire 
+world. But looking at our particular measure here and considering our 
+assertions above, it’s not surprising that the openness of the U.S. 
+economy is lower than that of its neighbors. We also see that there’s a 
+general trend of increasing openness, which we can associate with the 
+general trend of globalization more than the impact of any particular 
+trade agreements.</p>
+<p class="">How this graph was created: Search FRED for “Canada exports”
+ and take the nominal measure. From the “Edit Graph” panel, add the 
+series for Canadian imports and GDP and apply formula (a+b)/c*100 (to 
+get percentages). From the “Add Line” tab, repeat for the U.S. and 
+Mexico. For the horizontal lines, use the “Add Line” tab again, but this
+ time add 2 “user-defined” lines: the first with values 0.1 and 89.9 in 
+1989-01-01 and the second in 1994-01-01.</p>
+<p class="rm-manual">Suggested by <a href="https://research.stlouisfed.org/econ/zimmermann">Christian Zimmermann</a>.</p>
+<p class="rm-manual">Search FRED Blog</p>
+<p class="rm-manual"> Search for: </p>
+<p class="rm-manual">Disclaimer</p>
+<p class="rm-manual">The views expressed are those of individual authors
+ and do not necessarily reflect official positions of the Federal 
+Reserve Bank of St. Louis, the Federal Reserve System, or the Board of 
+Governors.</p>
+<p class="rm-manual">FRED links</p>
+<ul class="rm-manual"> <li class="rm-manual">
+<a href="https://fredblog.stlouisfed.org/feed/">FRED® Blog RSS feed</a>, follow us </li>
+<li class="rm-manual">
+<a href="https://fred.stlouisfed.org/">FRED®</a>, the complete database </li>
+<li class="rm-manual">
+<a href="https://alfred.stlouisfed.org/">ALFRED®</a>, the vintage data version of FRED® </li>
+<li class="rm-manual">
+<a href="https://geofred.stlouisfed.org/">GeoFRED®</a>, mapping tool of FRED® </li>
+<li class="rm-manual">
+<a href="https://fredhelp.stlouisfed.org/">FRED® Help</a> </li>
+<li class="rm-manual">
+<a href="https://research.stlouisfed.org/fred-mobile/">FRED® mobile apps</a> </li>
+<li class="rm-manual">
+<a href="https://research.stlouisfed.org/fred-addin/">FRED® Excel® add-in</a> </li>
+<li class="rm-manual">
+<a href="https://fredhelp.stlouisfed.org/fred/graphs/share-my-fred-graph/how-to-embedding-fred-graphs/">How to include a FRED® graph in your blog or web page</a> </li>
+<li class="rm-manual">
+<a href="https://fredhelp.stlouisfed.org/fred/graphs/share-my-fred-graph/embedded-fred-a-widget-just-for-you/">Embedding a FRED widget</a> </li>
+</ul>
+<p class="rm-manual">St. Louis Fed links</p>
+<ul class="rm-manual"> <li class="rm-manual">
+<a href="http://www.stlouisfed.org/">St. Louis Fed</a> </li>
+<li class="rm-manual">
+<a href="http://research.stlouisfed.org/">St. Louis Fed Research</a> </li>
+<li class="rm-manual">
+<a href="http://www.stlouisfed.org/publications/">St. Louis Fed publications</a> </li>
+<li class="rm-manual">
+<a href="http://www.stlouisfed.org/on-the-economy">On the Economy</a>, the St. Louis Fed blog </li>
+</ul>
+<p class="rm-manual">Recent Posts</p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://fredblog.stlouisfed.org/2021/07/measuring-an-economys-openness/">Measuring an economy’s openness</a> </li> <li class="rm-manual"> <a href="https://fredblog.stlouisfed.org/2021/07/whats-different-for-working-women-in-canada/">What’s different for working women in Canada?</a> </li> <li class="rm-manual"> <a href="https://fredblog.stlouisfed.org/2021/06/is-this-the-new-fastest-economic-recovery/">Is this the new fastest economic recovery?</a> </li> <li class="rm-manual"> <a href="https://fredblog.stlouisfed.org/2021/06/measuring-uncertainty-and-volatility-with-fred-data/">Measuring uncertainty and volatility with FRED data</a> </li> <li class="rm-manual"> <a href="https://fredblog.stlouisfed.org/2021/06/the-pandemics-boost-to-online-sales-a-one-time-event-or-a-new-normal/">The pandemic’s boost to online sales: A one-time event or a new normal?</a> </li> </ul>
+<p class="rm-manual"> <a href="http://research.stlouisfed.org/">Recent St. Louis Fed research</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://research.stlouisfed.org/publications/economic-synopses/2021/07/07/rethinking-global-value-chains-during-covid-19-part-2">Rethinking Global Value Chains During COVID-19: Part 2</a></li>
+<li class="rm-manual"><a href="https://research.stlouisfed.org/publications/economic-synopses/2021/07/01/rethinking-global-value-chains-during-covid-19-part-1">Rethinking Global Value Chains During COVID-19: Part 1</a></li>
+<li class="rm-manual"><a href="https://research.stlouisfed.org/publications/economic-synopses/2021/07/02/the-economic-and-epidemiological-impact-of-covid-19-and-government-policies-part-ii">The Economic and Epidemiological Impact of COVID-19 and Government Policies: Part 2</a></li>
+<li class="rm-manual"><a href="https://research.stlouisfed.org/publications/review/2021/07/01/convergence-to-rational-expectations-in-learning-models-a-note-of-caution">Convergence to Rational Expectations in Learning Models: A Note of Caution</a></li>
+<li class="rm-manual"><a href="https://research.stlouisfed.org/publications/review/2021/05/05/global-value-chains-and-u-s-economic-activity-during-covid-19">Global Value Chains and U.S. Economic Activity During COVID-19</a></li>
+</ul>
+<p class="rm-manual">Archives</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2021/07/">July 2021</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2021/06/">June 2021</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2021/05/">May 2021</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2021/04/">April 2021</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2021/03/">March 2021</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2021/02/">February 2021</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2021/01/">January 2021</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2020/12/">December 2020</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2020/11/">November 2020</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2020/10/">October 2020</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2020/09/">September 2020</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2020/08/">August 2020</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2020/07/">July 2020</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2020/06/">June 2020</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2020/05/">May 2020</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2020/04/">April 2020</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2020/03/">March 2020</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2020/02/">February 2020</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2020/01/">January 2020</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2019/12/">December 2019</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2019/11/">November 2019</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2019/10/">October 2019</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2019/09/">September 2019</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2019/08/">August 2019</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2019/07/">July 2019</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2019/06/">June 2019</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2019/05/">May 2019</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2019/04/">April 2019</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2019/03/">March 2019</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2019/02/">February 2019</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2019/01/">January 2019</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2018/12/">December 2018</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2018/11/">November 2018</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2018/10/">October 2018</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2018/09/">September 2018</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2018/08/">August 2018</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2018/07/">July 2018</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2018/06/">June 2018</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2018/05/">May 2018</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2018/04/">April 2018</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2018/03/">March 2018</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2018/02/">February 2018</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2018/01/">January 2018</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2017/12/">December 2017</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2017/11/">November 2017</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2017/10/">October 2017</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2017/09/">September 2017</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2017/08/">August 2017</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2017/07/">July 2017</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2017/06/">June 2017</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2017/05/">May 2017</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2017/04/">April 2017</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2017/03/">March 2017</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2017/02/">February 2017</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2017/01/">January 2017</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2016/12/">December 2016</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2016/11/">November 2016</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2016/10/">October 2016</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2016/09/">September 2016</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2016/08/">August 2016</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2016/07/">July 2016</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2016/06/">June 2016</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2016/05/">May 2016</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2016/04/">April 2016</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2016/03/">March 2016</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2016/02/">February 2016</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2016/01/">January 2016</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2015/12/">December 2015</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2015/11/">November 2015</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2015/10/">October 2015</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2015/09/">September 2015</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2015/08/">August 2015</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2015/07/">July 2015</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2015/06/">June 2015</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2015/05/">May 2015</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2015/04/">April 2015</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2015/03/">March 2015</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2015/02/">February 2015</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2015/01/">January 2015</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2014/12/">December 2014</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2014/11/">November 2014</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2014/10/">October 2014</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2014/09/">September 2014</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2014/08/">August 2014</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2014/07/">July 2014</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2014/06/">June 2014</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2014/05/">May 2014</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2014/04/">April 2014</a></li> <li class="rm-manual"><a href="https://fredblog.stlouisfed.org/2014/03/">March 2014</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual">SERVICES</li> <li class="rm-manual"><a href="file:///">FRED®</a></li> <li class="rm-manual"><a href="file:///">ALFRED®</a></li> <li class="rm-manual"><a href="file:///">GeoFRED®</a></li> <li class="rm-manual"><a href="file:///">FRASER®</a></li> <li class="rm-manual"><a href="file:///">IDEAS</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual">RESEARCH</li> <li class="rm-manual"><a href="file:///regecon/">Eighth District Economy</a></li> <li class="rm-manual"><a href="file:///wp/">Working Papers</a></li> <li class="rm-manual"><a href="file:///conferences/">Events</a></li> <li class="rm-manual"><a href="file:///publications/">Publications</a></li> <li class="rm-manual"><a href="file:///resources.html">Other Resources</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual">TOOLS</li> <li class="rm-manual"><a href="file:///fred-mobile/">FRED Mobile Apps</a></li> <li class="rm-manual"><a href="file:///fred-addin/">FRED Add-In for Excel®</a></li> <li class="rm-manual"><a href="file:///fred/graphs/share-my-fred-graph/embedded-fred-a-widget-just-for-you/">Embeddable FRED Widget</a></li> <li class="rm-manual"><a href="file:///docs/api/fred/">Developer/APIs</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual">ABOUT</li> <li class="rm-manual"><a href="file:///jobopps/">Careers</a></li> <li class="rm-manual"><a href="file:///contactus/">Contact</a></li> <li class="rm-manual"><a href="file:///legal/">Legal</a></li> <li class="rm-manual"><a href="file:///privacy.html">Privacy Notice &amp; Policy</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual">OUR SITES</li> <li class="rm-manual"><a href="file:///">St. Louis Fed</a></li> <li class="rm-manual"><a href="file:///">Federal Reserve System</a></li> <li class="rm-manual"><a href="file:///">Research Division</a></li> <li class="rm-manual"><a href="file:///education/">Education Resources</a></li> </ul>
+<h3 class="rm-manual">Need Help?</h3>
+<p class="rm-manual"> <a href="file:///contactus/">Questions or Comments</a> </p>
+<p class="rm-manual"> <a href="file:///">FRED Help</a> </p>
+<h3 class="rm-manual">Subscribe to the FRED newsletter</h3>
+<h3 class="rm-manual">Follow us</h3>
+<p class="rm-manual"> <a href="#top">Back to Top</a> </p>
+<p class="rm-manual"> Federal Reserve Bank of St. Louis, One Federal Reserve Bank Plaza, St. Louis, MO 63102 </p></article>
+</body></html>

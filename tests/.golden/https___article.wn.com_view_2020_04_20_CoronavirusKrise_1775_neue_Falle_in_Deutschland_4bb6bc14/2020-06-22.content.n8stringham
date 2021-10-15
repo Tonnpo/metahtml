@@ -1,0 +1,162 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Coronavirus-Krise: 1775 neue Fälle in Deutschland - Worldnews.com </p>
+<p class="rm-manual">system</p>
+<ul class="rm-manual"> <li class="rm-manual"><h2 class="rm-manual"><a href="#news-tab"><span>News</span></a></h2></li> <li class="rm-manual"><h2 class="rm-manual"><a href="#search-tab"><span>Search</span></a></h2></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"><h2 class="rm-manual"><a href="#news-tab-m"><span>News</span></a></h2></li> <li class="rm-manual"><h2 class="rm-manual"><a href="#search-tab-m"><span>Search</span></a></h2></li> </ul> <ul class="rm-manual"> <li class="rm-manual"><a href="https://wn.com/"><span>Top Stories</span></a></li> <li class="rm-manual"><a href="https://wn.com/world"><span>World</span></a></li> <li class="rm-manual"><a href="https://wn.com/business"><span>Business</span></a></li> <li class="rm-manual"><a href="https://wn.com/technology"><span>Technology</span></a></li> <li class="rm-manual"><a href="https://wn.com/sport"><span>Sport</span></a></li> <li class="rm-manual"><a href="https://wn.com/entertainment"><span>Entertainment</span></a></li> <li class="rm-manual"><a href="https://wn.com/health"><span>Health</span></a></li> <li class="rm-manual"><a href="https://wn.com/video"><span>Videos</span></a></li> <li class="rm-manual"><a href="https://wn.com/editorial"><span>Editorial</span></a></li> <li class="rm-manual">
+<a href="#">More </a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://wn.com/science">Science</a></li> <li class="rm-manual"><a href="https://wn.education.com/">Education</a></li> <li class="rm-manual"><a href="https://wn.com/chat">Chat</a></li> <li class="rm-manual"><a href="https://broadcast.com/">Radio</a></li> </ul> </li> </ul> </li> <li class="rm-manual"><p class="rm-manual"> Monday, 22 June 2020</p></li> <li class="rm-manual"> <a href="#"><span>Log in</span> </a> <a href="#"><span>Log in</span> </a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://wn.com/">Top Stories</a></li> <li class="rm-manual"><a href="https://wn.com/world">World</a></li> <li class="rm-manual"><a href="https://wn.com/business">Business</a></li> <li class="rm-manual"><a href="https://wn.com/sport">Sport</a></li> <li class="rm-manual"><a href="https://wn.com/entertainment">Entertainment</a></li> <li class="rm-manual"><a href="https://wn.com/health">Health</a></li> <li class="rm-manual"><a href="https://wn.com/video">Videos</a></li> <li class="rm-manual"><a href="https://wn.com/editorial">Editorial</a></li> <li class="rm-manual"><a href="https://wn.com/technology">Technology</a></li> <li class="rm-manual">
+<a href="#">More </a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://wn.com/science">Science</a></li> <li class="rm-manual"><a href="https://wn.com/education">Education</a></li> <li class="rm-manual"><a href="https://wn.com/chat">Chat</a></li> <li class="rm-manual"><a href="https://broadcast.com/">Radio</a></li> </ul> </li> </ul>
+<p class="rm-manual"> <a>Articles</a> <a>Photos</a> <a href="file:///">Advanced Search</a> </p>
+<h1 class="rm-manual"><a href="https://article.wn.com/view/2020/04/20/CoronavirusKrise_1775_neue_Falle_in_Deutschland/">Coronavirus-Krise: 1775 neue Fälle in Deutschland</a></h1>
+<p class="rm-manual"> <span>Posted</span> <span>2020-04-20</span>, <a rel="nofollow" href="https://www.faz.net/-ivn-9yn7g"> Frankfurter Allgemeine Zeitung</a> </p>
+<p> Das Robert-Koch-Institut hat am Montag insgesamt 141.672 Infektionen
+ mit dem Coronavirus in Deutschland gemeldet, das ist ein Plus von 1775 
+zum Vortag. Rund 91.500 Menschen sind genesen. Gute Nachrichten kommen 
+auch aus Neuseeland. ... </p>
+<p class=""> <a rel="nofollow" href="https://www.faz.net/-ivn-9yn7g">Read Full Article </a> </p>
+<p class="rm-manual"><a href="http://www.htmlcommentbox.com/">Comment Box</a> is loading comments...</p>
+<p class="rm-manual">developed with <a href="http://youtube.com/">YouTube</a></p>
+<h2 class="rm-manual">Related Videos</h2>
+<p class="rm-manual">47:02</p>
+<h3 class="rm-manual"><a href="">تعلم المونتاج ببرنامج بريمير Premiere في أقل من ساعه</a></h3>
+<p class="rm-manual"><span>Published:</span> 10 Nov 2017</p>
+<p class="rm-manual">4:09</p>
+<h3 class="rm-manual"><a href="">LIONT - MONTAG (prod. by Topic) MUSIKVIDEO</a></h3>
+<p class="rm-manual"><span>Published:</span> 06 Mar 2015</p>
+<p class="rm-manual">3:01</p>
+<h3 class="rm-manual"><a href="">BERKANT EGIN - ARBEIT AMK ► Prod. von BK (Official Video) #Montag #Corona #Song</a></h3>
+<p class="rm-manual"><span>Published:</span> 13 Jul 2017</p>
+<p class="rm-manual">1:55</p>
+<h3 class="rm-manual"><a href="">Wochentage lernen für Kinder - Tage von Montag bis Sonntag (deutsch) Lernvideo</a></h3>
+<p class="rm-manual"><span>Published:</span> 26 Aug 2014</p>
+<p class="rm-manual">2:13</p>
+<h3 class="rm-manual"><a href="">HATIK - MONTAG #ProjetBerlin I Daymolition</a></h3>
+<p class="rm-manual"><span>Published:</span> 25 Feb 2019</p>
+<p class="rm-manual">3:38</p>
+<h3 class="rm-manual"><a href="">SDP - Die Nacht von Freitag auf Montag (Corona Edition)</a></h3>
+<p class="rm-manual"><span>Published:</span> 24 Mar 2020</p>
+<p class="rm-manual">2:45</p>
+<h3 class="rm-manual"><a href="">Montag Du Arschloch</a></h3>
+<p class="rm-manual"><span>Published:</span> 18 Sep 2017</p>
+<p class="rm-manual">2:58</p>
+<h3 class="rm-manual"><a href="">Wochentagelied - Wissenslieder für Kleinkinder || Kinderlieder</a></h3>
+<p class="rm-manual"><span>Published:</span> 24 Jun 2014</p>
+<h2 class="rm-manual">Popular News Stories</h2>
+<p class="rm-manual"> <a href="https://article.wn.com/view/2020/06/22/Trump_says_2020_presidential_election_will_be_rigged_by_fore/"> </a></p><p class="rm-manual"><a href="https://article.wn.com/view/2020/06/22/Trump_says_2020_presidential_election_will_be_rigged_by_fore/"> </a></p><h3 class="rm-manual"><a href="https://article.wn.com/view/2020/06/22/Trump_says_2020_presidential_election_will_be_rigged_by_fore/"><span>Trump says 2020 presidential election will be 'rigged by foreign countries' as he slumps further in polls</span></a></h3><a href="https://article.wn.com/view/2020/06/22/Trump_says_2020_presidential_election_will_be_rigged_by_fore/"> <p class="rm-manual"> The Independent</p> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://article.wn.com/view/2020/06/22/Are_The_Trumps_And_Karens_The_New_Face_Of_Slave_Patrols_In_T/"> </a></p><p class="rm-manual"><a href="https://article.wn.com/view/2020/06/22/Are_The_Trumps_And_Karens_The_New_Face_Of_Slave_Patrols_In_T/"> </a></p><h3 class="rm-manual"><a href="https://article.wn.com/view/2020/06/22/Are_The_Trumps_And_Karens_The_New_Face_Of_Slave_Patrols_In_T/"><span>Are The Trumps And Karens The New Face Of Slave Patrols In The U.S.?</span></a></h3><a href="https://article.wn.com/view/2020/06/22/Are_The_Trumps_And_Karens_The_New_Face_Of_Slave_Patrols_In_T/"> <p class="rm-manual"> WorldNews.com</p> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://article.wn.com/view/2020/06/22/How_to_talk_to_your_child_about_race/"> </a></p><p class="rm-manual"><a href="https://article.wn.com/view/2020/06/22/How_to_talk_to_your_child_about_race/"> </a></p><h3 class="rm-manual"><a href="https://article.wn.com/view/2020/06/22/How_to_talk_to_your_child_about_race/"><span>How to talk to your child about race</span></a></h3><a href="https://article.wn.com/view/2020/06/22/How_to_talk_to_your_child_about_race/"> <p class="rm-manual"> Harpers Bazaar</p> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://article.wn.com/view/2020/06/22/Johnson_and_May_ignored_claims_Russia_had_likely_hold_over_T/"> </a></p><p class="rm-manual"><a href="https://article.wn.com/view/2020/06/22/Johnson_and_May_ignored_claims_Russia_had_likely_hold_over_T/"> </a></p><h3 class="rm-manual"><a href="https://article.wn.com/view/2020/06/22/Johnson_and_May_ignored_claims_Russia_had_likely_hold_over_T/"><span>Johnson and May ignored claims Russia had 'likely hold' over Trump, ex-spy alleges</span></a></h3><a href="https://article.wn.com/view/2020/06/22/Johnson_and_May_ignored_claims_Russia_had_likely_hold_over_T/"> <p class="rm-manual"> The Observer</p> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://article.wn.com/view/2020/06/22/China_to_Canada_PM_Stop_Irresponsible_Remarks_on_Spy_Case_hg/"> </a></p><p class="rm-manual"><a href="https://article.wn.com/view/2020/06/22/China_to_Canada_PM_Stop_Irresponsible_Remarks_on_Spy_Case_hg/"> </a></p><h3 class="rm-manual"><a href="https://article.wn.com/view/2020/06/22/China_to_Canada_PM_Stop_Irresponsible_Remarks_on_Spy_Case_hg/"><span>China to Canada PM: Stop 'Irresponsible Remarks' on Spy Case</span></a></h3><a href="https://article.wn.com/view/2020/06/22/China_to_Canada_PM_Stop_Irresponsible_Remarks_on_Spy_Case_hg/"> <p class="rm-manual"> Voa News</p> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://article.wn.com/view/2020/06/22/Putin_visits_huge_army_church_ahead_of_vote_on_extending_his_3/"> </a></p><p class="rm-manual"><a href="https://article.wn.com/view/2020/06/22/Putin_visits_huge_army_church_ahead_of_vote_on_extending_his_3/"> </a></p><h3 class="rm-manual"><a href="https://article.wn.com/view/2020/06/22/Putin_visits_huge_army_church_ahead_of_vote_on_extending_his_3/"><span>Putin visits huge army church ahead of vote on extending his rule</span></a></h3><a href="https://article.wn.com/view/2020/06/22/Putin_visits_huge_army_church_ahead_of_vote_on_extending_his_3/"> <p class="rm-manual"> Yahoo Daily News</p> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://article.wn.com/view/2020/06/22/Ansel_Elgort_denies_sexual_assault_claim/"> </a></p><p class="rm-manual"><a href="https://article.wn.com/view/2020/06/22/Ansel_Elgort_denies_sexual_assault_claim/"> </a></p><h3 class="rm-manual"><a href="https://article.wn.com/view/2020/06/22/Ansel_Elgort_denies_sexual_assault_claim/"><span>Ansel Elgort denies sexual assault claim</span></a></h3><a href="https://article.wn.com/view/2020/06/22/Ansel_Elgort_denies_sexual_assault_claim/"> <p class="rm-manual"> BBC News</p> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://article.wn.com/view/2020/06/22/Trump_let_Nigel_Farage_break_coronavirus_travel_rules_in_the/"> </a></p><p class="rm-manual"><a href="https://article.wn.com/view/2020/06/22/Trump_let_Nigel_Farage_break_coronavirus_travel_rules_in_the/"> </a></p><h3 class="rm-manual"><a href="https://article.wn.com/view/2020/06/22/Trump_let_Nigel_Farage_break_coronavirus_travel_rules_in_the/"><span>Trump let Nigel Farage break coronavirus travel rules 'in the national interest'. Whose interests are those?</span></a></h3><a href="https://article.wn.com/view/2020/06/22/Trump_let_Nigel_Farage_break_coronavirus_travel_rules_in_the/"> <p class="rm-manual"> The Independent</p> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://article.wn.com/view/2020/06/22/Scientists_find_huge_ring_of_ancient_shafts_near_Stonehenge/"> </a></p><p class="rm-manual"><a href="https://article.wn.com/view/2020/06/22/Scientists_find_huge_ring_of_ancient_shafts_near_Stonehenge/"> </a></p><h3 class="rm-manual"><a href="https://article.wn.com/view/2020/06/22/Scientists_find_huge_ring_of_ancient_shafts_near_Stonehenge/"><span>Scientists find huge ring of ancient shafts near Stonehenge</span></a></h3><a href="https://article.wn.com/view/2020/06/22/Scientists_find_huge_ring_of_ancient_shafts_near_Stonehenge/"> <p class="rm-manual"> The Oklahoman</p> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://article.wn.com/view/2020/06/22/Boneheaded_Decision_Nick_Kyrgios_Slams_Adria_Tour_Says_Coron/"> </a></p><p class="rm-manual"><a href="https://article.wn.com/view/2020/06/22/Boneheaded_Decision_Nick_Kyrgios_Slams_Adria_Tour_Says_Coron/"> </a></p><h3 class="rm-manual"><a href="https://article.wn.com/view/2020/06/22/Boneheaded_Decision_Nick_Kyrgios_Slams_Adria_Tour_Says_Coron/"><span>Boneheaded Decision! Nick Kyrgios Slams Adria Tour, Says Coronavirus is Not a Joke</span></a></h3><a href="https://article.wn.com/view/2020/06/22/Boneheaded_Decision_Nick_Kyrgios_Slams_Adria_Tour_Says_Coron/"> <p class="rm-manual"> Yahoo Daily News</p> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://article.wn.com/view/2020/06/22/Syrian_doctor_arrested_in_Germany_for_alleged_crimes_against/"> </a></p><p class="rm-manual"><a href="https://article.wn.com/view/2020/06/22/Syrian_doctor_arrested_in_Germany_for_alleged_crimes_against/"> </a></p><h3 class="rm-manual"><a href="https://article.wn.com/view/2020/06/22/Syrian_doctor_arrested_in_Germany_for_alleged_crimes_against/"><span>Syrian doctor arrested in Germany for alleged crimes against humanity</span></a></h3><a href="https://article.wn.com/view/2020/06/22/Syrian_doctor_arrested_in_Germany_for_alleged_crimes_against/"> <p class="rm-manual"> The Observer</p> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://article.wn.com/view/2020/06/22/ICC_Prosecutors_Cite_Grave_Errors_in_Gbagbo_Acquittal_at_Sta_1/"> </a></p><p class="rm-manual"><a href="https://article.wn.com/view/2020/06/22/ICC_Prosecutors_Cite_Grave_Errors_in_Gbagbo_Acquittal_at_Sta_1/"> </a></p><h3 class="rm-manual"><a href="https://article.wn.com/view/2020/06/22/ICC_Prosecutors_Cite_Grave_Errors_in_Gbagbo_Acquittal_at_Sta_1/"><span>ICC Prosecutors Cite Grave Errors in Gbagbo Acquittal at Start of Appeal</span></a></h3><a href="https://article.wn.com/view/2020/06/22/ICC_Prosecutors_Cite_Grave_Errors_in_Gbagbo_Acquittal_at_Sta_1/"> <p class="rm-manual"> Voa News</p> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://article.wn.com/view/2020/06/22/Stuttgart_Hundreds_of_rioters_attack_police/"> </a></p><p class="rm-manual"><a href="https://article.wn.com/view/2020/06/22/Stuttgart_Hundreds_of_rioters_attack_police/"> </a></p><h3 class="rm-manual"><a href="https://article.wn.com/view/2020/06/22/Stuttgart_Hundreds_of_rioters_attack_police/"><span>Stuttgart: Hundreds of rioters attack police</span></a></h3><a href="https://article.wn.com/view/2020/06/22/Stuttgart_Hundreds_of_rioters_attack_police/"> <p class="rm-manual"> Free West Media</p> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://article.wn.com/view/2020/06/22/south_korea_says_it_is_battling_8216second_wave_8217_of_coro_n/"> </a></p><p class="rm-manual"><a href="https://article.wn.com/view/2020/06/22/south_korea_says_it_is_battling_8216second_wave_8217_of_coro_n/"> </a></p><h3 class="rm-manual"><a href="https://article.wn.com/view/2020/06/22/south_korea_says_it_is_battling_8216second_wave_8217_of_coro_n/"><span>South Korea says it is battling ‘second wave’ of coronavirus</span></a></h3><a href="https://article.wn.com/view/2020/06/22/south_korea_says_it_is_battling_8216second_wave_8217_of_coro_n/"> <p class="rm-manual"> Canoe</p> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://article.wn.com/view/2020/06/22/Coronavirus_pandemic_still_accelerating_WHO_chief/"> </a></p><p class="rm-manual"><a href="https://article.wn.com/view/2020/06/22/Coronavirus_pandemic_still_accelerating_WHO_chief/"> </a></p><h3 class="rm-manual"><a href="https://article.wn.com/view/2020/06/22/Coronavirus_pandemic_still_accelerating_WHO_chief/"><span>Coronavirus pandemic still accelerating: WHO chief</span></a></h3><a href="https://article.wn.com/view/2020/06/22/Coronavirus_pandemic_still_accelerating_WHO_chief/"> <p class="rm-manual"> The Times of India</p> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<h2 class="rm-manual">Related News</h2>
+<h3 class="rm-manual"><a href="https://article.wn.com/view/2020/06/10/318_registrierte_Neuinfektionen_mit_dem_Coronavirus_in_Deuts/"><span>318 registrierte Neuinfektionen mit dem Coronavirus in Deutschland </span></a></h3>
+<p class="rm-manual"><span>Innerhalb von 24 Stunden haben die 
+Gesundheitsämter in Deutschland dem Robert Koch-Institut (RKI) 318 neue 
+Infektionen mit dem Coronavirus gemeldet. Damit haben sich seit</span>...</p>
+<p class="rm-manual"><a href="https://www.berliner-zeitung.de/mensch-metropole/318-registrierte-neuinfektionen-mit-dem-coronavirus-in-deutschland-li.77734">Berliner Zeitung</a> </p>
+<p class="rm-manual"><span>2020-06-10</span> </p>
+<h3 class="rm-manual"><a href="https://article.wn.com/view/2020/04/21/CoronaKrise_Die_aktuellen_Fallzahlen_fur_Deutschland_Entsche/"><span>Corona-Krise: Die aktuellen Fallzahlen für Deutschland - Entscheidung über Oktoberfest gefallen</span></a></h3>
+<p class="rm-manual"><span>Alle Autoren schließenKatja Thorwarth Tanja 
+Banner Monika Gemmer Tobias Möllers Marvin Ziegele Tim Vincent Dicke 
+Während der Corona-Krise führen immer mehr Länder eine</span>...</p>
+<p class="rm-manual"><a href="https://www.fr.de/panorama/angela-merkel-per30389/corona-deutschland-maskenpflicht-immer-mehr-laendern-kritik-flickenteppich-zr-13634697.html">Frankfurter Rundschau</a> </p>
+<p class="rm-manual"><span>2020-04-21</span> </p>
+<h3 class="rm-manual"><a href="https://article.wn.com/view/2020/06/09/alle_ampeln_weiter_gr_xfcn_40_neue_coronaf_xe4lle_in_berlin_/"><span>Alle Ampeln weiter Grün: 40 neue Corona-Fälle in Berlin bestätigt </span></a></h3>
+<p class="rm-manual"><span>In Berlin ist die Gesamtzahl der positiv auf 
+Sars-CoV-2 getesteten Menschen auf 7081 gestiegen. Von Montag auf 
+Dienstag sind 40 Fälle neu gemeldet worden, wie aus der am</span>...</p>
+<p class="rm-manual"><a href="https://www.berliner-zeitung.de/mensch-metropole/alle-ampeln-weiter-gruen-40-neue-corona-faelle-in-berlin-bestaetigt-li.77734">Berliner Zeitung</a> </p>
+<p class="rm-manual"><span>2020-06-09</span> </p>
+<h3 class="rm-manual"><a href="https://article.wn.com/view/2020/06/09/40_neue_coronaf_xe4lle_in_berlin_best_xe4tigt_alle_ampeln_we/"><span>40 neue Corona-Fälle in Berlin bestätigt - alle Ampeln weiter Grün</span></a></h3>
+<p class="rm-manual"><span>In Berlin ist die Gesamtzahl der positiv auf 
+Sars-CoV-2 getesteten Menschen auf 7081 gestiegen. Von Montag auf 
+Dienstag sind 40 Fälle neu gemeldet worden, wie aus der am</span>...</p>
+<p class="rm-manual"><a href="https://www.berliner-zeitung.de/mensch-metropole/40-neue-corona-faelle-in-berlin-bestaetigt-alle-ampeln-weiter-gruen-li.77734">Berliner Zeitung</a> </p>
+<p class="rm-manual"><span>2020-06-09</span> </p>
+<h3 class="rm-manual"><a href="https://article.wn.com/view/2020/05/05/coronakrise_rki_spricht_von_8222sehr_guter_nachricht_fur_deu/"><span>Corona-Krise - RKI spricht von „sehr guter Nachricht für Deutschland“</span></a></h3>
+<p class="rm-manual"><span>Alle Autoren schließenKatja Thorwarth Monika 
+Gemmer Tobias Möllers Marvin Ziegele Marcel Richters Astrid Theil Die 
+Zahl der Neuinfektionen mit dem Corona-Virus in</span>...</p>
+<p class="rm-manual"><a href="https://www.fr.de/panorama/corona-krise-deutschland-rki-gute-nachricht-bundeslaender-zr-13680236.html">Frankfurter Rundschau</a> </p>
+<p class="rm-manual"><span>2020-05-05</span> </p>
+<h3 class="rm-manual"><a href="https://article.wn.com/view/2020/04/20/CoronaKrise_Die_tagesaktuellen_Fallzahlen_fur_Deutschland/"><span>Corona-Krise: Die tagesaktuellen Fallzahlen für Deutschland</span></a></h3>
+<p class="rm-manual"><span>Alle Autoren schließenKatja Thorwarth Tanja 
+Banner Monika Gemmer Tobias Möllers Marvin Ziegele Tim Vincent Dicke In 
+der Corona-Krise gibt es in Deutschland erste</span>...</p>
+<p class="rm-manual"><a href="https://www.fr.de/panorama/corona-krise-tagesaktuellen-fallzahlen-deutschland-zr-13634697.html">Frankfurter Rundschau</a> </p>
+<p class="rm-manual"><span>2020-04-20</span> </p>
+<h3 class="rm-manual"><a href="https://article.wn.com/view/2020/04/07/coronakrise_xa0scholz_setzt_auf_eupaket_aus_drei_x201einstru/"><span>Corona-Krise: Scholz setzt auf EU-Paket aus drei „Instrumenten der Solidarität“</span></a></h3>
+<p class="rm-manual"><span>Bundesfinanzminister Olaf Scholz setzt auf 
+eine Einigung der EU-Staaten auf ein Paket aus Krisenhilfen des 
+Eurorettungsschirms ESM, der Europäischen Investitionsbank und</span>...</p>
+<p class="rm-manual"><a href="https://www.berliner-zeitung.de/gesundheit-oekologie/scholz-setzt-auf-eu-paket-aus-drei-instrumenten-der-solidaritaet-li.5643">Berliner Zeitung</a> </p>
+<p class="rm-manual"><span>2020-04-07</span> </p>
+<h3 class="rm-manual"><span><span>Trending</span></span></h3>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://de.wn.com/K_ln_50667/news">Köln 50667</a></li> <li class="rm-manual"><a href="https://de.wn.com/Red_Dead_Redemption_2/news">Red Dead Redemption 2</a></li> <li class="rm-manual"><a href="https://de.wn.com/Nintendo_Switch_Preis/news">Nintendo Switch Preis</a></li> <li class="rm-manual"><a href="https://de.wn.com/Civilization_6/news">Civilization 6</a></li> <li class="rm-manual"><a href="https://de.wn.com/Nintendo_Switch/news">Nintendo Switch</a></li> <li class="rm-manual"><a href="https://de.wn.com/The_Voice_of_Germany/news">The Voice of Germany</a></li> <li class="rm-manual"><a href="https://de.wn.com/Europa_League/news">Europa League</a></li> <li class="rm-manual"><a href="https://de.wn.com/Yvonne_Catterfeld/news">Yvonne Catterfeld</a></li> <li class="rm-manual"><a href="https://de.wn.com/Max_Giesinger/news">Max Giesinger</a></li> <li class="rm-manual"><a href="https://de.wn.com/Helene_Fischer/news">Helene Fischer</a></li> </ul>
+<h2 class="rm-manual"><span>Related News</span></h2>
+<p class="rm-manual"> <a href=""> </a></p><p class="rm-manual"><a href=""> <span>by Email</span> </a></p> <p class="rm-manual"></p>
+<p class="rm-manual"><span>Get the top news stories delivered directly to your inbox!</span></p>
+<h3 class="rm-manual"><a href="https://article.wn.com/view/2020/06/02/35_neue_coronavirusf_xe4lle_in_berlin/"><span>35 neue Coronavirus-Fälle in Berlin</span></a></h3>
+<p class="rm-manual"><a rel="nofollow" href="https://www.berliner-zeitung.de/mensch-metropole/newsblog-35-neue-coronavirus-faelle-in-berlin-li.77734">Berliner Zeitung</a> </p>
+<p class="rm-manual"><span>2020-06-02</span> </p>
+<h3 class="rm-manual"><a href="https://article.wn.com/view/2020/03/10/Coronavirus_Ganz_Deutschland_betroffen_Erster_Fall_in_Sachse/"><span>Coronavirus: Ganz Deutschland betroffen - Erster Fall in Sachsen-Anhalt</span></a></h3>
+<p class="rm-manual"><a rel="nofollow" href="https://www.fr.de/panorama/coronavirus-sars-cov-2-erster-deutscher-stirbt-nach-infektion-zr-13560844.html">Frankfurter Rundschau</a> </p>
+<p class="rm-manual"><span>2020-03-10</span> </p>
+<h3 class="rm-manual"><a href="https://article.wn.com/view/2020/03/07/coronavirus_fast_700_falle_in_deutschland_8211_italienischer/"><span>Coronavirus: Fast 700 Fälle in Deutschland – Italienischer Spitzenpolitiker infiziert</span></a></h3>
+<p class="rm-manual"><a rel="nofollow" href="https://www.fr.de/panorama/coronavirus-sars-cov-2-pandemie-gefahr-deutschland-zr-13560844.html">Frankfurter Rundschau</a> </p>
+<p class="rm-manual"><span>2020-03-07</span> </p>
+<h3 class="rm-manual"><a href="https://wn.com/">EXPLORE WN.com</a></h3>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://wn.com/world">World</a></li> <li class="rm-manual"><a href="https://wn.com/business">Business</a></li> <li class="rm-manual"><a href="https://wn.com/entertainment">Entertainment</a></li> <li class="rm-manual"><a href="https://wn.com/technology">Technology</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://wn.com/health">Health</a></li> <li class="rm-manual"><a href="https://wn.com/science">Science</a></li> <li class="rm-manual"><a href="https://wn.com/sports">Sports</a></li> <li class="rm-manual"><a href="https://wn.com/film">Film</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://wn.com/videos">Videos</a></li> <li class="rm-manual"><a href="https://travelagents.com/">Travel</a></li> <li class="rm-manual"><a href="https://globalweather.com/">Weather</a></li> <li class="rm-manual"><a href="http://population.com/">Population</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://cheese.com/">Cheese</a></li> <li class="rm-manual"><a href="https://www.dubai.com/">Dubai</a></li> <li class="rm-manual"><a href="https://students.com/">Students</a></li> <li class="rm-manual"><a href="https://education.wn.com/">Education</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://search.wn.com/">Advanced Search</a></li> <li class="rm-manual"><a href="https://broadcasts.com/">Broadcast</a></li> <li class="rm-manual"><a href="http://www.customisednews.com/">Customised News</a></li> <li class="rm-manual"><a href="http://worldphotos.com/">World Photos</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://gas.com/">Gas.com</a></li> <li class="rm-manual"><a href="https://www.petrol.com/">Petrol.com</a></li> <li class="rm-manual"><a href="http://www.oil.com/">Oil.com</a></li> <li class="rm-manual"><a href="http://silverprices.com/">Silver Prices</a></li> </ul>
+<p class="rm-manual"> © WN 2020 | <a href="file:///or/html/mediakit/about-us-2019.html"><span>About WN</span></a> | <a href="https://wn.com/sitemap"><span>Sitemap</span></a> | <a href="https://wn.com/privacypolicy"><span>Privacy Policy</span></a> | <a href="https://wn.com/contact"><span>Contact</span></a> | <a href="https://manage.wn.com/employment/?from=https://wn.com/"><span>Jobs</span></a> | <a href="https://manage.wn.com/feedback/?url=https://wn.com/"><span>Feedback</span></a> | <a href="https://manage.wn.com/article/"><span>Submit Article</span></a> | <a href="https://wn.com/email-register">Newsletter</a> | <a rel="nofollow" href="https://wn.com/123">Create video playlist</a> | </p>
+<ul class="rm-manual"> <li class="rm-manual"><span>Connect:</span></li> </ul></article>
+</body></html>

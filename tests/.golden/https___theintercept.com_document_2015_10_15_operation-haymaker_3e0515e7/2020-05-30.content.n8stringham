@@ -1,0 +1,75 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Operation Haymaker - The Intercept </p>
+<p class="rm-manual"><a href="file:///"><span> The Intercept_</span></a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///">English</a></li>
+<li class="rm-manual"><a href="file:///brasil/">Português</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://theintercept.com/politics/">Politics</a></li>
+<li class="rm-manual"><a href="https://theintercept.com/justice/">Justice</a></li>
+<li class="rm-manual"><a href="https://theintercept.com/national-security/">National Security</a></li>
+<li class="rm-manual"><a href="https://theintercept.com/world/">World</a></li>
+<li class="rm-manual"><a href="https://theintercept.com/technology/">Technology</a></li>
+<li class="rm-manual"><a href="https://theintercept.com/environment/">Environment</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://theintercept.com/special-investigations/">Special Investigations</a></li>
+<li class="rm-manual"><a href="file:///voices/">Voices</a></li>
+<li class="rm-manual"><a href="file:///podcasts/">Podcasts</a></li>
+<li class="rm-manual"><a href="https://theintercept.com/videos/">Videos</a></li>
+<li class="rm-manual"><a href="file:///documents/">Documents</a></li>
+<li class="rm-manual"><a href="https://join.theintercept.com/donate/now/?source=web_intercept_20200514_hamburger_spring-campaign"><p class="rm-manual"> Become A Member</p></a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///about/">About</a></li>
+<li class="rm-manual"><a href="file:///policies/">Editorial Policies</a></li>
+<li class="rm-manual"><a href="https://theintercept.com/source/">Become a Source</a></li>
+<li class="rm-manual"><a href="file:///newsletter/?source=web_hamburger">Join Newsletter</a></li>
+</ul>
+<p class="rm-manual">The Intercept is a First Look Media Company.</p>
+<p class="rm-manual"> © First Look Media. </p>
+<p class="rm-manual"><span>All rights reserved</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///terms-use/"><span>Terms of use</span></a></li>
+<li class="rm-manual"><a href="file:///privacy-policy/"><span>Privacy</span></a></li>
+</ul>
+<p class="rm-manual"><a href="file:///"><span> The Intercept_</span></a></p>
+<p class="rm-manual"> Filters SVG </p></article>
+</body></html>

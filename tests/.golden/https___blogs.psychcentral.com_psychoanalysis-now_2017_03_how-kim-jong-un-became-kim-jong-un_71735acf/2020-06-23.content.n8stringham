@@ -1,0 +1,325 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Kim Jong Un Like H-Bombs and the NBA </p>
+<p class="rm-manual"><span><span>MENU</span><span>MENU</span></span></p>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="https://psychcentral.com/disorders/">Conditions</a> <ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual">
+<a href="https://psychcentral.com/addictions/">Addictions</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://psychcentral.com/disorders/revised-alcoholsubstance-use-disorder/">Substance Use Symptoms</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/addictions/opioid-use-disorder-symptoms/">Opioid Use Symptoms</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/disorders/substance-use-disorder-symptoms/">Substance Use Treatment</a></li> </ul> </li>
+<li class="rm-manual">
+<a href="https://psychcentral.com/adhd/">ADHD Overview</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://psychcentral.com/adhd/attention-deficit-hyperactivity-disorder-adhd-symptoms/">Adult ADHD Symptoms</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/adhd/treatment-for-attention-deficit-hyperactivity-disorder-adhd">Adult ADHD Treatment</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/quizzes/adhd-quiz/">ADHD Quiz</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/childhood-adhd/">Childhood ADHD</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/childhood-adhd/childhood-teenager-adhd-symptoms/">Childhood ADHD Symptoms</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/childhood-adhd/treatment-of-adhd-in-children/">Childhood ADHD Treatment</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/quizzes/child-adhd-quiz/">Childhood ADHD Quiz</a></li> </ul> </li>
+<li class="rm-manual">
+<a href="https://psychcentral.com/anxiety/">Anxiety &amp; Panic</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://psychcentral.com/anxiety/generalized-anxiety-disorder-symptoms/">General Anxiety Symptoms</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/anxiety/generalized-anxiety-disorder-treatment/">Anxiety Treatment</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/anxiety/panic-disorder-symptoms/">Panic Disorder Symptoms</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/anxiety/panic-disorder-treatment/">Panic Disorder Treatment</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/quizzes/anxiety-quiz/">Anxiety Test</a></li> </ul> </li>
+<li class="rm-manual">
+<a href="https://psychcentral.com/autism/">Autism</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://psychcentral.com/autism/autism-spectrum-disorder-symptoms/">Autism Symptoms</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/lib/treatment-of-autism/">Autism Treatment</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/lib/symptoms-of-aspergers-disorder/">Asperger's Symptoms</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/lib/treatment-for-aspergers-disorder/">Asperger's Treatment</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/quizzes/autism-quiz/">Autism Test</a></li> </ul> </li> </ul> </li>
+<li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual">
+<a href="https://psychcentral.com/bipolar/">Bipolar Disorder</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://psychcentral.com/bipolar/bipolar-disorder-symptoms/">Bipolar Disorder Symptoms</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/bipolar/bipolar-disorder-treatment/">Bipolar Disorder Treatment</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/quizzes/bipolar-quiz/">Bipolar Disorder Test</a></li> </ul> </li>
+<li class="rm-manual">
+<a href="https://psychcentral.com/depression/">Depression</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://psychcentral.com/depression/depression-symptoms-major-depressive-disorder/">Depression Symptoms</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/lib/seasonal-affective-disorder/">Seasonal Affective Disorder</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/disorders/postpartum-depression/">Postpartum Depression</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/depression/depression-treatment/">Depression Treatment</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/quizzes/depression-quiz/">Depression Test</a></li> </ul> </li>
+<li class="rm-manual">
+<a href="https://psychcentral.com/eating-disorders/">Eating Disorders</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://psychcentral.com/eating-disorders/anorexia-nervosa-symptoms/">Anorexia Symptoms</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/eating-disorders/treatment-for-anorexia/">Anorexia Treatment</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/eating-disorders/symptoms-of-binge-eating-disorder/">Binge Eating Symptoms</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/eating-disorders/treatment-for-binge-eating-disorder/">Binge Eating Treatment</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/eating-disorders/bulimia-nervosa-symptoms/">Bulimia Symptoms</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/eating-disorders/treatment-for-bulimia/">Bulimia Treatment</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/quizzes/binge-eating-quiz/">Binge Eating Test</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/quizzes/eating-attitudes-test/">Eating Attitudes Test</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/quizzes/eating-disorders-quiz/">Eating Disorders Test</a></li> </ul> </li>
+<li class="rm-manual">
+<a href="https://psychcentral.com/ocd/">OCD</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://psychcentral.com/ocd/obsessive-compulsive-disorder-ocd-symptoms/">OCD Symptoms</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/ocd/obsessive-compulsive-disorder-ocd-treatment/">OCD Treatment</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/quizzes/ocd-quiz/">OCD Test</a></li> </ul> </li> </ul> </li>
+<li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual">
+<a href="https://psychcentral.com/ptsd/">PTSD</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://psychcentral.com/ptsd/posttraumatic-stress-disorder-ptsd-symptoms/">PTSD Symptoms</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/ptsd/posttraumatic-stress-disorder-ptsd-treatment/">PTSD Treatment</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/quizzes/ptsd-quiz/">PTSD Test</a></li> </ul> </li>
+<li class="rm-manual">
+<a href="https://psychcentral.com/schizophrenia/">Schizophrenia</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://psychcentral.com/schizophrenia/schizophrenia-symptoms/">Schizophrenia Symptoms</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/schizophrenia/schizophrenia-treatment/">Schizophrenia Treatment</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/schizophrenia-guide/">Schizophrenia Guide</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/quizzes/schizophrenia-test/">Schizophrenia Test</a></li> </ul> </li>
+<li class="rm-manual"><a href="https://psychcentral.com/lib/category/parenting/">Parenting Issues</a></li>
+<li class="rm-manual">
+<a href="https://psychcentral.com/personality/">Personality</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://psychcentral.com/personality-test/">Personality Test</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/quizzes/personality/start.php">16-Type Personality Test</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/quizzes/personality-tests/">All Personality Tests</a></li> </ul> </li>
+<li class="rm-manual">
+<a href="https://psychcentral.com/lib/category/relationships/">Relationship Issues</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://psychcentral.com/quizzes/sexuality-relationship-tests/">Sex &amp; Relationship Tests</a></li> </ul> </li>
+<li class="rm-manual">
+<a href="https://psychcentral.com/disorders/sleep/">Sleep Disorders</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://psychcentral.com/quizzes/sleep-quiz/">Sleep Test</a></li> </ul> </li>
+<li class="rm-manual"><a href="https://psychcentral.com/stress/">Coping with Stress</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/disorders/">All Mental Disorders</a></li> </ul> </li> </ul> </li>
+</ul> </li>
+<li class="rm-manual">
+<a href="https://psychcentral.com/quizzes/">Quizzes</a> <ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"><a href="https://psychcentral.com/quizzes/adhd-quiz/">ADHD Test</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/quizzes/anxiety-quiz/">Anxiety Test</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/quizzes/autism-test/">Autism Test</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/quizzes/bipolar-quiz/">Bipolar Test</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/quizzes/depression-quiz/">Depression Test</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/quizzes/eating-disorders-quiz/">Eating Disorders Test</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/quizzes/grief-quiz/">Grief Test</a></li>
+<li class="rm-manual"><a href="https://www3.psychcentral.com/quizzes/mood-tracker/">Mood Tracker</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/quizzes/personality-tests/">Personality Tests</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/quizzes/sexuality-relationship-tests/">Relationship Tests</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/quizzes/schizophrenia-test/">Schizophrenia Test</a></li> </ul> </li> </ul> </li>
+</ul> </li>
+<li class="rm-manual">
+<a href="https://psychcentral.com/news/">News &amp; Experts</a> <ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"><a href="https://psychcentral.com/ask-the-therapist/">Ask the Therapist</a></li>
+<li class="rm-manual"><a href="https://blogs.psychcentral.com/">Blogs &amp; Experts</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/news/">Daily Psychology News</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/podcasts/">Mental Health Podcasts</a></li> <li class="rm-manual"><a href="https://psychcentral.com/blog/">World of Psychology Blog</a></li> </ul> </li> </ul> </li>
+</ul> </li>
+<li class="rm-manual">
+<a href="https://psychcentral.com/find-help/">Find Help</a> <ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"><a href="https://psychcentral.com/find-help/">Find a Therapist</a></li>
+<li class="rm-manual"><a href="https://psychcentralforums.com/">Forums &amp; Support Groups</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/psychotherapy/">Psychotherapy 101</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/drugs/">Drugs &amp; Medications</a></li>
+<li class="rm-manual"><a href="https://psychcentral.com/coronavirus/">Coping with Coronavirus</a></li> </ul> </li> </ul> </li>
+</ul> </li>
+<li class="rm-manual">
+<a href="https://pro.psychcentral.com/">Pro</a> <ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"><a href="https://pro.psychcentral.com/">Professional</a></li>
+<li class="rm-manual"><a href="https://pro.psychcentral.com/jobs-in-mental-health-psychology-psychiatry/">Find a Job</a></li>
+<li class="rm-manual"><a href="https://pro.psychcentral.com/submit-a-new-job/">Submit a Job</a></li>
+<li class="rm-manual"><a href="https://nepsy.com/">New England Psychologist</a></li> </ul> </li> </ul> </li>
+</ul> </li>
+</ul>
+<p class="rm-manual"><a href="https://psychcentral.com/find-help/">Find help or get online counseling now</a> </p>
+<p class="rm-manual"><a href="file:///">Home</a> » <a href="file:///">Blogs</a> » <a href="https://blogs.psychcentral.com/psychoanalysis-now">Psychoanalysis Now</a> » Kim Jong Un Likes H-Bombs and the NBA</p>
+<p class="rm-manual"><a href="file:///psychoanalysis-now/"></a></p><h2 class="rm-manual"><a href="file:///psychoanalysis-now/">Psychoanalysis Now</a></h2><p class="rm-manual"></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///psychoanalysis-now/about/">About the Blog</a></li>
+<li class="rm-manual"><a href="file:///psychoanalysis-now/#archives">Archives</a></li>
+</ul>
+<h1 class="rm-manual">Kim Jong Un Likes H-Bombs and the NBA</h1>
+<p class="rm-manual"> By <a rel="author" href="https://blogs.psychcentral.com/psychoanalysis-now/author/geralds/"><span><span>Gerald Schoenewolf, Ph.D.</span></span></a> </p>
+<p class="rm-manual">Last updated: <span>5 Mar 2017</span> </p>
+<p class="rm-manual">~ 4 min read</p>
+<p> The recent assassination of Kim Jong Un’s older half-brother, Kim 
+Jong Nam, was apparently the latest extermination by Kim Jong Un. </p>
+<p>Besides exterminating people, Kim Jong Un also likes basketball and 
+H-bombs. Un, who is the leader of North Korea, doesn’t mind killing a 
+few people now and then who don’t agree with him, but he also likes to 
+play with and watch the game with the round ball, and he even invited 
+some American NBA players, organized by former NBA great, Dennis Rodman,
+ to visit North Korea and stage a game for his pleasure and some of the 
+North Korean inner circle.</p>
+<p>Killing people and watching the NBA; that is what apparently gives him the most joy. In addition to his older brother, he has <a href="https://en.wikipedia.org/wiki/Kim_Jong-un" rel="noopener nofollow">exterminated</a>
+ whole families and generals who disagree with him since coming to 
+power. In December 2013, Kim Jong-un’s Uncle Jang Sung-taek was arrested
+ and executed for treachery. Jang Sung-taek is believed to have been 
+executed by firing squad. According to multiple unnamed sources, Kim 
+Jong-un has also put to death members of Jang’s family, to completely 
+destroy all traces of Jang’s existence through the extermination of his 
+family, including the children and grandchildren of all close relatives.
+ </p>
+<p>Top generals were also executed. O Sang-hon was a deputy security 
+minister in the Ministry of Public Security in the government of North 
+Korea. He was killed during a political purge in 2014. According to the 
+Korean newspaper Chosun Ilbo, he was executed by flamethrower for his 
+role in supporting Kim Jong-un’s uncle Jang Song-taek.</p>
+<p>Most of his country is struggling to find food to eat, while he 
+chuckles in his lavish mansion with an almost teenage delight when 
+LeBron James makes a dunk, and Un appears at that moment to be like any 
+normal young NBA fan. Only once was he reported to have taken note of 
+the difference between his lifestyle and the people he rules. When he 
+was 18 and living in a mansion, smoking Yves Saint Laurent cigarettes, 
+swilling Johnnie Walker whisky and driving a Mercedes-Benz 600 luxury 
+sedan, Jong un questioned his lavish lifestyle and asked, “We are here, 
+playing basketball, riding horses, riding jet skis, having fun together.
+ But what of the lives of the average people?” Apparently this was only a
+ momentary concern.</p>
+<p>Today Un spends much of his time, and much of North Korea’s resources
+ developing H-bombs and missiles capable of carrying these H-bombs to 
+the United States, the country which seems to be his most hated enemy. 
+On 7 March 7, 2013, North Korea threatened the United States with a 
+“pre-emptive nuclear attack”, and Kim Jong Un issued a detailed threat 
+to “wipe out” Baengnyeong Island, the scene of previous naval clashes. 
+North Korea has revealed plans for conducting nuclear strikes on U.S. 
+cities, including Los Angeles and Washington, D.C. Experts do not think 
+Un and North Korea have developed the capability yet, but it is expected
+ that they will soon.</p>
+<p>There is no doubt that Kim Jong Un is deranged. His exact diagnosis 
+is difficult to make, but we can say he is probably paranoid and he is 
+the number one nuclear threat in the world. His most often stated goal 
+is to eradicate the United States. He is like a nuclear suicide bomber 
+ready at a moment’s notice to do his work. The question is, how did he 
+get that way?</p>
+<p>The man who served as his<a href="https://english.alarabiya.net/en/variety/2014/02/23/Kim-John-Un-s-childhood-of-Big-Macs-and-pleasure-girls-revealed.html" rel="noopener nofollow"> father’s chef</a>
+ and Un’s de facto nanny, Fujimoto (his Japanese name), spoke out 
+recently about Kim Jong Un’s childhood. It seems that he, his older 
+brother and sister, were given everything they wanted, but not the love 
+that every child needs. Allowed every privilege at a young age, Fujimoto
+ recalls Jong-un demanding to drive a car, a Mercedes no less, at the 
+age of seven. “They put a little box beneath his feet to help him reach 
+the pedals and someone gave him instruction. The first car he got was a 
+Mercedes-Benz, and he has owned Mercedes ever since. I’d say he has more
+ than ten now – all bulletproof.” </p>
+<p>At the age of 14, Un demanded to smoke, and then to drink. “[He] 
+drank a lot, too, even as a young teenager – Russia’s finest vodka. 
+Sometimes he’d drink the whole bottle all by himself,” Fujimoto noted. 
+Then he began spending time on one of the two yachts his father bought 
+for him and became a good sailor. He also has an endless supply of 
+McDonalds Big Macs, although the chain is not in North Korea.</p>
+<p>In his late teens, Jong-un was exposed to his father’s ‘pleasure 
+brigade’ – an endless array of beautiful teenage girls forced to sing, 
+strip naked, give massages and perform sexual duties for Un’s father. 
+Fujimoto claims that the 18-year-old Kim was shy with girls and hated 
+“having relationships with multiple women.” His stand-offish attitude 
+toward girls led his father to wonder if his son was gay. Fujimoto 
+speculates that Kim hated his father’s womanizing and this is what led 
+him to execute his uncle, Jang Sung Taek, who was responsible for 
+picking the girls that served in the father’s pleasure brigade. I would 
+speculate that his father hatred started during his early childhood and 
+was fueled by his father’s ruthless attitude toward him.</p>
+<p>According to many sources, Un and his older brother both attended 
+private schools in Switzerland, Un going to the International School in 
+Gümligen under the name “Chol-pak” or “Pak-chol” from 1993 to 1998. He 
+did poorly in his studies but excelled at one sport in 
+particular—basketball. He was described by classmates as a shy child who
+ was awkward with girls and indifferent to political issues, but who 
+distinguished himself in sports and had a fascination with the American 
+National Basketball Association and Michael Jordan. One friend claimed 
+that Kim had been shown pictures of himself with Kobe Bryant and Toni 
+Kukoč.</p>
+<p>Now Kim Jong Un has his own private basketball court where he sets up
+ games with his intimates while he plans his future H-bomb attacks on 
+the United States. He appears to have been a spoiled little boy who got 
+everything but self-discipline and the love of his father, and he has 
+now turned into a megalomaniac leader. His hatred of his father has been
+ transferred to the United States, which he despises for its sexualized 
+lifestyle, similar to his father’s. </p>
+<p>Un has never known any limits to his behavior since his early child. 
+Now the world wants to impose limits and he doesn’t like it. He just 
+wants the world to give him whatever he wants, or else.</p>
+<p><span>Kim Jong Un Likes H-Bombs and the NBA</span></p>
+<h4 class="rm-manual">Gerald Schoenewolf, Ph.D.</h4>
+<p class="rm-manual">Gerald Schoenewolf, Ph.D. is a licensed 
+psychoanalyst in New York and has been practicing for over 37 years. He 
+works with adults, couples, families, adolescents, and children. He has 
+graduated from three psychotherapy institutes and received a Certificate
+ in Psychoanalysis from the Washington Square Institute in 1981. He has 
+been an Adjunct Assistant Professor of psychology at the Borough of 
+Manhattan Community College since 2002 and has authored thirteen books 
+on psychotherapy and psychoanalysis as well as four novels and a book of
+ poems and drawings. More recently he wrote 20 screenplays (winning four
+ first-place awards at festivals) and produced and directed two feature 
+films.</p>
+<p class="rm-manual"> <span> One comment: </span> </p>
+<p class="rm-manual"> APA Reference </p>
+<p class="rm-manual"> Schoenewolf, G. (2017). Kim Jong Un Likes H-Bombs 
+and the NBA. Psych Central. Retrieved on June 23, 2020, from 
+https://blogs.psychcentral.com/psychoanalysis-now/2017/03/how-kim-jong-un-became-kim-jong-un/</p>
+<p class="rm-manual"> Last updated: 5 Mar 2017</p>
+<p class="rm-manual">Statement of review: Psych Central does not review 
+the content that appears in our blog network (blogs.psychcentral.com) 
+prior to publication. All opinions expressed herein are exclusively 
+those of the author alone, and do not reflect the views of the editorial
+ staff or management of Psych Central. Published on PsychCentral.com. 
+All rights reserved. </p>
+<h5 class="rm-manual">Hot Topics Today</h5>
+<p class="rm-manual">1</p>
+<h4 class="rm-manual"><a href="https://blogs.psychcentral.com/childhood-neglect/2020/06/how-it-feels-to-have-emotionally-neglectful-parents/">How it Feels to Have Emotionally Neglectful Parents</a></h4>
+<p class="rm-manual">2</p>
+<h4 class="rm-manual"><a href="https://psychcentral.com/news/2020/06/19/what-doesnt-kill-you-makes-you-stronger-proven-false-by-new-research/157302.html">"What Doesn't Kill You Makes You Stronger" Proven False By New Research</a></h4>
+<p class="rm-manual">3</p>
+<h4 class="rm-manual"><a href="https://pro.psychcentral.com/recovery-expert/2020/06/are-you-being-emotionally-abused/">Are You Being Emotionally Abused?</a></h4>
+<p class="rm-manual">4</p>
+<h4 class="rm-manual"><a href="https://blogs.psychcentral.com/dysfunction/2020/06/6-ways-to-eliminate-the-emotional-baggage-that-creates-low-self-esteem/?li_source=LI&amp;li_medium=popular17">6 Ways to Eliminate the Emotional Baggage that Creates Low Self Esteem</a></h4>
+<h5 class="rm-manual">Subscribe to This Blog</h5>
+<p class="rm-manual">Get a Single Email For New Entries:</p>
+<p class="rm-manual"> <a href="file:///PsychoanalysisNow" rel="alternate">Or via RSS Feed</a> </p>
+<h5 class="rm-manual">Most Popular Posts</h5>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://blogs.psychcentral.com/psychoanalysis-now/2017/05/falling-dreams-mean-different-things/"><span>Falling Dreams Mean Different Things</span></a></li> <li class="rm-manual"><a href="https://blogs.psychcentral.com/psychoanalysis-now/2019/03/the-rise-of-brother-sister-incest/"><span>The Rise of Brother-Sister Incest</span></a></li> <li class="rm-manual"><a href="https://blogs.psychcentral.com/psychoanalysis-now/2016/01/mind-games-people-play/"><span>Mind Games People Play</span></a></li> <li class="rm-manual"><a href="https://blogs.psychcentral.com/psychoanalysis-now/2015/02/6-kinds-of-apology-and-what-they-mean/"><span>6 Types of Apology and What They Mean</span></a></li> <li class="rm-manual"><a href="https://blogs.psychcentral.com/psychoanalysis-now/2018/05/7-kinds-of-crying-and-what-they-mean/"><span>7 Kinds of Crying and What They Mean</span></a></li> </ul>
+<h5 class="rm-manual">Recent Comments</h5>
+<ul class="rm-manual"> <li class="rm-manual">
+<a href="https://blogs.psychcentral.com/psychoanalysis-now/2019/03/the-rise-of-brother-sister-incest/#comment-1082">Luvda Wimmins</a>: A lot of it is not made in the US, Owen. Yes most incest porn is fake… but a decent amount is...</li> <li class="rm-manual">
+<a href="https://blogs.psychcentral.com/psychoanalysis-now/2019/03/the-rise-of-brother-sister-incest/#comment-1081">Larry</a>: Im over 50 and I am glad I am the age I am. These are issues better left for people with plenty of life left...</li> <li class="rm-manual">
+<a href="https://blogs.psychcentral.com/psychoanalysis-now/2019/04/pot-during-pregnancy-causes-child-psychosis/#comment-1076">Bee</a>: I agree with Len May’s comment. Cannabis may affect certain genes… But, this is a fear tactic. There...</li> <li class="rm-manual">
+<a href="https://blogs.psychcentral.com/psychoanalysis-now/2016/01/mind-games-people-play/#comment-1075">Debra Cole</a>: Someone is stealing from me and has been for 2 years. I can’t find out who it is by any means even...</li> <li class="rm-manual">
+<a href="https://blogs.psychcentral.com/psychoanalysis-now/2019/03/the-rise-of-brother-sister-incest/#comment-1074">Anonymous</a>: I noticed that you didn’t give any reason to believe these relationships were negative or harmful in...</li> </ul>
+<p class="rm-manual">Join Over 205,000 Subscribers</p>
+<p class="rm-manual">to Our Weekly Newsletter</p>
+<table class="rm-manual"> <tbody><tr class="rm-manual"><td class="rm-manual"> Find a Therapist Enter ZIP or postal code </td></tr>
+</tbody></table>
+<p class="rm-manual"> <a href="file:///">Home</a></p>
+<p class="rm-manual"> <a href="file:///about/">About Us</a></p>
+<p class="rm-manual"> <a href="file:///about/advertising/">Advertise with Us</a></p>
+<p class="rm-manual"> <a href="file:///about/feedback/">Contact Us</a></p>
+<p class="rm-manual"> <a href="file:///about/privacy/">Privacy Policy</a></p>
+<p class="rm-manual"> <a href="file:///about/editorial-policy/">Editorial Policy</a></p>
+<p class="rm-manual"> <a href="file:///about/terms/">Terms of Use</a></p>
+<p class="rm-manual"> <a href="file:///about/disclaimer/">Disclaimer</a></p>
+<p class="rm-manual"> <a href="file:///about/disclaimer/#adchoices">Ad Choices</a></p>
+<p class="rm-manual"> Support Groups</p>
+<p class="rm-manual"> <a href="file:///">Forums</a></p>
+<p class="rm-manual"> <a href="file:///">NeuroTalk</a></p>
+<p class="rm-manual"><a href="file:///lib/common-hotline-phone-numbers/">Crisis Helplines</a></p>
+<p class="rm-manual"> Psych Central Network</p>
+<p class="rm-manual"> <a href="file:///">Psych Central Professional</a></p>
+<p class="rm-manual"> <a href="file:///">AllPsych</a></p>
+<p class="rm-manual"> <a href="file:///">New England Psychologist</a></p>
+<p class="rm-manual"> <a href="file:///">Sanity Score</a></p>
+<p class="rm-manual"> <a href="file:///">Psych Central Reviews</a></p>
+<p class="rm-manual"> Copyright © 1995-2020 Psych Central </p>
+<p class="rm-manual">Site last updated: 23 Jun 2020</p>
+<p class="rm-manual">Handcrafted with pride in historic Massachusetts. </p>
+<p class="rm-manual">Psych Central does not provide medical or psychological advice, diagnosis or treatment. <a href="file:///about/disclaimer/">Learn more</a>.</p></article>
+</body></html>

@@ -1,0 +1,91 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> South Korea denies rumours Kim Jong-un is 'gravely ill' following surgery - ITV News </p>
+<p class="rm-manual"> <a href="file:///">ITV</a> </p>
+<p class="rm-manual"> <a href="#"> <span>Toggle navigation</span> </a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.itv.com/itv">Live TV</a> </li> <li class="rm-manual"> <a href="https://www.itv.com/shows">Shows</a> </li> <li class="rm-manual"> <a href="https://www.itv.com/hub/categories">Categories</a> </li> <li class="rm-manual"> <a href="https://www.itv.com/news">News</a> </li> <li class="rm-manual"> <a rel="nofollow" href="https://www.itv.com/help">Help</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a rel="nofollow" href="https://www.itv.com/help">Help</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///news/">Top stories</a> </li> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///news/">National</a> </li> <li class="rm-manual"> <a href="file:///news/border/">Border</a> </li> <li class="rm-manual"> <a href="file:///news/tyne-tees/">Tyne Tees</a> </li> <li class="rm-manual"> <a href="file:///news/calendar/">Calendar</a> </li> <li class="rm-manual"> <a href="file:///news/granada/">Granada</a> </li> <li class="rm-manual"> <a href="file:///news/central/">Central</a> </li> <li class="rm-manual"> <a href="file:///news/anglia/">Anglia</a> </li> <li class="rm-manual"> <a href="file:///news/london/">London</a> </li> <li class="rm-manual"> <a href="file:///news/meridian/">Meridian</a> </li> <li class="rm-manual"> <a href="file:///news/wales/">Wales</a> </li> <li class="rm-manual"> <a href="file:///news/westcountry/">West Country</a> </li> <li class="rm-manual"> <a href="file:///news/channel/">Channel</a> </li> <li class="rm-manual"> <a href="file:///news/utv/">UTV</a> </li> </ul> </li> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///news/world/">World</a> </li> <li class="rm-manual"> <a href="file:///news/politics/">Politics</a> </li> <li class="rm-manual"> <a href="file:///news/brexit/">Brexit</a> </li> <li class="rm-manual"> <a href="file:///news/business/">Business</a> </li> <li class="rm-manual"> <a href="file:///news/money/">Money</a> </li> <li class="rm-manual"> <a href="file:///news/health/">Health</a> </li> <li class="rm-manual"> <a href="file:///news/education/">Education</a> </li> <li class="rm-manual"> <a href="file:///news/entertainment/">Entertainment</a> </li> <li class="rm-manual"> <a href="file:///news/royal/">Royal</a> </li> <li class="rm-manual"> <a href="file:///news/technology/">Technology</a> </li> <li class="rm-manual"> <a href="file:///news/sport/">Sport</a> </li> <li class="rm-manual"> <a href="file:///news/and-finally/">And Finally</a> </li> <li class="rm-manual"> <a href="file:///news/environment/">Environment</a> </li> <li class="rm-manual"> <a href="file:///news/science/">Science</a> </li> <li class="rm-manual"> <a href="file:///news/travel/">Travel</a> </li> <li class="rm-manual"> <a href="file:///news/religion/">Religion</a> </li> <li class="rm-manual"> <a href="file:///news/economy/">Economy</a> </li> <li class="rm-manual"> <a href="file:///news/weather/">Weather</a> </li> <li class="rm-manual"> <a href="file:///news/countryside/">Countryside</a> </li> <li class="rm-manual"> <a href="file:///news/employment/">Employment</a> </li> <li class="rm-manual"> <a href="file:///news/animals/">Animals</a> </li> <li class="rm-manual"> <a href="file:///news/consumer/">Consumer</a> </li> <li class="rm-manual"> <a href="file:///news/the-rundown/">The Rundown</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///news/sport/">Sport</a> </li> <li class="rm-manual"> <a href="file:///news/weather/">Weather</a> </li> </ul>
+<p class="rm-manual"><a href="#containerTarget">Main page content</a> </p>
+<ol class="rm-manual"> <li class="rm-manual"> ITV Report </li> <li class="rm-manual"> 21 April 2020 at 9:57am </li> </ol>
+<h1 class="rm-manual">South Korea denies rumours Kim Jong-un is 'gravely ill' following surgery </h1>
+<figcaption>There have been many rumours about North Korean leader Kim Jong Un's health in recent years. Credit: AP</figcaption><p>South Korean officials have said there is no evidence to support rumours that <a href="https://www.itv.com/news/topic/north-korea/">North Korean</a> leader <a href="https://www.itv.com/news/topic/kim-jong-un/">Kim Jong-un</a> is gravely ill.</p>
+<p>US media reported that Mr Kim was in a fragile condition following surgery. </p>
+<p>But in a statement, South Korea's presidential office said no 
+suspicious activity had been detected in their northern neighbour that 
+backed the reports.</p>
+<p>US media network CNN cited an anonymous US official who said Mr Kim 
+was in "grave danger" after unspecified surgery in a report on Tuesday.</p>
+<p>The Unification Ministry, which deals with inter-Korean affairs, said
+ it could not confirm another report by Daily NK (a news outlet based in
+ South Korea), which quoted another anonymous sources as saying Mr Kim 
+was recovering from heart surgery in the capital Pyongyang and that his 
+condition was improving.</p>
+<figcaption>Mr Kim, seen here at an air force defence unit in North Korea earlier this year Credit: AP</figcaption><ul> <li class="rm-manual"><a href="https://www.itv.com/news/2020-03-29/seoul-calls-north-korea-very-inappropriate-for-firing-missiles-during-pandemic/">Seoul calls North Korea ‘very inappropriate’ for firing missiles during pandemic</a></li> <li class="rm-manual"><a href="https://www.itv.com/news/2020-03-21/north-korea-fires-two-ballistic-missiles-into-sea/">North Korea fires two ballistic missiles into sea</a></li> </ul>
+<p>Speculation about Mr Kim's health was raised after he missed a 
+celebration honouring his late grandfather and state founder Kim Il Sung
+ on April 15.</p>
+<p>He was last seen four days before that at a government meeting.</p>
+<p>Credible information about North Korea and especially its leadership is difficult to obtain. </p>
+<p>Even intelligence agencies have been wrong about its inner workings in the past.</p>
+<p>CNN quoted Bruce Klingner, a senior research fellow at the Heritage 
+Foundation and former CIA deputy division chief for North Korea, as 
+saying rumours had circulated recently about Mr Kim's health.</p>
+<p>"But, over the years, there have been a number of false health rumours about Kim Jong-un, or his father. </p>
+<p>"We'll have to wait and see," the network quoted Mr Klingner as saying.</p>
+<p class="rm-manual"> Last updated Tue 21 Apr 2020 </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///news/world/">World</a> </li> <li class="rm-manual"> <a href="file:///news/topic/north-korea/">North Korea</a> </li> <li class="rm-manual"> <a href="file:///news/topic/kim-jong-un/">Kim Jong-un</a> </li> </ul>
+<h2 class="rm-manual"> Related news </h2>
+<ul class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"> <a href="file:///news/2020-05-01/kim-jong-un-makes-public-appearance-to-quash-ill-health-rumours/">Kim Jong-un pictured for first time since ill-health rumours</a> </h3> <p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"> <a href="file:///news/2020-04-29/north-korea-who-could-become-leader-if-kim-jong-un-is-dead/">North Korea: Who could become leader if Kim Jong-un is dead?</a> </h3> <p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"> <a href="file:///news/2020-04-26/satellite-photos-locate-kim-jong-uns-train-as-health-rumours-persist/">Satellite photos locate Kim Jong Un’s train as health rumours persist</a> </h3> <p class="rm-manual"></p> </article> </li> </ul>
+<h2 class="rm-manual"> Top stories </h2>
+<ul class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"> <a href="file:///news/2020-06-04/police-receive-hundreds-of-calls-and-emails-after-new-madeleine-mccann-appeal/">Madeleine McCann: Hundreds respond to new appeal</a> </h3> <p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"> <a href="file:///news/2020-06-04/mary-nightingale-gerry-and-kate-mccann-madeleine/">Mary Nightingale on the resolve of Gerry and Kate McCann </a> </h3> <p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"> <a href="file:///news/2020-06-04/coronavirus-pandemic-impact-on-poverty-financial-impact-wages/">'I will cry when the hoover is on so my children can't hear me'</a> </h3> <p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"> <a href="file:///news/2020-06-04/hong-kong-s-tiananmen-square-vigil-doesn-t-just-defy-a-ban-it-challenges-china-s-rule/">Hong Kong's Tiananmen Square vigil doesn't just defy a ban - it challenges China</a> </h3> <p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"> <a href="file:///news/2020-04-15/face-masks-should-i-wear-one-what-s-the-advice-and-how-do-they-work/">Face masks: Should I wear one and how do they work?</a> </h3> <p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"> <a href="file:///news/2019-11-04/calling-peston-the-itv-news-election-podcast-listen-and-subscribe-here/">Calling Peston: Is the PM still 'following the science'?</a> </h3> <p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"> <a href="file:///news/update/2019-09-18/the-rundown-from-itv-news-watch-the-latest-edition/">The Rundown from ITV News: Watch the latest edition</a> </h3> <p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"> <a href="file:///news/2020-06-04/a-e-nurse-with-covid-19-applauded-by-his-colleagues-after-43-days-spent-in-coma/">A&amp;E nurse with Covid-19 applauded by his colleagues after 43 days spent in coma</a> </h3> <p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"> <a href="file:///news/2020-06-04/grant-shapps-leads-government-s-daily-coronavirus-press-conference/">Face coverings compulsory on public transport from June 15</a> </h3> <p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"> <a href="file:///news/2020-06-04/business-secretary-alok-sharma-tests-negative-for-coronavirus-after-appearing-ill-in-house-of-commons/">Business Secretary Alok Sharma tests negative for coronavirus</a> </h3> <p class="rm-manual"></p> </article> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.itv.com/itv"> <span>ITV</span> </a> </li>
+<li class="rm-manual"> <a href="https://www.itv.com/itv2"> <span>ITV2</span> </a> </li>
+<li class="rm-manual"> <a href="https://www.itv.com/hub/itvbe"> <span>ITVBE</span> </a> </li>
+<li class="rm-manual"> <a href="https://www.itv.com/itv3"> <span>ITV3</span> </a> </li>
+<li class="rm-manual"> <a href="https://www.itv.com/itv4"> <span>ITV4</span> </a> </li>
+<li class="rm-manual"> <a href="https://www.itv.com/hub/citv"> <span>CITV</span> </a> </li> </ul>
+<h3 class="rm-manual">ITV Presents</h3>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.itv.com/beontv/">Be on TV</a> </li> <li class="rm-manual"> <a href="https://www.itv.com/mobile/">Mobile</a> </li> <li class="rm-manual"> <a rel="nofollow" href="http://www.signedstories.com/">Signed Stories</a> </li> </ul>
+<h3 class="rm-manual">Corporate</h3>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="http://www.itvplc.com/">ITV Plc</a> </li> <li class="rm-manual"> <a href="http://www.itvjobs.com/">Jobs</a> </li> <li class="rm-manual"> <a href="https://www.itv.com/presscentre/">Press Centre</a> </li> <li class="rm-manual"> <a href="http://www.itvmedia.co.uk/">ITV Media</a> </li> <li class="rm-manual"> <a href="https://www.itv.com/commissioning/">Commissioning</a> </li> </ul>
+<h3 class="rm-manual">Information</h3>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.itv.com/help/">Help</a> </li> <li class="rm-manual"> <a href="https://www.itv.com/contactus/">Contact Us</a> </li> <li class="rm-manual"> <a rel="nofollow" href="https://www.itv.com/termsconditions/">Terms &amp; Conditions</a> </li> <li class="rm-manual"> <a rel="nofollow" href="https://www.itv.com/privacy/">Privacy Notice</a> </li> </ul>
+<p class="rm-manual"> By using this site, you agree we can set and use cookies. For more details of these cookies and how to disable them, see our <a href="https://www.itv.com/cookies/">cookie policy</a>. </p>
+<p class="rm-manual"> © Copyright ITV plc 2020 </p></article>
+</body></html>

@@ -1,0 +1,197 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> We may earn a commission for purchases using our links. <a href="https://www.futureplc.com/terms-conditions/" rel="nofollow">Learn more</a>. </p>
+<ol class="rm-manual"> <li class="rm-manual"> <a href="file:///"> <span>Home</span></a> </li> <span>/</span> <li class="rm-manual"> <a href="file:///category/news"> <span>News</span></a> </li> </ol>
+<p class="rm-manual"><span>iOS or Android</span> </p>
+<h1 class="rm-manual">Why Apple doesn't care that a quarter of all iPhone users eventually switch to Android</h1>
+<p class="rm-manual"> <span><a href="file:///author/Shruti%20Shekar">Shruti Shekar</a></span> </p>
+<p class="rm-manual"> 2 Jun 2021 </p>
+<p class="rm-manual"><span>Source: Apoorva Bhardwaj / Android Central</span></p>
+<p>Apple doesn't care that nearly 26% of its users switch to different 
+platforms between quarters because it is focusing on encouraging users 
+to buy all of the products in its broader functional ecosystem, experts 
+say. They add that users are likely switching over to Android phones to 
+save money.</p>
+<p>During the Epic Games vs. Apple trial, internal documents showed 
+evidence of "meaningful switching" of smartphone users 
+quarter-over-quarter. The highest percentage of users switching was 
+between Q1 2020 and Q2 2020, which saw 26% of users switch from iOS to 
+Android. This timeframe is particularly interesting as it marks the 
+period that typically follows the announcement and release of new 
+iPhones.</p>
+<p class="rm-manual"><span>Source: Apple</span></p>
+<p>Nugget of data on iPhone customers switching platforms came out in the Epic v. Apple trial. </p>
+<p>Apple submitted this to show people do switch (even if small) and therefore choice does exist.</p>
+<p>Average iOS loyalty over this time period was 81%.</p>
+<p> cc <a href="https://twitter.com/benedictevans?ref_src=twsrc%5Etfw">@benedictevans</a> <a href="https://twitter.com/asymco?ref_src=twsrc%5Etfw">@asymco</a> <a href="https://t.co/koBSk7bvpK">pic.twitter.com/koBSk7bvpK</a></p>
+<p>— Ben Bajarin (@BenBajarin) </p>
+<p><a href="https://twitter.com/BenBajarin/status/1391833113538400259?ref_src=twsrc%5Etfw">May 10, 2021</a></p>
+<p>Epic Games said during the trial that Apple's <a href="https://www.macrumors.com/2021/05/03/apple-doesnt-want-to-be-android/">App Store is anti-competitive and monopolistic</a>,
+ and doesn't allow developers to earn fairly. Apple said during the 
+trial that "Epic wants us to be Android, but we don't want to be," and 
+indicated that there needs to be a single highly curated App Store in 
+order to protect users' privacy, security, and reliability.</p>
+<p>Ben Bajarin, CEO and principal analyst at Creative Strategies in 
+California, said in an interview that a lot of people thought the number
+ of users switching away from Apple was a lot smaller, and that more 
+people were switching away from Android.</p>
+<p>"The point (Apple) was trying to make, and questionable as to whether
+ it's a valid point, is that people do switch. They're certainly not 
+switching 40% of the time, but they use that stat and say look 20% or 
+somewhere north of that some, on a quarterly basis, do leave iOS to go 
+to an Android," he said.</p>
+<p>"Their point is that switching does happen, but again it goes both 
+ways; there's growth to their platform. People do switch from Android to
+ iOS, but in general, it's not a large number."</p>
+<h2>Would having iMessage on Android make a difference?</h2>
+<p class="rm-manual"><span>Source: Daniel Bader / Android Central</span></p>
+<p>During the same trial between Epic Games and Apple, it was revealed that <a href="https://www.androidcentral.com/apple-considered-bringing-imessage-android-but-chose-not">Apple was in favor of bringing iMessage</a>
+ to Android as early as 2013. The company wasn't convinced that this 
+would be the right move and said it would "take more than a marginally 
+better app" to get users to switch to iMessage from the <a href="https://www.androidcentral.com/best-messaging-apps">best Android Messaging apps</a> such as WhatsApp. Apple said that <a href="https://www.androidcentral.com/imagining-world-where-imessage-came-android">iMessage on Android</a> "would simply serve to remove an obstacle to iPhone families giving their kids Android phones."</p>
+<p>Bajarin indicated that perhaps if Android phones had services like 
+iMessage, the percentage of switching over might be higher, but it 
+really isn't a factor for why users are switching now.</p>
+<p>"My gut would say, maybe that number would be a little bit higher for
+ someone who is just willing to try something different. But most of 
+those people came back to iPhones for other reasons. I don't think 
+iMessage alone is essentially a deal-breaker," he said. "Users just 
+wanted to try something different. They tried it, vetted it, and was 
+like I still prefer iOS."</p>
+<h2>So why do users switch from iOS to Android?</h2>
+<p><span>Source: Andrew Martonik / Android Central</span></p>
+<p>Neil Shah, vice-president of research at Counterpoint Research, said 
+in an interview that one reason many users switch is because they find 
+better deals for other phones.</p>
+<p>"Many iPhone users have been holding on to their phones longer, so by
+ the time when they are ready to upgrade (they see that), the price of 
+flagship new iPhones have gotten more expensive. So many users who can't
+ afford and find an attractive carrier or OEM deal are likely to 
+switch," he said, adding that a brand new OnePlus flagship is almost a 
+third of the price of an iPhone flagship.</p>
+<p>In China, users spend the most time in one or two apps such as 
+WeChat, so it doesn't matter to them if they are on an iOS or Android.</p>
+<p>Shah also explained that many iPhone users have hand-me-downs or 
+refurbished phones, in which case the phone's user experience isn't 
+optimum, "so when they are due for an upgrade, they are also likely to 
+shift out of the iOS ecosystem unless they are locked in."</p>
+<p>"There's also a case where some Android users might have moved to an 
+iPhone but couldn't get used to the UI or felt claustrophobic coming 
+from an open system like Android, so they switch back or out of an 
+iPhone," he said.</p>
+<p>And in some cases, the user is focused on what apps they are using 
+most and don't necessarily care about the type of phone they're using, 
+Shah added.</p>
+<h2>When you buy a phone, you're buying a lifestyle and Apple has created that ecosystem</h2>
+<p class="rm-manual"><span>Source: Apple</span></p>
+<p>Shah added that Apple has also been a "master" at locking users into 
+an ecosystem, making it difficult to switch to another platform. He said
+ that smartphone users who are on their second or third smartphone are 
+more likely to decide if an ecosystem benefits their lifestyle.</p>
+<p>"Some smart users are also cognizant of being locked into an 
+ecosystem and understand that switching costs especially for iOS and 
+make their choices accordingly if they want to (switch) or not," he 
+said.</p>
+<p>In the case of Apple, the company has been able to lock down the 
+integration of products in a seamless way, Shah said, creating a sense 
+of "premium-ness."</p>
+<p>Lifestyle and premium-ness becomes a factor for aspiration and also 
+actually choosing the ecosystem," Shah said. "For example, premium-ness 
+of the Apple Watch of the seamlessness of AirPods or sticky features 
+such as the AirDrop within the Apple ecosystem are some good examples to
+ attract users to the Apple iPhone and its ecosystem.</p>
+<h2>I don't see a cohesive roadmap for Google to take on Apple's ecosystem</h2>
+<p class="rm-manual"><span>Source: Chris Wedel/Android Central</span></p>
+<p>Carmi Levy, a technology analyst, said that the percentage of users 
+that fall under the category looking for a better deal lies somewhere 
+around 20%, and that number is going down every year.</p>
+<p>You're not just buying a device, you're buying a lifestyle, and 
+you're buying services, so as time goes on, that window for selling just
+ the phone is getting smaller.</p>
+<p>He added that a good percentage of those people do not see phones as 
+part of a broader ecosystem. "I think over time, that percentage of the 
+overall market is getting smaller. In other words, as time goes on, more
+ and more smartphone consumers are beginning to see phones as not just 
+devices, but as centers of a broader ecosystem that they are buying 
+into," he said.</p>
+<p>Levy says that this shift has tilted towards Apple's advantage 
+because the company has "arguably the most highly evolved ecosystems of 
+services in the entire market," adding that Google has struggled to find
+ its way with building an ecosystem.</p>
+<p>More recently, <a href="https://www.androidcentral.com/wear-os-google-samsung">Google announced it has teamed up with Samsung</a> for all future smartwatch efforts and to create a "unified experience."</p>
+<p>Levy explained that WearOS has arguably been a disaster since day one
+ and has gone through multiple rebranding efforts. But even this 
+partnership hasn't convinced Levy that Google will be able to create an 
+ecosystem that can compete with Apple's</p>
+<p>"Google wishes that it were in a position, certainly throwing 
+anything at the wall to try to regain some kind of traction and thus far
+ has failed and there's no guarantee that its recently announced 
+partnership with Samsung is going to succeed where previous efforts have
+ failed," he said. "I don't see a cohesive roadmap for Google that would
+ realistically take Apple on in this way."</p>
+<h3 class="rm-manual">Have you listened to this week's Android Central Podcast?</h3>
+<p class="rm-manual">Every week, the Android Central Podcast brings you 
+the latest tech news, analysis and hot takes, with familiar co-hosts and
+ special guests.</p>
+<ul class="rm-manual"> <li class="rm-manual">Subscribe in Pocket Casts: <a href="https://pca.st/androidcentral">Audio</a>
+</li> <li class="rm-manual">Subscribe in Spotify: <a href="https://open.spotify.com/show/5jrP8ZEXns0w5ro3MAVnp7">Audio</a>
+</li> <li class="rm-manual">Subscribe in iTunes: <a href="https://itunes.apple.com/us/podcast/android-central-podcast/id359703665?mt=2&amp;at=10l3Vy" rel="nofollow">Audio</a> </li> </ul>
+<p class="rm-manual"> We may earn a commission for purchases using our links. <a href="https://www.futureplc.com/terms-conditions/" rel="nofollow">Learn more</a>. </p>
+<p class="rm-manual"> This shouldn't be hard </p>
+<h3 class="rm-manual"> <a href="https://www.androidcentral.com/chromebooks-will-never-be-mainstream-laptops-until-accessory-makers-treat-them-properly"> Accessory makers are still ignoring Chromebooks, to the detriment of all </a> </h3>
+<p class="rm-manual">Chromebook sales have exploded in the last 18 
+months, but manufacturers still largely ignore them over Mac and Windows
+ laptops. While Works With Chromebooks has helped a little, looking for 
+Chromebook accessories often brings a lot of guesswork and second-class 
+experiences.</p>
+<p class="rm-manual"> From the Editor's Desk </p>
+<h3 class="rm-manual"> <a href="https://www.androidcentral.com/i-wish-my-apple-friends-would-stop-android-shaming-me"> When you wish your Apple friends would stop Android-shaming you ... </a> </h3>
+<p class="rm-manual">Even before I started using Android phones, I saw 
+the disdain that friends and family felt toward Android. But as someone 
+who happily jumps between both platforms, I'm tired of the Android 
+attitude ...</p>
+<p class="rm-manual"> Android &amp; Chill </p>
+<h3 class="rm-manual"> <a href="https://www.androidcentral.com/oneplus-knew-better-and-did-dumb-thing-anyway"> OnePlus knew better and did the dumb thing anyway </a> </h3>
+<p class="rm-manual">OnePlus is the Android enthusiast brand. So why did it think nobody would notice that it was trashing our favorite apps?</p>
+<p class="rm-manual"> Snap that </p>
+<h3 class="rm-manual"> <a href="https://www.androidcentral.com/best-android-camera"> The Google Pixel 5 is the best phone for taking photos, period </a> </h3>
+<p class="rm-manual">If you want the best Android camera, you should go 
+with the Google Pixel 5. There are many great options that get close, 
+though. So we've gathered a solid list to get you started.</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///category/news">News</a></li> <li class="rm-manual"><a href="file:///tag/apple">Apple</a></li> </ul></article>
+</body></html>

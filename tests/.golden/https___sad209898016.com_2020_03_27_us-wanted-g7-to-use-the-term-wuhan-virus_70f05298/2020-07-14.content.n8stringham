@@ -1,0 +1,74 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual">US wanted G7 to use the term “Wuhan virus”</h1>
+<p class="rm-manual"> <span> <a href="https://sad209898016.com/author/harrisl585/" rel="author">harrisl585</a> </span> <span> <a href="https://sad209898016.com/category/coronavirus/" rel="category tag">Coronavirus</a> </span> <span> March 27, 2020March 27, 2020 </span> <span>1 Minute</span> </p>
+<p class="">Trump is a bigot. It’s us against our allies again. This is disgraceful.</p>
+<p class="">US push to include "Wuhan virus" language in G7 joint statement fractures alliance <a href="https://t.co/L7bMbKraqK">https://t.co/L7bMbKraqK</a> <a href="https://t.co/LRrVm3cAR5">pic.twitter.com/LRrVm3cAR5</a></p>
+<p class="">— CNN Politics (@CNNPolitics) </p>
+<p class=""><a href="https://twitter.com/CNNPolitics/status/1243403908325621763?ref_src=twsrc%5Etfw">March 27, 2020</a></p>
+<p>—&gt;&gt; The G7 failed to issue a joint statement on the Coronavirus
+ response because the Trump administration insisted on including the 
+phrase “Wuhan virus.”</p>
+<p>— Jim Sciutto (@jimsciutto) </p>
+<p><a href="https://twitter.com/jimsciutto/status/1243189788267679749?ref_src=twsrc%5Etfw">March 26, 2020</a></p>
+<p>WaPo: G-7 failed to agree on statement after U.S. insisted on calling coronavirus outbreak "Wuhan virus" <a href="https://t.co/HaLOdK9ERw">https://t.co/HaLOdK9ERw</a></p>
+<p>— Geoff Bennett (@GeoffRBennett) </p>
+<p><a href="https://twitter.com/GeoffRBennett/status/1242921693401755649?ref_src=twsrc%5Etfw">March 25, 2020</a></p>
+<h2 class="rm-manual">Published by <span>harrisl585</span>
+</h2>
+<p class="rm-manual"> <a href="https://sad209898016.com/author/harrisl585/" rel="author"> View all posts by harrisl585 </a> </p>
+<p class="rm-manual"> Published March 27, 2020March 27, 2020 </p>
+<h2 class="rm-manual">Post navigation</h2>
+<p class="rm-manual"><a href="https://sad209898016.com/2020/03/27/trump-lies-at-his-briefings/" rel="prev"><span>Previous Post</span> Trump lies at his briefings</a></p>
+<p class="rm-manual"><a href="https://sad209898016.com/2020/03/28/covers-if-sugar-was-as-sweet-as-you/" rel="next"><span>Next Post</span> Covers: If Sugar Was As Sweet As You</a></p>
+<h3 class="rm-manual">Leave a Reply <a rel="nofollow" href="file:///2020/03/27/us-wanted-g7-to-use-the-term-wuhan-virus/#respond">Cancel reply</a>
+</h3>
+<p class="rm-manual"> Enter your comment here... </p>
+<p class="rm-manual">Fill in your details below or click an icon to log in:</p>
+<p class="rm-manual"> Email <span>(required)</span> <span>(Address never made public)</span> </p>
+<p class="rm-manual"> Name <span>(required)</span> </p>
+<p class="rm-manual"> Website </p>
+<p class="rm-manual"> You are commenting using your WordPress.com account. <span> ( <a href="">Log Out</a> / <a href="#">Change</a> ) </span> </p>
+<p class="rm-manual"> You are commenting using your Google account. <span> ( <a href="">Log Out</a> / <a href="#">Change</a> ) </span> </p>
+<p class="rm-manual"> You are commenting using your Twitter account. <span> ( <a href="">Log Out</a> / <a href="#">Change</a> ) </span> </p>
+<p class="rm-manual"> You are commenting using your Facebook account. <span> ( <a href="">Log Out</a> / <a href="#">Change</a> ) </span> </p>
+<p class="rm-manual"><a href="">Cancel</a></p>
+<p class="rm-manual">Connecting to %s</p>
+<p class="rm-manual"> Notify me of new comments via email.</p>
+<p class="rm-manual"> Notify me of new posts via email.</p></article>
+</body></html>

@@ -1,0 +1,92 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> TomoNews | North Korea boasts of Kim Jong-un's amazing feats </p>
+<ul class="rm-manual"> <li class="rm-manual"><p class="rm-manual">Categories</p></li> <a href="http://us.tomonews.com/newsfeed"><li class="rm-manual">Newsfeed</li></a> <a href="http://us.tomonews.com/category/us"><li class="rm-manual">U.S.</li></a> <a href="http://us.tomonews.com/category/asia"><li class="rm-manual">Asia</li></a> <a href="http://us.tomonews.com/category/world"><li class="rm-manual">World</li></a> <a href="http://us.tomonews.com/category/scitech"><li class="rm-manual">Sci&amp;Tech</li></a> <a href="http://us.tomonews.com/category/entertainment"><li class="rm-manual">Entertainment</li></a> <a href="http://us.tomonews.com/category/sports"><li class="rm-manual">Sports</li></a> <a href="http://us.tomonews.com/category/satire"><li class="rm-manual">Satire</li></a> </ul>
+<p class="rm-manual">Themes</p>
+<ul class="rm-manual"> <a href="http://us.tomonews.com/theme/what-the-freak"><li class="rm-manual">What the Freak?</li></a> <a href="http://us.tomonews.com/theme/good-cop"><li class="rm-manual">Good Cop</li></a> <a href="http://us.tomonews.com/theme/bad-cop"><li class="rm-manual">Bad Cop</li></a> <a href="http://us.tomonews.com/theme/celebrity-shorts"><li class="rm-manual">Celebrity Shorts</li></a> <a href="http://us.tomonews.com/theme/what-the-foul"><li class="rm-manual">What the Foul?</li></a> <a href="http://us.tomonews.com/theme/aww-animals"><li class="rm-manual">Aww! Animals!</li></a> <a href="http://us.tomonews.com/theme/defying-death"><li class="rm-manual">Defying Death</li></a> <a href="http://us.tomonews.com/theme/gun-crazy"><li class="rm-manual">Gun Crazy</li></a> <a href="http://us.tomonews.com/theme/everyday-heroes"><li class="rm-manual">Everyday Heroes</li></a> <a href="http://us.tomonews.com/theme/justice-is-served"><li class="rm-manual">Justice is Served</li></a> <a href="http://us.tomonews.com/theme/you-idiot"><li class="rm-manual">You Idiot!</li></a> <a href="http://us.tomonews.com/theme/police-state"><li class="rm-manual">Police State</li></a> <a href="http://us.tomonews.com/theme/pc-police"><li class="rm-manual">PC Police</li></a> <a href="http://us.tomonews.com/theme/maximum-suffrage"><li class="rm-manual">Maximum Suffrage</li></a> <a href="http://us.tomonews.com/theme/nsfw"><li class="rm-manual">NSFW</li></a> </ul>
+<p class="rm-manual">Services / Events</p>
+<p class="rm-manual"><a href="http://us.tomonews.com/about">About Us</a></p>
+<p class="rm-manual"><a href="http://us.tomonews.com/mobileApp">Mobile</a></p>
+<p class="rm-manual"><a href="http://us.tomonews.com/wall-of-thanks">Wall of Thanks</a></p>
+<p class="rm-manual">Editions</p>
+<p class="rm-manual"><a href="http://us.tomonews.com/"><span>English (US)</span></a></p>
+<p class="rm-manual"><a href="http://jp.tomonews.com/"><span>日本語 (JP)</span></a></p>
+<p class="rm-manual">Social Media</p>
+<p class="rm-manual"> <a href="http://us.tomonews.com/newsfeed"></a></p><p class="rm-manual"><a href="http://us.tomonews.com/newsfeed">Newsfeed</a></p> <a href="http://us.tomonews.com/category/us"><p class="rm-manual">U.S.</p></a> <a href="http://us.tomonews.com/category/asia"><p class="rm-manual">Asia</p></a> <a href="http://us.tomonews.com/category/world"><p class="rm-manual">World</p></a> <a href="http://us.tomonews.com/category/scitech"><p class="rm-manual">Sci&amp;Tech</p></a> <a href="http://us.tomonews.com/category/entertainment"><p class="rm-manual">Entertainment</p></a> <a href="http://us.tomonews.com/category/sports"><p class="rm-manual">Sports</p></a> <a href="http://us.tomonews.com/category/satire"><p class="rm-manual">Satire</p></a> <p class="rm-manual"></p>
+<h1 class="rm-manual">North Korea boasts of Kim Jong-un's amazing feats</h1>
+<p class="rm-manual"> <span>2012/01/09</span> </p>
+<p class="rm-manual"> <a href="http://us.tomonews.com/theme/nsfw"> <span>NSFW </span> </a> <a href="http://us.tomonews.com/theme/***"> <span>*** </span> </a> </p>
+<p>Who is Kim Jong-un? When his father, Kim Jong-il, died, Kim Jong-un 
+became North Korea's latest dictator. His grandfather, Kim Il-sung, is 
+still revered all over the isolated communist state, and rumor is that 
+Kim Jong-un had plastic surgery to look more like Kim Il-Sung.</p>
+<p>Like his grandfather Kim Il-sung, who is known as the "Great Leader,"
+ and his father, Kim Jung-il, aka the "Dear Leader," North Korean 
+propaganda claims Kim Jong-un possesses amazing powers. At the age of 3,
+ Kim Jong-un started firing guns and driving cars. He is a poet and a 
+military whiz-kid AND he plays basketball better than the pros. He is 
+now called the Supreme Leader and worshiped by the same cult of 
+personality that previously deified his father and grandfather.</p>
+<p>The big question is what his succession means for regional peace. 
+Little is know about Kim Jong-un beyond that which is reported by North 
+Korean propaganda. He studied at the International School of Bern, 
+Switzerland until 1998, but under a pseudonym. We probably know more 
+about life on Mars than we do about what goes on in North Korea. Which 
+is scary, because the country has nuclear bombs and the world's 
+fourth-largest army.</p>
+<p class="rm-manual">NEXT ON TOMONEWS</p>
+<p class="rm-manual">Jedi is a religion, say Star Wars fans</p>
+<p class="rm-manual">Facebook Conversation</p>
+<p class="rm-manual">Want more stuff like this?</p>
+<p class="rm-manual">We've got all the latest viral headlines from around the internet. </p>
+<p class="rm-manual">Sign up for our daily email to stay on top of what's trending now!</p>
+<p class="rm-manual"><a href="http://us.tomonews.com/tags.php?kw=Trump+in+Office"></a></p><p class="rm-manual"><a href="http://us.tomonews.com/tags.php?kw=Trump+in+Office">TRUMP IN OFFICE</a></p><a href="http://us.tomonews.com/trump-s-border-wall-could-threaten-wildlife-and-plants-3726145#c=Video&amp;a=clk&amp;l=Video_RR_topicthumbs_clk"><p class="rm-manual">Trump's border wall could threaten wildlife and plants</p></a><a href="http://us.tomonews.com/could-the-democrats-win-the-u-s-house-of-representatives--3725931#c=Video&amp;a=clk&amp;l=Video_RR_topicthumbs_clk"><p class="rm-manual">Could the Democrats win the U.S. House of Representatives?</p></a><a href="http://us.tomonews.com/will-the-democrats-be-able-to-impeach-trump-or-kavanaugh--3725557#c=Video&amp;a=clk&amp;l=Video_RR_topicthumbs_clk"><p class="rm-manual">Will the Democrats be able to impeach Trump or Kavanaugh?</p></a><p class="rm-manual"></p>
+<p class="rm-manual">YOU MAY ALSO LIKE</p>
+<ul class="rm-manual"> <a href="http://us.tomonews.com/category/us"> <li class="rm-manual">U.S.</li> </a> <a href="http://us.tomonews.com/category/asia"> <li class="rm-manual">Asia</li> </a> <a href="http://us.tomonews.com/category/world"> <li class="rm-manual">World</li> </a> <a href="http://us.tomonews.com/category/scitech"> <li class="rm-manual">Sci&amp;Tech</li> </a> <a href="http://us.tomonews.com/category/entertainment"> <li class="rm-manual">Entertainment</li> </a> <a href="http://us.tomonews.com/category/sports"> <li class="rm-manual">Sports</li> </a> <a href="http://us.tomonews.com/category/satire"> <li class="rm-manual">Satire</li> </a> </ul>
+<ul class="rm-manual"> <a href="http://us.tomonews.com/theme/what-the-freak"><li class="rm-manual">What the Freak?</li></a> <a href="http://us.tomonews.com/theme/good-cop"><li class="rm-manual">Good Cop</li></a> <a href="http://us.tomonews.com/theme/bad-cop"><li class="rm-manual">Bad Cop</li></a> <a href="http://us.tomonews.com/theme/celebrity-shorts"><li class="rm-manual">Celebrity Shorts</li></a> <a href="http://us.tomonews.com/theme/what-the-foul"><li class="rm-manual">What the Foul?</li></a> <a href="http://us.tomonews.com/theme/aww-animals"><li class="rm-manual">Aww! Animals!</li></a> <a href="http://us.tomonews.com/theme/defying-death"><li class="rm-manual">Defying Death</li></a> <a href="http://us.tomonews.com/theme/gun-crazy"><li class="rm-manual">Gun Crazy</li></a> <a href="http://us.tomonews.com/theme/everyday-heroes"><li class="rm-manual">Everyday Heroes</li></a> <a href="http://us.tomonews.com/theme/justice-is-served"><li class="rm-manual">Justice is Served</li></a> <a href="http://us.tomonews.com/theme/you-idiot"><li class="rm-manual">You Idiot!</li></a> <a href="http://us.tomonews.com/theme/police-state"><li class="rm-manual">Police State</li></a> <a href="http://us.tomonews.com/theme/pc-police"><li class="rm-manual">PC Police</li></a> <a href="http://us.tomonews.com/theme/maximum-suffrage"><li class="rm-manual">Maximum Suffrage</li></a> <a href="http://us.tomonews.com/theme/nsfw"><li class="rm-manual">NSFW</li></a> </ul>
+<p class="rm-manual"><a href="http://us.tomonews.com/newsfeed"><span>NEWSFEED</span></a></p>
+<p class="rm-manual"><a href="https://www.facebook.com/tomonewsus"> <span>Facebook</span></a></p>
+<p class="rm-manual"><a href="https://twitter.com/TomoNewsUS"> <span>Twitter</span></a></p>
+<p class="rm-manual"><a href="https://plus.google.com/+TomoNewsUS/posts"> <span>Google+</span></a></p>
+<p class="rm-manual"><a href="https://www.youtube.com/user/TomoNewsUS/"> <span>Youtube</span></a></p>
+<p class="rm-manual"><a href="http://instagram.com/tomonewsus"> <span>Instagram</span></a></p>
+<p class="rm-manual"><a href="http://us.tomonews.com/about">About Us</a></p>
+<p class="rm-manual"><a href="http://us.tomonews.com/mobileApp">Mobile</a></p>
+<p class="rm-manual"><a href="http://us.tomonews.com/wall-of-thanks">Wall of thanks</a></p>
+<p class="rm-manual">TOMONEWS © 2018 All rights reserved.<a href="http://tomonews.com/term_us.html"><span>TERMS &amp; CONDITIONS</span></a></p></article>
+</body></html>

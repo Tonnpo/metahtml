@@ -1,0 +1,176 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> A look at Soleimani’s Revolutionary Guard Corps | The Seattle Times </p>
+<p class="rm-manual"><a href="#content">Skip to content</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.seattletimes.com/tag/coronavirus/">Coronavirus</a></li> <li class="rm-manual">
+<a href="file:///seattle-news/">Local News</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///seattle-news/transportation/">Traffic Lab</a></li> <li class="rm-manual"><a href="file:///seattle-news/crime/">Crime</a></li> <li class="rm-manual"><a href="file:///seattle-news/politics/">Local Politics</a></li> <li class="rm-manual"><a href="file:///seattle-news/education/">Education</a></li> <li class="rm-manual"><a href="file:///education-lab/">Education Lab</a></li> <li class="rm-manual"><a href="file:///seattle-news/eastside/">Eastside</a></li> <li class="rm-manual"><a href="file:///seattle-news/health/">Health</a></li> <li class="rm-manual"><a href="file:///seattle-news/data/">Data</a></li> <li class="rm-manual"><a href="file:///seattle-news/homeless/">Project Homeless</a></li> <li class="rm-manual"><a href="file:///seattle-news/times-watchdog/">Times Watchdog</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///business/">Business &amp; Tech</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///business/boeing-aerospace/">Boeing &amp; Aerospace</a></li> <li class="rm-manual"><a href="file:///business/amazon/">Amazon</a></li> <li class="rm-manual"><a href="file:///business/microsoft/">Microsoft</a></li> <li class="rm-manual"><a href="file:///business/technology/">Technology</a></li> <li class="rm-manual"><a href="file:///business/real-estate/">Real Estate</a></li> <li class="rm-manual"><a href="file:///business/economy/">Economy</a></li> <li class="rm-manual"><a href="file:///tag/artificial-intelligence/">Artificial Intelligence</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///nation-world/">Nation &amp; World</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///nation-world/nation-politics/">Nation &amp; World Politics</a></li> <li class="rm-manual"><a href="file:///nation-world/oddities/">Oddities</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///sports/">Sports</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///sports/seahawks/">Seahawks</a></li> <li class="rm-manual"><a href="file:///sports/uw-huskies/">Huskies</a></li> <li class="rm-manual"><a href="file:///sports/wsu-cougars/">Cougars</a></li> <li class="rm-manual"><a href="file:///sports/mariners/">Mariners</a></li> <li class="rm-manual"><a href="file:///sports/sounders/">Sounders</a></li> <li class="rm-manual"><a href="file:///sports/storm/">Storm</a></li> <li class="rm-manual"><a href="file:///sports/high-school/">High School Sports</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/sports/hockey/">Hockey</a></li> <li class="rm-manual"><a href="file:///sports/sports-on-tv-radio-2/">On TV/Radio</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///entertainment/">Entertainment</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///entertainment/movies/">Movies</a></li> <li class="rm-manual"><a href="file:///entertainment/books/">Books</a></li> <li class="rm-manual"><a href="file:///entertainment/music/">Music</a></li> <li class="rm-manual"><a href="file:///entertainment/theater/">Theater</a></li> <li class="rm-manual"><a href="file:///entertainment/classical-music/">Classical Music</a></li> <li class="rm-manual"><a href="file:///entertainment/tv/">TV/Streaming</a></li> <li class="rm-manual"><a href="file:///entertainment/comics/">Comics</a></li> <li class="rm-manual"><a href="file:///entertainment/games/">Games &amp; Puzzles</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/horoscopes/">Horoscopes</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///life/">Life</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///life/food-drink/">Food &amp; Drink</a></li> <li class="rm-manual"><a href="file:///life/travel/">Travel &amp; Outdoors</a></li> <li class="rm-manual"><a href="file:///life/wellness/">Wellness</a></li> <li class="rm-manual"><a href="file:///life/pets/">Pets</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/category/rant-and-rave/">Rant &amp; Rave</a></li> </ul> </li> <li class="rm-manual"><a href="file:///pacific-nw-magazine/">Pacific NW Magazine</a></li> <li class="rm-manual"><a href="file:///homes-real-estate">Homes &amp; Real Estate</a></li> <li class="rm-manual">
+<a href="file:///opinion/">Opinion</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///opinion/editorials/">Editorials</a></li> <li class="rm-manual"><a href="file:///opinion/letters-to-the-editor/">Letters to the Editor</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/author/david-horsey/">David Horsey</a></li> <li class="rm-manual"><a href="file:///tag/free-press/">Free Press</a></li> </ul> </li> <li class="rm-manual"><a href="file:///video/">Video</a></li> <li class="rm-manual"><a href="file:///photo-video/">Photography</a></li> <li class="rm-manual">
+<a href="http://www.legacy.com/obituaries/seattletimes/#_ga=1.72389267.1837675783.1379017650">Obituaries</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///obituaries/">News Obituaries</a></li> <li class="rm-manual"><a href="http://www.legacy.com/obituaries/seattletimes/#_ga=1.15101558.1560921668.1447363166">Paid Obituaries</a></li> </ul> </li> <li class="rm-manual"><a href="http://seattletimes.com/newsletters/">Newsletters</a></li> <li class="rm-manual"><a href="https://secure.seattletimes.com/accountcenter/replica">Print Replica</a></li> <li class="rm-manual"><a href="http://www.seattletimes.com/tag/inside-the-times/">Inside The Times</a></li> <li class="rm-manual"><a href="file:///explore/">Explore</a></li> <li class="rm-manual"><a href="http://jobs.seattletimes.com/">Jobs</a></li> <li class="rm-manual"><a href="http://autos.seattletimes.com/">Autos</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://secure.seattletimes.com/accountcenter/">Log In</a></li> <li class="rm-manual"><a href="file:///subscribe/signup-offers?subsource=voluntary">Subscribe</a></li> </ul>
+<p class="rm-manual"> <a href="file:///nation-world/">Nation &amp; World</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.seattletimes.com/tag/coronavirus/">Coronavirus</a></li> <li class="rm-manual"><a href="file:///seattle-news/">Local</a></li> <li class="rm-manual"><a href="file:///business/">Biz</a></li> <li class="rm-manual"><a href="file:///sports/">Sports</a></li> <li class="rm-manual"><a href="file:///entertainment/">Entertainment</a></li> <li class="rm-manual"><a href="file:///life/">Life</a></li> <li class="rm-manual"><a href="file:///homes-real-estate/">Homes</a></li> <li class="rm-manual"><a href="file:///opinion/">Opinion</a></li> <li class="rm-manual"><a>|</a></li> <li class="rm-manual"><a href="http://jobs.seattletimes.com/">Jobs</a></li> <li class="rm-manual"><a href="http://autos.seattletimes.com/">Autos</a></li> <li class="rm-manual"><a href="file:///explore/">Explore</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///nation-world/nation/">Nation</a></li> <li class="rm-manual"><a href="file:///nation-world/world/">World</a></li> <li class="rm-manual"><a href="file:///nation-world/nation-politics/">Nation &amp; World Politics</a></li> <li class="rm-manual"><a href="file:///nation-world/oddities/">Oddities</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="file:///seattle-news/">Local</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///tag/coronavirus/">Coronavirus</a></li> <li class="rm-manual"><a href="file:///seattle-news/transportation/">Traffic Lab</a></li> <li class="rm-manual"><a href="file:///seattle-news/homeless/">Project Homeless</a></li> <li class="rm-manual"><a href="file:///seattle-news/crime/">Crime</a></li> <li class="rm-manual"><a href="file:///seattle-news/politics/">Local Politics</a></li> <li class="rm-manual"><a href="file:///seattle-news/education/">Education</a></li> <li class="rm-manual"><a href="file:///education-lab/">Education Lab</a></li> <li class="rm-manual"><a href="file:///seattle-news/eastside/">Eastside</a></li> <li class="rm-manual"><a href="file:///seattle-news/northwest/">Northwest</a></li> <li class="rm-manual"><a href="file:///seattle-news/data/">Data</a></li> <li class="rm-manual"><a href="file:///seattle-news/health/">Health</a></li> <li class="rm-manual"><a href="file:///seattle-news/times-watchdog/">Times Watchdog</a></li> <li class="rm-manual"><a href="http://www.seattletimes.com/tag/inside-the-times/">Inside The Times</a></li> <li class="rm-manual"><a href="file:///obituaries/">News Obituaries</a></li> <li class="rm-manual"><a href="file:///photo-video/">Photo &amp; Video</a></li> <li class="rm-manual"><a href="file:///nation-world/">Nation &amp; World</a></li> <li class="rm-manual"><a href="file:///nation-world/nation-politics/">Politics</a></li> <li class="rm-manual"><a href="file:///nation-world/oddities/">Oddities</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///business/">Business</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///business/boeing-aerospace/">Boeing</a></li> <li class="rm-manual"><a href="file:///business/amazon/">Amazon</a></li> <li class="rm-manual"><a href="file:///tag/artificial-intelligence/">Artificial Intelligence</a></li> <li class="rm-manual"><a href="file:///business/microsoft/">Microsoft</a></li> <li class="rm-manual"><a href="file:///business/technology/">Technology</a></li> <li class="rm-manual"><a href="file:///business/economy/">Economy</a></li> <li class="rm-manual"><a href="file:///business/real-estate/">Real Estate</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///sports/">Sports</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///sports/seahawks/">Seahawks</a></li> <li class="rm-manual"><a href="file:///sports/uw-huskies/">Huskies</a></li> <li class="rm-manual"><a href="file:///sports/wsu-cougars/">Cougars</a></li> <li class="rm-manual"><a href="file:///sports/high-school/">High Schools</a></li> <li class="rm-manual"><a href="file:///sports/mariners/">Mariners</a></li> <li class="rm-manual"><a href="file:///sports/sounders/">Sounders</a></li> <li class="rm-manual"><a href="file:///sports/snow-sports/">Snow Sports</a></li> <li class="rm-manual"><a href="file:///author/geoff-baker">Geoff Baker</a></li> <li class="rm-manual"><a href="file:///author/matt-calkins">Matt Calkins</a></li> <li class="rm-manual"><a href="file:///author/larry-stone">Larry Stone</a></li> <li class="rm-manual"><a href="file:///author/bob-condotta">Bob Condotta</a></li> <li class="rm-manual"><a href="file:///sports/sports-on-tv-radio-2/">On TV/Radio</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///entertainment/">Entertainment</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///entertainment/movies/">Movies</a></li> <li class="rm-manual"><a href="file:///entertainment/books/">Books</a></li> <li class="rm-manual"><a href="file:///entertainment/music/">Music</a></li> <li class="rm-manual"><a href="file:///entertainment/theater/">Theater</a></li> <li class="rm-manual"><a href="file:///entertainment/classical-music/">Classical Music</a></li> <li class="rm-manual"><a href="file:///entertainment/tv/">TV/Streaming</a></li> <li class="rm-manual"><a href="file:///entertainment/comics/">Comics</a></li> <li class="rm-manual"><a href="file:///entertainment/games/">Games &amp; Puzzles</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/horoscopes/">Horoscopes</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///life/">Life</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///pacific-nw-magazine/">Pacific NW Magazine</a></li> <li class="rm-manual"><a href="file:///life/food-drink/">Food &amp; Drink</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/category/seattle-happy-hours/">Happy Hour</a></li> <li class="rm-manual"><a href="file:///life/wellness/">Wellness</a></li> <li class="rm-manual"><a href="file:///life/home-decor/">Home &amp; Decor</a></li> <li class="rm-manual"><a href="file:///life/pets/">Pets</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/category/rant-and-rave/">Rant &amp; Rave</a></li> <li class="rm-manual"><a href="file:///author/bethany-jean-clement">Bethany Jean Clement</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///life/travel/">Travel</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///life/outdoors/">Outdoors</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/category/northwest-hikes/">Northwest Hikes</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/category/travel-in-washington-state/">Washington</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/category/travel-to-oregon/">Oregon</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/category/travel-to-british-columbia/">B.C.</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/category/travel-to-hawaii/">Hawaii</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///opinion/">Opinion</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///opinion/editorials/">Editorials</a></li> <li class="rm-manual"><a href="file:///opinion/letters-to-the-editor/">Letters</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/category/op-eds/">Op-Eds</a></li> <li class="rm-manual"><a href="file:///author/david-horsey/">David Horsey</a></li> <li class="rm-manual"><a href="file:///author/kate-riley/">Kate Riley</a></li> <li class="rm-manual"><a href="file:///author/mark-higgins/">Mark Higgins</a></li> <li class="rm-manual"><a href="file:///author/brier-dudley/">Brier Dudley</a></li> <li class="rm-manual"><a href="file:///author/jennifer-hemmingsen/">Jennifer Hemmingsen</a></li> <li class="rm-manual"><a href="file:///author/derrick-nunnally/">Derrick Nunnally</a></li> <li class="rm-manual"><a href="file:///author/dean-miller/">Dean Miller</a></li> <li class="rm-manual"><a href="file:///tag/free-press/">Free Press</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///newsroom-staff/#news-columnists">Columnists</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///author/gene-balk-fyi-guy">FYI Guy</a></li> <li class="rm-manual"><a href="file:///author/gabriel-campanario-seattle-sketcher/">Seattle Sketcher</a></li> <li class="rm-manual"><a href="file:///author/danny-westneat/">Danny Westneat</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/author/naomi-ishisaka/">Naomi Ishisaka</a></li> <li class="rm-manual"><a href="file:///author/jon-talton/">Jon Talton</a></li> </ul> </li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="http://jobs.seattletimes.com/">Jobs</a></li> <li class="rm-manual"><a href="http://autos.seattletimes.com/">Autos</a></li> <li class="rm-manual"><a href="file:///explore/nwhomes/">Homes Listings</a></li> <li class="rm-manual"><a href="http://classifieds.seattletimes.com/">Classifieds</a></li> <li class="rm-manual"><a href="http://www.legacy.com/obituaries/seattletimes/#_ga=1.6704882.1560921668.1447363166">Paid Obituaries</a></li> <li class="rm-manual"><a href="file:///explore/">Explore</a></li> <li class="rm-manual"><a href="file:///sponsored/">Sponsored Posts</a></li> <li class="rm-manual"><a href="file:///explore/shop-northwest/">ShopNW</a></li> <li class="rm-manual"><a href="http://company.seattletimes.com/store/">Seattle Times Store</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.seattletimes.com/contact/">Contact</a></li> <li class="rm-manual"><a href="file:///help/">FAQs</a></li> <li class="rm-manual"><a href="https://secure.seattletimes.com/accountcenter/managesubscriptions">Subscriber Services</a></li> <li class="rm-manual"><a href="https://secure.seattletimes.com/accountcenter/replica">Print Replica</a></li> <li class="rm-manual"><a href="https://itunes.apple.com/us/app/seattle-times-mobile/id329502124">iOS App</a></li> <li class="rm-manual"><a href="https://play.google.com/store/apps/details?id=com.seattletimes.android.SeattleTimesMobileNews">Android App</a></li> </ul>
+<p class="rm-manual"> <span>Nation &amp; World</span> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///nation-world/nation/">Nation</a></li> <li class="rm-manual"><a href="file:///nation-world/world/">World</a></li> <li class="rm-manual"><a href="file:///nation-world/nation-politics/">Nation &amp; World Politics</a></li> <li class="rm-manual"><a href="file:///nation-world/oddities/">Oddities</a></li> </ul>
+<p class="rm-manual"> <a href="file:///nation-world/">Nation &amp; World</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://secure.seattletimes.com/accountcenter/">Log In</a></li> <li class="rm-manual"><a href="file:///subscribe/signup-offers?subsource=voluntary">Subscribe</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///nation-world/nation/" rel="tag">Nation</a></li>
+<li class="rm-manual"><a href="file:///nation-world/" rel="tag">Nation &amp; World</a></li>
+<li class="rm-manual"><a href="file:///nation-world/nation-politics/" rel="tag">Nation &amp; World Politics</a></li>
+<li class="rm-manual"><a href="file:///nation-world/world/" rel="tag">World</a></li> </ul>
+<h1 class="rm-manual"> A look at Soleimani’s Revolutionary Guard Corps </h1>
+<p class="rm-manual"> Jan. 4, 2020 at 12:02 pm Updated Jan. 4, 2020 at 12:12 pm </p>
+<p class="rm-manual"> <span>By </span> </p>
+<p class="rm-manual"> <a href="file:///author/miriam-berger/" rel="author"><span>MIRIAM BERGER</span></a> </p>
+<p class="rm-manual"><span>The Washington Post</span></p>
+<p>Iran’s powerful military commander Qasem Soleimani was allegedly 
+planning imminent attacks targeting Americans when a U.S. drone strike 
+killed him Friday morning in Baghdad, according to U.S. officials, The 
+Trump administration has released no details about Soleimani’s alleged 
+attack plans but has cited the major general’s recent trips across the 
+Middle East, from Syria to Lebanon to Iraq, as evidence.</p>
+<p>Such travel, however, has been a mainstay of Soleimani’s work for 
+decades as the leader of Iran’s Quds Force, a special squad focused on 
+overseas operations, among other intelligence missions, as part of the 
+elite Islamic Revolutionary Guard Corps, or IRGC.</p>
+<p>When the 1979 Iranian revolution brought Ayatollah Ruhollah Khomeini 
+to power and the Islamic Republic was established, Khomeini and his 
+supporters had a problem: They weren’t sure they could trust the 
+military, which just a short time beforehand had been aligned with the 
+deposed shah. So they consolidated supporters and set up a parallel 
+military force, called the Islamic Revolutionary Guard Corps, made up of
+ skilled fighters that they knew were committed to guarding Iran’s new 
+Islamic political system and the ideals of the revolution.</p>
+<p>This two-tired system is reflected throughout the bifurcated Iranian 
+state: There’s the elected president, who oversees parliament and 
+various ministries, but then there’s the supreme leader, who’s the 
+nation’s highest political and religious authority and controls his own 
+key political and financial institutions. The IRGC reports directly to 
+the supreme leader, now Ayatollah Ali Khamenei.</p>
+<p>Like Iraqi leader Saddam Hussein’s Republican Guard, the ayatollah 
+uses the IRGC to enforce his will upon the Iranian people and squash any
+ perceived threats, both from inside and outside the country.</p>
+<p>On April 8, 2019, President Donald Trump designated the IRGC as a 
+terrorist group, the first time the U.S. had ever labeled a foreign 
+government entity one. The designation enabled Washington to increase 
+economic sanctions and political pressure on Tehran.</p>
+<p>The Revolutionary Guard is made up of several subgroups, including 
+the Quds Force and the Basiij militia. The latter are a paramilitary 
+force mobilized to enforce order, including crushing protests such as 
+the short-lived ones that swiftly swept through Iran in November. Like 
+many military institutions in Iran, the Basiij first formed as a 
+volunteer force in the Iran-Iraq War and has since become an entrenched,
+ and feared, part of the state.</p>
+<p>Soleimani was the head of the Quds (Jerusalem) Force, an ultra-elite 
+group focused on overseas operations, such as developing and managing 
+proxy militias, along with military intelligence work.</p>
+<p>Soon after the Iranian Revolution, Iran and Iraq begun a brutal 
+eight-year-long war. The fighting helped the isolated and fledgling 
+republic to consolidate power domestically, but also took a very heavy 
+toll on Iran’s society and economy — the effects of which are still felt
+ today.</p>
+<p>Iran consequently pushed forward with developing allies abroad in an 
+effort to spread its form of Islamic Revolution, as well as to ensure it
+ would never be left alone on the battlefield again. Through the Quds 
+Force, Iran has cultivated Shiite militias in Iraq, Syria and 
+Afghanistan, while also supporting groups like Hezbollah in Lebanon and 
+Hamas in the Gaza Strip. In the late 1990s, Soleimani was given command 
+of the unit.</p>
+<p>Following the 2003 invasion of Iraq, American forces along with their
+ coalition allies found themselves facing Iranian militias backed by the
+ Quds Force in the aftermath of the fall of the Saddam Hussein regime. 
+The Trump administration has blamed the deaths of over 600 coalition 
+soldiers in Iraq on Soleimani and the pro-Iran militias he formed and 
+directed. As head of the Quds Force, Soleimani was also a key architect 
+of Syrian President Bashar al-Assad’s brutal attacks on anti-government 
+protesters and rebels in the now nine-year long war.</p>
+<p>For a brief period, however, the United States and Soleimani’s 
+proxies were working together in Iraq and Syria against the 
+self-described Islamic State. In 2014, Iraq set up the Popular 
+Mobilization Forces (PMF), in Arabic known as the Hashd al-Shaabi, an 
+umbrella organization of primarily Iran-backed Shiite paramilitary 
+groups united in the fight to oust the Islamic State. (The United States
+ also killed one of the leaders of the PMF in the drone strike that 
+killed Soleimani.)</p>
+<p>Within hours of Soleimani’s death, Khamenei announced a successor: 
+Ismail Qaani, the formerly deputy head of the Quds Force. Soleimani and 
+Qaani have similarities: They both joined the force during the Iran-Iraq
+ War, and they’ve both been sanctioned by the Treasury Department for 
+alleged terrorist activities. Unlike Soleimani, however, Qaani lacks the
+ cult of personality that surrounded his predecessor, who was both 
+revered and reviled for having had a hand in so many of the attacks and 
+wars that have shaped events and daily life in the Middle East in recent
+ decades.</p>
+<p class="rm-manual">This story was originally published at washingtonpost.com. <a href="https://www.washingtonpost.com/world/2020/01/04/what-is-irans-revolutionary-guard-corps-that-soleimani-helped-lead/">Read it here.</a></p>
+<p class="rm-manual">The Seattle Times does not append comment threads 
+to stories from wire services such as the Associated Press, The New York
+ Times, The Washington Post or Bloomberg News. Rather, we focus on 
+discussions related to local stories by our own staff. You can read more
+ about our <a href="https://www.seattletimes.com/help/#commenting-on-articles-on-seattletimes-com">community policies here</a>.</p>
+<ul class="rm-manual"> <li class="rm-manual">
+<a href="https://www.seattletimes.com/type/link/">Contact</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.seattletimes.com/newsroom-staff/">Newsroom Staff List</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/help/">FAQ</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/contact/">Contact Form</a></li> </ul> </li> <li class="rm-manual">
+<a href="http://company.seattletimes.com/who-we-are/">About the Company</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://srw.seattletimes.com/">Seattle Restaurant Week</a></li> <li class="rm-manual"><a href="http://nie.seattletimes.com/">Newspapers in Education</a></li> <li class="rm-manual"><a href="http://ffn.seattletimes.com/">Fund for the Needy</a></li> <li class="rm-manual"><a href="http://company.seattletimes.com/careers/">Employment</a></li> <li class="rm-manual"><a href="http://nl.newsbank.com/nl-search/we/Archives/?p_product=HA-SE&amp;p_theme=histpaper&amp;p_action=keyword">Newspaper Archive</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/pulitzers/">Pulitzers</a></li> <li class="rm-manual"><a href="http://company.seattletimes.com/contact-us/">Company Information</a></li> <li class="rm-manual"><a href="https://stux.wufoo.com/forms/permissions-and-licensing-request/">Permissions</a></li> <li class="rm-manual"><a href="http://company.seattletimes.com/store/">Seattle Times Store</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://www.seattletimes.com/type/link/">Advertise</a> <ul class="rm-manual"> <li class="rm-manual"><a href="http://classifieds.seattletimes.com/">Classifieds</a></li> <li class="rm-manual"><a href="http://autos.seattletimes.com/">Autos</a></li> <li class="rm-manual"><a href="http://homes.seattletimes.com/postlisting.html">Homes</a></li> <li class="rm-manual"><a href="http://services.nwsource.com/ClassifiedWeb/ObituaryNotice.aspx">Obituary</a></li> <li class="rm-manual"><a href="http://jobs.seattletimes.com/employer-home">Jobs</a></li> <li class="rm-manual"><a href="http://mediakit.seattletimes.com/">Media Kit</a></li> <li class="rm-manual"><a href="http://mediakit.seattletimes.com/">Advertise with Us</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://www.seattletimes.com/type/link/">My Account</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///subscribe/signup-offers/?subsource=voluntary">Subscribe</a></li> <li class="rm-manual"><a href="https://secure.seattletimes.com/accountcenter/linksubscription">Activate Account</a></li> <li class="rm-manual"><a href="https://secure.seattletimes.com/accountcenter/managesubscriptions">Manage Subscription</a></li> <li class="rm-manual"><a href="https://secure.seattletimes.com/accountcenter/deliveryholds">Place Temporary Hold</a></li> <li class="rm-manual"><a href="https://secure.seattletimes.com/accountcenter/reportdeliveryissue">Report Delivery Issue</a></li> <li class="rm-manual"><a href="https://secure.seattletimes.com/accountcenter/paymybill">Make a Payment</a></li> <li class="rm-manual"><a href="https://secure.seattletimes.com/accountcenter/replica">Print Replica</a></li> </ul> </li> <li class="rm-manual"><a href="https://secure.seattletimes.com/accountcenter/replica">Today’s Front Page</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="https://www.facebook.com/seattletimes">Facebook</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="https://twitter.com/seattletimes">Twitter</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.seattletimes.com/rss-feeds/">RSS Feeds</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/newsletters/">Newsletters</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/mobile-apps/">Mobile Apps</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/inside-the-times/listen-to-the-seattle-times-on-smart-speakers-and-podcast-apps/">Audio &amp; Voice</a></li> <li class="rm-manual"><a href="file:///subscribe/signup/">Subscribe</a></li> </ul>
+<section class="rm-manual"> <a href="https://company.seattletimes.com/notices/notice3.html">Copyright © 2020 The Seattle Times</a> | <a href="https://company.seattletimes.com/notices/notice2.html">Privacy statement</a> | <a href="https://company.seattletimes.com/notices/notice1.html">Terms of service</a> </section></article>
+</body></html>

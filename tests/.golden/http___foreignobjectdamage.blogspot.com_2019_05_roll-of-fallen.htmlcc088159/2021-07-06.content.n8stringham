@@ -1,0 +1,156 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Foreign Object Damage: ROLL OF THE FALLEN </p>
+<h1 class="rm-manual"> <a href="http://foreignobjectdamage.blogspot.com/"> Foreign Object Damage </a> </h1>
+<h2 class="rm-manual">Friday, May 24, 2019</h2>
+<h3> ROLL OF THE FALLEN </h3>
+<h2> On Memorial Day we remember those Navy cryptologists who fell in the line of duty. (Links UPDATED 2021) </h2>
+<p> <span>CTIC Shannon M. Kent was killed while supporting<a href="https://www.nsa.gov/News-Features/Feature-Stories/Article-View/Article/1772179/ctics-shannon-kent-honored-on-cryptologic-memorial-wall/"> CJTF-Operation Inherent Resolve</a>, in Manbij, Syria, Jan 16, 2019. </span></p>
+<p><span> CTR1(EXW) Michael J. Strange, August 6, 2011. Wardak province,
+ Afghanistan, of wounds suffered when the CH-47 Chinook helicopter in 
+which he was riding was shot down. </span></p>
+<p> <span>CTTC (IDW/SW) Christian Michael Pike, March 10, 2013, combat </span><a href="http://navycaptain-therealnavy.blogspot.com/2013/03/chief-christian-michael-pike.html">operations Maiwand District</a><span>, Afghanistan</span></p>
+<p> SGT Lucas T. Pyeatt, USMC, <a href="https://stationhypo.com/2019/03/05/remembering-sgt-lucas-t-pyeatt-usmc-kia-afghanistan/">Afghanistan</a>, February 5, 2011</p>
+<p> <span>CTRCS(SW/FMF) McLendon, Sept. 21, 2010 combat operations in the Zabul province, Afghanistan.</span></p>
+<p> <span>CTM3 Matthew J. Bryant, </span><a href="https://thefallen.militarytimes.com/navy-cryptologic-technician-3rd-class-matthew-j-o-8217-bryant/3741174">Islamabad</a><span>, Sept 20, 2008.</span></p>
+<p> <span>CTT1 Steven Phillip Daugherty, </span><a href="https://americanfallensoldiers.com/steven-daugherty/">Baghdad</a><span>, July 6, 2007</span></p>
+<p> <span>CTI3 Patrick Price and CTI3 Craig Rudolph </span><a href="https://stationhypo.com/2017/01/25/remembering-the-crew-of-ranger-12-2/">lost in the EA-3B</a><span> off the USS Nimitz, Jan 25, 1987</span></p>
+<p> <span>Sgt Robert Hrisoulis, USMC Vietnam 21 Jan 1971</span></p>
+<p> Lost in the <a href="https://theaviationist.com/2017/11/22/u-s-navy-aircraft-carrying-11-crew-and-passengers-crashed-in-the-ocean-southeast-of-okinawa/">C2 crash</a> off Vietnam December 12, 1971</p>
+<p> <span>CT03 James M. Coon, USN </span></p>
+<p> <span>CTISN John M. Deremigio, USN </span></p>
+<p> <span>CTO1 Donald E. Dickerson, USN </span></p>
+<p> <span>CTOSN Stephen H. Elliott, USN </span></p>
+<p> <span>CTRI Walter R. Woods, Jr., USN </span></p>
+<p> <span>CTM2 Gregory K. Zeller, USN </span></p>
+<p> CH46 Crash in Vietnam 28 Dec 1969</p>
+<p> <span>CTC Robert S. Gates, USN </span></p>
+<p> <span>MgySgt Edward R. Storm, USMC </span></p>
+<p> <a href="https://stationhypo.com/2020/01/31/remembering-sgt-larry-w-duke-usmc-special-radio-operator-kia-vietnam/">CH46 Crash</a>, Quang Nam, Vietnam 10 March 1970</p>
+<p> <span>Sgt Larry W. Duke, USMC </span></p>
+<p> The <a href="https://theavgeeks.com/2019/04/01/incident-the-ec-121-deep-sea-129-shootdown/">EC-121</a> shot down by the North Koreans on <a href="https://theavgeeks.com/2019/04/01/incident-the-ec-121-deep-sea-129-shootdown/">April 15, 1969.</a></p>
+<p> <span>CT3 Gary R. Ducharme, USN </span></p>
+<p> <span>CT3 John A. Miller, USN </span></p>
+<p> <span>CTI John H. Potts, USN </span></p>
+<p> <span>CTC Frederick A. Randall, USN </span></p>
+<p> <span>CTC Richard E. Smith, USN </span></p>
+<p> <span>CT3 Philip D. Sundby, USN </span></p>
+<p> <span>LT Robert F. Taylor, USN </span></p>
+<p> <span>CT2 Stephen J. Tesmer, USN </span></p>
+<p> <span>SSgt Hugh M. Lynch, USMC </span></p>
+<p> Operation Union II, Quang Tin, South Vietnam 26 May 1968 </p>
+<p> <span>Maj James W. Ayers, USMC </span></p>
+<p> USS Pueblo attacked and captured by North Koreans </p>
+<p> <span>FN Duane D. Hodges, USN 23 Jan 1968</span></p>
+<p> Near Quang Tri, Vietnam</p>
+<p> <span>Cpl Stephen L. Traughber, USMC 10 Sep 1967</span></p>
+<p> The attack on the USS Liberty by the Israelis on June 8, 1967 </p>
+<p> <span>CT3 William B. Allenbaugh, USN </span></p>
+<p> <span>LCDR Philip M. Armstrong, Jr. USN </span></p>
+<p> <span>SN Gary R. Blanchard, USN </span></p>
+<p> <span>SN Francis Brown, USN </span></p>
+<p> <span>CT2 Ronnie J. Campbell, USN </span></p>
+<p> <span>CT3 Jerry L. Converse, USN </span></p>
+<p> <span>CT2 Robert B. Eisenberg, USN </span></p>
+<p> <span>CT3 Jerry L. Goss, USN </span></p>
+<p> <span>CTI Curtis A. Graves, USN </span></p>
+<p> <span>CTSN Lawrence P. Hayden, USN </span></p>
+<p> <span>CTI Warren E. Hersey, USN </span></p>
+<p> <span>CTSN Alan Higgins, USN </span></p>
+<p> <span>SN Carl L. Hoar, USN </span></p>
+<p> <span>CT2 Richard W. Keene, Jr., USN </span></p>
+<p> <span>CTSN James L. Lenau, USN </span></p>
+<p> <span>CTC Raymond E. Linn, USN </span></p>
+<p> <span>CTI James M. Lupton, USN </span></p>
+<p> <span>CT3 Duane R. Marggraf, USN </span></p>
+<p> <span>CTSN David W. Marlborough, USN </span></p>
+<p> <span>CT2 Anthony P. Mendle, USN </span></p>
+<p> <span>CTSN Carl C. Nygren, USN </span></p>
+<p> <span>LT James C. Pierce, USN </span></p>
+<p> <span>ICFN David Skolak, USN </span></p>
+<p> <span>CTI John C. Smith, Jr., USN </span></p>
+<p> <span>CTC Melvin D. Smith, USN </span></p>
+<p> <span>PC2 John C. Spicher, USN </span></p>
+<p> <span>GMG3 Alexander N. Thompson, Jr., USN </span></p>
+<p> <span>CT3 Thomas R. Thornton, USN </span></p>
+<p> <span>CT3 Philippe C. Tiedtke, USN </span></p>
+<p> <span>LT Stephen S. Toth, USN </span></p>
+<p> <span>CTI Frederick J. Walton, USN </span></p>
+<p> <span>Sgt Jack L. Raper, USMC </span></p>
+<p> <span>Cpl Edward E. Rehmeyer, USMC </span></p>
+<p> <span>Allen M. Blue, NSA </span></p>
+<p> Quang Nam, Vietnam January 30, 1968</p>
+<p> <span>SSgt Alfred T. Dwyer, USMC </span></p>
+<p> The <a href="https://www.navycthistory.com/kamifire16.html">Kami Seya fire</a> on September 24, 1965</p>
+<p> <span>CTSA Roger W. Alex, USN </span></p>
+<p> <span>CTASA William E. Briley, USN </span></p>
+<p> <span>CTSN Wilfred D. Cordell, USN </span></p>
+<p> <span>CTSN Dennis E. Etzweiler, USN </span></p>
+<p> <span>CT3 Archie R. Garofalo, USN </span></p>
+<p> <span>CTSA John D. House, USN </span></p>
+<p> <span>LTJG Ernest D. Moody, USN </span></p>
+<p> <span>CT3 Wayne E. Tower, USN </span></p>
+<p> <span>CTSN James K. Whitman, USN </span></p>
+<p> <span>CT3 Gregory S. Williams, USN </span></p>
+<p> <span>LCPI Richard E. McKown, USMC </span></p>
+<p> <span>Sgt Paul C. Rodrigues, USMC </span></p>
+<p> Shot down off the coast of the Soviet Union April 8, 1950</p>
+<p> <span>CT3 Edward Purcell, April 8, 1950</span></p>
+<p> <a href="https://www.nsa.gov/about/cryptologic-heritage/cryptologic-memorial/">"They Served in Silence"</a></p>
+<p> This is an update to my original post from 2009 here:</p>
+<p> http://foreignobjectdamage.blogspot.com/2009/05/roll-of-fallen-on-memorial-day-we.html</p>
+<p class="rm-manual"> posted by FOD at <a href="http://foreignobjectdamage.blogspot.com/2019/05/roll-of-fallen.html"> 8:39 AM </a> </p>
+<h4 class="rm-manual">0 Comments:</h4>
+<h4 class="rm-manual">Post a Comment</h4>
+<p class="rm-manual">Subscribe to Post Comments [<a href="http://foreignobjectdamage.blogspot.com/feeds/2771139653800345852/comments/default">Atom</a>]</p>
+<p class="rm-manual"> <a href="http://foreignobjectdamage.blogspot.com/">&lt;&lt; Home</a> </p>
+<h2 class="rm-manual">About Me</h2>
+<dl class="rm-manual"> <dd>Name: <a rel="author" href="https://www.blogger.com/profile/02926790302336719950"> FOD </a>
+</dd> <dd>Location: Southeastern, United States </dd>
+</dl>
+<p class="rm-manual">Retired US Navy Command Master Chief. Have traveled
+ the world from the Arctic to Africa, from Panama to Greece, Siberia, 
+and Japan as a Cold War cryptologist and arms control inspector. Have 
+moved on now. Still suckling at the Government teat, but thinking 
+independently.</p>
+<p class="rm-manual"><a rel="author" href="https://www.blogger.com/profile/02926790302336719950">View my complete profile</a></p>
+<h2 class="rm-manual">Previous Posts</h2>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://foreignobjectdamage.blogspot.com/2019/01/roll-of-fallen-on-memorial-day-2019-we.html">ROLL OF THE FALLENOn Memorial Day 2019 we will re...</a></li> <li class="rm-manual"><a href="http://foreignobjectdamage.blogspot.com/2016/05/roll-of-fallen-on-memorial-day-2019-we.html">Roll of the FallenOn Memorial Day we remember th...</a></li> <li class="rm-manual"><a href="http://foreignobjectdamage.blogspot.com/2015/05/roll-of-fallen-on-memorial-day-we.html">Roll of the FallenOn Memorial Day, we remember tho...</a></li> <li class="rm-manual"><a href="http://foreignobjectdamage.blogspot.com/2014/05/on-memorial-day-there-are-war-monuments.html">On Memorial DayThere are war monuments all across ...</a></li> <li class="rm-manual"><a href="http://foreignobjectdamage.blogspot.com/2014/01/village-voice-and-glock-advertising.html">Village Voice and Glock Advertising</a></li> <li class="rm-manual"><a href="http://foreignobjectdamage.blogspot.com/2014/01/response-from-senator-chambliss.html">Response from Senator Chambliss</a></li> <li class="rm-manual"><a href="http://foreignobjectdamage.blogspot.com/2013/05/memorial-day-2013.html">Memorial Day 2013</a></li> <li class="rm-manual"><a href="http://foreignobjectdamage.blogspot.com/2013/04/the-president-is-angry-again-ron.html">The President is Angry Again Ron Fournier has wri...</a></li> <li class="rm-manual"><a href="http://foreignobjectdamage.blogspot.com/2013/04/the-willy-victor-shootdown-forty-four.html">The Willy Victor Shootdown - Forty Four Years Joh...</a></li> <li class="rm-manual"><a href="http://foreignobjectdamage.blogspot.com/2013/04/its-all-about-control-imagine-how-gay.html">It's All About Control Imagine how a gay person m...</a></li> </ul>
+<p class="rm-manual">Subscribe to</p>
+<p class="rm-manual">Posts [<a href="http://foreignobjectdamage.blogspot.com/feeds/posts/default">Atom</a>]</p></article>
+</body></html>

@@ -1,0 +1,80 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">Breaking News</p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="#"> <span>Read More »</span> </a> </li> </ul>
+<p class="rm-manual"><a href="file:///breaking-news">More (<span>0</span>) »</a> </p>
+<h1 class="rm-manual">Washington, DC's Leading Local News: Weather, Traffic, Sports and more | Washington, DC | WUSA9.com</h1>
+<article class="rm-manual"> <a href="file:///section/coronavirus">coronavirus</a> </article><h1 class="rm-manual">Tomb of the Unknown Soldier sentinels continue their duty through coronavirus pandemic</h1>
+<p class="rm-manual">The Army’s 3rd U.S. Infantry Regiment, more commonly known as the Old Guard, continues to watch over the Tomb 24/7.</p>
+<p class="rm-manual"> <span>Author:</span> Mike Valerio </p>
+<p class="rm-manual"> <span>Published:</span> 9:46 PM EDT March 23, 2020 </p>
+<p class="rm-manual"> <span>Updated:</span> 5:03 PM EDT March 24, 2020 </p>
+<p>ARLINGTON, Va. — There is a sacred duty not even a pandemic can stop:
+ a rite of continuity still carried out in Arlington National Cemetery 
+even as much of the country shuts down.</p>
+<p>The sentinels who guard the Tomb of the Unknown Soldier recently 
+marked more than 30,000 days of constant watch over the remains of 
+unidentified U.S. service members — a streak persisting through the 
+pandemic.</p>
+<p>“For us, it doesn't matter if it's a hurricane, or if it's the 
+coronavirus.” said Cpt. Harold Earls in an interview. “We are always 
+here, we are always guarding.”</p>
+<p>The Army’s 3rd U.S. Infantry Regiment, more commonly known as the Old Guard, continues to watch over the Tomb 24/7.</p>
+<p>Arlington National Cemetery is now closed to visiting members of the 
+public, aside from military funerals. The sentinels themselves live in 
+the barracks, partially underneath the Tomb plaza.</p>
+<p>But silence is how it should be, and the sentinels have said in this 
+unusual chapter, they are drawn closer to the souls they’ve sworn to 
+protect.</p>
+<p>“When we feel closest to the unknowns, it's when no one's here,” 
+Earls said. “For us, that's when it's very personal. I feel like after 
+serving here after a certain amount of time, you honestly feel like you 
+have a connection to our nation's past.”</p>
+<p>The rituals are still performed as if an audience is standing before 
+the marble Tomb. Each step carried out much as the first sentinels began
+ on July 1, 1937.</p>
+<p>“I think it's important for us to show to this country that we 
+haven't forgotten,” Earls continued. “That we will never forget the 
+sacrifices that these soldiers made. That the missing in actions, the 
+unknown made.”</p>
+<p class="rm-manual">RELATED: <a href="file:///article/news/health/coronavirus/coronavirus-closures-dmv-schools-bars-restaurants-movie-theaters-and-gyms/65-4346150c-0e20-4f09-a096-2fdb3e4718e4">Coronavirus closures: DMV schools, bars, restaurants, movie theaters and gyms</a></p>
+<p class="rm-manual">RELATED: <a href="file:///article/news/health/coronavirus/coronavirus-here-are-the-symptoms/65-8a1d12ee-028b-4033-a4fd-3b5e6b51f8db">Coronavirus: Here are the symptoms</a></p>
+<p class="rm-manual">RELATED: <a href="file:///article/news/health/coronavirus/dmv-coronavirus-tracker-see-where-every-reported-covid-19-case-is-in-maryland-dc-virginia/65-5c8b4a71-128d-4046-b53c-d9e7676ea598">DMV Coronavirus Tracker: See where every reported COVID-19 case is in Maryland, DC, Virginia</a></p>
+<p class="rm-manual"><a href="file:///appredirect/" rel="noopener noreferrer">Download the brand new WUSA9 app here</a>.</p>
+<p class="rm-manual"><a href="file:///email" rel="noopener noreferrer">Sign up for the Get Up DC newsletter: Your forecast. Your commute. Your news.</a></p></article>
+</body></html>

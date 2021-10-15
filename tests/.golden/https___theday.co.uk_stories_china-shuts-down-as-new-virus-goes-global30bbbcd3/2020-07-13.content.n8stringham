@@ -1,0 +1,168 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> The Day | China shuts down as new virus goes global </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///stories/china-shuts-down-as-new-virus-goes-global?edition=uk">UK</a> </li> <li class="rm-manual"> <a href="file:///stories/china-shuts-down-as-new-virus-goes-global?edition=international">International</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///how-to-use">How to Use</a> </li> </ul>
+<p class="rm-manual"> <a href="file:///subscriptions/free-trial"> Free trial </a> <a href="file:///subscriptions/pricing"> Pricing </a> </p>
+<p class="rm-manual"><a href="file:///pdf/TD-weekly-calendar-2021.pdf">Plan ahead! Download next year's Weekly Themes Poster.</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///"><span>H</span></a></li> <li class="rm-manual"> <a href="file:///categories/climate"> <span>Climate</span> </a> </li> <li class="rm-manual"> <a href="file:///categories/conflict"> <span>Conflict</span> </a> </li> <li class="rm-manual"> <a href="file:///categories/politics"> <span>Politics</span> </a> </li> <li class="rm-manual"> <a href="file:///categories/science"> <span>Science</span> </a> </li> <li class="rm-manual"> <a href="file:///categories/technology"> <span>Technology</span> </a> </li> <li class="rm-manual"> <a href="file:///categories/culture"> <span>Culture</span> </a> </li> <li class="rm-manual"> <a href="file:///categories/health"> <span>Health</span> </a> </li> <li class="rm-manual"> <a href="file:///categories/sport"> <span>Sport</span> </a> </li> <li class="rm-manual"> <a href="file:///categories/money"> <span>Money</span> </a> </li> <li class="rm-manual"> <a href="file:///categories/society"> <span>Society</span> </a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///subjects/maths">Maths</a></li> <li class="rm-manual"><a href="file:///subjects/english">English</a></li> <li class="rm-manual"><a href="file:///subjects/physics">Physics</a></li> <li class="rm-manual"><a href="file:///subjects/biology">Biology</a></li> <li class="rm-manual"><a href="file:///subjects/chemistry">Chemistry</a></li> <li class="rm-manual"><a href="file:///subjects/history">History</a></li> <li class="rm-manual"><a href="file:///subjects/geography">Geography</a></li> <li class="rm-manual"><a href="file:///subjects/religious-studies">RS</a></li> <li class="rm-manual"><a href="file:///subjects/psychology">Psychology</a></li> <li class="rm-manual"><a href="file:///subjects/design-tech">D&amp;T</a></li> <li class="rm-manual"><a href="file:///subjects/sociology">Sociology</a></li> <li class="rm-manual"><a href="file:///subjects/media-film-tv">Media</a></li> <li class="rm-manual"><a href="file:///subjects/business">Business</a></li> <li class="rm-manual"><a href="file:///subjects/art-design">Art &amp; Design</a></li> <li class="rm-manual"><a href="file:///subjects/citizenship">Citizenship</a></li> <li class="rm-manual"><a href="file:///subjects/pshe">PSHE</a></li> <li class="rm-manual"><a href="file:///ib">IB</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///">Home</a> </li> <li class="rm-manual"> <a href="file:///categories/health">Health</a> </li> <li class="rm-manual"> <span>China shuts down as new virus goes global</span>
+</li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a rel="alternate" href="file:///stories/china-shuts-down-as-new-virus-goes-global/simplified">Simplified Version</a> </li> <li class="rm-manual"> <a href="">Presentation view</a> </li> <li class="rm-manual"> <a href="file:///stories/china-shuts-down-as-new-virus-goes-global?printable=true">Print view</a> </li> </ul>
+<p class="rm-manual"> Thursday, 6 February 2020 </p>
+<h1 class="rm-manual">China shuts down as new virus goes global</h1>
+<figcaption class="rm-manual"> Trapped: At least 10 people on board a cruiser in the Japanese port of Yokohama have tested positive. </figcaption><p>Can
+ the coronavirus be contained? As the number of infected rises, the 
+world is racing to isolate the disease and prevent a global pandemic. 
+But some experts believe it is already too late.</p>
+<p>Borders closed, roads blocked, flights cancelled. As of 6:00am, 28,000 people are now infected including a new born baby. </p>
+<p> The biggest operation in history to contain an infectious disease is
+ happening right now in Hubei province, in central China. Over 50 
+million people are <span>quarantined</span>, banned from leaving the 
+region. Foreign countries are flying their citizens out, monitoring them
+ closely for symptoms of the deadly <span>coronavirus</span>. And the news inside Hubei is of crowded hospitals and shortages of medical supplies. </p>
+<p> It is a scary picture. The deserted streets and shops look like 
+something out of a zombie apocalypse. But is it as bad as it looks? We 
+now have more data about the virus and <span>epidemiology</span> can help us separate the facts from the panic. </p>
+<p> Two numbers help us understand what is happening. The first is the <span>case mortality rate</span>. This tells us what percentage of the people infected will die. <span>WHO</span>
+ currently estimates the virus is killing 2.1% of those with the virus, 
+mostly the elderly and people with other health problems. That is much 
+higher than, say, flu (less than 0.1%), but it is nowhere near as deadly
+ as the <span>Sars</span> outbreak of 2003 (9.5%). </p>
+<p> The second number is the <span>infection rate</span>. How many 
+people does each person infect, on average? It may be as low as 1.4 
+people, but Chinese scientists think it could be as high as 5.5. Much 
+less contagious than measles (12 to 18 people), but much more than Sars.
+ </p>
+<p>One more piece of the puzzle: the virus takes up to two weeks to 
+incubate in the body before you begin to feel ill. This is why the 
+Chinese government has quarantined millions of healthy people in Hubei.</p>
+<p>The problem, argues expert Jeremy Konyndyk, is “the horse has 
+probably already left the barn”. With more cases reported outside China,
+ it is too late to contain the virus. The focus should be on finding a 
+cure. And containment may make things worse, says public health expert 
+Vageesh Jain. “A quarantine of this scale will create more problems than
+ it solves.” Shutting down whole cities will cause food shortages, 
+spread panic, and make treating people harder.</p>
+<p>However, China is taking no chances. With months before we develop a 
+cure, expect to hear a lot more about quarantines and containing the 
+disease. </p>
+<p>But can it be contained?</p>
+<h2>Stick or twist</h2>
+<p>Yes, because it has to be. There really isn’t a choice for any 
+responsible government. Firstly, even if containment reduces the spread 
+by as little as 10% or 5%, it is still worth it. Secondly, the idea is 
+to buy time while scientists rush to try and develop a vaccine. That 
+surely is a worthy aim. Thirdly, it is easier to focus medical resources
+ on fewer areas. Building a new 1,000-bed hospital in 10 days in the <span>epicentre</span> of the outbreak was exactly the right thing to do.</p>
+<p>No, we would be better to face the facts. The virus cannot now be 
+fenced in. Quarantine only works with smaller numbers. If it sounds a 
+bit heartless to reduce an epidemic to maths, that misunderstands the 
+power of numbers. Numbers help us to see what is going on. In fact, they
+ are encouraging, for they show that, like any virus, this one will 
+eventually peak and then fall away. And next time it strikes, humanity 
+will be ready with a vaccine.</p>
+<h2 class="">You Decide</h2>
+<ol> <li>Have you ever received a chain letter? Do you think a virus spreads in a similar way?</li> <li>Which do you think is more important: finding a cure or containing the spread of the virus?</li> </ol>
+<h2>Activities</h2>
+<ol> <li>You’re going into quarantine with your family. List five things you will take with you.</li> <li>Your
+ town is to be quarantined and you are in charge of informing the 
+public. In threes, prepare a public service announcement about the plan.
+ Remember that you have to impart useful information but not create 
+panic.</li> </ol>
+<h2>Some People Say...</h2>
+<p> “Only one form of contagion travels faster than a virus. And that’s fear.” </p>
+<p><span>Dan Brown, American novelist</span> </p>
+<p>What do you think?</p>
+<h2>Q &amp; A</h2>
+<dl> <dt>What do we know?</dt> <dd>It is widely agreed that an epidemic 
+follows a recognised pattern. The number of cases initially increases 
+exponentially (very fast) until the proportion of susceptible people 
+(who could still catch the disease) starts dropping in relation to the 
+number of immune people (who’ve had the disease and have recovered, or 
+who’ve had a vaccine). At a certain point, the rate of cases drops – 
+eventually leading to extinction of the infection.</dd> <dt>What do we not know?</dt> <dd>Most
+ crucially, there is much disagreement about how best to hasten the 
+death of a virus. One way is to let the virus spread freely. Parents 
+used to take their children to “measles parties” in order for them to 
+catch the disease early and become immune. It depends how deadly a virus
+ really is and how fast it spreads. We are still guessing at the 
+variables that will determine when the new coronavirus will peak and how
+ many total deaths that will involve.</dd> </dl>
+<h2>Word Watch</h2>
+<dl> <dt>Quarantined</dt> <dd>Isolating the infected from the general 
+population is probably the oldest technique for managing an epidemic. 
+It’s mentioned in the Bible to stop leprosy and was used in the 14th 
+Century against the Black Death.</dd> <dt>Coronavirus</dt> <dd>Also 
+known as the 2019 novel coronavirus, or Wuhan coronavirus, this is an 
+infectious disease that was probably transmitted to humans from bats at a
+ live food market in the city of Wuhan last December.</dd> <dt>Epidemiology</dt> <dd>The science of disease, how it spreads, and how it can be controlled.</dd> <dt>Case mortality rate</dt> <dd>The
+ number of deaths in a population. Compare these figures to malaria 
+(over 200 million cases each year and 400,000 deaths) and tuberculosis 
+(10 million cases and 1.3 million deaths).</dd> <dt>WHO</dt> <dd>The World Health Organisation is the branch of the United Nations responsible for international public health.</dd> <dt>Sars</dt> <dd>Severe
+ acute respiratory syndrome was another form of coronavirus that 
+developed in 2002-2003 in southern China. It infected 8,098 people in 17
+ countries and the final death toll was 774.</dd> <dt>Infection rate</dt> <dd>The average number of people infected by one case.</dd> <dt>Epicentre</dt> <dd>Right in the middle.</dd> </dl>
+<h2>Become an Expert</h2>
+<ul> <li> <a href="https://www.youtube.com/watch?v=n2C-mtbMS1w">What’s 
+it like living in Wuhan under quarantine? This fascinating video 
+interviews people trapped inside the city. Guardian News – YouTube. 
+(3:17)</a> </li> <li> <a href="https://www.theguardian.com/world/2020/feb/04/what-is-coronavirus-china-wuhan-symptoms">How worried should we be? This Guardian article does an excellent job at getting past the panic to the facts. (900 words)</a> </li> <li> <a href="https://theconversation.com/coronavirus-outbreak-quarantining-millions-in-china-is-unprecedented-and-wrong-130565">Public
+ health expert Vageesh Jain writes convincingly about why he thinks 
+quarantine is a terrible idea. The Conversation. (766 words)</a> </li> <li> <a href="https://theconversation.com/coronavirus-why-chinas-strategy-to-contain-the-virus-might-work-130729">An
+ interesting different point-of-view, also in the Conversation, showing 
+how the unusual situation in China may help the containment of the 
+virus. (800 words)</a> </li> <li> <a href="https://theconversation.com/quarantines-have-tried-to-keep-out-disease-for-thousands-of-years-130680">A wonderful deep dive into the history of quarantines and fighting epidemics. The Conversation. (1,000 words)</a> </li> </ul>
+<h2>Subjects</h2>
+<ul> <li><a href="file:///subjects/biology">Biology</a></li> <li><a href="file:///subjects/maths">Maths</a></li> </ul>
+<h2 class="rm-manual">PDF Download</h2>
+<p class="rm-manual"> Please click on "Print view" at the top of the page to see a print friendly version of the article. </p>
+<h2 class="rm-manual"> Related Features </h2>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///quizzes/2020-02-07"> <p class="rm-manual"> </p><h2 class="rm-manual">Weekly Quiz</h2> <h3 class="rm-manual">Test your wit</h3> <p class="rm-manual"></p> </a>
+</li> <li class="rm-manual"> <a href="file:///video-articles/2020-02-11"> <p class="rm-manual"> </p><h2 class="rm-manual">Video of the Day</h2> <h3 class="rm-manual">Has the virus peaked?</h3> <p class="rm-manual"></p> </a>
+</li> <li class="rm-manual"> <a href="file:///video-articles/2020-02-27"> <p class="rm-manual"> </p><h2 class="rm-manual">Video of the Day</h2> <h3 class="rm-manual">What the virus does</h3> <p class="rm-manual"></p> </a>
+</li> <li class="rm-manual"> <a href="file:///you-decide-polls/is-the-china-coronavirus-your-worst-fear"> <p class="rm-manual"> </p><h2 class="rm-manual">You Decide</h2> <h3 class="rm-manual">Your worst fear?</h3> <p class="rm-manual"></p> </a>
+</li> <li class="rm-manual"> <a href="file:///specials/coronavirus"> <p class="rm-manual"> </p><h2 class="rm-manual">Special</h2> <h3 class="rm-manual">Coronavirus</h3> <p class="rm-manual"></p> </a>
+</li> </ul>
+<h2 class="rm-manual">Related Stories</h2>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///stories/flu-crisis-alarm-grows-as-deadly-virus-surges"> <p class="rm-manual">Flu crisis alarm grows as deadly virus surges</p> </a> </li> <li class="rm-manual"> <a href="file:///stories/deadly-defrosted-virus-revives-pandemic-fears"> <p class="rm-manual">Deadly defrosted virus revives pandemic fears</p> </a> </li> <li class="rm-manual"> <a href="file:///stories/zika-virus-spreads-fear-of-deadly-mosquitoes"> <p class="rm-manual">Zika virus spreads fear of deadly mosquitoes</p> </a> </li> </ul>
+<h2 class="rm-manual">Share Article</h2>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://twitter.com/share?text=China+shuts+down+as+new+virus+goes+global&amp;url=https%3A%2F%2Ftheday.co.uk%2Fstories%2Fchina-shuts-down-as-new-virus-goes-global">Twitter</a> </li> <li class="rm-manual"> <a href="mailto:?body=I%20thought%20you%20might%20be%20interested%20in%20this%20article%3A%0A%0Ahttps%3A%2F%2Ftheday.co.uk%2Fstories%2Fchina-shuts-down-as-new-virus-goes-global&amp;subject=You%20might%20like%20this%20article%20on%20The%20Day">Email</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <span>Legal</span> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///legal/terms-and-conditions">Terms &amp; conditions</a></li> <li class="rm-manual"><a href="file:///legal/privacy-policy">Privacy policy</a></li> <li class="rm-manual"><a href="file:///legal/terms-of-website-use">Terms of Website Use</a></li> <li class="rm-manual"><a href="file:///legal/acceptable-use-policy">Acceptable use</a></li> <li class="rm-manual"><a href="file:///legal/staff-handbook">Staff Handbook</a></li> </ul> </li> <li class="rm-manual"> <span>Subscriptions</span> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///subscriptions/free-trial">Free Trial</a></li> <li class="rm-manual"><a href="file:///subscriptions/pricing">Pricing</a></li> <li class="rm-manual"><a href="file:///subscriptions/testimonials">Testimonials</a></li> <li class="rm-manual"><a href="file:///subscriptions/training">Training</a></li> <li class="rm-manual"><a href="file:///subscriptions/the-day-home">The Day Home</a></li> </ul> </li> <li class="rm-manual"> <span>About us</span> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///about-us/meet-the-team">The Team</a></li> <li class="rm-manual"><a href="file:///about-us/our-story">Our Story</a></li> <li class="rm-manual"><a href="file:///about-us/media-coverage">Media Coverage</a></li> <li class="rm-manual"><a href="file:///about-us/how-we-work">How We Work</a></li> </ul> </li> <li class="rm-manual"> <span>Contact us</span> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///contact-us/feedback">Feedback</a></li> <li class="rm-manual"><a href="file:///contact-us/get-in-touch">Get in Touch</a></li> <li class="rm-manual"><a href="file:///contact-us/work-experience">Work Experience</a></li> <li class="rm-manual"><a href="file:///contact-us/work-with-us">Work with Us</a></li> </ul> </li> <li class="rm-manual"> <span>+44 (0)207 300 7316</span> <a href="mailto:support@theday.co.uk">support@theday.co.uk</a> </li> </ul></article>
+</body></html>

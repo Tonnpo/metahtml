@@ -1,0 +1,198 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual">share this!</p> </li> </ul>
+<ol class="rm-manual"> <li class="rm-manual"> <a href="file:///" rel="home"> <span>Home</span> </a> </li> <li class="rm-manual"> <a href="https://medicalxpress.com/research-news/"> <span>Medical research</span> </a> </li> </ol>
+<p class="rm-manual"> June 21, 2021 <a href="https://medicalxpress.com/editorials/"> <span>feature</span> </a> </p>
+<h1 class="rm-manual">How a protein named STING assaults viruses and cancer cells that invade us</h1>
+<p class="rm-manual"> by Delthia Ricks , Medical Xpress </p>
+<figcaption> Electron micrographs of hepatitis C virus purified from 
+cell culture. Scale bar is 50 nanometers. Credit: Center for the Study 
+of Hepatitis C, The Rockefeller University. </figcaption><p>The 
+molecular world is full of surprises, and none more stunning than those 
+occurring among the infinitesimal proteins that drive the activities 
+guarding against viral infections and cancer. </p>
+<p>In Canada, molecular biologists have found that the activity of a 
+single protein, which strongly influences antiviral and antitumor immune
+ responses, is regulated by the <a href="https://medicalxpress.com/tags/amino+acid+cysteine/" rel="tag">amino acid cysteine</a>.</p>
+<p>But what may seem at first blush an arcane discovery involving amino 
+acid chemistry turns out to be a finding of timely significance. A team,
+ led by scientists at Center Hospitalier de l'Université de Montréal, 
+has elucidated in intricate new detail the signaling activity that 
+underlies how emerging cancers are thwarted. And of equal 
+importance—especially in the midst of the global coronavirus pandemic—a 
+finding that sheds new light on a critical piece in the larger jigsaw 
+puzzle of how immune forces are alerted to attack viral infiltrators.</p>
+<p>Having unraveled one of nature's mysteries about a series of key 
+innate immune system activities, the scientists have opened a new window
+ of understanding into a biological pathway that can aid the development
+ of new cancer immunotherapies. And the same novel pathway, these 
+scientists say, may hold sway over vaccine development in the 
+not-too-distant future as researchers become ever mindful of the 
+critical first steps in the innate <a href="https://medicalxpress.com/tags/immune+response/" rel="tag">immune response</a>.</p>
+<p>The new research centers on what is known as an adapter protein, a 
+molecule formally called STING, which stands for stimulator of 
+interferon genes. STING arrives in an early phase of the innate immune 
+response, and cysteine, an amino acid, regulates STING's conformation 
+and activity.</p>
+<p>But the Canadian team discovered that a specific cysteine residue 
+limits the full antiviral and antitumor effects of STING. The 
+researchers are calling for the development of novel therapeutic 
+interventions that can circumvent the residue, hence allowing the full 
+biological impact of STING.</p>
+<p>The Center Hospitalier research also involved molecular biologists at
+ l'Université de Montréal's departments of biochemistry and molecular 
+medicine who contributed to exploring STING. But while STING may seem an
+ obscure protein, the new research has brought it out of the molecular 
+shadows and into a spotlight. Its role in viral infectious diseases, the
+ scientists say, is pivotal. As soon as a viral infection is detected, 
+STING strikes.</p>
+<p>"The adaptor protein STING is stimulated in response to the detection
+ of cytosolic viral DNA by the enzyme cGAS," wrote Dr. Natalia Zamorano 
+Cuervo and colleagues, referring to the protein, cyclic GMP-AMP 
+synthase, or cGAS. It is one in a cascade of signaling molecules that is
+ in the first wave of innate immune system responses.</p>
+<p>Whenever a <a href="https://medicalxpress.com/tags/virus/" rel="tag">virus</a>,
+ such as herpesvirus—a DNA virus—causes infection, its DNA is recognized
+ by cGAS, a sensor of foreign nucleic acids. This, in turn, catalyzes a 
+series of rapid biological events—among them, activating STING. "STING 
+activation then leads to the expression of genes encoding type I 
+interferons as part of the antiviral response. STING activation also 
+plays a role in antitumor immunity, making STING an important 
+therapeutic target, Zamorano Cuervo and her team wrote in the journal 
+Science Signaling.</p>
+<p>STING is most vital in the innate immune response to pathogens that 
+take up residence inside cells, namely viruses. Viral DNA in the 
+cellular cytosol activates cGAS, which in turn generates a molecule that
+ activates STING. STING activation triggers genes for type I interferons
+ in the early antiviral response. This basic scenario—cGAS to STING to 
+type I interferons—occurs whether the offender is a virus or a tumor 
+cell. In <a href="https://medicalxpress.com/tags/viral+infections/" rel="tag">viral infections</a>, STING's inducing the production of type I interferons stimulates an immune response that promotes viral clearance.</p>
+<p>In addition to DNA viruses, cGAS binds to double-stranded DNA from 
+various other invaders, including bacteria. And while cGAS is a master 
+at binding to foreign DNA, there is evidence that it's also involved in 
+restricting RNA virus infection. The cGAS-STING research arena is an 
+active area of investigation worldwide. But scientists underscore that 
+many questions about the cGAS-STING signaling axis remain unanswered, 
+part of a still-unexplored frontier.</p>
+<p>The Montréal scientists relied on mass spectrometry and structural 
+analyses to identify cysteine residues that underwent reversible 
+oxidation during the activation of STING. One specific residue, oxidized
+ either in response to other oxidants in the cytosolic milieu, or a 
+molecule involved as an activator of STING, led to a loss of STING 
+robustness. Regardless of which of the two is the cause, the team 
+determined that loss as a key limitation. Recognizing that STING 
+activity can become limited, Zamorano Cuervo and collaborators say 
+designing targeted therapeutics can override that limitation and 
+modulate STING's activity in both viral infections and cancer. </p>
+<p>"Pinpointing cysteine oxidation sites by high-resolution proteomics 
+reveals a mechanism of redox-dependent inhibition of human STING," 
+Zamorano Cuervo and her team concluded.</p>
+<p>The loss of robustness, which occurs because of a change in redox 
+status, is not isolated to STING—scientists have seen it before. For 
+example, changes in redox status occur during various cellular 
+processes, including viral infections.</p>
+<p>"Whereas chronically increased amounts of reactive oxygen 
+species—ROS—might be associated with oxidative damage, local changes in 
+ROS abundance act as redox switches to regulate cellular signaling," 
+Zamorano Cuervo wrote. "Increased ROS abundance has been documented 
+during various infections by DNA viruses, such as Epstein-Barr virus and
+ Kaposi's sarcoma–associated herpesvirus, as well as RNA viruses, 
+including hepatitis C virus, respiratory syncytial virus, influenza 
+virus, and human immunodeficiency virus." </p>
+<p class="rm-manual">Explore further</p>
+<p class="rm-manual"><a href="https://medicalxpress.com/news/2020-05-probing-innate-immunity-cgas-protein.html">Probing innate immunity, cGAS protein, and our own damaged DNA</a> </p>
+<p class="rm-manual"> More information: Natalia Zamorano Cuervo et al. 
+Pinpointing cysteine oxidation sites by high-resolution proteomics 
+reveals a mechanism of redox-dependent inhibition of human STING, 
+Science Signaling (2021). <a href="http://dx.doi.org/10.1126/scisignal.aaw4673">DOI: 10.1126/scisignal.aaw4673</a> </p>
+<p class="rm-manual"> Journal information: <a href="https://medicalxpress.com/journals/science-signaling/">Science Signaling</a> </p>
+<p class="rm-manual"> © 2021 Science X Network </p>
+<p class="rm-manual"> Citation: How a protein named STING assaults 
+viruses and cancer cells that invade us (2021, June 21) retrieved 22 
+June 2021 from 
+https://medicalxpress.com/news/2021-06-protein-assaults-viruses-cancer-cells.html
+ </p>
+<p class="rm-manual"> This document is subject to copyright. Apart from 
+any fair dealing for the purpose of private study or research, no part 
+may be reproduced without the written permission. The content is 
+provided for information purposes only. </p>
+<p class="rm-manual"> <a href=""><span>60</span> shares</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href=""> <p class="rm-manual">Facebook</p> </a> </li> <li class="rm-manual"> <a href="#"> <p class="rm-manual">Twitter</p> </a> </li> <li class="rm-manual"> <a href="#"> <p class="rm-manual">Email</p> </a> </li> </ul>
+<p class="rm-manual"><a href="#"> </a></p><p class="rm-manual"><a href="#"> Feedback to editors</a></p><a href="#"> </a> <p class="rm-manual"></p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="#nav-featured">Featured</a> </li> <li class="rm-manual"> <a href="#nav-commented">Last Comments</a> </li> <li class="rm-manual"> <a href="#nav-popular">Popular</a> </li> </ul>
+<h4 class="rm-manual"><a href="https://medicalxpress.com/news/2021-06-protein-assaults-viruses-cancer-cells.html">How a protein named STING assaults viruses and cancer cells that invade us</a></h4>
+<p class="rm-manual">Jun 21, 2021</p>
+<p class="rm-manual"><span>0</span></p>
+<h4 class="rm-manual"><a href="https://medicalxpress.com/news/2021-06-insight-brain-decisions-environments.html">New insight into how the brain makes decisions in changing environments</a></h4>
+<p class="rm-manual">Jun 21, 2021</p>
+<p class="rm-manual"><span>0</span></p>
+<h4 class="rm-manual"><a href="https://medicalxpress.com/news/2021-06-combining-mri-imaging-brain-genetic.html">Combining MRI imaging of brain structures with genetic data reveals new insights into white matter</a></h4>
+<p class="rm-manual">Jun 18, 2021</p>
+<p class="rm-manual"><span>0</span></p>
+<h4 class="rm-manual"><a href="https://medicalxpress.com/news/2021-06-tweak-pritelivir-treatment-latent-herpes.html">Tweak to pritelivir allows treatment of latent herpes infections</a></h4>
+<p class="rm-manual">Jun 17, 2021</p>
+<p class="rm-manual"><span>0</span></p>
+<h4 class="rm-manual"><a href="https://medicalxpress.com/news/2021-06-glial-cells-mouse-brain.html">Two new types of glial cells found in mouse brain</a></h4>
+<p class="rm-manual">Jun 11, 2021</p>
+<p class="rm-manual"><span>0</span></p>
+<p class="rm-manual"> <a href="https://medicalxpress.com/news/2021-06-true-stress-hair-gray-reversible.html"> </a></p><article class="rm-manual"><a href="https://medicalxpress.com/news/2021-06-true-stress-hair-gray-reversible.html"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">It's true: Stress does turn hair gray (and it's reversible)</h5> <p class="rm-manual"> </p><p class="rm-manual">8 minutes ago</p> <p class="rm-manual"></p> </figcaption> </figure> </a></article><a href="https://medicalxpress.com/news/2021-06-true-stress-hair-gray-reversible.html"> </a> <a href="https://medicalxpress.com/news/2021-06-diagnostic-method-relapse-recovering-prescription.html"> <article class="rm-manual"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">New diagnostic method may predict relapse risk for recovering prescription opioid addicts</h5> <p class="rm-manual"> </p><p class="rm-manual">1 hour ago</p> <p class="rm-manual"></p> </figcaption> </figure> </article> </a> <a href="https://medicalxpress.com/news/2021-06-pancreatic-cancer-cells-dodge-drug.html"> <article class="rm-manual"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">How pancreatic cancer cells dodge drug treatments</h5> <p class="rm-manual"> </p><p class="rm-manual">1 hour ago</p> <p class="rm-manual"></p> </figcaption> </figure> </article> </a> <a href="https://medicalxpress.com/news/2021-06-bone-marrow-fat-hormone-metabolism.html"> <article class="rm-manual"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">How a bone marrow fat hormone controls metabolism and bone cell development</h5> <p class="rm-manual"> </p><p class="rm-manual">1 hour ago</p> <p class="rm-manual"></p> </figcaption> </figure> </article> </a> <a href="https://medicalxpress.com/news/2021-06-self-reported-declines-cognition-linked-brain.html"> <article class="rm-manual"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">Self-reported declines in cognition may be linked to changes in brain connectivity</h5> <p class="rm-manual"> </p><p class="rm-manual">1 hour ago</p> <p class="rm-manual"></p> </figcaption> </figure> </article> </a> <a href="https://medicalxpress.com/news/2021-06-scientists-combination-biological-markers-severe.html"> <article class="rm-manual"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">Scientists identify combination of biological markers associated with severe dengue</h5> <p class="rm-manual"> </p><p class="rm-manual">1 hour ago</p> <p class="rm-manual"></p> </figcaption> </figure> </article> </a> <a href="https://medicalxpress.com/news/2021-06-tumors-not-innocent-bystanders.html"> <article class="rm-manual"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">Targeted tumors attack not-innocent bystanders</h5> <p class="rm-manual"> </p><p class="rm-manual">3 hours ago</p> <p class="rm-manual"></p> </figcaption> </figure> </article> </a> <p class="rm-manual"></p>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> </p><h2 class="rm-manual">Related Stories</h2> <p class="rm-manual"></p> <p class="rm-manual"> <a href="https://medicalxpress.com/news/2020-05-probing-innate-immunity-cgas-protein.html"> </a></p><article class="rm-manual"><a href="https://medicalxpress.com/news/2020-05-probing-innate-immunity-cgas-protein.html"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">Probing innate immunity, cGAS protein, and our own damaged DNA</h5> <p class="rm-manual"> </p><p class="rm-manual">May 22, 2020</p> <p class="rm-manual"></p> </figcaption> </figure> </a></article><a href="https://medicalxpress.com/news/2020-05-probing-innate-immunity-cgas-protein.html"> </a> <a href="https://medicalxpress.com/news/2021-05-regulatory-pathway-blocks-immune-response.html"> <article class="rm-manual"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">Researchers discover regulatory pathway that blocks immune response against cancer</h5> <p class="rm-manual"> </p><p class="rm-manual">May 11, 2021</p> <p class="rm-manual"></p> </figcaption> </figure> </article> </a> <a href="https://medicalxpress.com/news/2021-04-gene-methylation-melanoma-evade-immune.html"> <article class="rm-manual"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">Investigators identify STING gene methylation allows melanoma to evade the immune system</h5> <p class="rm-manual"> </p><p class="rm-manual">Apr 08, 2021</p> <p class="rm-manual"></p> </figcaption> </figure> </article> </a> <p class="rm-manual"></p> <p class="rm-manual"> <a href="https://medicalxpress.com/news/2021-06-potential-antiviral-compound-covid-flu.html"> </a></p><article class="rm-manual"><a href="https://medicalxpress.com/news/2021-06-potential-antiviral-compound-covid-flu.html"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">Research identifies potential antiviral compound for COVID-19, flu, other viral infection</h5> <p class="rm-manual"> </p><p class="rm-manual">Jun 11, 2021</p> <p class="rm-manual"></p> </figcaption> </figure> </a></article><a href="https://medicalxpress.com/news/2021-06-potential-antiviral-compound-covid-flu.html"> </a> <a href="https://phys.org/news/2020-08-protein-cells-dna.html"> <article class="rm-manual"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">How a protein stops cells from attacking their own DNA</h5> <p class="rm-manual"> </p><p class="rm-manual">Aug 13, 2020</p> <p class="rm-manual"></p> </figcaption> </figure> </article> </a> <a href="https://phys.org/news/2020-11-host-protein-phosphatase-restricts-innate.html"> <article class="rm-manual"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">A host protein phosphatase restricts innate immune signaling</h5> <p class="rm-manual"> </p><p class="rm-manual">Nov 24, 2020</p> <p class="rm-manual"></p> </figcaption> </figure> </article> </a> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> </p><h2 class="rm-manual">Recommended for you</h2> <p class="rm-manual"></p> <p class="rm-manual"> <a href="https://medicalxpress.com/news/2021-06-true-stress-hair-gray-reversible.html"> </a></p><article class="rm-manual"><a href="https://medicalxpress.com/news/2021-06-true-stress-hair-gray-reversible.html"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">It's true: Stress does turn hair gray (and it's reversible)</h5> <p class="rm-manual"> </p><p class="rm-manual">8 minutes ago</p> <p class="rm-manual"></p> </figcaption> </figure> </a></article><a href="https://medicalxpress.com/news/2021-06-true-stress-hair-gray-reversible.html"> </a> <a href="https://medicalxpress.com/news/2021-06-tumors-not-innocent-bystanders.html"> <article class="rm-manual"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">Targeted tumors attack not-innocent bystanders</h5> <p class="rm-manual"> </p><p class="rm-manual">3 hours ago</p> <p class="rm-manual"></p> </figcaption> </figure> </article> </a> <a href="https://medicalxpress.com/news/2021-06-common-tumor-inhibitor-drug-triggers.html"> <article class="rm-manual"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">Common tumor inhibitor drug triggers unfavorable immune effects</h5> <p class="rm-manual"> </p><p class="rm-manual">7 hours ago</p> <p class="rm-manual"></p> </figcaption> </figure> </article> </a> <p class="rm-manual"></p> <p class="rm-manual"> <a href="https://medicalxpress.com/news/2021-06-blueprint-reproductive-hormone-aid-infertility.html"> </a></p><article class="rm-manual"><a href="https://medicalxpress.com/news/2021-06-blueprint-reproductive-hormone-aid-infertility.html"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">Blueprint for a reproductive hormone may aid infertility</h5> <p class="rm-manual"> </p><p class="rm-manual">8 hours ago</p> <p class="rm-manual"></p> </figcaption> </figure> </a></article><a href="https://medicalxpress.com/news/2021-06-blueprint-reproductive-hormone-aid-infertility.html"> </a> <a href="https://medicalxpress.com/news/2021-06-universal-vaccine-coronaviruses-future-pandemics.html"> <article class="rm-manual"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">Universal vaccine targets coronaviruses to prevent future pandemics</h5> <p class="rm-manual"> </p><p class="rm-manual">5 hours ago</p> <p class="rm-manual"></p> </figcaption> </figure> </article> </a> <a href="https://medicalxpress.com/news/2021-06-exposure-pollutants-free-radical-aging.html"> <article class="rm-manual"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">Exposure to pollutants, increased free-radical damage speeds up aging</h5> <p class="rm-manual"> </p><p class="rm-manual">Jun 21, 2021</p> <p class="rm-manual"></p> </figcaption> </figure> </article> </a> <p class="rm-manual"></p> </li> </ul>
+<h2 class="rm-manual">User comments</h2>
+<h5 class="rm-manual">Let us know if there is a problem with our content</h5>
+<p class="rm-manual"> Use this form if you have come across a typo, 
+inaccuracy or would like to send an edit request for the content on this
+ page. For general inquiries, please use our <a href="https://sciencex.com/help/feedback/">contact form</a>. For general feedback, use the public comments section below (please <a href="https://sciencex.com/help/comments/">adhere to guidelines</a>). </p>
+<p class="rm-manual">Please select the most appropriate category to facilitate processing of your request</p>
+<p class="rm-manual"> Your message to the editors </p>
+<p class="rm-manual"> Your email (only if you want to be contacted back) </p>
+<p class="rm-manual">Thank you for taking time to provide your feedback to the editors.</p>
+<p class="rm-manual">Your feedback is important to us. However, we do not guarantee individual replies due to the high volume of messages. </p>
+<h6 class="rm-manual">E-mail the story</h6>
+<h5 class="rm-manual">How a protein named STING assaults viruses and cancer cells that invade us</h5>
+<p class="rm-manual"> Your friend's email </p>
+<p class="rm-manual"> Your email </p>
+<p class="rm-manual"> I would like to subscribe to Science X Newsletter. <a href="https://sciencex.com/help/newsletter/">Learn more</a> </p>
+<p class="rm-manual"> Your name </p>
+<h6 class="rm-manual">Note</h6>
+<p class="rm-manual"> Your email address is used only to let the 
+recipient know who sent the email. Neither your address nor the 
+recipient's address will be used for any other purpose. The information 
+you enter will appear in your e-mail message and is not retained by 
+Medical Xpress in any form. </p>
+<p class="rm-manual"> Your message </p></article>
+</body></html>

@@ -1,0 +1,191 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"><span><span>Posted in</span><a href="https://liliputing.com/category/news" rel="category tag">News</a></span></p>
+<h1 class="rm-manual"> Microsoft Edge coming to Linux, and Linux GUI apps are coming to Windows</h1>
+<p class="rm-manual"> <span><span>by</span> <span><a href="https://liliputing.com/author/admin">Brad Linder</a></span></span></p>
+<p class="rm-manual">Posted on September 22, 2020 at 4:07 pm</p>
+<p class="rm-manual"><a href="https://liliputing.com/2020/09/microsoft-edge-coming-to-linux-and-linux-gui-apps-are-coming-to-windows.html#comments">4 Comments<span> on Microsoft Edge coming to Linux, and Linux GUI apps are coming to Windows</span></a></p>
+<p>Microsoft’s relationship with Linux has <a href="https://www.theverge.com/2020/5/18/21262103/microsoft-open-source-linux-history-wrong-statement">changed a lot in recent years</a>.
+ The company includes a Windows Subsystem for Linux (WSL) that lets 
+developers and power users run a Linux terminal within Windows, and 
+Microsoft has become a major contributor to many open source projects.</p>
+<p>The latest versions of Microsoft’s Edge web browser are built on top 
+of Google’s open source Chromium code. And now Microsoft says it’s 
+getting ready to make the Edge browser available to Linux users… no 
+Windows PC required.</p>
+<p>Edge for Linux <a href="https://blogs.windows.com/windowsexperience/2020/09/22/whats-new-in-web-experiences-ignite-2020-need-to-secure-your-remote-workers-choose-microsoft-edge-as-your-browser-for-business/">will be available in a developer preview channel</a>
+ starting in October. And that’s just one of a bunch of new 
+Linux/command line/geeky things Microsoft is announcing during this 
+year’s <a href="https://myignite.microsoft.com/home">MS Ignite</a> developer conference.</p>
+<p>The company is also bringing support for running Linux apps with a graphical user interface to the Windows Subsystem for Linux.</p>
+<p>GUI app support is still a work in progress, but Microsoft program manager <a href="https://twitter.com/craigaloewen/status/1308452901266751488">Craig Loewen shared a GIF</a>
+ showing what it looks like when you launch an GUI application like the 
+Nautilus file manager or GIMP image editor using a command in a Linux 
+terminal window.</p>
+<p>Check out this sneak preview of our work on adding Linux GUI application support to WSL! <a href="https://t.co/lcx4WWwxTo">pic.twitter.com/lcx4WWwxTo</a></p>
+<p>— Craig Loewen (@craigaloewen) <a href="https://twitter.com/craigaloewen/status/1308452901266751488?ref_src=twsrc%5Etfw">September 22, 2020</a></p>
+<p>We knew GUI app support was coming, but now Microsoft is providing a 
+rough timeline: the company says a preview should be available to 
+Windows Insiders “<a href="https://devblogs.microsoft.com/commandline/whats-new-in-the-windows-subsystem-for-linux-september-2020/">within the next couple of months</a>.” Microsoft’s Steve Pronovost also provided more details about WSL 2 and X11 and Wayland apps <a href="https://www.youtube.com/watch?v=b2mnbyRgXkY&amp;feature=youtu.be&amp;t=7975">during the XDC conference earlier this month</a>.</p>
+<p>A few other recent and/or upcoming changes to WSL 2 include:</p>
+<ul>
+<li>Support for a “wsl — install” feature that lets you set up WSL and 
+install a Linux distro at the same time with just a single command</li>
+<li>A “wsl –mount” parameter that lets you view Linux file system such as ext4 in Windows Explorer</li>
+<li>Linux kernel updates delivered through Windows update</li>
+</ul>
+<p>Microsoft has also released <a href="https://devblogs.microsoft.com/commandline/windows-terminal-preview-1-4-release/">preview version 1.4 of the Windows Terminal app</a>,
+ bringing support for embedded hyperlinks, blink graphic rendering, and 
+Jump list support allowing you to launch different terminal profiles 
+from the start menu or taskbar (such as PowerShell, Command Prompt, or 
+WSL).</p>
+<p>The company is also updating another command line tool, although it’s not a Linux feature, strictly speaking.</p>
+<p>Earlier this year the company <a href="https://liliputing.com/2020/05/coming-soon-to-windows-10-linux-apps-and-a-windows-package-manager.html">introduced a preview version of a Windows Package Manager</a>
+ that lets you download and install Windows applications from the 
+command line, much the way you can on most GNU/Linux distributions. Now 
+there’s an updated Windows Package Manager Preview <a href="https://devblogs.microsoft.com/commandline/windows-package-manager-preview-v0-2-2521/">that adds support for</a>:</p>
+<ul>
+<li>Toggling features by altering the winget settings</li>
+<li>PowerShell autocomplete</li>
+<li>Installing Microsoft Store apps using winget</li>
+</ul>
+<p>Microsoft says other planned features for the winget package manager 
+include support for uninstalling from the command line, an upgrade tool 
+that would let you upgrade all of your apps at once, and a list feature 
+that would show available applications.</p>
+<p>You can try out the Windows Package Manager by joining the <a href="https://insider.windows.com/en-us/">Windows Insider program</a> or by downloading the <a href="https://github.com/microsoft/winget-cli/releases">latest release from Github</a>.</p>
+<h4 class="rm-manual">Share this article:</h4>
+<h2 class="rm-manual">Support Liliputing</h2>
+<p class="rm-manual">Liliputing's primary sources of revenue are advertising and affiliate links (if you click the "<a rel="nofollow noopener" href="https://www.amazon.com/Best-Sellers-Computers-Accessories/zgbs/pc/ref=as_li_ss_tl?_encoding=UTF8&amp;linkCode=ll2&amp;tag=liliputing_shop-20&amp;linkId=93aaf7ba4e36ed56d46003558471548d">Shop</a>" button at the top of the page and buy something on Amazon, for example, we'll get a small commission).</p>
+<p class="rm-manual">But there are several ways you can support the site directly even if you're using an ad blocker* and hate online shopping.</p>
+<h3 class="rm-manual">Contribute to our <a href="https://www.patreon.com/bradlinder">Patreon campaign</a>
+</h3>
+<p class="rm-manual"> or...</p>
+<h3 class="rm-manual">Contribute via <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=PTBQ9EKAYTZBS&amp;source=url">PayPal</a>
+</h3>
+<p class="rm-manual"> * If you are using an ad blocker like uBlock Origin and seeing a pop-up message at the bottom of the screen, we have a </p>
+<p class="rm-manual"><a href="https://liliputing.com/2020/09/ublock-origin-how-to-hide-googles-script-blocking-warning-for-websites-using-funding-choices.html" rel="noopener">guide that may help you disable it.</a></p>
+<p class="rm-manual"><span><span>Tagged: </span><a href="https://liliputing.com/tag/command-line" rel="tag">command line</a><span>, </span><a href="https://liliputing.com/tag/edge" rel="tag">edge</a><span>, </span><a href="https://liliputing.com/tag/edge-for-linux" rel="tag">edge for linux</a><span>, </span><a href="https://liliputing.com/tag/linux" rel="tag">linux</a><span>, </span><a href="https://liliputing.com/tag/microsoft" rel="tag">microsoft</a><span>, </span><a href="https://liliputing.com/tag/microsoft-edge" rel="tag">microsoft edge</a><span>, </span><a href="https://liliputing.com/tag/ms-ignite" rel="tag">ms ignite</a><span>, </span><a href="https://liliputing.com/tag/windows-package-manager" rel="tag">windows package manager</a><span>, </span><a href="https://liliputing.com/tag/windows-terminal" rel="tag">windows terminal</a><span>, </span><a href="https://liliputing.com/tag/winget" rel="tag">winget</a><span>, </span><a href="https://liliputing.com/tag/wsl" rel="tag">wsl</a></span></p>
+<h2 class="rm-manual"> Join the Conversation</h2>
+<p class="rm-manual"> <span>4 Comments</span></p>
+<h3 class="rm-manual"> <a rel="nofollow" href="file:///2020/09/microsoft-edge-coming-to-linux-and-linux-gui-apps-are-coming-to-windows.html#respond">Cancel reply</a>
+</h3>
+<p class="rm-manual"><span>Your email address will not be published.</span> Required fields are marked <span>*</span></p>
+<p class="rm-manual">Comment</p>
+<p class="rm-manual">Name <span>*</span> </p>
+<p class="rm-manual">Email <span>*</span> </p>
+<p class="rm-manual">Website </p>
+<p class="rm-manual"> Save my name, email, and website in this browser for the next time I comment.</p>
+<p class="rm-manual"> Notify me of follow-up comments by email.</p>
+<p class="rm-manual"> Notify me of new posts by email.</p>
+<ol class="rm-manual"><li class="rm-manual">
+<article class="rm-manual"><p class="rm-manual"> Drone <span>says:</span></p>
+<p class="rm-manual"> <a href="https://liliputing.com/2020/09/microsoft-edge-coming-to-linux-and-linux-gui-apps-are-coming-to-windows.html#comment-1155789">09/23/2020 at 12:23 AM</a></p>
+<p class="rm-manual">Why would I infect a Linux machine with a browser 
+from Microsoft? I mean really, there must be some reason, otherwise why 
+would Microsoft spend real money to port Chromium/Edge to Linux.</p>
+<p class="rm-manual">I totally get the Windows Subsystem for Linux; make
+ Windows do Linuxy stuff to stem people from jumping of the Windows 
+boat. But making Windows stuff work natively in Linux? I don’t get it.</p>
+<p class="rm-manual"><a rel="nofollow" href="#comment-1155789">Reply</a></p></article><ol class="rm-manual">
+<li class="rm-manual"><article class="rm-manual"><p class="rm-manual"> Corporal Lint <span>says:</span></p>
+<p class="rm-manual"> <a href="https://liliputing.com/2020/09/microsoft-edge-coming-to-linux-and-linux-gui-apps-are-coming-to-windows.html#comment-1155821">09/23/2020 at 8:30 AM</a></p>
+<p class="rm-manual">Edge is basically an alternative Chrome. Using it 
+on Linux can be a way to keep Google off of your machine while still 
+having a well-supported Chromium-based cross-platform browser available.
+ Pick your poison.</p>
+<p class="rm-manual">As for why MS would do it — I suspect that MS cloud
+ stuff like Office 365 will work better on Edge for Linux than on other 
+browsers, which might help their sales. Mindshare is important, and Edge
+ on Linux maybe increases mindshare. Also Edge was built to be highly 
+portable (it already works on MacOS, iOS, and Android) so adding one 
+more platform probably isn’t that big of a deal.</p>
+<p class="rm-manual"><a rel="nofollow" href="#comment-1155821">Reply</a></p></article></li>
+<li class="rm-manual"><article class="rm-manual"><p class="rm-manual"> <a href="https://atetux.com/" rel="external nofollow ugc">Larry Haiti</a> <span>says:</span></p>
+<p class="rm-manual"> <a href="https://liliputing.com/2020/09/microsoft-edge-coming-to-linux-and-linux-gui-apps-are-coming-to-windows.html#comment-1155827">09/23/2020 at 10:02 AM</a></p>
+<p class="rm-manual">Depend on your use case, for our case we need to 
+test a lot of our application againts Edge, so we have a lot windows VM 
+for this purpose.</p>
+<p class="rm-manual">If Edge run natively on Linux we’ll save a lot money on licensing.</p>
+<p class="rm-manual"><a rel="nofollow" href="#comment-1155827">Reply</a></p></article></li>
+<li class="rm-manual"><article class="rm-manual"><p class="rm-manual"> Kyle <span>says:</span></p>
+<p class="rm-manual"> <a href="https://liliputing.com/2020/09/microsoft-edge-coming-to-linux-and-linux-gui-apps-are-coming-to-windows.html#comment-1155835">09/23/2020 at 11:58 AM</a></p>
+<p class="rm-manual">It has to do with content management. Utilizing 
+intune policies can be built that say data in o365 can be accessed by a 
+managed browser (edge). Microsoft is trying to ensure they leave no 
+platform left behind. This will allow the company to only provision one 
+device for the worker vs multiple when the end-users primary workstation
+ is Linux.</p>
+<p class="rm-manual"><a rel="nofollow" href="#comment-1155835">Reply</a></p></article></li>
+</ol>
+</li></ol>
+<section class="rm-manual"> <span>Search for:</span> </section><h2 class="rm-manual"><span>Follow</span></h2>
+<h2 class="rm-manual"><span>Featured Articles</span></h2>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"><a href="https://liliputing.com/2021/06/lenovo-thinkpad-x1-nano-review-2-pound-notebook-that-punches-above-its-weight-class.html" rel="bookmark">Lenovo Thinkpad X1 Nano review (2 pound notebook that punches above its weight class)</a></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="https://liliputing.com/2021/05/msi-prestige-14-review.html" rel="bookmark">MSI Prestige 14 Evo review (Speedy thin &amp; light laptop with some sacrifices)</a></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="https://liliputing.com/2021/05/onexplayer-handheld-gaming-pc-review.html" rel="bookmark">ONEXPLAYER Review: (Handheld gaming PC with 8.4 inch display, Intel Tiger Lake, and built-in controllers)</a></p></li>
+</ul>
+<h2 class="rm-manual"><span>Latest Deals</span></h2>
+<ul class="rm-manual"><li class="rm-manual"><p class="rm-manual"><a href="https://liliputing.com/2021/07/daily-deals-7-12-2021.html" rel="bookmark">Daily Deals (7-12-2021)</a></p></li></ul>
+<p class="rm-manual">Disclosure: Some links on this page may be monetized by <a rel="nofollow" href="https://go.skimlinks.com/?id=32X105&amp;xs=1&amp;url=https://skimlinks.com">Skimlinks</a> and <a rel="nofollow" href="https://affiliate-program.amazon.com/welcome">Amazon's</a> and <a rel="no follow" href="https://partnernetwork.ebay.com/">eBay's</a> affiliate programs.</p>
+<h2 class="rm-manual"><span>Recent Posts</span></h2>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"><a href="https://liliputing.com/2021/07/kobo-clara-hd-becomes-an-e-ink-linux-tablet-with-the-help-of-postmarketos.html" rel="bookmark">Kobo Clara HD becomes an E Ink Linux tablet with the help of postmarketOS</a></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="https://liliputing.com/2021/07/pisugar-s-brings-battery-power-to-raspberry-pi-devices-for-less-than-30.html" rel="bookmark">PiSugar S brings battery power to Raspberry Pi devices for less than $30</a></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="https://liliputing.com/2021/07/this-diy-cyberdeck-is-a-retrofuturistic-wearable-workstation-for-hacking-on-the-go.html" rel="bookmark">This DIY cyberdeck is a retrofuturistic wearable workstation for hacking on the go</a></p></li>
+</ul>
+<h2 class="rm-manual"><span>Recent Comments</span></h2>
+<ul class="rm-manual">
+<li class="rm-manual">
+<span>sean c</span> on <a href="https://liliputing.com/2021/07/amd-4700s-desktop-kit-is-a-mini-pc-with-an-xbox-series-x-like-processor.html#comment-1246167">AMD 4700S Desktop Kit is a mini PC with an Xbox Series X-like processor</a>
+</li>
+<li class="rm-manual">
+<span>ssj9</span> on <a href="https://liliputing.com/2021/07/microsoft-may-offer-7-different-versions-of-windows-11-home-pro-education-mixed-reality-etc.html#comment-1245912">Microsoft may offer 7 different versions of Windows 11 (Home, Pro, Education, Mixed Reality, etc)</a>
+</li>
+<li class="rm-manual">
+<span>Arthran</span> on <a href="https://liliputing.com/2021/07/amd-4700s-desktop-kit-is-a-mini-pc-with-an-xbox-series-x-like-processor.html#comment-1245901">AMD 4700S Desktop Kit is a mini PC with an Xbox Series X-like processor</a>
+</li>
+<li class="rm-manual">
+<span>Arthran</span> on <a href="https://liliputing.com/2021/07/amd-4700s-desktop-kit-is-a-mini-pc-with-an-xbox-series-x-like-processor.html#comment-1245900">AMD 4700S Desktop Kit is a mini PC with an Xbox Series X-like processor</a>
+</li>
+<li class="rm-manual">
+<span>Rob</span> on <a href="https://liliputing.com/2021/07/amd-4700s-desktop-kit-is-a-mini-pc-with-an-xbox-series-x-like-processor.html#comment-1245898">AMD 4700S Desktop Kit is a mini PC with an Xbox Series X-like processor</a>
+</li>
+</ul></article>
+</body></html>

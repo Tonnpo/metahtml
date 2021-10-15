@@ -1,0 +1,205 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> North Korea: Kim Jong Un was in critical condition after surgery, US official says | Asia – Gulf News </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a>Menu</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a>Menu</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///world/asia">Asia</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///world">World</a> </li> <li class="rm-manual"> <a href="file:///uae">UAE</a> </li> <li class="rm-manual"> <a href="file:///opinion">Opinion</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <a href="#">Logout</a> </p> </li> </ul>
+<h5 class="rm-manual">Trending</h5>
+<p class="rm-manual"><a href="https://gulfnews.com/1.1578219844739">UAE holidays 2020</a> </p>
+<p class="rm-manual"><a href="https://gulfnews.com/world/coronavirus">Coronavirus</a> </p>
+<p class="rm-manual"><a href="file:///uae/special-reports">Special Reports</a> </p>
+<p class="rm-manual"><a href="https://getthat.com/jobs/cv-writing-services?utm_source=gulfnews&amp;utm_medium=featured&amp;utm_campaign=CVwritingservices">Get Hired Faster</a> </p>
+<p class="rm-manual"><a href="file:///travel">Travel</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///uae">UAE</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///uae/crime">Crime</a> </li> <li class="rm-manual"> <a href="file:///uae/education">Education</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///uae/education/young-editors">Young Editors</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///uae/environment">Environment</a> </li> <li class="rm-manual"> <a href="file:///uae/government">Government</a> </li> <li class="rm-manual"> <a href="file:///uae/health">Health</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///uae/health/better-health">Better Health</a> </li> <li class="rm-manual"> <a href="file:///uae/health/why-worry">Why Worry</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///uae/transport">Transport</a> </li> <li class="rm-manual"> <a href="file:///uae/science">Science</a> </li> <li class="rm-manual"> <a href="file:///uae/weather">Weather</a> </li> <li class="rm-manual"> <a href="file:///uae/reader-complaints">Reader Complaint</a> </li> <li class="rm-manual"> <a href="file:///uae/ask-the-law">Ask the Law</a> </li> <li class="rm-manual"> <a href="file:///uae/special-reports">Special Reports</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///living-in-uae">Living In UAE</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///living-in-uae/visa-immigration">Visa+Immigration</a> </li> <li class="rm-manual"> <a href="file:///living-in-uae/housing">Housing</a> </li> <li class="rm-manual"> <a href="file:///living-in-uae/telephone-internet">Phone+Internet</a> </li> <li class="rm-manual"> <a href="file:///living-in-uae/banking">Banking</a> </li> <li class="rm-manual"> <a href="file:///living-in-uae/transport">Transport</a> </li> <li class="rm-manual"> <a href="file:///living-in-uae/health">Health</a> </li> <li class="rm-manual"> <a href="file:///living-in-uae/education">Education</a> </li> <li class="rm-manual"> <a href="file:///living-in-uae/relocate">Relocate</a> </li> <li class="rm-manual"> <a href="file:///living-in-uae/ask-us">Ask Us</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///latest-news">Latest News</a> </li> <li class="rm-manual"> <a href="https://gulfnews.com/world/gulf"> Gulf </a> </li> <li class="rm-manual"> <a href="file:///your-money">Your Money</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///your-money/saving-investment">Saving and Investment</a> </li> <li class="rm-manual"> <a href="file:///your-money/budget-living">Budget Living</a> </li> <li class="rm-manual"> <a href="file:///your-money/taxation">Taxation</a> </li> <li class="rm-manual"> <a href="file:///your-money/expert-columns">Expert Columns</a> </li> <li class="rm-manual"> <a href="file:///your-money/community-tips">Community Tips</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///business">Business</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///business/banking">Banking</a> </li> <li class="rm-manual"> <a href="file:///business/aviation">Aviation</a> </li> <li class="rm-manual"> <a href="file:///business/property">Property</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///business/property/cityscape">Cityscape</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///business/energy">Energy</a> </li> <li class="rm-manual"> <a href="file:///business/analysis">Analysis</a> </li> <li class="rm-manual"> <a href="file:///business/tourism">Tourism</a> </li> <li class="rm-manual"> <a href="file:///business/markets">Markets</a> </li> <li class="rm-manual"> <a href="file:///business/retail">Retail</a> </li> <li class="rm-manual"> <a href="file:///business/company-releases">Company Releases</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///world">World</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///world/gulf">Gulf</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///world/gulf/bahrain">Bahrain</a> </li> <li class="rm-manual"> <a href="file:///world/gulf/kuwait">Kuwait</a> </li> <li class="rm-manual"> <a href="file:///world/gulf/oman">Oman</a> </li> <li class="rm-manual"> <a href="file:///world/gulf/qatar">Qatar</a> </li> <li class="rm-manual"> <a href="file:///world/gulf/saudi">Saudi</a> </li> <li class="rm-manual"> <a href="file:///world/gulf/yemen">Yemen</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///world/mena">Mena</a> </li> <li class="rm-manual"> <a href="file:///world/europe">Europe</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///world/europe/brexit">Brexit</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///world/africa">Africa</a> </li> <li class="rm-manual"> <a href="file:///world/americas">Americas</a> </li> <li class="rm-manual"> <a href="file:///world/asia">Asia</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///world/asia/india">India</a> </li> <li class="rm-manual"> <a href="file:///world/asia/pakistan">Pakistan</a> </li> <li class="rm-manual"> <a href="file:///world/asia/philippines">Philippines</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///world/oceania">Oceania</a> </li> <li class="rm-manual"> <a href="file:///world/offbeat">Offbeat</a> </li> <li class="rm-manual"> <a href="file:///world/court-crime">Court and Crime</a> </li> <li class="rm-manual"> <a href="file:///world/coronavirus">Coronavirus</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///opinion">Opinion</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///opinion/editorials">Editorials</a> </li> <li class="rm-manual"> <a href="file:///opinion/op-eds">Op-Eds</a> </li> <li class="rm-manual"> <a href="file:///opinion/letters">Letters</a> </li> <li class="rm-manual"> <a href="file:///opinion/off-the-cuff">Off the Cuff</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///sport">Sport</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///sport/uae-sport">UAE Sport</a> </li> <li class="rm-manual"> <a href="file:///sport/horse-racing">Horse Racing</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///sport/horse-racing/dubai-world-cup">Dubai World Cup</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///sport/cricket">Cricket</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///sport/cricket/ipl">IPL</a> </li> <li class="rm-manual"> <a href="file:///sport/cricket/icc">ICC</a> </li> <li class="rm-manual"> <a href="file:///sport/cricket/icc-world-cup-2019">ICC World Cup 2019</a> </li> <li class="rm-manual"> <a href="file:///sport/cricket/howzaat-kr">Howzaat with KR</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///sport/football">Football</a> </li> <li class="rm-manual"> <a href="file:///sport/motorsport">Motorsport</a> </li> <li class="rm-manual"> <a href="file:///sport/tennis">Tennis</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///sport/tennis/dubai-duty-free-tennis-2020">Dubai Duty Free Tennis 2020</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///sport/golf">Golf</a> </li> <li class="rm-manual"> <a href="file:///sport/rugby">Rugby</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///entertainment">Entertainment</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///entertainment/hollywood">Hollywood</a> </li> <li class="rm-manual"> <a href="file:///entertainment/bollywood">Bollywood</a> </li> <li class="rm-manual"> <a href="file:///entertainment/pakistani-cinema">Pakistani Cinema</a> </li> <li class="rm-manual"> <a href="file:///entertainment/pinoy-celebs">Pinoy Celebs</a> </li> <li class="rm-manual"> <a href="file:///entertainment/south-indian">South Indian</a> </li> <li class="rm-manual"> <a href="file:///entertainment/arab-celebs">Arab Celebs</a> </li> <li class="rm-manual"> <a href="file:///entertainment/music">Music</a> </li> <li class="rm-manual"> <a href="file:///entertainment/tv">TV</a> </li> <li class="rm-manual"> <a href="file:///entertainment/books">Books</a> </li> <li class="rm-manual"> <a href="file:///entertainment/theatre">Theatre</a> </li> <li class="rm-manual"> <a href="file:///entertainment/arts-culture">Arts+Culture</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///going-out">Going Out</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///going-out/movie-reviews">Movie Reviews</a> </li> <li class="rm-manual"> <a href="file:///going-out/society">Society</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///photos">Photos</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///photos/news">News</a> </li> <li class="rm-manual"> <a href="file:///photos/entertainment">Entertainment</a> </li> <li class="rm-manual"> <a href="file:///photos/readers-pictures">Readers' Photos</a> </li> <li class="rm-manual"> <a href="file:///photos/lifestyle">Lifestyle</a> </li> <li class="rm-manual"> <a href="file:///photos/business">Business</a> </li> <li class="rm-manual"> <a href="file:///photos/sports">Sports</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///lifestyle">Lifestyle</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///lifestyle/health-fitness">Health+Fitness</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///lifestyle/health-fitness/breast-cancer">Beating Breast Cancer</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///lifestyle/family">Family</a> </li> <li class="rm-manual"> <a href="file:///lifestyle/community">Community</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///lifestyle/community/india">India</a> </li> <li class="rm-manual"> <a href="file:///lifestyle/community/pakistan">Pakistan</a> </li> <li class="rm-manual"> <a href="file:///lifestyle/community/philippines">#Pinoy</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///lifestyle/home">Home</a> </li> <li class="rm-manual"> <a href="file:///lifestyle/fashion">Fashion</a> </li> <li class="rm-manual"> <a href="file:///lifestyle/weekend-review">Weekend Review</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///auto">Auto</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///auto/news">News</a> </li> <li class="rm-manual"> <a href="file:///auto/test-drives">Test Drives</a> </li> <li class="rm-manual"> <a href="file:///auto/car-culture">Car Culture</a> </li> <li class="rm-manual"> <a href="file:///auto/auto-care">Auto Care</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///gn-reach">GN Reach</a> </li> <li class="rm-manual"> <a href="https://getthat.com/jobs/search?utm_source=gn&amp;utm_medium=topnav&amp;utm_campaign=logo&amp;utm_content=JobsinUAE"> Jobs </a> </li> <li class="rm-manual"> <a href="file:///technology">Tech</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///technology/consumer-electronics">Electronics</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///technology/consumer-electronics/gitex">Gitex Shopper</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///technology/gaming">Gaming</a> </li> <li class="rm-manual"> <a href="file:///technology/trends">Trends</a> </li> <li class="rm-manual"> <a href="file:///technology/fin-tech">Fin-Tech</a> </li> <li class="rm-manual"> <a href="file:///technology/media">Media</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///how-to">How To</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///how-to/employment">Employment</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://getthat.com/jobs/search?utm_source=gn&amp;utm_medium=submenu&amp;utm_campaign=howtoemployment&amp;utm_content=Jobs"> Jobs </a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///how-to/passports-visa">Passports &amp; Visas</a> </li> <li class="rm-manual"> <a href="file:///how-to/your-money">Your Money</a> </li> <li class="rm-manual"> <a href="file:///how-to/legal">Legal</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///videos">Videos</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///videos/how-to">How-To</a> </li> <li class="rm-manual"> <a href="file:///videos/best-bollywood">Best Of Bollywood</a> </li> <li class="rm-manual"> <a href="file:///videos/news">News</a> </li> <li class="rm-manual"> <a href="file:///videos/entertainment">Entertainment</a> </li> <li class="rm-manual"> <a href="file:///videos/business">Business</a> </li> <li class="rm-manual"> <a href="file:///videos/sport">Sport</a> </li> <li class="rm-manual"> <a href="file:///videos/pinoy">#Pinoy</a> </li> <li class="rm-manual"> <a href="file:///videos/community">Community</a> </li> <li class="rm-manual"> <a href="file:///videos/travel">Travel</a> </li> <li class="rm-manual"> <a href="file:///videos/technology">Technology</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///food">Food</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///food/recipes">Recipes</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///travel">Travel</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///travel/destinations">Destinations</a> </li> <li class="rm-manual"> <a href="file:///travel/hotels">Hotels</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///gold-forex">Gold-Forex</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="#">Notifications</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///gold-forex">Gold/Forex </a> </li> <li class="rm-manual"> <a href="file:///prayer-times">Prayer Times</a> </li> <li class="rm-manual"> <a href="file:///cinema-listing">Cinema Listing</a> </li> <li class="rm-manual"> <a href="https://gulfnews.com/newsletter/sign-up?utm_source=gn&amp;utm_medium=gn_topnav">Subscribe to Newsletters</a> </li> </ul>
+<li class="rm-manual"> <a href="file:///about-gulf-news">About Gulf News </a> </li>
+<li class="rm-manual"> <a href="file:///contact-us">Contact us</a> </li>
+<li class="rm-manual"> <a href="file:///work-with-us">Work with us</a> </li>
+<li class="rm-manual"> <a href="file:///about-gulf-news/term-conditions">Terms and Conditions</a> </li>
+<li class="rm-manual"> <a href="file:///about-gulf-news/privacy-policy">Privacy Policy</a> </li>
+<li class="rm-manual"> <a href="https://store.gulfnews.com/">Gulf News store</a> </li>
+<li class="rm-manual"> <a href="http://advertising.gulfnews.com/">Advertise with us</a> </li>
+<li class="rm-manual"> <a href="file:///gn-reach">Reach by GN</a> </li>
+<li class="rm-manual"> <a href="file:///gn-focus">GN Focus</a> </li>
+<li class="rm-manual"> <a href="http://gulfnews.newspaperdirect.com/epaper/viewer.aspx">Gulf News epaper</a> </li>
+<li class="rm-manual"> <a href="file:///site-map">Sitemap</a> </li>
+<li class="rm-manual"> <a href="file:///have-your-say">Have your say</a> </li>
+<p class="rm-manual"> © Al Nisr Publishing LLC 2020. All rights reserved. </p>
+<h5 class="rm-manual">North Korea: Kim Jong Un was in critical condition after surgery, US official says</h5>
+<p class="rm-manual"> <a href="file:///world"> World </a> </p>
+<h2 class="rm-manual"><a href="file:///world/asia">Asia</a></h2>
+<p class="rm-manual"> <a href="file:///user/login"> <span>Login / Sign Up</span> </a> </p>
+<p class="rm-manual">Tuesday, June 30, 2020</p>
+<p class="rm-manual"> <a href="file:///gold-forex">Gold / Forex</a> </p>
+<h2 class="rm-manual">
+<a href="file:///world/asia">Asia</a> </h2>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///world/asia/india"> India </a> </li> <li class="rm-manual"> <a href="file:///world/asia/pakistan"> Pakistan </a> </li> <li class="rm-manual"> <a href="file:///world/asia/philippines"> Philippines </a> </li> </ul>
+<p class="rm-manual"> <a href=""> All Sections </a> </p>
+<h1 class="rm-manual">North Korea: Kim Jong Un was in critical condition after surgery, US official says</h1>
+<p class="rm-manual">The White House was told that Kim took a turn for the worse after the procedure</p>
+<p class="rm-manual"> Published: <span>April 21, 2020 16:34</span> <span> <a rel="author" href="#"> <span>Bloomberg</span> </a> </span> </p>
+<figcaption> This picture taken on February 8, 2019 and released from 
+North Korea's official Korean Central News Agency (KCNA) shows North 
+Korea's leader Kim Jong Un delivering a speech during his visit at the 
+Ministry of People's Armed Forces for the 71st founding anniversary of 
+the Korean People's army in Pyongyang. <span>Image Credit: KNS</span> </figcaption><p>Mystery
+ surrounded Kim Jong Un's health after US and South Korean officials 
+gave differing accounts of the North Korean leader's condition following
+ his unusual absence from recent holiday celebrations.</p>
+<p>Kim was in critical condition after undergoing cardiovascular surgery
+ last week and the Trump administration wasn't sure of his current 
+health, said US officials, who asked not to be identified. One of the 
+officials said the White House was told that Kim took a turn for the 
+worse after the procedure, while CNN earlier cited a US official with 
+direct knowledge saying the 36-year-old leader may be in "grave danger."</p>
+<p>Meanwhile, South Korean President Moon Jae-in's office said that Kim 
+was conducting "normal activities" in a rural part of the country 
+assisted by close aides and no special movements were detected. Moon 
+spokesman Kang Min-seok said earlier there was nothing to confirm on the
+ speculation over Kim's health.</p>
+<p>North Korea's state-run news broadcast at 6.30pm local time made no 
+mention of Kim, and the official Korean Central News Agency didn't 
+provide an update on his condition. Kim Min-ki, head of the intelligence
+ committee in South Korea's parliament, told Yonhap News Agency he 
+believes there's no unusual signs regarding Kim's health after he was 
+briefed by the country's spy agency.</p>
+<p>The news around Kim's health spurred the benchmark Kospi gauge to 
+extend losses to as much as 3% while the won slid as much as 1.7% 
+against the dollar. The Kospi closed 1% lower.</p>
+<p>The health of Kim, overweight and a heavy smoker, is one of North 
+Korea's most closely guarded secrets, typically only known by a handful 
+of people in the inner circle of leadership. While North Korea had 
+scaled down major events as it battles the coronavirus pandemic, 
+speculation about Kim had been growing since his unprecedented absence 
+from April 15 celebrations for the birthday of his grandfather and state
+ founder Kim Il Sung, one of the biggest days on the country's calendar.</p>
+<p>Even the most well-informed North Korea experts find it hard to tell 
+what's happening in the secretive state. The Daily NK, a Seoul-based 
+website that gathers information from informants inside the isolated 
+nation, separately reported that Kim underwent a "cardiovascular 
+surgical procedure" and was now mostly recovered. Reuters cited an 
+official with the Chinese Communist Party's International Liaison 
+Department saying that Kim wasn't believed to be critically ill.</p>
+<p>"I saw some reports, but I don't know what these sources are," 
+Chinese foreign ministry spokesman Geng Shuang told reporters in Beijing
+ Tuesday afternoon.</p>
+<p>U.S. National Security Advisor Robert O'Brien told reporters on 
+Tuesday morning that the Trump administration is "watching the reports 
+closely." "It's just hard to know, we're keeping a close eye on it," he 
+said.</p>
+<p>Any leadership crisis in North Korea could potentially have serious 
+ramifications for regional stability, as well as for talks with the U.S.
+ over the country's nuclear arsenal. Kim, who took power in 2011 
+following his father's 17-year reign, developed the capability to 
+deliver a nuclear warhead to any part of the U.S. before engaging in 
+direct talks with President Donald Trump over his arsenal and sanctions 
+imposed on the state.</p>
+<p>"When Kim Jong Un came to power, his path to leadership had been 
+carefully cultivated by his father's guidance and maneuvering," said 
+Mintaro Oba, a former U.S. diplomat who was specialized in Korean 
+Peninsula issues. "Now, there is no clear transition plan and no clear 
+future leader."</p>
+<h3>White Horse</h3>
+<p>Kim has been shown in state media in recent months appearing at 
+military drills and riding a white horse on the country's revered Mt. 
+Paektu, where state propaganda says his grandfather used as a guerrilla 
+base to fight Japanese colonial occupiers. North Korea's state media 
+reported on April 11 that Kim attended a Politburo meeting of the ruling
+ Workers' Party. The next day it said he inspected a military unit, but 
+didn't reveal the date of that visit.</p>
+<figcaption> North Korean leader Kim Jong-un rides a horse during snowfall in Mount Paektu. <span>Image Credit: REUTERS </span> </figcaption><p>The
+ South Korean Unification Ministry said Friday it was "inappropriate" to
+ speculate about the reasons for Kim's absence. Kim has made 17 public 
+appearances this year that were mentioned in state media - at a pace of a
+ little more than one a week - the ministry said. That's slightly down 
+from 84 public appearances last year.</p>
+<p>South Korean intelligence said Kim Jong Un married Ri Sol Ju, a 
+former singer, in 2009. They are thought to have three children, but 
+there is no official mention of their offspring. Dennis Rodman, the 
+offbeat basketball great who visited Kim in North Korea, said in 2013 he
+ held the leader's baby girl in his arms, a daughter named Ju Ae.</p>
+<p>While there's been little time for him to groom a successor, Kim 
+raised the status of his younger sister Kim Yo Jong as a key player in 
+the secretive state. She was thrust into the global spotlight when she 
+served as envoy to the 2018 Winter Olympics in Pyeongchang, South Korea,
+ and became the first member of the immediate ruling family to visit 
+Seoul.</p>
+<h3 class="rm-manual">More From Asia</h3>
+<h2 class="rm-manual"> <a href="file:///world/asia/us-ends-sensitive-defence-exports-to-hong-kong-1.1593466833304">US ends sensitive defence exports to Hong Kong</a> </h2>
+<h2 class="rm-manual"> <a href="file:///world/asia/amid-search-for-coronavirus-origin-who-says-sending-team-to-china-next-week-1.1593456160804">COVID-19: WHO says sending team to China 'next week'</a> </h2>
+<h2 class="rm-manual"> <a href="file:///world/asia/blast-kills-23-at-a-cattle-market-in-southern-afghanistan-1.72313233">Blast kills 23 Afghans at cattle market in Afghanistan</a> </h2>
+<h2 class="rm-manual"> <a href="file:///world/asia/chinese-coronavirus-vaccine-approved-for-military-use-1.1593428154587">Chinese coronavirus vaccine approved for military use</a> </h2>
+<h2 class="rm-manual">Trending</h2>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> </p><h2 class="rm-manual"> <a href="file:///world/asia/india/india-police-arrest-kerala-gang-that-forces-models-to-become-escorts-and-targeted-actress-shamna-kasim-1.1593356701484">India: Gang arrested for blackmailing Kerala actress</a> </h2> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> </p><h2 class="rm-manual"> <a href="file:///world/asia/picture-of-human-sized-bat-from-the-philippines-goes-viral-netizens-spooked-out-1.1593343643184">Picture of Philippines 'human-sized bat' goes viral</a> </h2> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> </p><p class="rm-manual"> <span>Explainer</span> </p> <h2 class="rm-manual"> <a href="file:///world/asia/philippines/25-paid-by-filipino-expat-workers-how-far-does-it-go-1.1592997968947">$25 paid by Filipino expats: How far does it go?</a> </h2> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> </p><p class="rm-manual"> <span>Update</span> </p> <h2 class="rm-manual"> <a href="file:///world/asia/pakistan/gunmen-attack-pakistan-stock-exchange-in-karachi-1.1593411207028">Video: Gunmen attack Pakistan Stock Exchange, killing 6</a> </h2> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> </p><p class="rm-manual"> <span>SWAT Analysis</span> </p> <h2 class="rm-manual"> <a href="file:///world/asia/india/rahul-gandhi-to-become-congress-boss-again-but-is-he-the-opposition-leader-india-needs-1.1593332872242">Is Rahul Gandhi the Opposition leader India needs?</a> </h2> <p class="rm-manual"></p> </li> </ul>
+<h3 class="rm-manual"><a href="#">Latest In</a></h3>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> </p><h2 class="rm-manual"> <a href="file:///world/asia/us-ends-sensitive-defence-exports-to-hong-kong-1.1593466833304">US ends sensitive defence exports to Hong Kong</a> </h2> <p class="rm-manual"> <span>44 minutes ago</span> </p> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> </p><h2 class="rm-manual"> <a href="file:///world/europe/covid-19-uk-reimposes-local-lockdown-on-coronvirus-hit-leicester-1.1593466577893">UK reimposes local lockdown on coronvirus-hit Leicester</a> </h2> <p class="rm-manual"> <span>48 minutes ago</span> </p> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> </p><h2 class="rm-manual"> <a href="file:///business/energy/saudi-crown-prince-nigerian-president-discuss-opec-deal-1.1593466312477">Saudi crown prince, Nigerian president talk Opec+ deal</a> </h2> <p class="rm-manual"> <span>52 minutes ago</span> </p> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> </p><h2 class="rm-manual"> <a href="file:///world/court-crime/india-hyderabad-man-murders-two-sisters-injures-third-1.1593457454626">Man murders two sisters, injures third</a> </h2> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> </p><h2 class="rm-manual"> <a href="file:///world/asia/india/india-cow-gets-injured-after-biting-crude-bomb-in-andhras-chittoor-1.1593456974393">Cow gets injured after biting crude bomb</a> </h2> <p class="rm-manual"></p> </li> </ul>
+<p class="rm-manual"> Network links: </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://babyandchild.ae/?utm_source=gn&amp;utm_medium=footerlogo">Baby &amp; Child</a> </li> <li class="rm-manual"> <a href="https://fridaymagazine.ae/?utm_source=gn&amp;utm_medium=footerlogo">Friday</a> </li> <li class="rm-manual"> <a href="https://insideoutmagazine.ae/?utm_source=gn&amp;utm_medium=footerlogo">Inside Out</a> </li> <li class="rm-manual"> <a href="https://watchtime.me/?utm_source=gn&amp;utm_medium=footerlogo">Watch Time</a> </li> <li class="rm-manual"> <a href="https://wheels.ae/?utm_source=gn&amp;utm_medium=footerlogo">Wheels</a> </li> <li class="rm-manual"> <a href="https://getthat.com/?utm_source=gn&amp;utm_medium=footerlogo">getthat</a> </li> <li class="rm-manual"> <a href="https://gntech.ae/">GN Tech</a> </li> <li class="rm-manual"> <a href="https://getthat.com/jobs/search?utm_source=gn&amp;utm_medium=footerlinks&amp;utm_campaign=networkfooter&amp;utm_content=Jobs">Jobs</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///about-gulf-news">About Gulf News </a> </li> <li class="rm-manual"> <a href="file:///contact-us">Contact us</a> </li> <li class="rm-manual"> <a href="file:///work-with-us">Work with us</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///about-gulf-news/term-conditions">Terms and Conditions</a> </li> <li class="rm-manual"> <a href="file:///about-gulf-news/privacy-policy">Privacy Policy</a> </li> <li class="rm-manual"> <a href="https://store.gulfnews.com/">Gulf News store</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="http://advertising.gulfnews.com/">Advertise with us</a> </li> <li class="rm-manual"> <a href="file:///gn-reach">Reach by GN</a> </li> <li class="rm-manual"> <a href="file:///gn-focus">GN Focus</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="http://gulfnews.newspaperdirect.com/epaper/viewer.aspx">Gulf News epaper</a> </li> <li class="rm-manual"> <a href="file:///site-map">Sitemap</a> </li> <li class="rm-manual"> <a href="file:///have-your-say">Have your say</a> </li> </ul>
+<p class="rm-manual"> © Al Nisr Publishing LLC 2020. All rights reserved. </p>
+<p class="rm-manual"> <a href="#">Close</a> </p>
+<p class="rm-manual"> Get <span>Breaking News</span> Alerts From Gulf News </p>
+<p class="rm-manual">We’ll send you latest news updates through the day. You can manage them any time by clicking on the notification icon.</p>
+<p class="rm-manual"><a href="">Subscribe</a> </p>
+<p class="rm-manual"><a href="">No Thanks</a> </p>
+<p class="rm-manual">Continue reading Gulf News</p>
+<p class="rm-manual">Dear Reader, please register to read gulfnews.com</p>
+<p class="rm-manual">Dear Reader,</p>
+<p class="rm-manual">This section is about <span>Living in UAE</span> and essential information you cannot live without.</p>
+<p class="rm-manual">Register to read and get full access to gulfnews.com</p>
+<p class="rm-manual"> Create your account </p>
+<p class="rm-manual">or <a href="#">login</a> if you already have one</p>
+<p class="rm-manual"> First name is required. </p>
+<p class="rm-manual"> Last name is required. </p>
+<p class="rm-manual"> Please enter a valid email address. </p>
+<p class="rm-manual"> Password should have minimum 7 characters with at least one letter and number </p>
+<p class="rm-manual"> Passwords do not match </p>
+<p class="rm-manual"> By clicking below to sign up, you're agreeing to our <a href="file:///about-gulf-news/term-conditions">Terms of Use</a> and <a href="file:///about-gulf-news/privacy-policy">Privacy Policy</a> </p>
+<p class="rm-manual"> Login your account </p>
+<p class="rm-manual">New to Gulf News? <a href="#">Sign up now</a> </p>
+<p class="rm-manual"> Please enter your email address. </p>
+<p class="rm-manual"> Please enter your password. </p>
+<p class="rm-manual"><a href="file:///forgot-password">Forgot password</a></p>
+<p class="rm-manual">or</p></article>
+</body></html>

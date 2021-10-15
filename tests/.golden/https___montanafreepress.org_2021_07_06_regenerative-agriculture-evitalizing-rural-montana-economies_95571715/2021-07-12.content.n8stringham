@@ -1,0 +1,517 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> <span><span>Posted in</span><a href="https://montanafreepress.org/category/economy/agriculture/" rel="category tag">Agriculture</a></span> </p>
+<h1 class="rm-manual"> ‘Soil is our livelihood and we better protect it, or we’re screwed.’ </h1>
+<p class="rm-manual"> Common Ground, Part I: How organic and regenerative agriculture are revitalizing rural Montana economies. </p>
+<p class="rm-manual"> <span> <span>by</span> <span><a href="https://montanafreepress.org/author/emily-wolfe/">Emily Stifler Wolfe</a></span> </span> <span>07.06.202107.08.2021</span> </p>
+<figcaption><span>New seedlings come up through last year’s crop residue
+ at Happy Steer Ranch near Shelby. Because Korey and Wendy Fauque want 
+to maintain soil structure, they use a “no-till drill” to plant directly
+ into the soil. Instead of tilling to fight weeds, they spray herbicide,
+ albeit smaller amounts than most conventional systems. <span>Credit: Jason Thompson / MTFP</span></span></figcaption><p>Thank
+ you for supporting Montana Free Press and being a part of our 
+community. Your donation makes this and all our other local reporting 
+possible.</p>
+<p>A donation to Montana Free Press goes beyond the newsroom. We uncover
+ the truth, explain essential news stories and hold those in power 
+accountable.</p>
+<p class="rm-manual"><a href="https://checkout.fundjournalism.org/memberform?org_id=montanafreepress&amp;campaign=7014o000000Je8IAAS" rel="checkout.fundjournalism.org/memberform?org_id=montanafreepress&amp;campaign=7014o000000Je8IAAS(opens in a new tab) noopener">Donate</a></p>
+<p>The news you need to know. Local news in your inbox every weekday morning.</p>
+<p> Success! You're on the list. </p>
+<p> Whoops! There was an error and we couldn't process your subscription. Please reload the page and try again. </p>
+<p> Processing… </p>
+<p>Wind and water have eroded Montana soils since the first plow turned 
+earth on the Northern Plains more than 150 years ago, taking with them 
+one of the state’s most important resources. Since then, tillage, plus 
+the fertilizer and pesticides common in industrial agriculture, have 
+continued to degrade the soil that agriculture depends on. With climate 
+change threatening almost 25,000 Montana agricultural jobs in the next 
+50 years, many farmers, ranchers and researchers believe the status quo 
+is no longer adequate. And though conventional farming continues to 
+account for the overwhelming majority of Montana’s $4.6 billion ag 
+sector, things are shifting.</p>
+<p>Part I of this series, supported by the Solutions Journalism Network,
+ explores two responses to soil degradation in the age of climate 
+change: organic and regenerative farming systems. </p>
+<p>Organic has been a USDA certification since 2002, while regenerative 
+lacks a codified or even consensus definition, but generally includes a 
+suite of techniques like cover cropping, crop rotation and livestock 
+integration that decrease erosion, improve biodiversity and capture 
+carbon. Both systems have challenges and shortfalls, which are 
+considered here, but a growing number of Montana producers are using 
+them to build topsoil, become more resilient to drought, capture carbon 
+and increase profits. </p>
+<p>A slight haze hangs on the blue horizon above Ledger Road, 50 miles 
+north of Great Falls in north-central Montana. Rectangles of spring 
+crops and native grasses glow green alongside the dried straw of last 
+year’s fallow. Forty miles north, the Sweetgrass Hills rise 3,700 feet 
+above the high plains. </p>
+<p>A mile down a side road, past another farm, the home place at Tiber 
+Ridge Farm is an oasis of trees, farm buildings and birdsong. The farm 
+sits in the geographic center of the Golden Triangle, a 
+4,000-square-mile area between Great Falls, Havre and Cut Bank best 
+known for producing high-protein wheat. </p>
+<p>In the driveway, John Wicks starts his semi, a Freightliner with 
+800,000 miles he bought used in 2007. That was right after his dad died 
+and Wicks left Montana State University in Bozeman to help his mother on
+ the farm where he grew up.</p>
+<p>“It’s got a [fuel] leak, a pinhole somewhere that’s sucking air,” 
+Wicks says, stepping away from the truck while it warms up. “So when I 
+let it sit for a couple days, it’s hard to start.”</p>
+<p>While he waits, Wicks talks to his wife, Gwyneth Givens, who’s 
+building new raised beds for their summer garden with the hired hand, 
+Peyton Cole.</p>
+<figcaption>John Wicks puts away the fill auger on his air cart after 
+planting the last of his organic barley at Tiber Ridge Farm north of 
+Great Falls in early June 2021. <span>Credit: Jason Thompson / MTFP</span></figcaption><p>Once
+ the truck is warmed up, Wicks climbs back into the cab and pulls left 
+out of the driveway. As he descends toward Pondera Creek, the eastern 
+end of Tiber Reservoir emerges into view between crumbling sandstone 
+bluffs. In front of it, across the drainage, wind blows dust off a 
+hilltop. </p>
+<p>Wicks frowns. He and Givens planted those hilltop fields with winter 
+wheat, but some of it died in a cold snap, making the ground susceptible
+ to wind erosion. Like the majority of their neighbors in the Golden 
+Triangle, they are dryland farmers, meaning they don’t irrigate.</p>
+<p>“The tillage we’re doing is 2” deep — trying not to get in there and 
+mess with our microbiome,” Wicks says. Traditional tillage, he explains,
+ rips four to five inches down, destroying the interconnected web of 
+plants, animals and microorganisms that make up a<a href="https://www.ucsusa.org/resources/how-soil-erosion-threatens-food-and-farms"> healthy underground ecosystem</a>,
+ which in turn provides nutrients for crops. Used for weed control and 
+to loosen the soil for planting, tillage combined with drought caused 
+the Dust Bowl of the 1930s and continues to cause severe erosion in 
+Montana and<a href="https://www.npr.org/2021/05/03/989984124/a-giant-organic-farm-faces-criticism-that-its-harming-the-environment"> elsewhere on the Great Plains</a>. </p>
+<p>Located 26 miles from Chester, population 1,099, Tiber Ridge Farm is 
+in one of Montana’s most significant agricultural areas. The nine 
+counties that roughly form the Golden Triangle grew<a href="https://www.nass.usda.gov/Statistics_by_State/Montana/Publications/Annual_Statistical_Bulletin/2020/Montana-Annual-Bulletin-2020.pdf"> 61% of the state’s winter wheat and 58% of its barley</a> in 2019, and were second only to northeastern Montana in lentil production. In 2018, producers here grossed<a href="https://www.nass.usda.gov/Statistics_by_State/Montana/Publications/Annual_Statistical_Bulletin/2020/Montana-Annual-Bulletin-2020.pdf"> $1.16 billion</a>, more than a quarter of the state’s annual $4.4 billion gross farm and ranch income. </p>
+<p>As in the rest of Montana, most Golden Triangle farmers use the 
+“conventional” techniques of modern industrial agriculture. Aiming for 
+the highest crop yield possible, these are generally monocropping 
+systems reliant on pesticides (including herbicides, insecticides and 
+fungicides), synthetic fertilizers and genetically modified seeds. </p>
+<p>In contrast, Wicks and Givens are borrowing methods <a href="https://civileats.com/2021/01/05/does-regenerative-agriculture-have-a-race-problem/">developed by indigenous farmers millennia ago</a>.
+ They fight weeds and pests by rotating which crops they seed in a plot 
+each year, for example, and by planting cover crop mixes of vegetables, 
+grasses and clover that also return nitrogen and biomass to the soil and
+ protect against erosion. They also lease land to neighboring ranchers, 
+whose grazing cattle aerate the soil with their hooves and add organic 
+matter and nutrients via manure. </p>
+<p>“When I was farming [before], I sprayed, and I liked what I thought 
+was a really clean field. It took me a little mind-changing to realize 
+that [the] soil was just dead … And I think that’s one of the things a 
+lot of farmers struggle with, is admitting that maybe you weren’t doing 
+the best practices.” </p>
+<p>John Wicks</p>
+<p>With climate change threatening almost <a href="https://montanaclimate.org/sites/default/files/thumbnails/image/2017-MCA-Agriculture-Chapter-lr.pdf">25,000 Montana agricultural jobs</a>
+ in the next 50 years, many farmers and ranchers are realizing the 
+status quo is no longer adequate. And as a movement toward ecologically 
+based agricultural practices gains ground nationwide, an increasing 
+number of Montana producers are building topsoil, drought resilience and
+ profits by integrating practices like organic or<a href="https://www.no-tillfarmer.com/articles/10340-podcast-jonathan-lundgren-on-evaluating-regenerative-farming-practices"> regenerative systems</a>. </p>
+<p>Both approaches are expanding in the state. Because organic is a USDA certification, it’s easy to <a href="https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Organic_Production/pdf/2019_Organic_Executive_Briefing.pdf">measure its growth in Montana</a>, which is second only to California in certified organic acreage. Regenerative, meanwhile, <a href="https://www.frontiersin.org/articles/10.3389/fsufs.2020.577723/full">lacks a codified or even consensus definition</a>,
+ but generally includes techniques like cover cropping, crop rotation 
+and livestock integration. Although regenerative approaches are harder 
+to track, one likely indicator, cover cropping, is up by 489% over the 
+last 10 years in programs supported by the USDA’s Natural Resources 
+Conservation Service. </p>
+<p>For producers working to improve their farm’s soil health and 
+economic stability, transitioning to an organic or regenerative system 
+is a long game. They’re investing not only in this year’s yields, but in
+ the future of their farms, their communities, and the system that 
+produces food for both U.S and global consumption. A growing body of 
+research also points to <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/ajes.12334">regenerative agriculture’s ability to sequester carbon</a>, although <a href="https://www.wri.org/insights/regenerative-agriculture-good-soil-health-limited-potential-mitigate-climate-change">how much is yet to be determined</a>. </p>
+<p>But farmers and ranchers can’t overhaul America’s food system 
+themselves, and they might not need to. On June 8, the USDA announced a 
+more than <a href="https://www.usda.gov/media/press-releases/2021/06/08/usda-invest-more-4-billion-strengthen-food-system">$4 billion investment in the nation’s food system</a>
+ aimed at strengthening supply chains, creating new market 
+opportunities, responding to climate change, helping underserved 
+communities and supporting good-paying jobs. Depending on how those 
+funds are allocated, they may allow more Montana farmers to build soil 
+health and add economic resiliency to their operations. </p>
+<h3>TRANSITIONING TO ORGANIC</h3>
+<p>Wicks was 21 when he left MSU and returned to the family farm. At first, he and his mother farmed about 1,300 acres, all wheat. </p>
+<p>“A lot of years, we were going backwards and rolling our debt over, 
+just building up our long-term debt,” said Wicks, now 36. “It was really
+ scary.” </p>
+<p>Wicks had considered transitioning to organic for years, but he and 
+his mother knew it was a risk. When Givens moved to Tiber Ridge, her 
+support gave him the extra push to make it happen. </p>
+<p>Givens, 35, grew up on a seed-cleaning operation in Big Sandy, 90 
+minutes east of Tiber Ridge. After attending culinary school in Denver 
+and working as a pastry chef at a yacht club in Florida and the Northern
+ Hotel in Billings, she moved to the farm in 2015. That year, they 
+planted a home garden and cleaned up the farmyard. She got jobs cooking 
+at a bar in Hingham and a coffee shop in Fort Benton, but quickly 
+realized it didn’t make sense to drive an hour each way to work for 
+minimum wage when there was plenty of farmwork to do. It just had to 
+pencil out.</p>
+<h4 class="rm-manual">What else you need to know:</h4>
+<h2 class="rm-manual"><a href="https://montanafreepress.org/2021/07/12/montana-coronavirus-update/" rel="bookmark">Montana coronavirus report</a></h2>
+<p class="rm-manual"> 07.12.202107.12.2021 </p>
+<h2 class="rm-manual"><a href="https://montanafreepress.org/2021/07/09/montana-redistricting-commission-congressional/" rel="bookmark">Redistricting commission adopts congressional criteria</a></h2>
+<p class="rm-manual"> 07.09.202107.09.2021 </p>
+<h2 class="rm-manual"><a href="https://montanafreepress.org/2021/07/09/media-lawsuit-alleging-open-meetings-violation-dismissed/" rel="bookmark">Media lawsuit alleging open-meetings violation dismissed</a></h2>
+<p class="rm-manual"> 07.09.202107.09.2021 </p>
+<p class="">“But the farm had to make money to support a family, so 
+that’s where that transition started to really make sense,” Givens said.
+ </p>
+<p class="">The couple began experimenting with organic crops in 2016. 
+They planted 700 acres of organic red lentils and spring wheat. Wicks 
+didn’t think they’d stick with it, but he wound up having fun farming 
+that way, and at year’s end his books showed the organic crops were the 
+most profitable. </p>
+<figcaption class="">Fields of alternating crop and chemically forced 
+fallow south of Tiber Reservoir. “Chem fallow” has been common in 
+Montana since the herbicide Roundup became readily available in the 
+1990s, because the technique preserves water and prevents erosion, but 
+as weeds become increasingly resistant to herbicide, farmers are forced 
+to use more each year. <span>Credit: Jason Thompson / MTFP</span></figcaption><p class="">Plus,
+ he was getting tired of dealing with the chemicals, mostly the 
+herbicide commonly known by the brand name Roundup. In 2015 he 
+contracted chemical pneumonia, caused by inhaling toxins. He knew cancer
+ was a concern (“most farmers just assume that’s what’s going to get 
+them,” he said), but it was still several years before the class-action 
+lawsuit against Roundup’s manufacturer, Bayer, which is now paying out <a href="https://www.nytimes.com/2020/06/24/business/roundup-settlement-lawsuits.html">$10 billion in a settlement to farmers who contracted cancer</a> after extended use. </p>
+<p class="">Soon after they began experimenting with organic on part of 
+the farm, weeds became so resistant to Roundup that chemical companies 
+instead suggested Paraquat, which is<a href="https://www.epa.gov/pesticide-worker-safety/paraquat-dichloride-one-sip-can-kill"> lethal to humans in even small amounts</a>.
+ At that point, Wicks and Givens decided they were over it. In 2018 they
+ went cold turkey on both pesticide and fertilizer, reducing their 
+operational costs by $200,000 from the previous year, even with an added
+ 1,000 acres in production. </p>
+<p class="">Wicks and Givens earned organic certification for their entire farm this year, and they’re now applying for the new<a href="https://regenorganic.org/"> regenerative organic certification</a>.
+ Established in 2017 by a group of farmers, soil scientists, nonprofits 
+and private businesses, the certification’s goal is to create “long-term
+ solutions to the climate crisis, factory farming, and fractured rural 
+economies.” Two other producers in Montana are also applying for the 
+certification. </p>
+<p class="">In the five years since they started down the organic road, 
+Wicks and Givens have encountered obstacles. Insurance isn’t available 
+for some specialty crops like Einkorn, for example, and they have to 
+truck their barley to Anheuser-Busch’s organic grain elevator in Idaho 
+Falls, rather than dropping it off at the company’s elevator an hour 
+away in Conrad, which accepts only conventionally grown crops. And 
+because organic takes more time and management overall, they had to 
+really work for it. </p>
+<p class="">After growing up on the farm and studying conventional 
+agricultural practices at MSU for a year, the toughest thing, Wicks 
+said, was changing his mindset.</p>
+<p class="">“When I was farming [before], I sprayed, and I liked what I 
+thought was a really clean field,” Wicks says over the rumble of his 
+tractor. “It took me a little mind-changing to realize that [the] soil 
+was just dead. So, starting over from that, realizing what I was doing 
+wasn’t great. And I think that’s one of the things a lot of farmers 
+struggle with, is admitting that maybe you weren’t doing the best 
+practices.” </p>
+<h3 class="">INVESTING IN RURAL COMMUNITIES </h3>
+<p class="">A couple of miles west of the home place as the crow flies, 
+Wicks parks the semi in a field. There he begins the half-hour process 
+of loading 230 bushels of barley seed from the trailer into an air cart,
+ a giant seed tank on wheels that he’ll tow behind a tractor. </p>
+<p class="">Barley pours out of a funnel below the semi into a small 
+basin, where a boom arm with a fill auger resembling a giant drill bit 
+spins them up into the air cart. Sweat soaks Wicks’ shirt. It’s early 
+June, and the temperature is 85 at 1 p.m. </p>
+<figcaption class="">John Wicks drives his tractor during the last 
+barley planting of the season. On this day he planted about 330 acres of
+ the 600 acres he put in barley this year. He and his wife, Gwyneth 
+Givens, are planting 4,500 acres in 2021: 3,000 acres in cash crops, and
+ 1,500 acres in cover crops. <span>Credit: Jason Thompson / MTFP</span></figcaption><p class="">Once
+ the cart is full, Wicks starts the tractor, drives to where he left off
+ the day before, and sets a GPS track. He starts a fan on the air cart, 
+which pushes seeds through a set of tubes to another piece of machinery 
+Wicks tows behind the air cart, a 50-foot-wide hoe drill that drags 50 
+pointy hoes through the soil and inserts seeds every 12 inches. </p>
+<p class="">Between cash and cover crops, Wicks and Givens are planting 
+about 4,500 acres this year. Some of that land is leased from Wicks’ 
+mother, who retired in 2019, and the rest they lease from neighbors. 
+They’ve contracted most of the barley to Anheuser-Busch, though they’ll 
+sell some to nearby Hutterite colonies for chicken feed. They’re also 
+growing lentils, chickpeas, Kamut and Einkorn for smaller mills 
+including Timeless Seeds and Montana Flour and Grain, both based in 
+Montana. </p>
+<p class="">Their yields are smaller than their conventional ones were, 
+but Wicks said it’s worth it. Previously, they were at the mercy of 
+international commodity markets, as well as ever-increasing seed, 
+chemical and fertilizer prices. Organic producers often have more 
+leverage, because they usually grow a diverse range of crops and sell 
+directly to processors. Plus, many Montana organic grain and pulse 
+growers forward-contract their crops, meaning they lock in a per bushel 
+price before even planting. Wicks and Givens often sell their organic 
+crops for two to three times the price of conventionally grown ones. </p>
+<p class="">In turn, they spend locally, buying groceries in Chester, 
+beef from a neighbor and equipment from local dealerships. Their 
+equipment dealer,<a href="https://www.blondefarmsofmontana.com/about-us"> Gary Blonde</a>,
+ sees the economic ripples of organic and regenerative, too. An organic 
+farmer himself, Blonde sells farm machinery for Tilleman Equipment in 
+Havre, where he says more people are buying tools specific to organic 
+and regenerative farming. </p>
+<p class="">“We cut the prairie sod, and then we basically mined the 
+soil the sod had made, and now the mine is starting to go dry. Now we’re
+ presented with the opportunity to rebuild the soil and put it back 
+together. Soil is our livelihood and we better protect it, or we’re 
+screwed. The writing is on the wall.”</p>
+<p class="">Tim Seipel, MSU agricultural ecologist and extension specialist</p>
+<p class="">“I’m seeing a huge increase in [equipment] purchases as guys
+ get more experienced, because they’re finding different tools that can 
+do jobs they once thought were impossible,” Blonde said. “And they’re 
+just getting on their feet at this point to [make those investments].”</p>
+<p class="">Wicks and Givens also invest in their community in other 
+ways. Wicks serves on the Liberty County Farm Service Agency and Montana
+ Organic Association boards, as well as the state Agriculture 
+Development Council in Helena. He says they pay Cole, their hired hand, 
+competitive wages and provide room and board. Originally from Chester, 
+Cole moved back to the area when she lost her job in Missoula during the
+ pandemic, and this is her first season on the farm. In addition to her 
+wages, she’ll also earn a harvest bonus based on the farm’s 2021 profit.</p>
+<p class="">In rural communities like Chester, it’s increasingly important to<a href="https://ilsr.org/key-studies-why-local-matters/#3"> keep money circulating locally</a>,
+ said MSU agricultural economist George Haynes. More money in rural 
+agricultural communities not only means more jobs, Haynes explained, but
+ also a larger financial base that supports economic development, 
+community investment and infrastructure improvements.</p>
+<p class="">In the Chester of Wicks’ childhood, the town had a baker, 
+three butcher shops and a factory that built cultivator parts. “Everyone
+ shopped more locally,” Wicks said. “Now there’s no jobs like that.”</p>
+<h3 class="">JOURNEY INTO REGENERATIVE AGRICULTURE</h3>
+<p class="">Lack of jobs and loss of soil fertility in the Golden 
+Triangle run parallel to each other. Once incredibly healthy, the soil 
+here formed during the 11,000 years after the last Ice Age. As the 
+prairie sod thickened, it absorbed water and carbon, becoming ever 
+richer, said Tim Seipel, an MSU agricultural ecologist and extension 
+specialist. Seipel compared that original sod to old-growth forest.</p>
+<p class="">“We cut the prairie sod, and then we basically mined the 
+soil the sod had made, and now the mine is starting to go dry,” Seipel 
+said. <a href="https://www.colorado.edu/today/2021/01/12/soil-degradation-costs-us-corn-farmers-half-billion-dollars-every-year#:~:text=One%2Dthird%20of%20the%20fertilizer,last%20month%20in%20Earth's%20Future.">That phenomenon is occurring on farmland worldwide</a> as erosion, salinization, acidification and nutrient loss degrade the soils humans need to produce food. </p>
+<p class="">“Now we’re presented with the opportunity to rebuild the 
+soil and put it back together,” Seipel said. “Soil is our livelihood and
+ we better protect it, or we’re screwed. The writing is on the wall.”</p>
+<figcaption class="">Wendy Fauque (right) and Willow Wieskamp set up a 
+temporary electric fence at Happy Steer Ranch. They move the cows daily 
+as part of an intensive grazing system. The animals fertilize the soil 
+with manure and aerate it with their hooves, while the Fauques are able 
+to make a profit by grazing their cover crops. <span>Credit: Jason Thompson / MTFP</span></figcaption><p class="">While soil health is codified into <a href="https://www.ecfr.gov/cgi-bin/text-idx?SID=fc9051a8365405526856c8b029f742ab&amp;mc=true&amp;node=se7.3.205_1203&amp;rgn=div8">organic regulations</a>,
+ not all organic farmers control erosion effectively, and tilling too 
+often or at the wrong time can have devastating effects. Just this year,
+ dust blowing off an organic farm field in Chinook <a href="https://www.blainecountyjournal.com/story/2021/03/10/news/winter-winds-add-a-new-hazard-at-local-golf-course-drifts-of-dirt/6339.html">filled a fairway on the local golf course</a>
+ three feet deep with dirt, according to Greg Jergeson, a retired farmer
+ and former state legislator who sits on the Blaine County Conservation 
+District board. The farmer had plowed right before a 75 mph wind event. 
+He also described driving through white-out conditions on a road south 
+of town, caused by dirt blowing off the same farmer’s fields. </p>
+<p class="">Enter regenerative agriculture. </p>
+<p class="">Fifty miles northwest of Tiber Ridge, gray clouds hang high 
+over Happy Steer Ranch. The air is uncharacteristically calm, and 
+lightning flashes a few miles off. </p>
+<p class="">Set between Interstate 15 and the Sweetgrass Hills, Korey 
+and Wendy Fauque’s 5,000-acre operation is a landscape of contrasts. 
+From the ranch headquarters, four miles south of Sunburst and 23 north 
+of Shelby, you can see oil rigs, wind turbines and the sharp rise of the
+ Rocky Mountain Front.</p>
+<p class="">In the closest pasture, a herd of 70 cow-calf pairs laze in 
+the grass. Wendy paces 50 steps beyond a temporary electric fence and 
+unspools a hot wire. Willow Wieskamp, the hired hand, stamps in fence 
+posts. Wendy seeded a rye-wheat hybrid called triticale here last 
+October, and the ungrazed grass is already over knee-high. Between the 
+three of them, they move the fence daily, aiming to graze roughly half 
+of the grass before moving on. The cows ramble over, lowing for the new 
+feed.</p>
+<p class="">As Wendy and Wieskamp set up the fence, Korey pushes a shovel into the ground and pries up a blade of soil.</p>
+<p class="">“These roots are extruding sugars to feed the [soil] biology
+ … like mycorrhizal fungi and bacteria,” he says, breaking apart a mass 
+of roots and earth with his hands. “We’re really short on the fungi 
+part, because we killed all that with the chemicals over the last 40 
+years of farming. We just hammered and hammered and hammered on it.”</p>
+<p class="">The Fauques (pronounced “Fauks”) are using regenerative 
+practices to turn that around. The tiny world of roots, earthworms and 
+insects crumbling through Korey’s fingers is evidence it’s working. 
+Aiming to improve fertility and biodiversity and<a href="https://drawdown.org/solutions/regenerative-annual-cropping"> capture carbon, they </a>use many of the same techniques as Wicks and Givens, <a href="https://drawdown.org/solutions/regenerative-annual-cropping">with one main difference: Instead of tilling to </a>fight weeds, the Fauques spray herbicide, albeit much less than a typical conventional grower. </p>
+<p class="">Korey, 43, grew up on the ranch, and attended school in 
+Sunburst, population 360. After graduating from MSU Northern in Havre, 
+he worked as an agronomist at an agricultural co-op in Cut Bank, 
+scouting farmer’s fields, sampling soil and advising on fertilizer 
+ratios and herbicides. That’s where he met Wendy, 44, then the co-op’s 
+finance manager and commodities broker. Raised on a Nebraska cattle 
+ranch, Wendy moved to Montana after earning a masters degree in 
+agricultural economics and agribusiness from the University of Wyoming. 
+They married in 2003, purchased a crop insurance business, and soon 
+added agrochemical sales and consulting to their portfolio. When Korey’s
+ dad retired in 2012, they took over what’s now Happy Steer Ranch.</p>
+<figcaption class="">Korey Fauque holds a chunk of soil from the 
+5,000-acre Happy Steer Ranch, a crop and cattle operation south of 
+Sunburst that he shares with his wife, Wendy. The Fauques are using 
+regenerative agricultural techniques to improve their soil health, which
+ Korey says was “hammered” by conventional practices that relied on 
+heavy pesticide and fertilizer use over the last 40 years. <span>Credit: Jason Thompson / MTFP</span></figcaption><p class="">Starting
+ out, they followed the standard practice of alternating wheat and 
+barley with “chem fallow,” which means they grew a crop one year and 
+then killed everything with Roundup and left it unplanted the following 
+year. After that, they planted directly into the old crop residue with a
+ “no-till drill” that slices diagonally into the soil and inserts seeds 
+directly into old crop residue. Because there were no live crops using 
+water during the fallow year, the method preserved soil moisture, 
+essentially giving the next year’s crop two seasons’ worth of water. </p>
+<p class="">No-till has been common on dryland farms in Montana since 
+Roundup became readily available in the state in the 1990s. It replaced 
+tilled fallow, in which farmers plowed last year’s crops under and left a
+ field of bare dirt. At the time, chem fallow/no-till was considered 
+revolutionary because it reduced erosion by leaving the dead straw in 
+place and eliminated plowing. </p>
+<p class="">At first, the Fauques sprayed 16 ounces per acre, but as the
+ weeds became resistant they bumped up to 24 ounces, and then a quart. 
+Like Wicks and Givens, they drew the line at Paraquat. </p>
+<p class="">Around that time, their neighbor Griff Bye was one of the 
+first in the area to experiment with cover crops and integrating 
+livestock, and he often stopped by to talk about what he was trying. In 
+those conversations, the Fauques realized they could improve the soil by
+ planting pulses or cover crops, and make money by grazing those same 
+cover crops, instead of spending so much on Roundup. After attending a 
+Natural Resources Conservation Service training and watching soil health
+ videos on YouTube, they stopped fallowing and began planting legumes 
+and cover crop, and reducing pesticides and fertilizer. Five years in, 
+soil sampling showed increased organic matter and microbial life. Next 
+they devised a mobile water trough that pumped water to their cover crop
+ plots and native pastures, allowing them to move their cattle daily, a 
+practice known as intensive grazing. In 2019, they switched to a 
+smaller, hardier breed, Aberdeen Angus, and began calving in late spring
+ instead of winter to reduce stress on the animals. Now, they’re 
+planting pollinator strips to attract birds and insects like bees, which
+ are integral to crop farming but in <a href="https://www.nap.edu/read/11761/chapter/5#79">decline, in part due to pesticide use</a>.</p>
+<p class="">“The more you start trying stuff, the more you want to try stuff to get it turned around,” Wendy said.</p>
+<h3 class="">AN IMPERFECT SOLUTION </h3>
+<p class="">Even when used minimally, tillage and pesticides both come with clear downsides. But<a href="https://modernfarmer.com/2019/10/the-elusive-goal-of-no-till-organic/"> no one has figured out how to completely eliminate either at scale and over time</a>,
+ a goal Korey calls the “Holy Grail.” With new technology and research —
+ including a current MSU study on naturally occurring weed pathogens 
+based on<a href="https://www.youtube.com/watch?v=znVDgle8tM0&amp;t=162s"> a similar biocontrol project in Kenya</a> — a no-till organic system might one day be possible.</p>
+<p class="rm-manual">In the meantime, public interest in regenerative agriculture is <a href="https://journals.sagepub.com/doi/10.1177/0030727021998063">growing rapidly</a>. Around since the 1970s, the term only recently became<a href="https://journals.sagepub.com/doi/10.1177/0030727021998063"> part of the lexicon</a>. </p>
+<figcaption class="">Wendy Fauque looks through a microscope at a soil 
+sample, while Korey Fauque points out the microbial and insect life 
+she’s seeing on a computer screen. <span>Credit: Jason Thompson / MTFP</span></figcaption><p class="">Mainstream
+ media coverage has increased dramatically in the last two years, as 
+private companies and now the Biden administration consider paying 
+farmers to capture carbon as part of carbon markets. Alongside that 
+rising profile come critiques. Skeptics are raising concerns ranging 
+from the<a href="https://www.wri.org/insights/regenerative-agriculture-good-soil-health-limited-potential-mitigate-climate-change"> limited scientific proof of carbon capture rates</a> to the<a href="https://civileats.com/2019/10/29/big-food-is-betting-on-regenerative-agriculture-to-thwart-climate-change/"> potential for greenwashing</a> and the barriers to<a href="https://www.frontiersin.org/articles/10.3389/fsufs.2019.00096/full"> Black, Indigenous, migrant, women and other minority farmers who are integral</a> for regenerative agriculture to thrive in the long run.</p>
+<p class="">As the movement lurches forward nationwide, the Fauques are a
+ decade into their own regenerative experiment. They say they’re growing
+ more crops with less rain and applying 70% less pesticide. This year 
+they replaced granular fertilizer with compost extract, though they’re 
+still using liquid nitrogen. (“Soil is like an addict,” Wendy said. 
+“Once it becomes dependent on nitrogen and you’ve killed all the good 
+bugs, you can’t grow a crop without nitrogen.”) They have fewer weeds 
+than ever and went from doctoring more than 10% of their calves to 
+almost none. By direct-marketing their grass-finished beef, they make a 
+better profit than they did when they shipped calves to a feedlot. </p>
+<p class="">But it’s not all bumper crops and roses. </p>
+<p class="">It can be harder to find used equipment for regenerative 
+practices, and as with all agriculture, equipment costs are 
+astronomical. When they try something different like<a href="https://www.sare.org/publications/crop-rotation-on-organic-farms/guidelines-for-intercropping/"> intercropping</a>,
+ in which they plant two or more symbiotic crops together, they often 
+can’t insure it because of strict federal crop insurance regulations, 
+even as owners of their own crop insurance agency. They also get 
+negative comments on social media, usually when a more traditional 
+operator takes offense at the Fauques comparing their new practices to 
+conventional ones.</p>
+<p class="">“We all did the same thing, [but] if you’re the person still doing those practices, it’s hard to not get offended,” Korey said. </p>
+<p class="">Regenerative systems are known for <a href="https://www.csuchico.edu/regenerativeagriculture/demos/gabe-brown.shtml">building topsoil quickly</a>.
+ But it’s slow going in an arid environment like the Golden Triangle, 
+which historically averaged 10 to 15 inches of moisture a year. Happy 
+Steer Ranch, which is dry even for the Triangle, has averaged eight 
+inches annually during the Fauques’ tenure. While they saw noticeable 
+improvement of their soil structure in 2020, they’re predicting less 
+improvement this year with <a href="https://apnews.com/article/mt-state-wire-montana-lifestyle-business-government-and-politics-98ed6f159876d59c323e35e0e1cdcf3e">the drought</a>. </p>
+<p class="">“It was easier to farm the way we were farming [before],” Wendy said.</p>
+<figcaption class="">John Wicks planting organic barley at Tiber Ridge Farm in June 2021. <span>Credit: Jason Thompson / MTFP</span></figcaption><p class="">Still,
+ they estimate that about 50% of operators in Toole County are adopting 
+regenerative practices on at least part of their land. Some are doing it
+ because they can’t afford synthetic fertilizers and pesticides, Korey 
+said, while others are responding to herbicide-resistant weeds. In 
+addition, Korey says, a new generation of young farmers recently 
+returned to the area, and many are open to trying new things.</p>
+<p class="">Ultimately, the Fauques want to retool the framework of 
+their direct-market beef business for crops. They sell 90% of their beef
+ to local customers in Sunburst and Shelby, and their new idea is to 
+market legumes and grains directly to consumers as well, using 
+nutrient-density as a selling point. But they suspect finding demand to 
+match their large supply will be a challenge, and they’ve yet to find a 
+reliable nutrient test. They also hope to stock organic biological 
+supplements in place of the fertilizers and pesticides they currently 
+sell out of their retail warehouse, employing their salesman to sell 
+compost extract, humic acid and worm castings instead.</p>
+<p class="">“I think ag is headed that way, but there’s so much money in
+ the chemicals and fertilizer and in the way things are done that it’s 
+hard to get away from that and figure out how to find those markets,” 
+Wendy said. “At least right now we’re figuring out a way to improve our 
+ground and our animals’ health. And I think it’ll eventually pay us back
+ — even if it’s not financially — if we can just keep making a living 
+and producing better products.”</p>
+<p class="rm-manual"> Loading… </p>
+<h2 class="rm-manual">Support Montana Free Press</h2>
+<p class="rm-manual">Our mission is to produce in-depth journalism that 
+creates positive change in the lives of our local communities. But we 
+need your help to make our journalism possible and free for all readers.</p>
+<p class="rm-manual"> One-time </p>
+<p class="rm-manual"> $120 </p>
+<p class="rm-manual"> $180 </p>
+<p class="rm-manual"> $300 </p>
+<p class="rm-manual"> Other Donation amount </p>
+<p class="rm-manual"> <span> $ </span> </p>
+<p class="rm-manual"> Monthly </p>
+<p class="rm-manual"> $10 </p>
+<p class="rm-manual"> $15 </p>
+<p class="rm-manual"> $25 </p>
+<p class="rm-manual"> Other Donation amount </p>
+<p class="rm-manual"> <span> $ </span> </p>
+<p class="rm-manual"> Annually </p>
+<p class="rm-manual"> $120 </p>
+<p class="rm-manual"> $180 </p>
+<p class="rm-manual"> $300 </p>
+<p class="rm-manual"> Other Donation amount </p>
+<p class="rm-manual"> <span> $ </span> </p>
+<p class="rm-manual"> Your contribution is appreciated. </p>
+<h3 class="rm-manual">Thank you for supporting Montana Free Press. </h3>
+<p class="rm-manual">We rely on your donations to remain free for 
+everyone. A donation to us goes beyond supporting the newsroom. Every 
+dollar helps your family, friends and neighbors have access to reliable,
+ independent reporting.</p>
+<p class="rm-manual"><a rel="https://checkout.fundjournalism.org/memberform?org_id=montanafreepress&amp;campaign=7014o000000JemDAAS noopener">Give Again!</a></p>
+<p class="rm-manual"><span><span>Tagged: </span><a href="https://montanafreepress.org/tag/agriculture/" rel="tag">agriculture</a><span>, </span><a href="https://montanafreepress.org/tag/golden-triangle/" rel="tag">golden triangle</a><span>, </span><a href="https://montanafreepress.org/tag/organic-agriculture/" rel="tag">organic agriculture</a><span>, </span><a href="https://montanafreepress.org/tag/regenerative-agriculture/" rel="tag">regenerative agriculture</a></span> </p>
+<h2 class="rm-manual"> Emily Stifler Wolfe </h2>
+<p class="rm-manual"> <a href="mailto:emilystiflerwolfe@gmail.com"> emilystiflerwolfe@gmail.com </a> </p>
+<p class="rm-manual">Emily Stifler Wolfe is an independent writer based in Bozeman. Find her at emilystiflerwolfe.com.</p>
+<p class="rm-manual"><a href="https://montanafreepress.org/author/emily-wolfe/" rel="author"> More by Emily Stifler Wolfe </a> </p></article>
+</body></html>

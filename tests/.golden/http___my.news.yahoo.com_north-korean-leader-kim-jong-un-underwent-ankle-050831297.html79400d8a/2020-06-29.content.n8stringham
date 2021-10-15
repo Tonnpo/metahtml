@@ -1,0 +1,112 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">North Korean leader Kim Jong-Un underwent ankle operation to remove cyst</p>
+<p class="rm-manual"><a href="https://malaysia.yahoo.com/news">Yahoo</a></p>
+<p class="rm-manual">Search</p>
+<ul class="rm-manual"><li class="rm-manual"><a href="https://mail.yahoo.com/?.intl=my&amp;.lang=en-MY&amp;.partner=none&amp;.src=news">Mail</a></li></ul>
+<p class="rm-manual"><a href="https://malaysia.news.yahoo.com/"> News</a></p>
+<p class="rm-manual"><span>Follow us</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://malaysia.news.yahoo.com/malaysia/"> Malaysia</a></li>
+<li class="rm-manual"><a href="https://sg.news.yahoo.com/esports/"> Esports</a></li>
+<li class="rm-manual"><a href="https://malaysia.news.yahoo.com/sports/"> Sports</a></li>
+<li class="rm-manual"><a href="https://malaysia.news.yahoo.com/finance/"> Finance</a></li>
+<li class="rm-manual"><a href="https://malaysia.news.yahoo.com/tech/"> Tech</a></li>
+<li class="rm-manual"><a href="https://malaysia.news.yahoo.com/lifestyle/"> Lifestyle</a></li>
+<li class="rm-manual"><a href="https://malaysia.news.yahoo.com/celebrity/"> Celebrity</a></li>
+<li class="rm-manual"><a href="https://malaysia.news.yahoo.com/movies/"> Movies</a></li>
+<li class="rm-manual"><a href="https://malaysia.news.yahoo.com/videos/"> Videos</a></li>
+</ul>
+<h1 class="rm-manual">North Korean leader Kim Jong-Un underwent ankle operation to remove cyst</h1>
+<p class="rm-manual"><a href="http://aniin.com/" rel="noopener noreferrer nofollow">ANI</a></p>
+<p class="rm-manual">29 October 2014</p>
+<p>Washington, Oct 29 (ANI): A lawmaker has said that North Korean 
+leader Kim Jong-Un who went missing from public view for about six 
+weeks, underwent a surgery to get a cyst removed from his left ankle.</p>
+<p>Lawmaker Lee Cheol-woo said that South Korea's National Intelligence 
+Service told lawmakers that a cyst was removed from the leader's ankle 
+between May and June earlier and that cyst may have caused muscle nerve 
+damage and impelled him to undergo ankle surgery between September and 
+October.</p>
+<p>According to CNN, Kim is believed to be recovering but the cyst could recur due to the leader's heavy schedule and obesity.</p>
+<p>It was Kim's longest absence when he went missing from September 3 after he reportedly attended a concert with his wife.</p>
+<p>Kim had also missed the 65th anniversary of the Workers' Party of North Korea when he went missing in September. (ANI)</p>
+<h2 class="rm-manual">What to read next</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///us-n-korea-envoy-doubts-trump-kim-summit-190614670.html"><span>US N.Korea envoy doubts new Trump-Kim summit</span></a></h3><p class="rm-manual">AFP News</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///indonesian-actress-anya-geraldine-raises-085001040.html"><span>Indonesian actress Anya Geraldine raises eyebrows after confessing to baby bottle drinking habit</span></a></h3><p class="rm-manual">Malay Mail</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/us-coast-guard-veteran-celebrates-213301192.html"><span>US Coast Guard Veteran Celebrates 100th Birthday in New Orleans</span></a></h3><p class="rm-manual">Storyful</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///guan-eng-reminds-malaysians-not-152940667.html"><span>Guan Eng reminds Malaysians not to judge each other by skin colour</span></a></h3><p class="rm-manual">Malay Mail</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///rmco-no-more-buffet-lines-101910278.html"><span>RMCO: No more buffet lines and after-party hangouts at Malaysian social events, says ministry</span></a></h3><p class="rm-manual">Malay Mail</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/miller-fire-burns-more-5-212319486.html"><span>Miller Fire Burns Through More Than 5,500 Acres in Eastern Nevada</span></a></h3><p class="rm-manual">Storyful</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///naming-shafie-apdal-pakatan-pm-220012264.html"><span>Naming Shafie Apdal Pakatan’s PM designate a double-edged sword for coalition, say pundits</span></a></h3><p class="rm-manual">Malay Mail</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///azmin-perikatan-govt-ensure-selangor-111235178.html"><span>Azmin: Perikatan govt will ensure Selangor not left out in terms of development, put politics aside</span></a></h3><p class="rm-manual">Malay Mail</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///dr-mahathir-mukhriz-going-own-061411161.html"><span>Dr Mahathir: Mukhriz going his own way now, I’ve no right to stop him becoming DPM candidate</span></a></h3><p class="rm-manual">Malay Mail</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///former-bar-presidents-urge-ag-034912595.html"><span>Former Bar presidents urge AG to reconsider contempt proceedings against Malaysiakini</span></a></h3><p class="rm-manual">Malay Mail</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/wall-cloud-spotted-tornado-warning-160719789.html"><span>Wall Cloud Spotted as Tornado Warning Issued in Wisconsin</span></a></h3><p class="rm-manual">Storyful</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///feds-program-loaning-main-street-215503942.html"><span>Fed's program for loaning to Main Street off to slow start</span></a></h3><p class="rm-manual">Associated Press</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///dap-chin-tong-urges-putrajaya-115518616.html"><span>DAP’s Chin Tong urges Putrajaya to release fatal 2016 JB hospital fire report</span></a></h3><p class="rm-manual">Malay Mail</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///indonesian-president-threatens-reshuffle-cabinet-132454101.html"><span>Indonesian president threatens to reshuffle cabinet over COVID-19 response</span></a></h3><p class="rm-manual">Reuters</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///malaysian-social-media-reacts-negatively-064321199.html"><span>Malaysian social media reacts negatively to singer Atilia Haron’s barefoot yoga in PJ grocery store (VIDEO)</span></a></h3><p class="rm-manual">Malay Mail</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/fox-pup-tackles-worst-itch-152031414.html"><span>Fox Pup Tackles Worst Itch Ever on New York Roadside</span></a></h3><p class="rm-manual">Storyful</p><p class="rm-manual"></p></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///pompeo-calls-china-muslim-sterilization-215041355.html"><span>Pompeo calls China Muslim sterilization reports 'shocking' and 'disturbing'</span></a></h3><p class="rm-manual">Reuters</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///pbb-veep-no-reason-pm-034604024.html"><span>PBB veep: No reason PM can’t be from Sarawak, Sabah</span></a></h3><p class="rm-manual">Malay Mail</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///pkr-says-now-ready-discuss-122034125.html"><span>PKR says now ready to discuss Pakatan’s PM candidate</span></a></h3><p class="rm-manual">Malay Mail</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///bmw-vehicles-idrive-os-7-014531449.html"><span>BMW vehicles with iDrive OS 7.0 will soon support wireless Android Auto (VIDEO)</span></a></h3><p class="rm-manual">Malay Mail</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/smoke-billows-5-000-acre-151016106.html"><span>Smoke Billows From 5,000-Acre Fire Near Las Vegas</span></a></h3><p class="rm-manual">Storyful</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///uk-pm-johnsons-answer-covid-214316307.html"><span>UK PM Johnson's answer to COVID-19 downturn: 'Build, build, build'</span></a></h3><p class="rm-manual">Reuters</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///eu-urged-speak-single-voice-172557203.html"><span>EU urged to ‘speak with single voice’ against China’s national security law</span></a></h3><p class="rm-manual">South China Morning Post</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///malaysian-singer-fynn-jamal-women-083719325.html"><span>Malaysian
+ singer Fynn Jamal: Women ignite men’s lust through face filters, posing
+ provocatively; victim-blaming and #MeToo just ‘Western concepts’</span></a></h3><p class="rm-manual">Malay Mail</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///china-military-becomes-world-first-143400707.html"><span>China’s military becomes world’s first to use experimental coronavirus vaccine</span></a></h3><p class="rm-manual">South China Morning Post</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/couple-waves-points-guns-defund-055822370.html"><span>Couple Point Guns at Defund Police Protesters Outside Home in St Louis</span></a></h3><p class="rm-manual">Storyful</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///police-arrest-wanted-26-old-090246291.html"><span>Police arrest wanted 26-year-old man over kidnap-murder of ‘Datuk Seri’ businessman in Rawang</span></a></h3><p class="rm-manual">Malay Mail</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///pm-shafie-says-flattered-needs-043209659.html"><span>Me as PM? Shafie says flattered, but needs time to think it over</span></a></h3><p class="rm-manual">Malay Mail</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/long-line-vehicles-coronavirus-testing-110445050.html"><span>Long Line of Vehicles at Coronavirus Testing Center in Austin as Cases Mount</span></a></h3><p class="rm-manual">Storyful</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///roberts-court-u-chief-justice-214223745.html"><span>'The Roberts Court': U.S. chief justice cements pivotal role</span></a></h3><p class="rm-manual">Reuters</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///deputy-cm-state-govt-feedback-105147789.html"><span>Deputy CM: State govt to get feedback from private sector before coming up post Covid-19 economic policy</span></a></h3><p class="rm-manual">Malay Mail</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///national-security-law-beijing-slaps-144514639.html"><span>National
+ security law: Beijing slaps visa restrictions on US officials who 
+‘meddle’ in Hong Kong affairs as local authorities gear up for sweeping 
+new roles</span></a></h3><p class="rm-manual">South China Morning Post</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///indian-missile-system-order-could-125204136.html"><span>Indian missile system order ‘could raise border risk for China’</span></a></h3><p class="rm-manual">South China Morning Post</p><p></p></li>
+</ul></article>
+</body></html>

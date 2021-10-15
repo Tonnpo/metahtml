@@ -1,0 +1,123 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> First Lady Jill Biden To Visit Jackson, Promote Vaccine Outreach | Jackson Free Press | Jackson, MS </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///">JFP</a></li> <li class="rm-manual"><a href="http://jfp.ms/vip/">Be a JFP VIP</a></li> <li class="rm-manual"><a href="http://www.bestofjackson.com/">Best of Jackson</a></li> <li class="rm-manual"><a href="file:///news/newsletter/">JFPDaily</a></li> <li class="rm-manual"><a href="file:///advertise/">Advertise</a></li> <li class="rm-manual"><a href="file:///contact/">Contact</a></li> <li class="rm-manual"><a href="file:///awards/">Awards</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///accounts/login/?next=/news/2021/jun/22/first-lady-jill-biden-visit-jackson-promote-vaccin/">Sign in</a></li> </ul>
+<h1 class="rm-manual"><a href="file:///">Jackson Free Press</a></h1>
+<p class="rm-manual"><a href="#body">Jump to content</a></p>
+<ul class="rm-manual"> <li class="rm-manual">
+<a href="file:///news/all">News</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///news/all/">Home</a></li> <li class="rm-manual"><a href="file:///news/justice/">Justice</a></li> <li class="rm-manual"><a href="file:///news/education/">Education</a></li> <li class="rm-manual"><a href="file:///news/politics/">Politics</a></li> <li class="rm-manual"><a href="file:///news/business/">Business</a></li> <li class="rm-manual"><a href="file:///news/people/">People</a></li> <li class="rm-manual"><a href="file:///news/media/">Media</a></li> <li class="rm-manual"><a href="http://blogs.jacksonfreepress.com/">Jackblog</a></li> <li class="rm-manual"><a href="file:///news/covers/">Covers</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///news/opinion">Opinion</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///news/opinion">Home</a></li> <li class="rm-manual"><a href="file:///weblogs/">Weblogs</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///news/arts/">Arts</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///news/arts/">Home</a></li> <li class="rm-manual"><a href="file:///news/film/">Film</a></li> <li class="rm-manual"><a href="file:///news/books/">Books</a></li> <li class="rm-manual"><a href="file:///news/art/">Art</a></li> <li class="rm-manual"><a href="file:///news/theater/">Theater</a></li> <li class="rm-manual"><a href="file:///news/dance/">Dance</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///news/music/">Music</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///news/music/">Home</a></li> <li class="rm-manual"><a href="file:///news/music/listings/">Music Listings</a></li> <li class="rm-manual"><a href="file:///places/music-venue/">Music Venues</a></li> <li class="rm-manual"><a href="file:///bands/">Local Bands</a></li> <li class="rm-manual"><a href="file:///weblogs/music/">Music Blog</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///calendar/">Calendar</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///calendar/">Happening Today</a></li> <li class="rm-manual"><a href="file:///events/exhibits/">Ongoing Exhibits</a></li> <li class="rm-manual"><a href="file:///galleries/">Galleries</a></li> <li class="rm-manual"><a href="file:///events/ongoing/">Other Ongoing Events</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///news/lifestyle/">Life+Style</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///news/lifestyle/">Home</a></li> <li class="rm-manual"><a href="file:///news/bodysoul/">Body+Soul</a></li> <li class="rm-manual"><a href="file:///news/good/">GOOD Ideas</a></li> <li class="rm-manual"><a href="file:///news/faith/">Faith</a></li> <li class="rm-manual"><a href="file:///news/home-garden/">Home &amp; Garden</a></li> <li class="rm-manual"><a href="file:///news/hitched/">Hitched</a></li> <li class="rm-manual"><a href="file:///news/flystyle/">Fly! Style</a></li> <li class="rm-manual"><a href="file:///news/girl-about-town/">Girl About Town</a></li> <li class="rm-manual"><a href="file:///news/running-recreation/">Running &amp; Recreation</a></li> <li class="rm-manual"><a href="file:///news/travel/">Travel</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///news/food&amp;drink/">Food+Drink</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///news/food&amp;drink/">Home</a></li> <li class="rm-manual"><a href="file:///restaurants/">Restaurants</a></li> <li class="rm-manual"><a href="file:///weblogs/food/">Food Blog</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///news/sports/">Sports</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///news/sports/">Home</a></li> <li class="rm-manual"><a href="file:///sports/the_slate">Slate - Schedule</a></li> <li class="rm-manual"><a href="file:///categories/news/bryans-rant">Bryan's Rant</a></li> <li class="rm-manual"><a href="file:///weblogs/sports/">Sports Blog</a></li> </ul> </li> </ul>
+<h2 class="rm-manual">First Lady Jill Biden To Visit Jackson, Promote Vaccine Outreach</h2>
+<p class="rm-manual"> The First Lady is on a tour across the south, 
+along with other members of President Joe Biden’s administration, to 
+promote vaccine awareness and outreach. Photo courtesy Cameron 
+Smith/White House </p>
+<p class="rm-manual"> <span> By <a href="file:///staff/julian-mills/">Julian Mills</a> </span> <span> <a href="file:///news/2021/jun/22/first-lady-jill-biden-visit-jackson-promote-vaccin/"> Tuesday, June 22, 2021 1:13 p.m. CDT </a> </span> </p>
+<p class="rm-manual"> <span>0</span> </p>
+<p>First Lady Jill Biden is in Jackson today as part of a national tour 
+to promote COVID-19 vaccine outreach and awareness. For her stop in 
+Jackson, Biden plans to visit vaccination sites including Jackson State 
+University, which has itself <a href="https://www.jacksonfreepress.com/news/2021/may/26/jackson-state-providing-free-vaccines-students-com/">held events to address lingering vaccine hesitancy in Mississippi</a>.</p>
+<p>Jackson Mayor Chokwe Antar Lumumba and U.S. Rep. Bennie Thompson will
+ accompany Biden on her tour of JSU’s vaccination site. Biden’s next 
+stop will take her to Nashville, TN where she will join country music 
+singer Brad Paisley at vaccination sites.</p>
+<p>The trip is part of a wider reaching effort by President Joe Biden’s 
+administration to encourage stronger vaccination rates across the 
+country, and in the south especially. Biden tapped Vice President Kamala
+ Harris to travel across southern states as well, while Biden himself 
+will make an appearance in North Carolina this Thursday.</p>
+<p>Vaccination rates in Mississippi have declined almost every week 
+since April, from a high of 132,000 shots in one week to just under 
+25,000 last week. Only 32% of the state is fully vaccinated, compared to
+ some states which have topped 60% vaccination rates.</p>
+<p>The federal effort comes days after House Speaker Philip Gunn sent a 
+letter to Gov. Tate Reeves on June 16, requesting an end to 
+Mississippi’s State of Emergency due to COVID-19.</p>
+<p>“It is our firm belief that any state of emergency created by the 
+COVID-19 pandemic no longer exists,” Gunn said. “Even so, the State of 
+Mississippi continues to be under a state of emergency that you declared
+ last year. We are not aware of any reason why the declared state of 
+emergency should continue to exist,” he said.</p>
+<p>In a June 18 reply, Reeves announced August 15 as the date to end the
+ State of Emergency due to COVID-19, as well as July 15 as the end of 
+the state’s use of the Mississippi National Guard to assist vaccination 
+efforts.</p>
+<p>“I want to thank all Mississippians for their sacrifices over the 
+past 15 months,” Reeves said. “Your actions resulted in a significant 
+decline of COVID-19 cases and allowed our state to effectively manage 
+the impacts of the virus. I’m also extremely proud of the way our 
+Mississippi National Guard, Mississippi Department of Health, MEMA, and 
+other state agencies have capably handled this pandemic. With their 
+help, we’ve administered nearly 2 million COVID-19 vaccinations.”</p>
+<p>“While a State of Emergency should no longer be necessary after 
+August 15, all Mississippians should remain vigilant, get vaccinated, 
+and follow public health guidance,” Reeves said. </p>
+<p class="rm-manual">Email Reporting Fellow Julian Mills at <a href="file:///cdn-cgi/l/email-protection#38524d545159567852595b534b57565e4a5d5d484a5d4b4b165b5755"><span>[email protected]</span></a>.</p>
+<h3 class="rm-manual">More stories by this author</h3>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///news/2021/jun/16/reeves-supports-special-session-reimplement-medica/">Reeves Supports Special Session To Reimplement Medical Marijuana</a></li> <li class="rm-manual"><a href="file:///news/2021/jun/14/vaccine-hesitancy-pitiful-dobbs-says-hospitalizati/">Vaccine Hesitancy ‘Pitiful,’ Dobbs Says As Hospitalizations Up for Under-40 Residents</a></li> <li class="rm-manual"><a href="file:///news/2021/jun/10/dobbs-say-we-need-do-better-vaccine-reaching-latin/">Dobbs Say ‘We Need To Do Better’ on Vaccine, Reaching Latinx Communities</a></li> <li class="rm-manual"><a href="file:///news/2021/jun/03/cdc-investigating-possible-link-between-vaccines-e/">CDC Investigating Possible Link Between Vaccines, ‘Exceedingly Rare’ Myocarditis</a></li> <li class="rm-manual"><a href="file:///news/2021/jun/02/initiative-process-rests-governors-hands/">Initiative Process Rests in Governor’s Hands</a></li> </ul>
+<h3 class="rm-manual">Support our reporting -- Become a JFP VIP.</h3>
+<p class="rm-manual">The news business has changed dramatically in the 
+past year, and we need your help more than ever to keep bringing you 
+important stories about Jackson and the Metro. <a href="https://form.jotform.com/jacksonfreepress/vipannual">Become a JFP VIP with an annual membership</a> or you can <a>Sign up as a monthly supporter.</a> Thanks for anything you can do to empower our journalism!</p>
+<h3 class="rm-manual">Comments</h3>
+<p class="rm-manual">Use the comment form below to begin a discussion about this content.</p>
+<p class="rm-manual"> Please enable JavaScript to view the </p>
+<p class="rm-manual"><a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a> </p>
+<p class="rm-manual"><a href="https://disqus.com/">comments powered by <span>Disqus</span></a> </p>
+<h3 class="rm-manual">Sponsors</h3>
+<h3 class="rm-manual">JFP Tweets</h3>
+<h3 class="rm-manual">Sponsors</h3>
+<h3 class="rm-manual">Top Stories</h3>
+<h3 class="rm-manual">Sponsors</h3>
+<h3 class="rm-manual">Recent Comments</h3>
+<p class="rm-manual"><a href="https://www.jacksonfreepress.com/comments/disqus">see recent 25 »</a></p>
+<dl class="rm-manual"> <dt class="rm-manual">Sections</dt> <dd> <a href="file:///news/all/">News</a>, <a href="file:///news/opinion/">Opinion</a>, <a href="file:///news/arts/">Arts</a>, <a href="file:///news/music/">Music</a>, <a href="file:///news/music/">Events</a>, <a href="file:///news/lifestyle/">Life+Style</a>, <a href="file:///news/food&amp;drink/">Food+Drink</a>, <a href="file:///news/sports/">Sports</a> </dd> <dt class="rm-manual">Events</dt> <dd> <a href="file:///events/">Events Calendar</a>, <a href="https://portal.cityspark.com/Account/PopLogin?ReturnUrl=%2fEventEntry%2fEventEntry%2fJacksonFreePress">Submit an Event</a> </dd> <dt class="rm-manual">Media</dt> <dd> <a href="file:///photos/">Photos</a>, <a href="file:///photos/galleries/">Galleries</a>, <a href="file:///videos/">Videos</a>, <a href="file:///audioclips/">Audio</a>, <a href="file:///documents/">Documents</a> </dd> <dt class="rm-manual">Advertise</dt> <dd> <a href="file:///advertise/">In the JFP</a>, <a href="http://www.jfpclassifieds.com/">Classifieds</a>, <a href="file:///cdn-cgi/l/email-protection#8efae1eaeacee4efede5fde1e0e8fcebebfefcebfdfda0ede1e3">Email the Publisher</a> </dd> <dt class="rm-manual">About</dt> <dd> <a href="https://www.jacksonfreepress.com/masthead/">Meet Our Staff</a>, <a href="https://www.jacksonfreepress.com/jobs/">Apply for a Job</a> </dd> </dl>
+<p class="rm-manual"> © Jackson Free Press, Inc.</p>
+<p class="rm-manual"> <a href="file:///user-agreement/">User agreement and privacy statement.</a></p>
+<p class="rm-manual"> phone: 601-362-6121 (ext 11 sales, ext 16 editorial, ext 17 publisher)</p>
+<p class="rm-manual"> fax: 601-510-9019</p>
+<p class="rm-manual"> 125 S. Congress St. #1324 * Jackson, MS * 39201 </p></article>
+</body></html>

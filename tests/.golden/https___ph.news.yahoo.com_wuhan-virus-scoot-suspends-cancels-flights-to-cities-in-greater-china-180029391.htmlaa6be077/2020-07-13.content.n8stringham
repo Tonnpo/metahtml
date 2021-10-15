@@ -1,0 +1,128 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">Wuhan virus: Scoot, SIA and SilkAir to cut flights to China</p>
+<p class="rm-manual"><a href="https://ph.news.yahoo.com/">Yahoo</a></p>
+<p class="rm-manual">Search</p>
+<ul class="rm-manual"><li class="rm-manual"><a href="https://mail.yahoo.com/?.intl=ph&amp;.lang=en-PH&amp;.partner=none&amp;.src=news">Mail</a></li></ul>
+<p class="rm-manual"><a href="https://ph.news.yahoo.com/"> News</a></p>
+<p class="rm-manual"><span>Follow Us</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://ph.news.yahoo.com/philippines"> Philippines</a></li>
+<li class="rm-manual"><a href="https://sg.news.yahoo.com/esports/"> Esports</a></li>
+<li class="rm-manual"><a href="https://ph.news.yahoo.com/sports"> Sports</a></li>
+<li class="rm-manual"><a href="https://ph.news.yahoo.com/sports/nbafantasy"> NBA Fantasy</a></li>
+<li class="rm-manual"><a href="https://ph.news.yahoo.com/finance"> Finance</a></li>
+<li class="rm-manual"><a href="https://ph.news.yahoo.com/tech"> Tech</a></li>
+<li class="rm-manual"><a href="https://ph.news.yahoo.com/autos"> Autos</a></li>
+<li class="rm-manual"><a href="https://ph.news.yahoo.com/lifestyle"> Lifestyle</a></li>
+<li class="rm-manual"><a href="https://ph.news.yahoo.com/celebrity"> Celebrity</a></li>
+<li class="rm-manual"><a href="https://ph.news.yahoo.com/movies"> Movies</a></li>
+<li class="rm-manual"><a href="https://ph.news.yahoo.com/videos"> Videos</a></li>
+</ul>
+<h1 class="rm-manual">Wuhan virus: Scoot, SIA and SilkAir to cut flights to China</h1>
+<p class="rm-manual"><a href="https://www.yahoo.com/author/staff-writer--singapore">Staff Writer, Singapore</a></p>
+<p class="rm-manual">Editorial Team</p>
+<p class="rm-manual"><span><span><a href="https://sg.style.yahoo.com/">Yahoo Lifestyle SEA</a></span></span>30 January 2020</p>
+<p class="rm-manual">The Boeing 787-9 Dreamliner aircraft of Scoot on 30 January 2020. (PHOTO: AFP via Getty Images)</p>
+<p class="rm-manual">UPDATE: Singapore Airlines and SilkAir have also announced that they are reducing their flights to China from next month.</p>
+<p>SINGAPORE — Scoot said it will suspend, cancel and cut flights to a 
+number of cities in Greater China due to weak demand amid the Wuhan 
+virus outbreak.</p>
+<p>In a post on Facebook on Friday morning (31 January), the 
+Singapore-based low cost airline said it will suspend flights between 
+Singapore and 11 cities in mainland China - Harbin, Hangzhou, Shenyang, 
+Xi’an, Changsha, Nanchang, Zhengzhou, Ningbo, Jinan, Nanning and Wuxi - 
+from early February until end March 2020.</p>
+<p>Affected customers booked on these flights will receive full refund via original mode of payment.</p>
+<p>Scoot will also cut frequencies to eight cities - Fuzhou, Guangzhou, 
+Haikou, Kunming, Nanjing, Qingdao, Tianjin and Macau - from 1 February 
+to 28 March 2020.</p>
+<p>In addition, Scoot will cancel some flights between Singapore and Guangzhou, Nanjing, Macau and Hong Kong.</p>
+<p>Affected customers affected by the cut in flight frequencies and 
+cancellations will be informed about refunds and rebooking options via 
+emails from Scoot.</p>
+<h2>Affected SIA, SilkAir flights</h2>
+<p>Meanwhile, SIA also put up a Facebook post providing details of 
+affected SIA and SilkAir flights. It added that affected customers will 
+be notified and re-accommodated onto other flights.</p>
+<p>Customers can contact their travel agents or email the Singapore reservations team if they require assistance.</p>
+<p>SIA has flights to three China cities (Beijing, Shanghai and 
+Guangzhou), while SilkAir has four (Shenzhen, Xiamen, Chengdu and 
+Chongqing).</p>
+<p class="rm-manual">READ MORE:</p>
+<p class="rm-manual"><a href="https://sg.style.yahoo.com/wuhan-coronavirus-jetstar-to-stop-flying-to-hefei-guiyang-and-xuzhou-china-102647271.html">Wuhan virus: Jetstar to suspend flights to Hefei, Guiyang and Xuzhou</a></p>
+<p class="rm-manual"><a href="https://sg.news.yahoo.com/wuhan-virus-scoot-cancels-all-wuhan-flights-until-end-of-march-051415985.html">Wuhan virus: Scoot cancels all Wuhan flights until end of March</a></p>
+<h2 class="rm-manual">What to Read Next</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.finance.yahoo.com/news/singapore-stocks-seen-helped-by-election-as-diversity-increases-015408151.html"><span>Singapore stocks seen helped by election as diversity increases</span></a></h3><p class="rm-manual">Bloomberg</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ph.news.yahoo.com/fresh-lockdown-250-000-manila-virus-surges-094759248.html"><span>Fresh lockdown for 250,000 in Manila as virus surges</span></a></h3><p class="rm-manual">AFP News</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ph.news.yahoo.com/video/york-man-protests-goya-foods-222250778.html"><span>New York Man Protests Goya Foods by Tossing Cans in the Trash</span></a></h3><p class="rm-manual">Storyful</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ph.news.yahoo.com/virus-immunity-may-disappear-within-months-study-111110289.html"><span>Virus immunity may disappear within months: study</span></a></h3><p class="rm-manual">AFP News</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ph.news.yahoo.com/lisa-marie-presleys-son-benjamin-232305965.html"><span>Lisa Marie Presley 'heartbroken' over death of son Benjamin Keough, Elvis Presley's grandson, at 27</span></a></h3><p class="rm-manual">USA TODAY Entertainment</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ph.news.yahoo.com/video/cincinnati-zoos-fiona-bibi-kiss-210839804.html"><span>Cincinnati Zoo's Fiona, Bibi 'Kiss Crash' Under Water in Adorable Display of Affection</span></a></h3><p class="rm-manual">Storyful</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sg.news.yahoo.com/galapagos-reopens-tourist-sites-virus-lockdown-214537174.html"><span>Galapagos reopens tourist sites after virus lockdown</span></a></h3><p class="rm-manual">AFP News</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/philippines-reports-65-coronavirus-deaths-090557428.html"><span>Philippines reports 65 new coronavirus deaths, 836 more infections</span></a></h3><p class="rm-manual">Reuters</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ph.news.yahoo.com/ah-young-love-cotabato-teen-013114992.html"><span>Ah, Young Love: Cotabato teen forgives boyfriend after surprise Jollibee delivery</span></a></h3><p class="rm-manual">Coconuts Manila</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ph.news.yahoo.com/us-military-moves-repelled-south-061633577.html"><span>US military South China Sea moves are ‘futile and its allies risk harm’: Chinese colonel</span></a></h3><p class="rm-manual">South China Morning Post</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ph.news.yahoo.com/australian-scientist-films-mosquitoes-drinking-182120213.html"><span>Australian Scientist Films Mosquitoes Drinking His Blood Until They Burst</span></a></h3><p class="rm-manual">Storyful</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ph.news.yahoo.com/video/firefighters-continue-battle-blaze-uss-203713880.html"><span>Firefighters Continue to Battle Blaze on USS Bonhomme Richard</span></a></h3><p class="rm-manual">Storyful</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://www.intheknow.com/2020/07/13/these-cosplaying-puppies-are-the-cutest-thing-youll-see-today/"><span>These cosplaying puppies are the cutest thing you'll see today</span></a></h3><p class="rm-manual">AOL </p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ph.news.yahoo.com/us-man-30-dies-virus-attending-covid-party-230251592.html"><span>US man, 30, dies from virus after attending 'COVID party'</span></a></h3><p class="rm-manual">AFP News</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sports.yahoo.com/goat-of-goa-ts-who-is-the-greatest-athlete-of-all-time-vote-now-043748134.html"><span>GOAT of GOATs: Who is the Greatest Athlete Of All Time? Vote now</span></a></h3><p class="rm-manual">Yahoo Sports</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ph.news.yahoo.com/cayetano-defends-abs-cbn-shutdown-045704702.html"><span>Cayetano defends ABS-CBN shutdown, claims media giant played ‘fast and loose’ with law</span></a></h3><p class="rm-manual">Coconuts Manila</p><p class="rm-manual"></p></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/nelson-mandelas-daughter-zindzi-dies-072736673.html"><span>Nelson Mandela's daughter Zindzi dies at 59</span></a></h3><p class="rm-manual">BBC</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ph.news.yahoo.com/video/timelapse-shows-neowise-comet-moving-175320828.html"><span>Timelapse Shows Neowise Comet Moving Over Devon, England</span></a></h3><p class="rm-manual">Storyful</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://www.aol.co.uk/living/2020/07/13/hilarious-moment-two-dogs-react-to-toy-dinosaur/"><span>Hilarious moment two dogs react to toy dinosaur</span></a></h3><p class="rm-manual">AOL </p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ph.news.yahoo.com/raising-stakes-us-brands-china-claims-south-china-202208829.html"><span>Raising stakes, US brands China claims in South China Sea illegal</span></a></h3><p class="rm-manual">AFP News</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ph.news.yahoo.com/body-found-us-lake-search-actress-naya-rivera-172304390.html"><span>Body of actress Naya Rivera recovered from US lake: police</span></a></h3><p class="rm-manual">AFP News</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ph.news.yahoo.com/latin-america-virus-deaths-pass-us-spain-lockdown-110902364.html"><span>WHO says no return to 'normal' as Latin America deaths pass US</span></a></h3><p class="rm-manual">AFP News</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ph.news.yahoo.com/aishwarya-rai-bachchan-coronavirus-covid-175535895.html"><span>Aishwarya Rai Bachchan, Bollywood star known as 'world's most beautiful woman,' tests positive for COVID-19</span></a></h3><p class="rm-manual">Yahoo Celebrity</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ph.news.yahoo.com/video/sea-foam-covers-cape-town-172313192.html"><span>Sea Foam Covers Cape Town as Winds Lash South African Coast</span></a></h3><p class="rm-manual">Storyful</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://www.aol.co.uk/living/2020/07/13/thai-woman-makes-plastic-face-shields-with-cartoon-characters/"><span>Thai woman makes plastic face shields with cartoon characters</span></a></h3><p class="rm-manual">AOL </p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ph.news.yahoo.com/religious-hindus-streets-festival-while-140000873.html"><span>Religious Hindus take to streets for festival while holding hundreds of deadly cobras</span></a></h3><p class="rm-manual">Newsflare</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/hundreds-dead-elephants-found-botswana-143512526.html"><span>Hundreds of dead elephants have been found in Botswana, and officials say a novel disease could be to blame</span></a></h3><p class="rm-manual">Business Insider</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/5-reasons-why-may-bloated-203206046.html"><span>5 reasons why you may be bloated</span></a></h3><p class="rm-manual">INSIDER</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ph.news.yahoo.com/free-cars-20-down-payments-in-philippines-as-auto-sales-dive-054658951.html"><span>Free Cars, $20 Down Payments in Philippines as Auto Sales Dive</span></a></h3><p class="rm-manual">Bloomberg</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ph.news.yahoo.com/video/portland-protesters-set-fire-elk-170450790.html"><span>Portland Protesters Set Fire to Base of Elk Statue During 46th Consecutive Night of Demonstrations</span></a></h3><p class="rm-manual">Storyful</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://www.aol.co.uk/entertainment/2020/07/13/grandson-of-elvis-presley-mourned-following-death-aged-27/"><span>Grandson of Elvis Presley mourned following death aged 27</span></a></h3><p class="rm-manual">AOL </p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ph.news.yahoo.com/alpine-melt-yields-old-india-headlines-indira-gandhi-200038551.html"><span>Alpine melt yields old India headlines: Indira Gandhi is PM</span></a></h3><p class="rm-manual">AFP News</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/filippinos-starve-president-duterte-vows-110508367.html"><span>Filipinos starve as President Duterte vows not to ease the world's longest lockdown</span></a></h3><p class="rm-manual">The Telegraph</p><p></p></li>
+</ul></article>
+</body></html>

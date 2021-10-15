@@ -1,0 +1,83 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"><a href="file:///show/mysteries-mental-illness/">Mysteries of Mental Illness</a></p>
+<h1 class="rm-manual">Decolonizing Mental Health | Preview</h1>
+<p class="rm-manual"><span> Preview: Special | 36s </span><span> | </span><span>Video has closed captioning.</span></p>
+<p> A preview of DECOLONIZING MENTAL HEALTH, an original digital series 
+that dismantles the racism underscoring the mental healthcare industry. 
+By focusing its gaze on the transformative work of therapists and 
+individuals of color, it calls for redressal of the ways in which we 
+define psychiatric illness and health. </p>
+<p class="rm-manual"> Aired: 06/07/21 </p>
+<p class="rm-manual"> Rating: TV-PG </p>
+<p class="rm-manual"> Problems Playing Video? <span> | <a href="file:///cc-info/">Closed Captioning</a></span></p>
+<h2 class="rm-manual">Report a Problem</h2>
+<p class="rm-manual">Before you submit an error, please consult our <a href="file:///troubleshooting/" rel="noopener noreferrer">Troubleshooting Guide</a>.</p>
+<p class="rm-manual">Type of Error</p>
+<p class="rm-manual">Please add more details</p>
+<p class="rm-manual">Your report has been successfully submitted. Thank you for helping us improve PBS Video.</p>
+<p class="rm-manual"><span>Funding for Mysteries of Mental Illness is 
+provided by the Corporation for Public Broadcasting, Johnson &amp; 
+Johnson, the American Psychiatric Association Foundation, and Draper, 
+and through the support of PBS …</span></p>
+<p class="rm-manual">Funding for Mysteries of Mental Illness is provided
+ by the Corporation for Public Broadcasting, Johnson &amp; Johnson, the 
+American Psychiatric Association Foundation, and Draper, and through the
+ support of PBS viewers. Additional support for the Decolonizing Mental 
+Health digital series was provided by the John D. &amp; Catherine T. 
+MacArthur Foundation.</p>
+<h2 class="rm-manual"><a href="file:///show/mysteries-mental-illness/extras/"> More Extras </a></h2>
+<h2 class="rm-manual"><span>Related to This Preview</span></h2>
+<ul class="rm-manual"><li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/decolonizing-mental-health-overview/"> Decolonizing Mental Health | Overview </a></h3><p class="rm-manual">Shawna Murray-Browne and experts speak to what the current mental health field lacks.</p><p class="rm-manual"></p></li></ul>
+<h3 class="rm-manual">Keep exploring:</h3>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///video/shawna-murray-browne-decolonizing-mental-health-mtqtcl/"> Shawna Murray-Browne | Decolonizing Mental Health</a></li>
+<li class="rm-manual"><a href="file:///video/idris-mitchell-decolonizing-mental-health-xlsymh/"> Idris Mitchell | Decolonizing Mental Health</a></li>
+<li class="rm-manual"><a href="file:///video/lloyd-hale-part-2-decolonizing-mental-health-rizw4l/"> Lloyd Hale | Part 2 | Decolonizing Mental Health</a></li>
+<li class="rm-manual"><a href="file:///video/lloyd-hale-part-1-decolonizing-mental-health-bugfh4/"> Lloyd Hale | Part 1 | Decolonizing Mental Health</a></li>
+</ul>
+<h2 class="rm-manual"><a href="file:///show/mysteries-mental-illness/specials/"> More Specials </a></h2>
+<p class="rm-manual">Campaign</p>
+<h2 class="rm-manual"><a rel="noopener noreferrer" href="https://www.pbs.org/wgbh/mysteries-mental-illness/connect/whats-your-normal/"> Join the Campaign </a></h2>
+<p class="rm-manual"> Share your story of dealing with mental illness 
+through textual commentary, a still image, a short-form video — however 
+you feel most comfortable — using the hashtag #MentalHealthPBS on social
+ media. </p>
+<p class="rm-manual"><a rel="noopener noreferrer" href="https://www.pbs.org/wgbh/mysteries-mental-illness/connect/whats-your-normal/"><span> Share Your Story </span></a></p>
+<h2 class="rm-manual"><a href="file:///shows/?search=&amp;genre=science-and-nature"><span>More Science and Nature Shows</span></a></h2></article>
+</body></html>

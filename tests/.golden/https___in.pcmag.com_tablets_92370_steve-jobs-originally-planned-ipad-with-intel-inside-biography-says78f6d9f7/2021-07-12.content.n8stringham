@@ -1,0 +1,144 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Steve Jobs Originally Planned iPad With Intel Inside, Biography Says </p>
+<p class="rm-manual"> <a href="https://in.pcmag.com/"> PCMag India </a> </p>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="file:///article/news/">News</a><span>/</span>
+</li>
+<li class="rm-manual">
+<a href="file:///article/feature/">Features</a><span>/</span>
+</li>
+<li class="rm-manual">
+<a href="file:///article/help/">How-To</a><span>/</span>
+</li>
+<li class="rm-manual">
+<a href="file:///article/opinion/">Opinions</a><span>/</span>
+</li>
+<li class="rm-manual">
+<a href="file:///article/guide/">Top 10</a><span>/</span>
+</li>
+<li class="rm-manual">
+<a href="file:///gallery/">Gallery</a><span>/</span>
+</li>
+<li class="rm-manual"><a href="file:///video/">Video</a></li>
+</ul>
+<p class="rm-manual"> <a href="file:///"><span>PCMag India</span></a> <a href="https://in.pcmag.com/computers-electronics" rel="tag"><span>Computers &amp; Electronics</span></a> <a href="https://in.pcmag.com/tablets" rel="tag"><span>Tablets</span></a> </p>
+<h1 class="rm-manual">Steve Jobs Originally Planned iPad With Intel Inside, Biography Says</h1>
+<address class="rm-manual"> <span>By Peter Pachal</span> </address>
+<p class="rm-manual"> Oct. 26, 2011, 10:29 p.m. </p>
+<p>Although Apple gets chips for its entire Mac lineup from Intel, <a href="http://www.pcmag.com/article2/0,2817,2395195,00.asp">Steve Jobs</a> had issues with the company, Walter Isaacson reveals in <a href="http://www.pcmag.com/article2/0,2817,2395246,00.asp">his biography</a>
+ of the former Apple CEO. Jobs thought Intel was a company that was slow
+ to adapt, although at one point Jobs had considered using Intel 
+technology in the iPhone and iPad.</p>
+<p>Apple made the high-profile switch to Intel chips in the middle of 
+the last decade after a long period of using IBM's and Motorola's 
+PowerPC processors. Intel now powers all the desktops and laptops Apple 
+makes. And if things had been different, it might be in Apple's iOS 
+devices, too.</p>
+<p>In the early days of the partnership, Isaacson writes, Jobs had plans
+ to power the iPad with an Intel Atom chip, even though one of his key 
+executives, Tony Fadell (who helped create the iPod and went on to found
+ a company that just announced a <a href="http://www.pcmag.com/article2/0,2817,2395108,00.asp">high-tech thermostat</a>)
+ thought Apple should go with a processor based on the ARM architecture,
+ the low-power design that's the basis of almost every chip in cell 
+phones and tablets today.</p>
+<p class="rm-manual"><a href="file:///desktop/41787/gallery/the-greatest-victories-of-steve-jobs">View all Photos in Gallery</a></p>
+<p>"At the high-performance end, Intel is the best," Jobs said. "At the 
+beginning, we were doing wonderful things together. They wanted this big
+ joint project to do chips for future iPhones."</p>
+<p>Ultimately, though, Fadell's point of view won out. Apple acquired a 
+couple of chip companies, PA Semi and Intrinsity, and created its own 
+chips, the A4 and later A5. Jobs explains why he didn't go with Intel 
+for the iPad and iPhone in the book.</p>
+<p>"There were two reasons we did not go with them" he said. "One was 
+that they are just really slow. They are like a steamship, not very 
+flexible. We are used to going pretty fast. Second is that we just did 
+not want to teach them everything, which they could go and sell to our 
+competitors,"</p>
+<p>Jobs also voiced other criticisms. He said Intel's "graphics suck" 
+and that its processors don't have the same system-on-a-chip 
+efficiencies of the A4/A5. It's not known if the interview was conducted
+ before the most recent refresh of the MacBook Air, which switched from 
+Nvidia graphics to Intel and include Intel's energy-efficient "Sandy 
+Bridge" processors. Intel also has plans to expand its system-on-a-chip 
+offerings, including designs for <a href="http://in.pcmag.com/news/26327/next-generation-of-windows-will-run-on-arm">Windows 8</a>.</p>
+<p>Isaacson goes on to quote Intel CEO Paul Otellini, who says part of 
+the reason Intel did not appear on the iPad was because the companies 
+could not agree on pricing, and because Jobs wanted too much control 
+over the final design of the iPad chip.</p>
+<h5 class="rm-manual">More Inside PCMag.com</h5>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://in.pcmag.com/tablets/143640/whats-the-best-ipad-to-buy-in-2021">What's the Best iPad to Buy in 2021?</a></li> <li class="rm-manual"><a href="https://in.pcmag.com/tablets/143569/oneplus-pad-trademark-hints-at-android-tablet">OnePlus Pad Trademark Hints at Android Tablet</a></li> <li class="rm-manual"><a href="https://in.pcmag.com/tablets/143402/lenovos-huge-array-of-new-tablets-includesa-huge-tablet">Lenovo's Huge Array of New Tablets Includes...a Huge Tablet</a></li> <li class="rm-manual"><a href="https://in.pcmag.com/tablets/115474/the-best-cheap-tablets-for-2020">The Best Cheap Tablets for 2021</a></li> <li class="rm-manual"><a href="https://in.pcmag.com/tablets/38124/the-best-android-tablets-for-2020">The Best Android Tablets for 2021</a></li> </ul>
+<h3 class="rm-manual">More From Peter Pachal</h3>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://in.pcmag.com/tvs/92284/will-apples-tv-set-be-powered-by-siri">Will Apple's TV Set Be Powered by Siri?</a> </li> <li class="rm-manual"> <a href="https://in.pcmag.com/mobile-phones/92295/sony-finally-enters-the-smartphone-era-with-ericsson-deal">Sony Finally Enters the Smartphone Era with Ericsson Deal </a> </li> <li class="rm-manual"> <a href="https://in.pcmag.com/tablets/92370/steve-jobs-originally-planned-ipad-with-intel-inside-biography-says">Steve Jobs Originally Planned iPad With Intel Inside, Biography Says</a> </li> <li class="rm-manual"> <a href="https://in.pcmag.com/mobile-phones/92416/apples-biggest-mobile-challenger-is-htc">Apple's Biggest Mobile Challenger Is... HTC?</a> </li> <li class="rm-manual"> <a href="https://in.pcmag.com/tvs/92421/5-big-obstacles-standing-in-the-way-of-a-real-apple-tv">5 Big Obstacles Standing in the Way of a Real Apple TV</a> </li> </ul>
+<h5 class="rm-manual">Comments</h5>
+<p class="rm-manual"> Please enable JavaScript to view the comments. </p>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="file:///article/news/">News</a><span>/</span>
+</li>
+<li class="rm-manual">
+<a href="file:///article/feature/">Features</a><span>/</span>
+</li>
+<li class="rm-manual">
+<a href="file:///article/help/">How-To</a><span>/</span>
+</li>
+<li class="rm-manual">
+<a href="file:///article/opinion/">Opinions</a><span>/</span>
+</li>
+<li class="rm-manual">
+<a href="file:///article/guide/">Top 10</a><span>/</span>
+</li>
+<li class="rm-manual">
+<a href="file:///gallery/">Gallery</a><span>/</span>
+</li>
+<li class="rm-manual"><a href="file:///video/">Video</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="http://in.pcmag.com/indian-news/93428/news/welcome-to-pcmag-india">About PCMagazine</a></li>
+<li class="rm-manual"><a href="file:///pcmag-in/95398/page/privacy">Privacy Policy</a></li>
+<li class="rm-manual"><a href="http://in.pcmag.com/indian-news/93428/news/welcome-to-pcmag-india">Terms of Use</a></li>
+<li class="rm-manual"><a href="file:///pcmag-in/95394/page/cookies">Cookies</a></li>
+</ul>
+<p class="rm-manual">PCMag is obsessed with culture and tech, offering 
+smart, spirited coverage of the products and innovations that shape our 
+connected lives and the digital trends that keep us talking.</p>
+<p class="rm-manual"> PCMag India is operated under license from Ziff Davis </p>
+<p class="rm-manual"> <span>International Editions:</span> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.pcmag.com/?setccpref=US">PCMag USA</a></li> <li class="rm-manual"><a href="https://uk.pcmag.com/">United Kingdom</a></li> <li class="rm-manual"><a href="https://au.pcmag.com/">Australia</a></li> <li class="rm-manual"><a href="https://gr.pcmag.com/">Greece</a></li> <li class="rm-manual"><a href="https://in.pcmag.com/">India</a></li> <li class="rm-manual"><a href="https://il.pcmag.com/">Israel</a></li> <li class="rm-manual"><a href="https://me.pcmag.com/">Middle East</a></li> <li class="rm-manual"><a href="https://sea.pcmag.com/">Southeast Asia</a></li> </ul></article>
+</body></html>

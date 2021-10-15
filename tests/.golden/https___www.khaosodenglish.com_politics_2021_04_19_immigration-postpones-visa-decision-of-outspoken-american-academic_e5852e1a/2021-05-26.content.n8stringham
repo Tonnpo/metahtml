@@ -1,0 +1,179 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Immigration Postpones Visa Decision of Outspoken American Academic </p>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="https://www.khaosodenglish.com/category/news/">News</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.khaosodenglish.com/category/news/asean/">ASEAN</a></li> <li class="rm-manual"><a href="https://www.khaosodenglish.com/category/news/bangkok/">Bangkok</a></li> <li class="rm-manual"><a href="https://www.khaosodenglish.com/category/news/business/">Business</a></li> <li class="rm-manual"><a href="https://www.khaosodenglish.com/category/news/crimecourtscalamity/">Crime, Courts, Calamity</a></li> <li class="rm-manual"><a href="https://www.khaosodenglish.com/category/news/crimecourtscalamity/calamity/">Calamity</a></li> <li class="rm-manual"><a href="https://www.khaosodenglish.com/category/news/crimecourtscalamity/courts/">Courts</a></li> <li class="rm-manual"><a href="https://www.khaosodenglish.com/category/news/crimecourtscalamity/crime-crime/">Crime</a></li> <li class="rm-manual"><a href="https://www.khaosodenglish.com/category/news/international/">International</a></li> <li class="rm-manual"><a href="https://www.khaosodenglish.com/category/news/transpo/">Transportation</a></li> </ul> </li> <li class="rm-manual"><a href="https://www.khaosodenglish.com/category/politics/">Politics</a></li> <li class="rm-manual">
+<a href="https://www.khaosodenglish.com/category/life/">Lifestyle</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.khaosodenglish.com/category/life/arts/">Arts &amp; Culture</a></li> <li class="rm-manual"><a href="https://www.khaosodenglish.com/category/life/embassy/">Embassy Corner</a></li> <li class="rm-manual"><a href="https://www.khaosodenglish.com/category/life/entertainment/">Entertainment</a></li> <li class="rm-manual"><a href="https://www.khaosodenglish.com/category/life/events/">Events</a></li> <li class="rm-manual"><a href="https://www.khaosodenglish.com/category/life/food/">Food</a></li> <li class="rm-manual"><a href="https://www.khaosodenglish.com/category/life/geek/">Geek</a></li> <li class="rm-manual"><a href="https://www.khaosodenglish.com/category/life/nightlife/">Nightlife</a></li> <li class="rm-manual"><a href="https://www.khaosodenglish.com/category/life/shopping/">Shopping</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://www.khaosodenglish.com/category/news/crimecourtscalamity/">Crime &amp; Legal</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.khaosodenglish.com/category/news/crimecourtscalamity/calamity/">Calamity</a></li> <li class="rm-manual"><a href="https://www.khaosodenglish.com/category/news/crimecourtscalamity/courts/">Courts</a></li> <li class="rm-manual"><a href="https://www.khaosodenglish.com/category/news/crimecourtscalamity/crime-crime/">Crime</a></li> </ul> </li> <li class="rm-manual"><a href="https://www.khaosodenglish.com/category/culture/net/">dot.Net</a></li> <li class="rm-manual"><a href="https://www.khaosodenglish.com/category/opinion/">Opinion</a></li> <li class="rm-manual"><a href="https://www.khaosodenglish.com/category/news/asean/">ASEAN</a></li> <li class="rm-manual"><a href="https://www.khaosodenglish.com/category/videos/">Videos</a></li> </ul>
+<p class="rm-manual"> <span>Search</span> </p>
+<p class="rm-manual"> <a href="https://www.khaosodenglish.com/"> <span>Khaosod English</span> </a> </p>
+<p class="rm-manual"> <span>28.8</span> <span>C</span> </p>
+<p class="rm-manual">Bangkok</p>
+<p class="rm-manual"> Saturday, May 8, 2021 </p>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="https://www.khaosodenglish.com/category/news/">News</a> <ul class="rm-manual"> <li class="rm-manual">
+<p class="rm-manual"><a href="https://www.khaosodenglish.com/category/news/">All</a><a href="https://www.khaosodenglish.com/category/news/asean/">ASEAN</a><a href="https://www.khaosodenglish.com/category/news/bangkok/">Bangkok</a><a href="https://www.khaosodenglish.com/category/news/business/">Business</a><a href="https://www.khaosodenglish.com/category/news/crimecourtscalamity/">Crime, Courts, Calamity</a><a href="https://www.khaosodenglish.com/category/news/crimecourtscalamity/calamity/">Calamity</a><a href="https://www.khaosodenglish.com/category/news/crimecourtscalamity/courts/">Courts</a><a href="https://www.khaosodenglish.com/category/news/crimecourtscalamity/crime-crime/">Crime</a><a href="https://www.khaosodenglish.com/category/news/international/">International</a><a href="https://www.khaosodenglish.com/category/news/transpo/">Transportation</a></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.khaosodenglish.com/news/international/2021/05/07/asian-american-health-workers-fight-virus-and-racist-attacks/" rel="bookmark">Asian American Health Workers Fight Virus and Racist Attacks</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.khaosodenglish.com/news/crimecourtscalamity/2021/05/07/us-citizen-charged-with-murdering-thai-wife/" rel="bookmark">US Citizen Charged With Murdering Thai Wife</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.khaosodenglish.com/news/crimecourtscalamity/2021/05/07/court-grants-bail-to-pro-democracy-protest-leader/" rel="bookmark">Court Grants Bail To Pro-Democracy Protest Leader</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.khaosodenglish.com/news/international/2021/05/07/cases-rise-pressure-grows-on-modi-to-impose-strict-lockdown/" rel="bookmark">Cases Rise, Pressure Grows on Modi To Impose Strict Lockdown</a></h3> <p class="rm-manual"></p> </li> </ul> </li> <li class="rm-manual">
+<a href="https://www.khaosodenglish.com/category/politics/">Politics</a> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.khaosodenglish.com/politics/2021/05/03/immigration-renews-visa-for-american-academic-who-writes-about-112/" rel="bookmark">Immigration Renews Visa for American Academic Who Writes About 112</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.khaosodenglish.com/politics/2021/04/19/immigration-postpones-visa-decision-of-outspoken-american-academic/" rel="bookmark">Immigration Postpones Visa Decision of Outspoken American Academic</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.khaosodenglish.com/politics/2021/04/02/court-overturns-order-to-fine-yingluck-35-7-billion-baht-over-failed-rice-scheme/" rel="bookmark">Court Overturns Order to Fine Yingluck 35.7 Billion Baht Over Failed…</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.khaosodenglish.com/politics/2021/03/24/cabinet-reshuffle-replaces-3-members-booted-by-court/" rel="bookmark">Cabinet Reshuffle Replaces 3 Members Booted by Court</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.khaosodenglish.com/politics/2021/03/22/prayut-denies-thailand-sending-rice-to-myanmar-army/" rel="bookmark">Prayut Denies Thailand Sending Rice to Myanmar Army</a></h3> <p class="rm-manual"></p> </li> </ul> </li> <li class="rm-manual">
+<a href="https://www.khaosodenglish.com/category/life/">Lifestyle</a> <ul class="rm-manual"> <li class="rm-manual">
+<p class="rm-manual"><a href="https://www.khaosodenglish.com/category/life/">All</a><a href="https://www.khaosodenglish.com/category/life/arts/">Arts &amp; Culture</a><a href="https://www.khaosodenglish.com/category/life/embassy/">Embassy Corner</a><a href="https://www.khaosodenglish.com/category/life/entertainment/">Entertainment</a><a href="https://www.khaosodenglish.com/category/life/events/">Events</a><a href="https://www.khaosodenglish.com/category/life/food/">Food</a><a href="https://www.khaosodenglish.com/category/life/geek/">Geek</a><a href="https://www.khaosodenglish.com/category/life/nightlife/">Nightlife</a><a href="https://www.khaosodenglish.com/category/life/shopping/">Shopping</a></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.khaosodenglish.com/news/international/2021/04/26/nomadland-wins-best-picture-at-a-social-distanced-oscars/" rel="bookmark">‘Nomadland’ Wins Best Picture at a Social Distanced Oscars</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.khaosodenglish.com/life/entertainment/2021/03/19/exclusive-interview-with-the-thai-woman-behind-raya-and-the-last-dragon/" rel="bookmark">Exclusive: Interview With the Thai Woman Behind ‘Raya and the Last…</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.khaosodenglish.com/life/entertainment/2021/03/16/review-raya-and-the-last-dragon-is-a-dazzling-adventure/" rel="bookmark">Review: ‘Raya and the Last Dragon’ Is a Dazzling Adventure</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.khaosodenglish.com/news/2021/03/09/sanook-loey-songkran-given-green-light/" rel="bookmark">Sanook Loey! Songkran Given Green Light</a></h3> <p class="rm-manual"></p> </li> </ul> </li> <li class="rm-manual">
+<a href="https://www.khaosodenglish.com/category/news/crimecourtscalamity/">Crime &amp; Legal</a> <ul class="rm-manual"> <li class="rm-manual">
+<p class="rm-manual"><a href="https://www.khaosodenglish.com/category/news/crimecourtscalamity/">All</a><a href="https://www.khaosodenglish.com/category/news/crimecourtscalamity/calamity/">Calamity</a><a href="https://www.khaosodenglish.com/category/news/crimecourtscalamity/courts/">Courts</a><a href="https://www.khaosodenglish.com/category/news/crimecourtscalamity/crime-crime/">Crime</a></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.khaosodenglish.com/news/crimecourtscalamity/2021/05/07/us-citizen-charged-with-murdering-thai-wife/" rel="bookmark">US Citizen Charged With Murdering Thai Wife</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.khaosodenglish.com/news/crimecourtscalamity/2021/05/07/court-grants-bail-to-pro-democracy-protest-leader/" rel="bookmark">Court Grants Bail To Pro-Democracy Protest Leader</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.khaosodenglish.com/news/crimecourtscalamity/2021/05/06/officials-say-foreigners-in-thailand-will-get-vaccine-jabs-someday/" rel="bookmark">Officials Say Foreigners in Thailand Will Get Vaccine Jabs…Someday</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.khaosodenglish.com/news/crimecourtscalamity/2021/05/06/court-says-thammanat-can-stay-despite-drug-case/" rel="bookmark">Court Says Thammanat Can Stay Despite Drug Case</a></h3> <p class="rm-manual"></p> </li> </ul> </li> <li class="rm-manual">
+<a href="https://www.khaosodenglish.com/category/culture/net/">dot.Net</a> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.khaosodenglish.com/culture/net/2021/02/24/meet-thailands-hottest-tiktok-star-a-cambodian-migrant-worker/" rel="bookmark">Meet Thailand’s Hottest TikTok Star: A Cambodian Migrant Worker</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.khaosodenglish.com/culture/net/2021/02/22/miss-grand-mexico-criticized-for-posing-with-buddha-image/" rel="bookmark">‘Miss Grand Mexico’ Criticized For Posing With Buddha Image</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.khaosodenglish.com/culture/net/2021/02/15/feb-march-march-luk-thung-earworm-about-calendar-vexes-netizens/" rel="bookmark">Feb! March! March! Luk Thung Earworm About Calendar Vexes Netizens</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.khaosodenglish.com/culture/net/2021/02/10/pm-prayut-wishes-you-a-happy-chinese-new-year-on-tiktok/" rel="bookmark">PM Prayut Wishes You A Happy Chinese New Year…On TikTok</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.khaosodenglish.com/politics/2021/02/02/myanmar-celeb-paing-takhon-condemns-coup/" rel="bookmark">Myanmar Celeb ‘Paing Takhon’ Condemns Coup</a></h3> <p class="rm-manual"></p> </li> </ul> </li> <li class="rm-manual">
+<a href="https://www.khaosodenglish.com/category/opinion/">Opinion</a> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.khaosodenglish.com/opinion/2021/05/02/opinion-covid-19-exposes-deadly-inequalities-in-thailand/" rel="bookmark">Opinion: COVID-19 Exposes Deadly Inequalities in Thailand</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.khaosodenglish.com/opinion/2021/04/24/opinion-cia-agents-in-thailand-please-raise-your-hand/" rel="bookmark">Opinion: CIA Agents in Thailand, Please Raise Your Hand</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.khaosodenglish.com/opinion/2021/04/17/opinion-try-not-to-mix-politics-with-the-outbreak/" rel="bookmark">Opinion: Try Not to Mix Politics With the Outbreak</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.khaosodenglish.com/opinion/2021/04/10/opinion-why-jatuporn-reappearance-may-no-bode-well-for-progressive-change/" rel="bookmark">Opinion: Why Jatuporn Reappearance May No Bode Well for Progressive Change?</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.khaosodenglish.com/opinion/2021/04/03/opinion-let-us-not-lose-our-humanity-on-myanmar-issue/" rel="bookmark">Opinion: Let Us Not Lose Our Humanity on Myanmar Issue</a></h3> <p class="rm-manual"></p> </li> </ul> </li> <li class="rm-manual">
+<a href="https://www.khaosodenglish.com/category/news/asean/">ASEAN</a> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.khaosodenglish.com/news/2021/03/09/myanmar-protesters-defy-curfew-media-outlets-ordered-shut/" rel="bookmark">Myanmar Protesters Defy Curfew; Media Outlets Ordered Shut</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.khaosodenglish.com/news/international/2019/11/12/myanmar-accused-at-un-court-of-genocide-against-rohingya/" rel="bookmark">Myanmar Accused at UN Court of Genocide Against Rohingya</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.khaosodenglish.com/news/international/2019/11/01/us-official-urges-asean-to-stand-up-to-china-in-sea-row/" rel="bookmark">US Official Urges ASEAN to Stand up to China in Sea…</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.khaosodenglish.com/news/international/2019/11/01/police-say-body-of-british-tourist-missing-in-cambodia-found/" rel="bookmark">Police Say Body of British Tourist Missing in Cambodia Found</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.khaosodenglish.com/news/asean/2019/10/21/widodo-begins-2nd-term-pledging-to-make-indonesia-developed/" rel="bookmark">Widodo Begins 2nd Term Pledging to Make Indonesia Developed</a></h3> <p class="rm-manual"></p> </li> </ul> </li> <li class="rm-manual">
+<a href="https://www.khaosodenglish.com/category/videos/">Videos</a> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.khaosodenglish.com/life/food/2020/09/25/this-thai-hakka-street-food-snack-has-all-but-disappeared/" rel="bookmark">This Thai-Hakka Street Food Snack Has All But Disappeared</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.khaosodenglish.com/featured/2019/12/27/khaosod-englishs-top-6-watched-videos-of-2019/" rel="bookmark">Khaosod English’s Top 6 Watched Videos of 2019</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.khaosodenglish.com/news/crimecourtscalamity/2019/12/20/surreal-video-of-grandma-slapping-student-to-christmas-carols-goes-viral/" rel="bookmark">Surreal Video of Grandma Slapping Student to Christmas Carols Goes Viral</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.khaosodenglish.com/news/crimecourtscalamity/2019/12/04/american-on-phuket-fined-for-fighting-with-burmese-waiters-over-seafood-order-video/" rel="bookmark">American on Phuket Fined for Fighting With Burmese Waiters Over Seafood…</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.khaosodenglish.com/videos/2019/11/15/colombian-priest-in-thailand-translates-pope-welcome-song-into-spanish/" rel="bookmark">Colombian Priest in Thailand Translates Pope Welcome Song into Spanish (Video)</a></h3> <p class="rm-manual"></p> </li> </ul> </li> </ul>
+<p class="rm-manual"><span><a href="https://www.khaosodenglish.com/">Home</a></span> <span><a href="https://www.khaosodenglish.com/category/politics/">Politics</a></span> <span>Immigration Postpones Visa Decision of Outspoken American Academic</span></p>
+<ul class="rm-manual"><li class="rm-manual"><a href="https://www.khaosodenglish.com/category/politics/">Politics</a></li></ul>
+<h1 class="rm-manual">Immigration Postpones Visa Decision of Outspoken American Academic</h1>
+<p class="rm-manual">By</p>
+<p class="rm-manual"><a href="https://www.khaosodenglish.com/author/khaosodenglish/">Khaosod English</a></p>
+<p class="rm-manual"> - </p>
+<p class="rm-manual"><span>April 19, 2021 8:00 pm</span> </p>
+<figcaption class="rm-manual">David Streckfuss at Khon Kaen Immigration Office on Apr. 19, 2021. Photo: Hathairat Phaholtap / Facebook.</figcaption><p>KHON KAEN<span>
+ — The immigration bureau on Monday deferred the decision to extend the 
+work permit and visa of an American academic who wrote about the 
+country’s draconian lese majeste law.</span></p>
+<p><span>Scholar David Streckfuss faced expulsion from the kingdom after
+ Khon Kaen University suddenly terminated his employment contract, 
+resulting in his visa being revoked. He went to the local immigration 
+office Monday to plead for another extension. The bureau said the 
+decision was delayed to May 3 because they needed more time to revise 
+his documents.</span></p>
+<p><span>“I confirm that the Khon Kaen Immigration Office is pursuing 
+the case accordingly,” Lt. Col. Nattapong Kulsak, inspector of Khon Kaen
+ immigration, said. “This has nothing to do with politics and David is 
+not a prohibited person under the immigration act. Therefore, there 
+should be no problem with his visa application process.”</span></p>
+<p><span>Streckfuss said he will not flee the country and is trying to 
+secure a new work permit and visa under his new employer, The Isaan 
+Record online news site. After filing his application last month, 
+Streckfuss said police officers repeatedly visited his office and asked 
+local people about his whereabouts.</span></p>
+<p><span>“It seems irregular as if there is something going on,” he said.</span></p>
+<p><span>The longtime expat worked as the director of the exchange 
+student program at Khon Kaen University for the past 27 years before he 
+was given a one-month notice of termination in February for “not being 
+able to do assigned work.” He believed the decision was politically 
+charged, an allegation denied by his former employer.</span></p>
+<p><span>“No police or any other state officials have met with the 
+rector or the dean,” Khon Kaen University rector Charnchai 
+Pangthongviriyakul said Saturday. “The faculty saw that there has been 
+no progress in his work, so it decided to notify him of contract 
+termination.”</span></p>
+<p><span>Although Streckfuss admitted that there was no exchange of 
+students due to the pandemic, he told Khaosod English in an interview 
+Friday that police officers did visit the rector and the dean of the 
+Faculty of Public Health he worked with in February.</span></p>
+<p><span>“I heard from someone who is close to the matter that some 
+police visited the rector and the dean on Feb. 18,” Streckfuss said. 
+“They said I was interfering in politics, so the administration made the
+ choice to end the contract. That was the reason, but they didn’t put it
+ in writing.”</span></p>
+<p><span>In 2010, he published “Truth on Trial in Thailand: Defamation, 
+Treason, and Lese-Majeste,” which explores how the royal defamation law 
+shaped Thai society. Streckfuss said he does not believe it is the book 
+that is causing him problems, but it is the accusations of him being a 
+foreign agent made by former leader of the Yellowshirt movement Sondhi 
+Limthongkul that put him under spotlight.</span></p>
+<p><span>“There’s no way to prove that I’m not a unicorn either,” 
+Streckfuss said. “No, I’m not. I came from University of 
+Wisconsin–Madison, where there were often protests against the CIA.”</span></p>
+<p><span>Apart from the book, he also discussed Article 112 at a panel 
+held by the Foreign Correspondents’ Club of Thailand in March alongside 
+heavyweight panelists such as the outspoken Move Forward MP Rangsiman 
+Rome and the leader of the pro-establishment Thai Phakdee group Warong 
+Dechgitvigom.</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><span>TAGS</span></li>
+<li class="rm-manual"><a href="https://www.khaosodenglish.com/tag/112/">112</a></li>
+<li class="rm-manual"><a href="https://www.khaosodenglish.com/tag/khon-kaen/">Khon Kaen</a></li>
+</ul>
+<p class="rm-manual"><span>Previous article</span><a href="https://www.khaosodenglish.com/news/international/2021/04/19/half-of-us-adults-have-received-at-least-one-covid-19-shot/">Half of Us Adults Have Received At Least One COVID-19 Shot</a></p>
+<p class="rm-manual"><span>Next article</span><a href="https://www.khaosodenglish.com/sponsored/2021/04/20/cp-foods-continues-to-apply-for-thailands-new-hygiene-standard-to-boost-confidence-in-food-safety/">CP Foods Continues to Apply For Thailand’s New Hygiene Standard To Boost Confidence in Food Safety</a></p>
+<p class="rm-manual"><span><a href="https://www.khaosodenglish.com/author/khaosodenglish/">Khaosod English</a></span></p>
+<p class="rm-manual"><a href="https://www.khaosodenglish.com/">https://www.khaosodenglish.com</a></p>
+<h4 class="rm-manual">
+<a href="#">RELATED ARTICLES</a><a href="#">MORE FROM AUTHOR</a>
+</h4>
+<h3 class="rm-manual"><a href="https://www.khaosodenglish.com/news/crimecourtscalamity/2021/05/07/court-grants-bail-to-pro-democracy-protest-leader/" rel="bookmark">Court Grants Bail To Pro-Democracy Protest Leader</a></h3>
+<h3 class="rm-manual"><a href="https://www.khaosodenglish.com/politics/2021/05/03/immigration-renews-visa-for-american-academic-who-writes-about-112/" rel="bookmark">Immigration Renews Visa for American Academic Who Writes About 112</a></h3>
+<h3 class="rm-manual"><a href="https://www.khaosodenglish.com/news/crimecourtscalamity/2021/04/01/5-activists-indicted-over-alleged-attempt-to-harm-queen/" rel="bookmark">5 Activists Indicted Over Alleged Attempt To Harm Queen</a></h3>
+<h3 class="rm-manual"><a href="https://www.khaosodenglish.com/news/crimecourtscalamity/2021/03/26/protesters-hold-peaceful-rally-criticizing-the-monarchy/" rel="bookmark">Protesters Hold Peaceful Rally Criticizing the Monarchy</a></h3>
+<h3 class="rm-manual"><a href="https://www.khaosodenglish.com/politics/2021/03/11/thailand-seeks-more-prison-space-for-new-political-prisoners/" rel="bookmark">Thailand Seeks More Prison Space for New Political Prisoners</a></h3>
+<h3 class="rm-manual"><a href="https://www.khaosodenglish.com/news/2021/03/08/thailand-charges-more-activists-with-sedition-royal-insults/" rel="bookmark">Thailand Charges More Activists With Sedition, Royal Insults</a></h3>
+<h4 class="rm-manual"><span>LATEST NEWS</span></h4>
+<h3 class="rm-manual"><a href="https://www.khaosodenglish.com/news/international/2021/05/07/asian-american-health-workers-fight-virus-and-racist-attacks/" rel="bookmark">Asian American Health Workers Fight Virus and Racist Attacks</a></h3>
+<h3 class="rm-manual"><a href="https://www.khaosodenglish.com/news/crimecourtscalamity/2021/05/07/us-citizen-charged-with-murdering-thai-wife/" rel="bookmark">US Citizen Charged With Murdering Thai Wife</a></h3>
+<h3 class="rm-manual"><a href="https://www.khaosodenglish.com/news/crimecourtscalamity/2021/05/07/court-grants-bail-to-pro-democracy-protest-leader/" rel="bookmark">Court Grants Bail To Pro-Democracy Protest Leader</a></h3>
+<h3 class="rm-manual"><a href="https://www.khaosodenglish.com/news/international/2021/05/07/cases-rise-pressure-grows-on-modi-to-impose-strict-lockdown/" rel="bookmark">Cases Rise, Pressure Grows on Modi To Impose Strict Lockdown</a></h3>
+<h3 class="rm-manual"><a href="https://www.khaosodenglish.com/news/crimecourtscalamity/2021/05/06/officials-say-foreigners-in-thailand-will-get-vaccine-jabs-someday/" rel="bookmark">Officials Say Foreigners in Thailand Will Get Vaccine Jabs…Someday</a></h3>
+<h4 class="rm-manual"><span>COMING UP IN BANGKOK</span></h4>
+<h3 class="rm-manual"><a href="https://www.khaosodenglish.com/news/2021/03/09/sanook-loey-songkran-given-green-light/" rel="bookmark">Sanook Loey! Songkran Given Green Light</a></h3>
+<h3 class="rm-manual"><a href="https://www.khaosodenglish.com/life/food/2021/03/03/cuban-food-just-like-how-abuela-makes-it-in-bangkok/" rel="bookmark">Cuban Food Just Like How Abuela Makes It – In Bangkok</a></h3>
+<h3 class="rm-manual"><a href="https://www.khaosodenglish.com/news/crimecourtscalamity/2021/02/25/13-provinces-to-get-vaccines-first-lowkey-welcome-for-az-doses/" rel="bookmark">13 Provinces to Get Vaccines First; Lowkey Welcome for AZ Doses</a></h3>
+<h3 class="rm-manual"><a href="https://www.khaosodenglish.com/life/2021/02/25/chula-to-offer-free-tests-of-salt-level-in-bangkok-tap-water/" rel="bookmark">Chula to Offer Free Tests of Salt Level in Bangkok Tap Water</a></h3>
+<h3 class="rm-manual"><a href="https://www.khaosodenglish.com/life/entertainment/2021/02/22/prayut-to-discuss-reopening-bars-lifting-virus-booze-ban/" rel="bookmark">Bangkok Ban on Booze in Restaurants Lifted, Bars Reopen</a></h3>
+<h4 class="rm-manual"><span>FRESH CUTS</span></h4>
+<p class="rm-manual">Bangkok</p>
+<p class="rm-manual">overcast clouds</p>
+<p class="rm-manual"> enter location </p>
+<p class="rm-manual"> <span>28.8</span> <span>°</span> <span>C</span> </p>
+<p class="rm-manual"> <span>29.4</span> <span>°</span> </p>
+<p class="rm-manual"> <span>27.7</span> <span>°</span> </p>
+<p class="rm-manual"> <span>67 %</span> </p>
+<p class="rm-manual"> <span>2.6kmh</span> </p>
+<p class="rm-manual"> <span>98 %</span> </p>
+<p class="rm-manual">Fri</p>
+<p class="rm-manual"> <span>28</span> <span>°</span> </p>
+<p class="rm-manual">Sat</p>
+<p class="rm-manual"> <span>35</span> <span>°</span> </p>
+<p class="rm-manual">Sun</p>
+<p class="rm-manual"> <span>36</span> <span>°</span> </p>
+<p class="rm-manual">Mon</p>
+<p class="rm-manual"> <span>36</span> <span>°</span> </p>
+<p class="rm-manual">Tue</p>
+<p class="rm-manual"> <span>35</span> <span>°</span> </p>
+<p class="rm-manual"><span>ABOUT US</span></p>
+<p class="rm-manual">© 2021 Khaosod English. 40/10 S. Thetsaban Nimit Tai Road Prachaniwet 1, Chatuchak, Bangkok, Thailand 10900</p>
+<p class="rm-manual">Contact us: <a href="file:///cdn-cgi/l/email-protection#50333f3e24313324103b38313f233f34353e373c3923387e333f3d"><span>[email protected]</span></a></p>
+<p class="rm-manual"><a href="http://truehits.net/">Truehits.net</a> </p>
+<p class="rm-manual"> <a href="#">Edit with Live CSS</a> <a href="#">Save</a> </p>
+<p class="rm-manual">Write CSS OR LESS and hit save. CTRL + SPACE for auto-complete.</p></article>
+</body></html>

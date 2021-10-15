@@ -1,0 +1,130 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">Kim Jong-Un's Aunt Sues N Korean Defectors</p>
+<p class="rm-manual"><a href="https://uk.news.yahoo.com/">Yahoo</a></p>
+<p class="rm-manual">Search</p>
+<ul class="rm-manual"><li class="rm-manual"><a href="https://mail.yahoo.com/?.intl=uk&amp;.lang=en-GB&amp;.partner=none&amp;.src=news">Mail</a></li></ul>
+<p class="rm-manual"><a href="https://uk.news.yahoo.com/"> News</a></p>
+<p class="rm-manual"><span>Follow us</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://uk.yahoo.com/topics/coronavirus-news"> Coronavirus</a></li>
+<li class="rm-manual"><a href="https://uk.news.yahoo.com/uk/"> UK</a></li>
+<li class="rm-manual"><a href="file:///tagged/ukoriginal"> Yahoo Originals</a></li>
+<li class="rm-manual"><a href="https://uk.news.yahoo.com/tv-celebrity"> TV + Celebrity</a></li>
+<li class="rm-manual"><a href="https://uk.news.yahoo.com/360"> The 360</a></li>
+<li class="rm-manual"><a href="https://uk.news.yahoo.com/world/"> World</a></li>
+<li class="rm-manual"><a href="https://uk.finance.yahoo.com/"> Finance</a></li>
+<li class="rm-manual"><a href="https://uk.sports.yahoo.com/"> Sport</a></li>
+<li class="rm-manual"><a href="https://uk.style.yahoo.com/"> Style</a></li>
+<li class="rm-manual"><a href="https://uk.movies.yahoo.com/"> Movies</a></li>
+<li class="rm-manual"><a href="https://uk.news.yahoo.com/motoring/"> Motoring</a></li>
+<li class="rm-manual"><a href="https://uk.news.yahoo.com/science-tech/"> Science &amp; Tech</a></li>
+<li class="rm-manual"><a href="https://uk.news.yahoo.com/weather/"> Weather</a></li>
+<li class="rm-manual"><a href="https://uk.news.yahoo.com/video"> News Video</a></li>
+<li class="rm-manual"><a href="https://uk.news.yahoo.com/viral"> Viral</a></li>
+</ul>
+<h1 class="rm-manual">Kim Jong-Un's Aunt Sues N Korean Defectors</h1>
+<p class="rm-manual"><span><span><a href="http://news.sky.com/skynews/" rel="noopener noreferrer nofollow">Sky News</a></span></span>2 December 2015</p>
+<p>Kim Jong-Un's Aunt Sues N Korean Defectors</p>
+<p>The US-based aunt of North Korean leader Kim Jong-un has launched 
+legal action against three defectors, claiming they made defamatory 
+statements about her.</p>
+<p>Ko Yong Suk has filed the defamation suit through her lawyer in South
+ Korea, Kang Yong-Seok, where the three defendants now live.</p>
+<p>Mr Kang said the action relates to claims that Ms Ko managed a secret
+ fund for Kim's late father, Kim Jong-Il, that her father collaborated 
+during Japan's colonial rule over the Korean peninsula, and that she had
+ plastic surgery after defecting to the US.</p>
+<p>"The defectors made groundless remarks without really knowing about her life," her lawyer said.</p>
+<p>"These defectors who often make appearances on TV are not in a 
+position to know about her directly and what they are saying is not 
+true.</p>
+<p>"She and her husband find it very unpleasant."</p>
+<p>Ms Ko, who sought asylum in the US in 1998, looked after Kim Jong-un for several years while he was at school in Switzerland.</p>
+<p>She has accused the three defectors of "spreading false information" about her and her family.</p>
+<p>It is not yet known whether Ms Ko will travel to Seoul for the court hearing.</p>
+<p>She is seeking 60 million won (£34,000) in damages.</p>
+<p>The lawsuit is unusual for North Korea's ruling family; relatives who have left the state usually shun the spotlight.</p>
+<p>The three defectors named in the court documents include a former 
+North Korean agent, the son-in-law of a former North Korean prime 
+minister and an ex-diplomat.</p>
+<p>One of the defendants, An Chan-il, who fled to South Korea in 1979 
+said he had merely repeated what had been reported in media, adding that
+ he and one of the other defendants planned to file a counter-suit for 
+libel.</p>
+<h2 class="rm-manual">What to read next</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///south-korean-activists-launch-leaflets-071038159.html"><span>South Korean activists launch leaflets into North amid tensions</span></a></h3><p class="rm-manual">PA Media: World News</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///korean-war-echoes-souths-generations-055847421.html"><span>Korean War echoes through the South's generations</span></a></h3><p class="rm-manual">AFP</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://www.yahoo.com/entertainment/film-tells-tale-north-korean-051340024.html"><span>New film tells tale of North Korean orphans sent to Europe</span></a></h3><p class="rm-manual">Associated Press</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///north-korea-seen-reinstalling-border-030702407.html"><span>North Korea seen reinstalling border loudspeakers; satellite photos show liaison office standing but damaged</span></a></h3><p class="rm-manual">Reuters</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///coronavirus-press-conference-downing-street-131116008.html"><span>No.10 Coronavirus Press Conferences Will No Longer Be Daily</span></a></h3><p class="rm-manual">HuffPost UK</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/wirecards-former-ceo-arrested-accounting-135622736.html"><span>Wirecard's former CEO arrested in accounting </span></a></h3><p class="rm-manual">Yahoo UK Finance Video</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///boris-johnson-1m-social-distancing-114206188.html"><span>Boris Johnson announces '1m plus' social distancing rule from 4 July as lockdown eased further</span></a></h3><p class="rm-manual">Yahoo News UK</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///government-daily-downing-street-briefings-coronavirus-covid-132340598.html"><span>Government to drop daily Downing Street coronavirus press briefings</span></a></h3><p class="rm-manual">Yahoo News UK</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/us-father-death-son-reading-070441753.html"><span>US father on death of son in Reading terror attack</span></a></h3><p class="rm-manual">PA Media: Video</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///creepy-intruder-causes-tiktok-user-180420259.html"><span>Creepy figure in the background of woman’s video leaves her disturbed: 'My soul just left my body'</span></a></h3><p class="rm-manual">In The Know</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///george-alagiah-cancer-attitude-072426198.html"><span>George Alagiah focusing on life not death as cancer spreads</span></a></h3><p class="rm-manual">Yahoo Celebrity UK</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///matthew-mc-conaughey-tributes-joel-schumacher-074906009.html"><span>Matthew McConaughey leads tributes to the late Joel Schumacher</span></a></h3><p class="rm-manual">Yahoo Movies UK</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/pair-rare-leopard-cubs-enjoy-070727618.html"><span>Pair of rare leopard cubs enjoy new outside world</span></a></h3><p class="rm-manual">PA Media: Video</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///coronavirus-covid-19-pubs-re-opening-4-july-boris-johnson-114505629.html"><span>Coronavirus: Boris Johnson confirms pubs and restaurants to reopen from 4 July</span></a></h3><p class="rm-manual">Yahoo Finance UK</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///coronavirus-deaths-england-wales-fall-075300680.html"><span>Coronavirus deaths in England and Wales fall to lowest weekly total since lockdown in sign pandemic is easing</span></a></h3><p class="rm-manual">Evening Standard</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///dizzee-rascal-shuts-down-piers-082201090.html"><span>Dizzee Rascal shuts down Piers Morgan’s attempt to question him on Black Lives Matter</span></a></h3><p class="rm-manual">Evening Standard</p><p class="rm-manual"></p></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/cinemas-museums-set-reopen-england-083930499.html"><span>Cinemas and museums set to reopen in England</span></a></h3><p class="rm-manual">Sky video</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///police-provoke-outrage-muslim-woman-122908257.html"><span>Police provoke outrage after Muslim woman arrested at Black Lives Matter protest forced to remove hijab for mugshot</span></a></h3><p class="rm-manual">The Independent</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///coronavirus-britons-travel-quarantine-093028651.html"><span>Coronavirus: Britons 'to be allowed to go on quarantine-free holidays to 10 countries within two weeks'</span></a></h3><p class="rm-manual">Yahoo News UK</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///mike-wedderburn-sky-sports-presenter-125600724.html"><span>Mike
+ Wedderburn: Sky Sports presenter issues powerful speech to explain why 
+‘Black Lives Matter’ doesn’t mean white lives do not matter</span></a></h3><p class="rm-manual">The Independent</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/white-lives-matter-banner-flown-223123785.html"><span>'White Lives Matter' banner flown over football match</span></a></h3><p class="rm-manual">Sky video</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///boris-johnson-cuts-two-metre-social-distancing-rule-to-one-metre-114004210.html"><span>Boris Johnson Cuts Two-Metre Social Distancing Rule To 'One Metre Plus'</span></a></h3><p class="rm-manual">HuffPost UK</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///pizza-delivery-driver-prius-south-london-wing-mirror-110239437.html"><span>Pizza delivery driver jailed for 14 years for running over and killing man after wing mirror was broken</span></a></h3><p class="rm-manual">Yahoo News UK</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///major-coronavirus-developments-tuesday-23-june-135807570.html"><span>Coronavirus: The 13 major developments that happened on Tuesday</span></a></h3><p class="rm-manual">Yahoo News UK</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/greater-manchester-police-appeals-public-190856173.html"><span>Greater Manchester Police appeals to public for information on double murder</span></a></h3><p class="rm-manual">PA Media: Video</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///republican-candidate-shares-conspiracy-theory-103548030.html"><span>Republican candidate shares conspiracy theory that George Floyd murder was faked</span></a></h3><p class="rm-manual">The Independent</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///lockdown-rules-two-housholds-meet-114313359.html"><span>Two Households Of Any Size Will Be Allowed To Meet Inside, Announces Boris Johnson</span></a></h3><p class="rm-manual">HuffPost UK</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/reading-terror-suspect-khairi-saadallah-160450125.html"><span>Who is Reading terror suspect Khairi Saadallah?</span></a></h3><p class="rm-manual">PA Media: Video</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///elizabeth-hurley-steve-bing-111223508.html"><span>Elizabeth Hurley pays tribute to "sweet, kind" ex Steve Bing after his death aged 55</span></a></h3><p class="rm-manual">Yahoo Celebrity UK</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///coronavirus-june-purchasing-managers-index-economic-data-manufacturing-services-084011556.html"><span>Coronavirus: Data points to 'vastly improved' picture for UK economy</span></a></h3><p class="rm-manual">Yahoo Finance UK</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///steve-bing-dead-elizabeth-hurley-son-damian-father-062104304.html"><span>Steve Bing, Filmmaker And Father To Elizabeth Hurley’s Son Damian, Dies Aged 55</span></a></h3><p class="rm-manual">HuffPost UK</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/coronavirus-numbers-lowest-number-daily-143259577.html"><span>Coronavirus in numbers: Lowest number of daily deaths in UK since mid-March</span></a></h3><p class="rm-manual">PA Media: Video</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///elizabeth-hurley-shares-tribute-ex-133100626.html"><span>Elizabeth Hurley shares tribute to ex Steve Bing after his 'devastating' death</span></a></h3><p class="rm-manual">AOL.com</p><p></p></li>
+</ul></article>
+</body></html>

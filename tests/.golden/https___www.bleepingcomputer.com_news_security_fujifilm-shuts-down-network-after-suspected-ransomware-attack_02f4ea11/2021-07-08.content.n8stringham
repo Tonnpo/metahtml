@@ -1,0 +1,141 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> FUJIFILM shuts down network after suspected ransomware attack </p>
+<ul class="rm-manual"> <li class="rm-manual">
+<a href="https://www.bleepingcomputer.com/">News</a> <ul class="rm-manual"> <li class="rm-manual"><a href="#nfeatured">Featured</a></li> <li class="rm-manual"><a href="#nlatest">Latest</a></li> </ul> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.bleepingcomputer.com/news/microsoft/microsofts-incomplete-printnightmare-patch-fails-to-fix-vulnerability/"> <p class="rm-manual">Microsoft's incomplete PrintNightmare patch fails to fix vulnerability</p> </a> </li> <li class="rm-manual"> <a href="https://www.bleepingcomputer.com/news/security/kaseya-roughly-1-500-businesses-hit-by-revil-ransomware-attack/"> <p class="rm-manual">Kaseya: Roughly 1,500 businesses hit by REvil ransomware attack</p> </a> </li> <li class="rm-manual"> <a href="https://www.bleepingcomputer.com/news/security/hacker-dumps-private-info-of-pro-trump-gettr-social-network-members/"> <p class="rm-manual">Hacker dumps private info of pro-Trump GETTR social network members</p> </a> </li> <li class="rm-manual"> <a href="https://www.bleepingcomputer.com/news/security/tens-of-thousands-scammed-using-fake-android-cryptomining-apps/"> <p class="rm-manual">Tens of thousands scammed using fake Android cryptomining apps</p> </a> </li> </ul> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.bleepingcomputer.com/news/microsoft/new-windows-11-dev-build-released-with-bug-fixes-and-new-features/"> <p class="rm-manual">New Windows 11 Dev build released with bug fixes and new features</p> </a> </li> <li class="rm-manual"> <a href="https://www.bleepingcomputer.com/news/microsoft/windows-security-update-kb5004945-breaks-printing-on-zebra-printers/"> <p class="rm-manual">Windows security update KB5004945 breaks printing on Zebra printers</p> </a> </li> <li class="rm-manual"> <a href="https://www.bleepingcomputer.com/news/security/morgan-stanley-reports-data-breach-after-vendor-accellion-hack/"> <p class="rm-manual">Morgan Stanley reports data breach after vendor Accellion hack</p> </a> </li> <li class="rm-manual"> <a href="https://www.bleepingcomputer.com/news/security/mozilla-firefox-to-roll-out-dns-over-https-for-canadian-users/"> <p class="rm-manual">Mozilla Firefox to roll out DNS over HTTPS for Canadian users</p> </a> </li> </ul> </li> <li class="rm-manual">
+<a href="https://www.bleepingcomputer.com/download/">Downloads</a> <ul class="rm-manual"> <li class="rm-manual"><a href="#dlatest">Latest</a></li> <li class="rm-manual"><a href="#most">Most Downloaded</a></li> </ul> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.bleepingcomputer.com/download/qualys-browsercheck/"> <p class="rm-manual">Qualys BrowserCheck</p> </a> </li> <li class="rm-manual"> <a href="https://www.bleepingcomputer.com/download/stopdecrypter/"> <p class="rm-manual">STOPDecrypter</p> </a> </li> <li class="rm-manual"> <a href="https://www.bleepingcomputer.com/download/auroradecrypter/"> <p class="rm-manual">AuroraDecrypter</p> </a> </li> <li class="rm-manual"> <a href="https://www.bleepingcomputer.com/download/fileslockerdecrypter/"> <p class="rm-manual">FilesLockerDecrypter</p> </a> </li> </ul> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///download/adwcleaner/"> <p class="rm-manual">AdwCleaner</p> </a> </li> <li class="rm-manual"> <a href="file:///download/combofix/"> <p class="rm-manual">ComboFix</p> </a> </li> <li class="rm-manual"> <a href="file:///download/rkill/"> <p class="rm-manual">RKill</p> </a> </li> <li class="rm-manual"> <a href="file:///download/junkware-removal-tool/"> <p class="rm-manual">Junkware Removal Tool</p> </a> </li> </ul> </li> <li class="rm-manual">
+<a href="https://www.bleepingcomputer.com/virus-removal/">Virus Removal Guides</a> <ul class="rm-manual"> <li class="rm-manual"><a href="#vlatest">Latest</a></li> <li class="rm-manual"><a href="#vmost">Most Viewed</a></li> <li class="rm-manual"><a href="#ransomware">Ransomware</a></li> </ul> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///virus-removal/how-to-remove-the-pblock-adware-extension"> <p class="rm-manual">How to remove the PBlock+ adware browser extension</p> </a> </li> <li class="rm-manual"> <a href="file:///virus-removal/remove-toksearches.xyz-search-redirect"> <p class="rm-manual">Remove the Toksearches.xyz Search Redirect</p> </a> </li> <li class="rm-manual"> <a href="file:///virus-removal/remove-smashapps.net-search-redirect"> <p class="rm-manual">Remove the Smashapps.net Search Redirect</p> </a> </li> <li class="rm-manual"> <a href="file:///virus-removal/remove-smashappsearch.com-search-redirect"> <p class="rm-manual">Remove the Smashappsearch.com Search Redirect</p> </a> </li> </ul> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///virus-removal/remove-security-tool"> <p class="rm-manual">Remove Security Tool and SecurityTool (Uninstall Guide)</p> </a> </li> <li class="rm-manual"> <a href="file:///virus-removal/uninstall-antivirus-2009"> <p class="rm-manual">How to remove Antivirus 2009 (Uninstall Instructions)</p> </a> </li> <li class="rm-manual"> <a href="file:///virus-removal/remove-vundo-virtumonde"> <p class="rm-manual">How to Remove WinFixer / Virtumonde / Msevents / Trojan.vundo</p> </a> </li> <li class="rm-manual"> <a href="file:///virus-removal/remove-tdss-tdl3-alureon-rootkit-using-tdsskiller"> <p class="rm-manual">How to remove Google Redirects or the TDSS, TDL3, or Alureon rootkit using TDSSKiller</p> </a> </li> </ul> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///virus-removal/locky-ransomware-information-help"> <p class="rm-manual">Locky Ransomware Information, Help Guide, and FAQ</p> </a> </li> <li class="rm-manual"> <a href="file:///virus-removal/cryptolocker-ransomware-information"> <p class="rm-manual">CryptoLocker Ransomware Information Guide and FAQ</p> </a> </li> <li class="rm-manual"> <a href="file:///virus-removal/cryptorbit-ransomware-information"> <p class="rm-manual">CryptorBit and HowDecrypt Information Guide and FAQ</p> </a> </li> <li class="rm-manual"> <a href="file:///virus-removal/cryptodefense-ransomware-information"> <p class="rm-manual">CryptoDefense and How_Decrypt Ransomware Information Guide and FAQ</p> </a> </li> </ul> </li> <li class="rm-manual">
+<a href="https://www.bleepingcomputer.com/tutorials/">Tutorials</a> <ul class="rm-manual"> <li class="rm-manual"><a href="#tlatest">Latest</a></li> <li class="rm-manual"><a href="#popular">Popular</a></li> </ul> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///tutorials/how-to-make-the-start-menu-full-screen-in-windows-10/"> <p class="rm-manual">How to make the Start menu full screen in Windows 10</p> </a> </li> <li class="rm-manual"> <a href="file:///tutorials/how-to-install-the-microsoft-visual-c-2015-runtime/"> <p class="rm-manual">How to install the Microsoft Visual C++ 2015 Runtime</p> </a> </li> <li class="rm-manual"> <a href="file:///tutorials/how-to-open-an-elevated-powershell-admin-prompt-in-windows-10/"> <p class="rm-manual">How to open an elevated PowerShell Admin prompt in Windows 10</p> </a> </li> <li class="rm-manual"> <a href="file:///tutorials/how-to-translate-a-web-page-in-google-chrome/"> <p class="rm-manual">How to Translate a Web Page in Google Chrome</p> </a> </li> </ul> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///tutorials/how-to-start-windows-in-safe-mode/"> <p class="rm-manual">How to start Windows in Safe Mode</p> </a> </li> <li class="rm-manual"> <a href="file:///tutorials/how-to-remove-a-trojan-virus-worm-or-malware/"> <p class="rm-manual">How to remove a Trojan, Virus, Worm, or other Malware</p> </a> </li> <li class="rm-manual"> <a href="file:///tutorials/show-hidden-files-in-windows-7/"> <p class="rm-manual">How to show hidden files in Windows 7</p> </a> </li> <li class="rm-manual"> <a href="file:///tutorials/how-to-see-hidden-files-in-windows/"> <p class="rm-manual">How to see hidden files in Windows</p> </a> </li> </ul> </li> <li class="rm-manual">
+<a href="https://deals.bleepingcomputer.com/">Deals</a> <ul class="rm-manual"> <li class="rm-manual"><a href="#dcategories">Categories</a></li> </ul> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://deals.bleepingcomputer.com/deals/elearning?utm_source=bleepingcomputer.com&amp;utm_medium=dd_cat"> <p class="rm-manual">eLearning</p> </a> </li> <li class="rm-manual"> <a href="https://deals.bleepingcomputer.com/deals/certifications?utm_source=bleepingcomputer.com&amp;utm_medium=dd_cat"> <p class="rm-manual">IT Certification Courses</p> </a> </li> <li class="rm-manual"> <a href="https://deals.bleepingcomputer.com/deals/gear-gadgets?utm_source=bleepingcomputer.com&amp;utm_medium=dd_cat"> <p class="rm-manual">Gear + Gadgets</p> </a> </li> <li class="rm-manual"> <a href="https://deals.bleepingcomputer.com/collections/tag-cyber-security?utm_source=bleepingcomputer.com&amp;utm_medium=dd_cat"> <p class="rm-manual">Security</p> </a> </li> </ul> </li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/forums/">Forums</a></li> <li class="rm-manual">
+<a href="#">More</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/startups/">Startup Database</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/uninstall/">Uninstall Database</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/filedb/">File Database</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/glossary/">Glossary</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/forums/t/730914/the-bleepingcomputer-official-discord-chat-server-come-join-the-fun/">Chat on Discord</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/news-tip/">Send us a Tip!</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/welcome-guide/">Welcome Guide</a></li> </ul> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/"><span>Home</span></a></li>
+<li class="rm-manual"><span><a href="https://www.bleepingcomputer.com/news/">News</a></span></li>
+<li class="rm-manual"><span><a href="https://www.bleepingcomputer.com/news/security/">Security</a></span></li>
+<li class="rm-manual"><span>FUJIFILM shuts down network after suspected ransomware attack</span></li> </ul>
+<h1 class="rm-manual">FUJIFILM shuts down network after suspected ransomware attack</h1>
+<p class="rm-manual"> By </p>
+<h6 class="rm-manual"><a rel="author" href="https://www.bleepingcomputer.com/author/lawrence-abrams/"><span><span>Lawrence Abrams</span></span></a></h6>
+<ul class="rm-manual"> <li class="rm-manual">June 2, 2021</li> <li class="rm-manual">03:03 PM</li> <li class="rm-manual"><a href="#comment_form">0</a></li> </ul>
+<p>FujiFilm is investigating a ransomware attack and has shut down portions of its network to prevent the attack's spread.</p>
+<p>FujiFilm, also known as just Fuji, is a Japanese multinational 
+conglomerate headquartered in Tokyo, Japan, which initially started in 
+optical film and cameras. It has grown to include pharmaceuticals, 
+storage devices, photocopiers and printers (XEROX), and digital cameras.</p>
+<p>FUJIFILM earned $20.1 billion in 2020 and has 37,151 employees worldwide.</p>
+<p>If you have first-hand information about this or other unreported cyberattacks, you can confidentially contact us on Signal at <a href="tel:+16469613731">+16469613731</a> or on Wire at @lawrenceabrams-bc.</p>
+<h2>Likely ransomware attack</h2>
+<p>Today, FUJIFILM announced that their Tokyo headquarters suffered a 
+cyberattack Tuesday night that they indicate is a ransomware attack.</p>
+<p>"FUJIFILM Corporation is currently carrying out an investigation into
+ possible unauthorized access to its server from outside of the company.
+ As part of this investigation, the network is partially shut down and 
+disconnected from external correspondence," FUJIFILM said in a 
+statement.</p>
+<p>"We want to state what we understand as of now and the measures that 
+the company has taken. In the late evening of June 1, 2021, we became 
+aware of the possibility of a ransomware attack. As a result, we have 
+taken measures to suspend all affected systems in coordination with our 
+various global entities."</p>
+<p>"We are currently working to determine the extent and the scale of 
+the issue. We sincerely apologize to our customers and business partners
+ for the inconvenience this has caused."</p>
+<p>Due to the partial network outage, FUJIFILM USA has added an alert to
+ the top of their website stating that they are experiencing network 
+problems that are impacting their email and phone systems.</p>
+<figcaption>Alert about cyberattack on FUJIFILM USA website</figcaption><p>While FUJIFILM has not stated what ransomware group is responsible for the attack, Advanced Intel CEO <a href="https://twitter.com/VK_Intel" rel="nofollow noopener">Vitali Kremez</a> has told BleepingComputer that FUJIFILM was infected with the Qbot trojan last month.</p>
+<p>"Based on our unique threat prevention platform Andariel, FUJIFILM 
+Corporate appeared to be infected with Qbot malware based on May 15, 
+2021," Kremez told BleepingComputer. "Since the underground ransomware 
+turmoil, the Qbot malware group currently works with the REvil 
+ransomware group."</p>
+<p>"A network infection attributed to QBot automatically results in risks associated with future ransomware attacks."</p>
+<p>The operators of the Qbot trojan have a long history of working with 
+ransomware operations to provide remote access to compromised networks.</p>
+<p>In the past, the <a href="https://www.bleepingcomputer.com/news/security/prolock-ransomware-teams-up-with-qakbot-trojan-for-network-access/">ProLock</a> and <a href="https://www.bleepingcomputer.com/news/security/qbot-partners-with-egregor-ransomware-in-bot-fueled-attacks/">Egregor</a>
+ ransomware gangs partnered with Qbot, but with the shutdown of those 
+operations, the REvil ransomware operation has been utilizing the 
+botnet.</p>
+<p>While ransomware has been active since 2012, it has recently gained worldwide attention after the <a href="https://www.bleepingcomputer.com/news/security/largest-us-pipeline-shuts-down-operations-after-ransomware-attack/">attacks on Colonial Pipeline</a>, the US's largest fuel pipeline, and the world's largest beef producer, <a href="https://www.bleepingcomputer.com/news/security/food-giant-jbs-foods-shuts-down-production-after-cyberattack/">JBS</a>.</p>
+<p>The US government has <a href="https://www.bleepingcomputer.com/news/security/security-expert-coalition-shares-actions-to-disrupt-ransomware/">created a ransomware task force</a> to recommend new policies and guidelines for battling the growing threat.</p>
+<h3 class="rm-manual">Related Articles:</h3>
+<p class="rm-manual"><a href="https://www.bleepingcomputer.com/news/security/fujifilm-confirms-ransomware-attack-disrupted-business-operations/">Fujifilm confirms ransomware attack disrupted business operations</a></p>
+<p class="rm-manual"><a href="https://www.bleepingcomputer.com/news/security/foodservice-supplier-edward-don-hit-by-a-ransomware-attack/">Foodservice supplier Edward Don hit by a ransomware attack</a></p>
+<p class="rm-manual"><a href="https://www.bleepingcomputer.com/news/security/revil-is-increasing-ransoms-for-kaseya-ransomware-attack-victims/">REvil is increasing ransoms for Kaseya ransomware attack victims</a></p>
+<p class="rm-manual"><a href="https://www.bleepingcomputer.com/news/security/kaseya-was-fixing-zero-day-just-as-revil-ransomware-sprung-their-attack/">Kaseya was fixing zero-day just as REvil ransomware sprung their attack</a></p>
+<p class="rm-manual"><a href="https://www.bleepingcomputer.com/news/security/healthcare-giant-grupo-fleury-hit-by-revil-ransomware-attack/">Healthcare giant Grupo Fleury hit by REvil ransomware attack</a></p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/tag/cyberattack/">Cyberattack</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/tag/fujifilm/">FUJIFILM</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/tag/qbot/">Qbot</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/tag/ransomware/">Ransomware</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/tag/revil/">REvil</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/tag/tokyo/">Tokyo</a></li> </ul>
+<h5 class="rm-manual">
+<a href="https://www.bleepingcomputer.com/author/lawrence-abrams/">Lawrence Abrams</a> </h5>
+<p class="rm-manual"> Lawrence Abrams is the creator and owner of 
+BleepingComputer.com. Lawrence's area of expertise includes malware 
+removal and computer forensics. Lawrence Abrams is a co-author of the 
+Winternals Defragmentation, Recovery, and Administration Field Guide and
+ the technical editor for Rootkits for Dummies. </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-to-announce-windows-10s-successor-on-june-24/"> Previous Article </a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/news/technology/whatsapp-caves-in-wont-limit-features-if-you-reject-privacy-changes/">Next Article </a></li> </ul>
+<h5 class="rm-manual">Post a Comment <span><a href="https://www.bleepingcomputer.com/posting-guidelines/">Community Rules</a></span>
+</h5>
+<h6 class="rm-manual">You need to login in order to post a comment</h6>
+<p class="rm-manual">Not a member yet? <a href="https://www.bleepingcomputer.com/forums/index.php?app=core&amp;module=global&amp;section=register">Register Now</a></p>
+<h3 class="rm-manual">You may also like:</h3>
+<p class="rm-manual">Popular Stories</p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.bleepingcomputer.com/news/security/microsoft-pushes-emergency-update-for-windows-printnightmare-zero-day/"> <p class="rm-manual">Microsoft pushes emergency update for Windows PrintNightmare zero-day</p> </a> </li> <li class="rm-manual"> <a href="https://www.bleepingcomputer.com/news/microsoft/microsofts-incomplete-printnightmare-patch-fails-to-fix-vulnerability/"> <p class="rm-manual">Microsoft's incomplete PrintNightmare patch fails to fix vulnerability</p> </a> </li> </ul>
+<h5 class="rm-manual">Newsletter Sign Up</h5>
+<h5 class="rm-manual">Main Sections</h5>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/">News</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/download/">Downloads</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/virus-removal/">Virus Removal Guides</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/tutorials/">Tutorials</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/startups/">Startup Database</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/uninstall/">Uninstall Database</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/filedb/">File Database</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/glossary/">Glossary</a></li> </ul>
+<h5 class="rm-manual">Community</h5>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/forums/">Forums</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/forum-rules/">Forum Rules</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/forums/t/730914/the-bleepingcomputer-official-discord-chat-server-come-join-the-fun/">Chat</a></li> </ul>
+<h5 class="rm-manual">Useful Resources</h5>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/welcome-guide/">Welcome Guide</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/sitemap/">Sitemap</a></li> </ul>
+<h5 class="rm-manual">Company</h5>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/about/">About BleepingComputer</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/contact/">Contact Us</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/news-tip/">Send us a Tip!</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/advertise/">Advertising</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/write-for-bleepingcomputer/">Write for BleepingComputer</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/rss-feeds/">Social &amp; Feeds</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/changelog/">Changelog</a></li> </ul>
+<p class="rm-manual"><a href="https://www.bleepingcomputer.com/terms-of-use/">Terms of Use</a> - <a href="https://www.bleepingcomputer.com/privacy/"> Privacy Policy</a> - <a href="https://www.bleepingcomputer.com/ethics-statement/">Ethics Statement</a></p>
+<p class="rm-manual">Copyright @ 2003 - 2021 <a href="https://www.bleepingcomputer.com/"> Bleeping Computer® LLC </a> - All Rights Reserved</p>
+<h4 class="rm-manual">Login</h4>
+<p class="rm-manual"> Username </p>
+<p class="rm-manual"> Password </p>
+<p class="rm-manual"> Remember Me </p>
+<p class="rm-manual"> Sign in anonymously </p>
+<p class="rm-manual"> <a href="https://www.bleepingcomputer.com/forums/index.php?app=core&amp;module=global&amp;section=login&amp;serviceClick=twitter&amp;return=https://www.bleepingcomputer.com/news/security/fujifilm-shuts-down-network-after-suspected-ransomware-attack/"> Sign in with Twitter</a> </p>
+<p class="rm-manual">Not a member yet? <a href="https://www.bleepingcomputer.com/forums/index.php?app=core&amp;module=global&amp;section=register">Register Now</a></p>
+<h4 class="rm-manual">Reporter</h4>
+<h6 class="rm-manual">Help us understand the problem. What is going on with this comment?</h6>
+<ul class="rm-manual"> <li class="rm-manual"> Spam </li> <li class="rm-manual"> Abusive or Harmful </li> <li class="rm-manual"> Inappropriate content </li> <li class="rm-manual"> Strong language </li> <li class="rm-manual"> Other </li> </ul>
+<p class="rm-manual">Read our <a href="https://www.bleepingcomputer.com/posting-guidelines/">posting guidelinese</a> to learn what content is prohibited.</p>
+<p class="rm-manual">Submitting...</p>
+<p class="rm-manual"><a href="#">SUBMIT</a> </p></article>
+</body></html>

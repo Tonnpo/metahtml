@@ -1,0 +1,388 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Dual Shock 4: A Good Choice on Linux ? - Boiling Steam </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://boilingsteam.com/">Home</a></li>
+<li class="rm-manual"><a href="https://boilingsteam.com/support-us-on-patreon/">SUPPORT US ON PATREON</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/about-boiling-steam-2/">ABOUT BOILING STEAM</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/activate/">Activate</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/activity/">Activity</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/newsletter/">GET OUR NEWSLETTER!</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/log-in/">Log In</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/member-directory/">Member Directory</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/members/">Members</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/account/">My Account</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/my-profile/">My Profile</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/register/">Register</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/reset-password/">Reset Password</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/send-us-news-tips-game-keys/">SEND US NEWS TIPS / GAME KEYS</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/sign-up/">Sign Up</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/user-registration/">USER REGISTRATION</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/linux/">WHAT IS GNU/LINUX ?</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/games/">WHERE TO GET LINUX GAMES</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/recommended-games/">RECOMMENDED GAMES</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/tutorial-and-guides/">TUTORIALS AND GUIDES</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/privacy-policy/">Privacy Policy</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/cookie-policy-eu/">Cookie Policy (EU)</a></li> </ul>
+<p class="rm-manual"><a href="#main-navigation">Menu</a> </p>
+<p class="rm-manual"><a href="#">Close</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://boilingsteam.com/">Home</a></li>
+<li class="rm-manual"><a href="https://boilingsteam.com/support-us-on-patreon/">SUPPORT US ON PATREON</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/about-boiling-steam-2/">ABOUT BOILING STEAM</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/activate/">Activate</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/activity/">Activity</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/newsletter/">GET OUR NEWSLETTER!</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/log-in/">Log In</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/member-directory/">Member Directory</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/members/">Members</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/account/">My Account</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/my-profile/">My Profile</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/register/">Register</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/reset-password/">Reset Password</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/send-us-news-tips-game-keys/">SEND US NEWS TIPS / GAME KEYS</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/sign-up/">Sign Up</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/user-registration/">USER REGISTRATION</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/linux/">WHAT IS GNU/LINUX ?</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/games/">WHERE TO GET LINUX GAMES</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/recommended-games/">RECOMMENDED GAMES</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/tutorial-and-guides/">TUTORIALS AND GUIDES</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/privacy-policy/">Privacy Policy</a></li> <li class="rm-manual"><a href="https://boilingsteam.com/cookie-policy-eu/">Cookie Policy (EU)</a></li> </ul>
+<h1 class="rm-manual">Dual Shock 4: A Good Choice on Linux ?</h1>
+<p class="rm-manual"> <span>BY <a href="https://boilingsteam.com/author/ekianjo/">Ekianjo</a></span> <span><a href="https://boilingsteam.com/dual-shock-4-a-good-choice-on-linux/" rel="bookmark">November 26, 2015</a></span> <span> <a href="https://boilingsteam.com/dual-shock-4-a-good-choice-on-linux/#comments">9 Comments</a></span> </p>
+<p>Very recently I was shopping for a new controller. Probably because I
+ have an odd use case. I travel often for work these days, and while I 
+can game a little bit on my laptop, for some games the keyboard and 
+mouse combo do not cut it. So, I went to look out in Tokyo in the 
+nearest HUGE shop for controllers on the video games floor. Note that in
+ Japan, the PC section is clearly separated from the video games one. 
+Consoles get a floor on their own, usually high in the building among 
+with the hobby category of products, while the PC is usually 
+underground, in the basement, displayed in a boring and almost secret 
+way. Most people never go there. I decided to look among the consoles 
+first, because I knew that it is where i would find the most abundant 
+choice of accessories such as controllers.</p>
+<p>For most Linux gamers, the obvious choice is a Xbox 360 wireless pad.
+ It’s a very solid option. But I wanted something a little smaller for 
+travelling, and first a mini controller FC30 PRO from 8bit Do. I had 
+heard good things about it. It’s wired and wireless as well using 
+bluetooth, and it seems to feature some decent controls. But the price… 
+ouch. For some reason it is price more than 7000 JPY here, and at this 
+price point your mind starts to wander and consider other options. Like,
+ you know, why not getting a real gamepad for the same price or even 
+slightly cheaper ?</p>
+<p>While I really like the Xbox360 pad, it has two problems for when I am on the go:</p>
+<ul> <li>It’s a little on the bulky side.</li> <li>It needs a separate USB dongle to work.</li> </ul>
+<p>I have even considered the Xbox One gamepad for a second, but it 
+seems like it is not properly supported yet (or at least, I was not sure
+ it was worth the risk…).</p>
+<p>That left me with the Dual Shock 4 from Sony. That shop had some 
+samples for a quick hands-on experience. And as much as I like the Xbox 
+One controller, I have to admit Sony did a really good job with the Dual
+ Shock 4 as well. It feels way better that the Dual Shock 3 in almost 
+every way. The D-pad is really good and while I don’t remember how the 
+XBox One Dpad feels, the DS4’s Dpad is much better than the one from the
+ Xbox 360 pad for sure. The nubs are great, too – more subtle and more 
+sensitive than the ones used in the DS3 – and require some time for 
+adaptation if you are too used to the DS3 feel, by the way. On top of 
+that, the R2/L2 buttons are now properly designed to be used effectively
+ in shooters – and much closer to the Xbox design in that sense, as you 
+can see below. The back of the pad also features a different plastic 
+texture, making it much easier to grip and keep in hands. A really 
+thoughtful addition.</p>
+<p>And more importantly, the DS4 fits two other criteria that were relevant for the use case:</p>
+<ul> <li>Not too bulky and relatively light to carry</li> <li>Does not 
+need a separate adapter/dongle to work. As long as you have a bluetooth 
+receiver integrated. Most laptops have Wifi-Bluetooth combo chips these 
+days, so it should not be an issue as long as your hardware works 
+properly with Linux.</li> </ul>
+<p>Of course, what matters most in the end is… does the DS4 work 
+properly on Linux ? Well, yes and no. It’s not as straightforward as you
+ might believe.</p>
+<p>From a bluetooth standpoint, it was recognized immediately on my 
+Linux Mint 17.2 install. I just had to hold the PS button and the Share 
+button at the same time for 5 seconds and it would go into pairing mode.
+ You know it’s paired when the big LED window lights up at the back of 
+the pad.</p>
+<p>Then, Steam. Steam is great, it recognizes directly that your DS4 is 
+connected, and maps it accordingly. If you hold the PS button for a 
+couple of seconds, it makes the Steam Client jump directly in Big 
+Picture Mode. Nice!</p>
+<p>Next, I tried Broforce, and lo and behold, the gamepad was properly 
+recognized and I could play the game just as expected. At this point, I 
+thought the experiment was successful and my test was over. I was wrong.
+ Testing other controller-supported games led to the harsh conclusion 
+that most of the other games do not recognize the DS4 at all. There is a
+ workaround for some of those games. If you decide to get rid of the 
+bluetooth connection, and instead go for a micro-USB to USB connection 
+(hence, wired), more games seem to work, but then you lose the appeal of
+ the wireless itself. Needless to say, I was not super satisfied with 
+this solution – especially when I realized there were still some titles 
+for which this solution was not working either. Some games actually 
+REQUIRE an XBox360 controller. Yup.</p>
+<p>The real solution is DS4DRV. This little tool, which source is available on<a href="https://github.com/chrippa/ds4drv" rel="noopener"> Github</a>,
+ acts as a separate driver for the Dual Shock 4 and enables additional 
+modes, such as Xpad emulation. Xpad is the protocol used by the Xbox360 
+driver (depreciated by the Xbox One controller, unfortunately), used by 
+most games providing controller support on Linux. With this Xpad 
+emulation, you can now make the OS believe it is dealing with a Xbox 360
+ gamepad, solving all the compatibility issues we have mentioned above. 
+And this works even in wireless mode.</p>
+<p>DS4DRV can do many other things, such as:</p>
+<ul> <li>Changing the back LED color to your liking (using a typical 
+color code such as #FF0000 for Red, for example – blue would be #0000FF,
+ and so on…). This is awesome if you like specific colors and 
+customization.</li> <li>Enabling you to cycle through different 
+emulation modes. You can switch between the Xpad and the regular DS4 
+mode with a button combination.</li> <li>Emulating a mouse with the DS4 
+trackpad. Don’t expect it to behave as well as a real trackpad (it does 
+not, and there’s lag), but for very light use in case you don’t have a 
+mouse plugged in, it may be useful once in a while. Let me stress this 
+again: this is nowhere like what the Steam Controller offers. But it’s 
+nice to have.</li> </ul>
+<p>Here’s my controller in bright red glow, using the Xpad mode:</p>
+<p>Installing and running Ds4dv was a breeze, but there are a couple of 
+things to keep in mind – here’s how you should probably proceed if you 
+go down this way:</p>
+<ol> <li>Install DS4DRV on your distro. This should work probably everywhere since it relies on Python : <pre> sudo pip install ds4drv</pre> </li> <li>Grab <a href="http://boilingsteam.com/download/50-ds4drv.rules">this file</a> and save it as it in your Downloads folder as: <pre>50-ds4drv.rules</pre> </li> <li>Copy that file to /etc/udev/rules.d/ with the following command, assuming you saved the previous file in ~/Downloads : <pre>suco cp ~/Downloads/50-ds4drv.rules /etc/udev/rules.d/</pre> </li> <li>Once this is done you need to reload the permissions: <pre>sudo udevadm control --reload-rules</pre> <pre>sudo udevadm trigger</pre> </li> <li>You should then save the configuration file (you can <a href="http://boilingsteam.com/download/ds4drv.conf">grab mine here</a>) in the .config folder in your home folder (~/.config/), using the following file name: <pre>ds4drv.conf</pre> </li> <li>Start the driver by typing in a terminal: <pre>ds4drv</pre> </li> <li>Pair
+ your controller by keeping the PS button and the Share Button pressed 
+for something like 5 seconds. When pairing starts the LED should flicker
+ in quick white lights until pairing is complete. Once paired, the LED 
+should look blue by default.</li> <li>Switch your controller to Xpad 
+mode to avoid most issues. With my config file settings you can do this 
+by pressing PS + R1 + L1 at the same time – Press once or twice until 
+the LED light at the front of the gamepad turns red.</li> <li>You are good to go !</li> </ol>
+<p>Note that in Xpad mode, the gamepad should work perfectly in wireless
+ mode with Steam (all the games I tested had no issue with it) as well 
+as Kodi, and probably most of the other software (emulators and so on). 
+In default mode (i.e. non-red LED light), note that Kodi will crash 
+(this is a known bug), so make sure you use Xpad mode if you use Kodi in
+ its latest incarnation.</p>
+<p>I hope this was helpful for all of you who were considering a DS4 
+controller along with your Linux Gaming system. Note that while I was 
+preparing this post, <a href="https://www.reddit.com/r/linux_gaming/comments/3tuym0/ds4drv_a_utility_to_pair_sony_ds4_cotrollers_is/" rel="noopener">ProfessorKaos64 has released a Ds4drv package for SteamOS</a>, so it should be possible to follow the same guide on SteamOS too after installing the same package.</p>
+<p>Have fun!</p>
+<p class="rm-manual"> BoilingSteam lets you access our content for free,
+ but writing articles is a constant investment. We don't use ads or 
+sponsporship, help us make our activities sustainable by donating via <a href="https://www.patreon.com/boiling_steam_linux" rel="noopener">Patreon</a> or <a href="https://en.liberapay.com/boilingsteam/" rel="noopener">LiberaPay</a> if you prefer it anonymous. You can follow what we do via our <a href="http://boilingsteam.com/newsletter/">newsletter</a>, our <a href="http://boilingsteam.com/?feed=rss2">RSS feed</a>, our <a href="https://mastodon.cloud/@boilingsteam" rel="noopener">Mastodon profile</a> or our <a href="https://twitter.com/BoilingSteam" rel="noopener">Twitter feed</a>. We also have <a href="https://peertube.linuxrocks.online/video-channels/boilingsteam/videos" rel="noopener">Peertube</a>, <a href="https://www.youtube.com/channel/UCeQ36uE1kgT3mHHHdhEyK_w" rel="noopener">Youtube</a> and <a href="https://odysee.com/@boilingsteam:8" rel="noopener">LBRY</a> channels. If you'd like to chat, you can also find us on #boilingsteam:matrix.org. (<a href="https://matrix.org/" rel="noopener">what is Matrix?</a>)</p>
+<p class="rm-manual"> <span>0</span> <span>0</span> <span>votes</span></p>
+<p class="rm-manual">Article Rating</p>
+<h3 class="rm-manual">You might want to check out the following articles too!</h3>
+<p class="rm-manual"><a href="https://boilingsteam.com/470-drivers-nvidia-steps-up-their-game/"></a></p><p class="rm-manual"><a href="https://boilingsteam.com/470-drivers-nvidia-steps-up-their-game/">470 Drivers: Nvidia Steps Up Their Game!</a></p><a href="https://boilingsteam.com/steam-on-chromeos-not-a-rumor-anymore/"><p class="rm-manual">Steam on ChromeOS: Not a Rumor Anymore</p></a><a href="https://boilingsteam.com/smach-zs-final-message/"><p class="rm-manual">Smach Z's Final Message</p></a><p class="rm-manual"></p>
+<p class="rm-manual"><span> <a href="https://boilingsteam.com/category/hardware/controller/" rel="category tag">Controller</a>, <a href="https://boilingsteam.com/category/hardware/" rel="category tag">Hardware</a></span></p>
+<p class="rm-manual"><span> <a href="https://boilingsteam.com/tag/dual-shock-4/" rel="tag">dual shock 4</a></span> </p>
+<h3 class="rm-manual">Ekianjo</h3>
+<p class="rm-manual"> <a href="https://boilingsteam.com/author/ekianjo/" rel="me">More Posts</a> <a href="http://twitter.com/https://twitter.com/BoilingSteam">Twitter</a> </p>
+<h1 class="rm-manual">Post navigation</h1>
+<p class="rm-manual"><span>Previous Article</span><a href="https://boilingsteam.com/q4-gnulinux-gamers-survey-is-out/" rel="prev"><span>←</span> Q4 GNU/Linux Gamers Survey is Out</a></p>
+<p class="rm-manual"><span>Next Article</span><a href="https://boilingsteam.com/hard-west-weird-weird-west/" rel="next">Hard West: Weird, Weird West <span>→</span></a></p>
+<p class="rm-manual"> <span>Subscribe</span> </p>
+<p class="rm-manual">Notify of </p>
+<p class="rm-manual"> Label </p>
+<p class="rm-manual"> Name* </p>
+<p class="rm-manual"> Email* </p>
+<p class="rm-manual"> Website </p>
+<p class="rm-manual"> Label </p>
+<p class="rm-manual"> Name* </p>
+<p class="rm-manual"> Email* </p>
+<p class="rm-manual"> Website </p>
+<p class="rm-manual"> <span>9</span> Comments </p>
+<p class="rm-manual"> <span>Oldest</span> </p>
+<p class="rm-manual"> <span>Newest</span> <span>Most Voted</span> </p>
+<p class="rm-manual"> Inline Feedbacks</p>
+<p class="rm-manual">View all comments</p>
+<p class="rm-manual"> <a href="https://boilingsteam.com/author/psppwner300" rel="noreferrer ugc">cow_killer</a> </p>
+<p class="rm-manual"> 5 years ago </p>
+<p class="rm-manual">Thanks. Good read.</p>
+<p class="rm-manual">&gt; Testing other controller-supported games led 
+to the harsh conclusion that most of the other games do not recognize 
+the DS4 at all.</p>
+<p class="rm-manual">It probably suffers the same thing that a lot of 
+gamepads do: no native support within the kernel. Broforce is probably 
+one of those few cases where generic gamepads can be used.</p>
+<p class="rm-manual">0</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> <a href="https://boilingsteam.com/" rel="noreferrer ugc">Ekianjo</a> </p>
+<p class="rm-manual"> <span>Author</span> </p>
+<p class="rm-manual"> Reply to <a href="#comment-7122"> cow_killer </a> </p>
+<p class="rm-manual"> 5 years ago </p>
+<p class="rm-manual">Yeah – I wonder what’s fundamentally happening when
+ the driver does not follow the Xpad model, and whether it would easy 
+for any developer to recognize the different models automatically.</p>
+<p class="rm-manual">0</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> <a href="http://pandoralive.info/?p=4964" rel="noreferrer ugc nofollow">SlackWare 14.1 on Pandora: Everything is Awesome! - PandoraLive</a> </p>
+<p class="rm-manual"> 5 years ago </p>
+<p class="rm-manual">[…] on the Pandora in SZ, with Slackware it’s 
+trivial since you can install the ds4drv script (see my tutorial on 
+BoilingSteam if you want to know more) and just run it. It will then 
+appear in your controllers’ list in applications supporting […]</p>
+<p class="rm-manual">0</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> <a href="http://webdev.tips/" rel="noreferrer ugc nofollow">Spoygg</a> </p>
+<p class="rm-manual"> 4 years ago </p>
+<p class="rm-manual">Thanks for sharing 🙂</p>
+<p class="rm-manual">0</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> Evontroy Alexander </p>
+<p class="rm-manual"> 4 years ago </p>
+<p class="rm-manual">Great article!</p>
+<p class="rm-manual">0</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> nicolas </p>
+<p class="rm-manual"> 4 years ago </p>
+<p class="rm-manual">Hi, finally I got it working with this tutorial and
+ installing all python dependencies including pip… Thanks for your 
+config files.</p>
+<p class="rm-manual"> But I have one issue, if I run it on startup 
+(linux mint startup apps) and changing it to daemon and hidraw in 
+ds4drv.conf it does not change the leds colors (but actually the 
+profiles cycle-switch works fine)</p>
+<p class="rm-manual">0</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> <a href="https://boilingsteam.com/" rel="noreferrer ugc">Ekianjo</a> </p>
+<p class="rm-manual"> <span>Author</span> </p>
+<p class="rm-manual"> Reply to <a href="#comment-12002"> nicolas </a> </p>
+<p class="rm-manual"> 4 years ago </p>
+<p class="rm-manual">Are you using the very same config files?</p>
+<p class="rm-manual">0</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> mihir </p>
+<p class="rm-manual"> 3 years ago </p>
+<p class="rm-manual">I use the default profile, but the buttons r1, l1 don’t work in PPSSPP on Ubuntu 17.04.</p>
+<p class="rm-manual">0</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> <a href="https://sekisuiseien.com/computer/10992/" rel="noreferrer ugc nofollow">【Linux】UbuntuでPS4のコントローラDS4を利用する方法 | 積水成淵日記</a> </p>
+<p class="rm-manual"> 3 years ago </p>
+<p class="rm-manual">[…] Dual Shock 4: A Good Choice on Linux ? – Boiling Steam […]</p>
+<p class="rm-manual">0</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> <a href="https://boilingsteam.com/support-us-on-patreon/">SUPPORT US ON PATREON</a></p>
+<p class="rm-manual"> <a href="https://boilingsteam.com/user-registration/">USER REGISTRATION</a></p>
+<p class="rm-manual"> <a href="https://boilingsteam.com/newsletter/">NEWSLETTER</a></p>
+<p class="rm-manual"> <a href="https://boilingsteam.com/forums">FORUMS</a></p>
+<p class="rm-manual"> <a href="https://boilingsteam.com/about-boiling-steam-2/">ABOUT BOILING STEAM</a></p>
+<p class="rm-manual"> <a href="https://boilingsteam.com/send-us-news-tips-game-keys/">SEND US NEWS TIPS/GAME KEYS</a></p>
+<p class="rm-manual"> <a href="https://boilingsteam.com/linux/">WHAT IS GNU/LINUX?</a></p>
+<p class="rm-manual"> <a href="https://boilingsteam.com/games/">WHERE TO GET LINUX GAMES?</a></p>
+<p class="rm-manual"> <a href="https://boilingsteam.com/recommended-games/">RECOMMENDED GAMES</a></p>
+<p class="rm-manual"> <a href="https://boilingsteam.com/tutorial-and-guides/">TUTORIALS AND GUIDES</a></p>
+<p class="rm-manual"> <a href="https://boilingsteam.com/privacy-policy/">Privacy Policy</a></p>
+<p class="rm-manual"> <a href="https://boilingsteam.com/cookie-policy-eu/">Cookie Policy (EU)</a></p>
+<h3 class="rm-manual">Login</h3>
+<p class="rm-manual"> Username or Email </p>
+<p class="rm-manual"> Password </p>
+<p class="rm-manual">Remember Me</p>
+<p class="rm-manual"><a href="https://boilingsteam.com/wp-login.php?loginSocial=google&amp;redirect=https%3A%2F%2Fboilingsteam.com%2Fdual-shock-4-a-good-choice-on-linux%2F" rel="nofollow"></a></p><p class="rm-manual"><a href="https://boilingsteam.com/wp-login.php?loginSocial=google&amp;redirect=https%3A%2F%2Fboilingsteam.com%2Fdual-shock-4-a-good-choice-on-linux%2F" rel="nofollow">Continue with Google</a></p><a href="https://boilingsteam.com/wp-login.php?loginSocial=twitter&amp;redirect=https%3A%2F%2Fboilingsteam.com%2Fdual-shock-4-a-good-choice-on-linux%2F" rel="nofollow"><p class="rm-manual">Continue with Twitter</p></a><p class="rm-manual"></p>
+<p class="rm-manual"><a href="http://boilingsteam.com/user-registration/?request_form_location=widget">Register</a></p>
+<h3 class="rm-manual">Search Boiling Steam</h3>
+<p class="rm-manual"><span>Search for:</span> </p>
+<h3 class="rm-manual">BOILINGSTEAM FEEDS</h3>
+<p class="rm-manual"><a href="https://boilingsteam.com/?feed=rss2">RSS entries feed</a></p>
+<p class="rm-manual"> <a href="https://boilingsteam.com/feed/podcast/boilingsteam-regular">Podcast feed</a></p>
+<h3 class="rm-manual">Categories</h3>
+<p class="rm-manual">Categories </p>
+<h3 class="rm-manual">Archives</h3>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="https://boilingsteam.com/2021/">2021</a> (84) <ul class="rm-manual"> <li class="rm-manual">
+<a href="https://boilingsteam.com/2021/07/">July</a> (5)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2021/06/">June</a> (11)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2021/05/">May</a> (10)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2021/04/">April</a> (16)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2021/03/">March</a> (15)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2021/02/">February</a> (12)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2021/01/">January</a> (15)</li> </ul>
+</li>
+<li class="rm-manual"> <a href="https://boilingsteam.com/2020/">2020</a> (95) <ul class="rm-manual"> <li class="rm-manual">
+<a href="https://boilingsteam.com/2020/12/">December</a> (11)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2020/11/">November</a> (13)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2020/10/">October</a> (11)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2020/09/">September</a> (6)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2020/08/">August</a> (2)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2020/07/">July</a> (8)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2020/06/">June</a> (8)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2020/05/">May</a> (18)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2020/04/">April</a> (10)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2020/03/">March</a> (2)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2020/02/">February</a> (4)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2020/01/">January</a> (2)</li> </ul>
+</li>
+<li class="rm-manual"> <a href="https://boilingsteam.com/2019/">2019</a> (42) <ul class="rm-manual"> <li class="rm-manual">
+<a href="https://boilingsteam.com/2019/11/">November</a> (3)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2019/10/">October</a> (2)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2019/09/">September</a> (4)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2019/08/">August</a> (5)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2019/07/">July</a> (4)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2019/06/">June</a> (2)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2019/05/">May</a> (2)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2019/04/">April</a> (5)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2019/03/">March</a> (6)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2019/02/">February</a> (2)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2019/01/">January</a> (7)</li> </ul>
+</li>
+<li class="rm-manual"> <a href="https://boilingsteam.com/2018/">2018</a> (44) <ul class="rm-manual"> <li class="rm-manual">
+<a href="https://boilingsteam.com/2018/12/">December</a> (4)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2018/11/">November</a> (5)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2018/10/">October</a> (10)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2018/09/">September</a> (4)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2018/08/">August</a> (3)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2018/07/">July</a> (1)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2018/06/">June</a> (2)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2018/05/">May</a> (1)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2018/04/">April</a> (3)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2018/03/">March</a> (2)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2018/02/">February</a> (6)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2018/01/">January</a> (3)</li> </ul>
+</li>
+<li class="rm-manual"> <a href="https://boilingsteam.com/2017/">2017</a> (83) <ul class="rm-manual"> <li class="rm-manual">
+<a href="https://boilingsteam.com/2017/12/">December</a> (8)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2017/11/">November</a> (3)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2017/10/">October</a> (4)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2017/09/">September</a> (2)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2017/08/">August</a> (1)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2017/07/">July</a> (6)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2017/06/">June</a> (13)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2017/05/">May</a> (12)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2017/04/">April</a> (6)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2017/03/">March</a> (10)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2017/02/">February</a> (13)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2017/01/">January</a> (5)</li> </ul>
+</li>
+<li class="rm-manual"> <a href="https://boilingsteam.com/2016/">2016</a> (73) <ul class="rm-manual"> <li class="rm-manual">
+<a href="https://boilingsteam.com/2016/12/">December</a> (4)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2016/11/">November</a> (6)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2016/10/">October</a> (6)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2016/09/">September</a> (8)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2016/08/">August</a> (8)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2016/07/">July</a> (6)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2016/06/">June</a> (10)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2016/05/">May</a> (7)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2016/04/">April</a> (5)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2016/03/">March</a> (5)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2016/02/">February</a> (4)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2016/01/">January</a> (4)</li> </ul>
+</li>
+<li class="rm-manual"> <a href="https://boilingsteam.com/2015/">2015</a> (75) <ul class="rm-manual"> <li class="rm-manual">
+<a href="https://boilingsteam.com/2015/12/">December</a> (20)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2015/11/">November</a> (8)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2015/10/">October</a> (7)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2015/09/">September</a> (6)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2015/08/">August</a> (4)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2015/07/">July</a> (5)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2015/06/">June</a> (9)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2015/05/">May</a> (1)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2015/04/">April</a> (1)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2015/03/">March</a> (7)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2015/02/">February</a> (2)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2015/01/">January</a> (5)</li> </ul>
+</li>
+<li class="rm-manual"> <a href="https://boilingsteam.com/2014/">2014</a> (33) <ul class="rm-manual"> <li class="rm-manual">
+<a href="https://boilingsteam.com/2014/12/">December</a> (8)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2014/11/">November</a> (7)</li> <li class="rm-manual">
+<a href="https://boilingsteam.com/2014/10/">October</a> (18)</li> </ul>
+</li>
+</ul>
+<p class="rm-manual"> © 2021 Boiling Steam. All rights reserved. </p>
+<p class="rm-manual"> <a href="http://athemes.com/theme/fashionista">Fashionista</a> by aThemes </p>
+<p class="rm-manual"><a href="" rel="#wpdUserContentInfo">wpDiscuz</a></p>
+<p class="rm-manual"><span>9</span></p>
+<p class="rm-manual"><span>0</span></p>
+<p class="rm-manual">Would love your thoughts, please comment.<span><a href="#">x</a></span></p>
+<p class="rm-manual"><span>( )</span></p>
+<p class="rm-manual"><span><a href="#">x</a></span></p>
+<p class="rm-manual"><span>| <a href="#">Reply</a></span></p></article>
+</body></html>

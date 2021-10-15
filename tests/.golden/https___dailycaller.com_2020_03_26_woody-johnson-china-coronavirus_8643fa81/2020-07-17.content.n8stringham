@@ -1,0 +1,77 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><article class="rm-manual"> <a href="file:///section/world"> World </a> </article><h1 class="rm-manual">US Ambassador To UK: China’s ‘Secrets And Lies’ Produced Coronavirus Pandemic</h1>
+<p class="rm-manual"> <a href="file:///author/anders.h"> Anders Hagstrom </a> <span>White House Correspondent</span> </p>
+<p class="rm-manual"><span>March 26, 2020</span> </p>
+<p class="rm-manual"><span>11:02 AM ET</span> </p>
+<p class="rm-manual"> <span>Font Size:</span> </p>
+<p>The United States Ambassador to the United Kingdom attacked China for
+ its slow and secretive response to coronavirus Thursday, saying other 
+countries wouldn’t have to be dealing with outbreaks if China had made 
+the right decisions.</p>
+<p>Ambassador Woody Johnson <a href="https://www.thetimes.co.uk/article/chinas-secrets-and-lies-turned-covid-19into-a-global-threat-cdqf7r02p" rel="noopener noreferrer">made the comments</a>
+ in an op-ed in The Times, adding that not only had China allowed the 
+virus to spread, but it was now attempting to shift blame to the U.S.</p>
+<p>“Had China done the right things at the right time, more of its own 
+population, and the rest of the world, might have been spared the most 
+serious impact of this disease,” he wrote.</p>
+<p>US Ambassador to the United Kingdom Woody Johnson (L) walks with US 
+President Donald Trump (C) and US First Lady Melania Trump (Photo 
+credit: BRENDAN SMIALOWSKI/AFP/Getty Images)</p>
+<p>Johnson’s comments echo those of President Donald Trump, who recently
+ described China’s early action on the coronavirus pandemic in Wuhan as “<a href="https://dailycaller.com/2020/03/21/trump-china-messages-xi-jinping-coronavirus/" rel="noopener noreferrer">secretive</a>.” <a href="https://dailycaller.com/2020/03/25/new-york-coronavirus-white-house/" rel="noopener noreferrer">(RELATED: NY Health Commissioner Tells People Not To Follow White House Coronavirus Guidance)</a></p>
+<p>“I have a tremendous relationship with President Xi. I wish they 
+could have told us earlier,” Trump said last week. “China was very 
+secretive, and that’s unfortunate.”</p>
+<p>The administration has also hit China for spreading misinformation 
+that U.S. soldiers were responsible for starting the outbreak in Wuhan. 
+China has <a href="https://www.washingtonpost.com/world/asia_pacific/conspiracy-theorists-blame-the-us-for-coronavirus-china-is-happy-to-encourage-them/2020/03/05/50875458-5dc8-11ea-ac50-18701e14e06d_story.html" rel="noopener noreferrer">fostered</a> the conspiracy theories by censoring detractors. <a href="https://dailycaller.com/2020/03/23/germany-coronavirus-ban-groups-of-two/" rel="noopener noreferrer">(RELATED: Germany Bans Meetings Of More Than Two People)</a></p>
+<p>“It is bad enough when conspiracy-theory cranks spread dangerous 
+misinformation around the world. It is far worse, and more dangerous, 
+when malign misinformation is spread by a government’s officials, And 
+that is exactly what the People’s Republic of China has been doing, 
+spreading false accusations about the origin and spread of the 
+coronavirus,” Johnson wrote.</p>
+<p>Some <a href="https://cbs6albany.com/news/coronavirus/stefanik-looking-to-hold-china-accountable-for-spread-of-coronavirus" rel="noopener noreferrer">have suggested</a>
+ the international community should hold China responsible for the virus
+ and require some form of compensation, but Trump has not made a public 
+statement on the issue.</p>
+<p class="rm-manual"> <span>Tags :</span> <a href="file:///buzz/china">china</a> <a href="file:///buzz/coronavirus">coronavirus</a> <a href="file:///buzz/united-kingdom">united kingdom</a> </p>
+<p class="rm-manual">Anders Hagstrom</p>
+<p class="rm-manual">Loading comments...</p></article>
+</body></html>

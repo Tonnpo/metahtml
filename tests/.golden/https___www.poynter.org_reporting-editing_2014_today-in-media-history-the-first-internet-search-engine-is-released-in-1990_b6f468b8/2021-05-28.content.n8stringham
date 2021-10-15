@@ -1,0 +1,113 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> By: <a href="https://www.poynter.org/author/shedden/" rel="author">David Shedden</a> </p>
+<p class="rm-manual">September 10, 2014</p>
+<p class="rm-manual">Early online journalists used an Internet search tool called Archie,</p>
+<p class="rm-manual"> which was released on September 10, 1990.</p>
+<p class="rm-manual">Here’s a screen shot of a Web-based Archie search engine. <a href="http://archie.icm.edu.pl/archie-adv_eng.html">And here is a link</a> to an archival version posted by the University of Warsaw.</p>
+<p class="rm-manual">(archie.icm.edu.pl image)</p>
+<p>“Originally, the Internet was nothing but a compendium of File</p>
+<p> Transfer Protocol (FTP) sites that users could peruse in an attempt to</p>
+<p> find specific communal files. As the list of web servers joining the</p>
+<p> Internet grew, the World Wide Web became the interface of choice for</p>
+<p> accessing information on the Internet. Naturally, the need for finding</p>
+<p> and organizing the geographically dispersed data files developed.</p>
+<p>In the early 1990s, search engines spawned from users’ needs to</p>
+<p> readily navigate the files on the web servers that made up the</p>
+<p> Internet.</p>
+<p>Archie became the first index that attempted to organize this content.</p>
+<p> Gopher made the database searchable.”</p>
+<p class="rm-manual">— “<a href="http://searchenginewatch.com/article/2323241/Wheres-the-Search">Where’s the Search?</a>“</p>
+<p> Search Engine Watch, January 16, 2014</p>
+<p>“The first search engine was developed as a school project by Alan</p>
+<p> Emtage, a student at McGill University in Montreal. Back in 1990, Alan</p>
+<p> created Archie, an index (or archives) of computer files stored on</p>
+<p> anonymous FTP web sites in a given network of computers (“Archie”</p>
+<p> rather than “Archives” fit name length parameters – thus it became the</p>
+<p> name of the first search engine). In 1991, Mark McCahill, a student at</p>
+<p> the University of Minnesota, effectively used a hypertext paradigm to</p>
+<p> create Gopher, which also searched for plain text references in files.</p>
+<p>Archie and Gopher’s searchable database of websites did not have</p>
+<p> natural language keyword capabilities used in modern search engines.</p>
+<p> Rather, in 1993 the graphical Mosaic web browser improved upon</p>
+<p> Gopher’s primarily text-based interface. About the same time, Matthew</p>
+<p> Gray developed Wandex, the first search engine in the form that we</p>
+<p> know search engines today. Wandex’s technology was the first to crawl</p>
+<p> the web indexing and searching the catalog of indexed pages on the</p>
+<p> web. Another significant development in search engines came in 1994</p>
+<p> when WebCrawler’s search engine began indexing the full text of web</p>
+<p> sites instead of just web page titles.”</p>
+<p class="rm-manual">— “<a href="http://www.thehistoryofseo.com/The-Industry/Short_History_of_Early_Search_Engines.aspx">Short History of Early Search Engines</a>“</p>
+<p class="rm-manual">Video: “Searching the Internet – FTP Anarchie | The Internet Revealed (1995)”</p>
+<p class="rm-manual">And here’s a screen shot of an early text-based Internet Archie search.</p>
+<p class="rm-manual">(VozExpress Image)</p>
+<p class="rm-manual">Support high-integrity, independent journalism that
+ serves democracy. Make a gift to Poynter today. The Poynter Institute 
+is a nonpartisan, nonprofit organization, and your gift helps us make 
+good journalism better.</p>
+<p class="rm-manual"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=R6P847KAR4672&amp;source=url">Donate</a> </p>
+<p class="rm-manual"> Tags: <a href="https://www.poynter.org/tag/journalism-history/" rel="tag">journalism history</a>, <a href="https://www.poynter.org/tag/media-history/" rel="tag">Media History</a>, <a href="https://www.poynter.org/tag/mediawire/" rel="tag">MediaWire</a> </p>
+<p class="rm-manual"><a href="https://www.poynter.org/author/shedden/" rel="author">David Shedden</a></p>
+<p class="rm-manual"><a href="https://www.poynter.org/author/shedden/">More by David Shedden</a> </p>
+<h3 class="rm-manual">More News</h3>
+<h5 class="rm-manual"><a href="https://www.poynter.org/reporting-editing/2021/chlorine-shortage-threatens-pool-openings-just-in-time-for-memorial-day-weekend/" rel="bookmark">Chlorine shortage threatens pool openings just in time for Memorial Day weekend</a></h5>
+<p class="rm-manual">Plus, the CDC's mask guidance change may have 
+reignited vaccinations, US vaccine stockpiles grow as the world pleads 
+for help, and more.</p>
+<p class="rm-manual">May 28, 2021</p>
+<p class="rm-manual"><a href="https://www.poynter.org/author/atompkins/">Al Tompkins</a></p>
+<h5 class="rm-manual"><a href="https://www.poynter.org/fact-checking/2021/should-i-get-a-covid-19-vaccination-here-are-some-answers-to-common-questions-about-vaccines/" rel="bookmark">Should I get a COVID-19 vaccination? Here are some answers to common questions about vaccines.</a></h5>
+<p class="rm-manual">If you're skeptical of the vaccines, or know 
+someone who is, here are answers to some of the most common questions we
+ see about them.</p>
+<p class="rm-manual">May 28, 2021</p>
+<p class="rm-manual"><a href="https://www.poynter.org/author/noah-y-kim/">Noah Y. Kim</a></p>
+<h5 class="rm-manual"><a href="https://www.poynter.org/locally/2021/the-coronavirus-has-closed-more-than-60-local-newsrooms-across-america-and-counting/" rel="bookmark">The coronavirus has closed more than 70 local newsrooms across America. And counting.</a></h5>
+<p class="rm-manual">At first, the pandemic cost newsrooms jobs and communities critical work. Now it’s starting to end entire newsrooms.</p>
+<p class="rm-manual">May 27, 2021</p>
+<p class="rm-manual"><a href="https://www.poynter.org/author/kristenhare/">Kristen Hare</a></p>
+<h5 class="rm-manual"><a href="https://www.poynter.org/business-work/2021/here-are-the-newsroom-layoffs-furloughs-and-closures-caused-by-the-coronavirus/" rel="bookmark">Here are the newsroom layoffs, furloughs and closures that happened during the coronavirus pandemic</a></h5>
+<p class="rm-manual">We're still updating this list </p>
+<p class="rm-manual">May 27, 2021</p>
+<p class="rm-manual"><a href="https://www.poynter.org/author/kristenhare/">Kristen Hare</a></p>
+<h5 class="rm-manual"><a href="https://www.poynter.org/locally/2021/one-minneapolis-reporter-on-the-year-since-george-floyds-murder/" rel="bookmark">One Minneapolis reporter on the year since George Floyd’s murder</a></h5>
+<p class="rm-manual">“It’s been nonstop since this time last year.”</p>
+<p class="rm-manual">May 27, 2021</p>
+<p class="rm-manual"><a href="https://www.poynter.org/author/kristenhare/">Kristen Hare</a></p>
+<p class="rm-manual"><a href="file:///news">Back to News</a> </p></article>
+</body></html>

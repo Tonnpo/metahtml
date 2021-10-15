@@ -1,0 +1,89 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual"><a href="https://jamesedwardbell.wordpress.com/2017/10/10/assassination-of-kim-jong-nam/" rel="bookmark">Assassination of Kim Jong Nam</a></h1>
+<figcaption class="rm-manual">Photo from CNN.com</figcaption><p>I just recently read an article on <a href="http://abcnews.go.com/International/wireStory/chemist-kim-14-times-lethal-dosage-vx-face-50383012">abcnews.go.com </a>,
+ about the assassination of Kim Jong Nam, the half brother of North 
+Korean leader Kim Jong Un in a Malaysian airport. Two Vietnamese women 
+attacked Kim with VX Nerve Agent on their hands and clothing effectively
+ administering a lethal enough dose to prove fatal.</p>
+<p>It was very surprising to me that the article stated that experts 
+believe that the murder could somehow be connected to Kim Jong Un 
+feeling that his rule was threatened, and that the lawyers of the two 
+females claim that they believed they were tricked by North Korean 
+Agents and told they were performing a prank on a Hidden Camera TV show.</p>
+<p>News outlet, <a href="https://twitter.com/malaysiandigest">Malaysian Digest</a> recently tweeted about the beginning of the murder trial for the two women.</p>
+<p>These women face the death penalty if convicted, so if there is foul 
+play by the North Korean government involved their defense lawyer will 
+have to build a strong case. My reflection on the case so far is that 
+they will have a difficult time doing this because of airport footage 
+that appears to show them “practicing” 2 days before the murder.</p>
+<p>I remember briefly hearing about the assassination in February when 
+it occurred, but did not know about the possible involvement of North 
+Korean Agents and Kim Jong Un, or that Kim Jong Nam was estranged to the
+ rest of the family. My interest was now peaked with the possibility of 
+the murder possibly being a set up.</p>
+<p>This article for me provided an update on the case, and describe in 
+detail how Kim had 1.4 times the lethal dosage on his face according to 
+Raja Subramaniam who is the head of the Center of Chemical Weapons 
+Analysis in Malaysia. As the trial develops I hope to stay informed and 
+see what the court decides.</p>
+<h2 class="rm-manual">Published by <span>jamesedwardbell</span>
+</h2>
+<p class="rm-manual"> <a href="https://jamesedwardbell.wordpress.com/author/jamesedwardbell/" rel="author"> View all posts by jamesedwardbell </a> </p>
+<p class="rm-manual"> October 10, 2017 </p>
+<p class="rm-manual"><a href="https://jamesedwardbell.wordpress.com/category/world-news/" rel="category tag">World News</a></p>
+<p class="rm-manual"><a href="https://jamesedwardbell.wordpress.com/tag/featured/" rel="tag">featured</a>, <a href="https://jamesedwardbell.wordpress.com/tag/international/" rel="tag">International</a>, <a href="https://jamesedwardbell.wordpress.com/tag/news/" rel="tag">News</a></p>
+<h2 class="rm-manual">Post navigation</h2>
+<p class="rm-manual"><a href="https://jamesedwardbell.wordpress.com/2017/10/03/market-analysis-lake-orion-homepage/" rel="prev">Market Analysis: Lake Orion Homepage</a></p>
+<p class="rm-manual"><a href="https://jamesedwardbell.wordpress.com/2017/11/04/johns-journey-to-greece/" rel="next">John’s Journey to Greece</a></p>
+<h3 class="rm-manual">Leave a Reply <a rel="nofollow" href="file:///2017/10/10/assassination-of-kim-jong-nam/#respond">Cancel reply</a>
+</h3>
+<p class="rm-manual"> Enter your comment here... </p>
+<p class="rm-manual">Fill in your details below or click an icon to log in:</p>
+<p class="rm-manual"> Email <span>(required)</span> <span>(Address never made public)</span> </p>
+<p class="rm-manual"> Name <span>(required)</span> </p>
+<p class="rm-manual"> Website </p>
+<p class="rm-manual"> You are commenting using your WordPress.com account. <span> ( <a href="">Log Out</a> / <a href="#">Change</a> ) </span> </p>
+<p class="rm-manual"> You are commenting using your Google account. <span> ( <a href="">Log Out</a> / <a href="#">Change</a> ) </span> </p>
+<p class="rm-manual"> You are commenting using your Twitter account. <span> ( <a href="">Log Out</a> / <a href="#">Change</a> ) </span> </p>
+<p class="rm-manual"> You are commenting using your Facebook account. <span> ( <a href="">Log Out</a> / <a href="#">Change</a> ) </span> </p>
+<p class="rm-manual"><a href="">Cancel</a></p>
+<p class="rm-manual">Connecting to %s</p>
+<p class="rm-manual"> Notify me of new comments via email.</p>
+<p class="rm-manual"> Notify me of new posts via email.</p></article>
+</body></html>

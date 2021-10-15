@@ -1,0 +1,71 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Italy Covid-19 Cases and Deaths Statistics (Update Live Cases: 243230 / Deaths: 34967) </p>
+<ul class="rm-manual"> <a href="file:///"><li class="rm-manual">Statistics</li></a> <a href="file:///insight"><li class="rm-manual">Insights</li></a> <a href="file:///coronavirus-cases-statistics"><li class="rm-manual">Cases</li></a> <a href="file:///coronavirus-death-statistics"><li class="rm-manual">Deaths</li></a> <a href="file:///about-covid-19"><li class="rm-manual">How</li></a> <a href="file:///what-you-need-to-know-covid-19"><li class="rm-manual">Prevention</li></a> <a href="file:///covid19-incubation-period"><li class="rm-manual">Incubation</li></a> <a href="file:///covid-19-age-sex-cases-and-deaths"><li class="rm-manual">Age</li></a> <a href="file:///who-report"><li class="rm-manual">Report</li></a> <a href="file:///infographic"><li class="rm-manual">Infographic</li></a> <a href="file:///places-restricting-travel"><li class="rm-manual">Places Restricting Travel</li></a> </ul>
+<p class="rm-manual"> <span>virusncov.com</span> </p>
+<h1 class="rm-manual">COVID-19 Coronavirus - Update </h1>
+<p class="rm-manual"> Last updated: 2020-07-14 05:35:06 UTC+7 </p>
+<p class="rm-manual"> <a href="file:///">Statistics</a> <a href="file:///insight">Insights</a> <a href="file:///coronavirus-cases-statistics">Cases</a> <a href="file:///coronavirus-death-statistics">Deaths</a> <a href="file:///covid-19-age-sex-cases-and-deaths">Age</a> <a href="file:///places-restricting-travel">Places Restricting Travel</a> </p>
+<p class="rm-manual"> <a href="file:///">Covid 19 statistics</a> » Italy (Update) </p>
+<h1 class="rm-manual"> Italy Covid-19 Cases and Deaths Statistics (Update)</h1>
+<p class="">All data update for UTC+7.</p>
+<h2 class="">Total Cases: 243,230 of which 65 in severe condition 
+Deaths: 34,967 Deaths/ Total Cases: (14%) Recovered: 195,106 Recovered/ 
+Total Cases: (80%) </h2>
+<h3 class="">Daily New Cases in Italy</h3>
+<h3 class="">Daily New Deaths in Italy</h3>
+<h3 class="">Active Cases, Recovered and Deaths in Italy</h3>
+<h3 class="">ACTIVE CASES IN <span>Italy</span>
+</h3>
+<p class=""> <span>13,157</span> <span>Currently Infected Patients</span> </p>
+<p class=""> <span>13,092 (100%)</span> <span>in Mild Condition</span> </p>
+<p class=""> <span>65 (0%)</span> <span>Serious or Critical</span> </p>
+<h3 class="">CLOSED CASES IN <span>Italy</span>
+</h3>
+<p class=""> <span>230,073</span> <span>Cases which had an outcome</span> </p>
+<p class=""> <span>195,106 (85%)</span> <span>Recovered / Discharged</span> </p>
+<p class=""> <span>34,967 (15%)</span> <span>Deaths</span> </p>
+<h3 class="rm-manual">COVID19 Sections</h3>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///">Covid-19 Update (live) [Coronavirus Update (live)]</a></li> <li class="rm-manual"><a href="file:///insight">Covid-19 Insights</a></li> <li class="rm-manual"><a href="file:///coronavirus-cases-statistics/">Covid-19 Cases Statistics</a></li> <li class="rm-manual"><a href="file:///coronavirus-death-statistics/">Covid-19 Deaths Statistics</a></li> <li class="rm-manual"><a href="file:///covid-19-age-sex-cases-and-deaths/">Covid-19 Cases and Deaths Demographic</a></li> <li class="rm-manual"><a href="file:///covid19-incubation-period/">Covid-19 incubation period</a></li> <li class="rm-manual"><a href="file:///who-report/">Covid-19 situation reports (WHO)</a></li> <li class="rm-manual"><a href="file:///infographic">Covid-19 Infographic</a></li> <li class="rm-manual"><a href="file:///about-covid-19">Covid-19 How</a></li> <li class="rm-manual"><a href="file:///what-you-need-to-know-covid-19">Covid-19 Prevention</a></li> <li class="rm-manual"><a href="file:///covid19-incubation-period">Covid-19 Incubation</a></li> <li class="rm-manual"><a href="file:///what-you-need-to-know-covid-19">Covid-19 What You Need</a></li> </ul>
+<h2 class="rm-manual">COVID19 in Europe </h2>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///covid-statistics/russia">Covid-19 Update (live) in Russia</a></li> <li class="rm-manual"><a href="file:///covid-statistics/spain">Covid-19 Update (live) in Spain</a></li> <li class="rm-manual"><a href="file:///covid-statistics/uk">Covid-19 Update (live) in UK</a></li> <li class="rm-manual"><a href="file:///covid-statistics/turkey">Covid-19 Update (live) in Turkey</a></li> <li class="rm-manual"><a href="file:///covid-statistics/germany">Covid-19 Update (live) in Germany</a></li> <li class="rm-manual"><a href="file:///covid-statistics/france">Covid-19 Update (live) in France</a></li> <li class="rm-manual"><a href="file:///covid-statistics/sweden">Covid-19 Update (live) in Sweden</a></li> <li class="rm-manual"><a href="file:///covid-statistics/belarus">Covid-19 Update (live) in Belarus</a></li> <li class="rm-manual"><a href="file:///covid-statistics/belgium">Covid-19 Update (live) in Belgium</a></li> <li class="rm-manual"><a href="file:///covid-statistics/ukraine">Covid-19 Update (live) in Ukraine</a></li> <li class="rm-manual"><a href="file:///covid-statistics/netherlands">Covid-19 Update (live) in Netherlands</a></li> <li class="rm-manual"><a href="file:///covid-statistics/portugal">Covid-19 Update (live) in Portugal</a></li> <li class="rm-manual"><a href="file:///covid-statistics/israel">Covid-19 Update (live) in Israel</a></li> <li class="rm-manual"><a href="file:///covid-statistics/poland">Covid-19 Update (live) in Poland</a></li> <li class="rm-manual"><a href="file:///covid-statistics/romania">Covid-19 Update (live) in Romania</a></li> <li class="rm-manual"><a href="file:///covid-statistics/switzerland">Covid-19 Update (live) in Switzerland</a></li> <li class="rm-manual"><a href="file:///covid-statistics/armenia">Covid-19 Update (live) in Armenia</a></li> <li class="rm-manual"><a href="file:///covid-statistics/ireland">Covid-19 Update (live) in Ireland</a></li> <li class="rm-manual"><a href="file:///covid-statistics/moldova">Covid-19 Update (live) in Moldova</a></li> <li class="rm-manual"><a href="file:///covid-statistics/austria">Covid-19 Update (live) in Austria</a></li> <li class="rm-manual"><a href="file:///covid-statistics/serbia">Covid-19 Update (live) in Serbia</a></li> <li class="rm-manual"><a href="file:///covid-statistics/czech-republic">Covid-19 Update (live) in Czech Republic</a></li> <li class="rm-manual"><a href="file:///covid-statistics/denmark">Covid-19 Update (live) in Denmark</a></li> <li class="rm-manual"><a href="file:///covid-statistics/norway">Covid-19 Update (live) in Norway</a></li> <li class="rm-manual"><a href="file:///covid-statistics/north-macedonia">Covid-19 Update (live) in North Macedonia</a></li> <li class="rm-manual"><a href="file:///covid-statistics/bulgaria">Covid-19 Update (live) in Bulgaria</a></li> <li class="rm-manual"><a href="file:///covid-statistics/finland">Covid-19 Update (live) in Finland</a></li> <li class="rm-manual"><a href="file:///covid-statistics/bosnia-and-herzegovina">Covid-19 Update (live) in Bosnia and Herzegovina</a></li> <li class="rm-manual"><a href="file:///covid-statistics/luxembourg">Covid-19 Update (live) in Luxembourg</a></li> <li class="rm-manual"><a href="file:///covid-statistics/hungary">Covid-19 Update (live) in Hungary</a></li> <li class="rm-manual"><a href="file:///covid-statistics/greece">Covid-19 Update (live) in Greece</a></li> <li class="rm-manual"><a href="file:///covid-statistics/croatia">Covid-19 Update (live) in Croatia</a></li> <li class="rm-manual"><a href="file:///covid-statistics/albania">Covid-19 Update (live) in Albania</a></li> <li class="rm-manual"><a href="file:///covid-statistics/estonia">Covid-19 Update (live) in Estonia</a></li> <li class="rm-manual"><a href="file:///covid-statistics/slovakia">Covid-19 Update (live) in Slovakia</a></li> <li class="rm-manual"><a href="file:///covid-statistics/iceland">Covid-19 Update (live) in Iceland</a></li> <li class="rm-manual"><a href="file:///covid-statistics/lithuania">Covid-19 Update (live) in Lithuania</a></li> <li class="rm-manual"><a href="file:///covid-statistics/slovenia">Covid-19 Update (live) in Slovenia</a></li> <li class="rm-manual"><a href="file:///covid-statistics/montenegro">Covid-19 Update (live) in Montenegro</a></li> <li class="rm-manual"><a href="file:///covid-statistics/latvia">Covid-19 Update (live) in Latvia</a></li> <li class="rm-manual"><a href="file:///covid-statistics/cyprus">Covid-19 Update (live) in Cyprus</a></li> <li class="rm-manual"><a href="file:///covid-statistics/georgia">Covid-19 Update (live) in Georgia</a></li> <li class="rm-manual"><a href="file:///covid-statistics/andorra">Covid-19 Update (live) in Andorra</a></li> <li class="rm-manual"><a href="file:///covid-statistics/san-marino">Covid-19 Update (live) in San Marino</a></li> <li class="rm-manual"><a href="file:///covid-statistics/malta">Covid-19 Update (live) in Malta</a></li> <li class="rm-manual"><a href="file:///covid-statistics/isle-of-man">Covid-19 Update (live) in Isle of Man</a></li> <li class="rm-manual"><a href="file:///covid-statistics/faroe-islands">Covid-19 Update (live) in Faroe Islands</a></li> <li class="rm-manual"><a href="file:///covid-statistics/gibraltar">Covid-19 Update (live) in Gibraltar</a></li> <li class="rm-manual"><a href="file:///covid-statistics/monaco">Covid-19 Update (live) in Monaco</a></li> <li class="rm-manual"><a href="file:///covid-statistics/liechtenstein">Covid-19 Update (live) in Liechtenstein</a></li> <li class="rm-manual"><a href="file:///covid-statistics/sint-maarten">Covid-19 Update (live) in Sint Maarten</a></li> <li class="rm-manual"><a href="file:///covid-statistics/greenland">Covid-19 Update (live) in Greenland</a></li> <li class="rm-manual"><a href="file:///covid-statistics/vatican">Covid-19 Update (live) in Vatican City</a></li> <li class="rm-manual"><a href="file:///covid-statistics/st-barth">Covid-19 Update (live) in St. Barth</a></li> </ul>
+<p class="rm-manual"> <a rel="noreferrer nofollow" href="https://ko-fi.com/19ncov"><span> Support Our Team</span></a> </p>
+<p class="rm-manual"> <a href="https://coronavirusnote.com/" rel="noopener">Anti Fake COVID-19 News</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///contact">Contact Us</a></li> </ul>
+<p class="rm-manual">© Copyright virusncov.com - All rights reserved - <a href="file:///disclaimer">Disclaimer</a> &amp; <a href="file:///policy">Privacy Policy</a></p></article>
+</body></html>

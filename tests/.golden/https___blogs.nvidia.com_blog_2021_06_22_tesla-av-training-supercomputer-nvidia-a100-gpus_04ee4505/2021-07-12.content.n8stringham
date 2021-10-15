@@ -1,0 +1,102 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual">Tesla Unveils Top AV Training Supercomputer Powered by NVIDIA A100 GPUs</h1>
+<p class="rm-manual"> ‘Incredible’ GPU cluster powers AI development for Autopilot and full self-driving. </p>
+<p class="rm-manual"> <span>June 22, 2021</span> <span>by</span> <span><a href="https://blogs.nvidia.com/blog/author/danny-shapiro/">Danny Shapiro</a></span> </p>
+<p>Tackling one of the largest computing challenges of this lifetime requires larger than life computing.</p>
+<p><a href="https://www.youtube.com/watch?v=eOL_rCK59ZI&amp;t=29533s">At CVPR this week</a>,
+ Andrej Karpathy, senior director of AI at Tesla, unveiled the in-house 
+supercomputer the automaker is using to train deep neural networks for 
+Autopilot and self-driving capabilities. The cluster uses 720 nodes of 
+8x <a href="https://www.nvidia.com/en-us/data-center/a100/">NVIDIA A100 Tensor Core GPUs</a> (5,760 GPUs total) to achieve an industry-leading 1.8 exaflops of performance.</p>
+<p>“This is a really incredible supercomputer,” Karpathy said. “I 
+actually believe that in terms of flops, this is roughly the No. 5 
+supercomputer in the world.”</p>
+<p>With unprecedented levels of compute for the automotive industry at 
+the center of its development cycle, Tesla is making it possible for 
+autonomous vehicle engineers to do their life’s work efficiently and at 
+the cutting edge.</p>
+<p>NVIDIA A100 GPUs deliver acceleration at every scale to power the 
+world’s highest-performing data centers. Powered by the NVIDIA Ampere 
+Architecture, the A100 GPU provides up to 20x higher performance over 
+the prior generation and can be partitioned into seven GPU instances to 
+dynamically adjust to shifting demands.</p>
+<p>The GPU cluster is part of Tesla’s vertically integrated autonomous 
+driving approach, which uses more than 1 million cars already driving on
+ the road to refine and build new features for continuous improvement.</p>
+<h2>From the Car to the Data Center</h2>
+<p>Tesla’s cyclical development begins in the car. A deep neural network
+ running in “shadow mode” quietly perceives and makes predictions while 
+the car is driving without actually controlling the vehicle.</p>
+<p>These predictions are recorded, and any mistakes or 
+misidentifications are logged. Tesla engineers then use these instances 
+to create a training dataset of difficult and diverse scenarios to 
+refine the DNN.</p>
+<p>The result is a collection of roughly 1 million 10-second clips 
+recorded at 36 frames per second, totaling a whopping 1.5 petabytes of 
+data. The DNN is then run through these scenarios in the data center 
+over and over until it operates without a mistake. Finally, it’s sent 
+back to the vehicle and begins the process again.</p>
+<p>Karpathy said training a DNN in this manner and on such a large 
+amount of data requires “a huge amount of compute,” which led Tesla to 
+build and deploy the current generation supercomputer with 
+high-performance A100 GPUs.</p>
+<h2>Continuous Iteration</h2>
+<p>In addition to comprehensive training, Tesla’s supercomputer gives 
+autonomous vehicle engineers the performance needed to experiment and 
+iterate in the development process.</p>
+<p>Karpathy said the current DNN structure the automaker is deploying 
+allows a team of 20 engineers to work on a single network at once, 
+isolating different features for parallel development.</p>
+<p>These DNNs can then be run through training datasets at speeds faster
+ than what has been previously possible for rapid iteration.</p>
+<p>“Computer vision is the bread and butter of what we do and enables 
+Autopilot. For that to work, you need to train a massive neural network 
+and experiment a lot,” Karpathy said. “That’s why we’ve invested a lot 
+into the compute.”</p>
+<p class="rm-manual"><a href="https://www.youtube.com/watch?v=eOL_rCK59ZI&amp;t=29533s">Watch the full CVPR session</a>.</p>
+<p class="rm-manual"><span>Categories: <a href="https://blogs.nvidia.com/blog/category/auto/" rel="category tag">Driving</a></span></p>
+<p class="rm-manual"><span>Tags: <a href="https://blogs.nvidia.com/blog/tag/automotive/" rel="tag">Automotive</a> | <a href="https://blogs.nvidia.com/blog/tag/nvidia-dgx/" rel="tag">NVIDIA DGX</a></span></p>
+<h3 class="rm-manual">All nvidia news</h3>
+<p class="rm-manual"><a href="https://blogs.nvidia.com/blog/2021/07/12/autox-full-self-driving-nvidia-drive/">AutoX Unveils Full Self-Driving System Powered by NVIDIA DRIVE</a></p>
+<p class="rm-manual"><a href="https://blogs.nvidia.com/blog/2021/07/12/palo-alto-networks-cyber-defenses/">NVIDIA and Palo Alto Networks Boost Cyber Defenses with DPU Acceleration</a></p>
+<p class="rm-manual"><a href="https://blogs.nvidia.com/blog/2021/07/09/common-voice-conversational-ai/">Tongues Untied: Dataset Starts Global Dialogue in Conversational AI</a></p>
+<p class="rm-manual"><a href="https://blogs.nvidia.com/blog/2021/07/08/ai-analyzes-classroom-discussions/">Math Teaches Math: Researchers Tap AI to Boost Classroom Discussions</a></p>
+<p class="rm-manual"><a href="https://blogs.nvidia.com/blog/2021/07/08/geforce-now-thursday-july-8/">Squad Up for GFN Thursday with 400+ Multiplayer PC Games, Including 3 Added This Week</a></p>
+<h2 class="rm-manual">Post navigation</h2></article>
+</body></html>

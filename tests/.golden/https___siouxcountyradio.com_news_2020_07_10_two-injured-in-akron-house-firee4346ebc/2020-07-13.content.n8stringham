@@ -1,0 +1,86 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Two Injured in Akron House Fire - Sioux County Radio </p>
+<p class="rm-manual"><a href="#body-start">Skip to Main Content</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///on-air"> <span>On-Air</span> </a> </li> <li class="rm-manual"> <a href="file:///news"> <span>News</span> </a> </li> <li class="rm-manual"> <a href="file:///weather"> <span>Weather</span> </a> </li> <li class="rm-manual"> <a href="file:///sports"> <span>Sports</span> </a> </li> <li class="rm-manual"> <a href="file:///obituaries"> <span>Obituaries</span> </a> </li> <li class="rm-manual"> <a href="file:///swap-shop"> <span>Swap Shop</span> </a> </li> <li class="rm-manual"> <a href="file:///the-daily-grind"> <span>The Daily Grind</span> </a> </li> <li class="rm-manual"> <a href="file:///events"> <span>Events</span> </a> </li> <li class="rm-manual"> <a href="file:///programs"> <span>Programs</span> </a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///weather/weatherlocal-announcements"> <span>Weather/Local Announcements</span> </a> </li> <li class="rm-manual"> <a href="file:///weather/sioux-ritmo-anuncios"> <span>Sioux Ritmo Anuncios</span> </a> </li> <li class="rm-manual"> <a href="file:///win"> <span>Win</span> </a> </li> <li class="rm-manual"> <a href="file:///about-us"> <span>About Us</span> </a> </li> <li class="rm-manual"> <a href="file:///advertising"> <span>Advertising</span> </a> </li> <li class="rm-manual"> <a href="file:///cf-digital"> <span>CF Digital</span> </a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///on-air"> <span>On-Air</span> </a> <p class="rm-manual"> <a href="file:///on-air/939-ksou-programming"> <span>93.9 KSOU Programming</span> </a> <a href="file:///on-air/hawk-country-1069-programming"> <span>Hawk Country 106.9 Programming</span> </a> <a href="file:///on-air/sioux-ritmo"> <span>Sioux Ritmo Programming (1090AM/101.5FM)</span> </a> <a href="file:///on-air/mobile-apps"> <span>Mobile Apps</span> </a> </p> </li> <li class="rm-manual"> <a href="file:///news"> <span>News</span> </a> <p class="rm-manual"> <a href="file:///local-news"> <span>Local News</span> </a> </p> </li> <li class="rm-manual"> <a href="file:///weather"> <span>Weather</span> </a> <p class="rm-manual"> <a href="file:///weather/weatherlocal-announcements"> <span>Weather/Local Announcements</span> </a> <a href="file:///weather/sioux-ritmo-anuncios"> <span>Sioux Ritmo Anuncios</span> </a> </p> </li> <li class="rm-manual"> <a href="file:///sports"> <span>Sports</span> </a> <p class="rm-manual"> <a href="file:///sports/broadcast-schedule"> <span>Broadcast Schedule</span> </a> <a href="file:///sports/audio-archive"> <span>Audio Archive</span> </a> <a href="file:///sports/area-scoreboard"> <span>Area Scoreboard</span> </a> <a href="file:///sports/scr-tv-video-stream"> <span>SCR TV Video Stream</span> </a> <a href="file:///sports/scr-mobile-apps"> <span>SCR Mobile Apps</span> </a> <a href="file:///local-sports"> <span>Local Sports</span> </a> </p> </li> <li class="rm-manual"> <a href="file:///obituaries"> <span>Obituaries</span> </a> </li> <li class="rm-manual"> <a href="file:///swap-shop"> <span>Swap Shop</span> </a> <p class="rm-manual"> <a href="file:///swap-shop/monday"> <span>Monday</span> </a> <a href="file:///swap-shop/tuesday"> <span>Tuesday</span> </a> <a href="file:///swap-shop/wednesday"> <span>Wednesday</span> </a> <a href="file:///swap-shop/thursday"> <span>Thursday</span> </a> <a href="file:///swap-shop/friday"> <span>Friday</span> </a> <a href="file:///swap-shop/garage-sales"> <span>Garage Sales</span> </a> </p> </li> <li class="rm-manual"> <a href="file:///the-daily-grind"> <span>The Daily Grind</span> </a> </li> <li class="rm-manual"> <a href="file:///events"> <span>Events</span> </a> <p class="rm-manual"> <a href="file:///events"> <span>Community Calendar</span> </a> <a href="file:///events/major-concerts-events"> <span>Major Concerts &amp; Events</span> </a> </p> </li> <li class="rm-manual"> <a href="file:///programs"> <span>Programs</span> </a> <p class="rm-manual"> <a href="file:///programs/amistad-cristiana"> <span>Amistad Cristiana</span> </a> <a href="file:///events"> <span>Community Calendar</span> </a> <a href="file:///the-daily-grind"> <span>The Daily Grind</span> </a> <a href="file:///programs/job-hunter"> <span>Job Hunter</span> </a> <a href="file:///programs/outdoors-this-week"> <span>Outdoors This Week</span> </a> <a href="file:///programs/pet-patrol"> <span>Pet Patrol</span> </a> <a href="file:///programs/precious-memories"> <span>Precious Memories</span> </a> <a href="file:///swap-shop"> <span>Swap Shop</span> </a> </p> </li> </ul>
+<p class="rm-manual"><a href="https://coronavirus.iowa.gov/"> Iowa Coronavirus Dashboard</a></p>
+<ul class="rm-manual"> <li class="rm-manual"> <h4 href="#" class="rm-manual">Local News</h4> </li> <li class="rm-manual"> <a href="file:///local-news">MORE Local News</a> </li> </ul>
+<h5 class="rm-manual">Two Injured in Akron House Fire</h5>
+<p class="rm-manual">July 10, 2020 9:21<span>am</span></p>
+<p>Crews were on the scene of a house fire in Akron Thursday morning where two people were injured.</p>
+<p>Firefighters responded to a fire on the 500 block of Cheyenne Blvd at about 9:50 a.m.</p>
+<p>Investigators on the scene say the fire was accidental, but the exact cause of the fire is still under investigation.</p>
+<p>Two people received injuries in the fire, one person suffered burns 
+and smoke inhalation, the other suffered from smoke inhalation.</p>
+<p class="rm-manual">Courtesy of Media Partner KTIV</p>
+<ul class="rm-manual"> <li class="rm-manual"> <h4 href="#" class="rm-manual">More Local News</h4> </li> <li class="rm-manual"> <a href="file:///news">All News</a> </li> </ul>
+<p class="rm-manual"> <a href="file:///news/2020/07/06/lewis-clark-celebrating-30-years-sioux-center-now-center-of-construction"> </a></p><p class="rm-manual"><a href="file:///news/2020/07/06/lewis-clark-celebrating-30-years-sioux-center-now-center-of-construction"> </a></p><h5 class="rm-manual"><a href="file:///news/2020/07/06/lewis-clark-celebrating-30-years-sioux-center-now-center-of-construction">Lewis &amp; Clark Celebrating 30 Years - Sioux Center Now Center of Construction</a></h5><a href="file:///news/2020/07/06/lewis-clark-celebrating-30-years-sioux-center-now-center-of-construction"> <p class="rm-manual">July 06, 2020 11:36<span>am</span></p> <p class="rm-manual"></p> <p class="rm-manual"> The Lewis &amp; Clark Regional Water System is celebrating its 30th year of incorporation and</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///news/2020/06/29/sioux-center-considers-proposed-pond-for-retention"> </a></p><p class="rm-manual"><a href="file:///news/2020/06/29/sioux-center-considers-proposed-pond-for-retention"> </a></p><h5 class="rm-manual"><a href="file:///news/2020/06/29/sioux-center-considers-proposed-pond-for-retention">Sioux Center Considers Proposed Pond For Retention</a></h5><a href="file:///news/2020/06/29/sioux-center-considers-proposed-pond-for-retention"> <p class="rm-manual">June 29, 2020 2:40<span>pm</span></p> <p class="rm-manual"></p> <p class="rm-manual"> A proposed detention pond in eastern Sioux Center could provide a number of benefits to both</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///news/2020/06/26/land-use-planning-sets-vision-for-three-sites-in-sioux-center"> </a></p><p class="rm-manual"><a href="file:///news/2020/06/26/land-use-planning-sets-vision-for-three-sites-in-sioux-center"> </a></p><h5 class="rm-manual"><a href="file:///news/2020/06/26/land-use-planning-sets-vision-for-three-sites-in-sioux-center">Land Use Planning Sets Vision for Three Sites in Sioux Center</a></h5><a href="file:///news/2020/06/26/land-use-planning-sets-vision-for-three-sites-in-sioux-center"> <p class="rm-manual">June 26, 2020 6:51<span>am</span></p> <p class="rm-manual"></p> <p class="rm-manual"> Positioning Sioux Center for healthy growth is the focus of commercial site planning for three</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///news/2020/06/25/no-injuries-in-head-on-collision"> </a></p><p class="rm-manual"><a href="file:///news/2020/06/25/no-injuries-in-head-on-collision"> </a></p><h5 class="rm-manual"><a href="file:///news/2020/06/25/no-injuries-in-head-on-collision">No Injuries in Head-On Collision</a></h5><a href="file:///news/2020/06/25/no-injuries-in-head-on-collision"> <p class="rm-manual">June 25, 2020 10:13<span>am</span></p> <p class="rm-manual"></p> <p class="rm-manual"> Sioux Center Police investigated a head-on collision in a construction zone on highway 75. The</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///news/2020/06/11/siouxnami-water-park-opens-friday-new-rules-for-staff-and-guests"> </a></p><p class="rm-manual"><a href="file:///news/2020/06/11/siouxnami-water-park-opens-friday-new-rules-for-staff-and-guests"> </a></p><h5 class="rm-manual"><a href="file:///news/2020/06/11/siouxnami-water-park-opens-friday-new-rules-for-staff-and-guests">Siouxnami Water Park Opens Friday - New Rules For Staff and Guests</a></h5><a href="file:///news/2020/06/11/siouxnami-water-park-opens-friday-new-rules-for-staff-and-guests"> <p class="rm-manual">June 11, 2020 10:11<span>am</span></p> <p class="rm-manual"></p> <p class="rm-manual"> 2020 Siouxnami Waterpark Operations Policies and Procedures With safety and health concerns</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///news/2020/06/10/siouxnami-water-park-to-open-friday"> </a></p><p class="rm-manual"><a href="file:///news/2020/06/10/siouxnami-water-park-to-open-friday"> </a></p><h5 class="rm-manual"><a href="file:///news/2020/06/10/siouxnami-water-park-to-open-friday">Siouxnami Water Park To Open Friday</a></h5><a href="file:///news/2020/06/10/siouxnami-water-park-to-open-friday"> <p class="rm-manual">June 10, 2020 3:38<span>pm</span></p> <p class="rm-manual"></p> <p class="rm-manual"> Sioux Centers Siouxnami Waterpark is set to open Friday, June 12, for summer fun. The</p> </a> <p class="rm-manual"></p>
+<ul class="rm-manual"> <li class="rm-manual"> <h4 href="/weather" class="rm-manual">Weather</h4> </li> <li class="rm-manual"> <a href="file:///weather">MORE LOCAL WEATHER</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <h4 href="#" class="rm-manual">What's Hot</h4> </li> </ul>
+<p class="rm-manual"><a href="file:///news/2020/07/07/city-offers-flower-tour"> </a></p><p class="rm-manual"><a href="file:///news/2020/07/07/city-offers-flower-tour">City Offers Flower Tour</a></p><a href="file:///news/2020/07/07/city-offers-flower-tour"> <p class="rm-manual">July 07, 2020 12:30<span>am</span></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///news/2020/07/08/agrivision-breaks-ground-on-85000-square-foot-facility"> </a></p><p class="rm-manual"><a href="file:///news/2020/07/08/agrivision-breaks-ground-on-85000-square-foot-facility">AgriVision Breaks Ground on 85,000 Square Foot Facility</a></p><a href="file:///news/2020/07/08/agrivision-breaks-ground-on-85000-square-foot-facility"> <p class="rm-manual">July 08, 2020 2:52<span>pm</span></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///news/2020/07/09/two-highway-60-accidents-investigated-on-tuesday"> </a></p><p class="rm-manual"><a href="file:///news/2020/07/09/two-highway-60-accidents-investigated-on-tuesday">Two Highway 60 Accidents Investigated on Tuesday</a></p><a href="file:///news/2020/07/09/two-highway-60-accidents-investigated-on-tuesday"> <p class="rm-manual">July 09, 2020 2:04<span>pm</span></p> </a> <p class="rm-manual"></p>
+<ul class="rm-manual"> <li class="rm-manual"> <h4 href="/events" class="rm-manual">Upcoming Events</h4> </li> <li class="rm-manual"> <a href="file:///events">MORE EVENTS</a> </li> </ul>
+<p class="rm-manual"><a href="file:///event/sioux-center-vfw-post-6129-meeting"> </a></p><p class="rm-manual"><a href="file:///event/sioux-center-vfw-post-6129-meeting"> </a></p><h5 class="rm-manual"><a href="file:///event/sioux-center-vfw-post-6129-meeting">Jul</a></h5><a href="file:///event/sioux-center-vfw-post-6129-meeting"> <h2 class="rm-manual">13</h2> <p class="rm-manual"></p> <p class="rm-manual">Sioux Center VFW Post 6129 Meeting</p> <p class="rm-manual">7:00pm </p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///event/hull-kiwanis-youth-golf-tournament"> </a></p><p class="rm-manual"><a href="file:///event/hull-kiwanis-youth-golf-tournament"> </a></p><h5 class="rm-manual"><a href="file:///event/hull-kiwanis-youth-golf-tournament">Jul</a></h5><a href="file:///event/hull-kiwanis-youth-golf-tournament"> <h2 class="rm-manual">15</h2> <p class="rm-manual"></p> <p class="rm-manual">Hull Kiwanis Youth Golf Tournament</p> <p class="rm-manual">1:00pm Hull, IA</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///event/farmers-market-orange-city"> </a></p><p class="rm-manual"><a href="file:///event/farmers-market-orange-city"> </a></p><h5 class="rm-manual"><a href="file:///event/farmers-market-orange-city">Jul</a></h5><a href="file:///event/farmers-market-orange-city"> <h2 class="rm-manual">15</h2> <p class="rm-manual"></p> <p class="rm-manual">Farmers Market-Orange City</p> <p class="rm-manual">5:00pm Orange City, IA</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual">128 20th Street S.E. | Sioux Center, IA 51250 | <a href="tel:712-722-1090">712-722-1090</a> </p>
+<p class="rm-manual"> <a href="file:///submit-news">Submit News</a> <a href="file:///free-advertising-audit">Free Advertising Audit</a> <a href="file:///legal-links">Legal Links</a> <a href="file:///privacy-policy">Privacy Policy</a> </p>
+<p class="rm-manual">©2020 Sioux County Radio | All Rights Reserved</p>
+<p class="rm-manual">Site powered by <a href="https://cfdigitalgroup.com/" rel="nofollow">CF Digital Group</a></p>
+<p class="rm-manual"> No </p>
+<p class="rm-manual"> Yes </p>
+<h1 class="rm-manual">Sioux County Radio</h1>
+<p class="rm-manual"><span>https://siouxcountyradio.com</span> </p>
+<p class="rm-manual"><span>Sioux County Radio</span> </p>
+<p class="rm-manual"><span>712-722-1090</span> </p>
+<p class="rm-manual"><span>ksou@siouxcountyradio.com</span> </p>
+<p class="rm-manual"><span>https://siouxcountyradio.com/media/library11/fluid-mod-setting/12/logo/SCRAmerica-1.png</span> </p>
+<p class="rm-manual"><span>https://siouxcountyradio.com/media/library11/fluid-mod-page/967/footer_image/web-color.jpg</span> </p>
+<p class="rm-manual"><span> <span>128 20th Street S.E.</span> <span>Sioux Center</span> <span>IA</span> <span>51250</span> <span>US</span> </span> </p>
+<p class="rm-manual"><span> <span>43.05544500</span> <span>-96.17355900</span> </span> </p>
+<p class="rm-manual"><span>https://www.facebook.com/Siouxcountyradio</span> </p>
+<p class="rm-manual"><span>https://twitter.com/theSCRadio</span> </p></article>
+</body></html>

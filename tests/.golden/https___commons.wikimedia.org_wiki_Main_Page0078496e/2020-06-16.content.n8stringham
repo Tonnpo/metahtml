@@ -1,0 +1,495 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Wikimedia Commons </p>
+<h1>Main Page</h1>
+<p>From Wikimedia Commons, the free media repository</p>
+<p><a href="#mw-head">Jump to navigation</a> </p>
+<p><a href="#p-search">Jump to search</a> </p>
+<table> <tbody><tr> <td>
+<p>Wikimedia Commons</p>
+<p>a collection of <a href="file:///wiki/Special:Statistics">62,071,918</a> <a href="file:///wiki/Commons:Reusing_content_outside_Wikimedia">freely usable</a> media files to which <a href="file:///wiki/Commons:Welcome">anyone can contribute</a></p> </td> <td> <ul>
+<li><a href="file:///wiki/Category:Images">Images</a></li> <li><a href="file:///wiki/Category:Audio_files">Sounds</a></li> <li><a href="file:///wiki/Category:Videos">Videos</a></li> <li><a href="file:///wiki/Special:UploadWizard"><span>Upload</span></a></li>
+</ul> </td>
+</tr></tbody>
+</table>
+<table> <tbody><tr> <td> <p>Picture of the day</p> <p>Image of the <a href="https://en.wikipedia.org/wiki/Virgin_of_Los_Remedios">Virgin of Los Remedios</a> ("Lady of the Cures") in the homonymous <a href="https://en.wikipedia.org/wiki/Baroque">Baroque</a> chapel of the church of <a href="https://en.wikipedia.org/wiki/John_the_Baptist">John the Baptist</a>, <a href="https://en.wikipedia.org/wiki/%C3%81greda">Ágreda</a>, <a href="https://en.wikipedia.org/wiki/province_of_Soria">province of Soria</a>, <a href="https://en.wikipedia.org/wiki/Castile_and_Le%C3%B3n">Castile and León</a>, Spain. The chapel was built in 1697 by Count of Villarea. The originally Romanesque church (visible in its <a href="https://en.wikipedia.org/wiki/Portal_(architecture)">portal</a>) was built in the second half of the 12th century and reworked in the 16th century with <a href="https://en.wikipedia.org/wiki/Gothic_architecture">Gothic</a>, <a href="https://en.wikipedia.org/wiki/Renaissance_architecture">Renaissance</a> and Baroque elements, while the <a href="https://en.wikipedia.org/wiki/reredos">reredos</a> behind the image dates from the 18th century. </p> <ul>
+<li><a rel="nofollow" href="https://twitter.com/share?url=https://commons.wikimedia.org/wiki/File:Iglesia_de_San_Juan_Bautista,_%C3%81greda,_Soria,_Espa%C3%B1a,_2018-03-29,_DD_40-42_HDR.jpg&amp;via=WikiCommons&amp;text=Check+out+today%27s+%23PictureOfTheDay+on+Wikimedia+Commons+at&amp;related=WikiCommons,Wikipedia">Tweet</a></li> <li><a href="https://commons.wikimedia.org/w/api.php?action=featuredfeed&amp;feed=potd&amp;feedformat=rss&amp;language=en">RSS feed</a></li> <li><a href="https://lists.wikimedia.org/mailman/listinfo/daily-image-l">Subscribe</a></li> <li><a href="file:///wiki/Special:MyLanguage/Commons:Picture_of_the_day">Previous Pictures of the day</a></li>
+</ul> <p>Media of the day</p> <p><a href="https://upload.wikimedia.org/wikipedia/commons/5/51/BlackBerry_Leap-sensores_array_infrared_proximity-I3200_VNr%C2%B00003.webm"><span><span>Play media</span></span></a></p> <p>The pulsing <a href="https://en.wikipedia.org/wiki/Proximity_sensor">proximity sensor</a> of a <a href="https://en.wikipedia.org/wiki/BlackBerry_Leap">BlackBerry Leap</a> during a call. It detects when it is covered and turns off the smartphone screen. The sensor size is about 1.5 by 1.5 mm. </p> <p><a href="file:///wiki/Commons:Media_help">Problems playing the file?</a></p> <ul>
+<li><a rel="nofollow" href="https://twitter.com/share?url=https://commons.wikimedia.org/wiki/File:BlackBerry_Leap-sensores_array_infrared_proximity-I3200_VNr%C2%B00003.webm&amp;via=WikiCommons&amp;text=Check+out+today%27s+%23MediaOfTheDay+on+Wikimedia+Commons+at&amp;related=WikiCommons,Wikipedia">Tweet</a></li> <li><a href="https://commons.wikimedia.org/w/api.php?action=featuredfeed&amp;feed=motd&amp;feedformat=rss&amp;language=en">RSS feed</a></li> <li><a href="file:///wiki/Special:MyLanguage/Commons:Media_of_the_day">Previous Media of the day</a></li>
+</ul> <p class="rm-manual">Participating</p> <p class="rm-manual"><a href="file:///wiki/Special:UserLogin"><span><span>Log in</span></span></a><a href="file:///wiki/Special:UserLogin/signup"><span><span>Create account</span></span></a></p> <dl class="rm-manual">
+<dt class="rm-manual">Browsing?</dt> <dd>Please use the search box at the top of this page or the links to the right. Feel free to subscribe to our <a href="file:///wiki/Commons:Feeds">syndicated feeds</a>.</dd> <dt class="rm-manual">Using?</dt> <dd>To fulfill the free license requirements, please read our <a href="file:///wiki/Commons:Reusing_content_outside_Wikimedia">Reuse</a> guide. You can also <a href="file:///wiki/Commons:Picture_requests">request a picture</a>.</dd> <dt class="rm-manual">Identifying?</dt> <dd>Have a browse through <a href="file:///wiki/Category:Unidentified_subjects">Category:Unidentified subjects</a>. If you find something you can identify, write a note on the item's talk page.</dd> <dt class="rm-manual">Creating?</dt> <dd>Check out all you need to know at our <a href="file:///wiki/Commons:Contributing_your_own_work">Contributing your own work</a> guide.</dd> <dt class="rm-manual">and more!</dt> <dd>To explore more ways you can contribute to this project, check out the <a href="file:///wiki/Commons:Community_portal">Community Portal</a>.</dd>
+</dl> </td> <td> <p>Monthly photo challenge</p> <p>Take some photos and upload them to meet our monthly thematic challenge, get inspiration and try new subjects! <a href="file:///wiki/Commons:Photo_challenge">Learn more about the challenges!</a></p> <p> <a href="file:///wiki/Commons:Photo_challenge#Challenges_open_for_submission"><span><span>Check out this month's challenges</span></span></a> </p> <p>Highlights</p> <p>If you are browsing Commons for the first time, you may want to start with <a href="file:///wiki/Commons:Featured_pictures">Featured pictures</a>, <a href="file:///wiki/Commons:Quality_images">Quality images</a>, <a href="file:///wiki/Commons:Valued_images">Valued images</a> or <a href="file:///wiki/Commons:Featured_videos">Featured videos</a>.</p><p>You can also see some work created by our highly skilled contributors in <a href="file:///wiki/Commons:Meet_our_photographers">Meet our photographers</a> and <a href="file:///wiki/Commons:Meet_our_illustrators">Meet our illustrators</a>. You may also be interested in <a href="file:///wiki/Commons:Picture_of_the_Year">Picture of the Year</a>. </p><p></p> <p>Content</p> <dl><dt>By topic</dt></dl> <p><a href="file:///wiki/Category:Nature">Nature</a> </p> <ul>
+<li><a href="file:///wiki/Category:Animalia">Animalia</a></li> <li><a href="file:///wiki/Category:Fossils">Fossils</a></li> <li><a href="file:///wiki/Category:Landscapes">Landscapes</a></li> <li><span><a href="file:///wiki/Category:Marine_life">Marine life</a></span></li> <li><a href="file:///wiki/Category:Plantae">Plantae</a></li> <li><a href="file:///wiki/Category:Weather">Weather</a></li>
+</ul> <p><a href="file:///wiki/Category:Society">Society</a> <a href="file:///wiki/Category:Culture">Culture</a> </p> <ul>
+<li><a href="file:///wiki/Category:Art">Art</a></li> <li><a href="file:///wiki/Category:Belief">Belief</a></li> <li><a href="file:///wiki/Category:Entertainment">Entertainment</a></li> <li><a href="file:///wiki/Category:Events">Events</a></li> <li><a href="file:///wiki/Category:Flags">Flags</a></li> <li><a href="file:///wiki/Category:Food">Food</a></li> <li><a href="file:///wiki/Category:History">History</a></li> <li><a href="file:///wiki/Category:Language">Language</a></li> <li><a href="file:///wiki/Category:Literature">Literature</a></li> <li><a href="file:///wiki/Category:Music">Music</a></li> <li><a href="file:///wiki/Category:Objects">Objects</a></li> <li><a href="file:///wiki/Category:People">People</a></li> <li><a href="file:///wiki/Category:Places">Places</a></li> <li><a href="file:///wiki/Category:Politics">Politics</a></li> <li><a href="file:///wiki/Category:Sports">Sports</a></li>
+</ul> <p><a href="file:///wiki/Category:Science">Science</a> </p> <ul>
+<li><a href="file:///wiki/Category:Astronomy">Astronomy</a></li> <li><a href="file:///wiki/Category:Biology">Biology</a></li> <li><a href="file:///wiki/Category:Chemistry">Chemistry</a></li> <li><a href="file:///wiki/Category:Earth_sciences">Earth sciences</a></li> <li><a href="file:///wiki/Category:Mathematics">Mathematics</a></li> <li><a href="file:///wiki/Category:Medicine">Medicine</a></li> <li><a href="file:///wiki/Category:Physics">Physics</a></li> <li><a href="file:///wiki/Category:Technology">Technology</a></li>
+</ul> <p><a href="file:///wiki/Category:Engineering">Engineering</a> </p> <ul>
+<li><a href="file:///wiki/Category:Architecture">Architecture</a></li> <li><a href="file:///wiki/Category:Chemical_engineering">Chemical</a></li> <li><a href="file:///wiki/Category:Civil_engineering">Civil</a></li> <li><a href="file:///wiki/Category:Electrical_engineering">Electrical</a></li> <li><a href="file:///wiki/Category:Environmental_engineering">Environmental</a></li> <li><a href="file:///wiki/Category:Geophysical_engineering">Geophysical</a></li> <li><a href="file:///wiki/Category:Mechanical_engineering">Mechanical</a></li> <li><a href="file:///wiki/Category:Process_engineering">Process</a></li>
+</ul> <p><span>By location </span></p> <p><a href="file:///wiki/Category:Earth">Earth</a> </p> <ul>
+<li><a href="file:///wiki/Category:Oceans">Oceans</a></li> <li><a href="file:///wiki/Category:Islands">Islands</a></li> <li><a href="file:///wiki/Category:Archipelagoes">Archipelagoes</a></li> <li><a href="file:///wiki/Category:Continents">Continents</a></li> <li><a href="file:///wiki/Category:Countries">Countries</a></li> <li><a href="file:///wiki/Category:Country_subdivisions_by_country">Subdivisions</a></li>
+</ul> <p><a href="file:///wiki/Category:Outer_space">Space</a> </p> <ul>
+<li><a href="file:///wiki/Category:Asteroids">Asteroids</a></li> <li><span><a href="file:///wiki/Category:Natural_satellites">Natural satellites</a></span></li> <li><a href="file:///wiki/Category:Comets">Comets</a></li> <li><a href="file:///wiki/Category:Planets">Planets</a></li> <li><a href="file:///wiki/Category:Stars">Stars</a></li> <li><a href="file:///wiki/Category:Galaxies">Galaxies</a></li>
+</ul> <p><span>By type </span></p> <p><a href="file:///wiki/Category:Images">Images</a> </p> <ul>
+<li><a href="file:///wiki/Category:Animations">Animations</a></li> <li><a href="file:///wiki/Category:Diagrams">Diagrams</a></li> <li><a href="file:///wiki/Category:Drawings">Drawings</a></li> <li>
+<a href="file:///wiki/Category:Maps">Maps</a> (<a href="file:///wiki/Atlas">Atlas</a>)</li> <li><a href="file:///wiki/Category:Paintings">Paintings</a></li> <li><a href="file:///wiki/Category:Photographs">Photos</a></li> <li><a href="file:///wiki/Category:Symbols">Symbols</a></li>
+</ul> <p><a href="file:///wiki/Category:Audio_files">Sounds</a> </p> <ul>
+<li><a href="file:///wiki/Category:Audio_files_of_music">Music</a></li> <li><a href="file:///wiki/Category:Pronunciation">Pronunciation</a></li> <li><a href="file:///wiki/Category:Audio_files_of_speeches">Speeches</a></li> <li><a href="file:///wiki/Category:Spoken_Wikipedia">Spoken Wikipedia</a></li>
+</ul> <p><a href="file:///wiki/Category:Videos">Videos</a> </p> <p><span>By author </span></p> <ul>
+<li><a href="file:///wiki/Category:Buildings_by_architect">Architects</a></li> <li><a href="file:///wiki/Category:Compositions_by_composer">Composers</a></li> <li><a href="file:///wiki/Category:Paintings_by_painter">Painters</a></li> <li><a href="file:///wiki/Category:Photographs_by_photographer">Photographers</a></li> <li><a href="file:///wiki/Category:Sculptures_by_sculptor">Sculptors</a></li>
+</ul> <p><span>By license </span></p> <p><a href="file:///wiki/Category:Copyright_statuses">Copyright statuses</a> </p> <ul>
+<li><span><a href="file:///wiki/Category:Creative_Commons_licenses">Creative Commons licenses</a></span></li> <li><a href="file:///wiki/Category:GFDL">GFDL</a></li> <li><a href="file:///wiki/Category:Public_domain">Public domain</a></li>
+</ul> <p><span>By source </span></p> <p><a href="file:///wiki/Category:Image_sources">Image sources</a> </p> <ul>
+<li><a href="file:///wiki/Category:Images_from_encyclopedias">Encyclopedias</a></li> <li><a href="file:///wiki/Category:Media_from_scholarly_journals">Scholarly journals</a></li> <li><a href="file:///wiki/Category:Self-published_work">Self-published work</a></li>
+</ul> <dl><dt><a href="file:///wiki/June_16">Images from June 16</a></dt></dl> </td>
+</tr></tbody>
+</table>
+<p class="rm-manual">Wikimedia Commons is part of the <a href="https://en.wikipedia.org/wiki/Non-profit_organization">non-profit</a>, multilingual, <a href="file:///wiki/Commons:Licensing">free-content</a> <a href="https://meta.wikimedia.org/wiki/Wikimedia_movement">Wikimedia</a> family.</p>
+<table class="rm-manual"> <tbody>
+<tr class="rm-manual"> <td class="rm-manual">
+<a href="https://en.wikipedia.org/wiki/">Wikipedia</a><span>Encyclopedia</span> </td> <td class="rm-manual">
+<a href="https://en.wikinews.org/wiki/">Wikinews</a><span>Open journalism</span> </td> <td class="rm-manual">
+<a href="https://en.wiktionary.org/wiki/">Wiktionary</a><span>Dictionary &amp; thesaurus</span> </td> <td class="rm-manual">
+<a href="https://en.wikibooks.org/wiki/">Wikibooks</a><span>Textbooks &amp; manuals</span> </td>
+</tr> <tr class="rm-manual"> <td class="rm-manual">
+<a href="https://en.wikiquote.org/wiki/">Wikiquote</a><span>Quotations</span> </td> <td class="rm-manual">
+<a href="https://species.wikimedia.org/wiki/">Wikispecies</a><span>Species directory</span> </td> <td class="rm-manual">
+<a href="https://en.wikiversity.org/wiki/">Wikiversity</a><span>Learning tools</span> </td> <td class="rm-manual">
+<a href="https://en.wikivoyage.org/wiki/">Wikivoyage</a><span>Travel guide</span> </td>
+</tr> <tr class="rm-manual"> <td class="rm-manual">
+<a href="https://en.wikisource.org/wiki/">Wikisource</a><span>Source texts</span> </td> <td class="rm-manual">
+<a href="https://www.wikidata.org/wiki/">Wikidata</a><span>Knowledge base</span> </td> <td class="rm-manual">
+<a href="https://meta.wikimedia.org/wiki/">Meta-Wiki</a><span>Coordination</span> </td> <td class="rm-manual">
+<a href="https://www.mediawiki.org/wiki/">MediaWiki</a><span>Wiki software development</span> </td>
+</tr>
+</tbody>
+</table>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Tuisblad">Afrikaans</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Houptsyte">Alemannisch</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Portalada">aragonés</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/H%C4%93afodtramet">Ænglisc</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D8%A9">العربية</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Entamu">asturianu</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%D0%91%D0%B5%D1%82%D3%80%D0%B5%D1%80%D0%B0%D0%B1_%D0%B3%D1%8C%D1%83%D0%BC%D0%B5%D1%80">авар</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Hauptsaitn">Boarisch</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%D0%9F%D0%B5%D1%80%D1%88%D0%B0%D1%8F_%D1%81%D1%82%D0%B0%D1%80%D0%BE%D0%BD%D0%BA%D0%B0">беларуская</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%D0%93%D0%B0%D0%BB%D0%BE%D1%9E%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D0%B0%D1%80%D0%BE%D0%BD%D0%BA%D0%B0">беларуская (тарашкевіца)‎</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%D0%9D%D0%B0%D1%87%D0%B0%D0%BB%D0%BD%D0%B0_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0">български</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%E0%A4%AE%E0%A5%81%E0%A4%96%E0%A5%8D%E0%A4%AF_%E0%A4%AA%E0%A4%A8%E0%A5%8D%E0%A4%A8%E0%A4%BE">भोजपुरी</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Tungkaran_Tatambaian">Banjar</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%A7%E0%A6%BE%E0%A6%A8_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE">বাংলা</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Degemer">brezhoneg</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Po%C4%8Detna_strana">bosanski</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/P%C3%A0gina_principal">català</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/T%C3%A0u-hi%C4%95k">Mìng-dĕ̤ng-ngṳ̄</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%D8%AF%DB%95%D8%B3%D8%AA%D9%BE%DB%8E%DA%A9">کوردی</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Hlavn%C3%AD_strana">čeština</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Hafan">Cymraeg</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Forside">dansk</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Hauptseite">Deutsch</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Pela_Seri">Zazaki</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%CE%9A%CF%8D%CF%81%CE%B9%CE%B1_%CE%A3%CE%B5%CE%BB%CE%AF%CE%B4%CE%B1">Ελληνικά</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a>English</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%C4%88efpa%C4%9Do">Esperanto</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Portada">español</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Esileht">eesti</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Azala">euskara</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/P%C3%A1hina_prencipal">estremeñu</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%D8%B5%D9%81%D8%AD%D9%87%D9%94_%D8%A7%D8%B5%D9%84%DB%8C">فارسی</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Etusivu">suomi</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Fors%C3%AD%C3%B0a/fo">føroyskt</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Accueil">français</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Haadside">Frysk</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Pr%C3%ADomhleathanach">Gaeilge</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Portada_galega">galego</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%E0%AA%AE%E0%AB%81%E0%AA%96%E0%AA%AA%E0%AB%83%E0%AA%B7%E0%AB%8D%E0%AA%A0">ગુજરાતી</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Th%C3%A8u-ya%CC%8Dp">客家語/Hak-kâ-ngî</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%D7%A2%D7%9E%D7%95%D7%93_%D7%A8%D7%90%D7%A9%D7%99">עברית</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%E0%A4%AE%E0%A5%81%E0%A4%96%E0%A4%AA%E0%A5%83%E0%A4%B7%E0%A5%8D%E0%A4%A0_(hi)">हिन्दी</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Glavna_stranica">hrvatski</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/H%C5%82owna_strona">hornjoserbsce</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Kezd%C5%91lap">magyar</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%D4%B3%D5%AC%D5%AD%D5%A1%D5%BE%D5%B8%D6%80_%D4%B7%D5%BB">հայերեն</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Pagina_principal">interlingua</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Halaman_Utama">Bahasa Indonesia</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Fors%C3%AD%C3%B0a/is">íslenska</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Pagina_principale">italiano</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8">日本語</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%E1%83%9B%E1%83%97%E1%83%90%E1%83%95%E1%83%90%E1%83%A0%E1%83%98_%E1%83%92%E1%83%95%E1%83%94%E1%83%A0%E1%83%93%E1%83%98">ქართული</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%D0%91%D0%B0%D1%81%D1%82%D1%8B_%D0%B1%D0%B5%D1%82">қазақша</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%E1%9E%91%E1%9F%86%E1%9E%96%E1%9F%90%E1%9E%9A%E1%9E%8A%E1%9E%BE%E1%9E%98">ភាសាខ្មែរ</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%E0%B2%AE%E0%B3%81%E0%B2%96%E0%B3%8D%E0%B2%AF_%E0%B2%AA%E0%B3%81%E0%B2%9F">ಕನ್ನಡ</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%EB%8C%80%EB%AC%B8">한국어</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%EC%A1%B0%EC%84%A0%EB%A7%90">조선말</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Destp%C3%AAk">kurdî</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Pagina_prima">Latina</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Haapts%C3%A4it">Lëtzebuergesch</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Pagrindinis_puslapis">lietuvių</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/S%C4%81kumlapa">latviešu</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Fandraisana">Malagasy</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0">македонски</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%A7%E0%B4%BE%E0%B4%A8_%E0%B4%A4%E0%B4%BE%E0%B5%BE">മലയാളം</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%E0%A4%AE%E0%A5%81%E0%A4%96%E0%A4%AA%E0%A5%83%E0%A4%B7%E0%A5%8D%E0%A4%A0_(mr)">मराठी</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Laman_Utama">Bahasa Melayu</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Il-Pa%C4%A1na_prin%C4%8Bipali">Malti</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/P%C3%A1igina_percipal">Mirandés</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%E1%80%97%E1%80%9F%E1%80%AD%E1%80%AF%E1%80%85%E1%80%AC%E1%80%99%E1%80%BB%E1%80%80%E1%80%BA%E1%80%94%E1%80%BE%E1%80%AC">မြန်မာဘာသာ</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%DA%AF%D8%AA_%D9%88%D9%84%DA%AF">مازِرونی</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Cal%C4%ABxatl">Nāhuatl</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Paggena_prencepale">Napulitano</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/H%C3%B6%C3%B6ftsiet">Plattdüütsch</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Veurblad">Nedersaksies</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%E0%A4%97%E0%A5%83%E0%A4%B9_%E0%A4%AA%E0%A5%83%E0%A4%B7%E0%A5%8D%E0%A4%A0">नेपाली</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Hoofdpagina">Nederlands</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Hovudside">norsk nynorsk</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Hovedside">norsk</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Acu%C3%A8lh">occitan</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%E0%AC%AA%E0%AD%8D%E0%AC%B0%E0%AC%A7%E0%AC%BE%E0%AC%A8_%E0%AC%AA%E0%AD%83%E0%AC%B7%E0%AD%8D%E0%AC%A0%E0%AC%BE">ଓଡ଼ିଆ</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%D0%A1%C3%A6%D0%B9%D1%80%D0%B0%D0%B3_%D1%84%D0%B0%D1%80%D1%81">Ирон</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%E0%A8%AE%E0%A9%81%E0%A9%B1%E0%A8%96_%E0%A8%B8%E0%A8%AB%E0%A8%BC%E0%A8%BE">ਪੰਜਾਬੀ</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Pamuklat">Kapampangan</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Pache_picarte">Picard</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Strona_g%C5%82%C3%B3wna">polski</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%D9%84%D9%88%D9%85%DA%93%DB%8C_%D9%85%D8%AE">پښتو</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/P%C3%A1gina_principal">português</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Qhapaq_p%27anqa">Runa Simi</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Pagina_principal%C4%83">română</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0">русский</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%E0%A4%AE%E0%A5%81%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AA%E0%A5%83%E0%A4%B7%E0%A5%8D%E0%A4%A0%E0%A4%AE%E0%A5%8D">संस्कृतम्</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/P%C3%A0gina_printzipale">sardu</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/P%C3%A0ggina_principali">sicilianu</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Scots_Commons">Scots</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Glavna_stranica_(sh)">srpskohrvatski / српскохрватски</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%E0%B6%B8%E0%B7%94%E0%B6%BD%E0%B7%8A_%E0%B6%B4%E0%B7%92%E0%B6%A7%E0%B7%94%E0%B7%80">සිංහල</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Simple_English">Simple English</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Hlavn%C3%A1_str%C3%A1nka">slovenčina</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Glavna_stran">slovenščina</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Bogga_Hore">Soomaaliga</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Faqja_kryesore">shqip</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B0">српски / srpski</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Haudsiede_Commons">Seeltersk</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Tepas">Sunda</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Huvudsida">svenska</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Przod%C5%84o_zajta">ślůnski</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%E0%AE%AE%E0%AF%81%E0%AE%A4%E0%AE%B1%E0%AF%8D_%E0%AE%AA%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AE%AE%E0%AF%8D">தமிழ்</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%D0%A1%D0%B0%D2%B3%D0%B8%D1%84%D0%B0%D0%B8_%D0%90%D1%81%D0%BB%D3%A3">тоҷикӣ</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81">ไทย</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Unang_Pahina">Tagalog</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Anasayfa">Türkçe</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%D0%9A%D1%83%D1%82%D1%81%D0%BA%D0%BE%D0%BD_%D0%B1%D0%B0%D0%BC">удмурт</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%D0%93%D0%BE%D0%BB%D0%BE%D0%B2%D0%BD%D0%B0_%D1%81%D1%82%D0%BE%D1%80%D1%96%D0%BD%D0%BA%D0%B0">українська</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%D8%B5%D9%81%D8%AD%DB%82_%D8%A7%D9%88%D9%84">اردو</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Pajina_prinsipa%C5%82e">vèneto</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Trang_Ch%C3%ADnh">Tiếng Việt</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Cifapad">Volapük</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Syahan_nga_Pakli">Winaray</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%D7%A2%D7%A8%D7%A9%D7%98%D7%A2_%D7%96%D7%B2%D6%B7%D7%98">ייִדיש</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/Oj%C3%BAew%C3%A9_%C3%80k%E1%BB%8D%CC%81k%E1%BB%8D%CC%81">Yorùbá</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%E9%A0%AD%E7%89%88">粵語</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%E5%8D%B7%E9%A6%96">文言</a></span></p></li> <li class="rm-manual"><p class="rm-manual"><span><a href="file:///wiki/%E9%A6%96%E9%A1%B5">中文</a></span></p></li> <li class="rm-manual">
+<p class="rm-manual"><span><a href="file:///wiki/Th%C3%A2u-ia%CC%8Dh">Bân-lâm-gú</a></span></p>
+<span><span> ·</span> <a href="https://commons.wikimedia.org/w/index.php?title=Template:Lang-mp&amp;action=edit">+/−</a></span>
+</li>
+</ul>
+<p class="rm-manual">Retrieved from "<a href="https://commons.wikimedia.org/w/index.php?title=Main_Page&amp;oldid=419734877">https://commons.wikimedia.org/w/index.php?title=Main_Page&amp;oldid=419734877</a>"</p>
+<p class="rm-manual"><a href="file:///wiki/Special:Categories">Category</a>: </p>
+<ul class="rm-manual"><li class="rm-manual"><a href="file:///wiki/Category:Commons-en">Commons-en</a></li></ul>
+<h2 class="rm-manual">Navigation menu</h2>
+<h3 class="rm-manual"> <span>Personal tools</span> </h3>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="#">English</a></li>
+<li class="rm-manual">Not logged in</li>
+<li class="rm-manual"><a href="file:///wiki/Special:MyTalk">Talk</a></li>
+<li class="rm-manual"><a href="file:///wiki/Special:MyContributions">Contributions</a></li>
+<li class="rm-manual"><a href="file:///w/index.php?title=Special:CreateAccount&amp;returnto=Main+Page">Create account</a></li>
+<li class="rm-manual"><a href="file:///w/index.php?title=Special:UserLogin&amp;returnto=Main+Page">Log in</a></li>
+</ul>
+<h3 class="rm-manual"> <span>Namespaces</span> </h3>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///wiki/Main_Page">Main page</a></li>
+<li class="rm-manual"><a href="file:///wiki/Talk:Main_Page" rel="discussion">Discussion</a></li>
+</ul>
+<h3 class="rm-manual"> <span>Variants</span> </h3>
+<h3 class="rm-manual"> <span>Views</span> </h3>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///wiki/Main_Page">View</a></li>
+<li class="rm-manual"><a href="file:///w/index.php?title=Main_Page&amp;action=edit">View source</a></li>
+<li class="rm-manual"><a href="file:///w/index.php?title=Main_Page&amp;action=history">History</a></li>
+</ul>
+<h3 class="rm-manual"> <span>More</span> </h3>
+<h3 class="rm-manual"> Search </h3>
+<h3 class="rm-manual"> <span>Navigate</span> </h3>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///wiki/Main_Page">Main page</a></li>
+<li class="rm-manual"><a href="file:///wiki/Commons:Welcome">Welcome</a></li>
+<li class="rm-manual"><a href="file:///wiki/Commons:Community_portal">Community portal</a></li>
+<li class="rm-manual"><a href="file:///wiki/Commons:Village_pump">Village pump</a></li>
+<li class="rm-manual"><a href="file:///wiki/Special:MyLanguage/Help:Contents">Help center</a></li>
+</ul>
+<h3 class="rm-manual"> <span>Participate</span> </h3>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///wiki/Special:UploadWizard">Upload file</a></li>
+<li class="rm-manual"><a href="file:///wiki/Special:RecentChanges">Recent changes</a></li>
+<li class="rm-manual"><a href="file:///wiki/Special:NewFiles">Latest files</a></li>
+<li class="rm-manual"><a href="file:///wiki/Special:Random/File">Random file</a></li>
+<li class="rm-manual"><a href="file:///wiki/Commons:Contact_us">Contact us</a></li>
+</ul>
+<h3 class="rm-manual"> <span>Print/export</span> </h3>
+<h3 class="rm-manual"> <span>Tools</span> </h3>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///wiki/Special:WhatLinksHere/Main_Page">What links here</a></li>
+<li class="rm-manual"><a href="file:///wiki/Special:RecentChangesLinked/Main_Page" rel="nofollow">Related changes</a></li>
+<li class="rm-manual"><a href="file:///wiki/Special:SpecialPages">Special pages</a></li>
+<li class="rm-manual"><a href="file:///w/index.php?title=Main_Page&amp;oldid=419734877">Permanent link</a></li>
+<li class="rm-manual"><a href="file:///w/index.php?title=Main_Page&amp;action=info">Page information</a></li>
+<li class="rm-manual"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q5296">Wikidata item</a></li>
+<li class="rm-manual"><a href="file:///w/index.php?title=Special:CiteThisPage&amp;page=Main_Page&amp;id=419734877&amp;wpFormIdentifier=titleform">Cite this page</a></li>
+</ul>
+<h3 class="rm-manual"> <span>In Wikipedia</span> </h3>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://aa.wikipedia.org/wiki/Main_Page">Qafár af</a></li>
+<li class="rm-manual"><a href="https://ab.wikipedia.org/wiki/%D0%98%D1%85%D0%B0%D0%B4%D0%BE%D1%83_%D0%B0%D0%B4%D0%B0%D2%9F%D1%8C%D0%B0">Аҧсшәа</a></li>
+<li class="rm-manual"><a href="https://ace.wikipedia.org/wiki/%C3%94n_Keu%C3%AB">Acèh</a></li>
+<li class="rm-manual"><a href="https://ady.wikipedia.org/wiki/%D0%9D%D1%8D%D0%BA%D3%80%D1%83%D0%B1%D0%B3%D1%8A%D0%BE_%D1%88%D1%8A%D1%85%D1%8C%D0%B0%D3%80">Адыгабзэ</a></li>
+<li class="rm-manual"><a href="https://af.wikipedia.org/wiki/Tuisblad">Afrikaans</a></li>
+<li class="rm-manual"><a href="https://ak.wikipedia.org/wiki/Krataafa_Titiriw">Akan</a></li>
+<li class="rm-manual"><a href="https://als.wikipedia.org/wiki/Wikipedia:Houptsyte">Alemannisch</a></li>
+<li class="rm-manual"><a href="https://am.wikipedia.org/wiki/%E1%8B%8B%E1%8A%93%E1%8B%8D_%E1%8C%88%E1%8C%BD">አማርኛ</a></li>
+<li class="rm-manual"><a href="https://an.wikipedia.org/wiki/Portalada">Aragonés</a></li>
+<li class="rm-manual"><a href="https://ang.wikipedia.org/wiki/H%C4%93afodtramet">Ænglisc</a></li>
+<li class="rm-manual"><a href="https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D8%A9">العربية</a></li>
+<li class="rm-manual"><a href="https://arc.wikipedia.org/wiki/%DC%A6%DC%90%DC%AC%DC%90_%DC%AA%DC%9D%DC%AB%DC%9D%DC%AC%DC%90">ܐܪܡܝܐ</a></li>
+<li class="rm-manual"><a href="https://arz.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D9%87_%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D9%87">مصرى</a></li>
+<li class="rm-manual"><a href="https://as.wikipedia.org/wiki/%E0%A6%AC%E0%A7%87%E0%A6%9F%E0%A7%81%E0%A6%AA%E0%A6%BE%E0%A6%A4">অসমীয়া</a></li>
+<li class="rm-manual"><a href="https://ast.wikipedia.org/wiki/Portada">Asturianu</a></li>
+<li class="rm-manual"><a href="https://atj.wikipedia.org/wiki/Otitikowin">Atikamekw</a></li>
+<li class="rm-manual"><a href="https://av.wikipedia.org/wiki/%D0%91%D0%B5%D1%82%D3%80%D0%B5%D1%80%D0%B0%D0%B1_%D0%B3%D1%8C%D1%83%D0%BC%D0%B5%D1%80">Авар</a></li>
+<li class="rm-manual"><a href="https://awa.wikipedia.org/wiki/%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%A7%E0%A4%BE%E0%A4%A8_%E0%A4%AA%E0%A4%A8%E0%A5%8D%E0%A4%A8%E0%A4%BE">अवधी</a></li>
+<li class="rm-manual"><a href="https://ay.wikipedia.org/wiki/Nayriri_u%C3%B1stawi">Aymar aru</a></li>
+<li class="rm-manual"><a href="https://az.wikipedia.org/wiki/Ana_S%C9%99hif%C9%99">Azərbaycanca</a></li>
+<li class="rm-manual"><a href="https://azb.wikipedia.org/wiki/%D8%A2%D9%86%D8%A7_%D8%B5%D9%81%D8%AD%D9%87">تۆرکجه</a></li>
+<li class="rm-manual"><a href="https://ba.wikipedia.org/wiki/%D0%91%D0%B0%D1%88_%D0%B1%D0%B8%D1%82">Башҡортса</a></li>
+<li class="rm-manual"><a href="https://ban.wikipedia.org/wiki/Kaca_Utama">Bali</a></li>
+<li class="rm-manual"><a href="https://bar.wikipedia.org/wiki/Hoamseitn">Boarisch</a></li>
+<li class="rm-manual"><a href="https://bat-smg.wikipedia.org/wiki/P%C4%97rms_poslapis">Žemaitėška</a></li>
+<li class="rm-manual"><a href="https://bcl.wikipedia.org/wiki/Panginot_na_Pahina">Bikol Central</a></li>
+<li class="rm-manual"><a href="https://be.wikipedia.org/wiki/%D0%93%D0%B0%D0%BB%D0%BE%D1%9E%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D0%B0%D1%80%D0%BE%D0%BD%D0%BA%D0%B0">Беларуская</a></li>
+<li class="rm-manual"><a href="https://be-tarask.wikipedia.org/wiki/%D0%93%D0%B0%D0%BB%D0%BE%D1%9E%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D0%B0%D1%80%D0%BE%D0%BD%D0%BA%D0%B0">Беларуская (тарашкевіца)‎</a></li>
+<li class="rm-manual"><a href="https://bg.wikipedia.org/wiki/%D0%9D%D0%B0%D1%87%D0%B0%D0%BB%D0%BD%D0%B0_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0">Български</a></li>
+<li class="rm-manual"><a href="https://bh.wikipedia.org/wiki/%E0%A4%AE%E0%A5%81%E0%A4%96%E0%A5%8D%E0%A4%AF_%E0%A4%AA%E0%A4%A8%E0%A5%8D%E0%A4%A8%E0%A4%BE">भोजपुरी</a></li>
+<li class="rm-manual"><a href="https://bi.wikipedia.org/wiki/Nambawan_Pej">Bislama</a></li>
+<li class="rm-manual"><a href="https://bjn.wikipedia.org/wiki/Tungkaran_Tatambaian">Banjar</a></li>
+<li class="rm-manual"><a href="https://bm.wikipedia.org/wiki/Ny%C9%9B_f%C9%94l%C9%94">Bamanankan</a></li>
+<li class="rm-manual"><a href="https://bn.wikipedia.org/wiki/%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%A7%E0%A6%BE%E0%A6%A8_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE">বাংলা</a></li>
+<li class="rm-manual"><a href="https://bo.wikipedia.org/wiki/%E0%BD%82%E0%BD%91%E0%BD%BC%E0%BD%84%E0%BC%8B%E0%BD%A4%E0%BD%BC%E0%BD%82">བོད་ཡིག</a></li>
+<li class="rm-manual"><a href="https://bpy.wikipedia.org/wiki/%E0%A6%AA%E0%A6%AF%E0%A6%BC%E0%A6%B2%E0%A6%BE_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE">বিষ্ণুপ্রিয়া মণিপুরী</a></li>
+<li class="rm-manual"><a href="https://br.wikipedia.org/wiki/Degemer">Brezhoneg</a></li>
+<li class="rm-manual"><a href="https://bs.wikipedia.org/wiki/Po%C4%8Detna_strana">Bosanski</a></li>
+<li class="rm-manual"><a href="https://bug.wikipedia.org/wiki/Mappadec%C3%A9%C5%8B">ᨅᨔ ᨕᨘᨁᨗ</a></li>
+<li class="rm-manual"><a href="https://bxr.wikipedia.org/wiki/%D0%9D%D1%8E%D1%83%D1%80_%D1%85%D1%83%D1%83%D0%B4%D0%B0%D2%BB%D0%B0%D0%BD">Буряад</a></li>
+<li class="rm-manual"><a href="https://ca.wikipedia.org/wiki/Portada">Català</a></li>
+<li class="rm-manual"><a href="https://cbk-zam.wikipedia.org/wiki/El_Primero_Pagina">Chavacano de Zamboanga</a></li>
+<li class="rm-manual"><a href="https://cdo.wikipedia.org/wiki/T%C3%A0u_Hi%C4%95k">Mìng-dĕ̤ng-ngṳ̄</a></li>
+<li class="rm-manual"><a href="https://ce.wikipedia.org/wiki/%D0%9A%D0%BE%D1%8C%D1%80%D1%82%D0%B0_%D0%B0%D0%B3%D3%80%D0%BE">Нохчийн</a></li>
+<li class="rm-manual"><a href="https://ceb.wikipedia.org/wiki/Unang_Panid">Cebuano</a></li>
+<li class="rm-manual"><a href="https://ch.wikipedia.org/wiki/Fanhaluman">Chamoru</a></li>
+<li class="rm-manual"><a href="https://cho.wikipedia.org/wiki/Main_Page">Choctaw</a></li>
+<li class="rm-manual"><a href="https://chr.wikipedia.org/wiki/%E1%8E%A4%E1%8E%B5%E1%8E%AE%E1%8E%B5%E1%8F%8D%E1%8F%97">ᏣᎳᎩ</a></li>
+<li class="rm-manual"><a href="https://chy.wikipedia.org/wiki/Va%27ohtama">Tsetsêhestâhese</a></li>
+<li class="rm-manual"><a href="https://ckb.wikipedia.org/wiki/%D8%AF%DB%95%D8%B3%D8%AA%D9%BE%DB%8E%DA%A9">کوردی</a></li>
+<li class="rm-manual"><a href="https://co.wikipedia.org/wiki/Pagina_maestra">Corsu</a></li>
+<li class="rm-manual"><a href="https://cr.wikipedia.org/wiki/%E1%93%83%E1%94%A5%E1%91%95%E1%92%BB%E1%90%B9%E1%94%85%E1%91%8C%E1%92%8B%E1%93%82%E1%91%B2%E1%93%90">Nēhiyawēwin / ᓀᐦᐃᔭᐍᐏᐣ</a></li>
+<li class="rm-manual"><a href="https://crh.wikipedia.org/wiki/Ba%C5%9F_Saife">Qırımtatarca</a></li>
+<li class="rm-manual"><a href="https://cs.wikipedia.org/wiki/Hlavn%C3%AD_strana">Čeština</a></li>
+<li class="rm-manual"><a href="https://csb.wikipedia.org/wiki/Prz%C3%A9dn%C3%B4_starna">Kaszëbsczi</a></li>
+<li class="rm-manual"><a href="https://cu.wikipedia.org/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D1%8C%D0%BD%D0%B0_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0">Словѣньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ</a></li>
+<li class="rm-manual"><a href="https://cv.wikipedia.org/wiki/%D0%A2%C4%95%D0%BF_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0">Чӑвашла</a></li>
+<li class="rm-manual"><a href="https://cy.wikipedia.org/wiki/Hafan">Cymraeg</a></li>
+<li class="rm-manual"><a href="https://da.wikipedia.org/wiki/Forside">Dansk</a></li>
+<li class="rm-manual"><a href="https://de.wikipedia.org/wiki/Wikipedia:Hauptseite">Deutsch</a></li>
+<li class="rm-manual"><a href="https://din.wikipedia.org/wiki/Apam_k%C3%ABd%C3%AFt">Thuɔŋjäŋ</a></li>
+<li class="rm-manual"><a href="https://diq.wikipedia.org/wiki/Pela_Seri">Zazaki</a></li>
+<li class="rm-manual"><a href="https://dsb.wikipedia.org/wiki/G%C5%82owny_bok">Dolnoserbski</a></li>
+<li class="rm-manual"><a href="https://dty.wikipedia.org/wiki/%E0%A4%AE%E0%A5%81%E0%A4%96%E0%A5%8D%E0%A4%AF_%E0%A4%AA%E0%A4%A8%E0%A5%8D%E0%A4%A8%E0%A4%BE">डोटेली</a></li>
+<li class="rm-manual"><a href="https://dv.wikipedia.org/wiki/%DE%89%DE%A6%DE%87%DE%A8_%DE%9E%DE%A6%DE%8A%DE%B0%DE%99%DE%A7">ދިވެހިބަސް</a></li>
+<li class="rm-manual"><a href="https://dz.wikipedia.org/wiki/%E0%BD%98%E0%BC%8B%E0%BD%A4%E0%BD%BC%E0%BD%82%E0%BC%8D">ཇོང་ཁ</a></li>
+<li class="rm-manual"><a href="https://ee.wikipedia.org/wiki/Axa_do_%C5%8Ag%C9%94">Eʋegbe</a></li>
+<li class="rm-manual"><a href="https://el.wikipedia.org/wiki/%CE%A0%CF%8D%CE%BB%CE%B7:%CE%9A%CF%8D%CF%81%CE%B9%CE%B1">Ελληνικά</a></li>
+<li class="rm-manual"><a href="https://eml.wikipedia.org/wiki/PP">Emiliàn e rumagnòl</a></li>
+<li class="rm-manual"><a href="https://en.wikipedia.org/wiki/Main_Page">English</a></li>
+<li class="rm-manual"><a href="https://eo.wikipedia.org/wiki/Vikipedio:%C4%88efpa%C4%9Do">Esperanto</a></li>
+<li class="rm-manual"><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada">Español</a></li>
+<li class="rm-manual"><a href="https://et.wikipedia.org/wiki/Esileht">Eesti</a></li>
+<li class="rm-manual"><a href="https://eu.wikipedia.org/wiki/Azala">Euskara</a></li>
+<li class="rm-manual"><a href="https://ext.wikipedia.org/wiki/P%C3%A1gina_prencipal">Estremeñu</a></li>
+<li class="rm-manual"><a href="https://fa.wikipedia.org/wiki/%D8%B5%D9%81%D8%AD%D9%87%D9%94_%D8%A7%D8%B5%D9%84%DB%8C">فارسی</a></li>
+<li class="rm-manual"><a href="https://ff.wikipedia.org/wiki/Hello_ja%C9%93%C9%93orgo">Fulfulde</a></li>
+<li class="rm-manual"><a href="https://fi.wikipedia.org/wiki/Wikipedia:Etusivu">Suomi</a></li>
+<li class="rm-manual"><a href="https://fiu-vro.wikipedia.org/wiki/P%C3%A4%C3%A4leht">Võro</a></li>
+<li class="rm-manual"><a href="https://fj.wikipedia.org/wiki/Tabana_levu">Na Vosa Vakaviti</a></li>
+<li class="rm-manual"><a href="https://fo.wikipedia.org/wiki/Fors%C3%AD%C3%B0a">Føroyskt</a></li>
+<li class="rm-manual"><a href="https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal">Français</a></li>
+<li class="rm-manual"><a href="https://frp.wikipedia.org/wiki/Vouiquip%C3%A8dia:Re%C3%A7ua_princip%C3%A2la">Arpetan</a></li>
+<li class="rm-manual"><a href="https://frr.wikipedia.org/wiki/Wikipedia:Hoodsid">Nordfriisk</a></li>
+<li class="rm-manual"><a href="https://fur.wikipedia.org/wiki/Pagjine_princip%C3%A2l">Furlan</a></li>
+<li class="rm-manual"><a href="https://fy.wikipedia.org/wiki/Haadside">Frysk</a></li>
+<li class="rm-manual"><a href="https://ga.wikipedia.org/wiki/Pr%C3%ADomhleathanach">Gaeilge</a></li>
+<li class="rm-manual"><a href="https://gag.wikipedia.org/wiki/Ba%C5%9F_yaprak">Gagauz</a></li>
+<li class="rm-manual"><a href="https://gan.wikipedia.org/wiki/%E5%B0%81%E9%9D%A2">贛語</a></li>
+<li class="rm-manual"><a href="https://gcr.wikipedia.org/wiki/Paj_Prensipal">Kriyòl gwiyannen</a></li>
+<li class="rm-manual"><a href="https://gd.wikipedia.org/wiki/Pr%C3%AComh-Dhuilleag">Gàidhlig</a></li>
+<li class="rm-manual"><a href="https://gl.wikipedia.org/wiki/Portada">Galego</a></li>
+<li class="rm-manual"><a href="https://glk.wikipedia.org/wiki/%DA%AF%D8%AA%CB%87_%D9%88%D9%84%DA%AF">گیلکی</a></li>
+<li class="rm-manual"><a href="https://gn.wikipedia.org/wiki/Ape">Avañe'ẽ</a></li>
+<li class="rm-manual"><a href="https://gom.wikipedia.org/wiki/%E0%A4%AE%E0%A5%81%E0%A4%96%E0%A5%87%E0%A4%B2_%E0%A4%AA%E0%A4%BE%E0%A4%A8">गोंयची कोंकणी / Gõychi Konknni</a></li>
+<li class="rm-manual"><a href="https://gor.wikipedia.org/wiki/Halaman_Bungaliyo">Bahasa Hulontalo</a></li>
+<li class="rm-manual"><a href="https://got.wikipedia.org/wiki/%F0%90%8C%B0%F0%90%8C%BD%F0%90%8C%B0%F0%90%8D%83%F0%90%8D%84%F0%90%8D%89%F0%90%8C%B3%F0%90%8C%B4%F0%90%8C%B9%F0%90%8C%BD%F0%90%8C%B9%F0%90%8C%BB%F0%90%8C%B0%F0%90%8C%BF%F0%90%8D%86%F0%90%8D%83">𐌲𐌿𐍄𐌹𐍃𐌺</a></li>
+<li class="rm-manual"><a href="https://gu.wikipedia.org/wiki/%E0%AA%AE%E0%AB%81%E0%AA%96%E0%AA%AA%E0%AB%83%E0%AA%B7%E0%AB%8D%E0%AA%A0">ગુજરાતી</a></li>
+<li class="rm-manual"><a href="https://gv.wikipedia.org/wiki/Ard-ghuillag">Gaelg</a></li>
+<li class="rm-manual"><a href="https://ha.wikipedia.org/wiki/Babban_shafi">Hausa</a></li>
+<li class="rm-manual"><a href="https://hak.wikipedia.org/wiki/Th%C3%A8u-Ya%CC%8Dp">客家語/Hak-kâ-ngî</a></li>
+<li class="rm-manual"><a href="https://haw.wikipedia.org/wiki/Ka_papa_kinohi">Hawaiʻi</a></li>
+<li class="rm-manual"><a href="https://he.wikipedia.org/wiki/%D7%A2%D7%9E%D7%95%D7%93_%D7%A8%D7%90%D7%A9%D7%99">עברית</a></li>
+<li class="rm-manual"><a href="https://hi.wikipedia.org/wiki/%E0%A4%AE%E0%A5%81%E0%A4%96%E0%A4%AA%E0%A5%83%E0%A4%B7%E0%A5%8D%E0%A4%A0">हिन्दी</a></li>
+<li class="rm-manual"><a href="https://hif.wikipedia.org/wiki/Pahila_Panna">Fiji Hindi</a></li>
+<li class="rm-manual"><a href="https://ho.wikipedia.org/wiki/Main_Page">Hiri Motu</a></li>
+<li class="rm-manual"><a href="https://hr.wikipedia.org/wiki/Glavna_stranica">Hrvatski</a></li>
+<li class="rm-manual"><a href="https://hsb.wikipedia.org/wiki/H%C5%82owna_strona">Hornjoserbsce</a></li>
+<li class="rm-manual"><a href="https://ht.wikipedia.org/wiki/Paj_Prensipal">Kreyòl ayisyen</a></li>
+<li class="rm-manual"><a href="https://hu.wikipedia.org/wiki/Kezd%C5%91lap">Magyar</a></li>
+<li class="rm-manual"><a href="https://hy.wikipedia.org/wiki/%D4%B3%D5%AC%D5%AD%D5%A1%D5%BE%D5%B8%D6%80_%D5%A7%D5%BB">Հայերեն</a></li>
+<li class="rm-manual"><a href="https://hyw.wikipedia.org/wiki/%D4%B3%D5%AC%D5%AD%D5%A1%D6%82%D5%B8%D6%80_%D4%B7%D5%BB">Արեւմտահայերէն</a></li>
+<li class="rm-manual"><a href="https://hz.wikipedia.org/wiki/Main_Page">Otsiherero</a></li>
+<li class="rm-manual"><a href="https://ia.wikipedia.org/wiki/Pagina_principal">Interlingua</a></li>
+<li class="rm-manual"><a href="https://id.wikipedia.org/wiki/Halaman_Utama">Bahasa Indonesia</a></li>
+<li class="rm-manual"><a href="https://ie.wikipedia.org/wiki/Principal_p%C3%A1gine">Interlingue</a></li>
+<li class="rm-manual"><a href="https://ig.wikipedia.org/wiki/Ihu_m%CC%80b%E1%BB%A5">Igbo</a></li>
+<li class="rm-manual"><a href="https://ik.wikipedia.org/wiki/Aimaa%C4%A1vik">Iñupiak</a></li>
+<li class="rm-manual"><a href="https://ilo.wikipedia.org/wiki/Umuna_a_Panid">Ilokano</a></li>
+<li class="rm-manual"><a href="https://inh.wikipedia.org/wiki/%D0%9A%D0%B5%D1%80%D1%82%D1%82%D0%B5%D1%80%D0%B0_%D0%BE%D0%B0%D0%B3%D3%80%D1%83%D0%B2">ГӀалгӀай</a></li>
+<li class="rm-manual"><a href="https://io.wikipedia.org/wiki/Frontispico">Ido</a></li>
+<li class="rm-manual"><a href="https://is.wikipedia.org/wiki/Fors%C3%AD%C3%B0a">Íslenska</a></li>
+<li class="rm-manual"><a href="https://it.wikipedia.org/wiki/Pagina_principale">Italiano</a></li>
+<li class="rm-manual"><a href="https://iu.wikipedia.org/wiki/%E1%90%8A%E1%92%A5%E1%96%85">ᐃᓄᒃᑎᑐᑦ/inuktitut</a></li>
+<li class="rm-manual"><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8">日本語</a></li>
+<li class="rm-manual"><a href="https://jam.wikipedia.org/wiki/Mien_Piej">Patois</a></li>
+<li class="rm-manual"><a href="https://jbo.wikipedia.org/wiki/uikipedi%27as:ralju">La .lojban.</a></li>
+<li class="rm-manual"><a href="https://jv.wikipedia.org/wiki/Tepas">Jawa</a></li>
+<li class="rm-manual"><a href="https://ka.wikipedia.org/wiki/%E1%83%9B%E1%83%97%E1%83%90%E1%83%95%E1%83%90%E1%83%A0%E1%83%98_%E1%83%92%E1%83%95%E1%83%94%E1%83%A0%E1%83%93%E1%83%98">ქართული</a></li>
+<li class="rm-manual"><a href="https://kaa.wikipedia.org/wiki/Bas_bet">Qaraqalpaqsha</a></li>
+<li class="rm-manual"><a href="https://kab.wikipedia.org/wiki/Asebter_agejdan">Taqbaylit</a></li>
+<li class="rm-manual"><a href="https://kbd.wikipedia.org/wiki/%D0%9D%D0%B0%D0%BF%D1%8D%D0%BA%D3%80%D1%83%D1%8D%D1%86%D3%80_%D0%BD%D1%8D%D1%85%D1%8A%D1%8B%D1%89%D1%85%D1%8C%D1%8D">Адыгэбзэ</a></li>
+<li class="rm-manual"><a href="https://kbp.wikipedia.org/wiki/Tal%C9%A9_%C9%96eu">Kabɩyɛ</a></li>
+<li class="rm-manual"><a href="https://kg.wikipedia.org/wiki/Muk%C3%A2nda_ya_ngudi">Kongo</a></li>
+<li class="rm-manual"><a href="https://ki.wikipedia.org/wiki/Main_Page">Gĩkũyũ</a></li>
+<li class="rm-manual"><a href="https://kj.wikipedia.org/wiki/Main_Page">Kwanyama</a></li>
+<li class="rm-manual"><a href="https://kk.wikipedia.org/wiki/%D0%91%D0%B0%D1%81%D1%82%D1%8B_%D0%B1%D0%B5%D1%82">Қазақша</a></li>
+<li class="rm-manual"><a href="https://kl.wikipedia.org/wiki/Saqqaa">Kalaallisut</a></li>
+<li class="rm-manual"><a href="https://km.wikipedia.org/wiki/%E1%9E%91%E1%9F%86%E1%9E%96%E1%9F%90%E1%9E%9A%E1%9E%8A%E1%9E%BE%E1%9E%98">ភាសាខ្មែរ</a></li>
+<li class="rm-manual"><a href="https://kn.wikipedia.org/wiki/%E0%B2%AE%E0%B3%81%E0%B2%96%E0%B3%8D%E0%B2%AF_%E0%B2%AA%E0%B3%81%E0%B2%9F">ಕನ್ನಡ</a></li>
+<li class="rm-manual"><a href="https://ko.wikipedia.org/wiki/%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC:%EB%8C%80%EB%AC%B8">한국어</a></li>
+<li class="rm-manual"><a href="https://koi.wikipedia.org/wiki/%D0%9F%D0%BE%D0%BD%D0%B4%D3%A7%D1%82%D1%87%D0%B0%D0%BD_%D0%BB%D0%B8%D1%81%D1%82%D0%B1%D0%BE%D0%BA">Перем Коми</a></li>
+<li class="rm-manual"><a href="https://kr.wikipedia.org/wiki/Main_Page">Kanuri</a></li>
+<li class="rm-manual"><a href="https://krc.wikipedia.org/wiki/%D0%91%D0%B0%D1%88_%D0%B1%D0%B5%D1%82">Къарачай-малкъар</a></li>
+<li class="rm-manual"><a href="https://ks.wikipedia.org/wiki/%D8%A7%DB%81%D9%85_%D8%B5%D9%8E%D9%81%DB%81%D9%95">कॉशुर / کٲشُر</a></li>
+<li class="rm-manual"><a href="https://ksh.wikipedia.org/wiki/Wikipedia:Houpsigk">Ripoarisch</a></li>
+<li class="rm-manual"><a href="https://ku.wikipedia.org/wiki/Destp%C3%AAk">Kurdî</a></li>
+<li class="rm-manual"><a href="https://kv.wikipedia.org/wiki/%D0%9C%D0%B5%D0%B4%D1%88%D3%A7%D1%80_%D0%BB%D0%B8%D1%81%D1%82_%D0%B1%D0%BE%D0%BA">Коми</a></li>
+<li class="rm-manual"><a href="https://kw.wikipedia.org/wiki/Folen_dre">Kernowek</a></li>
+<li class="rm-manual"><a href="https://ky.wikipedia.org/wiki/%D0%91%D0%B0%D1%88%D0%B1%D0%B0%D1%80%D0%B0%D0%BA">Кыргызча</a></li>
+<li class="rm-manual"><a href="https://la.wikipedia.org/wiki/Vicipaedia:Pagina_prima">Latina</a></li>
+<li class="rm-manual"><a href="https://lad.wikipedia.org/wiki/La_Primera_Hoja">Ladino</a></li>
+<li class="rm-manual"><a href="https://lb.wikipedia.org/wiki/Haapts%C3%A4it">Lëtzebuergesch</a></li>
+<li class="rm-manual"><a href="https://lbe.wikipedia.org/wiki/%D0%90%D0%B3%D1%8C%D0%B0%D0%BC%D0%BC%D1%83%D1%80_%D0%BB%D0%B0%D0%B6%D0%B8%D0%BD">Лакку</a></li>
+<li class="rm-manual"><a href="https://lez.wikipedia.org/wiki/%D0%9A%D1%8C%D0%B8%D0%BB%D0%B8%D0%BD_%D1%87%D1%87%D0%B8%D0%BD">Лезги</a></li>
+<li class="rm-manual"><a href="https://lfn.wikipedia.org/wiki/Paje_xef">Lingua Franca Nova</a></li>
+<li class="rm-manual"><a href="https://lg.wikipedia.org/wiki/Olupapula_Olusooka">Luganda</a></li>
+<li class="rm-manual"><a href="https://li.wikipedia.org/wiki/Veurblaad">Limburgs</a></li>
+<li class="rm-manual"><a href="https://lij.wikipedia.org/wiki/Pagina_prin%C3%A7ip%C3%A2">Ligure</a></li>
+<li class="rm-manual"><a href="https://lmo.wikipedia.org/wiki/Pagina_principala">Lumbaart</a></li>
+<li class="rm-manual"><a href="https://ln.wikipedia.org/wiki/Lok%C3%A1s%C3%A1_ya_libos%C3%B3">Lingála</a></li>
+<li class="rm-manual"><a href="https://lo.wikipedia.org/wiki/%E0%BB%9C%E0%BB%89%E0%BA%B2%E0%BA%AB%E0%BA%BC%E0%BA%B1%E0%BA%81">ລາວ</a></li>
+<li class="rm-manual"><a href="https://lrc.wikipedia.org/wiki/%D8%B3%D8%B1%D8%A2%D8%B3%D9%88%D9%86%D9%B1">لۊری شومالی</a></li>
+<li class="rm-manual"><a href="https://lt.wikipedia.org/wiki/Pagrindinis_puslapis">Lietuvių</a></li>
+<li class="rm-manual"><a href="https://ltg.wikipedia.org/wiki/Suoku_puslopa">Latgaļu</a></li>
+<li class="rm-manual"><a href="https://lv.wikipedia.org/wiki/S%C4%81kumlapa">Latviešu</a></li>
+<li class="rm-manual"><a href="https://mai.wikipedia.org/wiki/%E0%A4%B8%E0%A4%AE%E0%A5%8D%E0%A4%AE%E0%A5%81%E0%A4%96_%E0%A4%AA%E0%A4%A8%E0%A5%8D%E0%A4%A8%E0%A4%BE">मैथिली</a></li>
+<li class="rm-manual"><a href="https://map-bms.wikipedia.org/wiki/Kaca_Utama">Basa Banyumasan</a></li>
+<li class="rm-manual"><a href="https://mdf.wikipedia.org/wiki/%D0%9F%D1%80%D1%8F_%D0%BB%D0%BE%D0%BF%D0%B0">Мокшень</a></li>
+<li class="rm-manual"><a href="https://mg.wikipedia.org/wiki/Wikipedia:Fandraisana">Malagasy</a></li>
+<li class="rm-manual"><a href="https://mhr.wikipedia.org/wiki/%D0%A2%D3%B1%D2%A5_%D0%BB%D0%B0%D1%88%D1%82%D1%8B%D0%BA">Олык марий</a></li>
+<li class="rm-manual"><a href="https://mi.wikipedia.org/wiki/Hau_K%C4%81inga">Māori</a></li>
+<li class="rm-manual"><a href="https://min.wikipedia.org/wiki/Laman_Utamo">Minangkabau</a></li>
+<li class="rm-manual"><a href="https://mk.wikipedia.org/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0">Македонски</a></li>
+<li class="rm-manual"><a href="https://ml.wikipedia.org/wiki/%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%A7%E0%B4%BE%E0%B4%A8_%E0%B4%A4%E0%B4%BE%E0%B5%BE">മലയാളം</a></li>
+<li class="rm-manual"><a href="https://mn.wikipedia.org/wiki/%D0%9D%D2%AF%D2%AF%D1%80_%D1%85%D1%83%D1%83%D0%B4%D0%B0%D1%81">Монгол</a></li>
+<li class="rm-manual"><a href="https://mnw.wikipedia.org/wiki/%E1%80%99%E1%80%AF%E1%80%80%E1%80%BA%E1%80%9C%E1%80%AD%E1%80%80%E1%80%BA%E1%80%90%E1%80%99%E1%80%BA">ဘာသာ မန်</a></li>
+<li class="rm-manual"><a href="https://mr.wikipedia.org/wiki/%E0%A4%AE%E0%A5%81%E0%A4%96%E0%A4%AA%E0%A5%83%E0%A4%B7%E0%A5%8D%E0%A4%A0">मराठी</a></li>
+<li class="rm-manual"><a href="https://mrj.wikipedia.org/wiki/%D0%A2%D3%B9%D0%BD%D0%B3_%D3%B9%D0%BB%D3%B9%D1%88%D1%82%D3%93%D1%88">Кырык мары</a></li>
+<li class="rm-manual"><a href="https://ms.wikipedia.org/wiki/Laman_Utama">Bahasa Melayu</a></li>
+<li class="rm-manual"><a href="https://mt.wikipedia.org/wiki/Il-Pa%C4%A1na_prin%C4%8Bipali">Malti</a></li>
+<li class="rm-manual"><a href="https://mus.wikipedia.org/wiki/Main_Page">Mvskoke</a></li>
+<li class="rm-manual"><a href="https://mwl.wikipedia.org/wiki/Biquip%C3%A9dia:P%C3%A1igina_percipal">Mirandés</a></li>
+<li class="rm-manual"><a href="https://my.wikipedia.org/wiki/%E1%80%97%E1%80%9F%E1%80%AD%E1%80%AF%E1%80%85%E1%80%AC%E1%80%99%E1%80%BB%E1%80%80%E1%80%BA%E1%80%94%E1%80%BE%E1%80%AC">မြန်မာဘာသာ</a></li>
+<li class="rm-manual"><a href="https://myv.wikipedia.org/wiki/%D0%9F%D1%80%D1%8F%D0%B2%D1%82%D0%BB%D0%BE%D0%BF%D0%B0">Эрзянь</a></li>
+<li class="rm-manual"><a href="https://mzn.wikipedia.org/wiki/%DA%AF%D8%AA_%D8%B5%D9%81%D8%AD%D9%87">مازِرونی</a></li>
+<li class="rm-manual"><a href="https://na.wikipedia.org/wiki/Bwiema_peij">Dorerin Naoero</a></li>
+<li class="rm-manual"><a href="https://nah.wikipedia.org/wiki/Cal%C4%ABxatl">Nāhuatl</a></li>
+<li class="rm-manual"><a href="https://nap.wikipedia.org/wiki/Paggena_prencepale">Napulitano</a></li>
+<li class="rm-manual"><a href="https://nds.wikipedia.org/wiki/Wikipedia:H%C3%B6%C3%B6ftsiet">Plattdüütsch</a></li>
+<li class="rm-manual"><a href="https://nds-nl.wikipedia.org/wiki/V%C3%B6%C3%A4rblad">Nedersaksies</a></li>
+<li class="rm-manual"><a href="https://ne.wikipedia.org/wiki/%E0%A4%AE%E0%A5%81%E0%A4%96%E0%A5%8D%E0%A4%AF_%E0%A4%AA%E0%A5%83%E0%A4%B7%E0%A5%8D%E0%A4%A0">नेपाली</a></li>
+<li class="rm-manual"><a href="https://new.wikipedia.org/wiki/%E0%A4%AE%E0%A5%82_%E0%A4%AA%E0%A5%8C">नेपाल भाषा</a></li>
+<li class="rm-manual"><a href="https://ng.wikipedia.org/wiki/Hambili_Tarkerazu">Oshiwambo</a></li>
+<li class="rm-manual"><a href="https://nl.wikipedia.org/wiki/Hoofdpagina">Nederlands</a></li>
+<li class="rm-manual"><a href="https://nn.wikipedia.org/wiki/Hovudside">Norsk nynorsk</a></li>
+<li class="rm-manual"><a href="https://no.wikipedia.org/wiki/Portal:Forside">Norsk</a></li>
+<li class="rm-manual"><a href="https://nov.wikipedia.org/wiki/Chefi_pagine">Novial</a></li>
+<li class="rm-manual"><a href="https://nqo.wikipedia.org/wiki/%DF%93%DF%8F%DF%AC%DF%9F%DF%8F%DF%B2%DF%AC%DF%98%DF%8A">ߒߞߏ</a></li>
+<li class="rm-manual"><a href="https://nrm.wikipedia.org/wiki/Page_d%C3%A9_garde">Nouormand</a></li>
+<li class="rm-manual"><a href="https://nso.wikipedia.org/wiki/Letlakala_la_pele">Sesotho sa Leboa</a></li>
+<li class="rm-manual"><a href="https://nv.wikipedia.org/wiki/%C3%8Diyis%C3%AD%C3%AD_Naaltsoos">Diné bizaad</a></li>
+<li class="rm-manual"><a href="https://ny.wikipedia.org/wiki/Tsamba_Lalikulu">Chi-Chewa</a></li>
+<li class="rm-manual"><a href="https://oc.wikipedia.org/wiki/Acu%C3%A8lh">Occitan</a></li>
+<li class="rm-manual"><a href="https://olo.wikipedia.org/wiki/Pi%C3%A4sivu">Livvinkarjala</a></li>
+<li class="rm-manual"><a href="https://om.wikipedia.org/wiki/Fuula_Dura">Oromoo</a></li>
+<li class="rm-manual"><a href="https://or.wikipedia.org/wiki/%E0%AC%AA%E0%AD%8D%E0%AC%B0%E0%AC%A7%E0%AC%BE%E0%AC%A8_%E0%AC%AA%E0%AD%83%E0%AC%B7%E0%AD%8D%E0%AC%A0%E0%AC%BE">ଓଡ଼ିଆ</a></li>
+<li class="rm-manual"><a href="https://os.wikipedia.org/wiki/%D0%A1%C3%A6%D0%B9%D1%80%D0%B0%D0%B3_%D1%84%D0%B0%D1%80%D1%81">Ирон</a></li>
+<li class="rm-manual"><a href="https://pa.wikipedia.org/wiki/%E0%A8%AE%E0%A9%81%E0%A9%B1%E0%A8%96_%E0%A8%B8%E0%A8%AB%E0%A8%BC%E0%A8%BE">ਪੰਜਾਬੀ</a></li>
+<li class="rm-manual"><a href="https://pag.wikipedia.org/wiki/Arapan_ya_Bolong">Pangasinan</a></li>
+<li class="rm-manual"><a href="https://pam.wikipedia.org/wiki/Pun_Bulung">Kapampangan</a></li>
+<li class="rm-manual"><a href="https://pap.wikipedia.org/wiki/P%C3%A1gina_Prinsipal">Papiamentu</a></li>
+<li class="rm-manual"><a href="https://pcd.wikipedia.org/wiki/Accueul">Picard</a></li>
+<li class="rm-manual"><a href="https://pdc.wikipedia.org/wiki/Haaptblatt">Deitsch</a></li>
+<li class="rm-manual"><a href="https://pfl.wikipedia.org/wiki/Wikipedia:Haubdsaid">Pälzisch</a></li>
+<li class="rm-manual"><a href="https://pi.wikipedia.org/wiki/%E0%A4%AE%E0%A5%81%E0%A4%96%E0%A4%BF%E0%A4%AF_%E0%A4%AA%E0%A4%B0%E0%A5%81%E0%A4%B6%E0%A5%8D%E0%A4%B9%E0%A4%A0">पालि</a></li>
+<li class="rm-manual"><a href="https://pih.wikipedia.org/wiki/Mien_Paij">Norfuk / Pitkern</a></li>
+<li class="rm-manual"><a href="https://pl.wikipedia.org/wiki/Wikipedia:Strona_g%C5%82%C3%B3wna">Polski</a></li>
+<li class="rm-manual"><a href="https://pms.wikipedia.org/wiki/Intrada">Piemontèis</a></li>
+<li class="rm-manual"><a href="https://pnb.wikipedia.org/wiki/%D9%BE%DB%81%D9%84%D8%A7_%D8%B5%D9%81%DB%81">پنجابی</a></li>
+<li class="rm-manual"><a href="https://pnt.wikipedia.org/wiki/%CE%91%CF%81%CF%87%CE%B9%CE%BA%CF%8C%CE%BD_%CF%83%CE%B5%CE%BB%CE%AF%CE%B4%CE%B1">Ποντιακά</a></li>
+<li class="rm-manual"><a href="https://ps.wikipedia.org/wiki/%D9%84%D9%88%D9%85%DA%93%DB%8C_%D9%85%D8%AE">پښتو</a></li>
+<li class="rm-manual"><a href="https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal">Português</a></li>
+<li class="rm-manual"><a href="https://qu.wikipedia.org/wiki/Qhapaq_p%27anqa">Runa Simi</a></li>
+<li class="rm-manual"><a href="https://rm.wikipedia.org/wiki/Wikipedia:Pagina_principala">Rumantsch</a></li>
+<li class="rm-manual"><a href="https://rmy.wikipedia.org/wiki/Sherutni_patrin">Romani čhib</a></li>
+<li class="rm-manual"><a href="https://rn.wikipedia.org/wiki/Main_Page">Kirundi</a></li>
+<li class="rm-manual"><a href="https://ro.wikipedia.org/wiki/Pagina_principal%C4%83">Română</a></li>
+<li class="rm-manual"><a href="https://roa-rup.wikipedia.org/wiki/Prota_fr%C3%A3ndz%C3%A3">Armãneashti</a></li>
+<li class="rm-manual"><a href="https://roa-tara.wikipedia.org/wiki/Pagene_Prengep%C3%A1le">Tarandíne</a></li>
+<li class="rm-manual"><a href="https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0">Русский</a></li>
+<li class="rm-manual"><a href="https://rue.wikipedia.org/wiki/%D0%93%D0%BE%D0%BB%D0%BE%D0%B2%D0%BD%D0%B0_%D1%81%D1%82%D0%BE%D1%80%D1%96%D0%BD%D0%BA%D0%B0">Русиньскый</a></li>
+<li class="rm-manual"><a href="https://rw.wikipedia.org/wiki/Intangiriro">Kinyarwanda</a></li>
+<li class="rm-manual"><a href="https://sa.wikipedia.org/wiki/%E0%A4%AE%E0%A5%81%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AA%E0%A5%83%E0%A4%B7%E0%A5%8D%E0%A4%A0%E0%A4%AE%E0%A5%8D">संस्कृतम्</a></li>
+<li class="rm-manual"><a href="https://sah.wikipedia.org/wiki/%D0%A1%D2%AF%D1%80%D2%AF%D0%BD_%D1%81%D0%B8%D1%80%D1%8D%D0%B9">Саха тыла</a></li>
+<li class="rm-manual"><a href="https://sat.wikipedia.org/wiki/%E1%B1%A2%E1%B1%A9%E1%B1%AC%E1%B1%A9%E1%B1%9B_%E1%B1%A5%E1%B1%9F%E1%B1%A6%E1%B1%B4%E1%B1%9F">ᱥᱟᱱᱛᱟᱲᱤ</a></li>
+<li class="rm-manual"><a href="https://sc.wikipedia.org/wiki/P%C3%A0gina_printzipale">Sardu</a></li>
+<li class="rm-manual"><a href="https://scn.wikipedia.org/wiki/P%C3%A0ggina_principali">Sicilianu</a></li>
+<li class="rm-manual"><a href="https://sco.wikipedia.org/wiki/Main_Page">Scots</a></li>
+<li class="rm-manual"><a href="https://sd.wikipedia.org/wiki/%D9%85%D9%8F%DA%A9_%D8%B5%D9%81%D8%AD%D9%88">سنڌي</a></li>
+<li class="rm-manual"><a href="https://se.wikipedia.org/wiki/Port%C3%A1la:Ovdasiidu">Davvisámegiella</a></li>
+<li class="rm-manual"><a href="https://sg.wikipedia.org/wiki/G%C3%A4_nz%C3%B6n%C3%AE">Sängö</a></li>
+<li class="rm-manual"><a href="https://sh.wikipedia.org/wiki/Glavna_stranica">Srpskohrvatski / српскохрватски</a></li>
+<li class="rm-manual"><a href="https://shn.wikipedia.org/wiki/%E1%81%BC%E1%82%83%E1%82%88%E1%82%81%E1%80%B0%E1%80%9D%E1%80%BA%E1%82%81%E1%82%85%E1%81%B5%E1%80%BA%E1%82%88">ၽႃႇသႃႇတႆး </a></li>
+<li class="rm-manual"><a href="https://si.wikipedia.org/wiki/%E0%B6%B8%E0%B7%94%E0%B6%BD%E0%B7%8A_%E0%B6%B4%E0%B7%92%E0%B6%A7%E0%B7%94%E0%B7%80">සිංහල</a></li>
+<li class="rm-manual"><a href="https://simple.wikipedia.org/wiki/Main_Page">Simple English</a></li>
+<li class="rm-manual"><a href="https://sk.wikipedia.org/wiki/Hlavn%C3%A1_str%C3%A1nka">Slovenčina</a></li>
+<li class="rm-manual"><a href="https://sl.wikipedia.org/wiki/Glavna_stran">Slovenščina</a></li>
+<li class="rm-manual"><a href="https://sm.wikipedia.org/wiki/It%C5%ABlau_Muamua">Gagana Samoa</a></li>
+<li class="rm-manual"><a href="https://sn.wikipedia.org/wiki/Peji_Rekutanga">ChiShona</a></li>
+<li class="rm-manual"><a href="https://so.wikipedia.org/wiki/Bogga_Hore">Soomaaliga</a></li>
+<li class="rm-manual"><a href="https://sq.wikipedia.org/wiki/Faqja_kryesore">Shqip</a></li>
+<li class="rm-manual"><a href="https://sr.wikipedia.org/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B0">Српски / srpski</a></li>
+<li class="rm-manual"><a href="https://srn.wikipedia.org/wiki/Fesipapira">Sranantongo</a></li>
+<li class="rm-manual"><a href="https://ss.wikipedia.org/wiki/Likhasi_Lelikhulu">SiSwati</a></li>
+<li class="rm-manual"><a href="https://st.wikipedia.org/wiki/Leqephe_la_pele">Sesotho</a></li>
+<li class="rm-manual"><a href="https://stq.wikipedia.org/wiki/Haudsiede">Seeltersk</a></li>
+<li class="rm-manual"><a href="https://su.wikipedia.org/wiki/Tepas">Sunda</a></li>
+<li class="rm-manual"><a href="https://sv.wikipedia.org/wiki/Portal:Huvudsida">Svenska</a></li>
+<li class="rm-manual"><a href="https://sw.wikipedia.org/wiki/Mwanzo">Kiswahili</a></li>
+<li class="rm-manual"><a href="https://szl.wikipedia.org/wiki/Przodni%C5%8F_zajta">Ślůnski</a></li>
+<li class="rm-manual"><a href="https://szy.wikipedia.org/wiki/saayaway_a_belih">Sakizaya</a></li>
+<li class="rm-manual"><a href="https://ta.wikipedia.org/wiki/%E0%AE%AE%E0%AF%81%E0%AE%A4%E0%AE%B1%E0%AF%8D_%E0%AE%AA%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AE%AE%E0%AF%8D">தமிழ்</a></li>
+<li class="rm-manual"><a href="https://tcy.wikipedia.org/wiki/%E0%B2%AE%E0%B3%81%E0%B2%96%E0%B3%8D%E0%B2%AF_%E0%B2%AA%E0%B3%81%E0%B2%9F">ತುಳು</a></li>
+<li class="rm-manual"><a href="https://te.wikipedia.org/wiki/%E0%B0%AE%E0%B1%8A%E0%B0%A6%E0%B0%9F%E0%B0%BF_%E0%B0%AA%E0%B1%87%E0%B0%9C%E0%B1%80">తెలుగు</a></li>
+<li class="rm-manual"><a href="https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk">Tetun</a></li>
+<li class="rm-manual"><a href="https://tg.wikipedia.org/wiki/%D0%A1%D0%B0%D2%B3%D0%B8%D1%84%D0%B0%D0%B8_%D0%B0%D1%81%D0%BB%D3%A3">Тоҷикӣ</a></li>
+<li class="rm-manual"><a href="https://th.wikipedia.org/wiki/%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81">ไทย</a></li>
+<li class="rm-manual"><a href="https://ti.wikipedia.org/wiki/%E1%88%98%E1%89%A0%E1%8C%88%E1%88%B2_%E1%8C%88%E1%8C%BD">ትግርኛ</a></li>
+<li class="rm-manual"><a href="https://tk.wikipedia.org/wiki/Ba%C5%9F_Sahypa">Türkmençe</a></li>
+<li class="rm-manual"><a href="https://tl.wikipedia.org/wiki/Unang_Pahina">Tagalog</a></li>
+<li class="rm-manual"><a href="https://tn.wikipedia.org/wiki/Main_Page">Setswana</a></li>
+<li class="rm-manual"><a href="https://to.wikipedia.org/wiki/Peesi_tali_fiefia">Lea faka-Tonga</a></li>
+<li class="rm-manual"><a href="https://tpi.wikipedia.org/wiki/Fran_pes">Tok Pisin</a></li>
+<li class="rm-manual"><a href="https://tr.wikipedia.org/wiki/Anasayfa">Türkçe</a></li>
+<li class="rm-manual"><a href="https://ts.wikipedia.org/wiki/Tlukankulu">Xitsonga</a></li>
+<li class="rm-manual"><a href="https://tt.wikipedia.org/wiki/%D0%91%D0%B0%D1%88_%D0%B1%D0%B8%D1%82">Татарча/tatarça</a></li>
+<li class="rm-manual"><a href="https://tum.wikipedia.org/wiki/Main_Page">ChiTumbuka</a></li>
+<li class="rm-manual"><a href="https://tw.wikipedia.org/wiki/Main_Page">Twi</a></li>
+<li class="rm-manual"><a href="https://ty.wikipedia.org/wiki/Fa%E2%80%99ari%E2%80%99ira%E2%80%99a">Reo tahiti</a></li>
+<li class="rm-manual"><a href="https://tyv.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BB_%D0%B0%D1%80%D1%8B%D0%BD">Тыва дыл</a></li>
+<li class="rm-manual"><a href="https://udm.wikipedia.org/wiki/%D0%9A%D1%83%D1%82%D1%81%D0%BA%D0%BE%D0%BD_%D0%B1%D0%B0%D0%BC">Удмурт</a></li>
+<li class="rm-manual"><a href="https://ug.wikipedia.org/wiki/%D8%A6%DB%87%D9%8A%D8%BA%DB%87%D8%B1%DA%86%DB%95_%DB%8B%D9%89%D9%83%D9%89%D9%BE%D9%89%D8%AF%D9%89%D9%8A%DB%95">ئۇيغۇرچە / Uyghurche</a></li>
+<li class="rm-manual"><a href="https://uk.wikipedia.org/wiki/%D0%93%D0%BE%D0%BB%D0%BE%D0%B2%D0%BD%D0%B0_%D1%81%D1%82%D0%BE%D1%80%D1%96%D0%BD%D0%BA%D0%B0">Українська</a></li>
+<li class="rm-manual"><a href="https://ur.wikipedia.org/wiki/%D8%B5%D9%81%D8%AD%DB%82_%D8%A7%D9%88%D9%84">اردو</a></li>
+<li class="rm-manual"><a href="https://uz.wikipedia.org/wiki/Bosh_Sahifa">Oʻzbekcha/ўзбекча</a></li>
+<li class="rm-manual"><a href="https://ve.wikipedia.org/wiki/Hayani">Tshivenda</a></li>
+<li class="rm-manual"><a href="https://vec.wikipedia.org/wiki/Pajina_prinsipa%C5%82e">Vèneto</a></li>
+<li class="rm-manual"><a href="https://vep.wikipedia.org/wiki/P%C3%A4lehtpol%E2%80%99">Vepsän kel’</a></li>
+<li class="rm-manual"><a href="https://vi.wikipedia.org/wiki/Trang_Ch%C3%ADnh">Tiếng Việt</a></li>
+<li class="rm-manual"><a href="https://vls.wikipedia.org/wiki/Voorblad">West-Vlams</a></li>
+<li class="rm-manual"><a href="https://vo.wikipedia.org/wiki/Cifapad">Volapük</a></li>
+<li class="rm-manual"><a href="https://wa.wikipedia.org/wiki/Mwaisse_p%C3%A5dje">Walon</a></li>
+<li class="rm-manual"><a href="https://war.wikipedia.org/wiki/Syahan_nga_Pakli">Winaray</a></li>
+<li class="rm-manual"><a href="https://wo.wikipedia.org/wiki/X%C3%ABt_wu_nj%C3%ABkk">Wolof</a></li>
+<li class="rm-manual"><a href="https://wuu.wikipedia.org/wiki/%E5%B0%81%E9%9D%A2">吴语</a></li>
+<li class="rm-manual"><a href="https://xal.wikipedia.org/wiki/%D0%9D%D2%AF%D1%80_%D1%85%D0%B0%D0%BB%D1%85">Хальмг</a></li>
+<li class="rm-manual"><a href="https://xh.wikipedia.org/wiki/Iphepha_Elingundoqo">IsiXhosa</a></li>
+<li class="rm-manual"><a href="https://xmf.wikipedia.org/wiki/%E1%83%93%E1%83%A3%E1%83%93%E1%83%AE%E1%83%90%E1%83%A1%E1%83%B7%E1%83%9A%E1%83%90">მარგალური</a></li>
+<li class="rm-manual"><a href="https://yi.wikipedia.org/wiki/%D7%94%D7%95%D7%99%D7%A4%D7%98_%D7%96%D7%99%D7%99%D7%98">ייִדיש</a></li>
+<li class="rm-manual"><a href="https://yo.wikipedia.org/wiki/Oj%C3%BAew%C3%A9_%C3%80k%E1%BB%8D%CC%81k%E1%BB%8D%CC%81">Yorùbá</a></li>
+<li class="rm-manual"><a href="https://za.wikipedia.org/wiki/Yiebdaeuz">Vahcuengh</a></li>
+<li class="rm-manual"><a href="https://zea.wikipedia.org/wiki/V%C3%B2blad">Zeêuws</a></li>
+<li class="rm-manual"><a href="https://zh.wikipedia.org/wiki/Wikipedia:%E9%A6%96%E9%A1%B5">中文</a></li>
+<li class="rm-manual"><a href="https://zh-classical.wikipedia.org/wiki/%E7%B6%AD%E5%9F%BA%E5%A4%A7%E5%85%B8:%E5%8D%B7%E9%A6%96">文言</a></li>
+<li class="rm-manual"><a href="https://zh-min-nan.wikipedia.org/wiki/Th%C3%A2u-ia%CC%8Dh">Bân-lâm-gú</a></li>
+<li class="rm-manual"><a href="https://zh-yue.wikipedia.org/wiki/%E9%A0%AD%E7%89%88">粵語</a></li>
+<li class="rm-manual"><a href="https://zu.wikipedia.org/wiki/Ikhasi_Elikhulu">IsiZulu</a></li>
+</ul>
+<p class="rm-manual"><span><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q5296#sitelinks-wikipedia">Edit links</a></span></p>
+<h3 class="rm-manual"> <span>In other projects</span> </h3>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.mediawiki.org/wiki/MediaWiki">MediaWiki</a></li>
+<li class="rm-manual"><a href="https://meta.wikimedia.org/wiki/Main_Page">Meta-Wiki</a></li>
+<li class="rm-manual"><a href="https://species.wikimedia.org/wiki/Main_Page">Wikispecies</a></li>
+<li class="rm-manual"><a href="https://en.wikibooks.org/wiki/Main_Page">Wikibooks</a></li>
+<li class="rm-manual"><a href="">Wikidata</a></li>
+<li class="rm-manual"><a href="https://wikimania.wikimedia.org/wiki/Wikimania">Wikimania</a></li>
+<li class="rm-manual"><a href="https://en.wikinews.org/wiki/Main_Page">Wikinews</a></li>
+<li class="rm-manual"><a href="https://en.wikipedia.org/wiki/Main_Page">Wikipedia</a></li>
+<li class="rm-manual"><a href="https://en.wikiquote.org/wiki/Main_Page">Wikiquote</a></li>
+<li class="rm-manual"><a href="https://en.wikisource.org/wiki/Main_Page">Wikisource</a></li>
+<li class="rm-manual"><a href="https://en.wikiversity.org/wiki/Wikiversity:Main_Page">Wikiversity</a></li>
+<li class="rm-manual"><a href="https://en.wikivoyage.org/wiki/Main_Page">Wikivoyage</a></li>
+<li class="rm-manual"><a href="https://en.wiktionary.org/wiki/Wiktionary:Main_Page">Wiktionary</a></li>
+</ul>
+<ul class="rm-manual"> <li class="rm-manual"> This page was last edited on 17 May 2020, at 06:09.</li> <li class="rm-manual">Files
+ are available under licenses specified on their description page. All 
+structured data from the file and property namespaces is available under
+ the <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons CC0 License</a>; all unstructured text is available under the <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike License</a>; additional terms may apply. By using this site, you agree to the <a href="file:///wiki/Terms_of_Use">Terms of Use</a> and the <a href="file:///wiki/Privacy_policy">Privacy Policy</a>.</li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy">Privacy policy</a></li> <li class="rm-manual"><a href="file:///wiki/Commons:Welcome">About Wikimedia Commons</a></li> <li class="rm-manual"><a href="file:///wiki/Commons:General_disclaimer">Disclaimers</a></li> <li class="rm-manual"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li> <li class="rm-manual"><a href="https://stats.wikimedia.org/#/commons.wikimedia.org">Statistics</a></li> <li class="rm-manual"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li> <li class="rm-manual"><a href="file:///w/index.php?title=Main_Page&amp;mobileaction=toggle_view_mobile">Mobile view</a></li> </ul></article>
+</body></html>

@@ -1,0 +1,94 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">Free Digital Access to Our June Issue</p>
+<p class="rm-manual"><a href="file:///plugged-in/"><span>Plugged In</span></a></p>
+<h1 class="rm-manual">North Korea by night [photograph]</h1>
+<ul class="rm-manual"><li class="rm-manual">By <span><span><a href="https://www.scientificamerican.com/author/david-wogan/">David Wogan</a></span></span> on December 19, 2011</li></ul>
+<figcaption class="rm-manual">Advertisement</figcaption><p>North Korea 
+appears as a sea of darkness in this famous photograph. The capital city
+ Pyongyang registers as the sole blip of light.</p>
+<p>Perhaps there is no better visualization of the isolation and oppression that the North Koreans live under.</p>
+<p>Via the late Christopher Hitchens’ essay on North Korea for Slate: <a href="http://www.slate.com/articles/news_and_politics/fighting_words/2010/02/a_nation_of_racist_dwarfs.single.html">"A Nation of Racist Dwarfs"</a>.</p>
+<p class="rm-manual">The views expressed are those of the author(s) and are not necessarily those of Scientific American. </p>
+<h3 class="rm-manual">ABOUT THE AUTHOR(S)</h3>
+<h4 class="rm-manual">David Wogan</h4>
+<p class="rm-manual">David Wogan is an engineer and policy researcher who writes about energy, technology, and policy. </p>
+<p class="rm-manual">David's academic and professional background 
+includes a unique blend of technology and policy in the field of energy 
+systems. Most recently, David worked at Austin Energy, a Texas municipal
+ utility, implementing a Department of Energy stimulus grant related to 
+energy efficiency. Previously, David was a member of the Energy &amp; 
+Climate Change team at the White House Council on Environmental Quality 
+for the Obama Administration. </p>
+<p class="rm-manual">David holds two Master's degrees from The 
+University of Texas at Austin in Mechanical Engineering and Public 
+Affairs. While at UT, David was a researcher in the Webber Energy Group,
+ where his research focused on advanced biofuel production to offset 
+petroleum use in the transportation sector. David holds a Bachelor's of 
+Science degree in Mechanical Engineering from The University of Texas at
+ Austin, where he researched nuclear non-proliferation measurement 
+technology. </p>
+<p class="rm-manual">David is a 2013 Aspen Institute Journalism Scholar,
+ joining a select group of journalists from Slate, ABC News, and The New
+ York Times. </p>
+<p class="rm-manual">David lives in Austin, Texas. Follow along on <a href="http://www.twitter.com/davidwogan">Twitter</a> or email him at <a href="mailto:david.m.wogan@gmail.com">david.wogan@me.com</a>.</p>
+<h4 class="rm-manual">Recent Articles</h4>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://blogs.scientificamerican.com/plugged-in/farewell1/">Farewell</a></li>
+<li class="rm-manual"><a href="https://blogs.scientificamerican.com/plugged-in/rethinking-environmental-folklore/">Rethinking environmental folklore</a></li>
+<li class="rm-manual"><a href="https://blogs.scientificamerican.com/plugged-in/offshore-drilling-exhibit-opens-at-george-bush-presidential-library/">George Bush Presidential Library opens offshore drilling exhibit</a></li>
+</ul>
+<h2 class="rm-manual"><span>Read This Next</span></h2>
+<p class="rm-manual"><a href="https://blogs.scientificamerican.com/observations/what-social-distancing-reveals-about-east-west-differences/"></a></p><section class="rm-manual"><p class="rm-manual"></p><p class="rm-manual"><a href="https://blogs.scientificamerican.com/observations/what-social-distancing-reveals-about-east-west-differences/">Behavior &amp; Society</a></p><h3 class="rm-manual"><a href="https://blogs.scientificamerican.com/observations/what-social-distancing-reveals-about-east-west-differences/">What Social Distancing Reveals about East-West Differences</a></h3><p class="rm-manual"><a href="https://blogs.scientificamerican.com/observations/what-social-distancing-reveals-about-east-west-differences/">13 minutes ago — Gish Jen and Qi Wang | </a><a href="https://www.scientificamerican.com/section/opinion/"> Opinion</a></p><p class="rm-manual"></p></section><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://www.scientificamerican.com/article/recommended-books-june-2020/"></a></p><section class="rm-manual"><p class="rm-manual"></p><p class="rm-manual"><a href="https://www.scientificamerican.com/article/recommended-books-june-2020/">Arts &amp; Culture</a></p><h3 class="rm-manual"><a href="https://www.scientificamerican.com/article/recommended-books-june-2020/">Recommended Books, June 2020</a></h3><p class="rm-manual"><a href="https://www.scientificamerican.com/article/recommended-books-june-2020/">3 hours ago — Andrea Gawrylewski</a></p><p class="rm-manual"></p></section><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://www.scientificamerican.com/article/the-biggest-mystery-what-it-will-take-to-trace-the-coronavirus-source/"></a></p><section class="rm-manual"><p class="rm-manual"></p><p class="rm-manual"><a href="https://www.scientificamerican.com/article/the-biggest-mystery-what-it-will-take-to-trace-the-coronavirus-source/">Public Health</a></p><h3 class="rm-manual"><a href="https://www.scientificamerican.com/article/the-biggest-mystery-what-it-will-take-to-trace-the-coronavirus-source/">The Biggest Mystery: What It Will Take To Trace The Coronavirus Source</a></h3><p class="rm-manual"><a href="https://www.scientificamerican.com/article/the-biggest-mystery-what-it-will-take-to-trace-the-coronavirus-source/">4 hours ago — David Cyranoski and Nature magazine</a></p><p class="rm-manual"></p></section><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://blogs.scientificamerican.com/observations/the-new-science-of-lockdowns/"></a></p><section class="rm-manual"><p class="rm-manual"></p><p class="rm-manual"><a href="https://blogs.scientificamerican.com/observations/the-new-science-of-lockdowns/">Public Health</a></p><h3 class="rm-manual"><a href="https://blogs.scientificamerican.com/observations/the-new-science-of-lockdowns/">The New Science of Lockdowns</a></h3><p class="rm-manual"><a href="https://blogs.scientificamerican.com/observations/the-new-science-of-lockdowns/">20 hours ago — Thomas Parisini, Robert Shorten and Lewi Stone | </a><a href="https://www.scientificamerican.com/section/opinion/"> Opinion</a></p><p class="rm-manual"></p></section><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://www.scientificamerican.com/article/trump-waives-environmental-reviews-vulnerable-communities-could-bear-the-brunt/"></a></p><section class="rm-manual"><p class="rm-manual"></p><p class="rm-manual"><a href="https://www.scientificamerican.com/article/trump-waives-environmental-reviews-vulnerable-communities-could-bear-the-brunt/">Environment</a></p><h3 class="rm-manual"><a href="https://www.scientificamerican.com/article/trump-waives-environmental-reviews-vulnerable-communities-could-bear-the-brunt/">Trump Waives Environmental Reviews, Vulnerable Communities Could Bear the Brunt</a></h3><p class="rm-manual"><a href="https://www.scientificamerican.com/article/trump-waives-environmental-reviews-vulnerable-communities-could-bear-the-brunt/">21 hours ago — Adam Aton, Scott Waldman and E&amp;E News</a></p><p class="rm-manual"></p></section><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://www.scientificamerican.com/article/black-birders-call-out-racism-say-nature-should-be-for-everyone/"></a></p><section class="rm-manual"><p class="rm-manual"></p><p class="rm-manual"><a href="https://www.scientificamerican.com/article/black-birders-call-out-racism-say-nature-should-be-for-everyone/">Policy &amp; Ethics</a></p><h3 class="rm-manual"><a href="https://www.scientificamerican.com/article/black-birders-call-out-racism-say-nature-should-be-for-everyone/">Black Birders Call Out Racism, Say Nature Should Be for Everyone</a></h3><p class="rm-manual"><a href="https://www.scientificamerican.com/article/black-birders-call-out-racism-say-nature-should-be-for-everyone/">June 5, 2020 — Andrea Thompson</a></p><p class="rm-manual"></p></section><p class="rm-manual"></p>
+<p class="rm-manual">Free Digital Access to Our June Issue</p>
+<h2 class="rm-manual"><span>Read More</span></h2>
+<p class="rm-manual">Previous</p>
+<h3 class="rm-manual"><span>Congress strips funding for efficient lighting standards</span></h3>
+<ul class="rm-manual">
+<li class="rm-manual">By David Wogan on December 19, 2011</li>
+<li class="rm-manual"> 2</li>
+</ul>
+<p class="rm-manual">Next</p>
+<h3 class="rm-manual"><span>SunShot - Driving Toward the Dollar Watt</span></h3>
+<ul class="rm-manual"><li class="rm-manual">By Melissa C. Lott on December 20, 2011</li></ul></article>
+</body></html>

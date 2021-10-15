@@ -1,0 +1,460 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Classified Challenger tank specs leaked online for videogame </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://ukdefencejournal.org.uk/">Home</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/air/">Air</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/sea/">Sea</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/land/">Land</a></li> <li class="rm-manual">
+<a href="https://ukdefencejournal.org.uk/news/international/">International</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/international/europe/">Europe</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/international/north-america/">North America</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/international/pacific/">Pacific</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/international/africa/">Africa</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/international/south-america/">South America</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/international/asia/">Asia</a></li> </ul> </li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/analysis/">Analysis</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/fact-check/">Fact Check</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/the-osint-bunker/">The OSINT Bunker</a></li> <li class="rm-manual">
+<a href="https://ukdefencejournal.org.uk/about-us/">About Us</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/our-team">Our Team</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/about-us/contact-us/">Contact Us</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/about-us/submission-guidelines/">Submission Guidelines</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/correction-policy/">Correction Policy</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/about-us/social-media-and-comment-moderation-policy/">Social Media and Comment Moderation Policy</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/privacy/">Privacy Policy</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/cookies/">Cookie Policy</a></li> </ul> </li> </ul>
+<p class="rm-manual">Sign in</p>
+<p class="rm-manual"><span>Welcome!</span>Log into your account</p>
+<p class="rm-manual">your username</p>
+<p class="rm-manual">your password</p>
+<p class="rm-manual"><a href="#">Forgot your password?</a></p>
+<p class="rm-manual"><a href="https://ukdefencejournal.org.uk/privacy/">Privacy Policy</a></p>
+<p class="rm-manual">Password recovery</p>
+<p class="rm-manual">Recover your password</p>
+<p class="rm-manual">your email</p>
+<p class="rm-manual"> <span>Search</span> </p>
+<p class="rm-manual">Sign in</p>
+<p class="rm-manual">Welcome! Log into your account</p>
+<p class="rm-manual">your username</p>
+<p class="rm-manual">your password</p>
+<p class="rm-manual"><a href="#">Forgot your password? Get help</a></p>
+<p class="rm-manual"><a href="https://ukdefencejournal.org.uk/privacy/">Privacy Policy</a></p>
+<p class="rm-manual">Password recovery</p>
+<p class="rm-manual">Recover your password</p>
+<p class="rm-manual">your email</p>
+<p class="rm-manual">A password will be e-mailed to you.</p>
+<p class="rm-manual"> <a href="https://ukdefencejournal.org.uk/"> <span>UK Defence Journal</span> </a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://ukdefencejournal.org.uk/">Home</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/air/">Air</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/sea/">Sea</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/land/">Land</a></li> <li class="rm-manual">
+<a href="https://ukdefencejournal.org.uk/news/international/">International</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/international/europe/">Europe</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/international/north-america/">North America</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/international/pacific/">Pacific</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/international/africa/">Africa</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/international/south-america/">South America</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/international/asia/">Asia</a></li> </ul> </li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/analysis/">Analysis</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/fact-check/">Fact Check</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/the-osint-bunker/">The OSINT Bunker</a></li> <li class="rm-manual">
+<a href="https://ukdefencejournal.org.uk/about-us/">About Us</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/our-team">Our Team</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/about-us/contact-us/">Contact Us</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/about-us/submission-guidelines/">Submission Guidelines</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/correction-policy/">Correction Policy</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/about-us/social-media-and-comment-moderation-policy/">Social Media and Comment Moderation Policy</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/privacy/">Privacy Policy</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/cookies/">Cookie Policy</a></li> </ul> </li> </ul>
+<p class="rm-manual"><span><a href="https://ukdefencejournal.org.uk/">Home</a></span> <span><a href="https://ukdefencejournal.org.uk/news/land/">Land</a></span> <span>Classified Challenger tank specs leaked online for videogame</span></p>
+<figcaption class="rm-manual">The tank as it appears in game.</figcaption><ul class="rm-manual"><li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/land/">Land</a></li></ul>
+<h1 class="rm-manual">Classified Challenger tank specs leaked online for videogame</h1>
+<p class="rm-manual">By</p>
+<p class="rm-manual"><a href="https://ukdefencejournal.org.uk/author/george-allison/">George Allison</a></p>
+<p class="rm-manual"> - </p>
+<p class="rm-manual"><span>July 16, 2021</span> </p>
+<p class="rm-manual"><a href="https://ukdefencejournal.org.uk/classified-challenger-tank-specs-leaked-online-for-videogame/#comments">37</a></p>
+<h3 class="rm-manual">A user has posted a classified document online 
+relating to the Challenger 2 in order to improve the accuracy of the 
+design of the tank in combat game ‘War Thunder’.</h3>
+<p>A gamer identifying as Challenger 2 commander has posted a classified
+ document online in order to improve the accuracy of the design of the 
+tank in the game ‘War Thunder’.</p>
+<p>War Thunder is a vehicular combat multiplayer video game developed 
+and published by Gaijin Entertainment. Despite the fact that Gaijin 
+Entertainment lists itself as a Cyprus-based studio, it was originally 
+founded in Moscow, Russia, where it still has offices today.</p>
+<p>It also has branches in Germany, Hungary, and Latvia, <a href="https://www.thegamer.com/gaijin-entertainment-russia-anti-ukraine-sponsor/">you can read more on the studio here</a>.</p>
+<h3>So, what happened?</h3>
+<p>A user identifying as a Challenger 2 commander posted specific 
+excerpts from a Challenger 2 AESP (Army Equipment Support Publication, 
+sort of like a user manual) to show game developers that they “didn’t 
+model it correctly”.</p>
+<p>The user identifies as a make in Tidworth with a history of “Tanks 
+&amp; AFV’s, CR2 Tank Commander, AFV Instr, D&amp;M Instr, Gunnery 
+Instr, Former ATDU”. It should be noted that Tidworth is home to the 
+Royal Tank Regiment who operate Challenger 2 tanks.</p>
+<p>Anyway, it is understood that the excerpts from the document had 
+their ‘UK RESTRICTED’ label crossed out and a stamp of ‘UNCLASSIFIED’ 
+added, as well as having various parts fully blanked. One forum user 
+remarked that “the cover for instance had basically everything except 
+CHALLENGER 2 blacked out”.</p>
+<p>The forum user posted the following alongside the now removed AESP in
+ an effort to have an issue with the in-game design of the vehicle 
+rectified.</p>
+<p>“Linking those screenshots with the following edited image from the 
+AESP’s which is meant to show the relationship of the various 
+components. The image isn’t exactly to scale as its only meant to show 
+the position of components relative to each other but it works for the 
+point I’m trying to make here. The trunnion’s sit centrally of the 
+rotor. The trunnions support the rotor in the turret structure and the 
+GCE sub components as previously stated are all mounted to the rotor.”</p>
+<p>Gaijin refused to deal with the apparently still classified documents. Saying through through their community manager:</p>
+<p>“Before any discussion, handling or bug reports are even made, proof 
+of this documents declassification will be required as well as where it 
+was sourced form. If it is declassified, it should be available to the 
+public. Last time such a document was shared that was claimed to be 
+“unclassified” it was in fact still classified and was confirmed that it
+ should never have been shared. We make it very clear that we will not 
+handle any source material unless it is publically available and fully 
+declassified with the rights to prove that.”</p>
+<p>Additionally, a forum moderator posted:</p>
+<p>“We have written confirmation from MoD that this document remains 
+classified. By continuing to disseminate it you are in violation of the 
+Official Secrets Act as stated by the warning on the cover of the 
+document, an offence which can carry up to a 14 year prison sentence if 
+prosecuted. Of this you are already aware, as a service person you have 
+signed a declaration that you understand the act and what actions it 
+compels you to take. Every time you post this you place us 
+(International representatives of Gaijin), especially any UK citizens, 
+in hot water as the warning so helpfully states that unauthorised 
+retention of a protected document is an offence.”</p>
+<p>It’s not yet clear what happened – was the clearance faked or was it 
+given by the wrong people? We’ll update htis article when we know more.</p>
+<p class="rm-manual"><span><a href="https://ukdefencejournal.org.uk/author/george-allison/">George Allison</a></span></p>
+<p class="rm-manual">George has a degree in Cyber Security from Glasgow 
+Caledonian University and has a keen interest in naval defence 
+technology and cyber security matters. George is on Twitter at 
+@geoallison</p>
+<h4 class="rm-manual">
+<a href="#">RELATED ARTICLES</a><a href="#">MORE FROM AUTHOR</a>
+</h4>
+<p class="rm-manual"> <a href="https://ukdefencejournal.org.uk/news/land/">Land</a> </p>
+<h3 class="rm-manual"><a href="https://ukdefencejournal.org.uk/british-army-receives-new-rapidly-deployable-bridge/" rel="bookmark">British Army receives new rapidly deployable bridge</a></h3>
+<p class="rm-manual"> <a href="https://ukdefencejournal.org.uk/news/land/">Land</a> </p>
+<h3 class="rm-manual"><a href="https://ukdefencejournal.org.uk/trophy-active-protection-system-picked-for-challenger-3/" rel="bookmark">Trophy Active Protection System picked for Challenger 3</a></h3>
+<p class="rm-manual"> <a href="https://ukdefencejournal.org.uk/news/land/">Land</a> </p>
+<h3 class="rm-manual"><a href="https://ukdefencejournal.org.uk/ajax-armoured-vehicle-trials-halted-again/" rel="bookmark">Ajax armoured vehicle trials halted again</a></h3>
+<p class="rm-manual"> <a href="https://ukdefencejournal.org.uk/news/land/">Land</a> </p>
+<h3 class="rm-manual"><a href="https://ukdefencejournal.org.uk/british-troops-conduct-firepower-demo-in-jordan/" rel="bookmark">British troops conduct firepower demo in Jordan</a></h3>
+<p class="rm-manual"> <a href="https://ukdefencejournal.org.uk/news/land/">Land</a> </p>
+<h3 class="rm-manual"><a href="https://ukdefencejournal.org.uk/wfel-to-supply-dry-support-bridges-to-philippines/" rel="bookmark">WFEL to supply Dry Support Bridges to Philippines</a></h3>
+<p class="rm-manual"> <a href="https://ukdefencejournal.org.uk/news/land/">Land</a> </p>
+<h3 class="rm-manual"><a href="https://ukdefencejournal.org.uk/britain-second-biggest-defence-spender-in-nato/" rel="bookmark">Britain second biggest defence spender in NATO</a></h3>
+<p class="rm-manual"> <span>Subscribe</span> </p>
+<p class="rm-manual">Notify of </p>
+<p class="rm-manual"> Label </p>
+<p class="rm-manual"> Comments may automatically be held for moderation 
+by our team, they will be approved as soon as possible in accordance 
+with our <a href="https://ukdefencejournal.org.uk/about-us/social-media-and-comment-moderation-policy/">Comment Moderation Policy</a>.
+ Please do not e-mail the team in order to speed this process up. If you
+ have any concerns about comment moderation or any general questions 
+relating to our comment section please send an e-mail to <a href="file:///cdn-cgi/l/email-protection#5f33362c3e71283a2c2b1f2a343b3a393a313c3a35302a2d313e3371302d38712a34602c2a3d353a3c2b7f627f1c3032323a312b2c793d303b267f627f123a2c2c3e383a"><span>[email protected]</span></a>. For corrections, please see our <a href="https://ukdefencejournal.org.uk/correction-policy/">Correction Policy</a>. </p>
+<p class="rm-manual"> Name* </p>
+<p class="rm-manual"> Email* </p>
+<p class="rm-manual"> Label </p>
+<p class="rm-manual"> Comments may automatically be held for moderation 
+by our team, they will be approved as soon as possible in accordance 
+with our <a href="https://ukdefencejournal.org.uk/about-us/social-media-and-comment-moderation-policy/">Comment Moderation Policy</a>.
+ Please do not e-mail the team in order to speed this process up. If you
+ have any concerns about comment moderation or any general questions 
+relating to our comment section please send an e-mail to <a href="file:///cdn-cgi/l/email-protection#93fffae0f2bde4f6e0e7d3e6f8f7f6f5f6fdf0f6f9fce6e1fdf2ffbdfce1f4bde6f8ace0e6f1f9f6f0e7b3aeb3d0fcfefef6fde7e0b5f1fcf7eab3aeb3def6e0e0f2f4f6"><span>[email protected]</span></a>. For corrections, please see our <a href="https://ukdefencejournal.org.uk/correction-policy/">Correction Policy</a>. </p>
+<p class="rm-manual"> Name* </p>
+<p class="rm-manual"> Email* </p>
+<p class="rm-manual"> <span>37</span> Comments </p>
+<p class="rm-manual"> <span>oldest</span> </p>
+<p class="rm-manual"> <span>newest</span> </p>
+<p class="rm-manual"> Inline Feedbacks</p>
+<p class="rm-manual">View all comments</p>
+<p class="rm-manual"> Goldilocks </p>
+<p class="rm-manual"> 5 hours ago </p>
+<p class="rm-manual">Sadly, we have 227 atm – soon to have just 148. Oh dear</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> farouk </p>
+<p class="rm-manual"> 5 hours ago </p>
+<p class="rm-manual">What a dick</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> Andy P </p>
+<p class="rm-manual"> 4 hours ago </p>
+<p class="rm-manual"> Reply to <a href="#comment-571080"> farouk </a> </p>
+<p class="rm-manual">Yeah…. <span>While RESTRICTED is ‘just’ classified,
+ you need to take a look at yourself if you’re sending in an operators 
+manual to a computer game company to try and get them to change stuff. 
+Time to step away from your laptop.</span></p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> Nate M </p>
+<p class="rm-manual"> 3 hours ago </p>
+<p class="rm-manual"> Reply to <a href="#comment-571087"> Andy P </a> </p>
+<p class="rm-manual">I my self play war thunder Great game. But russian 
+bias!! Hopefully the leaked secrets will mean the nerfed british tech 
+tree will get huge upgrade! However, this is a bad thing.</p>
+<p class="rm-manual">Last edited 3 hours ago by Nate M</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> Raz </p>
+<p class="rm-manual"> 3 hours ago </p>
+<p class="rm-manual"> Reply to <a href="#comment-571087"> Andy P </a> </p>
+<p class="rm-manual">The guy who posted it is a tank commander and has 
+been gathering information for a long time and sone changes have come as
+ a result. Everything he posts and collects he clears with his OC first 
+and had quite a bit under review still. This article was so long ago and
+ had been cleared by his superiors.</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> Andy P </p>
+<p class="rm-manual"> 2 hours ago </p>
+<p class="rm-manual"> Reply to <a href="#comment-571094"> Raz </a> </p>
+<p class="rm-manual">Fair enough Raz, I guess its easy to mock someone else’s passion/hobby. Each to their own I suppose.</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> Raz </p>
+<p class="rm-manual"> 2 hours ago </p>
+<p class="rm-manual"> Reply to <a href="#comment-571110"> Andy P </a> </p>
+<p class="rm-manual">Yeah, the post was like 2 years ago and they post 
+it now. If they paid any real attention they would know he did nothing 
+wrong and gaijins claims were assumptions without merit.</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> nem </p>
+<p class="rm-manual"> 1 hour ago </p>
+<p class="rm-manual"> Reply to <a href="#comment-571111"> Raz </a> </p>
+<p class="rm-manual">The post was 3 days ago</p>
+<p class="rm-manual">The sources were removed today by the mods after getting in touch with DE&amp;S.</p>
+<p class="rm-manual">The text is all still there on the forums in a locked thread.</p>
+<p class="rm-manual">Last edited 1 hour ago by nem</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> dan </p>
+<p class="rm-manual"> 4 minutes ago </p>
+<p class="rm-manual"> Reply to <a href="#comment-571087"> Andy P </a> </p>
+<p class="rm-manual">He should worry more about his job and less about his hobby.</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> Dern </p>
+<p class="rm-manual"> 5 hours ago </p>
+<p class="rm-manual">Usually a good idea not to post something you’re given in work unless you can find it on OS in your own time….</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> Rob N </p>
+<p class="rm-manual"> 3 hours ago </p>
+<p class="rm-manual"> Reply to <a href="#comment-571083"> Dern </a> </p>
+<p class="rm-manual">Yes agreed. This individual is obviously a security
+ risk and has already given information to a possible future adversary. 
+If they find hip he should de dismissed and charged under the OSA.</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> Raz </p>
+<p class="rm-manual"> 2 hours ago </p>
+<p class="rm-manual"> Reply to <a href="#comment-571093"> Rob N </a> </p>
+<p class="rm-manual">Both of you are making assumptions on misleading 
+information. This was posted on the forums around 2 years ago and they 
+claimed it was still classified but he had gotten it approved by his 
+superiors first and continues to provide information they use today to 
+make the fixes we keep getting to the chally.</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> AyyP </p>
+<p class="rm-manual"> 1 hour ago </p>
+<p class="rm-manual"> Reply to <a href="#comment-571112"> Raz </a> </p>
+<p class="rm-manual">Incorrect – you can look and see he *just* posted 
+it two days ago, and you can see a developer response stating that they 
+directly asked the MOD if this information was kosher and they in turn 
+were directly told “No.”</p>
+<p class="rm-manual">It would have taken you five minutes to verify that you weren’t the one making assumptions on misleading information, my friend.</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> Jack </p>
+<p class="rm-manual"> 54 minutes ago </p>
+<p class="rm-manual"> Reply to <a href="#comment-571112"> Raz </a> </p>
+<p class="rm-manual">while the original forum post is from two years ago the classified docs in question were released like less than 2 days ago</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> Matthews </p>
+<p class="rm-manual"> 21 minutes ago </p>
+<p class="rm-manual"> Reply to <a href="#comment-571112"> Raz </a> </p>
+<p class="rm-manual">Really? So he posted it 2 years ago and they 
+noticed only now? Not trying to sound smart, just if I got it right. I 
+dig for this guy, he has a passion I share with him, even if he does 
+some little over the top things.</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> Raz </p>
+<p class="rm-manual"> 15 minutes ago </p>
+<p class="rm-manual"> Reply to <a href="#comment-571122"> Matthews </a> </p>
+<p class="rm-manual">We are just seeing a screenshot of the article and I
+ remember it from back then. It says 17 hours ago or something but 
+notice there is no date showing? They have cut it to not show the date 
+it was posted and the screen shot was taken.</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> Jonathan </p>
+<p class="rm-manual"> 3 hours ago </p>
+<p class="rm-manual"> Reply to <a href="#comment-571083"> Dern </a> </p>
+<p class="rm-manual">Yes thats a very good rule to follow. If your 
+posting something that’s not open source your probably risking your job 
+if your lucky.</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> JJ Smallpiece </p>
+<p class="rm-manual"> 3 hours ago </p>
+<p class="rm-manual">As others have said, the future plan for British 
+tanks is so small, it hardly matters. I’m more concerned about the 
+British Government not funding defence properly. Thats the biggest 
+security risk. The scary thing is, our fellow citizens elected these 
+clowns.</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> Rob N </p>
+<p class="rm-manual"> 3 hours ago </p>
+<p class="rm-manual"> Reply to <a href="#comment-571088"> JJ Smallpiece </a> </p>
+<p class="rm-manual">To be fare the Government have increased defence 
+spending recently and we are the second biggest spender in NATO. I would
+ like to see more spent on defence but at least we have reversed the 
+direction of cut cut cut. Not everything can be funded and the future 
+battlefield may be very different from now and what kit is required is 
+likely to change. At one time a line of Dreadnaughts was the thing… in 
+the future it might be AI controlled stealth drones. The traditional 
+tank as we know it today may not be as much of a player<span><span>… </span><span>Read more »</span></span></p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> Spyinthesky </p>
+<p class="rm-manual"> 2 hours ago </p>
+<p class="rm-manual"> Reply to <a href="#comment-571099"> Rob N </a> </p>
+<p class="rm-manual">Indeed I’m not sure despite my contempt for Boris’s
+ Buffoons that any alternative Govt would have increased defence 
+spending, indeed had Corbyn been elected we would have bikes in place of
+ tanks. Again I agree the effectiveness of tanks esp past this decade is
+ very much up for debate it needs a serious conflict to truly judge, I 
+wonder how long battleships would have lasted had the 2nd WW not 
+occurred maybe even into the 60s who knows and would the Aircraft 
+Carrier still much doubted by some in 1939 gained the impetus in the 40s
+ and beyond? Tanks futures<span><span>… </span><span>Read more »</span></span></p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> Harry Bulpit </p>
+<p class="rm-manual"> 3 hours ago </p>
+<p class="rm-manual">Unfortunately War Thunder is developed by a Russian company. So this could have serious implications.</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> colin </p>
+<p class="rm-manual"> 3 hours ago </p>
+<p class="rm-manual">Doesn’t really matter we have only 148 Challenger in the UK . Poland has secured 250 x Abrams M1A2 SEPV3</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> Jack </p>
+<p class="rm-manual"> 2 hours ago </p>
+<p class="rm-manual"> Reply to <a href="#comment-571092"> colin </a> </p>
+<p class="rm-manual">$6 Billion USD for 250 tanks ? That seems steep to 
+me. The UK are spending $1.1 Billion USD for 148 Challenger 3s. I wish 
+we would upgrade more, even if we put the additional tanks in storage.</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> Sharpie </p>
+<p class="rm-manual"> 2 hours ago </p>
+<p class="rm-manual"> Reply to <a href="#comment-571103"> Jack </a> </p>
+<p class="rm-manual">@Jack you’ll probably find that the Poland deal 
+includes a lot of other things that you need to operate a new tank, like
+ spare parts, ammunition, crew training, maintenance tooling, etc</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> Spyinthesky </p>
+<p class="rm-manual"> 2 hours ago </p>
+<p class="rm-manual"> Reply to <a href="#comment-571092"> colin </a> </p>
+<p class="rm-manual">We have to accept that Britain’s role in any war 
+and especially in Europe won’t be at the head of mass tank battles. 
+Other specialities are far more important for us and we can and should 
+only expect a minor tank contribution as much as 300 or 400 would be 
+ideal if we had the budget for it I agree. Fact is Poland, Central 
+European powers and Germany and then France are by far those with 
+highest priorities there. We would be better working on and offering 
+state of the art fast moving and deployable anti tank weapons for the<span><span>… </span><span>Read more »</span></span></p>
+<p class="rm-manual">Last edited 2 hours ago by Spyinthesky</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> Jonathan </p>
+<p class="rm-manual"> 3 hours ago </p>
+<p class="rm-manual">I have to say that’s a pretty robust response from 
+the site moderators. Actually checking back with the MOD. So full points
+ to them.</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> Shirazz </p>
+<p class="rm-manual"> 3 hours ago </p>
+<p class="rm-manual">Its not clear yet where the mistake has been made. 
+The guy that posted the excerpts has always maintained that they have 
+been cleared. Someone has obviously made a mistake but it isn’t clear 
+who it is yet, whether that be the guy on the forum or otherwise. It is 
+probably best not to jump to the conclusion that this has been ‘leaked’ 
+just yet.</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> Rob </p>
+<p class="rm-manual"> 2 hours ago </p>
+<p class="rm-manual">What a plank. Hope he gets a knock on the door from
+ the fuzz. See the thing is the real world isn’t a computer game and 
+this idiot may well have caused ‘real world’ casualties.</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> dan </p>
+<p class="rm-manual"> 2 hours ago </p>
+<p class="rm-manual">So many people nowadays have zero common sense. Ugh</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> Dave12 </p>
+<p class="rm-manual"> 7 seconds ago </p>
+<p class="rm-manual"> Reply to <a href="#comment-571102"> dan </a> </p>
+<p class="rm-manual">Ye but dan you are a trumpski supporter lol</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> Arty </p>
+<p class="rm-manual"> 2 hours ago </p>
+<p class="rm-manual">Fxcking legend he was fed up with the challenger and went fxck it this needs to be fixed</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> Hi Ga </p>
+<p class="rm-manual"> 1 hour ago </p>
+<p class="rm-manual">Absolute mad lad.</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> Karl </p>
+<p class="rm-manual"> 1 hour ago </p>
+<p class="rm-manual">Welcome to global Britain, a laugh everyday.</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> Gunbuster </p>
+<p class="rm-manual"> 1 hour ago </p>
+<p class="rm-manual">Think before you click.</p>
+<p class="rm-manual">I read through everything I post to ensure its already open source or is no longer classified.</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> ian </p>
+<p class="rm-manual"> 51 minutes ago </p>
+<p class="rm-manual">lmfao, i can make a meme outta this</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> Dave12 </p>
+<p class="rm-manual"> 7 minutes ago </p>
+<p class="rm-manual">Any one plays the pc game series combat missions? It’s a pretty good strat game, yes I nerd this.</p>
+<p class="rm-manual">Last edited 3 minutes ago by Dave12</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> dan </p>
+<p class="rm-manual"> 6 minutes ago </p>
+<p class="rm-manual">Even if that stuff wasn’t “classified” his job is 
+being a tanker in the British Army. Not trying to make a “game” more 
+realistic. Jeez.</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> <a href="https://wpdiscuz.com/" rel="noreferrer">wpDiscuz</a> </p>
+<h4 class="rm-manual"><span>Other News</span></h4>
+<p class="rm-manual"> <a href="https://ukdefencejournal.org.uk/news/air/">Air</a> </p>
+<h3 class="rm-manual"><a href="https://ukdefencejournal.org.uk/typhoon-jet-to-get-anti-ship-cruise-missile/" rel="bookmark">Typhoon jet to get anti-ship cruise missile</a></h3>
+<p class="rm-manual"> <span>July 10, 2021</span> </p>
+<p class="rm-manual"> The 'Future Cruise/Anti-Ship Weapon' will be fitted to Typhoon jets from 2030. </p>
+<h3 class="rm-manual"><a href="https://ukdefencejournal.org.uk/carrier-strike-group-suffering-covid-19-outbreak/" rel="bookmark">Carrier Strike Group suffering COVID-19 outbreak</a></h3>
+<p class="rm-manual"> <span>July 14, 2021</span> </p>
+<h3 class="rm-manual"><a href="https://ukdefencejournal.org.uk/hms-queen-elizabeth-joins-uss-ronald-reagan-uss-iwo-jima/" rel="bookmark">HMS Queen Elizabeth joins USS Ronald Reagan, USS Iwo Jima</a></h3>
+<p class="rm-manual"> <span>July 12, 2021</span> </p>
+<h3 class="rm-manual"><a href="https://ukdefencejournal.org.uk/britain-and-america-extend-aircraft-carrier-cooperation/" rel="bookmark">Britain and America extend aircraft carrier cooperation</a></h3>
+<p class="rm-manual"> <span>July 13, 2021</span> </p>
+<h3 class="rm-manual"><a href="https://ukdefencejournal.org.uk/royal-marines-carry-out-raids-in-australia/" rel="bookmark">Royal Marines carry out raids in Australia</a></h3>
+<p class="rm-manual"> <span>July 10, 2021</span> </p>
+<h3 class="rm-manual"><a href="https://ukdefencejournal.org.uk/babcock-builds-up-supply-chain-for-greek-frigate-programme/" rel="bookmark">Babcock builds up supply chain for Greek frigate programme</a></h3>
+<p class="rm-manual"> <span>July 11, 2021</span> </p>
+<h3 class="rm-manual"><a href="https://ukdefencejournal.org.uk/sailors-training-to-operating-autonomous-minehunters/" rel="bookmark">Sailors training to operating autonomous minehunters</a></h3>
+<p class="rm-manual"> <span>July 15, 2021</span> </p>
+<h3 class="rm-manual"><a href="https://ukdefencejournal.org.uk/british-carrier-strike-group-enters-indian-ocean/" rel="bookmark">British Carrier Strike Group enters Indian Ocean</a></h3>
+<p class="rm-manual"> <span>July 16, 2021</span> </p>
+<h3 class="rm-manual"><a href="https://ukdefencejournal.org.uk/classified-challenger-tank-specs-leaked-online-for-videogame/" rel="bookmark">Classified Challenger tank specs leaked online for videogame</a></h3>
+<p class="rm-manual"> <span>July 16, 2021</span> </p>
+<h3 class="rm-manual"><a href="https://ukdefencejournal.org.uk/british-carrier-group-exercises-with-japanese-warship/" rel="bookmark">British carrier group exercises with Japanese warship</a></h3>
+<p class="rm-manual"> <span>July 12, 2021</span> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://ukdefencejournal.org.uk/about-us/">About Us</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/about-us/contact-us/">Contact Us</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/privacy/">Privacy Policy</a></li> </ul>
+<p class="rm-manual"> © 2014-2021 UK Defence Journal, all rights reserved. </p>
+<p class="rm-manual"><a href="" rel="#wpdUserContentInfo">wpDiscuz</a></p>
+<p class="rm-manual"><span>37</span></p>
+<p class="rm-manual"><span>0</span></p>
+<p class="rm-manual">Would love your thoughts, please comment.<span><a href="#">x</a></span></p>
+<p class="rm-manual"><span>( )</span></p>
+<p class="rm-manual"><span><a href="#">x</a></span></p>
+<p class="rm-manual"><span>| <a href="#">Reply</a></span></p>
+<p class="rm-manual"><a rel="#wcaiInfo">Comment Author Info</a> </p>
+<p class="rm-manual"><span>You are going to send email to </span></p>
+<p class="rm-manual"><span>Move Comment</span></p></article>
+</body></html>

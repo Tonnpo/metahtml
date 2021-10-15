@@ -1,0 +1,148 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Kim Jong-un fighting for life after 'heart surgery' as North Korea battles coronavirus | Metro News </p>
+<p class="rm-manual">News... but not as you know it</p>
+<p class="rm-manual"><a href="file:///news/">News</a> </p>
+<p class="rm-manual"><a href="file:///sport/">Sport</a> </p>
+<p class="rm-manual"><a href="file:///covid-free-zone/" rel="nofollow">Covid-Free Zone</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="file:///news/">News</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://metro.co.uk/tag/coronavirus/">Coronavirus</a></li> <li class="rm-manual"><a href="file:///news/uk/">UK</a></li> <li class="rm-manual"><a href="file:///news/us/">US</a></li> <li class="rm-manual"><a href="file:///news/world/">World</a></li> <li class="rm-manual"><a href="file:///news/weird/">Weird</a></li> <li class="rm-manual"><a href="file:///news/tech/">Tech</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///sport/">Sport</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///sport/football/">Football</a></li> <li class="rm-manual"><a href="file:///sport/tennis/">Tennis</a></li> <li class="rm-manual"><a href="file:///sport/cricket/">Cricket</a></li> <li class="rm-manual"><a href="file:///sport/boxing/">Boxing</a></li> <li class="rm-manual"><a href="file:///sport/ufc/">UFC</a></li> <li class="rm-manual"><a href="https://metro.co.uk/tag/snooker/">Snooker</a></li> <li class="rm-manual"><a href="https://metro.co.uk/tag/darts/">Darts</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///entertainment/">Entertainment</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///entertainment/showbiz/">Showbiz</a></li> <li class="rm-manual"><a href="file:///entertainment/tv/">TV</a></li> <li class="rm-manual"><a href="file:///entertainment/film/">Film</a></li> <li class="rm-manual"><a href="file:///entertainment/music/">Music</a></li> <li class="rm-manual"><a href="file:///entertainment/gaming/">Gaming</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///tv-soaps/">Soaps</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///tv-soaps/eastenders/">EastEnders</a></li> <li class="rm-manual"><a href="file:///tv-soaps/emmerdale/">Emmerdale</a></li> <li class="rm-manual"><a href="file:///tv-soaps/coronation-street/">Coronation Street</a></li> <li class="rm-manual"><a href="file:///tv-soaps/hollyoaks/">Hollyoaks</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///lifestyle/">Lifestyle</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///lifestyle/sex/">Sex</a></li> <li class="rm-manual"><a href="file:///lifestyle/health/">Health</a></li> <li class="rm-manual"><a href="file:///lifestyle/property/">Property</a></li> <li class="rm-manual"><a href="file:///lifestyle/fashion/">Fashion</a></li> <li class="rm-manual"><a href="file:///lifestyle/food/">Food</a></li> <li class="rm-manual"><a href="file:///lifestyle/travel/">Travel</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://metro.co.uk/blogs/">Platform</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://metro.co.uk/tag/metro-lifeline/">Lifeline Campaign</a></li> </ul> </li> <li class="rm-manual"><a href="file:///video/">Video</a></li> <li class="rm-manual">
+<a rel="nofollow" href="https://metro.co.uk/covid-free-zone/">Covid-Free Zone</a> <ul class="rm-manual"> <li class="rm-manual"><a rel="nofollow" href="https://metro.co.uk/covid-free-zone/feel-good/">Feel Good</a></li> <li class="rm-manual"><a rel="nofollow" href="https://metro.co.uk/covid-free-zone/news/">News</a></li> <li class="rm-manual"><a rel="nofollow" href="https://metro.co.uk/covid-free-zone/sport/">Sport</a></li> <li class="rm-manual"><a rel="nofollow" href="https://metro.co.uk/covid-free-zone/entertainment/">Entertainment</a></li> <li class="rm-manual"><a rel="nofollow" href="https://metro.co.uk/covid-free-zone/soaps/">Soaps</a></li> <li class="rm-manual"><a rel="nofollow" href="https://metro.co.uk/covid-free-zone/lifestyle/">Lifestyle</a></li> <li class="rm-manual"><a rel="nofollow" href="https://metro.co.uk/covid-free-zone/platform/">Platform</a></li> </ul> </li> <li class="rm-manual">
+<a href="#">More</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://metro.co.uk/trending/">Trending</a></li> <li class="rm-manual"><a href="file:///lifestyle/">Lifestyle</a></li> <li class="rm-manual"><a rel="follow" href="https://discountcode.metro.co.uk/">Discounts</a></li> <li class="rm-manual"><a href="https://metro.co.uk/submit-stuff/">Submit Stuff</a></li> <li class="rm-manual"><a href="https://metro.co.uk/competitions/">Competitions</a></li> <li class="rm-manual"><a href="https://metro.co.uk/jobs">Jobs</a></li> <li class="rm-manual"><a rel="noopener" href="http://www.mailadvertising.co.uk/brand/metro-co-uk/">Advertise</a></li> <li class="rm-manual"><a href="https://metro.co.uk/weather/">Weather</a></li> </ul> </li> <li class="rm-manual"><a href="https://metro.co.uk/trending/">Trending</a></li> <li class="rm-manual"><a href="file:///search/">Search Metro</a></li> <li class="rm-manual"> <span>Follow us</span> </li>
+</ul>
+<p class="rm-manual"> <a href="http://www.facebook.com/metrouk" rel="noopener"> <span>Follow Metro.co.uk on Facebook</span> </a> <a href="http://www.twitter.com/metrouk" rel="noopener"> <span>Follow Metro.co.uk on Twitter</span> </a> <a href="https://uk.pinterest.com/metrouk" rel="noopener"> <span>Follow Metro.co.uk on Pinterest</span> </a> <a href="https://www.instagram.com/metro.co.uk" rel="noopener"> <span>Follow Metro.co.uk on Instagram</span> </a> </p>
+<h1 class="rm-manual">Kim Jong-un fighting for life after ‘heart surgery’ as North Korea battles coronavirus</h1>
+<p class="rm-manual"><span><a href="https://metro.co.uk/author/jimmy-mccloskey/" rel="author">Jimmy McCloskey</a></span><span>Tuesday 21 Apr 2020 2:43 am</span></p>
+<figcaption class="rm-manual">North Korean dictator Kim Jong-un is 
+reported to be gravely ill in hospital after undergoing surgery for an 
+undisclosed condition (Picture: Reuters)</figcaption><p>North Korean leader Kim Jong-un is gravely-ill after undergoing heart surgery, it has been claimed.</p>
+<p><a href="https://www.cnn.com/2020/04/20/politics/kim-jong-un-north-korea/index.html">CNN</a>
+ reported that the 36 year-old leader’s condition is being monitored by 
+US intelligence officials, who were reportedly told that Kim was ‘in 
+grave danger’ after the cardiovascular operation. Kim was absent from 
+North Korea’s most important annual holiday on April 15, raising 
+speculation about his well-being.</p>
+<p>South Korean news website the Daily NK claimed earlier on Monday 
+night that Kim was ‘mostly-recovered’ from the procedure. The website 
+obtained the story from a single anonymous informant based in North 
+Korea, and has been unable to obtain further details on Kim’s condition,
+ <a href="https://www.bloomberg.com/news/articles/2020-04-21/kim-surgery-report-fuels-speculation-about-north-korean-leader?srnd=premium">Bloomberg</a> reported.</p>
+<p class="rm-manual">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="file:///html5-video-support/" rel="noopener">supports HTML5 video</a></p>
+<p>Bruce Klingner, a former CIA deputy division chief for North Korea, 
+said previous rumors about Kim being in poor health had turned out to be
+ false, and that the country’s extreme secrecy made it difficult to 
+establish the facts. </p>
+<p>He told CNN: ‘There have been a number of recent rumours about Kim’s 
+health (smoking, heart, and brain). If Kim is hospitalised, it would 
+explain why he wasn’t present on the important April 15 celebrations. </p>
+<p>‘But, over the years, there have been a number of false health 
+rumours about Kim Jong-un or his father. We’ll have to wait and see.’</p>
+<p class="rm-manual">For all the latest news and updates on Coronavirus, <a href="https://metro.co.uk/tag/coronavirus/">click here</a>.</p>
+<p class="rm-manual">For our Coronavirus live blog <a href="https://metro.co.uk/2020/03/17/coronavirus-live-updates-schools-travel-pay-self-isolation-12406630/">click here</a>.</p>
+<p>The despotic leader was last seen publicly on April 11 at a 
+government meeting. North Korea’s highly-secretive government has yet to
+ comment on Kim’s alleged illness, or issue any sort of statement 
+through its state-controlled media. </p>
+<p>The nuclear-capable dictatorship has not reported any cases of 
+coronavirus, and has scaled back its frequent displays of power in a bid
+ to stop the potential spread of Covid-19. Neither South Korea nor the 
+United States have offered an on-the-record comment on Kim’s health. </p>
+<figcaption>Kim famously met with US President Donald Trump for an 
+historic peace summit in June 2018, with the two men meeting again the 
+following year (Picture: Reuters)</figcaption><p>Kim was previously 
+reported to be a chain smoker and has been photographed with a cigarette
+ in his hand on multiple occasions. He married wife Ri Sol Ju in 2009, 
+with the couple said to be parents to between one and three children. </p>
+<p>President Trump famously met with Kim in Singapore in June 2018 for 
+peace talks, becoming the first sitting US president to meet with a 
+North Korean leader. </p>
+<p>The men met again the following year, with President Trump urging Kim
+ to give up his nuclear weapons program in return for financial help for
+ Kim’s impoverished nation. Kim held a ground-breaking peace summit with
+ South Korean leader Moon Jae-In in April 2018.</p>
+<p> That saw Kim become the first North Korean leader to set foot on South Korean soil since the Korean War of 1953.</p>
+<p>Kim took over as leader of North Korea from his father Kim Jong Il 
+after the elder Kim’s death in 2011. He is the grandson of Kim Il Sung, 
+who founded North Korea in 1948 and led the rogue nation until his death
+ in 1994. </p>
+<p>Kim Jong-un sparked speculation about his health after missing the 
+annual April 15 celebration of Kim Il Sung’s birthday. Kim’s brutal 
+leadership style has seen him accused of executing at least 10 of his 
+own officials, including former army Vice Minister Kim Choi, who was 
+allegedly put to death by mortar bombardment in 2012.</p>
+<p>And in 2014, deputy security minister O Sang Hon is said to have been
+ executed by flamethrower for showing support for Kim’s uncle and 
+political rival Jang Song Thaek.</p>
+<p class="rm-manual">Get in touch with our news team by emailing us at <a href="mailto:webnews@metro.co.uk">webnews@metro.co.uk</a>.</p>
+<p class="rm-manual">For more stories like this, <a href="https://metro.co.uk/news/">check our news page</a>.</p>
+<p class="rm-manual"><span>More</span></p>
+<p class="rm-manual"><a href="https://metro.co.uk/tag/politics/" rel="tag">Politics</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://metro.co.uk/2020/07/03/dominic-cummings-backs-100000000-scheme-12938258/"><h3 class="rm-manual"><span>Dominic Cummings backs £100,000,000 air-scrubber plan to remove CO2</span></h3></a></li>
+<li class="rm-manual"><a href="https://metro.co.uk/2020/06/26/armed-forces-fight-coronavirus-12887970/"><h3 class="rm-manual"><span>This is how our Armed Forces have been helping fight coronavirus on the frontline</span></h3></a></li>
+<li class="rm-manual"><a href="https://metro.co.uk/2020/07/02/hong-kong-protester-arrested-flight-uk-stabbing-police-officer-12932403/"><h3 class="rm-manual"><span>Hong Kong protester arrested on flight to UK after stabbing police officer</span></h3></a></li>
+<li class="rm-manual"><a href="https://metro.co.uk/2020/06/26/union-flag-upside-boris-johnsons-900000-plane-12905817/"><h3 class="rm-manual"><span>Is the Union Flag upside down on Boris Johnson's £900,000 plane?</span></h3></a></li>
+</ul>
+<p class="rm-manual"><span>Must read</span></p>
+<p class="rm-manual"> <span>What's trending now</span> </p>
+<p class="rm-manual"><a href="file:///trending"> More trending stories <span>»</span></a> </p>
+<ol class="rm-manual"> <li class="rm-manual"> <a href="https://metro.co.uk/2020/07/02/groom-dies-111-guests-test-positive-coronavirus-wedding-12932292/"> <p class="rm-manual"> </p><h3 class="rm-manual"> <span>Groom dead and 111 guests test positive when family refused to cancel wedding over cost</span> </h3> <p class="rm-manual"></p> </a> </li> <li class="rm-manual"> <a href="https://metro.co.uk/2020/07/02/stanley-johnson-ignores-lockdown-travel-rule-fly-greek-holiday-home-12932960/"> <p class="rm-manual"> </p><h3 class="rm-manual"> <span>BoJo’s dad bypassed travel rules by flying to Bulgaria to get to Greek villa</span> </h3> <p class="rm-manual"></p> </a> </li> <li class="rm-manual"> <a href="https://metro.co.uk/2020/07/02/former-girlfriend-jeffrey-epstein-arrested-fbi-12935242/"> <p class="rm-manual"> </p><h3 class="rm-manual"> <span>Jeffrey Epstein ex-girlfriend Ghislaine Maxwell to be charged over sex abuse and exploitation of minors</span> </h3> <p class="rm-manual"></p> </a> </li> <li class="rm-manual"> <a href="https://metro.co.uk/2020/06/24/black-lives-matter-protests-havent-caused-spike-covid-cases-12899049/"> <p class="rm-manual"> </p><h3 class="rm-manual"> <span>Black Lives Matter protests ‘haven’t caused any spike in coronavirus cases’</span> </h3> <p class="rm-manual"></p> </a> </li> <li class="rm-manual"> <a href="https://metro.co.uk/2020/06/29/portugal-excluded-uks-quarantine-free-holiday-destination-list-12918078/"> <p class="rm-manual"> </p><h3 class="rm-manual"> <span>Portugal ‘excluded from’ UK’s quarantine-free holiday destination list</span> </h3> <p class="rm-manual"></p> </a> </li> </ol>
+<p class="rm-manual"> <span>Video</span> </p>
+<p class="rm-manual"><a href="file:///video/">More videos <span>»</span></a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///video/bird-plucks-shark-ocean-flies-just-because-2203614/"> <p class="rm-manual"> </p><h2 class="rm-manual"><span> Bird plucks shark out of the ocean and flies around with it just because </span></h2> <p class="rm-manual"></p> </a> </li> <li class="rm-manual"> <a href="file:///video/pm-says-gyms-able-reopen-couple-weeks-2203686/"> <p class="rm-manual"> </p><h2 class="rm-manual"><span> PM says gyms will be able to reopen 'in a couple of weeks' </span></h2> <p class="rm-manual"></p> </a> </li> <li class="rm-manual"> <a href="file:///video/man-flees-scene-slashing-face-two-year-old-2203986/"> <p class="rm-manual"> </p><h2 class="rm-manual"><span> Man flees scene after slashing the face of two year-old </span></h2> <p class="rm-manual"></p> </a> </li> <li class="rm-manual"> <a href="file:///video/horrific-moment-woman-holds-black-family-gunpoint-car-park-2203570/"> <p class="rm-manual"> </p><h2 class="rm-manual"><span> Horrific moment woman holds black family at gunpoint in car park </span></h2> <p class="rm-manual"></p> </a> </li> </ul>
+<p class="rm-manual"><a href="file:///video/">More videos <span>»</span></a> </p>
+<p class="rm-manual"><span><a href="https://metro.co.uk/"><span>Home</span></a><span> › </span><a href="https://metro.co.uk/news/"><span>News</span></a><span> › </span><a href="https://metro.co.uk/news/world/"><span>World</span></a></span></p>
+<p class="rm-manual"> <span>Today's Best Discounts</span> </p>
+<p class="rm-manual"><a href="https://discountcode.metro.co.uk/">More discounts</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="https://discountcode.metro.co.uk/groupon" rel="noopener"> Experiences and days out Find exclusive discounts on local deals </a> </li>
+<li class="rm-manual"> <a href="https://discountcode.metro.co.uk/asos" rel="noopener"> Women &amp; Men's fashion Score 10% off your first order </a> </li>
+<li class="rm-manual"> <a href="https://discountcode.metro.co.uk/adidas" rel="noopener"> Best adidas deals Upgrade your style with these discounts </a> </li>
+<li class="rm-manual"> <a href="https://discountcode.metro.co.uk/nordvpn" rel="noopener"> Software for laptops Find exclusive discounts on subscriptions </a> </li>
+<li class="rm-manual"> <a href="https://discountcode.metro.co.uk/ao-com" rel="noopener"> Electronics and appliances Discover discounts on home appliances </a> </li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///">Home</a></li> <li class="rm-manual"><a href="file:///news/">News</a></li> <li class="rm-manual"><a href="file:///sport/">Sport</a></li> <li class="rm-manual"><a href="file:///lifestyle/">Lifestyle</a></li> <li class="rm-manual"><a href="file:///entertainment/">Entertainment</a></li> <li class="rm-manual"><a href="https://metro.co.uk/blogs/">Platform</a></li> <li class="rm-manual"><a href="file:///search/">Search Metro</a></li> </ul>
+<p class="rm-manual"><a href="file:///covid-free-zone/" rel="nofollow">Covid-Free Zone </a> </p></article>
+</body></html>

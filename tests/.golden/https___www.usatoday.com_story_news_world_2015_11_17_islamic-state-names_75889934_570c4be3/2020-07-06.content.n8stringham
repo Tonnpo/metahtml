@@ -1,0 +1,69 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual">'Daesh,' other Islamic State names explained</h1>
+<p class="rm-manual">George Petras</p>
+<p class="rm-manual">USA TODAY</p>
+<p>Western governments are divided on what to call the Islamic 
+extremists claiming responsibility for the attacks in Paris and other 
+atrocities. U.S. Secretary of State John Kerry recently began using the 
+term "Daesh," adding to the confusion. Where the names come from:</p>
+<p>Da'ish or Daesh</p>
+<p>• What is it? A disputed acronym based on the group's full Arabic name.</p>
+<p>• Stands for: “Dawlat al-Islamiyah f'al-Iraq wa al-Sham,” which 
+translates to “Islamic State in Iraq and the Levant.” The Levant refers 
+to an area between the Mediterranean Sea and the Euphrates River.</p>
+<p>• Used by: The French government, starting in September. Some Arab 
+politicians and Arab media use the term, but the group itself doesn't 
+recognize it. The acronym has a negative meaning because it sounds 
+similar to the Arabic word for "sowers of discord," which are enemies of
+ Islam.</p>
+<p>ISIS</p>
+<p>• Stands for: Islamic State of Iraq and Syria, or Islamic State in Iraq and al-Sham</p>
+<p>• From: The extremists' invasion of Syria. "Al-Sham" can refer to Syria or the Levant.</p>
+<p>• Used by: United Kingdom government</p>
+<p>ISIL</p>
+<p>• Stands for: Islamic State of Iraq and the Levant</p>
+<p>• Used by: U.S. government and U.N.</p>
+<p>Why the difference?</p>
+<p>The names have changed with the group's rise in notoriety and Western preferences in Arabic translation.</p>
+<p class="">What should we call it?</p>
+<p class="">USA TODAY identifies the group as the Islamic State, the 
+Islamic State militant group, or the Islamic State extremist group. The 
+acronym is not used except in quotes.</p>
+<p class="rm-manual">Sources: BBC, International Business Times, the Independent, USA TODAY research</p></article>
+</body></html>

@@ -1,0 +1,191 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Kim Jong Un's third child born in February | Washingtonian Post </p>
+<p class="rm-manual"> <a href="#main">Skip to content</a> </p>
+<p class="rm-manual"> Thursday, June 25, 2020 </p>
+<p class="rm-manual"> Latest: </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="http://washingtonianpost.com/magazine/money/how-to-prioritize-credit-card-bills-when-money-is-tight/">How to Prioritize Credit Card Bills When Money Is Tight</a> </li> <li class="rm-manual"> <a href="http://washingtonianpost.com/magazine/how-will-the-covid-19-pandemic-end/">How will the COVID-19 pandemic end?</a> </li> <li class="rm-manual"> <a href="http://washingtonianpost.com/magazine/technology/japanese-supercomputer-beats-u-s-china-to-take-world-speed-crown/">Japanese Supercomputer Beats U.S., China to Take World Speed Crown</a> </li> <li class="rm-manual"> <a href="http://washingtonianpost.com/magazine/if-kim-jong-un-dies-who-leads-north-korea/">If Kim Jong Un dies, who leads North Korea?</a> </li> <li class="rm-manual"> <a href="http://washingtonianpost.com/magazine/technology/apple-announces-the-iphone-se-2020-at-just-399/">Apple announces the iPhone SE 2020 at just $399</a> </li> </ul>
+<h3 class="rm-manual"> <a href="http://washingtonianpost.com/" rel="home">Washingtonian Post</a> </h3>
+<p class="rm-manual">Daily Top News and Online Magazine</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="http://washingtonianpost.com/">Home</a></li> <li class="rm-manual"><a href="http://washingtonianpost.com/category/magazine/health/">Health &amp; Food</a></li> <li class="rm-manual"><a href="http://washingtonianpost.com/category/magazine/money/">Money</a></li> <li class="rm-manual"><a href="http://washingtonianpost.com/category/magazine/politic/">Politic</a></li> <li class="rm-manual"><a href="http://washingtonianpost.com/category/magazine/christianity/">Christianity</a></li> <li class="rm-manual"><a href="http://washingtonianpost.com/category/magazine/travel/">Travel</a></li> <li class="rm-manual"><a href="http://washingtonianpost.com/category/magazine/technology/">Science &amp; Technology</a></li> </ul>
+<p class="rm-manual"><span><a href="http://washingtonianpost.com/category/magazine/asia/" rel="category tag">Asia</a> <a href="http://washingtonianpost.com/category/magazine/" rel="category tag">Magazine</a> </span></p>
+<h1 class="rm-manual"> Kim Jong Un’s third child born in February </h1>
+<p class="rm-manual"> <span><a href="http://washingtonianpost.com/magazine/kim-jong-uns-third-child-born-in-february/" rel="bookmark"> August 29, 2017April 23, 2020</a></span> <span> <span> <a href="http://washingtonianpost.com/author/thawngnoyahoo-com/">thawngno </a> </span> </span> <span><a href="http://washingtonianpost.com/tag/north-korea/" rel="tag">North Korea</a></span></p>
+<p class="rm-manual"><a href="http://www.cnn.com/">CNN</a> | By Taehoon Lee and James Griffiths</p>
+<p> North Korean dictator Kim Jong Un has a third child, South Korea’s National Intelligence Service (NIS) has learned. </p>
+<p>Lawmakers were briefed on the matter Monday, said Kim Byung-kee of 
+South Korea’s ruling Democratic Party, though Kim Jong Un’s wife Ri Sol 
+Ju is believed to have given birth in February.</p>
+<p>“The gender of their new child is unknown,” the lawmaker said.</p>
+<p>Little is known about the North Korean first family, but Kim said he 
+learned from “non-NIS sources” the couple’s first child was a boy, born 
+in 2010, while the second was a daughter, born in 2013.</p>
+<p>Opposition lawmaker Yi Wan-yong said “Kim’s first child is a son and 
+the second child is a daughter,” noting he also learned this information
+ from non-NIS sources.</p>
+<p> “The NIS told us (Monday) about Ri Sol Ju giving birth to the third 
+child because this implies she remains an influential figure in North 
+Korea,” Yi said.</p>
+<p>In 2013, following a highly controversial visit to North Korea, former NBA star Dennis Rodman <a href="http://cnn.com/2013/09/09/world/asia/north-korea-rodman-kim-daughter/index.html">revealed the name and gender of one of Kim and Ri’s children</a>, a daughter called Ju Ae.</p>
+<p>“I held their baby Ju Ae and spoke with Ms. Ri as well,” he said, describing Kim as “a good dad.”</p>
+<p>On Tuesday, North Korea <a href="http://cnn.com/2017/08/28/politics/north-korea-launch-unidentified-projectile/index.html">launched a ballistic missile that flew over Japan before crashing into the ocean</a>, the latest in a series of ramped up missile tests since Kim became the country’s supreme leader in 2011.</p>
+<figcaption><span>Kim Jong Un and his wife Ri Sol Ju, seen in 2013.</span></figcaption><h2>Mystery wife</h2>
+<p>There was speculation that Ri Sol Ju was pregnant late last year, when she <a href="http://www.telegraph.co.uk/news/2016/10/31/where-is-kim-jong-uns-wife-seven-month-public-absence-sparks-rum/">disappeared from public view for several months</a>, a time frame that would seem to line up with a February birth.</p>
+<p>Little is known about Ri, who accompanied Kim to his father’s funeral
+ in late 2011, sparking widespread speculation about the couple.</p>
+<p>It wasn’t until the following year that South Korean intelligence <a href="http://cnn.com/2012/07/26/world/asia/north-korea-kim-jong-un-wife-identity/index.html">confirmed they had been married since 2009</a>, according to lawmakers briefed on the matter.</p>
+<p>Ri was partially educated in China and visited South Korea in 2005 
+for the Asian Athletic Championships “as a member of North Korea’s 
+cheering squad,” a South Korean lawmaker told CNN in 2012.</p>
+<p>She is believed to be around 30 years old.</p>
+<h2>Shadowy clan</h2>
+<p>The Kim family has ruled North Korea since the country’s founding in 1948, but <a href="http://cnn.com/2017/02/15/asia/kim-jong-un-family-tree-trnd/index.html">very little is known about its members</a>.</p>
+<p>According to NK Leadership Watch, a project of the US-Korea 
+Institute, Kim Il Sung had six children and two wives, while his son and
+ successor Kim Jong Il had seven children with four women. Only one of 
+the women is believed to have been his legal wife, though these figures 
+are unconfirmed and have been contested.</p>
+<p>Current supreme leader Kim Jong Un was born to Kim Jong Il’s mistress Ko Young Hee in the early 1980s.</p>
+<p>Initially, North Korea watchers expected Kim Jong Il’s eldest son, Kim Jong Nam, to succeed him, but he was <a href="http://cnn.com/2017/02/20/asia/kim-jong-nam-north-korea/index.html">sidelined after his father left his mother for Ko in the 1970s</a>.</p>
+<p>Kim and Ko had two sons, Kim Jong Un and Kim Jong Chul. Though Kim 
+Jong Un was the youngest, he soon appeared to be being groomed for 
+succession.</p>
+<p>Any potential threat that remained from Kim Jong Nam was removed earlier this year, <a href="http://cnn.com/2017/07/26/asia/kim-jong-nam-killing/index.html">when he was murdered in Kuala Lumpur airport allegedly on the order of Pyongyang</a>.</p>
+<p class="rm-manual">________</p>
+<p class="rm-manual">This article was post originally in <a href="http://www.cnn.com/2017/08/29/asia/kim-jong-un-third-child/index.html">CNN</a></p>
+<h3 class="rm-manual">Related Posts</h3>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"><a href="http://washingtonianpost.com/magazine/10-shocking-facts-you-never-knew-about-north-korea/">10 Shocking Facts You Never Knew About North Korea</a></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="http://washingtonianpost.com/magazine/money/cars-made-in-north-korea/">Cars made in North Korea</a></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="http://washingtonianpost.com/magazine/cholliwood-or-north-koreas-hollywood/">Cholliwood or North Korea’s Hollywood</a></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="http://washingtonianpost.com/magazine/fears-for-n-koreas-first-lady-ri-sol-ju-after-vanishes-from-public/">Fears for N Korea’s First Lady Ri Sol-Ju After Vanishes From Public</a></p></li>
+</ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://washingtonianpost.com/magazine/choosing-alternative-cancer-therapy-doubles-risk-of-death-study-says/" rel="prev"><span>←</span> Choosing alternative cancer therapy doubles risk of death, study says</a></li> <li class="rm-manual"><a href="http://washingtonianpost.com/magazine/why-trump-wont-attack-north-korea/" rel="next">Why Trump won’t attack North Korea <span>→</span></a></li> </ul>
+<h3 class="rm-manual"><span>Email Signup</span></h3>
+<h3 class="rm-manual"><span>Money/Financial</span></h3>
+<p class="rm-manual"><span><a href="http://washingtonianpost.com/category/magazine/" rel="category tag">Magazine</a> <a href="http://washingtonianpost.com/category/magazine/money/" rel="category tag">Money</a> </span></p>
+<h3 class="rm-manual"> <a href="http://washingtonianpost.com/magazine/money/how-to-prioritize-credit-card-bills-when-money-is-tight/">How to Prioritize Credit Card Bills When Money Is Tight</a> </h3>
+<p class="rm-manual"> <span><a href="http://washingtonianpost.com/magazine/money/how-to-prioritize-credit-card-bills-when-money-is-tight/" rel="bookmark"> June 25, 2020</a></span> <span><span><a href="http://washingtonianpost.com/author/thawngnoyahoo-com/">thawngno</a></span></span> <span><a href="http://washingtonianpost.com/magazine/money/how-to-prioritize-credit-card-bills-when-money-is-tight/#respond">0</a></span> </p>
+<p class="rm-manual">The balance | By Kelly Dilworth If money is so tight these days you can barely pay your</p>
+<p class="rm-manual"><span><a href="http://washingtonianpost.com/category/magazine/" rel="category tag">Magazine</a> <a href="http://washingtonianpost.com/category/magazine/money/" rel="category tag">Money</a> </span></p>
+<h3 class="rm-manual"> <a href="http://washingtonianpost.com/magazine/money/38-year-old-retiree-america-stop-wasting-your-money-on-these-7-things-if-you-want-to-retire-early/">38-year-old retiree: ‘America, stop wasting your money on these 7 things—if you want to retire early’</a> </h3>
+<p class="rm-manual"> <span><a href="http://washingtonianpost.com/magazine/money/38-year-old-retiree-america-stop-wasting-your-money-on-these-7-things-if-you-want-to-retire-early/" rel="bookmark"> March 7, 2020April 20, 2020</a></span> <span><span><a href="http://washingtonianpost.com/author/thawngnoyahoo-com/">thawngno</a></span></span> </p>
+<p class="rm-manual"><span><a href="http://washingtonianpost.com/category/magazine/" rel="category tag">Magazine</a> <a href="http://washingtonianpost.com/category/magazine/money/" rel="category tag">Money</a> <a href="http://washingtonianpost.com/category/magazine/usa/" rel="category tag">US Politics</a> </span></p>
+<h3 class="rm-manual"> <a href="http://washingtonianpost.com/magazine/money/how-much-american-presidents-really-cost-us-taxpayers/">How Much American Presidents Really Cost US Taxpayers</a> </h3>
+<p class="rm-manual"> <span><a href="http://washingtonianpost.com/magazine/money/how-much-american-presidents-really-cost-us-taxpayers/" rel="bookmark"> August 22, 2019January 18, 2020</a></span> <span><span><a href="http://washingtonianpost.com/author/thawngnoyahoo-com/">thawngno</a></span></span> </p>
+<p class="rm-manual"><span><a href="http://washingtonianpost.com/category/magazine/" rel="category tag">Magazine</a> <a href="http://washingtonianpost.com/category/magazine/money/" rel="category tag">Money</a> <a href="http://washingtonianpost.com/category/magazine/usa/" rel="category tag">US Politics</a> </span></p>
+<h3 class="rm-manual"> <a href="http://washingtonianpost.com/magazine/money/stop-blaming-americas-poor-for-their-poverty/">Stop Blaming America’s Poor for Their Poverty</a> </h3>
+<p class="rm-manual"> <span><a href="http://washingtonianpost.com/magazine/money/stop-blaming-americas-poor-for-their-poverty/" rel="bookmark"> July 31, 2019January 21, 2020</a></span> <span><span><a href="http://washingtonianpost.com/author/thawngnoyahoo-com/">thawngno</a></span></span> </p>
+<p class="rm-manual"><span><a href="http://washingtonianpost.com/category/magazine/asia/" rel="category tag">Asia</a> <a href="http://washingtonianpost.com/category/magazine/" rel="category tag">Magazine</a> <a href="http://washingtonianpost.com/category/magazine/money/" rel="category tag">Money</a> </span></p>
+<h3 class="rm-manual"> <a href="http://washingtonianpost.com/magazine/money/southeast-asia-gains-new-leverage-as-china-and-us-battle-for-influence/">Southeast Asia Gains New Leverage as China and US Battle for Influence</a> </h3>
+<p class="rm-manual"> <span><a href="http://washingtonianpost.com/magazine/money/southeast-asia-gains-new-leverage-as-china-and-us-battle-for-influence/" rel="bookmark"> June 14, 2019June 14, 2019</a></span> <span><span><a href="http://washingtonianpost.com/author/thawngnoyahoo-com/">thawngno</a></span></span> </p>
+<p class="rm-manual"><span><a href="http://washingtonianpost.com/category/magazine/asia/" rel="category tag">Asia</a> <a href="http://washingtonianpost.com/category/magazine/" rel="category tag">Magazine</a> <a href="http://washingtonianpost.com/category/magazine/money/" rel="category tag">Money</a> </span></p>
+<h3 class="rm-manual"> <a href="http://washingtonianpost.com/magazine/money/is-trump-now-launching-a-currency-war-too/">Is Trump Now Launching a Currency War, Too?</a> </h3>
+<p class="rm-manual"> <span><a href="http://washingtonianpost.com/magazine/money/is-trump-now-launching-a-currency-war-too/" rel="bookmark"> May 30, 2019January 18, 2020</a></span> <span><span><a href="http://washingtonianpost.com/author/thawngnoyahoo-com/">thawngno</a></span></span> </p>
+<p class="rm-manual"><span><a href="http://washingtonianpost.com/category/magazine/" rel="category tag">Magazine</a> <a href="http://washingtonianpost.com/category/magazine/money/" rel="category tag">Money</a> </span></p>
+<h3 class="rm-manual"> <a href="http://washingtonianpost.com/magazine/money/why-the-us-china-trade-war-wont-last/">Why the US-China trade war won’t last</a> </h3>
+<p class="rm-manual"> <span><a href="http://washingtonianpost.com/magazine/money/why-the-us-china-trade-war-wont-last/" rel="bookmark"> May 14, 2019January 18, 2020</a></span> <span><span><a href="http://washingtonianpost.com/author/thawngnoyahoo-com/">thawngno</a></span></span> </p>
+<p class="rm-manual"><span><a href="http://washingtonianpost.com/category/magazine/" rel="category tag">Magazine</a> <a href="http://washingtonianpost.com/category/magazine/money/" rel="category tag">Money</a> </span></p>
+<h3 class="rm-manual"> <a href="http://washingtonianpost.com/magazine/money/what-to-know-about-credit-card-interest-rates/">What to Know About Credit Card Interest Rates</a> </h3>
+<p class="rm-manual"> <span><a href="http://washingtonianpost.com/magazine/money/what-to-know-about-credit-card-interest-rates/" rel="bookmark"> April 23, 2019April 12, 2020</a></span> <span><span><a href="http://washingtonianpost.com/author/thawngnoyahoo-com/">thawngno</a></span></span> </p>
+<h3 class="rm-manual"><span>Asia/Pacific</span></h3>
+<p class="rm-manual"><span><a href="http://washingtonianpost.com/category/magazine/asia/" rel="category tag">Asia</a> <a href="http://washingtonianpost.com/category/magazine/" rel="category tag">Magazine</a> </span></p>
+<h3 class="rm-manual"> <a href="http://washingtonianpost.com/magazine/if-kim-jong-un-dies-who-leads-north-korea/">If Kim Jong Un dies, who leads North Korea?</a> </h3>
+<p class="rm-manual"> <span><a href="http://washingtonianpost.com/magazine/if-kim-jong-un-dies-who-leads-north-korea/" rel="bookmark"> April 24, 2020April 24, 2020</a></span> <span><span><a href="http://washingtonianpost.com/author/thawngnoyahoo-com/">thawngno</a></span></span> </p>
+<p class="rm-manual">Quartz | By Steve Mollman It’s very hard to know what’s really going in North Korea. If reports</p>
+<p class="rm-manual"><span><a href="http://washingtonianpost.com/category/magazine/asia/" rel="category tag">Asia</a> <a href="http://washingtonianpost.com/category/magazine/health/" rel="category tag">Health &amp; Food</a> <a href="http://washingtonianpost.com/category/magazine/" rel="category tag">Magazine</a> </span></p>
+<h3 class="rm-manual"> <a href="http://washingtonianpost.com/magazine/uncovering-amazake-japans-ancient-fermented-superdrink/">Uncovering Amazake: Japan’s Ancient Fermented Superdrink</a> </h3>
+<p class="rm-manual"> <span><a href="http://washingtonianpost.com/magazine/uncovering-amazake-japans-ancient-fermented-superdrink/" rel="bookmark"> March 22, 2020April 12, 2020</a></span> <span><span><a href="http://washingtonianpost.com/author/thawngnoyahoo-com/">thawngno</a></span></span> </p>
+<p class="rm-manual"><span><a href="http://washingtonianpost.com/category/magazine/asia/" rel="category tag">Asia</a> <a href="http://washingtonianpost.com/category/magazine/" rel="category tag">Magazine</a> <a href="http://washingtonianpost.com/category/magazine/travel/" rel="category tag">Travel</a> </span></p>
+<h3 class="rm-manual"> <a href="http://washingtonianpost.com/magazine/takamagahara_hot_spring_onsen_japan/">Why Japan Values Naked Communion</a> </h3>
+<p class="rm-manual"> <span><a href="http://washingtonianpost.com/magazine/takamagahara_hot_spring_onsen_japan/" rel="bookmark"> October 19, 2019April 12, 2020</a></span> <span><span><a href="http://washingtonianpost.com/author/thawngnoyahoo-com/">thawngno</a></span></span> </p>
+<p class="rm-manual"><span><a href="http://washingtonianpost.com/category/magazine/asia/" rel="category tag">Asia</a> <a href="http://washingtonianpost.com/category/magazine/" rel="category tag">Magazine</a> </span></p>
+<h3 class="rm-manual"> <a href="http://washingtonianpost.com/magazine/us-china-trade-war-is-making-china-stronger/">US-China trade war is making China stronger</a> </h3>
+<p class="rm-manual"> <span><a href="http://washingtonianpost.com/magazine/us-china-trade-war-is-making-china-stronger/" rel="bookmark"> July 9, 2019January 18, 2020</a></span> <span><span><a href="http://washingtonianpost.com/author/thawngnoyahoo-com/">thawngno</a></span></span> </p>
+<p class="rm-manual"><span><a href="http://washingtonianpost.com/category/magazine/asia/" rel="category tag">Asia</a> <a href="http://washingtonianpost.com/category/magazine/" rel="category tag">Magazine</a> </span></p>
+<h3 class="rm-manual"> <a href="http://washingtonianpost.com/magazine/meet-jadav-payeng-the-forest-man-of-india-who-created-an-entire-forest-himself-over-40-years/">Meet Jadav Payeng: The “Forest Man Of India” Who Created An Entire Forest Himself Over 40 Years</a> </h3>
+<p class="rm-manual"> <span><a href="http://washingtonianpost.com/magazine/meet-jadav-payeng-the-forest-man-of-india-who-created-an-entire-forest-himself-over-40-years/" rel="bookmark"> June 27, 2019January 18, 2020</a></span> <span><span><a href="http://washingtonianpost.com/author/thawngnoyahoo-com/">thawngno</a></span></span> </p>
+<p class="rm-manual"><span><a href="http://washingtonianpost.com/category/magazine/asia/" rel="category tag">Asia</a> <a href="http://washingtonianpost.com/category/magazine/" rel="category tag">Magazine</a> <a href="http://washingtonianpost.com/category/magazine/money/" rel="category tag">Money</a> </span></p>
+<h3 class="rm-manual"> <a href="http://washingtonianpost.com/magazine/money/southeast-asia-gains-new-leverage-as-china-and-us-battle-for-influence/">Southeast Asia Gains New Leverage as China and US Battle for Influence</a> </h3>
+<p class="rm-manual"> <span><a href="http://washingtonianpost.com/magazine/money/southeast-asia-gains-new-leverage-as-china-and-us-battle-for-influence/" rel="bookmark"> June 14, 2019June 14, 2019</a></span> <span><span><a href="http://washingtonianpost.com/author/thawngnoyahoo-com/">thawngno</a></span></span> </p>
+<p class="rm-manual"><span><a href="http://washingtonianpost.com/category/magazine/" rel="category tag">Magazine</a> <a href="http://washingtonianpost.com/category/magazine/money/" rel="category tag">Money</a> <a href="http://washingtonianpost.com/category/magazine/usa/" rel="category tag">US Politics</a> </span></p>
+<h3 class="rm-manual"> <a href="http://washingtonianpost.com/magazine/money/how-much-american-presidents-really-cost-us-taxpayers/">How Much American Presidents Really Cost US Taxpayers</a> </h3>
+<p class="rm-manual"> <span><a href="http://washingtonianpost.com/magazine/money/how-much-american-presidents-really-cost-us-taxpayers/" rel="bookmark"> August 22, 2019January 18, 2020</a></span> <span><span><a href="http://washingtonianpost.com/author/thawngnoyahoo-com/">thawngno</a></span></span> </p>
+<p class="rm-manual">The Voice of America | By Dora Makouar Being president of the United States comes with numerous perks</p>
+<p class="rm-manual"><span><a href="http://washingtonianpost.com/category/magazine/" rel="category tag">Magazine</a> <a href="http://washingtonianpost.com/category/magazine/money/" rel="category tag">Money</a> <a href="http://washingtonianpost.com/category/magazine/usa/" rel="category tag">US Politics</a> </span></p>
+<h3 class="rm-manual"> <a href="http://washingtonianpost.com/magazine/money/stop-blaming-americas-poor-for-their-poverty/">Stop Blaming America’s Poor for Their Poverty</a> </h3>
+<p class="rm-manual"> <span><a href="http://washingtonianpost.com/magazine/money/stop-blaming-americas-poor-for-their-poverty/" rel="bookmark"> July 31, 2019January 21, 2020</a></span> <span><span><a href="http://washingtonianpost.com/author/thawngnoyahoo-com/">thawngno</a></span></span> </p>
+<p class="rm-manual"><span><a href="http://washingtonianpost.com/category/magazine/" rel="category tag">Magazine</a> <a href="http://washingtonianpost.com/category/magazine/usa/" rel="category tag">US Politics</a> </span></p>
+<h3 class="rm-manual"> <a href="http://washingtonianpost.com/magazine/trump-smiles-with-north-korea-threatens-iran/">Trump smiles with North Korea, threatens Iran</a> </h3>
+<p class="rm-manual"> <span><a href="http://washingtonianpost.com/magazine/trump-smiles-with-north-korea-threatens-iran/" rel="bookmark"> July 2, 2019January 18, 2020</a></span> <span><span><a href="http://washingtonianpost.com/author/thawngnoyahoo-com/">thawngno</a></span></span> </p>
+<p class="rm-manual"><span><a href="http://washingtonianpost.com/category/magazine/" rel="category tag">Magazine</a> <a href="http://washingtonianpost.com/category/magazine/usa/" rel="category tag">US Politics</a> </span></p>
+<h3 class="rm-manual"> <a href="http://washingtonianpost.com/magazine/who-is-trumps-supreme-court-pick-brett-kavanaugh/">Who is Trump’s Supreme Court Pick Brett Kavanaugh?</a> </h3>
+<p class="rm-manual"> <span><a href="http://washingtonianpost.com/magazine/who-is-trumps-supreme-court-pick-brett-kavanaugh/" rel="bookmark"> July 10, 2018September 26, 2018</a></span> <span><span><a href="http://washingtonianpost.com/author/thawngnoyahoo-com/">thawngno</a></span></span> </p>
+<p class="rm-manual"><span><a href="http://washingtonianpost.com/category/magazine/" rel="category tag">Magazine</a> <a href="http://washingtonianpost.com/category/magazine/usa/" rel="category tag">US Politics</a> </span></p>
+<h3 class="rm-manual"> <a href="http://washingtonianpost.com/magazine/the-optimistic-case-for-trumps-iran-decision/">The optimistic case for Trump’s Iran decision</a> </h3>
+<p class="rm-manual"> <span><a href="http://washingtonianpost.com/magazine/the-optimistic-case-for-trumps-iran-decision/" rel="bookmark"> May 12, 2018September 18, 2018</a></span> <span><span><a href="http://washingtonianpost.com/author/thawngnoyahoo-com/">thawngno</a></span></span> </p>
+<p class="rm-manual"><span><a href="http://washingtonianpost.com/category/magazine/" rel="category tag">Magazine</a> <a href="http://washingtonianpost.com/category/magazine/money/" rel="category tag">Money</a> <a href="http://washingtonianpost.com/category/magazine/usa/" rel="category tag">US Politics</a> </span></p>
+<h3 class="rm-manual"> <a href="http://washingtonianpost.com/magazine/money/what-does-tax-reform-mean/">What does tax reform mean?</a> </h3>
+<p class="rm-manual"> <span><a href="http://washingtonianpost.com/magazine/money/what-does-tax-reform-mean/" rel="bookmark"> August 10, 2017January 18, 2020</a></span> <span><span><a href="http://washingtonianpost.com/author/thawngnoyahoo-com/">thawngno</a></span></span> </p>
+<p class="rm-manual"><span><a href="http://washingtonianpost.com/category/magazine/gun-control/" rel="category tag">Gun Control</a> <a href="http://washingtonianpost.com/category/magazine/" rel="category tag">Magazine</a> </span></p>
+<h3 class="rm-manual"> <a href="http://washingtonianpost.com/magazine/mass_shootings_and_national_security/">Mass Shootings and National Security</a> </h3>
+<p class="rm-manual"> <span><a href="http://washingtonianpost.com/magazine/mass_shootings_and_national_security/" rel="bookmark"> August 7, 2019January 2, 2020</a></span> <span><span><a href="http://washingtonianpost.com/author/thawngnoyahoo-com/">thawngno</a></span></span> </p>
+<p class="rm-manual">Asia Times | By Jeferson Morley A fter the massacre in El Paso, Texas, the idea that white</p>
+<p class="rm-manual"><span><a href="http://washingtonianpost.com/category/magazine/gun-control/" rel="category tag">Gun Control</a> <a href="http://washingtonianpost.com/category/magazine/" rel="category tag">Magazine</a> </span></p>
+<h3 class="rm-manual"> <a href="http://washingtonianpost.com/magazine/the-biggest-lies-about-the-2nd-amendment-going-around-in-2018/">The biggest lies about the 2nd amendment going around in 2018</a> </h3>
+<p class="rm-manual"> <span><a href="http://washingtonianpost.com/magazine/the-biggest-lies-about-the-2nd-amendment-going-around-in-2018/" rel="bookmark"> March 27, 2018April 12, 2020</a></span> <span><span><a href="http://washingtonianpost.com/author/thawngnoyahoo-com/">thawngno</a></span></span> </p>
+<p class="rm-manual"><span><a href="http://washingtonianpost.com/category/magazine/gun-control/" rel="category tag">Gun Control</a> <a href="http://washingtonianpost.com/category/magazine/" rel="category tag">Magazine</a> </span></p>
+<h3 class="rm-manual"> <a href="http://washingtonianpost.com/magazine/japan-has-almost-completely-eliminated-gun-deaths-heres-how/">Japan has almost completely eliminated gun deaths — here’s how</a> </h3>
+<p class="rm-manual"> <span><a href="http://washingtonianpost.com/magazine/japan-has-almost-completely-eliminated-gun-deaths-heres-how/" rel="bookmark"> February 16, 2018January 18, 2020</a></span> <span><span><a href="http://washingtonianpost.com/author/thawngnoyahoo-com/">thawngno</a></span></span> </p>
+<p class="rm-manual"><span><a href="http://washingtonianpost.com/category/magazine/gun-control/" rel="category tag">Gun Control</a> <a href="http://washingtonianpost.com/category/magazine/" rel="category tag">Magazine</a> </span></p>
+<h3 class="rm-manual"> <a href="http://washingtonianpost.com/magazine/these-4-countries-have-nearly-eliminated-gun-deaths-heres-what-the-us-can-learn/">These 4 countries have nearly eliminated gun deaths — here’s what the US can learn</a> </h3>
+<p class="rm-manual"> <span><a href="http://washingtonianpost.com/magazine/these-4-countries-have-nearly-eliminated-gun-deaths-heres-what-the-us-can-learn/" rel="bookmark"> November 20, 2017April 15, 2020</a></span> <span><span><a href="http://washingtonianpost.com/author/thawngnoyahoo-com/">thawngno</a></span></span> </p>
+<h3 class="rm-manual"><span>Recent Posts</span></h3>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="http://washingtonianpost.com/magazine/money/how-to-prioritize-credit-card-bills-when-money-is-tight/">How to Prioritize Credit Card Bills When Money Is Tight</a> </li> <li class="rm-manual"> <a href="http://washingtonianpost.com/magazine/how-will-the-covid-19-pandemic-end/">How will the COVID-19 pandemic end?</a> </li> <li class="rm-manual"> <a href="http://washingtonianpost.com/magazine/technology/japanese-supercomputer-beats-u-s-china-to-take-world-speed-crown/">Japanese Supercomputer Beats U.S., China to Take World Speed Crown</a> </li> <li class="rm-manual"> <a href="http://washingtonianpost.com/magazine/if-kim-jong-un-dies-who-leads-north-korea/">If Kim Jong Un dies, who leads North Korea?</a> </li> <li class="rm-manual"> <a href="http://washingtonianpost.com/magazine/technology/apple-announces-the-iphone-se-2020-at-just-399/">Apple announces the iPhone SE 2020 at just $399</a> </li> <li class="rm-manual"> <a href="http://washingtonianpost.com/magazine/myth-busters-from-the-world-health-organization-on-coronavirus/">Myth Busters from the World Health Organization on Coronavirus</a> </li> <li class="rm-manual"> <a href="http://washingtonianpost.com/magazine/top-10-worst-plagues-in-history/">Top 10 Worst Plagues In History</a> </li> <li class="rm-manual"> <a href="http://washingtonianpost.com/magazine/a-timeline-of-the-coronavirus/">A Timeline of the Coronavirus</a> </li> <li class="rm-manual"> <a href="http://washingtonianpost.com/magazine/uncovering-amazake-japans-ancient-fermented-superdrink/">Uncovering Amazake: Japan’s Ancient Fermented Superdrink</a> </li> <li class="rm-manual"> <a href="http://washingtonianpost.com/magazine/googles-coronavirus-website-finally-launches-alongside-enhanced-search-results/">Google’s coronavirus website finally launches alongside enhanced search results</a> </li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="http://washingtonianpost.com/">Home</a></li> <li class="rm-manual"><a href="http://washingtonianpost.com/category/magazine/health/">Health &amp; Food</a></li> <li class="rm-manual"><a href="http://washingtonianpost.com/category/magazine/money/">Money</a></li> <li class="rm-manual"><a href="http://washingtonianpost.com/category/magazine/politic/">Politic</a></li> <li class="rm-manual"><a href="http://washingtonianpost.com/category/magazine/christianity/">Christianity</a></li> <li class="rm-manual"><a href="http://washingtonianpost.com/category/magazine/travel/">Travel</a></li> <li class="rm-manual"><a href="http://washingtonianpost.com/category/magazine/technology/">Science &amp; Technology</a></li> </ul>
+<h3 class="rm-manual"><span>Archives</span></h3>
+<p class="rm-manual"> Archives </p>
+<h3 class="rm-manual"><span>Categories</span></h3>
+<p class="rm-manual">Categories </p>
+<h3 class="rm-manual"><span>Meta</span></h3>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://washingtonianpost.com/wp-login.php?action=register">Register</a></li> <li class="rm-manual"><a href="http://washingtonianpost.com/wp-login.php">Log in</a></li> <li class="rm-manual"><a href="http://washingtonianpost.com/feed/">Entries feed</a></li> <li class="rm-manual"><a href="http://washingtonianpost.com/comments/feed/">Comments feed</a></li> <li class="rm-manual"><a href="https://wordpress.org/">WordPress.org</a></li> </ul>
+<p class="rm-manual">Copyright © 2020 <a href="http://washingtonianpost.com/"><span>Washingtonian Post</span></a>. All rights reserved.</p>
+<p class="rm-manual">Theme: ColorMag by <a href="https://themegrill.com/themes/colormag" rel="author"><span>ThemeGrill</span></a>. Powered by <a href="https://wordpress.org/"><span>WordPress</span></a>.</p></article>
+</body></html>

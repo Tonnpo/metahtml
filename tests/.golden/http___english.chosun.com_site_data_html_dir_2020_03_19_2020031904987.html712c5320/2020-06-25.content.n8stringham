@@ -1,0 +1,98 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> N.Korea 'Suffers 
+Coronavirus Epidemic in Pyongyang, Sinuiju' - The Chosun Ilbo (English 
+Edition): Daily News from Korea - North Korea </p>
+<h1 class="rm-manual">N.Korea 'Suffers Coronavirus Epidemic in Pyongyang, Sinuiju'</h1>
+<ul class="rm-manual"> <li class="rm-manual"> By Kim Myong-song </li> </ul>
+<p class="rm-manual"> March 19, 2020 13:03 </p>
+<p>Despite sealing its borders and halting all trade with China, major 
+cities in North Korea have been hit by the coronavirus epidemic, 
+according to witness accounts. </p>
+<p>Christian group Voice of the Martyrs Korea that proselytizes in North
+ Korea said an underground North Korean church member told it that the 
+virus has spread widely in Pyongyang and the border town of Sinuiju, 
+North Pyongan Province. "The situation is so desperate that it is just a
+ matter of dying from starvation or infection," the member wrote.</p>
+<p>North Korea claims it has not a single confirmed case of coronavirus,
+ but experts believe that the epidemic has spread significantly there. </p>
+<p>U.S. Forces Korea Commander Gen. Robert Abrams said last week that he
+ is "fairly certain" coronavirus has already spread to North Korea.</p>
+<figcaption>North Korean leader Kim Jong-un (center) breaks ground at a 
+planned hospital in Pyonyang on Tuesday, in this grab from the [North] 
+Korean Central Television. </figcaption><p>Meanwhile, North Korean 
+leader Kim Jong-un attended the ground-breaking ceremony of a general 
+hospital in Pyongyang on Tuesday, according to state media. </p>
+<p>Kim had been spending time on the east coast since late February 
+before returning to the capital. Kim said at the ceremony that the 
+hospital "must be completed in time for the 75th anniversary of the 
+establishment of the [Worker's] party," which is Oct. 10. </p>
+<p class="rm-manual">That leaves workers just 200 days to complete construction.</p>
+<p class="rm-manual"> <a href="https://news.chosun.com/site/data/html_dir/2020/03/19/2020031900228.html">Read this article in Korean</a></p>
+<dl class="rm-manual"> <dt class="rm-manual">
+<a href="http://english.chosun.com/site/data/html_dir/2020/03/20/2020032002783.html?related_all">Kim Jong-un Prioritizes Hospital Project in Pyongyang</a> </dt> </dl>
+<dl class="rm-manual"> <dt class="rm-manual">
+<a href="http://english.chosun.com/site/data/html_dir/2020/03/18/2020031802790.html?related_all">N.Koreans 'Starving to Death' Amid Border Lockdown</a> </dt> </dl>
+<dl class="rm-manual"> <dt class="rm-manual">
+<a href="http://english.chosun.com/site/data/html_dir/2020/03/11/2020031102055.html?related_all">Kim Jong-un 'Flees Pyongyang over Coronavirus' </a> </dt> </dl>
+<dl class="rm-manual"> <dt class="rm-manual">
+<a href="http://english.chosun.com/site/data/html_dir/2020/03/10/2020031002261.html?related_all">N.Korean Media Photoshop Images to Promote Mask Use </a> </dt> </dl>
+<dl class="rm-manual"> <dt class="rm-manual">
+<a href="http://english.chosun.com/site/data/html_dir/2020/03/06/2020030601658.html?related_all">N.Korea Seems Overwhelmed by Coronavirus Challenge</a> </dt> </dl>
+<dl class="rm-manual"> <dt class="rm-manual">
+<a href="http://english.chosun.com/site/data/html_dir/2020/03/02/2020030202187.html?related_all">Thousands of N.Koreans Under Monitoring for Coronavirus </a> </dt> </dl>
+<dl class="rm-manual"> <dt class="rm-manual">
+<a href="http://english.chosun.com/site/data/html_dir/2020/02/26/2020022601693.html?related_all">Several N.Koreans Rumored Dead of Coronavirus</a> </dt> </dl>
+<dl class="rm-manual"> <dt class="rm-manual">
+<a href="http://english.chosun.com/site/data/html_dir/2020/02/11/2020021102159.html?related_all">N.Korea Avoids 'Wuhan' Tag for Coronavirus</a> </dt> </dl>
+<dl class="rm-manual"> <dt class="rm-manual">
+<a href="http://english.chosun.com/site/data/html_dir/2020/02/05/2020020502187.html?related_all">Coronavirus 'Spreading in N.Korea' </a> </dt> </dl>
+<dl class="rm-manual"> <dt class="rm-manual">
+<a href="http://english.chosun.com/site/data/html_dir/2020/02/04/2020020401938.html?related_all">Gov't Offers to Help N.Korea with Coronavirus</a> </dt> </dl>
+<dl class="rm-manual"> <dt class="rm-manual">
+<a href="http://english.chosun.com/site/data/html_dir/2020/02/03/2020020302193.html?related_all">Can N.Korea Avoid Coronavirus with Lockdown?</a> </dt> </dl>
+<dl class="rm-manual"> <dt class="rm-manual">
+<a href="http://english.chosun.com/site/data/html_dir/2020/01/31/2020013101770.html?related_all">Inter-Korean Liaison Office Closes Amid Coronavirus Fears</a> </dt> </dl>
+<dl class="rm-manual"> <dt class="rm-manual">
+<a href="http://english.chosun.com/site/data/html_dir/2020/01/30/2020013001172.html?related_all">N.Korea Halts Trade with China Amid Coronavirus Fears</a> </dt> </dl>
+<dl class="rm-manual"> <dt class="rm-manual">
+<a href="http://english.chosun.com/site/data/html_dir/2020/01/23/2020012301151.html?related_all">N.Korea Closes Borders Amid Spread of Coronavirus</a> </dt> </dl>
+<ul class="rm-manual"> <li class="rm-manual">Copyright © Chosunilbo &amp; Chosun.com</li> </ul>
+<p class="rm-manual"> <a href="">Previous</a> <a href="">Next</a> </p>
+<p class="rm-manual"> <a href="http://english.chosun.com/svc/list_in/list.html?catid=F">All Headlines</a> <a href="#top">Back to Top</a> </p></article>
+</body></html>

@@ -1,0 +1,645 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"><span><a href="file:///section/us">U.S.</a></span><span>|</span><span>As Death Toll Nears 100,000, Some in White House Question the Math</span></p>
+<p class="rm-manual"><span>https://nyti.ms/2XlqFLs</span></p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.nytimes.com/news-event/coronavirus?action=click&amp;pgtype=Article&amp;state=default&amp;module=styln-coronavirus-national&amp;region=TOP_BANNER&amp;context=storylines_menu"> The Coronavirus Outbreak </a> </li> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <span> • </span> <a href="https://www.nytimes.com/2020/05/31/world/coronavirus-news.html?action=click&amp;pgtype=Article&amp;state=default&amp;module=styln-coronavirus-national&amp;region=TOP_BANNER&amp;context=storylines_menu"> Latest Updates </a> </p> </li> <li class="rm-manual"> <a href="https://www.nytimes.com/interactive/2020/us/coronavirus-us-cases.html?action=click&amp;pgtype=Article&amp;state=default&amp;module=styln-coronavirus-national&amp;region=TOP_BANNER&amp;context=storylines_menu"> Maps and Cases </a> </li> <li class="rm-manual"> <a href="https://www.nytimes.com/interactive/2020/us/states-reopen-map-coronavirus.html?action=click&amp;pgtype=Article&amp;state=default&amp;module=styln-coronavirus-national&amp;region=TOP_BANNER&amp;context=storylines_menu"> States Reopening </a> </li> <li class="rm-manual"> <a href="https://www.nytimes.com/interactive/2020/world/coronavirus-tips-advice.html?action=click&amp;pgtype=Article&amp;state=default&amp;module=styln-coronavirus-national&amp;region=TOP_BANNER&amp;context=storylines_menu"> Answers to Your Questions </a> </li> <li class="rm-manual"> <a href="https://www.nytimes.com/newsletters/coronavirus-briefing?action=click&amp;pgtype=Article&amp;state=default&amp;module=styln-coronavirus-national&amp;region=TOP_BANNER&amp;context=storylines_menu"> Newsletter </a> </li> </ul> </ul>
+<p class="rm-manual">Advertisement</p>
+<p class="rm-manual"><a href="#after-top">Continue reading the main story</a></p>
+<p class="rm-manual">Supported by</p>
+<p class="rm-manual"><a href="#after-sponsor">Continue reading the main story</a></p>
+<h1 class="rm-manual">As Death Toll Nears 100,000, Some in White House Question the Math</h1>
+<p>President Trump ordered states to reopen places of worship, but 
+several governors said that decision would be their call. Persistently 
+high case levels in Los Angeles, Chicago and Washington have medical 
+experts concerned.</p>
+<ul><li><p class="rm-manual">Published May 22, 2020Updated May 23, 2020</p></li></ul>
+<p class="rm-manual">This briefing has ended. Follow our <a href="https://www.nytimes.com/2020/05/23/world/coronavirus-updates.html">latest coverage of the global coronavirus pandemic</a></p>
+<h3 class="rm-manual">Here’s what you need to know:</h3>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="#link-60e70738">Some White House officials suggest deaths are overcounted. Experts disagree.</a></li>
+<li class="rm-manual"><a href="#link-6e76113e">Trump demands that governors let houses of worship reopen. </a></li>
+<li class="rm-manual"><a href="#link-3a63197b">States differ on their approaches to religious services during the pandemic.</a></li>
+<li class="rm-manual"><a href="#link-307b2d35">Birx expresses concerns about case levels in Los Angeles, Chicago and Washington.</a></li>
+<li class="rm-manual"><a href="#link-394fcd21">Ahead of a holiday weekend, beach towns are telling N.Y.C. residents to stay away.</a></li>
+<li class="rm-manual"><a href="#link-5550eb1a">The Justice Dept. backs a lawsuit to block Illinois’s stay-at-home order.</a></li>
+<li class="rm-manual"><a href="#link-6650f83a">Airlines are permitted to stop flying to dozens of U.S. cities.</a></li>
+</ul>
+<p class="rm-manual"><span>Image</span></p>
+<figcaption class="rm-manual"><span>Dr. Deborah Birx, the White House coronavirus response coordinator, briefed reporters on Friday.</span><span><span>Credit...</span><span>Anna Moneymaker/The New York Times</span></span></figcaption><h2 class="rm-manual">Some White House officials suggest deaths are overcounted. Experts disagree.</h2>
+<p class="rm-manual">As the United States continues its advance toward 100,000 coronavirus deaths, <a href="https://www.nytimes.com/interactive/2020/us/coronavirus-us-cases.html">a grim milestone</a>
+ the country is expected to reach in the coming days, President Trump 
+and members of his administration have begun questioning the official 
+coronavirus death toll, suggesting the numbers are inflated. </p>
+<p class="rm-manual"><a href="https://www.nytimes.com/2020/05/22/us/politics/coronavirus-trump-death-toll.html?action=click&amp;module=Spotlight&amp;pgtype=Homepage">Most experts say the opposite is likely the case</a>.</p>
+<p class="rm-manual">In White House meetings, conversations with health officials have <a href="https://www.nytimes.com/2020/05/22/us/politics/coronavirus-trump-death-toll.html">returned to similar suspicions</a>:
+ that the data compiled by state health departments and the Centers for 
+Disease Control and Prevention include people who have died with the 
+coronavirus but of other conditions. </p>
+<p class="rm-manual">Last Friday, Mr. Trump told reporters that he 
+accepted the current death toll, but that the figures could be “lower 
+than” the official count, which now totals more than 95,000.</p>
+<p class="rm-manual">Most <a href="https://www.nytimes.com/2020/05/13/opinion/coronavirus-us-deaths.html">statisticians</a> and <a href="https://www.nytimes.com/2020/04/05/us/coronavirus-deaths-undercount.html">public health experts</a>
+ say he is wrong; the death toll is probably far higher than what is 
+publicly known. People are dying at their houses and nursing homes 
+without ever being tested, they say, and deaths early this year were 
+likely misidentified as influenza or described only as pneumonia.</p>
+<p class="rm-manual">Dr. Deborah L. Birx, the White House’s coronavirus 
+response coordinator, has said publicly that the American health care 
+system incorporates a generous definition of a death caused by Covid-19.</p>
+<p class="rm-manual">“There are other countries that if you had a 
+pre-existing condition, and let’s say the virus caused you to go to the 
+I.C.U., and then have a heart or kidney problem — some countries are 
+recording that as a heart issue or a kidney issue and not a Covid-19 
+death,” she said at a White House news conference last month.</p>
+<p class="rm-manual">In a brief interview on Thursday, Dr. Birx stressed
+ that there had been no pressure to alter data. But concerns about 
+official statistics are not limited to the death toll, or to 
+administration officials.</p>
+<p class="rm-manual">Epidemiologists said they were stunned to learn 
+that the C.D.C. is combining tests that detect active infection with 
+those that detect recovery from Covid-19 — a system that muddies the 
+picture of the pandemic but raises the percentage of Americans tested as
+ President Trump boasts about testing.</p>
+<p class="rm-manual">Experts said that data from antibody tests and active virus tests should never be mixed.</p>
+<p class="rm-manual">“It just doesn’t make any sense,” said Natalie 
+Dean, a biostatistician at the University of Florida. “All of us are 
+really baffled.”</p>
+<p class="rm-manual">Epidemiologists, state health officials and a 
+spokeswoman for the C.D.C. said there was no ill intent; they attributed
+ the flawed reporting system to confusion and fatigue in overworked 
+state and local health departments that typically track infections — not
+ tests — during outbreaks. </p>
+<p class="rm-manual"><a href="https://www.nytimes.com/interactive/2020/us/coronavirus-us-cases.html"></a></p><p class="rm-manual"></p><h2 class="rm-manual"><a href="https://www.nytimes.com/interactive/2020/us/coronavirus-us-cases.html">Coronavirus in the U.S.: Latest Map and Case Count</a></h2><p class="rm-manual"><a href="https://www.nytimes.com/interactive/2020/us/coronavirus-us-cases.html">A detailed county map shows the extent of the coronavirus outbreak, with tables of the number of cases by county.</a></p><p class="rm-manual"></p><p class="rm-manual"></p>
+<h2 class="rm-manual">Trump demands that governors let houses of worship reopen. </h2>
+<p class="rm-manual"><span>Video</span></p>
+<p class="rm-manual">transcript</p>
+<p class="rm-manual">bars</p>
+<p class="rm-manual">0:00 / 1:39</p>
+<p class="rm-manual">- 0:00</p>
+<p class="rm-manual">transcript</p>
+<h2 class="rm-manual">‘We Need More Prayer,’ Trump Says, Calling Houses of Worship ‘Essential’</h2>
+<h4 class="rm-manual">President Trump urged governors to reopen houses 
+of worship immediately, saying he would override them if they did not. 
+His authority to do so is unclear.</h4>
+<dl class="rm-manual"><dd><p class="rm-manual">Today, I’m identifying 
+houses of worship, churches, synagogues and mosques as essential places 
+that provide essential services. Some governors have deemed liquor 
+stores and abortion clinics as essential, but have left out churches and
+ other houses of worship. It’s not right. So I’m correcting this 
+injustice, and calling houses of worship “essential.” I call upon 
+governors to allow our churches and places of worship to open right now.
+ These are places that hold our society together, and keep our people 
+united. The people are demanding to go to church and synagogue, go to 
+their mosque. Many millions of Americans embrace worship as an essential
+ part of life. The ministers, pastors, rabbis, imams and other faith 
+leaders will make sure that their congregations are safe as they gather 
+and pray. I know them well, they love their congregations. They love 
+their people. They don’t want anything bad to happen to them or to 
+anybody else. The governors need to do the right thing, and allow these 
+very important essential places of faith to open right now, for this 
+weekend. If they don’t do it, I will override the governors. In America,
+ we need more prayer, not less.</p></dd></dl>
+<figcaption class="rm-manual"><span>President Trump urged governors to 
+reopen houses of worship immediately, saying he would override them if 
+they did not. His authority to do so is unclear.</span><span><span>Credit</span><span><span>Credit...</span><span>Anna Moneymaker/The New York Times</span></span></span></figcaption><p class="rm-manual">President
+ Trump stepped into the culture wars again on Friday, taking the side of
+ some religious leaders against governors who have moved slowly in 
+reopening places of worship amid the pandemic.</p>
+<p class="rm-manual">Without any clear authority to do so, Mr. Trump 
+said that he was calling houses of faith, including churches, 
+synagogues, and mosques, “essential services” and urged governors to 
+reopen them “right now.” </p>
+<p class="rm-manual">“Today I am identifying houses of worship — 
+churches, synagogue and mosques — as essential places that provide 
+essential services,” Mr. Trump said at a hastily scheduled briefing at 
+the White House on Friday. “Some governors have deemed liquor stores and
+ abortion clinics as essential but have left out churches and other 
+houses of worship. It’s not right.”</p>
+<p class="rm-manual">After he spoke, the Centers for Disease Control and Prevention issued a number of <a href="https://www.nytimes.com/2020/05/07/us/politics/trump-cdc.html">long-delayed guidelines</a>
+ with suggestions for steps that houses of worship can take to curb the 
+spread of the virus. Among them was a recommendation that religious 
+officials defer to the directive of state and local governments.</p>
+<p class="rm-manual">Still, the president threatened to “override” the 
+governors if they did not follow his order, though it was not 
+immediately clear what powers he was claiming. “I call upon governors to
+ allow our churches and places of worship to open right now,” he said. 
+“If there’s any question, they’re going to have to call me, but they’re 
+not going to be successful in that call.”</p>
+<p class="rm-manual">When the C.D.C. recently released a set of guidelines for reopening, its report largely mirrored an earlier <a href="https://int.nyt.com/data/documenthelper/6935-CDC-opening-guidelines/e1a8802d0d76b3eb43a8/optimized/full.pdf#page=1" rel="noopener noreferrer">draft version</a>
+ that the White House had rejected because Trump administration 
+officials worried that the suggestions infringed on religious rights.</p>
+<p class="rm-manual">On Friday the C.D.C.’s new guidelines for religious
+ communities suggested that they consider a number of limitations to 
+keep congregations safe. Among them:</p>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual">“Take steps to limit the size of gatherings in accordance with the guidance and directives of state and local authorities.”</p></li>
+<li class="rm-manual"><p class="rm-manual">“Consider suspending or at 
+least decreasing use of a choir/musical ensembles and congregant 
+singing, chanting, or reciting during services or other programming, if 
+appropriate within the faith tradition. The act of singing may 
+contribute to transmission of Covid-19, possibly through emission of 
+aerosols.”</p></li>
+<li class="rm-manual"><p class="rm-manual">“Consider temporarily 
+limiting the sharing of frequently touched objects that cannot be easily
+ cleaned between persons, such as worship aids, prayer rugs, prayer 
+books, hymnals, religious texts and other bulletins, books, shared cups,
+ or other items received, passed or shared among congregants.”</p></li>
+</ul>
+<p class="rm-manual">Mr. Trump said Friday at the White House that the 
+nation needs religion. “In America, we need more prayer, not less,” he 
+said. He left without taking questions. </p>
+<p class="rm-manual">David Postman, the chief of staff for Gov. Jay 
+Inslee of Washington, said the state didn’t know what the president’s 
+comments meant and noted the state had not seen any formal order. “We 
+don’t believe the president has the ability to dictate what states can 
+and cannot open,” Mr. Postman said.</p>
+<p class="rm-manual">Rhode Island’s governor, Gina Raimondo, was more blunt when told of the president’s comments, saying, “<a href="https://turnto10.com/news/local/raimondo-sticks-to-may-30-reopening-of-churches-as-trump-deems-them-essential" rel="noopener noreferrer">No, that’s not happening in Rhode Island</a>.”</p>
+<p class="rm-manual">“We’re not ready,” she said. “Honestly, that would be reckless. It’s Friday. They’re not ready.”</p>
+<h2 class="rm-manual">States differ on their approaches to religious services during the pandemic.</h2>
+<p class="rm-manual"><span>Image</span></p>
+<figcaption class="rm-manual"><span>Churches like the Basilica of San 
+Albino in Mesilla, N.M., have resorted to measures like distributing 
+communion to parishioners in cars during the pandemic.</span><span><span>Credit...</span><span>Paul Ratje/Agence France-Presse — Getty Images</span></span></figcaption><p class="rm-manual">It
+ was not clear what authority President Trump was invoking on Friday 
+when he called for governors “to allow our churches and places of 
+worship to open right now,” and threatened to “override” them if they 
+did not. Soon after he spoke, though, the C.D.C. issued guidelines 
+urging faith leaders to “take steps to limit the size of gatherings in 
+accordance with the guidance and directives of state and local 
+authorities.”</p>
+<p class="rm-manual">States and localities have been taking a variety of approaches to religious services since the outbreak began.</p>
+<p class="rm-manual">Houses of worship were already allowed to operate 
+in more than half of the states, though many remain under social 
+distancing instructions and many individual churches, synagogues and 
+mosques have decided to remain closed for safety.</p>
+<p class="rm-manual">There have been tensions in places that still have 
+restrictions in place. In California, more than 1,200 pastors signed a 
+declaration protesting the state’s restrictions on in-person services 
+and pledged to reopen their churches by May 31 even if the restrictions 
+are not lifted. Gov. Gavin Newsom, a Democrat, said Friday that the 
+state was working with faith leaders on guidelines to reopen in “a safe 
+and responsible manner” that would be released by Monday at the latest.</p>
+<p class="rm-manual">The state’s guidelines, which will distinguish 
+between megachurches and smaller venues, deal with the configuration of 
+pews and “sanitation protocols,” the governor said.</p>
+<p class="rm-manual">In Illinois, Gov. J.B. Pritzker said on Friday that
+ he would “continue to operate on the basis of science and data” in 
+deciding when it was safe for houses of worship to open. </p>
+<p class="rm-manual">“I’m as anxious as anybody to make sure that our 
+churches, our mosques, our synagogues open back to where they were 
+before Covid-19 came along,” Mr. Pritzker said. “We’re gradually moving 
+in that direction. But there’s no doubt the most important thing is, we 
+do not want parishioners to get ill because their faith leaders bring 
+them together.”</p>
+<p class="rm-manual">The president’s call to let in-person services 
+resume came just before one of the biggest Muslim holidays of the year, 
+Eid al-Fitr, which starts Saturday night.</p>
+<p class="rm-manual">Washington State currently allows drive-in 
+services, where congregants remain in their vehicles, and allows houses 
+of worship to bring in personnel to broadcast and stream videos of 
+services. Officials there have been working with an interfaith group to 
+develop guidelines on how religious institutions can safely open up for 
+more in-person activities. </p>
+<p class="rm-manual">And in some states, houses of worships were never 
+required to close. In Pennsylvania, religious institutions were exempt 
+from a stay-at-home order, though Gov. Tom Wolf has advised religious 
+leaders not to hold in-person services or large gatherings to protect 
+people from the virus. </p>
+<p class="rm-manual">Gov. Gretchen Whitmer of Michigan, who on Friday <a href="https://content.govdelivery.com/attachments/MIEOG/2020/05/22/file_attachments/1458387/EO%202020-100%20Emerg%20order%20-%20amendments.pdf" rel="noopener noreferrer">extended</a> the state’s stay-at-home order through June 12, has banned large gatherings but also said that houses of worship would <a href="https://www.michigan.gov/coronavirus/0,9753,7-406-98178_98455-522357--,00.html" rel="noopener noreferrer">not be subject to penalties</a>,
+ leaving the decision in the hands of religious leaders. Many churches, 
+synagogues and mosques there decided to remain closed anyway, and those 
+that are reopening often remain under strict guidelines, including 
+limiting the number of congregants who could enter.</p>
+<p class="rm-manual">In hard-hit New York, Gov. Andrew M. Cuomo moved 
+this week to allow religious gatherings of up to 10 people to resume as 
+long as attendees wear masks and maintain social distance. The 
+announcement was particularly significant for Jewish congregations, 
+where a minyan, defined as 10 people over 13, is required for a worship 
+service.</p>
+<h2 class="rm-manual">Birx expresses concerns about case levels in Los Angeles, Chicago and Washington.</h2>
+<p class="rm-manual"><span>Image</span></p>
+<figcaption class="rm-manual"><span>A view of Venice Beach, Calif., on May 17.</span><span><span>Credit...</span><span>Ryan Young for The New York Times</span></span></figcaption><p class="rm-manual">One
+ testing measure shows that coronavirus cases are persisting at 
+worrisome rates in three major metropolitan areas — Los Angeles, Chicago
+ and Washington, D.C. — that are still under stay-at-home orders, a top 
+White House official said on Friday.</p>
+<p class="rm-manual">“We have concerns of where cities have remained 
+closed and metros that have remained closed but have still persistent 
+high number of cases,” Dr. Deborah L. Birx, the White House’s 
+coronavirus response coordinator, told reporters at a news conference. 
+She said officials from the Centers for Disease Control and Prevention 
+were working with local officials in the three cities “to really 
+understand where these new cases coming from, and what do we need to do 
+to prevent them in the future.”</p>
+<p class="rm-manual">Dr. Birx’s concern did not suggest that the case 
+rates in the three regions were spiking to alarming new levels, but 
+rather that they were not dropping at the same rate as in many other 
+cities.</p>
+<p class="rm-manual">Dr. Birx singled out the Washington area — which 
+includes the district as well as parts of Maryland and Virginia — and 
+said it led the country in the percentage of positive test results, a 
+measure different from total coronavirus cases. Among those who have 
+tested positive is the former N.B.A. all-star Patrick Ewing, now the 
+men’s basketball coach at Georgetown University in Washington, who 
+announced on Twitter on Friday that he had the virus. </p>
+<p class="rm-manual">Unlike New York, the Washington area has seen no 
+“dramatic decline” in positive test rates or emergency room visits, Dr. 
+Birx said.</p>
+<p class="rm-manual">Further complicating the picture, Mayor Muriel E. 
+Bowser of Washington said on Thursday that the city could begin a phased
+ reopening as early as May 29, pointing to figures that showed a 
+downward trend in spread of the virus for almost two weeks. Yet on the 
+same day, Washington, D.C., and Virginia <a href="https://www.wusa9.com/article/news/health/coronavirus/here-are-your-live-dc-updates/65-cdc624c4-179b-41b3-9f0b-01091ca49b31" rel="noopener noreferrer">announced</a> <a href="https://twitter.com/JordanOnRecord/status/1263494043989917702" rel="noopener noreferrer">single-day highs</a> in cases.</p>
+<p class="rm-manual">The Washington region’s high positive-test 
+percentage comes despite reassuring news in most states: 42 have a rate 
+under 10 percent of positive test results as part of a rolling, 
+seven-day average, Dr. Birx said.</p>
+<p class="rm-manual">The New York area, which includes Jersey City and 
+Newark, is seeing steeper declines by that test result measure, Dr. Birx
+ said. And cities that have been especially hard hit, such as Detroit, 
+Boston and Miami, now have more promising daily case counts.</p>
+<h2 class="rm-manual">Ahead of a holiday weekend, beach towns are telling N.Y.C. residents to stay away.</h2>
+<p class="rm-manual"><span>Image</span></p>
+<figcaption class="rm-manual"><span>People enjoying the boardwalk in 
+Long Beach on Thursday. New York City residents will not be able to use 
+the beach over the Memorial Day weekend.</span><span><span>Credit...</span><span>Al Bello/Getty Images</span></span></figcaption><p class="rm-manual">In <a href="https://www.easthamptonstar.com/villages-health/2020521/east-hampton-officials-prepare-limited-beach-openings" rel="noopener noreferrer">the Hamptons</a>,
+ the locals have put up barricades to limit parking and deployed 
+enforcement officers to ticket outsiders. Jersey Shore towns have banned
+ short-term leases and Airbnb rentals. And on Long Island, the Suffolk 
+County executive’s office taunted Mayor Bill de Blasio of New York City:
+ “Do your job. Figure out a plan to safely reopen your beaches.”</p>
+<p class="rm-manual">Since the pandemic began, tensions have flared over whether too many New York City residents have <a href="https://www.nytimes.com/2020/03/25/nyregion/coronavirus-leaving-nyc-vacation-homes.html">decamped to outlying vacation areas</a>,
+ potentially taking the virus with them. But now the region appears on 
+the brink of a full-fledged (and nasty) battle over beaches, touched off
+ by the city’s decision to keep its shoreline closed.</p>
+<p class="rm-manual">In normal times, start of beach season on Memorial 
+Day weekend incites a mass migration from New York to Long Island, the 
+Jersey Shore and, to a lesser extent, Connecticut. But the extension of 
+beach closings in New York City has led to a backlash from local 
+officials in those areas, who say they fear that their shorelines will 
+be overwhelmed by an exodus of sun-starved New Yorkers blocked from 
+their own beaches, which can in normal times attract a million people a 
+day.</p>
+<p class="rm-manual">To maintain social distancing, beaches across the 
+region are moving to limit access to everyone, and special rules have 
+also been adopted to keep outsiders away. </p>
+<h2 class="rm-manual">The Justice Dept. backs a lawsuit to block Illinois’s stay-at-home order.</h2>
+<p class="rm-manual">The Justice Department on Friday backed an Illinois
+ Republican’s effort to invalidate the state’s stay-at-home order, the 
+latest effort by the federal government to undermine governors’ 
+coronavirus measures.</p>
+<p class="rm-manual">The U.S. attorney for the Southern District of Illinois <a href="https://www.courtlistener.com/recap/gov.uscourts.ilsd.84687/gov.uscourts.ilsd.84687.15.0.pdf" rel="noopener noreferrer">argued in a legal brief</a> that Gov. J. B. Pritzker, a Democrat, had exceeded his authority by extending his executive order for more than 30 days.</p>
+<p class="rm-manual">The brief came in response to a directive from 
+Attorney General William P. Barr that department lawyers review 
+stay-at-home orders around the country “to ensure that civil liberties 
+are protected.”</p>
+<p class="rm-manual">Since Mr. Barr’s request, the Justice Department 
+has increasingly asserted itself in arguing over the legality of states’
+ sweeping orders in response to the coronavirus pandemic.</p>
+<p class="rm-manual">“Under our system, all public officials, including 
+governors, must comply with the law, especially during times of crisis,”
+ Eric Dreiband, the head of the department’s civil rights division, said
+ in a statement. On Friday, Mr. Dreiband also <a href="https://www.latimes.com/california/story/2020-05-22/trump-administration-garcetti-warning-coronavirus-stay-at-home-orders" rel="noopener noreferrer">warned in</a> <a href="https://ca-times.brightspotcdn.com/62/5c/4c5878ad4ae3a77072c773ff423a/5-22-20-letter-to-la-mayor-and-health-director-ed.pdf" rel="noopener noreferrer">a letter</a> to Mayor Eric Garcetti of Los Angeles that a “long-term lockdown” could be illegal.</p>
+<p class="rm-manual">The move in Illinois came in a lawsuit that was 
+filed by Darren Bailey, a Republican state representative whose fellow 
+lawmakers kicked him out of the building in which they had gathered 
+because he <a href="https://www.nprillinois.org/post/house-rep-ejected-face-mask-rule-breaking-state-lawmakers-greeted-protests#stream/0" rel="noopener noreferrer">refused to wear a mask</a>.
+ Mr. Bailey had asked an Illinois court to declare the governor’s order 
+invalid. The governor this week sought to have the case <a href="https://www.courtlistener.com/recap/gov.uscourts.ilsd.84687/gov.uscourts.ilsd.84687.1.0.pdf" rel="noopener noreferrer">transferred to federal court</a>, a move the Justice Department also said was wrong.</p>
+<h2 class="rm-manual">Airlines are permitted to stop flying to dozens of U.S. cities.</h2>
+<p class="rm-manual"><span>Image</span></p>
+<figcaption class="rm-manual"><span>A view of San Francisco International Airport on Friday.</span><span><span>Credit...</span><span>Jim Wilson/The New York Times</span></span></figcaption><p class="rm-manual">The Transportation Department said late Friday that it <a href="https://www.nytimes.com/2020/05/22/business/coronavirus-airports-airlines.html">would tentatively allow</a>
+ 15 airlines to stop flights to about 60 mostly small and midsize 
+cities, though none of the destinations stand to lose service entirely.</p>
+<p class="rm-manual">American Airlines would be allowed to stop flying 
+to airports in Worcester, Mass., and Aspen, Colo. Delta Air Lines would 
+be able to stop service to Erie, Pa., and Flint, Mich. United Airlines 
+would be able to stop flights to Fairbanks, Alaska; Kalamazoo, Mich.; 
+and Myrtle Beach, S.C., among other locations.</p>
+<p class="rm-manual">None of the cities would be left without service, 
+the agency said, because it granted exemptions only if other airlines 
+still flew there. Some of the affected regions are also served by other 
+airports. </p>
+<p class="rm-manual">The decision is rooted in the federal stimulus act 
+passed in late March. Under that law, any airline that received federal 
+assistance is required to maintain a minimum number of flights to 
+locations that it had served before the pandemic. But the law also 
+allowed the Transportation Department to grant exceptions, which it has 
+done regularly for weeks.</p>
+<h2 class="rm-manual">Homeland security exempts some foreign athletes from travel restrictions. </h2>
+<p class="rm-manual">The Department of Homeland Security late Friday 
+provided exemptions for certain professional athletes from its travel 
+restrictions that Trump administration officials have said are crucial 
+to preventing the spread of the coronavirus.</p>
+<p class="rm-manual">The department said in a statement that foreign 
+baseball, basketball, golf, hockey and tennis players, as well as their 
+families and essential staff members, would be allowed to enter the 
+United States. In his push to reopen the economy, President Trump has 
+encouraged sports commissioners to resume play.</p>
+<p class="rm-manual">“Professional sporting events provide much-needed 
+economic benefits, but equally important, they provide community pride 
+and national unity,” said Chad F. Wolf, the acting secretary of the 
+Department of Homeland Security. “In today’s environment, Americans need
+ their sports.”</p>
+<p class="rm-manual">In late January, the administration prohibited 
+foreign travelers who had been in China within the previous 14 days from
+ coming to the United States. The administration later put similar 
+restrictions in place for those from Iran and many European countries, 
+including Britain. </p>
+<p class="rm-manual">The order on Friday said that allowing the athletes
+ into the United States was within the “national interest.” But homeland
+ security officials have defended using health authorities granted to 
+the surgeon general to rapidly turn away asylum-seeking migrants at the 
+southwestern border.</p>
+<h2 class="rm-manual">As businesses navigate the pandemic, summer internships are sacrificed.</h2>
+<p class="rm-manual"><span>Image</span></p>
+<figcaption class="rm-manual"><span>“I had been working for it all of 
+college,” said Lydia Burns, a recent University of Louisville graduate 
+whose internship was called off. “Now I don’t know what I’m going to 
+do.”</span><span><span>Credit...</span><span>Luke Sharrett for The New York Times</span></span></figcaption><p class="rm-manual">When
+ she found out in mid-March that she had landed an internship with an 
+education nonprofit in Washington, Lydia Burns, a senior at the 
+University of Louisville, called her mother to celebrate.</p>
+<p class="rm-manual">The euphoria lasted all of a week. As she worked on
+ a paper the next Tuesday, Ms. Burns got an email from the nonprofit: 
+The internship was canceled because of the coronavirus pandemic. She 
+burst into tears.</p>
+<h1 class="rm-manual"> <a href="https://www.nytimes.com/news-event/coronavirus">The Coronavirus Outbreak</a> </h1>
+<ul class="rm-manual"> <li class="rm-manual"> <h2 class="rm-manual">Frequently Asked Questions and Advice</h2> <p class="rm-manual">Updated May 28, 2020</p> <ul class="rm-manual"> <li class="rm-manual"> <h4 class="rm-manual">My state is reopening. Is it safe to go out?</h4> <p class="rm-manual"><a href="https://www.nytimes.com/interactive/2020/us/states-reopen-map-coronavirus.html">States are reopening bit by bit</a>.
+ This means that more public spaces are available for use and more and 
+more businesses are being allowed to open again. The federal government 
+is largely leaving the decision up to states, and some state leaders are
+ leaving the decision up to local authorities. Even if you aren’t being 
+told to stay at home, it’s still a good idea to limit trips outside and 
+your interaction with other people.</p> </li> </ul> <ul class="rm-manual"> <li class="rm-manual"> <h4 class="rm-manual">What’s the risk of catching coronavirus from a surface?</h4> <p class="rm-manual">Touching
+ contaminated objects and then infecting ourselves with the germs is not
+ typically how the virus spreads. But it can happen. A number <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.905.8444&amp;rep=rep1&amp;type=pdf">of studies</a>
+ of flu, rhinovirus, coronavirus and other microbes have shown that 
+respiratory illnesses, including the new coronavirus, can spread by 
+touching contaminated surfaces, particularly in places like day care 
+centers, offices and <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5519164/">hospitals</a>.
+ But a long chain of events has to happen for the disease to spread that
+ way. The best way to protect yourself from coronavirus — whether it’s 
+surface transmission or close human contact — is still social 
+distancing, washing your hands, not touching your face and wearing 
+masks.</p> </li> </ul> <ul class="rm-manual"> <li class="rm-manual"> <h4 class="rm-manual">What are the symptoms of coronavirus?</h4> <p class="rm-manual">Common symptoms <a href="https://www.nytimes.com/article/symptoms-coronavirus.html">include fever, a dry cough, fatigue and difficulty breathing or shortness of breath.</a>
+ Some of these symptoms overlap with those of the flu, making detection 
+difficult, but runny noses and stuffy sinuses are less common. <a href="https://www.nytimes.com/2020/04/27/health/coronavirus-symptoms-cdc.html">The C.D.C. has also</a>
+ added chills, muscle pain, sore throat, headache and a new loss of the 
+sense of taste or smell as symptoms to look out for. Most people fall 
+ill five to seven days after exposure, but symptoms may appear in as few
+ as two days or as many as 14 days.</p> </li> </ul> <ul class="rm-manual"> <li class="rm-manual"> <h4 class="rm-manual">How can I protect myself while flying?</h4> <p class="rm-manual">If air travel is unavoidable,<a href="https://www.nytimes.com/2020/03/03/travel/how-to-clean-your-airplane-seat-and-space.html"> there are some steps you can take to protect yourself.</a> Most important: Wash your hands often, and stop touching your face. If possible, choose a window seat. A <a href="http://emoryhealthdigest.emory.edu/issues/2018/spring/from_the_well/germs-on-a-plane/index.html">study from Emory University</a>
+ found that during flu season, the safest place to sit on a plane is by a
+ window, as people sitting in window seats had less contact with 
+potentially sick people. Disinfect hard surfaces. When you get to your 
+seat and your hands are clean, use disinfecting wipes to clean the hard 
+surfaces at your seat like the head and arm rest, the seatbelt buckle, 
+the remote, screen, seat back pocket and the tray table. If the seat is 
+hard and nonporous or leather or pleather, you can wipe that down, too. 
+(Using wipes on upholstered seats could lead to a wet seat and spreading
+ of germs rather than killing them.)</p> </li> </ul> <ul class="rm-manual"> <li class="rm-manual"> <h4 class="rm-manual">How many people have lost their jobs due to coronavirus in the U.S.?</h4> <p class="rm-manual">More
+ than 40 million people — the equivalent of 1 in 4 U.S. workers — have 
+filed for unemployment benefits since the pandemic took hold. One in 
+five who were working in February reported losing a job or being 
+furloughed in March or the beginning of April, <a href="https://www.nytimes.com/2020/05/14/business/economy/coronavirus-jobless-unemployment.html">data from a Federal Reserve survey released on May 14 showed</a>,
+ and that pain was highly concentrated among low earners. Fully 39 
+percent of former workers living in a household earning $40,000 or less 
+lost work, compared with 13 percent in those making more than $100,000, a
+ Fed official said.</p> </li> </ul> <ul class="rm-manual"> <li class="rm-manual"> <h4 class="rm-manual">Is ‘Covid toe’ a symptom of the disease?</h4> <p class="rm-manual">There is an uptick in <a href="https://www.nytimes.com/2020/05/01/health/coronavirus-covid-toe.html">people reporting symptoms of chilblains,</a>
+ which are painful red or purple lesions that typically appear in the 
+winter on fingers or toes. The lesions are emerging as yet another <a href="https://www.nytimes.com/article/coronavirus-symptoms.html">symptom</a>
+ of infection with the new coronavirus. Chilblains are caused by 
+inflammation in small blood vessels in reaction to cold or damp 
+conditions, but they are usually common in the coldest winter months. 
+Federal health officials do not include toe lesions in the list of 
+coronavirus symptoms, but some dermatologists are pushing for a change, 
+saying so-called Covid toe should be sufficient grounds for testing.</p> </li> </ul> <ul class="rm-manual"> <li class="rm-manual"> <h4 class="rm-manual">Can I go to the park?</h4> <p class="rm-manual">Yes, but make sure you keep six feet of distance between you and people who don’t live in your home. <a href="https://www.nytimes.com/2020/03/19/well/move/coronavirus-covid-exercise-outdoors-infection-fitness.html">Even
+ if you just hang out in a park, rather than go for a jog or a walk, 
+getting some fresh air, and hopefully sunshine, is a good idea.</a></p> </li> </ul> <ul class="rm-manual"> <li class="rm-manual"> <h4 class="rm-manual">How do I take my temperature?</h4> <p class="rm-manual">Taking
+ one’s temperature to look for signs of fever is not as easy as it 
+sounds, as “normal” temperature numbers can vary, but generally, keep an
+ eye out for a temperature of 100.5 degrees Fahrenheit or higher. If you
+ don’t have a thermometer (they can be pricey these days), there are <a href="https://www.nytimes.com/article/coronavirus-temperature-fever-thermometer.html">other ways to figure out if you have a fever, or are at risk of Covid-19 complications.</a></p> </li> </ul> <ul class="rm-manual"> <li class="rm-manual"> <h4 class="rm-manual">Should I wear a mask?</h4> <p class="rm-manual">The C.D.C. has <a href="https://www.nytimes.com/2020/04/03/world/coronavirus-news-updates.html">recommended</a> that all Americans wear cloth masks if they go out in public. This is a shift in federal guidance reflecting<a href="https://www.nytimes.com/2020/03/31/health/coronavirus-asymptomatic-transmission.html"> new concerns that the coronavirus is being spread by infected people who have no symptoms</a>.
+ Until now, the C.D.C., like the W.H.O., has advised that ordinary 
+people don’t need to wear masks unless they are sick and coughing. Part 
+of the reason was to preserve medical-grade masks for health care 
+workers who desperately need them at a time when they are in 
+continuously short supply. Masks don’t replace hand washing and social 
+distancing.</p> </li> </ul> <ul class="rm-manual"> <li class="rm-manual"> <h4 class="rm-manual">What should I do if I feel sick?</h4> <p class="rm-manual"><a href="https://www.nytimes.com/2020/03/22/well/what-if-i-have-coronavirus.html">If you’ve been exposed to the coronavirus or think you have,</a>
+ and have a fever or symptoms like a cough or difficulty breathing, call
+ a doctor. They should give you advice on whether you should be tested, 
+how to get tested, and how to seek medical treatment without potentially
+ infecting or exposing others.</p> </li> </ul> <ul class="rm-manual"> <li class="rm-manual"> <h4 class="rm-manual">How do I get tested?</h4> <p class="rm-manual">If you’re sick and you think you’ve been exposed to the new coronavirus, <a href="https://www.nytimes.com/2020/03/22/well/what-if-i-have-coronavirus.html">the C.D.C. recommends that you call your healthcare provider and explain your symptoms and fears. </a>They
+ will decide if you need to be tested. Keep in mind that there’s a 
+chance — because of a lack of testing kits or because you’re 
+asymptomatic, for instance — you won’t be able to get tested.</p> </li> </ul> <ul class="rm-manual"> <li class="rm-manual"> <h4 class="rm-manual">How can I help?</h4> <p class="rm-manual"><a href="https://www.charitynavigator.org/index.cfm?bay=content.view&amp;cpid=7779">Charity Navigator</a>,
+ which evaluates charities using a numbers-based system, has a running 
+list of nonprofits working in communities affected by the outbreak. You 
+can give blood through the <a href="https://www.redcrossblood.org/donate-blood/dlp/coronavirus--covid-19--and-blood-donation.html">American Red Cross</a>, and <a href="https://wck.org/">World Central Kitchen</a> has stepped in to distribute meals in major cities.</p> </li> </ul> </li> </ul>
+<p class="rm-manual">“I feel like I had such a strong plan,” she said. 
+“I knew what I was going to do — I had been working for it all of 
+college. Now I don’t know what I’m going to do.”</p>
+<p class="rm-manual">For millions of college students, internships can 
+be a steppingstone to full-time work, a vital source of income and even a
+ graduation requirement.</p>
+<p class="rm-manual">But like so much else, summer internships have been
+ upended by the pandemic, with a wide range of major companies, 
+including tech firms like Yelp and entertainment behemoths like the Walt
+ Disney Company, canceling programs and rescinding offers. Instead, 
+students who had hoped to experience an office setting for the first 
+time are instead looking for work at fast-food restaurants.</p>
+<h2 class="rm-manual">A vaccine developed in China appears to be safe and may offer protection against the virus, scientists say.</h2>
+<p class="rm-manual">The early-stage trial, <a href="https://www.thelancet.com/lancet/article/s0140673620312083" rel="noopener noreferrer">published in the Lancet</a>,
+ was conducted by researchers at several laboratories and included 108 
+participants. Subjects who got the vaccine mounted a moderate immune 
+response to the virus, which peaked 28 days after the inoculation, the 
+researchers found.</p>
+<p class="rm-manual">A vaccine to the new coronavirus is considered to 
+be the best long-term solution to ending the pandemic and helping 
+countries reopen their societies. Nearly 100 teams worldwide are racing 
+to test various candidates.</p>
+<p class="rm-manual">On Monday, Moderna announced that its RNA vaccine <a href="https://www.nytimes.com/2020/05/18/health/coronavirus-vaccine-moderna.html">appears to be safe and effective</a>,
+ based on results from eight people in its trial. On Wednesday, 
+researchers in Boston said a prototype vaccine protected monkeys from 
+coronavirus infection.</p>
+<p class="rm-manual">The vaccine reported today was created with another virus, an adenovirus called Ad5 that easily enters human cells.</p>
+<p class="rm-manual">But the virus is one that many people already have 
+been exposed to, and some experts have worried that too many already 
+have antibodies to Ad5, limiting its usefulness as a way to deliver a 
+vaccine.</p>
+<p class="rm-manual">Although the vaccine did elicit some immune 
+response, the results are based on data from just a short period. It is 
+not clear how long-lasting the protection might be.</p>
+<p class="rm-manual">Apart from pain at the injection site, close to 
+half of the participants also reported fever, fatigue and headaches, and
+ about one in five had muscle pain.</p>
+<p class="rm-manual">The participants knew whether they were receiving a
+ low, medium or high dose, however, which may have influenced their 
+perceptions of the side effects.</p>
+<h2 class="rm-manual">Deadly diseases could surge after disruptions to vaccination programs.</h2>
+<p class="rm-manual"><span>Image</span></p>
+<figcaption class="rm-manual"><span>A health worker administered polio vaccines to children on a three-day vaccination campaign in Peshawar, Pakistan, in February.</span><span><span>Credit...</span><span>Arshad Arbab/EPA, via Shutterstock</span></span></figcaption><p class="rm-manual">The
+ widespread interruption of routine immunization programs around the 
+world during the coronavirus pandemic is putting 80 million children 
+under 1 year old at risk of contracting deadly, vaccine-preventable 
+diseases, according to a report Friday by the World Health Organization,
+ UNICEF and Gavi, the Vaccine Alliance.</p>
+<p class="rm-manual">The groups surveyed 129 poor and middle-income 
+countries and found that 68 had some degree of disruption of vaccine 
+services through clinics and through large inoculation campaigns.</p>
+<p class="rm-manual">Many public health experts say they are worried 
+that deaths from diseases including cholera, rotavirus and diphtheria 
+could far outstrip those from Covid-19 itself.</p>
+<p class="rm-manual">The problem of slipping vaccine rates is not limited to developing countries. This week,<a href="https://www.nytimes.com/2020/05/18/health/vaccinations-rates-coronavirus.html"> the C.D.C. reported that coverage rates among Michigan infants</a> had dropped below 50 percent for all childhood immunizations. <a href="https://www.nytimes.com/2020/05/20/nyregion/coronavirus-schools-vaccinations.html">New York City announced</a>
+ that during a six-week period of pandemic lockdown, the number of 
+vaccine doses administered to children dropped 63 percent, compared with
+ the same period last year.</p>
+<p class="rm-manual">International public health experts, including the W.H.O., <a href="https://www.who.int/immunization/news_guidance_immunization_services_during_COVID-19/en/" rel="noopener noreferrer">had initially recommended that mass vaccine programs </a>in
+ particular be halted while the pandemic raged to protect against 
+further spread occasioned by long lines of children waiting for shots.</p>
+<p class="rm-manual">But officials are now moving toward a cautious risk-benefit analysis.</p>
+<h2 class="rm-manual">Employers are preparing to test their workers as they return to offices.</h2>
+<p class="rm-manual"><span>Image</span></p>
+<figcaption class="rm-manual"><span>A worker at the Venetian resort in Las Vegas, Wesley Smith, is tested for the coronavirus.</span><span><span>Credit...</span><span>Bridget Bennett for The New York Times</span></span></figcaption><p class="rm-manual">As
+ the country reopens, employers are looking into how to safely bring 
+back their workers. One recurring question: Should they be tested for 
+the new coronavirus?</p>
+<p class="rm-manual">Some businesses are moving ahead. Amazon plans to 
+spend as much as $1 billion this year to regularly test its work force, 
+while laying the groundwork to build its own lab near the Cincinnati 
+airport.</p>
+<p class="rm-manual">Las Vegas casinos are testing thousands of 
+employees as they prepare to return to work, collecting nasal samples in
+ convention halls. Gov. Steve Sisolak of Nevada is hoping to reopen the 
+state’s gambling industry by June 4, he said on Friday.</p>
+<p class="rm-manual">And Major League Baseball, eager to begin its 
+season, is proposing a detailed regimen that involves testing players 
+and critical staff members multiple times a week.</p>
+<p class="rm-manual">While public health experts and government 
+officials have emphasized that widespread testing will be critical to 
+reopening, state and federal agencies have given little clear guidance 
+on the role employers should play in detecting and tracking the virus. </p>
+<p class="rm-manual">Despite rapid advancements in testing, many 
+limitations remain. Diagnostic tests, for example, only detect 
+infections during a certain period. And antibody tests alone should not 
+be used to make decisions about when people can return to work, the 
+Association of Public Health Laboratories and Council of State and 
+Territorial Epidemiologists <a href="https://www.aphlblog.org/antibody-testing-important-covid-19-response-data-needed-expand-role/" rel="noopener noreferrer">warned</a>.</p>
+<p class="rm-manual">Some public health officials also said that broad-based testing might have unintended consequences.</p>
+<p class="rm-manual">“We don’t want people to get a false sense of 
+security,” said Karen Landers, a district medical officer with the 
+Alabama Department of Public Health, which is not recommending that 
+employers test all workers.</p>
+<h2 class="rm-manual">The virus still does not spread easily on surfaces, the C.D.C. says.</h2>
+<p class="rm-manual"><a href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/how-covid-spreads.html" rel="noopener noreferrer">Guidelines from the C.D.C.</a> making the rounds online this week are clarifying what we know about the spread of the virus.</p>
+<p class="rm-manual">The virus does not spread easily via contaminated 
+surfaces, according to the agency. For those who were worried about 
+wiping down grocery bags or disinfecting mailed packages, the<a href="https://www.foxnews.com/health/cdc-now-says-coronavirus-does-not-spread-easily-via-contaminated-surfaces" rel="noopener noreferrer"> news headlines</a> highlighting<a href="https://www.wbrz.com/news/cdc-virus-does-not-spread-easily-on-surfaces/" rel="noopener noreferrer"> this guidance</a> in<a href="https://nypost.com/2020/05/20/cdc-now-says-coronavirus-does-not-spread-easily-on-surfaces/" rel="noopener noreferrer"> recent days</a> might have brought some relief.</p>
+<p class="rm-manual">But this information is not new; the agency has 
+been using similar language for months. If anything, the headlines have 
+pulled into sharper focus what we already know. The virus is thought to 
+spread mainly from one person to another, typically through droplets 
+when an infected person sneezes, coughs or talks at close range — even 
+if that person is not showing symptoms.</p>
+<p class="rm-manual">The C.D.C.’s website also says that “touching a 
+surface or object that has the virus on it and then touching their own 
+mouth, nose, or possibly their eyes” is a possible way for people to 
+become infected. But those are “not thought to be the main way the virus
+ spreads.”</p>
+<p class="rm-manual">According to<a href="https://web.archive.org/web/*/https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/how-covid-spreads.html" rel="noopener noreferrer"> cached versions of the website that are available online</a>,
+ this language has remained largely unchanged since at least late March.
+ But it appears to have drawn more attention after it was placed under a
+ new subheading<a href="https://web.archive.org/web/20200511163242/https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/how-covid-spreads.html" rel="noopener noreferrer"> on May 11</a>, when information about the difficulty of catching the virus from animals was added.</p>
+<h2 class="rm-manual">As cases rise in Alabama, Montgomery’s mayor warns of a shortage of I.C.U. beds. </h2>
+<p class="rm-manual"><span>Image</span></p>
+<figcaption class="rm-manual"><span>A testing site in Decatur, Ala., in 
+April. Alabama has seen more than 13,000 known cases of the virus and 
+more than 500 deaths, according to a New York Times database.</span><span><span>Credit...</span><span>Dan Busey/The Decatur Daily, via Associated Press</span></span></figcaption><p class="rm-manual">As <a href="https://www.nytimes.com/2020/05/20/us/coronavirus-reopening-50-states.html">all 50 states begin to open back up</a>
+ in some way, some epidemiologists are seeing warning signs of a 
+possible resurgence in the South, including Montgomery, Ala., where 
+Mayor Steven L. Reed raised alarms going into the holiday weekend. </p>
+<p class="rm-manual">Mr. Reed, who earlier this week said there was just
+ one I.C.U. bed remaining at certain area hospitals, said he spoke out 
+after hearing from hospital leaders that the situation was becoming 
+unsustainable. </p>
+<p class="rm-manual">“We are in a very dangerous predicament,” he said on MSNBC on Thursday night. </p>
+<p class="rm-manual">Mr. Reed, a Democrat whose position is officially 
+nonpartisan, attributed an uptick in cases in Montgomery to changes in 
+people’s behavior amid an early decision by Gov. Kay Ivey, a Republican,
+ to relax restrictions across Alabama, including the reopening of 
+entertainment venues on Friday.</p>
+<p class="rm-manual">“It has sent a message that the battle with 
+Covid-19 is over and it has been won,” he said. “We are still in this 
+battle. We can’t afford to relax now.” </p>
+<p class="rm-manual">Mia Mothershed, a spokeswoman for Jackson Hospital 
+in Montgomery, said on Friday that the hospital had reached capacity in 
+its 30 I.C.U. beds because of a combination of the virus and other 
+patients. “We have absolutely no beds available here,” she said.</p>
+<p class="rm-manual"><a href="https://www.nytimes.com/interactive/2020/us/alabama-coronavirus-cases.html">Alabama has seen more than 13,000 known cases</a>
+ of the virus and more than 500 deaths, according to a New York Times 
+database. It is among a handful of states where cases have been rising 
+in recent days.</p>
+<h2 class="rm-manual">This is how to fix your work-from-home tech.</h2>
+<p class="rm-manual">The last thing you need right now is a spotty Wi-Fi
+ signal interrupting your workday. Good news! There are some simple 
+steps you can take to improve that. And, while you’re at it, take a look
+ at the rest of your computer setup and see what may be slowing you 
+down. A little tweak can make working from home less miserable.</p>
+<h2 class="rm-manual">China abandons a growth target for the year and more from our international correspondents.</h2>
+<p class="rm-manual">Parting with years of precedent, China on Friday <a href="https://www.nytimes.com/2020/05/21/business/economy/coronavirus-china-economy.html">abandoned an annual growth target for 2020</a>,
+ in an acknowledgment that restarting its economy after the outbreak 
+will be a slow and difficult process. In his annual report to lawmakers 
+meeting in Beijing, Premier Li Keqiang said that the country had made 
+major achievements in its response to the epidemic and that economic 
+development was a top priority. But while he set goals to limit 
+inflation and unemployment, he did not announce a target for economic 
+growth for the year.</p>
+<p class="rm-manual">Reporting was contributed by Mike Baker, Karen 
+Barrow, Alan Blinder, Julie Bosman, Keith Bradsher, Nicholas 
+Bogel-Burroughs, Kassie Bracken, Chris Buckley, Niraj Chokshi, Michael 
+Cooper, Elizabeth Dias, Steve Eder, Christopher Flavelle, Ellen Gabler, 
+Bianca Giaever, Michael Gold, Joseph Goldstein, Abby Goodnough, Denise 
+Grady, Maggie Haberman, Mohammed Hadi, Jan Hoffman, Zolan Kanno-Youngs, 
+Sheila Kaplan, Annie Karni, Corey Kilgannon, Sarah Kliff, Apoorva 
+Mandavilli, Patricia Mazzei, Jesse McKinley, Sarah Mervosh, Heather 
+Murphy, Robin Pogrebin, Alan Rappeport, Emily Rhyne, Dana Rubinstein, 
+Marc Santora, Jeanna Smialek, Farah Stockman, Sheryl Gay Stolberg, 
+Eileen Sullivan, Noah Weiland and David Yaffe-Bellany.</p>
+<p class="rm-manual">Advertisement</p>
+<p class="rm-manual"><a href="#after-bottom">Continue reading the main story</a></p></article>
+</body></html>

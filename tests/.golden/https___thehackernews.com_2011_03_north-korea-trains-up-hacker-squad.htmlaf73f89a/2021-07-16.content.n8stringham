@@ -1,0 +1,90 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual"><a href="https://thehackernews.com/2011/03/north-korea-trains-up-hacker-squad.html">North Korea Trains Up Hacker Squad !</a></h1>
+<p class="rm-manual"><span>March 07, 2011</span><span><a href="file:///p/authors.html" rel="author">Mohit Kumar</a></span></p>
+<p><span><span>Concerns about North Korea's cyber warfare squads are 
+resurfacing after Friday's cyber and GPS jamming attacks, which are 
+being blamed on the North. Pyongyang began developing electronic warfare
+ capabilities in 1986 when it founded Mirim University, the present-day 
+Automation University, to train specialists. A defector who graduated 
+from the university recalled that 25 Russian professors were invited 
+from the Frunze Military Academy in the former Soviet Union to give 
+lectures, and some 100 to 110 hackers were trained there every year. 
+Mirim is a five-year college. The Amrokgang College of Military 
+Engineering, the National Defense University, the Air Force Academy and 
+the Naval Academy are also reportedly training electronic warfare 
+specialists. Jang Se-yul of North Korean People's Liberation Front, an 
+organization of former North Korean military officers and servicemen, 
+recalled that when he fled the North in 2007, "I heard that the North 
+Korean military has about 30,000 electronic warfare specialists, 
+including some 1,200 personnel under two electronic warfare brigades." 
+"Each Army corps operates an automation unit, or an electronic warfare 
+unit." Jang used to be an officer of a North Korean electronic warfare 
+command.</span></span></p>
+<p> <span><span>Material published by the North Korean Army in 2005 
+quotes leader Kim Jong-il as saying, "Modern war is electronic warfare. 
+Victory or defeat of a modern war depends on how to carry out electronic
+ warfare." In a 2006 report, the South Korean military warned North 
+Korean hackers could paralyze the command post of the U.S. Pacific 
+Command and damage computer systems on the U.S. mainland. Experts 
+believe that the North's 600 or so special hackers are as good as their 
+CIA counterparts. They attempted in August 2008 to hack the computer of a
+ colonel in South Korean Field Army headquarters. In 1999, the U.S. 
+Defense Department said the most frequent visitor to its website was 
+traced to North Korea. Due to economic difficulties since the 1990s, the
+ North Korean regime had a hard time boosting its conventional military 
+capabilities and instead focused on strengthening so-called asymmetric 
+capabilities that would allow it to achieve relatively large effects 
+with small expenses. That includes not only nuclear and biochemical 
+weapons and missiles but also special forces and hackers.</span></span></p>
+<p class="rm-manual">Found this article interesting? Follow THN on <a href="https://www.facebook.com/thehackernews" rel="noopener">Facebook</a>, <a href="https://twitter.com/thehackersnews" rel="noopener">Twitter </a> and <a href="https://www.linkedin.com/company/thehackernews/" rel="noopener">LinkedIn</a> to read more exclusive content we post.</p>
+<p class="rm-manual"><a href="#link_share" rel="nofollow noopener"><span>Share</span></a></p>
+<p class="rm-manual"><a href="#link_share" rel="nofollow noopener"><span> Tweet</span></a></p>
+<p class="rm-manual"><a href="#link_share" rel="nofollow noopener"><span> Share</span></a></p>
+<aside class="rm-manual"><a href=""></a> <a href="#link_share" rel="nofollow noopener">Share on Facebook</a> <a href="#link_share" rel="nofollow noopener"> Share on Twitter</a> <a href="#link_share" rel="nofollow noopener"> Share on Linkedin</a> <a href="#link_share" rel="nofollow noopener">Share on Reddit</a> <a href="#link_share" rel="nofollow noopener"> Share on Hacker News</a> <a href="#link_share" rel="nofollow noopener">Share on Email</a> <a href="#link_share" rel="nofollow noopener"> Share on WhatsApp</a> <a href="#link_share" rel="nofollow noopener">Share on Facebook Messenger</a> <a href="#link_share" rel="nofollow noopener"> Share on Telegram</a> </aside><p class="rm-manual"><a href="#comment-box">Comments</a></p>
+<p class="rm-manual"><a href="">SHARE </a></p>
+<p class="rm-manual"><span><a href="https://thehackernews.com/search/label/GENERAL%20NEWS" rel="tag"><span>GENERAL NEWS</span></a>, <a href="https://thehackernews.com/search/label/Hacker%20News" rel="tag"><span>Hacker News</span></a>, <a href="https://thehackernews.com/search/label/News" rel="tag"><span>News</span></a>, <a href="https://thehackernews.com/search/label/Security%20News" rel="tag"><span>Security News</span></a></span></p>
+<p class="rm-manual">Popular This Week</p>
+<p class="rm-manual"> <a href="https://thehackernews.com/2021/07/a-new-critical-solarwinds-zero-day.html"> </a></p><p class="rm-manual"><a href="https://thehackernews.com/2021/07/a-new-critical-solarwinds-zero-day.html">A New Critical SolarWinds Zero-Day Vulnerability Under Active Attack</a></p><a href="https://thehackernews.com/2021/07/a-new-critical-solarwinds-zero-day.html"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://thehackernews.com/2021/07/microsoft-warns-of-new-unpatched.html"> </a></p><p class="rm-manual"><a href="https://thehackernews.com/2021/07/microsoft-warns-of-new-unpatched.html">Microsoft Warns of New Unpatched Windows Print Spooler Vulnerability</a></p><a href="https://thehackernews.com/2021/07/microsoft-warns-of-new-unpatched.html"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://thehackernews.com/2021/07/update-your-windows-pcs-to-patch-117.html"> </a></p><p class="rm-manual"><a href="https://thehackernews.com/2021/07/update-your-windows-pcs-to-patch-117.html">Update Your Windows PCs to Patch 117 New Flaws, Including 9 Zero-Days</a></p><a href="https://thehackernews.com/2021/07/update-your-windows-pcs-to-patch-117.html"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://thehackernews.com/2021/07/revil-ransomware-gang-mysteriously.html"> </a></p><p class="rm-manual"><a href="https://thehackernews.com/2021/07/revil-ransomware-gang-mysteriously.html">REvil Ransomware Gang Mysteriously Disappears After High-Profile Attacks</a></p><a href="https://thehackernews.com/2021/07/revil-ransomware-gang-mysteriously.html"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://thehackernews.com/2021/07/trickbot-malware-returns-with-new-vnc.html"> </a></p><p class="rm-manual"><a href="https://thehackernews.com/2021/07/trickbot-malware-returns-with-new-vnc.html">Trickbot Malware Returns with a new VNC Module to Spy on its Victims</a></p><a href="https://thehackernews.com/2021/07/trickbot-malware-returns-with-new-vnc.html"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://thehackernews.com/2021/07/update-your-chrome-browser-to-patch-new.html"> </a></p><p class="rm-manual"><a href="https://thehackernews.com/2021/07/update-your-chrome-browser-to-patch-new.html">Update Your Chrome Browser to Patch New Zero‑Day Bug Exploited in the Wild</a></p><a href="https://thehackernews.com/2021/07/update-your-chrome-browser-to-patch-new.html"> </a> <p class="rm-manual"></p>
+<p class="rm-manual">Comments</p></article>
+</body></html>

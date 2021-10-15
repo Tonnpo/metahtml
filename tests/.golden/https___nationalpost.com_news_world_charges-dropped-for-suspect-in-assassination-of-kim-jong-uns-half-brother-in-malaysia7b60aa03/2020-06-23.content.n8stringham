@@ -1,0 +1,172 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h2 class="rm-manual">Breadcrumb Trail Links</h2>
+<ol class="rm-manual">
+<li class="rm-manual"><a href="file:///category/world/">World</a></li>
+<li class="rm-manual"><a href="file:///category/news/">News</a></li>
+</ol>
+<h1 class="rm-manual">Charges dropped for suspect in assassination of Kim Jong Un's half brother in Malaysia</h1>
+<p class="rm-manual">Author of the article:</p>
+<p class="rm-manual"><span>Washington Post</span></p>
+<p class="rm-manual">Publishing date:</p>
+<p class="rm-manual"><span>March 11, 2019</span> • </p>
+<p class="rm-manual"><span>3 minute read</span></p>
+<figcaption><span>Indonesian Siti Aisyah talks during a press conference
+ at foreign minister office in Jakarta, Indonesia, Monday, March 11, 
+2019. The Indonesian woman held two years on suspicion of killing North 
+Korean leader's half brother Kim Jong Nam was freed from custody Monday 
+after prosecutors unexpectedly dropped the murder charge against her.</span> <span>Achmad Ibrahim/AP</span></figcaption><h2 class="rm-manual">Article Sidebar</h2>
+<h2 class="rm-manual">Share this Story: <span>Charges dropped for suspect in assassination of Kim Jong Un's half brother in Malaysia</span>
+</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://nationalpost.com/news/world/charges-dropped-for-suspect-in-assassination-of-kim-jong-uns-half-brother-in-malaysia/wcm/4d471cd6-60ea-4788-97d5-650a4b8af88b/"> <span>Copy Link</span></a></li>
+<li class="rm-manual"><a href="mailto:?Subject=I%20saw%20this%20on%20National%20Post&amp;Body=https://nationalpost.com/news/world/charges-dropped-for-suspect-in-assassination-of-kim-jong-uns-half-brother-in-malaysia/wcm/4d471cd6-60ea-4788-97d5-650a4b8af88b/"> <span>Email</span></a></li>
+<li class="rm-manual"><a href="http://www.facebook.com/sharer.php?u=https://nationalpost.com/news/world/charges-dropped-for-suspect-in-assassination-of-kim-jong-uns-half-brother-in-malaysia/wcm/4d471cd6-60ea-4788-97d5-650a4b8af88b/&amp;display=popup" rel="noopener"> <span>Facebook</span></a></li>
+<li class="rm-manual"><a href="https://twitter.com/share?url=https://nationalpost.com/news/world/charges-dropped-for-suspect-in-assassination-of-kim-jong-uns-half-brother-in-malaysia/wcm/4d471cd6-60ea-4788-97d5-650a4b8af88b/&amp;text=Charges%20dropped%20for%20suspect%20in%20assassination%20of%20Kim%20Jong%20Un%27s%20half%20brother%20in%20Malaysia" rel="noopener"> <span>Twitter</span></a></li>
+<li class="rm-manual"><a href="http://www.reddit.com/submit?url=https://nationalpost.com/news/world/charges-dropped-for-suspect-in-assassination-of-kim-jong-uns-half-brother-in-malaysia/wcm/4d471cd6-60ea-4788-97d5-650a4b8af88b/&amp;smid=re-share&amp;title=Charges%20dropped%20for%20suspect%20in%20assassination%20of%20Kim%20Jong%20Un%27s%20half%20brother%20in%20Malaysia" rel="noopener"> <span>Reddit</span></a></li>
+<li class="rm-manual"><a href="https://pinterest.com/pin/create/button/?url=https://nationalpost.com/news/world/charges-dropped-for-suspect-in-assassination-of-kim-jong-uns-half-brother-in-malaysia/wcm/4d471cd6-60ea-4788-97d5-650a4b8af88b/&amp;description=Charges%20dropped%20for%20suspect%20in%20assassination%20of%20Kim%20Jong%20Un%27s%20half%20brother%20in%20Malaysia&amp;media=https%3A//nationalpostcom.files.wordpress.com/2019/03/indonesia_north_korea-e1552307559119.jpg" rel="noopener"> <span>Pinterest</span></a></li>
+<li class="rm-manual"><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://nationalpost.com/news/world/charges-dropped-for-suspect-in-assassination-of-kim-jong-uns-half-brother-in-malaysia/wcm/4d471cd6-60ea-4788-97d5-650a4b8af88b/&amp;title=Charges%20dropped%20for%20suspect%20in%20assassination%20of%20Kim%20Jong%20Un%27s%20half%20brother%20in%20Malaysia" rel="noopener"> <span>LinkedIn</span></a></li>
+<li class="rm-manual"><a href="https://tumblr.com/widgets/share/tool?canonicalUrl=https://nationalpost.com/news/world/charges-dropped-for-suspect-in-assassination-of-kim-jong-uns-half-brother-in-malaysia/wcm/4d471cd6-60ea-4788-97d5-650a4b8af88b/&amp;name=Charges%20dropped%20for%20suspect%20in%20assassination%20of%20Kim%20Jong%20Un%27s%20half%20brother%20in%20Malaysia&amp;description" rel="noopener"> <span>Tumblr</span></a></li>
+</ul>
+<h2 class="rm-manual">Trending</h2>
+<h2 class="rm-manual">Article content</h2>
+<p>HONG KONG – One of the women suspected of killing Kim Jong Nam, the 
+half brother of North Korean leader Kim Jong Un, was freed Monday after 
+prosecutors unexpectedly dropped charges against her.</p>
+<p>Siti Aisyah, 26, will now be allowed to return home to Indonesia, 
+Malaysian officials say, after being held for over two years in 
+Malaysia. She and the second suspect in the murder, Doan Thi Huong, 30, 
+from Vietnam, both appeared in court on Monday, but the acquittal only 
+applies to her.</p>
+<p class="rm-manual">We apologize, but this video has failed to load.</p>
+<p class="rm-manual">Try refreshing your browser, or</p>
+<p class="rm-manual"><a href="https://nationalpost.com/tag/video-centre">tap here to see other videos from our team</a>.</p>
+<h5 class="rm-manual">
+<span>Charges dropped for suspect in assassination of Kim Jong Un's half brother in Malaysia</span> <span>Back to video</span>
+</h5>
+<p>“I feel very happy,” she told reporters at a news conference, 
+thanking everyone who worked for her release. “I didn’t expect that 
+today will be the day of my freedom.”</p>
+<p>The two women, who maintain their innocence, were accused of 
+delivering the potent VX nerve agent that killed Kim Jong Nam in an 
+airport terminal in Kuala Lumpur, Malaysia, in February 2017. Both 
+Aisyah and Huong have said that they believed they were taking part in a
+ prank for a television show, and thought they were applying lotion on 
+the man’s face. U.S. officials have said the orders came from Pyongyang.</p>
+<h2 class="rm-manual">Advertisement</h2>
+<h2 class="rm-manual">Article content continued</h2>
+<p>The pair were the only ones held by Malaysian authorities, after four
+ North Korean suspects fled the country the day of Kim Jong Nam’s 
+murder. He was the eldest son of North Korean leader Kim Jong Il, and 
+had lived abroad since 2003.</p>
+<p>In a statement, Malaysia’s Attorney General Tommy Thomas said 
+Aisyah’s release came after intervention from the Indonesian government,
+ which has repeatedly lobbied for charges against her to be dropped and 
+for her to be allowed home. The decision was made “taking into account 
+the good relations” between Indonesia and Malaysia, Thomas wrote in a 
+letter announcing her acquittal to Indonesia’s Minister of Law and Human
+ Rights.</p>
+<h2 class="rm-manual">Advertisement</h2>
+<h2 class="rm-manual">Article content continued</h2>
+<p>The young woman’s case has been raised at every bilateral meeting 
+between Indonesia and Malaysia, Indonesian officials say, including when
+ Indonesian President Joko Widodo met with Malaysian Prime Minister 
+Mahathir Mohamad last July. Both are Muslim-majority nations, with a 
+closely-related language and deep bilateral ties.</p>
+<p>Gooi Soon Seng, Aisyah’s lawyer, said the acquittal has completely 
+nullified the case against her, as though she has never been charged.</p>
+<p>“We are grateful the public prosecutor has come to this conclusion, 
+because we truly believe she is merely a scapegoat and she is innocent,”
+ he said.</p>
+<h2 class="rm-manual">Advertisement</h2>
+<h2 class="rm-manual">Article content continued</h2>
+<p>Aisyah is expected to return home to Indonesia Monday evening, as officials make preparations for her departure.</p>
+<p>The trial against Huong, however, will continue on Thursday. She was 
+expected to testify for the first time in court on Monday, but she only 
+read a few lines of her prepared statement tearfully. Her lawyers have 
+asked for the attorney general to review the case, and for the charge to
+ be withdrawn on the same grounds as Aisyah’s.</p>
+<p>“We are hoping against hope that the charges against her will be 
+dropped,” said Teh Poh Teik, Huong’s lawyer. “It is unfair that despite 
+the case being the same for both, that one could have been dropped 
+without explanation, while the other is being set to continue.”</p>
+<h2 class="rm-manual">Advertisement</h2>
+<h2 class="rm-manual">Article content continued</h2>
+<p>Huong grew up in Nghia Binh, Vietnam, not far from Hanoi, and is 
+thought to have been recruited by North Korean agents while working at a
+ bar in the Vietnamese capital. She flew to Kuala Lumpur a week before 
+Kim Jong Nam’s slaying on Feb. 13, 2017. Aisyah was a migrant worker in 
+Kuala Lumpur, and is believed to have approached by a man at the 
+nightclub she was working at who convinced her to participate in the 
+prank.</p>
+<p>A Malaysian High Court judge found last August there was enough 
+evidence to prosecute Aisyah, Huong and the four North Koreans, who fled
+ the country, on a conspiracy to kill Kim Jong Nam. But lawyers have 
+consistently argued that they were merely used for the political 
+assassination, which had clear links to North Korea.</p>
+<h2 class="rm-manual">Share this article in your social network</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="mailto:?Subject=I%20saw%20this%20on%20nationalpost.com&amp;Body=https://nationalpost.com/news/world/charges-dropped-for-suspect-in-assassination-of-kim-jong-uns-half-brother-in-malaysia/wcm/4d471cd6-60ea-4788-97d5-650a4b8af88b/"> <span>Share via email</span></a></li>
+<li class="rm-manual"><a href="http://www.facebook.com/sharer.php?u=https://nationalpost.com/news/world/charges-dropped-for-suspect-in-assassination-of-kim-jong-uns-half-brother-in-malaysia/wcm/4d471cd6-60ea-4788-97d5-650a4b8af88b/&amp;display=popup" rel="noopener"> <span>Share on Facebook</span></a></li>
+<li class="rm-manual"><a href="https://twitter.com/share?url=https://nationalpost.com/news/world/charges-dropped-for-suspect-in-assassination-of-kim-jong-uns-half-brother-in-malaysia/wcm/4d471cd6-60ea-4788-97d5-650a4b8af88b/&amp;text=Charges%20dropped%20for%20suspect%20in%20assassination%20of%20Kim%20Jong%20Un%27s%20half%20brother%20in%20Malaysia" rel="noopener"> <span>Share on Twitter</span></a></li>
+<li class="rm-manual"><section class="rm-manual"><h2 class="rm-manual">Share this Story: <span>Charges dropped for suspect in assassination of Kim Jong Un's half brother in Malaysia</span>
+</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://nationalpost.com/news/world/charges-dropped-for-suspect-in-assassination-of-kim-jong-uns-half-brother-in-malaysia/wcm/4d471cd6-60ea-4788-97d5-650a4b8af88b/"> <span>Copy Link</span></a></li>
+<li class="rm-manual"><a href="mailto:?Subject=I%20saw%20this%20on%20National%20Post&amp;Body=https://nationalpost.com/news/world/charges-dropped-for-suspect-in-assassination-of-kim-jong-uns-half-brother-in-malaysia/wcm/4d471cd6-60ea-4788-97d5-650a4b8af88b/"> <span>Email</span></a></li>
+<li class="rm-manual"><a href="http://www.facebook.com/sharer.php?u=https://nationalpost.com/news/world/charges-dropped-for-suspect-in-assassination-of-kim-jong-uns-half-brother-in-malaysia/wcm/4d471cd6-60ea-4788-97d5-650a4b8af88b/&amp;display=popup" rel="noopener"> <span>Facebook</span></a></li>
+<li class="rm-manual"><a href="https://twitter.com/share?url=https://nationalpost.com/news/world/charges-dropped-for-suspect-in-assassination-of-kim-jong-uns-half-brother-in-malaysia/wcm/4d471cd6-60ea-4788-97d5-650a4b8af88b/&amp;text=Charges%20dropped%20for%20suspect%20in%20assassination%20of%20Kim%20Jong%20Un%27s%20half%20brother%20in%20Malaysia" rel="noopener"> <span>Twitter</span></a></li>
+<li class="rm-manual"><a href="http://www.reddit.com/submit?url=https://nationalpost.com/news/world/charges-dropped-for-suspect-in-assassination-of-kim-jong-uns-half-brother-in-malaysia/wcm/4d471cd6-60ea-4788-97d5-650a4b8af88b/&amp;smid=re-share&amp;title=Charges%20dropped%20for%20suspect%20in%20assassination%20of%20Kim%20Jong%20Un%27s%20half%20brother%20in%20Malaysia" rel="noopener"> <span>Reddit</span></a></li>
+<li class="rm-manual"><a href="https://pinterest.com/pin/create/button/?url=https://nationalpost.com/news/world/charges-dropped-for-suspect-in-assassination-of-kim-jong-uns-half-brother-in-malaysia/wcm/4d471cd6-60ea-4788-97d5-650a4b8af88b/&amp;description=Charges%20dropped%20for%20suspect%20in%20assassination%20of%20Kim%20Jong%20Un%27s%20half%20brother%20in%20Malaysia&amp;media=https%3A//nationalpostcom.files.wordpress.com/2019/03/indonesia_north_korea-e1552307559119.jpg" rel="noopener"> <span>Pinterest</span></a></li>
+<li class="rm-manual"><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://nationalpost.com/news/world/charges-dropped-for-suspect-in-assassination-of-kim-jong-uns-half-brother-in-malaysia/wcm/4d471cd6-60ea-4788-97d5-650a4b8af88b/&amp;title=Charges%20dropped%20for%20suspect%20in%20assassination%20of%20Kim%20Jong%20Un%27s%20half%20brother%20in%20Malaysia" rel="noopener"> <span>LinkedIn</span></a></li>
+<li class="rm-manual"><a href="https://tumblr.com/widgets/share/tool?canonicalUrl=https://nationalpost.com/news/world/charges-dropped-for-suspect-in-assassination-of-kim-jong-uns-half-brother-in-malaysia/wcm/4d471cd6-60ea-4788-97d5-650a4b8af88b/&amp;name=Charges%20dropped%20for%20suspect%20in%20assassination%20of%20Kim%20Jong%20Un%27s%20half%20brother%20in%20Malaysia&amp;description" rel="noopener"> <span>Tumblr</span></a></li>
+</ul></section></li>
+</ul>
+<h2 class="rm-manual">Trending</h2>
+<h2 class="rm-manual">Related Stories</h2>
+<h2 class="rm-manual">This Week in Flyers</h2>
+<h2 class="rm-manual">Article Comments</h2>
+<h3 class="rm-manual">Comments</h3>
+<p class="rm-manual">Postmedia is committed to maintaining a lively but 
+civil forum for discussion and encourage all readers to share their 
+views on our articles. Comments may take up to an hour for moderation 
+before appearing on the site. We ask you to keep your comments relevant 
+and respectful. We have enabled email notifications—you will now receive
+ an email if you receive a reply to your comment, there is an update to a
+ comment thread you follow or if a user you follow comments. Visit our <a href="https://pages.postmedia.com/community-guidelines/">Community Guidelines</a> for more information and details on how to adjust your <a href="https://pages.postmedia.com/community-guidelines/#FAQ8">email</a> settings.</p></article>
+</body></html>

@@ -1,0 +1,108 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><ol class="rm-manual"> <li class="rm-manual"> <a href="https://www.buzzfeednews.com/collection/coronavirus">Coronavirus</a> </li> </ol>
+<h1 class="rm-manual">Disney World And Other Major Theme Parks Are Closing Until The End Of March Due To The Coronavirus</h1>
+<p class="rm-manual">The decisions came after California officials 
+advised that gatherings of more than 250 people should be postponed in 
+order to help stop the spread of the virus.</p>
+<p class="rm-manual">By <a href="file:///author/davidmack">David Mack</a> and <a href="file:///author/briannasacks">Brianna Sacks</a> </p>
+<p class="rm-manual"> <a href="file:///author/davidmack"> <span> <span>David Mack</span> <span>BuzzFeed News Reporter</span> </span> </a> <a href="file:///author/briannasacks"> <span> <span>Brianna Sacks</span> <span>BuzzFeed News Reporter</span> </span> </a> </p>
+<p class="rm-manual"> Last updated on March 12, 2020, at 8:44 p.m. ET </p>
+<p class="rm-manual"> Posted on March 12, 2020, at 4:42 p.m. ET </p>
+<p class="rm-manual"> <span> Joshua Sudock/Disneyland Resort via Getty Images </span> </p>
+<p>The Walt Disney Company said Thursday that it would close several 
+major parks, including its flagship resort in Florida, because of the 
+coronavirus.</p>
+<p>Disneyland, located in Anaheim, California, and its sister park, 
+Disney California Adventure, were the first locations to announce the 
+shutdowns, citing updated warning guidelines on gathering in public 
+spaces from the state health department. It was only the third time in 
+history that Disneyland closed its gates to guests.</p>
+<p>In a statement to BuzzFeed News, a Disneyland Resort spokesperson said:</p>
+<p>While there have been no reported cases of COVID-19 at Disneyland 
+Resort, after carefully reviewing the guidelines of the Governor of 
+California’s executive order and in the best interest of our guests and 
+employees, we are proceeding with the closure of Disneyland Park and 
+Disney California Adventure, beginning the morning of March 14 through 
+the end of the month. The Hotels of Disneyland Resort will remain open 
+until Monday, March 16 to give guests the ability to make necessary 
+travel arrangements; Downtown Disney will remain open. We will monitor 
+the ongoing situation and follow the advice and guidance of federal and 
+state officials and health agencies. Disney will continue to pay cast 
+members during this time.</p>
+<p>Disneyland Resort will work with guests who wish to change or cancel 
+their visits, and will provide refunds to those who have hotel bookings 
+during this closure period. Please contact The Walt Disney Travel 
+Company for questions and cancellations at 714-520-5050.</p>
+<p>A few hours later, the company said in a statement that "out of an 
+abundance of caution" it would also close the Walt Disney World Resort 
+in Florida and Disneyland Paris Resort, beginning on Sunday, through the
+ end of the month.</p>
+<p>Disney Cruise Line will also suspend all new departures on Saturday 
+for the same amount of time. Hotels at the parks will remain open, 
+however, as will the retail and dining complexes.</p>
+<p>"We will continue to stay in close contact with appropriate officials and health experts," the statement said.</p>
+<p>The parks' decisions came after <a rel="nofollow" href="https://www.latimes.com/california/story/2020-03-12/coronavirus-pandemic-response-trump-travel-ban-nba-suspends-season">California officials advised</a>
+ on Thursday that gatherings of more than 250 people should be postponed
+ in order to help stop the spread of the virus — a practice known as <a rel="nofollow" href="https://www.buzzfeednews.com/article/davidmack/social-distancing-coronavirus">social distancing</a>.</p>
+<p>But Gov. Gavin Newsom had said earlier on Thursday that Disneyland 
+was not covered by that guidance due to "the complexity of their unique 
+circumstances."</p>
+<p>The governor said he had spoken by phone with Bob Iger, executive chair of the Walt Disney Company, to discuss the crisis.</p>
+<p>The other two times Disneyland suspended operations were after 
+President John F. Kennedy's assassination and the Sept. 11 attacks.</p>
+<p>In 2014, a <a rel="nofollow" href="https://www.buzzfeednews.com/article/tasneemnashrulla/california-measles-outbreak-that-began-in-disneyland-may-end">multistate outbreak of measles</a> began at Disneyland, ultimately infecting 159 people in 18 states and the District of Columbia.</p>
+<p>Universal Studios Hollywood also announced it would be closing its 
+California theme park "out of an abundance of caution and in response to
+ the guidance provided by the California Department of Public Health."</p>
+<p>The closures will begin Saturday, with the theme park saying it 
+anticipates reopening on March 28 "as we continue to monitor the 
+situation."</p>
+<p>The parks are the latest American attractions that have suspended or postponed operations amid the coronavirus pandemic.</p>
+<p>On Thursday, the <a rel="nofollow" href="https://www.buzzfeednews.com/article/salvadorhernandez/mlb-nhl-nba-mls-shutting-down-coronavirus?ref=bfnsplash">National Hockey League, Major League Soccer, and the Association of Tennis Professionals</a>
+ suspended games. Major League Baseball also announced it would suspend 
+the remainder of all spring training games and delay the opening day of 
+the regular season by two weeks. A day earlier, the <a rel="nofollow" href="https://www.buzzfeednews.com/article/briannasacks/nba-season-suspended-coronavirus">National Basketball Association</a> announced its season would be suspended.</p>
+<p>In New York City, <a rel="nofollow" href="https://www.buzzfeednews.com/article/juliareinstein/coronavirus-broadway-theater-usher-tickets">theaters on Broadway</a> were ordered shut until the end of the month, while museums were also shutting their doors.</p>
+<h2> <span>CORRECTION</span> </h2>
+<p> Mar. 13, 2020, at 01:22 AM </p>
+<p>This is the third time Disneyland has closed. A previous version of this story misstated the number of closures.</p>
+<h2 class="rm-manual">Coronavirus</h2>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.buzzfeednews.com/article/juliareinstein/coronavirus-broadway-theater-usher-tickets?bfsource=relatedmanual">New York Is Shutting Down Broadway Shows And All Gatherings Over 500 People</a> <span><span>Julia Reinstein</span> <span>·</span> March 12, 2020</span> </li> <li class="rm-manual"> <a href="https://www.buzzfeednews.com/article/juliareinstein/coronavirus-broadway-theater-usher-tickets?bfsource=relatedmanual">New York Is Shutting Down Broadway Shows And All Gatherings Over 500 People</a> <span><span>Julia Reinstein</span> <span>·</span> March 12, 2020</span> </li> <li class="rm-manual"> <a href="https://www.buzzfeednews.com/article/briannasacks/nba-season-suspended-coronavirus?bfsource=relatedmanual">The NBA Is Suspending Its Season Because A Player Tested Positive For The Coronavirus</a> <span><span>Brianna Sacks</span> <span>·</span> March 12, 2020</span> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual">David Mack is a deputy director of breaking news for BuzzFeed News and is based in New York. </p> <p class="rm-manual">Contact <a href="file:///author/davidmack">David Mack</a> at <a href="mailto:david.mack@buzzfeed.com">david.mack@buzzfeed.com</a>.</p> <p class="rm-manual">Got a confidential tip? <a href="https://tips.buzzfeed.com/">Submit it here</a>.</p> </li> <li class="rm-manual"> <p class="rm-manual">Brianna Sacks is a reporter for BuzzFeed News and is based in Los Angeles.</p> <p class="rm-manual">Contact <a href="file:///author/briannasacks">Brianna Sacks</a> at <a href="mailto:brianna.sacks@buzzfeed.com">brianna.sacks@buzzfeed.com</a>.</p> </li> </ul></article>
+</body></html>

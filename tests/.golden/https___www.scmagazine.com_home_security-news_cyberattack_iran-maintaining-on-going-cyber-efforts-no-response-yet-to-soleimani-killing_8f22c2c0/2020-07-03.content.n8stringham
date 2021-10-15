@@ -1,0 +1,93 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"><span><span><a href="https://www.scmagazine.com/">SC Media</a> &gt; <span><a href="https://www.scmagazine.com/home/">Home</a> &gt; <span><a href="https://www.scmagazine.com/home/security-news/">Security News</a> &gt; <span><a href="https://www.scmagazine.com/home/security-news/cyberattack/">cyberattack</a> &gt; <span>Iran maintaining on-going cyber efforts, no response yet to Soleimani killing</span></span></span></span></span></span></p>
+<p class="rm-manual"> <span>Publish Date</span> <span> February 27, 2020 </span> </p>
+<h1 class="rm-manual"> Iran maintaining on-going cyber efforts, no response yet to Soleimani killing </h1>
+<p class="rm-manual"> <span> <a href="https://www.scmagazine.com/author/doug-olenick/">Doug Olenick</a> </span> </p>
+<p class="rm-manual"> <a href="https://twitter.com/DougOlenick"> Follow @DougOlenick </a> </p>
+<p>Iranian cyberespionage operations are continuing at a steady pace, 
+but so far no reaction has been spotted in response to the January U.S. 
+drone strike that killed Iranian Gen. Qasem Soleimani.</p>
+<p>Almost two months has passed since the Jan. 2, 2020 attack, 
+Secureworks is only noting the continuation of previously implemented 
+espionage operations from Iran/ These are primarily targeting 
+governmental organizations in Turkey, Jordan, Iraq along with 
+intergovernmental and other agencies in Georgia and Azerbaijan.</p>
+<p>“Most of this activity commenced prior to the U.S. drone strike. 
+Victimology and code similarity between the macros in the analyzed 
+samples and macros documented in open-source reporting suggest that 
+these campaigns were conducted by the COBALT ULSTER threat group (also 
+known as MuddyWater, Seedworm, TEMP.Zagros, and Static Kitten), which is
+ tasked by the Iranian government,” Secureworks <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/Most%20of%20this%20activity%20commenced%20prior%20to%20the%20U.S.%20drone%20strike.%20Victimology%20and%20code%20similarity%20between%20the%20macros%20in%20the%20analyzed%20samples%20and%20macros%20documented%20in%20open-source%20reporting%20suggest%20that%20these%20campaigns%20were%20conducted%20by%20the%20COBALT%20ULSTER%20threat%20group%20(also%20known%20as%20MuddyWater,%20Seedworm,%20TEMP.Zagros,%20and%20Static%20Kitten),%20which%20is%20tasked%20by%20the%20Iranian%20government.">reported</a>.</p>
+<p>That does not mean a cyberattack is not forthcoming. Secureworks 
+noted that setting up a major online effort requires time and Iran is 
+known for using its cyber capabilities to counterstrike its oppenents.</p>
+<p>“In some cases, these responses materialized several months after 
+provocations toward Iran occurred. However, Iran’s cyberespionage 
+operations continue,” Secureworks said.</p>
+<p>Iran did quickly resort to a military strike launching a missile 
+attack that struck several U.S. bases in Iraq in response to Soleimani’s
+ killing.</p>
+<p>With the operations currently underway attackers are using multiple 
+rounds spearphishing attacks to gain entrance to the targeted systems. 
+In some cases studied by researchers the emails contained links to 
+malicious websites that allow the hacking groups to track their targets.
+ In other attacks the email had a malicious spreadsheet attached that 
+was socially engineered to match the subject line of the email to 
+encourage the recipient to click.</p>
+<p>Opening and enabling the attachment launches the embedded malicious VBScript which disables the machine’s security controls.</p>
+<p>Several payloads are then downloaded from an IP address hard-coded in the script.</p>
+<p>Another attack viewed by Secureworks saw the attackers again using a 
+spearphishing attack, but this time the malicious code was hidden inside
+ an attached zip file storing a malicious Excel file that required the 
+victim to activate a macro. In this case a new a previously unobserved 
+RAT Securework’s researchers refer to as ForeLord is dropped and 
+executed.</p>
+<h2 class="rm-manual">Topics:</h2>
+<p class="rm-manual"><a href="https://www.scmagazine.com/tag/cyberattack/">Cyberattack</a> </p>
+<p class="rm-manual"><a href="https://www.scmagazine.com/tag/email-security/">Email Security</a> </p>
+<p class="rm-manual"><a href="https://www.scmagazine.com/tag/government-defense/">Government/Defense</a> </p>
+<p class="rm-manual"><a href="https://www.scmagazine.com/tag/phishing/">Phishing</a> </p>
+<ul class="rm-manual"> <p class="rm-manual"> <a href="https://cam.scmagazine.com/security-asset-management-in-the-remote-work-era/" rel="noopener noreferrer"> Security asset management in the remote work era </a> </p> <p class="rm-manual"> <a href="https://cam.scmagazine.com/customer-case-study-fast-growing-appsflyer-automates-security-policy-validation-with-axonius/" rel="noopener noreferrer"> Customer case study: Fast-growing AppsFlyer automates security policy validation with Axonius </a> </p> <p class="rm-manual"> <a href="https://cam.scmagazine.com/managing-data-compliance-and-workflows/" rel="noopener noreferrer"> Managing data compliance and workflows </a> </p> <li class="rm-manual">
+<h2 class="rm-manual">MOST POPULAR</h2> <ul class="rm-manual"> <li class="rm-manual"> <a href="#most-5-popular"> Popular </a> </li> <li class="rm-manual"> <a href="#most-5-emailed"> Emailed </a> </li> <li class="rm-manual"> <a href="#most-5-recent"> Recent </a> </li> </ul> <section class="rm-manual"> <p class="rm-manual"> Loading... </p> </section> <section class="rm-manual"> <p class="rm-manual"> Loading... </p> </section> <section class="rm-manual"> <p class="rm-manual"> Loading... </p> </section> </li> </ul>
+<h2 class="rm-manual">Want to read more?</h2>
+<p class="rm-manual">Please login or register first to view this content.</p>
+<p class="rm-manual"> <a href="https://www.scmagazine.com/login/">Login</a> <a href="https://www.scmagazine.com/register/">Register</a> </p>
+<p class="rm-manual"> <span> Next post in cyberattack </span> </p>
+<h2 class="rm-manual"> <a href="https://www.scmagazine.com/home/security-news/cyberattack/campaign-staffers-husband-arrested-for-ddosing-former-rep-katie-hills-opponent/"> Campaign staffer’s husband arrested for DDoSing former Rep. Katie Hill’s opponent </a> </h2></article>
+</body></html>

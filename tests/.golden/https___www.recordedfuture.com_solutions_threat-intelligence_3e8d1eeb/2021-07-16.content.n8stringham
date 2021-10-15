@@ -1,0 +1,163 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Threat Intelligence From Recorded Future </p>
+<p class="rm-manual"><span><span>MENU</span><span>MENU</span></span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.recordedfuture.com/predict/">Predict</a></li>
+<li class="rm-manual"><a href="https://www.recordedfuture.com/blog/">Blog</a></li>
+<li class="rm-manual"><a href="https://www.recordedfuture.com/careers/">Careers</a></li>
+<li class="rm-manual"><a href="https://www.recordedfuture.com/live-demo/">Live Product Tour</a></li>
+<li class="rm-manual"><a href="http://support.recordedfuture.com/">Support</a></li>
+<li class="rm-manual"><a href="https://app.recordedfuture.com/live/login/">Sign In</a></li>
+</ul>
+<ul class="rm-manual"> <ul class="rm-manual">
+<li class="rm-manual"><a href="https://go.recordedfuture.com/demo">Get a Demo</a></li>
+<li class="rm-manual"><a href="https://www.recordedfuture.com/resources/">RESOURCES</a></li>
+<li class="rm-manual">
+<a href="file:///partners/">PARTNERS</a> <ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"><p class="rm-manual"> </p><p class="rm-manual"> </p><h6 class="rm-manual">Recorded Future Express</h6> <p class="rm-manual"><a href="https://aws.amazon.com/marketplace/seller-profile?id=0e798044-1f43-48fa-8621-cf2207e7e204">Learn More </a></p> <p class="rm-manual"></p><p class="rm-manual"></p></li> </ul> </li>
+<li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.recordedfuture.com/partners/"><span><span>Overview</span><span>As a Recorded Future Connect Partner, you can deliver threat intelligence to your clients whenever and wherever they need it.</span></span></a></li>
+<li class="rm-manual"><a href="https://recfut.force.com/partnerportal">Partner Portal Log In </a></li> </ul> </li>
+<li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///partners/">Partners</a></li>
+<li class="rm-manual"><a href="https://www.recordedfuture.com/partners/var/">Value-Added Reseller</a></li>
+<li class="rm-manual"><a href="file:///partners/technology/">Technology Partners</a></li>
+<li class="rm-manual"><a href="https://www.recordedfuture.com/partners/mssp/">Managed Security Service Providers</a></li>
+<li class="rm-manual"><a href="https://www.recordedfuture.com/partners/oem/">OEM</a></li> </ul> </li> </ul> </li>
+</ul> </li>
+<li class="rm-manual">
+<a href="file:///about">COMPANY</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.recordedfuture.com/about/">About</a></li>
+<li class="rm-manual"><a href="https://www.recordedfuture.com/clients/">Clients</a></li>
+<li class="rm-manual"><a href="file:///events">Events</a></li>
+<li class="rm-manual"><a href="https://www.recordedfuture.com/news/">News</a></li>
+<li class="rm-manual"><a href="https://www.recordedfuture.com/careers/">Careers</a></li>
+<li class="rm-manual"><a href="https://www.recordedfuture.com/contact/">Contact</a></li>
+</ul> </li>
+<li class="rm-manual">
+<a>SOLUTIONS</a> <ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.recordedfuture.com/solutions/brand-intelligence/">Brand Intelligence</a></li>
+<li class="rm-manual"><a href="https://www.recordedfuture.com/solutions/secops-intelligence/">SecOps Intelligence</a></li>
+<li class="rm-manual"><a href="https://www.recordedfuture.com/solutions/threat-intelligence/">Threat Intelligence</a></li>
+<li class="rm-manual"><a href="https://www.recordedfuture.com/solutions/vulnerability-intelligence/">Vulnerability Intelligence</a></li>
+<li class="rm-manual"><a href="https://www.recordedfuture.com/solutions/third-party-intelligence/">Third-Party Intelligence</a></li>
+<li class="rm-manual"><a href="https://www.recordedfuture.com/solutions/geopolitical-intelligence/">Geopolitical Intelligence</a></li> </ul> </li>
+<li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"><p class="rm-manual"> <a href="file:///platform/"></a></p><h6 class="rm-manual"><a href="file:///platform/">The World’s Most Advanced Security Intelligence Platform</a></h6> <p class="rm-manual"><a href="file:///platform/">Learn More </a></p> <p class="rm-manual"></p></li> </ul> </li> </ul> </li>
+</ul> </li>
+<li class="rm-manual">
+<a href="https://www.recordedfuture.com/platform/">PLATFORM</a> <ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"><p class="rm-manual"> </p><p class="rm-manual"> </p><h6 class="rm-manual">See Intelligence-Led Security In Action</h6> <p class="rm-manual"><a href="https://www.recordedfuture.com/live-demo/">Live Product Tour </a></p> <p class="rm-manual"></p> <p class="rm-manual"></p></li> </ul> </li>
+<li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.recordedfuture.com/platform/"><span><span>Overview</span><span>Explore the world’s most advanced intelligence platform.</span></span></a></li>
+<li class="rm-manual"><a href="https://www.recordedfuture.com/platform/security-intelligence-graph/"><span><span>Intelligence Graph</span><span>Take a closer look at how we generate intelligence, at scale, in real-time.</span></span></a></li>
+<li class="rm-manual"><a href="https://www.recordedfuture.com/platform/interaction-points/"><span><span>Interaction Points</span><span>Delivering the right intelligence at the right time, right where you need it.</span></span></a></li> </ul> </li>
+<li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.recordedfuture.com/integrations/"><span><span>Integrations</span><span>Powerful APIs make it easy to integrate intelligence into your existing tech stack.</span></span></a></li>
+<li class="rm-manual"><a href="file:///services"><span><span>Client Services</span><span>Applying our collective knowledge to ensure client success.</span></span></a></li>
+<li class="rm-manual"><a href="https://www.recordedfuture.com/license-options/"><span><span>License Options</span><span>Our modular approach makes it easy to customize the intelligence solution your organization needs.</span></span></a></li> </ul> </li> </ul> </li>
+</ul> </li>
+</ul> </ul>
+<h1>High-Confidence Threat Intelligence</h1>
+<p>As your attack surface grows -- expanding into the cloud and 
+employees' homes -- there are even more opportunities for threat actors 
+to breach your organization. Recorded Future’s Threat Intelligence 
+solution arms your team with high confidence, dynamic threat 
+intelligence so you can make faster, more informed decisions about your 
+security strategies and defenses. </p>
+<h3>Threat Intelligence Includes</h3>
+<table> <tbody><tr> <td> <ul> <li>Access to Recorded Future’s 10+ year cyber repository for advanced threat research and reporting and dark web investigation </li> <li>High confidence indicator relationships to fuel advanced detection and validation capabilities</li> <li>Advanced querying, alerting, and data visualization capabilities for an end-to-end view of your threat landscape</li> <li>Access to unique finished intelligence, threat hunting packages, malware analysis rules, and more.</li> </ul> </td> </tr> </tbody></table>
+<h4>Faster Research, Better Reporting</h4>
+<p>Immediately access contextual intelligence and be ready to recommend actions instantly. Real-time intelligence from an <a href="file:///platform/security-intelligence-graph/">unrivaled quantity and variety of sources</a> across every language is enriched with insights from our team of world-class analysts and <a href="file:///integrations/">integrated into your research workflows</a>. This enables rapid risk analysis for faster research while advanced search, <a href="file:///solutions/threat-alerting/">customizable alerting</a>, and data visualization capabilities surface relevant intelligence for better reporting. </p>
+<h4>Accelerate Threat Hunting</h4>
+<p>Get instant access to Recorded Future’s cyber repository, 
+high-confidence intelligence, and advanced querying capabilities to fuel
+ deep, tailored investigations. Automatically insert threat hunting 
+packages, malware detection rules, and more, into your existing network,
+ endpoint, and malware security solutions to detect more threats and 
+harden your security controls.</p>
+<h4>Collaborate Easily Across Security Teams</h4>
+<p>Break down silos by centralizing and <a href="file:///platform/">continuously updating intelligence in real time</a>.
+ Shared access to source materials and the ability to contribute analyst
+ notes detailing assessments, verdicts, and threat leads enhance 
+collaboration and engagement across all of your organization’s security 
+teams.</p>
+<h4>Shine a Light into the Dark Web</h4>
+<p>Instantly processes <a href="file:///solutions/dark-web-monitoring/">intelligence from the dark web</a>
+ — including hacker, criminal, and extremist forums. For invitation-only
+ sites on the dark web, Recorded Future’s world-class team of analysts, 
+linguists, and security researchers combine their expertise with our <a href="file:///platform/security-intelligence-graph/">automated broad sourcing and natural language processing capabilities</a> to produce real-time, elite intelligence and <a href="file:///solutions/threat-alerting/">alerting</a> that empowers you to take action with confidence. </p>
+<h4>Integrations</h4>
+<p>Out-of-the-box <a href="file:///integrations/">integrations</a> make 
+it easy to insert Recorded Future’s unprecedented security intelligence 
+directly into your existing security systems and workflows.</p>
+<h4>Palo Alto</h4>
+<p><a href="file:///integrations/">Learn more </a></p>
+<h4>Splunk</h4>
+<p><a href="file:///integrations/">Learn more </a></p>
+<h4>Maltego</h4>
+<p><a href="file:///integrations/">Learn more </a></p>
+<p><a href="file:///clients/" rel="noopener noreferrer"> </a></p><p><a href="file:///clients/" rel="noopener noreferrer">“The
+ Recorded Future platform and accompanying analyst services are used 
+daily by our team to monitor the threat landscape and support cross-team
+ investigations.”</a></p><a href="file:///clients/" rel="noopener noreferrer"> <p> </p><h4>Gartner Peer Insights</h4> <p></p> </a><p></p>
+<p><a href="file:///clients/" rel="noopener noreferrer"> </a></p><p><a href="file:///clients/" rel="noopener noreferrer">“The
+ thing that is most impressive about Recorded Future is the breadth and 
+depth of their coverage. Overall, we see this tool as a ‘must have’ for 
+any serious threat analyst.”</a></p><a href="file:///clients/" rel="noopener noreferrer"> <p> </p><h4>PETER STEPHENSON, TECHNOLOGY EDITOR</h4> <p><span>SC MEDIA</span></p><p></p> </a><p></p>
+<h3>Security Intelligence to Disrupt Adversaries</h3>
+<p>Combine precision security intelligence solutions from Recorded 
+Future to amplify risk reduction across your entire organization. </p>
+<h3 class="rm-manual">Related Resources</h3>
+<h4 class="rm-manual">Data Sheet</h4>
+<p class="rm-manual">Access the most comprehensive view of your threat landscape</p>
+<p class="rm-manual"> <a href="https://go.recordedfuture.com/hubfs/data-sheets/threat-intelligence.pdf">Download now </a> </p>
+<h4 class="rm-manual">Solution Brief</h4>
+<p class="rm-manual">Use threat intelligence to disrupt adversaries</p>
+<p class="rm-manual"> <a href="https://go.recordedfuture.com/hubfs/solution-briefs/threat-intelligence.pdf">Read now </a> </p>
+<h4 class="rm-manual">Network Traffic Analysis</h4>
+<p class="rm-manual">Monitor, detect, and research adversaries in real time</p>
+<p class="rm-manual"> <a href="https://go.recordedfuture.com/hubfs/solution-briefs/network-traffic-analysis.pdf">Learn more </a> </p>
+<p class="rm-manual">Platform</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///platform/">Overview</a></li> <li class="rm-manual"><a href="file:///platform/security-intelligence-graph">Intelligence Graph</a></li> <li class="rm-manual"><a href="file:///platform/interaction-points/">Interaction Points</a></li> <li class="rm-manual"><a href="file:///integrations/">Integrations</a></li> <li class="rm-manual"><a href="file:///services/">Services</a></li> <li class="rm-manual"><a href="file:///license-options/">License Options</a></li> </ul>
+<p class="rm-manual">Solutions</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///solutions/brand-intelligence/">Brand Intelligence</a></li> <li class="rm-manual"><a href="file:///solutions/secops-intelligence/">SecOps Intelligence</a></li> <li class="rm-manual"><a href="file:///solutions/threat-intelligence/">Threat Intelligence</a></li> <li class="rm-manual"><a href="file:///solutions/vulnerability-intelligence/">Vulnerability Intelligence</a></li> <li class="rm-manual"><a href="file:///solutions/third-party-intelligence/">Third-Party Intelligence</a></li> <li class="rm-manual"><a href="file:///solutions/geopolitical-intelligence/">Geopolitical Intelligence</a></li> </ul>
+<p class="rm-manual">Partners</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///partners/">Overview</a></li> <li class="rm-manual"><a href="file:///partners/var/">VAR</a></li> <li class="rm-manual"><a href="file:///partners/technology/">Technology</a></li> <li class="rm-manual"><a href="file:///partners/mssp/">MSSP</a></li> <li class="rm-manual"><a href="file:///partners/oem/">OEM</a></li> </ul>
+<p class="rm-manual">Company</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///about/">About</a></li> <li class="rm-manual"><a href="file:///clients/">Clients</a></li> <li class="rm-manual"><a href="file:///events/">Events</a></li> <li class="rm-manual"><a href="file:///news/">News</a></li> <li class="rm-manual"><a href="file:///careers/">Careers</a></li> <li class="rm-manual"><a href="file:///contact/">Contact</a></li> <li class="rm-manual"><a href="https://theintelligencefund.com/">The Intelligence Fund</a></li> </ul>
+<p class="rm-manual">Resources</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///blog/">Blog</a></li> <li class="rm-manual"><a href="https://go.recordedfuture.com/cyber-daily">Cyber Daily</a></li> <li class="rm-manual"><a href="https://go.recordedfuture.com/book-3">Handbook</a></li> <li class="rm-manual"><a href="file:///resources/videos/">Videos</a></li> <li class="rm-manual"><a href="file:///resources/podcast/">Podcasts</a></li> <li class="rm-manual"><a href="file:///resources/reports/">Reports</a></li> <li class="rm-manual"><a href="file:///resources/webinars/">Webinars</a></li> </ul>
+<p class="rm-manual">Information</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///privacy-policy/cookies/">Cookies</a></li> <li class="rm-manual"><a href="file:///faq/security/">Security FAQ</a></li> <li class="rm-manual"><a href="https://id.recordedfuture.com/login?request_id=eyJpZCI6IjI3OTY0N2RhLWRmNDctNDJmNC1hM2FjLTM5MTM3NTQ1MmQ1NiIsImNsaWVudF9pZCI6InBvcnRhbCIsInJlc3BvbnNlX3R5cGUiOlsiY29kZSJdLCJzdGF0ZSI6IjZ3MUszdFlwNEhaNSIsInJlZGlyZWN0X3VyaSI6Imh0dHBzOi8vYXBwLnJlY29yZGVkZnV0dXJlLmNvbS9yZi9hcGkvdjEvbG9naW5fY2FsbGJhY2siLCJzY29wZSI6WyJlbWFpbCIsIm9wZW5pZCJdfQ==">Sign In</a></li> <li class="rm-manual"><a href="file:///privacy-policy/">Privacy</a></li> <li class="rm-manual"><a href="https://support.recordedfuture.com/hc/en-us">Support</a></li> <li class="rm-manual"><a href="file:///terms-of-use/">Terms</a></li> </ul>
+<p class="rm-manual">Copyright © 2021 Recorded Future, Inc.</p>
+<p class="rm-manual"> <a href="file:///privacy-policy/cookies/">Cookies</a> ∙ <a href="file:///privacy-policy/">Privacy</a> ∙ <a href="file:///terms-of-use/">Terms</a> </p>
+<p class="rm-manual">Copyright © 2021 Recorded Future, Inc.</p></article>
+</body></html>

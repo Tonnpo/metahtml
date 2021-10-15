@@ -1,0 +1,96 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Israel: No Comment on Iran's Natanz Drone Claim - Middle East - Israel National News </p>
+<p class="rm-manual"><a href="#main">jump to content</a> </p>
+<p class="rm-manual"> <span><span> Login </span></span> </p>
+<p class="rm-manual">Top tags: <span> <a href="file:///News/Tag.aspx/257">Iran</a> <a href="file:///News/Tag.aspx/2437">Binyamin Netanyahu</a> <a href="file:///News/Tag.aspx/2495">IDF</a> <a href="file:///News/Tag.aspx/13425">Donald Trump</a> <a href="file:///News/Tag.aspx/19807">Coronavirus</a> <a href="file:///News/Tag.aspx/48071">2020 elections</a> </span><a href="file:///More/ActivePage.aspx/Info">Advertise</a> </p>
+<table class=""> <tbody><tr class=""> <td class=""> <p class="rm-manual"><a href="file:///">Main</a><a href="file:///News/">All News</a><a href="file:///News/Section.aspx/24">Middle East</a><a href="file:///News/News.aspx/184358">Israel: No Comment on Iran's Natanz Drone Claim </a></p> <article class=""> <p class=""> </p><h1 class="rm-manual"> Israel: No Comment on Iran's Natanz Drone Claim </h1><p class="rm-manual">Revolutionary Guard said it has brought down an Israeli stealth drone above the Natanz uranium enrichment site.</p> <p class=""> </p><p class="rm-manual"> AFP, Arutz Sheva , <span><span>24/08/14 16:22</span></span> </p> <p class=""></p> <p class=""></p> <p class=""></p><p class="rm-manual">Eitan UAV</p><p class="rm-manual">IDF Spokesman's Unit</p><p class="rm-manual"></p><p class="rm-manual"></p> <p class=""><span>Iran's
+ elite Revolutionary Guard said it has brought down an Israeli stealth 
+drone above the Natanz uranium enrichment site in the center of the 
+country.</span></p> <p><span>"A spy drone of the Zionist regime (Israel)
+ was brought down by a missile... This stealth drone was trying to 
+approach the Natanz nuclear zone," the corps said in a statement on its 
+official website </span>sepahnews.com<span>.</span></p> <p>This act 
+demonstrates a new adventurism by the Zionist regime... The 
+Revolutionary Guard and the other armed forces reserve the right to 
+respond to this act," the statement added.</p> <p><span>An Israeli spokesman told AFP in Jerusalem on Sunday that the military does </span><span>"not address foreign media reports".</span></p> <p>Natanz
+ is Iran's main uranium enrichment site, housing more than 16,000 
+centrifuges. Around 3,000 more are at the Fordow plant, buried inside a 
+mountain and hard to destroy.</p> <p>Israel has often threatened to attack Iranian nuclear installations.</p> <p>Iran
+ and the P5+1 powers -- Britain, China, France, Russia, the United 
+States and Germany -- reached a six-month interim agreement under which 
+Iran suspended part of its nuclear activities in return for a partial 
+lifting of international sanctions.</p> <p>In July, that deal was 
+extended by four months, until November 24, to give the two sides more 
+time to negotiate a final accord aimed at ending 10 years of tensions 
+over Iran's nuclear program.</p> <p>The sides remain split on how much uranium enrichment Iran should be allowed to carry out.</p> <p>Washington
+ wants Tehran to slash its program by three-quarters, but Iran wants to 
+expand enrichment ten-fold by 2021, chiefly to produce fuel for its 
+Bushehr nuclear power plant.</p> <p>Israel, which Iran considers its 
+sworn enemy, opposes any agreement allowing Tehran to keep part of its 
+uranium enrichment program saying Iran would use the material to make an
+ atomic bomb.</p> <p>Iran has repeatedly vowed to wipe Israel off the map.</p> <p>In
+ 2010, the Israeli Air Force launched an unmanned aerial vehicle (UAV), 
+dubbed "Eitan," "Heron TP" or "Heron 2", which can stay in the air 24 
+hours and can reach Iran. </p> <p>“The ‘Eitan’ marks a technological 
+breakthrough and a new level in the Air Force's ability to operate 
+against threats, near and far, in its <span>every day</span> missions and during emergencies,” IDF spokesmen said.</p> <p>Military
+ officials declined to say whether the new UAV was designed for use 
+against Iran and did not specifically mention the Islamic Republic, but 
+foreign <span>news services</span> noted that the Eitan can fly as far as Iran. </p> <p>"The
+ launching of this airplane is another substantial landmark in the 
+development of unmanned aerial vehicles.” Maj.-Gen. Nehushtan said. 
+“They have gone from the humble beginning of their development, with 
+initial operational results during the first Lebanon war, to the 
+substantial and professional apparatus that now accompanies almost any 
+air force operational frame work.”</p> <p>The Eitan was grounded for much of 2012 following a mysterious crash during test flights.</p> </article> </td> </tr>
+</tbody></table>
+<table><tbody><tr> <td class="rm-manual">© Arutz Sheva, All Rights Reserved<p><a href="file:///">Home page</a> | <a href="file:///More/ActivePage.aspx/Contact">Contact</a> | <a href="file:///More/ActivePage.aspx/Privacy">Privacy Policy</a> | <a href="file:///More/ActivePage.aspx/Staff">Staff</a> | <a href="file:///More/ActivePage.aspx/Info">Advertise with us</a> | <a href="http://www.beteltours.com/">Israel Tours</a> | <a href="http://www.inn.co.il/"> חדשות ערוץ 7</a> </p>
+</td> </tr></tbody></table>
+<table><tbody> <tr>
+<td class="rm-manual">
+<h4 class="rm-manual">Main</h4> <a href="#">Homepage</a> <a href="file:///News/Section.aspx/46">Op-Eds</a><a href="file:///News/Section.aspx/47">Judaism</a> <a href="file:///Forecast.aspx">Forecast</a> <a href="file:///More/ActivePage.aspx/Useful">Services</a> <a href="file:///More/Album.aspx/3001">Caricature</a><a href="file:///More/Album.aspx/2">Israel Pics</a> </td>
+<td class="rm-manual">
+<h4 class=""><a href="file:///">News</a></h4> <a href="file:///More/ActivePage.aspx/AreaEmail">Send Us Breaking News</a> <a href="file:///News/AllFlashes.aspx">News Briefs</a> </td>
+<td class="rm-manual">
+<h4 class="">More</h4>
+<a href="file:///Blogs/">Blogs</a><a href="file:///Blogs/Blog.aspx/39">Once-Over</a>
+</td>
+<td class="rm-manual">
+<h4 class="rm-manual">Radio</h4> <a href="file:///News/Section.aspx/4">Recorded Shows</a><a href="file:///Radio/Jukebox.aspx">Jukebox</a> </td> </tr> </tbody></table></article>
+</body></html>

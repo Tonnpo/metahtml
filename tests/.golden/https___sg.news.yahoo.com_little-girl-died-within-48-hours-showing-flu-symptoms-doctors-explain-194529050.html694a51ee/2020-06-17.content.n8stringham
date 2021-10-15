@@ -1,0 +1,151 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">Girl dies within 48 hours of showing flu symptoms</p>
+<p class="rm-manual"><a href="https://sg.news.yahoo.com/">Yahoo</a></p>
+<p class="rm-manual">Search</p>
+<ul class="rm-manual"><li class="rm-manual"><a href="https://mail.yahoo.com/?.intl=sg&amp;.lang=en-SG&amp;.partner=none&amp;.src=news">Mail</a></li></ul>
+<p class="rm-manual"><a href="https://sg.news.yahoo.com/"> News</a></p>
+<p class="rm-manual"><span>Follow us</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://sg.news.yahoo.com/singapore"> Singapore</a></li>
+<li class="rm-manual"><a href="https://sg.news.yahoo.com/health/"> Coronavirus Updates</a></li>
+<li class="rm-manual"><a href="https://sg.news.yahoo.com/commentary"> Commentary</a></li>
+<li class="rm-manual"><a href="https://sg.news.yahoo.com/esports/"> Esports</a></li>
+<li class="rm-manual"><a href="https://sg.news.yahoo.com/world/"> World</a></li>
+<li class="rm-manual"><a href="https://sg.news.yahoo.com/video/"> Videos</a></li>
+<li class="rm-manual"><a href="https://sg.news.yahoo.com/sports/"> Sports</a></li>
+<li class="rm-manual"><a href="https://sg.weather.yahoo.com/"> Weather</a></li>
+</ul>
+<h1 class="rm-manual">This little girl died within 48 hours of showing flu symptoms — doctors explain why</h1>
+<p class="rm-manual">Korin Miller</p>
+<p class="rm-manual">Writer</p>
+<p class="rm-manual"><span><span><a href="https://www.yahoo.com/lifestyle/wellness/">Yahoo Lifestyle</a></span></span>7 January 2019</p>
+<p>A family is mourning the loss of a 6-year-old, who died just 48 hours
+ after contracting influenza. Here’s what might have happened. (Photo: 
+GoFundMe).</p>
+<p>Flu season is well underway in the U.S., and the virus has already 
+claimed the lives of 13 children so far, according to recently released 
+data from the <a href="https://www.cdc.gov/flu/weekly/index.htm#S3" rel="nofollow noopener">Centers for Disease Control and Prevention</a>. Among them is 6-year-old Allison Eaglespeaker, who died of the flu on Dec. 1</p>
+<p>Eaglespeaker’s mother, Crystal White Shield, told <a href="https://www.wcvb.com/article/as-flu-is-on-the-rise-mom-says-i-didn-t-know-i-was-going-to-lose-my-baby-to-the-flu/25749201" rel="nofollow noopener">WCVB5</a>
+ that her daughter — who suffered from mild asthma — first showed signs 
+of being sick just 48 hours before she died. “This illness hit her 
+really hard and really fast,” Shield said. “I didn’t know I was going to
+ lose my baby.” Eaglespeaker’s aunt reportedly set up a <a href="https://www.gofundme.com/funeral-expenses-for-allison" rel="nofollow noopener">GoFundMe</a> for her niece’s family, calling her their “beautiful baby girl.”</p>
+<p>It seems shocking that someone could die that quickly from the flu, 
+but it happens, Gina Posner, MD, a pediatrician at MemorialCare Orange 
+Coast Medical Center in Fountain Valley, Calif., tells Yahoo Lifestyle. 
+“The flu can move super quickly in children and adults,” she says. “The 
+flu can come and just overwhelm the system. That’s why we always tell 
+people to get their flu shot.”</p>
+<p>Having an underlying condition like asthma, being immunocompromised, 
+and not getting a flu shot increase the chances that someone will have a
+ serious, rapidly progressing case of the flu, infectious disease expert
+ Amesh A. Adalja, MD, senior scholar at the John’s Hopkins Center for 
+Health Security, tells Yahoo Lifestyle. In general, “to die that fast 
+from flu likely means that it caused a primary viral pneumonia, which 
+can interfere with oxygen function,” he says. But overall, “there’s a 
+lot of mystery in understanding who dies from flu and who doesn’t die 
+from flu,” Adalja says. “There may be some genetic variation in the 
+immune system of some people that allows the flu to progress rapidly.”</p>
+<p>If your child becomes sick with an upper respiratory infection, it 
+can be tough to know whether it’s due to something like a cold, general 
+cough, or the flu, Posner says. “Typically the fever is higher and more 
+persistent with the flu, but not always,” she says.</p>
+<p>If your child has any kind of underlying medical issue, Adalja 
+recommends taking them to the doctor ASAP to be tested for the flu and 
+potentially put on an anti-viral drug like Tamiflu, which can shorten 
+the duration of the flu and lower the odds that your child will 
+experience serious complications from the illness. “Also, if they don’t 
+have any medical problems but are short of breath, have uncontrollable 
+fever, are lethargic, or have a change in behavior, that should prompt 
+you to see a doctor,” Adalja says.</p>
+<p>You’ll also want to provide lots of comfort care, including pushing 
+fluids, having your child rest, and giving them ibuprofen or 
+acetaminophen if they’re uncomfortable and feverish, Posner says. “Keep 
+an eye on them and call your doctor if they seem to get worse,” she 
+adds.</p>
+<p>Overall, experts stress that prevention is crucial. “The most 
+important thing that anyone can do is the flu shot,” Posner says. “Even 
+if the shot does not prevent your child from getting the flu, at least 
+it can help prevent your child from dying from the flu.”</p>
+<p class="rm-manual">Read more from Yahoo Lifestyle:</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.yahoo.com/lifestyle/doctors-flabbergasted-half-parents-think-flu-shot-causes-flu-impossible-173146594.html">Doctors ‘flabbergasted’ that half of parents think flu shot causes the flu: ‘It’s impossible’</a></li>
+<li class="rm-manual"><a>This 11-year-old boy reportedly died of an allergic reaction after smelling fish</a></li>
+<li class="rm-manual"><a href="https://www.yahoo.com/lifestyle/22-year-old-suddenly-paralyzed-teaching-thailand-heres-mysterious-illness-behind-175905745.html">22-year-old suddenly paralyzed while teaching in Thailand — here’s the mysterious illness behind it</a></li>
+</ul>
+<p class="rm-manual">Follow us on <a href="https://instagram.com/yahoolifestyle/" rel="nofollow noopener">Instagram</a>, <a href="https://www.facebook.com/yahoolifestyle" rel="nofollow noopener">Facebook</a>, and <a href="https://twitter.com/yahoolifestyle" rel="nofollow noopener">Twitter</a> for nonstop inspiration delivered fresh to your feed, every day.</p>
+<h2 class="rm-manual">What to read next</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.style.yahoo.com/fantastic-bang-for-your-buck-amazon-25-bike-shorts-185629064.html"><span>'Fantastic bang for your buck': These $25 bike shorts are an affordable take on the hottest trend of the season</span></a></h3><p class="rm-manual">Yahoo Canada Style</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://uk.style.yahoo.com/fathers-day-gift-uk-2020-164626281.html"><span>Father's Day UK: The one gift your dad is bound to love</span></a></h3><p class="rm-manual">Yahoo Style UK</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///coronavirus-covid19-canada-latest-updates-190048955.html"><span>COVID-19 in Canada: U.S. spikes are 'warning signal' for Canada, Ontario urges border stays closed</span></a></h3><p class="rm-manual">Yahoo News Canada</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.style.yahoo.com/kate-middleton-superga-cotu-sneakers-nordstrom-sale-162254530.html"><span>Kate Middleton's favourite sneakers are perfect for summer — and Nordstrom just slashed the price to 46% off</span></a></h3><p class="rm-manual">Yahoo Canada Style</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.style.yahoo.com/todays-the-last-day-to-save-up-to-100-on-running-shoes-at-sport-chek-154942090.html"><span>Today's the last day to save up to $100 on running shoes at Sport Chek</span></a></h3><p class="rm-manual">Yahoo Canada Style</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///coronavirus-cases-rise-doctor-175513623.html"><span>'No one should be shocked' by alarming rise in U.S. coronavirus cases, Obama-era health official says</span></a></h3><p class="rm-manual">Yahoo Finance</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///5-years-family-reheats-last-204009052.html"><span>After 5 Years, Family Reheats Last Meal Cooked By Mum Before Her Death</span></a></h3><p class="rm-manual">theAsianparent</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///spoke-doctors-people-close-trump-175721272.html"><span>I spoke to doctors and people close to Trump this week. We're right to worry about his health</span></a></h3><p class="rm-manual">The Independent</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///level-ex-releases-video-game-130500555.html"><span>CORRECTING and REPLACING Level Ex® Releases Video Game COVID-19 Levels to Prepare Healthcare Providers</span></a></h3><p class="rm-manual">Business Wire</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///zealand-military-oversee-borders-virus-bungle-023630055.html"><span>New Zealand military to control borders after virus bungle</span></a></h3><p class="rm-manual">AFP News</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///sph-newspaper-vendor-jailed-2-weeks-for-delivering-newspapers-while-on-stay-home-notice-103436731.html"><span>SPH newspaper vendor jailed 2 weeks for delivering newspapers while on Stay Home Notice</span></a></h3><p class="rm-manual">Yahoo News Singapore</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///two-singapore-residents-among-247-new-covid-19-infections-five-community-cases-071006295.html"><span>2 Singapore residents among 247 new COVID-19 infections; 5 community cases</span></a></h3><p class="rm-manual">Yahoo News Singapore</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.style.yahoo.com/this-underdesk-elliptical-will-shake-up-your-wfh-routine-205754214.html"><span>This under-desk elliptical will shake up your WFH routine — and it's on sale right now</span></a></h3><p class="rm-manual">Yahoo Canada Style</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///kopitiam-at-our-tampines-and-2-supermarkets-in-siglap-visited-by-covid-19-cases-160813782.html"><span>Kopitiam at Our Tampines Hub and 2 supermarkets in Siglap visited by COVID-19 cases</span></a></h3><p class="rm-manual">Yahoo News Singapore</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///coronavirus-chinese-firm-says-vaccine-190047413.html"><span>Coronavirus: Chinese firm says its vaccine candidate passes phase two clinical trials</span></a></h3><p class="rm-manual">South China Morning Post</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///sport-sg-advises-2-metre-spacing-during-exercises-contact-sports-permitted-in-phase-2-141340596.html"><span>SportSG advises 2-metre spacing when exercising; contact sports permitted in Phase 2</span></a></h3><p class="rm-manual">Yahoo News Singapore</p><p class="rm-manual"></p></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///amerihealth-caritas-urges-americans-reduce-204800930.html"><span>AmeriHealth Caritas Urges Americans to Reduce Coronavirus Risk by Quitting Smoking and Vaping</span></a></h3><p class="rm-manual">Business Wire</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///suria-channel-apologizes-cocking-baking-075648024.html"><span>Suria channel apologizes for cocking-up baking show’s subtitles</span></a></h3><p class="rm-manual">Coconuts Singapore</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///louis-walsh-video-x-factor-071817459.html"><span>Louis Walsh: Video of X Factor judge groping Mel B on live television resurfaces</span></a></h3><p class="rm-manual">The Independent</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///last-minute-fathers-day-gifts-which-will-wow-any-dads-100841868.html"><span>Last-minute Father's Day gifts which will wow any dad</span></a></h3><p class="rm-manual">Yahoo Lifestyle SEA</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///merck-animal-health-completes-acquisition-203000822.html"><span>Merck Animal Health Completes Acquisition of Quantified Ag®</span></a></h3><p class="rm-manual">Business Wire</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///singapore-must-never-be-where-pedigree-and-connections-count-more-than-ability-and-effort-tharman-115107487.html"><span>Singapore must never be where ‘pedigree and connections count more than ability and effort’: Tharman</span></a></h3><p class="rm-manual">Yahoo News Singapore</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///news-anchor-blames-indian-army-for-ladakh-skirmish-083248447.html"><span>News anchor blames Indian army for Ladakh skirmish</span></a></h3><p class="rm-manual">Yahoo News</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///employers-need-new-thinking-to-give-mature-singaporean-workers-fair-chance-tharman-114215110.html"><span>Employers need ‘new thinking’ to give mature Singaporean workers ‘fair chance’: Tharman</span></a></h3><p class="rm-manual">Yahoo News Singapore</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///5-covid-19-antibodies-discovered-by-singapore-team-human-trials-slated-in-coming-months-170052246.html"><span>5 COVID-19 antibodies discovered by Singapore team, human trials slated in coming months</span></a></h3><p class="rm-manual">Yahoo News Singapore</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///no-buffet-lines-product-testers-mall-activities-when-phase-2-begins-012252506.html"><span>COVID-19: No buffet lines, product testers, mall activities when Phase 2 begins</span></a></h3><p class="rm-manual">Yahoo News Singapore</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///quebec-coroner-orders-inquiry-care-home-covid-19-202338206.html"><span>Quebec coroner orders inquiry into care home COVID-19 deaths</span></a></h3><p class="rm-manual">AFP News</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///too-hot-handle-francesca-farago-020340919.html"><span>Too Hot to Handle 's Francesca Farago &amp; Harry Jowsey Split: 'I Thought We Were Going to Get Married'</span></a></h3><p class="rm-manual">People</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///hawker-centres-will-have-different-seating-arrangements-for-different-group-sizes-004515242.html"><span>Hawker centres to have different seating arrangements for different dining group sizes</span></a></h3><p class="rm-manual">Yahoo News Singapore</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///hsbc-resumes-cutting-around-35-054048174.html"><span>HSBC revives 35,000 job cut plan after pandemic pause</span></a></h3><p class="rm-manual">Reuters</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://www.yahoo.com/huffpost/the-first-data-on-covid-19-and-teens-mental-health-is-here-and-its-not-good-202153280.html"><span>The First Data On COVID-19 And Teens' Mental Health Is Here — And It's Not Good</span></a></h3><p class="rm-manual">HuffPost Life</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///india-says-three-soldiers-killed-clash-chinese-border-081657097.html"><span>India says 20 troops killed in deadliest clash with China in decades</span></a></h3><p class="rm-manual">AFP News</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///12-per-cent-americans-may-183349849.html"><span>12 per cent of Americans may not need coronavirus vaccine because of previous exposure, US officials say</span></a></h3><p class="rm-manual">South China Morning Post</p><p></p></li>
+</ul></article>
+</body></html>

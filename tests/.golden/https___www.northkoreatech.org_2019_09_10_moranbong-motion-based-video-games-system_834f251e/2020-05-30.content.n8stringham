@@ -1,0 +1,78 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Moranbong motion-based video games system </p>
+<p class="rm-manual"> <a href="https://www.northkoreatech.org/" rel="home"> </a></p><p class="rm-manual"><a href="https://www.northkoreatech.org/" rel="home"> </a></p><p class="rm-manual"><a href="https://www.northkoreatech.org/" rel="home"> </a></p><h1 class="rm-manual"><a href="https://www.northkoreatech.org/" rel="home">North Korea Tech - 노스코리아테크</a></h1><a href="https://www.northkoreatech.org/" rel="home"> <p class="rm-manual"></p> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.northkoreatech.org/">Home</a></li> <li class="rm-manual">
+<a href="https://www.northkoreatech.org/category/analysis/">Analysis</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.northkoreatech.org/category/general-news/">General News</a></li> <li class="rm-manual"><a href="https://www.northkoreatech.org/category/analysis/satelliteimages/">Satellite images</a></li> </ul> </li> <li class="rm-manual"><a href="https://www.northkoreatech.org/category/business/">Business</a></li> <li class="rm-manual">
+<a href="https://www.northkoreatech.org/category/internet/">Internet</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.northkoreatech.org/category/internet/censorship/">Censorship</a></li> <li class="rm-manual"><a href="https://www.northkoreatech.org/category/internet/intranet/">Intranet</a></li> <li class="rm-manual"><a href="https://www.northkoreatech.org/category/internet/socialmedia/">Social media</a></li> <li class="rm-manual"><a href="https://www.northkoreatech.org/category/internet/websites/">Websites</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://www.northkoreatech.org/category/media/">Media</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.northkoreatech.org/category/media/culture/">Culture</a></li> <li class="rm-manual"><a href="https://www.northkoreatech.org/category/media/newspapers/">Newspapers</a></li> <li class="rm-manual"><a href="https://www.northkoreatech.org/category/media/radio/">Radio</a></li> <li class="rm-manual"><a href="https://www.northkoreatech.org/category/media/television/">Television</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://www.northkoreatech.org/category/resources/">Resources</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.northkoreatech.org/category/resources/radio-schedules/">Radio Schedules</a></li> <li class="rm-manual"><a href="https://www.northkoreatech.org/category/resources/web-directory/">Web directory</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://www.northkoreatech.org/category/security/">Security</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.northkoreatech.org/category/security/electronicwarfare/">Electronic warfare</a></li> <li class="rm-manual"><a href="https://www.northkoreatech.org/category/security/hacking/">Hacking</a></li> <li class="rm-manual"><a href="https://www.northkoreatech.org/category/security/military/">Military</a></li> </ul> </li> <li class="rm-manual"><a href="https://www.northkoreatech.org/category/space/">Space</a></li> <li class="rm-manual">
+<a href="https://www.northkoreatech.org/category/technology/">Tech</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.northkoreatech.org/category/technology/computerhardware/">Computer Hardware</a></li> <li class="rm-manual"><a href="https://www.northkoreatech.org/category/technology/general-technology/">General Technology</a></li> <li class="rm-manual"><a href="https://www.northkoreatech.org/category/technology/medical/">Medical</a></li> <li class="rm-manual"><a href="https://www.northkoreatech.org/category/technology/software/">Software</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://www.northkoreatech.org/category/telecom/">Telecom</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.northkoreatech.org/category/telecom/cellular/">Cellular</a></li> </ul> </li> </ul>
+<aside class="rm-manual"> <span>Search for:</span> </aside><p class="rm-manual"><span><a href="https://www.northkoreatech.org/"><span>Home</span></a></span> <a href="https://www.northkoreatech.org/category/technology/">Technology</a> <span><a href="https://www.northkoreatech.org/category/technology/computerhardware/"><span>Computer Hardware</span></a></span> </p>
+<h1 class="rm-manual"> Moranbong motion-based video games system </h1>
+<p class="rm-manual"><span>TOPICS:</span><a href="https://www.northkoreatech.org/tag/moranbong-game-console/" rel="tag">Moranbong game console</a></p>
+<p class="rm-manual"> <span>Posted By: <a href="https://www.northkoreatech.org/author/martynw/">Martyn Williams</a></span> <span>September 10, 2019</span> </p>
+<p>North Korea appears to have developed its own version of the Nintendo
+ Wii. The Moranbong games console comes with a couple of 
+motion-sensitive controllers and a sensor bar that includes a camera.</p>
+<p>It was briefly detailed by the state-run Arirang Meari website on Monday with a few small images of the device.</p>
+<p>Through the console, users can experience various physical activities
+ that are good for physical fitness, obesity, and whole body, the report
+ said.</p>
+<p>It highlighted a shooting game and a running game that appears to use
+ a floor mat as part of the system. These are all similar components to 
+those offered with the Nintendo Wii and PlayStation Move.</p>
+<p class="">Arirang Meari didn’t disclose any details about the 
+manufacturer of the device. It’s possible the device was developed in 
+North Korea although it’s much more likely that it has been acquired 
+from a Chinese electronics maker and branded with the Moranbong name.</p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.northkoreatech.org/2019/09/06/hundreds-of-north-korea-it-workers-abroad-earning-money-for-missile-nuclear-program-says-un-report/" rel="prev">Previous post</a>
+</li> <li class="rm-manual"> <a href="https://www.northkoreatech.org/2019/09/10/a-new-smartphone-from-an-unknown-company/" rel="next">Next post</a>
+</li> </ul>
+<h4 class="rm-manual"> <span>1 Comment</span> <span>on "Moranbong motion-based video games system"</span> </h4>
+<ol class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <span><a href="https://hudgames.com/game/rapunzel-tower" rel="external nofollow ugc">Hudgames Infinity speed</a></span> | <a href="https://www.northkoreatech.org/2019/09/10/moranbong-motion-based-video-games-system/#comment-411147">September 26, 2019 at 12:18</a> | </p> <p class="rm-manual">Amazingly,
+ the technology of North Korea is comparable with other countries in the
+ world, I really love your country. It would be fun if you could play 
+the games you made one day.</p> </li> </ol>
+<p class="rm-manual">Comments are closed.</p>
+<p class="rm-manual"> Copyright 2018 Martyn Williams </p>
+<p class="rm-manual"> <a href="http://www.38north.org/">38 North</a> is a project of <a href="https://www.stimson.org/">The Henry L. Stimson Center</a>. </p></article>
+</body></html>

@@ -1,0 +1,90 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Possible Indiana coronavirus patient lived in Wuhan | US 93.3 | Your Country | Fort Wayne, IN </p>
+<p class="rm-manual">July 13, 2020</p>
+<h1 class="rm-manual"><span>On-Air Now</span></h1>
+<p class="rm-manual">Randy Alomar 3p-7p</p>
+<h3 class="rm-manual">Menu</h3>
+<p class="rm-manual"><a href="#content">Skip to content</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://bobbybones.iheart.com/">Bobby Bones</a></li> <li class="rm-manual">
+<a href="#">On-Air</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://us933fm.com/bobby-bones/">Bobby Bones</a></li> <li class="rm-manual"><a href="https://us933fm.com/erica-gray/">Erica Gray</a></li> <li class="rm-manual"><a href="https://us933fm.com/randy-alomar/">Randy Alomar</a></li> <li class="rm-manual"><a href="https://us933fm.com/taylor-3/">Taylor</a></li> </ul> </li> <li class="rm-manual"><a href="https://us933fm.com/category/events/">Events</a></li> <li class="rm-manual">
+<a href="https://us933fm.com/category/us933-media/">PHOTOS &amp; VIDEO</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.facebook.com/pg/US933/photos/?tab=album&amp;album_id=10155810359546371">Old Dominion</a></li> <li class="rm-manual"><a href="https://www.facebook.com/pg/US933/photos/?tab=album&amp;album_id=10155796772411371">Alan Jackson</a></li> <li class="rm-manual"><a href="https://www.facebook.com/pg/US933/photos/?tab=album&amp;album_id=10155627243561371">Russell Dickerson</a></li> <li class="rm-manual"><a href="https://www.facebook.com/pg/US933/photos/?tab=album&amp;album_id=10155828392531371%20">Granger Smith &amp; Sam Grow</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://us933fm.com/category/news/">News</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://us933fm.com/category/news/localnews/">Local News</a></li> <li class="rm-manual"><a href="file:///category/news/indiananews/">Indiana News</a></li> <li class="rm-manual"><a href="file:///category/news/nationalnews/">National News</a></li> <li class="rm-manual"><a href="https://us933fm.com/music-report/">Music Report</a></li> <li class="rm-manual"><a href="https://us933fm.com/vip-sports-report/">Sports News</a></li> </ul> </li> <li class="rm-manual">
+<a href="#">Connect</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///category/careers/">Careers</a></li> <li class="rm-manual"><a href="https://us933fm.com/contact/">Contact</a></li> <li class="rm-manual"><a href="https://us933fm.com/contest-rules-fort-wayne/">Contest Rules</a></li> <li class="rm-manual"><a href="https://blank.arg.vipology.com/wp-content/uploads/sites/2/EEO-Report-Adams-03-30-2019.pdf">EEO Public File</a></li> <li class="rm-manual"><a href="https://www.facebook.com/US933">Facebook</a></li> <li class="rm-manual"><a href="https://us933fm.com/featured/us93-3-phone-app/">Phone App</a></li> <li class="rm-manual"><a href="https://twitter.com/us933">Twitter</a></li> <li class="rm-manual"><a href="https://www.youtube.com/user/US933">Youtube</a></li> </ul> </li> <li class="rm-manual"><a href="https://www.ebusinessreportadamsradiofw.com/index.php/about-us/special-pricing-promotions">Advertise with Us</a></li> </ul>
+<p class="rm-manual"> Search </p>
+<h1 class="rm-manual">Possible Indiana coronavirus patient lived in Wuhan</h1>
+<p class="rm-manual">Posted by <span><a rel="author" href="https://us933fm.com/author/joeymartin/">ADAMS NEWS</a></span> on January 29, 2020 in <span><a href="https://us933fm.com/category/coronavirus-coverage/" rel="tag">Coronavirus Coverage</a>, <a href="https://us933fm.com/category/featured-news/" rel="tag">Featured News</a></span> </p>
+<p class="rm-manual">UPDATE (January 30, 2020):</p>
+<p>The woman who could be Indiana’s first case of coronavirus is visiting the state from the city where the virus began.</p>
+<p>Officials with the Porter County Public Health Department yesterday said the woman is visiting from Wuhan, China.</p>
+<p> The woman is isolated in the hospital as health managers wait for the results of her tests.</p>
+<p class="rm-manual">Read more <a href="https://www.nwitimes.com/news/local/lake/lake-newsletter/potential-case-of-coronavirus-identified-in-porter-county/article_c91af1d7-6604-5d5e-9a26-86037a191e64.html">here</a></p>
+<p class="rm-manual">ORIGINAL STORY (January 29, 2020):</p>
+<p>PORTER CO., Ind. (ADAMS) – Health officials could be dealing with a 
+person possibly infected with the coronavirus in northwest Indiana. The 
+person has been isolated at a hospital after they were discovered 
+traveling through Porter County. A final diagnosis is pending laboratory
+ tests being conducted by the CDC.</p>
+<p>In Illinois, DuPage County health officials have been talking with 
+multiple residents who may have come in contact with a Chicago woman 
+being treated for the coronavirus in suburban Hoffman Estates. The woman
+ was diagnosed last week after she returned from caring for her sick 
+father in China earlier this month.</p>
+<p class="rm-manual">Read more <a href="https://www.wthr.com/article/person-traveling-through-porter-county-isolated-over-coronavirus-concerns">here</a></p>
+<p class="rm-manual"><span><span>Posted in </span><a href="https://us933fm.com/category/coronavirus-coverage/" rel="tag">Coronavirus Coverage</a>, <a href="https://us933fm.com/category/featured-news/" rel="tag">Featured News</a></span> </p>
+<h2 class="rm-manual">Related Posts</h2>
+<h3 class="rm-manual"><a href="https://us933fm.com/featured-news/northeast-indiana-has-first-presumptive-positive-case-of-coronavirus/">COVID-19 in Indiana: Cases still trending up<span>→</span></a></h3>
+<h3 class="rm-manual"><a href="https://us933fm.com/featured-news/kroger-to-stop-giving-coins-as-change/">Kroger to stop giving coins as change<span>→</span></a></h3>
+<h3 class="rm-manual"><a href="https://us933fm.com/news/localnews/salomon-farm-park-fall-harvest-festival-canceled/">Salomon Farm Park Fall Harvest Festival canceled<span>→</span></a></h3>
+<h3 class="rm-manual"><a href="https://us933fm.com/featured-news/coronavirus-in-allen-county-two-cases-confirmed/">Coronavirus in Allen County: Approaching 3,000 cases<span>→</span></a></h3>
+<h1 class="rm-manual"><span>NOW PLAYING</span></h1>
+<h1 class="rm-manual"><span>Most Popular Stories</span></h1>
+<ol class="rm-manual"> <li class="rm-manual"><span><a href="https://us933fm.com/featured-news/kroger-to-stop-giving-coins-as-change/">Kroger to stop giving coins as change</a> </span></li> <li class="rm-manual"><span><a href="https://us933fm.com/news/simple-math-trick-to-for-percentages-is-blowing-peoples-minds/">Simple Math Trick to For Percentages Is Blowing People’s Minds</a> </span></li> <li class="rm-manual"><span><a href="https://us933fm.com/news/localnews/woman-dies-at-local-hampton-inn-homicide-detectives-called-in/">Woman dies at local Hampton Inn, homicide detectives called in</a> </span></li> <li class="rm-manual"><span><a href="https://us933fm.com/news/localnews/drainage-improvements-to-close-portion-s-r-5-in-noble-county/">Drainage improvements to close portion S.R. 5 in Noble County</a> </span></li> <li class="rm-manual"><span><a href="https://us933fm.com/news/kelly-preston-died-of-breast-cancer-yesterday/">Kelly Preston Died of Breast Cancer Yesterday</a> </span></li> </ol>
+<p class="rm-manual"><span>Fort Wayne</span></p>
+<p class="rm-manual"> 81° </p>
+<p class="rm-manual">few clouds</p>
+<p class="rm-manual">39% humidity</p>
+<p class="rm-manual">wind: 6m/s N</p>
+<p class="rm-manual">H 82 • L 80</p>
+<h1 class="rm-manual"><span>Music Trivia</span></h1>
+<p class="rm-manual">©2020 WBTU-FM | Powered By: <a href="http://www.vipology.com/">Vipology</a></p>
+<h1 class="rm-manual">Menu</h1>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://us933fm.com/privacy-policy/">Privacy Policy</a></li> <li class="rm-manual"><a href="https://wbtu-fm.arg.vipology.com/wp-content/uploads/sites/8/EEO-Report-Adams-03-27-2020.pdf">EEO</a></li> <li class="rm-manual"><a href="https://publicfiles.fcc.gov/fm-profile/wbtu">Public File</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="http://www.adamsradiogroup.com/">Adams Radio Group</a></li> </ul></article>
+</body></html>

@@ -1,0 +1,289 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual">Linux Fu: PDF For Penguins</h1>
+<p class="rm-manual"> <a href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/#comments"> 32 Comments </a> </p>
+<ul class="rm-manual"> <li class="rm-manual">by:</li> <span><a href="https://hackaday.com/author/wd5gnr1/" rel="author">Al Williams</a></span> </ul>
+<p class="rm-manual"> <span><a href="https://hackaday.com/2021/07/06/">July 6, 2021</a></span> </p>
+<p>PostScript started out as a programming language for printers. While 
+PostScript printers are still a thing, there are many other ways to send
+ data to a printer. But PostScript also spawned the Portable Document 
+Format or PDF and that has been crazy successful. Hardly a day goes by 
+that you don’t see some kind of PDF document come across your computer 
+screen. Sure, there are other competing formats but they hold a sliver 
+of market share compared to PDF. Viewing PDFs under Linux is no problem.
+ But what about editing them? Turns out, that’s easy, too, if you know 
+how.</p>
+<h2>GUI Tools</h2>
+<p>You can use lots of tools to edit PDF files, but the trick is how 
+good the results will look. Anything will work for this: LibreOffice 
+Draw, Inkscape, or even GIMP. If all you want to do is remove something 
+with a white box or make an annotation, these tools are usually great, 
+but for more complicated changes, or pixel-perfect output, they may not 
+be the right tool.</p>
+<p>The biggest problem is that most of these tools deal with the PDF as 
+an image or, at least, a collection of objects. For example, columns of 
+text will probably turn into a collection of discrete lines. Changing 
+something that causes a line to wrap will require you to change all the 
+other lines to match. Sometimes text isn’t even text at all, but images.
+ It largely depends on how the creator made the PDF to begin with. If 
+you don’t mind using a Web-based tool, <a href="https://www.pdfescape.com/">PDFEscape</a>
+ is free and works very well. Other options include Scribus and Okular. 
+Both of these tools can’t really edit the file but can import them as 
+images that you can further manipulate. For example, Okular’s review 
+mode can add annotations like highlights and freehand lines.</p>
+<p>Unsurprisingly, emacs can display a PDF file if it is running under 
+X. You can use Control+C Control+C to switch to view a text 
+representation. After all, most of the PDF file format is text and emacs
+ can even handle binary files. So if you don’t mind working inside the 
+PDF format — very much like PostScript — you can do your editing in 
+emacs or even another text editor.</p>
+<p>There are a few dedicated non-free editors out there and at least one <a href="https://sourceforge.net/projects/pdfedit/">open-source PDF-specific editor</a>. Of course, like most things in Linux, you can also use the command line.</p>
+<h2>Hiding Text</h2>
+<p>The problem with working with PDFs as text — even in emacs — is that 
+they are often compressed and otherwise unreadable. For example, words 
+may appear a character at a time separated by formatting code or other 
+data. So searching for arbitrary text in the PDF may not work.</p>
+<p>You can convert the file to use more uncompressed text, although 
+that’s no panacea. For example, if you open up this segment from an 
+article on ham radio and want to change the word “convention”, it is 
+hard to tell exactly where that text is, but it is somewhere in this 
+general area:</p>
+<pre>3 0 obj &lt;&lt; /Length 14770 /Filter /FlateDecode &gt;&gt; stream H�|Wɒ�8��+p$gJ,�c��v�cS�Ҍc��J�$���\ZV�����\0�� �CTR�������r��[�}�7}����|��������I5u���`M�&gt;�/��?l�.8�@��gBzq�r!#�%� AE�� �˜ ᥉��x!$��X8^%$��A�D�B���(���b�[H �&gt;����#��{a���e0$^H&amp;|/����U1$^��#��/�G�Us��/"/��\ &lt;i�'qC���$xe�"X�x22�������G��F�Lp]Mnm�$] #TI��G�q�l��'3;!���!+�ȷ�{䕀��� ��b��Qja����Q i� GRn�\0�g;L����x�Zܿ㌳�n�2�R&amp; :"x�r�ky�[JPK��/���S��i��������]r�F�p����k�� |��� QI�mx&gt;1�\�1�Q��y)ХǺ�Z�U.^�](pN��dx����;�֬;d�_�{˪�cYa�\�.t�s�}�ْ{&lt;\0ZW�:�Ȅ�Oɴ��cS�UzluP�֨o}ި��Uqf��o��V��bT%mj|��t����;v�{s�Rj˺��� </pre>
+<p>Good luck finding it in that soup. You want to convert it to unpacked text.</p>
+<pre>qpdf -qdf input.pdf output.txt</pre>
+<p>The resulting file is actually a PDF even though I named it .txt. 
+However, it has everything unpacked. That’s still not great, though, but
+ at least you could find the part you need to change:</p>
+<pre>1.2632 -1.1242 TD 0.0739 Tc 0.1263 Tw (One potentially confusing Stamp)Tj -1.2632 -1.1368 TD 0.026 Tc 0.1248 Tw [(con)38.6(v)20.7(ention is that the I/O pin numbers)]TJ 0 -1.1242 TD 0.0262 Tc 0.0072 Tw [&lt;646f6e90&gt;13.6(t correspond to the IC pin numbers.)]TJ T*</pre>
+<p>Again, good luck searching for the word “convention,” for example. 
+But it is still better than the first example. You can also find 
+metadata even in unprocessed files using things like /Author and /Title.</p>
+<h2>Command Line Magic</h2>
+<p>The </p>
+<code>qpdf</code><p> tool can convert a PDF file to another PDF file. It
+ can optimize the output for Web serving, text editing, and it can do 
+simple things like remove pages or merge pieces of multiple files. You 
+can read </p>
+<p><a href="http://qpdf.sourceforge.net/files/qpdf-manual.html">the documentation</a>,
+ but here we use the QDF mode to produce a legitimate PDF file with all 
+the objects in numerical order and with normal Unix-style line endings. 
+This allows you to more easily edit the file with a text editor, but as 
+you’ve seen that doesn’t always make it simple. Removing entire objects 
+is a headache, but if you get rid of all the mentions of an object, you 
+can run fix-qdf to recreate the proper QDF file.</p>
+<p>Another way to make common edits to PDF files is to use <a href="https://www.pdflabs.com/tools/pdftk-server/">PDFtk server</a>
+ (PDFtk without the server moniker is a GUI toolkit for Windows). Using 
+PDFtk you can merge or split documents, rotate pages, and do many other 
+common tasks. For example, to join two files in order:</p>
+<pre>pdftk in1.pdf in2.pdf cat output output.pdf</pre>
+<p>You can omit, say, page 9:</p>
+<pre>pdftk in1.pdf in2.pdf cat 1-8 10-end output output.pdf</pre>
+<p>You can also shuffle merged pages in different orders:</p>
+<pre>pdftk A=in1.pdf B=in2.pdf shuffle A B output output.pdf</pre>
+<h2>Text to PDF and Back</h2>
+<p>If you want to convert text into PDF from the command line you have several options. <a href="https://pandoc.org/MANUAL.html">Pandoc</a>
+ is an amazing tool that converts markdown to almost anything. It will 
+not only convert markdown to PDF but just about anything else.</p>
+<p>You can also use various combinations of <a href="https://web.mit.edu/ghostscript/www/Ps2pdf.htm">ps2pdf</a> (along with a tool to generate PostScript), pdf2text (part of <a href="https://poppler.freedesktop.org/">poppler-utils</a>), or <a href="https://www.ghostscript.com/">Ghostscript</a>
+ to create PDFs or strip text out of them. Ghostscript can do a lot, 
+including convert a PDF to a number of image formats if you want to, 
+say, display them on a Web page as an image.</p>
+<h2>Special Printing and Other Tools</h2>
+<p> Sometimes you want to modify a PDF file so it will print a certain 
+way. We’ve already talked about how to merge odd and even pages, for 
+example, but there are a few other commands you might want for this 
+purpose:</p>
+<ul> <li>
+<a href="http://manpages.ubuntu.com/manpages/bionic/man1/pdfxup.1.html">pdfxup</a> – Uses pdflatex and Ghostscript to put multiple pages on one printed page (e.g., 2-up)</li> <li>
+<code>pdfjam</code> – Uses LaTeX to put documents on different size pages or produce multiple pages on one printed page</li> <li>
+<code>pdfposter</code> – Create giant output on multiple pages from a single page</li> </ul>
+<p>If you prefer a GUI you might check out <a href="https://pdfsam.org/">PDFsam basic</a>. If you are interested in Java software, there is <a href="http://multivalent.sourceforge.net/">Multivalent</a>.</p>
+<h2>Wrap Up</h2>
+<p>As usual, there are many ways to do daily tasks in Linux. Sometimes 
+the challenge isn’t doing the work, but rather finding the tool that 
+best fits your style of working.</p>
+<p>Oddly enough pandoc <a href="https://hackaday.com/2017/05/23/stupid-git-tricks/">keeps coming up</a> for different reasons. If you prefer your documents on paper, you need a printer and <a href="https://hackaday.com/2012/07/16/dealing-with-the-horrors-of-pdfs-by-binding-your-own-books/">bookbinding clamp</a>.</p>
+<p class="rm-manual"><span>Posted in <a href="https://hackaday.com/category/hackaday-columns/" rel="category tag">Hackaday Columns</a>, <a href="https://hackaday.com/category/linux-hacks/" rel="category tag">Linux Hacks</a>, <a href="https://hackaday.com/category/slider/" rel="category tag">Slider</a></span></p>
+<p class="rm-manual"><span>Tagged <a href="https://hackaday.com/tag/ghostscript/" rel="tag">ghostscript</a>, <a href="https://hackaday.com/tag/linux/" rel="tag">linux</a>, <a href="https://hackaday.com/tag/pdf/" rel="tag">pdf</a>, <a href="https://hackaday.com/tag/postscript/" rel="tag">postscript</a></span> </p>
+<h1 class="rm-manual">Post navigation</h1>
+<p class="rm-manual"><a href="https://hackaday.com/2021/07/06/lightwave-multimeter-teardown/" rel="prev"><span>←</span> Lightwave Multimeter Teardown</a></p>
+<p class="rm-manual"><a href="https://hackaday.com/2021/07/06/usb-power-banks-auto-off-becomes-useful-feature-in-garage-door-remote/" rel="next">USB Power Bank’s Auto-Off Becomes Useful Feature In Garage Door Remote <span>→</span></a></p>
+<h3 class="rm-manual">
+<span>Read more from this series:</span> Linux-Fu</h3>
+<p class="rm-manual"> <a href="https://hackaday.com/2017/03/10/linux-fu-keeping-things-running/">Linux-Fu: Keeping Things Running</a> </p>
+<p class="rm-manual"> <a href="https://hackaday.com/2017/03/31/linux-fu-applications-on-the-web/">Linux-Fu: Applications On The Web</a> </p>
+<p class="rm-manual"> <a href="https://hackaday.com/2017/07/07/linux-fu-running-commands/">Linux-Fu: Running Commands</a> </p>
+<p class="rm-manual"> <a href="https://hackaday.com/2017/09/21/linux-fu-x-command/">Linux Fu: X Command</a> </p>
+<p class="rm-manual"> <a href="https://hackaday.com/2017/11/09/linux-fu-system-administration-made-easier/">Linux Fu: System Administration Made Easier</a> </p>
+<p class="rm-manual"> <a href="https://hackaday.com/2018/01/19/linux-fu-custom-bash-command-completion/">Linux Fu: Custom Bash Command Completion</a> </p>
+<p class="rm-manual"> <a href="https://hackaday.com/2018/02/02/linux-fu-a-little-help-for-bash/">Linux Fu: A Little Help For Bash</a> </p>
+<p class="rm-manual"> <a href="https://hackaday.com/2018/03/09/linux-fu-regular-expressions/">Linux Fu: Regular Expressions</a> </p>
+<p class="rm-manual"> <a href="https://hackaday.com/2018/03/16/linux-fu-file-aliases-links-and-mappings/">Linux Fu: File Aliases, Links, And Mappings</a> </p>
+<p class="rm-manual"> <a href="https://hackaday.com/2018/06/01/linux-fu-counter-rotate-keys/">Linux Fu: Counter Rotate Keys!</a> </p>
+<p class="rm-manual"> <a href="https://hackaday.com/2018/06/07/linux-fu-watch-that-filesystem/">Linux Fu: Watch That Filesystem</a> </p>
+<p class="rm-manual"> <a href="https://hackaday.com/2018/06/22/linux-fu-the-great-power-of-make/">Linux Fu: The Great Power Of Make</a> </p>
+<p class="rm-manual"> <a href="https://hackaday.com/2018/06/29/linux-fu-scripting-for-binary-files/">Linux Fu: Scripting For Binary Files</a> </p>
+<p class="rm-manual"> <a href="https://hackaday.com/2018/08/29/linux-fu-modernize-your-command-line/">Linux Fu: Modernize Your Command Line</a> </p>
+<p class="rm-manual"> <a href="https://hackaday.com/2018/10/04/linux-fu-keep-an-eye-on-that-file/">Linux Fu: Keep An Eye On That File</a> </p>
+<p class="rm-manual"> <a href="https://hackaday.com/2018/10/24/linux-fu-marker-is-a-command-line-menu/">Linux Fu: Marker Is A Command Line Menu</a> </p>
+<p class="rm-manual"> <a href="https://hackaday.com/2018/11/07/linux-fu-pimp-your-pipes/">Linux Fu: Pimp Your Pipes</a> </p>
+<p class="rm-manual"> <a href="https://hackaday.com/2018/12/05/linux-fu-turn-a-web-app-into-a-full-program/">Linux Fu: Turn A Web App Into A Full Program</a> </p>
+<p class="rm-manual"> <a href="https://hackaday.com/2018/12/21/linux-fu-share-terminal-in-browser/">Linux Fu: Share Terminal In Browser</a> </p>
+<p class="rm-manual"> <a href="https://hackaday.com/2019/01/10/linux-fu-the-kitchen-sync/">Linux Fu: The Kitchen Sync</a> </p>
+<h2 class="rm-manual"> 32 thoughts on “<span>Linux Fu: PDF For Penguins</span>” </h2>
+<ol class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> lthemick <span>says:</span> </p> <p class="rm-manual"> <a href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/#comment-6362275"> July 6, 2021 at 10:19 am </a> </p> <p class="rm-manual">This is really useful information; thanks, Al!</p> <p class="rm-manual">As a follow-up: What Linux tools enable indexing or searching a collection of pdf’s?</p> <p class="rm-manual">For
+ example, I have a large collection of magazine pdf’s – all paid for! – 
+and I’d love to index the articles for search. What tools are available 
+either to search the pdf’s on demand, or to index their contents ahead 
+of a search?</p> <p class="rm-manual"> <span><a href="">Report comment</a></span> </p> <p class="rm-manual"><a rel="nofollow" href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/?replytocom=6362275#respond">Reply</a></p> </article> <ol class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> Stanson <span>says:</span> </p> <p class="rm-manual"> <a href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/#comment-6362277"> July 6, 2021 at 10:32 am </a> </p> <p class="rm-manual">&gt; What tools are available either to search the pdf’s on demand, or to index their contents ahead of a search?</p> <p class="rm-manual">Some evil person don’t allow you to use f.e. mentioned in artice pdf2text output piped through grep?</p> <p class="rm-manual"> <span><a href="">Report comment</a></span> </p> <p class="rm-manual"><a rel="nofollow" href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/?replytocom=6362277#respond">Reply</a></p> </article> <ol class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> Moryc <span>says:</span> </p> <p class="rm-manual"> <a href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/#comment-6362315"> July 6, 2021 at 1:05 pm </a> </p> <p class="rm-manual">What if PDF is protected? As in “you can’t copy text from this document without a password”?</p><p class="rm-manual"> As for solution I just use my vast memory to know, where everything is. I also use meaningful file names…</p><p class="rm-manual"></p> <p class="rm-manual">On related note this proves again, that the GUI for Linux exists only to display multiple text terminals on one screen…</p> <p class="rm-manual"> <span><a href="">Report comment</a></span> </p> <p class="rm-manual"><a rel="nofollow" href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/?replytocom=6362315#respond">Reply</a></p> </article> <ol class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> X <span>says:</span> </p> <p class="rm-manual"> <a href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/#comment-6362321"> July 6, 2021 at 1:44 pm </a> </p> <p class="rm-manual">This
+ is true of every operating system. Windows is a thin layer on the 
+Windows text based kernel and macOS is also just a layer on top of BSD.</p> <p class="rm-manual"> <span><a href="">Report comment</a></span> </p> <p class="rm-manual"><a rel="nofollow" href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/?replytocom=6362321#respond">Reply</a></p> </article> <ol class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> Moryc <span>says:</span> </p> <p class="rm-manual"> <a href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/#comment-6362390"> July 6, 2021 at 9:42 pm </a> </p> <p class="rm-manual">But
+ i case of Windows or macOS (and Android too), user rarely has to 
+operate via command line. On Linux this is not optional, it’s mandatory.
+ It’s all about user experience. The only times I have to resort to 
+command line or text file editing is when I’m dealing with open source 
+tools that either originate from Linux or were developed on it, or with 
+Python. Text file edits are reserved for some games, when developers 
+didn’t include a way to scale up the graphics…</p> <p class="rm-manual"> <span><a href="">Report comment</a></span> </p> </article> </li> </ol> </li> </ol> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> lthemick <span>says:</span> </p> <p class="rm-manual"> <a href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/#comment-6362325"> July 6, 2021 at 2:02 pm </a> </p> <p class="rm-manual">Of
+ course I could, but it’s a bit cumbersome on a library of ~300 
+documents. That’s why I wondered whether there was a tool to 
+search/index pdf’s more succinctly.</p> <p class="rm-manual"> <span><a href="">Report comment</a></span> </p> <p class="rm-manual"><a rel="nofollow" href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/?replytocom=6362325#respond">Reply</a></p> </article> </li> </ol> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <a href="http://www.techbotch.org/" rel="external nofollow ugc">Phil</a> <span>says:</span> </p> <p class="rm-manual"> <a href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/#comment-6362310"> July 6, 2021 at 12:31 pm </a> </p> <p class="rm-manual">Not
+ exactly indexing, but I have used pdfgrep several times to find stuff 
+in collections of well behaved pdf files. Another route may be using 
+pdftotext and indexing the output. Finally, a document management system
+ like mayan edms or paperless-ng may be helpful – both will run your 
+pdfs through tesseract for OCR (yes, even if it’s not a scan) and store 
+everything in a database.</p> <p class="rm-manual"> <span><a href="">Report comment</a></span> </p> <p class="rm-manual"><a rel="nofollow" href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/?replytocom=6362310#respond">Reply</a></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> Isaac <span>says:</span> </p> <p class="rm-manual"> <a href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/#comment-6362388"> July 6, 2021 at 9:11 pm </a> </p> <p class="rm-manual">On
+ Macs, Spotlight automatically indexes the contents of PDFs (along with 
+everything else), assuming they have a text layer — some do, some don’t.
+ To find out, try to select some text. If it works like a text editor 
+(word by word), that’s good. If the selection is just a rectangle, 
+there’s no text to index; what you have is just an image of the page. A 
+“good” PDF will have the text “hidden” behind the page image, so you see
+ the page exactly as the creator intended (the image), but you can still
+ select the text. (And that’s why sometimes when you select text, it 
+doesn’t seem to line up exactly with the letters you’re looking at).</p> <p class="rm-manual"> <span><a href="">Report comment</a></span> </p> <p class="rm-manual"><a rel="nofollow" href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/?replytocom=6362388#respond">Reply</a></p> </article> <ol class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> Eric <span>says:</span> </p> <p class="rm-manual"> <a href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/#comment-6362602"> July 7, 2021 at 3:04 pm </a> </p> <p class="rm-manual">mdfind for macOS terminal uses.</p> <p class="rm-manual">User-Name:Desktop username$ mdfind pdf -onlyin ./books “acrylic”</p> <p class="rm-manual">/Users/username/Desktop/books/9780071257633_shigleys_mechanical_engineering_design_f5c5.pdf</p><p class="rm-manual"> /Users/username/Desktop/books/9781560109143_art_of_acrylic_painting_0842.pdf</p><p class="rm-manual"> /Users/username/Desktop/books/Mechanisms_and_Mechanical devices sourcebook 5e NEIL SCLATER.pdf</p><p class="rm-manual"> /Users/username/Desktop/books/9780071704427_Mechanisms_and_Mechanical_Devices_5th_24fb.pdf</p><p class="rm-manual"></p> <p class="rm-manual"> <span><a href="">Report comment</a></span> </p> <p class="rm-manual"><a rel="nofollow" href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/?replytocom=6362602#respond">Reply</a></p> </article> </li> </ol> </li> </ol> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> BT <span>says:</span> </p> <p class="rm-manual"> <a href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/#comment-6362278"> July 6, 2021 at 10:33 am </a> </p> <p class="rm-manual">“there are many ways to do daily tasks in Linux. Sometimes the challenge isn’t doing the work, but rather finding the tool”</p> <p class="rm-manual">Ain’t that the truth!</p> <p class="rm-manual"> <span><a href="">Report comment</a></span> </p> <p class="rm-manual"><a rel="nofollow" href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/?replytocom=6362278#respond">Reply</a></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> therogerv <span>says:</span> </p> <p class="rm-manual"> <a href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/#comment-6362280"> July 6, 2021 at 10:48 am </a> </p> <p class="rm-manual">when it started talking about pandoc and converting Markdown to pdf, now that is what got me excited</p> <p class="rm-manual"> <span><a href="">Report comment</a></span> </p> <p class="rm-manual"><a rel="nofollow" href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/?replytocom=6362280#respond">Reply</a></p> </article> <ol class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <a href="https://hackaday.io/hexagon5un" rel="external nofollow ugc">Elliot Williams</a> <span>says:</span> </p> <p class="rm-manual"> <a href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/#comment-6362425"> July 7, 2021 at 2:10 am </a> </p> <p class="rm-manual">Pandoc
+ is good. Understands a whole bunch of markup languages. Markdown is 
+probably the least featureful of them, but if that’s all you need, then 
+the glove fits. </p> <p class="rm-manual">Asciidoc and DocBook are worth a look if you need something more, at least in the print-media direction.</p> <p class="rm-manual">All
+ of these convert to PDF / HTML / LaTeX, etc. That’s what’s cool about 
+pandoc. It makes the choice of markup language and final output about as
+ independent of each other as is possible.</p> <p class="rm-manual">It’s going the other way that’s hard. PDF is a Frankenstein’s monster, but it’s what we’ve got.</p> <p class="rm-manual"> <span><a href="">Report comment</a></span> </p> <p class="rm-manual"><a rel="nofollow" href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/?replytocom=6362425#respond">Reply</a></p> </article> </li> </ol> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> therogerv <span>says:</span> </p> <p class="rm-manual"> <a href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/#comment-6362282"> July 6, 2021 at 10:51 am </a> </p> <p class="rm-manual">which makes me think, hmm, a Hackaday article like this one on PDF, on the subject of Markdown, would be a good read</p> <p class="rm-manual"> <span><a href="">Report comment</a></span> </p> <p class="rm-manual"><a rel="nofollow" href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/?replytocom=6362282#respond">Reply</a></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> rnjacobs <span>says:</span> </p> <p class="rm-manual"> <a href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/#comment-6362288"> July 6, 2021 at 11:12 am </a> </p> <p class="rm-manual">My favorite tool for this, as limited as it is, is “flpsed”. Some times you only need to add some text on top of a pdf.</p> <p class="rm-manual"> <span><a href="">Report comment</a></span> </p> <p class="rm-manual"><a rel="nofollow" href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/?replytocom=6362288#respond">Reply</a></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> z_e <span>says:</span> </p> <p class="rm-manual"> <a href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/#comment-6362305"> July 6, 2021 at 12:16 pm </a> </p> <p class="rm-manual">I
+ was really struggling to find a decent PDF editor for Linux that gives 
+all the usual editing options as the name brand one. Especially for 
+business stuff, it’s been really a pain to fill and sign non-fillable 
+forms in OpenOffice or GIMP. Also for just quickly editing text, 
+pictures and export it back into a normal non-image PDF and be done with
+ it.</p><p class="rm-manual"> Went through all the open source options, 
+but then settled with Master PDF Editor. Perpetual license for a very 
+reasonable price, as it should be. Am not affiliated with them just a 
+satisfied user.</p><p class="rm-manual"></p> <p class="rm-manual"> <span><a href="">Report comment</a></span> </p> <p class="rm-manual"><a rel="nofollow" href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/?replytocom=6362305#respond">Reply</a></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> sqelch <span>says:</span> </p> <p class="rm-manual"> <a href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/#comment-6362308"> July 6, 2021 at 12:24 pm </a> </p> <p class="rm-manual">PDF
+ is terribly overused. It is not convenient at all, well outlined in the
+ first few paragraphs here. I see it as only really useful for 
+transmitting finished works that are not meant to be edited. It really 
+kind of sucks.</p> <p class="rm-manual"> <span><a href="">Report comment</a></span> </p> <p class="rm-manual"><a rel="nofollow" href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/?replytocom=6362308#respond">Reply</a></p> </article> <ol class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> denis <span>says:</span> </p> <p class="rm-manual"> <a href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/#comment-6362312"> July 6, 2021 at 12:44 pm </a> </p> <p class="rm-manual">This
+ .. but i dont mind it so. its how I choose to send invoices by email, I
+ use linux on all my computers in work so i know the recipient will be 
+able to open it regardless of underlying OS, also its clumbersome to 
+edit so can be somewhat assured what i send is what they get and theres 
+no messing about. (For example I often list problems found on the 
+invoice during works so as to cover my ass from the ” it wasnt like that
+ before you touched it” crowd.) and as im usually asked to do the work 
+by one party on behalf of another its important I show what I did, and 
+what I didnt do, but was aware of.</p> <p class="rm-manual"> <span><a href="">Report comment</a></span> </p> <p class="rm-manual"><a rel="nofollow" href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/?replytocom=6362312#respond">Reply</a></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> X <span>says:</span> </p> <p class="rm-manual"> <a href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/#comment-6362324"> July 6, 2021 at 2:01 pm </a> </p> <p class="rm-manual">You
+ are really late for this party, the PDF standard was made decades ago, 
+you might as well complain about the weather. If you want to make your 
+own file format to solve your perceived issues, feel free to invent one 
+and get folks to go along with it, good luck with that.</p> <p class="rm-manual"> <span><a href="">Report comment</a></span> </p> <p class="rm-manual"><a rel="nofollow" href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/?replytocom=6362324#respond">Reply</a></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> Conor Stewart <span>says:</span> </p> <p class="rm-manual"> <a href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/#comment-6362357"> July 6, 2021 at 4:18 pm </a> </p> <p class="rm-manual">I
+ agree it is overused in some situations, for example if you get sent a 
+form you need to sign and email back but it’s a pdf and you can’t edit 
+it or from worksheets or cover sheets at Uni. </p> <p class="rm-manual">PDFs
+ should only be used for final copies of documents to be sent or put on a
+ website like data sheets or read only documents or documents that need 
+password protected.</p> <p class="rm-manual"> <span><a href="">Report comment</a></span> </p> <p class="rm-manual"><a rel="nofollow" href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/?replytocom=6362357#respond">Reply</a></p> </article> </li> </ol> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> rpavlik <span>says:</span> </p> <p class="rm-manual"> <a href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/#comment-6362314"> July 6, 2021 at 12:59 pm </a> </p> <p class="rm-manual">PdfArranger is also a useful tool: open source, cross platform, for doing things like the pdftk gui appears to</p> <p class="rm-manual"> <span><a href="">Report comment</a></span> </p> <p class="rm-manual"><a rel="nofollow" href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/?replytocom=6362314#respond">Reply</a></p> </article> <ol class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> Drone <span>says:</span> </p> <p class="rm-manual"> <a href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/#comment-6362686"> July 7, 2021 at 11:09 pm </a> </p> <p class="rm-manual">PdfArranger
+ is cross platform? Pffft, maybe if you live long enough to cobble 
+together all the tools you’ll need to get it to run on baseline Windows.
+ Mac-OS would likely be easier, it’s BSD at its core and doesn’t blink 
+at swiping stuff from Linux. PDF Arranger is a Python-GTK fork of the 
+venerable PDF Shuffler app which is itself a GUI wrapper for the pikepdf
+ Python PDF library.</p> <p class="rm-manual"> <span><a href="">Report comment</a></span> </p> <p class="rm-manual"><a rel="nofollow" href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/?replytocom=6362686#respond">Reply</a></p> </article> </li> </ol> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> Michel <span>says:</span> </p> <p class="rm-manual"> <a href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/#comment-6362322"> July 6, 2021 at 1:48 pm </a> </p> <p class="rm-manual">Some other useful tools I use regularly:</p><p class="rm-manual"> – pdfshuffler (for Debian/Ubuntu/Mint) or pdfslicer (for Arch Linux) to reorder or delete pages and mix documents)</p><p class="rm-manual"> – krop to cut pdf to big to be printed on a single A4 page (useful for maps… just use some glue after :-)</p><p class="rm-manual"> – pdfbook (alias to pdfjam) to save paper and made physical pretty booklets</p><p class="rm-manual"></p> <p class="rm-manual"> <span><a href="">Report comment</a></span> </p> <p class="rm-manual"><a rel="nofollow" href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/?replytocom=6362322#respond">Reply</a></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> Neil <span>says:</span> </p> <p class="rm-manual"> <a href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/#comment-6362323"> July 6, 2021 at 1:54 pm </a> </p> <p class="rm-manual">I
+ had to generate PDF invoices. HTML2PDF tools produced sub-optimal 
+output. I found “prawn” surprisingly easy to use and an elegant way to 
+learn the structure of PDF. I have full control over the output. I went 
+from hating PDF to enjoying it.</p> <p class="rm-manual">Only 
+peripherally related, I like eps2svg (from the “geg” package) to take 
+PostScript output such as gEDA schematics and produce SVG files for 
+resolution-independent consumption on the web.</p> <p class="rm-manual"> <span><a href="">Report comment</a></span> </p> <p class="rm-manual"><a rel="nofollow" href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/?replytocom=6362323#respond">Reply</a></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> Walla B. Goode <span>says:</span> </p> <p class="rm-manual"> <a href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/#comment-6362349"> July 6, 2021 at 3:16 pm </a> </p> <p class="rm-manual">I
+ prefer EPUB over PDF, since EPUB flows to fit the display device 
+geometry. For conversion, I use Calibre to convert PDF to EPUB. For 
+editing, Sigil edits what looks like a HTML document, and outputs EPUB. I
+ kinda think Calibre lets you create PDFs and other formats from EPUB 
+but I’ve not bothered.</p> <p class="rm-manual"> <span><a href="">Report comment</a></span> </p> <p class="rm-manual"><a rel="nofollow" href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/?replytocom=6362349#respond">Reply</a></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> Zelea <span>says:</span> </p> <p class="rm-manual"> <a href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/#comment-6362365"> July 6, 2021 at 5:11 pm </a> </p> <p class="rm-manual">There are also commercial packages that can be used to process PDF in linux and can do much more than the tools listed above.</p><p class="rm-manual"> My favorites are Apago: <a href="https://www.apagoinc.com/" rel="nofollow ugc">https://www.apagoinc.com</a> and 3-Heights <a href="https://www.pdf-tools.com/" rel="nofollow ugc">https://www.pdf-tools.com</a></p><p class="rm-manual"></p> <p class="rm-manual"> <span><a href="">Report comment</a></span> </p> <p class="rm-manual"><a rel="nofollow" href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/?replytocom=6362365#respond">Reply</a></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> shermelin <span>says:</span> </p> <p class="rm-manual"> <a href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/#comment-6362376"> July 6, 2021 at 6:59 pm </a> </p> <p class="rm-manual">I actually use diurnal (<a href="http://sourceforge.net/projects/xournal/" rel="nofollow ugc">http://sourceforge.net/projects/xournal/</a>) for masking or adding stiff (signature, filling forms which are not forms, adding text, drawing…)</p><p class="rm-manual"> It looks like a rewrite appeared : <a href="https://xournalpp.github.io/" rel="nofollow ugc">https://xournalpp.github.io/</a></p><p class="rm-manual"></p> <p class="rm-manual"> <span><a href="">Report comment</a></span> </p> <p class="rm-manual"><a rel="nofollow" href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/?replytocom=6362376#respond">Reply</a></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> gareth <span>says:</span> </p> <p class="rm-manual"> <a href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/#comment-6362454"> July 7, 2021 at 4:42 am </a> </p> <p class="rm-manual">The
+ article fails to mention the most useful feature of all, the one thing 
+that actually redeems pdf from being a total steaming pile of crud to 
+just a pile of crud, and that is pdfmarks. Pdfmarks are processed by 
+ghostscript and can be effectively appended to an existing pdf without 
+altering any of the exsiting pdf format and writing over the top or 
+adding to it.</p> <p class="rm-manual">Including really, really useful stuff like adding named destions and the like.</p> <p class="rm-manual">Waring,
+ once you start delving into pdf you will lose substantial portions of 
+your life to get to any real deep understanding, I see one guy has spent
+ 15 years of his life to get to the point he can publish a tool that 
+works with pdf at the most fundemental levels, Adobe have a lot to 
+answer for.</p> <p class="rm-manual"> <span><a href="">Report comment</a></span> </p> <p class="rm-manual"><a rel="nofollow" href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/?replytocom=6362454#respond">Reply</a></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> Rex <span>says:</span> </p> <p class="rm-manual"> <a href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/#comment-6362507"> July 7, 2021 at 7:56 am </a> </p> <p class="rm-manual">While
+ we are talking about PDF’s, I sometimes use ‘pdfimages’, part of the 
+poppler-utils package. It will extract all the images from a PDF file, 
+saving them in jpg format.</p> <p class="rm-manual">pdfimages -all “mypdf.pdf” /media/Workspace/Temp/</p> <p class="rm-manual"> <span><a href="">Report comment</a></span> </p> <p class="rm-manual"><a rel="nofollow" href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/?replytocom=6362507#respond">Reply</a></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> b1twise <span>says:</span> </p> <p class="rm-manual"> <a href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/#comment-6362574"> July 7, 2021 at 11:49 am </a> </p> <p class="rm-manual">I’d like to mention hexapdf, which has become my favorite tool for pdf manipulation.</p> <p class="rm-manual"> <span><a href="">Report comment</a></span> </p> <p class="rm-manual"><a rel="nofollow" href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/?replytocom=6362574#respond">Reply</a></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> Bruce Richardson <span>says:</span> </p> <p class="rm-manual"> <a href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/#comment-6362687"> July 7, 2021 at 11:10 pm </a> </p> <p class="rm-manual">Shout out to Tabula <a href="https://tabula.technology/" rel="nofollow ugc">https://tabula.technology/</a> if you ever need to grab a table of data from a PDF.</p> <p class="rm-manual"> <span><a href="">Report comment</a></span> </p> <p class="rm-manual"><a rel="nofollow" href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/?replytocom=6362687#respond">Reply</a></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> Drone <span>says:</span> </p> <p class="rm-manual"> <a href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/#comment-6362688"> July 7, 2021 at 11:12 pm </a> </p> <p class="rm-manual">@Al Williams said: “If you don’t mind using a Web-based tool, PDFEscape is free and works very well.”</p> <p class="rm-manual">Well not for me at 05:35 UTC on 08-July-2021. The link:</p> <p class="rm-manual"><a href="https://www.pdfescape.com/" rel="nofollow ugc">https://www.pdfescape.com/</a></p> <p class="rm-manual">in the article looks OK to me, but the result gets redirected to:</p> <p class="rm-manual"><a href="https://www.pdfescape.com/500/?aspxerrorpath=/500/" rel="nofollow ugc">https://www.pdfescape.com/500/?aspxerrorpath=/500/</a></p> <p class="rm-manual">With the following creepy message:</p> <p class="rm-manual">“The page isn’t redirecting properly. An error occurred during a connection to <a href="http://www.pdfescape.com/" rel="nofollow ugc">http://www.pdfescape.com</a>. This problem can sometimes be caused by disabling or refusing to accept cookies.”</p> <p class="rm-manual">So
+ what? I have to accept abusive tracking cookies or something to use 
+PDFEscape? If yes, that makes PDFEscape both NOT free and totally 
+broken. Or maybe the HaD overload effect is temporarily causing problems
+ at PDFEscape? Yawn, I’ll try PDFEscape again tomorrow and see how it 
+goes.</p> <p class="rm-manual"> <span><a href="">Report comment</a></span> </p> <p class="rm-manual"><a rel="nofollow" href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/?replytocom=6362688#respond">Reply</a></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> nu2eivuB <span>says:</span> </p> <p class="rm-manual"> <a href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/#comment-6362703"> July 8, 2021 at 1:12 am </a> </p> <p class="rm-manual">Agree. I had a look at PDFEscape. Here from their privacy policy:</p> <p class="rm-manual">“We take your privacy seriously. Please read the following information to learn more about our privacy practices.</p> <p class="rm-manual"> This policy covers what information we collect and how it is treated.</p><p class="rm-manual">
+ This policy only applies to Red Software Websites and does not extend 
+to the practices of other websites that we may link to, companies that 
+we do not own or control, or to people that we do not employ or manage.”</p><p class="rm-manual"></p> <p class="rm-manual">So far so good. And now from their page source:</p> <p class="rm-manual">“if( Cookiebot.consented ? Cookiebot.consent.statistics : Cookiebot.isOutsideEU )</p><p class="rm-manual"> {</p><p class="rm-manual"> (function(i,s,o,g,r,a,m){i[‘GoogleAnalyticsObject’]=r;i[r]=i[r]||function(){ [… the usual Google spyware crap …] } }”</p><p class="rm-manual"></p> <p class="rm-manual">Thanks, folks. I’ll pass.</p> <p class="rm-manual"> <span><a href="">Report comment</a></span> </p> <p class="rm-manual"><a rel="nofollow" href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/?replytocom=6362703#respond">Reply</a></p> </article> </li> </ol>
+<h3 class="rm-manual">Leave a Reply <a rel="nofollow" href="file:///2021/07/06/linux-fu-pdf-for-penguins/#respond">Cancel reply</a> </h3>
+<p class="rm-manual">Please be kind and respectful to help make the comments section excellent. (<a href="https://hackaday.com/policies/">Comment Policy</a>)</p>
+<h1 class="rm-manual">Search</h1>
+<p class="rm-manual"><span>Search for:</span> </p>
+<h1 class="rm-manual">If you missed it</h1>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> </p><h2 class="rm-manual"> <a href="https://hackaday.com/2021/07/07/whats-chia-and-why-is-it-eating-all-the-hard-drives/">What’s Chia, And Why Is It Eating All The Hard Drives?</a> </h2> <a href="https://hackaday.com/2021/07/07/whats-chia-and-why-is-it-eating-all-the-hard-drives//#comments"> 92 Comments </a> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> </p><h2 class="rm-manual"> <a href="https://hackaday.com/2021/07/06/terrapowers-natrium-combining-a-fast-neutron-reactor-with-built-in-grid-level-storage/">TerraPower’s Natrium: Combining A Fast Neutron Reactor With Built-In Grid Level Storage</a> </h2> <a href="https://hackaday.com/2021/07/06/terrapowers-natrium-combining-a-fast-neutron-reactor-with-built-in-grid-level-storage//#comments"> 54 Comments </a> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> </p><h2 class="rm-manual"> <a href="https://hackaday.com/2021/07/02/the-trouble-with-hubble-payload-computer-glitch-stops-science-at-the-space-observatory/">The Trouble With Hubble: Payload Computer Glitch Stops Science At The Space Observatory</a> </h2> <a href="https://hackaday.com/2021/07/02/the-trouble-with-hubble-payload-computer-glitch-stops-science-at-the-space-observatory//#comments"> 11 Comments </a> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> </p><h2 class="rm-manual"> <a href="https://hackaday.com/2021/07/01/could-airships-make-a-comeback-with-new-hybrid-designs/">Could Airships Make A Comeback With New Hybrid Designs?</a> </h2> <a href="https://hackaday.com/2021/07/01/could-airships-make-a-comeback-with-new-hybrid-designs//#comments"> 93 Comments </a> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> </p><h2 class="rm-manual"> <a href="https://hackaday.com/2021/07/01/social-engineering-and-menus/">Social Engineering And Menus</a> </h2> <a href="https://hackaday.com/2021/07/01/social-engineering-and-menus//#comments"> 59 Comments </a> <p class="rm-manual"></p> </li> </ul>
+<p class="rm-manual"><a href="https://hackaday.com/category/featured/">More from this category</a> </p>
+<h1 class="rm-manual">Our Columns</h1>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> </p><h2 class="rm-manual"> <a href="https://hackaday.com/2021/07/08/tech-hidden-in-plain-sight-cruise-control/">Tech Hidden In Plain Sight: Cruise Control</a> </h2> <a href="https://hackaday.com/2021/07/08/tech-hidden-in-plain-sight-cruise-control//#comments"> 1 Comment </a> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> </p><h2 class="rm-manual"> <a href="https://hackaday.com/2021/07/08/electric-land-speed-racing-can-be-lightning-fast/">Electric Land Speed Racing Can Be Lightning Fast</a> </h2> <a href="https://hackaday.com/2021/07/08/electric-land-speed-racing-can-be-lightning-fast//#comments"> 3 Comments </a> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> </p><h2 class="rm-manual"> <a href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins/">Linux Fu: PDF For Penguins</a> </h2> <a href="https://hackaday.com/2021/07/06/linux-fu-pdf-for-penguins//#comments"> 32 Comments </a> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> </p><h2 class="rm-manual"> <a href="https://hackaday.com/2021/07/05/microfluidics-for-biohacking-hack-chat/">Microfluidics For Biohacking Hack Chat</a> </h2> <a href="https://hackaday.com/2021/07/05/microfluidics-for-biohacking-hack-chat//#comments"> 2 Comments </a> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> </p><h2 class="rm-manual"> <a href="https://hackaday.com/2021/07/04/hackaday-links-july-4-2021/">Hackaday Links: July 4, 2021</a> </h2> <a href="https://hackaday.com/2021/07/04/hackaday-links-july-4-2021//#comments"> 9 Comments </a> <p class="rm-manual"></p> </li> </ul>
+<p class="rm-manual"><a href="https://hackaday.com/category/hackaday-columns/">More from this category</a> </p></article>
+</body></html>

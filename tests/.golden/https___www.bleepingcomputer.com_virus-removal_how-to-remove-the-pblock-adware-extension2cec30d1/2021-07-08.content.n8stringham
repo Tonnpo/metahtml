@@ -1,0 +1,470 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> How to remove the PBlock+ adware browser extension </p>
+<ul class="rm-manual"> <li class="rm-manual">
+<a href="https://www.bleepingcomputer.com/">News</a> <ul class="rm-manual"> <li class="rm-manual"><a href="#nfeatured">Featured</a></li> <li class="rm-manual"><a href="#nlatest">Latest</a></li> </ul> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.bleepingcomputer.com/news/microsoft/microsofts-incomplete-printnightmare-patch-fails-to-fix-vulnerability/"> <p class="rm-manual">Microsoft's incomplete PrintNightmare patch fails to fix vulnerability</p> </a> </li> <li class="rm-manual"> <a href="https://www.bleepingcomputer.com/news/security/kaseya-roughly-1-500-businesses-hit-by-revil-ransomware-attack/"> <p class="rm-manual">Kaseya: Roughly 1,500 businesses hit by REvil ransomware attack</p> </a> </li> <li class="rm-manual"> <a href="https://www.bleepingcomputer.com/news/security/hacker-dumps-private-info-of-pro-trump-gettr-social-network-members/"> <p class="rm-manual">Hacker dumps private info of pro-Trump GETTR social network members</p> </a> </li> <li class="rm-manual"> <a href="https://www.bleepingcomputer.com/news/security/tens-of-thousands-scammed-using-fake-android-cryptomining-apps/"> <p class="rm-manual">Tens of thousands scammed using fake Android cryptomining apps</p> </a> </li> </ul> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.bleepingcomputer.com/news/microsoft/new-windows-11-dev-build-released-with-bug-fixes-and-new-features/"> <p class="rm-manual">New Windows 11 Dev build released with bug fixes and new features</p> </a> </li> <li class="rm-manual"> <a href="https://www.bleepingcomputer.com/news/microsoft/windows-security-update-kb5004945-breaks-printing-on-zebra-printers/"> <p class="rm-manual">Windows security update KB5004945 breaks printing on Zebra printers</p> </a> </li> <li class="rm-manual"> <a href="https://www.bleepingcomputer.com/news/security/morgan-stanley-reports-data-breach-after-vendor-accellion-hack/"> <p class="rm-manual">Morgan Stanley reports data breach after vendor Accellion hack</p> </a> </li> <li class="rm-manual"> <a href="https://www.bleepingcomputer.com/news/security/mozilla-firefox-to-roll-out-dns-over-https-for-canadian-users/"> <p class="rm-manual">Mozilla Firefox to roll out DNS over HTTPS for Canadian users</p> </a> </li> </ul> </li> <li class="rm-manual">
+<a href="https://www.bleepingcomputer.com/download/">Downloads</a> <ul class="rm-manual"> <li class="rm-manual"><a href="#dlatest">Latest</a></li> <li class="rm-manual"><a href="#most">Most Downloaded</a></li> </ul> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.bleepingcomputer.com/download/qualys-browsercheck/"> <p class="rm-manual">Qualys BrowserCheck</p> </a> </li> <li class="rm-manual"> <a href="https://www.bleepingcomputer.com/download/stopdecrypter/"> <p class="rm-manual">STOPDecrypter</p> </a> </li> <li class="rm-manual"> <a href="https://www.bleepingcomputer.com/download/auroradecrypter/"> <p class="rm-manual">AuroraDecrypter</p> </a> </li> <li class="rm-manual"> <a href="https://www.bleepingcomputer.com/download/fileslockerdecrypter/"> <p class="rm-manual">FilesLockerDecrypter</p> </a> </li> </ul> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///download/adwcleaner/"> <p class="rm-manual">AdwCleaner</p> </a> </li> <li class="rm-manual"> <a href="file:///download/combofix/"> <p class="rm-manual">ComboFix</p> </a> </li> <li class="rm-manual"> <a href="file:///download/rkill/"> <p class="rm-manual">RKill</p> </a> </li> <li class="rm-manual"> <a href="file:///download/junkware-removal-tool/"> <p class="rm-manual">Junkware Removal Tool</p> </a> </li> </ul> </li> <li class="rm-manual">
+<a href="https://www.bleepingcomputer.com/virus-removal/">Virus Removal Guides</a> <ul class="rm-manual"> <li class="rm-manual"><a href="#vlatest">Latest</a></li> <li class="rm-manual"><a href="#vmost">Most Viewed</a></li> <li class="rm-manual"><a href="#ransomware">Ransomware</a></li> </ul> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///virus-removal/how-to-remove-the-pblock-adware-extension"> <p class="rm-manual">How to remove the PBlock+ adware browser extension</p> </a> </li> <li class="rm-manual"> <a href="file:///virus-removal/remove-toksearches.xyz-search-redirect"> <p class="rm-manual">Remove the Toksearches.xyz Search Redirect</p> </a> </li> <li class="rm-manual"> <a href="file:///virus-removal/remove-smashapps.net-search-redirect"> <p class="rm-manual">Remove the Smashapps.net Search Redirect</p> </a> </li> <li class="rm-manual"> <a href="file:///virus-removal/remove-smashappsearch.com-search-redirect"> <p class="rm-manual">Remove the Smashappsearch.com Search Redirect</p> </a> </li> </ul> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///virus-removal/remove-security-tool"> <p class="rm-manual">Remove Security Tool and SecurityTool (Uninstall Guide)</p> </a> </li> <li class="rm-manual"> <a href="file:///virus-removal/uninstall-antivirus-2009"> <p class="rm-manual">How to remove Antivirus 2009 (Uninstall Instructions)</p> </a> </li> <li class="rm-manual"> <a href="file:///virus-removal/remove-vundo-virtumonde"> <p class="rm-manual">How to Remove WinFixer / Virtumonde / Msevents / Trojan.vundo</p> </a> </li> <li class="rm-manual"> <a href="file:///virus-removal/remove-tdss-tdl3-alureon-rootkit-using-tdsskiller"> <p class="rm-manual">How to remove Google Redirects or the TDSS, TDL3, or Alureon rootkit using TDSSKiller</p> </a> </li> </ul> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///virus-removal/locky-ransomware-information-help"> <p class="rm-manual">Locky Ransomware Information, Help Guide, and FAQ</p> </a> </li> <li class="rm-manual"> <a href="file:///virus-removal/cryptolocker-ransomware-information"> <p class="rm-manual">CryptoLocker Ransomware Information Guide and FAQ</p> </a> </li> <li class="rm-manual"> <a href="file:///virus-removal/cryptorbit-ransomware-information"> <p class="rm-manual">CryptorBit and HowDecrypt Information Guide and FAQ</p> </a> </li> <li class="rm-manual"> <a href="file:///virus-removal/cryptodefense-ransomware-information"> <p class="rm-manual">CryptoDefense and How_Decrypt Ransomware Information Guide and FAQ</p> </a> </li> </ul> </li> <li class="rm-manual">
+<a href="https://www.bleepingcomputer.com/tutorials/">Tutorials</a> <ul class="rm-manual"> <li class="rm-manual"><a href="#tlatest">Latest</a></li> <li class="rm-manual"><a href="#popular">Popular</a></li> </ul> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///tutorials/how-to-make-the-start-menu-full-screen-in-windows-10/"> <p class="rm-manual">How to make the Start menu full screen in Windows 10</p> </a> </li> <li class="rm-manual"> <a href="file:///tutorials/how-to-install-the-microsoft-visual-c-2015-runtime/"> <p class="rm-manual">How to install the Microsoft Visual C++ 2015 Runtime</p> </a> </li> <li class="rm-manual"> <a href="file:///tutorials/how-to-open-an-elevated-powershell-admin-prompt-in-windows-10/"> <p class="rm-manual">How to open an elevated PowerShell Admin prompt in Windows 10</p> </a> </li> <li class="rm-manual"> <a href="file:///tutorials/how-to-translate-a-web-page-in-google-chrome/"> <p class="rm-manual">How to Translate a Web Page in Google Chrome</p> </a> </li> </ul> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///tutorials/how-to-start-windows-in-safe-mode/"> <p class="rm-manual">How to start Windows in Safe Mode</p> </a> </li> <li class="rm-manual"> <a href="file:///tutorials/how-to-remove-a-trojan-virus-worm-or-malware/"> <p class="rm-manual">How to remove a Trojan, Virus, Worm, or other Malware</p> </a> </li> <li class="rm-manual"> <a href="file:///tutorials/show-hidden-files-in-windows-7/"> <p class="rm-manual">How to show hidden files in Windows 7</p> </a> </li> <li class="rm-manual"> <a href="file:///tutorials/how-to-see-hidden-files-in-windows/"> <p class="rm-manual">How to see hidden files in Windows</p> </a> </li> </ul> </li> <li class="rm-manual">
+<a href="https://deals.bleepingcomputer.com/">Deals</a> <ul class="rm-manual"> <li class="rm-manual"><a href="#dcategories">Categories</a></li> </ul> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://deals.bleepingcomputer.com/deals/elearning?utm_source=bleepingcomputer.com&amp;utm_medium=dd_cat"> <p class="rm-manual">eLearning</p> </a> </li> <li class="rm-manual"> <a href="https://deals.bleepingcomputer.com/deals/certifications?utm_source=bleepingcomputer.com&amp;utm_medium=dd_cat"> <p class="rm-manual">IT Certification Courses</p> </a> </li> <li class="rm-manual"> <a href="https://deals.bleepingcomputer.com/deals/gear-gadgets?utm_source=bleepingcomputer.com&amp;utm_medium=dd_cat"> <p class="rm-manual">Gear + Gadgets</p> </a> </li> <li class="rm-manual"> <a href="https://deals.bleepingcomputer.com/collections/tag-cyber-security?utm_source=bleepingcomputer.com&amp;utm_medium=dd_cat"> <p class="rm-manual">Security</p> </a> </li> </ul> </li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/forums/">Forums</a></li> <li class="rm-manual">
+<a href="#">More</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/startups/">Startup Database</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/uninstall/">Uninstall Database</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/filedb/">File Database</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/glossary/">Glossary</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/forums/t/730914/the-bleepingcomputer-official-discord-chat-server-come-join-the-fun/">Chat on Discord</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/news-tip/">Send us a Tip!</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/welcome-guide/">Welcome Guide</a></li> </ul> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/"><span>Home</span></a></li>
+<li class="rm-manual"><span><a href="https://www.bleepingcomputer.com/virus-removal/">Virus, Spyware, Malware, &amp; PUP Removal Guides</a></span></li>
+<li class="rm-manual"><span>How to remove the PBlock adware browser extension</span></li> </ul>
+<h1 class="rm-manual">How to remove the PBlock+ adware browser extension</h1>
+<ul class="rm-manual">
+<li class="rm-manual">Filed Under : <span> <span><a href="https://www.bleepingcomputer.com/virus-removal/threat/browser-extensions-and-add-ons/">Browser Extensions and Add-ons</a></span> </span>
+</li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual">October 29, 2020</li> </ul>
+<h2>What is PBlock+ adware browser extension?</h2>
+<p><a href="#rt_options">Skip this and learn how to remove PBlock+ adware browser extension!</a> </p>
+<p>PBlock+ is a Google Chrome extension that claims to be a popup blocker, but instead displays advertisements in the browser.</p>
+<p> When installed, this extension will open new tabs in the browser 
+that display advertisements trying to sell software, push fake software 
+updates, and tech support scams.</p>
+<h2>How was the PBlock+ Extension installed in Chrome?</h2>
+<p>The PBlock+ extension is currently being distributed using 
+advertisements similar to the one below. It has not been seen being 
+installed via adware bundles or other programs. These advertisements are
+ either shown by site that open popups or new tabs to these pages or via
+ adware.</p>
+<p>As this extension advertises itself as a popup blocker, yet displays 
+unwanted and malicious advertisements, it is strongly advised that you 
+uninstall it. If you do not wish to use this extension, you can remove 
+PBlock+ for free <a href="https://www.bleepingcomputer.com/tutorials/how-to-remove-a-google-chrome-extension/">using these instructions</a>. </p>
+<p>If you are unsure how this extension was installed or are concerned 
+other extensions or unwanted programs may be installed on your computer,
+ you can use the removal guide below instead.</p>
+<h2>PBlock+ adware browser extension Removal Options</h2>
+<ul>
+<li> <p> <a href="#self-help">Self Help Removal Guide (Below)</a> </p> </li> <li> <p> <a href="https://www.bleepingcomputer.com/forums/f/79/security/">Ask for Help in our Security Forum</a> </p> </li> </ul>
+<h2>Self Help Guide</h2>
+<p> This guide contains advanced information, but has been written in 
+such a way so that anyone can follow it. Please ensure your data is 
+backed up before proceeding.</p>
+<p> If you are uncomfortable making changes to your computer or 
+following these steps, do not worry! Instead you can get free one-on-one
+ help by asking in the <a href="file:///forums">forums</a>.</p>
+<h3>To remove PBlock+ adware browser extension, follow these steps:</h3>
+<ul>
+<li><a href="#print"><span>STEP 1:</span> Print out instructions before we begin.</a></li> <li><a href="#rkill"><span>STEP 2:</span> Use Rkill to terminate suspicious programs.</a></li> <li><a href="#mbam"><span>STEP 3:</span> Use Malwarebytes AntiMalware to Scan for Malware and Unwanted Programs</a></li> <li><a href="#zemana"><span>STEP 4:</span> Scan and clean your computer with Zemana AntiMalware.</a></li> <li><a href="#adwcleaner"><span>STEP 5:</span> Use AdwCleaner to remove adware from a computer.</a></li> <li><a href="#reset_browser"><span>STEP 6:</span> Reset browsers back to default settings.</a></li> <li><a href="#hitmanpro"><span>STEP 7:</span> Use HitmanPro to scan your computer for badware</a></li> <li><a href="#psi"><span>STEP 8:</span> Run Secunia PSI to find outdated and vulnerable programs.</a></li> </ul>
+<p> <span>1</span> </p>
+<p>This removal guide may appear overwhelming due to the amount of the 
+steps and numerous programs that will be used. It was only written this 
+way to provide clear, detailed, and easy to understand instructions that
+ anyone can use to remove this infection for free. Before using this 
+guide, we suggest that you read it once and download all necessary tools
+ to your desktop. After doing so, please print this page as you may need
+ to close your browser window or reboot your computer.</p>
+<p> <span>2</span> </p>
+<p>To terminate any programs that may interfere with the removal process
+ we must first download the Rkill program. Rkill will search your 
+computer for active malware infections and attempt to terminate them so 
+that they wont interfere with the removal process. To do this, please 
+download RKill to your desktop from the following link.</p>
+<h5 class="">Rkill</h5>
+<p class=""> <a href="https://www.bleepingcomputer.com/download/rkill/">Download Now</a> </p>
+<p class="">When at the download page, click on the Download Now button 
+labeled iExplore.exe. When you are prompted where to save it, please 
+save it on your desktop.</p>
+<p> <span>3</span> </p>
+<p>Once it is downloaded, double-click on the iExplore.exe icon in order
+ to automatically attempt to stop any processes associated with PBlock+ 
+adware browser extension and other malware. Please be patient while the 
+program looks for various malware programs and ends them. When it has 
+finished, the black window will automatically close and a log file will 
+open. Please review the log file and then close so you can continue with
+ the next step. If you have problems running RKill, you can download the
+ other renamed versions of RKill from the <a href="https://www.bleepingcomputer.com/download/rkill/">rkill download page</a>.
+ All of the files are renamed copies of RKill, which you can try 
+instead. Please note that the download page will open in a new browser 
+window or tab.</p>
+<p>Do not reboot your computer after running RKill as the malware programs will start again. </p>
+<p> <span>4</span> </p>
+<p> At this point you should download Malwarebytes Anti-Malware, or 
+MBAM, to scan your computer for any infections, adware, or potentially 
+unwanted programs that may be present. Please download Malwarebytes from
+ the following location and save it to your desktop:</p>
+<h5>Malwarebytes Anti-Malware</h5>
+<p> <a href="https://www.bleepingcomputer.com/download/malwarebytes-anti-malware/">Download Now</a> </p>
+<p> <span>5</span> </p>
+<p>Once downloaded, close all programs and Windows on your computer, including this one.</p>
+<p> <span>6</span> </p>
+<p>Double-click on the icon on your desktop named 
+MBSetup-1878.1878-4.0.exe. This will start the installation of MBAM onto
+ your computer.</p>
+<p> <span>7</span> </p>
+<p>When the installation begins, keep following the prompts in order to 
+continue with the installation process. Do not make any changes to 
+default settings and when the program has finished installing, a welcome
+ screen will be displayed.</p>
+<p>At this screen, click on the Get Started button where you will be 
+prompted to buy and activate a license. To continue using it for free, 
+click on the 'Maybe Later' option and then select 'Use Malwarebytes 
+Free'. </p>
+<p>It should be noted that the free version will scan for and remove 
+malware, but not provide real-time protection from threats that occur 
+when not performing a scan.</p>
+<p>Finally, you will be shown a screen asking you to sign up for their 
+newsletter. Just click on the 'Open Malwarebytes Free' option to start 
+the program.</p>
+<p> <span>8</span> </p>
+<p>MBAM will now start and you will be at the main screen as shown below.</p>
+<p>We now need to enable rootkit scanning to detect the largest amount 
+of malware and unwanted programs that is possible with MalwareBytes. To 
+do this, click on the Settings gear on the top left side of the screen 
+and you will be brought to the general settings section.</p>
+<p>Now click on the Security option at the top of the screen. You will 
+now be shown the settings MalwareBytes will use when scanning your 
+computer.</p>
+<p>Scroll down until you see Scan option as shown below.</p>
+<p>At this screen, please enable the Scan for rootkits setting by clicking on the toggle switch so it turns blue.</p>
+<p>Now that you have enabled rootkit scanning, click on the X button to close the settings to get back to the main screen.</p>
+<p> <span>9</span> </p>
+<p>You should now click on the Scan button to begin scanning your computer for malware.</p>
+<p>This process can take quite a while, so we suggest you do something 
+else and periodically check on the status of the scan to see when it is 
+finished.</p>
+<p> <span>10</span> </p>
+<p>When MBAM is finished scanning it will display a screen that displays
+ any malware, adware, or potentially unwanted programs that it has 
+detected. Please note that our guide's scan results image may look 
+different than the one you are shown in this version of Malwarebytes as 
+it was created with an older version.</p>
+<p>You should now click on the Quarantine button to remove all the 
+selected items. MBAM will now delete all of the files and registry keys 
+and add them to the program's quarantine.</p>
+<p>When removing the files, MBAM may require a reboot in order to remove
+ some of them. If it displays a message stating that it needs to reboot,
+ please allow it to do so. Once your computer has rebooted, and you are 
+logged in, please continue with the rest of the steps.</p>
+<p> <span>11</span> </p>
+<p>You can now exit the MBAM program.</p>
+<p> <span>12</span> </p>
+<p>At this point you should download Zemana AntiMalware, or ZAM, in 
+order to scan your computer for any any infections, adware, or 
+potentially unwanted programs that may be present. Please download 
+Zemana AntiMalware from the following location and save it to your 
+desktop:</p>
+<h5>Zemana AntiMalware</h5>
+<p> <a href="https://www.bleepingcomputer.com/download/zemana-antimalware/dl/312/">Download Now</a> </p>
+<p> <span>13</span> </p>
+<p>Once downloaded, close all programs and open windows on your computer.</p>
+<p> <span>14</span> </p>
+<p>Now double-click on the icon on your desktop named 
+Zemana.AntiMalware.Setup.exe. This will start the installation of Zemana
+ AntiMalware onto your computer.</p>
+<p> <span>15</span> </p>
+<p>When the installation begins, keep following the prompts in order to 
+continue with the installation process. Do not make any changes to 
+default settings and when the program has finished installing, Zemana 
+will automatically start and display the main screen.</p>
+<p> <span>16</span> </p>
+<p>You will now be at the main screen for Zemana AntiMalware as shown below.</p>
+<p>Above the Scan button, please change the scan type to Deep Scan and 
+then click on the Scan button to start the malware removal scan.</p>
+<p> <span>17</span> </p>
+<p>Zemana AntiMalware will now start scanning your computer for malware,
+ adware, and potentially unwanted programs. This process can take quite a
+ while, so we suggest you do something else and periodically check on 
+the status of the scan to see when it is finished.</p>
+<p> <span>18</span> </p>
+<p>When Zemana has finished finished scanning it will display a screen 
+that displays any programs that have been detected. Please note that the
+ items found may be different than what is shown in the image below.</p>
+<p>Review the scan results and when you are ready to continue with the 
+cleanup process, click on the Next button to delete or repair all of the
+ the selected results. Once you click on the Next button, Zemana will 
+remove any unwanted files and fix any modified legitimate files. If you 
+receive a warning that Zemana needs to close your open browsers, please 
+close any web browsers that may be open and then click on the OK button 
+to continue.</p>
+<p>Zemana will now create a System Restore Point and remove the detected files and repair any files that were modified. </p>
+<p> <span>19</span> </p>
+<p>When the process is complete, you will be shown a screen that says 
+Completed. At this screen, you can now close the Zemana AntiMalware 
+screen and continue with the rest of the instructions.</p>
+<p> <span>20</span> </p>
+<p>Now please download AdwCleaner and save it to your desktop. 
+AdwCleaner will scan your computer for adware programs that may have 
+been installed on your computer without your knowledge. You can download
+ AdwCleaner from the following URL:</p>
+<h5>AdwCleaner</h5>
+<p> <a href="https://www.bleepingcomputer.com/download/adwcleaner/">Download Now</a> </p>
+<p> <span>21</span> </p>
+<p>When AdwCleaner has finished downloading, please double-click on the 
+AdwCleaner.exe icon that now appears on your desktop. Once you 
+double-click on the icon the AdwCleaner program will open and you will 
+be presented with the program's license agreement. After you read it, 
+click on the I agree button if you wish to continue. Otherwise, click on
+ the I disagree button to close the program. If Windows prompts you as 
+to whether or not you wish to run AdwCleaner, please allow it to run.</p>
+<p>If you selected to continue, you will be presented with the start screen as shown below.</p>
+<p> <span>22</span> </p>
+<p>Now click on the Scan button in AdwCleaner. The program will now 
+start to search for known adware programs that may be installed on your 
+computer. When it has finished it will display all of the items it has 
+found in Results section of the screen above. Please look through the 
+results and try to determine if the programs that are listed contain 
+ones that you do not want installed. If you find programs that you need 
+to keep, then uncheck the entries associated with them.</p>
+<p>For many people, the contents of the Results section may appear 
+confusing. Unless you see a program name that you know should not be 
+removed,please continue with the next step.</p>
+<p> <span>23</span> </p>
+<p>To remove the adware programs that were detected in the previous 
+step, please click on the Clean button on the AdwCleaner screen. 
+AdwCleaner will now prompt you to save any open files or data as the 
+program will need to close any open programs before it starts to clean.</p>
+<p>Please save your work and then click on the OK button. AdwCleaner 
+will now delete all detected adware from your computer. When it is done 
+it will display an alert that explains what PUPs (Potentially Unwanted 
+Programs) and Adware are. Please read through this information and then 
+press the OK button. You will now be presented with an alert that states
+ AdwCleaner needs to reboot your computer.</p>
+<p>Please click on the OK button to let AdwCleaner reboot your computer.</p>
+<p> <span>24</span> </p>
+<p>When your computer reboots and you are logged in, AdwCleaner will 
+automatically open a log file that contains the files, registry keys, 
+and programs that were removed from your computer.</p>
+<p>Please review this log file and then close the Notepad Window.</p>
+<p> <span>25</span> </p>
+<p>If you are still having problems with PBlock+ adware browser 
+extension then you should also reset your browsers back to their default
+ configuration. Please note that this method will remove all add-ons, 
+extensions, toolbars and other customizations but will leave your 
+bookmarks and favorites intact. </p>
+<p>For each browser that you have installed on your computer, please 
+click on the browsers icon below and follow the displayed steps to reset
+ that browser.</p>
+<ul>
+<li><a href="#section-chrome"><span>Chrome</span></a></li> <li><a href="#section-ie"><span>Internet Explorer</span></a></li> <li><a href="#section-firefox"><span>Firefox</span></a></li> <li><a href="#section-safari"><span>Safari</span></a></li> </ul>
+<p>In order to remove PBlock+ adware browser extension completely you 
+will need to reset Chrome back to its initial settings. Doing these 
+steps will erase all configuration information from Chrome such as your 
+home page, tab settings, saved form information, browsing history, and 
+cookies. This process will also disable any installed extensions. All of
+ your bookmarks, though, will be preserved.</p>
+<p>To reset Chrome, open the program and click on the Chrome menu button
+ () in the top right-hand corner of the window. This will open the main 
+menu for Chrome as shown below.</p>
+<p>Now click on the menu option labeled Settings as shown by the arrow 
+in the picture above, which will open the basic settings screen. Scroll 
+down to the very bottom and you will see a Show advanced settings... 
+option as shown in the image below.</p>
+<p>Click on the Show advanced settings... option to open the advanced 
+settings screen. Scroll to the very bottom until you see the reset 
+button as shown in the image below.</p>
+<p>Now click on the Reset settings button as shown in the image above. 
+Chrome will now open a confirmation dialog asking if you are sure you 
+wish to reset your browser.</p>
+<p>To reset Chrome, click on the Reset button. Chrome will now erase all
+ your personal data, browsing history, and disable all installed 
+extensions. Your bookmarks, though, will remain intact and still be 
+accessible. You can now close the Settings tab and continue with the 
+rest of the instructions.</p>
+<p>In order to remove PBlock+ adware browser extension completely you 
+will need to reset Internet Explorer back to its initial settings. Doing
+ these steps will erase all configuration information from Internet 
+Explorer such as your home page, saved form information, browsing 
+history, and cookies. This process will also disable any installed 
+toolbars and add-ons. All of your bookmarks, though, will be preserved.</p>
+<p>To reset Internet Explorer, open the program and click on the 
+Internet Explorer menu button () in the top right-hand corner of the 
+window. This will open the main menu for Internet Explorer as shown 
+below.</p>
+<p>Now click on the menu option labeled Internet options as shown by the
+ arrow in the picture above, which will open the Internet Options 
+screen.</p>
+<p>Now click on the Advanced tab as shown in the image above. This will open the Advanced Settings screen.</p>
+<p>Now click on the Reset... button as shown in the image above. 
+Internet Explorer will now open a confirmation dialog asking you to 
+confirm that you wish to reset your browser.</p>
+<p>In the reset dialog shown above, please put a check mark in Delete 
+personal settings and then click on the Reset button. Internet Explorer 
+will now erase all your personal data, browsing history, and disable all
+ add-ons and toolbars. Your favorites, though, will remain intact and 
+still be accessible.</p>
+<p>Once the Reset process has been completed, click on the Close button.
+ You will now be prompted to restart Internet Explorer to complete the 
+reset. Once you have restarted Internet Explorer, you can continue with 
+the rest of the instructions.</p>
+<p>In order to remove PBlock+ adware browser extension completely you 
+will need to refresh Firefox back to its initial settings. It does this 
+by removing all add-ons and personalized configuration settings. All of 
+your bookmarks, though, will be preserved. </p>
+<p>To reset Firefox, open the program and click on the Firefox menu</p>
+<p>button () in the top right-hand corner of the window. This will open the main menu for Firefox as shown below.</p>
+<p>Now click on the question mark button () as indicated by the arrow in the image above. This will open up the Firefox help menu.</p>
+<p>Next click on the Troubleshooting Information option as indicated by 
+the arrow in the image above. This will bring you to a Troubleshooting 
+page.</p>
+<p>To begin the refresh process click on the Refresh Firefox.. button. 
+When you do this a confirmation will be shown asking if you wish to 
+perform a Firefox refresh.</p>
+<p>To refresh Firefox, click on the Refresh Firefox button. When the 
+refresh process is finished you will be shown an Import window that will
+ automatically close. When that closes, Firefox will be open and state 
+that it has been refreshed.</p>
+<p>You can now click on the Let's go! button to start using Firefox again.</p>
+<p>In order to completely remove PBlock+ adware browser extension you 
+will need to reset Safari back to its initial settings. Doing these 
+steps will erase all configuration information from Safari such as your 
+Top Sites, saved form information, browsing history, and cookies. This 
+process will not erase your bookmarks or extensions, which will still be
+ available after you reset Safari.</p>
+<p>To reset Safari, open the program and click on the gear () in the top
+ right-hand corner of the window. This will open the main menu for 
+Safari as shown below.</p>
+<p>Now click on the menu option labeled Reset Safari as shown by the 
+arrow in the picture above. This will open a window that allows you to 
+select all the items you wish to reset.</p>
+<p>Keep the check marks in each option and then click on the Reset 
+button. Safari will delete all of your personal data and then open a 
+blank page, which means the process has finished.</p>
+<p>It is important to note that this process does not delete your 
+Bookmarks or any installed Safari Extensions. If you wish to remove your
+ Safari Extensions as well, you can download <a href="https://download.bleepingcomputer.com/reset-browsers/safari/reset-safari.bat" rel="nofollow noopener">this batch file</a>, which will reset Safari and delete all installed extensions, while still retaining your bookmarks.</p>
+<p> <span>26</span> </p>
+<p>Now you should download HitmanPro from the following location and save it to your desktop:</p>
+<h5>HitmanPro</h5>
+<p> <a href="https://www.bleepingcomputer.com/download/hitmanpro/">Download Now</a> </p>
+<p>When you visit the above page, please download the version that 
+corresponds to the bit-type of the Windows version you are using.</p>
+<p> <span>27</span> </p>
+<p>Once downloaded, double-click on the file named HitmanPro.exe (for 
+32-bit versions of Windows) or HitmanPro_x64.exe (for 64-bit versions of
+ Windows). When the program starts you will be presented with the start 
+screen as shown below.</p>
+<p>Now click on the Next button to continue with the scan process.</p>
+<p> <span>28</span> </p>
+<p>You will now be at the HitmanPro setup screen. If you would like to 
+install the 30 day trial for HitmanPro, select the Yes, create a copy of
+ HitmanPro so I can regularly scan this computer (recommended) option. 
+Otherwise, if you just want to scan the computer this one time, please 
+select the No, I only want to perform a one-time scan to check this 
+computer option.</p>
+<p>Once you have selected one of the options, please click on the Next button.</p>
+<p> <span>29</span> </p>
+<p>HitmanPro will now begin to scan your computer for infections, 
+adware, and potentially unwanted programs. When it has finished it will 
+display a list of all the items that Hitman has found as shown in the 
+image below. Please note that the items found may be different than what
+ is shown in the image.</p>
+<p>You should now click on the Next button to have HitmanPro remove the 
+detected items. When it is done you will be shown a Removal Results 
+screen that shows the status of the various programs that were removed. 
+At this screen you should click on the Next button and then if prompted 
+you should click on the Reboot button. If HitmanPro does not prompt you 
+to reboot, please just click on the Close button.</p>
+<p>Once your computer has has restarted or you pressed the Close button, you should now be at your Windows desktop.</p>
+<p> <span>30</span> </p>
+<p>As many malware and unwanted programs are installed through 
+vulnerabilities found in out-dated and insecure programs, it is strongly
+ suggested that you use Secunia PSI to scan for vulnerable programs on 
+your computer. A tutorial on how to use Secunia PSI to scan for 
+vulnerable programs can be found here:</p>
+<p><a href="https://www.bleepingcomputer.com/tutorials/detect-vulnerable-programs-with-secunia-psi/">How to detect vulnerable and out-dated programs using Secunia Personal Software Inspector</a></p>
+<p>Your computer should now be free of the PBlock+ adware browser 
+extension program. If your current security solution allowed this 
+program on your computer, you may want to consider <a href="https://www.malwarebytes.com/lp/sem/en/?affiliate=1878%26x-at%3dext" rel="nofollow noopener">purchasing the full-featured version of Malwarebytes Anti-Malware</a> to protect against these types of threats in the future.</p>
+<p> If you are still having problems with your computer after completing
+ these instructions, then please follow the steps outlined in the topic 
+linked below:</p>
+<blockquote><a href="https://www.bleepingcomputer.com/forums/t/34773/preparation-guide-for-use-before-using-malware-removal-tools-and-requesting-help/">Preparation Guide For Use Before Using Malware Removal Tools and Requesting Help</a></blockquote>
+<h2 class="rm-manual">Are Your Protected?</h2>
+<p class="rm-manual">While Malwarebytes Anti-Malware, Zemana AntiMalware
+ &amp; HitmanPro will scan and clean a computer for free, the free 
+versions do not offer real-time protection. If you want to be fully 
+protected at all times then it is recommended that you purchase a 
+premium version.</p>
+<h3 class="rm-manual">Malwarebytes Anti-Malware</h3>
+<p class="rm-manual">Purchase the full-featured version of Malwarebytes 
+Anti-Malware, which includes real-time protection, scheduled scanning, 
+and website filtering, to protect yourself against these types of 
+threats in the future!</p>
+<p class="rm-manual"><a href="https://www.malwarebytes.com/lp/sem/en/?affiliate=1878%26x-at%3dext" rel="nofollow noopener">Purchase Premium</a></p>
+<h3 class="rm-manual">Zemana AntiMalware</h3>
+<p class="rm-manual">Purchase the full-featured version of Zemana 
+AntiMalware, which includes second opinion malware scanner when other 
+solutions do not work, cloud scanning, and super-fast scan time, to 
+protect yourself against these types of threats in the future!</p>
+<p class="rm-manual"><a href="https://shop.zemana.com/order/checkout.php?PRODS=4655525&amp;QTY=1&amp;CART=1&amp;CARD=2&amp;SHORT_FORM=1&amp;ORDERSTYLE=nLWonpXPjLg=&amp;AFFILIATE=76981" rel="nofollow noopener">Purchase Premium</a></p>
+<h3 class="rm-manual">HitmanPro</h3>
+<p class="rm-manual">Purchase the full-featured version of HitmanPro, 
+which includes discover viruses, trojans, rootkits, spyware and other 
+malware on up-to-date and fully protected computers using cloud 
+protection and behavioral detections, to protect yourself against these 
+types of threats in the future!</p>
+<p class="rm-manual"><a href="https://www.cleverbridge.com/747/?affiliate=1878&amp;scope=cart&amp;cart=69061" rel="nofollow noopener">Purchase Premium</a></p>
+<p class="rm-manual">Disclaimer: While we do earn a commission from the 
+sale of the above products, rest assured we only recommend them due to 
+their effectiveness.</p>
+<h3 class="rm-manual">This is a self-help guide. Use at your own risk.</h3>
+<p class="rm-manual">BleepingComputer.com can not be held responsible 
+for problems that may occur by using this information. If you would like
+ help with any of these fixes, you can ask for malware removal 
+assistance in our <a href="#">Virus,Trojan,Spyware, and Malware Removal Logs forum</a>.</p>
+<p class="rm-manual">If you have any questions about this self-help guide then please post those questions in our <a href="#">Am I infected? What do I do?</a> and someone will help you.</p>
+<p class="rm-manual">search guides</p>
+<p class="rm-manual">Latest Guides</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/virus-removal/remove-toksearches.xyz-search-redirect">Toksearches.xyz</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/virus-removal/remove-smashapps.net-search-redirect">Smashapps.net Search Redirect</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/virus-removal/remove-smashappsearch.com-search-redirect">Smashappsearch.com Search Redirect</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/virus-removal/remove-bipapp-chrome-extension">BipApp Chrome Extension</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/virus-removal/remove-please-allow-to-watch-the-video">Please Allow to watch the video Notification Page</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/virus-removal/remove-annual-visitor-survey">Annual visitor survey Scam</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/virus-removal/remove-chrome-search-contest-2020-scam">Chrome search contest 2020 Scam</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/virus-removal/remove-srchus.xyz-search-redirect">Srchus.xyz Search Redirect</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/virus-removal/remove-vitosc.xyz-search-Redirect">Vitosc.xyz Search Redirect</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/virus-removal/remove-wisp-chrome-extension">Wisip Chrome Extension</a></li> </ul>
+<p class="rm-manual">Removal Tool Guides</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/combofix/"><span>ComboFix</span></a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/virus-removal/how-to-use-emsisoft-anti-malware-tutorial"><span>Emsisoft Anti-Malware</span></a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/virus-removal/how-to-use-malwarebytes-anti-malware-tutorial/"><span>Malwarebytes Anti-Malware</span></a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/virus-removal/how-to-use-malwarebytes-anti-rootkit/"><span>Malwarebytes' Anti-Rootkit</span></a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/virus-removal/how-to-use-superantispyware-tutorial/"><span>SUPERAntiSpyware</span></a></li> </ul>
+<p class="rm-manual">Threat Descriptions</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/virus-removal/threat/adware/">Adware</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/virus-removal/threat/browser-extensions-and-add-ons/">Browser Extensions and Add-ons</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/virus-removal/threat/browser-hijacker/">Browser Hijacker</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/virus-removal/threat/potentially-unwanted-programs-pup/">Potentially Unwanted Programs (PUP)</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/virus-removal/threat/ransomware/">Ransomware</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/virus-removal/threat/rogue-programs-scareware/">Rogue Programs &amp; Scareware</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/virus-removal/threat/rootkits/">Rootkits</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/virus-removal/threat/spyware/">Spyware</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/virus-removal/threat/tech-support-scams/">Tech Support Scams</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/virus-removal/threat/trojan-horses/">Trojan Horses</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/virus-removal/threat/unwanted-browser-advertisements/">Unwanted Browser Advertisements</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/virus-removal/threat/worms/">Worms</a></li> </ul>
+<h5 class="rm-manual">Newsletter Sign Up</h5>
+<h5 class="rm-manual">Main Sections</h5>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/">News</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/download/">Downloads</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/virus-removal/">Virus Removal Guides</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/tutorials/">Tutorials</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/startups/">Startup Database</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/uninstall/">Uninstall Database</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/filedb/">File Database</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/glossary/">Glossary</a></li> </ul>
+<h5 class="rm-manual">Community</h5>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/forums/">Forums</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/forum-rules/">Forum Rules</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/forums/t/730914/the-bleepingcomputer-official-discord-chat-server-come-join-the-fun/">Chat</a></li> </ul>
+<h5 class="rm-manual">Useful Resources</h5>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/welcome-guide/">Welcome Guide</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/sitemap/">Sitemap</a></li> </ul>
+<h5 class="rm-manual">Company</h5>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/about/">About BleepingComputer</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/contact/">Contact Us</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/news-tip/">Send us a Tip!</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/advertise/">Advertising</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/write-for-bleepingcomputer/">Write for BleepingComputer</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/rss-feeds/">Social &amp; Feeds</a></li> <li class="rm-manual"><a href="https://www.bleepingcomputer.com/changelog/">Changelog</a></li> </ul>
+<p class="rm-manual"><a href="https://www.bleepingcomputer.com/terms-of-use/">Terms of Use</a> - <a href="https://www.bleepingcomputer.com/privacy/"> Privacy Policy</a> - <a href="https://www.bleepingcomputer.com/ethics-statement/">Ethics Statement</a></p>
+<p class="rm-manual">Copyright @ 2003 - 2021 <a href="https://www.bleepingcomputer.com/"> Bleeping Computer® LLC </a> - All Rights Reserved</p>
+<h4 class="rm-manual">Login</h4>
+<p class="rm-manual"> Username </p>
+<p class="rm-manual"> Password </p>
+<p class="rm-manual"> Remember Me </p>
+<p class="rm-manual"> Sign in anonymously </p>
+<p class="rm-manual"> <a href="https://www.bleepingcomputer.com/forums/index.php?app=core&amp;module=global&amp;section=login&amp;serviceClick=twitter&amp;return=https://www.bleepingcomputer.com/virus-removal/how-to-remove-the-pblock-adware-extension"> Sign in with Twitter</a> </p>
+<p class="rm-manual">Not a member yet? <a href="https://www.bleepingcomputer.com/forums/index.php?app=core&amp;module=global&amp;section=register">Register Now</a></p></article>
+</body></html>

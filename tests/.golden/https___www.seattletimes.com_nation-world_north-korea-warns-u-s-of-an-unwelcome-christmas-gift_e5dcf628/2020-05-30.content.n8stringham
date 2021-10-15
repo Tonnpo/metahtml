@@ -1,0 +1,147 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> North Korea warns U.S. of an unwelcome ‘Christmas gift’ | The Seattle Times </p>
+<p class="rm-manual"><a href="#content">Skip to content</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.seattletimes.com/tag/coronavirus/">Coronavirus</a></li> <li class="rm-manual">
+<a href="file:///seattle-news/">Local News</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///seattle-news/transportation/">Traffic Lab</a></li> <li class="rm-manual"><a href="file:///seattle-news/crime/">Crime</a></li> <li class="rm-manual"><a href="file:///seattle-news/politics/">Local Politics</a></li> <li class="rm-manual"><a href="file:///seattle-news/education/">Education</a></li> <li class="rm-manual"><a href="file:///education-lab/">Education Lab</a></li> <li class="rm-manual"><a href="file:///seattle-news/eastside/">Eastside</a></li> <li class="rm-manual"><a href="file:///seattle-news/health/">Health</a></li> <li class="rm-manual"><a href="file:///seattle-news/data/">Data</a></li> <li class="rm-manual"><a href="file:///seattle-news/homeless/">Project Homeless</a></li> <li class="rm-manual"><a href="file:///seattle-news/times-watchdog/">Times Watchdog</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///business/">Business &amp; Tech</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///business/boeing-aerospace/">Boeing &amp; Aerospace</a></li> <li class="rm-manual"><a href="file:///business/amazon/">Amazon</a></li> <li class="rm-manual"><a href="file:///business/microsoft/">Microsoft</a></li> <li class="rm-manual"><a href="file:///business/technology/">Technology</a></li> <li class="rm-manual"><a href="file:///business/real-estate/">Real Estate</a></li> <li class="rm-manual"><a href="file:///business/economy/">Economy</a></li> <li class="rm-manual"><a href="file:///tag/artificial-intelligence/">Artificial Intelligence</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///nation-world/">Nation &amp; World</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///nation-world/nation-politics/">Nation &amp; World Politics</a></li> <li class="rm-manual"><a href="file:///nation-world/oddities/">Oddities</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///sports/">Sports</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///sports/seahawks/">Seahawks</a></li> <li class="rm-manual"><a href="file:///sports/uw-huskies/">Huskies</a></li> <li class="rm-manual"><a href="file:///sports/wsu-cougars/">Cougars</a></li> <li class="rm-manual"><a href="file:///sports/mariners/">Mariners</a></li> <li class="rm-manual"><a href="file:///sports/sounders/">Sounders</a></li> <li class="rm-manual"><a href="file:///sports/storm/">Storm</a></li> <li class="rm-manual"><a href="file:///sports/high-school/">High School Sports</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/sports/hockey/">Hockey</a></li> <li class="rm-manual"><a href="file:///sports/sports-on-tv-radio-2/">On TV/Radio</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///entertainment/">Entertainment</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///entertainment/movies/">Movies</a></li> <li class="rm-manual"><a href="file:///entertainment/books/">Books</a></li> <li class="rm-manual"><a href="file:///entertainment/music/">Music</a></li> <li class="rm-manual"><a href="file:///entertainment/theater/">Theater</a></li> <li class="rm-manual"><a href="file:///entertainment/classical-music/">Classical Music</a></li> <li class="rm-manual"><a href="file:///entertainment/tv/">TV/Streaming</a></li> <li class="rm-manual"><a href="file:///entertainment/comics/">Comics</a></li> <li class="rm-manual"><a href="file:///entertainment/games/">Games &amp; Puzzles</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/horoscopes/">Horoscopes</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///life/">Life</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///life/food-drink/">Food &amp; Drink</a></li> <li class="rm-manual"><a href="file:///life/travel/">Travel &amp; Outdoors</a></li> <li class="rm-manual"><a href="file:///life/wellness/">Wellness</a></li> <li class="rm-manual"><a href="file:///life/pets/">Pets</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/category/rant-and-rave/">Rant &amp; Rave</a></li> </ul> </li> <li class="rm-manual"><a href="file:///pacific-nw-magazine/">Pacific NW Magazine</a></li> <li class="rm-manual"><a href="file:///homes-real-estate">Homes &amp; Real Estate</a></li> <li class="rm-manual">
+<a href="file:///opinion/">Opinion</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///opinion/editorials/">Editorials</a></li> <li class="rm-manual"><a href="file:///opinion/letters-to-the-editor/">Letters to the Editor</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/author/david-horsey/">David Horsey</a></li> <li class="rm-manual"><a href="file:///tag/free-press/">Free Press</a></li> </ul> </li> <li class="rm-manual"><a href="file:///video/">Video</a></li> <li class="rm-manual"><a href="file:///photo-video/">Photography</a></li> <li class="rm-manual">
+<a href="http://www.legacy.com/obituaries/seattletimes/#_ga=1.72389267.1837675783.1379017650">Obituaries</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///obituaries/">News Obituaries</a></li> <li class="rm-manual"><a href="http://www.legacy.com/obituaries/seattletimes/#_ga=1.15101558.1560921668.1447363166">Paid Obituaries</a></li> </ul> </li> <li class="rm-manual"><a href="http://seattletimes.com/newsletters/">Newsletters</a></li> <li class="rm-manual"><a href="https://secure.seattletimes.com/accountcenter/replica">Print Replica</a></li> <li class="rm-manual"><a href="http://www.seattletimes.com/tag/inside-the-times/">Inside The Times</a></li> <li class="rm-manual"><a href="file:///explore/">Explore</a></li> <li class="rm-manual"><a href="http://jobs.seattletimes.com/">Jobs</a></li> <li class="rm-manual"><a href="http://autos.seattletimes.com/">Autos</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://secure.seattletimes.com/accountcenter/">Log In</a></li> <li class="rm-manual"><a href="file:///subscribe/signup-offers?subsource=voluntary">Subscribe</a></li> </ul>
+<p class="rm-manual"> <a href="file:///nation-world/">Nation &amp; World</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.seattletimes.com/tag/coronavirus/">Coronavirus</a></li> <li class="rm-manual"><a href="file:///seattle-news/">Local</a></li> <li class="rm-manual"><a href="file:///business/">Biz</a></li> <li class="rm-manual"><a href="file:///sports/">Sports</a></li> <li class="rm-manual"><a href="file:///entertainment/">Entertainment</a></li> <li class="rm-manual"><a href="file:///life/">Life</a></li> <li class="rm-manual"><a href="file:///homes-real-estate/">Homes</a></li> <li class="rm-manual"><a href="file:///opinion/">Opinion</a></li> <li class="rm-manual"><a>|</a></li> <li class="rm-manual"><a href="http://jobs.seattletimes.com/">Jobs</a></li> <li class="rm-manual"><a href="http://autos.seattletimes.com/">Autos</a></li> <li class="rm-manual"><a href="file:///explore/">Explore</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///nation-world/nation/">Nation</a></li> <li class="rm-manual"><a href="file:///nation-world/world/">World</a></li> <li class="rm-manual"><a href="file:///nation-world/nation-politics/">Nation &amp; World Politics</a></li> <li class="rm-manual"><a href="file:///nation-world/oddities/">Oddities</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="file:///seattle-news/">Local</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///tag/coronavirus/">Coronavirus</a></li> <li class="rm-manual"><a href="file:///seattle-news/transportation/">Traffic Lab</a></li> <li class="rm-manual"><a href="file:///seattle-news/homeless/">Project Homeless</a></li> <li class="rm-manual"><a href="file:///seattle-news/crime/">Crime</a></li> <li class="rm-manual"><a href="file:///seattle-news/politics/">Local Politics</a></li> <li class="rm-manual"><a href="file:///seattle-news/education/">Education</a></li> <li class="rm-manual"><a href="file:///education-lab/">Education Lab</a></li> <li class="rm-manual"><a href="file:///seattle-news/eastside/">Eastside</a></li> <li class="rm-manual"><a href="file:///seattle-news/northwest/">Northwest</a></li> <li class="rm-manual"><a href="file:///seattle-news/data/">Data</a></li> <li class="rm-manual"><a href="file:///seattle-news/health/">Health</a></li> <li class="rm-manual"><a href="file:///seattle-news/times-watchdog/">Times Watchdog</a></li> <li class="rm-manual"><a href="http://www.seattletimes.com/tag/inside-the-times/">Inside The Times</a></li> <li class="rm-manual"><a href="file:///obituaries/">News Obituaries</a></li> <li class="rm-manual"><a href="file:///photo-video/">Photo &amp; Video</a></li> <li class="rm-manual"><a href="file:///nation-world/">Nation &amp; World</a></li> <li class="rm-manual"><a href="file:///nation-world/nation-politics/">Politics</a></li> <li class="rm-manual"><a href="file:///nation-world/oddities/">Oddities</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///business/">Business</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///business/boeing-aerospace/">Boeing</a></li> <li class="rm-manual"><a href="file:///business/amazon/">Amazon</a></li> <li class="rm-manual"><a href="file:///tag/artificial-intelligence/">Artificial Intelligence</a></li> <li class="rm-manual"><a href="file:///business/microsoft/">Microsoft</a></li> <li class="rm-manual"><a href="file:///business/technology/">Technology</a></li> <li class="rm-manual"><a href="file:///business/economy/">Economy</a></li> <li class="rm-manual"><a href="file:///business/real-estate/">Real Estate</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///sports/">Sports</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///sports/seahawks/">Seahawks</a></li> <li class="rm-manual"><a href="file:///sports/uw-huskies/">Huskies</a></li> <li class="rm-manual"><a href="file:///sports/wsu-cougars/">Cougars</a></li> <li class="rm-manual"><a href="file:///sports/high-school/">High Schools</a></li> <li class="rm-manual"><a href="file:///sports/mariners/">Mariners</a></li> <li class="rm-manual"><a href="file:///sports/sounders/">Sounders</a></li> <li class="rm-manual"><a href="file:///sports/snow-sports/">Snow Sports</a></li> <li class="rm-manual"><a href="file:///author/geoff-baker">Geoff Baker</a></li> <li class="rm-manual"><a href="file:///author/matt-calkins">Matt Calkins</a></li> <li class="rm-manual"><a href="file:///author/larry-stone">Larry Stone</a></li> <li class="rm-manual"><a href="file:///author/bob-condotta">Bob Condotta</a></li> <li class="rm-manual"><a href="file:///sports/sports-on-tv-radio-2/">On TV/Radio</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///entertainment/">Entertainment</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///entertainment/movies/">Movies</a></li> <li class="rm-manual"><a href="file:///entertainment/books/">Books</a></li> <li class="rm-manual"><a href="file:///entertainment/music/">Music</a></li> <li class="rm-manual"><a href="file:///entertainment/theater/">Theater</a></li> <li class="rm-manual"><a href="file:///entertainment/classical-music/">Classical Music</a></li> <li class="rm-manual"><a href="file:///entertainment/tv/">TV/Streaming</a></li> <li class="rm-manual"><a href="file:///entertainment/comics/">Comics</a></li> <li class="rm-manual"><a href="file:///entertainment/games/">Games &amp; Puzzles</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/horoscopes/">Horoscopes</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///life/">Life</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///pacific-nw-magazine/">Pacific NW Magazine</a></li> <li class="rm-manual"><a href="file:///life/food-drink/">Food &amp; Drink</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/category/seattle-happy-hours/">Happy Hour</a></li> <li class="rm-manual"><a href="file:///life/wellness/">Wellness</a></li> <li class="rm-manual"><a href="file:///life/home-decor/">Home &amp; Decor</a></li> <li class="rm-manual"><a href="file:///life/pets/">Pets</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/category/rant-and-rave/">Rant &amp; Rave</a></li> <li class="rm-manual"><a href="file:///author/bethany-jean-clement">Bethany Jean Clement</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///life/travel/">Travel</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///life/outdoors/">Outdoors</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/category/northwest-hikes/">Northwest Hikes</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/category/travel-in-washington-state/">Washington</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/category/travel-to-oregon/">Oregon</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/category/travel-to-british-columbia/">B.C.</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/category/travel-to-hawaii/">Hawaii</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///opinion/">Opinion</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///opinion/editorials/">Editorials</a></li> <li class="rm-manual"><a href="file:///opinion/letters-to-the-editor/">Letters</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/category/op-eds/">Op-Eds</a></li> <li class="rm-manual"><a href="file:///author/david-horsey/">David Horsey</a></li> <li class="rm-manual"><a href="file:///author/kate-riley/">Kate Riley</a></li> <li class="rm-manual"><a href="file:///author/mark-higgins/">Mark Higgins</a></li> <li class="rm-manual"><a href="file:///author/brier-dudley/">Brier Dudley</a></li> <li class="rm-manual"><a href="file:///author/jennifer-hemmingsen/">Jennifer Hemmingsen</a></li> <li class="rm-manual"><a href="file:///author/derrick-nunnally/">Derrick Nunnally</a></li> <li class="rm-manual"><a href="file:///author/dean-miller/">Dean Miller</a></li> <li class="rm-manual"><a href="file:///tag/free-press/">Free Press</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///newsroom-staff/#news-columnists">Columnists</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///author/gene-balk-fyi-guy">FYI Guy</a></li> <li class="rm-manual"><a href="file:///author/gabriel-campanario-seattle-sketcher/">Seattle Sketcher</a></li> <li class="rm-manual"><a href="file:///author/danny-westneat/">Danny Westneat</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/author/naomi-ishisaka/">Naomi Ishisaka</a></li> <li class="rm-manual"><a href="file:///author/jon-talton/">Jon Talton</a></li> </ul> </li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="http://jobs.seattletimes.com/">Jobs</a></li> <li class="rm-manual"><a href="http://autos.seattletimes.com/">Autos</a></li> <li class="rm-manual"><a href="file:///explore/nwhomes/">Homes Listings</a></li> <li class="rm-manual"><a href="http://classifieds.seattletimes.com/">Classifieds</a></li> <li class="rm-manual"><a href="http://www.legacy.com/obituaries/seattletimes/#_ga=1.6704882.1560921668.1447363166">Paid Obituaries</a></li> <li class="rm-manual"><a href="file:///explore/">Explore</a></li> <li class="rm-manual"><a href="file:///sponsored/">Sponsored Posts</a></li> <li class="rm-manual"><a href="file:///explore/shop-northwest/">ShopNW</a></li> <li class="rm-manual"><a href="http://company.seattletimes.com/store/">Seattle Times Store</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.seattletimes.com/contact/">Contact</a></li> <li class="rm-manual"><a href="file:///help/">FAQs</a></li> <li class="rm-manual"><a href="https://secure.seattletimes.com/accountcenter/managesubscriptions">Subscriber Services</a></li> <li class="rm-manual"><a href="https://secure.seattletimes.com/accountcenter/replica">Print Replica</a></li> <li class="rm-manual"><a href="https://itunes.apple.com/us/app/seattle-times-mobile/id329502124">iOS App</a></li> <li class="rm-manual"><a href="https://play.google.com/store/apps/details?id=com.seattletimes.android.SeattleTimesMobileNews">Android App</a></li> </ul>
+<p class="rm-manual"> <span>Nation &amp; World</span> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///nation-world/nation/">Nation</a></li> <li class="rm-manual"><a href="file:///nation-world/world/">World</a></li> <li class="rm-manual"><a href="file:///nation-world/nation-politics/">Nation &amp; World Politics</a></li> <li class="rm-manual"><a href="file:///nation-world/oddities/">Oddities</a></li> </ul>
+<p class="rm-manual"> <a href="file:///nation-world/">Nation &amp; World</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://secure.seattletimes.com/accountcenter/">Log In</a></li> <li class="rm-manual"><a href="file:///subscribe/signup-offers?subsource=voluntary">Subscribe</a></li> </ul>
+<p class="rm-manual"> <a href="https://www.seattletimes.com/seattle-news/protest-updates-as-the-country-reacts-to-the-death-of-george-floyd-follow-the-latest-developments-in-seattle-and-elsewhere/?utm_medium=notification&amp;utm_source=pushly&amp;utm_campaign=552950#update-12812160"> </a></p><p class="rm-manual"><a href="https://www.seattletimes.com/seattle-news/protest-updates-as-the-country-reacts-to-the-death-of-george-floyd-follow-the-latest-developments-in-seattle-and-elsewhere/?utm_medium=notification&amp;utm_source=pushly&amp;utm_campaign=552950#update-12812160">BREAKING NEWS</a></p><a href="https://www.seattletimes.com/seattle-news/protest-updates-as-the-country-reacts-to-the-death-of-george-floyd-follow-the-latest-developments-in-seattle-and-elsewhere/?utm_medium=notification&amp;utm_source=pushly&amp;utm_campaign=552950#update-12812160"> Curfew in Seattle starting at 5 p.m. Saturday and Sunday in response to downtown protests </a> <p class="rm-manual"></p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///nation-world/" rel="tag">Nation &amp; World</a></li>
+<li class="rm-manual"><a href="file:///nation-world/world/" rel="tag">World</a></li> </ul>
+<h1 class="rm-manual"> North Korea warns U.S. of an unwelcome ‘Christmas gift’ </h1>
+<p class="rm-manual"> Dec. 3, 2019 at 3:08 am Updated Dec. 3, 2019 at 11:45 am </p>
+<figcaption class="rm-manual"><span>President Donald Trump meets with 
+North Korean leader Kim Jong Un on June 30, 2019, at the border village 
+of Panmunjom in the Demilitarized Zone, South Korea. It marked the first
+ time a sitting U.S. president had set foot on North Korean soil. (Susan
+ Walsh / The Associated Press)</span></figcaption><p class="rm-manual"> <span>By </span> </p>
+<p class="rm-manual"> <a href="file:///author/cap-simon-denyer/" rel="author"><span>Simon Denyer</span></a> </p>
+<p class="rm-manual"><span>The Washington Post</span></p>
+<p>TOKYO – North Korea said on Tuesday that dialogue with the United 
+States had been nothing but a “foolish trick” and warned Washington it 
+could be on the receiving of an unwelcome Christmas gift.</p>
+<p>The North Korean regime has given the United States until the end of 
+the year to drop its “hostile policy,” come up with a new approach to 
+talks and offer concessions in return for its decision to end nuclear 
+and intercontinental ballistic missile (ICBM) tests in 2018.</p>
+<p>But a recent decision by the United States to postpone a joint air drill with South Korea clearly hasn’t satisfied Pyongyang.</p>
+<p>Ri Thae Song, vice foreign minister in charge of U.S. affairs, 
+accused Washington of trying to buy time by calling for a “sustained and
+ substantial dialogue,” but he rejected this approach.</p>
+<p>“The dialogue touted by the U.S. is, in essence, nothing but a 
+foolish trick hatched to keep the DPRK bound to dialogue and use it in 
+favor of the political situation and election in the U.S.,” he said, 
+referring to his country by its official name the Democratic People’s 
+Republic of Korea. “The DPRK has heard more than enough dialogue 
+rhetoric raised by the U.S. whenever it is driven into a tight corner. 
+So, no one will lend an ear to the U.S. any longer.”</p>
+<p>Ri then again reminded the United States of the fast-approaching 
+deadline, effectively repeating a veiled threat to resume long-range 
+missile tests.</p>
+<p>“The DPRK has done its utmost with maximum perseverance not to 
+backtrack from the important steps it has taken on its own initiative,” 
+he said in a statement carried by the Korean Central News Agency. “What 
+is left to be done now is the U.S. option and it is entirely up to the 
+U.S. what Christmas gift it will select to get.”</p>
+<p>North Korea has a history of timing launches with an eye on international developments and even U.S. holidays.</p>
+<p>Last week, North Korea chose Thanksgiving Day to launch two 
+projectiles from what it called a “super large multiple-rocket 
+launcher,” marking the 14th test of short-range rockets or missiles it 
+has undertaken this year.</p>
+<p>On July 4, 2017, North Korea conducted its first ICBM test, the 
+Hwasong-14, with leader Kim Jong Un describing it as a “gift package” 
+for the Americans on their Independence Day.</p>
+<p>North Korea has also dialed up the military threats in recent months,
+ suggesting it may soon launch a ballistic missile in the direction of 
+Japan.</p>
+<p>When Japan’s Prime Minister Shinzo Abe described last week’s launch 
+as a threat to the region and the world, but described the projectiles 
+as ballistic missiles, North Korea responded by calling him the worst 
+idiot in the world and the most stupid man in history.</p>
+<p>“Abe may see what a real ballistic missile is in the not distant 
+future and under his nose,” KCNA said Saturday. “Abe is none other than a
+ perfect imbecile and a political dwarf.”</p>
+<p class="rm-manual">– – –</p>
+<p class="rm-manual">The Washington Post’s Min Joo Kim in Seoul contributed to this report.</p>
+<p class="rm-manual">This story was originally published at washingtonpost.com. <a href="http://www.washingtonpost.com/world/north-korea-warns-united-states-of-an-unwelcome-christmas-gift/2019/12/03/ad406634-1599-11ea-80d6-d0ca7007273f_story.html">Read it here.</a></p>
+<p class="rm-manual">The Seattle Times does not append comment threads 
+to stories from wire services such as the Associated Press, The New York
+ Times, The Washington Post or Bloomberg News. Rather, we focus on 
+discussions related to local stories by our own staff. You can read more
+ about our <a href="https://www.seattletimes.com/help/#commenting-on-articles-on-seattletimes-com">community policies here</a>.</p>
+<ul class="rm-manual"> <li class="rm-manual">
+<a href="https://www.seattletimes.com/type/link/">Contact</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.seattletimes.com/newsroom-staff/">Newsroom Staff List</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/help/">FAQ</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/contact/">Contact Form</a></li> </ul> </li> <li class="rm-manual">
+<a href="http://company.seattletimes.com/who-we-are/">About the Company</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://srw.seattletimes.com/">Seattle Restaurant Week</a></li> <li class="rm-manual"><a href="http://nie.seattletimes.com/">Newspapers in Education</a></li> <li class="rm-manual"><a href="http://ffn.seattletimes.com/">Fund for the Needy</a></li> <li class="rm-manual"><a href="http://company.seattletimes.com/careers/">Employment</a></li> <li class="rm-manual"><a href="http://nl.newsbank.com/nl-search/we/Archives/?p_product=HA-SE&amp;p_theme=histpaper&amp;p_action=keyword">Newspaper Archive</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/pulitzers/">Pulitzers</a></li> <li class="rm-manual"><a href="http://company.seattletimes.com/contact-us/">Company Information</a></li> <li class="rm-manual"><a href="https://stux.wufoo.com/forms/permissions-and-licensing-request/">Permissions</a></li> <li class="rm-manual"><a href="http://company.seattletimes.com/store/">Seattle Times Store</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://www.seattletimes.com/type/link/">Advertise</a> <ul class="rm-manual"> <li class="rm-manual"><a href="http://classifieds.seattletimes.com/">Classifieds</a></li> <li class="rm-manual"><a href="http://autos.seattletimes.com/">Autos</a></li> <li class="rm-manual"><a href="http://homes.seattletimes.com/postlisting.html">Homes</a></li> <li class="rm-manual"><a href="http://services.nwsource.com/ClassifiedWeb/ObituaryNotice.aspx">Obituary</a></li> <li class="rm-manual"><a href="http://jobs.seattletimes.com/employer-home">Jobs</a></li> <li class="rm-manual"><a href="http://mediakit.seattletimes.com/">Media Kit</a></li> <li class="rm-manual"><a href="http://mediakit.seattletimes.com/">Advertise with Us</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://www.seattletimes.com/type/link/">My Account</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///subscribe/signup-offers/?subsource=voluntary">Subscribe</a></li> <li class="rm-manual"><a href="https://secure.seattletimes.com/accountcenter/linksubscription">Activate Account</a></li> <li class="rm-manual"><a href="https://secure.seattletimes.com/accountcenter/managesubscriptions">Manage Subscription</a></li> <li class="rm-manual"><a href="https://secure.seattletimes.com/accountcenter/deliveryholds">Place Temporary Hold</a></li> <li class="rm-manual"><a href="https://secure.seattletimes.com/accountcenter/reportdeliveryissue">Report Delivery Issue</a></li> <li class="rm-manual"><a href="https://secure.seattletimes.com/accountcenter/paymybill">Make a Payment</a></li> <li class="rm-manual"><a href="https://secure.seattletimes.com/accountcenter/replica">Print Replica</a></li> </ul> </li> <li class="rm-manual"><a href="https://secure.seattletimes.com/accountcenter/replica">Today’s Front Page</a></li> <li class="rm-manual"><a href="https://www.facebook.com/seattletimes">Facebook</a></li> <li class="rm-manual"><a href="https://twitter.com/seattletimes">Twitter</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.seattletimes.com/rss-feeds/">RSS Feeds</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/newsletters/">Newsletters</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/mobile-apps/">Mobile Apps</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/inside-the-times/listen-to-the-seattle-times-on-smart-speakers-and-podcast-apps/">Audio &amp; Voice</a></li> <li class="rm-manual"><a href="file:///subscribe/signup/">Subscribe</a></li> </ul>
+<section class="rm-manual"> <a href="https://company.seattletimes.com/notices/notice3.html">Copyright © 2020 The Seattle Times</a> | <a href="https://company.seattletimes.com/notices/notice2.html">Privacy statement</a> | <a href="https://company.seattletimes.com/notices/notice1.html">Terms of service</a> </section></article>
+</body></html>

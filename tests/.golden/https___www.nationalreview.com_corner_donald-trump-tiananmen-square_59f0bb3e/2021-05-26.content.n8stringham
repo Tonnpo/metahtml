@@ -1,0 +1,138 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h4 class="rm-manual"> <a href="file:///corner/">The Corner</a> </h4>
+<h1 class="rm-manual"> ‘The Chinese Government Almost Blew It’ </h1>
+<p class="rm-manual"> By <a href="https://www.nationalreview.com/author/jay-nordlinger/" rel="author">Jay Nordlinger</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.nationalreview.com/author/jay-nordlinger/"> About Jay Nordlinger </a> </li> <li class="rm-manual"> <a href="https://twitter.com/jaynordlinger"> Follow Jay Nordlinger on Twitter </a> </li> </ul>
+<p class="rm-manual"> February 27, 2016 10:33 PM </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.nationalreview.com%2Fcorner%2Fdonald-trump-tiananmen-square%2F"> <span> <span>Share on Facebook</span> </span> </a> </li> <li class="rm-manual"> <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.nationalreview.com%2Fcorner%2Fdonald-trump-tiananmen-square%2F&amp;text=%E2%80%98The%20Chinese%20Government%20Almost%20Blew%20It%E2%80%99"> <span> <span>Share on Twitter</span> </span> </a> </li> <li class="rm-manual"> <a href="https://share.flipboard.com/bookmarklet/popout?v=2&amp;title=%E2%80%98The%20Chinese%20Government%20Almost%20Blew%20It%E2%80%99&amp;url=https%3A%2F%2Fwww.nationalreview.com%2Fcorner%2Fdonald-trump-tiananmen-square%2F&amp;utm_campaign=tools&amp;utm_medium=article-share&amp;utm_source=https://www.nationalreview.com/"> <span> <span>Share on Flipboard</span> </span> </a> </li> <li class="rm-manual"> <a href="mailto:?body=%E2%80%98The%20Chinese%20Government%20Almost%20Blew%20It%E2%80%99%20https://www.nationalreview.com/corner/donald-trump-tiananmen-square/"> <span> <span>Email this article</span> </span> </a> </li> <li class="rm-manual"> <a href=""> <span> <span>Print this article</span> </span> </a> </li> </ul>
+<p><span>In Thursday night’s debate, Donald Trump put in a word for Saddam Hussein and </span>Moammar Qaddafi<span>,
+ in a way. He said that, if those two were still in power, “instead of 
+having terrorism all over the place, we’d be — at least they killed 
+terrorists, all right?”</span></p>
+<p>The fact is, they were terrorists. And funders and shelterers of 
+other terrorists. (Abu Nidal, for one, in Saddam Hussein’s case.)</p>
+<p>An interview that Trump gave to Playboy in 1990 has just <a href="http://www.ijreview.com/2016/01/513180-trumps-comment-about-chinese-government-at-tianenman-square-shows-hes-strongman-america-needs/">come to my attention</a>.
+ If I’m the last to know about it, forgive me. Trump was asked about 
+Gorbachev — who was nearing the end of his time in power. Trump said, 
+“Russia is out of control and the leadership knows it. That’s my problem
+ with Gorbachev. Not a firm enough hand.”</p>
+<p>His interviewer asked, “You mean firm hand as in China?”</p>
+<p>Trump answered, “When the students poured into Tiananmen Square, the 
+Chinese government almost blew it. Then they were vicious, they were 
+horrible, but they put it down with strength. That shows you the power 
+of strength. Our country is right now perceived as weak … as being spit 
+on by the rest of the world –”</p>
+<p>Trump’s admiration of Putin is no surprise, in light of this. We 
+conservatives like to mock Thomas L. Friedman for his occasional 
+favorable words about the regime in Beijing — his longing for a bit of 
+that here, to accomplish things without the snags of democracy.</p>
+<p>We already have one party that has substantially turned its back on 
+freedom, democracy, and human rights — the Democratic party, in the 
+post-McGovern age. The Republican party looks ready to fall, too.</p>
+<p>Chouette.</p>
+<p>(<a href="http://www.nationalreview.com/corner/421947/ted-cruz-jay-nordlinger">Disclosure</a>.)</p>
+<p>P.S. I wish the Chinese government had blown it. I wish the 1989 
+uprising had led to the toppling of that cruel, murderous, despicable 
+regime.</p>
+<p>P.P.S. A couple of months ago, it was pointed out to Trump that Putin
+ kills journalists who displease him. Trump answered, “I think our 
+country does plenty of killing also.” This is exactly the moral 
+equivalence I learned from the Left, when I was growing up. I rejected 
+it. Because it’s an abominable lie.</p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.nationalreview.com%2Fcorner%2Fdonald-trump-tiananmen-square%2F"> <span> <span>Share on Facebook</span> </span> </a> </li> <li class="rm-manual"> <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.nationalreview.com%2Fcorner%2Fdonald-trump-tiananmen-square%2F&amp;text=%E2%80%98The%20Chinese%20Government%20Almost%20Blew%20It%E2%80%99"> <span> <span>Share on Twitter</span> </span> </a> </li> <li class="rm-manual"> <a href="https://share.flipboard.com/bookmarklet/popout?v=2&amp;title=%E2%80%98The%20Chinese%20Government%20Almost%20Blew%20It%E2%80%99&amp;url=https%3A%2F%2Fwww.nationalreview.com%2Fcorner%2Fdonald-trump-tiananmen-square%2F&amp;utm_campaign=tools&amp;utm_medium=article-share&amp;utm_source=https://www.nationalreview.com/"> <span> <span>Share on Flipboard</span> </span> </a> </li> <li class="rm-manual"> <a href="mailto:?body=%E2%80%98The%20Chinese%20Government%20Almost%20Blew%20It%E2%80%99%20https://www.nationalreview.com/corner/donald-trump-tiananmen-square/"> <span> <span>Email this article</span> </span> </a> </li> <li class="rm-manual"> <a href=""> <span> <span>Print this article</span> </span> </a> </li> </ul>
+<p class="rm-manual"> <a href="#"> <span>Comments</span> </a> </p>
+<h4 class="rm-manual"> <a href="https://www.nationalreview.com/corner"> return-icon <span>Return to The Corner</span> </a> </h4>
+<p class="rm-manual"> <a href="#"> <span>Comments</span> </a> </p>
+<figcaption class="rm-manual"> <a href="https://www.nationalreview.com/author/jay-nordlinger/">Jay Nordlinger</a> is a senior editor of <span>National Review</span> and a book fellow at the National Review Institute. <a href="https://www.twitter.com/jaynordlinger"> @jaynordlinger </a> </figcaption><h3 class="rm-manual"><span>Recommended</span></h3>
+<h2 class="rm-manual"> <a href="https://www.nationalreview.com/2021/05/calm-down-everyone-the-ufos-arent-aliens/?utm_source=recirc-%5BSCREENSIZE%5D&amp;utm_medium=article&amp;utm_campaign=river&amp;utm_content=native-evergreen&amp;utm_term=first">Calm Down, Everyone: The ‘UFOs’ Aren’t Aliens</a> </h2>
+<p class="rm-manual"> The videos disclosed so far all have obvious potential terrestrial explanations. </p>
+<p class="rm-manual"> <a href="https://www.nationalreview.com/author/andrew-follett/" rel="author">Andrew Follett</a> </p>
+<h2 class="rm-manual"> <a href="https://www.nationalreview.com/2021/04/is-coke-rethinking-woke/?utm_source=recirc-%5BSCREENSIZE%5D&amp;utm_medium=article&amp;utm_campaign=river&amp;utm_content=native-evergreen&amp;utm_term=second">Is Coke Rethinking Woke?</a> </h2>
+<p class="rm-manual"> Why the soft-drink giant is pulling back from its left-wing posturing. </p>
+<p class="rm-manual"> <a href="https://www.nationalreview.com/author/dan-mclaughlin/" rel="author">Dan McLaughlin</a> </p>
+<h2 class="rm-manual"> <a href="https://www.nationalreview.com/2021/05/covid-19-rewired-our-brains/?utm_source=recirc-%5BSCREENSIZE%5D&amp;utm_medium=article&amp;utm_campaign=river&amp;utm_content=native-evergreen&amp;utm_term=third">COVID-19 Rewired Our Brains</a> </h2>
+<p class="rm-manual"> It’s time for a mass deprogramming. </p>
+<p class="rm-manual"> <a href="https://www.nationalreview.com/author/michael-brendan-dougherty/" rel="author">Michael Brendan Dougherty</a> </p>
+<h2 class="rm-manual"> <a href="https://www.nationalreview.com/2021/05/the-mask-is-an-outward-sign-of-inward-things/?utm_source=recirc-%5BSCREENSIZE%5D&amp;utm_medium=article&amp;utm_campaign=river&amp;utm_content=native-evergreen&amp;utm_term=fourth">The Mask Is an Outward Sign of Inward Things</a> </h2>
+<p class="rm-manual"> This isn’t a medical question anymore; it’s a question of cultural allegiance. </p>
+<p class="rm-manual"> <a href="https://www.nationalreview.com/author/kevin-d-williamson/" rel="author">Kevin D. Williamson</a> </p>
+<h2 class="rm-manual"> <a href="https://www.nationalreview.com/2021/05/rebekah-jones-the-covid-whistleblower-who-wasnt/?utm_source=recirc-%5BSCREENSIZE%5D&amp;utm_medium=article&amp;utm_campaign=river&amp;utm_content=native-evergreen&amp;utm_term=fifth">Rebekah Jones, the COVID Whistleblower Who Wasn’t</a> </h2>
+<p class="rm-manual"> The former dashboard manager alleges a vast data conspiracy in Florida; not a word of it is true. </p>
+<p class="rm-manual"> <a href="https://www.nationalreview.com/author/charles-c-w-cooke/" rel="author">Charles C. W. Cooke</a> </p>
+<h2 class="rm-manual"> <a href="https://www.nationalreview.com/2021/05/the-democrats-have-a-kamala-harris-problem/?utm_source=recirc-%5BSCREENSIZE%5D&amp;utm_medium=article&amp;utm_campaign=river&amp;utm_content=native-evergreen&amp;utm_term=sixth">The Democrats Have a Kamala Harris Problem</a> </h2>
+<p class="rm-manual"> It seems indisputable that the Democratic Party has a real interest in Harris being more popular than she is. </p>
+<p class="rm-manual"> <a href="https://www.nationalreview.com/author/charles-c-w-cooke/" rel="author">Charles C. W. Cooke</a> </p>
+<h3 class="rm-manual"><span>The Latest</span></h3>
+<h2 class="rm-manual"> <a href="https://www.nationalreview.com/2021/05/pompeo-slams-bidens-shut-down-of-lab-leak-probe-they-havent-lifted-a-finger/?utm_source=recirc-%5BSCREENSIZE%5D&amp;utm_medium=article&amp;utm_campaign=river&amp;utm_content=native-latest&amp;utm_term=first">Pompeo Slams Biden’s Shut-Down of Lab-Leak Probe: ‘They Haven’t Lifted a Finger’</a> </h2>
+<p class="rm-manual"> EXCLUSIVE: The former secretary of state fires 
+back amid reports that the Biden State Department cut short a 
+coronavirus-origin investigation he once led. </p>
+<p class="rm-manual"> <a href="https://www.nationalreview.com/author/jimmy-quinn/" rel="author">Jimmy Quinn</a> </p>
+<h2 class="rm-manual"> <a href="https://www.nationalreview.com/news/facebook-lifts-ban-on-wuhan-lab-leak-posts-amid-renewed-debate-over-theory/?utm_source=recirc-%5BSCREENSIZE%5D&amp;utm_medium=article&amp;utm_campaign=river&amp;utm_content=native-latest&amp;utm_term=second">Facebook Lifts Ban on Wuhan Lab Leak Posts amid Renewed Debate over Theory</a> </h2>
+<p class="rm-manual"> Facebook will no longer treat online content about
+ the lab-leak theory as a qualifying misleading claim amid recent debate
+ over the virus's origins. </p>
+<p class="rm-manual"> <a href="https://www.nationalreview.com/author/caroline-downey/" rel="author">Caroline Downey</a> </p>
+<h2 class="rm-manual"> <a href="https://www.nationalreview.com/news/cuomo-dismisses-new-york-ethics-commission-as-meaningless/?utm_source=recirc-%5BSCREENSIZE%5D&amp;utm_medium=article&amp;utm_campaign=river&amp;utm_content=native-latest&amp;utm_term=third">Cuomo Dismisses New York Ethics Commission as ‘Meaningless’</a> </h2>
+<p class="rm-manual"> ‘The fundamental flaw is it can't enforce anything; it's nonbinding,’ said the governor, who created the commission in 2011. </p>
+<p class="rm-manual"> <a href="https://www.nationalreview.com/author/caroline-downey/" rel="author">Caroline Downey</a> </p>
+<h2 class="rm-manual"> <a href="https://www.nationalreview.com/news/dhs-secretary-insists-border-is-closed-defends-response-to-migrant-crisis/?utm_source=recirc-%5BSCREENSIZE%5D&amp;utm_medium=article&amp;utm_campaign=river&amp;utm_content=native-latest&amp;utm_term=fourth">DHS Secretary Insists ‘Border Is Closed,’ Defends Response to Migrant Crisis</a> </h2>
+<p class="rm-manual"> ‘It looks like you rolled out a big welcome mat 
+that says “send us your kids,” and that is criminal,’ Congressman Steven
+ Palazzo told Mayorkas. </p>
+<p class="rm-manual"> <a href="https://www.nationalreview.com/author/caroline-downey/" rel="author">Caroline Downey</a> </p>
+<h2 class="rm-manual"> <a href="https://www.nationalreview.com/news/caitlyn-jenner-trans-girls-who-transitioned-young-should-compete-in-girls-sports/?utm_source=recirc-%5BSCREENSIZE%5D&amp;utm_medium=article&amp;utm_campaign=river&amp;utm_content=native-latest&amp;utm_term=fifth">Caitlyn Jenner: Trans Girls Who Transitioned Young Should Compete in Girls’ Sports</a> </h2>
+<p class="rm-manual"> The former Olympian said earlier this month that 
+biological boys should not be allowed to compete in girls’ sports as a 
+matter of ‘fairness.’ </p>
+<p class="rm-manual"> <a href="https://www.nationalreview.com/author/brittany-bernstein/" rel="author">Brittany Bernstein</a> </p>
+<h2 class="rm-manual"> <a href="https://www.nationalreview.com/news/biden-administration-denies-gop-lawmakers-access-to-border-facility/?utm_source=recirc-%5BSCREENSIZE%5D&amp;utm_medium=article&amp;utm_campaign=river&amp;utm_content=native-latest&amp;utm_term=sixth">Biden Administration Denies GOP Lawmakers Access to Border Facility</a> </h2>
+<p class="rm-manual"> 'All I can say is, I don't know what they have to hide,' Representative Brian Babin said. </p>
+<p class="rm-manual"> <a href="https://www.nationalreview.com/author/caroline-downey/" rel="author">Caroline Downey</a> </p>
+<h3 class="rm-manual"> Top Stories </h3>
+<h3 class="rm-manual"> <a href="https://www.nationalreview.com/photos/">Photos</a> </h3>
+<figure class="rm-manual"> <a href="https://www.nationalreview.com/photos/cartoons-of-the-day-may-26-2021/?utm_source=recirc-desktop&amp;utm_medium=article&amp;utm_campaign=right-rail&amp;utm_content=photos&amp;utm_term=first"> <p class="rm-manual"> </p><p class="rm-manual"> <span>3</span> </p> <span>View Slide Show</span> <p class="rm-manual"></p> </a> </figure><p class="rm-manual"> <a href="https://www.nationalreview.com/photos/category/cartoons">Cartoons</a> </p>
+<h4 class="rm-manual"><a href="https://www.nationalreview.com/photos/cartoons-of-the-day-may-26-2021/?utm_source=recirc-desktop&amp;utm_medium=article&amp;utm_campaign=right-rail&amp;utm_content=photos&amp;utm_term=first">Cartoons of the Day: May 26, 2021</a></h4>
+<figure class="rm-manual"> <a href="https://www.nationalreview.com/photos/top-shots-interesting-images-photo-gallery-may-26-2021/?utm_source=recirc-desktop&amp;utm_medium=article&amp;utm_campaign=right-rail&amp;utm_content=photos&amp;utm_term=second"> <p class="rm-manual"> </p><p class="rm-manual"> <span>21</span> </p> <span>View Slide Show</span> <p class="rm-manual"></p> </a> </figure><p class="rm-manual"> <a href="https://www.nationalreview.com/photos/category/world">World</a> </p>
+<h4 class="rm-manual"><a href="https://www.nationalreview.com/photos/top-shots-interesting-images-photo-gallery-may-26-2021/?utm_source=recirc-desktop&amp;utm_medium=article&amp;utm_campaign=right-rail&amp;utm_content=photos&amp;utm_term=second">Top Shots</a></h4>
+<figure class="rm-manual"> <a href="https://www.nationalreview.com/photos/cartoons-of-the-day-may-25-2021/?utm_source=recirc-desktop&amp;utm_medium=article&amp;utm_campaign=right-rail&amp;utm_content=photos&amp;utm_term=third"> <p class="rm-manual"> </p><p class="rm-manual"> <span>2</span> </p> <span>View Slide Show</span> <p class="rm-manual"></p> </a> </figure><p class="rm-manual"> <a href="https://www.nationalreview.com/photos/category/cartoons">Cartoons</a> </p>
+<h4 class="rm-manual"><a href="https://www.nationalreview.com/photos/cartoons-of-the-day-may-25-2021/?utm_source=recirc-desktop&amp;utm_medium=article&amp;utm_campaign=right-rail&amp;utm_content=photos&amp;utm_term=third">Cartoons of the Day: May 25, 2021</a></h4>
+<p class="rm-manual"><a href="https://www.nationalreview.com/photos/">More In Photos</a></p>
+<h3 class="rm-manual"> Recommended Articles </h3></article>
+</body></html>

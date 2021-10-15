@@ -1,0 +1,160 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> How to register for a COVID-19 vaccine in Hua Hin - Hua Hin Today English Newspaper Info, Reports, Events and News Social Life </p>
+<p class="rm-manual"><a>Sign in</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="http://www.huahintoday.com/">Home</a></li> <li class="rm-manual">
+<a href="https://www.huahintoday.com/category/sports/">Sports</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.huahintoday.com/category/sports/athletics/">Athletics</a></li> <li class="rm-manual"><a href="https://www.huahintoday.com/category/sports/badminton/">Badminton</a></li> <li class="rm-manual"><a href="https://www.huahintoday.com/category/sports/basketball-sports/">Basketball</a></li> <li class="rm-manual"><a href="https://www.huahintoday.com/category/sports/boxing-sports/">Boxing</a></li> <li class="rm-manual"><a href="https://www.huahintoday.com/category/sports/cricket-sports/">Cricket</a></li> <li class="rm-manual"><a href="https://www.huahintoday.com/category/sports/cycling/">Cycling</a></li> <li class="rm-manual"><a href="https://www.huahintoday.com/category/sports/f1-race/">F1 Race</a></li> <li class="rm-manual"><a href="https://www.huahintoday.com/category/sports/football-sports/">Football</a></li> <li class="rm-manual"><a href="https://www.huahintoday.com/category/sports/footgolf/">Footgolf</a></li> <li class="rm-manual"><a href="https://www.huahintoday.com/category/sports/formula-1/">Formula 1</a></li> <li class="rm-manual"><a href="https://www.huahintoday.com/category/sports/golf/">Golf</a></li> <li class="rm-manual"><a href="https://www.huahintoday.com/category/sports/grand-prix/">Grand Prix</a></li> <li class="rm-manual"><a href="https://www.huahintoday.com/category/sports/kitesurfing/">Kitesurfing</a></li> <li class="rm-manual"><a href="https://www.huahintoday.com/category/sports/marathon/">Marathon</a></li> <li class="rm-manual"><a href="https://www.huahintoday.com/category/sports/motoring-sports/">Motoring</a></li> <li class="rm-manual"><a href="https://www.huahintoday.com/category/sports/rugby-sports/">Rugby</a></li> <li class="rm-manual"><a href="https://www.huahintoday.com/category/sports/swimming/">Swimming</a></li> <li class="rm-manual"><a href="https://www.huahintoday.com/category/sports/tennis/">Tennis</a></li> <li class="rm-manual"><a href="https://www.huahintoday.com/category/sports/ufc/">UFC</a></li> <li class="rm-manual"><a href="https://www.huahintoday.com/category/sports/water-sports/">Water Sports</a></li> </ul> </li> <li class="rm-manual"><a href="https://www.huahintoday.com/category/thailand-news/">Thailand News</a></li> <li class="rm-manual"><a href="https://en.laluahuahin.com/">Hotels</a></li> <li class="rm-manual">
+<a href="#">Features</a> <ul class="rm-manual"> <li class="rm-manual"><a href="http://www.huahintoday.com/category/food-wine/">Food &amp; Entertainment</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/category/golf-sports-news/">Golf &amp; Sports</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/category/motoring/">Motoring</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/category/real-estate-property/">Property News</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/category/health-news/">Spa, Health &amp; Wellness</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/category/editors-notes/">Letters to the Editor</a></li> </ul> </li> <li class="rm-manual"><a href="https://babyswimmingthailand.com/">Health &amp; Fitness</a></li> <li class="rm-manual">
+<a>More</a> <ul class="rm-manual"> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/hua_hin_hotels_resorts.php">Hotels</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/dining_in_hua_hin.php">Restaurants</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/hua_hin_fitness_centres.php">Gyms and Fitness Centres</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/calendar/">Calendar</a></li> <li class="rm-manual"><a href="https://www.huahintoday.com/events/">Events</a></li> <li class="rm-manual"><a href="https://www.huahintoday.com/classifieds/">Classifields</a></li> <li class="rm-manual"><a href="https://www.huahintoday.com/video/">Video</a></li> <li class="rm-manual"><a href="https://www.huahintoday.com/ask/">Questions &amp; Answers</a></li> </ul> </li> <li class="rm-manual"><a href="http://www.huahintoday.com/contact-us/">Contact</a></li> <li class="rm-manual"><a href="https://5ujk7.r.bh.d.sendibt3.com/mk/mr/1SDI-Z71jUqM8vUPwBIfBbVvuZQk6sRefc0j22Ro28eICqUjC9eZrGuifnlNBYvht3zleVVXwoGFkJluUXgRkCIqKKpLjgSKEqp-z_NlHNI">WEEKLY NEWSLETTER</a></li> <li class="rm-manual"><a href="https://www.huahintoday.com/2020-top-news-compilation/">2020 Top News Compilation</a></li> <li class="rm-manual"><a href="https://www.huahintoday.com/membership-page/">Subscribe</a></li> </ul>
+<p class="rm-manual">Sign in</p>
+<p class="rm-manual"><span>Welcome!</span>Log into your account</p>
+<p class="rm-manual">your username</p>
+<p class="rm-manual">your password</p>
+<p class="rm-manual"> <a href="#">Forgot your password?</a> </p>
+<p class="rm-manual">Password recovery</p>
+<p class="rm-manual">Recover your password</p>
+<p class="rm-manual">your email</p>
+<p class="rm-manual"> <span>Search</span> </p>
+<p class="rm-manual"> Saturday, May 29, 2021 </p>
+<ul class="rm-manual"><li class="rm-manual"><a href="#login-form">Sign in / Join</a></li></ul>
+<p class="rm-manual">Sign in</p>
+<p class="rm-manual">Welcome! Log into your account</p>
+<p class="rm-manual">your username</p>
+<p class="rm-manual">your password</p>
+<p class="rm-manual"><a href="#">Forgot your password? Get help</a></p>
+<p class="rm-manual">Password recovery</p>
+<p class="rm-manual">Recover your password</p>
+<p class="rm-manual">your email</p>
+<p class="rm-manual">A password will be e-mailed to you.</p>
+<p class="rm-manual"> <a href="https://www.huahintoday.com/"> <span>Hua Hin Today English Newspaper Info, Reports, Events and News Social Life</span> </a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="http://www.huahintoday.com/">Home</a></li> <li class="rm-manual">
+<a href="https://www.huahintoday.com/category/sports/">Sports</a> <ul class="rm-manual"> <li class="rm-manual">
+<p class="rm-manual"><a href="https://www.huahintoday.com/category/sports/">All</a><a href="https://www.huahintoday.com/category/sports/athletics/">Athletics</a><a href="https://www.huahintoday.com/category/sports/badminton/">Badminton</a><a href="https://www.huahintoday.com/category/sports/basketball-sports/">Basketball</a><a href="https://www.huahintoday.com/category/sports/boxing-sports/">Boxing</a><a href="https://www.huahintoday.com/category/sports/cricket-sports/">Cricket</a><a href="https://www.huahintoday.com/category/sports/cycling/">Cycling</a><a href="https://www.huahintoday.com/category/sports/f1-race/">F1 Race</a><a href="https://www.huahintoday.com/category/sports/football-sports/">Football</a><a href="https://www.huahintoday.com/category/sports/footgolf/">Footgolf</a><a href="https://www.huahintoday.com/category/sports/formula-1/">Formula 1</a><a href="https://www.huahintoday.com/category/sports/golf/">Golf</a><a href="https://www.huahintoday.com/category/sports/grand-prix/">Grand Prix</a><a href="https://www.huahintoday.com/category/sports/kitesurfing/">Kitesurfing</a><a href="https://www.huahintoday.com/category/sports/marathon/">Marathon</a><a href="https://www.huahintoday.com/category/sports/motoring-sports/">Motoring</a><a href="https://www.huahintoday.com/category/sports/rugby-sports/">Rugby</a><a href="https://www.huahintoday.com/category/sports/swimming/">Swimming</a><a href="https://www.huahintoday.com/category/sports/tennis/">Tennis</a><a href="https://www.huahintoday.com/category/sports/ufc/">UFC</a><a href="https://www.huahintoday.com/category/sports/water-sports/">Water Sports</a></p> <p class="rm-manual"> <a href="https://www.huahintoday.com/category/sports/football-sports/">Football</a> </p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.huahintoday.com/sports/football-sports/juventus-champions-league-hopes-in-jeopardy-after-late-defeat-at-atalanta/" rel="bookmark">Juventus’ Champions league hopes in jeopardy after late defeat at Atalanta</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> <a href="https://www.huahintoday.com/category/sports/">Sports</a> </p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.huahintoday.com/sports/thailand-reports-3226-new-covid-19-cases-26-more-fatalities/" rel="bookmark">Thailand reports 3,226 new COVID-19 cases, 26 more fatalities</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> <a href="https://www.huahintoday.com/category/sports/">Sports</a> </p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.huahintoday.com/sports/summer-of-changes-on-the-horizon-at-barca-and-real-madrid-after-season-of-disappointments/" rel="bookmark">Summer of changes on the horizon at Barca and Real Madrid…</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> <a href="https://www.huahintoday.com/category/sports/football-sports/">Football</a> </p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.huahintoday.com/sports/football-sports/online-abuse-premier-league-move-for-social-media-blackout-in-may/" rel="bookmark">Online abuse: Premier league move for social media blackout in May</a></h3> <p class="rm-manual"></p> </li> </ul> </li> <li class="rm-manual">
+<a href="https://www.huahintoday.com/category/thailand-news/">Thailand News</a> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <a href="https://www.huahintoday.com/category/thailand-news/">News from Thailand</a> </p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.huahintoday.com/thailand-news/most-covid-19-infections-in-thailand-in-april-were-caused-by-uk-variant/" rel="bookmark">Most COVID-19 Infections in Thailand in April Were Caused by UK…</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> <a href="https://www.huahintoday.com/category/thailand-news/">News from Thailand</a> </p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.huahintoday.com/thailand-news/dms-clears-batches-of-locally-produced-astrazeneca-vaccine/" rel="bookmark">DMS clears batches of locally produced AstraZeneca vaccine</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> <a href="https://www.huahintoday.com/category/thailand-news/">News from Thailand</a> </p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.huahintoday.com/thailand-news/kratom-is-removed-from-thailands-controlled-narcotics-list/" rel="bookmark">Kratom Is Removed from Thailand’s Controlled Narcotics List</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> <a href="https://www.huahintoday.com/category/thailand-news/">News from Thailand</a> </p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.huahintoday.com/thailand-news/covid-19-update-27-may-2021-3323-new-cases-47-more-deaths/" rel="bookmark">Covid-19 update 27 May 2021: +3,323 new cases, 47 more deaths</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> <a href="https://www.huahintoday.com/category/thailand-news/">News from Thailand</a> </p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.huahintoday.com/thailand-news/anutin-confirms-astrazeneca-jabs-to-arrive-in-june/" rel="bookmark">Anutin confirms AstraZeneca jabs to arrive in June</a></h3> <p class="rm-manual"></p> </li> </ul> </li> <li class="rm-manual"><a href="https://en.laluahuahin.com/">Hotels</a></li> <li class="rm-manual">
+<a href="#">Features</a> <ul class="rm-manual"> <li class="rm-manual"><a href="http://www.huahintoday.com/category/food-wine/">Food &amp; Entertainment</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/category/golf-sports-news/">Golf &amp; Sports</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/category/motoring/">Motoring</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/category/real-estate-property/">Property News</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/category/health-news/">Spa, Health &amp; Wellness</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/category/editors-notes/">Letters to the Editor</a></li> </ul> </li> <li class="rm-manual"><a href="https://babyswimmingthailand.com/">Health &amp; Fitness</a></li> <li class="rm-manual">
+<a>More</a> <ul class="rm-manual"> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/hua_hin_hotels_resorts.php">Hotels</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/dining_in_hua_hin.php">Restaurants</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/hua_hin_fitness_centres.php">Gyms and Fitness Centres</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/calendar/">Calendar</a></li> <li class="rm-manual"><a href="https://www.huahintoday.com/events/">Events</a></li> <li class="rm-manual"><a href="https://www.huahintoday.com/classifieds/">Classifields</a></li> <li class="rm-manual"><a href="https://www.huahintoday.com/video/">Video</a></li> <li class="rm-manual"><a href="https://www.huahintoday.com/ask/">Questions &amp; Answers</a></li> </ul> </li> <li class="rm-manual"><a href="http://www.huahintoday.com/contact-us/">Contact</a></li> <li class="rm-manual"><a href="https://5ujk7.r.bh.d.sendibt3.com/mk/mr/1SDI-Z71jUqM8vUPwBIfBbVvuZQk6sRefc0j22Ro28eICqUjC9eZrGuifnlNBYvht3zleVVXwoGFkJluUXgRkCIqKKpLjgSKEqp-z_NlHNI">WEEKLY NEWSLETTER</a></li> <li class="rm-manual"><a href="https://www.huahintoday.com/2020-top-news-compilation/">2020 Top News Compilation</a></li> <li class="rm-manual"><a href="https://www.huahintoday.com/membership-page/">Subscribe</a></li> </ul>
+<p class="rm-manual"><span><a href="https://www.huahintoday.com/">Home</a></span> <span><a href="https://www.huahintoday.com/category/hua-hin-news/">Hua Hin News</a></span> <span>How to register for a COVID-19 vaccine in Hua Hin</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.huahintoday.com/category/hua-hin-news/">Hua Hin News</a></li>
+<li class="rm-manual"><a href="https://www.huahintoday.com/category/local-news/">Local News</a></li>
+</ul>
+<h1 class="rm-manual">How to register for a COVID-19 vaccine in Hua Hin</h1>
+<p class="rm-manual">By</p>
+<p class="rm-manual"><a href="https://www.huahintoday.com/author/andrews/">Paul Andrews</a></p>
+<p class="rm-manual"> - </p>
+<p class="rm-manual"><span>May 26, 2021</span> </p>
+<p class="rm-manual"><a href="https://www.huahintoday.com/local-news/how-to-register-for-a-covid-19-vaccine-in-hua-hin/#respond">0</a></p>
+<p class="rm-manual"><span>1423</span></p>
+<figcaption class="rm-manual">file photo</figcaption><p>In response to a
+ number of emails and messages from readers confused about how they can 
+register for a COVID-19 vaccine, Hua Hin Today has been in contact with 
+local health officials in order to clarify the situation for people 
+living in Hua Hin.</p>
+<h3>Who can register for a COVID-19 vaccine?</h3>
+<p>Currently anyone over the age of 18 can register to receive the vaccine.</p>
+<p>However, priority is being given to the over 60s and sufferers of one of seven chronic health conditions.</p>
+<p>If you are over 60 you are urged to register for the vaccine as soon 
+as possible. It is likely you will be given an appointment date in early
+ July.</p>
+<p>Hua Hin Today has spoken to several expats aged over 60 who have 
+already been given appointment dates in the first week of July, all of 
+whom were given appointments within 48 hours of registering.</p>
+<h3>Where to register for a COVID-19 vaccine?</h3>
+<figcaption>The vaccination registration desks at Market Village.</figcaption><p>There are registration desks set up at both Market Village and BluPort shopping malls.</p>
+<p>At Market Village, the registration desks are located in the middle 
+of the ground floor between the Bata shoe shop on one side and Boots 
+pharmacy on the other.</p>
+<p>The desks are open from 11am to 6pm, with dedicated English speakers available between 11am and 4pm.</p>
+<p>At BluPort, the registration desks are located opposite the Coffee Club on the ground floor.</p>
+<p>You can also register at Hua Hin Hospital but it is perhaps more 
+convenient (and a bit quieter) to complete the registration at Market 
+Village or BluPort.</p>
+<h3>How to register?</h3>
+<p>To register, you will need to complete the registration form below. 
+Take along your passport, and a photocopy of the ID page. Make sure you 
+write clearly.</p>
+<p>Once you have registered, you will be contacted to confirm your vaccination appointment date.</p>
+<figcaption>The patient registration form to receive the COVID-19 vaccine in Hua Hin.</figcaption><h3>Where to get vaccinated?</h3>
+<p>This will be confirmed to you once you receive your appointment date but it will likely be at Hua Hin Hospital.</p>
+<p>It was originally announced that vaccination centres would be set up 
+at seven different locations in Hua Hin and while Hua Hin Today 
+understands these may still be set up in the future, the first phase of 
+vaccinations will likely take place at Hua Hin Hospital.</p>
+<p>If you have already been given a vaccination appointment date but are
+ unsure where you need to go to receive your jab, you are advised to 
+contact Hua Hin Hospital directly.</p>
+<p class="rm-manual"> comments</p>
+<p class="rm-manual"><a href="https://www.centarahotelsresorts.com/centaragrand/chbr/festive/">Centara Grand Beach Resort &amp; Villas Hua Hin</a></p>
+<p class="rm-manual"><span>Previous article</span><a href="https://www.huahintoday.com/hua-hin-news/nopporn-delighted-thankful-be-re-elected/">Nopporn delighted and thankful to be re-elected</a></p>
+<p class="rm-manual"><span>Next article</span><a href="https://www.huahintoday.com/thailand-news/thailand-scraps-mor-prom-vaccine-registration-app/">Thailand scraps Mor Prom vaccine registration app</a></p>
+<p class="rm-manual"><span><a href="https://www.huahintoday.com/author/andrews/">Paul Andrews</a></span></p>
+<h4 class="rm-manual">
+<a href="#">RELATED ARTICLES</a><a href="#">MORE FROM AUTHOR</a>
+</h4>
+<p class="rm-manual"> <a href="https://www.huahintoday.com/category/hua-hin-news/">Hua Hin News</a> </p>
+<h3 class="rm-manual"><a href="https://www.huahintoday.com/local-news/may-28-prachuap-khiri-khan-reports-24-new-covid-19-cases/" rel="bookmark">May 28: Prachuap Khiri Khan reports 24 new COVID-19 cases</a></h3>
+<p class="rm-manual"> <a href="https://www.huahintoday.com/category/hua-hin-news/">Hua Hin News</a> </p>
+<h3 class="rm-manual"><a href="https://www.huahintoday.com/local-news/may-27-prachuap-khiri-khan-reports-10-new-covid-19-cases/" rel="bookmark">May 27: Prachuap Khiri Khan reports 10 new COVID-19 cases</a></h3>
+<p class="rm-manual"> <a href="https://www.huahintoday.com/category/hua-hin-news/">Hua Hin News</a> </p>
+<h3 class="rm-manual"><a href="https://www.huahintoday.com/hua-hin-news/nopporn-delighted-thankful-be-re-elected/" rel="bookmark">Nopporn delighted and thankful to be re-elected</a></h3>
+<h3 class="rm-manual">LEAVE A REPLY <a rel="nofollow" href="file:///local-news/how-to-register-for-a-covid-19-vaccine-in-hua-hin/#respond">Cancel reply</a>
+</h3>
+<p class="rm-manual"><a href="#login-form">Log in to leave a comment </a></p>
+<h4 class="rm-manual"><span>Hua Hin Information</span></h4>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/banks-hua-hin.html">Banks</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/events/">Event Entertainment</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/hua-hin-elephant-rides.html">Elephant Rides</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/dining-hua-hin.html">Dining in the city</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/hua_hin_kings_cup_elephant_polo_tournament.php">King’s Cup Elephant Polo</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/hua-hin-pubs.html">Pubs and Bars, Nightlife</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/credit-card-changing-money-hua-hin.html">Credit Card &amp; Changing Money</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/hua_hin_universities.php">Universities</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_shopping/hua_hin_market_village.php">Hua Hin Market Village</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/hospitals-hua-hin.html">Hospitals and Clinics</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/traffic-hua-hin.html">Traffic and streets</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/renting-motorbike-hua-hin.html">Renting a motorbike</a></li> </ul>
+<h4 class="rm-manual"><span>7 Large Shopping Malls in Hua Hin</span></h4>
+<p class="rm-manual"> <a href="https://www.youtube.com/watch?v=jsV9U89rTio">https://www.youtube.com/watch?v=jsV9U89rTio</a></p>
+<h4 class="rm-manual"><span>Hua Hin Information</span></h4>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/hua_hin_tourism_authority_of_thailand_office.php">Tourism Authority of Thailand</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/hua-hin-transportation.html">Transportation</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/hua-hin-travel-train.html">Travel by Train</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/landline-telephone-cell-phone-systems-hua-hin.html">Landline Telephone</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/landline-telephone-cell-phone-systems-hua-hin.html">Cell Phone Systems</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/dining-hua-hin.html">Dining in the city, Restaurants</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/climate-weather-hua-hin.html">Hua Hin Weather &amp; Climate</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/insurance_in_hua_hin.php">Insurance in Hua Hin</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/hua-hin-immigration-office.html">Immigration Office and Visas</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/hua-hin-tourist-police.html">Tourist Police</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/renting-car-hua-hin.html">Renting a Car, what you need to know</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_shopping/hua_hin_local_markets.php">Local Markets</a></li> </ul>
+<h4 class="rm-manual"><span>7 Beaches close to Hua Hin City Center</span></h4>
+<p class="rm-manual"><a href="https://www.youtube.com/watch?v=sYkhbzyJOio">https://www.youtube.com/watch?v=sYkhbzyJOio</a></p>
+<h4 class="rm-manual"><span>Hua Hin Information</span></h4>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/hua-hin-watersports.html">Hua Hin Watersports</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/hua-hin-fitness-centres.html">Hua Hin Fitness Centres</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/hua-hin-hotels-resorts.html">Hua Hin Hotels and Resorts</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/police-traffic-police-hua-hin.html">Traffic police in Hua Hin</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/thailands-passports-visas.html">Thailand’s Passports &amp; Visas</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/hua-hin-cost-living.html">Cost of Living in Hua Hin</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/hua-hin-internet.html">Hua Hin Internet</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/tuk-tuks-hua-hin.html">Tuk Tuks in Hua Hin</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/motorbike-taxis-hua-hin.html">Motorbike Taxis in Hua Hin</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/education-hua-hin.html">Education in Hua Hin</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/information/e/huahin_info_general/living-hua-hin.html">Living in Hua Hin</a></li> </ul>
+<h4 class="rm-manual"><span>Top 12 Must-See Attractions in Hua Hin</span></h4>
+<p class="rm-manual"><a href="https://www.youtube.com/watch?v=QhB5hkLoHrg">https://www.youtube.com/watch?v=QhB5hkLoHrg</a></p>
+<p class="rm-manual"><span>ABOUT US</span></p>
+<p class="rm-manual">Hua Hin Today is an English newspaper reporting on events, news and social life in Hua Hin</p>
+<p class="rm-manual">Contact us: <a href="mailto:visa@huahintoday.com">visa@huahintoday.com</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="http://www.huahintoday.com/">Home</a></li> <li class="rm-manual"><a href="#">Privacy</a></li> <li class="rm-manual"><a href="#">Advertisement</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/business-directory/">Business List</a></li> <li class="rm-manual"><a href="http://www.huahintoday.com/contact-us/">Contact Us</a></li> </ul>
+<p class="rm-manual"> © Copyright 2020 Hua Hin Today Newspaper </p>
+<p class="rm-manual"> <a href="#">X</a> </p>
+<p class="rm-manual"> <a href=""> View Details </a> </p></article>
+</body></html>

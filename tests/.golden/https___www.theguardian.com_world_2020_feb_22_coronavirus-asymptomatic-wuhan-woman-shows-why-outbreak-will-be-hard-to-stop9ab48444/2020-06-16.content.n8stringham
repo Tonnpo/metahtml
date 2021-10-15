@@ -1,0 +1,270 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Coronavirus: asymptomatic Wuhan woman shows why outbreak 'will be hard to stop' | Coronavirus outbreak | The Guardian </p>
+<p class="rm-manual">US edition</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///preference/edition/us">US edition</a></li>
+<li class="rm-manual"><a href="file:///preference/edition/uk">UK edition</a></li>
+<li class="rm-manual"><a href="file:///preference/edition/au">Australian edition</a></li>
+<li class="rm-manual"><a href="file:///preference/edition/int">International edition</a></li>
+</ul>
+<p class="rm-manual"><a href="file:///"><span>The Guardian - Back to home</span></a></p>
+<p class="rm-manual"><a href="https://jobs.theguardian.com/?INTCMP=jobs_uk_web_newheader">Search jobs</a><a href="https://profile.theguardian.com/signin?INTCMP=DOTCOM_NEWHEADER_SIGNIN&amp;ABCMP=ab-sign-in"> Sign in</a><a href="https://www.google.co.uk/advanced_search?q=site:www.theguardian.com">Search</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///">News</a></li>
+<li class="rm-manual"><a href="file:///commentisfree">Opinion</a></li>
+<li class="rm-manual"><a href="file:///sport">Sport</a></li>
+<li class="rm-manual"><a href="file:///culture">Culture</a></li>
+<li class="rm-manual"><a href="file:///lifeandstyle">Lifestyle</a></li>
+</ul>
+<p class="rm-manual"><span>Show</span><span>More</span><span>Show More</span></p>
+<ul class="rm-manual">
+<li class="rm-manual">News<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///us-news">US news</a></li>
+<li class="rm-manual"><a href="file:///us-news/us-elections-2020">Elections 2020</a></li>
+<li class="rm-manual"><a href="file:///world">World news</a></li>
+<li class="rm-manual"><a href="file:///environment">Environment</a></li>
+<li class="rm-manual"><a href="file:///football">Soccer</a></li>
+<li class="rm-manual"><a href="file:///us-news/us-politics">US politics</a></li>
+<li class="rm-manual"><a href="file:///business">Business</a></li>
+<li class="rm-manual"><a href="file:///technology">Tech</a></li>
+<li class="rm-manual"><a href="file:///science">Science</a></li>
+</ul>
+</li>
+<li class="rm-manual">Opinion<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///profile/editorial">The Guardian view</a></li>
+<li class="rm-manual"><a href="file:///index/contributors">Columnists</a></li>
+<li class="rm-manual"><a href="file:///tone/letters">Letters</a></li>
+<li class="rm-manual"><a href="file:///type/video+tone/comment">Opinion videos</a></li>
+<li class="rm-manual"><a href="file:///cartoons/archive">Cartoons</a></li>
+</ul>
+</li>
+<li class="rm-manual">Sport<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///football">Soccer</a></li>
+<li class="rm-manual"><a href="file:///sport/nfl">NFL</a></li>
+<li class="rm-manual"><a href="file:///sport/tennis">Tennis</a></li>
+<li class="rm-manual"><a href="file:///sport/mlb">MLB</a></li>
+<li class="rm-manual"><a href="file:///football/mls">MLS</a></li>
+<li class="rm-manual"><a href="file:///sport/nba">NBA</a></li>
+<li class="rm-manual"><a href="file:///sport/nhl">NHL</a></li>
+</ul>
+</li>
+<li class="rm-manual">Culture<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///film">Film</a></li>
+<li class="rm-manual"><a href="file:///books">Books</a></li>
+<li class="rm-manual"><a href="file:///music">Music</a></li>
+<li class="rm-manual"><a href="file:///artanddesign">Art &amp; design</a></li>
+<li class="rm-manual"><a href="file:///tv-and-radio">TV &amp; radio</a></li>
+<li class="rm-manual"><a href="file:///stage">Stage</a></li>
+<li class="rm-manual"><a href="file:///music/classicalmusicandopera">Classical</a></li>
+<li class="rm-manual"><a href="file:///games">Games</a></li>
+</ul>
+</li>
+<li class="rm-manual">Lifestyle<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///fashion">Fashion</a></li>
+<li class="rm-manual"><a href="file:///food">Food</a></li>
+<li class="rm-manual"><a href="file:///tone/recipes">Recipes</a></li>
+<li class="rm-manual"><a href="file:///lifeandstyle/love-and-sex">Love &amp; sex</a></li>
+<li class="rm-manual"><a href="file:///lifeandstyle/home-and-garden">Home &amp; garden</a></li>
+<li class="rm-manual"><a href="file:///lifeandstyle/health-and-wellbeing">Health &amp; fitness</a></li>
+<li class="rm-manual"><a href="file:///lifeandstyle/family">Family</a></li>
+<li class="rm-manual"><a href="file:///travel">Travel</a></li>
+<li class="rm-manual"><a href="file:///money">Money</a></li>
+</ul>
+</li>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://support.theguardian.com/contribute?INTCMP=side_menu_support_contribute&amp;acquisitionData=%7B%22componentType%22:%22ACQUISITIONS_HEADER%22,%22componentId%22:%22side_menu_support_contribute%22,%22source%22:%22GUARDIAN_WEB%22%7D">Make a contribution</a></li>
+<li class="rm-manual"><a href="https://support.theguardian.com/subscribe?INTCMP=side_menu_support_subscribe&amp;acquisitionData=%7B%22componentType%22:%22ACQUISITIONS_HEADER%22,%22componentId%22:%22side_menu_support_subscribe%22,%22source%22:%22GUARDIAN_WEB%22%7D">Subscribe</a></li>
+</ul>
+<li class="rm-manual"><ul class="rm-manual">
+<li class="rm-manual"><a href="https://jobs.theguardian.com/?INTCMP=jobs_us_web_newheader_dropdown">Search jobs</a></li>
+<li class="rm-manual"><a href="https://theguardian.newspapers.com/">Digital Archive</a></li>
+<li class="rm-manual"><a href="https://discountcode.theguardian.com/">Coupons</a></li>
+<li class="rm-manual"><a href="https://puzzles.theguardian.com/download">Guardian Puzzles app</a></li>
+<li class="rm-manual"><a href="https://www.theguardian.com/mobile/2014/may/29/the-guardian-for-mobile-and-tablet">The Guardian app</a></li>
+<li class="rm-manual"><a href="file:///video">Video</a></li>
+<li class="rm-manual"><a href="file:///podcasts">Podcasts</a></li>
+<li class="rm-manual"><a href="file:///inpictures">Pictures</a></li>
+<li class="rm-manual"><a href="file:///email-newsletters">Newsletters</a></li>
+<li class="rm-manual"><a href="https://www.theguardian.com/membership">Inside the Guardian</a></li>
+<li class="rm-manual"><a href="https://www.theguardian.com/weekly?INTCMP=gdnwb_mawns_editorial_gweekly_GW_TopNav_US">Guardian Weekly</a></li>
+<li class="rm-manual"><a href="file:///crosswords">Crosswords</a></li>
+</ul></li>
+<li class="rm-manual"><ul class="rm-manual">
+<li class="rm-manual"><a href="https://jobs.theguardian.com/?INTCMP=jobs_us_web_newheader_dropdown">Search jobs</a></li>
+<li class="rm-manual"><a href="https://theguardian.newspapers.com/">Digital Archive</a></li>
+<li class="rm-manual"><a href="https://discountcode.theguardian.com/">Coupons</a></li>
+<li class="rm-manual"><a href="https://puzzles.theguardian.com/download">Guardian Puzzles app</a></li>
+</ul></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///world">World</a></li>
+<li class="rm-manual"><a href="file:///world/europe-news">Europe</a></li>
+<li class="rm-manual"><a href="file:///us-news">US</a></li>
+<li class="rm-manual"><a href="file:///world/americas">Americas</a></li>
+<li class="rm-manual"><a href="file:///world/asia">Asia</a></li>
+<li class="rm-manual"><a href="file:///australia-news">Australia</a></li>
+<li class="rm-manual"><a href="file:///world/middleeast">Middle East</a></li>
+<li class="rm-manual"><a href="file:///world/africa">Africa</a></li>
+<li class="rm-manual"><a href="file:///inequality">Inequality</a></li>
+<li class="rm-manual"><a href="file:///global-development">Global development</a></li>
+</ul>
+<p class="rm-manual"><a href="https://www.theguardian.com/world/coronavirus-outbreak"><span>Coronavirus outbreak</span></a></p>
+<p class="rm-manual"> This article is more than 3 months old</p>
+<h1 class="rm-manual">Coronavirus: asymptomatic Wuhan woman shows why outbreak 'will be hard to stop'</h1>
+<p class="rm-manual">This article is more than 3 months old</p>
+<p class="rm-manual">Case study of 20-year-old who infected relatives 
+despite not showing signs of illness – and testing negative – stokes 
+global pandemic fears</p>
+<figcaption class="rm-manual"><span>Coronavirus outbreak: a recovered virus patient is discharged from a temporary hospital at Tazihu Gymnasium in Wuhan on Friday.</span> Photograph: AP</figcaption><figcaption class="rm-manual"><span>Coronavirus outbreak: a recovered virus patient is discharged from a temporary hospital at Tazihu Gymnasium in Wuhan on Friday.</span> Photograph: AP</figcaption><p class="rm-manual"><a rel="author" href="file:///profile/martinfarrer">Martin Farrer</a> and agencies</p>
+<p class="rm-manual"><span>Published on </span>Sat 22 Feb 2020 05.20 EST</p>
+<p>A 20-year-old Chinese woman from Wuhan travelled hundreds of miles to
+ another city where she is believed to have infected five relatives 
+without showing signs of infection, scientists in China have said, 
+offering fresh evidence that the new coronavirus can be spread 
+asymptomatically.</p>
+<p>The case study, published in the Journal of the American Medical 
+Association, offered clues about how the coronavirus is spreading, and 
+suggested it might be difficult to stop.</p>
+<p>According to the study, by Dr Meiyun Wang of the People’s Hospital of
+ Zhengzhou University and colleagues, the woman travelled 400 miles 
+(650km) from Wuhan to Anyang in Henan province on 10 January and visited
+ several relatives. When they started getting sick, doctors isolated the
+ woman and tested her for coronavirus. Initially, the young woman tested
+ negative for the virus, but a follow-up test was positive.</p>
+<p>All five of her relatives developed Covid-19 pneumonia, but as of 11 
+February, the woman had still not developed any symptoms, her chest CT 
+remained normal and she had no fever, stomach or respiratory symptoms, 
+such as cough or sore throat.</p>
+<figcaption><span>A courier waits for business at a normally busy intersection in Beijing on Friday.</span> Photograph: Kevin Frayer/Getty Images</figcaption><p>Scientists in the study were careful to <a href="https://jamanetwork.com/journals/jama/fullarticle/2762028">qualify the conclusions </a>by
+ saying the evidence “suggested” the woman had infected her relatives. 
+But they nevertheless warned that if the findings were replicated, “the 
+prevention of Covid-19 infection could prove challenging”.</p>
+<p>World Health Organization officials have praised China’s lockdown of 
+millions of people as helping to buy time for the rest of the world to 
+prepare for the new virus.</p>
+<p>But as hot spots emerge around the globe, such as <a href="https://www.theguardian.com/world/2020/feb/22/coronavirus-south-korea-sees-huge-jump-cases-china-hubei-wuhan-outbreak-">South Korea</a>
+ and Iran, health officials are having difficulty finding and isolating 
+the first source of the virus – the so-called index case. This is 
+fuelling concern that the disease has begun spreading too widely for 
+tried-and-true public health steps to stamp it out.</p>
+<p>“A number of spot fires occurring around the world is a sign that 
+things are ticking along, and what we are going to have here is probably
+ a pandemic,” said Ian Mackay, who studies viruses at the University of 
+Queensland in Australia.</p>
+<p>The WHO has insisted that Covid-19 is not yet a pandemic and says 
+countries outside China do not yet need more draconian measures. But the
+ spike in cases outside China means the world could be running out of 
+time.</p>
+<p>“What we see is a very different phase of this outbreak depending 
+where you look,” said WHO’s Dr Sylvie Briand. “We see different patterns
+ of transmission in different places.”</p>
+<p>The WHO defines a global pandemic as a disease spreading on two 
+continents, though some public health experts would call an outbreak a 
+pandemic if the spread is over a wide area or across many international 
+borders.</p>
+<p>Dr William Schaffner, an infectious disease expert at Vanderbilt 
+University medical centre in Nashville, who was not involved in the 
+Zhengzhou University study, said the Wuhan woman’s case provided a 
+“natural laboratory” to study Covid-19.</p>
+<p>“Scientists have been asking if you can have this infection and not be ill? The answer is apparently, yes,” he said.</p>
+<p>“You had this patient from Wuhan where the virus is, traveling to 
+where the virus wasn’t. She remained asymptomatic and infected a bunch 
+of family members and you had a group of physicians who immediately 
+seized on the moment and tested everyone.”</p>
+<p>Key questions now, Schaffner said, are how often does this kind of 
+transmission occur and when during the asymptomatic period does a person
+ test positive for the virus.</p>
+<p class="rm-manual">Reuters and Associated Press contributed to this article.</p>
+<p class="rm-manual"><span>Topics</span></p>
+<ul class="rm-manual"><li class="rm-manual"><a href="file:///world/coronavirus-outbreak">Coronavirus outbreak</a></li></ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///world/china">China</a></li>
+<li class="rm-manual"><a href="file:///world/asia-pacific">Asia Pacific</a></li>
+<li class="rm-manual"><a href="file:///world/south-korea">South Korea</a></li>
+<li class="rm-manual"><a href="file:///world/iran">Iran</a></li>
+<li class="rm-manual"><a href="file:///science/infectiousdiseases">Infectious diseases</a></li>
+<li class="rm-manual"><a href="file:///tone/news">news</a></li>
+</ul>
+<ul class="rm-manual"><li class="rm-manual"><a href="https://syndication.theguardian.com/automation/?url=https%3A%2F%2Fwww.theguardian.com%2Fworld%2F2020%2Ffeb%2F22%2Fcoronavirus-asymptomatic-wuhan-woman-shows-why-outbreak-will-be-hard-to-stop&amp;type=article&amp;internalpagecode=world/2020/feb/22/coronavirus-asymptomatic-wuhan-woman-shows-why-outbreak-will-be-hard-to-stop"><span>Reuse this content</span></a></li></ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///world">World</a></li>
+<li class="rm-manual"><a href="file:///world/europe-news">Europe</a></li>
+<li class="rm-manual"><a href="file:///us-news">US</a></li>
+<li class="rm-manual"><a href="file:///world/americas">Americas</a></li>
+<li class="rm-manual"><a href="file:///world/asia">Asia</a></li>
+<li class="rm-manual"><a href="file:///australia-news">Australia</a></li>
+<li class="rm-manual"><a href="file:///world/middleeast">Middle East</a></li>
+<li class="rm-manual"><a href="file:///world/africa">Africa</a></li>
+<li class="rm-manual"><a href="file:///inequality">Inequality</a></li>
+<li class="rm-manual"><a href="file:///global-development">Global development</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///">News</a></li>
+<li class="rm-manual"><a href="file:///commentisfree">Opinion</a></li>
+<li class="rm-manual"><a href="file:///sport">Sport</a></li>
+<li class="rm-manual"><a href="file:///culture">Culture</a></li>
+<li class="rm-manual"><a href="file:///lifeandstyle">Lifestyle</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///info/about-guardian-us">About us</a></li>
+<li class="rm-manual"><a href="file:///info/about-guardian-us/contact">Contact us</a></li>
+<li class="rm-manual"><a href="file:///info/complaints-and-corrections">Complaints &amp; corrections</a></li>
+<li class="rm-manual"><a href="https://www.theguardian.com/securedrop">SecureDrop</a></li>
+<li class="rm-manual"><a href="https://workforus.theguardian.com/">Work for us</a></li>
+<li class="rm-manual"><a href="file:///info/privacy">Privacy policy</a></li>
+<li class="rm-manual"><a href="file:///info/cookies">Cookie policy</a></li>
+<li class="rm-manual"><a href="file:///help/terms-of-service">Terms &amp; conditions</a></li>
+<li class="rm-manual"><a href="file:///help">Help</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///index/subjects/a">All topics</a></li>
+<li class="rm-manual"><a href="file:///index/contributors">All writers</a></li>
+<li class="rm-manual"><a href="https://theguardian.newspapers.com/">Digital newspaper archive</a></li>
+<li class="rm-manual"><a href="https://www.facebook.com/theguardian">Facebook</a></li>
+<li class="rm-manual"><a href="https://twitter.com/guardian">Twitter</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://advertising.theguardian.com/us/advertising">Advertise with us</a></li>
+<li class="rm-manual"><a href="file:///guardian-labs-us">Guardian Labs</a></li>
+<li class="rm-manual"><a href="https://jobs.theguardian.com/?INTCMP=NGW_FOOTER_US_GU_JOBS">Search jobs</a></li>
+<li class="rm-manual"><a href="https://discountcode.theguardian.com/">Discount Codes</a></li>
+</ul>
+<p class="rm-manual"><a href="#top"><span>Back to top</span></a></p>
+<p class="rm-manual">© 2020 Guardian News &amp; Media Limited or its affiliated companies. All rights reserved. (beta)</p></article>
+</body></html>

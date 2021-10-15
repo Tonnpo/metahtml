@@ -1,0 +1,180 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> No new coronavirus case in Delhi in last 24 hours, says CM Arvind Kejriwal | India News | Zee News </p>
+<p class="rm-manual"> <a>LIVE TV</a> </p>
+<p class="rm-manual"> <a href="file:///hindi">हिन्दी</a> <a href="file:///marathi">मराठी</a> <a href="file:///bengali">বাংলা</a> <a href="file:///tamil">தமிழ்</a> <a href="file:///malayalam">മലയാളം</a> <a href="file:///gujarati">ગુજરાતી</a> <a href="file:///telugu">తెలుగు</a> <a href="file:///kannada">ಕನ್ನಡ</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///live-tv">Live TV</a></li> <li class="rm-manual"><a href="file:///coronavirus-news">Coronavirus</a></li> <li class="rm-manual"><a href="file:///latest-news">Latest News</a></li> <li class="rm-manual"><a href="file:///india">India</a></li> <li class="rm-manual"><a href="file:///video">Video</a></li> <li class="rm-manual"><a href="file:///state">State</a></li> <li class="rm-manual"><a href="file:///photos">Photos</a></li> <li class="rm-manual"><a href="file:///cricket">Cricket</a></li> <li class="rm-manual"><a href="file:///entertainment">Entertainment</a></li> <li class="rm-manual"><a href="file:///bhojpuri">Bhojpuri</a></li> <li class="rm-manual"><a href="file:///world">World</a></li> <li class="rm-manual"><a href="file:///business">Business</a></li> <li class="rm-manual"><a href="file:///technology">Technology</a></li> <li class="rm-manual"><a href="">. . .</a></li> </ul>
+<h2 class="rm-manual"><a href="file:///live-tv">Live TV</a></h2>
+<h2 class="rm-manual"><a href="file:///video">Videos</a></h2>
+<h2 class="rm-manual"><a href="file:///photos">Photos</a></h2>
+<h2 class="rm-manual"><a href="file:///blogs">Blogs</a></h2>
+<h2 class="rm-manual"><a href="file:///top-news">Top News</a></h2>
+<h2 class="rm-manual"><a href="file:///latest-news">Latest News</a></h2>
+<h2 class="rm-manual"><a href="file:///entertainment">Entertainment</a></h2>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///bollywood">Bollywood</a></li> <li class="rm-manual"> <a href="file:///television">Television</a> </li> <li class="rm-manual"> <a href="file:///music">Music</a> </li> <li class="rm-manual"> <a href="file:///regional">Regional</a> </li> <li class="rm-manual"> <a href="file:///movie-reviews">Movie Reviews</a> </li> <li class="rm-manual"> <a href="file:///hollywood">Hollywood</a> </li> </ul>
+<h2 class="rm-manual"><a href="file:///lifestyle">Lifestyle</a></h2>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///people">People</a></li> <li class="rm-manual"> <a href="file:///relationships">Relationships</a> </li> <li class="rm-manual"> <a href="file:///travel">Travel</a> </li> <li class="rm-manual"> <a href="file:///food-recipes">Food &amp; Recipes</a> </li> <li class="rm-manual"> <a href="file:///fashion">Fashion</a> </li> <li class="rm-manual"> <a href="file:///culture">Culture</a> </li> <li class="rm-manual"> <a href="file:///horoscope">Horoscope</a> </li> <li class="rm-manual"> <a href="file:///spirituality">Spirituality</a> </li> </ul>
+<h2 class="rm-manual"><a href="file:///sports">Sports</a></h2>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///cricket">Cricket</a></li> <li class="rm-manual"> <a href="file:///football">Football</a> </li> <li class="rm-manual"> <a href="file:///tennis">Tennis</a> </li> <li class="rm-manual"> <a href="file:///badminton">Badminton</a> </li> <li class="rm-manual"> <a href="file:///other-sports">Other Sports</a> </li> </ul>
+<h2 class="rm-manual"><a href="file:///technology">Technology</a></h2>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///gadgets">Gadgets</a></li> <li class="rm-manual"> <a href="file:///mobiles">Mobiles</a> </li> <li class="rm-manual"> <a href="file:///gaming">Gaming</a> </li> <li class="rm-manual"> <a href="file:///apps">Apps</a> </li> <li class="rm-manual"> <a href="file:///internet-social-media">Internet &amp; Social Media</a> </li> </ul>
+<h2 class="rm-manual"><a href="file:///india">India</a></h2>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///city">City</a></li> <li class="rm-manual"><a href="file:///mumbai">Mumbai</a></li> <li class="rm-manual"><a href="file:///kolkata">Kolkata</a></li> <li class="rm-manual"><a href="file:///pune">Pune</a></li> <li class="rm-manual"><a href="file:///bengaluru">Bengaluru</a></li> <li class="rm-manual"><a href="file:///chennai">Chennai</a></li> <li class="rm-manual"><a href="file:///hyderabad">Hyderabad</a></li> <li class="rm-manual"><a href="file:///ahmedabad">Ahmedabad</a></li> <li class="rm-manual"><a href="file:///gurugram">Gurugram</a></li> <li class="rm-manual"><a href="file:///noida">Noida</a></li> <li class="rm-manual"><a href="file:///ghaziabad">Ghaziabad</a></li> <li class="rm-manual"><a href="file:///patna">Patna</a></li> <li class="rm-manual"><a href="file:///bhopal">Bhopal</a></li> <li class="rm-manual"><a href="file:///lucknow">Lucknow</a></li> <li class="rm-manual"><a href="file:///jaipur">Jaipur</a></li> <li class="rm-manual"><a href="file:///faridabad">Faridabad</a></li> <li class="rm-manual"><a href="file:///kanpur">Kanpur</a></li> <li class="rm-manual"><a href="file:///shimla">Shimla</a></li> </ul>
+<h2 class="rm-manual"><a href="file:///state">States</a></h2>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///andhra-pradesh">Andhra Pradesh</a></li> <li class="rm-manual"><a href="file:///assam">Assam</a></li> <li class="rm-manual"><a href="file:///bihar">Bihar</a></li> <li class="rm-manual"><a href="file:///chhattisgarh">Chhattisgarh</a></li> <li class="rm-manual"><a href="file:///delhi">Delhi NCR</a></li> <li class="rm-manual"><a href="file:///goa">Goa</a></li> <li class="rm-manual"><a href="file:///gujarat">Gujarat</a></li> <li class="rm-manual"><a href="file:///haryana">Haryana</a></li> <li class="rm-manual"><a href="file:///himachal-pradesh">Himachal Pradesh</a></li> <li class="rm-manual"><a href="file:///jammu-and-kashmir">Jammu and Kashmir</a></li> <li class="rm-manual"><a href="file:///jharkhand">Jharkhand</a></li> <li class="rm-manual"><a href="file:///karnataka">Karnataka</a></li> <li class="rm-manual"><a href="file:///kerala">Kerala</a></li> <li class="rm-manual"><a href="file:///madhya-pradesh">Madhya Pradesh</a></li> <li class="rm-manual"><a href="file:///maharashtra">Maharashtra</a></li> <li class="rm-manual"><a href="file:///north-east">North East</a></li> <li class="rm-manual"><a href="file:///odisha">Odisha</a></li> <li class="rm-manual"><a href="file:///punjab">Punjab</a></li> <li class="rm-manual"><a href="file:///rajasthan">Rajasthan</a></li> <li class="rm-manual"><a href="file:///tamil-nadu">Tamil Nadu</a></li> <li class="rm-manual"><a href="file:///telangana">Telangana</a></li> <li class="rm-manual"><a href="file:///uttar-pradesh">Uttar Pradesh</a></li> <li class="rm-manual"><a href="file:///uttarakhand">Uttarakhand</a></li> <li class="rm-manual"><a href="file:///west-bengal">West Bengal</a></li> <li class="rm-manual"><a href="file:///uts">UTs</a></li> </ul>
+<h2 class="rm-manual"><a href="file:///World">World</a></h2>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///asia">Asia</a></li> <li class="rm-manual"><a href="file:///africa">Africa</a></li> <li class="rm-manual"><a href="file:///americas">Americas</a></li> <li class="rm-manual"><a href="file:///europe">Europe</a></li> <li class="rm-manual"><a href="file:///australia-oceania">Australia-Oceania</a></li> </ul>
+<h2 class="rm-manual"><a href="file:///business">Business</a></h2>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///economy">Economy</a></li> <li class="rm-manual"><a href="file:///markets">Markets</a></li> <li class="rm-manual"><a href="file:///personal-finance">Personal Finance</a></li> <li class="rm-manual"><a href="file:///companies">Companies</a></li> <li class="rm-manual"><a href="file:///international-business">International Business</a></li> <li class="rm-manual"><a href="file:///real-estate">Real Estate</a></li> <li class="rm-manual"><a href="file:///bullion">Bullion</a></li> <li class="rm-manual"><a href="file:///automobile">Automobile</a></li> </ul>
+<h2 class="rm-manual"><a href="file:///science-environment">Science &amp; Environment</a></h2>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///space">Space</a></li> <li class="rm-manual"><a href="file:///environment">Environment</a></li> <li class="rm-manual"><a href="file:///discoveries">Discoveries</a></li> <li class="rm-manual"><a href="file:///science">Science</a></li> </ul>
+<h2 class="rm-manual"><a href="file:///health">Health</a></h2>
+<p class="rm-manual"> <a href="file:///contact-us">CONTACT</a><span>.</span> <a href="file:///privacy-policy">PRIVACY POLICY</a><span>.</span> <a href="file:///disclaimer">LEGAL</a><span>.</span> <a href="file:///disputes">COMPLAINT</a><span>.</span> <a href="file:///author">OUR TEAM</a><span>.</span> <a href="http://investors.zeenews.com/" rel="noreferrer">INVESTOR INFO</a><span>.</span> <a href="file:///advertise-with-us">ADVERTISE With Us</a><span>.</span> <a href="http://careers.zeenews.com/" rel="noreferrer">CAREERS</a><span>.</span> <a href="file:///where-to-watch">WHERE TO WATCH</a> </p>
+<p class="rm-manual"> Breaking </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="http://zeenews.india.com/india/live-updates/india-coronavirus-covid-19-live-updates-june-16-2290144?UTM_SRC=breakingnews">India reports 343091 COVID19 cases with 153178 active cases, 180012 cured cases</a> </li> <li class="rm-manual"> <a href="https://zeenews.india.com/world/pakistan-uses-blasphemy-to-terrorise-minorities-india-at-un-human-rights-council-2290153.html?UTM_SRC=breakingnews">Pakistan uses blasphemy to terrorise minorities: India at UN Human Rights Council</a> </li> <li class="rm-manual"> <a href="http://zeenews.india.com/india/live-updates/india-coronavirus-covid-19-live-updates-june-16-2290144?UTM_SRC=breakingnews">10667 new COVID-19 cases and 380 deaths reported in the last 24 hours</a> </li> <li class="rm-manual"> <a href="https://zeenews.india.com/india/pm-narendra-modi-to-hold-consultation-with-chief-ministers-on-june-16-17-as-india-covid-19-death-toll-nears-10000-2290123.html?UTM_SRC=breakingnews">PM Narendra Modi to hold consultation with Chief Ministers on June 16, 17 as India COVID-19 death toll nears 10,000</a> </li> <li class="rm-manual"> <a href="https://zeenews.india.com/india/5-8-magnitude-earthquake-strikes-jammu-and-kashmir-epicentre-in-tajikistan-2290171.html?UTM_SRC=breakingnews">5.8 magnitude earthquake strikes Jammu and Kashmir, epicentre in Tajikistan</a> </li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://zeenews.india.com/"><span>News</span></a></li>
+<li class="rm-manual"><a href="https://zeenews.india.com/india"><span>India</span></a></li>
+</ul>
+<h5 class="rm-manual"> <a href="file:///tags/coronavirus.html">Coronavirus</a> </h5>
+<h1 class="rm-manual">No new coronavirus case in Delhi in last 24 hours, says CM Arvind Kejriwal</h1>
+<p>Delhi Chief Minister Arvind Kejriwal on Tuesday announced that no new
+ case of coronavirus has been reported in the last 24 hours in the 
+national capital. The Delhi chief minister, however, asserted that the 
+biggest challenge is to keep situation under control. </p>
+<p>Delhi Chief Minister Arvind Kejriwal on Tuesday announced that no new
+ case of coronavirus has been reported in the last 24 hours in the 
+national capital. The Delhi chief minister, however, asserted that the 
+biggest challenge is to keep situation under control.</p>
+<p>“No new case has been reported in Delhi in the last 24 hours. Five 
+people have been discharged from hospitals after getting treatment. But 
+we should not be happy. The biggest challenge now is to not let 
+situation go out of control, we need your support,” Kejriwal tweeted.</p>
+<p>पिछले 24 घंटों में दिल्ली में कोई नया केस नहीं आया। 5 लोग इलाज करवाकर
+ जा चुके हैं। अभी खुश नहीं होना। अभी सबसे बड़ी चुनौती है किसी भी अवस्था 
+में स्थिति को बेक़ाबू नहीं होने देना। इसमें आप सबका सहयोग चाहिए। <a href="https://t.co/e4GynrLopC">pic.twitter.com/e4GynrLopC</a></p>
+<p>— Arvind Kejriwal (@ArvindKejriwal) <a href="https://twitter.com/ArvindKejriwal/status/1242307610386124801?ref_src=twsrc%5Etfw">March 24, 2020</a></p>
+<p>Delhi has joined 30 states and union territories in enforc‌ing the 
+lockdown in the national capital to curb the spread of coronavirus. 
+Public transport services, shops, markets, religious places, privates 
+offices, commercial establishments and factories will remain closed in 
+Delhi till March 31. Prohibitory orders have been imposed by Delhi 
+Police under Section 144 of the Code of Criminal Procedure (CrPC) to ban
+ gatherings of more than five people in Delhi.</p>
+<p>The death toll due to coronavirus in India jumped to 10 on Tuesday 
+after a 65-year-old man died in Mumbai, Maharashtra. The man was 
+admitted to Mumbai's Kasturba Hospital on Monday (March 23) and died 
+within a few hours of admission.</p>
+<p>Nearly 500 coronavirus cases have been reported in India so far, 
+according to Health Ministry data on Tuesday. The total number of active
+ COVID-19 cases reported so far in the country stands at 446 while the 
+number of people who have been cured or discharged stands at 37, 
+according to the Ministry of Health and Family Welfare.</p>
+<p>Meanwhile, Prime Minister Narendra Modi will address the nation at 8 
+PM on Tuesday on the coronavirus outbreak and measures being taken to 
+contain the pandemic.</p>
+<p>"Will address the nation at 8 PM today, 24th March 2020, on vital 
+aspects relating to the menace of COVID-19," PM Modi said in a tweet.</p>
+<p class="rm-manual"> Tags: </p>
+<p class="rm-manual"> <a href="file:///tags/coronavirus.html">Coronavirus</a><a href="file:///tags/coronavirus-india.html">Coronavirus India</a><a href="file:///tags/arvind-kejriwal.html">Arvind Kejriwal</a><a href="file:///tags/coronavirus-delhi.html">coronavirus delhi</a> </p>
+<p class="rm-manual"> <a href="file:///india/coronavirus-covid-19-sonia-gandhi-writes-to-pm-narendra-modi-seeks-welfare-plan-for-unorganised-sector-workers-2271305.html"> </a></p><p class="rm-manual"><a href="file:///india/coronavirus-covid-19-sonia-gandhi-writes-to-pm-narendra-modi-seeks-welfare-plan-for-unorganised-sector-workers-2271305.html"> <span>Next Story</span> </a></p><a href="file:///india/coronavirus-covid-19-sonia-gandhi-writes-to-pm-narendra-modi-seeks-welfare-plan-for-unorganised-sector-workers-2271305.html"> <p class="rm-manual"> </p><h3 class="rm-manual">Coronavirus COVID-19: Sonia Gandhi writes to PM Narendra Modi, seeks welfare plan for unorganised sector workers</h3> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<ul class="rm-manual"> <li class="rm-manual">3,43,091<span>Confirmed</span>
+</li> <li class="rm-manual">9,900<span>Deaths</span>
+</li> </ul>
+<h4 class="rm-manual"><a href="file:///coronavirus-news">Full coverage</a></h4>
+<ul class="rm-manual"> <li class="rm-manual">80,63,488<span>Confirmed</span>
+</li> <li class="rm-manual">4,37,532<span>Deaths</span>
+</li> </ul>
+<h4 class="rm-manual"><a href="file:///coronavirus-news">Full coverage</a></h4>
+<h2 class="rm-manual">Must Watch</h2>
+<p class="rm-manual"> <a href="file:///video/world/taal-thok-ke-special-edition-how-long-will-china-test-indias-patience-2290309.html"> <span></span></a></p><p class="rm-manual"><a href="file:///video/world/taal-thok-ke-special-edition-how-long-will-china-test-indias-patience-2290309.html">PT25M27S</a></p><a href="file:///video/world/taal-thok-ke-special-edition-how-long-will-china-test-indias-patience-2290309.html"> </a> <p class="rm-manual"></p>
+<h3 class="rm-manual">
+<a href="file:///video/world/taal-thok-ke-special-edition-how-long-will-china-test-indias-patience-2290309.html"><span>Taal Thok Ke (Special Edition): How long will China test India's patience?</span></a> </h3>
+<p class="rm-manual"> <a href="file:///video/world/taal-thok-ke-does-china-want-war-with-india-2290306.html"> <span></span></a></p><p class="rm-manual"><a href="file:///video/world/taal-thok-ke-does-china-want-war-with-india-2290306.html">PT47M15S</a></p><a href="file:///video/world/taal-thok-ke-does-china-want-war-with-india-2290306.html"> </a> <p class="rm-manual"></p>
+<h3 class="rm-manual">
+<a href="file:///video/world/taal-thok-ke-does-china-want-war-with-india-2290306.html"><span>Taal Thok Ke: Does China want war with India?</span></a> </h3>
+<p class="rm-manual"> <a href="file:///video/india/cds-gen-bipin-rawat-meets-defense-minister-on-india-china-dispute-2290305.html"> <span></span></a></p><p class="rm-manual"><a href="file:///video/india/cds-gen-bipin-rawat-meets-defense-minister-on-india-china-dispute-2290305.html">PT3M21S</a></p><a href="file:///video/india/cds-gen-bipin-rawat-meets-defense-minister-on-india-china-dispute-2290305.html"> </a> <p class="rm-manual"></p>
+<h3 class="rm-manual">
+<a href="file:///video/india/cds-gen-bipin-rawat-meets-defense-minister-on-india-china-dispute-2290305.html"><span>CDS Gen. Bipin Rawat meets Defense Minister on India-China dispute</span></a> </h3>
+<ul class="rm-manual"> <li class="rm-manual">LIVE</li> <li class="rm-manual">RESULTS</li> </ul>
+<p class="rm-manual">No match is being played.</p>
+<p class="rm-manual"> <a href="file:///video/india/pm-modis-live-interation-with-chief-ministers-corona-patients-recovery-rate-over-50-in-india-2290282.html"> <span></span></a></p><p class="rm-manual"><a href="file:///video/india/pm-modis-live-interation-with-chief-ministers-corona-patients-recovery-rate-over-50-in-india-2290282.html">PT14M4S</a></p><a href="file:///video/india/pm-modis-live-interation-with-chief-ministers-corona-patients-recovery-rate-over-50-in-india-2290282.html"> </a> <p class="rm-manual"></p>
+<h3 class="rm-manual">
+<a href="file:///video/india/pm-modis-live-interation-with-chief-ministers-corona-patients-recovery-rate-over-50-in-india-2290282.html"><span>PM Modi's LIVE interation with Chief Ministers: Corona Patients Recovery Rate Over 50% in India</span></a> </h3>
+<p class="rm-manual"> <a href="file:///video/world/china-accuses-indian-soldiers-indian-troops-violate-border-on-june-15-2290279.html"> <span></span></a></p><p class="rm-manual"><a href="file:///video/world/china-accuses-indian-soldiers-indian-troops-violate-border-on-june-15-2290279.html">PT7M30S</a></p><a href="file:///video/world/china-accuses-indian-soldiers-indian-troops-violate-border-on-june-15-2290279.html"> </a> <p class="rm-manual"></p>
+<h3 class="rm-manual">
+<a href="file:///video/world/china-accuses-indian-soldiers-indian-troops-violate-border-on-june-15-2290279.html"><span>China accuses Indian soldiers: Indian troops violate border on June 15</span></a> </h3>
+<p class="rm-manual"> <a href="file:///video/world/chinas-statement-after-the-firing-between-soldiers-on-the-india-china-border-indian-soldiers-provoke-chinese-soldiers-2290278.html"> <span></span></a></p><p class="rm-manual"><a href="file:///video/world/chinas-statement-after-the-firing-between-soldiers-on-the-india-china-border-indian-soldiers-provoke-chinese-soldiers-2290278.html">PT32M12S</a></p><a href="file:///video/world/chinas-statement-after-the-firing-between-soldiers-on-the-india-china-border-indian-soldiers-provoke-chinese-soldiers-2290278.html"> </a> <p class="rm-manual"></p>
+<h3 class="rm-manual">
+<a href="file:///video/world/chinas-statement-after-the-firing-between-soldiers-on-the-india-china-border-indian-soldiers-provoke-chinese-soldiers-2290278.html"><span>China's statement after the firing between soldiers on the India-China border, "Indian soldiers provoke Chinese soldiers"</span></a> </h3>
+<p class="rm-manual"> <a href="file:///video/india/video-violent-face-off-at-galwan-valley-in-eastern-ladakh-between-indian-chinese-troops-army-officer-2-soldiers-martyred-2290222.html"> <span></span></a></p><p class="rm-manual"><a href="file:///video/india/video-violent-face-off-at-galwan-valley-in-eastern-ladakh-between-indian-chinese-troops-army-officer-2-soldiers-martyred-2290222.html">PT5M12S</a></p><a href="file:///video/india/video-violent-face-off-at-galwan-valley-in-eastern-ladakh-between-indian-chinese-troops-army-officer-2-soldiers-martyred-2290222.html"> </a> <p class="rm-manual"></p>
+<h3 class="rm-manual">
+<a href="file:///video/india/video-violent-face-off-at-galwan-valley-in-eastern-ladakh-between-indian-chinese-troops-army-officer-2-soldiers-martyred-2290222.html"><span>Video: Violent face-off at Galwan Valley in eastern Ladakh between Indian, Chinese troops; Army officer, 2 soldiers martyred</span></a> </h3>
+<p class="rm-manual"> <a href="file:///video/india/ground-report-nepal-is-attacking-india-by-sitting-in-chinese-tents-2290208.html"> <span></span></a></p><p class="rm-manual"><a href="file:///video/india/ground-report-nepal-is-attacking-india-by-sitting-in-chinese-tents-2290208.html">PT11M27S</a></p><a href="file:///video/india/ground-report-nepal-is-attacking-india-by-sitting-in-chinese-tents-2290208.html"> </a> <p class="rm-manual"></p>
+<h3 class="rm-manual">
+<a href="file:///video/india/ground-report-nepal-is-attacking-india-by-sitting-in-chinese-tents-2290208.html"><span>Ground Report: Nepal is 'attacking' India by sitting in Chinese tents</span></a> </h3>
+<p class="rm-manual"> <a href="file:///video/india/video-delhi-health-minister-satyendar-jain-admitted-to-hospital-with-covid-19-like-symptoms-2290205.html"> <span></span></a></p><p class="rm-manual"><a href="file:///video/india/video-delhi-health-minister-satyendar-jain-admitted-to-hospital-with-covid-19-like-symptoms-2290205.html">PT9M2S</a></p><a href="file:///video/india/video-delhi-health-minister-satyendar-jain-admitted-to-hospital-with-covid-19-like-symptoms-2290205.html"> </a> <p class="rm-manual"></p>
+<h3 class="rm-manual">
+<a href="file:///video/india/video-delhi-health-minister-satyendar-jain-admitted-to-hospital-with-covid-19-like-symptoms-2290205.html"><span>Video: Delhi Health Minister Satyendar Jain admitted to hospital with COVID-19 like symptoms</span></a> </h3>
+<p class="rm-manual"> <a href="file:///video/india/news-20-watch-top-20-news-stories-of-the-day-2290200.html"> <span></span></a></p><p class="rm-manual"><a href="file:///video/india/news-20-watch-top-20-news-stories-of-the-day-2290200.html">PT6M25S</a></p><a href="file:///video/india/news-20-watch-top-20-news-stories-of-the-day-2290200.html"> </a> <p class="rm-manual"></p>
+<h3 class="rm-manual">
+<a href="file:///video/india/news-20-watch-top-20-news-stories-of-the-day-2290200.html"><span>News 20: Watch top 20 news stories of the day</span></a> </h3>
+<p class="rm-manual"> <a href="file:///india">India News</a><span>|</span> <a href="file:///india/states">State News</a><span>|</span> <a href="file:///world">World News</a><span>|</span> <a href="file:///sports">Sports News</a><span>|</span> <a href="file:///cricket">Cricket News</a><span>|</span> <a href="file:///business">Business News</a><span>|</span> <a href="file:///entertainment">Entertainment News</a><span>|</span> <a href="file:///technology">Technology News</a><span>|</span> <a href="file:///science">Science News</a><span>|</span> <a href="file:///health">Health News</a><span>|</span> <a href="file:///blogs">Blogs</a><span>|</span> <a href="file:///photos">Photos</a><span>|</span> <a href="file:///video">Video</a><span>|</span> </p>
+<h2 class="rm-manual">TRENDING TOPICS</h2>
+<p class="rm-manual"> <a href="https://zeenews.india.com/tags/narendra-modi.html">Narendra Modi</a><a href="https://zeenews.india.com/bollywood">Bollywood News</a><a href="https://zeenews.india.com/bhojpuri">Bhojpuri Videos</a><a href="https://zeenews.india.com/india">India News</a> </p>
+<h2 class="rm-manual">zee media websites</h2>
+<p class="rm-manual"><a href="file:///hindi">hindi news</a> </p>
+<p class="rm-manual"><a href="file:///bengali">bengali news</a> </p>
+<p class="rm-manual"><a href="file:///marathi">marathi news</a> </p>
+<p class="rm-manual"><a href="file:///tamil">tamil news</a> </p>
+<p class="rm-manual"><a href="file:///malayalam">malayalam news</a> </p>
+<p class="rm-manual"><a href="file:///gujarati">Gujarati News</a> </p>
+<p class="rm-manual"><a href="file:///telugu">Telugu News</a> </p>
+<p class="rm-manual"><a href="file:///kannada">Kannada News</a> </p>
+<p class="rm-manual"><a href="https://www.zeebiz.com/" rel="noreferrer">zeebiz</a> </p>
+<p class="rm-manual"><a href="http://www.wionews.com/" rel="noreferrer">wion</a> </p>
+<p class="rm-manual"><a href="https://www.dnaindia.com/" rel="noreferrer">dna</a> </p>
+<p class="rm-manual"><a href="http://investors.zeenews.com/" rel="noreferrer">Investor Info</a> </p>
+<p class="rm-manual"><a href="file:///advertise-with-us">Advertise With Us</a> </p>
+<p class="rm-manual"> © 1998-2020 Zee Media Corporation Ltd (An Essel Group Company), All rights reserved. </p>
+<p class="rm-manual">follow us</p>
+<p class="rm-manual">mobile apps</p>
+<p class="rm-manual"> <span>|</span> </p>
+<p class="rm-manual">By continuing to use the site, you agree to the use of cookies. You can find out more by clicking <a href="file:///cookie-policy">this link</a> </p>
+<p class="rm-manual"><a>Close</a> </p></article>
+</body></html>

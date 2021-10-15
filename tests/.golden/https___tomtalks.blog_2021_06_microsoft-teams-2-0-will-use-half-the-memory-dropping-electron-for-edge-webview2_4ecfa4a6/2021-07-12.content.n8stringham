@@ -1,0 +1,133 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Microsoft Teams 2.0 will use half the memory, dropping Electron for Edge Webview2 – Tom Talks </p>
+<p class="rm-manual"> <span><a href="https://tomtalks.blog/" rel="home">Tom Talks</a></span> <span>Microsoft Teams and Microsoft 365 news and opinions</span> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://tomtalks.blog/tomsemailupdate/">Tom’s Email Update</a></li> <li class="rm-manual"><a href="https://tomtalks.blog/microsoft-teams-monthly-podcast/">Microsoft Teams Podcast</a></li> <li class="rm-manual"><a href="https://tomtalks.blog/tom-arbuthnot/">Tom Arbuthnot</a></li> </ul>
+<h1 class="rm-manual">Microsoft Teams 2.0 will use half the memory, dropping Electron for Edge Webview2</h1>
+<p class="rm-manual">By <span><span><a href="https://tomtalks.blog/author/tom/">Tom Arbuthnot</a></span></span></p>
+<p class="rm-manual"><span>June 24, 2021</span></p>
+<p class="rm-manual">3 Min read</p>
+<p class="rm-manual"><a href="https://tomtalks.blog/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edge-webview2/#comments">16 comments</a></p>
+<p>Credit to <a href="https://petri.com/microsoft-teams-2-0-will-deliver-big-performance-improvements" rel="noopener">Brad Sams</a> for first reporting on this, Alongside the Windows 11 announcement today, <a href="https://www.linkedin.com/in/rishtandon/" rel="noopener">Rish Tandon</a>, the CVP Engineering for Microsoft Teams, <a href="https://twitter.com/rishmsft/status/1408085784016539653">posted on Twitter</a> about changes coming to Microsoft Teams architecture. It gave a lot of useful insight into what is coming.</p>
+<ul> <li>Microsoft Teams is moving away from Electron to Edge Webview2</li> <li>Angular has gone. Teams is now 100% on reactjs</li> <li>Teams is also leveraging apollo graphql</li> <li>“Teams
+ 2.0”, a name Rish coins in his tweet, but I suspect not an actual 
+product name/version, launches with Windows 11 and consumer accounts 
+then commercial will move to the same architecture</li> <li>Teams/Microsoft will continue to contribute back to apollo, graphql, reactjs, chromium projects</li> </ul>
+<h2>So what does this all mean?</h2>
+<p>If you are not interested in the detail, the punchline is Teams is 
+moving to a more performant and more Microsoft controlled technology 
+stack, meaning a better and more performance client experience. If you 
+want the detail read on….</p>
+<p>Today Microsoft Teams uses Electron. Electron is a framework for 
+creating desktop applications with web technologies like JavaScript, 
+HTML, and CSS. It’s popular with some developers for its flexibility, 
+but it’s also a well-documented memory hog. Microsoft even has a Teams 
+documentation page explaining <a href="https://docs.microsoft.com/en-us/microsoftteams/teams-memory-usage-perf" rel="noopener">why Microsoft Teams might have high memory use</a>.</p>
+<p>Electron uses Chromium for rendering and Chromium’s behaviour is to 
+detect how much system memory is available and utilizes enough of that 
+memory to optimize the rendering experience. If other apps or services 
+signal that they require system memory, Chromium gives up memory to 
+those processes. This matters a lot less on high-end PC’s with lots of 
+RAM, but as you get to less performance machines with less RAM, for 
+example often the choice in education to hit an aggressive price point, 
+performance can really suffer.</p>
+<p>Beyond just memory usage there are other benefits to Edge Webview2</p>
+<h2>What is Edge Webview2?</h2>
+<p>Microsoft Edge WebView2 control allows you to embed web technologies 
+(HTML, CSS, and JavaScript) in native apps. So now Microsoft Teams will 
+be leveraging another Microsoft lead technology, rather than needing to 
+wait on and leverage and integrate Electron, a separate open-source 
+project.</p>
+<p>If an app is written in what is called “Evergreen distribution mode” 
+the WebView2 Runtime is updated automatically so there is no need for 
+the developer to manage it.</p>
+<p>All apps that use the Evergreen distribution mode use a shared copy 
+of the Evergreen WebView2 Runtime, meaning it does not have to be 
+distributed by each app, reducing the app size, meaning a smaller app to
+ download and update.</p>
+<p>Microsoft has been <a href="https://office365itpros.com/2021/03/08/edge-webview2-runtime/" rel="noopener">pushing Edge WebView2 Runtime on PCs with Microsoft 365 Apps for Enterprise</a>, WebView2 is already leveraged by the Outlook team in OWA Powered Experiences (OPX)</p>
+<h2>Windows 11 / Teams consumer version first</h2>
+<p>At the Windows 11 launch event today we saw that Teams will be 
+integrated into Windows. This will be Teams consumer and it will be the 
+first client to leverage Edge Webview2. Later the enterprise version of 
+teams will move away from Electron to Edge Webview2</p>
+<p class="rm-manual">Stay <a href="https://tomtalks.blog/tomsemailupdate/" rel="noopener">tuned to the blog</a> for more on the new Teams client as it rolls out.</p>
+<p class="rm-manual">Reference:</p>
+<p class="rm-manual"><a href="https://blog.thoughtstuff.co.uk/2021/06/electron-to-webview2-what-does-it-really-mean-for-the-teams-desktop-client-and-for-a-client-sdk/" rel="noopener">Electron to WebView2 – What does it really mean for the Teams desktop client, and for a Client SDK?</a></p>
+<p class="rm-manual"><a href="https://docs.microsoft.com/en-gb/microsoft-edge/webview2/" rel="noopener">Introduction to Microsoft Edge WebView2</a></p>
+<p class="rm-manual"><a href="https://medium.com/young-coder/the-most-exciting-part-of-microsoft-edge-is-webview2-584ac27fb788" rel="noopener">The Most Exciting Part of Microsoft Edge is WebView2</a></p>
+<p class="rm-manual"><a href="https://docs.microsoft.com/en-us/microsoft-edge/webview2/concepts/distribution" rel="noopener">Distribution of apps using WebView2</a></p>
+<p class="rm-manual"><a href="https://tomtalks.blog/tag/edge/" rel="tag">edge</a> <a href="https://tomtalks.blog/tag/electron/" rel="tag">electron</a> <a href="https://tomtalks.blog/tag/microsoftteams/" rel="tag">MicrosoftTeams</a></p>
+<h3 class="rm-manual">About the author</h3>
+<h5 class="rm-manual">Tom Arbuthnot</h5>
+<p class="rm-manual">A Microsoft MVP and Microsoft Certified Master, Tom
+ Arbuthnot is Principal Solutions Architect at Microsoft Collaboration 
+specialists Modality Systems. </p>
+<p class="rm-manual">Tom stays up to date with industry developments and
+ shares news and his opinions on his blog, Microsoft Teams Podcast and 
+email list. He is a regular speaker at events around the world.</p>
+<p class="rm-manual"> <a href="https://tomtalks.blog/author/tom/">View all posts</a> </p>
+<h3 class="rm-manual">16 comments</h3>
+<h3 class="rm-manual">Leave a Reply <a rel="nofollow" href="file:///2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edge-webview2/#respond">Cancel reply</a> </h3>
+<ul class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <a href="https://coverstory.ph/microsoft-teams-will-be-abandoning-electron-with-big-improvements-expected-mspoweruser-mspoweruser/" rel="external nofollow ugc">Microsoft Teams will be abandoning Electron, with big improvements expected – MSPoweruser – MSPoweruser – CoverStory</a> <span>says:</span> </p> <p class="rm-manual"> <a href="https://tomtalks.blog/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edge-webview2/#comment-132199">June 25, 2021 at 03:43</a> </p> <p class="rm-manual">[…] Microsoft Teams 2.0 will use half the memory, dropping Electron… – Tom Talks Blog […]</p> <p class="rm-manual"><a rel="nofollow" href="https://tomtalks.blog/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edge-webview2/?replytocom=132199#respond">Reply</a></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> James Edge <span>says:</span> </p> <p class="rm-manual"> <a href="https://tomtalks.blog/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edge-webview2/#comment-132203">June 26, 2021 at 12:22</a> </p> <p class="rm-manual">Meh,
+ the big design flaw with teams isn’t the memory usage its the HDD space
+ used. Because it installs to appdata instead of program files it has to
+ install a seperate copy for every user.</p> <p class="rm-manual">I’ve 
+lost count of the times we’ve had to repair or reimage machines because 
+they became ususable or straight up failed to boot due to having 30-90GB
+ of teams installations on the drive &gt;.&gt;</p> <p class="rm-manual"><a rel="nofollow" href="https://tomtalks.blog/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edge-webview2/?replytocom=132203#respond">Reply</a></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> David Weinehall <span>says:</span> </p> <p class="rm-manual"> <a href="https://tomtalks.blog/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edge-webview2/#comment-132205">June 26, 2021 at 13:56</a> </p> <p class="rm-manual">How will this affect the Linux version of Teams?</p> <p class="rm-manual"><a rel="nofollow" href="https://tomtalks.blog/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edge-webview2/?replytocom=132205#respond">Reply</a></p> </article> <ul class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> Tom Arbuthnot <span>says:</span> </p> <p class="rm-manual"> <a href="https://tomtalks.blog/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edge-webview2/#comment-132206">June 26, 2021 at 14:15</a> </p> <p class="rm-manual">Great question. Same one for Mac. I’ll see what I can find out. </p> <p class="rm-manual"><a rel="nofollow" href="https://tomtalks.blog/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edge-webview2/?replytocom=132206#respond">Reply</a></p> </article> <ul class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> James <span>says:</span> </p> <p class="rm-manual"> <a href="https://tomtalks.blog/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edge-webview2/#comment-132207">June 26, 2021 at 14:37</a> </p> <p class="rm-manual">Edge Webview2 is being ported to Mac first, then Linux, so presumably Teams will follow.</p> <p class="rm-manual"><a rel="nofollow" href="https://tomtalks.blog/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edge-webview2/?replytocom=132207#respond">Reply</a></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> Abraham <span>says:</span> </p> <p class="rm-manual"> <a href="https://tomtalks.blog/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edge-webview2/#comment-132220">June 28, 2021 at 02:41</a> </p> <p class="rm-manual">Find out anything ?</p> <p class="rm-manual"><a rel="nofollow" href="https://tomtalks.blog/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edge-webview2/?replytocom=132220#respond">Reply</a></p> </article> </li> </ul> </li> </ul> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> Jordan <span>says:</span> </p> <p class="rm-manual"> <a href="https://tomtalks.blog/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edge-webview2/#comment-132208">June 26, 2021 at 14:40</a> </p> <p class="rm-manual">That’s definitely a good news,</p><p class="rm-manual"> But what about being able to manage updates through SCCM/MECM?</p><p class="rm-manual">
+ I sincerely hope Microsoft will move on this soon because we are really
+ scared to stop using Skype4Buisness because of that. We have a lot of 
+users behind VSAT connections and we cannot afford to have every client 
+downloading their own updates, this will clearly kill our bandwidth at 
+some times.</p><p class="rm-manual"></p> <p class="rm-manual"><a rel="nofollow" href="https://tomtalks.blog/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edge-webview2/?replytocom=132208#respond">Reply</a></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <a href="https://breach74.com/blog/2021/06/26/microsoft-teams-2-0-will-use-half-the-memory-drop-electron/" rel="external nofollow ugc">Microsoft Teams 2.0 will use half the memory, drop Electron – Cyber News Network</a> <span>says:</span> </p> <p class="rm-manual"> <a href="https://tomtalks.blog/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edge-webview2/#comment-132209">June 26, 2021 at 15:55</a> </p> <p class="rm-manual">[…] Article URL: <a href="https://tomtalks.blog/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edg&amp;#8230" rel="nofollow ugc">https://tomtalks.blog/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edg&amp;#8230</a>; […]</p> <p class="rm-manual"><a rel="nofollow" href="https://tomtalks.blog/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edge-webview2/?replytocom=132209#respond">Reply</a></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> Anurag singh <span>says:</span> </p> <p class="rm-manual"> <a href="https://tomtalks.blog/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edge-webview2/#comment-132211">June 26, 2021 at 17:45</a> </p> <p class="rm-manual">Thanks for information and update. What will be value added for enterprise customer part of service offering?</p> <p class="rm-manual"><a rel="nofollow" href="https://tomtalks.blog/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edge-webview2/?replytocom=132211#respond">Reply</a></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> Miu Ling <span>says:</span> </p> <p class="rm-manual"> <a href="https://tomtalks.blog/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edge-webview2/#comment-132212">June 26, 2021 at 19:52</a> </p> <p class="rm-manual">Angular
+ 2 is significantly more performant than react. This is for control, and
+ to allow for the use of cheaper resources as they expand their reliance
+ on outsourced partner labor.</p> <p class="rm-manual"><a rel="nofollow" href="https://tomtalks.blog/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edge-webview2/?replytocom=132212#respond">Reply</a></p> </article> <ul class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> wintercounter <span>says:</span> </p> <p class="rm-manual"> <a href="https://tomtalks.blog/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edge-webview2/#comment-132213">June 26, 2021 at 21:13</a> </p> <p class="rm-manual">This
+ is not really true. React gives you much more fine-grained control over
+ performance than Angular. Incompetent developers and management, 
+unreasonable business pressure/decisions that’s making softwares simply 
+bad.</p> <p class="rm-manual"><a rel="nofollow" href="https://tomtalks.blog/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edge-webview2/?replytocom=132213#respond">Reply</a></p> </article> </li> </ul> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <a href="https://dmasior.com/hackernews-top-stories-63/" rel="external nofollow ugc">HackerNews top stories #63 | Damian M?sior</a> <span>says:</span> </p> <p class="rm-manual"> <a href="https://tomtalks.blog/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edge-webview2/#comment-132216">June 27, 2021 at 11:20</a> </p> <p class="rm-manual">[…] <a href="https://tomtalks.blog/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edg&amp;#8230" rel="nofollow ugc">https://tomtalks.blog/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edg&amp;#8230</a>; […]</p> <p class="rm-manual"><a rel="nofollow" href="https://tomtalks.blog/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edge-webview2/?replytocom=132216#respond">Reply</a></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <a href="https://www.365forall.com/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edge-webview2-blog-by-tomarbuthnot/" rel="external nofollow ugc">Microsoft Teams 2.0 will use half the memory, dropping Electron for Edge Webview2 – blog by @tomarbuthnot</a> <span>says:</span> </p> <p class="rm-manual"> <a href="https://tomtalks.blog/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edge-webview2/#comment-132217">June 27, 2021 at 12:26</a> </p> <p class="rm-manual">[…] Microsoft Teams 2.0 will use half the memory, dropping Electron for Edge Webview2 – Tom Talks […]</p> <p class="rm-manual"><a rel="nofollow" href="https://tomtalks.blog/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edge-webview2/?replytocom=132217#respond">Reply</a></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <a href="https://www.zoonman.com/" rel="external nofollow ugc">Phil</a> <span>says:</span> </p> <p class="rm-manual"> <a href="https://tomtalks.blog/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edge-webview2/#comment-132219">June 28, 2021 at 02:39</a> </p> <p class="rm-manual">The problem with Teams is not in used technologies.</p><p class="rm-manual"> It is implementation: a horrible UI/UX, bad code and countless number of bugs.</p><p class="rm-manual"> Product feels raw. Obviously it was cooked way too fast that supposed to be.</p><p class="rm-manual"> You need to invest in good people and time.</p><p class="rm-manual"></p> <p class="rm-manual"><a rel="nofollow" href="https://tomtalks.blog/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edge-webview2/?replytocom=132219#respond">Reply</a></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <a href="https://grouvi.wordpress.com/2021/06/29/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edge-webview2-tom-talks/" rel="external nofollow ugc">Microsoft Teams 2.0 will use half the memory, dropping Electron for Edge Webview2 – Tom Talks – grouvi</a> <span>says:</span> </p> <p class="rm-manual"> <a href="https://tomtalks.blog/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edge-webview2/#comment-132224">June 29, 2021 at 11:11</a> </p> <p class="rm-manual">[…] Source: Microsoft Teams 2.0 will use half the memory, dropping Electron for Edge Webview2 – Tom Talks […]</p> <p class="rm-manual"><a rel="nofollow" href="https://tomtalks.blog/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edge-webview2/?replytocom=132224#respond">Reply</a></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <a href="https://freelancehero.co/blog/2021/06/29/the-hybrid-workplace-were-all-feeling-our-way-who-grasps-the-whole-picture/" rel="external nofollow ugc">The hybrid workplace – we’re all feeling our way, who grasps the whole picture? – My blog</a> <span>says:</span> </p> <p class="rm-manual"> <a href="https://tomtalks.blog/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edge-webview2/#comment-132225">June 29, 2021 at 15:46</a> </p> <p class="rm-manual">[…]
+ natch — which sees Teams replace Skype as the default video calling 
+add-on to Windows. The Teams architecture is getting a makeover at the 
+same time, […]</p> <p class="rm-manual"><a rel="nofollow" href="https://tomtalks.blog/2021/06/microsoft-teams-2-0-will-use-half-the-memory-dropping-electron-for-edge-webview2/?replytocom=132225#respond">Reply</a></p> </article> </li> </ul>
+<p class="rm-manual"> <span><a href="https://tomtalks.blog/" rel="home">Tom Talks</a></span> <span>Microsoft Teams and Microsoft 365 news and opinions</span> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://tomtalks.blog/tomsemailupdate/">Tom’s Email Update</a></li> <li class="rm-manual"><a href="https://tomtalks.blog/microsoft-teams-monthly-podcast/">Microsoft Teams Podcast</a></li> <li class="rm-manual"><a href="https://tomtalks.blog/tom-arbuthnot/">Tom Arbuthnot</a></li> </ul></article>
+</body></html>

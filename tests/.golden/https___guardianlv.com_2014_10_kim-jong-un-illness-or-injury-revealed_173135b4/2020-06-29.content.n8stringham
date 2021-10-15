@@ -1,0 +1,115 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual"> Kim Jong Un: Illness or Injury Revealed </h1>
+<p class="rm-manual"><span>By <span><a href="https://guardianlv.com/author/haugh-l/" rel="author">Leigh Haugh</a></span> on October 29, 2014</span><span><a href="https://guardianlv.com/2014/10/kim-jong-un-illness-or-injury-revealed/#respond">No Comment</a></span></p>
+<p> Kim Jong Un, the North Korean dictator who had been publicly absent 
+in recent weeks, re-emerged on October 14 with a cane and many questions
+ unanswered. There has been a great deal of speculation about whether or
+ not the communist leader has suffered illness or injury, as well as his
+ possible vulnerability to a coup by opposition leaders. In the wake of 
+Kim’s return to the public spotlight, new details have been revealed 
+about his suspected illness or injury.</p>
+<p>The National Intelligence Service, which is South Korea’s spy agency,
+ told legislators that a foreign doctor was consulted and operated on 
+Kim Jong Un in either September or October 2014 to remove a cyst from 
+his ankle, according to opposition leaders. Moreover, the officials 
+commented that the spy agency also told lawmakers in a closed-door 
+session that the cyst could recur because of Kim’s health habits and 
+chaotic public schedule.</p>
+<p>According to reports, Kim Jong Un has a condition known as tarsal 
+tunnel syndrome. The syndrome is often painful and it is caused by the 
+compression of a nerve, which can result due to a cyst. Surgery is 
+generally viewed as a last resort after other treatments are deemed 
+unsuccessful.</p>
+<p>Following Kim Jong Un’s appearance with his wife at a function 
+covered by the state media on September 3, the North Korean leader 
+disappeared from public view for 6 weeks, and when he reappeared on 
+October 14, he was seen hobbling with a cane and appeared slimmer. Prior
+ to his absence, Kim was seen with a noticeable limb and there were also
+ reports that revealed he had injured himself during military training 
+exercises in August 2014. During his absence, wild media speculation 
+about Kim’s illness or injury was especially significant because of the 
+Kim family’s importance to poor, combative, and nuclear-armed nation. 
+This is because the Kim family has ruled the country since its creation 
+in 1948.</p>
+<p>According to experts, individuals who suffer from this disorder and 
+require surgical intervention should not apply any weight to the 
+affected region for 10 days after the operation, and an improvement in 
+symptoms could take as long as two to three months. If these reports are
+ in fact true, the timing of Kim Jong Un’s disappearance from the public
+ arena would make sense.</p>
+<p>According to Dr. Kim So Yeon, who served as personal physician to Kim
+ Jong Un’s grandfather, the North Korean leader has also inherited a 
+number of health concerns, including psychological problems and a 
+history of obesity. Moreover, she added that both Kim’s father, Kim Jong
+ Il, and grandfather, Kim Il Sung, suffered from diabetes, stress 
+disorders, and heart ailments.</p>
+<p>Now that Kim Jong Un has returned to the public stage following an 
+unexpected and lengthy six-week absence, new details have been revealed 
+regarding the world leader’s suspected illness or injury. It has been 
+revealed that the North Korean leader recently had surgery to remove a 
+cyst from his ankle and inherited a litany of medical concerns, as well 
+as suffers from a history of obesity and psychological issues. In 
+addition to the medical concerns surrounding Kim, a political purge, in 
+the wake of the execution of Kim’s uncle, Jang Song Thaek, has continued
+ in North Korea, which has captured the attention of South Korean 
+lawmakers and other world leaders, as well as continues to raise a 
+ominous eyebrow on Kim Jong Un.</p>
+<p class="rm-manual">By Leigh Haugh</p>
+<p class="rm-manual">See Related Articles:</p>
+<p class="rm-manual"><a href="https://guardianlv.com/2014/10/kim-jong-un-injury-or-illness/">Guardian Liberty Voice–Kim Jong Un Injury or Illness</a></p>
+<p class="rm-manual">Other Articles Written by This Author:</p>
+<p class="rm-manual"><a href="https://guardianlv.com/author/haugh-l/">Guardian Liberty Voice–Leigh Haugh Author Archive</a></p>
+<p class="rm-manual">Sources:</p>
+<p class="rm-manual"> <a href="https://www.usatoday.com/story/news/world/2014/10/28/kim-jong-un-ankle/18051457/">USA TODAY</a></p>
+<p class="rm-manual"> <a href="https://www.cnn.com/2014/10/28/world/asia/kim-jong-un-cyst/">CNN</a></p>
+<p class="rm-manual"> <a href="https://www.irishtimes.com/news/world/asia-pacific/mystery-of-kim-jong-un-s-absence-solved-by-south-korea-1.1979318">Irish Times</a></p>
+<p class="rm-manual"> <a href="https://time.com/3543176/kim-jong-un-mystery-north-korea/">TIME</a></p>
+<p class="rm-manual"> <a href="https://guardianlv.com/tag/kim-jong-un/" rel="tag">kim jong un</a>, <a href="https://guardianlv.com/tag/top/" rel="tag">top</a></p>
+<p class="rm-manual">Kim Jong Un: Illness or Injury Revealed added by <a href="https://guardianlv.com/author/haugh-l/" rel="author"><span>Leigh Haugh</span></a> on October 29, 2014</p>
+<p class="rm-manual"><a href="https://guardianlv.com/author/haugh-l/">View all posts by Leigh Haugh →</a></p>
+<h3 class="rm-manual">Leave a Reply <a rel="nofollow" href="file:///2014/10/kim-jong-un-illness-or-injury-revealed/#respond">Cancel Reply</a>
+</h3>
+<p class="rm-manual">Your email address will not be published.</p>
+<p class="rm-manual"> Save my name, email, and website in this browser for the next time I comment.</p>
+<h3 class="rm-manual">Recent Posts</h3>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://guardianlv.com/2020/06/supreme-court-reaffirms-abortion-rights/">Supreme Court Reaffirms Abortion RIghts</a> <span>June 29, 2020</span> </li> <li class="rm-manual"> <a href="https://guardianlv.com/2020/06/rapper-huey-murdered-in-missouri/">Rapper Huey Murdered in Missouri</a> <span>June 29, 2020</span> </li> <li class="rm-manual"> <a href="https://guardianlv.com/2020/06/nasa-renames-building-after-hidden-figure-mary-w-jackson/">NASA Renames Building After ‘Hidden Figure’ Mary W Jackson</a> <span>June 26, 2020</span> </li> <li class="rm-manual"> <a href="https://guardianlv.com/2020/06/chicago-shootouts-one-dead-one-critically-injured/">Chicago Shootouts- One Dead, One Critically Injured</a> <span>June 25, 2020</span> </li> <li class="rm-manual"> <a href="https://guardianlv.com/2020/06/disney-announces-splash-mountain-makeover/">Disney Announces Splash Mountain Makeover</a> <span>June 25, 2020</span> </li> <li class="rm-manual"> <a href="https://guardianlv.com/2020/06/is-it-time-to-change-the-national-anthem/">Is It Time to Change the National Anthem?</a> <span>June 25, 2020</span> </li> <li class="rm-manual"> <a href="https://guardianlv.com/2020/06/the-chinese-dragon-boat-festival-underway/">The Chinese Dragon Boat Festival Underway</a> <span>June 25, 2020</span> </li> <li class="rm-manual"> <a href="https://guardianlv.com/2020/06/ron-jeremy-porn-star-charged-with-rape-and-sexual-assualt/">Ron Jeremy, Porn Star, Charged With Rape and Sexual Assualt</a> <span>June 24, 2020</span> </li> <li class="rm-manual"> <a href="https://guardianlv.com/2020/06/wisconsin-protests-turn-violent-as-state-senator-is-attacked-and-statues-are-pulled-down/">Wisconsin Protests Turn Violent as State Senator Is Attacked and Statues Are Pulled Down</a> <span>June 24, 2020</span> </li> <li class="rm-manual"> <a href="https://guardianlv.com/2020/06/ortiz-couple-found-dead-in-apartment-on-upper-west-side/">Ortiz Couple Found Dead in Apartment on Upper West Side</a> <span>June 24, 2020</span> </li> <li class="rm-manual"> <a href="https://guardianlv.com/2020/06/steve-bing-commits-suicide-at-age-55/">Steve Bing Commits Suicide at Age 55</a> <span>June 23, 2020</span> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://guardianlv.com/terms-and-conditions/">Terms and Conditions</a></li> <li class="rm-manual"><a href="https://guardianlv.com/privacy-policy/">Privacy Policy</a></li> <li class="rm-manual"><a href="https://guardianlv.com/contact-us/trademarks/">Legal</a></li> <li class="rm-manual"><a href="https://guardianlv.com/sitemap.xml">SiteMap</a></li> <li class="rm-manual"><a href="https://guardianlv.com/about-us/">About Us</a></li> <li class="rm-manual"><a href="http://mediakit.guardianlv.com/">Media Kit</a></li> </ul>
+<p class="rm-manual"> © 2020, <a href="#top" rel="home">↑ Guardian Liberty Voice</a> </p>
+<p class="rm-manual"> <a href="https://guardianlv.com/wp-login.php?redirect_to=https%3A%2F%2Fguardianlv.com%2F2014%2F10%2Fkim-jong-un-illness-or-injury-revealed%2F">Log in</a> - Powered by <a href="http://fracklemedia.com/">Frackle Media</a> </p></article>
+</body></html>

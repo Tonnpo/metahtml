@@ -1,0 +1,204 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"><span><a href="file:///section/politics">Politics</a></span><span>|</span><span>Republicans Struggle to Derail Increasingly Popular Stimulus Package</span></p>
+<p class="rm-manual">Advertisement</p>
+<p class="rm-manual"><a href="#after-top">Continue reading the main story</a></p>
+<p class="rm-manual">Supported by</p>
+<p class="rm-manual"><a href="#after-sponsor">Continue reading the main story</a></p>
+<h1 class="rm-manual">Republicans Struggle to Derail Increasingly Popular Stimulus Package</h1>
+<p class="rm-manual">Polls show a $1.9 trillion rescue plan polls 
+strongly across the country, including with many Republican voters, 
+despite a scattershot series of attacks from congressional Republicans.</p>
+<figcaption class="rm-manual"><span>President Biden boarded Air Force 
+One en route to Milwaukee on Tuesday. According to new polling data, Mr.
+ Biden’s stimulus plan has broad support among Americans.</span><span><span>Credit...</span><span><span>Doug Mills/The New York Times</span></span></span></figcaption><p class="rm-manual"><span>By </span><span><a href="https://www.nytimes.com/by/emily-cochrane">Emily Cochrane</a></span> and <span><a href="https://www.nytimes.com/by/jim-tankersley">Jim Tankersley</a></span></p>
+<ul class="rm-manual"><li class="rm-manual">
+<span>Feb. 19, 2021</span><span>Updated <span>6:56 p.m. ET</span></span>
+</li></ul>
+<p>WASHINGTON — Republicans are struggling to persuade voters to oppose 
+President Biden’s $1.9 trillion economic rescue plan, which enjoys 
+strong, bipartisan support nationwide even as it is moving through 
+Congress with just Democratic backing.</p>
+<p>Democrats who control the House are preparing to approve the package 
+by the end of next week, with the Senate aiming to soon follow with its 
+own party-line vote before unemployment benefits are set to lapse in 
+mid-March. On Friday, the House Budget Committee unveiled the <a href="https://budget.house.gov/sites/democrats.budget.house.gov/files/documents/S%20Con%20Res%205%20Bill%20Final.pdf" rel="noopener noreferrer">nearly 600-page text</a> for the proposal, which includes billions of dollars for unemployment benefits, small businesses and stimulus checks.</p>
+<p>Republican leaders, searching for a way to derail the proposal, on 
+Friday led a final attempt to tarnish the package, labeling it a “payoff
+ to progressives.” The bill, they said, spends too much and includes a 
+liberal wish list of programs like aid to state and local governments — 
+which they call a “blue state bailout,” though many states facing 
+shortfalls are controlled by Republicans — and increased benefits for 
+the unemployed, which they argued would discourage people from looking 
+for work.</p>
+<p>Those attacks have followed weeks of varying Republican objections to
+ the package, including warnings that it would do little to help the 
+economy recover and grow, that it would add to the federal budget 
+deficit and possibly unleash faster inflation, and that Democrats were 
+violating Mr. Biden’s calls for “unity” by proceeding without bipartisan
+ consensus.</p>
+<p>The arguments have so far failed to connect, in part because many of its core provisions poll strongly — even with Republicans.</p>
+<p>More than 7 in 10 Americans now back Mr. Biden’s aid package, 
+according to new polling from the online research firm SurveyMonkey for 
+The New York Times. That includes support from three-quarters of 
+independent voters, 2 in 5 Republicans and nearly all Democrats. The 
+overall support for the bill is even larger than the substantial 
+majority of voters who said in January that they favored an end-of-year 
+economic aid bill signed into law by President Donald J. Trump.</p>
+<p>While Mr. Biden has encouraged Republican lawmakers to get on board 
+with his package, Democrats are moving their bill through Congress using
+ a parliamentary process that will allow them to pass it with only 
+Democratic votes.</p>
+<p>“Critics say my plan is too big, that it cost $1.9 trillion dollars; 
+that’s too much,” Mr. Biden said at an event on Friday. “Let me ask 
+them, what would they have me cut?”</p>
+<p>House Republican leaders on Friday urged their rank-and-file members 
+to vote against the plan, billing it as Speaker Nancy Pelosi of 
+California’s “Payoff to Progressives Act.” They detailed more than a 
+dozen objections to the bill, including “a third round of stimulus 
+checks costing more than $422 billion, which will include households 
+that have experienced little or no financial loss during the pandemic.” 
+Ms. Pelosi’s office issued its own rebuttal soon after, declaring 
+“Americans need help. House Republicans don’t care.”</p>
+<p>Republicans have also railed against the process Democrats have 
+employed to advance the bill, citing dozens of legislative amendments 
+that Republicans offered in various committees, which Democrats 
+rejected. Last week, top Republican senators complained in a letter to 
+Democratic committee leadership about plans to bypass Senate hearings on
+ the House bill, describing it as “the outsourcing of their own 
+committee gavels to the House.”</p>
+<p>The Republican pushback is complicated by the pandemic’s ongoing 
+economic pain, with millions of Americans still out of work and the 
+recovery slowing. It is also hampered by the fact that many of the 
+lawmakers objecting to Mr. Biden’s proposals supported similar 
+provisions, including direct checks to individuals, when Mr. Trump was 
+president.</p>
+<p>The New Washington</p>
+<h2 class="rm-manual"><a href="https://www.nytimes.com/live/2021/02/19/us/joe-biden-news">Latest Updates</a></h2>
+<p class="rm-manual"><span>Updated </span></p>
+<p class="rm-manual"><span>Feb. 19, 2021, 7:17 p.m. ET</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.nytimes.com/live/2021/02/19/us/joe-biden-news#georgia-legislators-want-to-restrict-voting-methods-popular-among-democrats">Georgia legislators want to restrict voting methods popular among Democrats.</a></li>
+<li class="rm-manual"><a href="https://www.nytimes.com/live/2021/02/19/us/joe-biden-news#lloyd-austin-addressed-a-viral-video-about-sexual-harassment-in-the-marine-corps">Lloyd Austin addressed a viral video about sexual harassment in the Marine Corps.</a></li>
+<li><a href="https://www.nytimes.com/live/2021/02/19/us/joe-biden-news#house-budget-committee-unveils-a-600-page-1-9-trillion-economic-relief-bill">House Budget Committee unveils a 600-page, $1.9 trillion economic relief bill.</a></li>
+</ul>
+<p>“What they’ve tried to do is pick apart individual pieces of it,” 
+Representative Richard E. Neal, Democrat of Massachusetts and the 
+chairman of the House Ways and Means Committee, said in an interview. 
+“But I think on an overall basis, you have to contrast that with how 
+well this is being received across the country.”</p>
+<p>Some Republican lawmakers and aides acknowledge the challenge they 
+face in trying to explain to voters why they object to the package, 
+particularly after reaching agreement with Democrats on several rounds 
+of aid earlier in the crisis. Many of those negotiations were 
+contentious and stretched for months; Mr. Biden has said he will not 
+wait for Republicans to join his effort, citing the urgency of the 
+economy’s needs.</p>
+<p>“We’ve shown over five different bills we can do it together,” said 
+Senator Shelley Moore Capito, Republican of West Virginia and one of the
+ lawmakers who had met privately with Mr. Biden to discuss both economic
+ relief and infrastructure plans. “I think we’re going to have to draw a
+ contrast of what’s in there and does not make sense.”</p>
+<p>While explaining their opposition to voters would be a challenge, she
+ said, supporting the bill is not an option for most Republicans.</p>
+<p>“The price tag in the end is just so inordinately high and has too 
+many extraneous things in it to gain any real support in the Republican 
+Party.”</p>
+<p>The scattershot critique is a contrast from the last time a president
+ used the parliamentary move, called budget reconciliation, to push a 
+major proposal: the $1.5 trillion tax cut package that Mr. Trump and 
+congressional Republicans passed in 2017 without any Democratic votes. 
+Shortly before the first House hearing on the tax cuts, Democrats on the
+ Ways and Means Committee made a plan to brand the bill as a “tax scam” 
+benefiting the rich and the powerful, before Republicans could sell it 
+as a boon to the middle class.</p>
+<p><span>Image</span></p>
+<figcaption><span>Representative Tom Reed of New York was one of the 
+moderate Republicans who initially spoke with White House officials in a
+ bid to reach a compromise on the stimulus package.</span><span><span>Credit...</span><span>Stefani Reynolds for The New York Times</span></span></figcaption><p>Mr.
+ Trump’s tax cuts took a hit in public polling, and they gave little 
+boost to Republican candidates in the 2018 midterm elections that 
+followed. Republicans have found similar success in recent years driving
+ the popularity of signature legislation under Democratic presidents, 
+most notably President Barack Obama’s Affordable Care Act in 2010.</p>
+<p>Representative Donald S. Beyer Jr., Democrat of Virginia, recalled 
+the warning he heard from leaders in his party in 2017: “Republicans are
+ great at talking in headlines, and we’re great at talking in fine 
+print.” Democrats’ ability to pick a pithy message and stick with it in 
+the tax debate, he said, was “one of the few times we ran against type.”</p>
+<p>Many Republicans remain confident that their attacks will begin to 
+resonate in this debate. One senior Republican aide, speaking on 
+condition of anonymity, said that with attention focused on the 
+legislation this week, members would continue to highlight provisions 
+that are seen as longtime liberal priorities, as well as the money left 
+over from previous relief packages. Republicans also plan to question 
+whether the new funds would deliver on promises to improve the economy 
+and reopen schools.</p>
+<p>“I think we do have an obligation to ask questions,” said 
+Representative Tom Reed of New York, one of the moderate Republicans who
+ initially spoke with White House officials in a bid to reach a 
+compromise. He predicted that once voters focused on individual 
+provisions that demonstrated the package’s largess and overreach, they 
+would sour on the overall proposal.</p>
+<p>“It’s human nature, and I get it, but can we try to move forward in a
+ much more productive manner?” Mr. Reed added, echoing the process 
+complaints already percolating among Republicans in both chambers.</p>
+<p>Polls suggest that could be a tough fight for Republicans, as many of
+ the bill’s provisions are widely popular. In the SurveyMonkey poll, 4 
+in 5 respondents said it was important for the relief bill to include 
+$1,400 direct checks, including nearly 7 in 10 Republicans. A similarly 
+large group of respondents said it was important to include aid to state
+ and local governments and money for vaccine deployment.</p>
+<p>They split evenly on the question of whether they are more concerned 
+that the plan is too big, further driving up the federal budget deficit,
+ or too small, and thus unable to quickly spur economic growth.</p>
+<p>The fractured debate over the plan in and outside of Washington has 
+also been largely overshadowed by the tumult within the Republican Party
+ itself, where the specter of Mr. Trump and his impeachment over the 
+Jan. 6 Capitol attack looms large and threatens to continue upending 
+efforts to focus on conservative efforts to frame the legislation as 
+overreaching and ineffective. (Mr. Trump, as recently as this week, was 
+hammering Republicans for an unwillingness to accept direct payments.)</p>
+<p>Given their slim majority in the House and the strict parameters that
+ allow them to avoid the filibuster in the Senate, Democrats can afford 
+few, if any, defections in order to send the legislation to Mr. Biden’s 
+desk before unemployment benefits begin to lapse in March.</p>
+<p class="rm-manual">Nicholas Fandos contributed reporting.</p>
+<p class="rm-manual">Advertisement</p>
+<p class="rm-manual"><a href="#after-bottom">Continue reading the main story</a></p></article>
+</body></html>

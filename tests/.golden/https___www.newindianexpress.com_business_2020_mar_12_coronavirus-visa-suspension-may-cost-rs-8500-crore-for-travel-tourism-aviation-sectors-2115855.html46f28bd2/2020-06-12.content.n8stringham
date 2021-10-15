@@ -1,0 +1,204 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Coronavirus: Visa suspension may cost Rs 8,500 crore for travel, tourism, aviation sectors- The New Indian Express </p>
+<p class="rm-manual"> <span>ADVERTISEMENT</span> </p>
+<p class="rm-manual"> <span>ADVERTISEMENT</span> </p>
+<p class="rm-manual"> <span>ADVERTISEMENT</span> </p>
+<ul class="rm-manual"> <li class="rm-manual">
+<a href="https://www.newindianexpress.com/nation">Nation</a> </li> <li class="rm-manual">
+<a href="https://www.newindianexpress.com/world">World</a> </li> <li class="rm-manual">
+<a href="https://www.newindianexpress.com/states">States</a> </li> <li class="rm-manual">
+<a href="https://www.newindianexpress.com/cities">Cities</a> </li> <li class="rm-manual">
+<a href="https://www.newindianexpress.com/business">Business</a> </li> <li class="rm-manual">
+<a href="https://www.newindianexpress.com/sport">Sport</a> </li>
+<li class="rm-manual"><a href="https://www.newindianexpress.com/good-news">Good News</a></li> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.newindianexpress.com/sport/womens-t20-world-cup">Women's T20 World Cup</a></li> <li class="rm-manual"><a href="https://www.newindianexpress.com/sport/icc-world-cup">ICC World Cup </a></li> </ul> <li class="rm-manual">
+<a href="https://www.newindianexpress.com/entertainment">Movies</a> </li> <li class="rm-manual">
+<a href="https://www.newindianexpress.com/galleries">Galleries</a> </li> <li class="rm-manual">
+<a href="https://www.newindianexpress.com/videos">Videos</a> </li> <li class="rm-manual">
+<a href="https://www.newindianexpress.com/Opinions">Opinions</a> </li>
+<li class="rm-manual"><a href="https://epaper.newindianexpress.com/">E-PAPER</a></li> </ul>
+<table class="rm-manual"> <tbody><tr class="rm-manual"> <td class="rm-manual">STOCK MARKET</td> <td class="rm-manual">BSE</td> <td class="rm-manual">NSE</td> </tr> </tbody></table>
+<p class="rm-manual"> <a href="https://www.newindianexpress.com/">Home</a> <a href="https://www.newindianexpress.com/business">Business</a> </p>
+<h1 class="rm-manual">Coronavirus: Visa suspension may cost Rs 8,500 crore for travel, tourism, aviation sectors</h1>
+<p class="rm-manual">'We estimate that it will lead to direct loss of not less than Rs 8,500 crore,' IATO Secretary Rajesh Mudgill said.</p>
+<h3 class="rm-manual">Share Via Email</h3>
+<p class="rm-manual"> Published: <span>12th March 2020 05:59 PM</span> | Last Updated: <span>12th March 2020 05:59 PM</span> <span><span> | </span><span>A+</span><span>A </span><span>A-</span></span> </p>
+<p class="rm-manual">For representation purposes</p>
+<p class="rm-manual"> <span> By <span>PTI</span></span></p>
+<p>NEW DELHI: The coronavirus pandemic could bring Indian travel, 
+tourism and aviation industries to a halt within next ten days, 
+especially with the government suspending visas for a month, a move that
+ could cause an immediate economic impact of at least Rs 8,500 crore, 
+according to industry players.</p>
+<p>Industry bodies, including Indian Association of Tour Operators 
+(IATO), and ASSOCHAM, foresee job losses in the sectors as companies try
+ to tide over the situation by removing non-essential work forces and 
+stopping recruitment, while calling the government to review the 
+decision to suspend visas for a month and allow inbound travel through 
+limited gateway cities.</p>
+<p>"The ban on travel to India for a period of one month will have a 
+cascading economic impact and will lead to job losses in the entire 
+hotel, aviation and travel sector.</p>
+<p>We estimate that it will lead to direct loss of not less than Rs 8,500 crore," IATO Secretary Rajesh Mudgill said.</p>
+<p>Assocham Tourism and Hospitality Council Chairman Subhash Goyal said 
+since the outbreak of coronavirus, the aviation and tourism industries 
+in India have been adversely affected.</p>
+<p>"However, we were able to manage our expenses and keep the staff because some amount of essential travel was going on.</p>
+<p>The suspension of visas last night has come as an immediate blow to 
+the entire tourism, aviation and hospitality industry," he said.</p>
+<p>Warning of the consequences of the step, Goyal said, "If no visas are
+ valid, within next ten days this travel and tourism industry will come 
+to a virtual stop.</p>
+<p>It would mean that everyone will cut down costs and terminate non-essential staff and stop recruiting additional staff.</p>
+<p>" Expressing similar views, Mudgill said,"In view of the staggering 
+loss that the entire industry stares at, we request the government to 
+consider review of the situation after 10 days and also consider giving 
+relief in taxation to the sector as it will help in mitigating the 
+losses suffered.</p>
+<p>" Federation of Hotel &amp; Restaurant Associations of India (FHRAI) 
+Vice President Gurbaxish Singh Kohli said,"Since November, when 
+coronavirus made news, hotel room cancellations began and crossed the 80
+ per cent mark.</p>
+<p>New bookings are almost completely on hold, including the NRI segment
+ which accounts for 60 per cent of the tourism revenues mostly in the 
+months from April to September.</p>
+<p>" Yatra.com Co-Founder and COO, Corporate Travel &amp; Head Industry 
+Relations, Sabina Chopra said the latest suspension of visas from all 
+countries to India is expected to have a substantial impact on the 
+foreign tourist arrival in the country which was already witnessing a 
+drop due to the prevailing situation.</p>
+<p>"We have received close to 35 per cent cancellation queries from 
+travellers planning their trip to foreign destinations," she said adding
+ airfares to affected destinations have dropped by 40 per cent.</p>
+<p>Chopra further said,"There has been about 18 per cent drop in hotel 
+rates and we are receiving cancellation requests from various travellers
+ who are wary of taking up trips domestically as well.</p>
+<p>" According to industry chamber CII, this is the one of the worst 
+crises ever to hit the Indian tourism industry impacting all its 
+geographical segments - inbound, outbound and domestic, almost all 
+tourism verticals - leisure , adventure, heritage, MICE, cruise, 
+corporate and niche segments.</p>
+<p>In an impact assessment of the coronavirus pandemic, CII Tourism 
+Committee said to save on variable costs and minimise fixed costs many 
+small and mid sized hotels, resorts and car rental companies are 
+shutting down operations and asking staff to go on leave without pay.</p>
+<p>Moreover, working capital of many corporates in tourism sector is 
+seriously hit by almost 60 per cent and for micro, small and medium 
+tourism enterprises by almost 80 per cent, it added.</p>
+<p>"Most of the Indian tourism travel and hospitality companies are 
+facing demands for full refunds and they are doing so out of their cash 
+reserves even for which they have paid advance tax and GST," the CII 
+assessment report added.</p>
+<p>The report further said cancellations are "reaching a peak of almost 
+80 per cent now in March in many Indian locations. The value at risk 
+from this segment will be in multiples of tens of thousands of crores." 
+With India cancelling all visas, the chamber said the impact "will be 
+worse".</p>
+<p>ANAROCK Property Consultants Chairman Anuj Puri said,"The 
+cancellation of visas for foreigners as well as the strong advice issued
+ to Indians to refrain from unnecessary travel will have a marked 
+effect.</p>
+<p>This is the most unsettling healthcare crisis in recent times and hotel bookings will go south.</p>
+<p>" On Indians being advised to refrain from unnecessary travel, the 
+CII report said,"The December holiday season of 2019 took an estimated 
+hit of almost 40-50 per cent, the holiday season of April to July 2020 
+is likely to take a humongous hit which could be as high as 80-100 per 
+cent, unless there is positive news of the progression of virus 
+decreasing.</p>
+<p>VFS Global Regional Group COO - South Asia, Middle East and North 
+Africa, Americas Vinay Malhotra said,"While it is too early to comment 
+on the impact of coronavirus on visa application trends, so far, our 
+visa application processes in India continue on schedule as per the 
+mandates of our client governments." MakeMyTrip Group CEO Rajesh Magow 
+said,"The decision by the government will have an impact on inbound and 
+outbound international travel."</p>
+<p class="rm-manual"><span>Stay up to date on all the latest <a href="https://www.newindianexpress.com/business">Business</a> news with The New Indian Express App. <a href="https://play.google.com/store/apps/details?id=com.newindianexpress.news"> Download now</a></span></p>
+<p class="rm-manual"> <span>TAGS</span> </p>
+<p class="rm-manual"><a href="https://www.newindianexpress.com/topic/tourism">tourism </a></p>
+<p class="rm-manual"><a href="https://www.newindianexpress.com/topic/Visa"> Visa</a> </p>
+<p class="rm-manual">O</p>
+<p class="rm-manual"> P</p>
+<p class="rm-manual"> E</p>
+<p class="rm-manual"> N</p>
+<p class="rm-manual"> <span>ADVERTISEMENT</span> </p>
+<p class="rm-manual"> <span>ADVERTISEMENT</span> </p>
+<p class="rm-manual"> <a>India Matters</a> </p>
+<p class="rm-manual"><a href="https://www.newindianexpress.com/nation/2020/jun/12/reservation-not-a-fundamental-right-sc-dismisses-pleas-seeking-implementation-of-obc-quota-in-tamil-nadu-medical-courses-2155524.html">Reservation is not a fundamental right, says Supreme Court </a></p>
+<p class="rm-manual"><a href="https://www.newindianexpress.com/nation/2020/jun/11/less-than-one-per-cent-population-in-non-hotspot-districts-exposed-to-covid-19-virus-yet-shows-icmrs-serosurvey-2155378.html">Less than 1% of population infected, no community transmission yet: ICMR </a></p>
+<p class="rm-manual"><a href="https://www.newindianexpress.com/">False positive test reports land 20 individuals in isolation centre </a></p>
+<p class="rm-manual"><a href="https://www.newindianexpress.com/cities/bengaluru/2020/jun/12/not-so-indelible-quarantine-stamps-fading-away-puts-officials-in-fix-2155428.html">Not so indelible: Quarantine stamps fading away puts officials in fix</a></p>
+<h4 class="rm-manual">Comments</h4>
+<p class="rm-manual"><span>Disclaimer </span>: We respect your thoughts 
+and views! But we need to be judicious while moderating your comments. 
+All the comments will be moderated by the newindianexpress.com 
+editorial. Abstain from posting comments that are obscene, defamatory or
+ inflammatory, and do not indulge in personal attacks. Try to avoid 
+outside hyperlinks inside the comment. Help us delete comments that do 
+not follow these guidelines.</p>
+<p class="rm-manual">The views expressed in comments published on 
+newindianexpress.com are those of the comment writers alone. They do not
+ represent the views or opinions of newindianexpress.com or its staff, 
+nor do they represent the views or opinions of The New Indian Express 
+Group, or any entity of, or affiliated with, The New Indian Express 
+Group. newindianexpress.com reserves the right to take any or all 
+comments down at any time.</p>
+<p class="rm-manual"> <span>ADVERTISEMENT</span> </p>
+<h4 class="rm-manual">Latest</h4>
+<p class="rm-manual"> <a href="https://www.newindianexpress.com/world/2020/jun/12/extreme-poverty-could-rise-to-over-one-billion-people-globally-due-to-covid-19-crisis-report-2155685.html">Extreme poverty could rise to over one billion people globally due to COVID-19 crisis: Report</a></p>
+<p class="rm-manual"> <a href="https://www.newindianexpress.com/states/kerala/2020/jun/12/retired-kerala-police-officer-commits-suicide-after-killing-wife-2155684.html">Retired Kerala police officer commits suicide after killing wife</a></p>
+<p class="rm-manual"> <a href="https://www.newindianexpress.com/nation/2020/jun/12/defence-ministry-extends-delivery-period-of-all-capital-acquisition-contracts-in-view-of-covid-19-2155683.html">Defence Ministry extends delivery period of all capital acquisition contracts in view of COVID-19</a></p>
+<p class="rm-manual"> <a href="https://www.newindianexpress.com/sport/cricket/2020/jun/12/virat-kohli-and-boys-await-bcci-nod-before-starting-outdoor-training-2155682.html">Virat Kohli &amp; boys await BCCI nod before starting outdoor training</a></p>
+<p class="rm-manual"> <a href="https://www.newindianexpress.com/business/2020/jun/12/flight-cancellations-during-lockdown-sc-asks-centre-to-discuss-ticket-price-refund-issue-with-airli-2155681.html">Flight cancellations during lockdown: SC asks Centre to discuss ticket price refund issue with airlines</a></p>
+<p class="rm-manual"> <a href="https://www.newindianexpress.com/nation/2020/jun/12/new-google-tool-to-help-users-find-covid-testing-centres-in-india-2155680.html">New Google tool to help users find COVID testing centres in India</a></p>
+<p class="rm-manual"> <span>ADVERTISEMENT</span> </p>
+<p class="rm-manual"> <span>ADVERTISEMENT</span> </p>
+<p class="rm-manual"> <a href="https://www.newindianexpress.com/videos">Videos</a></p>
+<p class="rm-manual"><a href="https://www.newindianexpress.com/videos/good-news/2020/jun/12/lockdown-boat-youtube-videos-help-kerala-mans-musafir-set-sail-at-last-108553.html">Lockdown boat: YouTube videos help Kerala man's 'Musafir' set sail at last</a></p>
+<p class="rm-manual"><a href="https://www.newindianexpress.com/videos/videos-nation/2020/jun/11/covid-19-death-risk-higher-in-india-women-than-men-study-suggests-108551.html">COVID-19: Death risk higher in India women than men, study suggests</a></p>
+<p class="rm-manual"> <span>ADVERTISEMENT</span> </p>
+<p class="rm-manual"> <a href="https://www.newindianexpress.com/galleries">Gallery</a></p>
+<p class="rm-manual"><a href="https://www.newindianexpress.com/galleries/entertainment/2020/jun/11/what-if-i-told-you-have-been-saying-these-epic-hollywood-dialogues-wrong-star-wars-the-lord-of-t-102892.html">'What if I told' you have been saying these epic Hollywood dialogues wrong? Star Wars, The Lord of the Rings and more...</a></p>
+<p class="rm-manual"><a href="https://www.newindianexpress.com/galleries/nation/2020/jun/10/what-did-opposition-do-here-are-some-notable-efforts-by-congress-left-other-parties-to-help-pe-102891.html">'What did Opposition do?': Here are some notable efforts by Congress, Left, other parties to help people during the pandemic</a></p>
+<h3 class="rm-manual"> <a> Trending </a> </h3>
+<h3 class="rm-manual">FOLLOW US</h3>
+<p class="rm-manual">Copyright - newindianexpress.com 2020</p>
+<p class="rm-manual"><a href="https://epaper.morningstandard.in/" rel="nofollow">The Morning Standard | </a><a href="https://www.dinamani.com/" rel="nofollow">Dinamani | </a> <a href="https://www.kannadaprabha.com/" rel="nofollow">Kannada Prabha | </a> <a href="https://www.samakalikamalayalam.com/" rel="nofollow">Samakalika Malayalam | </a><a href="https://www.indulgexpress.com/" rel="nofollow">Indulgexpress | </a> <a href="https://www.edexlive.com/" rel="nofollow">Edex Live | </a> <a href="https://www.cinemaexpress.com/" rel="nofollow">Cinema Express | </a> <a href="http://www.eventxpress.com/" rel="nofollow">Event Xpress </a></p>
+<p class="rm-manual"> <a href="https://www.newindianexpress.com/contact-us">Contact Us | </a> <a href="https://www.newindianexpress.com/about-us">About Us | </a> <a href="https://www.newindianexpress.com/careers">Careers | </a><a href="https://www.newindianexpress.com/privacy-policy">Privacy Policy | </a> <a href="https://www.newindianexpress.com/topic">Search | </a> <a href="https://www.newindianexpress.com/terms-of-use">Terms of Use | </a> <a href="https://www.newindianexpress.com/advertise-with-us">Advertise With Us </a></p>
+<p class="rm-manual"> <a href="https://www.newindianexpress.com/">Home | </a> <a href="https://www.newindianexpress.com/nation">Nation | </a> <a href="https://www.newindianexpress.com/world">World | </a> <a href="https://www.newindianexpress.com/cities">Cities | </a> <a href="https://www.newindianexpress.com/business">Business | </a> <a href="https://www.newindianexpress.com/opinions/columns">Columns | </a> <a href="https://www.newindianexpress.com/entertainment">Entertainment | </a> <a href="https://www.newindianexpress.com/sport">Sport | </a> <a href="https://www.newindianexpress.com/magazine">Magazine | </a> <a href="https://www.newindianexpress.com/thesundaystandard">The Sunday Standard </a></p>
+<p class="rm-manual"> <span> flipboard</span> <span> facebook</span> <span> twitter</span> <span> whatsapp</span> <span> Next</span> </p></article>
+</body></html>

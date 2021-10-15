@@ -1,0 +1,104 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Newzandar News - All News In One Place. </p>
+<p class="rm-manual"> <a href="https://newzandar.com/" rel="home"> </a></p><h1 class="rm-manual"><a href="https://newzandar.com/" rel="home">Newzandar News</a></h1><a href="https://newzandar.com/" rel="home"> <h2 class="rm-manual">All News In One Place.</h2> </a> <p class="rm-manual"></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://newzandar.com/category/headline/">Headline</a></li> <li class="rm-manual"><a href="https://newzandar.com/category/opinion/">Opinion</a></li> <li class="rm-manual"><a href="https://newzandar.com/category/crime/">Crime</a></li> <li class="rm-manual"><a href="https://newzandar.com/category/politics/">Politics</a></li> <li class="rm-manual">
+<a href="https://newzandar.com/tag/sports/">Sports</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://newzandar.com/category/ronaldo/">Ronaldo</a></li> <li class="rm-manual"><a href="https://newzandar.com/category/fifa/">FIFA</a></li> <li class="rm-manual"><a href="https://newzandar.com/category/leicester-city/">Leicester City</a></li> <li class="rm-manual"><a href="https://newzandar.com/category/manchester-united/">Manchester United</a></li> </ul> </li> <li class="rm-manual"><a href="https://newzandar.com/tag/5g/">5G</a></li> <li class="rm-manual">
+<a href="https://newzandar.com/tag/biafra-news/">Biafra News</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://newzandar.com/category/nnamdi-kanu/">Nnamdi Kanu</a></li> <li class="rm-manual"><a href="https://newzandar.com/category/ipob/">IPOB</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://newzandar.com/category/coronavirus/">coronavirus</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://newzandar.com/category/china/">China</a></li> <li class="rm-manual"><a href="https://newzandar.com/category/bill-gate/">Bill Gate</a></li> <li class="rm-manual"><a href="https://newzandar.com/category/face-mask/">Face mask</a></li> <li class="rm-manual">
+<a href="https://newzandar.com/category/ncdc/">NCDC</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://newzandar.com/category/covid-19-palliative/">COVID-19 palliative</a></li> <li class="rm-manual"><a href="https://newzandar.com/category/covid-19-lockdown/">COVID-19 lockdown</a></li> </ul> </li> </ul> </li> <li class="rm-manual"><a href="https://newzandar.com/category/celebrity-entertainment/">Entertainment</a></li> <li class="rm-manual">
+<a href="https://newzandar.com/category/celebrities/">CELEBRITIES</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://newzandar.com/category/funke-akindele/">Funke Akindele</a></li> <li class="rm-manual"><a href="https://newzandar.com/category/davido/">Davido</a></li> <li class="rm-manual"><a href="https://newzandar.com/category/don-jazzy/">Don Jazzy</a></li> </ul> </li> <li class="rm-manual"><a href="https://newzandar.com/category/jobs/">Jobs</a></li> <li class="rm-manual"><a href="https://newzandar.com/about-us/">About Newzandar News</a></li> <li class="rm-manual"><a href="https://newzandar.com/contact/">Contact Newzandar News</a></li> </ul>
+<h3 class="rm-manual"> <a href="https://newzandar.com/your-appointments-will-destroy-nigeria-col-umar-writes-buhari/" rel="bookmark"> Your appointments will destroy Nigeria, Col Umar writes Buhari </a> </h3>
+<p class="rm-manual"> <span>18 seconds ago</span> <span><a href="https://newzandar.com/author/admin/">Newzandar Editor</a></span> <span><a href="https://newzandar.com/your-appointments-will-destroy-nigeria-col-umar-writes-buhari/#mh-comments">0</a></span> </p>
+<p class="">By AbdulGafar Alabelewe, Kaduna Former Military Governor of 
+Kaduna State, Col. Abubakar Dangiwa Umar, has written a strongly-worded 
+open letter to President Muhammadu Buhari, <a href="https://newzandar.com/your-appointments-will-destroy-nigeria-col-umar-writes-buhari/">[…]</a></p>
+<h3 class="rm-manual"> <a href="https://newzandar.com/stop-beating-around-the-bush-on-restructuring-prof-yadudu-tells-adebanjo-nwodo-others/" rel="bookmark"> Stop beating around the bush on restructuring – Prof. Yadudu tells Adebanjo, Nwodo, others </a> </h3>
+<p class="rm-manual"> <span>17 mins ago</span> <span><a href="https://newzandar.com/author/admin/">Newzandar Editor</a></span> <span><a href="https://newzandar.com/stop-beating-around-the-bush-on-restructuring-prof-yadudu-tells-adebanjo-nwodo-others/#mh-comments">0</a></span> </p>
+<p>Restructuring …blames Jonathan for non-implementation of Confab 
+report Former Legal Adviser to the late Head of State, General Sani 
+Abacha, Prof Auwal Yadudu, has told <a href="https://newzandar.com/stop-beating-around-the-bush-on-restructuring-prof-yadudu-tells-adebanjo-nwodo-others/">[…]</a></p>
+<h3 class="rm-manual"> <a href="https://newzandar.com/group-writes-obiano-over-sack-of-161-wwf-traffic-officers/" rel="bookmark"> Group writes Obiano over sack of 161 WWF traffic officers </a> </h3>
+<p class="rm-manual"> <span>23 mins ago</span> <span><a href="https://newzandar.com/author/admin/">Newzandar Editor</a></span> <span><a href="https://newzandar.com/group-writes-obiano-over-sack-of-161-wwf-traffic-officers/#mh-comments">0</a></span> </p>
+<p>Obiano …says they were not given chance to defend themselves. By 
+Chimaobi Nwaiwu A Coalition of five Civil Society Groups in Southeast, 
+yesterday wrote to <a href="https://newzandar.com/group-writes-obiano-over-sack-of-161-wwf-traffic-officers/">[…]</a></p>
+<h3 class="rm-manual"> <a href="https://newzandar.com/police-urge-appeal-court-to-uphold-maryam-sandas-death-sentence-insist-convict-killed-her-husband/" rel="bookmark"> Police urge Appeal Court to uphold Maryam Sanda’s death sentence, insist convict killed her husband </a> </h3>
+<p class="rm-manual"> <span>24 mins ago</span> <span><a href="https://newzandar.com/author/admin/">Newzandar Editor</a></span> <span><a href="https://newzandar.com/police-urge-appeal-court-to-uphold-maryam-sandas-death-sentence-insist-convict-killed-her-husband/#mh-comments">0</a></span> </p>
+<p>The Police has prayed the Court of Appeal, Abuja Division to uphold 
+the death sentence imposed on Maryam Sanda by an Abuja High Court for <a href="https://newzandar.com/police-urge-appeal-court-to-uphold-maryam-sandas-death-sentence-insist-convict-killed-her-husband/">[…]</a></p>
+<h3 class="rm-manual"> <a href="https://newzandar.com/uniben-student-raped-to-death-inside-church-in-benin/" rel="bookmark"> UNIBEN student raped to death inside church in Benin </a> </h3>
+<p class="rm-manual"> <span>35 mins ago</span> <span><a href="https://newzandar.com/author/admin/">Newzandar Editor</a></span> <span><a href="https://newzandar.com/uniben-student-raped-to-death-inside-church-in-benin/#mh-comments">0</a></span> </p>
+<p>UNIBEN …As Obaseki orders investigation By Ozioruva Aliu A 100 level 
+Microbiology student of University of Benin, UNIBEN, Miss Vera Uwaila, 
+weekend, died from injuries <a href="https://newzandar.com/uniben-student-raped-to-death-inside-church-in-benin/">[…]</a></p>
+<h3 class="rm-manual"> <a href="https://newzandar.com/executive-order-governors-have-lost-emperorship-toga-bso/" rel="bookmark"> Executive Order: Governors have lost emperorship toga – BSO </a> </h3>
+<p class="rm-manual"> <span>37 mins ago</span> <span><a href="https://newzandar.com/author/admin/">Newzandar Editor</a></span> <span><a href="https://newzandar.com/executive-order-governors-have-lost-emperorship-toga-bso/#mh-comments">0</a></span> </p>
+<p>The Buhari Support Organisation (BSO), South-East zone, on Sunday, 
+hailed President Muhammadu Buhari for signing the Executive Order 10, 
+2020. The order recently signed by <a href="https://newzandar.com/executive-order-governors-have-lost-emperorship-toga-bso/">[…]</a></p>
+<h3 class="rm-manual"> <a href="https://newzandar.com/actress-susan-peters-shares-photos-from-her-42nd-birthday-celebration/" rel="bookmark"> Actress Susan Peters shares photos from her 42nd birthday celebration </a> </h3>
+<p class="rm-manual"> <span>37 mins ago</span> <span><a href="https://newzandar.com/author/admin/">Newzandar Editor</a></span> <span><a href="https://newzandar.com/actress-susan-peters-shares-photos-from-her-42nd-birthday-celebration/#mh-comments">0</a></span> </p>
+<p>Nollywood actress, Susan Peters has shared lovely photos from her 
+42nd birthday party which she celebrated with closed ones. The party 
+took place indoors and <a href="https://newzandar.com/actress-susan-peters-shares-photos-from-her-42nd-birthday-celebration/">[…]</a></p>
+<h3 class="rm-manual"> <a href="https://newzandar.com/zenith-bank-emerges-best-bank-in-global-finance-awards-2020/" rel="bookmark"> Zenith Bank emerges best bank in Global Finance Awards 2020 </a> </h3>
+<p class="rm-manual"> <span>40 mins ago</span> <span><a href="https://newzandar.com/author/admin/">Newzandar Editor</a></span> <span><a href="https://newzandar.com/zenith-bank-emerges-best-bank-in-global-finance-awards-2020/#mh-comments">0</a></span> </p>
+<p>Zenith Bank Zenith Bank Plc, has emerged as the best bank in Nigeria 
+in the recently released Global Finance Magazine World’s Best Banks 
+Awards 2020. <a href="https://newzandar.com/zenith-bank-emerges-best-bank-in-global-finance-awards-2020/">[…]</a></p>
+<h3 class="rm-manual"> <a href="https://newzandar.com/right-over-postage-stamps-remains-intact-says-nipost/" rel="bookmark"> Right over postage stamps remains intact, says NIPOST </a> </h3>
+<p class="rm-manual"> <span>40 mins ago</span> <span><a href="https://newzandar.com/author/admin/">Newzandar Editor</a></span> <span><a href="https://newzandar.com/right-over-postage-stamps-remains-intact-says-nipost/#mh-comments">0</a></span> </p>
+<p>The Nigerian Postal Service (NIPOST) has said it has the statutory 
+powers to print, mint, produce, retail and provide adhesive postage 
+stamps. In a statement <a href="https://newzandar.com/right-over-postage-stamps-remains-intact-says-nipost/">[…]</a></p>
+<h3 class="rm-manual"> <a href="https://newzandar.com/ayade-inaugurates-upscale-housing-estate-for-bakassi-idps/" rel="bookmark"> Ayade inaugurates upscale housing estate for Bakassi IDPs </a> </h3>
+<p class="rm-manual"> <span>40 mins ago</span> <span><a href="https://newzandar.com/author/admin/">Newzandar Editor</a></span> <span><a href="https://newzandar.com/ayade-inaugurates-upscale-housing-estate-for-bakassi-idps/#mh-comments">0</a></span> </p>
+<p>Our Reporter Cross River State Governor Ben Ayade at the weekend 
+handed over an ultra-modern housing estate to displaced Bakassi 
+indigenes. The Bakasi residents <a href="https://newzandar.com/ayade-inaugurates-upscale-housing-estate-for-bakassi-idps/">[…]</a></p>
+<h2 class="rm-manual">Posts navigation</h2>
+<p class="rm-manual"><span>1</span> <a href="https://newzandar.com/page/2/">2</a> <span>…</span> <a href="https://newzandar.com/page/3002/">3,002</a> <a href="https://newzandar.com/page/2/">»</a></p>
+<p class="rm-manual"> <span>Search for:</span> </p>
+<h4 class="rm-manual"><span>Trending Now</span></h4>
+<ul class="rm-manual"> <li> <a href="https://newzandar.com/ned-nwoko-buys-regina-daniels-a-house-in-london-to-celebrate-her-pregnancy-photos/">Ned Nwoko buys Regina Daniels a House in London to celebrate her pregnancy (photos)</a> <span><span>posted on May 31, 2020</span></span> </li> <li> <a href="https://newzandar.com/more-photos-and-videos-drop-after-regina-daniels-welcomed-her-baby/">More Photos And Videos Drop After Regina Daniels Welcomed Her Baby</a> <span><span>posted on May 31, 2020</span></span> </li> <li> <a href="https://newzandar.com/video-shows-moment-woman-threw-molotov-cocktail-at-nypd-car/">Video shows moment woman threw Molotov cocktail at NYPD car</a> <span><span>posted on May 31, 2020</span></span> </li> <li class="rm-manual"> <a href="https://newzandar.com/inec-gives-clarification-on-2020-recruitment/">INEC gives clarification on 2020 recruitment</a> <span><span>posted on May 31, 2020</span></span> </li> <li class="rm-manual"> <a href="https://newzandar.com/us-election-prophet-t-b-joshua-sends-new-message-to-donald-trump/">US election: Prophet T.B Joshua sends new message to Donald Trump</a> <span><span>posted on May 31, 2020</span></span> </li> <li class="rm-manual"> <a href="https://newzandar.com/cute-girl-with-more-heavy-chest-pops-up-challenges-pamela-odame-on-her-title/">Cute Girl With More Heavy Chest Pops Up, Challenges Pamela Odame on Her Title</a> <span><span>posted on May 31, 2020</span></span> </li> <li class="rm-manual"> <a href="https://newzandar.com/nigeria-maritime-university-okerenkoko-refutes-media-reports-on-alleged-sack-of-etebu-over-diversion-of-funds/">Nigeria Maritime University Okerenkoko refutes Media reports on alleged sack of Etebu over diversion of funds</a> <span><span>posted on May 31, 2020</span></span> </li> <li class="rm-manual"> <a href="https://newzandar.com/biafra-day-gowon-caused-civil-war-bnyl-insists/">Biafra Day: Gowon caused civil war – BNYL insists</a> <span><span>posted on May 31, 2020</span></span> </li> <li class="rm-manual"> <a href="https://newzandar.com/enugu-communities-hail-gov-ugwuanyi-over-40-kilometre-ring-road/">Enugu communities hail Gov Ugwuanyi over 40-kilometre ring road</a> <span><span>posted on May 31, 2020</span></span> </li> <li class="rm-manual"> <a href="https://newzandar.com/alaafin-of-oyos-favorite-wife-queen-aanu-celebrates-birthday-with-lovely-new-photos/">Alaafin of Oyo’s favorite wife, queen Aanu, celebrates birthday with lovely new photos</a> <span><span>posted on May 31, 2020</span></span> </li> <li class="rm-manual"> <a href="https://newzandar.com/which-of-these-5-movies-do-you-like-odunlade-adekolas-performance-the-most-video/">Which of these 5 Movies do you like Odunlade Adekola’s performance the Most (VIDEO)</a> <span><span>posted on May 31, 2020</span></span> </li> <li class="rm-manual"> <a href="https://newzandar.com/covid-19-ptf-submits-report-to-buhari-as-second-phase-of-eased-lockdown-ends/">COVID-19: PTF submits report to Buhari as second phase of eased lockdown ends</a> <span><span>posted on May 31, 2020</span></span> </li> <li class="rm-manual"> <a href="https://newzandar.com/three-suspected-armed-robbers-arrested-in-ogun/">Three suspected armed robbers arrested in Ogun</a> <span><span>posted on May 31, 2020</span></span> </li> <li class="rm-manual"> <a href="https://newzandar.com/exclusive-video-of-davidos-multi-million-naira-luxurious-apartment-in-banana-island-watch/">Exclusive video of Davido’s multi million Naira luxurious apartment in Banana Island | Watch</a> <span><span>posted on May 31, 2020</span></span> </li> <li class="rm-manual"> <a href="https://newzandar.com/100-level-uniben-student-raped-killed-in-church-photos/">100 level UNIBEN student raped, killed in church (Photos)</a> <span><span>posted on May 31, 2020</span></span> </li> <li class="rm-manual"> <a href="https://newzandar.com/soldier-and-policeman-spotted-throwing-punches-at-each-other-in-ilorin-video/">Soldier And Policeman Spotted Throwing Punches At Each Other In Ilorin (video)</a> <span><span>posted on June 1, 2020</span></span> </li> <li class="rm-manual"> <a href="https://newzandar.com/obey-order-granting-financial-independence-to-legislature-judiciary-presidency-tells-govs/">Obey order granting financial independence to legislature, judiciary – Presidency tells Govs</a> <span><span>posted on May 31, 2020</span></span> </li> <li class="rm-manual"> <a href="https://newzandar.com/whites-are-killing-black-americans-because-they-refused-to-remain-slaves-ex-police-officer/">Whites are killing Black-Americans Because They Refused To Remain Slaves – Ex-Police Officer</a> <span><span>posted on May 31, 2020</span></span> </li> <li class="rm-manual"> <a href="https://newzandar.com/wife-of-minneapolis-police-officer-who-killed-george-floyd-takes-final-action/">Wife of Minneapolis police officer who killed George Floyd takes final action</a> <span><span>posted on May 31, 2020</span></span> </li> <li class="rm-manual"> <a href="https://newzandar.com/machete-wielding-man-attacked-by-dallas-mob-in-disturbing-video/">Machete-wielding man attacked by Dallas mob in disturbing video</a> <span><span>posted on May 31, 2020</span></span> </li> <li class="rm-manual"> <a href="https://newzandar.com/toyin-abraham-reveals-her-husband-is-more-handsome-than-her-son/">Toyin Abraham reveals her husband is more handsome than her son</a> <span><span>posted on May 31, 2020</span></span> </li> <li class="rm-manual"> <a href="https://newzandar.com/pdp-sweeps-benue-lg-election-takes-all-23-chairmanship-276-councilorship-positions/">PDP sweeps Benue LG election, takes all 23 Chairmanship, 276 councilorship positions</a> <span><span>posted on May 31, 2020</span></span> </li> <li class="rm-manual"> <a href="https://newzandar.com/covid-19-things-not-looking-good-presidency-warns-nigerians-as-ncdc-confirms-553-new-cases/">COVID-19: Things not looking good – Presidency warns Nigerians as NCDC confirms 553 new cases</a> <span><span>posted on May 31, 2020</span></span> </li> <li class="rm-manual"> <a href="https://newzandar.com/my-prophecy-has-come-to-pass-fani-kayode-reacts-as-osinbajo-heads-toilet-committee/">My prophecy has come to pass – Fani-Kayode reacts as Osinbajo heads ‘toilet committee’</a> <span><span>posted on May 31, 2020</span></span> </li> <li class="rm-manual"> <a href="https://newzandar.com/kemi-olunloyo-accuses-davido-of-lying-about-his-newly-acquired-mansion-in-banana-island-details/">Kemi Olunloyo accuses Davido of lying about his newly acquired mansion in Banana Island | Details</a> <span><span>posted on May 31, 2020</span></span> </li> </ul>
+<h6 class="rm-manual"><span>Pages</span></h6>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://newzandar.com/about-us/">About Newzandar News</a></li> <li class="rm-manual"><a href="https://newzandar.com/advertise/">Advertise With Us</a></li> <li class="rm-manual"><a href="https://newzandar.com/contact/">Contact Newzandar News</a></li> <li class="rm-manual"><a href="https://newzandar.com/privacy-policy-2/">Privacy Policy</a></li> </ul>
+<p class="rm-manual">Copyright © 2020 | <a href="https://www.newzandar.com/" rel="nofollow">Newzandar News</a></p></article>
+</body></html>

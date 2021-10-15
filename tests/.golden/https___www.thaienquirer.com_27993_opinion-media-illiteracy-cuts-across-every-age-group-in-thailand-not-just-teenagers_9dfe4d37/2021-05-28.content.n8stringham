@@ -1,0 +1,200 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Opinion: Media illiteracy cuts across every age group in Thailand not just teenagers - Thai Enquirer </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.thaienquirer.com/">Home</a></li>
+<li class="rm-manual">
+<a href="https://www.thaienquirer.com/market-watch/">Market Watch</a><ul class="rm-manual"><li class="rm-manual"><a href="https://www.thaienquirer.com/enquistock/">EnquiStock</a></li></ul>
+</li>
+<li class="rm-manual">
+<a href="https://www.thaienquirer.com/current-affair/">Current Affairs</a><ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.thaienquirer.com/just-the-issues/">Just the issues</a></li>
+<li class="rm-manual"><a href="https://www.thaienquirer.com/latest-articles-thai-enquirer/">News summary</a></li>
+</ul>
+</li>
+<li class="rm-manual"><a href="https://www.thaienquirer.com/opinion/">Opinion</a></li>
+<li class="rm-manual">
+<a href="https://www.thaienquirer.com/the-culture-blog/">The Culture Blog</a><ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.thaienquirer.com/events/">Events</a></li>
+<li class="rm-manual"><a href="https://www.thaienquirer.com/commentary/">Commentary</a></li>
+</ul>
+</li>
+<li class="rm-manual"><a href="https://www.thaienquirer.com/podcasts/">Podcasts</a></li>
+<li class="rm-manual">
+<a href="https://www.thaienquirer.com/covid-19/">Covid-19</a><ul class="rm-manual"><li class="rm-manual"><a href="https://www.thaienquirer.com/11433/covid-19-statistics-situation-reports-thailand/">Statistics</a></li></ul>
+</li>
+</ul>
+<p class="rm-manual">Sign in</p>
+<p class="rm-manual"><span>Welcome!</span>Log into your account</p>
+<p class="rm-manual">your username</p>
+<p class="rm-manual">your password</p>
+<p class="rm-manual"> <a href="#">Forgot your password?</a></p>
+<p class="rm-manual">Password recovery</p>
+<p class="rm-manual">Recover your password</p>
+<p class="rm-manual">your email</p>
+<p class="rm-manual"> <span>Search</span> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.thaienquirer.com/"><p class="rm-manual">Home</p></a></li>
+<li class="rm-manual">
+<a href="https://www.thaienquirer.com/market-watch/"><p class="rm-manual">Market Watch</p></a><ul class="rm-manual"><li class="rm-manual"><a href="https://www.thaienquirer.com/enquistock/"><p class="rm-manual">EnquiStock</p></a></li></ul>
+</li>
+<li class="rm-manual">
+<a href="https://www.thaienquirer.com/current-affair/"><p class="rm-manual">Current Affairs</p></a><ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.thaienquirer.com/just-the-issues/"><p class="rm-manual">Just the issues</p></a></li>
+<li class="rm-manual"><a href="https://www.thaienquirer.com/latest-articles-thai-enquirer/"><p class="rm-manual">News summary</p></a></li>
+</ul>
+</li>
+<li class="rm-manual"><a href="https://www.thaienquirer.com/opinion/"><p class="rm-manual">Opinion</p></a></li>
+<li class="rm-manual">
+<a href="https://www.thaienquirer.com/the-culture-blog/"><p class="rm-manual">The Culture Blog</p></a><ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.thaienquirer.com/events/"><p class="rm-manual">Events</p></a></li>
+<li class="rm-manual"><a href="https://www.thaienquirer.com/commentary/"><p class="rm-manual">Commentary</p></a></li>
+</ul>
+</li>
+<li class="rm-manual"><a href="https://www.thaienquirer.com/podcasts/"><p class="rm-manual">Podcasts</p></a></li>
+<li class="rm-manual">
+<a href="https://www.thaienquirer.com/covid-19/"><p class="rm-manual">Covid-19</p></a><ul class="rm-manual"><li class="rm-manual"><a href="https://www.thaienquirer.com/11433/covid-19-statistics-situation-reports-thailand/"><p class="rm-manual">Statistics</p></a></li></ul>
+</li>
+</ul>
+<h1 class="rm-manual">Opinion: Media illiteracy cuts across every age group in Thailand not just teenagers</h1>
+<p class="rm-manual"><span>By</span> <a href="https://www.thaienquirer.com/author/codanderich/">Erich Parpart and Cod Satrusayang</a></p>
+<p class="rm-manual">May 28, 2021</p>
+<p>According to the latest data at the Programme for International 
+Student Assessment (PISA), the majority of 15-year-old students in 
+Thailand do not know how to distinguish between fact and opinion online.</p>
+<p>Its 2018 ranking show that the Thai students’ knowledge of reading 
+strategies for assessing the credibility of sources ranked among the 
+lowest in the world, we are basically second to last.</p>
+<p>That is alarming given that the same report also shows that globally,
+ more and more 15-year-olds are going online to access information. </p>
+<p>According to PISA, a Thai 15-year-old’s total online consumption has risen from 21 hours a week in 2012, to 35 hours in 2018.</p>
+<p>They also said that poorly informed students could lead to “political
+ polarisation, decreased trust in public institutions, and undermine 
+democracy.”</p>
+<p>That is precisely what is happening in Thailand right now.</p>
+<p>Our society is now is more divided than ever backed by misinformation and draconian laws.</p>
+<p>The level trust in public institutions had never been this low.</p>
+<p>Change is needed </p>
+<p>If the PISA study is true, then our teenagers must be better equipped
+ by the education system to deal with fake news and misinformation.</p>
+<p>But if the question is, who is using misinformation to sew seeds of 
+discord in society and undermining democracy, then the answer is not a 
+bunch of teenagers who get their news from twitter.</p>
+<p>If anything, the generation least equipped to interpret the rise of 
+fake news and to sift through misinformation has been the boomers and 
+Generation X.</p>
+<p>We all have Line chats filled with rumors sent by older relatives 
+claiming miraculous Covid fighting properties of the latest fad. They 
+are all fake.</p>
+<p>Or take the royalist mobs that descended on the American embassy 
+looking for blood – so sure were they that the Americans were funding 
+the student protests.</p>
+<p>We live in an era of disinformation and the ones that are gaining 
+advantage are ones that can use disinformation to discredit their 
+opponents while spurring on their own side.</p>
+<p>The last time we checked, the student protesters and the teenagers 
+asking for change were not the ones paying for Information Operation 
+(IO) campaigns. The teenagers do not have army camps full of IO 
+operatives trying to spin fake news towards a perceived advantage.</p>
+<p>So then who does fund the IO operatives? And who are the IO campaigns targeting.</p>
+<p>Not the teenagers, that’s for sure. If anything the news being spun 
+by these disinformation mills are being targeted towards the boomers and
+ those that are susceptible for such campaigns.</p>
+<p>If the PISA study is true, then our teenagers must be taught media 
+literacy for sure and how to interpret information in this crazy, 
+strange new world.</p>
+<p>But what the PISA study fails to recognize is that the most media 
+illiterate age group is not teenagers but their parents and 
+grandparents. And if anyone has the power to undermine democracy, it is 
+them.</p>
+<table class="rm-manual"><tbody><tr class="rm-manual"><td class="rm-manual"><p class="rm-manual">Listen to this story</p></td></tr></tbody></table>
+<p class="rm-manual"><span>Previous article</span><a href="https://www.thaienquirer.com/27998/hemp-potential-future-cash-crop-for-thailand/">Hemp: Potential future cash crop for Thailand?</a></p>
+<p class="rm-manual"><span>Next article</span><a href="https://www.thaienquirer.com/28006/thai-government-says-dont-call-it-the-thai-variant/">Thai government says don’t call it the “Thai variant”</a></p>
+<h4 class="rm-manual"><span>COVID-19</span></h4>
+<p class="rm-manual"> <a href="https://www.thaienquirer.com/category/covid-19/">Covid-19</a></p>
+<h3 class="rm-manual"><a href="https://www.thaienquirer.com/28022/cra-involvement-in-vaccine-procurement-is-slap-in-the-face-for-government-opposition-says/" rel="bookmark">CRA involvement in vaccine procurement is “slap in the face” for government, opposition says</a></h3>
+<p class="rm-manual"><span><span><a href="https://www.thaienquirer.com/author/jameswilson/">James Wilson</a> <span>-</span> </span><span>May 28, 2021</span></span></p>
+<p class="rm-manual"> The stepping up by Chulabhorn Royal Academy this 
+week to help procure Covid-19 vaccines has highlighted government 
+inflexibility and...</p>
+<p class="rm-manual"><a href="https://www.thaienquirer.com/28022/cra-involvement-in-vaccine-procurement-is-slap-in-the-face-for-government-opposition-says/">Read more</a></p>
+<h4 class="rm-manual"><span>Latest article</span></h4>
+<p class="rm-manual"><a href="https://www.thaienquirer.com/category/covid-19/">Covid-19</a><span><span><a href="https://www.thaienquirer.com/author/jameswilson/">James Wilson</a> <span>-</span> </span><span>May 28, 2021</span></span></p>
+<h3 class="rm-manual"><a href="https://www.thaienquirer.com/28022/cra-involvement-in-vaccine-procurement-is-slap-in-the-face-for-government-opposition-says/" rel="bookmark">CRA involvement in vaccine procurement is “slap in the face” for government, opposition says</a></h3>
+<p class="rm-manual"> The stepping up by Chulabhorn Royal Academy this 
+week to help procure Covid-19 vaccines has highlighted government 
+inflexibility and failure, members of the opposition...</p>
+<p class="rm-manual"><a href="https://www.thaienquirer.com/28022/cra-involvement-in-vaccine-procurement-is-slap-in-the-face-for-government-opposition-says/">Read more</a></p>
+<p class="rm-manual"><a href="https://www.thaienquirer.com/category/covid-19/">Covid-19</a><span><span><a href="https://www.thaienquirer.com/author/pear-maneechote/">Pear Maneechote</a> <span>-</span> </span><span>May 28, 2021</span></span></p>
+<h3 class="rm-manual"><a href="https://www.thaienquirer.com/28024/chulabhorn-royal-academy-to-handle-sinopharm-vaccine-imports/" rel="bookmark">Chulabhorn Royal Academy to handle Sinopharm vaccine imports</a></h3>
+<p class="rm-manual"> The Chulabhorn Royal Academy (CRA) will work with 
+the Ministry of Public Health and the Food and Drug Association (FDA) to
+ procure doses...</p>
+<p class="rm-manual"><a href="https://www.thaienquirer.com/28024/chulabhorn-royal-academy-to-handle-sinopharm-vaccine-imports/">Read more</a></p>
+<p class="rm-manual"><a href="https://www.thaienquirer.com/category/covid-19/">Covid-19</a><span><span><a href="https://www.thaienquirer.com/author/erich-parpart/">Erich Parpart</a> <span>-</span> </span><span>May 28, 2021</span></span></p>
+<h3 class="rm-manual"><a href="https://www.thaienquirer.com/28018/three-more-covid-clusters-found-in-bangkok/" rel="bookmark">Three more Covid clusters found in Bangkok</a></h3>
+<p class="rm-manual"> Bangkok found three more clusters of Covid-19 
+infections in the past 24 hours, the Center for COVID-19 Situation 
+Administration (CCSA) said on Friday.“The new...</p>
+<p class="rm-manual"><a href="https://www.thaienquirer.com/28018/three-more-covid-clusters-found-in-bangkok/">Read more</a></p>
+<p class="rm-manual"><a href="https://www.thaienquirer.com/category/main/">Main</a><span><span><a href="https://www.thaienquirer.com/author/panithan-onthaworn/">Panithan Onthaworn</a> <span>-</span> </span><span>May 28, 2021</span></span></p>
+<h3 class="rm-manual"><a href="https://www.thaienquirer.com/28010/export/" rel="bookmark">Exports to Myanmar down to decades’ low due to political situation</a></h3>
+<p class="rm-manual"> Thailand's exports to Myanmar in 2021 might 
+contract by almost 100 billion baht if the situation in Myanmar does not
+ improve, an economic think...</p>
+<p class="rm-manual"><a href="https://www.thaienquirer.com/28010/export/">Read more</a></p>
+<p class="rm-manual"><a href="https://www.thaienquirer.com/category/covid-19/">Covid-19</a><span><span><a href="https://www.thaienquirer.com/author/erich-parpart/">Erich Parpart</a> <span>-</span> </span><span>May 28, 2021</span></span></p>
+<h3 class="rm-manual"><a href="https://www.thaienquirer.com/28006/thai-government-says-dont-call-it-the-thai-variant/" rel="bookmark">Thai government says don’t call it the “Thai variant”</a></h3>
+<p class="rm-manual"> The Thai government is asking people not to call a
+ new strain of Covid-19 detected in the UK the "Thai variant" as it 
+originated...</p>
+<p class="rm-manual"><a href="https://www.thaienquirer.com/28006/thai-government-says-dont-call-it-the-thai-variant/">Read more</a></p>
+<p class="rm-manual"><a href="https://www.thaienquirer.com/category/current-affairs-main/">Current Affairs Main</a><span><span><a href="https://www.thaienquirer.com/author/codanderich/">Erich Parpart and Cod Satrusayang</a> <span>-</span> </span><span>May 28, 2021</span></span></p>
+<h3 class="rm-manual"><a href="https://www.thaienquirer.com/27993/opinion-media-illiteracy-cuts-across-every-age-group-in-thailand-not-just-teenagers/" rel="bookmark">Opinion: Media illiteracy cuts across every age group in Thailand not just teenagers</a></h3>
+<p class="rm-manual"> According to the latest data at the Programme for 
+International Student Assessment (PISA), the majority of 15-year-old 
+students in Thailand do not know how...</p>
+<p class="rm-manual"><a href="https://www.thaienquirer.com/27993/opinion-media-illiteracy-cuts-across-every-age-group-in-thailand-not-just-teenagers/">Read more</a></p>
+<table class="rm-manual"><tbody><tr class="rm-manual"><td class="rm-manual"><p class="rm-manual">Listen to this story</p></td></tr></tbody></table>
+<p class="rm-manual">ThaiNews Corp Co., Ltd.</p>
+<p class="rm-manual"><a href="https://www.thaienquirer.com/privacy-policy/">Privacy Policy</a></p>
+<p class="rm-manual"><a href="https://www.thaienquirer.com/about-us-thai-enquirer/">About Us</a></p>
+<p class="rm-manual"><a href="https://www.thaienquirer.com/contact-us">Contact</a></p>
+<p class="rm-manual">Website operations supported by:</p>
+<table class="rm-manual"><tbody><tr class="rm-manual"><td class="rm-manual"><p class="rm-manual">Listen to this story</p></td></tr></tbody></table></article>
+</body></html>

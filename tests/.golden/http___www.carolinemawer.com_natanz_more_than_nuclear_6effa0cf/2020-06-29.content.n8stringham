@@ -1,0 +1,94 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual">Natanz 1: more than a nuclear facility</h1>
+<p class="rm-manual"> <span><a href="http://www.carolinemawer.com/natanz_more_than_nuclear/" rel="bookmark">January 13, 2016January 13, 2016</a></span> <span>by <span><a href="http://www.carolinemawer.com/author/admin/" rel="author"><span>admin</span></a></span></span> </p>
+<p>Many travellers stop at Natanz on their way from Isfahan to Kashan. 
+Of course, when you hear the word ‘Natanz’, most people think only of 
+the Iranian nuclear enrichment controversy. But Natanz is also my most 
+favourite small town in Iran, with some very special historic monuments.
+ Please don’t miss seeing: the shrine; the monstrous plane trees; the 
+Ilkanid mosque; the caravanserai; and the royal hawk pavilion.</p>
+<p>First though, maybe you want a few words about the nuclear facilities
+ in Natanz. These are the primary site for Iran’s gas centrifuge 
+program. There are two primary facilities: the Pilot Fuel Enrichment 
+Plant (PFEP) and the Fuel Enrichment Plant (FEP).</p>
+<p>The <a href="http://www.jewishvirtuallibrary.org/jsource/images/Iran/irandeal.pdf">Comprehensive Nuclear Agreement</a>
+ was signed by the P5+1 and Iranian negotiators on 2 April 2015. Under 
+this, then for the next ten years the facility in Natanz will be the 
+only place in Iran where uranium enrichment will take place. There will 
+only be 5,060 of the less advanced, IR-1 first generation centrifuges. 
+Iran’s more advanced centrifuge models (IR-2, IR-4, IR-5, IR-6, and 
+IR-8) will be placed under IAEA care for the duration of the agreement.</p>
+<p>The agreement provides for “continuous monitoring” of the Natanz as 
+well as Fordow facilities. Inspectors supposedly will have unfettered 
+access to these facilities whenever necessary.</p>
+<p>Much has been said about the <a href="http://www.iranintelligence.com/nukefacilities">Iranian nuclear programme</a>,
+ but I think that the video here is pretty well balanced (unlike much 
+Western media coverage!). It certainly presents the historical 
+perspective better than most reports. It has some really interesting 
+points – including details of the pre-Revolutionary nuclear agreements. I
+ didn’t previously know that Iran currently owns 10% of FRENCH. I was 
+surprised to see Tony Benn in the video. He’s here in his guise as 
+Energy Minister at the time of the last Shah. But he also underlines 
+Iran’s absolute right to a civil nuclear programme, as part of the 
+discussion of how the Nuclear Non-Proliferation Treaty has been applied 
+to Iran.</p>
+<p>The Natanz facility is specifically mentioned in the video – and 
+shown at 35.40 as clearly visible from the road. This contradicts the 
+reports of its absolute secrecy.</p>
+<p>While there is some discussion of the need for a balanced and 
+long-term energy policy in Iran then, sadly, there’s no mention anywhere
+ of the potential of cheap solar power in Iran. Solar would be even 
+easier in sunny Iran than elsewhere in the world!</p>
+<p class="rm-manual">&lt;iframe width=”560″ height=”315″ 
+src=”https://www.youtube.com/embed/uCvygCYVUFo” frameborder=”0″ 
+allowfullscreen&gt;&lt;/iframe&gt;</p>
+<p>But please remember that Natanz is not only about nuclear facilities!</p>
+<p class="">Click to read more about: the shrine; the monstrous plane 
+trees; the Ilkanid mosque; the caravanserai; and the royal hawk 
+pavilion.</p>
+<p class="rm-manual"><span><span>Categories </span><a href="http://www.carolinemawer.com/whats-new/" rel="category tag">Blog</a></span> </p>
+<p class="rm-manual"><span><a href="http://www.carolinemawer.com/natanz_more_than_nuclear/#respond">Leave a comment</a></span> </p>
+<p class="rm-manual"><span>Post navigation</span> </p>
+<p class="rm-manual"><span><a href="http://www.carolinemawer.com/natanz_a_gorgeous_shrine/" rel="prev">Natanz 2: a gorgeous shrine</a></span></p>
+<p class="rm-manual"><span><a href="http://www.carolinemawer.com/persian-and-indian-textiles/" rel="next">Persian and Indian textiles</a></span></p>
+<h3 class="rm-manual">Leave a Comment <a rel="nofollow" href="file:///natanz_more_than_nuclear/#respond">Cancel reply</a>
+</h3>
+<p class="rm-manual">Comment</p>
+<p class="rm-manual">Name Email Website </p></article>
+</body></html>

@@ -1,0 +1,109 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> <a href="file:///blog/">Blog</a> <span>/</span> <a href="file:///blog/categories/engineering/">Engineering</a> </p>
+<p class="rm-manual"> <a href="file:///blog/tags.html#collaboration"> collaboration </a> <a href="file:///blog/tags.html#DevOps"> DevOps </a> </p>
+<h1 class="rm-manual"> How to stand-up a GitLab instance in AWS Marketplace </h1>
+<p class="rm-manual"> <a href="file:///company/team/#iganbaruch"> Itzik Gan-Baruch </a> <span>Â·</span> </p>
+<p class="rm-manual"> <span>Jun 30, 2021</span> <span>Â·</span> <span>4 min read</span> <span>Â·</span> <a href="#disqus_thread">Leave a comment</a> </p>
+<h2>In this guide we will learn how to spin up GitLab in the AWS Marketplace:</h2>
+<h3>Pre requisites for this lab are having an account in AWS and an accessible and working VPC.</h3>
+<h3>We will learn the following steps:</h3>
+<ol> <li>Stand up a self-managed instance of GitLab.</li> <li>Install Runner and Docker Engine.</li> </ol>
+<h2>Step-by-step Instructions</h2>
+<h3>Step 1 - Stand up GitLab instance in AWS</h3>
+<ul> <li>Open <a href="https://aws.amazon.com/marketplace/pp/B07SJ817DX">GitLab Ultimate</a> in AWS Marketplace.</li> <li>Click on Continue to Subscribe</li> </ul>
+<ul> <li>Sign in with your IAM user.</li> </ul>
+<ul> <li>Click on Continue to Configuration.</li> </ul>
+<ul> <li>Leave the default value for Delivery Method, select the latest 
+version in Software Version, select your Region, click Continue to 
+Launch.</li> </ul>
+<ul> <li>In Launch this software page, scroll down.</li> </ul>
+<ul> <li>Under Security Group Settings click Create New Based On Seller Settings .</li> </ul>
+<ul> <li>Name your security group, add a description, and save it.</li> </ul>
+<ul> <li>Select Key Pair. If you don't have key pair, create one. Leave other fields in this page with default values. Click Launch.</li> </ul>
+<ul> <li>You will get Congratulations message confirming you launched 
+the machine successfully. In this message click on EC2 Console link.</li> </ul>
+<ul> <li>Click on your instance ID link.</li> </ul>
+<p>The provisioning takes a few minutes. Please wait before you start the next step.</p>
+<ul> <li>Click "Open address" in order to open GitLab UI.</li> </ul>
+<p>Copy the private or public IP to your browser , depending on your VPC configuration.</p>
+<ul> <li>It takes a few minutes to start the server, you may see this error, this is ok, wait 1 minute and refresh the page.</li> </ul>
+<ul> <li>You now should be able to access the GitLab login page; Username is root, password is your instance ID, click Sign in.</li> </ul>
+<h2>Congratulations! you managed to start a GitLab instance and sign in to it.</h2>
+<h3>Step 2 - Install Runner and Docker Engine</h3>
+<p>Runner machines are the build agents that run the CI/CD jobs.</p>
+<p>Requirements:</p>
+<ul> <li>Jobs run inside the Docker images, therefore the runner machine requires Docker engine on the runner machine.</li> </ul>
+<h3>Connect to the machine with the AWS console - Connect</h3>
+<p>In order to setup the Runners and Docker engine, we need to connect 
+to the GitLab machine we are running. This can be done via SSH from any 
+command line, or directly via the AWS Console, depending on how your VPC
+ is set. In our example we will use the AWS console - Connect feature to
+ SSH into the machines.</p>
+<p>WARNING: It is not a recommended best practice to install Runners on 
+the same machine where the server is installed for security and 
+performance reasons, but only for the sake of simplicity, in this blog 
+we will install it on the same machine.</p>
+<ul> <li>Go to your Instance summary, and click Connect in order to open the console.</li> </ul>
+<ul> <li>Click Connect again.</li> </ul>
+<h3>Install Docker engine</h3>
+<ul> <li>Install Container by running this command <code>curl -fsSL https://get.docker.com -o get-docker.sh sudo sh get-docker.sh</code>
+</li> </ul>
+<h3>Setup Runners</h3>
+<ul> <li>Download the binaries for Linux x86 <code>sudo curl -L --output
+ /usr/local/bin/gitlab-runner 
+"https://gitlab-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-runner-linux-386"</code>
+</li> <li>Give it permissions to execute: <code>sudo chmod +x /usr/local/bin/gitlab-runner</code>
+</li> <li>Create a GitLab CI user: <code>sudo useradd --comment 'GitLab Runner' --create-home gitlab-runner --shell /bin/bash</code>
+</li> <li>Install and run as service: <code>sudo gitlab-runner install --user=gitlab-runner --working-directory=/home/gitlab-runner sudo gitlab-runner start</code>
+</li> </ul>
+<h3>Register the Runner</h3>
+<ul> <li>Run this command: <code>sudo gitlab-runner register</code>.</li> <li>You will be prompt to enter URL.</li> <li>Open your GitLab instance, under CI/CD settings: <ul> <li> <p>Click Settings, CI/CD.</p> </li> <li> <p>Expand Runners.</p> </li> <li> <p>Copy the URL to the clipboard under specific runner.</p> </li> </ul> </li> <li>Paste the URL in the console.</li> <li>Enter.</li> <li>You will be prompt to enter registration token, copy it from the Runner settings.</li> </ul>
+<ul> <li>Paste it in the console.</li> <li>Enter Description for the runner: type GitLab workshop.</li> <li>Add a tag to this runner, for example type Linux</li> <li>Enter executor, type docker.</li> <li>Enter the default Docker image, type ruby:2.6.</li> <li>You will get a message starting with Runner registered successfully. Feel free to start itâ€¦</li> <li>Refresh the Runner settings page in GitLab and you will see your runner under Available specific runners.</li> <li>Click edit.</li> </ul>
+<ul> <li>Check the Indicates whether this runner can pick jobs without tags option, and click Save changes.</li> </ul>
+<h2>Well done!! You installed and registered successfully GitLab Runner.
+ Now you are ready to create a project and run your first CI/CD 
+pipeline.</h2>
+<p>In my next blog, I will show you how to create a project, configure 
+the CI/CD, change your application code, and run a CI/CD pipeline.</p>
+<p><a href="http://twitter.com/share?text=%E2%80%9CHow+to+stand-up+GitLab+instance+in+AWS+Marketplace+%E2%80%9D+%E2%80%93+Itzik+Gan-Baruch&amp;url=https://about.gitlab.com/blog/2021/06/30/how-to-stand-up-gitlab-in-awsmp/"> </a></p><p class="rm-manual"><a href="http://twitter.com/share?text=%E2%80%9CHow+to+stand-up+GitLab+instance+in+AWS+Marketplace+%E2%80%9D+%E2%80%93+Itzik+Gan-Baruch&amp;url=https://about.gitlab.com/blog/2021/06/30/how-to-stand-up-gitlab-in-awsmp/"> â€œHow to stand-up GitLab instance in AWS Marketplace â€ â€“ Itzik Gan-Baruch </a></p><a href="http://twitter.com/share?text=%E2%80%9CHow+to+stand-up+GitLab+instance+in+AWS+Marketplace+%E2%80%9D+%E2%80%93+Itzik+Gan-Baruch&amp;url=https://about.gitlab.com/blog/2021/06/30/how-to-stand-up-gitlab-in-awsmp/"> <p href="https://twitter.com/share?text=%22How%20software%20developers%20can%20future-proof%20their%20careers%20(and%20why%20it%E2%80%99s%20better%20to%20be%20a%20generalist%20than%20a%20specialist).%2014%20DevOps%20practitioners%2C%20analysts%2C%20and%20%40gitlab%20execs%20weigh%20in%22&amp;url=https://current-page-url-here.com" class="rm-manual"> Click to tweet </p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <span>Tags:</span> <a href="file:///blog/tags.html#collaboration"> collaboration </a> <a href="file:///blog/tags.html#DevOps"> DevOps </a> </p>
+<h2 class="rm-manual"> More to explore </h2>
+<p class="rm-manual"> <a href="file:///blog/2021/06/23/how-to-use-agent-based-gitops/"> </a></p><p class="rm-manual"><a href="file:///blog/2021/06/23/how-to-use-agent-based-gitops/"> </a></p><p class="rm-manual"><a href="file:///blog/2021/06/23/how-to-use-agent-based-gitops/"> <span>engineering</span> </a></p><a href="file:///blog/2021/06/23/how-to-use-agent-based-gitops/"> <h2 class="rm-manual"> How to use a pull-based (agent-based) approach for GitOps </h2> <p class="rm-manual"> <span>Cesar Saavedra</span> </p> <p class="rm-manual"></p> </a> <a href="file:///blog/2021/06/21/how-to-become-more-productive-with-gitlab-ci/"> <p class="rm-manual"> </p><p class="rm-manual"> <span>engineering</span> </p> <h2 class="rm-manual"> How to become more productive with Gitlab CI </h2> <p class="rm-manual"> <span>Veethika Mishra</span> </p> <p class="rm-manual"></p> </a> <a href="file:///blog/2021/06/15/why-we-are-building-the-gitlab-environment-toolkit-to-help-deploy-gitlab-at-scale/"> <p class="rm-manual"> </p><p class="rm-manual"> <span>engineering</span> </p> <h2 class="rm-manual"> The next step in performance testing? The GitLab Environment Toolkit </h2> <p class="rm-manual"> <span>Grant Young</span> </p> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///blog/"> All Blog Posts </a> </p></article>
+</body></html>

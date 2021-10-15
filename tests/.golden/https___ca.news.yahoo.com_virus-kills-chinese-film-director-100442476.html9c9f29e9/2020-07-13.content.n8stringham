@@ -1,0 +1,143 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">Virus Kills Chinese Film Director and Family in Wuhan</p>
+<p class="rm-manual"><a href="https://ca.news.yahoo.com/">Yahoo</a></p>
+<p class="rm-manual">Search</p>
+<ul class="rm-manual"><li class="rm-manual"><a href="https://mail.yahoo.com/?.intl=ca&amp;.lang=en-CA&amp;.partner=none&amp;.src=news">Mail</a></li></ul>
+<p class="rm-manual"><a href="https://ca.news.yahoo.com/"> News</a></p>
+<p class="rm-manual"><span>Follow Us</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://ca.news.yahoo.com/tagged/coronavirus"> Coronavirus</a></li>
+<li class="rm-manual"><a href="https://ca.news.yahoo.com/tagged/pollca"> Vote 'n' Vent</a></li>
+<li class="rm-manual"><a href="https://ca.news.yahoo.com/blogs/"> Originals</a></li>
+<li class="rm-manual"><a href="https://ca.news.yahoo.com/canada/"> Canada</a></li>
+<li class="rm-manual"><a href="https://ca.news.yahoo.com/world/"> World</a></li>
+<li class="rm-manual"><a href="https://ca.finance.yahoo.com/"> Business</a></li>
+<li class="rm-manual"><a href="https://ca.news.yahoo.com/celebrity"> Entertainment</a></li>
+<li class="rm-manual"><a href="https://ca.sports.yahoo.com/"> Sports</a></li>
+<li class="rm-manual"><a href="https://ca.news.yahoo.com/science-tech/"> Science &amp; Tech</a></li>
+<li class="rm-manual"><a href="https://ca.weather.yahoo.com/"> Weather</a></li>
+</ul>
+<h1 class="rm-manual">Virus Kills Chinese Film Director and Family in Wuhan</h1>
+<p class="rm-manual">Vivienne Chow</p>
+<p class="rm-manual"><span><span><a href="http://variety.com/" rel="noopener noreferrer nofollow">Variety</a></span></span>February 17, 2020</p>
+<p class="rm-manual"><a href="https://variety.com/2020/film/asia/virus-kills-chinese-film-director-family-wuhan-1203505614/" rel="nofollow noopener">Click here to read the full article. </a></p>
+<p>A Chinese film director and his entire family have died from the novel <a href="https://variety.com/t/coronavirus/" rel="nofollow noopener">coronavirus</a> in <a href="https://variety.com/t/wuhan/" rel="nofollow noopener">Wuhan</a>, the epicenter of the outbreak.</p>
+<p>Chang Kai, a film director and an external communications officer at a
+ Hubei Film Studio subsidiary, died in hospital on Feb. 14 from the 
+virus now called COVID-19, according to a statement from the studio. He 
+was 55.</p>
+<p class="rm-manual">More from Variety</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://variety.com/2020/digital/news/apple-coronavirus-revenue-miss-1203505971/" rel="nofollow noopener">Apple Warns of Sales Shortfall for March Quarter, Blaming Coronavirus Outbreak</a></li>
+<li class="rm-manual"><a href="https://variety.com/2020/film/news/hollywood-companies-coronavirus-1203504876/" rel="nofollow noopener">Hollywood Companies Work Around Coronavirus Amid Travel Bans, Office Closures</a></li>
+<li class="rm-manual"><a href="https://variety.com/2020/film/news/coronavirus-china-hengdian-studios-1203502111/" rel="nofollow noopener">Chinese Shoots to Resume Despite Virus Threat, While Beijing Throws Industry a Lifeline</a></li>
+</ul>
+<p class="">But Chang’s death was not the first in his family—the 
+Chinese media reported that Chang’s father and mother were infected and 
+died one after the other. Chang and his sister, who looked after their 
+parents at home, were both infected with the virus as a result. His 
+sister died just hours later. Chang’s wife is also infected, still 
+alive, and is still battling the virus in an intensive care unit.</p>
+<p>A note written by Chang, said to be his last words, has gone viral on
+ the Chinese Internet. Chang wrote that his father succumbed to the 
+illness on the first day of the Lunar New Year (January 25). “My father 
+had a fever, cough and trouble breathing. [We] tried to send him to the 
+hospital but none of the hospitals we visited took him, because they had
+ no more beds,” he wrote.</p>
+<p>Instead, Chang brought his father home where ha died a few days 
+later, having passed on the virus to the other family members. Chang’s 
+note said that he and his wife were denied the opportunity to be treated
+ early. <a href="https://variety.com/2020/film/news/china-halts-film-production-coronavirus-surpasses-sars-1203490609/" rel="nofollow noopener">Wuhan</a>
+ built a new hospital in six days, but capacity to handle the virus 
+remains strained. Chang bade farewell to his family, friends and his 
+son, who is reportedly studying in the U.K.</p>
+<p>Chang enrolled in Wuhan University’s journalism school to study 
+photography in 1989, and joined Hubei Film Studio upon graduation. The 
+studio praised Chang for his contribution to the studio’s development, 
+saying that he was a well-respected colleague and his death was a 
+painful loss.</p>
+<p>As of Feb. 17, the virus has infected 71,330 —70,548 in mainland 
+China—and claimed 1,775 lives (1,770 in mainland China), surpassing the 
+death toll of SARS in 2003.</p>
+<p class="rm-manual">Best of Variety</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://variety.com/feature/2020-oscars-winners-list-academy-awards-1203497983/?utm_source=yahoo-2&amp;utm_medium=feeds&amp;utm_campaign=best_of_brands" rel="nofollow noopener">Oscars 2020: The Complete Winners List</a></li>
+<li><a href="https://variety.com/feature/oscar-predictions-2020-academy-awards-1203491058/?utm_source=yahoo-2&amp;utm_medium=feeds&amp;utm_campaign=best_of_brands" rel="nofollow noopener">Final Oscar Predictions: Who Will Win in the Major Categories?</a></li>
+<li><a href="https://variety.com/feature/watch-oscars-live-stream-2020-academy-awards-1203492388/?utm_source=yahoo-2&amp;utm_medium=feeds&amp;utm_campaign=best_of_brands" rel="nofollow noopener">Oscars 2020: How to Stream and Watch Online</a></li>
+</ul>
+<p class="rm-manual">Sign up for <a href="https://pages.email.variety.com/signup/?source=yahoo" rel="nofollow noopener">Variety’s Newsletter</a>. For the latest news, follow us on <a href="http://bit.ly/2MGsXik" rel="nofollow noopener">Facebook</a>, <a href="http://bit.ly/2Bnlwsf" rel="nofollow noopener">Twitter</a>, and <a href="http://bit.ly/2TqsJ1m" rel="nofollow noopener">Instagram</a>.</p>
+<h2 class="rm-manual">What to Read Next</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///eight-key-questions-experts-tracing-152804307.html"><span>The eight key questions experts tracing the origins of the coronavirus pandemic need to ask</span></a></h3><p class="rm-manual">The Telegraph</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///coronavirus-wuhan-lab-researches-covid-084609370.html"><span>Coronavirus: Wuhan lab that researches Covid-19 will not be visited by WHO investigators looking into origin of virus</span></a></h3><p class="rm-manual">The Independent</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///jobs-pandemic-canada-moncton-new-brunswick-131031747.html"><span>The Best Place For Jobs In Canada Is … Moncton?</span></a></h3><p class="rm-manual">HuffPost Canada</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/meat-industry-outbreaks-helping-vegan-165609127.html"><span>Are meat industry outbreaks helping vegan appeal?</span></a></h3><p class="rm-manual">Reuters Videos</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///coronavirus-covid19-canada-latest-updates-190048955.html"><span>COVID-19 in Canada: Alberta accuses federal government of blocking contact tracing app, Ontario enters Stage 3</span></a></h3><p class="rm-manual">Yahoo News Canada</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///naya-rivera-dead-body-recovered-lake-piru-glee-disappearance-211414122.html"><span>Naya Rivera dead at 33: Officials confirm body recovered from Lake Piru is 'Glee' star</span></a></h3><p class="rm-manual">Yahoo Celebrity</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/china-ramps-flood-response-081349407.html"><span>China ramps up flood response </span></a></h3><p class="rm-manual">Reuters Videos</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://people.com/tv/naya-rivera-found-on-7th-anniversary-of-glee-costar-cory-monteith-death/"><span>Naya Rivera's Body Found on the 7th Anniversary of Glee Costar Cory Monteith's Death</span></a></h3><p class="rm-manual">People</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///first-look-kelly-ripa-gorgeously-142000972.html"><span>Here’s a First Look at Kelly Ripa’s Gorgeously Manicured Backyard (Featuring a Shirtless Mark Consuelos)</span></a></h3><p class="rm-manual">PureWow</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///actor-depp-concludes-evidence-uk-121742360.html"><span>Depp tells court ex-wife attacked him on night he learned he'd lost $650 million</span></a></h3><p class="rm-manual">Reuters</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///president-trading-dr-fauci-ex-161100327.html"><span>The President Is Trading Dr. Fauci for the Ex-Host of 'Love Connection'</span></a></h3><p class="rm-manual">Esquire</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/chinese-firefighters-rescue-residents-trapped-080735243.html"><span>Chinese Firefighters Rescue Residents Trapped by Flooding</span></a></h3><p class="rm-manual">Storyful</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://www.yahoo.com/entertainment/hailee-steinfeld-talks-executive-producing-223909939.html"><span>Hailee Steinfeld Talks Executive Producing Her Own TV Debut on Apple TV+’s ‘Dickinson’</span></a></h3><p class="rm-manual">The Wrap</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///these-restaurants-have-filed-for-bankruptcy-and-many-more-are-at-risk-110046021.html"><span>These restaurants have filed for bankruptcy and many more are at risk</span></a></h3><p class="rm-manual">Yahoo Finance</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///mcdonald-muffin-hard-even-hammer-143322626.html"><span>McDonald’s customer calls out chain over inedible item: 'Why would [they] even serve it?'</span></a></h3><p class="rm-manual">In The Know</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///michigan-partygoers-test-positive-covid-192800711.html"><span>Michigan partygoers test positive for COVID-19 after July 4th lake bash; 43 cases tied to house party</span></a></h3><p class="rm-manual">USA TODAY</p><p class="rm-manual"></p></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/stranded-resident-carried-safety-digger-230000998.html"><span>Stranded resident carried to safety in a digger as floods hit Indonesia</span></a></h3><p class="rm-manual">Newsflare</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://www.yahoo.com/entertainment/naya-rivera-she-latest-victim-141950405.html"><span>Naya Rivera: Is she latest victim of 'curse' of beloved TV musical series 'Glee'?</span></a></h3><p class="rm-manual">USA TODAY Entertainment</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///meghan-markle-photographed-chic-white-151100852.html"><span>Meghan Markle Was Photographed Out in a Chic White Summer Dress in Beverly Hills</span></a></h3><p class="rm-manual">Good Housekeeping</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///meghan-markle-sleeveless-linen-dress-la-where-to-buy-173140384.html"><span>Meghan Markle was just spotted in L.A. in a surprisingly affordable summer dress</span></a></h3><p class="rm-manual">Yahoo Canada Style</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///kelly-preston-dead-actor-055523543.html"><span>Actress Kelly Preston Dead At 57 After Battle With Breast Cancer</span></a></h3><p class="rm-manual">HuffPost</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/residents-rescued-severe-flooding-chinas-062420604.html"><span>Residents Rescued from Severe Flooding in China's Guangxi Province</span></a></h3><p class="rm-manual">Storyful</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://www.yahoo.com/entertainment/hollywood-reacts-naya-rivera-death-223748500.html"><span>Hollywood Reacts to Naya Rivera’s Death: ‘She Spoke Truth to Power With Poise and Fearlessness’</span></a></h3><p class="rm-manual">Variety</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///hedge-fund-manager-singh-calls-215616541.html"><span>Hedge fund manager Singh calls Trump's handling of coronavirus 'an incredible gift'</span></a></h3><p class="rm-manual">Reuters</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///lisa-marie-presleys-son-benjamin-232305965.html"><span>Lisa Marie Presley 'heartbroken' over death of son Benjamin Keough, Elvis Presley's grandson, at 27</span></a></h3><p class="rm-manual">USA TODAY Entertainment</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///jack-ma-cashes-out-96-bn-from-alibaba-084430427.html"><span>Jack Ma cashes out $9.6bn from Alibaba</span></a></h3><p class="rm-manual">Yahoo Finance UK</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/recruit-wombat-wombles-around-australian-235825778.html"><span>New 'Recruit' Wombat Wombles Around Australian Police Station Office</span></a></h3><p class="rm-manual">Storyful</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///canadian-press-newsalert-federal-wage-154127364.html"><span>Federal wage subsidy to be extended to December, Trudeau says</span></a></h3><p class="rm-manual">The Canadian Press</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///north-american-stock-markets-early-135046123.html"><span>North American stock markets reverse from strong morning gains on vaccine hopes</span></a></h3><p class="rm-manual">The Canadian Press</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/animal-rights-activist-pours-red-120000116.html"><span>Animal rights activist pours red dye in Trafalgar Square fountain</span></a></h3><p class="rm-manual">Newsflare</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://www.yahoo.com/entertainment/empire-strikes-back-leads-weekend-182855509.html"><span>‘Empire Strikes Back’ Leads At The Weekend Box Office With $644K, 23 Years After Sequel’s Special Edition – Update</span></a></h3><p class="rm-manual">Deadline</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///huge-market-crash-coming-warren-121015499.html"><span>Huge Market Crash Coming? Warren Buffett and Other Experts Sound the Alarm</span></a></h3><p class="rm-manual">The Motley Fool</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///kourtney-kardashian-stuns-in-a-155-onepiece-leopard-swimsuit-171736141.html"><span>Kourtney Kardashian stuns in $155 one-piece leopard swimsuit that's already sold out</span></a></h3><p class="rm-manual">Yahoo Canada Style</p><p></p></li>
+</ul></article>
+</body></html>

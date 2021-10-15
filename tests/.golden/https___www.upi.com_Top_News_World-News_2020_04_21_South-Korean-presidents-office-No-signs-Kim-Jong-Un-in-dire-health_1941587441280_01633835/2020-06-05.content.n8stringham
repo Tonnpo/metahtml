@@ -1,0 +1,164 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> South Korean president's office: No signs Kim Jong Un in dire health - UPI.com </p>
+<p class="rm-manual"> <span>Sections</span> </p>
+<p class="rm-manual"> <a href="file:///accounts/login/"> Log in </a> </p>
+<p class="rm-manual"> <a href="file:///Top_News/?nav=tn">Top News</a> </p>
+<p class="rm-manual"> <a href="file:///Top_News/US/?nav=tn_us">U.S. News</a> <a href="file:///Top_News/World-News/?nav=tn_wn">World News</a> <a href="file:///Featured/?nav=fea">Featured</a> <a href="file:///Top_News/Voices/?nav=tn_an">Voices</a> </p>
+<p class="rm-manual"> <a href="file:///Odd_News/?nav=on">Odd News</a> </p>
+<p class="rm-manual"> <a href="file:///Entertainment_News/?nav=en">Entertainment</a> </p>
+<p class="rm-manual"> <a href="file:///Entertainment_News/Movies/?nav=en_mo">Movies</a> <a href="file:///Entertainment_News/Music/?nav=en_mu">Music</a> <a href="file:///Entertainment_News/TV/?nav=en_tv">TV</a> </p>
+<p class="rm-manual"> <a href="file:///Sports_News/?nav=spn">Sports</a> </p>
+<p class="rm-manual"> <a href="file:///Sports_News/Soccer/?nav=scr">Soccer</a> <a href="file:///Sports_News/NFL/?nav=nfl">NFL</a> <a href="file:///Sports_News/NBA/?nav=nba">NBA</a> <a href="file:///Sports_News/MLB/?nav=mlb">MLB</a> </p>
+<p class="rm-manual"> <a href="file:///News_Photos/?nav=ph">Photos</a> </p>
+<p class="rm-manual"> <a href="file:///News_Photos/collections/News/?nav=nw">News</a> <a href="file:///News_Photos/collections/Entertainment/?nav=en">Entertainment</a> <a href="file:///News_Photos/collections/Sports/?nav=sp">Sports</a> <a href="file:///News_Photos/collections/Features/?nav=fe">Features</a> </p>
+<p class="rm-manual"> <span>More</span><span>...</span> </p>
+<p class="rm-manual"> <a href="file:///Defense-News/?nav=dfn">Defense</a> <a href="file:///Featured/?nav=fea">Featured</a> <a href="file:///Science_News/?nav=scn">Science</a> <a href="file:///Health_News/?nav=hn">Health</a> <a href="file:///video/">Video</a> <a href="file:///Archives/?nav=arc">Archive</a> <a href="file:///Almanac/">Almanac</a> </p>
+<p class="rm-manual"> <a href="https://about.upi.com/">About</a> <a href="#">Feedback</a> <a href="https://about.upi.com/privacy-policy">Privacy Policy</a> </p>
+<p class="rm-manual"> <a href="https://about.upi.com/">About</a> <a href="#">Feedback</a> <a href="https://about.upi.com/privacy-policy">Privacy Policy</a> </p>
+<p class="rm-manual"> <span> <span>Search</span> </span> </p>
+<p class="rm-manual">Trending</p>
+<p class="rm-manual"><a href="https://www.upi.com/Top_News/US/2020/06/05/DC-mayor-renames-part-of-16th-Street-Black-Lives-Matter-Plaza/7291591376103/?tt=1">Black Lives Matter Plaza</a></p>
+<p class="rm-manual"><a href="https://www.upi.com/Top_News/US/2020/06/05/Philadelphia-judge-orders-release-of-man-on-death-row-for-23-years/7861591377172/?tt=2">Walter Ogrod</a></p>
+<p class="rm-manual"><a href="https://www.upi.com/Top_News/US/2020/06/05/George-Floyd-protests-DC-expects-major-rally-Buffalo-officers-suspended/5291591334926/?tt=3">George Floyd protests</a></p>
+<p class="rm-manual"><a href="https://www.upi.com/Odd_News/2020/06/05/Wallet-lost-at-Walmart-returned-with-more-than-5000-still-inside/1621591378015/?tt=4">Lost wallet</a></p>
+<p class="rm-manual"><a href="https://www.upi.com/Top_News/US/2020/06/05/Trump-signs-law-loosening-Paycheck-Protection-Program-limits/4711591380966/?tt=5">PPP</a></p>
+<p class="rm-manual"><a href="https://www.upi.com/Entertainment_News/2020/06/05/YouTube-star-Jake-Paul-charged-with-trespassing-unlawful-assembly/2681591369297/?tt=6">Jake Paul</a></p>
+<p class="rm-manual"><a href="https://www.upi.com/Top_News/US/2020/06/05/7-killed-in-mass-shooting-at-Alabama-residence/5001591400278/?tt=7">Alabama shooting</a></p>
+<p class="rm-manual"><a href="https://www.upi.com/Odd_News/2020/06/05/Young-boy-comes-face-to-face-with-bear-cub-outside-Louisiana-home/2551591390241/?tt=8">Bear cub</a></p>
+<p class="rm-manual"><a href="https://www.upi.com/Top_News/US/2020/06/05/Minneapolis-leaders-vote-in-favor-of-police-reforms-ban-choke-holds/6301591359171/?tt=9">Minneapolis reforms</a></p>
+<p class="rm-manual"><a href="https://www.upi.com/Entertainment_News/TV/2020/06/05/Oprah-Winfrey-to-host-two-night-town-hall-on-racism/4671591372941/?tt=10">Oprah</a></p>
+<p class="rm-manual"><a href="https://www.upi.com/Entertainment_News/2020/06/05/Tia-Mowry-reflects-on-biracial-identity-privilege/5831591370963/?tt=11">Tia Mowry</a></p>
+<p class="rm-manual"> <a href="https://www.upi.com/Top_News/World-News/">World News</a> </p>
+<p class="rm-manual"> April 21, 2020 / 12:52 AM </p>
+<h1 class="rm-manual">South Korean president's office: No signs Kim Jong Un in dire health</h1>
+<p class="rm-manual"><span>By</span> </p>
+<p class="rm-manual">Thomas Maresca</p>
+<p class="rm-manual">South Korean officials said Tuesday that there have
+ been no indications of North Korean leader Kim Jong Un being in grave 
+health as media reports have claimed. Photo by KCNA/EPA-EFE</p>
+<p><span>SEOUL, April 21 (UPI) --</span> As reports swirl claiming that <a href="https://www.upi.com/topic/Kim_Jong_Un/?tps=1">Kim Jong Un</a>
+ is in dire health, South Korea's presidential Blue House said Tuesday 
+that there have been no unusual signs about the North Korean leader's 
+condition.</p>
+<p>"There has been nothing to confirm regarding North Korean leader Kim 
+Jong Un's health anomalies recently reported by some media, and so far 
+no unusual activities have been identified inside North Korea," Blue 
+House spokesman Kang Min-seok said in a text message to reporters. </p>
+<p class="rm-manual"><span>Advertisement</span></p>
+<p>A report on Monday by the Daily NK, a Seoul-based website that 
+receives information from sources inside North Korea, claimed that Kim 
+was under treatment at a hospital after undergoing a cardiovascular 
+procedure.</p>
+<p>Citing an unnamed source, the article said Kim underwent the 
+procedure on April 12 at the Hyangsan Clinic, a private hospital for the
+ Kim family in North Pyongyan Province, as a result of "excessive 
+smoking, obesity and overwork." </p>
+<p class="rm-manual"><span>RELATED</span> <a href="https://www.upi.com/Top_News/World-News/2020/04/17/South-Korea-city-mulls-plan-for-joint-fishing-zone-with-North/9861587138017/?st_rec=1941587441280">South Korea city mulls plan for 'joint fishing zone' with North</a></p>
+<p>The North Korean leader was reported to be in recovery following the 
+procedure in a villa near the hospital. After judging that Kim's 
+condition had improved, most of the medical team treating him returned 
+to Pyongyang on April 19, the Daily NK report said.</p>
+<p>CNN on Tuesday reported that Kim was in "grave danger" following surgery, citing an anonymous U.S. official.</p>
+<p>Speculation has been rife about the North Korean leader's health since he <a href="https://www.upi.com/Top_News/World-News/2020/04/16/Kim-Jong-Un-absent-from-ceremony-marking-North-Korea-anniversary/5711587048424/?sl=3">did not attend</a> an annual ceremony observing the birth anniversary of founder <a href="https://www.upi.com/topic/Kim_Il_Sung/?tps=1">Kim Il Sung</a> on April 15 for the first time since he fully assumed power in 2012. </p>
+<p class="rm-manual"><span>RELATED</span> <a href="https://www.upi.com/Top_News/World-News/2020/04/17/North-Korea-disparages-newly-elected-defectors-district/9231587131705/?st_rec=1941587441280">North Korea disparages newly elected defector's district</a></p>
+<p>Kim's last reported public appearance came on April 11 at a meeting 
+of the ruling party's political bureau, during which he called for 
+stricter measures to contain the coronavirus in North Korea.</p>
+<p>He was not present at a meeting of North Korea's legislature, the 
+Supreme People's Assembly, on the following day, and his presence was 
+also not reported at the<a href="https://www.upi.com/Top_News/World-News/2020/04/14/North-Korea-fires-missiles-ahead-of-founders-birthday/6301586846024/"> launch of several missiles</a> on April 14.</p>
+<p class="rm-manual"><span>RELATED</span> <a href="https://www.upi.com/Top_News/US/2020/04/16/US-warns-North-Korean-cyberattacks-threaten-financial-system/5021587001193/?st_rec=1941587441280">U.S. warns North Korean cyberattacks threaten financial system</a></p>
+<ul class="rm-manual"> <li class="rm-manual">Topics</li> <li class="rm-manual"><a href="https://www.upi.com/topic/North-Korea/?tpl=1">North Korea</a></li>
+<li class="rm-manual"><a href="https://www.upi.com/topic/Kim_Jong_Un/?tpl=1">Kim Jong Un</a></li>
+<li class="rm-manual"><a href="https://www.upi.com/topic/Kim_Il_Sung/?tpl=1">Kim Il Sung</a></li> </ul>
+<h3 class="rm-manual">Latest Headlines</h3>
+<p class="rm-manual"> <a href="https://www.upi.com/Top_News/World-News/2020/06/05/Czech-Republic-expels-Russian-diplomats-over-allegedly-fake-poisoning-threat/2671591402165/?spt=slh&amp;or=1"> </a></p><p class="rm-manual"><a href="https://www.upi.com/Top_News/World-News/2020/06/05/Czech-Republic-expels-Russian-diplomats-over-allegedly-fake-poisoning-threat/2671591402165/?spt=slh&amp;or=1"><span>World News</span> // 35 minutes ago</a></p><a href="https://www.upi.com/Top_News/World-News/2020/06/05/Czech-Republic-expels-Russian-diplomats-over-allegedly-fake-poisoning-threat/2671591402165/?spt=slh&amp;or=1"> <p class="rm-manual">Czech Republic expels Russian diplomats over allegedly fake poisoning threat</p> <p class="rm-manual">
+ June 5 (UPI) -- Czech Prime Minister Andrej Babiš expelled two Russian 
+Embassy officials Friday, accusing the diplomats of inventing a plot to 
+poison Czech politicians.</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://www.upi.com/Top_News/World-News/2020/06/02/Cristobal-regains-tropical-storm-strength-heading-for-US-Gulf-Coast/3721591121417/?spt=slh&amp;or=2"> </a></p><p class="rm-manual"><a href="https://www.upi.com/Top_News/World-News/2020/06/02/Cristobal-regains-tropical-storm-strength-heading-for-US-Gulf-Coast/3721591121417/?spt=slh&amp;or=2"><span>World News</span> // 3 days ago</a></p><a href="https://www.upi.com/Top_News/World-News/2020/06/02/Cristobal-regains-tropical-storm-strength-heading-for-US-Gulf-Coast/3721591121417/?spt=slh&amp;or=2"> <p class="rm-manual">Cristobal regains tropical storm strength, heading for U.S. Gulf Coast</p> <p class="rm-manual">
+ June 5 (UPI) -- Cristobal strengthened into a tropical storm on Friday 
+as it edged closer to the southern Gulf of Mexico, expected to make 
+landfall in Louisiana late Sunday or early Monday.</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://www.upi.com/Top_News/World-News/2020/06/05/UN-backed-Libyan-government-retakes-Tarhuna-106-bodies-found-in-hospital/6291591395588/?spt=slh&amp;or=3"> </a></p><p class="rm-manual"><a href="https://www.upi.com/Top_News/World-News/2020/06/05/UN-backed-Libyan-government-retakes-Tarhuna-106-bodies-found-in-hospital/6291591395588/?spt=slh&amp;or=3"><span>World News</span> // 2 hours ago</a></p><a href="https://www.upi.com/Top_News/World-News/2020/06/05/UN-backed-Libyan-government-retakes-Tarhuna-106-bodies-found-in-hospital/6291591395588/?spt=slh&amp;or=3"> <p class="rm-manual">U.N.-backed Libyan government retakes Tarhuna; 106 bodies found in hospital</p> <p class="rm-manual">
+ June 5 (UPI) -- Libya's internationally backed government on Friday 
+said it took full control of the city of Tarhuna, the last stronghold of
+ rebel commander Khalifa Haftar in the country's west.</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://www.upi.com/Top_News/World-News/2020/06/05/French-forces-kill-leader-of-al-Qaida-in-North-Africa/5981591391843/?spt=slh&amp;or=4"> </a></p><p class="rm-manual"><a href="https://www.upi.com/Top_News/World-News/2020/06/05/French-forces-kill-leader-of-al-Qaida-in-North-Africa/5981591391843/?spt=slh&amp;or=4"><span>World News</span> // 3 hours ago</a></p><a href="https://www.upi.com/Top_News/World-News/2020/06/05/French-forces-kill-leader-of-al-Qaida-in-North-Africa/5981591391843/?spt=slh&amp;or=4"> <p class="rm-manual">French forces kill leader of al-Qaida in North Africa</p> <p class="rm-manual">
+ June 5 (UPI) -- French forces killed Abdelmalek Droukdel, the leader of
+ al-Qaida in North Africa, France's Ministry of Defense said Friday.</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://www.upi.com/Top_News/World-News/2020/06/05/British-carmakers-Bentley-Aston-Martin-McLaren-shedding-jobs/2581591379143/?spt=slh&amp;or=5"> </a></p><p class="rm-manual"><a href="https://www.upi.com/Top_News/World-News/2020/06/05/British-carmakers-Bentley-Aston-Martin-McLaren-shedding-jobs/2581591379143/?spt=slh&amp;or=5"><span>World News</span> // 6 hours ago</a></p><a href="https://www.upi.com/Top_News/World-News/2020/06/05/British-carmakers-Bentley-Aston-Martin-McLaren-shedding-jobs/2581591379143/?spt=slh&amp;or=5"> <p class="rm-manual">British carmakers Bentley, Aston Martin, McLaren shedding jobs</p> <p class="rm-manual">
+ June 5 (UPI) -- British car giants Bentley, Aston Martin and McLaren 
+have all announced staff cuts totaling almost 3,000 jobs because of the 
+coronavirus pandemic.</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://www.upi.com/Top_News/World-News/2020/06/05/Reports-Israeli-warplanes-target-Syrian-weapons-lab-at-least-9-killed/3781591368345/?spt=slh&amp;or=6"> </a></p><p class="rm-manual"><a href="https://www.upi.com/Top_News/World-News/2020/06/05/Reports-Israeli-warplanes-target-Syrian-weapons-lab-at-least-9-killed/3781591368345/?spt=slh&amp;or=6"><span>World News</span> // 8 hours ago</a></p><a href="https://www.upi.com/Top_News/World-News/2020/06/05/Reports-Israeli-warplanes-target-Syrian-weapons-lab-at-least-9-killed/3781591368345/?spt=slh&amp;or=6"> <p class="rm-manual">Reports: Israeli warplanes target Syrian weapons lab, at least 9 killed</p> <p class="rm-manual">
+ June 5 (UPI) -- At least nine people were killed in an Israeli 
+airstrike on a suspected weapons lab and factory in Syria on Thursday, 
+according to a Syrian non-governmental organization based in Britain.</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://www.upi.com/Top_News/World-News/2020/06/05/Seoul-to-allow-for-delivery-service-of-foreign-currencies-launch-drone-taxis/1621591370370/?spt=slh&amp;or=7"> </a></p><p class="rm-manual"><a href="https://www.upi.com/Top_News/World-News/2020/06/05/Seoul-to-allow-for-delivery-service-of-foreign-currencies-launch-drone-taxis/1621591370370/?spt=slh&amp;or=7"><span>World News</span> // 9 hours ago</a></p><a href="https://www.upi.com/Top_News/World-News/2020/06/05/Seoul-to-allow-for-delivery-service-of-foreign-currencies-launch-drone-taxis/1621591370370/?spt=slh&amp;or=7"> <p class="rm-manual">Seoul to allow for delivery service of foreign currencies, launch drone taxis</p> <p class="rm-manual">
+ SEOUL, June 5 (UPI) -- The South Korean government said Thursday that 
+it plans to allow for delivery service of foreign currencies to reduce 
+face-to-face contact amid the coronavirus threats.</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://www.upi.com/Top_News/World-News/2020/06/05/Suspect-in-Madeleine-McCann-case-linked-to-missing-German-girl/2121591354173/?spt=slh&amp;or=8"> </a></p><p class="rm-manual"><a href="https://www.upi.com/Top_News/World-News/2020/06/05/Suspect-in-Madeleine-McCann-case-linked-to-missing-German-girl/2121591354173/?spt=slh&amp;or=8"><span>World News</span> // 9 hours ago</a></p><a href="https://www.upi.com/Top_News/World-News/2020/06/05/Suspect-in-Madeleine-McCann-case-linked-to-missing-German-girl/2121591354173/?spt=slh&amp;or=8"> <p class="rm-manual">Suspect in Madeleine McCann case linked to missing German girl</p> <p class="rm-manual">
+ June 5 (UPI) -- Authorities said Friday a new suspect in the mysterious
+ 2007 disappearance of 3-year-old Madeleine McCann is now being 
+investigated for a similar case in Germany.</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://www.upi.com/Top_News/World-News/2020/06/05/UN-Violence-in-Congo-leaves-1300-civilians-dead-over-8-months/6791591365269/?spt=slh&amp;or=9"> </a></p><p class="rm-manual"><a href="https://www.upi.com/Top_News/World-News/2020/06/05/UN-Violence-in-Congo-leaves-1300-civilians-dead-over-8-months/6791591365269/?spt=slh&amp;or=9"><span>World News</span> // 9 hours ago</a></p><a href="https://www.upi.com/Top_News/World-News/2020/06/05/UN-Violence-in-Congo-leaves-1300-civilians-dead-over-8-months/6791591365269/?spt=slh&amp;or=9"> <p class="rm-manual">U.N.: Violence in Congo leaves 1,300 civilians dead over 8 months</p> <p class="rm-manual">
+ June 5 (UPI) -- About 1,300 civilians have been killed in the 
+Democratic Republic of the Congo amid conflict involving government 
+forces and armed opposition groups, the United Nations High Commissioner
+ for Human Rights said Friday.</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://www.upi.com/Top_News/World-News/2020/06/05/Father-of-Japanese-abductee-to-North-Korea-dead-at-87/3671591364850/?spt=slh&amp;or=10"> </a></p><p class="rm-manual"><a href="https://www.upi.com/Top_News/World-News/2020/06/05/Father-of-Japanese-abductee-to-North-Korea-dead-at-87/3671591364850/?spt=slh&amp;or=10"><span>World News</span> // 11 hours ago</a></p><a href="https://www.upi.com/Top_News/World-News/2020/06/05/Father-of-Japanese-abductee-to-North-Korea-dead-at-87/3671591364850/?spt=slh&amp;or=10"> <p class="rm-manual">Father of Japanese abductee to North Korea dead at 87</p> <p class="rm-manual">
+ June 5 (UPI) -- The father of a Japanese citizen who was abducted to 
+North Korea as a teenager has died after decades of activism that drew 
+international attention to Pyongyang's secret program of kidnappings.</p> </a> <p class="rm-manual"></p>
+<h3 class="rm-manual">Trending Stories</h3>
+<p class="rm-manual"> <a href="https://www.upi.com/Top_News/US/2020/06/05/Philadelphia-judge-orders-release-of-man-on-death-row-for-23-years/7861591377172/?mpst=1"> </a></p><p class="rm-manual"><a href="https://www.upi.com/Top_News/US/2020/06/05/Philadelphia-judge-orders-release-of-man-on-death-row-for-23-years/7861591377172/?mpst=1"> Philadelphia judge orders release of man on death row for 23 years </a></p><a href="https://www.upi.com/Top_News/US/2020/06/05/Philadelphia-judge-orders-release-of-man-on-death-row-for-23-years/7861591377172/?mpst=1"> </a> <a href="https://www.upi.com/Top_News/US/2020/06/05/George-Floyd-protests-DC-expects-major-rally-Buffalo-officers-suspended/5291591334926/?mpst=2"> <p class="rm-manual"> George Floyd protests: D.C. expects major rally; Buffalo officers suspended </p> </a> <a href="https://www.upi.com/Top_News/US/2020/06/04/Ohio-judge-rules-Trump-cannot-claim-portion-of-Stormy-Daniels-settlement/3141591315581/?mpst=3"> <p class="rm-manual"> Ohio judge rules Trump cannot claim portion of Stormy Daniels settlement </p> </a> <a href="https://www.upi.com/Top_News/US/2020/06/05/Strawberry-Moon-Friday-comes-with-a-twist-for-part-of-world/4411591351424/?mpst=4"> <p class="rm-manual"> Strawberry Moon Friday comes with a twist for part of world </p> </a> <a href="https://www.upi.com/Top_News/US/2020/06/05/Minneapolis-leaders-vote-in-favor-of-police-reforms-ban-choke-holds/6301591359171/?mpst=5"> <p class="rm-manual"> Minneapolis leaders vote in favor of police reforms; ban choke holds </p> </a> <p class="rm-manual"></p>
+<h3 class="rm-manual">Follow Us</h3>
+<h2 class="rm-manual">Sign up for our daily newsletter</h2>
+<p class="rm-manual"><a href="https://about.upi.com/privacy-policy" rel="noopener">Privacy policy</a></p>
+<h3 class="rm-manual">Photo Gallery</h3>
+<p class="rm-manual"><a href="https://www.upi.com/Entertainment_News/Photos/Notable-deaths-of-2020/12316/?rc_col=1"> </a></p><p class="rm-manual"><a href="https://www.upi.com/Entertainment_News/Photos/Notable-deaths-of-2020/12316/?rc_col=1"> Notable deaths of 2020 </a></p><a href="https://www.upi.com/Entertainment_News/Photos/Notable-deaths-of-2020/12316/?rc_col=1"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <span>Back to Article</span> </p>
+<p class="rm-manual"> / </p>
+<p class="rm-manual"> <a href="#"> <span>Back to top</span></a> </p>
+<p class="rm-manual"> <a href="https://about.upi.com/">About UPI</a> <a href="https://about.upi.com/contact/">Contact</a> <a href="#">Feedback</a> <a href="https://about.upi.com/advertising/advertise-online">Advertisements</a> <a href="https://www.upi.com/feedback/news-tips">Submit News Tips</a> </p>
+<p class="rm-manual"> Copyright © 2020 United Press International, Inc. All Rights Reserved. </p>
+<p class="rm-manual"> <a href="https://about.upi.com/terms">Terms of Use</a><a href="https://about.upi.com/privacy-policy">Privacy Policy</a> </p></article>
+</body></html>

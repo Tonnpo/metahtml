@@ -1,0 +1,505 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Colorado Springs hospital sees state's first death from coronavirus | Colorado Springs News | gazette.com </p>
+<p class="rm-manual">You are the owner of this article.</p>
+<p class="rm-manual"> <a href="https://gazette.com/users/https://gazette.com/tncms/admin/editorial-asset/?edit=9c95c83a-656f-11ea-b8e4-3b468e8f81be"> Edit Article</a> <a href="https://gazette.com/users/admin/contribute/article/?from_section=/news"> Add New Article</a> </p>
+<p class="rm-manual"> <a href="#">Sign Out</a> <a href="#">Sign In</a> <a href="https://checkout.gazette.com/?g2i_source=gazette&amp;g2i_medium=header&amp;g2i_campaign=default">Subscribe</a> <a href="https://myaccount.gazette.com/Dashboard?sitecode=Gazette">My Account</a> </p>
+<p class="rm-manual"> <a href="https://digital.olivesoftware.com/Olive/ODN/TheGazette/" rel="nofollow">E-Edition</a> <a href="#">Sign Out</a> <a href="#">Sign in</a> <a href="https://checkout.gazette.com/?g2i_source=gazette&amp;g2i_medium=header&amp;g2i_campaign=default">Subscribe</a> <a href="https://myaccount.gazette.com/Dashboard?sitecode=Gazette">My Account</a> </p>
+<p class="rm-manual"><a href="file:///news/">News</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///news/local/">Local News</a> </li>
+<li class="rm-manual"> <a href="file:///politics/">Politics </a> </li>
+<li class="rm-manual"> <a href="file:///news/government/">Government</a> </li>
+<li class="rm-manual"> <a href="file:///colorado-watch/">Colorado Watch </a> </li>
+<li class="rm-manual"> <a href="file:///business/">Business</a> </li>
+<li class="rm-manual"> <a href="file:///military/">Military</a> </li>
+<li class="rm-manual"> <a href="file:///news/crime/">Crime &amp; Justice</a> </li>
+<li class="rm-manual"> <a href="file:///news/education/">Education</a> </li>
+<li class="rm-manual"> <a href="file:///virtual_graduations/">Virtual Graduations </a> </li>
+<li class="rm-manual"> <a href="file:///news/david-ramsey/">David Ramsey</a> </li>
+<li class="rm-manual"> <a href="file:///news/fire-environment/">Wildfires</a> </li>
+<li class="rm-manual"> <a href="file:///news/us-world/">U.S. &amp; World</a> </li>
+<li class="rm-manual"> <a href="file:///news/traffic/">Colorado Springs Traffic</a> </li>
+<li class="rm-manual"> <a href="file:///news/national/">National News</a> </li>
+<li class="rm-manual"> <a href="file:///news/marijuana/">Marijuana</a> </li>
+<li class="rm-manual"> <a href="file:///pikespeakcourier/">Pikes Peak Courier</a> </li>
+<li class="rm-manual"> <a href="file:///cheyenneedition/">Cheyenne Edition</a> </li>
+<li class="rm-manual"> <a href="file:///woodmenedition/">Woodmen Edition</a> </li>
+<li class="rm-manual"> <a href="file:///thetribune/">The Tribune</a> </li>
+<li class="rm-manual"> <a href="file:///special-reports/">Special Reports</a> </li>
+<li class="rm-manual"> <a href="file:///blogs">Blogs</a> </li>
+<li class="rm-manual"> <a href="file:///podcasts/">Podcasts</a> </li>
+<li class="rm-manual"> <a href="file:///newsletters/">Newsletters</a> </li>
+<li class="rm-manual"> <a href="file:///news/news-tip/">Submit a News Tip</a> </li>
+</ul>
+<p class="rm-manual"><a href="file:///sports/">Sports</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///sports/air-force-sports/">Air Force Sports</a> </li>
+<li class="rm-manual"> <a href="file:///sports/baseball/">Baseball</a> </li>
+<li class="rm-manual"> <a href="file:///sports/basketball/">Basketball</a> </li>
+<li class="rm-manual"> <a href="file:///sports/broncos/">Denver Broncos</a> </li>
+<li class="rm-manual"> <a href="file:///sports/hockey/">Hockey</a> </li>
+<li class="rm-manual"> <a href="file:///sports/olympics/">Olympics</a> </li>
+<li class="rm-manual"> <a href="file:///sports/paul-klee/">Paul Klee</a> </li>
+<li class="rm-manual"> <a href="file:///high-school-sports/">Gazette Preps</a> </li>
+<li class="rm-manual"> <a href="file:///sports/switchbacks/">Switchbacks</a> </li>
+<li class="rm-manual"> <a href="https://gazette.com/video/sports/" rel="noopener">Videos</a> </li>
+<li class="rm-manual"> <a href="file:///sports/woody-paige/">Woody Paige</a> </li>
+</ul>
+<p class="rm-manual"><a href="file:///opinion/">Opinion</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///opinion/editorials/">Editorials</a> </li>
+<li class="rm-manual"> <a href="file:///opinion/columnists/">Columnists</a> </li>
+<li class="rm-manual"> <a href="file:///opinion/letters_to_editor/">Letters to the Editor</a> </li>
+<li class="rm-manual"> <a href="file:///editor/">Submit a Letter</a> </li>
+<li class="rm-manual"> <a href="file:///opinion/elected-officials/">Contact Elected Officials</a> </li>
+</ul>
+<p class="rm-manual"><a href="file:///life/">Life</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="https://www.outtherecolorado.com/" rel="noopener">OutThere Colorado</a> </li>
+<li class="rm-manual"> <a href="file:///life/travel">Travel</a> </li>
+<li class="rm-manual"> <a href="file:///life/home-garden/">Home &amp; Garden</a> </li>
+<li class="rm-manual"> <a href="file:///life/food/">Food</a> </li>
+<li class="rm-manual"> <a href="file:///life/faith-values/">Faith &amp; Values</a> </li>
+<li class="rm-manual"> <a href="file:///life/parenting/">Parenting</a> </li>
+<li class="rm-manual"> <a href="file:///life/around-town/">Around Town</a> </li>
+<li class="rm-manual"> <a href="file:///life/pets">Pets</a> </li>
+<li class="rm-manual"> <a href="file:///life/health/">Health</a> </li>
+<li class="rm-manual"> <a href="file:///special-sections/">Special Sections</a> </li>
+</ul>
+<p class="rm-manual"><a href="file:///arts-entertainment/">A&amp;E</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="https://coloradosprings.com/" rel="noopener">ColoradoSprings.com</a> </li>
+<li class="rm-manual"> <a href="https://www.thebestofthesprings.com/" rel="noopener">Best of the Springs</a> </li>
+<li class="rm-manual"> <a href="file:///arts-entertainment/dining/">Dining &amp; Drink</a> </li>
+<li class="rm-manual"> <a href="file:///arts-entertainment/restaurant-reviews/">Restaurant Reviews</a> </li>
+<li class="rm-manual"> <a href="file:///blogs/pop-culture/">Pop Culture</a> </li>
+<li class="rm-manual"> <a href="file:///arts-entertainment/comics/">Comics/Puzzles</a> </li>
+<li class="rm-manual"> <a href="file:///arts-entertainment/horoscopes/">Horoscopes</a> </li>
+<li class="rm-manual"> <a href="file:///tv/">Tv</a> </li>
+<li class="rm-manual"> <a href="file:///arts-entertainment/music/">Music</a> </li>
+</ul>
+<p class="rm-manual"><a href="file:///obits/">Obits</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///obits/">Latest Obituaries</a> </li>
+<li class="rm-manual"> <a href="file:///obits/paid-obituary/">Place an Obituary</a> </li>
+<li class="rm-manual"> <a href="file:///obits/submit/">Place a Death Notice</a> </li>
+</ul>
+<p class="rm-manual"><a href="file:///classifieds/">Classifieds</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="https://placead.gazette.com/ClassifiedAds/" rel="noopener">Place an Ad</a> </li>
+<li class="rm-manual"> <a href="file:///classifieds/">Classifieds</a> </li>
+<li class="rm-manual"> <a href="file:///jobs/">Jobs</a> </li>
+<li class="rm-manual"> <a href="file:///classifieds/sale/sale/garage">Garage Sales</a> </li>
+<li class="rm-manual"> <a href="file:///auto/">Shop for Cars</a> </li>
+<li class="rm-manual"> <a href="file:///classifieds/community/announcements/legal/">Legal Notices</a> </li>
+<li class="rm-manual"> <a href="file:///classifieds/sale/">Merchandise</a> </li>
+<li class="rm-manual"> <a href="file:///classifieds/sale/pet/">Dogs</a> </li>
+<li class="rm-manual"> <a href="file:///classifieds/housing/rent/">Rentals</a> </li>
+<li class="rm-manual"> <a href="file:///classifieds/service/">Service</a> </li>
+<li class="rm-manual"> <a href="file:///classifieds/sale/other">Various/Misc.</a> </li>
+<li class="rm-manual"> <a href="https://placead.gazette.com/ClassifiedAds" rel="noopener">Post an Ad</a> </li>
+<li class="rm-manual"> <a href="https://local.gazette.com/" rel="noopener">Shop Local</a> </li>
+<li class="rm-manual"> <a href="https://placead.gazette.com/Graduation" rel="noopener">Graduation Announcements</a> </li>
+</ul>
+<p class="rm-manual"><a href="file:///colorado-springs-home-search/">Real Estate</a> </p>
+<p class="rm-manual"><a href="file:///multimedia/">Photo/Video</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///multimedia/photos/">Photos </a> </li>
+<li class="rm-manual"> <a href="file:///video">Videos</a> </li>
+<li class="rm-manual"> <a href="file:///multimedia/photos/sports/">Sports Photos </a> </li>
+<li class="rm-manual"> <a href="file:///sports/video/">Sports Videos</a> </li>
+<li class="rm-manual"> <a href="https://gazettephoto.mycapture.com/mycapture/photoRequestForm.asp" rel="noopener">Buy Our Photos</a> </li>
+<li class="rm-manual"> <a href="https://www.instagram.com/co_gazette/" rel="noopener">Instagram</a> </li>
+</ul>
+<p class="rm-manual"><a href="file:///about/">About</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///about/">About the Gazette</a> </li>
+<li class="rm-manual"> <a href="https://myaccount.gazette.com/Home?_ga=2.215827159.1588901983.1570748917-2079914760.1476508185" rel="noopener">Account Center</a> </li>
+<li class="rm-manual"> <a href="file:///contact/">Contact Us</a> </li>
+<li class="rm-manual"> <a href="file:///site/report_an_issue.html">Report an Issue</a> </li>
+<li class="rm-manual"> <a href="file:///workforus/">Employment Opportunities</a> </li>
+<li class="rm-manual"> <a href="file:///site/copyright.html">Copyright Information</a> </li>
+<li class="rm-manual"> <a href="file:///site/reprint_permission.html">Reprint Information</a> </li>
+<li class="rm-manual"> <a href="file:///carrier/">Become a Carrier</a> </li>
+<li class="rm-manual"> <a href="https://csgiservices.dticloud.com/cgi-bin/cmo_cmo.sh/routeservice/web/login.html" rel="noopener">Carrier Portal</a> </li>
+<li class="rm-manual"> <a href="file:///archive-info/">Archives</a> </li>
+<li class="rm-manual"> <a href="file:///e-edition">e-Edition</a> </li>
+<li class="rm-manual"> <a href="file:///mobile/">Mobile Apps</a> </li>
+<li class="rm-manual"> <a href="file:///google-survey-faq/">Google Survey FAQ</a> </li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///archive-info/">Archives</a> </li>
+<li class="rm-manual"> <a href="file:///search/">Search</a> </li>
+<li class="rm-manual"> <a href="file:///manage-account/">Account Center</a> </li>
+<li class="rm-manual"> <a href="https://csgiservices.dticloud.com/cgi-bin/cmo_cmo.sh/routeservice/web/login.html" rel="noopener">Carrier Portal</a> </li>
+<li class="rm-manual"> <a href="https://gazettephoto.mycapture.com/mycapture/photoRequestForm.asp" rel="noopener">Buy Our Photos</a> </li>
+</ul>
+<p class="rm-manual"> <a href="https://gazette.com/search/?f=html&amp;s=start_time&amp;sd=desc&amp;l=25&amp;t=article&amp;nsa=eedition"> <span>Search</span> </a> </p>
+<p class="rm-manual"> <a href="#">Sign Out</a> <a href="#">Sign In</a> <a href="https://checkout.gazette.com/?g2i_source=gazette&amp;g2i_medium=header&amp;g2i_campaign=default">Subscribe</a> <a href="https://myaccount.gazette.com/Dashboard?sitecode=Gazette">My Account</a> </p>
+<p class="rm-manual"> <a href="https://digital.olivesoftware.com/Olive/ODN/TheGazette/" rel="nofollow">E-Edition</a> <a href="#">Sign Out</a> <a href="#">Sign in</a> <a href="https://checkout.gazette.com/?g2i_source=gazette&amp;g2i_medium=header&amp;g2i_campaign=default">Subscribe</a> <a href="https://myaccount.gazette.com/Dashboard?sitecode=Gazette">My Account</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///weather/?weather_zip=80903"> <span> <span>75°</span> <span>Sunny </span> </span> </a> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> </p><h4 class="rm-manual"> Colorado Springs, CO (80903) </h4> <h5 class="rm-manual">Today</h5> <p class="rm-manual">Mixed
+ clouds and sun this morning. Scattered thunderstorms developing this 
+afternoon. High 87F. Winds ENE at 5 to 10 mph. Chance of rain 40%..</p> <h5 class="rm-manual">Tonight</h5> <p class="rm-manual">Some clouds this evening will give way to mainly clear skies overnight. Low 62F. Winds NNW at 5 to 10 mph.</p> <p class="rm-manual"> Updated: July 20, 2020 @ 8:55 am</p> <p class="rm-manual"></p> </li> <li class="rm-manual"><a href="file:///weather/?weather_zip=80903"> Full Forecast</a></li> </ul> </li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///news/">News </a><ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///news/local/">Local News</a> </li>
+<li class="rm-manual"> <a href="file:///politics/">Politics </a> </li>
+<li class="rm-manual"> <a href="file:///news/government/">Government</a> </li>
+<li class="rm-manual"> <a href="file:///colorado-watch/">Colorado Watch </a> </li>
+<li class="rm-manual"> <a href="file:///business/">Business</a> </li>
+<li class="rm-manual"> <a href="file:///military/">Military</a> </li>
+<li class="rm-manual"> <a href="file:///news/crime/">Crime &amp; Justice</a> </li>
+<li class="rm-manual"> <a href="file:///news/education/">Education</a> </li>
+<li class="rm-manual"> <a href="file:///virtual_graduations/">Virtual Graduations </a> </li>
+<li class="rm-manual"> <a href="file:///news/david-ramsey/">David Ramsey</a> </li>
+<li class="rm-manual"> <a href="file:///news/fire-environment/">Wildfires</a> </li>
+<li class="rm-manual"> <a href="file:///news/us-world/">U.S. &amp; World</a> </li>
+<li class="rm-manual"> <a href="file:///news/traffic/">Colorado Springs Traffic</a> </li>
+<li class="rm-manual"> <a href="file:///news/national/">National News</a> </li>
+<li class="rm-manual"> <a href="file:///news/marijuana/">Marijuana</a> </li>
+<li class="rm-manual"> <a href="file:///pikespeakcourier/">Pikes Peak Courier</a> </li>
+<li class="rm-manual"> <a href="file:///cheyenneedition/">Cheyenne Edition</a> </li>
+<li class="rm-manual"> <a href="file:///woodmenedition/">Woodmen Edition</a> </li>
+<li class="rm-manual"> <a href="file:///thetribune/">The Tribune</a> </li>
+<li class="rm-manual"> <a href="file:///special-reports/">Special Reports</a> </li>
+<li class="rm-manual"> <a href="file:///blogs">Blogs</a> </li>
+<li class="rm-manual"> <a href="file:///podcasts/">Podcasts</a> </li>
+<li class="rm-manual"> <a href="file:///newsletters/">Newsletters</a> </li>
+<li class="rm-manual"> <a href="file:///news/news-tip/">Submit a News Tip</a> </li>
+</ul> <section class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"></p><h4 class="rm-manual"> <a href="file:///news/colorado-springs-weather-hot-and-possibly-wet-this-week/article_8ed20d20-ca92-11ea-afbb-9fbed94c106f.html"> Colorado Springs weather: Hot and possibly wet this week</a>
+</h4><p class="rm-manual"></p> </article> <article class="rm-manual"> <p class="rm-manual"></p><h4 class="rm-manual"> <a href="file:///news/mugshot-monday-most-wanted-in-the-colorado-springs-area/article_dda9d31c-c847-11ea-bdca-87d58c2b8c77.html"> Mugshot Monday: Most wanted in the Colorado Springs area</a>
+</h4><p class="rm-manual"></p> </article> </section> </li> </ul>
+</li>
+<li class="rm-manual"> <a href="file:///sports/">Sports </a><ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///sports/air-force-sports/">Air Force Sports</a> </li>
+<li class="rm-manual"> <a href="file:///sports/baseball/">Baseball</a> </li>
+<li class="rm-manual"> <a href="file:///sports/basketball/">Basketball</a> </li>
+<li class="rm-manual"> <a href="file:///sports/broncos/">Denver Broncos</a> </li>
+<li class="rm-manual"> <a href="file:///sports/hockey/">Hockey</a> </li>
+<li class="rm-manual"> <a href="file:///sports/olympics/">Olympics</a> </li>
+<li class="rm-manual"> <a href="file:///sports/paul-klee/">Paul Klee</a> </li>
+<li class="rm-manual"> <a href="file:///high-school-sports/">Gazette Preps</a> </li>
+<li class="rm-manual"> <a href="file:///sports/switchbacks/">Switchbacks</a> </li>
+<li class="rm-manual"> <a href="https://gazette.com/video/sports/" rel="noopener">Videos</a> </li>
+<li class="rm-manual"> <a href="file:///sports/woody-paige/">Woody Paige</a> </li>
+</ul> <section class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"></p><h4 class="rm-manual"> <a href="file:///news/u-s-olympic-paralympic-museum-sets-opening-date-in-colorado-springs-after-delay/article_3cffc44a-ca8a-11ea-a344-2f75f9f1d123.html"> U.S. Olympic &amp; Paralympic Museum sets opening date in Colorado Springs after delay</a>
+</h4><p class="rm-manual"></p> </article> <article class="rm-manual"> <p class="rm-manual"></p><h4 class="rm-manual"> <a href="file:///sports/nuggets-notebook-rep-john-lewis-life-legacy-and-good-trouble-cited-by-coach-malone/article_a574942c-ca23-11ea-9905-6f5e99a57d8f.html"> Nuggets notebook: Rep. John Lewis' life, legacy and 'Good Trouble' cited by coach Malone</a>
+</h4><p class="rm-manual"></p> </article> </section> </li> </ul>
+</li>
+<li class="rm-manual"> <a href="file:///opinion/">Opinion </a><ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///opinion/editorials/">Editorials</a> </li>
+<li class="rm-manual"> <a href="file:///opinion/columnists/">Columnists</a> </li>
+<li class="rm-manual"> <a href="file:///opinion/letters_to_editor/">Letters to the Editor</a> </li>
+<li class="rm-manual"> <a href="file:///editor/">Submit a Letter</a> </li>
+<li class="rm-manual"> <a href="file:///opinion/elected-officials/">Contact Elected Officials</a> </li>
+</ul> <section class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"></p><h4 class="rm-manual"> <a href="file:///opinion/letters-responding-to-irresponsible-michelle-malkin-wont-be-commanded-by-would-be-tyrants/article_42a04f68-c833-11ea-a1fc-3f8e89b34cf9.html"> LETTERS: Responding to 'irresponsible' Michelle Malkin; won't be commanded by would-be tyrants</a>
+</h4><p class="rm-manual"></p> </article> <article class="rm-manual"> <p class="rm-manual"></p><h4 class="rm-manual"> <a href="file:///am-update/letters-clean-the-bike-lanes-manually-families-in-economic-free-fall/article_6bca5cf4-c84b-11ea-a253-bf89bc033824.html"> LETTERS: Clean the bike lanes manually; families in economic free fall</a>
+</h4><p class="rm-manual"></p> </article> </section> </li> </ul>
+</li>
+<li class="rm-manual"> <a href="file:///life/">Life </a><ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual">
+<li class="rm-manual"> <a href="https://www.outtherecolorado.com/" rel="noopener">OutThere Colorado</a> </li>
+<li class="rm-manual"> <a href="file:///life/travel">Travel</a> </li>
+<li class="rm-manual"> <a href="file:///life/home-garden/">Home &amp; Garden</a> </li>
+<li class="rm-manual"> <a href="file:///life/food/">Food</a> </li>
+<li class="rm-manual"> <a href="file:///life/faith-values/">Faith &amp; Values</a> </li>
+<li class="rm-manual"> <a href="file:///life/parenting/">Parenting</a> </li>
+<li class="rm-manual"> <a href="file:///life/around-town/">Around Town</a> </li>
+<li class="rm-manual"> <a href="file:///life/pets">Pets</a> </li>
+<li class="rm-manual"> <a href="file:///life/health/">Health</a> </li>
+<li class="rm-manual"> <a href="file:///special-sections/">Special Sections</a> </li>
+</ul> <section class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"></p><h4 class="rm-manual"> <a href="file:///arts-entertainment/dining/3-new-eateries-open-in-colorado-springs/article_18e37fba-ca86-11ea-89bc-e71a688d7182.html"> 3 new eateries open in Colorado Springs</a>
+</h4><p class="rm-manual"></p> </article> <article class="rm-manual"> <p class="rm-manual"></p><h4 class="rm-manual"> <a href="file:///life/north-pole-amusement-park-near-colorado-springs-allowed-to-open-with-restrictions/article_64a159b0-c917-11ea-810a-538fac403a96.html"> North Pole amusement park near Colorado Springs allowed to open with restrictions</a>
+</h4><p class="rm-manual"></p> </article> </section> </li> </ul>
+</li>
+<li class="rm-manual"> <a href="file:///arts-entertainment/">A&amp;E </a><ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual">
+<li class="rm-manual"> <a href="https://coloradosprings.com/" rel="noopener">ColoradoSprings.com</a> </li>
+<li class="rm-manual"> <a href="https://www.thebestofthesprings.com/" rel="noopener">Best of the Springs</a> </li>
+<li class="rm-manual"> <a href="file:///arts-entertainment/dining/">Dining &amp; Drink</a> </li>
+<li class="rm-manual"> <a href="file:///arts-entertainment/restaurant-reviews/">Restaurant Reviews</a> </li>
+<li class="rm-manual"> <a href="file:///blogs/pop-culture/">Pop Culture</a> </li>
+<li class="rm-manual"> <a href="file:///arts-entertainment/comics/">Comics/Puzzles</a> </li>
+<li class="rm-manual"> <a href="file:///arts-entertainment/horoscopes/">Horoscopes</a> </li>
+<li class="rm-manual"> <a href="file:///tv/">Tv</a> </li>
+<li class="rm-manual"> <a href="file:///arts-entertainment/music/">Music</a> </li>
+</ul> <section class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"></p><h4 class="rm-manual"> <a href="file:///arts-entertainment/hillside-gardens-in-colorado-springs-hosts-a-summer-concert-series-unlike-anything-else/article_4dc27542-c081-11ea-8889-7f82881fc87a.html"> Hillside Gardens in Colorado Springs hosts a summer concert series unlike anything else</a>
+</h4><p class="rm-manual"></p> </article> <article class="rm-manual"> <p class="rm-manual"></p><h4 class="rm-manual"> <a href="file:///arts-entertainment/dining/3-new-eateries-open-in-colorado-springs/article_18e37fba-ca86-11ea-89bc-e71a688d7182.html"> 3 new eateries open in Colorado Springs</a>
+</h4><p class="rm-manual"></p> </article> </section> </li> </ul>
+</li>
+<li class="rm-manual"> <a href="file:///obits/">Obits </a><ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///obits/">Latest Obituaries</a> </li>
+<li class="rm-manual"> <a href="file:///obits/paid-obituary/">Place an Obituary</a> </li>
+<li class="rm-manual"> <a href="file:///obits/submit/">Place a Death Notice</a> </li>
+</ul> </li> </ul>
+</li>
+<li class="rm-manual"> <a href="file:///classifieds/">Classifieds </a><ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual">
+<li class="rm-manual"> <a href="https://placead.gazette.com/ClassifiedAds/" rel="noopener">Place an Ad</a> </li>
+<li class="rm-manual"> <a href="file:///classifieds/">Classifieds</a> </li>
+<li class="rm-manual"> <a href="file:///jobs/">Jobs</a> </li>
+<li class="rm-manual"> <a href="file:///classifieds/sale/sale/garage">Garage Sales</a> </li>
+<li class="rm-manual"> <a href="file:///auto/">Shop for Cars</a> </li>
+<li class="rm-manual"> <a href="file:///classifieds/community/announcements/legal/">Legal Notices</a> </li>
+<li class="rm-manual"> <a href="file:///classifieds/sale/">Merchandise</a> </li>
+<li class="rm-manual"> <a href="file:///classifieds/sale/pet/">Dogs</a> </li>
+<li class="rm-manual"> <a href="file:///classifieds/housing/rent/">Rentals</a> </li>
+<li class="rm-manual"> <a href="file:///classifieds/service/">Service</a> </li>
+<li class="rm-manual"> <a href="file:///classifieds/sale/other">Various/Misc.</a> </li>
+<li class="rm-manual"> <a href="https://placead.gazette.com/ClassifiedAds" rel="noopener">Post an Ad</a> </li>
+<li class="rm-manual"> <a href="https://local.gazette.com/" rel="noopener">Shop Local</a> </li>
+<li class="rm-manual"> <a href="https://placead.gazette.com/Graduation" rel="noopener">Graduation Announcements</a> </li>
+</ul> </li> </ul>
+</li>
+<li class="rm-manual"> <a href="file:///colorado-springs-home-search/">Real Estate </a>
+</li>
+<li class="rm-manual"> <a href="file:///multimedia/">Photo/Video </a><ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///multimedia/photos/">Photos </a> </li>
+<li class="rm-manual"> <a href="file:///video">Videos</a> </li>
+<li class="rm-manual"> <a href="file:///multimedia/photos/sports/">Sports Photos </a> </li>
+<li class="rm-manual"> <a href="file:///sports/video/">Sports Videos</a> </li>
+<li class="rm-manual"> <a href="https://gazettephoto.mycapture.com/mycapture/photoRequestForm.asp" rel="noopener">Buy Our Photos</a> </li>
+<li class="rm-manual"> <a href="https://www.instagram.com/co_gazette/" rel="noopener">Instagram</a> </li>
+</ul> <section class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"></p><h4 class="rm-manual"> <a href="file:///multimedia/photos-snow-fun-in-summer/collection_0f98a634-c869-11ea-891c-9b9c5c8d4b03.html"> PHOTOS: Snow fun in summer</a>
+</h4><p class="rm-manual"></p> </article> <article class="rm-manual"> <p class="rm-manual"></p><h4 class="rm-manual"> <a href="file:///multimedia/photos-baby-moose-arrives-at-the-cheyenne-mountain-zoo/collection_c6d21678-c6ca-11ea-9fa9-27a545ac4dbc.html"> PHOTOS | Baby Moose Arrives at the Cheyenne Mountain Zoo</a>
+</h4><p class="rm-manual"></p> </article> </section> </li> </ul>
+</li>
+<li class="rm-manual"> <a href="file:///about/">About </a><ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///about/">About the Gazette</a> </li>
+<li class="rm-manual"> <a href="https://myaccount.gazette.com/Home?_ga=2.215827159.1588901983.1570748917-2079914760.1476508185" rel="noopener">Account Center</a> </li>
+<li class="rm-manual"> <a href="file:///contact/">Contact Us</a> </li>
+<li class="rm-manual"> <a href="file:///site/report_an_issue.html">Report an Issue</a> </li>
+<li class="rm-manual"> <a href="file:///workforus/">Employment Opportunities</a> </li>
+<li class="rm-manual"> <a href="file:///site/copyright.html">Copyright Information</a> </li>
+<li class="rm-manual"> <a href="file:///site/reprint_permission.html">Reprint Information</a> </li>
+<li class="rm-manual"> <a href="file:///carrier/">Become a Carrier</a> </li>
+<li class="rm-manual"> <a href="https://csgiservices.dticloud.com/cgi-bin/cmo_cmo.sh/routeservice/web/login.html" rel="noopener">Carrier Portal</a> </li>
+<li class="rm-manual"> <a href="file:///archive-info/">Archives</a> </li>
+<li class="rm-manual"> <a href="file:///e-edition">e-Edition</a> </li>
+<li class="rm-manual"> <a href="file:///mobile/">Mobile Apps</a> </li>
+<li class="rm-manual"> <a href="file:///google-survey-faq/">Google Survey FAQ</a> </li>
+</ul> </li> </ul>
+</li>
+<li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///archive-info/">Archives</a> </li>
+<li class="rm-manual"> <a href="file:///search/">Search</a> </li>
+<li class="rm-manual"> <a href="file:///manage-account/">Account Center</a> </li>
+<li class="rm-manual"> <a href="https://csgiservices.dticloud.com/cgi-bin/cmo_cmo.sh/routeservice/web/login.html" rel="noopener">Carrier Portal</a> </li>
+<li class="rm-manual"> <a href="https://gazettephoto.mycapture.com/mycapture/photoRequestForm.asp" rel="noopener">Buy Our Photos</a> </li>
+</ul> </li> </ul>
+</li>
+</ul>
+<p class="rm-manual"> <span>Share This </span> </p>
+<p class="rm-manual"> <span> <span>1</span> of 3 </span> </p>
+<p class="rm-manual">A woman in her 80's died Friday at UCHealth 
+Memorial Central Hospital in Colorado Springs. According to the UCHealth
+ hospital statement, the hospital received confirmation that the woman 
+tested positive for COVID-19 after she died. The woman is the first 
+death in Colorado from the coronavirus. (Chancey Bush/ The Gazette)</p>
+<ul class="rm-manual"> <li class="rm-manual"><span>Chancey Bush The Gazette</span></li> </ul>
+<p class="rm-manual">Workers set up for the Colorado Department of 
+Public Health and Environment first community testing center for 
+COVID-19 at the state lab on Wednesday, March 11, 2020 in Denver, Colo. 
+For most people, the new coronavirus causes only mild or moderate 
+symptoms. For some it can cause more severe illness, especially in older
+ adults and people with existing health problems.</p>
+<ul class="rm-manual"> <li class="rm-manual"><span>RJ Sangosti</span></li> </ul>
+<p class="rm-manual">A woman in her 80's died Friday at UCHealth 
+Memorial Central Hospital in Colorado Springs. According to the UCHealth
+ hospital statement, the hospital received confirmation that the woman 
+tested positive for COVID-19 after she died. The woman is the first 
+death in Colorado from the coronavirus. </p>
+<ul class="rm-manual"> <li class="rm-manual"><span>(Photo by Chancey Bush, The Gazette)</span></li> </ul>
+<h1 class="rm-manual"> <span> Colorado Springs hospital sees state's first death from coronavirus </span> </h1>
+<h5 class="rm-manual">From the <a href="file:///coronavirus-in-colorado-full-coverage-march-2020/collection_5ad535e8-6254-11ea-b1b9-572cd3293114.html">Coronavirus in Colorado | Full Coverage March 2020</a> series</h5>
+<ul class="rm-manual"> <li class="rm-manual">
+<span rel="popover"><a href="https://gazette.com/users/profile/Liz%20Henderson">LIZ HENDERSON liz.henderson@gazette.com</a></span> <article class="rm-manual"> <p class="rm-manual"> </p><h4 class="rm-manual"> <a href="https://gazette.com/users/profile/Liz%20Henderson" rel="author">Liz Henderson</a> </h4><p class="rm-manual">Multimedia Journalist</p> <p class="rm-manual"></p> </article> </li> <li class="rm-manual"> Mar 13, 2020 </li> <li class="rm-manual">Mar 13, 2020 <span>Updated </span> Apr 7, 2020 </li> <li class="rm-manual">
+<a href="file:///news/colorado-springs-hospital-sees-states-first-death-from-coronavirus/article_9c95c83a-656f-11ea-b8e4-3b468e8f81be.html#disqus_thread">Comments</a> </li> </ul>
+<p class="rm-manual"> <span> <span>1</span> of 3 </span> </p>
+<p>A woman in her 80's died Friday at UCHealth Memorial Central Hospital
+ in Colorado Springs. According to the UCHealth hospital statement, the 
+hospital received confirmation that the woman tested positive for 
+COVID-19 after she died. The woman is the first death in Colorado from 
+the coronavirus. (Chancey Bush/ The Gazette)</p>
+<ul> <li class="rm-manual"><span>Chancey Bush The Gazette</span></li> </ul>
+<p>Workers set up for the Colorado Department of Public Health and 
+Environment first community testing center for COVID-19 at the state lab
+ on Wednesday, March 11, 2020 in Denver, Colo. For most people, the new 
+coronavirus causes only mild or moderate symptoms. For some it can cause
+ more severe illness, especially in older adults and people with 
+existing health problems.</p>
+<ul> <li class="rm-manual"><span>RJ Sangosti</span></li> </ul>
+<p>A woman in her 80's died Friday at UCHealth Memorial Central Hospital
+ in Colorado Springs. According to the UCHealth hospital statement, the 
+hospital received confirmation that the woman tested positive for 
+COVID-19 after she died. The woman is the first death in Colorado from 
+the coronavirus. </p>
+<ul> <li class="rm-manual"><span>(Photo by Chancey Bush, The Gazette)</span></li> </ul>
+<p>El Paso County has recorded the first death in Colorado from the 
+coronavirus as the disease continued to spread throughout the state, the
+ Colorado Department of Public Health and Environment said Friday.</p>
+<h5 class="rm-manual"> <a href="file:///health/drive-thru-coronavirus-testing-site-opens-in-colorado-springs/article_0ead8aa7-656f-5248-8809-0bf03b81c80a.html"> Drive-thru coronavirus testing site opens in Colorado Springs</a>
+</h5>
+<p>The woman, who was in her 80s and had "underlying health issues," 
+died Friday at UCHealth Memorial Central Hospital in Colorado Springs, a
+ hospital statement said.</p>
+<p>The hospital received confirmation that the woman tested positive for COVID-19 after she died, the UCHealth statement said.</p>
+<p>At a news conference at the Pikes Peak region's emergency management 
+office, Gov. Jared Polis said the woman had lived alone and had not been
+ in a nursing home or assisted living facility.</p>
+<p>However, state and hospital officials would not answer questions 
+about who else might have been exposed inside or outside the hospital to
+ the flu-like disease that has infected more than 145,000 worldwide and 
+killed 5,416.</p>
+<p>“While we were expecting this day, it doesn't make it any less 
+difficult to hear and share this news," Polis said. "As a state we are 
+in mourning and our hearts go out to the family and loved ones of the 
+Coloradan we lost."</p>
+<h5 class="rm-manual"> <a href="file:///pikespeakcourier/woodland-park-school-district-closes-schools-through-march-30-due-to-coronavirus-fears-rampart-library/article_08edd3dc-6544-11ea-bf74-83dbee59130e.html"> Woodland Park School District closes schools through March 30 due to coronavirus fears; Rampart Library District follows suit</a>
+</h5>
+<p>"What's important is that this is the first of many to come," he 
+continued. "Just as we'll be sensitive to all the families and loved 
+ones of the victims we want to make sure that we're providing the basic 
+information to the public while respecting the family's desires.</p>
+<p>"Many Coloradans will come down with coronavirus and most of those 
+will have a minor illness and be as inconvenienced as they might with a 
+cold and be able to return to work after their period of isolation. For 
+the most vulnerable, and for a small percentage of those of all ages, 
+this will take on a much more threatening form."</p>
+<p>Polis declined to say where the woman lived or how she may have contracted the virus.</p>
+<p>Cary Vogrin, a hospital spokeswoman, said privacy laws prevent her 
+from answering when the woman was admitted to the hospital, if she was 
+thought to have coronavirus at the time and if medical staff and others 
+in the hospital are being contacted or tested for the disease.</p>
+<p>"However, I can tell you that we have had screening guidelines in 
+place for more than a month and have been constantly educating and 
+training our staff — as is the case for any communicable disease, such 
+as the flu — and we are following all CDC and CDPHE guidelines to ensure
+ the safest environment for all patients, visitors and our care teams," 
+she said.</p>
+<p>The woman was among 28 new presumptive positive cases announced 
+Friday morning, raising the total in the state to 77, the fifth highest 
+in the country.</p>
+<p>Polis said the coronavirus pandemic is "one of the greatest 
+international public health disasters of our lifetime" in another 
+statement Friday. He reiterated the statewide guidance of avoiding large
+ gatherings of more than 250 people.</p>
+<p>"For areas that have active contagion and become hot spots we fully 
+are in correspondence with their local health authority and are 
+supportive of additional steps that they feel are necessary in that 
+community," Polis said.</p>
+<p>“We offer our deepest, heartfelt condolences to the family and are 
+saddened by this news,” said Susan Wheelan with the El Paso County 
+Health Department. “We have a dedicated team of experts working around 
+the clock to protect the health and safety of our community. We are 
+doing everything we can to prevent more loss of lives. We know all of El
+ Paso County, and Colorado, will join us.”</p>
+<p class="rm-manual">Contact Liz Henderson, 719-476-1623</p>
+<p class="rm-manual">Twitter: @GazetteLiz</p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///business/space-symposium-postponed-delivering-major-economic-blow-to-colorado-springs/article_4ce3e6e4-6535-11ea-be0b-8bc98dfb39c3.html" rel="nofollow"> Previous </a> </li> <li class="rm-manual"> <a href="file:///news/local/colorado-springs-mayor-john-suthers-discusses-coronavirus/article_68a5eda2-6565-11ea-b745-1f890e0ed679.html" rel="nofollow"> Next </a> </li> </ul>
+<p class="rm-manual">More in <a href="file:///coronavirus-in-colorado-full-coverage-march-2020/collection_5ad535e8-6254-11ea-b1b9-572cd3293114.html">Coronavirus in Colorado | Full Coverage March 2020</a> (146 of 191)</p>
+<h3 class="rm-manual"> <a href="file:///news/local/colorado-springs-mayor-john-suthers-discusses-coronavirus/article_68a5eda2-6565-11ea-b745-1f890e0ed679.html"> Colorado Springs mayor John Suthers discusses coronavirus</a>
+</h3>
+<p class="rm-manual"><a href="file:///news/local/colorado-springs-mayor-john-suthers-discusses-coronavirus/article_68a5eda2-6565-11ea-b745-1f890e0ed679.html">Read more</a> </p>
+<h3 class="rm-manual">More information</h3>
+<p class="rm-manual"> <a href="file:///news/colorado-issues-order-limiting-visits-to-nursing-homes-assisted-living-facilities-to-protect-elderly/article_2ea55220-6554-11ea-a5d1-d7a535e545bd.html"> </a></p><p class="rm-manual"><a href="file:///news/colorado-issues-order-limiting-visits-to-nursing-homes-assisted-living-facilities-to-protect-elderly/article_2ea55220-6554-11ea-a5d1-d7a535e545bd.html"> +2</a></p><a href="file:///news/colorado-issues-order-limiting-visits-to-nursing-homes-assisted-living-facilities-to-protect-elderly/article_2ea55220-6554-11ea-a5d1-d7a535e545bd.html"> </a> <p class="rm-manual"></p>
+<h3 class="rm-manual"> <a href="file:///news/colorado-issues-order-limiting-visits-to-nursing-homes-assisted-living-facilities-to-protect-elderly/article_2ea55220-6554-11ea-a5d1-d7a535e545bd.html"> Colorado issues order limiting visits to nursing homes, assisted-living facilities to protect elderly</a>
+</h3>
+<p class="rm-manual">Nursing homes and assisted living facilities across
+ the state and in Colorado Springs will be prohibiting friends and 
+family members from visi…</p>
+<h4 class="rm-manual">Tags</h4>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///search/?k=%22coronavirus%22#tncms-source=keyword">Coronavirus</a> </li> <li class="rm-manual"> <a href="file:///search/?k=%22covid-19%22#tncms-source=keyword">Covid-19</a> </li> <li class="rm-manual"> <a href="file:///search/?k=%22public%20health%22#tncms-source=keyword">Public Health</a> </li> <li class="rm-manual"> <a href="file:///search/?k=%22death%22#tncms-source=keyword">Death</a> </li> <li class="rm-manual"> <a href="file:///search/?k=%22el%20paso%20county%22#tncms-source=keyword">El Paso County</a> </li> <li class="rm-manual"> <a href="file:///search/?k=%22el%20paso%20county%20department%20of%20public%20health%22#tncms-source=keyword">El Paso County Department Of Public Health</a> </li> <li class="rm-manual"> <a href="file:///search/?k=%22updates%22#tncms-source=keyword">Updates</a> </li> <li class="rm-manual"> <a href="file:///search/?k=%22virus%22#tncms-source=keyword">Virus</a> </li> <li class="rm-manual"> <a href="file:///search/?k=%22local%22#tncms-source=keyword">Local</a> </li> <li class="rm-manual"> <a href="file:///search/?k=%22coronavirus%20colorado%22#tncms-source=keyword">Coronavirus Colorado</a> </li> <li class="rm-manual"> <a href="file:///search/?k=%22coronavirus%20colorado%20springs%22#tncms-source=keyword">Coronavirus Colorado Springs</a> </li> </ul>
+<h4 class="rm-manual"> <a href="https://gazette.com/users/profile/Liz%20Henderson" rel="author">Liz Henderson</a> </h4>
+<p class="rm-manual">Multimedia Journalist</p>
+<p class="rm-manual">Liz is a multimedia journalist who joined the Gazette staff in 2019.</p>
+<h4 class="rm-manual">Get email notifications on {{subject}} daily!</h4>
+<p class="rm-manual"> Your notification has been saved. </p>
+<p class="rm-manual"> There was a problem saving your notification. </p>
+<p class="rm-manual">{{description}}</p>
+<p class="rm-manual">Email notifications are only sent once a day, and only if there are new matching items.</p>
+<p class="rm-manual"> <a href="https://gazette.com/users/admin/savedsearch/">Manage followed notifications</a> </p>
+<h4 class="rm-manual">Followed notifications</h4>
+<h4 class="rm-manual">Please log in to use this feature</h4>
+<p class="rm-manual"><a href="https://gazette.com/users/login/?referer_url=https%3A%2F%2Fgazette.com%2Fnews%2Fcolorado-springs-hospital-sees-states-first-death-from-coronavirus%2Farticle_9c95c83a-656f-11ea-b8e4-3b468e8f81be.html" rel="nofollow">Log In</a> </p>
+<p class="rm-manual"> Don't have an account? <a href="https://gazette.com/users/signup/?referer_url=https%3A%2F%2Fgazette.com%2Fnews%2Fcolorado-springs-hospital-sees-states-first-death-from-coronavirus%2Farticle_9c95c83a-656f-11ea-b8e4-3b468e8f81be.html" rel="nofollow">Sign Up Today</a> </p>
+<h2 class="rm-manual">In this Series</h2>
+<h3 class="rm-manual"> <a href="file:///coronavirus-in-colorado-full-coverage-march-2020/collection_5ad535e8-6254-11ea-b1b9-572cd3293114.html"> Coronavirus in Colorado | Full Coverage March 2020</a>
+</h3>
+<p class="rm-manual">1</p>
+<h5 class="rm-manual">
+<span>Updated </span> Apr 8, 2020 article</h5>
+<h4 class="rm-manual"> <a href="file:///news/el-paso-public-health-high-number-of-deaths-driven-by-large-population-exposure-among-elderly/article_a40f2f38-7376-11ea-9290-e788418fb4f7.html"> El Paso Public Health: high number of deaths driven by large population, exposure among elderly</a>
+</h4>
+<p class="rm-manual">2</p>
+<h5 class="rm-manual">
+<span>Updated </span> Apr 7, 2020 article</h5>
+<h4 class="rm-manual"> <a href="file:///news/colorado-springs-prosecutor-tests-positive-for-covid-19/article_aab7842a-73bc-11ea-b356-1358382a8d4d.html"> Colorado Springs prosecutor tests positive for COVID-19</a>
+</h4>
+<p class="rm-manual">3</p>
+<h5 class="rm-manual">
+<span>Updated </span> May 8, 2020 article</h5>
+<h4 class="rm-manual"> <a href="file:///news/colorado-business-confidence-index-sinks-to-lowest-level-ever-due-to-covid-19/article_442b932d-8435-5726-8614-c8c6aff53905.html"> Colorado business confidence index sinks to lowest level ever due to COVID-19</a>
+</h4>
+<h4 class="rm-manual"> <a href="file:///coronavirus-in-colorado-full-coverage-march-2020/collection_5ad535e8-6254-11ea-b1b9-572cd3293114.html"> 191 updates </a> </h4>
+<p class="rm-manual"><a> Load comments</a> </p>
+<p class="rm-manual"> <a href="file:///sponsored/from-playground-mishaps-to-grandparents-joint-issues-expert-ortho-for-life/article_3085cba4-c0a0-11ea-9b93-a33096c1054e.html"> </a></p><p class="rm-manual"><a href="file:///sponsored/from-playground-mishaps-to-grandparents-joint-issues-expert-ortho-for-life/article_3085cba4-c0a0-11ea-9b93-a33096c1054e.html"> +2</a></p><a href="file:///sponsored/from-playground-mishaps-to-grandparents-joint-issues-expert-ortho-for-life/article_3085cba4-c0a0-11ea-9b93-a33096c1054e.html"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <span>sponsored</span> </p>
+<h2 class="rm-manual"> <a href="file:///sponsored/from-playground-mishaps-to-grandparents-joint-issues-expert-ortho-for-life/article_3085cba4-c0a0-11ea-9b93-a33096c1054e.html"> From playground mishaps to grandparents’ joint issues—expert ortho for life</a>
+</h2>
+<p class="rm-manual"><a href="file:///sponsored/from-playground-mishaps-to-grandparents-joint-issues-expert-ortho-for-life/article_3085cba4-c0a0-11ea-9b93-a33096c1054e.html"> <span>From playground mishaps to grandparents’ joint issues—expert ortho for life</span> </a></p>
+<p class="rm-manual"> <a href="file:///sponsored/a-brand-new-model-from-vanguard-homes-open-at-the-farm/article_edcb902c-c2c6-11ea-844b-dbefaacae147.html"> </a></p><p class="rm-manual"><a href="file:///sponsored/a-brand-new-model-from-vanguard-homes-open-at-the-farm/article_edcb902c-c2c6-11ea-844b-dbefaacae147.html"> +4</a></p><a href="file:///sponsored/a-brand-new-model-from-vanguard-homes-open-at-the-farm/article_edcb902c-c2c6-11ea-844b-dbefaacae147.html"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <span>sponsored</span> </p>
+<h2 class="rm-manual"> <a href="file:///sponsored/a-brand-new-model-from-vanguard-homes-open-at-the-farm/article_edcb902c-c2c6-11ea-844b-dbefaacae147.html"> A brand new model from Vanguard Homes open at The Farm</a>
+</h2>
+<p class="rm-manual"><a href="file:///sponsored/a-brand-new-model-from-vanguard-homes-open-at-the-farm/article_edcb902c-c2c6-11ea-844b-dbefaacae147.html"> <span>A brand new model from Vanguard Homes open at The Farm</span> </a></p>
+<p class="rm-manual"> <span>sponsored</span> </p>
+<h2 class="rm-manual"> <a href="https://gazette.secondstreetapp.com/Quintessential-Colorado-2020/rounds/1/gallery/" rel="noopener"> The Gazette and Mike's Camera Present QUINTESSENTIAL COLORADO: A PHOTO CONTEST</a>
+</h2>
+<p class="rm-manual"><a href="https://gazette.secondstreetapp.com/Quintessential-Colorado-2020/rounds/1/gallery/"> <span>The Gazette and Mike's Camera Present QUINTESSENTIAL COLORADO: A PHOTO CONTEST</span> </a></p>
+<p class="rm-manual"> <a href="file:///sponsored/your-child-can-become-a-reader-this-summer--new-program-is-fun-free-at/article_430a4968-b4b0-11ea-b9e2-6bd2a7f18a89.html"> </a></p><p class="rm-manual"><a href="file:///sponsored/your-child-can-become-a-reader-this-summer--new-program-is-fun-free-at/article_430a4968-b4b0-11ea-b9e2-6bd2a7f18a89.html"> +2</a></p><a href="file:///sponsored/your-child-can-become-a-reader-this-summer--new-program-is-fun-free-at/article_430a4968-b4b0-11ea-b9e2-6bd2a7f18a89.html"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <span>sponsored</span> </p>
+<h2 class="rm-manual"> <a href="file:///sponsored/your-child-can-become-a-reader-this-summer--new-program-is-fun-free-at/article_430a4968-b4b0-11ea-b9e2-6bd2a7f18a89.html"> Your child can become a reader this summer--new program is fun, free at PPLD</a>
+</h2>
+<p class="rm-manual"><a href="file:///sponsored/your-child-can-become-a-reader-this-summer--new-program-is-fun-free-at/article_430a4968-b4b0-11ea-b9e2-6bd2a7f18a89.html"> <span>Your child can become a reader this summer--new program is fun, free at PPLD</span> </a></p>
+<h4 class="rm-manual"> Follow Us </h4>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.facebook.com/springsgazette" rel="noopener"> <span>Facebook</span> </a> </li> <li class="rm-manual"> <a href="https://twitter.com/csgazette" rel="noopener"> <span>Twitter</span> </a> </li> <li class="rm-manual"> <a href="https://www.youtube.com/user/springsgazette" rel="noopener"> <span>YouTube</span> </a> </li> <li class="rm-manual"> <a href="https://www.instagram.com/co_gazette/" rel="noopener"> <span>Instagram</span> </a> </li> <li class="rm-manual"> <a href="https://apps.apple.com/us/app/the-colorado-springs-gazette/id369433119" rel="noopener"> <span>iOS App</span> </a> </li> <li class="rm-manual"> <a href="https://play.google.com/store/apps/details?id=com.gazette.id3672" rel="noopener"> <span>Android App</span> </a> </li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://gazette.com/">Gazette.com</a></li> <li class="rm-manual"><a href="https://www.coloradosprings.com/">Coloradosprings.com</a></li> <li class="rm-manual"><a href="https://www.gazette.com/high-school-sports/">Gazettepreps.com</a></li> <li class="rm-manual"><a href="https://www.thebestofthesprings.com/">Best of the Springs</a></li> <li class="rm-manual"><a href="https://outtherecolorado.com/">OutThereColorado.com</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://gazette.com/site/privacy.html">Privacy Policy</a></li> <li class="rm-manual"><a href="https://gazette.com/site/terms.html">Terms of Service</a></li> <li class="rm-manual">© 2020 Produced by Colorado Springs Gazette</li> </ul></article>
+</body></html>

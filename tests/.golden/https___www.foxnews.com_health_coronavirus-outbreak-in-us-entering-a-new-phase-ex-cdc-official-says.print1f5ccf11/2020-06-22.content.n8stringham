@@ -1,0 +1,111 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Coronavirus outbreak in US 'entering a new phase,' ex-CDC official says </p>
+<p class="rm-manual"><a href="#"> Print </a> <a href="#"> Close </a></p>
+<h1 class="rm-manual">Coronavirus outbreak in US 'entering a new phase,' ex-CDC official says</h1>
+<p class="rm-manual">By Alexandria Hein</p>
+<p class="rm-manual"> Published March 09, 2020 </p>
+<p class="rm-manual"><a href="http://www.foxnews.com/">Fox News</a></p>
+<p>The <a href="https://www.foxnews.com/category/health/infectious-disease/coronavirus">novel coronavirus</a>
+ has spread to at least 34 states in the U.S. and Washington, D.C., and 
+each official who has confirmed cases in their home state has warned 
+that more illnesses are likely to come, especially as more test kits are
+ made available.</p>
+<p>“The outbreak is entering a new phase, from mostly travel-related 
+cases to domestic transmission,” Dr. Robert Amler, dean of the School of
+ Health Sciences and Practice at New York Medical College and former 
+Centers for Disease Control and Prevention (CDC) chief medical officer, 
+told Fox News. “This puts our preventative measures to the test – how 
+good a job can every one of us do to minimize the spread of the virus?”</p>
+<p class="rm-manual"><a href="https://www.foxnews.com/health/coronavirus-everything-you-need-to-know">CORONAVIRUS: WHAT YOU NEED TO KNOW</a></p>
+<p>On Monday, the CDC said none of its employees had tested positive for
+ COVID-19, but discussed a series of guidelines for those who are 
+considered to be most vulnerable to the virus, including the elderly and
+ those with weakened immune systems.</p>
+<p>Dr. Nancy Messonnier, CDC director of the center for the National 
+Center for Immunization and Respiratory Diseases, said the guidelines 
+include avoiding large gatherings, staying close to home, and 
+stockpiling medications and groceries. In addition, caregivers should 
+devise a plan for how to provide care for patients should they contract 
+the illness.</p>
+<p>“As the trajectory of the outbreak continues, many people in the U.S.
+ will at some point in time this year or next be exposed to the virus, 
+and there’s a good chance many will become sick,” Messonnier said.</p>
+<p class="rm-manual"><a href="https://www.foxnews.com/health/coronavirus-us-state-by-state-breakdown">CORONAVIRUS IN THE US: STATE-BY-STATE BREAKDOWN </a></p>
+<p>She also asked for people to understand the need for “personal 
+responsibilities” to protect those who are older and considered at risk 
+for complications and to listen to local government officials regarding 
+event cancellations and other guidance.</p>
+<p>“We’re looking both at risk of exposure and risk of the individuals,” she said.</p>
+<p>Some of those responsibilities include using good personal judgment before traveling.</p>
+<p class="rm-manual"><a href="https://www.foxnews.com/category/health/infectious-disease/coronavirus">CLICK HERE FOR COMPLETE CORONAVIRUS COVERAGE</a></p>
+<p>“Domestic travelers should use good judgment,” Amler said, 
+“considering the importance of the trip and the expected level of virus 
+activity at the destination.”</p>
+<p class="">As far as mass transit goes, Amler said the risk of boarding
+ buses and trains each day is “not well characterized” yet, but for 
+riders and those who must continue commuting, “the basic rules always 
+apply – social distancing and avoidance of contact with people who are 
+coughing, sneezing, etc.”</p>
+<p class="rm-manual"><a href="#"> Print </a> <a href="#"> Close </a></p>
+<p class="rm-manual"><a href="https://www.foxnews.com/health/coronavirus-outbreak-in-us-entering-a-new-phase-ex-cdc-official-says">URL</a></p>
+<p class="rm-manual"> https://www.foxnews.com/health/coronavirus-outbreak-in-us-entering-a-new-phase-ex-cdc-official-says </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///">Home</a></li>
+<li class="rm-manual"><a href="file:///playlist/featured-editors-picks">Video</a></li>
+<li class="rm-manual"><a href="file:///politics">Politics</a></li>
+<li class="rm-manual"><a href="file:///us">U.S.</a></li>
+<li class="rm-manual"><a href="file:///opinion">Opinion</a></li>
+<li class="rm-manual"><a href="file:///entertainment">Entertainment</a></li>
+<li class="rm-manual"><a href="file:///tech">Tech</a></li>
+<li class="rm-manual"><a href="file:///science">Science</a></li>
+<li class="rm-manual"><a href="file:///health">Health</a></li>
+<li class="rm-manual"><a href="file:///travel">Travel</a></li>
+<li class="rm-manual"><a href="file:///lifestyle">Lifestyle</a></li>
+<li class="rm-manual"><a href="file:///world">World</a></li>
+<li class="rm-manual"><a href="file:///sports">Sports</a></li>
+<li class="rm-manual"><a href="file:///weather">Weather</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///about/privacy-policy/">Privacy</a></li>
+<li class="rm-manual"><a href="file:///about/terms-of-use/">Terms</a></li>
+</ul>
+<p class="rm-manual">This material may not be published, broadcast, 
+rewritten, or redistributed. © FOX News Network, LLC. All rights 
+reserved. All market data delayed 20 minutes. <a href="file:///about/privacy-policy/">Updated Privacy</a> - <a href="file:///donotsell">Do Not Sell my Personal Information</a> - <a href="file:///about/terms-of-use/">New Terms of Use</a> - <a href="file:///index.html">FAQ</a></p></article>
+</body></html>

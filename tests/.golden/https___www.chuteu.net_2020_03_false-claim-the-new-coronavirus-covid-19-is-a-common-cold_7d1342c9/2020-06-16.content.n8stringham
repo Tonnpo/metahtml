@@ -1,0 +1,76 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">You are here: <span><a href="https://www.chuteu.net/"><span>Home</span></a></span> <span>/</span> False claim: The new coronavirus (COVID-19) is a common cold</p>
+<h1 class="rm-manual">False claim: The new coronavirus (COVID-19) is a common cold</h1>
+<p class="rm-manual">March 17, 2020 by <a href="file:///go?url=aHR0cHM6Ly93d3cucmV1dGVycy5jb20vYXJ0aWNsZS91ay1mYWN0Y2hlY2stY29yb25hdmlydXMtY29tbW9uLWNvbGQvZmFsc2UtY2xhaW0tdGhlLW5ldy1jb3JvbmF2aXJ1cy1pcy1hLWNvbW1vbi1jb2xkLWlkVVNLQk4yMTQyTUM=">www.reuters.com</a> </p>
+<p>A Facebook user shared an image on Facebook that claims the novel 
+coronavirus (COVID-19) is the same as a common cold. It refers to a page
+ from a book that gives “common cold” as an example of a condition 
+caused by “coronaviruses” ( here )​. The virus referred to in the claim 
+is COVID-19, which is a new strain of the human coronavirus, not the 
+general coronavirus family. The common cold is usually mild, lasts 
+between 1-2 weeks and includes a sore throat followed by runny nose and 
+congestion, and finally a cough ( here ). COVID-19 causes symptoms 
+including difficulty breathing, fever and a dry cough ( here )​. Some 
+patients develop pneumonia and require hospitalization. If the pneumonia
+ becomes more severe, it may be fatal. As of March 16, 2020 the World 
+Health Organization (WHO) counted 6,606 deaths globally due to COVID-19 (
+ here ). The World Health Organizations says: “Coronaviruses (CoV) are a
+ large family of viruses that cause illness ranging from the common cold
+ to more severe diseases such as Middle East Respiratory Syndrome 
+(MERS-CoV) and Severe Acute Respiratory Syndrome (SARS-CoV). The most 
+recently discovered coronavirus causes coronavirus disease COVID-19.” ( 
+here )​ The Stanford Children’s Health clearly explains the distinction 
+needed to… <a href="file:///go?url=aHR0cHM6Ly93d3cucmV1dGVycy5jb20vYXJ0aWNsZS91ay1mYWN0Y2hlY2stY29yb25hdmlydXMtY29tbW9uLWNvbGQvZmFsc2UtY2xhaW0tdGhlLW5ldy1jb3JvbmF2aXJ1cy1pcy1hLWNvbW1vbi1jb2xkLWlkVVNLQk4yMTQyTUM=" rel="nofollow">Read full this story</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.chuteu.net/2018/09/passengers-on-emirates-flight-from-dubai-had-flu-and-common-cold/">Passengers on Emirates Flight From Dubai Had Flu and Common Cold</a></li>
+<li class="rm-manual"><a href="https://www.chuteu.net/2019/02/rep-steve-scalise-falsely-claims-ny-abortion-bill-allows-baby-killing-fox-news-anchors-let-it-slide/">Rep. Steve Scalise Falsely Claims NY Abortion Bill Allows Baby Killing; Fox News Anchors Let it Slide</a></li>
+<li class="rm-manual"><a href="https://www.chuteu.net/2019/09/krystal-ball-floats-suing-rush-limbaugh-over-false-claims/">Krystal Ball Floats Suing Rush Limbaugh over False Claims</a></li>
+<li class="rm-manual"><a href="https://www.chuteu.net/2018/07/trump-at-rally-makes-false-claim-on-photo-ids-for-groceries/">Trump at rally makes false claim on photo IDs for groceries</a></li>
+<li class="rm-manual"><a href="https://www.chuteu.net/2012/01/fox-news-analyst-falsely-states-new-regs-require-religious-employers-to-provide-abortions/">Fox News Analyst Falsely States New Regs Require Religious Employers To Provide Abortions</a></li>
+<li class="rm-manual"><a href="https://www.chuteu.net/2018/12/unprecedented-deception-washington-post-analysis-finds-trump-averaged-15-false-claims-a-day-in-2018/">‘Unprecedented Deception’: Washington Post Analysis Finds Trump Averaged 15 False Claims a Day in 2018</a></li>
+<li class="rm-manual"><a href="https://www.chuteu.net/2019/01/wrong-rudy-giuliani-falsely-claims-fisa-application-concealed-steele-dossier-was-oppo-research/">WRONG! Rudy Giuliani Falsely Claims FISA Application Concealed Steele Dossier Was Oppo Research</a></li>
+<li class="rm-manual"><a href="https://www.chuteu.net/2019/01/wrong-giuliani-falsely-claims-fisa-application-concealed-steele-dossier-was-oppo-research/">WRONG! Giuliani Falsely Claims FISA Application Concealed Steele Dossier Was Oppo Research</a></li>
+<li class="rm-manual"><a href="https://www.chuteu.net/2019/07/msnbc-repeats-false-claim-fox-isnt-airing-mueller-hearings/">MSNBC Repeats False Claim Fox Isn't Airing Mueller Hearings</a></li>
+<li class="rm-manual"><a href="https://www.chuteu.net/2018/05/fact-checkers-bust-trump-for-false-claims-during-his-naval-academy-speech/">Fact-Checkers Bust Trump for False Claims During His Naval Academy Speech</a></li>
+<li class="rm-manual"><a href="https://www.talkvietnam.org/2018/07/trump-falsely-claims-you-need-photo-id-to-buy-groceries/">Trump Falsely Claims You Need Photo ID to ‘Buy Groceries’</a></li>
+<li class="rm-manual"><a href="https://www.chuteu.net/2018/09/trump-falsely-claims-fake-news-media-ignored-obamas-57-states-gaffe/">Trump Falsely Claims ‘Fake News Media’ Ignored Obama’s ’57 States’ Gaffe</a></li>
+</ul>
+<blockquote class="rm-manual"> False claim: The new coronavirus (COVID-19) is a common cold have 331 words, post on <a href="file:///go?url=aHR0cHM6Ly93d3cucmV1dGVycy5jb20vYXJ0aWNsZS91ay1mYWN0Y2hlY2stY29yb25hdmlydXMtY29tbW9uLWNvbGQvZmFsc2UtY2xhaW0tdGhlLW5ldy1jb3JvbmF2aXJ1cy1pcy1hLWNvbW1vbi1jb2xkLWlkVVNLQk4yMTQyTUM=" rel="nofollow">www.reuters.com</a> at March 17, 2020. This is cached page on CHUTEU. If you want remove this page, <a href="file:///contact/" rel="nofollow">please contact us</a>.</blockquote>
+<p class="rm-manual"><span>Filed Under: <a href="https://www.chuteu.net/category/reuters-fact-check/" rel="category tag">Reuters Fact Check</a></span> <span><a href="https://www.chuteu.net/tag/uk/" rel="tag">UK</a>, <a href="https://www.chuteu.net/tag/factcheck/" rel="tag">FACTCHECK</a>, <a href="https://www.chuteu.net/tag/coronavirus/" rel="tag">CORONAVIRUS</a>, <a href="https://www.chuteu.net/tag/common/" rel="tag">COMMON</a>, <a href="https://www.chuteu.net/tag/cold/" rel="tag">COLD</a>, <a href="https://www.chuteu.net/tag/ukfactcheckcoronaviruscommoncold/" rel="tag">UK;FACTCHECK;CORONAVIRUS;COMMON;COLD</a>, <a href="https://www.chuteu.net/tag/world/" rel="tag">World</a>, <a href="https://www.chuteu.net/tag/common-cold-when-pregnant/" rel="tag">common cold when pregnant</a>, <a href="https://www.chuteu.net/tag/whistleblower-false-claims-act/" rel="tag">whistleblower false claims act</a>, <a href="https://www.chuteu.net/tag/falsely-claiming-benefits/" rel="tag">falsely claiming benefits</a>, <a href="https://www.chuteu.net/tag/falsely-claiming-us-citizenship-waiver/" rel="tag">falsely claiming us citizenship waiver</a>, <a href="https://www.chuteu.net/tag/common-cold-when-to-see-a-doctor/" rel="tag">common cold when to see a doctor</a>, <a href="https://www.chuteu.net/tag/what-virus-is-the-common-cold/" rel="tag">what virus is the common cold</a>, <a href="https://www.chuteu.net/tag/common-cold-how-to-treat/" rel="tag">common cold how to treat</a>, <a href="https://www.chuteu.net/tag/new-zealand-under-19-cricket-team/" rel="tag">new zealand under 19 cricket team</a>, <a href="https://www.chuteu.net/tag/advertising-false-claims/" rel="tag">advertising false claims</a>, <a href="https://www.chuteu.net/tag/maryland-false-claims-act/" rel="tag">maryland false claims act</a>, <a href="https://www.chuteu.net/tag/common-cold-cold-sores/" rel="tag">common cold cold sores</a>, <a href="https://www.chuteu.net/tag/false-claims-act-north-carolina/" rel="tag">false claims act north carolina</a>, <a href="https://www.chuteu.net/tag/how-long-common-cold-last/" rel="tag">how long common cold last</a>, <a href="https://www.chuteu.net/tag/how-long-common-cold/" rel="tag">how long common cold</a>, <a href="https://www.chuteu.net/tag/common-cold-how-long/" rel="tag">common cold how long</a>, <a href="https://www.chuteu.net/tag/common-cold-how-long-last/" rel="tag">common cold how long last</a>, <a href="https://www.chuteu.net/tag/illinois-false-claims-act/" rel="tag">illinois false claims act</a>, <a href="https://www.chuteu.net/tag/claim-new-jersey-unemployment-benefits/" rel="tag">claim new jersey unemployment benefits</a>, <a href="https://www.chuteu.net/tag/new-jersey-false-claims-act/" rel="tag">new jersey false claims act</a>, <a href="https://www.chuteu.net/tag/insurance-false-claims/" rel="tag">insurance false claims</a>, <a href="https://www.chuteu.net/tag/false-health-claims/" rel="tag">false health claims</a>, <a href="https://www.chuteu.net/tag/ohio-false-claims-act/" rel="tag">ohio false claims act</a>, <a href="https://www.chuteu.net/tag/does-new-york-recognize-common-law-marriage/" rel="tag">does new york recognize common law marriage</a>, <a href="https://www.chuteu.net/tag/new-york-false-claims-act/" rel="tag">new york false claims act</a>, <a href="https://www.chuteu.net/tag/new-york-cold/" rel="tag">new york cold</a>, <a href="https://www.chuteu.net/tag/food-common-cold/" rel="tag">food common cold</a>, <a href="https://www.chuteu.net/tag/new-mexico-quit-claim-deed-form/" rel="tag">new mexico quit claim deed form</a>, <a href="https://www.chuteu.net/tag/how-is-common-cold-spread/" rel="tag">how is common cold spread</a>, <a href="https://www.chuteu.net/tag/how-is-common-cold-transmitted/" rel="tag">how is common cold transmitted</a>, <a href="https://www.chuteu.net/tag/pregnancy-common-cold/" rel="tag">pregnancy common cold</a>, <a href="https://www.chuteu.net/tag/false-debt-collection-claim/" rel="tag">false debt collection claim</a></span></p></article>
+</body></html>

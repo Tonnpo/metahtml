@@ -1,0 +1,117 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"><span><span><a href="https://pattayaone.news/">Home</a> » <span>Nigerian Man &amp; 5 Thais Arrested Over A 200 Million Baht Romance Scam</span></span></span></p>
+<p class="rm-manual"><span><a href="https://pattayaone.news/category/chiangmai/" rel="category tag">ChiangMai One</a> <a href="https://pattayaone.news/category/pattayaone-new-en/national/" rel="category tag">National</a> <a href="https://pattayaone.news/category/news/" rel="category tag">News</a> <a href="https://pattayaone.news/category/pattayaone-new-en/news-asia/" rel="category tag">News Asia</a></span></p>
+<h1 class="rm-manual">Nigerian Man &amp; 5 Thais Arrested Over A 200 Million Baht Romance Scam</h1>
+<p class="rm-manual"> <span>by <span><a href="https://pattayaone.news/author/josh/">Josh Campbell</a></span></span><span>May 26, 2021May 27, 2021</span> </p>
+<p>A Nigerian and five Thais have been detained in Bangkok following a 
+police raid over a romance scam that made at least 200 million baht in a
+ year.</p>
+<p>A crime police search of seven locations in Bangkok, Nakhon Sawan, 
+Phuket and Pathum Thani on Monday led to the arrest of the six suspects,
+ Pol Maj Gen Suwat Saengnoom, chief of the Crime Suppression Division, 
+said on Tuesday.</p>
+<p>The suspects were identified as Ms Punyawee Chusinjiraphat, 46; Mr 
+Ezeneche Uzochukwu Jorome, 44, a Nigerian national; Ms Sasithorn 
+Nuankaew, 22; Mr Sudjai Kamnon, 34; Mr Thotsaphol Siripru, 33, and Mr 
+Nirandon Thianthavorn, 29.</p>
+<p>They were charged with collusion to defraud and putting false information into the computer system, said the CSD commander.</p>
+<p>Seized from them were a new Mitsubishi Pajero sport vehicle, 906,000 
+baht in cash, 7 mobile phones, 18 bank account books, several sets of 
+ornaments, 11 watches, 2 ivory ornaments and 11 electronic cards.</p>
+<p>The arrest came after a victim filed a complaint with Pol Maj Gen 
+Jirabhop Bhuridej, deputy commissioner of the Central Investigation 
+Bureau (CIB) last year, saying she had been swindled out of 1 million 
+baht in a romance scam</p>
+<p>CSD investigators began the probe and found that the gang, comprising
+ both Thais and foreign nationals, had colluded in swindling the 
+complainant.</p>
+<p>One member of the gang opened an Instagram account under the name Mr 
+Lanny Gray. He then approached the victim, claiming to be an American 
+businessman working in Malaysia.</p>
+<p>After befriending the victim, the man switched to communicating 
+through the Line chat app, sending numerous messages and promising to 
+live in Thailand with her. After gaining her trust, he told her she 
+would send parcels containing valuable items to her.</p>
+<p>Another gang member, a Thai, later contacted the victim by phone, 
+claiming to be an agent from a shipping firm and telling her to pay fees
+ in order to receive the parcels.</p>
+<p>The woman had paid almost 1 million baht but had yet to receive any packages, said Pol Maj Gen Saengnoom.</p>
+<p>After receiving money from the victim, the gang also tried to swindle
+ more money from her. Another gang member, claiming to be a hospital 
+employee from Malaysia, had phoned her and said Mr Lanny Gray had 
+suffered serious injuries in an accident and was under treatment at a 
+hospital.</p>
+<p>The impostor had asked her to pay almost 500,000 baht in medical 
+bills for Mr Gray. The woman became suspicious and tried to contact him 
+but failed. She decided not to wire the money and filed a complaint with
+ the police at Wang Thong Lang police station.</p>
+<p>Pol Col Wiwat Jitsophakul, superintendent of the CSD sub-division 3, 
+who led the arrest, said investigators took more than five months to 
+find clues about seven people involved in the scam.</p>
+<p>The investigation found that the Nigerian suspect, Ezeneche Uzochukwu Jorome, and his wife Punyawee were leaders of the gang.</p>
+<p>Several women had fallen victim to the gang over the past few years, said Pol Col Jitsophakul.</p>
+<p>The gang had used about 50 bank accounts of other people to receive 
+money transfers from victims. Once the money had been transferred, they 
+used ATM cards to withdraw the money and deposited it to personal bank 
+accounts, said the sub-division 3 chief.</p>
+<p>Between 2020 and 2021, about 200 million baht had been in circulation
+ in a bank account held by Ms Punyawee, said Pol Col Jitsophakul.</p>
+<p>The Nigerian suspect had run a restaurant and a currency exchange 
+shop as front businesses to conceal his wrongdoings. Police seized 
+documents from those businesses for examination.</p>
+<p>The CSD investigators also found that the Nigerian suspect had 
+committed a similar offence in 2018 in Chiang Mai by claiming to be a 
+decommissioned South African military officer to lure his victim online.
+ The investigators believed several women had fallen victim to this 
+gang.</p>
+<p>During the questioning, the six suspects denied all charges. They 
+were handed over to Wang Thong Lang police for legal action. Police were
+ extending the investigation and tracking down the seventh suspect, who 
+was still at large.</p>
+<p class="rm-manual">Nigerian Ezeneche Uzochukwu Jorome (centre), an 
+alleged leader of a romance scam, is taken into custody by Crime 
+Suppression Division police on Monday. front photo</p>
+<p class="rm-manual"><span><a href="https://pattayaone.news/tag/bangkok/" rel="tag">Bangkok</a><a href="https://pattayaone.news/tag/fit/" rel="tag">fit</a><a href="https://pattayaone.news/tag/health/" rel="tag">health</a><a href="https://pattayaone.news/tag/love/" rel="tag">love</a><a href="https://pattayaone.news/tag/news/" rel="tag">news</a><a href="https://pattayaone.news/tag/nigerian/" rel="tag">Nigerian</a><a href="https://pattayaone.news/tag/romance/" rel="tag">romance</a><a href="https://pattayaone.news/tag/scam/" rel="tag">scam</a><a href="https://pattayaone.news/tag/thai/" rel="tag">Thai</a><a href="https://pattayaone.news/tag/thailand/" rel="tag">Thailand</a></span></p>
+<p class="rm-manual"> <span>previous post</span> </p>
+<h5 class="rm-manual"><a href="https://pattayaone.news/massive-covid-19-vaccination-programme-from-june-7/">Massive Covid-19 vaccination programme from June 7</a></h5>
+<p class="rm-manual"> <span>next post</span> </p>
+<h5 class="rm-manual"><a href="https://pattayaone.news/computer-sale-fraud-programmer-arrested/">Computer sale fraud programmer arrested</a></h5>
+<h5 class="rm-manual"><a href="https://pattayaone.news/author/josh/" rel="author">Josh Campbell</a></h5>
+<h4 class="rm-manual"><span>Broadcasting 24/7, 365 days a year!</span></h4></article>
+</body></html>

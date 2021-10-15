@@ -1,0 +1,155 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">IBM, Amazon, Google and Microsoft partner with White House to provide compute resources for COVID-19 research</p>
+<p class="rm-manual"><a href="https://uk.news.yahoo.com/">Yahoo</a></p>
+<p class="rm-manual">Search</p>
+<ul class="rm-manual"><li class="rm-manual"><a href="https://mail.yahoo.com/?.intl=uk&amp;.lang=en-GB&amp;.partner=none&amp;.src=news">Mail</a></li></ul>
+<p class="rm-manual"><a href="https://uk.news.yahoo.com/"> News</a></p>
+<p class="rm-manual"><span>Follow us</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://uk.yahoo.com/topics/coronavirus-news"> Coronavirus</a></li>
+<li class="rm-manual"><a href="https://uk.news.yahoo.com/uk/"> UK</a></li>
+<li class="rm-manual"><a href="file:///tagged/ukoriginal"> Yahoo Originals</a></li>
+<li class="rm-manual"><a href="https://uk.news.yahoo.com/tv-celebrity"> TV + Celebrity</a></li>
+<li class="rm-manual"><a href="https://uk.news.yahoo.com/360"> The 360</a></li>
+<li class="rm-manual"><a href="https://uk.news.yahoo.com/world/"> World</a></li>
+<li class="rm-manual"><a href="https://uk.finance.yahoo.com/"> Finance</a></li>
+<li class="rm-manual"><a href="https://uk.sports.yahoo.com/"> Sport</a></li>
+<li class="rm-manual"><a href="https://uk.style.yahoo.com/"> Style</a></li>
+<li class="rm-manual"><a href="https://uk.movies.yahoo.com/"> Movies</a></li>
+<li class="rm-manual"><a href="https://uk.news.yahoo.com/motoring/"> Motoring</a></li>
+<li class="rm-manual"><a href="https://uk.news.yahoo.com/science-tech/"> Science &amp; Tech</a></li>
+<li class="rm-manual"><a href="https://uk.news.yahoo.com/weather/"> Weather</a></li>
+<li class="rm-manual"><a href="https://uk.news.yahoo.com/video"> News Video</a></li>
+<li class="rm-manual"><a href="https://uk.news.yahoo.com/viral"> Viral</a></li>
+</ul>
+<h1 class="rm-manual">IBM, Amazon, Google and Microsoft partner with White House to provide compute resources for COVID-19 research</h1>
+<p class="rm-manual">Frederic Lardinois</p>
+<p class="rm-manual"><span><span><a href="https://techcrunch.com/" rel="noopener noreferrer nofollow">TechCrunch</a></span></span>22 March 2020</p>
+<p>During today's White House coronavirus task force press conference, 
+President Trump announced the launch of a new public/private consortium 
+to "unleash the power of American supercomputing resources." The members
+ of this consortium are the White House, the Department of Energy and <a href="https://crunchbase.com/organization/ibm" rel="nofollow noopener">IBM </a>.
+ Other companies, including Google, Amazon and Microsoft, as well as a 
+number of academic institutions, are also "contributing lots of 
+different things," the president said.</p>
+<p>While Trump's comments were characteristically unclear, IBM <a href="https://newsroom.ibm.com/IBM-helps-bring-supercomputers-into-the-global-fight-against-COVID-19" rel="nofollow noopener">provided more details</a>,
+ noting that it is working with a number of national labs and other 
+institutions to offer a total of 330 petaflops of compute to various 
+projects in epidemiology, bioinformatics and molecular modeling. Amazon,
+ Google and Microsoft are also part of the consortium, which is being 
+led by IBM, the White House Office of Science and Technology Policy, and
+ the Department of Energy.</p>
+<p>IBM and its partners will coordinate the efforts to evaluate 
+proposals and provide access to high-performance computing resources to 
+those that are most likely to have an immediate impact.</p>
+<p>"How can supercomputers help us fight this virus? These 
+high-performance computing systems allow researchers to run very large 
+numbers of calculations in epidemiology, bioinformatics, and molecular 
+modeling. These experiments would take years to complete if worked by 
+hand, or months if handled on slower, traditional computing platforms," 
+writes Dario Gil, IBM's Director of Research.</p>
+<p>AWS has already <a href="https://blog.aboutamazon.com/innovation/aws-launches-initiative-to-accelerate-covid-19-diagnostics-research-and-testing?utm_source=social&amp;amp;utm_medium=tw&amp;amp;utm_term=amznnews&amp;amp;utm_content=COVID-19_AWSResearch" rel="nofollow noopener">dedicated</a>
+ $20 million to support COVID-19 research while Microsoft has already 
+announced a number of different initiatives, though mostly around 
+helping businesses cope with the fallout of this crisis. Google has now 
+launched its own <a href="https://techcrunch.com/2020/03/21/google-launches-covid-19-page-and-search-portal-with-safety-tips-official-stats-and-more-us-only-for-now/" rel="nofollow noopener">coronavirus website</a>
+ (though it's very different from the one Trump once promised) and 
+Alphabet's Verily is helping Bay Area residents find testing sites if 
+needed.</p>
+<p>After today's announcement, the White House shared statements from <a href="https://crunchbase.com/organization/microsoft" rel="nofollow noopener">Microsoft, </a>
+ Google and other partners. "We know that high performance computing can
+ reduce the time it takes to process massive data sets and perform 
+complex simulations from days to hours," said Mike Daniels, Vice 
+President, Global Public Sector at <a href="https://crunchbase.com/organization/google" rel="nofollow noopener">Google </a>
+ Cloud, in his statement. "We look forward to participating in this 
+initiative alongside leaders in technology, academia and the public 
+sector to make more resources available to COVID-19 researchers and to 
+apply Google Cloud computing capabilities toward the development of 
+potential treatments and vaccines.”</p>
+<p>Similarly, Microsoft's global head for its AI for Health Program, 
+John Kahan, notes that Microsoft wants to "make sure researchers working
+ to combat COVID-19 have access to the tools they need" by expanding 
+access to its Azure cloud and by creating more opportunities for 
+researchers to collaborate with the company's data scientists.</p>
+<p>"Today I'm also announcing the launch of a new public/private 
+consortium organized by the White House, the Department of Energy and 
+IBM to unleash the power of American supercomputing resources to fight 
+the Chinese virus," Trump, who continues to insist on calling COVID-19 
+'the Chinese virus,' said in today's press briefing.</p>
+<p>"The following leaders from private industries, academia and 
+government will be contributing and they are gonna be contributing a lot
+ of different things, but compute primarily -- computing resources to 
+help researchers discover new treatments and vaccine. They will be 
+working along with NIH and all of the people working on this. But 
+tremendous help from IBM, Google, <a href="https://crunchbase.com/organization/amazon" rel="nofollow noopener">Amazon, </a> Microsoft, MIT, Rensselaer Polytechnic Institute, the Department of Energy's, the <a href="https://crunchbase.com/organization/national-science-foundation" rel="nofollow noopener">National Science Foundation </a> and NASA. They are all contributing to this effort."</p>
+<p class="rm-manual">Update (4:45pm PT): we updated the post with statements from Google and Microsoft.</p>
+<h2 class="rm-manual">What to read next</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///trump-administration-proposes-rolling-back-215720550.html"><span>Trump administration proposes rolling back protections for big tech</span></a></h3><p class="rm-manual">Reuters</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sports.yahoo.com/is-president-trump-playing-politics-in-supporting-colin-kaepernicks-return-to-nfl-depends-on-your-point-of-view-215316037.html"><span>Is President Trump playing politics in supporting Colin Kaepernick's return to NFL? Depends on your point of view</span></a></h3><p class="rm-manual">Yahoo Sports</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///chargers-coach-anthony-lynn-says-182224091.html"><span>Trump would support Kaepernick's return to NFL as Chargers say QB is a good fit</span></a></h3><p class="rm-manual">The Guardian</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://techcrunch.com/2020/06/17/fcc-commissioner-disparages-trumps-social-media-order-the-decision-is-ours-alone/"><span>FCC Commissioner disparages Trump's social media order: 'The decision is ours alone'</span></a></h3><p class="rm-manual">TechCrunch</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///trump-gives-duda-pre-election-212411146.html"><span>Trump gives Duda pre-election boost with invite to White House</span></a></h3><p class="rm-manual">The Guardian</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///boris-johnson-car-crash-accident-video-watch-135407303.html"><span>Boris Johnson involved in minor car accident after protester runs into road</span></a></h3><p class="rm-manual">Yahoo News UK</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/leaked-documents-linked-russia-114912751.html"><span>Leaked documents linked to Russia</span></a></h3><p class="rm-manual">Sky video</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///every-prosecution-brought-under-the-new-coronavirus-act-dropped-for-being-unlawful-124120041.html"><span>Every Prosecution Under New Coronavirus Act Dropped For Being Unlawful – Again</span></a></h3><p class="rm-manual">HuffPost UK</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///johnson-warns-tough-times-ahead-173603373.html"><span>Johnson warns ‘tough times ahead’ as country emerges from coronavirus lockdown</span></a></h3><p class="rm-manual">PA Media: Money</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/dexamethasone-does-used-102131669.html"><span>What is dexamethasone, how does it work and when will it be used?</span></a></h3><p class="rm-manual">PA Media: Video</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///zoom-end-end-encryption-users-210505617.html"><span>Zoom will provide end-to-end encryption to all users after privacy backlash</span></a></h3><p class="rm-manual">The Guardian</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///tory-councils-warn-coronavirus-second-230137953.html"><span>Tory councils warn coronavirus second wave could bankrupt local authorities</span></a></h3><p class="rm-manual">The Guardian</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///kfc-drive-through-parking-fines-merseyside-110742018.html"><span>KFC customers receive £100 parking fines after queuing at drive-through for too long</span></a></h3><p class="rm-manual">Yahoo News UK</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///duchess-of-cambridge-marks-and-spencer-dress-assembly-105715665.html"><span>Duchess of Cambridge supports British high street in new Marks &amp; Spencer dress</span></a></h3><p class="rm-manual">Yahoo Style UK</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/why-children-less-risk-coronavirus-153309551.html"><span>Why are children less at risk of the coronavirus?</span></a></h3><p class="rm-manual">Yahoo Style UK</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.style.yahoo.com/save-up-to-250-off-select-macs-and-i-pads-and-get-air-pods-for-free-204853634.html"><span>Apple's Back To School sale is already on: Save up to $250 off select Macs and iPads — and get free AirPods, too</span></a></h3><p class="rm-manual">Yahoo Canada Style</p><p class="rm-manual"></p></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///boris-johnson-tim-tams-video-165435015.html"><span>Boris Johnson 'Waffling On' About Australian Biscuits And Vegemite Sparks Strong Reactions</span></a></h3><p class="rm-manual">HuffPost UK</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///quarter-staff-chicken-factory-supplying-093700777.html"><span>Quarter of staff at chicken factory supplying KFC and M&amp;S are self-isolating amid coronavirus outbreak, unions say</span></a></h3><p class="rm-manual">Evening Standard</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///k-pop-yohan-death-094515200.html"><span>K-pop boyband star Yohan dies aged 28</span></a></h3><p class="rm-manual">Yahoo Celebrity UK</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/european-stocks-higher-recovery-hopes-134900944.html"><span>European stocks higher recovery hopes </span></a></h3><p class="rm-manual">Yahoo UK Finance Video</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///why-microsoft-and-amazon-are-calling-on-congress-to-regulate-facial-recognition-tech-tech-200005870.html"><span>Why Microsoft and Amazon are calling on Congress to regulate facial recognition tech: Tech</span></a></h3><p class="rm-manual">Yahoo Finance</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///spoke-doctors-people-close-trump-175721272.html"><span>I spoke to doctors and people close to Trump this week. We're right to worry about his health</span></a></h3><p class="rm-manual">The Independent</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///matt-hancock-contact-tracing-app-coronavirus-063716299.html"><span>What Happened To Matt Hancock's Coronavirus Contact-Tracing App?</span></a></h3><p class="rm-manual">HuffPost UK</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///concrete-evidence-madeleine-mccann-dead-german-prosecutor-161522967.html"><span>'Concrete evidence' that Madeleine McCann is dead: German prosecutor</span></a></h3><p class="rm-manual">AFP</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/snooker-legend-willie-thorne-dies-101826112.html"><span>Snooker legend Willie Thorne dies aged 66</span></a></h3><p class="rm-manual">PA Media: Video</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://techcrunch.com/2020/06/17/twitter-begins-rolling-out-audio-tweets-on-ios/"><span>Twitter begins rolling out audio tweets on iOS</span></a></h3><p class="rm-manual">TechCrunch</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///coronavirus-beijing-china-new-outbreak-covid-19-dr-tom-wingfield-164608437.html"><span>New Beijing COVID-19 outbreak is 'reminder we are still in early stages of pandemic', expert warns</span></a></h3><p class="rm-manual">Yahoo News UK</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///robbie-williams-sleep-pattern-070457808.html"><span>Robbie Williams sleeps until noon and eats one meal a day to keep in shape</span></a></h3><p class="rm-manual">Yahoo Celebrity UK</p><p></p></li>
+</ul></article>
+</body></html>

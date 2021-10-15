@@ -1,0 +1,161 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> British shipbuilder Babcock to help beef up Ukraine’s navy </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///air"> Air </a> </li> <li class="rm-manual"> <a href="file:///land"> Land </a> </li> <li class="rm-manual"> <a href="file:///naval"> Naval </a> </li> <li class="rm-manual"> <a href="file:///space"> Space </a> </li> <li class="rm-manual"> <a href="https://www.c4isrnet.com/cyber/?source=dfn-nav"> Cyber </a> </li> <li class="rm-manual"> <a href="http://www.c4isrnet.com/?source=dfn-nav"> C4ISR </a> </li> <li class="rm-manual"> <a href="file:///pentagon"> Pentagon </a> </li> <li class="rm-manual"> <a href="file:///congress"> Congress </a> </li> <li class="rm-manual"> <a href="file:///global"> Global </a> </li> <li class="rm-manual"> <a href="file:///videos"> TV/Video </a> </li> <li class="rm-manual"> <a href="file:///thought-leadership"> Thought Leadership </a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///air">Air</a> </li> <li class="rm-manual"> <a href="file:///land">Land</a> </li> <li class="rm-manual"> <a href="file:///naval">Naval</a> </li> <li class="rm-manual"> <a href="file:///pentagon">Pentagon</a> </li> <li class="rm-manual"> <a href="file:///congress">Congress</a> </li> <li class="rm-manual"> <a href="https://www.c4isrnet.com/cyber/?source=dfn-nav">Cyber</a> </li> <li class="rm-manual"> <a href="http://www.c4isrnet.com/?source=dfn-nav">C4ISR</a> </li> <li class="rm-manual"> <a href="file:///space">Space</a> </li> <li class="rm-manual"> <a href="file:///training-sim">Training &amp; Sim</a> </li> <li class="rm-manual"> <a href="file:///unmanned">Unmanned</a> </li> <li class="rm-manual"> <a href="file:///global">Global</a> </li> <li class="rm-manual"> <a href="file:///industry">Industry</a> </li> <li class="rm-manual"> <a href="file:///interviews">Interviews</a> </li> <li class="rm-manual"> <a href="file:///opinion">Opinion</a> </li> <li class="rm-manual"> <a href="file:///top-100">2020 Top 100 Companies</a> </li> <li class="rm-manual"> <a href="file:///outlook">Outlook</a> </li> <li class="rm-manual"> <a href="file:///thought-leadership">Thought Leadership</a> </li> <li class="rm-manual"> <a href="file:///videos">TV/Video</a> </li> <li class="rm-manual"> <a href="https://link.defensenews.com/join/5ba/sign-up?source=dfn-nav">Newsletters</a> </li> <li class="rm-manual"> <a href="file:///ebb">Early Bird Brief</a> </li> <li class="rm-manual"> <a href="file:///native">Native</a> </li> <li class="rm-manual"><a href="file:///">© 2021 Sightline Media Group</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///congress/budget">Budget</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///global/asia-pacific">Asia Pacific</a> </li> <li class="rm-manual"> <a href="file:///global/europe">Europe</a> </li> <li class="rm-manual"> <a href="file:///global/mideast-africa">Mideast Africa</a> </li> <li class="rm-manual"> <a href="file:///global/the-americas">The Americas</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///industry/techwatch">TechWatch</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///opinion/editorial">Editorial</a> </li> <li class="rm-manual"> <a href="file:///opinion/commentary">Commentary</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="http://hub.defensenews.com/whitepapers?source=dfn-nav">White papers</a> </li> <li class="rm-manual"> <a href="file:///smr">Special Multimedia Reports</a> </li> <li class="rm-manual"> <a href="file:///digital-show-dailies">Digital Show Dailies</a> </li> <li class="rm-manual"> <a href="http://hub.defensenews.com/ebooks/?source=dfn-nav">E-Books</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///video/dntv">Defense News Weekly</a> </li> <li class="rm-manual"> <a href="file:///video/money-minute">Money Minute</a> </li> </ul>
+<h2 class="rm-manual"> <a href="file:///global/europe/">Europe</a> </h2>
+<h1 class="rm-manual">British shipbuilder Babcock to help beef up Ukraine’s navy</h1>
+<p class="rm-manual"> <span>By: </span> <span> <span><a href="file:///author/andrew-chuter" rel="author">Andrew Chuter</a></span> </span> <span> 22 hours ago </span> </p>
+<h4 class="rm-manual">Ukrainian navy ship Nikopol is towed towards a 
+port in Ochakiv in November 2019. British shipbuilder Babcock is in line
+ to supply the Ukrainian sea service with fresh warships. (Photo by 
+Oleksandr Gimanov/AFP via Getty Images)</h4>
+<p> LONDON – Ukraine is on course to rebuild the capabilities of its 
+navy with the help of a possible deal with British warship builder and 
+support-services company Babcock International.</p>
+<p> Babcock signed what was described as a tripartite memorandum of 
+implementation (MoI) with the Ukraine ministry of defense and the 
+British government during a visit to the Eastern European country by the
+ Royal Navy Type 45 destroyer HMS Defender and high-ranking British 
+officials, including the head of the navy and the procurement minister.</p>
+<p> The British signed an initial agreement with the Ukrainians last 
+October to help revitalize naval capabilities hit by the Russian 
+takeover of Crimea.</p>
+<p> The new memorandum falls short of a deal actually being struck by 
+the two sides, but a company spokesman in London said the signing 
+maintained the momentum of discussions and was an important next step.</p>
+<p> Babcock’s ship construction pedigree includes building five new Type 31 frigates for the Royal Navy.</p>
+<p> The company was also part of the alliance which assembled the Royal Nay’s two new Queen Elizabeth-class aircraft carriers.</p>
+<p> The company has an extensive training business, including work in the naval sector.</p>
+<p> A carrier strike group led by HMS Queen Elizabeth is currently in 
+the Eastern Mediterranean on its way to the Far East, in what is its 
+first operational deployment.</p>
+<h1 class="rm-manual"> Fear of missing out?</h1>
+<p class="rm-manual">Sign up for the Early Bird Brief, the defense industry's most comprehensive news and information, straight to your inbox.</p>
+<h1 class="rm-manual"> Thanks for signing up. </h1>
+<p class="rm-manual"><span>By giving us your email, you are opting in to the Early Bird Brief.</span></p>
+<p class="rm-manual"> Few details of what might be included in the 
+wide-ranging agreement between the Ukraine and Britain are being made 
+available at this time.</p>
+<p class="rm-manual"> In a statement released by Babcock, the company 
+said the program includes the “enhancement of capabilities on existing 
+naval platforms, the delivery of new platforms, including fast attack 
+missile craft, a modern frigate capability, shipborne armaments and the 
+training of naval personnel.”</p>
+<p class="rm-manual"> Babcock recently revealed Greece was a target for a possible sale of the its new Type 31 frigate and it’s likely <a href="https://www.defensenews.com/congress/2021/06/15/we-need-more-before-ukraine-can-join-nato-says-stoltenberg/">Ukraine</a> could be added to the list of possible export opportunities being pursued by the company.</p>
+<p class="rm-manual"> The company spokesman declined to discuss whether the Type 31 was part of the British offer.</p>
+<p class="rm-manual"> The company said part of the plan also involves working together to regenerate Ukrainian shipyards.</p>
+<p class="rm-manual"> Speculation when the initial deal was first 
+announced last year suggested the Ukrainians were discussing purchasing 
+eight missile boats , with at least the first two vessels, maybe more, 
+being built in U.K. shipyards.</p>
+<p class="rm-manual"> One option being considered was an updated version
+ of a 56 m patrol boat already sold to Oman by the British sometime ago,
+ Ukrainian media previously reported.</p>
+<p class="rm-manual"> At the time, local media reported president 
+Volodymyr Zelensky as saying the proposal was being supported by U.K. 
+government funding to the tune of £1.25 billion, or $1.7 billion.</p>
+<p class="rm-manual"> That’s partly borne out by a statement by Babcock chief executive David Lockwood who was on HMS Defender for the signing.</p>
+<p class="rm-manual"> “Our strengthened relationship with the U.K. 
+government has been instrumental in underpinning this significant 
+agreement which is supported by U.K. export finance and we continue to 
+work with them on a number of international opportunities,” said 
+Lockwood.</p>
+<p class="rm-manual"> “We are very proud to support Ukraine with their 
+Naval Capabilities Enhancement Program. This marks the beginning of a 
+new international relationship for Babcock, bringing together our new 
+ship capability, our infrastructure and support capability and our 
+strong relationship with the U.K. government,” he said.</p>
+<p class="rm-manual"> Defense procurement minister Jeremy Quin said 
+conclusion of the deal would be a win for the shipbuilding industries of
+ both nations.</p>
+<p class="rm-manual"> “I am delighted that British and Ukrainian 
+industry will work together on these projects, which will provide 
+world-leading capabilities and provide opportunities for both our 
+nations to boost our shipbuilding enterprises”, said Quin.</p>
+<p class="rm-manual"> “The U.K. and Ukraine have a close defense 
+relationship, and we continue to strengthen this partnership to help 
+deter shared threats,” he said.</p>
+<p class="rm-manual"> Babcock will be supported by several other 
+companies with a strong U.K. presence, including missile maker MBDA, 
+sensor builder Thales, and project management consultancy Royal 
+Haskoning DHV.</p>
+<h5 class="rm-manual">Recommended for you</h5>
+<h5 class="rm-manual">Comments</h5>
+<h5 class="rm-manual">Most Watched Videos</h5>
+<h6 class="rm-manual"> <a href="file:///video/2021/06/21/centcom-commander-eyes-future-of-middle-east-military-times-reports/">CENTCOM commander eyes future of Middle East | Military Times Reports</a> </h6>
+<p class="rm-manual"><a href="file:///video/2021/06/21/centcom-commander-eyes-future-of-middle-east-military-times-reports/">Marine
+ Gen. Kenneth McKenzie, commander of CENTCOM, talks about what's ahead 
+for his area of operations now that the Pentagon's eye has turned toward
+ Russia and China. Tension with Iran and the effort to aid Afghan 
+interpreters are also covered in a conversation with Military Times 
+managing editor Howard Altman.</a> </p>
+<p class="rm-manual"> <a href="file:///video/2021/06/21/secdef-tussles-on-capitol-hill-and-better-pay-for-guard-and-reserve-reporters-roundtable/"> </a></p><p class="rm-manual"><a href="file:///video/2021/06/21/secdef-tussles-on-capitol-hill-and-better-pay-for-guard-and-reserve-reporters-roundtable/"> </a></p><p class="rm-manual"><a href="file:///video/2021/06/21/secdef-tussles-on-capitol-hill-and-better-pay-for-guard-and-reserve-reporters-roundtable/">SecDef tussles on Capitol Hill, and better pay for Guard and Reserve | Reporters Roundtable</a></p><a href="file:///video/2021/06/21/secdef-tussles-on-capitol-hill-and-better-pay-for-guard-and-reserve-reporters-roundtable/"> <span>Play Video </span> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///video/2021/06/21/centcom-commander-speaks-and-the-navy-makes-a-choice-defense-news-weekly-full-episode-61921/"> </a></p><p class="rm-manual"><a href="file:///video/2021/06/21/centcom-commander-speaks-and-the-navy-makes-a-choice-defense-news-weekly-full-episode-61921/"> </a></p><p class="rm-manual"><a href="file:///video/2021/06/21/centcom-commander-speaks-and-the-navy-makes-a-choice-defense-news-weekly-full-episode-61921/">CENTCOM commander speaks, and the Navy makes a choice | Defense News Weekly Full Episode, 6.19.21</a></p><a href="file:///video/2021/06/21/centcom-commander-speaks-and-the-navy-makes-a-choice-defense-news-weekly-full-episode-61921/"> <span>Play Video </span> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///video/2021/06/21/money-minute-getting-out-of-the-rent-cycle-tips-for-buying-a-home-this-year/"> </a></p><p class="rm-manual"><a href="file:///video/2021/06/21/money-minute-getting-out-of-the-rent-cycle-tips-for-buying-a-home-this-year/"> </a></p><p class="rm-manual"><a href="file:///video/2021/06/21/money-minute-getting-out-of-the-rent-cycle-tips-for-buying-a-home-this-year/">Money Minute - Getting out of the rent cycle - tips for buying a home this year</a></p><a href="file:///video/2021/06/21/money-minute-getting-out-of-the-rent-cycle-tips-for-buying-a-home-this-year/"> <span>Play Video </span> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<h5 class="rm-manual"><a href="file:///">Top Headlines</a></h5>
+<figure class="rm-manual"> <a href="https://www.militarytimes.com/news/2021/06/23/russia-says-warning-shots-deter-uk-warship-london-denies-it/"> Russia says warning shots deter UK warship; London denies it</a> </figure><figure class="rm-manual"> <a href="https://www.defensenews.com/global/europe/2021/06/22/british-shipbuilder-babcock-to-help-beef-up-ukraines-navy/"> British shipbuilder Babcock to help beef up Ukraine’s navy</a> </figure><figure class="rm-manual"> <a href="https://www.defensenews.com/global/europe/2021/06/22/nato-hopes-to-launch-new-defense-tech-accelerator-by-2023/"> NATO hopes to launch new defense tech accelerator by 2023</a> </figure><figure class="rm-manual"> <a href="https://www.defensenews.com/global/europe/2021/06/21/german-government-ups-the-pressure-in-11b-poseidon-purchase-petition/"> German government ups the pressure in $1.1B Poseidon purchase petition</a> </figure><figure class="rm-manual"> <a href="https://www.defensenews.com/global/europe/2021/06/18/german-defense-ministry-seeks-53-billion-for-next-fcas-research-phase/"> German defense ministry seeks $5.3 billion for next FCAS research phase</a> </figure><h5 class="rm-manual">Current Edition</h5>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///subscribe/"><h5 class="rm-manual">Subscribe</h5></a> </li> <li class="rm-manual"> <a href="http://defensenews.va.newsmemory.com/"><h5 class="rm-manual">Digital Edition</h5></a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://link.defensenews.com/join/5ba/sign-up"> <span>Newsletters</span></a></li> <li class="rm-manual"><a href="https://subscribe.defensenews.com/subscribe"> <span>Subscribe</span></a></li> <li class="rm-manual"><a href="file:///news-tips"> <span>Got a Tip?</span></a></li> <li class="rm-manual"><a href="file:///contact"> <span>Contact Us</span></a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <span> https://www.defensenews.com © 2021 Sightline Media Group Not A U.S. Government Publication </span> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///air"> Air</a> </li> <li class="rm-manual"> <a href="file:///land"> Land</a> </li> <li class="rm-manual"> <a href="file:///naval"> Naval</a> </li> <li class="rm-manual"> <a href="file:///space"> Space</a> </li> <li class="rm-manual"> <a href="https://www.c4isrnet.com/cyber/?source=dfn-nav"> Cyber</a> </li> <li class="rm-manual"> <a href="http://www.c4isrnet.com/?source=dfn-nav"> C4ISR</a> </li> <li class="rm-manual"> <a href="file:///pentagon"> Pentagon</a> </li> <li class="rm-manual"> <a href="file:///congress"> Congress</a> </li> <li class="rm-manual"> <a href="file:///global"> Global</a> </li> <li class="rm-manual"> <a href="file:///videos"> TV/Video</a> </li> <li class="rm-manual"> <a href="file:///thought-leadership"> Thought Leadership</a> </li> </ul>
+<h6 class="rm-manual">Terms of Use</h6>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://sightlinemediagroup.com/terms-of-service/"> Terms of Service</a> </li> <li class="rm-manual"> <a href="file:///privacy"> Privacy Policy</a> </li> </ul>
+<h6 class="rm-manual">Get Us</h6>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://subscribe.defensenews.com/subscribe"> Subscribe</a> </li> <li class="rm-manual"> <a href="file:///rss"> RSS Feeds</a> </li> <li class="rm-manual"> <a href="https://link.defensenews.com/join/5ba/sign-up"> Newsletters &amp; Alerts</a> </li> </ul>
+<h6 class="rm-manual">Contact Us</h6>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///contact"> Help &amp; Contact Info</a> </li> <li class="rm-manual"> <a href="file:///advertising"> Advertise</a> </li> <li class="rm-manual"> <a href="file:///news-tips"> News Tips</a> </li> </ul>
+<h6 class="rm-manual">About Us</h6>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///about-us"> About Us</a> </li> <li class="rm-manual"> <a href="https://boards.greenhouse.io/sightlinemediagroup?gh_src=cpxe2a1"> Careers</a> </li> </ul>
+<p class="rm-manual"> <a href="file:///">Military News</a> </p>
+<p class="rm-manual"> <a href="file:///">Air Force News</a> </p>
+<p class="rm-manual"> <a href="file:///">Army News</a> </p>
+<p class="rm-manual"> <a href="file:///">Marine Corps News</a> </p>
+<p class="rm-manual"> <a href="file:///">Navy News</a> </p>
+<p class="rm-manual"> <a href="file:///">Defense News</a> </p>
+<p class="rm-manual"> <a href="file:///">Federal News</a> </p>
+<p class="rm-manual"> <a href="file:///">C4ISR</a> </p>
+<p class="rm-manual"> <a href="file:///">Cyber</a> </p>
+<p class="rm-manual"> <a href="file:///">History</a> </p></article>
+</body></html>

@@ -1,0 +1,324 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">Who was Qasem Soleimani, why did the US target him and how will Iran respond? | The Scotsman </p>
+<p class="rm-manual"><span>News you can trust since 1817</span></p>
+<p class="rm-manual"><span><a href="file:///profile">Edit Account</a></span><span>Sign Out</span><a href="file:///subscriptions">Subscribe</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a rel="noopener" href="https://www.scotsman.com/news/politics/quarantine-row-deepens-after-scottish-government-blamed-air-bridges-delay-2901954?itm_source=parsely-api"><p class="rm-manual">Quarantine row deepens after Scottish Government blamed for air bridges delay</p></a></li>
+<li class="rm-manual"><a rel="noopener" href="https://www.scotsman.com/news/transport/when-can-i-travel-france-latest-fco-guidance-country-looks-relax-lockdown-2010564?itm_source=parsely-api"><p class="rm-manual">When can I travel to France? Latest Foreign Office guidance for UK visitors on flights, holidays and quarantine rules</p></a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="file:///news">News</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///news/transport">Transport</a></li>
+<li class="rm-manual"><a href="file:///news/crime">Crime</a></li>
+<li class="rm-manual"><a href="file:///news/weather">Weather</a></li>
+<li class="rm-manual"><a href="file:///news/politics">Politics</a></li>
+<li class="rm-manual"><a href="file:///business">Business</a></li>
+<li class="rm-manual"><a href="file:///education">Education</a></li>
+<li class="rm-manual"><a href="file:///news/opinion">Opinion</a></li>
+<li class="rm-manual"><a href="file:///news/people">People</a></li>
+<li class="rm-manual"><a href="file:///news/obituaries">Obituaries</a></li>
+<li class="rm-manual"><a href="file:///news/environment">Environment</a></li>
+<li class="rm-manual"><a href="file:///health">Health</a></li>
+<li class="rm-manual"><a href="file:///news/uk-news">UK News</a></li>
+<li class="rm-manual"><a href="file:///news/world">World</a></li>
+<li class="rm-manual"><a href="file:///read-this">Read This</a></li>
+</ul>
+</li>
+<li class="rm-manual"><a href="file:///health/coronavirus">Coronavirus</a></li>
+<li class="rm-manual">
+<a href="file:///sport">Sport</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///sport/football">Football</a></li>
+<li class="rm-manual"><a href="file:///sport/rugby-union">Rugby Union</a></li>
+<li class="rm-manual"><a href="file:///sport/golf">Golf</a></li>
+<li class="rm-manual"><a href="file:///sport/other-sport">Other Sport</a></li>
+<li class="rm-manual"><a href="file:///sport/sport-opinion">Sport Opinion</a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="file:///arts-and-culture">Arts and Culture</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///arts-and-culture/music">Music</a></li>
+<li class="rm-manual"><a href="file:///arts-and-culture/books">Books</a></li>
+<li class="rm-manual"><a href="file:///arts-and-culture/film-and-tv">Film and TV</a></li>
+<li class="rm-manual"><a href="file:///arts-and-culture/theatre-and-stage">Theatre and Stage</a></li>
+<li class="rm-manual"><a href="file:///arts-and-culture/art">Art</a></li>
+<li class="rm-manual"><a href="file:///arts-and-culture/edinburgh-festivals">Edinburgh Festivals</a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="file:///lifestyle">Lifestyle</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///lifestyle/travel">Travel</a></li>
+<li class="rm-manual"><a href="file:///lifestyle/outdoors">Outdoors</a></li>
+<li class="rm-manual"><a href="file:///lifestyle/cars">Cars</a></li>
+<li class="rm-manual"><a href="file:///lifestyle/homes-and-gardens">Homes and Gardens</a></li>
+</ul>
+</li>
+<li class="rm-manual"><a href="http://foodanddrink.scotsman.com/">Food and Drink</a></li>
+<li class="rm-manual">
+<a href="file:///heritage-and-retro">Heritage and Retro</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///heritage-and-retro/heritage">Heritage</a></li>
+<li class="rm-manual"><a href="file:///heritage-and-retro/retro">Retro</a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="file:///future-scotland">Future Scotland</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///future-scotland/tech">Tech</a></li>
+<li class="rm-manual"><a href="file:///future-scotland/start-up-scale-up">Start up Scale up</a></li>
+<li class="rm-manual"><a href="file:///future-scotland/innovators">Innovators</a></li>
+<li class="rm-manual"><a href="file:///future-scotland/big-ideas">Big Ideas</a></li>
+<li class="rm-manual"><a href="file:///future-scotland/data">Data</a></li>
+<li class="rm-manual"><a href="file:///future-scotland/fintech">FinTech</a></li>
+<li class="rm-manual"><a href="file:///future-scotland/life-sciences">Life Sciences</a></li>
+</ul>
+</li>
+</ul>
+<p class="rm-manual"><a href="file:///news">News</a><a href="file:///news/world">World</a></p>
+<h1 class="rm-manual">Who was Qasem Soleimani, why did the US target him and how will Iran respond?</h1>
+<h2 class="rm-manual">The killing of General Qasem Soleimani marks a 
+significant escalation in tensions between Iran and the US - but why was
+ he targeted, and could this action lead to war between the powers?</h2>
+<p class="rm-manual"><a href="#"><span>By</span> Sarah Wilson</a></p>
+<p class="rm-manual">Friday, 3rd January 2020, 11:08 am</p>
+<figcaption class="rm-manual">Gen. Qasem Soleimani was killed in the US attack (Getty Images)</figcaption><p class="rm-manual">US
+ President Donald Trump ordered a fatal US airstrike on Major General 
+Qasem Soleimani, the head of Iran's paramilitary forces, early this 
+morning.</p>
+<p class="rm-manual">But why did the US target Soleimani? How 
+significant is his death? How will Iran respond? And could this action 
+lead to conflict between the two nations?</p>
+<p class="rm-manual">Who was Qasem Soleimani?</p>
+<h2 class="rm-manual">
+<span>Sign up</span> to our daily newsletter</h2>
+<h2 class="rm-manual">
+<span>The i newsletter</span> cut through the noise</h2>
+<p>Soleimani was considered one of Iran's most powerful figures. He was 
+the architect of military and intelligence operations overseas as the 
+commander of Iran's Quds Force of the Revolutionary Guards.</p>
+<p>Aged 62 at the time of his death, Soleimani is understood to have 
+reported directly to Iran's Supreme Leader Ali Khamenei. In recent 
+years, he has been responsible for spearheading Iran's growing military 
+influence in the Middle East.</p>
+<p>The US suspects that Soleimani was responsible for attacks on American forces in the region for the past couple of decades.</p>
+<p>The Revolutionary Guards were designated as a foreign terrorist organisation by the US last year.</p>
+<p>Why did the US target Soleimani specifically?</p>
+<p>For a long time, the White House has seen Soleimani as a threat to US
+ interests. As a powerful military figure in Iran, he was a fairly 
+obvious target.</p>
+<p>He was killed in Baghdad this morning by a US drone strike.</p>
+<p>A statement released by the Pentagon this morning has claimed that 
+General Soleimani was "actively developing plans to attack American 
+diplomats and service members in Iraq and throughout the region" and 
+that the strike was "aimed at deterring future Iranian attack plans".</p>
+<p>What's happened in the aftermath of the attack?</p>
+<p>The US has <a href="https://twitter.com/TravelGov/status/1213011491777060864">urged any American citizens currently in Iraq to depart immediately</a>, indicating fears that Americans could now be at serious risk in the country.</p>
+<p>The Israeli Prime Minister Benjamin Netanyahu has reportedly cut short a visit to Greece in the wake of the attack.</p>
+<p>750 airborne troops have immediately been deployed to Kuwait by the 
+US for use as a rapid reaction force in Iraq. Officials have commented 
+that up to 3,000 could be sent over the coming days.</p>
+<p>How will Iran respond to the attack?</p>
+<p>It is not yet clear exactly how Iran will respond to this latest 
+attack. However, Iran's Supreme Leader Ali Khamenei has issued a 
+statement saying that while Soleimani's death was "bitter", "the final 
+victory will make life more bitter for the murderers and criminals".</p>
+<p>Iran's Defence Minister Brig. Gen. Amir Hatami has claimed that the 
+attack will be met with a "crushing" response, while Foreign Minister 
+Javad Zarif named the strike an "act of international terrorism".</p>
+<p>Representatives from several countries around the world have called for a de-escalation of tensions between Iran and the US.</p>
+<p>Does Iran have nuclear weapons - and could they use them in retaliation?</p>
+<p>In 2015, Iran agreed to a deal on its nuclear programme which would 
+limit its sensitive nuclear activity and allow international inspectors 
+to check on their nuclear activity in return for the lifting of economic
+ sanctions on the country.</p>
+<p>The deal came after years of anxiety around Iran's alleged efforts to develop a nuclear weapon.</p>
+<p>However in May 2019, Iran suspended its commitments to the deal a year after the US also withdrew their commitments.</p>
+<p>Iran has since announced it would increase its stockpile of uranium, 
+indicating a potential move towards building a nuclear weapon.</p>
+<p>As it currently stands, the country is not known to possess a fully 
+operational nuclear weapon, so could not carry out an attack.</p>
+<p>What is the UK's response?</p>
+<p>The UK's foreign office has issued a statement on the death of Soleimani.</p>
+<p>“We have always recognised the aggressive threat posed by the Iranian
+ Quds force led by Qasem Soleimani," said Foreign Secretary Dominic 
+Raab.</p>
+<p>"Following his death, we urge all parties to de-escalate. Further conflict is in none of our interests.”</p>
+<p>Sky News have reported that the UK military had increased its 
+"security and readiness" in the region, but both the foreign office and 
+Ministry of Defence have yet to confirm this.</p>
+<h3 class="rm-manual">Most Popular</h3>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%7B%7Burl%7D%7D">{{shortTitle}}</a><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%7B%7Bsectionlink%7D%7D">{{section}}</a></p>
+<h3 class="rm-manual">Most Popular</h3>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%7B%7Burl%7D%7D">{{shortTitle}}</a><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%7B%7Bsectionlink%7D%7D">{{section}}</a></p>
+<p class="rm-manual"><span>This website and its associated newspaper are members of Independent Press Standards Organisation (IPSO)</span></p>
+<h3 class="rm-manual">Explore</h3>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///news">News</a></li>
+<li class="rm-manual"><a href="file:///sport">Sport</a></li>
+<li class="rm-manual"><a href="file:///business">Business</a></li>
+<li class="rm-manual"><a href="file:///arts-and-culture">Arts and Culture</a></li>
+<li class="rm-manual"><a href="file:///lifestyle">Lifestyle</a></li>
+<li class="rm-manual"><a rel="noopener" href="http://foodanddrink.scotsman.com/">Food and Drink</a></li>
+<li class="rm-manual"><a href="file:///heritage-and-retro">Heritage and Retro</a></li>
+<li class="rm-manual"><a href="file:///future-scotland">Future Scotland</a></li>
+</ul>
+<h3 class="rm-manual">More from The Scotsman</h3>
+<ul class="rm-manual">
+<li class="rm-manual"><a rel="noopener" href="https://announcements.johnstonpress.co.uk/obituaries/scotsman-uk/">Announcements</a></li>
+<li class="rm-manual"><a href="file:///jobs">Jobs</a></li>
+<li class="rm-manual"><a href="file:///public-notices">Public Notices</a></li>
+<li class="rm-manual"><a href="file:///must-read">Must Read</a></li>
+<li class="rm-manual"><a rel="noopener" href="https://thescotsmanpublications.newsprints.co.uk/">Buy a Photo</a></li>
+<li class="rm-manual"><a rel="noopener" href="https://findit.scotsman.com/">Directory</a></li>
+<li class="rm-manual"><a rel="noopener" href="http://local.scotsman.com/">Local Guide</a></li>
+<li class="rm-manual"><a rel="noopener" href="http://www.localreaderoffers.co.uk/">Reader Shop</a></li>
+<li class="rm-manual"><a rel="noopener" href="https://www.scotsmanconferences.com/">Conferences</a></li>
+<li class="rm-manual"><a rel="noopener" href="https://britishnewspaperarchive.co.uk/titles/the-scotsman">The Scotsman Archive</a></li>
+</ul>
+<h3 class="rm-manual">Useful Links</h3>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///contact-us">Contact Us</a></li>
+<li class="rm-manual"><a rel="noopener" href="https://www.jplocalbusiness.co.uk/?ref=TSN&amp;utm_source=scotsman&amp;utm_medium=news-site-referral&amp;utm_term=ros&amp;utm_content=homepage&amp;utm_campaign=footer">Advertise My Business</a></li>
+<li class="rm-manual"><a rel="noopener" href="https://recruiters.jobstoday.co.uk/?utm_medium=referral&amp;utm_source=scotsman.com&amp;utm_campaign=footer&amp;utm_term=ros">Advertise a Job</a></li>
+<li class="rm-manual"><a href="file:///advertise-with-us">Place your Ad</a></li>
+<li class="rm-manual"><a rel="noopener" href="https://www.localsubsplus.co.uk/">Subscribe</a></li>
+<li class="rm-manual"><a rel="noopener" href="https://www.jpimediaevents.co.uk/">Events</a></li>
+<li class="rm-manual"><a href="file:///newsletter">Newsletter</a></li>
+<li class="rm-manual"><a href="file:///archive">Website Archive</a></li>
+<li class="rm-manual"><a rel="noopener" href="https://www.jpimedia.co.uk/readers-charter/">Readers Charter</a></li>
+</ul>
+<p class="rm-manual"><span>©JPIMedia Publishing Ltd. All rights reserved.</span><a href="#">Cookie Settings</a><a rel="noopener" href="https://www.jpimedia.co.uk/website-terms-conditions/">Terms and Conditions</a><a rel="noopener" href="https://www.jpimedia.co.uk/privacy-policy/">Privacy policy</a></p>
+<p class="rm-manual"><span>News you can trust since 1817</span></p>
+<p class="rm-manual"><a href="file:///profile">Edit Account</a><span>Sign Out</span></p>
+<p class="rm-manual"><a href="file:///subscriptions">Subscribe</a></p>
+<ul class="rm-manual">
+<li class="rm-manual">
+<p class="rm-manual"><a href="file:///news">News</a></p>
+<ul class="rm-manual">
+<li class="rm-manual">News</li>
+<li class="rm-manual"><a href="file:///news/transport">Transport</a></li>
+<li class="rm-manual"><a href="file:///news/crime">Crime</a></li>
+<li class="rm-manual"><a href="file:///news/weather">Weather</a></li>
+<li class="rm-manual"><a href="file:///news/scottish-news">Scottish News</a></li>
+<li class="rm-manual"><a href="file:///news/politics">Politics</a></li>
+<li class="rm-manual"><a href="file:///business">Business</a></li>
+<li class="rm-manual"><a href="file:///education">Education</a></li>
+<li class="rm-manual"><a href="file:///health">Health</a></li>
+<li class="rm-manual"><a href="file:///news/opinion">Opinion</a></li>
+<li class="rm-manual"><a href="file:///news/people">People</a></li>
+<li class="rm-manual"><a href="file:///news/obituaries">Obituaries</a></li>
+<li class="rm-manual"><a href="file:///news/environment">Environment</a></li>
+<li class="rm-manual"><a href="file:///news/uk-news">UK News</a></li>
+<li class="rm-manual"><a href="file:///news/world">World</a></li>
+<li class="rm-manual"><a href="file:///read-this">Read This</a></li>
+<li class="rm-manual"><a href="file:///must-read">Must Read</a></li>
+</ul>
+</li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///health/coronavirus">Coronavirus</a></p></li>
+<li class="rm-manual">
+<p class="rm-manual"><a href="file:///sport">Sport</a></p>
+<ul class="rm-manual">
+<li class="rm-manual">Sport</li>
+<li class="rm-manual"><a href="file:///sport/football">Football</a></li>
+<li class="rm-manual"><a href="file:///sport/rugby-union">Rugby Union</a></li>
+<li class="rm-manual"><a href="file:///sport/golf">Golf</a></li>
+<li class="rm-manual"><a href="file:///sport/other-sport">Other Sport</a></li>
+<li class="rm-manual"><a href="file:///sport/sport-opinion">Sport Opinion</a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<p class="rm-manual"><a href="file:///arts-and-culture">Arts and Culture</a></p>
+<ul class="rm-manual">
+<li class="rm-manual">Arts and Culture</li>
+<li class="rm-manual"><a href="file:///arts-and-culture/music">Music</a></li>
+<li class="rm-manual"><a href="file:///arts-and-culture/books">Books</a></li>
+<li class="rm-manual"><a href="file:///arts-and-culture/film-and-tv">Film and TV</a></li>
+<li class="rm-manual"><a href="file:///arts-and-culture/theatre-and-stage">Theatre and Stage</a></li>
+<li class="rm-manual"><a href="file:///arts-and-culture/art">Art</a></li>
+<li class="rm-manual"><a href="file:///arts-and-culture/edinburgh-festivals">Edinburgh Festivals</a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<p class="rm-manual"><a href="file:///lifestyle">Lifestyle</a></p>
+<ul class="rm-manual">
+<li class="rm-manual">Lifestyle</li>
+<li class="rm-manual"><a href="file:///lifestyle/travel">Travel</a></li>
+<li class="rm-manual"><a href="file:///lifestyle/outdoors">Outdoors</a></li>
+<li class="rm-manual"><a href="file:///lifestyle/cars">Cars</a></li>
+<li class="rm-manual"><a href="file:///lifestyle/homes-and-gardens">Homes and Gardens</a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<p class="rm-manual"><a href="file:///heritage-and-retro">Heritage and Retro</a></p>
+<ul class="rm-manual">
+<li class="rm-manual">Heritage and Retro</li>
+<li class="rm-manual"><a href="file:///heritage-and-retro/heritage">Heritage</a></li>
+<li class="rm-manual"><a href="file:///heritage-and-retro/retro">Retro</a></li>
+</ul>
+</li>
+<li class="rm-manual"><p class="rm-manual"><a href="http://foodanddrink.scotsman.com/">Food and Drink</a></p></li>
+<li class="rm-manual">
+<p class="rm-manual"><a href="file:///future-scotland">Future Scotland</a></p>
+<ul class="rm-manual">
+<li class="rm-manual">Future Scotland</li>
+<li class="rm-manual"><a href="file:///future-scotland/tech">Tech</a></li>
+<li class="rm-manual"><a href="file:///future-scotland/start-up-scale-up">Start up Scale up</a></li>
+<li class="rm-manual"><a href="file:///future-scotland/innovators">Innovators</a></li>
+<li class="rm-manual"><a href="file:///future-scotland/big-ideas">Big Ideas</a></li>
+<li class="rm-manual"><a href="file:///future-scotland/data">Data</a></li>
+<li class="rm-manual"><a href="file:///future-scotland/fintech">FinTech</a></li>
+<li class="rm-manual"><a href="file:///future-scotland/life-sciences">Life Sciences</a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<p class="rm-manual"><a href="file:///regions">Regions</a></p>
+<ul class="rm-manual">
+<li class="rm-manual">Regions</li>
+<li class="rm-manual"><a href="file:///regions/inverness-highlands-and-islands">Inverness, Highlands and Islands</a></li>
+<li class="rm-manual"><a href="file:///regions/aberdeen-and-north-east">Aberdeen and North East</a></li>
+<li class="rm-manual"><a href="file:///regions/dundee-and-tayside">Dundee and Tayside</a></li>
+<li class="rm-manual"><a href="file:///regions/glasgow-and-strathclyde">Glasgow and Strathclyde</a></li>
+<li class="rm-manual"><a href="file:///regions/edinburgh-fife-and-lothians">Edinburgh, Fife and Lothians</a></li>
+<li class="rm-manual"><a href="file:///regions/dumfries-and-borders">Dumfries and Borders</a></li>
+</ul>
+</li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///must-read">Must Read</a></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="http://www.jpimedialocal.co.uk/?ref=TSN&amp;utm_source=scotsman&amp;utm_medium=news-site-referral&amp;utm_content=top-nav&amp;utm_campaign=LDFE-0177%20Inbound%20Leads">Advertise My Business</a></p></li>
+</ul>
+<p class="rm-manual">Follow us</p>
+<p class="rm-manual"><a href="file:///profile">Edit Account</a></p></article>
+</body></html>

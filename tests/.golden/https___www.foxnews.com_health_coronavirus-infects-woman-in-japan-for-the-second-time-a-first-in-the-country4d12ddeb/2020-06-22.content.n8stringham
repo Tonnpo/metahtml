@@ -1,0 +1,95 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"><a href="file:///category/health/infectious-disease/coronavirus">Coronavirus</a></p>
+<p class="rm-manual">Published February 27</p>
+<h1 class="rm-manual">Coronavirus infects woman in Japan for the second time, a first in the country</h1>
+<p class="rm-manual"><span> By <span><a href="file:///person/a/david-aaro">David Aaro</a><span><a href="http://www.foxnews.com/"> | Fox News</a></span></span></span></p>
+<p class="rm-manual"><a href="#">close</a></p>
+<p class="rm-manual"><a href="http://video.foxnews.com/v/6136348167001"><span>Video</span></a></p>
+<h4 class="rm-manual"><a href="http://video.foxnews.com/v/6136348167001">Sen. Barrasso on preventing a coronavirus pandemic</a></h4>
+<p>Wyoming Republican Senator John Barrasso weighs in on Democratic criticism of Trump's coronavirus response.</p>
+<p>A woman in <a href="https://www.foxnews.com/category/world/world-regions/japan">Japan</a> tested positive for the <a href="https://www.foxnews.com/category/health/infectious-disease/coronavirus">coronavirus</a> for the second time on Wednesday, as the country grips with 190 cases separate from the Diamond Princess <a href="https://www.foxnews.com/category/travel/general/cruises">cruise ship</a> outbreak, according to multiple reports.</p>
+<p>The tour bus guide in her 40s first tested positive in late January 
+and was released from the hospital after recovering. She was readmitted 
+after having a sore throat and chest pains, according to the local 
+government.</p>
+<p>It's a first known case of a second positive test in Japan, which 
+prompted Health Minister Katsunobu Kato to inform Japan's central 
+government of the need to review previous patient lists and monitor the 
+condition of those previously discharged, according to Reuters.</p>
+<p class="rm-manual"><a href="https://www.foxnews.com/health/coronavirus-prompts-saudi-arabia-to-limit-travel-to-holy-sites-months-ahead-of-hajj-pilgrimage">CORONAVIRUS PROMPTS SAUDI ARABIA TO LIMIT TRAVEL TO HOLY SITES -- MONTHS AHEAD OF HAJJ PILGRIMAGE</a></p>
+<p> A man wearing a mask visits a beach as snow-capped Mount Fuji is 
+visible in the distance in Fujisawa, Japan, Thursday, Feb. 27, 2020. 
+According to local businesses in the area, the number of visitors has 
+dropped significantly since the outbreak of COVID-19. (AP Photo/Jae C. 
+Hong) </p>
+<p>“Once you have the infection, it could remain dormant and with 
+minimal symptoms, and then you can get an exacerbation if it finds its 
+way into the lungs,” said Philip Tierno Jr., professor of microbiology 
+and pathology at NYU School of Medicine, according to the news 
+organization.</p>
+<p>The virus can reportedly spread without symptoms showing up, which 
+forces officials to play catch up and makes it far more difficult to 
+manage.</p>
+<p>Health officials analyzed the implications of a patient testing 
+positive after having an initial recovery. Second positive tests have 
+been reported in China.</p>
+<p>“I’m not certain that this is not bi-phasic, like anthrax,” Tierno 
+Jr. said in regards to the disease being able to go away before 
+reappearing.</p>
+<p class="rm-manual"><a href="https://www.foxnews.com/health/respiratory-mask-supply-at-new-york-city-hospital-dwindled-amid-coronavirus-scare-report-says">RESPIRATORY MASK SUPPLY AT NEW YORK CITY HOSPITAL DWINDLED AMID CORONAVIRUS SCARE, REPORT SAYS</a></p>
+<p>With the 2020 Summer Olympic games scheduled in July, Toyko has urged
+ large gatherings of people to be stopped or limited over the next two 
+weeks to contain the virus, according to <a href="https://www.reuters.com/article/us-china-health-japan/japan-coronavirus-clouds-gather-as-woman-tests-positive-for-second-time-idUSKCN20L0BI">Reuters</a>.</p>
+<p>“The Olympics should be postponed if this continues ... There are 
+many people who don’t understand how easy it is to spread this infection
+ from one person to another," Tierno Jr. said.</p>
+<p>Prime Minister Shinzo Abe <a href="https://www.reuters.com/article/us-china-health-japan/japan-pm-abe-says-to-ask-all-schools-to-close-for-most-of-march-idUSKCN20L161">announced</a> on Thursday the government would close all schools for a month to help contain the virus.</p>
+<p class="rm-manual"><a href="https://www.foxnews.com/category/health/infectious-disease/coronavirus">CLICK HERE FOR MORE CORONAVIRUS COVERAGE</a></p>
+<p>Another death was also reported in northern Hokkaido, which brings 
+the total killed by the virus in Japan to eight. Four have died from the
+ cruise ship, which has roughly 704 cases.</p>
+<p class="rm-manual">David Aaro is a Reporter at Fox News Digital based in New York City.</p>
+<h4 class="rm-manual">Trending in Health</h4>
+<ul class="rm-manual">
+<li class="rm-manual"><article class="rm-manual"><p class="rm-manual"></p><h5 class="rm-manual"><a href="https://www.foxnews.com/health/coronavirus-death-rate-hospitalizations-rate-of-positivity-better-measures-of-spread-health-officials-say">Coronavirus update: Los Angeles health officials aren't concerned about increased cases, here's why</a></h5><p class="rm-manual"></p></article></li>
+<li class="rm-manual"><article class="rm-manual"><p class="rm-manual"></p><h5 class="rm-manual"><a href="https://www.foxnews.com/health/arizona-sees-cases-of-coronavirus-linked-inflammatory-condition-in-children">Arizona sees cases of coronavirus-linked inflammatory condition in children</a></h5><p class="rm-manual"></p></article></li>
+<li class="rm-manual"><article class="rm-manual"><p class="rm-manual"></p><h5 class="rm-manual"><a href="https://www.foxnews.com/health/coronavirus-infects-delaware-teens-who-participated-in-senior-week-activities-other-urged-to-get-tested">Coronavirus infects Delaware teens who participated in senior week activities, others urged to get tested</a></h5><p class="rm-manual"></p></article></li>
+<li class="rm-manual"><article class="rm-manual"><p class="rm-manual"></p><h5 class="rm-manual"><a href="https://www.foxnews.com/health/weekend-sees-record-high-coronavirus-hospitalizations-cases-for-these-states">Weekend sees record high coronavirus hospitalizations, cases for these states</a></h5><p></p></article></li>
+</ul></article>
+</body></html>

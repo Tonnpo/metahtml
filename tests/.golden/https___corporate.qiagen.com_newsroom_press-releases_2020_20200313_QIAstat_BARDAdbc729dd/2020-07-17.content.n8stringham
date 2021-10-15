@@ -1,0 +1,182 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> QIAGEN gains BARDA funding for approval process of QIAstat-Dx test kit for SARS-CoV-2 coronavirus&amp;#160; </p>
+<p class="rm-manual"> <a href=""> <span>Menu</span> </a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///about-us">About Us</a><ul class="rm-manual"> <li class="rm-manual"> <a href="file:///about-us/Overview">Overview</a> </li> <li class="rm-manual"> <a href="file:///about-us/What-we-do">What we do</a><ul class="rm-manual"> <li class="rm-manual"> <a href="file:///about-us/What-we-do/at-a-glance">At a glance</a> </li> <li class="rm-manual"> <a href="file:///about-us/What-we-do/mission-and-strategy">Vision, identity &amp; mission</a> </li> <li class="rm-manual"> <a href="file:///about-us/What-we-do/customers-and-products">Customers &amp; products</a> </li> <li class="rm-manual"> <a href="file:///about-us/What-we-do/digital-transformation">Digital transformation</a> </li> <li class="rm-manual"> <a href="file:///about-us/What-we-do/milestones">Milestones</a> </li> <li class="rm-manual"> <a href="file:///about-us/What-we-do/historic-development">Historic development</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///about-us/Who-we-are">Who we are</a><ul class="rm-manual"> <li class="rm-manual"> <a href="file:///about-us/Who-we-are/management">Management</a><ul class="rm-manual"> <li class="rm-manual"> <a href="file:///about-us/Who-we-are/management/executive-committee">Executive Committee</a> </li> <li class="rm-manual"> <a href="file:///about-us/Who-we-are/management/supervisory-board">Supervisory Board</a> </li> </ul> </li> </ul> </li> <li class="rm-manual"> <a href="file:///about-us/insights-magazine">Customer Stories</a> </li> <li class="rm-manual"> <a href="file:///about-us/global-presence">Global presence</a> </li> <li class="rm-manual"> <a href="file:///about-us/Sustainability">Sustainability</a><ul class="rm-manual"> <li class="rm-manual"> <a href="file:///about-us/Sustainability/overview">Overview</a> </li> <li class="rm-manual"> <a href="file:///about-us/Sustainability/environmental-matters">Environmental Matters</a> </li> <li class="rm-manual"> <a href="file:///about-us/Sustainability/employee-matters">Employee matters</a> </li> <li class="rm-manual"> <a href="file:///about-us/Sustainability/social-matters">Social matters</a> </li> <li class="rm-manual"> <a href="file:///about-us/Sustainability/human-rights">Human Rights</a> </li> <li class="rm-manual"> <a href="file:///about-us/Sustainability/anti-corruption">Anti-corruption</a> </li> <li class="rm-manual"> <a href="file:///about-us/Sustainability/gene-editing-ethics">Gene editing ethics</a> </li> </ul> </li> </ul> </li> <li class="rm-manual"> <a href="file:///investor-relations">Investor Relations</a><ul class="rm-manual"> <li class="rm-manual"> <a href="file:///investor-relations/Overview">Overview</a> </li> <li class="rm-manual"> <a href="file:///investor-relations/at-a-glance">At a glance</a><ul class="rm-manual"> <li class="rm-manual"> <a href="file:///investor-relations/at-a-glance/strategy">Strategy</a> </li> <li class="rm-manual"> <a href="file:///investor-relations/at-a-glance/key-figures">Key figures</a> </li> <li class="rm-manual"> <a href="file:///investor-relations/at-a-glance/equity-story">Equity story</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///investor-relations/share-information">Share information</a><ul class="rm-manual"> <li class="rm-manual"> <a href="file:///investor-relations/share-information/share-data">Share data</a> </li> <li class="rm-manual"> <a href="file:///investor-relations/share-information/shareholder-structure">Shareholder structure</a> </li> <li class="rm-manual"> <a href="file:///investor-relations/share-information/share-price">Share price</a> </li> <li class="rm-manual"> <a href="file:///investor-relations/share-information/share-buyback">Share buyback</a> </li> <li class="rm-manual"> <a href="file:///investor-relations/share-information/faq">FAQ</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///investor-relations/Analysts">Analysts</a><ul class="rm-manual"> <li class="rm-manual"> <a href="file:///investor-relations/Analysts/coverage">Analyst coverage</a> </li> <li class="rm-manual"> <a href="file:///investor-relations/Analysts/consensus">Analyst consensus</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///investor-relations/financial-reports">Financial reports</a> </li> <li class="rm-manual"> <a href="file:///investor-relations/events-and-presentations">Events and presentations</a> </li> <li class="rm-manual"> <a href="file:///investor-relations/corporate-governance">Corporate Governance</a><ul class="rm-manual"> <li class="rm-manual"> <a href="file:///investor-relations/corporate-governance/governance-codes">Governance Codes</a> </li> <li class="rm-manual"> <a href="file:///investor-relations/corporate-governance/supervisory-board">Supervisory Board</a> </li> <li class="rm-manual"> <a href="file:///investor-relations/corporate-governance/executive-committee">Executive Committee</a> </li> <li class="rm-manual"> <a href="file:///investor-relations/corporate-governance/directors-dealings">Directors’ dealings</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///investor-relations/compliance-and-ethics">Compliance and ethics</a> </li> <li class="rm-manual"> <a href="file:///investor-relations/thermo-offer-en">Thermo Fisher Offer</a> </li> <li class="rm-manual"> <a href="file:///investor-relations/ir-contacts">IR contacts</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///newsroom">Newsroom</a><ul class="rm-manual"> <li class="rm-manual"> <a href="file:///newsroom/Overview">Overview</a> </li> <li class="rm-manual"> <a href="file:///newsroom/press-releases">Press releases</a> </li> <li class="rm-manual"> <a href="file:///newsroom/resources">Resources</a> </li> <li class="rm-manual"> <a href="file:///newsroom/photo-archive">Photo archive</a> </li> <li class="rm-manual"> <a href="file:///newsroom/video-footage">Video footage</a> </li> <li class="rm-manual"> <a href="file:///newsroom/press-contact">Press contact</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///careers">Careers</a><ul class="rm-manual"> <li class="rm-manual"> <a href="file:///careers/Overview">Overview</a> </li> <li class="rm-manual"> <a href="file:///careers/why-qiagen">Why QIAGEN</a><ul class="rm-manual"> <li class="rm-manual"> <a href="file:///careers/why-qiagen/our-culture">Our culture</a> </li> <li class="rm-manual"> <a href="file:///careers/why-qiagen/our-mission">Our mission</a> </li> <li class="rm-manual"> <a href="file:///careers/why-qiagen/global-presence">Global presence</a> </li> <li class="rm-manual"> <a href="file:///careers/why-qiagen/career-development">Career development</a> </li> <li class="rm-manual"> <a href="file:///careers/why-qiagen/talent-management">Talent management</a> </li> <li class="rm-manual"> <a href="file:///careers/why-qiagen/awards">Awards</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///careers/get-insights">Get Insights</a> </li> <li class="rm-manual"> <a href="file:///careers/Your-path-to-QIAGEN">Your path to QIAGEN</a><ul class="rm-manual"> <li class="rm-manual"> <a href="file:///careers/Your-path-to-QIAGEN/your-profile">Your profile</a> </li> <li class="rm-manual"> <a href="file:///careers/Your-path-to-QIAGEN/how-to-apply">How to apply</a> </li> <li class="rm-manual"> <a href="file:///careers/Your-path-to-QIAGEN/interview-process">Interview process</a> </li> <li class="rm-manual"> <a href="file:///careers/Your-path-to-QIAGEN/find-jobs">Find jobs</a> </li> <li class="rm-manual"> <a href="file:///careers/Your-path-to-QIAGEN/faqs">FAQs</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///careers/hr-contacts">Contact us</a> </li> <li class="rm-manual"> <a href="file:///careers/Find-jobs">Find jobs</a> </li> </ul> </li> </ul>
+<ol class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"><a href="file:///">Home</a></p> <span>&gt;</span> </li> <li class="rm-manual"> <p class="rm-manual"><a href="file:///newsroom">Newsroom</a></p> <span>&gt;</span> </li> <li class="rm-manual"> <p class="rm-manual"><a href="file:///newsroom/press-releases">Press releases</a></p> <span>&gt;</span> </li> <li class="rm-manual"> <p class="rm-manual"><a href="file:///newsroom/press-releases/2020/20200313_qiastat_barda">QIAGEN gains BARDA funding for approval process of QIAstat-Dx test kit for SARS-CoV-2 coronavirus </a></p> </li> </ol>
+<p class="rm-manual">Mar 13 2020</p>
+<h1 class="rm-manual">QIAGEN gains BARDA funding for approval process of QIAstat-Dx test kit for SARS-CoV-2 coronavirus </h1>
+<h2 class="rm-manual">• First syndromic testing solution to get U.S. 
+agency’s development support in novel coronavirus response • QIAstat-Dx 
+Respiratory SARS-CoV-2 Panel test kit will rapidly differentiate novel 
+coronavirus from 21 other pathogens implicated in respiratory syndromes •
+ Further expanding QIAGEN’s global mobilization to scale up testing 
+supplies for the COVID-19 response</h2>
+<p><span>Hilden, Germany, and Germantown, Maryland, March 13, 2020 –</span><span>
+ QIAGEN (NYSE: QGEN; Frankfurt Prime Standard: QIA) today announced it 
+will develop a new QIAstat-Dx test kit to differentiate the novel 
+SARS-CoV-2 coronavirus from 21 other serious respiratory infections and 
+will receive advanced development support from the U.S. Department of 
+Health and Human Services' Office of the Assistant Secretary for 
+Preparedness and Response (ASPR). Accelerated development of the 
+QIAstat-Dx test kit further expands QIAGEN’s global mobilization for the
+ emergency, which already includes a dramatic increase in production of 
+components for a full range of U.S. and international testing protocols.</span></p>
+<p><span>QIAGEN’s QIAstat-Dx solution to help in the response to 
+COVID-19 disease becomes the first syndromic testing product selected 
+for development through ASPR's Biomedical Advanced Research and 
+Development Authority (BARDA) streamlined selection process, known as an
+ easy broad agency announcement (EZ-BAA). BARDA will contribute $598,000
+ to accelerate QIAGEN's evaluation of the testing cartridge that detects
+ the genetic material of SARS-CoV-2, the virus that causes COVID-19.</span></p>
+<p><span>The QIAstat-Dx kit will be a molecular testing panel designed 
+to aid in the diagnosis of patients with respiratory syndromes, in about
+ one hour, by differentiating the novel coronavirus from 21 other 
+bacterial and viral respiratory pathogens. QIAGEN’s panel will include 
+assays targeting two genes used to detect the pathogen behind the 
+disease, Severe acute respiratory syndrome-related coronavirus 2 
+(SARS-CoV-2). The virus was provisionally called 2019-nCoV when it first
+ surfaced.</span></p>
+<p><span>“The coronavirus emergency goes to the heart of QIAGEN’s 
+mission and expertise. Our team is partnering with customers and public 
+health authorities worldwide to quickly scale up capacity for 
+coronavirus testing, and also to make available the Sample to Insight 
+QIAstat-Dx respiratory panel with SARS-CoV-2 detection,” said Thierry 
+Bernard, Interim CEO of QIAGEN and Senior Vice President, Head of the 
+Molecular Diagnostics Business Area. “We have scaled up production to 
+respond to the rapid spread of COVID-19, moving to 24-hour, 
+seven-day-a-week operations at two key sites, investing to expand 
+capacity by 70% and adding staff. Our top priority is producing the 
+QIAamp and EZ1 sample technologies recommended in the U.S. Centers for 
+Disease Control guidelines for testing, as well as the new QIAstat-Dx 
+cartridges. We are working closely with laboratories, hospitals and 
+other customers around the world to assess their flexibility, timing and
+ quantity needs.”</span></p>
+<p><span>QIAGEN is aggressively managing supply chains and customer 
+service to help address the pandemic. The company has worked with 
+customers to help support laboratory-developed tests, including 
+applications for QIAGEN automation systems. Unlike other companies, 
+QIAGEN is not facing supply chain interruptions from China or other 
+markets. For customers facing delays or allocations, QIAGEN is working 
+out individualized supply plans and alternative workflow solutions.</span></p>
+<p><span>The HHS funding and QIAGEN’s discussions with the U.S. Food and
+ Drug Administration (FDA) are the first steps to adding the QIAstat-Dx 
+syndromic testing solution to U.S. efforts to contain the outbreak.</span></p>
+<p><span>In the rapidly evolving global response to the coronavirus 
+outbreak, the regulatory status of the QIAstat-Dx Respiratory SARS-CoV-2
+ Panel will vary by location. The panel will be available with CE-IVD 
+marking in Europe and other markets in the coming weeks.</span></p>
+<p><span>The QIAstat-Dx system was introduced in Europe in 2018 and in 
+the United States in mid-2019. It enables fast, cost-effective and 
+easy-to-use syndromic testing with Sample to Insight workflows. A 
+technician simply loads a clinical sample (such as a swab) into a 
+single-use QIAstat-Dx cartridge and places it in the analyzer. QIAGEN 
+chemistries for sample processing and analysis are built in, and the 
+QIAstat-Dx instrument delivers results in about one hour.</span></p>
+<p><span>Further information on QIAGEN’s response to the coronavirus outbreak can be found </span><a href="https://www.qiagen.com/de/insights-magazine/a-rapid-response-to-covid-19">here</a><span>.</span></p>
+<p class="rm-manual">About QIAGEN</p>
+<p class="rm-manual"><span>QIAGEN N.V., a Netherlands-based holding 
+company, is the leading global provider of Sample to Insight solutions 
+that enable customers to gain valuable molecular insights from samples 
+containing the building blocks of life. Our sample technologies isolate 
+and process DNA, RNA and proteins from blood, tissue and other 
+materials. Assay technologies make these biomolecules visible and ready 
+for analysis. Bioinformatics software and knowledge bases interpret data
+ to report relevant, actionable insights. Automation solutions tie these
+ together in seamless and cost-effective workflows. QIAGEN provides 
+solutions to more than 500,000 customers around the world in Molecular 
+Diagnostics (human healthcare) and Life Sciences (academia, pharma 
+R&amp;D and industrial applications, primarily forensics). As of 
+December 31, 2019, QIAGEN employed approximately 5,100 people in over 35
+ locations worldwide. Further information can be found at </span><a href="http://www.qiagen.com/">http://www.qiagen.com</a><span>.</span> Forward Looking Statement</p>
+<p class="rm-manual"><span>Certain statements contained in this press 
+release may be considered forward-looking statements within the meaning 
+of Section 27A of the U.S. Securities Act of 1933, as amended, and 
+Section 21E of the U.S. Securities Exchange Act of 1934, as amended. To 
+the extent that any of the statements contained herein relating to 
+QIAGEN's products, launches, regulatory submissions, collaborations, 
+markets, strategy, taxes or operating results, including without 
+limitation its expected net sales, net sales of particular products 
+(including anticipated sales of its QuantiFERON latent TB Test, its 
+portfolio of next generation sequencing solutions and QIAstat-Dx), 
+adjusted net sales, adjusted diluted earnings per share results, product
+ launches (including anticipated launches of digital PCR products, a new
+ version of its QuantiFERON-TB test, QuantiFERON-TB Access, the 
+QIAstat-Dx panel for respiratory conditions and a CE-IVD marked panel 
+for meningitis), placements of QIAsymphony modular PCR instruments, 
+improvements in operating and financial leverage, currency movements 
+against the U.S. dollar, and plans for investment in its portfolio and 
+share repurchase commitments, are forward-looking, such statements are 
+based on current expectations and assumptions that involve a number of 
+uncertainties and risks. Such uncertainties and risks include, but are 
+not limited to, risks associated with management of growth and 
+international operations (including the effects of currency 
+fluctuations, regulatory processes and dependence on logistics); 
+variability of operating results and allocations between customer 
+classes; the commercial development of markets for our products to 
+customers in academia, pharma, applied testing and molecular 
+diagnostics; changing relationships with customers, suppliers and 
+strategic partners; competition; rapid or unexpected changes in 
+technologies; fluctuations in demand for QIAGEN's products (including 
+fluctuations due to general economic conditions, the level and timing of
+ customers' funding, budgets and other factors); our ability to obtain 
+regulatory approval of our products; difficulties in successfully 
+adapting QIAGEN's products to integrated solutions and producing such 
+products; the ability of QIAGEN to identify and develop new products and
+ to differentiate and protect our products from competitors' products; 
+market acceptance of QIAGEN's new products and the integration of 
+acquired technologies and businesses; and the other factors discussed 
+under the heading “Risk Factors” contained in Item 3 of our most recent 
+Annual Report on Form 20-F. For further information, please refer to the
+ discussions in reports that QIAGEN has filed with, or furnished to, the
+ U.S. Securities and Exchange Commission (SEC).</span></p>
+<p class="rm-manual">FOLLOW US ON SOCIAL MEDIA</p>
+<h2 class="rm-manual">Contact Us</h2>
+<p class="rm-manual"> <a href="mailto:corporatecommunications@qiagen.com">Corporate Contact</a><a href="mailto:ir@qiagen.com">Investor Relations</a><a href="mailto:careers@qiagen.com">Human Resources</a> <a href="file:///contacts/webmaster">General Inquiries</a> </p>
+<h2 class="rm-manual">Share this page</h2>
+<p class="rm-manual">Sample to Insight</p>
+<p class="rm-manual"> LANGUAGE </p>
+<p class="rm-manual"> <a> English </a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///newsroom/press-releases/2020/20200313_qiastat_barda?sc_lang=fr-FR"> français (France) </a> </li> <li class="rm-manual"> <a href="file:///newsroom/press-releases/2020/20200313_qiastat_barda?sc_lang=de-DE"> Deutsch (Deutschland) </a> </li> <li class="rm-manual"> <a href="file:///newsroom/press-releases/2020/20200313_qiastat_barda?sc_lang=en"> English </a> </li> </ul>
+<p class="rm-manual"> OTHER WEBSITES </p>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"><a href="http://www.thehpvtest.com/">www.thehpvtest.com</a></p> </li> <li class="rm-manual"> <p class="rm-manual"><a href="https://www.qiagenbioinformatics.com/">www.QIAGENbioinformatics.com</a></p> </li> <li class="rm-manual"> <p class="rm-manual"><a href="http://www.genereaderngs.com/">www.GeneReaderNGS.com</a></p> </li> <li class="rm-manual"> <p class="rm-manual"><a href="http://www.quantiferon.com/">www.QuantiFERON.com</a></p> </li> <li class="rm-manual"> <p class="rm-manual"><a href="http://www.qiagen.com/">www.QIAGEN.com</a></p> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <span> | </span><a href="file:///privacy-policy">Privacy policy</a> </li> <li class="rm-manual"> <span> | </span><a href="file:///trademarksdisclamers">Trademarks &amp; disclaimers</a> </li> <li class="rm-manual"> <span> | </span><a href="file:///impressum">Impressum</a> </li> <li class="rm-manual"> <span> | </span><a href="file:///contacts">Contacts</a> </li> </ul>
+<p class="rm-manual"> <a>X</a> </p>
+<p class="rm-manual"> <span>By using this site you agree to the use of cookies for analytics, personalized content and ads. <a href="https://www.qiagen.com/trademarks-and-disclaimers/privacy-policy/">Learn more</a></span> </p>
+<p class="rm-manual"> <a>OK</a> </p></article>
+</body></html>

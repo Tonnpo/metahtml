@@ -1,0 +1,180 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> At least 50 dead in stampede during funeral for Iranian Gen. Qassem Soleimani - UPI.com </p>
+<p class="rm-manual"> <span>Sections</span> </p>
+<p class="rm-manual"> <a href="file:///accounts/login/"> Log in </a> </p>
+<p class="rm-manual"> <a href="file:///Top_News/">Top News</a> </p>
+<p class="rm-manual"> <a href="file:///Top_News/US/">U.S. News</a> <a href="file:///Top_News/World-News/">World News</a> <a href="file:///Featured/">Featured</a> <a href="file:///Top_News/Voices/">Voices</a> </p>
+<p class="rm-manual"> <a href="file:///Odd_News/">Odd News</a> </p>
+<p class="rm-manual"> <a href="file:///Entertainment_News/">Entertainment</a> </p>
+<p class="rm-manual"> <a href="file:///Entertainment_News/Movies/">Movies</a> <a href="file:///Entertainment_News/Music/">Music</a> <a href="file:///Entertainment_News/TV/">TV</a> </p>
+<p class="rm-manual"> <a href="file:///Sports_News/">Sports</a> </p>
+<p class="rm-manual"> <a href="file:///Sports_News/Soccer/">Soccer</a> <a href="file:///Sports_News/NFL/">NFL</a> <a href="file:///Sports_News/NBA/">NBA</a> <a href="file:///Sports_News/MLB/">MLB</a> </p>
+<p class="rm-manual"> <a href="file:///News_Photos/">Photos</a> </p>
+<p class="rm-manual"> <a href="file:///News_Photos/collections/News/">News</a> <a href="file:///News_Photos/collections/Entertainment/">Entertainment</a> <a href="file:///News_Photos/collections/Sports/">Sports</a> <a href="file:///News_Photos/collections/Features/">Features</a> </p>
+<p class="rm-manual"> <span>More</span><span>...</span> </p>
+<p class="rm-manual"> <a href="file:///Defense-News/">Defense</a> <a href="file:///Featured/">Featured</a> <a href="file:///Science_News/">Science</a> <a href="file:///Health_News/">Health</a> <a href="file:///video/">Video</a> <a href="file:///Archives/">Archive</a> <a href="file:///Almanac/">Almanac</a> </p>
+<p class="rm-manual"> <a href="https://about.upi.com/">About</a> <a href="#">Feedback</a> <a href="https://about.upi.com/privacy-policy">Privacy Policy</a> </p>
+<p class="rm-manual"> <a href="https://about.upi.com/">About</a> <a href="#">Feedback</a> <a href="https://about.upi.com/privacy-policy">Privacy Policy</a> </p>
+<p class="rm-manual"> <span> <span>Search</span> </span> </p>
+<p class="rm-manual">Trending</p>
+<p class="rm-manual"><a href="https://www.upi.com/Entertainment_News/2020/07/01/Maroon-5s-Mickey-Madden-arrested-for-domestic-violence-charge/9101593604074/">Mickey Madden</a></p>
+<p class="rm-manual"><a href="https://www.upi.com/Odd_News/2020/06/30/Researchers-Asian-flying-snakes-wriggle-their-bodies-for-stability/5151593545122/">Flying snakes</a></p>
+<p class="rm-manual"><a href="https://www.upi.com/Top_News/World-News/2020/06/30/Defectors-sent-offensive-images-of-North-Korea-first-lady-envoy-says/2311593523782/">North Korea</a></p>
+<p class="rm-manual"><a href="https://www.upi.com/Top_News/US/2020/06/30/Judge-halts-Trumps-niece-from-publishing-book-about-her-uncle/5971593540579/">Trump book</a></p>
+<p class="rm-manual"><a href="https://www.upi.com/Top_News/US/2020/07/01/New-laws-across-US-affect-guns-driving-wages-support-animals/4461593569073/">New laws</a></p>
+<p class="rm-manual"><a href="https://www.upi.com/Science_News/2020/07/01/NASA-concludes-second-spacewalk-on-historic-mission/1591593541623/">Spacewalk</a></p>
+<p class="rm-manual"><a href="https://www.upi.com/Top_News/US/2020/06/30/Lori-Vallow-charged-with-lying-to-police-to-conceal-deaths-of-children/4951593550085/">Lori Vallow</a></p>
+<p class="rm-manual"><a href="https://www.upi.com/Top_News/US/2020/06/30/Body-of-missing-hiker-discovered-at-Mount-Rainier-National-Park/5671593553790/">Missing hiker</a></p>
+<p class="rm-manual"><a href="https://www.upi.com/Top_News/US/2020/07/01/Army-Partial-human-remains-found-in-search-for-missing-Texas-soldier/5261593574328/">Missing soldier</a></p>
+<p class="rm-manual"><a href="https://www.upi.com/Top_News/US/2020/06/30/Glenmark-Pharmaceuticals-charged-with-conspiring-to-fix-generic-drug-prices/1771593565110/">Drug prices</a></p>
+<p class="rm-manual"> <a href="https://www.upi.com/Top_News/World-News/">World News</a> </p>
+<p class="rm-manual"> Jan. 7, 2020 / 7:28 AM / <span>Updated Jan. 7, 2020 at 5:08 PM</span> </p>
+<h1 class="rm-manual">At least 50 dead in stampede during funeral for Iranian general</h1>
+<p class="rm-manual"><span>By</span> </p>
+<p class="rm-manual">Don Jacobson</p>
+<p class="rm-manual">Thousands of mourners pay tribute to Iranian 
+Revolutionary Guards Commander Qassem Soleimani during his funeral 
+Monday in Tehran. Photo by Majid Asgaripour/UPI | <span>License Photo</span></p>
+<p><span>Jan. 7 (UPI) --</span> A stampede during a funeral procession Tuesday for slain Iranian military commander <a href="https://www.upi.com/topic/Qassem-Soleimani/">Qassem Soleimani</a> in his hometown of Kerman, lran, killed more than three dozen people, officials said.</p>
+<p>The <a href="https://www.tehrantimes.com/news/443888/40-died-200-injured-in-overcrowded-funeral-of-Gen-Soleimani">stampede began</a> as millions of mourners carried Soleimani's body from Kerman's Azadi Square to his burial site in a martyrs' cemetery. </p>
+<p class="rm-manual"><span>Advertisement</span></p>
+<p>The Iranian Students' News Agency reported at least <a href="https://www.wsj.com/articles/stampede-at-funeral-procession-for-iranian-commander-kills-35-11578390888">50 people died</a> in the crowd and more than 200 were injured.</p>
+<p>Soleimani's burial ceremony, which was scheduled for Tuesday afternoon, was canceled in light of the stampede. </p>
+<p class="rm-manual"><span>RELATED</span> <a href="https://www.upi.com/Top_News/Voices/2020/01/07/Donald-Trumps-threat-to-destroy-Irans-cultural-sites-is-a-historic-mistake/6651578401077/">Voices: Donald Trump's threat to destroy Iran's cultural sites is a historic mistake</a></p>
+<p>The massive crowds in Kerman, about 615 miles southeast of Tehran, mirrored others Sunday and <a href="https://www.upi.com/Top_News/World-News/2020/01/05/Millions-mourn-slain-Iranian-general-in-Tehran-chant-death-to-America/5381578234835/">Monday</a> in the capital and elsewhere that honored the slain <a href="https://www.upi.com/topic/Iranian_Revolutionary_Guard/">Iranian Revolutionary Guard</a> Corps commander. The rallies also condemned the United States with crowd chants of "down with the U.S." and "down with Israel."</p>
+<p>Soleimani, the head of IRGC's Quds Force, was killed Thursday in an 
+airstrike near Baghdad's international airport in Iraq. Iraqi 
+paramilitary commander Abu Mahdi al-Muhandis, an adviser to Soleimani, 
+was also killed in the attack.</p>
+<p>U.S. President <a href="https://www.upi.com/topic/Donald_Trump/">Donald Trump</a>
+ ordered the attack after protesters angered by deadly Dec. 29 U.S. 
+airstrikes against the Iranian-backed Iraqi paramilitary group Kataib <a href="https://www.upi.com/topic/Hezbollah/">Hezbollah</a> stormed the U.S. Embassy in Baghdad. </p>
+<p class="rm-manual"><span>RELATED</span> <a href="https://www.upi.com/Top_News/World-News/2020/01/05/Millions-mourn-slain-Iranian-general-in-Tehran-chant-death-to-America/5381578234835/">'Millions' mourn slain Iranian general in Tehran, chant 'death to America'</a></p>
+<p>Trump vowed in a tweet Sunday to hit 52 targets in Iran "very hard" 
+if Tehran retaliates for the death of Soleimani, including some targets 
+"at a very high level" that are "important to Iran and the Iranian 
+culture."</p>
+<p>Trump's threats toward non-military sites in Iran drew swift and 
+widespread criticism, and Pentagon officials later said no cultural 
+sites will be targeted.</p>
+<p>Gen. Mark Milley, chairman of the Joint Chiefs of Staff, told 
+reporters Monday the United States has no intention of targeting the 
+sites Trump mentioned -- as doing so would amount to a war crime. </p>
+<p class="rm-manual"><span>RELATED</span> <a href="https://www.upi.com/Top_News/World-News/2020/01/04/Rocket-fire-reported-in-Baghdad-near-US-Embassy/7131578164412/">Rocket fire reported in Baghdad near U.S. Embassy</a></p>
+<p>"We will follow the laws of armed conflict," Milley said.</p>
+<p>On Tuesday, Trump said that he likes to "obey the law" but questioned
+ the protection of cultural sites. He also maintained threats that the 
+United States will respond to Iranian actions it deems provocative.</p>
+<p>"They kill our people, they blow up our people and then we have to be
+ very gentle with their cultural institutions?" Trump said. "But I'm OK 
+with it. It's OK with me. If Iran does anything they shouldn't be doing,
+ they are going to be suffering the consequences and very strongly." </p>
+<p class="rm-manual"><span>RELATED</span> <a href="https://www.upi.com/Top_News/World-News/2020/01/04/Thousands-attend-funeral-for-Irans-Soleimani/4041578142886/">Thousands attend funeral for Iran's Soleimani</a></p>
+<p>Iranian Foreign Minister Mohammad Javad Zarif said Tuesday that Iran will respond to Soleimani's slaying, <a href="https://www.cnn.com/2020/01/07/middleeast/iran-zarif-united-states-intl/index.html">telling CNN</a> the move amounted to "state terrorism."</p>
+<p>"This is an act of aggression against Iran and amounts to an armed 
+attack against Iran, and we will respond," he said. "But we will respond
+ proportionally not disproportionately. We will respond lawfully, we are
+ not lawless people like President Trump."</p>
+<p>Zarif <a href="https://abcnews.go.com/International/iranian-foreign-minister-us-pay-act-war/story?id=68111391&amp;cid=clicksource_4380645_null_hero_hed">told ABC News</a> that Tehran is "very patient" and will respond after "necessary deliberation" at a "time of our choosing."</p>
+<p>He said the United States has violated Iraq's sovereignty with the 
+attack on Soleimani, stirred anti-American sentiment in the region and 
+"murdered" a high-ranking Iranian official.</p>
+<p>"They will pay for all three mistakes," Zarif said.</p>
+<ul> <li class="rm-manual">Topics</li> <li class="rm-manual"><a href="https://www.upi.com/topic/Donald_Trump/">Donald Trump</a></li>
+<li class="rm-manual"><a href="https://www.upi.com/topic/Emergency_Center/">Emergency Center</a></li>
+<li class="rm-manual"><a href="https://www.upi.com/topic/Hezbollah/">Hezbollah</a></li>
+<li class="rm-manual"><a href="https://www.upi.com/topic/Iranian_Revolutionary_Guard/">Iranian Revolutionary Guard</a></li>
+<li class="rm-manual"><a href="https://www.upi.com/topic/Qassem-Soleimani/">Qassem Soleimani</a></li> </ul>
+<h3 class="rm-manual">Latest Headlines</h3>
+<p class="rm-manual"> <a href="https://www.upi.com/Top_News/World-News/2020/07/01/Israel-consulting-US-after-missing-target-to-begin-annexation/4941593616980/"> </a></p><p class="rm-manual"><a href="https://www.upi.com/Top_News/World-News/2020/07/01/Israel-consulting-US-after-missing-target-to-begin-annexation/4941593616980/"><span>World News</span> // 49 minutes ago</a></p><a href="https://www.upi.com/Top_News/World-News/2020/07/01/Israel-consulting-US-after-missing-target-to-begin-annexation/4941593616980/"> <p class="rm-manual">Israel consulting U.S. after missing target to begin annexation</p> <p class="rm-manual">
+ July 1 (UPI) -- Israeli Prime Minister Benjamin Netanyahu decided 
+against starting plans Wednesday to annex parts of the West Bank, 
+although he'd previously given July 1 as the target date to begin the 
+controversial process.</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://www.upi.com/Top_News/World-News/2020/07/01/US-military-chief-in-South-Korea-dismisses-troop-withdrawal-reports/5551593618338/"> </a></p><p class="rm-manual"><a href="https://www.upi.com/Top_News/World-News/2020/07/01/US-military-chief-in-South-Korea-dismisses-troop-withdrawal-reports/5551593618338/"><span>World News</span> // 1 hour ago</a></p><a href="https://www.upi.com/Top_News/World-News/2020/07/01/US-military-chief-in-South-Korea-dismisses-troop-withdrawal-reports/5551593618338/"> <p class="rm-manual">U.S. military chief in South Korea dismisses troop withdrawal reports</p> <p class="rm-manual">
+ July 1 (UPI) -- U.S. Forces Korea commander Gen. Robert Abrams said 
+Wednesday there are no plans for the United States to withdraw its 
+troops from South Korea.</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://www.upi.com/Top_News/World-News/2020/07/01/North-Korea-praises-Xi-Jinping-after-signing-of-Hong-Kong-security-law/9831593613588/"> </a></p><p class="rm-manual"><a href="https://www.upi.com/Top_News/World-News/2020/07/01/North-Korea-praises-Xi-Jinping-after-signing-of-Hong-Kong-security-law/9831593613588/"><span>World News</span> // 3 hours ago</a></p><a href="https://www.upi.com/Top_News/World-News/2020/07/01/North-Korea-praises-Xi-Jinping-after-signing-of-Hong-Kong-security-law/9831593613588/"> <p class="rm-manual">North Korea praises Xi Jinping after signing of Hong Kong security law</p> <p class="rm-manual">
+ July 1 (UPI) -- North Korean state media said victory awaits Chinese 
+President Xi Jinping following China's imposition of a national security
+ law in Hong Kong.</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://www.upi.com/Top_News/World-News/2020/07/01/Chinas-border-corps-conducts-anti-crime-exercises-near-North-Korea/5461593610256/"> </a></p><p class="rm-manual"><a href="https://www.upi.com/Top_News/World-News/2020/07/01/Chinas-border-corps-conducts-anti-crime-exercises-near-North-Korea/5461593610256/"><span>World News</span> // 4 hours ago</a></p><a href="https://www.upi.com/Top_News/World-News/2020/07/01/Chinas-border-corps-conducts-anti-crime-exercises-near-North-Korea/5461593610256/"> <p class="rm-manual">China's border corps conducts anti-crime exercises near North Korea</p> <p class="rm-manual">
+ July 1 (UPI) -- China's National Immigration Administration conducted 
+large-scale exercises at the China-North Korea border to guard against 
+"unconventional" security threats.</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://www.upi.com/Top_News/World-News/2020/07/01/South-Korea-may-advocate-third-Donald-Trump-Kim-Jong-Un-summit/8641593605541/"> </a></p><p class="rm-manual"><a href="https://www.upi.com/Top_News/World-News/2020/07/01/South-Korea-may-advocate-third-Donald-Trump-Kim-Jong-Un-summit/8641593605541/"><span>World News</span> // 5 hours ago</a></p><a href="https://www.upi.com/Top_News/World-News/2020/07/01/South-Korea-may-advocate-third-Donald-Trump-Kim-Jong-Un-summit/8641593605541/"> <p class="rm-manual">South Korea may advocate third Donald Trump, Kim Jong Un summit</p> <p class="rm-manual">
+ July 1 (UPI) -- South Korean President Moon Jae-in could be proposing a
+ third official U.S.-North Korea summit before the U.S. presidential 
+election in November.</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://www.upi.com/Top_News/World-News/2020/07/01/Hong-Kong-Police-make-first-arrests-under-new-national-security-law/1411593585706/"> </a></p><p class="rm-manual"><a href="https://www.upi.com/Top_News/World-News/2020/07/01/Hong-Kong-Police-make-first-arrests-under-new-national-security-law/1411593585706/"><span>World News</span> // 9 hours ago</a></p><a href="https://www.upi.com/Top_News/World-News/2020/07/01/Hong-Kong-Police-make-first-arrests-under-new-national-security-law/1411593585706/"> <p class="rm-manual">Hong Kong: Police make first arrests under new national security law</p> <p class="rm-manual">
+ July 1 (UPI) -- Police in Hong Kong said Wednesday they have arrested a
+ man for holding a black flag calling for the city's independence from 
+China, making him the first person to be detained under a controversial 
+new law.</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://www.upi.com/Top_News/World-News/2020/07/01/Defectors-say-sending-information-into-North-Korea-is-vital/1211593527987/"> </a></p><p class="rm-manual"><a href="https://www.upi.com/Top_News/World-News/2020/07/01/Defectors-say-sending-information-into-North-Korea-is-vital/1211593527987/"><span>World News</span> // 10 hours ago</a></p><a href="https://www.upi.com/Top_News/World-News/2020/07/01/Defectors-say-sending-information-into-North-Korea-is-vital/1211593527987/"> <p class="rm-manual">Defectors say sending information into North Korea is vital</p> <p class="rm-manual">
+ SEOUL, July1 (UPI) -- North Korean defectors who send leaflets and 
+other information across the border say the practice is a vital step 
+toward forcing change in the repressive country.</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://www.upi.com/Top_News/World-News/2020/06/29/Chinas-controversial-Hong-Kong-national-security-law-goes-into-effect/5881593481307/"> </a></p><p class="rm-manual"><a href="https://www.upi.com/Top_News/World-News/2020/06/29/Chinas-controversial-Hong-Kong-national-security-law-goes-into-effect/5881593481307/"><span>World News</span> // 1 day ago</a></p><a href="https://www.upi.com/Top_News/World-News/2020/06/29/Chinas-controversial-Hong-Kong-national-security-law-goes-into-effect/5881593481307/"> <p class="rm-manual">China's controversial Hong Kong national security law goes into effect</p> <p class="rm-manual">
+ June 29 (UPI) -- Chinese President Xi Jinping signed into law a bill on
+ Tuesday that critics say will threaten the autonomy of Hong Kong and 
+the freedoms of its citizens.</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://www.upi.com/Top_News/World-News/2020/06/30/Torrential-rain-produces-severe-flooding-in-India-strands-over-200000-in-Bangladesh/2341593563075/"> </a></p><p class="rm-manual"><a href="https://www.upi.com/Top_News/World-News/2020/06/30/Torrential-rain-produces-severe-flooding-in-India-strands-over-200000-in-Bangladesh/2341593563075/"><span>World News</span> // 17 hours ago</a></p><a href="https://www.upi.com/Top_News/World-News/2020/06/30/Torrential-rain-produces-severe-flooding-in-India-strands-over-200000-in-Bangladesh/2341593563075/"> <p class="rm-manual">Torrential rain produces severe flooding in India, strands over 200,000 in Bangladesh</p> <p class="rm-manual">
+ June 30 (UPI) -- As June winds down, the Southwest monsoon is in full 
+force across India, and rainfall totals are climbing to staggering 
+levels as rising floodwaters leave thousands stranded.</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://www.upi.com/Top_News/World-News/2020/06/30/Vatican-probes-upkeep-offices-of-St-Peters-Basilica/4221593545509/"> </a></p><p class="rm-manual"><a href="https://www.upi.com/Top_News/World-News/2020/06/30/Vatican-probes-upkeep-offices-of-St-Peters-Basilica/4221593545509/"><span>World News</span> // 20 hours ago</a></p><a href="https://www.upi.com/Top_News/World-News/2020/06/30/Vatican-probes-upkeep-offices-of-St-Peters-Basilica/4221593545509/"> <p class="rm-manual">Vatican probes upkeep offices of St. Peter's Basilica</p> <p class="rm-manual">
+ June 30 (UPI) -- Vatican prosecutors said Tuesday they have acquired 
+documents from offices responsible for upkeep of St. Peter's Basilica in
+ an apparent probe following new set of contract laws.</p> </a> <p class="rm-manual"></p>
+<h3 class="rm-manual">Trending Stories</h3>
+<p class="rm-manual"> <a href="https://www.upi.com/Top_News/US/2020/06/30/Lori-Vallow-charged-with-lying-to-police-to-conceal-deaths-of-children/4951593550085/"> </a></p><p class="rm-manual"><a href="https://www.upi.com/Top_News/US/2020/06/30/Lori-Vallow-charged-with-lying-to-police-to-conceal-deaths-of-children/4951593550085/"> Lori Vallow charged with lying to police to conceal deaths of children </a></p><a href="https://www.upi.com/Top_News/US/2020/06/30/Lori-Vallow-charged-with-lying-to-police-to-conceal-deaths-of-children/4951593550085/"> </a> <a href="https://www.upi.com/Top_News/US/2020/06/30/Judge-halts-Trumps-niece-from-publishing-book-about-her-uncle/5971593540579/"> <p class="rm-manual"> Judge halts Trump's niece from publishing book about her uncle </p> </a> <a href="https://www.upi.com/Top_News/US/2020/06/30/Body-of-missing-hiker-discovered-at-Mount-Rainier-National-Park/5671593553790/"> <p class="rm-manual"> Body of missing hiker discovered at Mount Rainier National Park </p> </a> <a href="https://www.upi.com/Top_News/US/2020/07/01/Army-Partial-human-remains-found-in-search-for-missing-Texas-soldier/5261593574328/"> <p class="rm-manual"> Army: 'Partial human remains' found in search for missing Texas soldier </p> </a> <a href="https://www.upi.com/Top_News/US/2020/06/30/Bison-gores-72-year-old-woman-multiple-times-at-Yellowstone/9741593546754/"> <p class="rm-manual"> Bison gores 72-year-old woman multiple times at Yellowstone </p> </a> <p class="rm-manual"></p>
+<h3 class="rm-manual">Follow Us</h3>
+<h2 class="rm-manual">Sign up for our daily newsletter</h2>
+<p class="rm-manual"><a href="https://about.upi.com/privacy-policy" rel="noopener">Privacy policy</a></p>
+<h3 class="rm-manual">Photo Gallery</h3>
+<p class="rm-manual"><a href="https://www.upi.com/Entertainment_News/Photos/In-Memoriam-Moments-from-Carl-Reiners-career/12455/"> </a></p><p class="rm-manual"><a href="https://www.upi.com/Entertainment_News/Photos/In-Memoriam-Moments-from-Carl-Reiners-career/12455/"> In Memoriam: Moments from Carl Reiner's career </a></p><a href="https://www.upi.com/Entertainment_News/Photos/In-Memoriam-Moments-from-Carl-Reiners-career/12455/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <span>Back to Article</span> </p>
+<p class="rm-manual"> / </p>
+<p class="rm-manual"> <a href="#"> <span>Back to top</span></a> </p>
+<p class="rm-manual"> <a href="https://about.upi.com/">About UPI</a> <a href="https://about.upi.com/contact/">Contact</a> <a href="#">Feedback</a> <a href="https://about.upi.com/advertising/advertise-online">Advertisements</a> <a href="https://www.upi.com/feedback/news-tips">Submit News Tips</a> </p>
+<p class="rm-manual"> Copyright © 2020 United Press International, Inc. All Rights Reserved. </p>
+<p class="rm-manual"> <a href="https://about.upi.com/terms">Terms of Use</a><a href="https://about.upi.com/privacy-policy">Privacy Policy</a> </p></article>
+</body></html>

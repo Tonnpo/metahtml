@@ -1,0 +1,103 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><ul class="rm-manual">
+<li class="rm-manual"><a href="https://contemptor.com/" rel="home"><span>Home</span></a></li>
+<li class="rm-manual"><a href="https://contemptor.com/2020/"><span>2020</span></a></li>
+<li class="rm-manual"><a href="https://contemptor.com/2020/03/"><span>March</span></a></li>
+<li class="rm-manual"><a href="https://contemptor.com/2020/03/26/"><span>26</span></a></li>
+<li class="rm-manual"><a href="https://contemptor.com/2020/03/26/china-accuses-mike-pompeo-of-sinister-motive-for-calling-covid-19-wuhan-virus"><span>China Accuses Mike Pompeo of ‘Sinister Motive’ for Calling Covid-19 ‘Wuhan Virus’</span></a></li>
+</ul>
+<h1 class="rm-manual">China Accuses Mike Pompeo of ‘Sinister Motive’ for Calling Covid-19 ‘Wuhan Virus’</h1>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://contemptor.com/author/droche/">Darragh Roche</a> </li> <li class="rm-manual"> <a href="https://contemptor.com/2020/03/26/china-accuses-mike-pompeo-of-sinister-motive-for-calling-covid-19-wuhan-virus/">March 26, 2020</a> </li> <li class="rm-manual"> <a href="https://contemptor.com/2020/03/26/china-accuses-mike-pompeo-of-sinister-motive-for-calling-covid-19-wuhan-virus/">0</a> </li> </ul>
+<p>The Chinese government has responded angrily to Secretary of State 
+Mike Pompeo’s insistence on calling Covid-19 the ‘Wuhan Virus’. Amid a 
+global pandemic, Pompeo has repeatedly referred to the disease using a 
+term the World Health Organization has advised against.</p>
+<p>Pompeo <a href="https://thehill.com/policy/international/489484-pompeo-pressed-g7-leaders-to-refer-to-wuhan-virus-in-statement-report">pushed for Coronavirus to be known as Wuhan Virus</a>
+ during a virtual meeting of the G7 foreign ministers. This reportedly 
+led the leading industrial nations to decline to issue a joint statement
+ on the situation. Pompeo has been consistent in using the term.</p>
+<p>Chinese Foreign Ministry spokesman Geng Shuang <a href="https://apnews.com/d8d31ae73b1d44146d5077fe3fa9ba8c">accused Pompeo</a>
+ on Thursday of trying to ‘stigmatize China and discredit China’s 
+efforts in an attempt to divert attention and shift responsibilities.’</p>
+<p>“He has a very sinister motive,” Geng told journalists at a briefing.</p>
+<p>Pompeo <a href="https://thehill.com/policy/international/489605-china-pompeo-has-sinister-motive-for-pushing-wuhan-virus-language">criticized China on Wednesday</a> and made particular reference to the fact that China is a Communist, one-party state.</p>
+<p>“We’ve wanted to work with the Chinese Communist Party throughout 
+this crisis — this crisis that began in Wuhan, China,” Pompeo said.</p>
+<p>“We tried, you’ll remember, from the opening days to get our 
+scientists, our experts on the ground there so that we could begin to 
+assist in the global response to what began there in China, but we 
+weren’t able to do that. The Chinese Communist Party wouldn’t permit 
+that to happen.”</p>
+<p>President Donald Trump and his surrogates have repeatedly insisted 
+that terms like ‘Wuhan Virus’ and ‘China Virus’ are not racist, while 
+the Chinese government has been particularly sensitive about its own 
+handling of the disease.</p>
+<h3 class="rm-manual">Related</h3>
+<p class="rm-manual"> <a href="https://contemptor.com/tag/china/" rel="tag">China</a><a href="https://contemptor.com/tag/coronavirus/" rel="tag">Coronavirus</a><a href="https://contemptor.com/tag/covid-19/" rel="tag">Covid-19</a><a href="https://contemptor.com/tag/mike-pompe/" rel="tag">Mike Pompe</a><a href="https://contemptor.com/tag/state-department/" rel="tag">State Department</a> </p>
+<h3 class="rm-manual">Darragh Roche</h3>
+<p class="rm-manual"> Darragh Roche is Political Media Editor </p>
+<h2 class="rm-manual">Post navigation</h2>
+<p class="rm-manual"><a href="https://contemptor.com/2020/03/26/dr-oz-claims-worry-and-panic-could-be-worse-than-coronavirus-as-u-s-deaths-pass-1000/" rel="prev">Prev</a></p>
+<p class="rm-manual"><a href="https://contemptor.com/2020/03/26/youre-wasting-everyones-time-cnns-brianna-keilar-scolds-peter-navarro-on-coronavirus-response/" rel="next">Next</a></p>
+<h2 class="rm-manual">Related articles</h2>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://contemptor.com/category/coronavirus/" rel="category tag">Coronavirus</a></li>
+</ul>
+<h2 class="rm-manual"><a href="https://contemptor.com/2020/07/17/trump-administration-wont-retest-people-to-prove-they-no-longer-have-coronavirus/">Trump Administration Won’t Retest People to Prove They No Longer Have Coronavirus</a></h2>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://contemptor.com/author/droche/">Darragh Roche</a> </li> <li class="rm-manual"> <a href="https://contemptor.com/2020/07/17/trump-administration-wont-retest-people-to-prove-they-no-longer-have-coronavirus/">July 17, 2020</a> </li> <li class="rm-manual"> <a href="https://contemptor.com/2020/07/17/trump-administration-wont-retest-people-to-prove-they-no-longer-have-coronavirus/">0</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://contemptor.com/category/coronavirus/" rel="category tag">Coronavirus</a></li>
+</ul>
+<h2 class="rm-manual"><a href="https://contemptor.com/2020/07/17/kayleigh-mcenany-on-schools-reopening-the-science-should-not-stand-in-the-way-of-this/">Kayleigh McEnany on Schools Reopening: ‘The Science Should Not Stand in the Way of This’</a></h2>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://contemptor.com/author/droche/">Darragh Roche</a> </li> <li class="rm-manual"> <a href="https://contemptor.com/2020/07/17/kayleigh-mcenany-on-schools-reopening-the-science-should-not-stand-in-the-way-of-this/">July 17, 2020</a> </li> <li class="rm-manual"> <a href="https://contemptor.com/2020/07/17/kayleigh-mcenany-on-schools-reopening-the-science-should-not-stand-in-the-way-of-this/">0</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://contemptor.com/category/coronavirus/" rel="category tag">Coronavirus</a></li>
+</ul>
+<h2 class="rm-manual"><a href="https://contemptor.com/2020/07/15/trumps-former-doctor-ronny-jackson-i-dont-wear-a-mask-all-that-often/">Trump’s Former Doctor Ronny Jackson: ‘I Don’t Wear a Mask All That Often’</a></h2>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://contemptor.com/author/droche/">Darragh Roche</a> </li> <li class="rm-manual"> <a href="https://contemptor.com/2020/07/15/trumps-former-doctor-ronny-jackson-i-dont-wear-a-mask-all-that-often/">July 15, 2020</a> </li> <li class="rm-manual"> <a href="https://contemptor.com/2020/07/15/trumps-former-doctor-ronny-jackson-i-dont-wear-a-mask-all-that-often/">0</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://contemptor.com/category/coronavirus/" rel="category tag">Coronavirus</a></li>
+</ul>
+<h2 class="rm-manual"><a href="https://contemptor.com/2020/07/09/china-criticizes-u-s-for-withdrawing-from-world-health-organization/">China Criticizes U.S. for Withdrawing from World Health Organization</a></h2>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://contemptor.com/author/droche/">Darragh Roche</a> </li> <li class="rm-manual"> <a href="https://contemptor.com/2020/07/09/china-criticizes-u-s-for-withdrawing-from-world-health-organization/">July 9, 2020</a> </li> <li class="rm-manual"> <a href="https://contemptor.com/2020/07/09/china-criticizes-u-s-for-withdrawing-from-world-health-organization/">0</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://contemptor.com/category/coronavirus/" rel="category tag">Coronavirus</a></li>
+</ul>
+<h2 class="rm-manual"><a href="https://contemptor.com/2020/07/06/trump-will-hold-campaign-rally-outdoors-in-new-hampshire-this-saturday/">Trump Will Hold Campaign Rally Outdoors in New Hampshire This Saturday</a></h2>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://contemptor.com/author/droche/">Darragh Roche</a> </li> <li class="rm-manual"> <a href="https://contemptor.com/2020/07/06/trump-will-hold-campaign-rally-outdoors-in-new-hampshire-this-saturday/">July 6, 2020</a> </li> <li class="rm-manual"> <a href="https://contemptor.com/2020/07/06/trump-will-hold-campaign-rally-outdoors-in-new-hampshire-this-saturday/">0</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://contemptor.com/category/coronavirus/" rel="category tag">Coronavirus</a></li>
+</ul>
+<h2 class="rm-manual"><a href="https://contemptor.com/2020/07/03/dr-fauci-coronavirus-may-have-mutated-and-become-more-infectious/">Dr. Fauci: Coronavirus May Have Mutated and Become More Infectious</a></h2>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://contemptor.com/author/droche/">Darragh Roche</a> </li> <li class="rm-manual"> <a href="https://contemptor.com/2020/07/03/dr-fauci-coronavirus-may-have-mutated-and-become-more-infectious/">July 3, 2020</a> </li> <li class="rm-manual"> <a href="https://contemptor.com/2020/07/03/dr-fauci-coronavirus-may-have-mutated-and-become-more-infectious/">0</a> </li> </ul></article>
+</body></html>

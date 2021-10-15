@@ -1,0 +1,63 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual">Child Murdered, Two Others Injured in Landmine Explosion in Hasakah</h1>
+<p class="rm-manual"> <span> <span><a href="https://syrianews.cc/author/arabi-souri/"> Arabi Souri</a></span></span><span><a href="https://syrianews.cc/child-murdered-two-others-injured-in-landmine-explosion-in-hasakah/" rel="bookmark"> June 21, 2021</a></span><span><a href="https://syrianews.cc/category/syria/" rel="tag"> Syria</a></span><span><a href="https://syrianews.cc/child-murdered-two-others-injured-in-landmine-explosion-in-hasakah/#respond"> 0 Comments</a></span></p>
+<p>A child was murdered and two others injured in a landmine explosion 
+in the Ras al-Ayn region in the northwestern Hasakah countryside, 
+northern Syria.</p>
+<p>The landmine explosion blew up in the children in the outskirts of the Al Aliyah village to the south of the <a href="https://syrianews.cc/2-turkish-soldiers-killed-6-others-injured-in-a-car-bomb-explosion-in-ras-al-ain/" rel="noreferrer noopener">Ras al-Ayn city</a>
+ killing the child and injuring two others, the region is under the 
+occupation of the Turkish forces of the Turkish Army and Al-Qaeda and 
+Muslim Brotherhood-affiliated groups.</p>
+<figcaption>A Syrian child tests a smart prosthetic. [Archive]</figcaption><p>This
+ sad loss came one day after terrorists loyal to the Turkish Madman 
+Erdogan murdered a young girl and injured her father when they 
+indiscriminately shelled the town of Jourin (Jurin) in the northwestern 
+Hama countryside with missiles.</p>
+<p>The terrorist shelling also targeted the village of Talmans in the 
+southern Idlib countryside with 5 missiles, the shelling caused material
+ damage in the village.</p>
+<blockquote class="rm-manual"><a href="https://syrianews.cc/two-dead-one-injured-in-landmine-explosion-near-tadmor-unmas-continues-to-fail-syria/">Two Dead, One Injured in Landmine Explosion Near Tadmor; UNMAS Continues to Fail Syria</a></blockquote>
+<p class="rm-manual">To help us continue please visit the <a rel="noreferrer noopener" href="https://web.archive.org/web/20210423192549/https://syrianews.cc/donate/">Donate</a> page to donate or learn how you can help us with no cost on you. Follow us on Telegram: <a rel="noreferrer noopener" href="https://web.archive.org/web/20210423192549/https://t.me/syupdates">http://t.me/syupdates</a> link will open the Telegram app.</p>
+<h3 class="rm-manual">Related</h3>
+<h3 class="rm-manual">Comments: <a rel="nofollow" href="file:///child-murdered-two-others-injured-in-landmine-explosion-in-hasakah/#respond">Cancel reply</a>
+</h3>
+<p class="rm-manual">Tagged <a href="https://syrianews.cc/tag/al-aliyah-village/" rel="tag">Al Aliyah village</a>, <a href="https://syrianews.cc/tag/al-qaeda/" rel="tag">Al Qaeda</a>, <a href="https://syrianews.cc/tag/hama/" rel="tag">Hama</a>, <a href="https://syrianews.cc/tag/hasakah/" rel="tag">Hasakah</a>, <a href="https://syrianews.cc/tag/idlib/" rel="tag">Idlib</a>, <a href="https://syrianews.cc/tag/jourin/" rel="tag">Jourin</a>, <a href="https://syrianews.cc/tag/land-mines/" rel="tag">land mines</a>, <a href="https://syrianews.cc/tag/landmines/" rel="tag">landmines</a>, <a href="https://syrianews.cc/tag/muslim-brotherhood/" rel="tag">Muslim Brotherhood</a>, <a href="https://syrianews.cc/tag/syria-new/" rel="tag">Syria new</a>, <a href="https://syrianews.cc/tag/talmans-village/" rel="tag">Talmans village</a>, <a href="https://syrianews.cc/tag/turkish-army/" rel="tag">Turkish army</a></p>
+<h2 class="rm-manual">Post navigation</h2>
+<p class="rm-manual"><a href="https://syrianews.cc/iranians-elected-hardliner-raisi-as-president-thanks-to-donald-trump/" rel="prev"><span>Previous</span> <span>Previous post:</span> <span>Iranians Elected the Hardliner Raisi as President, Thanks to Donald Trump</span></a></p></article>
+</body></html>

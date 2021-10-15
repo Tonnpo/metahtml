@@ -1,0 +1,82 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">Nov. 6, 1987</p>
+<p class="rm-manual">12 AM</p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.facebook.com/dialog/share?app_id=119932621434123&amp;display=popup&amp;href=https%3A%2F%2Fwww.latimes.com%2Farchives%2Fla-xpm-1987-11-06-sp-12533-story.html"> <span>Facebook</span> </a> </li> <li class="rm-manual">
+<a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.latimes.com%2Farchives%2Fla-xpm-1987-11-06-sp-12533-story.html&amp;text=Southern%20Section%20Tennis%20Playoffs%20%3A%20Bain%2C%20Phebus%20Lead%20Corona%20del%20Mar%2C%2014-4"> <span>Twitter</span> </a> </li> <li class="rm-manual"> <a href="#"><span>Show more sharing options</span></a> </li> </ul>
+<p class="rm-manual"> <span>Share</span> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.facebook.com/dialog/share?app_id=119932621434123&amp;display=popup&amp;href=https%3A%2F%2Fwww.latimes.com%2Farchives%2Fla-xpm-1987-11-06-sp-12533-story.html"> <span>Facebook</span> </a> </li> <li class="rm-manual">
+<a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.latimes.com%2Farchives%2Fla-xpm-1987-11-06-sp-12533-story.html&amp;text=Southern%20Section%20Tennis%20Playoffs%20%3A%20Bain%2C%20Phebus%20Lead%20Corona%20del%20Mar%2C%2014-4"> <span>Twitter</span> </a> </li> <li class="rm-manual">
+<a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fwww.latimes.com%2Farchives%2Fla-xpm-1987-11-06-sp-12533-story.html&amp;mini=true&amp;title=Southern%20Section%20Tennis%20Playoffs%20%3A%20Bain%2C%20Phebus%20Lead%20Corona%20del%20Mar%2C%2014-4&amp;summary=Robin%20Bain%2C%20the%20No.%201%20singles%20player%20for%20Corona%20del%20Mar%20High%20School%2C%20swept%20her%20sets%2C%206-1%2C%206-0%2C%206-0%2C%20to%20help%20lead%20the%20Sea%20Kings%20to%20a%2014-4%20victory%20over%20Mission%20Viejo%20Thursday%20in%20a%20Southern%20Section%204-A%20girls%27%20first-%20round%20tennis%20match%20at%20Corona%20del%20Mar.%20&amp;source=Los%20Angeles%20Times"> <span>LinkedIn</span> </a> </li> <li class="rm-manual">
+<a href="mailto:?body=Southern%20Section%20Tennis%20Playoffs%20%3A%20Bain%2C%20Phebus%20Lead%20Corona%20del%20Mar%2C%2014-4%0A%0Ahttps%3A%2F%2Fwww.latimes.com%2Farchives%2Fla-xpm-1987-11-06-sp-12533-story.html%0A%0ARobin%20Bain%2C%20the%20No.%201%20singles%20player%20for%20Corona%20del%20Mar%20High%20School%2C%20swept%20her%20sets%2C%206-1%2C%206-0%2C%206-0%2C%20to%20help%20lead%20the%20Sea%20Kings%20to%20a%2014-4%20victory%20over%20Mission%20Viejo%20Thursday%20in%20a%20Southern%20Section%204-A%20girls%27%20first-%20round%20tennis%20match%20at%20Corona%20del%20Mar.%20"> <span>Email</span> </a> </li> <li class="rm-manual"> <a href="#"><span>Copy Link URL</span><span>Copied!</span></a> </li> <li class="rm-manual"> <a href=""><span>Print</span></a> </li> </ul>
+<p>Robin Bain, the No. 1 singles player for Corona del Mar High School, 
+swept her sets, 6-1, 6-0, 6-0, to help lead the Sea Kings to a 14-4 
+victory over Mission Viejo Thursday in a Southern Section 4-A girls’ 
+first- round tennis match at Corona del Mar.</p>
+<p>Kristy Phebus, the No. 2 player for Corona del Mar (17-2-1) won her 
+three sets, 6-0, 6-0, 6-0. Corona del Mar is the third-seeded team in 
+the 4-A.</p>
+<p>Mission Viejo ends the season at 8-9.</p>
+<p>In other 4-A matches:</p>
+<p>Edison 11, University 7--Debbie Goldberger swept her sets, 6-0, 6-0, 
+6-0, to lead Edison (18-2) at home. Lisa Ammann also won her three sets,
+ as did the doubles team of Nikki Turner and Genny Glofos.</p>
+<p>Dana Hills 10, Fountain Valley 8--Kristin Green and Kelly Lynch swept
+ in singles and Kim O’Neill and Michelle Michaels in doubles for Dana 
+Hills (11-6), which won at Fountain Valley. Fountain Valley finishes 
+16-4.</p>
+<p>Capistrano Valley 9, South Torrance 9 (Capistrano Valley wins on 
+games, 74-71)--The doubles team of Jill Linhart and Dana Foster swept 
+its sets, 6-1, 6-3, 6-1, as Capistrano Valley (13-2) won at home.</p>
+<p>In the 3-A:</p>
+<p>Laguna Hills 17, Charter Oak 1--Jenny Marques, Kim Wright and Brook 
+Fleming swept in singles and the doubles teams of Katrina Heppler and 
+Mai Nguyen and Suzi Kim and Sharron Oh swept for Laguna Hills (19-0) at 
+home.</p>
+<p>Laguna Hills is the third-seeded team in the 3-A.</p>
+<p>Laguna Beach 13, Mater Dei 5--Mindy Leach swept her sets, 6-2, 6-1, 
+6-0, and the doubles team of Wendy Sugi and Kim Stephens swept its sets,
+ 7-5, 6-3, 6-3, for Laguna Beach (17-4) at home.</p>
+<p>In the 2-A:</p>
+<p>Valencia 12, Pacifica 6--Diane Ewing and Julie Williams each won her 
+three sets to lead Valencia (13-4) at home. Diane Stoll and Stacy Zirwas
+ also swept in doubles. Pacifica finishes 12-3.</p>
+<p>Kennedy 11, Western 5--Kennedy was led by No. 1 singles player Marni 
+Matsumoto, who swept her sets to improve to 43-3 this season. Kennedy is
+ 12-3 and Western ends 9-6.</p></article>
+</body></html>

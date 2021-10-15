@@ -1,0 +1,116 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual">High Energy Physics - Theory</h1>
+<p class="rm-manual"> arXiv:hep-th/9609060 (hep-th) </p>
+<p class="rm-manual"> [Submitted on 7 Sep 1996 (<a href="https://arxiv.org/abs/hep-th/9609060v1">v1</a>), last revised 18 Jun 1997 (this version, v4)]</p>
+<h1 class="rm-manual">
+<span>Title:</span>An Explicit Construction of Casimir Operators and Eigenvalues : I</h1>
+<p class="rm-manual"><span>Authors:</span><a href="https://arxiv.org/search/hep-th?searchtype=author&amp;query=Karadayi%2C+H+R">H. R. Karadayi</a>, <a href="https://arxiv.org/search/hep-th?searchtype=author&amp;query=Gungormez%2C+M">M. Gungormez</a></p>
+<p class="rm-manual"><a href="file:///pdf/hep-th/9609060">Download PDF</a> </p>
+<blockquote> <span>Abstract:</span> We give a general method to 
+construct a complete set of linearly independent Casimir operators of a 
+Lie algebra with rank N. For a Casimir operator of degree p, this will 
+be provided by an explicit calculation of its symmetric coefficients $ 
+g^{A_1,A_2,.. A_p}$. It is seen that these coefficients can be descibed 
+by some rational polinomials of rank N. These polinomials are also 
+multilinear in Cartan sub-algebra indices taking values from the set 
+$I_0 = {1,2,.. N}$. The crucial point here is that for each degree one 
+needs, in general, more than one polinomials. This in fact is related 
+with an observation that the whole set of symmetric coefficients $ 
+g^{A_1,A_2,.. A_p} $ is decomposed into sum subsets which are in one to 
+one correspondence with these polinomials. We call these subsets 
+clusters and introduce some indicators with which we specify different 
+clusters. These indicators determine all the clusters whatever the 
+numerical values of coefficients $g^{A_1,A_2,.. A_p}$ are. For any 
+degree p, the number of clusters is independent of rank N. This hence 
+allows us to generalize our results to any value of rank N. To specify 
+the general framework explicit constructions of 4th and 5th order 
+Casimir operators of $A_N$ Lie algebras are studied and all the 
+polinomials which specify the numerical value of their coefficients are 
+given explicitly. </blockquote>
+<table class="rm-manual"> <tbody><tr class="rm-manual"> <td class="rm-manual">Comments:</td> <td class="rm-manual">14 pages, no figures, revised version, to appear in Jour.Math.Phys</td> </tr> <tr class="rm-manual"> <td class="rm-manual">Subjects:</td> <td class="rm-manual"> <span>High Energy Physics - Theory (hep-th)</span>; Mathematical Physics (math-ph); Algebraic Geometry (math.AG)</td> </tr> <tr class="rm-manual"> <td class="rm-manual">Journal reference:</td> <td class="rm-manual">J.Math.Phys. 38 (1997) 5976-5990</td> </tr> <tr class="rm-manual"> <td class="rm-manual">DOI:</td> <td class="rm-manual"><a href="https://arxiv.org/ct?url=https%3A%2F%2Fdx.doi.org%2F10.1063%2F1.532175&amp;v=c95c9da0" rel="external noopener nofollow">10.1063/1.532175</a></td> </tr> <tr class="rm-manual"> <td class="rm-manual">Report number:</td> <td class="rm-manual">itu-hep 96-01</td> </tr> <tr class="rm-manual"> <td class="rm-manual">Cite as:</td> <td class="rm-manual"><span><a href="https://arxiv.org/abs/hep-th/9609060">arXiv:hep-th/9609060</a></span></td> </tr> <tr class="rm-manual"> <td class="rm-manual">(or <span> <a href="https://arxiv.org/abs/hep-th/9609060v4">arXiv:hep-th/9609060v4</a></span> for this version) </td> </tr> </tbody></table>
+<h2 class="rm-manual">Submission history</h2>
+<p class="rm-manual"> From: Hasan Karadayi [</p>
+<p class="rm-manual"><a href="file:///show-email/ea799f96/hep-th/9609060">view email</a>] </p>
+<p class="rm-manual"> <a href="file:///abs/hep-th/9609060v1">[v1]</a> Sat, 7 Sep 1996 15:06:49 UTC (12 KB)</p>
+<p class="rm-manual"> <a href="file:///abs/hep-th/9609060v2">[v2]</a> Wed, 25 Sep 1996 15:05:09 UTC (0 KB)</p>
+<p class="rm-manual"> <a href="file:///abs/hep-th/9609060v3">[v3]</a> Fri, 10 Jan 1997 15:22:45 UTC (0 KB)</p>
+<p class="rm-manual">[v4] Wed, 18 Jun 1997 13:15:19 UTC (13 KB)</p>
+<p class="rm-manual"> <span>Full-text links:</span> </p>
+<h2 class="rm-manual">Download:</h2>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///pdf/hep-th/9609060">PDF</a></li> <li class="rm-manual"><a href="file:///ps/hep-th/9609060">PostScript</a></li> <li class="rm-manual"><a href="file:///format/hep-th/9609060">Other formats</a></li>
+</ul>
+<p class="rm-manual">(<a href="http://arxiv.org/licenses/assumed-1991-2003/">license</a>)</p>
+<p class="rm-manual"> Current browse context: </p>
+<p class="rm-manual">hep-th</p>
+<p class="rm-manual"> <span> <a href="file:///abs/hep-th/9609059">&lt; prev</a> </span> <span> | </span> <span> <a href="file:///abs/hep-th/9609061">next &gt;</a> </span></p>
+<p class="rm-manual"> <a href="file:///list/hep-th/new">new</a> <span> | </span> <a href="file:///list/hep-th/recent">recent</a> <span> | </span> <a href="file:///list/hep-th/9609">9609</a> </p>
+<h3 class="rm-manual">References &amp; Citations</h3>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://inspirehep.net/literature?q=find%20eprint%20hep-th/9609060">INSPIRE HEP</a> </li> <li class="rm-manual"><a href="https://ui.adsabs.harvard.edu/abs/arXiv:hep-th%2F9609060">NASA ADS</a></li>
+<li class="rm-manual"><a href="https://scholar.google.com/scholar_lookup?title=An%20Explicit%20Construction%20of%20Casimir%20Operators%20and%20Eigenvalues%20%3A%20I&amp;author=H.%20R.%20Karadayi&amp;author=M.%20Gungormez&amp;publication_date=1997/06/18&amp;arxiv_id=hep-th/9609060" rel="noopener">Google Scholar</a></li> <li class="rm-manual"><a href="https://api.semanticscholar.org/arXiv:hep-th/9609060" rel="noopener">Semantic Scholar</a></li> </ul>
+<p class="rm-manual"> <a href="https://static.arxiv.org/static/browse/0.3.2.7/css/cite.css">a</a> <span>export bibtex citation</span> <span>Loading...</span> </p>
+<h2 class="rm-manual">Bibtex formatted citation</h2>
+<p class="rm-manual"><span>×</span> </p>
+<p class="rm-manual"> <span>Data provided by: </span> </p>
+<h3 class="rm-manual">Bookmark</h3>
+<p class="rm-manual"> Bibliographic Tools </p>
+<h1 class="rm-manual">Bibliographic and Citation Tools</h1>
+<p class="rm-manual"> <span>Bibliographic Explorer Toggle</span> </p>
+<p class="rm-manual"> <span>Bibliographic Explorer</span> (<a href="https://labs.arxiv.org/">What is the Explorer?</a>) </p>
+<p class="rm-manual"> <span>Litmaps Toggle</span> </p>
+<p class="rm-manual"> <span>Litmaps</span> (<a href="https://www.litmaps.co/">What is Litmaps?</a>) </p>
+<p class="rm-manual"> Code &amp; Data </p>
+<h1 class="rm-manual">Code and Data Associated with this Article</h1>
+<p class="rm-manual"> <span>arXiv Links to Code Toggle</span> </p>
+<p class="rm-manual"> <span>arXiv Links to Code &amp; Data</span> (<a href="https://labs.arxiv.org/">What is Links to Code &amp; Data?</a>) </p>
+<p class="rm-manual"> Related Papers </p>
+<h1 class="rm-manual">Recommenders and Search Tools</h1>
+<p class="rm-manual"> <span>Connected Papers Toggle</span> </p>
+<p class="rm-manual"> <span>Connected Papers</span> (<a href="https://www.connectedpapers.com/about">What is Connected Papers?</a>) </p>
+<p class="rm-manual"> <span>Core recommender toggle</span> </p>
+<p class="rm-manual"> <span>CORE Recommender</span> (<a href="https://labs.arxiv.org/">What is CORE?</a>) </p>
+<p class="rm-manual"> About arXivLabs </p>
+<h1 class="rm-manual">arXivLabs: experimental projects with community collaborators</h1>
+<p class="rm-manual">arXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.</p>
+<p class="rm-manual">Both individuals and organizations that work with 
+arXivLabs have embraced and accepted our values of openness, community, 
+excellence, and user data privacy. arXiv is committed to these values 
+and only works with partners that adhere to them.</p>
+<p class="rm-manual">Have an idea for a project that will add value for arXiv's community? <a href="https://labs.arxiv.org/">Learn more about arXivLabs</a> and <a href="https://arxiv.org/about/people/developers">how to get involved</a>.</p>
+<p class="rm-manual"> <a href="file:///auth/show-endorsers/hep-th/9609060">Which authors of this paper are endorsers?</a> | <a href="">Disable MathJax</a> (<a href="https://arxiv.org/help/mathjax">What is MathJax?</a>) </p></article>
+</body></html>

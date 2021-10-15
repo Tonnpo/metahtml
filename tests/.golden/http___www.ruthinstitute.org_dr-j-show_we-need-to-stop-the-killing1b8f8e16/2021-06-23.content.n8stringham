@@ -1,0 +1,438 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> We Need to Stop the Killing </p>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="file:///about">About</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///about/about-the-ruth-institute">About Ruth</a></li>
+<li class="rm-manual"><a href="file:///bios/dr-morse">About Dr. J</a></li>
+<li class="rm-manual"><a href="file:///bios/dr-sullins">About Dr. Sullins</a></li>
+<li class="rm-manual"><a href="file:///about/circle-of-experts">Circle of Experts</a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="http://www.ruthinstitute.org/for-survivors">Resource Centers</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///resource-center/marriage">Marriage</a></li>
+<li class="rm-manual"><a href="file:///resource-center/censorship">Censorship</a></li>
+<li class="rm-manual"><a href="file:///resource-center/transgender">Transgenderism</a></li>
+<li class="rm-manual"><a href="file:///resource-center/motherhood">Motherhood</a></li>
+<li class="rm-manual"><a href="file:///resource-center/fatherhood">Fatherhood</a></li>
+<li class="rm-manual">
+<a href="file:///for-survivors">For Survivors</a><ul class="rm-manual">
+<li class="rm-manual">
+<a href="file:///for-survivors/are-you-a-survivor">Are You a Survivor?</a><ul class="rm-manual"><li class="rm-manual"><a href="file:///for-survivors/are-you-a-survivor/the-twelve-survivors-of-the-sexual-revolution-chart">The Twelve Survivors of the Sexual Revolution</a></li></ul>
+</li>
+<li class="rm-manual"><a href="file:///for-survivors/7-steps-to-sexual-peace">The 7 Steps to Sexual Peace</a></li>
+<li class="rm-manual"><a href="file:///for-survivors/tell-your-story">Tell Your Story</a></li>
+<li class="rm-manual"><a href="file:///tell-ruth-the-truth">The "Tell Ruth the Truth" Blog</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="file:///knowledge-base">Knowledge Base</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///make-a-difference/subscribe-to-our-newsletter">Subscribe to Our Newsletter</a></li>
+<li class="rm-manual"><a href="file:///press">Press</a></li>
+<li class="rm-manual"><a href="file:///dr-j-show">The Dr J Show</a></li>
+<li class="rm-manual"><a href="file:///podcasts">Podcast</a></li>
+<li class="rm-manual"><a href="file:///knowledge-base/youtube-channel">YouTube Channel</a></li>
+<li class="rm-manual"><a href="file:///ruth-speaks-out">Ruth Speaks Out blog</a></li>
+<li class="rm-manual">
+<a href="file:///knowledge-base/references-and-reports">References &amp; Reports</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///clergy-abuse-statistics">Clergy Sex Abuse</a></li>
+<li class="rm-manual"><a href="file:///receding-waves-report">Receding Waves</a></li>
+<li class="rm-manual"><a href="file:///knowledge-base/wheres-the-hate">Where's the Hate?</a></li>
+</ul>
+</li>
+<li class="rm-manual"><a href="file:///tell-ruth-the-truth">"Tell Ruth the Truth" blog</a></li>
+<li class="rm-manual"><a href="file:///cloud-of-witnesses">Cloud of Witnesses</a></li>
+<li class="rm-manual"><a href="file:///knowledge-base/ruth-legal">Ruth Legal</a></li>
+<li class="rm-manual"><a href="file:///testimonials">Testimonials</a></li>
+<li class="rm-manual"><a href="file:///knowledge-base/core-truths">Core Truths</a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="file:///make-a-difference">Make a Difference</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///make-a-difference/subscribe-to-our-newsletter">Subscribe to Our Newsletter</a></li>
+<li class="rm-manual"><a href="file:///make-a-difference/sign-our-petitions">Sign Our Petitions</a></li>
+<li class="rm-manual"><a href="file:///cloud-of-witnesses">Cloud of Witnesses</a></li>
+<li class="rm-manual"><a href="file:///make-a-difference/book-clubs/book-clubs">Book Clubs</a></li>
+<li class="rm-manual"><a href="file:///make-a-difference/real-estate-for-life">Real Estate for Life</a></li>
+<li class="rm-manual"><a href="file:///make-a-difference/annual-appeal">Donate</a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="">Video</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///dr-j-show">The Dr J Show</a></li>
+<li class="rm-manual"><a href="file:///knowledge-base/youtube-channel">YouTube Channel</a></li>
+<li class="rm-manual"><a href="file:///podcasts">Audio Podcast</a></li>
+</ul>
+</li>
+<li class="rm-manual"><a href="file:///press">Press</a></li>
+<li class="rm-manual"><a href="file:///store">Store</a></li>
+<li class="rm-manual"><a href="file:///donate">Donate</a></li>
+<li class="rm-manual"><a href="file:///summit-2021">Summit</a></li>
+</ul>
+<ul class="rm-manual"> <li class="rm-manual">
+<a href="file:///members/my-profile">Sign In</a><a href="file:///LogOutProcess.aspx">Sign Out</a>
+</li> <li class="rm-manual"><a href="file:///members/my-profile">Member Dashboard</a></li> <li class="rm-manual"><a href="file:///media">Media</a></li> <li class="rm-manual"><a href="file:///contact">Contact Us</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="file:///about">About</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///about/about-the-ruth-institute">About Ruth</a></li>
+<li class="rm-manual"><a href="file:///bios/dr-morse">About Dr. J</a></li>
+<li class="rm-manual"><a href="file:///bios/dr-sullins">About Dr. Sullins</a></li>
+<li class="rm-manual"><a href="file:///about/circle-of-experts">Circle of Experts</a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="http://www.ruthinstitute.org/for-survivors">Resource Centers</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///resource-center/marriage">Marriage</a></li>
+<li class="rm-manual"><a href="file:///resource-center/censorship">Censorship</a></li>
+<li class="rm-manual"><a href="file:///resource-center/transgender">Transgenderism</a></li>
+<li class="rm-manual"><a href="file:///resource-center/motherhood">Motherhood</a></li>
+<li class="rm-manual"><a href="file:///resource-center/fatherhood">Fatherhood</a></li>
+<li class="rm-manual">
+<a href="file:///for-survivors">For Survivors</a><ul class="rm-manual">
+<li class="rm-manual">
+<a href="file:///for-survivors/are-you-a-survivor">Are You a Survivor?</a><ul class="rm-manual"><li class="rm-manual"><a href="file:///for-survivors/are-you-a-survivor/the-twelve-survivors-of-the-sexual-revolution-chart">The Twelve Survivors of the Sexual Revolution</a></li></ul>
+</li>
+<li class="rm-manual"><a href="file:///for-survivors/7-steps-to-sexual-peace">The 7 Steps to Sexual Peace</a></li>
+<li class="rm-manual"><a href="file:///for-survivors/tell-your-story">Tell Your Story</a></li>
+<li class="rm-manual"><a href="file:///tell-ruth-the-truth">The "Tell Ruth the Truth" Blog</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="file:///knowledge-base">Knowledge Base</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///make-a-difference/subscribe-to-our-newsletter">Subscribe to Our Newsletter</a></li>
+<li class="rm-manual"><a href="file:///press">Press</a></li>
+<li class="rm-manual"><a href="file:///dr-j-show">The Dr J Show</a></li>
+<li class="rm-manual"><a href="file:///podcasts">Podcast</a></li>
+<li class="rm-manual"><a href="file:///knowledge-base/youtube-channel">YouTube Channel</a></li>
+<li class="rm-manual"><a href="file:///ruth-speaks-out">Ruth Speaks Out blog</a></li>
+<li class="rm-manual">
+<a href="file:///knowledge-base/references-and-reports">References &amp; Reports</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///clergy-abuse-statistics">Clergy Sex Abuse</a></li>
+<li class="rm-manual"><a href="file:///receding-waves-report">Receding Waves</a></li>
+<li class="rm-manual"><a href="file:///knowledge-base/wheres-the-hate">Where's the Hate?</a></li>
+</ul>
+</li>
+<li class="rm-manual"><a href="file:///tell-ruth-the-truth">"Tell Ruth the Truth" blog</a></li>
+<li class="rm-manual"><a href="file:///cloud-of-witnesses">Cloud of Witnesses</a></li>
+<li class="rm-manual"><a href="file:///knowledge-base/ruth-legal">Ruth Legal</a></li>
+<li class="rm-manual"><a href="file:///testimonials">Testimonials</a></li>
+<li class="rm-manual"><a href="file:///knowledge-base/core-truths">Core Truths</a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="file:///make-a-difference">Make a Difference</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///make-a-difference/subscribe-to-our-newsletter">Subscribe to Our Newsletter</a></li>
+<li class="rm-manual"><a href="file:///make-a-difference/sign-our-petitions">Sign Our Petitions</a></li>
+<li class="rm-manual"><a href="file:///cloud-of-witnesses">Cloud of Witnesses</a></li>
+<li class="rm-manual"><a href="file:///make-a-difference/book-clubs/book-clubs">Book Clubs</a></li>
+<li class="rm-manual"><a href="file:///make-a-difference/real-estate-for-life">Real Estate for Life</a></li>
+<li class="rm-manual"><a href="file:///make-a-difference/annual-appeal">Donate</a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="">Video</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///dr-j-show">The Dr J Show</a></li>
+<li class="rm-manual"><a href="file:///knowledge-base/youtube-channel">YouTube Channel</a></li>
+<li class="rm-manual"><a href="file:///podcasts">Audio Podcast</a></li>
+</ul>
+</li>
+<li class="rm-manual"><a href="file:///press">Press</a></li>
+<li class="rm-manual"><a href="file:///store">Store</a></li>
+<li class="rm-manual"><a href="file:///donate">Donate</a></li>
+<li class="rm-manual"><a href="file:///summit-2021">Summit</a></li>
+</ul>
+<p class="rm-manual"><a href="file:///">Home</a>The Dr J Show</p>
+<h2 class="rm-manual">The Dr J Show</h2>
+<p class="rm-manual">Welcome to our newest project. The Dr. J Show is a 
+weekly broadcast with an interview segment that features some of the 
+foremost leaders and thinkers on issues relating to marriage, family and
+ human sexuality. New episodes come out every Friday; catch them here or
+ over at our YouTube channel.</p>
+<h1 class="rm-manual">We Need to Stop the Killing</h1>
+<h4 class="rm-manual">Posted on Friday, June 04, 2021</h4>
+<p> Fr Stephen Imbarrato, a pro-life activist, commonly referred to as 
+the “Protest Priest,” has made regular appearances on EWTN Catholic TV 
+and is one of the leaders of the Red Rose Rescue movement. Fr Stephen 
+believes we can end preborn child killing peacefully yet 
+decisively...and sooner than we may think is possible. </p>
+<p>While attending Holy Apostles Seminary, Father helped start a crisis 
+pregnancy center across the street from an abortion business. He 
+explains, “…being across from the abortion mill showed me how important 
+it is to have ministries of life directly across from the gates of 
+death.”</p>
+<p>Ordained in May of 2005 for the Archdiocese of Santa Fe, Father 
+Stephen learned of a small adoration chapel located directly across from
+ a Planned Parenthood facility in Albuquerque. Using the chapel as a 
+focal point and prompted by the Holy Spirit to rejuvenate Project 
+Life–which was dedicated to prayer vigils and sidewalk counseling in 
+front of Planned Parenthood–Father Stephen gathered a group of 
+laypeople, forming the Project Defending Life.</p>
+<h3 class="rm-manual">Readings &amp; Resources</h3>
+<ul class="rm-manual"> <li class="rm-manual">Men’s March for Life in Washington D.C., June 12th: <a href="https://themensmarch.com/">themensmarch.com</a> </li> <li class="rm-manual">please
+ consider making a donation to offset Fr Stephen’s Red Rose Rescue 
+expenses and other costs. (Fr Stephen earns no income from his pro-life 
+activism. All donations go directly to support his pro-life ministry.) </li> <li class="rm-manual">Protest Child Killing: <a href="http://protestchildkilling.com/">protestchildkilling.com</a> </li> <li class="rm-manual">follow Fr Stephen: <a href="http://lifeministriesus.org/">lifeministriesus.org</a> </li> <li class="rm-manual">Red Rose Rescues: <a href="https://www.redroserescue.com/">redroserescue.com</a> </li> <li class="rm-manual">Fr Stephen's social media links <ul class="rm-manual"> <li class="rm-manual">Facebook: <a href="https://www.facebook.com/FrStephenImb">facebook.com/FrStephenImb</a> </li> <li class="rm-manual">
+<a href="https://www.youtube.com/channel/UCKi4JWR6HORuQCMgl8uIJNA">YouTube Channel</a> </li> <li class="rm-manual">contact Father Stephen at frstephen@defendinglife.org</li> </ul> </li> <li class="rm-manual">American Association of Pro-Life Obstetricians and Gynecologists: <a href="https://aaplog.org/">aaplog.org</a> </li> <li class="rm-manual">Follow Fr Stephen’s pro-life travels across the country: <a href="http://protestchildkilling.com/on-the-road-for-life/">On the Road for Life</a> </li> </ul>
+<p class="rm-manual"> Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a> </p>
+<p class="rm-manual"> Enter Word Verification in box below: </p>
+<p class="rm-manual"><a href="#">Previous</a> <a href="#">Next</a> </p>
+<h4 class="rm-manual">Recent Posts</h4>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///dr-j-show/we-need-to-stop-the-killing">We Need to Stop the Killing</a></li>
+<li class="rm-manual"><a href="file:///dr-j-show/what-do-therapists-think-about-the-priestly-sexual-abuse-crisis">What do Therapists Think About The Priestly Sexual Abuse Crisis?</a></li>
+<li class="rm-manual"><a href="file:///dr-j-show/children-shouldnt-sacrifice-their-happiness-for-ours">Children Shouldn't Sacrifice Their Happiness for Ours</a></li>
+<li class="rm-manual"><a href="file:///dr-j-show/lawfare-how-sexual-revolutionaries-bully-using-the-legal-system">Lawfare: How Sexual Revolutionaries Bully Using The Legal System</a></li>
+<li class="rm-manual"><a href="file:///dr-j-show/a-warning-from-a-former-trans-child">A Warning from a Former-Trans Child</a></li>
+<li class="rm-manual"><a href="file:///dr-j-show/the-un-sexual-education-is-insane">The UN Sexual Education is Insane</a></li>
+<li class="rm-manual"><a href="file:///dr-j-show/we-need-to-look-at-what-happens-to-society-after-abortion">We Need to Look At What Happens to Society After Abortion</a></li>
+<li class="rm-manual"><a href="file:///dr-j-show/expert-on-disinformation-spies-talks-about-digital-misinformation">Expert on Disinformation &amp; Spies Talks About Digital Misinformation</a></li>
+<li class="rm-manual"><a href="file:///dr-j-show/was-keeping-society-out-of-the-bedroom-a-disastrous-idea">Was Keeping Society "Out of the Bedroom" A Disastrous Idea?</a></li>
+<li class="rm-manual"><a href="file:///dr-j-show/the-grassroots-battle-against-the-sexual-revolution">The Grassroots Battle Against the Sexual Revolution</a></li>
+</ul>
+<h4 class="rm-manual">Tags</h4>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/Abortion/">Abortion <span>(10)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/abuse/">abuse <span>(11)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/artificial_reproductive_technologies/">artificial reproductive technologies <span>(3)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/Black_Lives_Matter/">Black Lives Matter <span>(1)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/Cardinal_McCarrick/">Cardinal McCarrick <span>(1)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/Catholic_Church_sex_abuse_cover-up/">Catholic Church sex abuse cover-up <span>(2)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/Censorship_and_Propaganda/">Censorship and Propaganda <span>(3)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/Child_of_Divorce/">Child of Divorce <span>(5)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/Child_of_Unmarried_Parents/">Child of Unmarried Parents <span>(3)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/children_of_divorced_parents/">children of divorced parents <span>(2)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/Christian/">Christian <span>(2)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/clergy_sex_abuse_report/">clergy sex abuse report <span>(2)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/Cloud_of_Witnesses/">Cloud of Witnesses <span>(4)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/Commit2020/">Commit2020 <span>(1)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/contraception/">contraception <span>(3)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/Corporate_America/">Corporate America <span>(3)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/court_cases/">court cases <span>(6)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/deep_state/">deep state <span>(5)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/Desistors/">Desistors <span>(1)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/DeTrans/">DeTrans <span>(1)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/DeTransitioners/">DeTransitioners <span>(1)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/Divorce/">Divorce <span>(6)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/Donor_Conceived_Person/">Donor Conceived Person <span>(2)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show?TagID=460916">Dr. J Show <span>(72)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/effects_of_divorce_on_children/">effects of divorce on children <span>(2)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/effects_of_divorce_on_children's_mental_health/">effects of divorce on children's mental health <span>(3)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/family_breakdown/">family breakdown <span>(13)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/family_issues/">family issues <span>(5)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/family_matters/">family matters <span>(2)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/former_lesbian/">former lesbian <span>(1)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/Gay_Lifestyle_Refugee/">Gay Lifestyle Refugee <span>(9)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/gender/">gender <span>(2)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/Gender_Dysphoria/">Gender Dysphoria <span>(5)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/gender_identity/">gender identity <span>(2)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/Heartbroken_Career_Woman/">Heartbroken Career Woman <span>(4)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/impact_of_divorce_on_children/">impact of divorce on children <span>(3)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/Intersex/">Intersex <span>(1)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/Jennifer_Roback_Morse/">Jennifer Roback Morse <span>(2)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/Kenya_Abortion/">Kenya Abortion <span>(1)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/Making_a_Difference/">Making a Difference <span>(7)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/Marriage/">Marriage <span>(6)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/Minors_and_the_Transgender_Agenda/">Minors and the Transgender Agenda <span>(4)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/People_With_Health_Problems_Due_to_Hook-Ups,_Abortion,_or_Contraception/">People With Health Problems Due to Hook-Ups, Abortion, or Contraception <span>(7)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/Planned_Parenthood/">Planned Parenthood <span>(1)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/population_control/">population control <span>(4)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/pornhub/">pornhub <span>(1)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/Pornography_Addict_and_Their_Families/">Pornography Addict and Their Families <span>(2)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/Post_Abortive_Woman_or_Man/">Post Abortive Woman or Man <span>(1)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/psychological_effects_of_divorce_on_children/">psychological effects of divorce on children <span>(2)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/rape/">rape <span>(4)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/Refugee_From_the_Hook-Up_Culture/">Refugee From the Hook-Up Culture <span>(2)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/Religious_Liberty/">Religious Liberty <span>(13)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/Reluctantly_Divorced_Man_or_Woman/">Reluctantly Divorced Man or Woman <span>(3)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/Reluctantly_Single_Parent/">Reluctantly Single Parent <span>(1)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/Same_Sex_Parenting/">Same Sex Parenting <span>(1)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/same-sex_unions/">same-sex unions <span>(2)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/sex_ed_in_schools/">sex ed in schools <span>(1)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/sex_trafficking/">sex trafficking <span>(1)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/sexual_abuse/">sexual abuse <span>(10)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/sexual_orientation_meaning/">sexual orientation meaning <span>(1)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/sexual_preference/">sexual preference <span>(1)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/Sexual_Revolution/">Sexual Revolution <span>(18)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/SOGI/">SOGI <span>(2)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/The_Sexual_State/">The Sexual State <span>(5)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/traditional_morality/">traditional morality <span>(4)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/Transgender/">Transgender <span>(10)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/transgender_surgery/">transgender surgery <span>(2)</span></a>
+</li>
+<li class="rm-manual"> <a href="file:///dr-j-show/tag/Transgenderism/">Transgenderism <span>(6)</span></a>
+</li>
+</ul>
+<h4 class="rm-manual">Support the Ruth Institute</h4>
+<h4 class="rm-manual">Links We Like</h4>
+<p class="rm-manual"><a href="http://anonymousus.org/">Anonymous Us Project</a> </p>
+<p class="rm-manual"><a href="http://www.donorchildren.com/">Donor Children</a> </p>
+<p class="rm-manual"><a href="http://marysadvocates.org/">Mary's Advocates</a> </p>
+<h4 class="rm-manual">Archives</h4>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///dr-j-show/calendar/2021/6/">June 2021 (1)</a></li>
+<li class="rm-manual"><a href="file:///dr-j-show/calendar/2021/4/">April 2021 (4)</a></li>
+<li class="rm-manual"><a href="file:///dr-j-show/calendar/2021/3/">March 2021 (4)</a></li>
+<li class="rm-manual"><a href="file:///dr-j-show/calendar/2021/2/">February 2021 (4)</a></li>
+<li class="rm-manual"><a href="file:///dr-j-show/calendar/2021/1/">January 2021 (5)</a></li>
+<li class="rm-manual"><a href="file:///dr-j-show/calendar/2020/12/">December 2020 (4)</a></li>
+<li class="rm-manual"><a href="file:///dr-j-show/calendar/2020/11/">November 2020 (4)</a></li>
+<li class="rm-manual"><a href="file:///dr-j-show/calendar/2020/10/">October 2020 (5)</a></li>
+<li class="rm-manual"><a href="file:///dr-j-show/calendar/2020/9/">September 2020 (3)</a></li>
+<li class="rm-manual"><a href="file:///dr-j-show/calendar/2020/8/">August 2020 (4)</a></li>
+<li class="rm-manual"><a href="file:///dr-j-show/calendar/2020/7/">July 2020 (4)</a></li>
+</ul>
+<h4 class="rm-manual">Latest Posts</h4>
+<ol class="rm-manual">
+<li class="rm-manual">
+<a href="file:///ruth-speaks-out/opinion-religious-foster-is-vital-for-our-most-vulnerable">Opinion: Religious foster care plays a vital role for our most vulnerable children</a> <span>Betsy Kerekes</span> <span>22-Jun-2021</span>
+</li>
+<li class="rm-manual">
+<a href="file:///ruth-speaks-out/splc-uses-anniversary-of-islamic-terror-attack-to-demonize-conservative-christians">SPLC Uses Anniversary of Islamic Terror Attack to Demonize Conservative Christians</a> <span>Matt Maddox</span> <span>14-Jun-2021</span>
+</li>
+<li class="rm-manual">
+<a href="file:///ruth-speaks-out/survival-mode-flash-floods-trauma-and-childhood-sexual-abuse">Survival Mode: Flash Floods, Trauma and Childhood Sexual Abuse</a> <span>Matt Maddox</span> <span>11-Jun-2021</span>
+</li>
+<li class="rm-manual">
+<a href="file:///ruth-speaks-out/the-fate-of-nations-hinges-on-the-future-of-marriage">The Fate of Nations Hinges on the Future of Marriage</a> <span>Matt Maddox</span> <span>14-May-2021</span>
+</li>
+<li class="rm-manual">
+<a href="file:///ruth-speaks-out/the-left-s-war-on-procreation">The Left’s War on Procreation</a> <span>Matt Maddox</span> <span>12-May-2021</span>
+</li>
+</ol>
+<h4 class="rm-manual">Press Releases</h4>
+<ol class="rm-manual">
+<li class="rm-manual">
+<a href="file:///press/no-one-is-entitled-to-a-child-but-every-child-deserves-two-parents">No One is Entitled to a Child, but Every Child Deserves Two Parents</a> <span>Betsy Kerekes</span> <span>21-Jun-2021</span>
+</li>
+<li class="rm-manual">
+<a href="file:///press/top-10-reasons-to-attend-ruth-inst-survivors-summit">Top 10 Reasons to Attend Ruth Inst. Survivors’ Summit</a> <span>Betsy Kerekes</span> <span>17-Jun-2021</span>
+</li>
+<li class="rm-manual">
+<a href="file:///press/ruth-inst-launches-resource-center-on-the-necessity-of-fathers">Ruth Inst. Launches Resource Center on the Necessity of Fathers</a> <span>Betsy Kerekes</span> <span>15-Jun-2021</span>
+</li>
+<li class="rm-manual">
+<a href="file:///press/what-impact-will-jenner-s-candidacy-have-ruth-inst-asks">What Impact Will Jenner’s Candidacy Have, Ruth Inst. Asks</a> <span>Betsy Kerekes</span> <span>10-Jun-2021</span>
+</li>
+<li class="rm-manual">
+<a href="file:///press/reclaim-the-health-and-education-of-youth-at-the-ruth-inst-summit">Reclaim the Health and Education of Youth at the Ruth Inst. Summit</a> <span>Betsy Kerekes</span> <span>08-Jun-2021</span>
+</li>
+</ol>
+<h4 class="rm-manual">Subscribe to Our Newsletter</h4>
+<p class="rm-manual">Copyright © The Ruth Institute. All rights reserved. </p>
+<p class="rm-manual">The Ruth Institute | a 501(c)(3) non-profit organization </p>
+<p class="rm-manual">4845 Lake Street Suite 217, Lake Charles, Louisiana 70605 </p>
+<p class="rm-manual">tel. (760) 295-9278</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///terms-privacy">Terms &amp; Privacy</a></li>
+<li class="rm-manual"><a href="http://www.creationchamber.com/">Site by CC</a></li>
+</ul>
+<p class="rm-manual"> <span>Update Required</span> To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/">Flash plugin</a>. </p></article>
+</body></html>

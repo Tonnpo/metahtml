@@ -1,0 +1,193 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p><a href="file:///Video"></a></p><h4 class="rm-manual"><a href="file:///Video">Video</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///Live"></a></p><h4 class="rm-manual"><a href="file:///Live">Live</a></h4><p class="rm-manual"></p>
+<h4 class="rm-manual">Shows</h4>
+<p class="rm-manual"><a href="https://www.goodmorningamerica.com/"></a></p><h4 class="rm-manual"><a href="https://www.goodmorningamerica.com/">Good Morning America</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///WN"></a></p><h4 class="rm-manual"><a href="file:///WN">World News Tonight</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///Nightline"></a></p><h4 class="rm-manual"><a href="file:///Nightline">Nightline</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///2020"></a></p><h4 class="rm-manual"><a href="file:///2020">20/20</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///ThisWeek"></a></p><h4 class="rm-manual"><a href="file:///ThisWeek">This Week</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///TheView"></a></p><h4 class="rm-manual"><a href="file:///TheView">The View</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///WhatWouldYouDo"></a></p><h4 class="rm-manual"><a href="file:///WhatWouldYouDo">What Would You Do?</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///Elections"></a></p><h4 class="rm-manual"><a href="file:///Elections">2020 Elections</a></h4><p class="rm-manual"></p>
+<h4 class="rm-manual">Sections</h4>
+<p class="rm-manual"><a href="file:///US"></a></p><h4 class="rm-manual"><a href="file:///US">U.S.</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///Politics"></a></p><h4 class="rm-manual"><a href="file:///Politics">Politics</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///International"></a></p><h4 class="rm-manual"><a href="file:///International">International</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///Health/Coronavirus"></a></p><h4 class="rm-manual"><a href="file:///Health/Coronavirus">Coronavirus</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///Entertainment"></a></p><h4 class="rm-manual"><a href="file:///Entertainment">Entertainment</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///Business"></a></p><h4 class="rm-manual"><a href="file:///Business">Business</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///Technology"></a></p><h4 class="rm-manual"><a href="file:///Technology">Technology</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///Lifestyle"></a></p><h4 class="rm-manual"><a href="file:///Lifestyle">Lifestyle</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///Health"></a></p><h4 class="rm-manual"><a href="file:///Health">Health</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///VR"></a></p><h4 class="rm-manual"><a href="file:///VR">Virtual Reality</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///Alerts/Weather"></a></p><h4 class="rm-manual"><a href="file:///Alerts/Weather">Weather</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///US/tip-share-abc-news/story?id=61304290"></a></p><h4 class="rm-manual"><a href="file:///US/tip-share-abc-news/story?id=61304290">Tips</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///Sports"></a></p><h4 class="rm-manual"><a href="file:///Sports">Sports</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://fivethirtyeight.com/"></a></p><h4 class="rm-manual"><a href="https://fivethirtyeight.com/">FiveThirtyEight</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///"></a></p><h4 class="rm-manual"><a href="file:///">ABC News Network</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="http://disneyprivacycenter.com/"></a></p><h4 class="rm-manual"><a href="http://disneyprivacycenter.com/">Privacy Policy</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://disneyprivacycenter.com/notice-to-california-residents/"></a></p><h4 class="rm-manual"><a href="https://disneyprivacycenter.com/notice-to-california-residents/">Your CA Privacy Rights</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://disneyprivacycenter.com/kids-privacy-policy/english/"></a></p><h4 class="rm-manual"><a href="https://disneyprivacycenter.com/kids-privacy-policy/english/">Children's Online Privacy Policy</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://preferences-mgr.truste.com/?type=abcnews&amp;affiliateId=11"></a></p><h4 class="rm-manual"><a href="https://preferences-mgr.truste.com/?type=abcnews&amp;affiliateId=11">Interest-Based Ads</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://www.nielsen.com/digitalprivacy"></a></p><h4 class="rm-manual"><a href="https://www.nielsen.com/digitalprivacy">About Nielsen Measurement</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://disneytermsofuse.com/"></a></p><h4 class="rm-manual"><a href="https://disneytermsofuse.com/">Terms of Use</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://privacy.thewaltdisneycompany.com/en/dnsmi/"></a></p><h4 class="rm-manual"><a href="https://privacy.thewaltdisneycompany.com/en/dnsmi/">Do Not Sell My Info</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://abcnews.go.com/contact"></a></p><h4 class="rm-manual"><a href="https://abcnews.go.com/contact">Contact Us</a></h4><p class="rm-manual"></p>
+<section class="rm-manual">Copyright © 2020 ABC News Internet Ventures. All rights reserved.</section><p class="rm-manual"><a href="file:///"><span>ABC News</span></a></p>
+<p class="rm-manual"><a href="file:///Video"></a></p><h4 class="rm-manual"><a href="file:///Video">Video</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///Live"></a></p><h4 class="rm-manual"><a href="file:///Live">Live</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="#"></a></p><h4 class="rm-manual"><a href="#">Shows</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///Elections"></a></p><h4 class="rm-manual"><a href="file:///Elections">2020 Elections</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///Health/Coronavirus"></a></p><h4 class="rm-manual"><a href="file:///Health/Coronavirus">Coronavirus</a></h4><p class="rm-manual"></p>
+<h4 class="rm-manual">LOG IN</h4>
+<p class="rm-manual"><span>Interest Successfully Added</span></p>
+<p class="rm-manual">We'll notify you here with news about</p>
+<p class="rm-manual">Turn on desktop notifications for breaking stories about interest? </p>
+<p class="rm-manual"><span>Off</span></p>
+<p class="rm-manual"><span>On</span></p>
+<h1 class="rm-manual">Kim Jong-Un Isn't the First Dictator to Go Missing</h1>
+<h2 class="rm-manual">He learned the move from his father, the Dear Leader.</h2>
+<p class="rm-manual">By</p>
+<p class="rm-manual"> MEGHAN KENEALLY</p>
+<p class="rm-manual">October 10, 2014, 9:28 PM</p>
+<p class="rm-manual">7 min read</p>
+<p class="rm-manual">7 min read</p>
+<p><span>Kim Jong Un, right, along with his father and North Korea 
+leader Kim Jong Il, left, attend a massive military parade marking the 
+65th anniversary of the ruling Workers' Party in Pyongyang, North Korea,
+ Oct. 10, 2010.</span></p>
+<p><span>Kim Jong Un, right, along with his father and North Korea 
+leader Kim Jong Il, left, attend a massive military parade marking the 
+65th anniversary of the ruling Workers' Party in Pyongyang, North Korea,
+ Oct. 10, 2010.</span></p>
+<p class="rm-manual"><span>Kyodo News/AP Photo</span></p>
+<p>— -- This isn't the first time that <a href="http://abcnews.go.com/International/wireStory/eyes-kim-north-korea-preps-anniversary-26064013">Kim Jong-un</a> has gone missing but the North Korean leader is breaking his own record by staying out of the public eye for this long. </p>
+<p> Purposefully disappearing for long periods of time is a move long used by dictators, including former Venezuelan President <a href="http://abcnews.go.com/topics/news/world/president-hugo-chavez.htm">Hugo Chavez</a> and Cuban President <a href="http://abcnews.go.com/topics/news/world/president-fidel-castro.htm">Fidel Castro</a>, and though Kim Jong-un's absence for more than a month has sparked the international rumor mill. </p>
+<p> The 31-year-old dictator learned the power of the vanishing act from the best of them: his father. <a href="http://abcnews.go.com/topics/news/world/kim-jong-il.htm">Kim Jong-il</a>
+ "went missing" for up to 80 days when he reportedly had a stroke in 
+2008. Potential health issues remains the most likely reason for Kim 
+Jong-un's notable absence, and it is a reason he has not used before.</p>
+<p class="rm-manual"><a href="http://abcnews.go.com/International/sister-north-koreas-kim-jong-likes-power-eric/story?id=26081187">Meet Kim Jong-un's Mysterious Sister</a></p>
+<p class="rm-manual"><a href="http://abcnews.go.com/blogs/headlines/2014/10/where-is-kim-jong-un-and-six-more-questions-about-north-koreas-leader/">Where Is Kim Jong-un? And 6 More Questions About North Korea’s Leader</a></p>
+<p> "No one knows why Kim Jong-un is out of sight, but he has been the 
+most public of the three dynastic leaders," Katherine Moon, a senior 
+fellow for the Center for East Asia Policy Studies, told ABC News, 
+referring to the line of leadership that began with Kim Jong-un's 
+grandfather, <a href="http://abcnews.go.com/topics/news/world/eternal-president-kim-il-sung.htm">Kim Il-sung</a>. She said that his increasing weight, <a href="http://abcnews.go.com/topics/lifestyle/health/alcoholism.htm">alcoholism</a>,
+ heart or ankle problems and stress are all among the health factors 
+that could be ailing him, though nothing has been confirmed. </p>
+<p> "He may also be facing personal challenges -- he does have a family 
+-- a wife and at least one child. Perhaps there is illness or some other
+ problem. Again, who knows?" Moon said. </p>
+<p> North Korea expert Michael Madden, who runs a leadership watch blog 
+and contributes to Johns Hopkins University's Korean Studies site, told 
+ABC News that there were two other times that he has gone missing since 
+taking control of the country following his father's death in December 
+2011.</p>
+<p class=""><span>Venezuelan President Hugo Chavez blows a kiss from the
+ door of the airplane before departing to Cuba at Simon Bolivar airport 
+in Caracas, Dec. 10, 2012.</span></p>
+<p><span>Venezuelan President Hugo Chavez blows a kiss from the door of 
+the airplane before departing to Cuba at Simon Bolivar airport in 
+Caracas, Dec. 10, 2012.</span></p>
+<p><span>Miraflores Palace/Reuters</span></p>
+<p> The first came in June 2012, when he went missing for about three 
+weeks. As with many things in North Korea, the lack of transparency 
+means that nothing is known for sure, but Madden said that this absence 
+lined up with when the supreme leader's wife would have been entering 
+the <a href="http://abcnews.go.com/topics/lifestyle/health/second-trimester.htm">second trimester</a> of her pregnancy, leading him to believe that it was his wife's health that kept him out of the spotlight rather than his own. </p>
+<p> "There's no reason to really think it was his health back then," Madden said. "He was more muscular than he is now." </p>
+<p> The second absence came in April 2013, though he was only out of the
+ public eye for about two weeks immediately after a rather turbulent 
+political period, so it may have been a strategic move on the part of 
+his advisers. </p>
+<p> "Given that the DPRK regime is the most opaque on earth, it's not 
+surprising that there is very little reliable and publicly available 
+information about this," <a href="http://abcnews.go.com/topics/news/us/national-security-council.htm">National Security Council</a>
+ spokesman Patrick Ventrell told ABC News regarding Kim's latest 
+disappearance, referring to North Korea by its official name, the 
+Democratic People's Republic of Korea. </p>
+<p> Former Venezuelan President Hugo Chavez remained out of sight for 
+more than two months while he recovered from his fourth cancer-related 
+surgery in December 2012, according to the Associated Press. </p>
+<p> At the time, the state's foreign minister made regular public 
+updates, at one point telling how Chavez was "in charge and making 
+decisions." One noted difference between the Chavez absence at the time 
+and Kim Jong-un's latest vanishing period is the relative openness that 
+Venezuelan officials used to address the issue. Chavez was seen waving 
+to supporters as he boarded the plane to <a href="http://abcnews.go.com/topics/news/cuba.htm">Cuba</a> for his surgery, and officials told the Associated Press that "it's a slow, slow recovery process." </p>
+<p> When Kim Jong-il is believed to have had his stroke in 2008, North 
+Korean press officials did their best to prevent any admission of ill 
+health. Madden said that officials claimed Kim Jong-il attended two 
+public events during his roughly 80-day absence, though there were no 
+photos taken at one event and the images released from the second were 
+believed to be doctored. </p>
+<p> One factor that makes Kim Jong-un's ongoing absence different from 
+the rest of the dictatorial pack is his age. Though his health is 
+clearly a cause for concern -- since he has grown noticeably larger and 
+was seen limping in his last public appearance -- his age makes the 
+prospect of a grave medical issue less of a concern.</p>
+<p><span>Fidel Castro, Cuba's former President and revolutionary leader,
+ looks at the camera during a rare public appearance to attend the 
+inauguration of an art gallery on Jan. 8, 2014 in Havana, Cuba. </span></p>
+<p><span>Fidel Castro, Cuba's former President and revolutionary leader,
+ looks at the camera during a rare public appearance to attend the 
+inauguration of an art gallery on Jan. 8, 2014 in Havana, Cuba. </span></p>
+<p><span>Sven Creutzmann/Getty Images</span></p>
+<p> Each time Fidel Castro is not seen for long periods, which occurs 
+regularly, a fresh crop of death rumors begins to circulate. One of the 
+longest stretches came last year, when, at 87, he wasn't seen for eight 
+months and, according to the Associated Press, that stretch was broken 
+on Jan. 8 when he attended a gallery opening in Havana. </p>
+<p> Kim Jong-un acknowledged his absence from Friday's celebration of 
+the national party's anniversary by sending flowers that were placed in 
+front of statues of his father and grandfather. </p>
+<p> "I'm going to give Kim Jong-un until Monday to show up," Madden said. </p>
+<p><a href="file:///"></a></p><h4 class="rm-manual"><a href="file:///">ABC News Network</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="http://disneyprivacycenter.com/"></a></p><h4 class="rm-manual"><a href="http://disneyprivacycenter.com/">Privacy Policy</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://disneyprivacycenter.com/notice-to-california-residents/"></a></p><h4 class="rm-manual"><a href="https://disneyprivacycenter.com/notice-to-california-residents/">Your CA Privacy Rights</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://disneyprivacycenter.com/kids-privacy-policy/english/"></a></p><h4 class="rm-manual"><a href="https://disneyprivacycenter.com/kids-privacy-policy/english/">Children's Online Privacy Policy</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://preferences-mgr.truste.com/?type=abcnews&amp;affiliateId=11"></a></p><h4 class="rm-manual"><a href="https://preferences-mgr.truste.com/?type=abcnews&amp;affiliateId=11">Interest-Based Ads</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://www.nielsen.com/digitalprivacy"></a></p><h4 class="rm-manual"><a href="https://www.nielsen.com/digitalprivacy">About Nielsen Measurement</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://disneytermsofuse.com/"></a></p><h4 class="rm-manual"><a href="https://disneytermsofuse.com/">Terms of Use</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://privacy.thewaltdisneycompany.com/en/dnsmi/"></a></p><h4 class="rm-manual"><a href="https://privacy.thewaltdisneycompany.com/en/dnsmi/">Do Not Sell My Info</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://abcnews.go.com/contact"></a></p><h4 class="rm-manual"><a href="https://abcnews.go.com/contact">Contact Us</a></h4><p class="rm-manual"></p>
+<section class="rm-manual">Copyright © 2020 ABC News Internet Ventures. All rights reserved.</section></article>
+</body></html>

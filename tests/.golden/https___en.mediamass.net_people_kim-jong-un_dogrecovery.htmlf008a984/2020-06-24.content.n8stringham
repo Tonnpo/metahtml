@@ -1,0 +1,154 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Kim Jong-un's Dog Recovering from Surgery - Mediamass </p>
+<ul class="rm-manual"> <li class="rm-manual">Editions</li> <li class="rm-manual"><a href="https://en.mediamass.net/">EN</a></li> <li class="rm-manual"><a href="https://fr.mediamass.net/">FR</a></li> <li class="rm-manual"><a href="https://es.mediamass.net/">ES</a></li> <li class="rm-manual"><a href="https://de.mediamass.net/">DE</a></li> <li class="rm-manual"><a href="https://it.mediamass.net/">IT</a></li> <li class="rm-manual"><a href="https://pt.mediamass.net/">PT</a></li> <li class="rm-manual"><a href="https://cn.mediamass.net/">中文</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///">Home</a></li> <li class="rm-manual"><a href="file:///people">People</a></li> <li class="rm-manual"><a href="file:///culture">Culture</a></li> <li class="rm-manual"><a href="file:///world">World</a></li> <li class="rm-manual"><a href="https://athlet.org/">Sport</a></li> <li class="rm-manual"><a href="file:///birthdays">Celebrity Birthdays</a></li> <li class="rm-manual"><a href="https://cn.mediamass.net/lianxi">Contact</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://en.mediamass.net/">MediaMass</a></li>
+<li class="rm-manual"><a href="https://en.mediamass.net/people">People</a></li>
+<li class="rm-manual"><a href="https://en.mediamass.net/people/kim-jong-un">Kim Jong-un</a></li>
+<li class="rm-manual">Political figure asks fans to pray for ailing dog</li>
+</ul>
+<h1 class="rm-manual"><a href="#">Kim Jong-un's Dog Recovering from Surgery</a></h1>
+<ul class="rm-manual">
+<li class="rm-manual">By Allison Fey</li>
+<li class="rm-manual">Pyongyang</li>
+<li class="rm-manual">Last updated on June 24, 2020</li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><span>Translations</span></li>
+<li class="rm-manual"><a href="https://fr.mediamass.net/people/kim-jong-eun/operation-chien.html">Français</a></li>
+</ul>
+<p class="rm-manual">Spinee (see photo above) came out of the anaesthetic well.</p>
+<p class="rm-manual"><a href="https://en.mediamass.net/people/kim-jong-un">Kim Jong-un</a> »</p>
+<p class="rm-manual">See more <a href="https://en.mediamass.net/people/kim-jong-un">news</a>, <a href="https://en.mediamass.net/people/kim-jong-un">pictures</a> and <a href="https://en.mediamass.net/people/kim-jong-un">video</a>.</p>
+<h3 class="rm-manual">Hot news</h3>
+<ul class="rm-manual">
+<li class="rm-manual">
+<p class="rm-manual">Breaking news <span>June 23, 2020</span></p>
+<p class="rm-manual"><a href="https://en.mediamass.net/people/kim-jong-un/retirement.html">Kim Jong-un to announce retirement at age 37</a></p>
+</li>
+<li class="rm-manual">
+<p class="rm-manual">Rumor <span>June 2020</span></p>
+<p class="rm-manual"><a href="https://en.mediamass.net/people/kim-jong-un/deathhoax.html">Death Hoax says “Kim Jong-un dies at 37”</a></p>
+</li>
+<li class="rm-manual">
+<p class="rm-manual">Rumor Central <span>June 2020</span></p>
+<p class="rm-manual"><a href="https://en.cpost.org/poll/kim-jong-un/gay-rumors.html">Is Kim Jong-un secretly gay and hiding in the closet?</a></p>
+</li>
+</ul>
+<p><a href="https://en.mediamass.net/people/kim-jong-un">Kim Jong-un</a>’s
+ adored labrador retriever "Spinee" has undergone a risky surgery on 
+Monday and is luckily beginning the slow process of recovery, according 
+to Korean media reports. The 37-year-old political figure is said to 
+have received waves and waves and support for Spinee, as he offered his 
+Twitter followers an update on pooch’s status regularly.</p>
+<p>UPDATE 24/06/2020 : This story seems to be false. <a href="file:///blog/mediamass-project">(read more)</a></p>
+<p>Kim Jong-un is one busy daddy</p>
+<p>The yellow labrador retriever underwent a risky procedure at the 
+Pyongyang Veterinary Hospital on Monday (June 22, 2020), prompting the 
+political figure to ask his followers to send well wishes her way.</p>
+<p>“May I ask one favor? My dog Spinee needs your prayers,” he Tweeted 
+on Monday. “She just came out of a difficult surgery 20 minutes ago … 
+She is my beloved.”</p>
+<p>Kim Jong-un’s Twitter feed has kept his fans and followers updated</p>
+<p>Throughout the night the Korean political figure posted updates to 
+his numerous followers, about his dog’s delicate condition. “Spinee came
+ out of the anesthetic well … her vital signs are good … your prayers 
+are working,” he Tweeted.</p>
+<p>Kim Jong-un continued tweeting about his pup’s prognosis throughout 
+the night and it appears the pooch is on the mend. By Tuesday morning, 
+things continued to look good. “The Spinee Report: Her vital signs are 
+good… pink gums … sleeping peacefully… recovering as hoped,” he said. 
+“Not out of the woods yet. Prayers working :)”</p>
+<p>Prayers working</p>
+<p>As Kim Jong-un’s Twitter followers sent messages of support, he 
+showed his gratitude. “With prayers like this I feel confident Spinee 
+will be fine,” he wrote. “Thank you more than you will ever know.”</p>
+<p>Here’s to hoping Spinee has a successful and speedy recovery!</p>
+<p class="rm-manual">© 2020 MediaMass All rights reserved. Do not reproduce (even with permission).</p>
+<h3 class="rm-manual">Kim Jong-un: Recent News</h3>
+<ul class="rm-manual">
+<li class="rm-manual">
+<p class="rm-manual">International <span>June 24, 2020</span></p>
+<p class="rm-manual"><a href="https://en.mediamass.net/people/kim-jong-un/person-of-the-year.html">Kim Jong-un, Time's ‘Person of the Year’ 2020?</a></p>
+</li>
+<li class="rm-manual">
+<p class="rm-manual">Money <span>June 23, 2020</span></p>
+<p class="rm-manual"><a href="https://en.mediamass.net/people/kim-jong-un/highest-paid.html">Kim Jong-un is Highest-Paid Political figure in the World</a></p>
+</li>
+<li class="rm-manual">
+<p class="rm-manual">Buzz <span>June 24, 2020</span></p>
+<p class="rm-manual"><a href="https://en.mediamass.net/people/kim-jong-un/gangnam-style.html">Kim Jong-un goes ‘Gangnam Style’</a></p>
+</li>
+</ul>
+<h3 class="rm-manual">Celebrity Central</h3>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://en.mediamass.net/people/a">A</a></li>
+<li class="rm-manual"><a href="https://en.mediamass.net/people/b">B</a></li>
+<li class="rm-manual"><a href="https://en.mediamass.net/people/c">C</a></li>
+<li class="rm-manual"><a href="https://en.mediamass.net/people/d">D</a></li>
+<li class="rm-manual"><a href="https://en.mediamass.net/people/e">E</a></li>
+<li class="rm-manual"><a href="https://en.mediamass.net/people/f">F</a></li>
+<li class="rm-manual"><a href="https://en.mediamass.net/people/g">G</a></li>
+<li class="rm-manual"><a href="https://en.mediamass.net/people/h">H</a></li>
+<li class="rm-manual"><a href="https://en.mediamass.net/people/i">I</a></li>
+<li class="rm-manual"><a href="https://en.mediamass.net/people/j">J</a></li>
+<li class="rm-manual"><a href="https://en.mediamass.net/people/k">K</a></li>
+<li class="rm-manual"><a href="https://en.mediamass.net/people/l">L</a></li>
+<li class="rm-manual"><a href="https://en.mediamass.net/people/m">M</a></li>
+<li class="rm-manual"><a href="https://en.mediamass.net/people/n">N</a></li>
+<li class="rm-manual"><a href="https://en.mediamass.net/people/o">O</a></li>
+<li class="rm-manual"><a href="https://en.mediamass.net/people/p">P</a></li>
+<li class="rm-manual"><a href="https://en.mediamass.net/people/q">Q</a></li>
+<li class="rm-manual"><a href="https://en.mediamass.net/people/r">R</a></li>
+<li class="rm-manual"><a href="https://en.mediamass.net/people/s">S</a></li>
+<li class="rm-manual"><a href="https://en.mediamass.net/people/t">T</a></li>
+<li class="rm-manual"><a href="https://en.mediamass.net/people/u">U</a></li>
+<li class="rm-manual"><a href="https://en.mediamass.net/people/v">V</a></li>
+<li class="rm-manual"><a href="https://en.mediamass.net/people/w">W</a></li>
+<li class="rm-manual"><a href="https://en.mediamass.net/people/x">X</a></li>
+<li class="rm-manual"><a href="https://en.mediamass.net/people/y">Y</a></li>
+<li class="rm-manual"><a href="https://en.mediamass.net/people/z">Z</a></li>
+</ul>
+<h2 class="rm-manual"><a href="file:///birthdays">Famous Birthdays</a></h2>
+<h3 class="rm-manual">Who Was Born on My Birthday?</h3>
+<p class="rm-manual"> 大量转体 (MediaMass) 版权所有 © 2012-2018 - </p>
+<p class="rm-manual"><a href="file:///blog/mediamass-project">About us</a> (English) - Hosted by Gandi.net - </p>
+<p class="rm-manual"><a href="https://cn.mediamass.net/lianxi">Contact</a> </p></article>
+</body></html>

@@ -1,0 +1,298 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> No Man's Sea: CSBA's
+ Lethal Vision Of Future Naval War - Breaking Defense Breaking Defense -
+ Defense industry news, analysis and commentary No Man's Sea: CSBA's 
+Lethal Vision Of Future Naval War - Breaking Defense </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://breakingdefense.com/subscribe/">Newsletter Signup</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/about/">About Us</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/resources-and-ebooks/">Special Features</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://breakingdefense.com/category/air/">Air Warfare</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/category/land/">Land Warfare</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/category/sea/">Naval Warfare</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/category/space/">Space</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/category/networks-and-cyber/">Networks / Cyber</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/category/congress/">Congress</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/category/strategy-and-policy/">Threats</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/category/allies/">Allies</a></li> <li class="rm-manual">
+<a href="https://breakingdefense.com/category/special-reports/">Special Features »</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://breakingdefense.com/2021/06/a-leap-ahead-in-speed-range-and-endurance-is-locked-a-leap-ahead-in-speed-range-and-endurance/">Digital Dialogue: Future Vertical Lift</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/tag/defense-budget-2021/">Defense Budget 2021</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/whos-who-2021/">Who’s Who in Defense 2021</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/tag/all-domain-series-2020/">Multimedia Report: All Domain</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/tag/sofic-2021/">Show Coverage: SOFIC 2021</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/tag/red-hat-in-focus-2021/">In Focus: DOD IT Automation</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/tag/battlefield-mobility-series-2021/">Multimedia Report: Battlefield Mobility</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/tag/digital-dialogue-b-21-raider/">Digital Dialogue: B-21 Raider</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/tag/lockheed-martin-all-domain-spotlight-2021/">Spotlight: Shaping the Joint Battlespace</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/tag/ausa-global-2021/">Show Coverage: AUSA Global Force 2021</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/tag/idex-2021/">Show Coverage: IDEX 2021</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/tag/training-series-2020/">Multimedia Report: Military Readiness &amp; Training</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/tag/milspace-raytheon-mmr-2021/">Multimedia Report: The 4th Domain – Military Space</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/tag/c4isr-middle-east/">C4ISR Middle East</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/tag/preston-dunlap-interview-2020/">The All Domain Interview: Preston Dunlap</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/tag/dell-spotlight-2020/">Spotlight: Great Power Competition – The Role of AI, 5G, Cloud</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/tag/red-hat-spotlight-2020/">Spotlight: Automation – A Force Multiplier for Military Networks</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/tag/in-focus-air-superiority-2020/">In Focus: Air Superiority</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/tag/perspecta-spotlight-2020/">Spotlight: Defense Enclave Services</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/2020/09/multimedia-report-the-military-space-enterprise-space-force/">Multimedia Report: Space Force</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/tag/NGCV-Series-2020/">In Focus: NGCV – The Future of Combat Vehicles</a></li> </ul> </li> <li class="rm-manual"><a href="https://breakingdefense.com/subscribe/">Newsletters</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/about/">About Us</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://breakingdefense.com/category/air/">Air</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/category/land/">Land</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/category/sea/">Naval</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/category/space/">Space</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/category/networks-and-cyber/">Networks / Cyber</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/category/congress/">Congress</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/category/pentagon/">Pentagon</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/category/allies/">Allies</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/category/threats/">Threats</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://breakingdefense.com/subscribe/">Newsletter Signup</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/about/">About Us</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/resources-and-ebooks/">Special Features</a></li> </ul>
+<p class="rm-manual"> <span>Search for:</span> </p>
+<h3 class="rm-manual"> <a href="https://breakingdefense.com/2021/07/chinas-j-35-carrier-fighter-appears-step-to-most-powerful-navy/">China’s J-35 Carrier Fighter Appears; Step To ‘Most Powerful Navy’?</a> </h3>
+<h3 class="rm-manual"> <a href="https://breakingdefense.com/2021/06/f-35-nabs-6-5b-swiss-deal-lowest-operating-costs/">F-35 Nabs $6.5B Swiss Deal; ‘Lowest Operating Costs’</a> </h3>
+<h3 class="rm-manual"> <a href="https://breakingdefense.com/2021/06/devstar-for-b-21-design-build-sustainment/">DevStar for B-21 Design, Build, Sustainment</a> </h3>
+<h3 class="rm-manual"> <a href="https://breakingdefense.com/2021/06/skyborg-ai-flies-second-drone-demos-portability/">Skyborg AI Flies Second Drone; Demos ‘Portability’</a> </h3>
+<h3 class="rm-manual"> <a href="https://breakingdefense.com/2021/06/socom-to-test-anti-aging-pill-next-year/">SOCOM To Test Anti-Aging Pill Next Year</a> </h3>
+<h3 class="rm-manual"> <a href="https://breakingdefense.com/2021/06/house-approps-restores-2nd-destroyer-cuts-sea-launched-nuke-cruise-missile/">House Approps Restores 2nd Destroyer; Cuts Sea-Launched Nuke Cruise Missile</a> </h3>
+<h3 class="rm-manual"> <a href="https://breakingdefense.com/2021/06/did-russia-test-hypersonic-missile-from-syria-israel-may-know/">Did Russia Test Hypersonic Missile From Syria? Israel May Know</a> </h3>
+<h3 class="rm-manual"> <a href="https://breakingdefense.com/2021/06/iranian-nuke-centrifuge-plant-madly-damaged-by-drones/">Iranian Nuke Centrifuge Plant Badly Damaged By Drones</a> </h3>
+<h3 class="rm-manual"> <a href="https://breakingdefense.com/2021/06/first-abms-buy-kc-46-pods-to-link-f-22-f-35/">First ABMS Buy: KC-46 Pods To Link F-22, F-35</a> </h3>
+<h3 class="rm-manual"> <a href="https://breakingdefense.com/2021/06/acquisition-reform-that-works-no-one-has-heard-of/">Acquisition Reform That Works &amp; No One Has Heard Of</a> </h3>
+<h3 class="rm-manual"> <a href="https://breakingdefense.com/2021/06/israel-seeks-us-dough-to-help-build-airborne-laser-after-tests/">Israel Seeks US Dough To Help Build Airborne Laser After Tests</a> </h3>
+<h3 class="rm-manual"> <a href="https://breakingdefense.com/2021/06/bombers-best-bet-for-aussie-deterrence-of-china/">Bombers Best Bet For Aussie Deterrence Of China</a> </h3>
+<h3 class="rm-manual"> <a href="https://breakingdefense.com/2021/06/air-force-starts-kc-y-tanker-search-as-lawmakers-slam-kc-46/">Air Force Starts KC-Y Tanker Search As Lawmakers Slam KC-46</a> </h3>
+<h3 class="rm-manual"> <a href="https://breakingdefense.com/2021/06/houthi-terror-scuds-now-threaten-most-of-saudi-arabia/">Houthi ‘Terror’ Scuds Now Threaten Most Of Saudi Arabia</a> </h3>
+<h3 class="rm-manual"> <a href="https://breakingdefense.com/2021/06/air-force-to-set-up-3d-printed-supply-chain-at-tinker-afb/">Air Force To Set Up 3D Printed Supply Chain At Tinker AFB</a> </h3>
+<h2 class="rm-manual"> Defense industry news, analysis and commentary </h2>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://breakingdefense.com/category/air/">Air</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/category/land/">Land</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/category/sea/">Naval</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/category/space/">Space</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/category/networks-and-cyber/">Networks / Cyber</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/category/congress/">Congress</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/category/pentagon/">Pentagon</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/category/allies/">Allies</a></li> <li class="rm-manual"><a href="https://breakingdefense.com/category/threats/">Threats</a></li> </ul>
+<p class="rm-manual"> <span>Search for:</span> </p>
+<p class="rm-manual"> <a href="https://breakingdefense.com/whos-who-2021/"> <span>Who’s Who in Defense 2021 →</span> </a> <a href="https://bit.ly/3jngHUk"> <span>Automate The Complex: Network Automation Enables Military Interoperability And Agility. SPOTLIGHT →</span> </a> <a href="https://bit.ly/3jqrDki"> <span>SPOTLIGHT: The Pacific Cloud: Deterrence, Collaboration &amp; Security →</span> </a> <a href="https://breakingdefense.com/tag/c4isr-middle-east/"> <span>C4ISR Middle East Coverage. Read Here. →</span> </a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://breakingdefense.com/category/air/" rel="category tag">Air Warfare</a>, <a href="https://breakingdefense.com/category/sea/" rel="category tag">Naval Warfare</a>, <a href="https://breakingdefense.com/category/networks-and-cyber/" rel="category tag">Networks / Cyber</a>, <a href="https://breakingdefense.com/category/threats/" rel="category tag">Threats</a> </li> </ul>
+<h1 class="rm-manual"> <a href="https://breakingdefense.com/2015/04/no-mans-sea-csbas-lethal-vision-of-future-naval-war/" rel="bookmark"> No Man’s Sea: CSBA’s Lethal Vision Of Future Naval War </a> </h1>
+<p class="rm-manual"> <span> By <a href="https://breakingdefense.com/author/sydney-j-freedberg-jr/" rel="author">Sydney J. Freedberg Jr.</a> </span> <span> on April 13, 2015 at 4:25 AM</span> </p>
+<p class="rm-manual"> <a href="https://breakingdefense.com/2015/04/no-mans-sea-csbas-lethal-vision-of-future-naval-war/#comments"><span>214 comments</span></a> </p>
+<p class="rm-manual">CSBA graphic of a future war at sea.</p>
+<p>WASHINGTON: The seas are shrinking. As <a href="https://breakingdefense.com/2014/11/47-seconds-from-hell-a-challenge-to-navy-doctrine/">missiles grow longer-ranged and more precise</a>, as <a href="https://breakingdefense.com/2015/01/transparent-sea-the-unstealthy-future-of-submarines/">sensors grow ever sharper</a>,
+ there are ever fewer places for a ship to hide. “A ship’s a fool to 
+fight a fort,” goes an old naval adage, because a land base can carry 
+more ammunition and armor than anything that floats. Admirals have 
+always been uneasy about bringing their fleets <a href="https://breakingdefense.com/2015/04/marine-choppers-are-navys-cuisinart-surviving-littoral-warfare/">in range of shore-based weapons</a>. But what does the US Navy do when those weapons can find you hundreds or thousands of miles out to sea?</p>
+<p>That’s the question posed by <a href="http://csbaonline.org/about/people/akrepinevich/">Andrew Krepinevich</a>
+ in his forthcoming study, Maritime Competition In A Mature 
+Precision-Strike Regime. (Krepinevich gave Breaking Defense an exclusive
+ advance copy and answered our questions about it at length). The 
+thinktank Krepinevich heads, the <a href="http://csbaonline.org/">Center for Strategic and Budgetary Assessments</a>, has long led the way on the concepts called <a href="https://breakingdefense.com/2015/03/sowing-the-sea-with-fire-how-russia-china-iran-lay-mines-and-how-to-stop-them/">anti-access/area denial</a> (A2/AD) and <a href="https://breakingdefense.com/2013/07/glimpse-inside-air-sea-battle-nukes-cyber-at-its-heart/">Air-Sea Battle</a>, which wrestle with the rising power of <a href="https://breakingdefense.com/2013/10/chinas-fear-of-us-may-tempt-them-to-preempt-sinologists/">China</a>
+ and other countries to keep US forces at a distance. His new study 
+carries this earlier work to its logical conclusion: a world in which 
+both sides have built the wide-area network of <a href="https://breakingdefense.com/2015/03/us-military-losing-edge-in-space-kendall/">spy satellites</a>, <a href="https://breakingdefense.com/2014/10/triton-poseidon-uclass-the-navys-isr-balancing-act/">drones</a>, <a href="https://breakingdefense.com/2013/09/b-1b-bomber-exterminates-small-moving-boat-tests-larger-anti-ship-missile/">bombers</a>, and <a href="https://breakingdefense.com/2015/01/growing-teeth-upgunning-the-surface-navy/">missiles</a> that is <a href="https://breakingdefense.com/2012/12/the-end-of-advantage-enemies-may-catch-up-with-us-technology/">currently a US monopoly </a>— the “mature precision-strike regime” of the title.</p>
+<p>It’s a world in which naval warfare is very different — indeed, in 
+which land-based forces can do so much damage to fleets that the 
+conflict isn’t purely “naval” anymore. (That’s why the study uses 
+“maritime” instead). The World War II parallel is not Midway, where US 
+and Japanese carriers struggled to find each other in the vast Pacific: 
+It’s the Mediterranean, where both Axis and Allied ships were easily 
+found and ravaged by land-based bombers. The difference is that modern 
+technology effectively shrinks the Pacific to the size of the 
+Mediterranean.</p>
+<p>“In the Med [in World War II], you have these no man’s lands where it
+ becomes very difficult to operate on the surface of the water,” 
+Krepinevich told me. “In a mature [precision strike] regime, the oceans 
+may shrink to Mediterranean size.”</p>
+<p>Krepinevich foresees the anti-access/area denial zones of CSBA’s 
+earlier studies expanding ever further into the ocean until they meet in
+ the middle, creating a no man’s land — or rather, no man’s sea — where 
+both sides venture only at grave peril. After centuries in which freedom
+ of maneuver was the norm in naval operations, much of the ocean would 
+be carved up into impassable killing fields. In cases where rival 
+countries are close together, as <a href="https://breakingdefense.com/2014/01/japan-re-shapes-its-national-security-strategy/">Japan</a>, <a href="https://breakingdefense.com/2013/11/chinas-new-defense-zone-drives-korea-japan-together/">South Korea</a>, and <a href="https://breakingdefense.com/2012/12/us-wants-out-of-pacific-islands-mess/">Taiwan</a> are to China, the Gulf emirates to Iran, or the <a href="https://breakingdefense.com/2015/03/putin-wont-blitz-baltic-states-but-nato-has-a-plan/">Baltic States</a>
+ to Russia, the entire territory of the smaller nation may be inside the
+ no-go zone. This means US allies would be blockaded, under bombardment,
+ and under siege from the second that the shooting started. It also 
+means US forces coming to their rescue would have to cross the oceanic 
+equivalent of World War I’s Western Front.</p>
+<p>“If you have to reinforce Taiwan or some critical point,” said 
+Krepinevich, “and you don’t have a lot of time to prepare the 
+battlefield, you are confronted with the prospect of ceding that key 
+interest or suffering high levels of attrition.”</p>
+<p>So how do you cross the killing fields intact? Just like the 
+commanders of World War I, who turned to various combinations of new 
+technologies (British tanks) and tactics (German stormtroopers), 
+Krepinevich looks at a range of possibilities.</p>
+<p>The simplest solution is not to go in at all. Instead, blockade the 
+enemy and try to force him to come out into your kill zone to break the 
+siege. The tricky part, of course, is getting the enemy to cooperate. 
+Such a distant blockade, keeping China’s exports from reaching buyers 
+and keeping Mideast oil from reaching China, is the heart of the “<a href="http://www.usni.org/magazines/proceedings/2012-12/offshore-control-answer">Offshore Control</a>” strategy proposed by retired Marine colonel <a href="https://breakingdefense.com/tag/t-x-hammes/">T.X. Hammes</a>
+ as an alternative to Air-Sea Battle. That’s an attractive option when 
+you have time, Krepinevich told me. But our allies trapped inside the 
+enemy’s kill zone (e.g. Japan) might not last long enough for our 
+distant blockade to win the war.</p>
+<p>On the other hand, if we take a more aggressive course, our own ammo 
+may not last long enough. Fighting a high-tech enemy would eat up 
+missiles, drones, and even manned systems — with the loss of human life 
+that entails — at a rate far higher than relatively defenseless targets 
+in <a href="https://breakingdefense.com/2012/09/us-allies-wrestle-with-intel-sharing-problems-exposed-in-libya/">Libya</a>, Afghanistan, or the <a href="https://breakingdefense.com/2015/04/trench-warfare-with-wings-can-isil-airstrikes-go-beyond-attrition/">Islamic State</a>.
+ US commanders are already lamenting their low stockpiles of precision 
+weapons, and US industry can’t churn out new ones very fast.</p>
+<p>“In a prospective near-term conflict with the People’s Republic of 
+China, we have little ability to surge production of munitions, let 
+alone <a href="https://breakingdefense.com/2015/04/fy2016-long-range-shipbuilding-plan/">major platforms</a>,”
+ Krepinevich said. “So if you are the PRC, you may only need to plan to 
+maintain a few months’ supply of oil. If you are Beijing and thinking 
+long-term, you can stockpile — which I understand they are — or build 
+underground pipelines on land,” for example to oil-rich Russia.</p>
+<p>Stockpiling oil, however, is much easier than stockpiling 
+precision-guided weapons. If China and other adversaries can make us run
+ out of ammo, why can’t we make them run out of theirs? In the age of 
+iPhones, the technology to make missiles smart keeps getting cheaper, 
+Krepinevich said, but the technology to make them long-ranged does not. 
+That means even a major power will have a limited number of its most 
+dangerous weapons.</p>
+<p>One way of depleting the enemy arsenal is to make them shoot at nothing: decoys, <a href="https://breakingdefense.com/2015/03/winning-the-war-of-electrons-inside-the-new-maritime-strategy/">electronic warfare</a>, and even <a href="https://breakingdefense.com/2014/10/set-set-cyber-zebra-navy-shipboard-cybersecurity/">hacking the enemy’s network</a>
+ can all create illusory targets. When the enemy does fire at something 
+real, however, it would be great to be able to shoot the incoming 
+missile down. That’s a problem with <a href="https://breakingdefense.com/2015/03/raid-breaker-work-elevates-electronic-warfare-eye-on-missile-defense/">current missile defenses</a>, which rely on <a href="https://breakingdefense.com/2014/08/non-standard-navy-sm-6-kills-cruise-missiles-deep-inland/">high-priced interceptors</a> ships can only carry in small numbers. <a href="https://breakingdefense.com/2015/02/are-missile-defense-lasers-on-the-verge-of-reality/">Laser weapons</a> or <a href="https://breakingdefense.com/2014/04/navys-magnetic-super-gun-to-make-mach-7-shots-at-sea-in-2016-adm-greenert/">electromagnetic rail guns</a>, however, could keep taking cheap shots until the enemy is out of expensive missiles.</p>
+<p>Long-range missiles aren’t the only limited resource: So are the long-range sensors that find the targets in the first place. <a href="https://breakingdefense.com/2014/07/us-cant-stick-our-heads-in-the-sand-over-rising-threats-to-space-gen-shelton/">Satellites are increasingly vulnerable</a>
+ to both direct attack — lasers blinding their sensors, for example — 
+and indirect attack — hackers compromising their downlinks to earth or 
+smart bombs destroying the ground control stations. As space goes dark, 
+the warring powers will probably resort to high-altitude drones for both
+ reconnaissance and communications relays, Krepinevich says. But those 
+drones need to be smart enough to operate with <a href="https://breakingdefense.com/2014/10/who-pulls-trigger-for-new-navy-drone-swarm-boats/">a high level of autonomy</a>, he added, or the long-range <a href="https://breakingdefense.com/2012/08/drones-need-secure-datalinks-to-survive-vs-iran-china/">data links</a> between them and their operators will become another major vulnerability to be jammed and hacked.</p>
+<p>Overall, the <a href="https://breakingdefense.com/2014/01/cyberwar-what-people-keep-missing-about-the-threat/">wireless network</a>
+ connecting the far-flung enemy forces — both human and robotic — will 
+be a vital target. Cyber espionage could play as vital a role as 
+cracking Nazi and Japanese codes (the <a href="http://www.nationalmuseum.af.mil/factsheets/factsheet.asp?id=9722">ULTRA and MAGIC</a>
+ projects) did in World War II. Cyber attack could also introduce false 
+data or shut down key enemy systems at a critical time. But this domain 
+of warfare is even more filled with uncertainties than the rest of the 
+future, Krepinevich cautioned.</p>
+<p>“To a certain extent, cyber to this regime is kind of like airpower 
+in the ’20s and ’30s,” he said, “where everybody knew it was going to be
+ important,” but they didn’t know how important or in what way.</p>
+<p>With airpower, however, at least the uncertainty largely ended once 
+the shooting began: You could see planes going down, the cities in 
+flames. With cyber warfare and electronic deception, however, both 
+attack and effects are largely invisible. If the enemy stops shooting 
+long-range missiles at you, he may have run out, he may have been 
+blinded by your cyber and electronic attacks — or he may be holding his 
+fire for when you come closer, into his trap.</p>
+<p>Eventually, though, US forces will have to come closer, if only 
+because they’re running out of long-range weapons. So what kind of 
+future force will best survive the 21st century no man’s land? Stealth 
+will still matter, Krepinevich predicts, albeit continually challenged 
+by <a href="https://breakingdefense.com/2015/01/transparent-sea-the-unstealthy-future-of-submarines/">ever more sensitive sensors backed by big data analytics</a>. <a href="https://breakingdefense.com/2015/03/cyber-subs-a-decisive-edge-for-high-tech-war/">Submarines</a> and <a href="https://breakingdefense.com/2015/04/should-future-fighter-be-like-a-bomber-groundbreaking-csba-study/">land-based bombers</a> — larger and longer-ranged than any carrier aircraft — will likely form the leading edge of the force, backstopped by <a href="https://breakingdefense.com/2014/10/army-should-build-ship-killer-missiles-rep-randy-forbes/">land-based long-range missiles</a>.</p>
+<p>That said, Krepinevich hardly rules out a role for surface ships, even ones that present as big a target as an <a href="https://breakingdefense.com/2015/03/jet-cars-radars-the-ford-class-carrier/">aircraft carrier</a>.
+ While they’re more visible and vulnerable than submarines, surface 
+ships also cost much less per pound of payload, potentially giving them <a href="https://breakingdefense.com/2014/01/navy-seeks-rail-guns-lasers-cruise-missiles-to-improve-pacific-firepower/">much more firepower</a>.
+ The critical question is what that payload is. Currently, he warns, 
+potential adversaries have cruise missiles that can hit a US carrier 
+from ranges so long the carrier’s aircraft can’t strike back. (That is, 
+not without mid-air refueling, a prohibitively risky maneuver in hostile
+ airspace). <a href="https://breakingdefense.com/2014/11/expanding-the-reach-of-the-carrier-strike-group/">Longer-ranged carrier aircraft</a> — <a href="https://breakingdefense.com/2015/03/mccain-to-carter-make-uclass-a-long-range-strike-plane/">not necessarily manned ones</a> — could keep the Navy’s favorite flagships relevant.</p>
+<p>Andrew Krepinevich</p>
+<p>In fact, Krepinevich notes, most military revolutions begin on the 
+margin, with a few cutting-edge systems in an otherwise traditional 
+force, if only because that’s all most militaries can afford. The German
+ army of the blitzkrieg had more horse-drawn carts than tanks. The US 
+Navy of December 7, 1941 had more battleships than aircraft carriers — 
+and the battleships that survived, refitted with extra anti-aircraft 
+guns, played an important supporting role in the carrier war that 
+followed. A relatively small amount of new technology, applied using new
+ tactics, can make a decisive difference for a large force. The trick, 
+of course, is figuring out what <a href="https://breakingdefense.com/2014/11/hagel-launches-offset-strategy-lists-key-technologies/">the right new technologies</a> and tactics are.</p>
+<p>That’s the discussion Krepinevich hopes to help start.</p>
+<p>“This is really version 1.0,” he said of his report. “This is a best 
+first guess, and it’s based on trends,” he said, but there are a 
+tremendous number of variables in play, more so perhaps than any 
+previous time in military history. Nevertheless, he went on, “it’s 
+better to have something like this, that provides that point of 
+departure, than to have nothing at all and just keep stumbling toward <a href="https://breakingdefense.com/tag/navy-future/">the future</a>.”</p>
+<p class="rm-manual">“It’s the beginning of the conversation,” Krepinevich said. “It’s not the end.”</p>
+<p class="rm-manual"> <a href="https://breakingdefense.com/2021/06/cross-domain-solutions-enabling-all-domain-operations/">Networks / Cyber, </a> <a href="https://breakingdefense.com/2021/06/cross-domain-solutions-enabling-all-domain-operations/">Sponsored</a> </p>
+<h3 class="rm-manual"> <a href="https://breakingdefense.com/2021/06/cross-domain-solutions-enabling-all-domain-operations/">Cross Domain Solutions: Enabling All Domain Operations</a> </h3>
+<p class="rm-manual"> <a href="https://breakingdefense.com/2021/06/cross-domain-solutions-enabling-all-domain-operations/">Networks / Cyber, </a> <a href="https://breakingdefense.com/2021/06/cross-domain-solutions-enabling-all-domain-operations/">Sponsored</a> </p>
+<h3 class="rm-manual"> <a href="https://breakingdefense.com/2021/06/cross-domain-solutions-enabling-all-domain-operations/">Cross Domain Solutions: Enabling All Domain Operations</a> </h3>
+<p class="rm-manual"> <a href="https://breakingdefense.com/2021/06/cross-domain-solutions-enabling-all-domain-operations/">Networks / Cyber, </a> <a href="https://breakingdefense.com/2021/06/cross-domain-solutions-enabling-all-domain-operations/">Sponsored</a> </p>
+<h3 class="rm-manual"> <a href="https://breakingdefense.com/2021/06/cross-domain-solutions-enabling-all-domain-operations/">Cross Domain Solutions: Enabling All Domain Operations</a> </h3>
+<p class="rm-manual">Enabling the sharing of unclassified, Secret, and 
+Top Secret mission critical data across warfighting domains and security
+ boundaries at the tactical edge.</p>
+<p class="rm-manual"> <span>From </span> <a href="https://breakingdefense.com/author/brosenberg/" rel="author">Barry Rosenberg</a> </p>
+<p class="rm-manual">Enabling the sharing of unclassified, Secret, and 
+Top Secret mission critical data across warfighting domains and security
+ boundaries at the tactical edge.</p>
+<p class="rm-manual"> <span>From </span> <a href="https://breakingdefense.com/author/brosenberg/" rel="author">Barry Rosenberg</a> </p>
+<p class="rm-manual"> <a href="https://breakingdefense.com/2021/07/chinas-j-35-carrier-fighter-appears-step-to-most-powerful-navy/">Recommended</a> </p>
+<h3 class="rm-manual"> <a href="https://breakingdefense.com/2021/07/chinas-j-35-carrier-fighter-appears-step-to-most-powerful-navy/">China’s J-35 Carrier Fighter Appears; Step To ‘Most Powerful Navy’?</a> </h3>
+<p class="rm-manual">“The J-35 may well represent another significant 
+milestone in the Chinese long-term pursuit of a blue-water carrier based
+ naval aviation capability”, said retired US naval intelligence officer,
+ Capt. James Fanell.</p>
+<p class="rm-manual"> By <a href="https://breakingdefense.com/author/reubenjohnson/" rel="author">Reuben Johnson</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual">Topics: <a href="https://breakingdefense.com/tag/air-force/" rel="tag">air force</a>, <a href="https://breakingdefense.com/tag/aircraft-carriers/" rel="tag">aircraft carriers</a>, <a href="https://breakingdefense.com/tag/airsea-battle/" rel="tag">AirSea Battle</a>, <a href="https://breakingdefense.com/tag/allies/" rel="tag">allies</a>, <a href="https://breakingdefense.com/tag/andrew-krepinevich/" rel="tag">Andrew Krepinevich</a>, <a href="https://breakingdefense.com/tag/anti-access-area-denial/" rel="tag">anti-access area denial</a>, <a href="https://breakingdefense.com/tag/asia/" rel="tag">asia</a>, <a href="https://breakingdefense.com/tag/bombers/" rel="tag">bombers</a>, <a href="https://breakingdefense.com/tag/center-for-strategic-and-budgetary-assessments/" rel="tag">Center for Strategic and Budgetary Assessments</a>, <a href="https://breakingdefense.com/tag/china/" rel="tag">China</a>, <a href="https://breakingdefense.com/tag/csba/" rel="tag">CSBA</a>, <a href="https://breakingdefense.com/tag/cyber-warfare/" rel="tag">cyber warfare</a>, <a href="https://breakingdefense.com/tag/cybersecurity/" rel="tag">cybersecurity</a>, <a href="https://breakingdefense.com/tag/drones/" rel="tag">drones</a>, <a href="https://breakingdefense.com/tag/electronic-warfare/" rel="tag">electronic warfare</a>, <a href="https://breakingdefense.com/tag/missile-defense/" rel="tag">Missile Defense</a>, <a href="https://breakingdefense.com/tag/missiles/" rel="tag">Missiles</a>, <a href="https://breakingdefense.com/tag/navy/" rel="tag">navy</a>, <a href="https://breakingdefense.com/tag/navy-future/" rel="tag">navy future</a>, <a href="https://breakingdefense.com/tag/networks/" rel="tag">networks</a>, <a href="https://breakingdefense.com/tag/pacific/" rel="tag">Pacific</a>, <a href="https://breakingdefense.com/tag/sea-air-space-2015/" rel="tag">Sea-Air-Space 2015</a>, <a href="https://breakingdefense.com/tag/strategy/" rel="tag">strategy</a>, <a href="https://breakingdefense.com/tag/submarines/" rel="tag">submarines</a>, <a href="https://breakingdefense.com/tag/world-war-ii/" rel="tag">world war II</a> </p>
+</li> </ul>
+<p class="rm-manual"> <a href="https://breakingdefense.com/2021/05/the-b-21-raider-a-marvel-of-digital-development/">Air Warfare, </a> <a href="https://breakingdefense.com/2021/05/the-b-21-raider-a-marvel-of-digital-development/">Sponsored</a> </p>
+<h3 class="rm-manual"> <a href="https://breakingdefense.com/2021/05/the-b-21-raider-a-marvel-of-digital-development/">The B-21 Raider: A Marvel Of Digital Development</a> </h3>
+<p class="rm-manual"> <a href="https://breakingdefense.com/2021/05/the-b-21-raider-a-marvel-of-digital-development/">Air Warfare, </a> <a href="https://breakingdefense.com/2021/05/the-b-21-raider-a-marvel-of-digital-development/">Sponsored</a> </p>
+<h3 class="rm-manual"> <a href="https://breakingdefense.com/2021/05/the-b-21-raider-a-marvel-of-digital-development/">The B-21 Raider: A Marvel Of Digital Development</a> </h3>
+<p class="rm-manual"> <a href="https://breakingdefense.com/2021/05/the-b-21-raider-a-marvel-of-digital-development/">Air Warfare, </a> <a href="https://breakingdefense.com/2021/05/the-b-21-raider-a-marvel-of-digital-development/">Sponsored</a> </p>
+<h3 class="rm-manual"> <a href="https://breakingdefense.com/2021/05/the-b-21-raider-a-marvel-of-digital-development/">The B-21 Raider: A Marvel Of Digital Development</a> </h3>
+<p class="rm-manual">Risk reduction is vital in the development of this 
+new Air Force bomber. Northrop Grumman is driving risk out of the 
+program with digital capabilities throughout design, build, prototype, 
+and test.</p>
+<p class="rm-manual"> <span>From </span> <a href="https://breakingdefense.com/author/brosenberg/" rel="author">Barry Rosenberg</a> </p>
+<p class="rm-manual">Risk reduction is vital in the development of this 
+new Air Force bomber. Northrop Grumman is driving risk out of the 
+program with digital capabilities throughout design, build, prototype, 
+and test.</p>
+<p class="rm-manual"> <span>From </span> <a href="https://breakingdefense.com/author/brosenberg/" rel="author">Barry Rosenberg</a> </p>
+<p class="rm-manual">Recommended</p>
+<h3 class="rm-manual"> <a href="https://breakingdefense.com/2021/06/house-approps-restores-2nd-destroyer-cuts-sea-launched-nuke-cruise-missile/">House Approps Restores 2nd Destroyer; Cuts Sea-Launched Nuke Cruise Missile</a> </h3>
+<h3 class="rm-manual"> <a href="https://breakingdefense.com/2021/06/did-russia-test-hypersonic-missile-from-syria-israel-may-know/">Did Russia Test Hypersonic Missile From Syria? Israel May Know</a> </h3>
+<p class="rm-manual"> <a href="https://breakingdefense.com/2021/05/applying-risk-reduction-and-digital-engineering-the-air-forces-b-52-re-engining-program/">Air Warfare, </a> <a href="https://breakingdefense.com/2021/05/applying-risk-reduction-and-digital-engineering-the-air-forces-b-52-re-engining-program/">Sponsored</a> </p>
+<h3 class="rm-manual"> <a href="https://breakingdefense.com/2021/05/applying-risk-reduction-and-digital-engineering-the-air-forces-b-52-re-engining-program/">Applying Risk Reduction And Digital Engineering: The Air Force’s B-52 Re-Engining Program.</a> </h3>
+<p class="rm-manual"> <a href="https://breakingdefense.com/2021/05/applying-risk-reduction-and-digital-engineering-the-air-forces-b-52-re-engining-program/">Air Warfare, </a> <a href="https://breakingdefense.com/2021/05/applying-risk-reduction-and-digital-engineering-the-air-forces-b-52-re-engining-program/">Sponsored</a> </p>
+<h3 class="rm-manual"> <a href="https://breakingdefense.com/2021/05/applying-risk-reduction-and-digital-engineering-the-air-forces-b-52-re-engining-program/">Applying Risk Reduction And Digital Engineering: The Air Force’s B-52 Re-Engining Program.</a> </h3>
+<p class="rm-manual"> <a href="https://breakingdefense.com/2021/05/applying-risk-reduction-and-digital-engineering-the-air-forces-b-52-re-engining-program/">Air Warfare, </a> <a href="https://breakingdefense.com/2021/05/applying-risk-reduction-and-digital-engineering-the-air-forces-b-52-re-engining-program/">Sponsored</a> </p>
+<h3 class="rm-manual"> <a href="https://breakingdefense.com/2021/05/applying-risk-reduction-and-digital-engineering-the-air-forces-b-52-re-engining-program/">Applying Risk Reduction And Digital Engineering: The Air Force’s B-52 Re-Engining Program.</a> </h3>
+<p class="rm-manual">With hundreds of thousands of hours of digital 
+engineering work done, Rolls-Royce is well ahead of schedule for the 
+F130 engine development. </p>
+<p class="rm-manual"> <span>From </span> <a href="https://breakingdefense.com/author/breakingdefense/" rel="author">Breaking Defense</a> </p>
+<p class="rm-manual">With hundreds of thousands of hours of digital 
+engineering work done, Rolls-Royce is well ahead of schedule for the 
+F130 engine development. </p>
+<p class="rm-manual"> <span>From </span> <a href="https://breakingdefense.com/author/breakingdefense/" rel="author">Breaking Defense</a> </p>
+<p class="rm-manual"> <a href="https://breakingdefense.com/2021/06/a-leap-ahead-in-speed-range-and-endurance-is-locked-a-leap-ahead-in-speed-range-and-endurance/">Air Warfare, </a> <a href="https://breakingdefense.com/2021/06/a-leap-ahead-in-speed-range-and-endurance-is-locked-a-leap-ahead-in-speed-range-and-endurance/">Sponsored</a> </p>
+<h3 class="rm-manual"> <a href="https://breakingdefense.com/2021/06/a-leap-ahead-in-speed-range-and-endurance-is-locked-a-leap-ahead-in-speed-range-and-endurance/">A Leap Ahead In Speed, Range, And Endurance</a> </h3>
+<p class="rm-manual"> <a href="https://breakingdefense.com/2021/06/a-leap-ahead-in-speed-range-and-endurance-is-locked-a-leap-ahead-in-speed-range-and-endurance/">Air Warfare, </a> <a href="https://breakingdefense.com/2021/06/a-leap-ahead-in-speed-range-and-endurance-is-locked-a-leap-ahead-in-speed-range-and-endurance/">Sponsored</a> </p>
+<h3 class="rm-manual"> <a href="https://breakingdefense.com/2021/06/a-leap-ahead-in-speed-range-and-endurance-is-locked-a-leap-ahead-in-speed-range-and-endurance/">A Leap Ahead In Speed, Range, And Endurance</a> </h3>
+<p class="rm-manual"> <a href="https://breakingdefense.com/2021/06/a-leap-ahead-in-speed-range-and-endurance-is-locked-a-leap-ahead-in-speed-range-and-endurance/">Air Warfare, </a> <a href="https://breakingdefense.com/2021/06/a-leap-ahead-in-speed-range-and-endurance-is-locked-a-leap-ahead-in-speed-range-and-endurance/">Sponsored</a> </p>
+<h3 class="rm-manual"> <a href="https://breakingdefense.com/2021/06/a-leap-ahead-in-speed-range-and-endurance-is-locked-a-leap-ahead-in-speed-range-and-endurance/">A Leap Ahead In Speed, Range, And Endurance</a> </h3>
+<p class="rm-manual">How and why Bell’s candidates for the Army’s Two 
+Future Vertical Lift programs will help to create overmatch in the Great
+ Power competition. </p>
+<p class="rm-manual"> <span>From </span> <a href="https://breakingdefense.com/author/brosenberg/" rel="author">Barry Rosenberg</a> </p>
+<p class="rm-manual">How and why Bell’s candidates for the Army’s Two 
+Future Vertical Lift programs will help to create overmatch in the Great
+ Power competition. </p>
+<p class="rm-manual"> <span>From </span> <a href="https://breakingdefense.com/author/brosenberg/" rel="author">Barry Rosenberg</a> </p>
+<h2 class="rm-manual">Comments</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://breakingdefense.com/advertise/">Advertising &amp; Marketing Solutions</a></li> </ul>
+<h2 class="rm-manual">Our Sites</h2>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="http://breakingdefense.com/">Breaking Defense</a> </li> <li class="rm-manual"> <a href="http://breakingenergy.com/">Breaking Energy</a> </li> <li class="rm-manual"> <a href="http://breakinggov.com/">Breaking Gov</a> </li> <li class="rm-manual"> <a href="http://abovethelaw.com/">Above the Law</a> </li> <li class="rm-manual"> <a href="http://dealbreaker.com/">Dealbreaker</a> </li> <li class="rm-manual"> <a href="http://medcitynews.com/">MedCity News</a> </li> </ul>
+<p class="rm-manual"> Copyright © 2021 Breaking Media, Inc. All rights reserved. Registration or use of this site constitutes acceptance of our <a href="https://breakingdefense.com/terms-of-service/">Terms of Service</a> and <a href="https://breakingdefense.com/privacy-policy/">Privacy Policy</a>. </p>
+<p class="rm-manual"> <a href="#">Privacy Center</a> | <a href="#">Do not sell my information</a> </p>
+<p class="rm-manual"> <span>Share this Article</span> </p>
+<p class="rm-manual"> Friend's Email Address </p>
+<p class="rm-manual"> Your Name </p>
+<p class="rm-manual"> Your Email Address </p>
+<p class="rm-manual"> Comments </p>
+<p class="rm-manual">Email sent!</p>
+<p class="rm-manual">×</p></article>
+</body></html>

@@ -1,0 +1,105 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Kim Jong Un Gym, STDs And WHY HE IS DYING! • Muscle Roast </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://muscleroast.com/category/muscle-roast/">Muscle Roast</a></li>
+<li class="rm-manual"><a href="https://muscleroast.com/category/fun-read/">Fun Read</a></li>
+<li class="rm-manual"><a href="https://muscleroast.com/category/workout-crap/">Workout Crap</a></li>
+<li class="rm-manual"><a href="https://muscleroast.com/contact/">Contact us</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://muscleroast.com/category/muscle-roast/">Muscle Roast</a></li>
+<li class="rm-manual"><a href="https://muscleroast.com/category/fun-read/">Fun Read</a></li>
+<li class="rm-manual"><a href="https://muscleroast.com/category/workout-crap/">Workout Crap</a></li>
+<li class="rm-manual"><a href="https://muscleroast.com/contact/">Contact us</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://muscleroast.com/category/muscle-roast/">Muscle Roast</a></li>
+<li class="rm-manual"><a href="https://muscleroast.com/category/fun-read/">Fun Read</a></li>
+<li class="rm-manual"><a href="https://muscleroast.com/category/workout-crap/">Workout Crap</a></li>
+<li class="rm-manual"><a href="https://muscleroast.com/contact/">Contact us</a></li>
+</ul>
+<p class="rm-manual"> <span><a href="https://muscleroast.com/category/workout-crap/">Workout Crap</a></span> </p>
+<h1 class="rm-manual">Kim Jong Un Gym, STDs And WHY HE IS DYING!</h1>
+<p><span><span><a href="https://muscleroast.com/author/muscleroast/">muscleroast</a></span></span></p>
+<p> <a href="https://muscleroast.com/author/muscleroast/">muscleroast</a> </p>
+<h4 class="rm-manual">You may also like</h4>
+<p class="rm-manual"> <span><a href="https://muscleroast.com/category/workout-crap/">Workout Crap</a></span> </p>
+<h2 class="rm-manual"><a href="https://muscleroast.com/rest-between-sets/">REST BETWEEN Sets Explained FOR DUMMIES LIKE YOU!</a></h2>
+<p class="rm-manual"><span>November 6, 2018</span></p>
+<p class="rm-manual"> <span><a href="https://muscleroast.com/category/workout-crap/">Workout Crap</a></span> </p>
+<h2 class="rm-manual"><a href="https://muscleroast.com/lose-belly-fat/">LOSE Belly FAT By Trying THIS! Easy Steps!</a></h2>
+<p class="rm-manual"><span>October 25, 2018</span></p>
+<p class="rm-manual"> <span><a href="https://muscleroast.com/category/workout-crap/">Workout Crap</a></span> </p>
+<h2 class="rm-manual"><a href="https://muscleroast.com/tony-robbins-workout-program/">Tony Robbins WICKED Workout, CRAZY Morning Routine!</a></h2>
+<p class="rm-manual"><span>July 9, 2019</span></p>
+<p class="rm-manual"> <span><a href="https://muscleroast.com/category/workout-crap/">Workout Crap</a></span> </p>
+<h2 class="rm-manual"><a href="https://muscleroast.com/terron-beckham-nfl/">Terron Beckham’s Journey From Bodybuilding Beast to NFL Draft Prospect…</a></h2>
+<p class="rm-manual"><span>June 28, 2018</span></p>
+<p class="rm-manual"> <span><a href="https://muscleroast.com/category/workout-crap/">Workout Crap</a></span> </p>
+<h2 class="rm-manual"><a href="https://muscleroast.com/work-out-empty-stomach/">Should I Work Out On An EMPTY STOMACH? Does NOT MATTER!</a></h2>
+<p class="rm-manual"><span>November 4, 2018</span></p>
+<p class="rm-manual"> <span><a href="https://muscleroast.com/category/workout-crap/">Workout Crap</a></span> </p>
+<h2 class="rm-manual"><a href="https://muscleroast.com/new-army-physical-fitness-test/">7 EASY Ways To Pass Army PHYSICAL Fitness Test!</a></h2>
+<p class="rm-manual"><span>July 7, 2019</span></p>
+<p class="rm-manual"> <span><a href="https://muscleroast.com/category/workout-crap/">Workout Crap</a></span> </p>
+<h2 class="rm-manual"><a href="https://muscleroast.com/swimming-the-best-exercise/">Is Swimming The Best Exercise? The Truth Is Not What You’d Expect</a></h2>
+<p class="rm-manual"><span>September 22, 2018</span></p>
+<p class="rm-manual"> <span><a href="https://muscleroast.com/category/workout-crap/">Workout Crap</a></span> </p>
+<h2 class="rm-manual"><a href="https://muscleroast.com/traps-workout/">Traps Workout, SHRUGS Are NOT THE ANSWER!</a></h2>
+<p class="rm-manual"><span>June 27, 2019</span></p>
+<p class="rm-manual"> <span><a href="https://muscleroast.com/category/workout-crap/">Workout Crap</a></span> </p>
+<h2 class="rm-manual"><a href="https://muscleroast.com/rachel-brathen/">Rachel Brathen’s Followers And SHADY YOGA Industry!</a></h2>
+<p class="rm-manual"><span>June 24, 2019</span></p>
+<h4 class="rm-manual">Add Comment</h4>
+<p class="rm-manual"><span>Click here to post a comment</span></p>
+<h3 class="rm-manual"> <a rel="nofollow" href="file:///kim-jong-un-health/#respond">Cancel reply</a>
+</h3>
+<p class="rm-manual">You must be <a href="https://muscleroast.com/wp-login.php?redirect_to=https%3A%2F%2Fmuscleroast.com%2Fkim-jong-un-health%2F">logged in</a> to post a comment.</p>
+<p class="rm-manual"> <a href="https://muscleroast.com/how-steroids-work/" rel="next">How Do STEROIDS WORK? Here Is THE UGLY TRUTH!</a> </p>
+<p class="rm-manual"> <a href="https://muscleroast.com/tim-grover/" rel="prev">Michael Jordan’s Trainer Tim Grover RELENTLESS SYSTEM!</a> </p>
+<h4 class="rm-manual"><span>Most Popular</span></h4>
+<h2 class="rm-manual"><a href="https://muscleroast.com/blessing-awodibu/">Blessing Awodibu INTERESTING Workout, And Bio!</a></h2>
+<h2 class="rm-manual"><a href="https://muscleroast.com/vladamir-putin-vs-obama-gym/">Putin CRUSHES Obama IN THE GYM! Caught ON TAPE!</a></h2>
+<h2 class="rm-manual"><a href="https://muscleroast.com/dwayne-johnson-diet-and-workout/">Dwayne Johnson’s Diet And Workout EXPOSED!</a></h2>
+<h4 class="rm-manual"><span>Most Discussed</span></h4>
+<h2 class="rm-manual"><a href="https://muscleroast.com/pre-workout-drinks/">5 Reasons Pre-Workout Drinks Are RUINING YOUR LIFE!</a></h2>
+<h2 class="rm-manual"><a href="https://muscleroast.com/strength-training-every-day/">SCIENTIFIC Research PROVES, Do Strength Training EVERY Day!</a></h2>
+<h2 class="rm-manual"><a href="https://muscleroast.com/planet-fitness-2/">Planet Fitness Childcare INSANITY And LAWSUITS!</a></h2>
+<p class="rm-manual"><span>error: </span>Content is protected !!</p></article>
+</body></html>

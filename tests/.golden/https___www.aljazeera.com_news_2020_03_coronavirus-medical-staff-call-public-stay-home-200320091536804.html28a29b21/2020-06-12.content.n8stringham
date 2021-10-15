@@ -1,0 +1,127 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">ï»¿ </p>
+<p class="rm-manual"> Coronavirus: Medical staff call on public to stay home | News | Al Jazeera </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///">Home </a></li> <li class="rm-manual">
+<a href="file:///news/">News </a><ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///ajimpact/">AJ Impact</a></li> <li class="rm-manual"><a href="file:///topics/regions/middleeast.html">Middle East</a></li> <li class="rm-manual"><a href="file:///topics/regions/africa.html">Africa</a></li> <li class="rm-manual"><a href="file:///topics/regions/asia.html">Asia</a></li> <li class="rm-manual"><a href="file:///topics/regions/us-canada.html">US &amp; Canada</a></li> <li class="rm-manual"><a href="file:///topics/regions/latin-america.html">Latin America</a></li> <li class="rm-manual"><a href="file:///topics/regions/europe.html">Europe</a></li> <li class="rm-manual"><a href="file:///topics/regions/asia-pacific.html">Asia Pacific</a></li> <li class="rm-manual"><a href="file:///news">All</a></li> </ul> </li> </ul> </li> <li class="rm-manual"><a href="file:///ajimpact/">AJ Impact </a></li> <li class="rm-manual">
+<a href="file:///go/">AJ Go </a><ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///programmes/start-here/">Start Here</a></li> <li class="rm-manual"><a href="file:///programmes/aj-close-up/">Al Jazeera Close Up</a></li> <li class="rm-manual"><a href="file:///programmes/fork-the-system/">Fork the System</a></li> <li class="rm-manual"><a href="file:///programmes/all-hail-the-algorithm/">All Hail the Algorithm</a></li> <li class="rm-manual"><a href="file:///programmes/media-theorised/">Media Theorised</a></li> <li class="rm-manual"><a href="file:///programmes/between-us/">Between Us</a></li> <li class="rm-manual"><a href="file:///programmes/newsfeed/">NewsFeed</a></li> </ul> </li> </ul> </li> <li class="rm-manual">
+<a href="file:///documentaries/">Documentaries </a><ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///programmes/specialseries/">Featured Documentaries</a></li> <li class="rm-manual"><a href="file:///programmes/witness/">Witness</a></li> <li class="rm-manual"><a href="file:///programmes/aljazeeraworld/">Al Jazeera World</a></li> <li class="rm-manual"><a href="file:///programmes/101east/">101 East</a></li> <li class="rm-manual"><a href="file:///programmes/peopleandpower/">People &amp; Power</a></li> <li class="rm-manual"><a href="file:///programmes/faultlines/">Fault Lines</a></li> <li class="rm-manual"><a href="file:///programmes/whose-truth-is-it-anyway/truth.html">Whose Truth Is It Anyway?</a></li> <li class="rm-manual"><a href="file:///programmes/my-ethiopia/">My Ethiopia</a></li> <li class="rm-manual"><a href="file:///programmes/radicalised-youth/radicalised-youth.html">Radicalised Youth</a></li> <li class="rm-manual"><a href="file:///programmes/aljazeeracorrespondent/">Al Jazeera Correspondent</a></li> <li class="rm-manual"><a href="file:///programmes/this-is-europe/">This is Europe </a></li> <li class="rm-manual"><a href="file:///programmes/aljazeera-selects/">Al Jazeera Selects </a></li> <li class="rm-manual"><a href="file:///programmes/rewind/">REWIND</a></li> <li class="rm-manual"><a href="file:///documentaries/">All</a></li> </ul> </li> </ul> </li> <li class="rm-manual">
+<a href="file:///programmes/">Shows </a><ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///programmes/studio-b-unscripted/">Studio B: Unscripted</a></li> <li class="rm-manual"><a href="file:///programmes/the-bottom-line/">The Bottom Line</a></li> <li class="rm-manual"><a href="file:///programmes/insidestory/">Inside Story</a></li> <li class="rm-manual"><a href="file:///programmes/planet-sos/">Planet SOS</a></li> <li class="rm-manual"><a href="file:///programmes/thestream/">The Stream</a></li> <li class="rm-manual"><a href="file:///programmes/listeningpost/">The Listening Post</a></li> <li class="rm-manual"><a href="file:///programmes/talktojazeera/">Talk to Al Jazeera</a></li> <li class="rm-manual"><a href="file:///programmes/earthrise/">earthrise</a></li> <li class="rm-manual"><a href="file:///programmes/headtohead/">Head to Head</a></li> <li class="rm-manual"><a href="file:///programmes/countingthecost/">Counting the Cost</a></li> <li class="rm-manual"><a href="file:///programmes/upfront/">UpFront</a></li> <li class="rm-manual"><a href="file:///programmes/the-big-picture/">The Big Picture</a></li> <li class="rm-manual"><a href="file:///programmes/empire/">Empire</a></li> <li class="rm-manual"><a href="file:///programmes/">All</a></li> </ul> </li> </ul> </li> <li class="rm-manual"><a href="file:///investigations/">Investigations </a></li> <li class="rm-manual"><a href="file:///indepth/opinion/">Opinion </a></li> <li class="rm-manual">
+<a href="#">More </a><ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///go/">AJ Go</a></li> <li class="rm-manual"><a href="file:///indepth/features/">Features</a></li> <li class="rm-manual"><a href="file:///investigations/">Investigations</a></li> <li class="rm-manual"><a href="file:///indepth/inpictures/">In Pictures</a></li> <li class="rm-manual"><a href="file:///indepth/interactive/">Interactive</a></li> <li class="rm-manual"><a href="file:///indepth/interactive/documentaries/">Interactive Documentaries</a></li> <li class="rm-manual"><a href="file:///shorts/">AJ Shorts</a></li> <li class="rm-manual"><a href="file:///podcasts/">Podcasts</a></li> <li class="rm-manual"><a href="file:///blogs/">Reporter's Notebook</a></li> <li class="rm-manual"><a href="file:///topics/categories/human_rights.html">Human Rights</a></li> <li class="rm-manual"><a href="file:///topics/categories/sport.html">Sport</a></li> <li class="rm-manual"><a href="file:///topics/categories/science-and-technology.html">Science &amp; Technology</a></li> <li class="rm-manual"><a href="file:///topics/categories/weather.html">Weather</a></li> </ul> </li> </ul> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///live/"><span>Live</span></a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///">Home </a></li> <li class="rm-manual">
+<a href="file:///news/">News </a><ul class="rm-manual"> <li class="rm-manual"><a href="file:///ajimpact/">AJ Impact</a></li> <li class="rm-manual"><a href="file:///topics/regions/middleeast.html">Middle East</a></li> <li class="rm-manual"><a href="file:///topics/regions/africa.html">Africa</a></li> <li class="rm-manual"><a href="file:///topics/regions/asia.html">Asia</a></li> <li class="rm-manual"><a href="file:///topics/regions/us-canada.html">US &amp; Canada</a></li> <li class="rm-manual"><a href="file:///topics/regions/latin-america.html">Latin America</a></li> <li class="rm-manual"><a href="file:///topics/regions/europe.html">Europe</a></li> <li class="rm-manual"><a href="file:///topics/regions/asia-pacific.html">Asia Pacific</a></li> <li class="rm-manual"><a href="file:///news">All</a></li> </ul> </li> <li class="rm-manual"><a href="file:///ajimpact/">AJ Impact </a></li> <li class="rm-manual">
+<a href="file:///go/">AJ Go </a><ul class="rm-manual"> <li class="rm-manual"><a href="file:///programmes/start-here/">Start Here</a></li> <li class="rm-manual"><a href="file:///programmes/aj-close-up/">Al Jazeera Close Up</a></li> <li class="rm-manual"><a href="file:///programmes/fork-the-system/">Fork the System</a></li> <li class="rm-manual"><a href="file:///programmes/all-hail-the-algorithm/">All Hail the Algorithm</a></li> <li class="rm-manual"><a href="file:///programmes/media-theorised/">Media Theorised</a></li> <li class="rm-manual"><a href="file:///programmes/between-us/">Between Us</a></li> <li class="rm-manual"><a href="file:///programmes/newsfeed/">NewsFeed</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///documentaries/">Documentaries </a><ul class="rm-manual"> <li class="rm-manual"><a href="file:///programmes/specialseries/">Featured Documentaries</a></li> <li class="rm-manual"><a href="file:///programmes/witness/">Witness</a></li> <li class="rm-manual"><a href="file:///programmes/aljazeeraworld/">Al Jazeera World</a></li> <li class="rm-manual"><a href="file:///programmes/101east/">101 East</a></li> <li class="rm-manual"><a href="file:///programmes/peopleandpower/">People &amp; Power</a></li> <li class="rm-manual"><a href="file:///programmes/faultlines/">Fault Lines</a></li> <li class="rm-manual"><a href="file:///programmes/whose-truth-is-it-anyway/truth.html">Whose Truth Is It Anyway?</a></li> <li class="rm-manual"><a href="file:///programmes/my-ethiopia/">My Ethiopia</a></li> <li class="rm-manual"><a href="file:///programmes/radicalised-youth/radicalised-youth.html">Radicalised Youth</a></li> <li class="rm-manual"><a href="file:///programmes/aljazeeracorrespondent/">Al Jazeera Correspondent</a></li> <li class="rm-manual"><a href="file:///programmes/this-is-europe/">This is Europe </a></li> <li class="rm-manual"><a href="file:///programmes/aljazeera-selects/">Al Jazeera Selects </a></li> <li class="rm-manual"><a href="file:///programmes/rewind/">REWIND</a></li> <li class="rm-manual"><a href="file:///documentaries/">All</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///programmes/">Shows </a><ul class="rm-manual"> <li class="rm-manual"><a href="file:///programmes/studio-b-unscripted/">Studio B: Unscripted</a></li> <li class="rm-manual"><a href="file:///programmes/the-bottom-line/">The Bottom Line</a></li> <li class="rm-manual"><a href="file:///programmes/insidestory/">Inside Story</a></li> <li class="rm-manual"><a href="file:///programmes/planet-sos/">Planet SOS</a></li> <li class="rm-manual"><a href="file:///programmes/thestream/">The Stream</a></li> <li class="rm-manual"><a href="file:///programmes/listeningpost/">The Listening Post</a></li> <li class="rm-manual"><a href="file:///programmes/talktojazeera/">Talk to Al Jazeera</a></li> <li class="rm-manual"><a href="file:///programmes/earthrise/">earthrise</a></li> <li class="rm-manual"><a href="file:///programmes/headtohead/">Head to Head</a></li> <li class="rm-manual"><a href="file:///programmes/countingthecost/">Counting the Cost</a></li> <li class="rm-manual"><a href="file:///programmes/upfront/">UpFront</a></li> <li class="rm-manual"><a href="file:///programmes/the-big-picture/">The Big Picture</a></li> <li class="rm-manual"><a href="file:///programmes/empire/">Empire</a></li> <li class="rm-manual"><a href="file:///programmes/">All</a></li> </ul> </li> <li class="rm-manual"><a href="file:///investigations/">Investigations </a></li> <li class="rm-manual"><a href="file:///indepth/opinion/">Opinion </a></li> <li class="rm-manual">
+<a href="#">More </a><ul class="rm-manual"> <li class="rm-manual"><a href="file:///go/">AJ Go</a></li> <li class="rm-manual"><a href="file:///indepth/features/">Features</a></li> <li class="rm-manual"><a href="file:///investigations/">Investigations</a></li> <li class="rm-manual"><a href="file:///indepth/inpictures/">In Pictures</a></li> <li class="rm-manual"><a href="file:///indepth/interactive/">Interactive</a></li> <li class="rm-manual"><a href="file:///indepth/interactive/documentaries/">Interactive Documentaries</a></li> <li class="rm-manual"><a href="file:///shorts/">AJ Shorts</a></li> <li class="rm-manual"><a href="file:///podcasts/">Podcasts</a></li> <li class="rm-manual"><a href="file:///blogs/">Reporter's Notebook</a></li> <li class="rm-manual"><a href="file:///topics/categories/human_rights.html">Human Rights</a></li> <li class="rm-manual"><a href="file:///topics/categories/sport.html">Sport</a></li> <li class="rm-manual"><a href="file:///topics/categories/science-and-technology.html">Science &amp; Technology</a></li> <li class="rm-manual"><a href="file:///topics/categories/weather.html">Weather</a></li> </ul> </li> <li class="rm-manual"><a href="file:///live"><span>Live</span></a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///">Home </a></li> <li class="rm-manual">
+<a href="file:///news/">News </a><ul class="rm-manual"> <li class="rm-manual"><a href="file:///ajimpact/">AJ Impact</a></li> <li class="rm-manual"><a href="file:///topics/regions/middleeast.html">Middle East</a></li> <li class="rm-manual"><a href="file:///topics/regions/africa.html">Africa</a></li> <li class="rm-manual"><a href="file:///topics/regions/asia.html">Asia</a></li> <li class="rm-manual"><a href="file:///topics/regions/us-canada.html">US &amp; Canada</a></li> <li class="rm-manual"><a href="file:///topics/regions/latin-america.html">Latin America</a></li> <li class="rm-manual"><a href="file:///topics/regions/europe.html">Europe</a></li> <li class="rm-manual"><a href="file:///topics/regions/asia-pacific.html">Asia Pacific</a></li> <li class="rm-manual"><a href="file:///news">All</a></li> </ul> </li> <li class="rm-manual"><a href="file:///ajimpact/">AJ Impact </a></li> <li class="rm-manual">
+<a href="file:///go/">AJ Go </a><ul class="rm-manual"> <li class="rm-manual"><a href="file:///programmes/start-here/">Start Here</a></li> <li class="rm-manual"><a href="file:///programmes/aj-close-up/">Al Jazeera Close Up</a></li> <li class="rm-manual"><a href="file:///programmes/fork-the-system/">Fork the System</a></li> <li class="rm-manual"><a href="file:///programmes/all-hail-the-algorithm/">All Hail the Algorithm</a></li> <li class="rm-manual"><a href="file:///programmes/media-theorised/">Media Theorised</a></li> <li class="rm-manual"><a href="file:///programmes/between-us/">Between Us</a></li> <li class="rm-manual"><a href="file:///programmes/newsfeed/">NewsFeed</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///documentaries/">Documentaries </a><ul class="rm-manual"> <li class="rm-manual"><a href="file:///programmes/specialseries/">Featured Documentaries</a></li> <li class="rm-manual"><a href="file:///programmes/witness/">Witness</a></li> <li class="rm-manual"><a href="file:///programmes/aljazeeraworld/">Al Jazeera World</a></li> <li class="rm-manual"><a href="file:///programmes/101east/">101 East</a></li> <li class="rm-manual"><a href="file:///programmes/peopleandpower/">People &amp; Power</a></li> <li class="rm-manual"><a href="file:///programmes/faultlines/">Fault Lines</a></li> <li class="rm-manual"><a href="file:///programmes/whose-truth-is-it-anyway/truth.html">Whose Truth Is It Anyway?</a></li> <li class="rm-manual"><a href="file:///programmes/my-ethiopia/">My Ethiopia</a></li> <li class="rm-manual"><a href="file:///programmes/radicalised-youth/radicalised-youth.html">Radicalised Youth</a></li> <li class="rm-manual"><a href="file:///programmes/aljazeeracorrespondent/">Al Jazeera Correspondent</a></li> <li class="rm-manual"><a href="file:///programmes/this-is-europe/">This is Europe </a></li> <li class="rm-manual"><a href="file:///programmes/aljazeera-selects/">Al Jazeera Selects </a></li> <li class="rm-manual"><a href="file:///programmes/rewind/">REWIND</a></li> <li class="rm-manual"><a href="file:///documentaries/">All</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///programmes/">Shows </a><ul class="rm-manual"> <li class="rm-manual"><a href="file:///programmes/studio-b-unscripted/">Studio B: Unscripted</a></li> <li class="rm-manual"><a href="file:///programmes/the-bottom-line/">The Bottom Line</a></li> <li class="rm-manual"><a href="file:///programmes/insidestory/">Inside Story</a></li> <li class="rm-manual"><a href="file:///programmes/planet-sos/">Planet SOS</a></li> <li class="rm-manual"><a href="file:///programmes/thestream/">The Stream</a></li> <li class="rm-manual"><a href="file:///programmes/listeningpost/">The Listening Post</a></li> <li class="rm-manual"><a href="file:///programmes/talktojazeera/">Talk to Al Jazeera</a></li> <li class="rm-manual"><a href="file:///programmes/earthrise/">earthrise</a></li> <li class="rm-manual"><a href="file:///programmes/headtohead/">Head to Head</a></li> <li class="rm-manual"><a href="file:///programmes/countingthecost/">Counting the Cost</a></li> <li class="rm-manual"><a href="file:///programmes/upfront/">UpFront</a></li> <li class="rm-manual"><a href="file:///programmes/the-big-picture/">The Big Picture</a></li> <li class="rm-manual"><a href="file:///programmes/empire/">Empire</a></li> <li class="rm-manual"><a href="file:///programmes/">All</a></li> </ul> </li> <li class="rm-manual"><a href="file:///investigations/">Investigations </a></li> <li class="rm-manual"><a href="file:///indepth/opinion/">Opinion </a></li> <li class="rm-manual">
+<a href="#">More </a><ul class="rm-manual"> <li class="rm-manual"><a href="file:///go/">AJ Go</a></li> <li class="rm-manual"><a href="file:///indepth/features/">Features</a></li> <li class="rm-manual"><a href="file:///investigations/">Investigations</a></li> <li class="rm-manual"><a href="file:///indepth/inpictures/">In Pictures</a></li> <li class="rm-manual"><a href="file:///indepth/interactive/">Interactive</a></li> <li class="rm-manual"><a href="file:///indepth/interactive/documentaries/">Interactive Documentaries</a></li> <li class="rm-manual"><a href="file:///shorts/">AJ Shorts</a></li> <li class="rm-manual"><a href="file:///podcasts/">Podcasts</a></li> <li class="rm-manual"><a href="file:///blogs/">Reporter's Notebook</a></li> <li class="rm-manual"><a href="file:///topics/categories/human_rights.html">Human Rights</a></li> <li class="rm-manual"><a href="file:///topics/categories/sport.html">Sport</a></li> <li class="rm-manual"><a href="file:///topics/categories/science-and-technology.html">Science &amp; Technology</a></li> <li class="rm-manual"><a href="file:///topics/categories/weather.html">Weather</a></li> </ul> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///live/"><span>Live</span></a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///news/">News</a></li> </ul>
+<h1 class="rm-manual">Coronavirus: Medical staff call on public to stay home</h1>
+<p class="rm-manual">Doctors and nurses plead with people to socially 
+distance themselves with messages including â€˜Be responsible, stay 
+home, because I canâ€™tâ€™.</p>
+<p class="rm-manual">20 Mar 2020 09:15 GMT</p>
+<p>â€œSocial distancingâ€ has become a catchphrase around the world during the coronavirus pandemic.</p>
+<p>But the message has not been getting through to everyone, prompting some doctors and nurses to turn to social media.</p>
+<p class="rm-manual">Al Jazeera's Raheela Mahomed reports.</p>
+<p class="rm-manual"> Have your say.<a href="">Give us feedback.</a></p>
+<p class="rm-manual"> Sign up for our<a href="">Newsletter.</a></p>
+<h2 class="rm-manual">TRENDING</h2>
+<p class="rm-manual"><a href="file:///ajimpact/trump-powell-outlooks-economy-200612133710254.html">Trump and Powell have very different outlooks on the US economy</a></p>
+<p class="rm-manual"><a href="file:///news/2020/06/hong-kong-protesters-mark-anniversary-major-police-clashes-200612140259919.html">Hong Kong protesters mark anniversary of major police clashes</a></p>
+<p class="rm-manual"><a href="file:///news/2020/06/sees-summer-spike-coronavirus-cases-states-reopen-200612142728196.html">US sees summer spike in coronavirus cases as states reopen</a></p>
+<p class="rm-manual"><a href="file:///news/2020/06/expresses-horror-reported-mass-graves-discovery-libya-200611201231621.html">UN expresses 'horror' at reported mass graves in Libya</a></p>
+<h2 class="rm-manual">YOU MIGHT ALSO LIKE</h2>
+<h3 class="rm-manual"><a href="file:///indepth/features/portuguese-rediscovering-country-muslim-200604103407322.html">The Portuguese rediscovering their country's Muslim past</a></h3>
+<p class="rm-manual">Historians and archaeologists are showing just how integral Islam is to the country's identity.</p>
+<p class="rm-manual"><span>10 Jun 2020 14:00 GMT</span> </p>
+<h3 class="rm-manual"><a href="file:///indepth/features/doctor-note-developing-coronavirus-vaccine-200603060930044.html">Doctor's Note: Where are we in developing a coronavirus vaccine?</a></h3>
+<p class="rm-manual">More than 100 countries, the WHO and pharmaceutical companies are working on testing and developing a COVID-19 vaccine.</p>
+<p class="rm-manual"><span>09 Jun 2020 14:57 GMT</span> </p>
+<h3 class="rm-manual"><a href="file:///programmes/studio-b-unscripted/2019/12/studio-unscripted-patrisse-cullors-lowkey-191210212257886.html">Studio B, Unscripted: With Patrisse Cullors and Lowkey</a></h3>
+<p class="rm-manual">#BlackLivesMatter co-founder Patrisse Cullors and rapper Lowkey talk about being branded a 'terrorist' and activism.</p>
+<p class="rm-manual"><span>11 Dec 2019 21:07 GMT</span> </p>
+<h3 class="rm-manual"> About</h3>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///aboutus/">About Us</a>
+</li> <li class="rm-manual"> <a href="file:///aboutus/2006/11/2008525185733692771.html">Code of Ethics</a>
+</li> <li class="rm-manual"> <a href="file:///aboutus/2011/01/20111168582648190.html">Terms and Conditions</a>
+</li> <li class="rm-manual"> <a href="https://network.aljazeera.com/privacy/en">Privacy Policy</a>
+</li> <li class="rm-manual"> <a href="https://network.aljazeera.com/cookies/en">Cookie Policy</a>
+</li> <li class="rm-manual"> <a href="">Cookie Preferences</a>
+</li> <li class="rm-manual"> <a href="file:///aboutus/2011/01/201111681520872288.html">Community Guidelines</a>
+</li> <li class="rm-manual"> <a href="http://careers.aljazeera.net/en/">Work for us</a>
+</li> <li class="rm-manual"> <a href="file:///hraquality">HR Quality</a>
+</li> </ul>
+<h3 class="rm-manual"> Connect</h3>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///contactus/">Contact Us</a>
+</li> <li class="rm-manual"> <a href="file:///connect/">Apps</a>
+</li> <li class="rm-manual"> <a href="file:///aboutus/follow-us.html">Social</a>
+</li> <li class="rm-manual"> <a href="http://sat.aljazeera.net/en">Channel Finder</a>
+</li> <li class="rm-manual"> <a href="file:///watch_now/epgschedule.html">TV Schedule</a>
+</li> <li class="rm-manual"> <a href="file:///programmes/Podcasts.html">Podcasts</a>
+</li> <li class="rm-manual"> <a href="file:///newsletter">Newsletter</a>
+</li> <li class="rm-manual"> <a href="file:///tips">Submit a Tip</a>
+</li> <li class="rm-manual"> <a href="file:///directory">Directory</a>
+</li> </ul>
+<h3 class="rm-manual"> Our Channels</h3>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="http://aljazeera.net/">Al Jazeera Arabic</a>
+</li> <li class="rm-manual"> <a href="https://www.aljazeera.com/">Al Jazeera English</a>
+</li> <li class="rm-manual"> <a href="http://mubasher.aljazeera.net/">Al Jazeera Mubasher</a>
+</li> <li class="rm-manual"> <a href="http://doc.aljazeera.net/">Al Jazeera Documentary</a>
+</li> <li class="rm-manual"> <a href="http://balkans.aljazeera.net/">Al Jazeera Balkans</a>
+</li> <li class="rm-manual"> <a href="http://ajplus.net/">AJ+</a>
+</li> </ul>
+<h3 class="rm-manual"> Our Network</h3>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="http://www.jetty.fm/">Jetty</a>
+</li> <li class="rm-manual"> <a href="http://studies.aljazeera.net/en/">Al Jazeera Centre for Studies</a>
+</li> <li class="rm-manual"> <a href="http://training.aljazeera.net/">Al Jazeera Media Institute</a>
+</li> <li class="rm-manual"> <a href="http://learning.aljazeera.net/">Learn Arabic</a>
+</li> <li class="rm-manual"> <a href="http://liberties.aljazeera.com/en">Al Jazeera Centre for Public Liberties &amp; Human Rights</a>
+</li> <li class="rm-manual"> <a href="http://forum.aljazeera.net/">Al Jazeera Forum</a>
+</li> <li class="rm-manual"> <a href="http://festival.aljazeera.net/">Al Jazeera Film Festival</a>
+</li> <li class="rm-manual"> <a href="http://partners.aljazeera.net/">Al Jazeera Hotel Partners</a>
+</li> </ul>
+<p class="rm-manual"> Â© 2020 Al Jazeera Media Network</p></article>
+</body></html>

@@ -1,0 +1,103 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Australian researchers map immune response to Covid-19 | Life | Malay Mail </p>
+<h6 class="rm-manual">Search</h6>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.malaymail.com/topic/covid-19">COVID-19</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.malaymail.com/about">About Us</a> <a href="https://www.malaymail.com/advertise">Advertise with Us</a> </li> </ul>
+<h2 class="rm-manual"><a href="https://www.malaymail.com/">Malay Mail</a></h2>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.malaymail.com/">Home</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/news/malaysia">Malaysia</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/news/singapore">Singapore</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/news/world">World</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/news/money">Money</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/news/life">Life</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/news/eat-drink">Eat/Drink</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.malaymail.com/news/showbiz">Showbiz</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/news/what-you-think">WYT</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/news/opinion">Opinion</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/news/sports">Sports</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/news/tech-gadgets">Tech/Gadgets</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/news/drive">Drive</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/videos">Videos</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.malaymail.com/archives">Archives</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/about">About Us</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/policy">Privacy Policy</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/terms">Terms of Use</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/advertise">Advertise with Us</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://itunes.apple.com/my/app/malay-mail/id694093285?mt=8">Apple AppStore</a></li> <li class="rm-manual"><a href="https://play.google.com/store/apps/details?id=net.engboon.malaymailonline&amp;hl=en">Google Play Store</a></li> <li class="rm-manual"><a href="https://appgallery.cloud.huawei.com/marketshare/app/C101448815?locale=en_GB&amp;source=appshare&amp;subsource=C101448815">Huawei App Gallery</a></li> <li class="rm-manual"><a href="https://news.google.com/publications/CAAqBwgKMLHbhQswofmCAw?hl=en-MY&amp;gl=MY&amp;ceid=MY%3Aen">Google News</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.projekmm.com/">ProjekMM</a></li> <li class="rm-manual"><a href="https://www.cincainews.com/">精彩大马</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.malaymail.com/topic/covid-19">COVID-19</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.malaymail.com/">Home</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/news/malaysia">Malaysia</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/news/singapore">Singapore</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/news/world">World</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/news/money">Money</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/news/life">Life</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/news/eat-drink">Eat/Drink</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/news/showbiz">Showbiz</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/news/opinion">Opinion</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/news/sports">Sports</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/news/tech-gadgets">Tech/Gadgets</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/news/drive">Drive</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/videos">Videos</a></li> <li class="rm-manual"><a href="https://www.projekmm.com/">ProjekMM</a></li> <li class="rm-manual"><a href="https://www.cincainews.com/">精彩大马</a></li> </ul>
+<p class="rm-manual">Loading...</p>
+<ol class="rm-manual"> <li class="rm-manual"><a href="https://www.malaymail.com/">Home</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/news/life">Life</a></li> </ol>
+<h1 class="rm-manual">Australian researchers map immune response to Covid-19</h1>
+<p class="rm-manual">Tuesday, 17 Mar 2020 01:56 PM MYT</p>
+<figcaption>A nurse speaks with patients at a Covid-19 at Mount Barker 
+Hospital in Adelaide, Australia March 17, 2020. — AAP Image/Kelly Barnes
+ via Reuters</figcaption><p>SYDNEY, March 17 — Australian researchers 
+said today they have mapped the immune responses from one of country's 
+first coronavirus patients, findings that the health minister said were 
+an important step in developing a vaccine and treatment.</p>
+<p>The coronavirus has infected more than 168,000 people worldwide and 
+killed at least 6,610, according to the World Health Organisation.</p>
+<p>While the bulk of those infected experience only mild symptoms, it is
+ severe or critical in 20 of patients. The virus has been fatal in about
+ 3.4 per cent of reported cases.</p>
+<p>As scientists scramble to develop a vaccine, researchers at 
+Australia's Peter Doherty Institute for Infection and Immunity said they
+ had taken an important step in understanding the virus.</p>
+<p>By examining the blood results from an unidentified woman in her 40s,
+ they discovered that people's immune systems respond to coronavirus in 
+the same way it typically fights flu.</p>
+<p>The findings would help scientists understand why some patients 
+recover while others develop more serious respiratory problems, the 
+researchers said.</p>
+<p>“People can use our methods to understand the immune responses in 
+larger Covid-19 cohorts, and also understand what’s lacking in those who
+ have fatal outcomes,” said Katherine Kedzierska, professor of 
+microbiology and immunology at the University of Melbourne, referring to
+ the disease caused by the coronavirus.</p>
+<p>As researchers monitored the Australian patient's immune response, 
+they could accurately predict when she would recover, which she did.</p>
+<p>Minister for Health Greg Hunt said the research was a major development.</p>
+<p>“It's about fast-tracking a vaccine by identifying which candidates are most likely to be successful,” Hunt told reporters.</p>
+<p>“It's also about fast-tracking potential therapies and treatments for patients who already have coronavirus.”</p>
+<p>At least a dozen drugmakers around the world are working on vaccines 
+or antiviral and other treatments for the fast-spreading contagion.</p>
+<p>But investment costs for vaccines could run as high as US$800 million
+ (RM3.44 billion) in a process that, even if accelerated, will likely 
+take more than a year until approval, according to executives from 
+companies involved in the effort. — Reuters</p>
+<h3 class="rm-manual">Related Articles</h3>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.malaymail.com/news/sports/2020/06/17/serena-cannot-wait-to-compete-in-this-years-us-open/1876448" rel="nofollow">Serena ‘cannot wait’ to compete in this year’s US Open</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/news/sports/2020/06/17/atp-and-wta-tours-announce-august-resumption/1876445" rel="nofollow">ATP and WTA Tours announce August resumption</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/news/malaysia/2020/06/17/national-day-celebration-to-have-elements-of-rukun-negara-says-minister/1876443" rel="nofollow">National Day celebration to have elements of Rukun Negara, says minister</a></li> </ul>
+<h4 class="rm-manual"><span>In Life</span></h4>
+<p class="rm-manual">Loading...</p>
+<h3 class="rm-manual">News</h3>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.malaymail.com/news/malaysia">Malaysia</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/news/singapore">Singapore</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/news/world">World</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/news/money">Money</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/news/life">Life</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/news/eat-drink">Eat/Drink</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/news/showbiz">Showbiz</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.malaymail.com/news/opinion">Opinion</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/news/what-you-think">What You Think</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/news/sports">Sports</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/news/tech-gadgets">Tech/Gadgets</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/news/drive">Drive</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/videos">Videos</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/topic/covid-19">COVID-19</a></li> </ul>
+<h3 class="rm-manual">About</h3>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.malaymail.com/archives">Archives</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/about">About Us</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/policy">Privacy Policy</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/terms">Terms of Use</a></li> <li class="rm-manual"><a href="https://www.malaymail.com/advertise">Advertise with Us</a></li> </ul>
+<h3 class="rm-manual">Download</h3>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://itunes.apple.com/my/app/malay-mail/id694093285?mt=8">Apple AppStore</a></li> <li class="rm-manual"><a href="https://play.google.com/store/apps/details?id=net.engboon.malaymailonline&amp;hl=en">Google Play Store</a></li> <li class="rm-manual"><a href="https://appgallery.cloud.huawei.com/marketshare/app/C101448815?locale=en_GB&amp;source=appshare&amp;subsource=C101448815">Huawei App Gallery</a></li> <li class="rm-manual"><a href="https://news.google.com/publications/CAAqBwgKMLHbhQswofmCAw?hl=en-MY&amp;gl=MY&amp;ceid=MY%3Aen">Google News</a></li> </ul>
+<h3 class="rm-manual">Subscribe to Newsletter</h3>
+<p class="rm-manual">© 2020, Malay Mail, All Rights Reserved.</p></article>
+</body></html>

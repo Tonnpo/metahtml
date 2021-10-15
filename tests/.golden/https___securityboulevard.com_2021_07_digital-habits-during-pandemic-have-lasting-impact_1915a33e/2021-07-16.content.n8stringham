@@ -1,0 +1,247 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Digital Habits During Pandemic Have Lasting Impact - Security Boulevard </p>
+<p class="rm-manual"> Monday, July 12, 2021 </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://securityboulevard.com/2021/07/como-actuar-ante-la-ciberdelincuencia/">¿Cómo actuar ante la ciberdelincuencia?</a> </li> <li class="rm-manual"> <a href="https://securityboulevard.com/2021/07/how-to-secure-your-application-inside-azure-kubernetes-service-in-10-minutes/">How To Secure Your Application Inside Azure Kubernetes Service in 10 Minutes</a> </li> <li class="rm-manual"> <a href="https://securityboulevard.com/2021/07/was-haiti-assassination-inspired-by-american-history-of-domestic-coups/">Was Haiti Assassination Inspired by American History of Domestic Coups?</a> </li> <li class="rm-manual"> <a href="https://securityboulevard.com/2021/07/a-new-consultants-1st-con-wild-west-hackin-fest-way-west-2021/">A New Consultant’s 1st Con – Wild West Hackin Fest – Way West 2021</a> </li> <li class="rm-manual"> <a href="https://securityboulevard.com/2021/07/safeguards-to-protect-patient-data/">Safeguards to protect patient data</a> </li> </ul>
+<h3 class="rm-manual"> <a href="https://securityboulevard.com/" rel="home">Security Boulevard</a> </h3>
+<p class="rm-manual">The Home of the Security Bloggers Network</p>
+<p class="rm-manual"><span><span>Community Chats Webinars Library</span></span></p>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="https://securityboulevard.com/">Home</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://securityboulevard.com/cybersecurity-news/">Cybersecurity News</a></li>
+<li class="rm-manual"><a href="https://securityboulevard.com/features/">Features</a></li>
+<li class="rm-manual"><a href="https://securityboulevard.com/industry-spotlight/">Industry Spotlight</a></li>
+<li class="rm-manual"><a href="https://securityboulevard.com/news-releases/">News Releases</a></li>
+</ul> </li>
+<li class="rm-manual">
+<a href="https://securityboulevard.com/security-bloggers-network/">Security Bloggers Network</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://securityboulevard.com/security-bloggers-network/">Latest Posts</a></li>
+<li class="rm-manual"><a href="https://securityboulevard.com/boulevard-authors/?search=&amp;activity=1d&amp;submit=Search">Contributors</a></li>
+<li class="rm-manual"><a href="https://securityboulevard.com/boulevard-feed-request/">Syndicate Your Blog</a></li>
+<li class="rm-manual"><a href="https://securityboulevard.com/write-for-security-boulevard/">Write for Security Boulevard</a></li>
+</ul> </li>
+<li class="rm-manual">
+<a href="#">Events</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.mediaopsevents.com/virtual/upcoming">Upcoming Events</a></li>
+<li class="rm-manual"><a href="https://securityboulevard.com/webinars/">Upcoming Webinars</a></li>
+<li class="rm-manual"><a href="https://www.mediaopsevents.com/virtual/843942">On-Demand Events</a></li>
+<li class="rm-manual"><a href="https://securityboulevard.com/on-demand-webinars/">On-Demand Webinars</a></li>
+</ul> </li>
+<li class="rm-manual">
+<a href="https://securityboulevard.com/chats/">Chat</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://securityboulevard.com/chats/">Security Boulevard Chat</a></li>
+<li class="rm-manual"><a href="https://securityboulevard.com/marketing-insecurity-podcasts/">Marketing InSecurity Podcast</a></li>
+</ul> </li>
+<li class="rm-manual"><a href="https://securityboulevard.com/library/">Library</a></li>
+<li class="rm-manual">
+<a href="#">Related Sites</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://mediaops.io/">MediaOps Inc.</a></li>
+<li class="rm-manual"><a href="https://devops.com/">DevOps.com</a></li>
+<li class="rm-manual"><a href="https://containerjournal.com/">Container Journal</a></li>
+<li class="rm-manual"><a href="https://digitalanarchist.com/">Digital Anarchist</a></li>
+<li class="rm-manual"><a href="https://sweetcode.io/">SweetCode.io</a></li>
+</ul> </li>
+<li class="rm-manual"><a href="https://mediaops.io/wp-content/uploads/2020/02/MediaOpsOverview2020-1.pdf">Media Kit</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://securityboulevard.com/security-analytics/">Analytics</a></li> <li class="rm-manual"><a href="https://securityboulevard.com/application-security/">AppSec</a></li> <li class="rm-manual"><a href="https://securityboulevard.com/ciso-suite">CISO</a></li> <li class="rm-manual"><a href="https://securityboulevard.com/cloud-security/">Cloud</a></li> <li class="rm-manual"><a href="https://securityboulevard.com/devops/">DevOps</a></li> <li class="rm-manual"><a href="https://securityboulevard.com/governance-risk-compliance">GRC</a></li> <li class="rm-manual"><a href="https://securityboulevard.com/identity-management">Identity</a></li> <li class="rm-manual"><a href="https://securityboulevard.com/incident-response/">Incident Response</a></li> <li class="rm-manual"><a href="https://securityboulevard.com/iot-ics-security/">IoT / ICS</a></li> <li class="rm-manual"><a href="https://securityboulevard.com/threats-breaches/">Threats / Breaches</a></li> <li class="rm-manual">
+<a href="https://securityboulevard.com/">More</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://securityboulevard.com/blockchain-digital-currency-bitcoin/">Blockchain / Digital Currencies</a></li> <li class="rm-manual"><a href="https://securityboulevard.com/careers">Careers</a></li> <li class="rm-manual"><a href="https://securityboulevard.com/cyberlaw">Cyberlaw</a></li> <li class="rm-manual"><a href="https://securityboulevard.com/mobile-security">Mobile</a></li> <li class="rm-manual"><a href="https://securityboulevard.com/social-engineering">Social Engineering</a></li> </ul> </li> <li class="rm-manual"><a href="https://securityboulevard.com/humor">Humor</a></li> </ul>
+<p class="rm-manual"><span><a href="https://securityboulevard.com/category/blogs/ciso-suite/" rel="category tag">CISO Suite</a> <a href="https://securityboulevard.com/category/blogs/cloud-security/" rel="category tag">Cloud Security</a> <a href="https://securityboulevard.com/category/blogs/" rel="category tag">Cybersecurity</a> <a href="https://securityboulevard.com/category/blogs/data-security/" rel="category tag">Data Security</a> <a href="https://securityboulevard.com/category/sb/sb-featured/" rel="category tag">Featured</a> <a href="https://securityboulevard.com/category/blogs/governance-risk-compliance/" rel="category tag">Governance, Risk &amp; Compliance</a> <a href="https://securityboulevard.com/category/blogs/identity-access/" rel="category tag">Identity &amp; Access</a> <a href="https://securityboulevard.com/category/blogs/mobile-security/" rel="category tag">Mobile Security</a> <a href="https://securityboulevard.com/category/blogs/network-security/" rel="category tag">Network Security</a> <a href="https://securityboulevard.com/category/blogs/security-awareness/" rel="category tag">Security Awareness</a> <a href="https://securityboulevard.com/category/sb/" rel="category tag">Security Boulevard (Original)</a> <a href="https://securityboulevard.com/category/sb/sb-spotlight/" rel="category tag">Spotlight</a> </span></p>
+<p class="rm-manual"><span><span><a href="https://securityboulevard.com/">Home</a> » <span><a href="https://securityboulevard.com/category/sb/">Security Boulevard (Original)</a> » <span>Digital Habits During Pandemic Have Lasting Impact</span></span></span></span></p>
+<p class="rm-manual"> Digital Habits During Pandemic Have Lasting Impact </p>
+<p class="rm-manual"> <span><span> <a href="https://securityboulevard.com/author/nathan-eddy/"><span>by</span> Nathan Eddy <span>on</span> July 9, 2021</a></span></span> </p>
+<p>The unexpected global pandemic left the world scrambling to maintain their daily activities and work as best they could.</p>
+<p>With stay-at-home orders that lasted for months on end—and some countries currently <a href="https://www.hindustantimes.com/world-news/delta-spreads-australia-widens-covid-lockdown-101625096092426.html" rel="noopener">instituting another wave of lockdowns</a>—most
+ people resorted to consuming services and ordering goods online, 
+encompassing everything from groceries to telemedicine and shifting work
+ models to make do.</p>
+<p>In the process of migrating to <a href="https://securityboulevard.com/?s=remote+work" rel="noopener">remote work</a>
+ and staying indoors, companies had to quickly transform how they 
+offered services digitally, and most individuals opened about 15 new 
+digital accounts with vendors they had never used before.</p>
+<h2>Account Wave Increases Digital Footprint</h2>
+<p>This account boom extrapolates to billions of new online accounts 
+created around the world. A June IBM report found 44% of users are not 
+planning to delete or deactivate these new accounts, meaning consumers 
+have increased their digital footprint for years to come. This, in turn,
+ has expanded the attack surface for cybercriminals.</p>
+<p>“For a cybercriminal, the larger the playing field and the more data 
+they can prey on, the better,” explained Limor Kessem, executive 
+security advisor at IBM Security. “Every year, we bear witness to 
+billions of leaked or stolen records; compromised passwords and 
+identities abound. With users opting for speed and convenience, they 
+have reused passwords that have likely already been compromised.”</p>
+<p>Kessem explained how these new accounts can be compromised more 
+easily, since existing credentials are already in the hands of 
+fraudsters and available on dark web shops.</p>
+<p>The survey showed that more than half of millennials would rather 
+place an order using a potentially insecure app or website versus 
+calling or visiting a location in person.</p>
+<p>Kessem said that means users rely on their service providers for 
+security, expecting it to be inherent to the service offered, and would 
+forego caution if it meant convenience, in the moment.</p>
+<h2>Enterprises Must Guard Their Own Doors</h2>
+<p>With this in mind, enterprises must guard their own networks while leaked/stolen passwords become ubiquitous.</p>
+<p>With passwords becoming less and less reliable, one way that 
+organizations can adapt is shifting to a zero-trust approach – applying 
+advanced AI and analytics throughout the process of granting access to 
+users to spot potential threats, rather than assuming a user is trusted 
+after one approved login.</p>
+<p>Kessem said user privileges must be limited per least-privilege best 
+practices, and two-factor authentication, at least, must be rolled out 
+to users across the organization.</p>
+<p>“The enterprise that best serves customers has to make sure their 
+interactions with the business are secure inside and out,” he said. “IT 
+and security leaders must join hands to plan projects with security 
+built into them from the conceptual phase onward. Ease of use can come 
+from shifting to biometric logins, authenticator apps or using other 
+multi-factor challenges to ensure users are not solely relying on a 
+password.”</p>
+<p>Kessem said the responsibility for secure products falls as equally 
+on the CIO’s office as it does on the CISO’s as they work together to 
+scope projects, assess and quantify risk and determine how to best 
+address risk and data protection.</p>
+<p>Timur Kovalev, chief technology officer at Untangle, noted with recent ransomware attacks and high-profile breaches, including <a href="https://securityboulevard.com/?s=SolarWinds" rel="noopener">SolarWinds</a>, <a href="https://securityboulevard.com/?s=JBS" rel="noopener">JBS</a>, Pulse Secure and now <a href="https://securityboulevard.com/?s=Kaseya" rel="noopener">Kaseya VSA</a>, IT administrators should be considering using the more secure options.</p>
+<p>“This will also involve training their employees how to navigate the 
+less easy-to-use tools, as well as explaining to employees why these 
+measures are necessary and what they can do to avoid falling victim to 
+any type of security breach,” he said.</p>
+<p>He noted that, as workers moved to hybrid work styles, many added 
+even more unknown software and applications to help facilitate working 
+remotely.</p>
+<p>While helpful at home, these could prove dangerous once on the 
+corporate network, and with the workforce spread out across locations, 
+using a variety of networks and devices, the attack surface grows 
+dramatically and becomes an opportunity for cybercriminals.</p>
+<p>“Because employees and their devices are not always behind an office 
+firewall, workers that rotate in and out of the office could be bringing
+ malware that is hiding in their laptops, waiting to move onto the 
+corporate network,” he said. “Network security teams will need to be 
+diligent to prevent employees from bringing threats back to the office.”</p>
+<p class="rm-manual">Recent Articles By Author</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://securityboulevard.com/2021/07/phishing-ransomware-driving-wave-of-data-breaches/">Phishing, Ransomware Driving Wave of Data Breaches</a></li> <li class="rm-manual"><a href="https://securityboulevard.com/2021/07/remote-workforce-monitoring-brings-up-privacy-concerns/">Remote Workforce Monitoring Brings Up Privacy Concerns</a></li> <li class="rm-manual"><a href="https://securityboulevard.com/2021/07/ransomware-in-auto-manufacturing-threatens-industrys-recovery/">Ransomware in Auto Manufacturing Threatens Industry’s Recovery</a></li> </ul>
+<p class="rm-manual"><span><span> <a href="https://securityboulevard.com/author/nathan-eddy/">More from Nathan Eddy</a> </span></span></p>
+<p class="rm-manual"> <span><a href="https://securityboulevard.com/2021/07/digital-habits-during-pandemic-have-lasting-impact/" rel="bookmark"> July 9, 2021July 8, 2021</a></span> <span><span><a href="https://securityboulevard.com/author/nathan-eddy/">Nathan Eddy</a></span></span> <span><a href="https://securityboulevard.com/2021/07/digital-habits-during-pandemic-have-lasting-impact/#respond"><span> 0 Comments</span></a></span> <span><a href="https://securityboulevard.com/tag/covid-19/" rel="tag">COVID-19</a>, <a href="https://securityboulevard.com/tag/digital-transformation/" rel="tag">Digital Transformation</a>, <a href="https://securityboulevard.com/tag/remote-work/" rel="tag">remote work</a></span></p>
+<p class="rm-manual">Featured eBook</p>
+<h4 class="rm-manual"><a href="https://securityboulevard.com/downloads/managing-the-appsec-toolstack/">Managing the AppSec Toolstack</a></h4>
+<p class="rm-manual">The best cybersecurity defense is always applied in
+ layers—if one line of defense fails, the next should be able to thwart 
+an attack, and so on. Now that DevOps teams are taking more 
+responsibility for application security by embracing DevSecOps 
+processes, that same philosophy applies to security controls. The 
+challenge many organizations are facing now ... <a href="https://securityboulevard.com/downloads/managing-the-appsec-toolstack/">Read More</a></p>
+<p class="rm-manual">Security Boulevard</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://securityboulevard.com/2021/07/reevaluating-your-breach-prevention-strategy/" rel="prev"><span>←</span> Reevaluating Your Breach Prevention Strategy</a></li> <li class="rm-manual"><a href="https://securityboulevard.com/2021/07/ask-chloe-career-advancement/" rel="next">Ask Chloé: Career Advancement <span>→</span></a></li> </ul>
+<h4 class="rm-manual">Nathan Eddy</h4>
+<p class="rm-manual">Nathan Eddy is a Berlin-based filmmaker and 
+freelance journalist specializing in enterprise IT and security issues, 
+health care IT and architecture.</p>
+<p class="rm-manual">nathan-eddy has 32 posts and counting.<a href="https://securityboulevard.com/author/nathan-eddy/">See all posts by nathan-eddy</a></p>
+<h3 class="rm-manual"><span>TechStrong TV – Live</span></h3>
+<p class="rm-manual"> <a href="https://digitalanarchist.com/">Watch latest episodes and shows</a> </p>
+<h3 class="rm-manual"><span>Subscribe to our Newsletters</span></h3>
+<p class="rm-manual"> <span>Get breaking news, free eBooks and upcoming events delivered to your inbox.</span> </p>
+<ul class="rm-manual">
+<li class="rm-manual">Email<span><span>*</span></span>
+</li>
+<li class="rm-manual"><p class="rm-manual"><a href="https://securityboulevard.com/privacy-policy/">View Security Boulevard Privacy Policy</a></p></li>
+</ul>
+<h3 class="rm-manual"> <span>Most Read on the Boulevard</span> </h3>
+<p class="rm-manual"><a href="https://securityboulevard.com/2021/07/cryptomining-scam-apps-stealer-trojans-culled-from-google-play/">Cryptomining Scam Apps, ‘Stealer’ Trojans Culled from Google Play</a></p>
+<p class="rm-manual"><a href="https://securityboulevard.com/2021/07/top-5-physical-security-considerations/">Top 5 Physical Security Considerations</a></p>
+<p class="rm-manual"><a href="https://securityboulevard.com/2021/07/phishing-ransomware-driving-wave-of-data-breaches/">Phishing, Ransomware Driving Wave of Data Breaches</a></p>
+<p class="rm-manual"><a href="https://securityboulevard.com/2021/07/cities-key-in-war-on-ransomware-neuberger-tells-mayors/">Cities Key in War on Ransomware, Neuberger Tells Mayors</a></p>
+<p class="rm-manual"><a href="https://securityboulevard.com/2021/07/how-to-prepare-for-a-cyberattack/">How to Prepare for a Cyberattack</a></p>
+<p class="rm-manual"><a href="https://securityboulevard.com/2021/07/cybersecurity-news-round-up-week-of-july-9-2021/">Cybersecurity News Round-Up: Week of July 9, 2021</a></p>
+<p class="rm-manual"><a href="https://securityboulevard.com/2021/07/bsidesnova-2021-rich-wickershams-linkedin-opsec-targeting-analysis-and-countermeasures/">BSidesNoVA 2021 – Rich Wickersham’s ‘LinkedIn OPSEC, Targeting Analysis And Countermeasures’</a></p>
+<p class="rm-manual"><a href="https://securityboulevard.com/2021/07/bsidesnova-2021-andy-piazzas-and-james-nixons-vendor-hacking-how-to-make-your-tools-suck-less/">BSidesNoVA 2021 – Andy Piazza’s And James Nixon’s ‘Vendor Hacking: How To Make Your Tools Suck Less’</a></p>
+<p class="rm-manual"><a href="https://securityboulevard.com/2021/07/spike-in-chain-gang-destructive-attacks-on-atms/">Spike in “Chain Gang” Destructive Attacks on ATMs</a></p>
+<p class="rm-manual"><a href="https://securityboulevard.com/2021/07/rethinking-application-security-in-the-api-first-era/">Rethinking application security in the API-first era</a></p>
+<h3 class="rm-manual"> <span><a href="http://www.securityboulevard.com/events/category/webinar/">Upcoming Webinars </a></span> </h3>
+<p class="rm-manual"> <span> Wed </span> <span>14</span> </p>
+<h2 class="rm-manual"> <a href="https://securityboulevard.com/webinars/container-live-hack-continuous-application-security-for-your-openshift-workloads/" rel="bookmark">Container Live-Hack: Continuous Application Security for Your OpenShift Workloads</a> </h2>
+<p class="rm-manual"> <span>July 14 @ 3:00 pm</span> - <span>4:00 pm</span> </p>
+<p class="rm-manual"> <span> Wed </span> <span>21</span> </p>
+<h2 class="rm-manual"> <a href="https://securityboulevard.com/webinars/improving-pipeline-efficiency-with-enhanced-notifications-and-response-automation/" rel="bookmark">Improving Pipeline Efficiency With Enhanced Notifications and Response Automation</a> </h2>
+<p class="rm-manual"> <span>July 21 @ 3:00 pm</span> - <span>4:00 pm</span> </p>
+<p class="rm-manual"> <span> Thu </span> <span>22</span> </p>
+<h2 class="rm-manual"> <a href="https://securityboulevard.com/webinars/make-appsec-tools-seamless-in-devops-pipelines/" rel="bookmark">Make Appsec Tools Seamless In Devops Pipelines</a> </h2>
+<p class="rm-manual"> <span>July 22 @ 1:00 pm</span> - <span>2:00 pm</span> </p>
+<p class="rm-manual"> <span> Thu </span> <span>22</span> </p>
+<h2 class="rm-manual"> <a href="https://securityboulevard.com/webinars/panel-discussion-the-changing-face-of-software-security/" rel="bookmark">Panel Discussion: The Changing Face of Software Security</a> </h2>
+<p class="rm-manual"> <span>July 22 @ 3:00 pm</span> - <span>4:00 pm</span> </p>
+<p class="rm-manual"> <span> Thu </span> <span>29</span> </p>
+<h2 class="rm-manual"> <a href="https://securityboulevard.com/webinars/6-cloud-security-risks-hiding-inside-your-cloud-estate/" rel="bookmark">6 Cloud Security Risks Hiding Inside Your Cloud Estate</a> </h2>
+<p class="rm-manual"> <span>July 29 @ 3:00 pm</span> - <span>4:00 pm</span> </p>
+<p class="rm-manual"> <a href="https://securityboulevard.com/webinars/" rel="bookmark"> More Webinars </a> </p>
+<h3 class="rm-manual"><span>Download Free eBook</span></h3>
+<h3 class="rm-manual"><span>Recent Security Boulevard Chats</span></h3>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://soundcloud.com/user-540767378/cloud-devsecops-and-network-security-all-together" rel="noopener">Cloud, DevSecOps and Network Security, All Together?</a></li>
+<li class="rm-manual"><a href="https://soundcloud.com/user-540767378/security-as-code-with-tim-jefferson-barracuda-networks" rel="noopener">Security-as-Code with Tim Jefferson, Barracuda Networks</a></li>
+<li class="rm-manual"><a href="https://soundcloud.com/user-540767378/asrtm-with-rohit-sethi-security-compass" rel="noopener">ASRTM with Rohit Sethi, Security Compass</a></li>
+<li class="rm-manual"><a href="https://soundcloud.com/user-540767378/deception-art-or-science-ofer-israeli-illusive-networks" rel="noopener">Deception: Art or Science, Ofer Israeli, Illusive Networks</a></li>
+<li class="rm-manual"><a href="https://soundcloud.com/user-540767378/tips-to-secure-iot-and-connected-systems-w-digicert" rel="noopener">Tips to Secure IoT and Connected Systems w/ DigiCert</a></li>
+</ul>
+<aside class="rm-manual"> <a href="https://securityboulevard.com/industry-spotlight/"><h3 class="rm-manual"><span>Industry Spotlight </span></h3></a> </aside><p class="rm-manual"><span><a href="https://securityboulevard.com/category/blogs/cloud-security/" rel="category tag">Cloud Security</a> <a href="https://securityboulevard.com/category/blogs/" rel="category tag">Cybersecurity</a> <a href="https://securityboulevard.com/category/blogs/endpoint/" rel="category tag">Endpoint</a> <a href="https://securityboulevard.com/category/sb/sb-industry-spotlight/" rel="category tag">Industry Spotlight</a> <a href="https://securityboulevard.com/category/blogs/iot-ics-security/" rel="category tag">IoT &amp; ICS Security</a> <a href="https://securityboulevard.com/category/blogs/security-awareness/" rel="category tag">Security Awareness</a> <a href="https://securityboulevard.com/category/sb/" rel="category tag">Security Boulevard (Original)</a> </span></p>
+<h3 class="rm-manual"> <a href="https://securityboulevard.com/2021/07/top-5-physical-security-considerations/">Top 5 Physical Security Considerations</a> </h3>
+<p class="rm-manual"> <span><a href="https://securityboulevard.com/2021/07/top-5-physical-security-considerations/" rel="bookmark"> July 12, 2021</a></span> <span><span><a href="https://securityboulevard.com/author/andi-hendrickson/">Andi Hendrickson | 14 hours ago</a></span></span> <span><a href="https://securityboulevard.com/2021/07/top-5-physical-security-considerations/#respond"><span>0</span></a></span> </p>
+<p class="rm-manual"><span><a href="https://securityboulevard.com/category/blogs/" rel="category tag">Cybersecurity</a> <a href="https://securityboulevard.com/category/blogs/endpoint/" rel="category tag">Endpoint</a> <a href="https://securityboulevard.com/category/blogs/incident-response/" rel="category tag">Incident Response</a> <a href="https://securityboulevard.com/category/sb/sb-industry-spotlight/" rel="category tag">Industry Spotlight</a> <a href="https://securityboulevard.com/category/blogs/malware/" rel="category tag">Malware</a> <a href="https://securityboulevard.com/category/sb/" rel="category tag">Security Boulevard (Original)</a> <a href="https://securityboulevard.com/category/blogs/threats-breaches/" rel="category tag">Threats &amp; Breaches</a> <a href="https://securityboulevard.com/category/blogs/threats-breaches/vulnerabilities/" rel="category tag">Vulnerabilities</a> </span></p>
+<h3 class="rm-manual"> <a href="https://securityboulevard.com/2021/07/real-time-threat-assessment-with-in-memory-computing/">Real-Time Threat Assessment With In-Memory Computing</a> </h3>
+<p class="rm-manual"> <span><a href="https://securityboulevard.com/2021/07/real-time-threat-assessment-with-in-memory-computing/" rel="bookmark"> July 8, 2021</a></span> <span><span><a href="https://securityboulevard.com/author/bill-bain/">Bill Bain | 4 days ago</a></span></span> <span><a href="https://securityboulevard.com/2021/07/real-time-threat-assessment-with-in-memory-computing/#respond"><span>0</span></a></span> </p>
+<p class="rm-manual"><span><a href="https://securityboulevard.com/category/blogs/" rel="category tag">Cybersecurity</a> <a href="https://securityboulevard.com/category/blogs/data-security/" rel="category tag">Data Security</a> <a href="https://securityboulevard.com/category/blogs/endpoint/" rel="category tag">Endpoint</a> <a href="https://securityboulevard.com/category/sb/sb-industry-spotlight/" rel="category tag">Industry Spotlight</a> <a href="https://securityboulevard.com/category/blogs/iot-ics-security/" rel="category tag">IoT &amp; ICS Security</a> <a href="https://securityboulevard.com/category/blogs/malware/" rel="category tag">Malware</a> <a href="https://securityboulevard.com/category/sb/" rel="category tag">Security Boulevard (Original)</a> <a href="https://securityboulevard.com/category/blogs/threats-breaches/" rel="category tag">Threats &amp; Breaches</a> </span></p>
+<h3 class="rm-manual"> <a href="https://securityboulevard.com/2021/07/how-to-protect-medical-devices-from-ransomware/">How to Protect Medical Devices from Ransomware</a> </h3>
+<p class="rm-manual"> <span><a href="https://securityboulevard.com/2021/07/how-to-protect-medical-devices-from-ransomware/" rel="bookmark"> July 7, 2021</a></span> <span><span><a href="https://securityboulevard.com/author/doug-folsom/">Doug Folsom | Jul 07</a></span></span> <span><a href="https://securityboulevard.com/2021/07/how-to-protect-medical-devices-from-ransomware/#respond"><span>0</span></a></span> </p>
+<aside class="rm-manual"> <a href="https://securityboulevard.com/cybersecurity-news/"><h3 class="rm-manual"><span>Top Stories </span></h3></a> </aside><p class="rm-manual"><span><a href="https://securityboulevard.com/category/blogs/security-analytics/" rel="category tag">Analytics &amp; Intelligence</a> <a href="https://securityboulevard.com/category/blogs/cyberlaw/" rel="category tag">Cyberlaw</a> <a href="https://securityboulevard.com/category/blogs/" rel="category tag">Cybersecurity</a> <a href="https://securityboulevard.com/category/blogs/data-security/" rel="category tag">Data Security</a> <a href="https://securityboulevard.com/category/sb/sb-featured/" rel="category tag">Featured</a> <a href="https://securityboulevard.com/category/blogs/governance-risk-compliance/" rel="category tag">Governance, Risk &amp; Compliance</a> <a href="https://securityboulevard.com/category/blogs/identity-access/" rel="category tag">Identity &amp; Access</a> <a href="https://securityboulevard.com/category/sb/sb-news/" rel="category tag">News</a> <a href="https://securityboulevard.com/category/blogs/security-awareness/" rel="category tag">Security Awareness</a> <a href="https://securityboulevard.com/category/sb/" rel="category tag">Security Boulevard (Original)</a> <a href="https://securityboulevard.com/category/blogs/social-engineering/" rel="category tag">Social Engineering</a> <a href="https://securityboulevard.com/category/sb/sb-spotlight/" rel="category tag">Spotlight</a> <a href="https://securityboulevard.com/category/blogs/security-analytics/threat-intelligence/" rel="category tag">Threat Intelligence</a> </span></p>
+<h3 class="rm-manual"> <a href="https://securityboulevard.com/2021/07/china-eugenics-claim-as-bgi-hoards-prenatal-test-dna-data/">China ‘Eugenics’ Claim as BGI Hoards Prenatal Test DNA Data</a> </h3>
+<p class="rm-manual"> <span><a href="https://securityboulevard.com/2021/07/china-eugenics-claim-as-bgi-hoards-prenatal-test-dna-data/" rel="bookmark"> July 8, 2021</a></span> <span><span><a href="https://securityboulevard.com/author/richi/">Richi Jennings | 4 days ago</a></span></span> <span><a href="https://securityboulevard.com/2021/07/china-eugenics-claim-as-bgi-hoards-prenatal-test-dna-data/#respond"><span>0</span></a></span> </p>
+<p class="rm-manual"><span><a href="https://securityboulevard.com/category/blogs/security-analytics/" rel="category tag">Analytics &amp; Intelligence</a> <a href="https://securityboulevard.com/category/blogs/application-security/" rel="category tag">Application Security</a> <a href="https://securityboulevard.com/category/blockchain/" rel="category tag">Blockchain</a> <a href="https://securityboulevard.com/category/blogs/cloud-security/" rel="category tag">Cloud Security</a> <a href="https://securityboulevard.com/category/blogs/cyberlaw/" rel="category tag">Cyberlaw</a> <a href="https://securityboulevard.com/category/blogs/" rel="category tag">Cybersecurity</a> <a href="https://securityboulevard.com/category/blogs/data-security/" rel="category tag">Data Security</a> <a href="https://securityboulevard.com/category/blogs/devops/" rel="category tag">DevOps</a> <a href="https://securityboulevard.com/category/blockchain/digital-currency/" rel="category tag">Digital Currency</a> <a href="https://securityboulevard.com/category/sb/sb-featured/" rel="category tag">Featured</a> <a href="https://securityboulevard.com/category/blogs/governance-risk-compliance/" rel="category tag">Governance, Risk &amp; Compliance</a> <a href="https://securityboulevard.com/category/blogs/incident-response/" rel="category tag">Incident Response</a> <a href="https://securityboulevard.com/category/blogs/malware/" rel="category tag">Malware</a> <a href="https://securityboulevard.com/category/blogs/network-security/" rel="category tag">Network Security</a> <a href="https://securityboulevard.com/category/sb/sb-news/" rel="category tag">News</a> <a href="https://securityboulevard.com/category/blogs/security-awareness/" rel="category tag">Security Awareness</a> <a href="https://securityboulevard.com/category/sb/" rel="category tag">Security Boulevard (Original)</a> <a href="https://securityboulevard.com/category/sb/sb-spotlight/" rel="category tag">Spotlight</a> <a href="https://securityboulevard.com/category/blogs/security-analytics/threat-intelligence/" rel="category tag">Threat Intelligence</a> <a href="https://securityboulevard.com/category/blogs/threats-breaches/" rel="category tag">Threats &amp; Breaches</a> <a href="https://securityboulevard.com/category/blogs/threats-breaches/vulnerabilities/" rel="category tag">Vulnerabilities</a> </span></p>
+<h3 class="rm-manual"> <a href="https://securityboulevard.com/2021/07/revil-makes-monkeys-out-of-kaseya-customers/">REvil Makes Monkeys out of Kaseya Customers</a> </h3>
+<p class="rm-manual"> <span><a href="https://securityboulevard.com/2021/07/revil-makes-monkeys-out-of-kaseya-customers/" rel="bookmark"> July 6, 2021</a></span> <span><span><a href="https://securityboulevard.com/author/richi/">Richi Jennings | Jul 06</a></span></span> <span><a href="https://securityboulevard.com/2021/07/revil-makes-monkeys-out-of-kaseya-customers/#respond"><span>0</span></a></span> </p>
+<p class="rm-manual"><span><a href="https://securityboulevard.com/category/blogs/security-analytics/" rel="category tag">Analytics &amp; Intelligence</a> <a href="https://securityboulevard.com/category/blogs/application-security/" rel="category tag">Application Security</a> <a href="https://securityboulevard.com/category/blogs/cloud-security/" rel="category tag">Cloud Security</a> <a href="https://securityboulevard.com/category/blogs/cyberlaw/" rel="category tag">Cyberlaw</a> <a href="https://securityboulevard.com/category/blogs/" rel="category tag">Cybersecurity</a> <a href="https://securityboulevard.com/category/blogs/data-security/" rel="category tag">Data Security</a> <a href="https://securityboulevard.com/category/sb/sb-featured/" rel="category tag">Featured</a> <a href="https://securityboulevard.com/category/blogs/governance-risk-compliance/" rel="category tag">Governance, Risk &amp; Compliance</a> <a href="https://securityboulevard.com/category/blogs/identity-access/" rel="category tag">Identity &amp; Access</a> <a href="https://securityboulevard.com/category/blogs/incident-response/" rel="category tag">Incident Response</a> <a href="https://securityboulevard.com/category/sb/sb-news/" rel="category tag">News</a> <a href="https://securityboulevard.com/category/blogs/security-awareness/" rel="category tag">Security Awareness</a> <a href="https://securityboulevard.com/category/sb/" rel="category tag">Security Boulevard (Original)</a> <a href="https://securityboulevard.com/category/blogs/social-engineering/" rel="category tag">Social Engineering</a> <a href="https://securityboulevard.com/category/sb/sb-spotlight/" rel="category tag">Spotlight</a> <a href="https://securityboulevard.com/category/blogs/security-analytics/threat-intelligence/" rel="category tag">Threat Intelligence</a> <a href="https://securityboulevard.com/category/blogs/threats-breaches/" rel="category tag">Threats &amp; Breaches</a> </span></p>
+<h3 class="rm-manual"> <a href="https://securityboulevard.com/2021/07/one-medical-sorry-not-sorry-for-leaking-your-personal-info/">One Medical: Sorry-not-Sorry for Leaking your Personal Info</a> </h3>
+<p class="rm-manual"> <span><a href="https://securityboulevard.com/2021/07/one-medical-sorry-not-sorry-for-leaking-your-personal-info/" rel="bookmark"> July 2, 2021</a></span> <span><span><a href="https://securityboulevard.com/author/richi/">Richi Jennings | Jul 02</a></span></span> <span><a href="https://securityboulevard.com/2021/07/one-medical-sorry-not-sorry-for-leaking-your-personal-info/#respond"><span>0</span></a></span> </p>
+<h3 class="rm-manual"> <span><a href="https://securityboulevard.com/humor">Security Humor </a></span> </h3>
+<h4 class="rm-manual"><a href="https://securityboulevard.com/2021/07/robert-m-lees-jeff-haas-little-bobby-comic-week-337/">Robert M. Lee’s &amp; Jeff Haas’ Little Bobby Comic – ‘WEEK 337’</a></h4>
+<h3 class="rm-manual"><span>Join the Community</span></h3>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://securityboulevard.com/boulevard-feed-request/">Add your blog to Security Bloggers Network</a></li> <li class="rm-manual"><a href="https://securityboulevard.com/write-for-security-boulevard/">Write for Security Boulevard</a></li> <li class="rm-manual"><a href="https://securityboulevard.com/bloggers-meetup-awards/">Bloggers Meetup and Awards</a></li> <li class="rm-manual"><a href="https://securityboulevard.com/inquiry/">Ask a Question</a></li> <li class="rm-manual"><a href="file:///cdn-cgi/l/email-protection#5930373f36192a3c3a2c2b302d203b362c353c2f382b3d773a3634">Email: <span>[email protected]</span></a></li> </ul>
+<h3 class="rm-manual"><span>Useful Links</span></h3>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://securityboulevard.com/about/">About</a></li> <li class="rm-manual"><a href="https://mediaops.io/wp-content/uploads/2020/02/MediaOpsOverview2020.pdf">Media Kit</a></li> <li class="rm-manual"><a href="https://securityboulevard.com/sponsor-info/">Sponsors Info</a></li> <li class="rm-manual"><a href="https://securityboulevard.com/copyright/">Copyright</a></li> <li class="rm-manual"><a href="https://securityboulevard.com/tos/">TOS</a></li> <li class="rm-manual"><a href="https://securityboulevard.com/privacy-policy/">Privacy Policy</a></li> <li class="rm-manual"><a href="https://www.dmca.com/compliance/securityboulevard.com">DMCA Compliance Statement</a></li> </ul>
+<h3 class="rm-manual"><span>Other Mediaops Sites</span></h3>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://containerjournal.com/">Container Journal</a></li> <li class="rm-manual"><a href="https://devops.com/">DevOps.com</a></li> <li class="rm-manual"><a href="https://www.devopsconnect.com/">DevOps Connect</a></li> <li class="rm-manual"><a href="https://devopsinstitute.com/#sthash.Gt8mVe3w.dpbs">DevOps Institute</a></li> </ul>
+<p class="rm-manual">Copyright © 2021 <a href="https://mediaops.io/">MediaOps Inc.</a> All rights reserved.</p></article>
+</body></html>

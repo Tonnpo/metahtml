@@ -1,0 +1,233 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> How Mapping Land Use Paints a Clearer Picture of Urban Life - Resource Watch Blog </p>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="https://resourcewatch.org/data/explore">Data</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://resourcewatch.org/data/explore">Explore Datasets</a></li> <li class="rm-manual"><a href="https://resourcewatch.org/data/pulse">Near Real-Time Data</a></li> <li class="rm-manual"><a href="https://resourcewatch.org/get-involved/apps">App Gallery</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://resourcewatch.org/topics">Dashboards</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://resourcewatch.org/topics/cities">Cities</a></li> <li class="rm-manual"><a href="https://resourcewatch.org/topics/climate">Climate</a></li> <li class="rm-manual"><a href="https://resourcewatch.org/topics/energy">Energy</a></li> <li class="rm-manual"><a href="https://resourcewatch.org/topics/food">Food</a></li> <li class="rm-manual"><a href="https://resourcewatch.org/topics/forests">Forests</a></li> <li class="rm-manual"><a href="https://resourcewatch.org/topics/ocean">Ocean</a></li> <li class="rm-manual"><a href="https://resourcewatch.org/topics/society">Society</a></li> <li class="rm-manual"><a href="https://resourcewatch.org/topics/water">Water</a></li> </ul> </li> <li class="rm-manual"><a href="https://blog.resourcewatch.org/">Blog</a></li> <li class="rm-manual">
+<a href="https://resourcewatch.org/about">About</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://resourcewatch.org/about/partners">Partners</a></li> <li class="rm-manual"><a href="https://resourcewatch.org/about/faqs">FAQs</a></li> <li class="rm-manual"><a href="https://resourcewatch.org/about/howto">How to</a></li> <li class="rm-manual"><a href="https://resourcewatch.org/about/contact-us">Contact us</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://resourcewatch.org/get-involved">Get Involved</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://resourcewatch.org/get-involved/suggest-a-story">Suggest a story</a></li> <li class="rm-manual"><a href="https://resourcewatch.org/get-involved/contribute-data">Contribute date</a></li> <li class="rm-manual"><a href="https://resourcewatch.org/get-involved/join-the-community">Join the community</a></li> <li class="rm-manual"><a href="https://resourcewatch.org/get-involved/develop-your-app">Develop your app</a></li> <li class="rm-manual"><a href="https://resourcewatch.org/sign-in">Sign up</a></li> </ul> </li> </ul>
+<p class="rm-manual"> <span>Menu</span> </p>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="https://resourcewatch.org/data/explore">Data</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://resourcewatch.org/data/explore">Explore Datasets</a></li> <li class="rm-manual"><a href="https://resourcewatch.org/data/pulse">Near Real-Time Data</a></li> <li class="rm-manual"><a href="https://resourcewatch.org/get-involved/apps">App Gallery</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://resourcewatch.org/topics">Dashboards</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://resourcewatch.org/topics/cities">Cities</a></li> <li class="rm-manual"><a href="https://resourcewatch.org/topics/climate">Climate</a></li> <li class="rm-manual"><a href="https://resourcewatch.org/topics/energy">Energy</a></li> <li class="rm-manual"><a href="https://resourcewatch.org/topics/food">Food</a></li> <li class="rm-manual"><a href="https://resourcewatch.org/topics/forests">Forests</a></li> <li class="rm-manual"><a href="https://resourcewatch.org/topics/ocean">Ocean</a></li> <li class="rm-manual"><a href="https://resourcewatch.org/topics/society">Society</a></li> <li class="rm-manual"><a href="https://resourcewatch.org/topics/water">Water</a></li> </ul> </li> <li class="rm-manual"><a href="https://blog.resourcewatch.org/">Blog</a></li> <li class="rm-manual">
+<a href="https://resourcewatch.org/about">About</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://resourcewatch.org/about/partners">Partners</a></li> <li class="rm-manual"><a href="https://resourcewatch.org/about/faqs">FAQs</a></li> <li class="rm-manual"><a href="https://resourcewatch.org/about/howto">How to</a></li> <li class="rm-manual"><a href="https://resourcewatch.org/about/contact-us">Contact us</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://resourcewatch.org/get-involved">Get Involved</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://resourcewatch.org/get-involved/suggest-a-story">Suggest a story</a></li> <li class="rm-manual"><a href="https://resourcewatch.org/get-involved/contribute-data">Contribute date</a></li> <li class="rm-manual"><a href="https://resourcewatch.org/get-involved/join-the-community">Join the community</a></li> <li class="rm-manual"><a href="https://resourcewatch.org/get-involved/develop-your-app">Develop your app</a></li> <li class="rm-manual"><a href="https://resourcewatch.org/sign-in">Sign up</a></li> </ul> </li> </ul>
+<p class="rm-manual"> <a href="https://blog.resourcewatch.org/"> <span> <span>&lt; Blog</span> </span> </a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://blog.resourcewatch.org/2021/03/11/"> <span> March 11, 2021 </span> </a> </li> </ul>
+<h1 class="rm-manual">How Mapping Land Use Paints a Clearer Picture of Urban Life</h1>
+<p class="rm-manual"> by <a href="https://blog.resourcewatch.org/author/caitlin-kontgis/" rel="author">Caitlin Kontgis</a>, <a href="https://blog.resourcewatch.org/author/peter-kerins/" rel="author">Peter Kerins</a> and <a href="https://blog.resourcewatch.org/author/eric-mackres/" rel="author">Eric Mackres</a> </p>
+<p>Remote sensing has revolutionized how we measure and understand the Earth. We can now <a href="https://www.globalforestwatch.org/map/?analysis=eyJzaG93QW5hbHlzaXMiOnRydWUsImhpZGRlbiI6ZmFsc2V9&amp;map=eyJ6b29tIjozLCJjZW50ZXIiOnsibGF0IjotNC4yMTQ5NDMxNDEzOTA2MzksImxuZyI6LTUuODAwNzgxMjUwMDAwMDAxfSwiY2FuQm91bmQiOmZhbHNlLCJiYm94IjpudWxsLCJkYXRhc2V0cyI6W3siZGF0YXNldCI6ImU2NjNlYjA5LTA0ZGUtNGYzOS1iODcxLTM1YzZjMmVkMTBiNSIsIm9wYWNpdHkiOjEsInZpc2liaWxpdHkiOnRydWUsImxheWVycyI6WyJkZDVkZjg3Zi0zOWMyLTRhZWItYTQ2Mi0zZWY5NjliMjBiNjYiXX0seyJkYXRhc2V0IjoiZmRjOGRjMWItMjcyOC00YTc5LWIyM2YtYjA5NDg1MDUyYjhkIiwibGF5ZXJzIjpbIjZmNjc5OGU2LTM5ZWMtNDE2My05NzllLTE4MmE3NGNhNjVlZSIsImM1ZDFlMDEwLTM4M2EtNDcxMy05YWFhLTQ0ZjcyOGMwNTcxYyJdLCJvcGFjaXR5IjoxLCJ2aXNpYmlsaXR5Ijp0cnVlfV19&amp;menu=eyJtZW51U2VjdGlvbiI6IiIsImRhdGFzZXRDYXRlZ29yeSI6IiJ9">track deforestation across the globe</a>, <a href="https://www.theverge.com/2016/8/4/12369494/descartes-artificial-intelligence-crop-predictions-usda">predict end-of-season crop yields</a> and <a href="https://www.cnn.com/2019/12/05/tech/ai-wildfires/index.html">identify wildfires in near real-time</a>. But exploration into its possibilities for urban areas has only just begun. <a href="https://www.nrcan.gc.ca/maps-tools-and-publications/satellite-imagery-and-air-photos/remote-sensing-tutorials/land-cover-land-use/9373">Conventional land cover maps</a>,
+ which categorize the surface of the Earth into groupings like “forest” 
+or “water” or “tundra,” often lump urban areas into a single category, 
+like “urban” or “built-up.” This is useful for mapping urban extent 
+generally, but does not capture the complexity of urban areas. Mapping 
+land use, however, can reveal the patterns of a city, from road networks
+ to housing availability to the distribution of commercial and 
+industrial space — along with the jobs they represent — and much more.</p>
+<p>Mapping urban land use over time can show what, where and when 
+changes are happening: where the city is expanding or contracting; what 
+patterns and densities characterize areas of growth or redevelopment; 
+and which types of land use are being displaced. This information, for 
+example, can highlight spatial inequality and other key issues for 
+cities. Has housing kept pace with the population? Has infrastructure 
+kept pace with development, and if not, where is it needed? Is growth 
+encroaching on wetlands or farmlands that are critical to the city’s 
+well-being? Pressing questions like these abound for urban planners, 
+officials and residents. Robust land use data can help provide the 
+answers.</p>
+<p>Close-up view of WRI’s six-category urban land use and road maps for northeast Monterrey urban area, Mexico.</p>
+<p>WRI, with support from the National Geographic Society, has developed methods and infrastructure to <a href="https://www.wri.org/publication/mapping-urban-land-use-in-india-and-mexico">map urban land use in any city</a>,
+ providing a new tool to help cities manage their resources and improve 
+quality of life. The results for cities in two countries, Mexico and 
+India, illustrate what makes these new urban land use maps novel and how
+ they can benefit cities.</p>
+<h1>Mapping Patterns of Life</h1>
+<p>More than half of the world’s population now lives in cities, but 
+there’s still a lot we don’t know about urban areas. This is especially 
+true for rapidly growing cities in emerging economies, where expansion 
+and redevelopment often outpace administrative capacity. From the city 
+scale to the neighborhood scale, there is little rigorous, 
+globally-consistent data on how cities are arranged, how they grow and 
+change and how to improve them for the well-being of urban residents and
+ the planet.</p>
+<p>Detailed, global maps of land use within cities have, to date, simply not existed. <a href="https://land.copernicus.eu/pan-european/corine-land-cover">Many</a> <a href="https://modis.gsfc.nasa.gov/data/dataprod/mod12.php">existing</a> <a href="https://www.esa-landcover-cci.org/">products</a>
+ show land cover at the continental or global scale and are spatially 
+coarse. Other, true land use remote products are based on expensive, 
+relatively scarce high-resolution satellite imagery, and are thus 
+limited to individual cities or even districts. Other land use maps are 
+created by city planners through detailed, on-the-ground data collection
+ to develop <a href="http://www.fao.org/3/v4860e/v4860e03.htm">cadasters</a>.</p>
+<p>To address this information gap, we used data from the <a href="http://www.atlasofurbanexpansion.org/">Atlas of Urban Expansion</a>, remote sensing imagery, machine learning techniques and cloud computing tools — including Python libraries, Keras and the <a href="https://www.descarteslabs.com/">Descartes Labs Platform</a> — to create computer vision models to categorize and map land use.</p>
+<p>Our new urban mapping system is different: the resulting maps feature
+ a detailed taxonomy of land use drawn at 5-meter resolution and require
+ only medium-resolution satellite imagery, which is publicly available 
+for the Earth’s entire surface and is constantly updated.</p>
+<p>Thanks to the imagery archives of ESA’s Sentinel and NASA’s Landsat 
+satellite constellations, we can retroactively map urban land use going 
+back years. And because each data set captures the full globe at least a
+ couple of times per month, our methodology can continually be applied 
+to new imagery, creating an up-to-date and ever-richer dataset that can 
+provide insights about how cities around the world are growing and 
+changing. The outputs are <a href="https://www.wri.org/publication/mapping-urban-land-use-in-india-and-mexico">publicly available</a> so urban planners and other practitioners can start using them in research and to inform decisions immediately.</p>
+<h1>Insights from Hyderabad and Mexico City</h1>
+<p>Using these models, we mapped land use across multiple cities in 
+Mexico and India, two rapidly urbanizing countries with major 
+differences in their urban land use and development history. Despite 
+having some of the largest cities globally, India is still mostly rural,
+ with only <a href="https://databank.worldbank.org/reports.aspx?source=2&amp;series=SP.URB.TOTL.IN.ZS&amp;country=IND">34%</a> of its population living in urban areas. In contrast, <a href="https://databank.worldbank.org/reports.aspx?source=2&amp;series=SP.URB.TOTL.IN.ZS&amp;country=MEX">80%</a> of Mexico’s population is considered urban.</p>
+<p>Side-by-side comparisons of WRI’s land use maps (5 m spatial 
+resolution) and the ESA CCI land cover maps (300 m resolution) 
+illustrate the improved level of detail achieved in this new dataset. In
+ the ESA land cover maps, both Hyderabad, India and Mexico City, Mexico 
+look like giant blobs of “urban” across the landscape: they lack 
+definition at the boundaries and offer little detail about the city’s 
+interior landscape. Within the urban class, there is no information 
+about areas with primarily residential versus primarily business 
+activities, the location of transportation corridors or where 
+infrastructure exists. All of these elements are critical to 
+understanding the specific, local urbanization challenges faced by a 
+city.</p>
+<p>ESA CCI land cover map (left, 300 meter spatial resolution) compared 
+to WRI’s urban land use map (right, 5 meter spatial resolution) for 
+Mexico City, Mexico.</p>
+<p>The finer-resolution maps developed through this model distinguish 
+details in these “blobs,” revealing patterns and details invisible at 
+coarser scales. For example, the largest non-residential regions in 
+Mexico City are in the northern portion of the metropolitan area, where 
+industrial uses and warehouses are common. Housing types that serve 
+low-income people (informal, atomistic and residential projects) are 
+also common near these non-residential districts in the north, as well 
+as along the city’s periphery. Formal housing is predominant in the city
+ center and south. The <a href="https://thecityfix.com/blog/watch-urban-growth-unfold-amazing-visualizations-cities-worldwide-accra-mexico-city-nairobi-istanbul-sustaianble-development-sprawl-coby-joseph/">(in)famous sprawl of the Mexico City metropolitan area</a>
+ and the relative spatial segregation of land uses contributes to long 
+commutes, especially for those living at the periphery, and is a 
+significant contributor to the capital’s <a href="https://www.washingtonpost.com/world/2019/05/16/scary-images-mexico-citys-pollution-emergency/">well-documented air pollution</a>.</p>
+<p>By contrast, concentrations of non-residential areas in Hyderabad are
+ largely found on the periphery, many of which represent the information
+ technology office parks that proliferated at the city’s edge over the 
+past few decades. This also meant significant <a href="https://www.worldbank.org/en/news/feature/2013/10/21/india-urbanization-report-beyond-sustainable-cities">employment and housing growth in suburban areas</a>, which has <a href="https://www.wri.org/events/2019/01/upward-and-outward-growth">stressed the city’s ability to provide services</a>.</p>
+<p>The pattern of informal settlements also distinctly differs between 
+the two cities. In Mexico City, whose metropolitan population increased 
+an average of <a href="http://atlasofurbanexpansion.org/cities/view/Mexico_City">2.5% per year</a>
+ since 1990, rapid growth spawned both informal residential areas and 
+“atomistic settlements” — areas that were not clearly subdivided and 
+grew incrementally. These areas represent both planned developments to 
+accommodate new residents (as evidenced in Chimalhuacan and surrounding 
+municipalities, the large area of “informal subdivisions” in the 
+southeast) and unplanned growth when housing efforts did not keep pace 
+or meet residential needs (often atomistic settlements found primarily 
+along the urban periphery and into the foothills of the mountains that 
+surround the Valle de México). Many of these areas lack the basic 
+infrastructure that other settlement areas enjoy, such as reliable 
+water, sanitation, electricity and public transportation. People living 
+in these areas also have more <a href="https://thecityfix.com/blog/map-month-mobility-health-education-inequality-mexico-city-spatial-problem-mauricio-brito-lorelei-ramirez-reyes-jorge-macias-eric-mackres/">difficulty accessing critical urban services</a>
+ like jobs, education, food, recreation and health care. Traditional 
+land cover maps do not reflect these distinctions in land use type, or 
+the associated characteristics and problems.</p>
+<p>Hyderabad is different: its unplanned settlements, many of which are 
+long established, are distributed throughout the core of the city, along
+ the periphery and in surrounding villages. The informal residential 
+areas and non-residential areas that dot the region surrounding the city
+ are typical of many South and Southeast Asian cities. These “<a href="https://en.wikipedia.org/wiki/Desakota">desakota</a>”
+ regions have urban characteristics but are also highly reliant on 
+agriculture. Many of these areas are already subsumed by the growing 
+city, transformed into “urban villages,” with more areas likely to 
+follow as the city grows, creating an even more sprawling megacity. As 
+these unconnected dots grow into the more consolidated and contiguous 
+city, monitoring land use change offers the opportunity to anticipate 
+and manage these challenges.</p>
+<p>ESA CCI land cover map (left, 300 meter spatial resolution) compared 
+to WRI’s urban land use map (right, 5 meter spatial resolution) for 
+Hyderabad, India.</p>
+<h1>Implications</h1>
+<p>There are numerous ways that fine-grained land use maps like these 
+can be utilized, as researchers can compare patterns within cities and 
+differences from city to city and country to country. These land use 
+data can combine with other datasets — such as data on the 
+socioeconomics of households, amenities and services, land values, 
+economic activity, hazards and vulnerabilities — to derive new insights.</p>
+<p>Based on these findings, policymakers, civil society and the private 
+sector can make changes on the ground to improve peoples’ lives, 
+including enabling better targeting of scarce resources based on 
+evidence. And over time, these data can be used to measure the 
+effectiveness of the <a href="https://www.un.org/sustainabledevelopment/sustainable-development-goals/">U.N. Sustainable Development Goals</a> and other development metrics.</p>
+<p>We continue to develop and improve our methodology and aim, pending 
+necessary resources, to ultimately produce equivalent maps for every 
+city in the world every year. With high-fidelity land use data like 
+these, researchers can better understand how urban areas develop over 
+time, how land use changes along the urban periphery and which types of 
+settlements are most affected by natural disasters such as flooding or 
+landslides. These are just a few possible applications, but the 
+potential for these data are even greater — and can only be fully 
+realized by putting these maps and methods in the hands of users.</p>
+<p>Access the <a href="https://www.wri.org/publication/mapping-urban-land-use-in-india-and-mexico">technical note</a>, <a href="https://github.com/wri/UrbanLandUse/releases/tag/v0.2.0">open source scripts</a> and resulting maps (<a href="https://resourcewatch.org/data/explore/cit049-Urban-Land-Use-India_1">India</a>, <a href="https://resourcewatch.org/data/explore/cit047-Urban-Land-Use-Mexico">Mexico</a>, <a href="https://resourcewatch.org/data/explore/cit048-Urban-Land-Use-Mexico-Roads">Mexico roads</a>). If you’re an academic or non-profit researcher interested in using the Descartes Labs Platform, visit <a href="https://www.descarteslabs.com/impact_science/">Descartes Labs’ Scientific Programs page</a> for more information about the application process.</p>
+<p class="rm-manual">Caitlin Kontgis is a PhD student in the Geography department at the University of Wisconsin-Madison.</p>
+<p class="rm-manual">Peter Kerins is a Research Analyst for Research, Data and Innovation at World Resources Institute.</p>
+<p class="rm-manual">Eric Mackres is Senior Manager, Data and Tools, for Urban Efficiency &amp; Climate at WRI Ross Center for Sustainable Cities.</p>
+<p class="rm-manual">Cover photo of Mexico City, Mexico, <a href="https://unsplash.com/photos/6olGqjy-JGE">by Nitin Badjatia via Unsplash</a>.</p>
+<h2 class="rm-manual">Check out our catalog of trusted and timely data</h2>
+<p class="rm-manual"> <a href="https://resourcewatch.org/data/explore"> <span> <span>Explore Now</span> </span> </a> </p>
+<h2 class="rm-manual">Recent Posts</h2>
+<p class="rm-manual"><a href="https://blog.resourcewatch.org/2020/11/18/the-power-of-scientific-modeling-for-restoring-ecosystems/"> </a></p><h2 class="rm-manual"><a href="https://blog.resourcewatch.org/2020/11/18/the-power-of-scientific-modeling-for-restoring-ecosystems/">The Power of Scientific Modeling for Monitoring Ecosystems</a></h2><a href="https://blog.resourcewatch.org/2020/11/18/the-power-of-scientific-modeling-for-restoring-ecosystems/"> </a><p class="rm-manual"></p>
+<ul class="rm-manual">
+<li class="rm-manual"> By Kristine Lister<span>·</span> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://blog.resourcewatch.org/category/general/"> General </a><span>·</span> </li> </ul>
+<p class="rm-manual"><a href="https://blog.resourcewatch.org/2020/08/17/turning-user-feedback-into-smart-digital-design/"> </a></p><h2 class="rm-manual"><a href="https://blog.resourcewatch.org/2020/08/17/turning-user-feedback-into-smart-digital-design/">Turning User Feedback Into Smart Digital Design</a></h2><a href="https://blog.resourcewatch.org/2020/08/17/turning-user-feedback-into-smart-digital-design/"> </a><p class="rm-manual"></p>
+<ul class="rm-manual">
+<li class="rm-manual"> By Emily Nilson<span>·</span> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://blog.resourcewatch.org/category/general/"> General </a><span>·</span> </li> </ul>
+<p class="rm-manual"><a href="https://blog.resourcewatch.org/2020/05/19/which-countries-are-most-vulnerable-to-locust-swarms/"> </a></p><h2 class="rm-manual"><a href="https://blog.resourcewatch.org/2020/05/19/which-countries-are-most-vulnerable-to-locust-swarms/">Which Countries Are Most Vulnerable to Locust Swarms?</a></h2><a href="https://blog.resourcewatch.org/2020/05/19/which-countries-are-most-vulnerable-to-locust-swarms/"> </a><p class="rm-manual"></p>
+<ul class="rm-manual">
+<li class="rm-manual"> By Resource Watch Staff<span>·</span> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://blog.resourcewatch.org/category/food/"> Food </a><span>·</span> </li> </ul>
+<h3 class="rm-manual"><a href="https://resourcewatch.org/data">Data</a></h3>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://resourcewatch.org/data/explore"> <span>Explore Datasets</span> </a> </li> <li class="rm-manual"> <a href="https://resourcewatch.org/data/pulse"> <span>Near Real-Time Data</span> </a> </li> <li class="rm-manual"> <a href="https://resourcewatch.org/get-involved/apps"> <span>App gallery</span> </a> </li> </ul>
+<h3 class="rm-manual"><a href="https://resourcewatch.org/dashboards">Dashboards</a></h3>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://resourcewatch.org/dashboards/food"> <span>Food</span> </a> </li> <li class="rm-manual"> <a href="https://resourcewatch.org/dashboards/energy"> <span>Energy</span> </a> </li> <li class="rm-manual"> <a href="https://resourcewatch.org/dashboards/climate"> <span>Climate</span> </a> </li> <li class="rm-manual"> <a href="https://resourcewatch.org/dashboards/forests"> <span>Forests</span> </a> </li> <li class="rm-manual"> <a href="https://resourcewatch.org/dashboards/water"> <span>Water</span> </a> </li> <li class="rm-manual"> <a href="https://resourcewatch.org/dashboards/society"> <span>Society</span> </a> </li> <li class="rm-manual"> <a href="https://resourcewatch.org/dashboards/ocean"> <span>Ocean</span> </a> </li> <li class="rm-manual"> <a href="https://resourcewatch.org/dashboards/cities"> <span>Cities</span> </a> </li> </ul>
+<h3 class="rm-manual"><a href="https://blog.resourcewatch.org/">Blog</a></h3>
+<h3 class="rm-manual"><a href="https://resourcewatch.org/about">About</a></h3>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://resourcewatch.org/about/partners"> <span>Partners</span> </a> </li> <li class="rm-manual"> <a href="https://resourcewatch.org/about/faqs"> <span>FAQs</span> </a> </li> <li class="rm-manual"> <a href="https://resourcewatch.org/about/howto"> <span>How to </span> </a> </li> <li class="rm-manual"> <a href="https://resourcewatch.org/about/contact-us"> <span>Contact us </span> </a> </li> <li class="rm-manual"> <a href="https://resourcewatch.org/terms-of-service"> <span>Terms of service</span> </a> </li> <li class="rm-manual"> <a href="https://resourcewatch.org/privacy-policy"> <span>Privacy policy</span> </a> </li> <li class="rm-manual"> <a href="https://resourcewatch.org/api-attribution-requirements"> <span>Attribution requirements</span> </a> </li> </ul>
+<h3 class="rm-manual"><a href="https://resourcewatch.org/get-involved">Get Involved</a></h3>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://resourcewatch.org/get-involved/suggest-a-story"> <span>Suggest a story</span> </a> </li> <li class="rm-manual"> <a href="https://resourcewatch.org/get-involved/contribute-data"> <span>Contribute data</span> </a> </li> <li class="rm-manual"> <a href="https://resourcewatch.org/get-involved/join-the-community"> <span>Join the community</span> </a> </li> <li class="rm-manual"> <a href="https://resourcewatch.org/get-involved/develop-your-app"> <span>Develop your app</span> </a> </li> <li class="rm-manual"> <a href="https://resourcewatch.org/sign-in"> <span>Sign up</span> </a> </li> </ul>
+<p class="rm-manual"> <span> <span>Partners</span> </span> </p>
+<p class="rm-manual">Resource Watch</p>
+<p class="rm-manual">10 G Street NE Suite 800, Washington, DC 20002, USA</p>
+<p class="rm-manual">Phone +1(202) 729-7600 | Fax: +1 (202) 729-7686</p></article>
+</body></html>

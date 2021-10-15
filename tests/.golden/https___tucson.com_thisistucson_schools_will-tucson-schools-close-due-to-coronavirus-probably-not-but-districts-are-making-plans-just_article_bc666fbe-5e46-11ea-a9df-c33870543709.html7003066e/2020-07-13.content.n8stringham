@@ -1,0 +1,244 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Will Tucson schools close due to coronavirus? Probably not, but districts are making plans just in case | schools | tucson.com </p>
+<p class="rm-manual">You are the owner of this article.</p>
+<p class="rm-manual"> <a href="https://tucson.com/users/https://tucson.com/tncms/admin/editorial-asset/?edit=bc666fbe-5e46-11ea-a9df-c33870543709"> Edit Article</a> <a href="https://tucson.com/users/admin/contribute/article/?from_section=/thisistucson/schools"> Add New Article</a> </p>
+<p class="rm-manual"><a href="file:///thisistucson/about/">about #thisistucson</a> </p>
+<p class="rm-manual"><a href="file:///thisistucson/todo/">things to do </a> </p>
+<p class="rm-manual"><a href="file:///thisistucson/eat/">eat + drink</a> </p>
+<p class="rm-manual"><a href="file:///thisistucson/tucsonlife/">tucson life</a> </p>
+<p class="rm-manual"><a href="file:///thisistucson/schools/">schools</a> </p>
+<p class="rm-manual"><a href="https://thisistucson.com/tucsonlife/coronavirus-tucson-restaurant-grocery-guide/article_72c7a760-96f4-11ea-913d-cbae4285b04c.html" rel="noopener"> tucson restaurant and grocery guide </a> </p>
+<p class="rm-manual"><a href="file:///thisistucson/summerguide/">tucson summer guide</a> </p>
+<p class="rm-manual"><a href="file:///thisistucson/readingchallenge/">2020 summer reading challenge </a> </p>
+<p class="rm-manual"><a href="http://summercamps.tucson.com/#tracking-source=menu-nav" rel="noopener">summer camp guide </a> </p>
+<p class="rm-manual"><a href="https://checkout.fundjournalism.org/memberform?org_id=thisistucson&amp;amp;campaign=7016g000000Yeg0AAC" rel="noopener">become a member</a> </p>
+<p class="rm-manual"><a href="https://squareup.com/store/thisistucson/" rel="noopener">shop</a> </p>
+<p class="rm-manual"><a href="https://www.facebook.com/groups/168932296929970/?source_id=206403269739559" rel="noopener">book club </a> </p>
+<p class="rm-manual"><a href="https://tucson.com/thisistucson/tucsonlife/weddingguide/" rel="noopener">wedding guide </a> </p>
+<p class="rm-manual"><a href="https://speedway.tucson.com/thisistucson/find_a_school/" rel="noopener">school guide </a> </p>
+<p class="rm-manual"><a href="https://thisistucson.com/subscribe/" rel="noopener">newsletters </a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///weather/?weather_zip=85714"> <span> <span>98°</span> </span> </a> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> </p><h4 class="rm-manual"> Tucson, AZ (85714) </h4> <h5 class="rm-manual">Today</h5> <p class="rm-manual">Sunshine and clouds mixed. A stray shower or thunderstorm is possible. High 107F. Winds WNW at 10 to 20 mph..</p> <h5 class="rm-manual">Tonight</h5> <p class="rm-manual">A clear sky. Low 81F. WSW winds shifting to SSE at 10 to 15 mph.</p> <p class="rm-manual"> Updated: July 13, 2020 @ 10:01 am</p> <p class="rm-manual"></p> </li> <li class="rm-manual"><a href="file:///weather/?weather_zip=85714"> Full Forecast</a></li> </ul> </li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///thisistucson/todo/"> <span>to do</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///thisistucson/summerguide/"> <span>summer guide</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///thisistucson/eat/"> <span>eat</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///thisistucson/schools/"> <span>schools</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///thisistucson/tucsonlife/"> <span>tucson life</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///thisistucson/about/"> <span>about</span> </a>
+</li>
+</ul>
+<p class="rm-manual"> <span>Share This </span> </p>
+<ul class="rm-manual"> <li class="rm-manual"><span>Getty Images</span></li> </ul>
+<p class="rm-manual"> <span>spotlight</span> <span>top story</span> </p>
+<h1 class="rm-manual"> <span> Will Tucson schools close due to coronavirus? Probably not, but districts are making plans just in case </span> </h1>
+<ul class="rm-manual"> <li class="rm-manual">
+<span rel="popover"><a href="https://tucson.com/users/profile/Danyelle%20Khmara">By Danyelle Khmara Arizona Daily Star</a></span> <article class="rm-manual"> <p class="rm-manual"> </p><h4 class="rm-manual"> <a href="https://tucson.com/users/profile/Danyelle%20Khmara" rel="author">Danyelle Khmara</a> </h4><p class="rm-manual">Reporter</p> <p class="rm-manual"></p> </article> </li> <li class="rm-manual"> Mar 7, 2020 </li> <li class="rm-manual"> Mar 7, 2020</li> </ul>
+<figcaption class="rm-manual"> <span> <span>Getty Images</span> </span> </figcaption><p>Tucson-area schools are working to create contingency plans in the unlikely event of school closures due to the new coronavirus.</p>
+<p>In preparation for a possible COVID-19 epidemic, Pima County Health 
+Department and education officials are focusing on hygiene and 
+encouraging sick students and school staff to stay at home.</p>
+<p>School closures could have severe and adverse effects. The economic 
+and social disruption could be very large, says Health Department 
+Interim Director Bob England.</p>
+<p>“I am not planning on closing any schools,” he said. “I think it 
+could be counterproductive. … I would probably put a whole bunch of kids
+ a year behind because we’d be closing for the rest of spring.”</p>
+<p>Closing schools could put parents and guardians who don’t have child 
+care at risk of losing their jobs. A lack of income is one of the 
+biggest factors affecting health, England says.</p>
+<p>“You could easily do more harm than good by closing a bunch of schools,” he said.</p>
+<p>England thinks the epidemic will pan out like the bad flu season two 
+years ago, where 80,000 Americans died of flu and related complications.
+ As of Tuesday, March 3, Arizona had two documented cases of COVID-19, 
+both in Maricopa County.</p>
+<p>Most schools already have an influenza pandemic plan ready to implement, England says.</p>
+<p>Nationally, most districts already have plans to deal with natural 
+disasters, flu outbreaks and other emergencies, and many have planned 
+for widespread infections before, most notably during the 2009 H1N1 
+influenza pandemic. But most have never faced the prospect of closing 
+for weeks at a time, as has happened in China and other countries 
+working to prevent the virus from spreading.</p>
+<p>The virus prompted Japan’s prime minister to ask all of the nation’s 
+schools to close for a month as officials work to control the spread of 
+the new virus in the country.</p>
+<p>Pima County officials sent letters to all district and charter 
+schools, as well as a number of private schools, with basic information 
+on the virus and how to reduce risk of spread.</p>
+<p>The virus primarily spreads like a common cold or flu. Health 
+officials recommend that schools encourage thorough hand washing, 
+covering coughs and staying at home when not feeling well, as well as 
+routinely disinfecting high-touch surfaces like doorknobs and having a 
+plan for if school closures do occur.</p>
+<p>That plan should include addressing food insecurity for students who 
+rely on schools for breakfast or lunch, identifying at-home learning 
+opportunities and assuring that guardians who can’t take time off work 
+have a plan to care for their children.</p>
+<p>Tucson’s largest school district, TUSD, is finalizing a plan for 
+potential school closures, which it will tentatively share at the March 
+25 governing board meeting, said TUSD Superintendent Gabriel Trujillo.</p>
+<p>A large component of the plan was employed during the Red for Ed 
+teacher walkouts, including making sure any missed instruction was 
+tracked and made up for if necessary and that there were frequent and 
+widespread updates on the status of the closure, Trujillo said.</p>
+<p>TUSD did cancel a student summer trip to South Korea because of the 
+new coronavirus, due to travel warnings from the U.S. Department of 
+State and Centers for Disease Control and Prevention.</p>
+<p>Vail School District had to cancel a student trip as well. The tour 
+company working with the district gave the 22 Empire High School 
+students, who already paid $3,750 each for a spring break trip to Japan,
+ vouchers for future trips, said Vail spokeswoman Darcy Mentone.</p>
+<p>Vail is also identifying alternative learning locations in the event 
+they need to separate vulnerable children who could be more susceptible 
+to viruses, the same way the district did during a whooping cough 
+outbreak eight years ago, Mentone said.</p>
+<p>But primarily, like all the local districts, Vail is focusing on common-sense measures of not contracting and spreading illness.</p>
+<p>“It’s cold and flu season already,” Mentone said. “We go through this
+ every year, so this year, we’re just redoubling our efforts.”</p>
+<p>In the Tanque Verde School District, on top of hand washing and 
+recommending the use of hand sanitizer, the district will be sanitizing 
+shared classroom technology, door knobs, light switches and classroom 
+faucet handles daily, said spokeswoman Claire Place. They will disinfect
+ buses twice daily. The district will also discontinue attendance awards
+ for the duration of the threat.</p>
+<p>Marana Unified is reevaluating programs such as attendance awards and
+ has also added additional disinfectant cleaning measures, says 
+spokeswoman Tamara Crawley.</p>
+<p>Catalina Foothills Schools are taking the same heightened hygiene and
+ sanitation measures and are also prepared to postpone or cancel large 
+school events, increase space between students in classrooms, limit 
+access to campus by nonessential visitors, temporarily dismiss students 
+from school, and accommodate vulnerable staff and students with 
+alternative class space or working from home if possible, says 
+spokeswoman Julie Farbarik.</p>
+<p>Understanding of the virus is still in the early stages.</p>
+<p>Although we know the virus is very contagious, it’s “almost 
+certainly” less deadly than the current statistics show, England says. 
+He explains that health organizations, nationally and internationally, 
+don’t have the capabilities to screen a lot of people. Therefore, there 
+are probably many mild cases that go unreported, making the actual death
+ rate lower than current estimates.</p>
+<p>The virus seems to have a minimal impact on children, said Arizona Schools Chief Kathy Hoffman in a letter to school leaders.</p>
+<p>“The elderly and those with compromised immune systems are most 
+at-risk,” she said. “Nevertheless, in order to keep our schools and 
+students healthy, we, as always, recommend that students and staff with 
+respiratory symptoms or illness stay at home.”</p>
+<p class="rm-manual"><a href="https://checkout.fundjournalism.org/memberform?org_id=thisistucson&amp;campaign=7016g000000Yeg0AAC">Join #ThisisTucson today.</a> Members get access to our super secret Facebook group and discounts on merch.</p>
+<p class="rm-manual">The Associated Press contributed to this story. </p>
+<p class="rm-manual">Contact reporter Danyelle Khmara at <a href="mailto:dkhmara@tucson.com">dkhmara@tucson.com</a> or 573-4223. On Twitter: @DanyelleKhmara.</p>
+<h3 class="rm-manual"> <a href="file:///thisistucson/schools/unstoppable-women-these-3-tucson-area-teachers-will-make-you-thankful-for-the-educators-in/article_f086ee7c-c850-11e9-bef8-7713e5188e49.html"> Unstoppable women: These 3 Tucson-area teachers will make you thankful for the educators in your life</a>
+</h3>
+<p class="rm-manual">Go thank your teachers. </p>
+<h3 class="rm-manual"> <a href="file:///thisistucson/schools/free-counseling-services-available-for-all-tusd-students-and-their-families/article_f8017dfc-8179-11e9-bfcb-1f5e2594d83b.html"> Free counseling services available for all TUSD students and their families</a>
+</h3>
+<p class="rm-manual">Families with children enrolled in Tucson Unified School District can get free counseling se…</p>
+<h3 class="rm-manual"> <a href="file:///thisistucson/schools/heres-how-4-teachers-changed-their-students-lives/article_bb0b901e-b6b2-11e8-830e-e3850368d950.html"> Here's how 4 teachers changed their students' lives</a>
+</h3>
+<p class="rm-manual">Most of us had that one teacher. </p>
+<h3 class="rm-manual"> <a href="file:///thisistucson/todo/organizers-cancel-2020-tucson-festival-of-books-amid-coronavirus-concerns/article_24308cf4-6245-11ea-86c8-bb65380cb407.html"> Organizers cancel 2020 Tucson Festival of Books amid coronavirus concerns</a>
+</h3>
+<p class="rm-manual">More than 100 of the festival's 345 authors had canceled</p>
+<h3 class="rm-manual"> <a href="file:///thisistucson/todo/5-family-friendly-things-to-do-on-spring-break/article_9ceb22f0-6225-11ea-a83c-bfaf8478d23d.html"> 5 family-friendly things to do on spring break</a>
+</h3>
+<p class="rm-manual"><span>We've gathered a few ideas for you to fill 
+your days with all the fun and rounded up a list of local camp options 
+if you still need to make child care plans.</span></p>
+<h3 class="rm-manual"> <a href="file:///thisistucson/todo/book-sale-at-ua-features-titles-from-canceled-tucson-festival-of-books/article_ad6cc810-631d-11ea-9f3f-0fcfb7feaa45.html"> Book sale at UA features titles from canceled Tucson Festival of Books</a>
+</h3>
+<p class="rm-manual">The Tucson Festival of Books was canceled amid coronavirus concerns.</p>
+<h3 class="rm-manual">More information</h3>
+<h3 class="rm-manual"> <a href="file:///news/local/arizona-now-has-5-confirmed-cases-of-coronavirus/article_5061c3da-6090-11ea-976b-579e9fe19d7d.html"> Arizona now has 5 confirmed cases of coronavirus</a>
+</h3>
+<p class="rm-manual">Health officials from the state and Pinal County are investigating the latest diagnosis.</p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///news/local/coronavirus-fears-force-cancellation-of-tucson-festival-of-books/article_cad7f800-622f-11ea-85ff-ff32b775c57f.html"> Coronavirus fears force cancellation of Tucson Festival of Books </a> </li> <li class="rm-manual"> <a href="file:///news/local/tucson-area-reports-first-case-of-coronavirus-state-prepares-for-thousands-of-infections/article_7e345638-6252-11ea-a6f0-2382f24efe90.html"> Tucson area reports first case of coronavirus; state prepares for thousands of infections </a> </li> <li class="rm-manual"> <a href="file:///news/local/watch-the-stars-q-a-about-coronavirus-with-pima-county-health-department/article_a0d326b0-6315-11ea-9bc4-4ff5504ce8e8.html"> Watch the Star's Q&amp;A about coronavirus with Pima County Health Department </a> </li> </ul>
+<h4 class="rm-manual">Tags</h4>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///search/?k=%22coronavirus%22#tncms-source=keyword">Coronavirus</a> </li> <li class="rm-manual"> <a href="file:///search/?k=%22covid-19%22#tncms-source=keyword">Covid-19</a> </li> <li class="rm-manual"> <a href="file:///search/?k=%22preparation%22#tncms-source=keyword">Preparation</a> </li> <li class="rm-manual"> <a href="file:///search/?k=%22outbreak%22#tncms-source=keyword">Outbreak</a> </li> <li class="rm-manual"> <a href="file:///search/?k=%22k-12-education%22#tncms-source=keyword">K-12-education</a> </li> <li class="rm-manual"> <a href="file:///search/?k=%22tucson%20schools%22#tncms-source=keyword">Tucson Schools</a> </li> <li class="rm-manual"> <a href="file:///search/?k=%22tucson%20coronavirus%22#tncms-source=keyword">Tucson Coronavirus</a> </li> <li class="rm-manual"> <a href="file:///search/?k=%22tucson%20covid-19%22#tncms-source=keyword">Tucson Covid-19</a> </li> <li class="rm-manual"> <a href="file:///search/?k=%22tucson%20schools%20coronavirus%22#tncms-source=keyword">Tucson Schools Coronavirus</a> </li> <li class="rm-manual"> <a href="file:///search/?k=%22how%20will%20coronavirus%20affect%20tucson%20schools%22#tncms-source=keyword">How Will Coronavirus Affect Tucson Schools</a> </li> </ul>
+<h4 class="rm-manual"> <a href="https://tucson.com/users/profile/Danyelle%20Khmara" rel="author">Danyelle Khmara</a> </h4>
+<p class="rm-manual">Reporter</p>
+<p class="rm-manual">Danyelle joined the Star in 2018 and covers K-12 
+education. Previously, Danyelle wrote for the Tucson Weekly where she 
+won several statewide awards including story of the year and first place
+ investigative reporting.</p>
+<h3 class="rm-manual"> Most viewed stories </h3>
+<ul class="rm-manual">
+<li class="rm-manual"> <h4 class="rm-manual"> <a href="file:///thisistucson/eat/9-restaurants-that-opened-in-tucson-during-the-pandemic/article_b7d3d188-bd7f-11ea-9168-53905ff1f81e.html"> 9 restaurants that opened in Tucson during the pandemic</a>
+</h4> </li>
+<li class="rm-manual"> <h4 class="rm-manual"> <a href="file:///thisistucson/tucsonlife/what-to-plant-during-tucsons-monsoon-season/article_334ab31c-bbce-11ea-bb56-0fb8d80a4414.html"> What to plant during Tucson's monsoon season</a>
+</h4> </li>
+<li class="rm-manual"> <h4 class="rm-manual"> <a href="file:///thisistucson/todo/5-summer-drive-in-movies-around-tucson-oro-valley-and-sahuarita/article_11a53bf4-a780-11ea-ab83-2f16683ffa03.html"> 5 summer drive-in movies around Tucson, Oro Valley and Sahuarita</a>
+</h4> </li>
+<li class="rm-manual"> <h4 class="rm-manual"> <a href="file:///thisistucson/eat/some-tucson-businesses-are-keeping-covid-19-cases-secret/article_2bc0cddc-be2d-11ea-984b-d7be0ea34cd2.html"> Some Tucson businesses are keeping COVID-19 cases secret</a>
+</h4> </li>
+<li class="rm-manual"> <h4 class="rm-manual"> <a href="file:///thisistucson/schools/what-to-know-about-homeschooling-in-tucson-during-the-coronavirus-pandemic/article_7e29c606-bc9c-11ea-b82e-3beea5d898f9.html"> What to know about homeschooling in Tucson during the coronavirus pandemic</a>
+</h4> </li>
+<li class="rm-manual"> <h4 class="rm-manual"> <a href="file:///thisistucson/tucsonlife/vacuum-bags-are-super-effective-in-face-masks-ua-says/article_70235a76-c080-11ea-81e2-c77c10838cf2.html"> Vacuum bags are super effective in face masks, UA says</a>
+</h4> </li>
+<li class="rm-manual"> <h4 class="rm-manual"> <a href="file:///thisistucson/todo/send-some-love-to-isolated-tucson-seniors/article_ea0359e2-b566-11ea-a967-f35e22814060.html"> Send some love to isolated Tucson seniors</a>
+</h4> </li>
+<li class="rm-manual"> <h4 class="rm-manual"> <a href="file:///thisistucson/eat/alibaba-mediterranean-restaurant-on-speedway-has-permanently-closed/article_6e4724c2-ba5d-11ea-b183-8741c123b587.html"> Alibaba Mediterranean restaurant on Speedway has permanently closed</a>
+</h4> </li>
+<li class="rm-manual"> <h4 class="rm-manual"> <a href="file:///thisistucson/summerguide/9-tucson-things-to-look-forward-to-this-summer-yes-really/article_04c92a28-b674-11ea-8935-6be32079ad9a.html"> 9 Tucson things to look forward to this summer (yes, really)</a>
+</h4> </li>
+<li class="rm-manual"> <h4 class="rm-manual"> <a href="file:///thisistucson/tucsonlife/bighorn-fire-tucson-running-list-of-resources-for-evacuees-and-danger-zone-residents/article_ebe6570a-ac10-11ea-a729-bb51e02af66c.html"> Bighorn Fire Tucson: Running list of resources for evacuees and danger-zone residents</a>
+</h4> </li>
+</ul>
+<h3 class="rm-manual"> Tools &amp; Services </h3>
+<ul class="rm-manual">
+<li class="rm-manual"> <span> <a href="http://tucson.com/thisistucson/about/" rel="noopener"> About us</a></span> </li>
+<li class="rm-manual"> <span> <a href="https://docs.google.com/forms/d/e/1FAIpQLScmKTJ-Q9n-dxbBGQRiqjJDXQoEpwjMWOMIJikeDxlacca-fw/viewform" rel="noopener"> Submit a story idea</a></span> </li>
+<li class="rm-manual"> <span> <a href="http://marketing.tucson.com/" rel="noopener"> Advertise with us</a></span> </li>
+<li class="rm-manual"> <span> <a href="http://tucson.com/" rel="noopener"> Tucson.com</a></span> </li>
+</ul>
+<h3 class="rm-manual"> Products </h3>
+<ul class="rm-manual">
+<li class="rm-manual"> <span> <a href="http://thisistucson.com/subscribe/" rel="noopener"> Sign up for our weekly newsletters!</a></span> </li>
+<li class="rm-manual"> <span> <a href="https://itunes.apple.com/us/app/this-is-tucson/id1125182558?mt=8" rel="noopener"> #ThisIsTucson app for iOS</a></span> </li>
+<li class="rm-manual"> <span> <a href="https://play.google.com/store/apps/details?id=com.tucson.thisistucson" rel="noopener"> #ThisIsTucson app for Android</a></span> </li>
+<li class="rm-manual"> <span> <a href="https://itunes.apple.com/us/app/this-is-tucson-stickers/id1155234314?app=messages&amp;mt=8" rel="noopener"> Tucson stickers for iMessage</a></span> </li>
+<li class="rm-manual"> <span> <a href="https://play.google.com/store/apps/details?id=com.tucson.thisistucsonstickerpack" rel="noopener"> Tucson stickers for Gboard</a></span> </li>
+<li class="rm-manual"> <span> <a href="https://squareup.com/store/thisistucson/" rel="noopener"> This Is Tucson Shop</a></span> </li>
+</ul>
+<p class="rm-manual">© Copyright 2020 <a href="file:///">Arizona Daily Star</a>, 4850 S. Park Ave. Tucson, AZ | <a href="file:///terms">Terms of Use</a> | <a href="file:///privacy">Privacy Policy</a></p>
+<p class="rm-manual">Powered by <a href="https://bloxcms.com/" rel="noopener">BLOX Content Management System</a> from <a href="https://townnews.com/" rel="noopener">TownNews.com</a>.</p></article>
+</body></html>

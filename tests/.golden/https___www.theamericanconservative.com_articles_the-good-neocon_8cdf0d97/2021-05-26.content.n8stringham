@@ -1,0 +1,180 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> <span><a href="https://www.theamericanconservative.com/"><span>Home</span></a></span>/<span><a href="https://www.theamericanconservative.com/articles/"><span>Articles</span></a></span>/<span>The Good Neocon</span> </p>
+<h1 class="rm-manual"><span>The Good Neocon</span></h1>
+<p class="rm-manual">May 7, 2007</p>
+<p class="rm-manual"><span>|</span></p>
+<p class="rm-manual">12:00 am</p>
+<p class="rm-manual"><a href="https://www.theamericanconservative.com/author/patrick-j-buchanan/"> Patrick Buchanan </a></p>
+<p><span>In writing a book on the new era America is entering after the 
+Iraqi debacle, I revisited the various contributions to a post-Cold War 
+symposium organized by </span><span>Owen Harries of The National Interest.</span></p>
+<p><span> Then, before the crack-up of conservatism, the most respected 
+foreign-policy voice of neoconservatism was that of Jeane Kirkpatrick. A
+ Humphrey Democrat who had moved rightward since school days at Stephens
+ and Barnard, Kirkpatrick had been Reagan’s ambassador to the UN. The 
+Gipper was deeply fond of her. At the Republican Convention of 1984, 
+Jeane had coined two phrases that have lived on: “San Francisco 
+Democrats” and “They always blame America first!” </span></p>
+<p><span>Her essay, “A Normal Country in a Normal Time,” was published 
+in the fall 1990 issue of TNI. Jeane likely finished it after the Berlin
+ Wall fell but before Saddam’s August invasion of Kuwait.</span></p>
+<p><span> Though her specialty was foreign policy, she began by declaring, “America’s purposes are mainly domestic.”</span></p>
+<p><span> “A good society is defined not by its foreign policy but by 
+its internal qualities. … Foreign policy becomes a major aspect of a 
+society only if its government is expansionist, imperial, aggressive, or
+ when it is threatened by aggression. One of the most important 
+consequences of the half century of war and Cold War has been to give 
+foreign affairs an unnatural importance.”</span></p>
+<p><span> Kirkpatrick believed that foreign policy must now take a 
+backseat: “The end of the Cold War frees time, attention and resources 
+to American ends.”</span></p>
+<p><span> In a frontal assault on today’s neoconservative dogmas about 
+America having an historic mission to democratize mankind, Jeane noted 
+that the only mention of foreign policy in the preamble to the 
+Constitution is “provide for the common defense.” </span></p>
+<p><span> “There is no mystical American ‘mission,’ or purpose to be 
+‘found’ independently of the U.S. Constitution. … There is no inherent 
+or historical ‘imperative’ for the U.S. government to seek to achieve 
+any other goal—however great—except as it is mandated by the 
+Constitution or adopted by the people through elected officials.”</span></p>
+<p><span> Bush’s doctrine of “world democratic revolution” and “ending 
+tyranny on earth,” as it has not been ratified by an elected Congress, 
+is without constitutional sanction. When Bush goes, it goes.</span></p>
+<p><span> In those days, Charles Krauthammer was already burbling on 
+about surrendering U.S. sovereignty to merge with Europe and Japan in a 
+“super-sovereign” entity that would be “hegemonic in the world.” Jeane 
+brought him up short: “[I]t is not America’s purpose to establish 
+‘universal dominance’… not even the universal dominance of democracy. … 
+It is not within the United States’ power to democratize the world.” </span></p>
+<p><span> Beware of elites who behave like some priestly class that 
+alone has the knowledge, experience, and wisdom to guide foreign policy,
+ she warned. “It has become more important than ever that the experts 
+who conduct foreign policy on our behalf be subject to the direction and
+ control of the people.”</span></p>
+<p><span> Beware, too, of an “internationalism” that “looks at the world
+ and asks what needs to be done—with little explicit concern for the 
+national interest.”</span></p>
+<p><span> America “should assume no new obligations in remote places,” 
+she admonished. The United States “should negotiate rules which give 
+U.S. products fair access to foreign markets and give foreign businesses
+ no better than fair access to U.S. markets … to ensure that the 
+patterns of trade competition do not undermine the United States’ 
+technological and industrial base.”</span></p>
+<p><span> “This is a government responsibility which cannot be ignored because of anxieties about an ‘industrial’ policy.” </span></p>
+<p><span>Kirkpatrick was no Wall Street Journal free-trade fundamentalist. She was an economic nationalist.</span></p>
+<p><span> As for the U.S. role in NATO, she wrote, “Neither can the U.S.
+ be expected to sustain an expensive role in an alliance whose chief 
+role is to diminish European fear of a resurgent Germany.”</span></p>
+<p><span> “We should not spend American money protecting an affluent Japan …”</span></p>
+<p><span> “Most of the international military obligations that we 
+assumed were once important are now outdated. … It is time to give up 
+the dubious benefits of superpower status and become again an usually 
+successful, open American republic.” A republic, not an empire, the lady
+ said.</span></p>
+<p><span> In closing, she wrote, “The United States preformed heroically
+ in a time when heroism was required; altruistically during the long 
+years when freedom was endangered.</span></p>
+<p><span> “The time when America should bear such unusual burdens is 
+past. With the return of ‘normal’ times we can again become a normal 
+nation.”</span></p>
+<p><span>Had Bush II heeded her wise counsel, America would not be in 
+the hellish mess it is in today. Jeane Kirkpatrick died in December at 
+80 years of age. Requiescat in pace. </span></p>
+<h2 class="rm-manual"><span>leave a comment</span></h2>
+<h2 class="rm-manual"><span>Latest Articles</span></h2>
+<h2 class="rm-manual"><span>Recommended</span></h2>
+<p class="rm-manual"> <a href="file:///web-categories/foreign-affairs">Foreign Affairs</a> <a href="file:///web-categories/politics">Politics</a> </p>
+<p class="rm-manual"><a href="https://www.theamericanconservative.com/articles/another-mek-sock-puppet-conservatives-should-care-about-pro-war-disinformation/"> </a></p><h3 class="rm-manual"><a href="https://www.theamericanconservative.com/articles/another-mek-sock-puppet-conservatives-should-care-about-pro-war-disinformation/">Another Opinion Columnist Pushing War With Iran Who Doesn’t Actually Exist</a></h3><a href="https://www.theamericanconservative.com/articles/another-mek-sock-puppet-conservatives-should-care-about-pro-war-disinformation/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual">The fake opinion columnists primarily targeted right-of-center outlets receptive to a hawkish line against Iran</p>
+<p class="rm-manual"> <a href="https://www.theamericanconservative.com/author/pbrianbloom/">Paul Brian and Arthur Bloom</a> <span>September 2, 2020</span> </p>
+<h3 class="rm-manual"><span>Get our new Digital Edition</span></h3>
+<p class="rm-manual">Get a roundup of the most important and intriguing stories from around the world, delivered to your inbox every weekday.</p>
+<p class="rm-manual"><a href="https://theamericanconservative.com/subscribe">Subscribe </a></p>
+<h3 class="rm-manual"><span>3 Ways to support the American Conservative</span></h3>
+<h4 class="rm-manual"> <span>1.</span> Make a Donation</h4>
+<p class="rm-manual"> <a href="https://theamericanconservative.com/donate/">Donate </a> </p>
+<h4 class="rm-manual"> <span>2.</span> Join our Newsletter</h4>
+<p class="rm-manual"> Email Address </p>
+<h4 class="rm-manual"> <span>3.</span> Subscribe to our Magazine</h4>
+<p class="rm-manual"> <a href="https://theamericanconservative.com/subscribe/">Subscribe </a> </p>
+<p class="rm-manual">The American Conservative exists to advance a Main 
+Street conservatism. We cherish local community, the liberties 
+bequeathed us by the Founders, the civilizational foundations of faith 
+and family, and—we are not ashamed to use the word—peace.</p>
+<h4 class="rm-manual"> Blogs </h4>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://theamericanconservative.com/dreher">Rod Dreher </a></li>
+<li class="rm-manual"><a href="https://theamericanconservative.com/larison">Daniel Larison </a></li>
+<li class="rm-manual"><a href="https://theamericanconservative.com/urbs">New Urbs </a></li>
+<li class="rm-manual"><a href="https://theamericanconservative.com/prufrock">Prufrock </a></li>
+<li class="rm-manual"><a href="https://www.theamericanconservative.com/state-of-the-union/">State of the Union </a></li>
+</ul>
+<h4 class="rm-manual"> Categories </h4>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.theamericanconservative.com/web-categories/politics/">Politics </a></li>
+<li class="rm-manual"><a href="https://www.theamericanconservative.com/web-categories/world/">World </a></li>
+<li class="rm-manual"><a href="https://www.theamericanconservative.com/web-categories/culture/">Culture </a></li>
+<li class="rm-manual"><a href="https://www.theamericanconservative.com/web-categories/arts-letters/">Arts &amp; Letters </a></li>
+<li class="rm-manual"><a href="https://www.theamericanconservative.com/web-categories/new-urbanism/">New Urbanism </a></li>
+<li class="rm-manual"><a href="https://www.theamericanconservative.com/web-categories/crony-capitalism/">Crony Capitalism </a></li>
+<li class="rm-manual"><a href="https://www.theamericanconservative.com/web-categories/realism-restraint/">Realism &amp; Restraint </a></li>
+</ul>
+<h4 class="rm-manual"> Help &amp; Info </h4>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.theamericanconservative.com/about-us/">Who We Are </a></li>
+<li class="rm-manual"><a href="https://www.theamericanconservative.com/frequently-asked-questions/">FAQ </a></li>
+<li class="rm-manual"><a href="https://www.theamericanconservative.com/comments-policy/">Comments Policy </a></li>
+<li class="rm-manual"><a href="https://www.theamericanconservative.com/were-hiring/">Jobs/Internships </a></li>
+<li class="rm-manual"><a href="https://www.theamericanconservative.com/masthead/">Masthead </a></li>
+<li class="rm-manual"><a href="https://www.theamericanconservative.com/contact-us/">Contact TAC </a></li>
+</ul>
+<h4 class="rm-manual"> The Magazine </h4>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.theamericanconservative.com/subscribe/">Subscribe </a></li>
+<li class="rm-manual"><a href="https://sfsdata.com/americanconservative/CustomerService.html">Customer Service </a></li>
+<li class="rm-manual"><a href="https://sfsdata.com/americanconservative/CustomerService.html">Change Address </a></li>
+<li class="rm-manual"><a href="https://www.theamericanconservative.com/donate/">Donate </a></li>
+<li class="rm-manual"><a href="https://www.theamericanconservative.com/advertise/">Advertise </a></li>
+</ul>
+<ul class="rm-manual"><li class="rm-manual"><span>© 2021 The American Conservative</span></li></ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://theamericanconservative.com/advertise">Advertising Guidelines </a></li>
+<li class="rm-manual"><a href="https://theamericanconservative.com/privacy-policy">Privacy Policy </a></li>
+</ul></article>
+</body></html>

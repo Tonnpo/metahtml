@@ -1,0 +1,397 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual">Letter on the Wuhan Virus, by ShepherdFarmerGeek</h1>
+<p class="rm-manual"> <span> <a rel="author" href="https://survivalblog.com/author/jwr/"> James Wesley Rawles </a> </span> <span> February 10, 2020 February 9, 2020 </span> </p>
+<p>The following are my comments to the SurvivalBlog article <a href="https://survivalblog.com/post-exposure-prevention-pep-protocol-jj-mi/" rel="noopener">Post-Exposure Prevention (PEP) Protocol, by JJ in MI</a>.</p>
+<p>This is great to be considering post-exposure treatment. Our 
+protective gear is likely to be *less than perfect*, and if we know 
+we’ve been exposed we need a Plan B!</p>
+<p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5986684/" rel="noopener">This study</a> supports the use of PVP-I as an antiviral, although I do wonder about swabbing my nose with it!</p>
+<p>Thinking in terms of what we can do *on the scene* when we realize 
+we’ve been exposed, I’m wondering if it would be more convenient to use a
+ <a href="https://www.amazon.com/Betadine-Povidone-Antiseptic-Prevent-Infection/dp/B01C49IHU4/ref=sr_1_1?keywords=Betadine+First+Aid+Spray+3+oz+Povidone+Iodine+Antiseptic&amp;qid=1580921901&amp;sr=8-1" rel="noopener">Betadine spray</a>,
+ into our mouths (don’t spray your face or lips!), followed by a swig of
+ water from a bottle, with gargling for a minute. Remember to NOT 
+SWALLOW this!!!!</p>
+<p>It seems to me that time is of the essence once exposed. The sooner 
+we can gargle and swish the better, right? For my own family I’ve made 
+up some <a href="https://www.amazon.com/Basic-Care-Saline-Nasal-Spray/dp/B074F2GP3K/ref=sr_1_4?keywords=saline+nose+spray&amp;qid=1580938824&amp;s=hpc&amp;sr=1-4" rel="noopener">saline nose spray bottles</a> with two drops of <a href="http://(https//www.amazon.com/Nutribiotic-Liquid-Concentrate-Fluid-Ounce/dp/B000M7OOPS/ref=sr_1_1_sspa?keywords=Nutribiotic+Gse+Liquid+Concentrate&amp;qid=1580938909&amp;sr=8-1-spons&amp;psc=1&amp;spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzQTI0RDZZWlhOUVRTJmVuY3J5cHRlZElkPUEwNTMzMDY3M1g3NEwzMEE0Q1pEJmVuY3J5cHRlZEFkSWQ9QTA0NzMyMTUxWFBBRUg3MFAyRjRFJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==" rel="noopener">Grapefruit Seed Extract</a> and about 1/8 of a teaspoon of <a href="https://www.amazon.com/Xlear-Nasal-Spray-Sinus-Relief/dp/B000M4W2E6?th=1" rel="noopener">Xylitol</a>.
+ Supposedly the Xylitol helps wash microorganisms from your nose. I’d 
+rather carry this solution in my pocket than Betadine that might ruin my
+ clothes if it leaks. And I can use it immediately and discretely while 
+in public.</p>
+<p>As far as re-using an N95 mask goes, one of the dangers would be 
+putting it back on if it really DOES have the virus on the outside. 
+You’re putting it very near your eyes and would have to be *extremely* 
+careful (goggles first).</p>
+<p>Since the viruses don’t foul the mask like pollution or smoke or 
+fallout would I don’t see why they couldn’t be re-used. But exposure to 
+strong ultraviolet light might sanitize them better (sunlight, for as 
+long as possible). I’m thinking that some N-95 mask – even re-used – is 
+better than no N-95 mask, IF it comes to that.</p>
+<p>Don’t spray the mask with liquids (diluted bleach comes to mind) or 
+bake them – the mask works by having a huge network of *fuzzy fibers* to
+ attract tiny particles as they make their way through. If the fuzzies 
+get clumped together by being wetted (and dried) they aren’t going to 
+work.</p>
+<p>(The masks don’t actually block viruses – they’re too small to be 
+stopped – but viruses in the air are usually embedded in tiny saliva 
+droplets that are large enough to stop, although some free viruses will 
+be caught by the fibers because of an <a href="https://blogs.cdc.gov/niosh-science-blog/2009/10/14/n95/" rel="noopener">electrostatic attraction</a>.)</p>
+<p>There are filter masks in the pipeline with copper and silver fiber elements, but best I can tell they’re not for sale yet…</p>
+<p>Here’s my two cents for supplements that help with viral infections. My family is already taking some of these:</p>
+<p><a href="https://www.ncbi.nlm.nih.gov/pubmed/11375434" rel="noopener">Vitamin A</a></p>
+<p><a href="https://articles.mercola.com/sites/articles/archive/2020/01/27/quercetin-benefits.aspx" rel="noopener">Quercetin</a></p>
+<p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4032030/" rel="noopener">Andrographis</a></p>
+<p><a href="https://www.mskcc.org/cancer-care/integrative-medicine/herbs/astragalus" rel="noopener">Astragalus</a> (immune stimulant)</p>
+<p><a href="https://www.drweil.com/health-wellness/body-mind-spirit/colds-flu/new-weapon-against-colds/" rel="noopener">Olive Leaf</a></p>
+<p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4288282/" rel="noopener">Selenium</a></p>
+<p><a href="https://www.rxlist.com/n-acetyl_cysteine/supplements.htm" rel="noopener">N acetyl cysteine (NAC)</a></p>
+<p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5409678/" rel="noopener">Vitamin C</a></p>
+<p> https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3659258/</p>
+<p>Guaifenesin (thins mucuous and makes bronchial cilia row faster to clear lungs better)</p>
+<p>When treating a sick family member remember: this virus affects 
+people’s respiration and that could require positioning them on the bed <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3388640/" rel="noopener">face down</a>.</p>
+<p>And, by the way, you can buy oxygen concentrators online via eBay, if you’ve got that kind of budget…</p>
+<p>Last idea: Treating a sick family member at home (should professional
+ medical care be overloaded) could burn through all of our N95 masks. <a href="https://www.rddusa.com/shop/nbc-gas-mask-and-protective-hood-with-double-blower-system" rel="noopener">This might be a better solution</a> (and I can tell you from personal experience it’s more comfortable!):</p>
+<p>It’s a powered filter hood. I’m guessing that with a little ingenuity
+ preppers could improvise a 110v household power supply to run the 
+motors so you’re not going through expensive C123 batteries!</p>
+<p>Thank you JJ in MI and everyone else for your ideas! God have mercy on us all.</p>
+<p>Hope this helps.</p>
+<p>Trust God. Be prepared. We can do both!</p>
+<p class="rm-manual">Previous Post<a href="https://survivalblog.com/recipe-week-dried-apricot-pie/" rel="prev"><span>Recipe of the Week: Dried Apricot Pie</span></a></p>
+<p class="rm-manual">Next Post<a href="https://survivalblog.com/sig-sauer-p320-compact-9mm-fresh-look-pat-cascio/" rel="next"><span>SIG Sauer P320 Compact 9mm – A Fresh Look, by Pat Cascio</span></a></p>
+<ul class="rm-manual"> <li class="rm-manual"><span><a rel="nofollow" href="https://survivalblog.com/marketplace/modules/tracker/go.php?id=328"><span>Ad</span> “The Survival Compound” by Wayne Bosak</a><p class="rm-manual">Being cops, they couldn’t just watch as their neighbors were attacked by roving gangs</p></span></li> <li class="rm-manual"><span><a rel="nofollow" href="https://survivalblog.com/marketplace/modules/tracker/go.php?id=179"><span>Ad</span> USA Berkey Water Filters - Start Drinking Purified Water Today!</a><p class="rm-manual">#1
+ Trusted Gravity Water Purification System! Start Drinking Purified 
+Water now with a Berkey water filtration system. Find systems, 
+replacement filters, parts and more here.</p></span></li> </ul>
+<h3 class="rm-manual"> <span>22 Comments </span> </h3>
+<ol class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>Tunnel Rabbit</span> </p> <p class="rm-manual"> <a href="https://survivalblog.com/letter-wuhan-virus-shepherdfarmergeek/#comment-196846"> <span> February 10, 2020 at 9:06 am </span> <span> 5 months ago </span> </a> </p> <p class="rm-manual">Oxygen Concentrator:</p><p class="rm-manual"> <a href="https://www.ebay.com/itm/1-6L-Oxygen-Concentrator-O2-Air-Purifier-Oxy-Generator-Machine-Home-Traval-Use/303438667611?hash=item46a65a9f5b:g:eLEAAOSwcOBeFyIv" rel="nofollow">https://www.ebay.com/itm/1-6L-Oxygen-Concentrator-O2-Air-Purifier-Oxy-Generator-Machine-Home-Traval-Use/303438667611?hash=item46a65a9f5b:g:eLEAAOSwcOBeFyIv</a></p><p class="rm-manual"></p> <p class="rm-manual">I
+ am not a medical professional. Do not follow my advice. Perhaps someone
+ with expertise will explain more. I believe that a big family that 
+lives in a city, is at risk of having a member become sick with this 
+virus. I know from personal experience that an oxygen concentrator can 
+keep someone alive, and give them a chance to recover, when they would 
+otherwise would die. If the pneumonia gets bad enough, this could make a
+ huge difference. It could be very helpful should congestive heart 
+failure be possible. Don’t let it go below 90%. If oxygen saturation is 
+above 90, yet the heart rate is very high, dehydration is the first 
+thing to address. An oxygen tent can be easily made for children. I’ve 
+done this. These are some of the things I learned from listening to Dr. 
+Alton of Survival Medicine. It is a simple tool that works wonders. 
+You’ll need a finger tip oxygen/pulse meter to go with it:</p> <p class="rm-manual"><a href="https://www.amazon.com/Pulse-Oximeter-Fingertip-Automatic-Saturation/dp/B082STMWB8/ref=sr_1_9?crid=1K6W9O8I6QZZA&amp;keywords=oxygen+saturation+monitor&amp;qid=1581324081&amp;sprefix=oxygen%2Caps%2C425&amp;sr=8-9" rel="nofollow">https://www.amazon.com/Pulse-Oximeter-Fingertip-Automatic-Saturation/dp/B082STMWB8/ref=sr_1_9?crid=1K6W9O8I6QZZA&amp;keywords=oxygen+saturation+monitor&amp;qid=1581324081&amp;sprefix=oxygen%2Caps%2C425&amp;sr=8-9</a></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>sewNurse</span> </p> <p class="rm-manual"> <a href="https://survivalblog.com/letter-wuhan-virus-shepherdfarmergeek/#comment-196854"> <span> February 10, 2020 at 9:30 am </span> <span> 5 months ago </span> </a> </p> <p class="rm-manual">Powered
+ filtered hoods are used in the OR primarily in Total Joint surgeries. 
+While I have never worn one personally, they appear to be comfortable, 
+and are run off rechargeable batteries. I have to wonder why anyone 
+would be drinking in one of these systems like the one displayed here 
+though. They also are worn without mask. Usually the mask is removed by 
+the circulating Nurse, after the hood is donned by the doctor and scrub 
+personnel. This is only to maintain sterility and would not be necessary
+ in an everyday setting. They do decrease hearing. I am glad someone is 
+still working on this problem. Good Job!</p> <p class="rm-manual">Ice 
+Age Farmer released a video Sat. regarding medical compounds coming from
+ China, or other countries. I verified this with two chemist that work 
+in Pharmaceuticals. This is correct. It appears that all our out 
+sourcing of supplies coming from moving to overseas factories is going 
+to haunt us in a big way. Get prepared folks.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>3AD Scout</span> </p> <p class="rm-manual"> <a href="https://survivalblog.com/letter-wuhan-virus-shepherdfarmergeek/#comment-196883"> <span> February 10, 2020 at 11:28 am </span> <span> 5 months ago </span> </a> </p> <p class="rm-manual">I wonder if a neti pot with salt water would work? Maybe increase the salt concentration a little?</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>JJ in MI</span> </p> <p class="rm-manual"> <a href="https://survivalblog.com/letter-wuhan-virus-shepherdfarmergeek/#comment-196952"> <span> February 10, 2020 at 2:15 pm </span> <span> 5 months ago </span> </a> </p> <p class="rm-manual">Thanks
+ ShepherdFarmerGeek, and to everyone that commented in this and the 
+other article as well. On having a “Plan B”, I couldn’t agree more. If 
+we think in terms of the masks and gloves being a ballistic vest as our 
+first line of defense, then the PVP-I / PEP plan might be the blowout 
+kit we carry just in case. </p> <p class="rm-manual">I’m not qualified 
+to comment on the Betadine spray but I like the idea. I had considered 
+adding PVP-I to saline nasal spray bottles too, although I couldn’t find
+ anything on the safety of using it in that manner so I stuck with the 
+plan of swabbing the nostrils instead – although I hope someone more 
+knowledgeable than me might clarify that one way or the other. Paging 
+Doc Cindy? I do think there’s probably lots of room for improvement in 
+my plan, and thanks again to everyone for sharing ideas on how it might 
+be made better.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>OneGuy</span> </p> <p class="rm-manual"> <a href="https://survivalblog.com/letter-wuhan-virus-shepherdfarmergeek/#comment-196959"> <span> February 10, 2020 at 2:27 pm </span> <span> 5 months ago </span> </a> </p> <p class="rm-manual">Short
+ of becoming a recluse I believe most of this effort is a waste of time.
+ You cannot do it 24/7 and you only need one breath of air with the 
+virus to infect you. If the virus becomes pandemic you will be exposed 
+to it no matter if you wear two face masks and wash your hands every 
+five minutes. About the only good advice I have seen regarding this 
+latest scare is stay away from cruise ships.</p> </article> <ol class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>JL</span> </p> <p class="rm-manual"> <a href="https://survivalblog.com/letter-wuhan-virus-shepherdfarmergeek/#comment-197029"> <span> February 10, 2020 at 7:13 pm </span> <span> 5 months ago </span> </a> </p> <p class="rm-manual">OneGuy,</p><p class="rm-manual">
+ I must agree with you. Some prevention “tips” can be more dangerous 
+than the actual disease. I will reuse a mask when cutting grass, but 
+never in disease prevention. It would be removed and discarded prior to 
+entering my home. Don’t reuse gloves either and I wouldn’t try to clean 
+them. They come in boxes of 100 for $10, just discard them. As for your 
+immune system, eat well and exercise. Some supplements contain many 
+times more or less than the listed amount (they aren’t regulated). If 
+you think some vitamins are good so more is better, then please educate 
+yourself. Excess amounts of certain vitamins are highly dangerous. There
+ are some betadine mouthwashes on the market if you choose that route. 
+Obviously not a good idea if you have an allergy or a thyroid condition.
+ But as OneGuy states, you’re going to have literally have to rinse, 
+swish, irrigate or whatever basically every time you take a breath.</p><p class="rm-manual"></p> </article> <ol class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>Once a Marine...</span> </p> <p class="rm-manual"> <a href="https://survivalblog.com/letter-wuhan-virus-shepherdfarmergeek/#comment-197150"> <span> February 11, 2020 at 4:25 am </span> <span> 5 months ago </span> </a> </p> <p class="rm-manual">One
+ breath exposure to an offending virus is highly unlikely to result in 
+disease, unless your immune system is extremely compromised.</p> <p class="rm-manual">A high concentration of invaders or a consistent attack is more likely to overwhelm your immune response.</p> <p class="rm-manual">I
+ agree, One Guy, that excess worry about all this is counterproductive. 
+Remember, too, that accepting the love of another and giving love 
+strengthen the immune system. And it is free.</p> <p class="rm-manual">Carry on</p> </article> <ol class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>OneGuy</span> </p> <p class="rm-manual"> <a href="https://survivalblog.com/letter-wuhan-virus-shepherdfarmergeek/#comment-197229"> <span> February 11, 2020 at 2:56 pm </span> <span> 5 months ago </span> </a> </p> <p class="rm-manual">Yes,
+ one breath is all it takes even if you have the Superman of immune 
+systems. Tests have shown that it takes no more than a dozen virus cells
+ to infect a person and you can literally inhale millions in one 
+breathe. As for your immune system it does not kick in until the virus 
+has infected your cells and begins to multiply and by then the numbers 
+are in the billions. Your immune system responds and that is the week or
+ so of felling lousy. Your immune system works but it works slowly there
+ is no immediate response.</p> <p class="rm-manual">Most people who die 
+from the flu die as a result of a secondary infection that the virus has
+ so weakened you that you cannot fight the secondary infection. The 
+secondary infection is hard to predict but one very real possibility is a
+ bacterial pneumonia and you can protect yourself from that by getting 
+the pneumonia vaccine.</p> </article> <ol class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>Once a Marine...</span> </p> <p class="rm-manual"> <a href="https://survivalblog.com/letter-wuhan-virus-shepherdfarmergeek/#comment-197301"> <span> February 11, 2020 at 9:46 pm </span> <span> 5 months ago </span> </a> </p> <p class="rm-manual">Yes, my medical people recommend the pneumonia vaccine, esp. for an old cat like me. </p> <p class="rm-manual">Carry on</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>T.R.</span> </p> <p class="rm-manual"> <a href="https://survivalblog.com/letter-wuhan-virus-shepherdfarmergeek/#comment-203264"> <span> March 8, 2020 at 10:24 pm </span> <span> 4 months ago </span> </a> </p> <p class="rm-manual">One
+ Guy, I think Tunnel Rabbit’s suggestion of the Oxygen Concentrator from
+ Craig’s list coupled with using a plain vanilla finger pulse oximeter 
+from Amazon for $16 might save the life of your family member. 
+Basically, healthcare services will get overrun – your family member is 
+sick and you can at least monitor their blood oxygen levels and then 
+supplement. </p> <p class="rm-manual">Thank you TUNNEL Rabbit. You rock.</p> </article> </li> </ol> </li> </ol> </li> </ol> </li> </ol> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>St. Funogas</span> </p> <p class="rm-manual"> <a href="https://survivalblog.com/letter-wuhan-virus-shepherdfarmergeek/#comment-197010"> <span> February 10, 2020 at 5:30 pm </span> <span> 5 months ago </span> </a> </p> <p class="rm-manual">Finally!
+ Some real numbers coming from an actual doctor on the front lines in 
+China. Please do yourself a favor and read the entire article which I 
+have linked at the bottom. It’s a very readable article. Try not to cry 
+when you get to the end.</p> <p class="rm-manual">Also, the mortality 
+rate he mentions in the article represents the mortality rate for people
+ who are very sick and in the intensive care unit, not the overall 
+morality rate of people getting the virus. That mortality rate will be 
+much lower. As a comparison, the mortality rate for the common flu this 
+winter for Americans is 7% for those who end up in the hospital, but 
+only 0.1% for the overall population getting the flu. That means the 
+mortality rate for this cornoavirus looks like it is going to turn out 
+to be pretty low for the general population if what this Chinese doctor 
+is saying is true.</p> <p class="rm-manual">Here are some key snippets from the article (he appears to have given the interview on Feb 3rd):</p> <p class="rm-manual">“I’ve
+ observed that the breakout period of the novel coronavirus tends to be 
+three weeks, from the onset of symptoms to developing difficulties 
+breathing. Basically going from mild to severe symptoms takes about a 
+week. There are all sorts of mild symptoms: feebleness, shortness of 
+breath, some people have fevers, some don’t. Based on studies of our 138
+ cases, the most common symptoms in the first stage are fever (98.6 per 
+cent of cases), feebleness (69.6 per cent), cough (59.4 per cent), 
+muscle pains (34.8 per cent), difficulties breathing (31.2%), while less
+ common symptoms include headaches, dizziness, stomach pain, diarrhea, 
+nausea, vomiting.</p> <p class="rm-manual">“But some patients who enter the second week will suddenly get worse. At this stage, people should go to the hospital. </p> <p class="rm-manual">“For
+ most, the illness is over in two weeks, whereas for those for whom the 
+illness becomes severe, if they can survive three weeks, they’re good. 
+Those that can’t will die in three weeks.</p> <p class="rm-manual">“Based
+ on my clinical observations, this disease is highly contagious, but the
+ mortality rate is low. Those that progressed into the life-threatening 
+stage often occurred in the elderly already with chronic diseases.</p> <p class="rm-manual">“As
+ of Jan 28, of 138 cases, 36 were in the ICU, 28 recovered, five died. 
+That is to say, the mortality rate of patients with severe conditions 
+was 3.6 per cent. Yesterday (Feb 3), another patient died, bringing the 
+mortality rate to 4.3 per cent. Given patients in the ICU, it is likely 
+to have more deaths. The mortality rate is also likely to edge up but 
+not significantly.</p> <p class="rm-manual">“Those hospitalised tend to 
+have severe or life-threatening conditions. Patients with slight 
+symptoms are placed in quarantine at home. We have not gathered data on 
+the percentage of cases that progress from slight symptoms to serious 
+symptoms.</p> <p class="rm-manual">“…57 were infected while being 
+hospitalised, including 17 patients already hospitalised in other 
+departments; and 40 medical staff, among 138 cases (as of Jan 28). That 
+demonstrates that a hospital is a high-risk zone and appropriate 
+protection must be taken.”</p> <p class="rm-manual"><a href="https://www.straitstimes.com/asia/east-asia/reporters-notebook-life-and-death-in-a-wuhan-coronavirus-icu" rel="nofollow">https://www.straitstimes.com/asia/east-asia/reporters-notebook-life-and-death-in-a-wuhan-coronavirus-icu</a></p> </article> <ol class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>Wheatley Fisher</span> </p> <p class="rm-manual"> <a href="https://survivalblog.com/letter-wuhan-virus-shepherdfarmergeek/#comment-197032"> <span> February 10, 2020 at 7:32 pm </span> <span> 5 months ago </span> </a> </p> <p class="rm-manual">Good read. Yes, I cried a bit at the end. And it’s actually still just the beginning.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>Tunnel Rabbit</span> </p> <p class="rm-manual"> <a href="https://survivalblog.com/letter-wuhan-virus-shepherdfarmergeek/#comment-197047"> <span> February 10, 2020 at 9:42 pm </span> <span> 5 months ago </span> </a> </p> <p class="rm-manual">St Funogas,</p> <p class="rm-manual">Good
+ data, Great story, tear jerking ending. Excellent medical staff, yet 
+many were sick. What happens if everyone is sick? And there is only a 
+limited number of machines in the ICU. It is instructive that oxygen is 
+key. Without it, the fatality rate would be much higher. This is only 
+one small sample, and data set and outcomes from a fully functioning 
+modern hospital. Much more is needed. As resources are expended, and 
+personnel exhausted and sick, the quality of care is decreased. What 
+would be the fatality rate of those who cannot access modern medicine? 
+Will the virus mutate? If it is highly contagious as the doctor 
+characterized, how can we expect what little modern medicine there is to
+ be available during the peak of the pandemic? Already PPE is limited. 
+It’s not over until it is over, and we can’t know how it will behave in 
+the U.S., and how Americans deal with it. Certainly the economic 
+ramifications will be significant.</p> <p class="rm-manual"> Glad I’m a 
+recluse somewhere in the mountains of Montana. In past years, even a 
+single trip to the store would cause me to become sick with something. I
+ should have gone to the hospital at least twice last year, but could 
+not afford it, so I cured myself. Since then I’ve boosted my immune 
+system, but given my lousy health history, it is best to isolate myself 
+as best as possible. I have a friend who can do shopping for me when he 
+goes shopping for his family, if need be. But I already have enough not 
+to have to shop at all for many years if need be. There are ways to 
+limit exposure. I’d use them all.</p> <p class="rm-manual">Here is admission from the Chinese goobermint about their lying about the numbers:</p> <p class="rm-manual"><a href="https://www.naturalnews.com/2020-02-10-china-changes-definition-of-infected-to-rig-officially-reported-coronavirus-numbers.html" rel="nofollow">https://www.naturalnews.com/2020-02-10-china-changes-definition-of-infected-to-rig-officially-reported-coronavirus-numbers.html</a></p> <p class="rm-manual">3 videos from Mike Adams… thought provoking:</p> <p class="rm-manual">* Coronavirus Pandemic: Start thinking beyond containment</p><p class="rm-manual"> Watch this video</p><p class="rm-manual"> <a href="https://www.brighteon.com/b056bd96-7e28-4bfd-b63a-fbba30077f75" rel="nofollow">https://www.brighteon.com/b056bd96-7e28-4bfd-b63a-fbba30077f75</a></p><p class="rm-manual"></p> <p class="rm-manual">* Same media liars downplaying the Coronavirus pandemic once spread panic over the measles</p><p class="rm-manual"> Watch this video</p><p class="rm-manual"> <a href="https://www.brighteon.com/78dc576c-c533-4112-b872-bbafaaf322d5" rel="nofollow">https://www.brighteon.com/78dc576c-c533-4112-b872-bbafaaf322d5</a></p><p class="rm-manual"></p> <p class="rm-manual">* China orders citizens to murder their own pets to stop coronavirus</p><p class="rm-manual"> Watch this video</p><p class="rm-manual"> <a href="https://www.brighteon.com/2ed50754-c128-4064-b64b-dee7a8040c48" rel="nofollow">https://www.brighteon.com/2ed50754-c128-4064-b64b-dee7a8040c48</a></p><p class="rm-manual"></p> </article> <ol class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>St. Funogas</span> </p> <p class="rm-manual"> <a href="https://survivalblog.com/letter-wuhan-virus-shepherdfarmergeek/#comment-197117"> <span> February 11, 2020 at 12:45 am </span> <span> 5 months ago </span> </a> </p> <p class="rm-manual">Hey
+ Tunnel Rabbit, you and me both, glad I live so far out in the boonies 
+it’ll be a cinch to self-isolate if it becomes necessary. I think I’m 
+even farther out than you are, I can’t even watch YouTubes on my limited
+ internet availability. 🙂 I only go to town two or three times a month 
+to get the mail so if I had to skip it for three months due to an 
+outbreak, no big deal. Since I’m in that most susceptible 
+male-over-60-geezer group, I’m not even going to bother with PPE, I’ll 
+self isolate and ping my front gate with my Henry .22 if anyone ignores 
+my Keep Out sign. I’m getting one of those steel plates you talked 
+about, lol.</p> <p class="rm-manual">Somebody here pointed out the other
+ day that if we had as many people sick here as they do in China, 
+there’d be a lot of medical people calling in sick and staging walkouts,
+ and with our crazy profit-driven “health care” system, I can’t say I’d 
+blame them. In China, they have a gun to their heads and no choice in 
+the matter, I’m guessing, so they have to show up to work. If it gets to
+ epidemic proportions here, there’s really no predicting what will 
+happen because of factors like that that don’t exist in China.</p> </article> <ol class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>Tunnel Rabbit</span> </p> <p class="rm-manual"> <a href="https://survivalblog.com/letter-wuhan-virus-shepherdfarmergeek/#comment-197129"> <span> February 11, 2020 at 2:30 am </span> <span> 5 months ago </span> </a> </p> <p class="rm-manual">St Funogas,</p> <p class="rm-manual">That is exactly right, and what I’m thinking. This country ain’t no China.</p> <p class="rm-manual">It’s
+ gonna be a very different rodeo here, and most will operate in their 
+own self interest from medical personal down to the entry level city 
+employee. Any body in the public. They have already angered the gun 
+owners, and a flood of anti 2A legislation is already in the pipe. 
+‘Cooperation’ will have nothing to do with what happens here. This virus
+ does not even need to be as severe as the Spanish Flu to potentially 
+create chaos, and mayhem in the big cities. The Chinese, although under 
+the thumb of tyranny, are actually pulling off a monumental task with 
+impressive efficiency and effect. With greater precision than any 
+military, and on a massive scale involving at least 75 million people. 
+It is truly astonishing. Our government in comparison, is totally inept,
+ held in contempt on one hand, and worshiped by the drooling brain dead,
+ and entitled idiots on the other. It lacks any kind of real disaster 
+preparedness planning. The ideas of civil defense is complete dead. And 
+even if they were to muster up any actionable plan, it would be likely 
+herding feral cats. And if the threat of force is employed, gun owners 
+just ain’t gonna put up with it.</p> <p class="rm-manual">By the time 
+this pandemic is in the U.S really gets going, even if mild, the cheeep 
+Chinese stuff that we desperately need will not be available. No more 
+Wally mart stuff, no more cheap meds for the sick and dying, no tools to
+ fix the machines, parts to make much of anything, then lay offs 
+everywhere, prices rapidly rising, civil unrest, and more would begin 
+shortly after the onset. And Trump might loose as the slobbering 
+brain-deads come out big, or get sold on a socialist plan promising 
+everything for nothing. Trump can dump all the infinite helicopter money
+ he has, yet it will become quickly meaningless, and banks will at a 
+point, refuse to do business.</p> <p class="rm-manual">This pandemic is about more than just a nasty bug.</p> </article> </li> </ol> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>Wheatley Fisher</span> </p> <p class="rm-manual"> <a href="https://survivalblog.com/letter-wuhan-virus-shepherdfarmergeek/#comment-197126"> <span> February 11, 2020 at 2:08 am </span> <span> 5 months ago </span> </a> </p> <p class="rm-manual">My new in the bag Czech filters and masks arrived today. Thanks for the tip and the links you posted awhile back.</p> <p class="rm-manual">I’m
+ putting the WallyWorld supply chain thru a test now. Just ordered more 
+antibiotics for my imaginary fish. I have kept Alton’s book by my 
+bedside for continued review and shopping list updates. We’ll see if any
+ are still in the supply chain here or not. All of it is made in China.</p> <p class="rm-manual">Stocking up ain’t cheap, but an oxygen concentrator is next on my shopping list. </p> <p class="rm-manual">As
+ far as numbers of sick vs. dead for statistical analysis, when the 
+hospitals got full in china and they admit they are refusing entrance to
+ the sick who are in the second stage of illness, and entire medical 
+staffs get ill and have started dying, it is immaterial to crank 
+numbers. They simply cannot be accurate and obscure the hands-on 
+dedicated effort we need to apply for group survival in this pandemic.</p> <p class="rm-manual">Time
+ to put on our big boy pants and prepare for a worse one to come. Corona
+ is just a preparatory plague. Think of it a realistic training.</p> </article> <ol class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>Tunnel Rabbit</span> </p> <p class="rm-manual"> <a href="https://survivalblog.com/letter-wuhan-virus-shepherdfarmergeek/#comment-197145"> <span> February 11, 2020 at 3:41 am </span> <span> 5 months ago </span> </a> </p> <p class="rm-manual">Hi Wheatley Fisher,</p> <p class="rm-manual">Thanks
+ for letting me know Glad to have helped some one. It makes sense that 
+these are a much more effective option than the N95 masks that now 
+probably cost more than the replacement NBC filters for the M10 Czech 
+mask, that I picked up for only $2.00 per pair, plus shipping. These are
+ new masks. The NBC filters should be in a sealed mylar packaging, and 
+be gray in color. These should look like this:</p><p class="rm-manual"> <a href="https://vignette.wikia.nocookie.net/gasmaskandrespirator/images/f/f6/20170502_144243.jpg/revision/latest/scale-to-width-down/185?cb=20170507133755" rel="nofollow">https://vignette.wikia.nocookie.net/gasmaskandrespirator/images/f/f6/20170502_144243.jpg/revision/latest/scale-to-width-down/185?cb=20170507133755</a></p><p class="rm-manual"></p> <p class="rm-manual">
+ The white filter that comes in a standard bag is good for only tear 
+gas, pepper spray, and other chemicals, and other smelly things. Good 
+for skunk hunting too. Believe me, you’ll want a mask for rotting 
+things. I would practice removing and replacing filters using this set. I
+ would also prefit the mask now so it is good to go when needed. Adjust 
+straps, suck air and holding hands over the inlet to create a vacuum to 
+ensure the outlet valve does not leak, and the seal around the face is 
+good. Adjusting straps can fix leaks around the face to mask. One size 
+fits 95 % of faces. At 2 bucks per filter set, these are disposable, but
+ could be used in a dust free environment for up to 8 hours. The inlet 
+could be sealed off when not in use with duct tape, and the mask 
+decontaminated thereafter.</p> <p class="rm-manual">It’s better to bring
+ more to a fight than is the normally assumed ‘good enough’. At our age,
+ good enough, ain’t good enough, and this is also, more than good 
+enough, and inexpensive.</p> <p class="rm-manual">Dr. Alton recommends 
+Thomas labs as a supplier of good quality veterinary grade antibiotics. 
+This is where I wouldn’t scrimp unless I had to. <a href="https://fishmoxfishflex.com/" rel="nofollow">https://fishmoxfishflex.com/</a></p> <p class="rm-manual">Regards,</p><p class="rm-manual"> Tunnel Rabbit</p><p class="rm-manual"></p> </article> <ol class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>Wheatley Fisher</span> </p> <p class="rm-manual"> <a href="https://survivalblog.com/letter-wuhan-virus-shepherdfarmergeek/#comment-197251"> <span> February 11, 2020 at 4:29 pm </span> <span> 5 months ago </span> </a> </p> <p class="rm-manual">Great
+ points. I got the $3.99 per pair NBC filters ordered before I realized 
+the other company had $2.99 per pair, but 20 sets for $80 bucks was 
+still a good buy.</p> <p class="rm-manual">Yes way back in the 1970s we 
+got careful instruction in Basic Combat Training on mask assembly, 
+disassembly, and decontamination.</p> <p class="rm-manual">Also very 
+important is that NO CBR/NBC filters will prevent toxic vapors from 
+getting us. Fuel, gasoline, paint thinner, xylene, coleman fuel, certain
+ nerve agents, insecticide vapors, cooking vapors, and such, will go 
+right through the filters and kill or disable us……..or the enemy. </p> <p class="rm-manual">One
+ Doomsday Prepper show had people making their own homemade pepper spray
+ that was so effective that while cooking it up in their kitchen they 
+were overwhelmed even through their gas masks.</p> <p class="rm-manual">On
+ the Czech masks, I found the versions with drinking tubes as well, so 
+got 2 of those as first choice, with 2 of the non-drinking tube versions
+ for backup/outfitting stray volunteers who might show up at our place.</p> <p class="rm-manual">God Bless</p> </article> </li> </ol> </li> </ol> </li> </ol> </li> </ol> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>N S</span> </p> <p class="rm-manual"> <a href="https://survivalblog.com/letter-wuhan-virus-shepherdfarmergeek/#comment-197024"> <span> February 10, 2020 at 6:43 pm </span> <span> 5 months ago </span> </a> </p> <p class="rm-manual">The
+ best defense against the Cornonavirus, as well as any transmittable 
+disease, is what Remus from The Woodpile Report states – “Stay Away From
+ Crowds”. I realize this is pretty hard for some of us living in the 
+more populated areas and cannot leave easily, for whatever reason. But 
+still, use your head and limit interaction with the masses, reducing 
+your exposure…. You just might find you enjoy a bit of solitude. 
+Surprising how much you can accomplish without all the “social 
+distractions”…</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>GGHD</span> </p> <p class="rm-manual"> <a href="https://survivalblog.com/letter-wuhan-virus-shepherdfarmergeek/#comment-197071"> <span> February 10, 2020 at 10:47 pm </span> <span> 5 months ago </span> </a> </p> <p class="rm-manual">The
+ governments are still treating the Wuhan, China, Coronavirus Flu as a 
+dangerous ~&gt;pandemic; NOT as just another seasonal Flu strain.</p> <p class="rm-manual">Coronavirus 2019-nCoV Global Cases by Johns Hopkins CSSE … Now has an update of the Wuhan Flu cases.</p><p class="rm-manual"> hub[[.]]jhu[[.]]edu/2020/01/23/coronavirus-outbreak-mapping-tool-649-em1-art1-dtd-health/</p><p class="rm-manual"></p> <p class="rm-manual">The John Hopkins Center for Systems Science and Engineering &gt;Map is used by other websites too.</p><p class="rm-manual"> kungflu[[.]]net/</p><p class="rm-manual"></p> <p class="rm-manual">I didn’t drop a link; it’s not my site. Always be careful about computer viruses, and pandemic viruses too.</p><p class="rm-manual"> Survivalblog has information about the dangerous of both problems.</p><p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>Justin Case</span> </p> <p class="rm-manual"> <a href="https://survivalblog.com/letter-wuhan-virus-shepherdfarmergeek/#comment-197146"> <span> February 11, 2020 at 3:45 am </span> <span> 5 months ago </span> </a> </p> <p class="rm-manual">Zinc. Both in pill and nasal swab. It stops the virus from attaching to the cell walls.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>ShepherdFarmerGeek</span> </p> <p class="rm-manual"> <a href="https://survivalblog.com/letter-wuhan-virus-shepherdfarmergeek/#comment-197262"> <span> February 11, 2020 at 5:55 pm </span> <span> 5 months ago </span> </a> </p> <p class="rm-manual">Awesome collaboration here on such an important issue!!!</p> <p class="rm-manual">1.
+ Since pneumonia is one of the complications of this virus I’m wondering
+ if the Pneumovax vaccine could help. (Yes, I have issues with the flu 
+vax, but some vaccines work and are very helpful.)</p> <p class="rm-manual">2.
+ Gargling and swabbing our noses with Betadine/Povidone-Iodine is only 
+going to disinfect a small percentage of inhaled viruses that will have 
+proceeded directly to our lungs. And unless we can gargle and swab 
+immediately after inhalation the flow of mucus in our upper respiratory 
+system will wash the viruses into our throats where we can’t reach them 
+with gargling and swabbing. That said, desperate people do desperate 
+things. Don’t be that person.</p> <p class="rm-manual">3. <a href="https://whatkillsit.com/virus/what-kills-coronavirus/" rel="nofollow">https://whatkillsit.com/virus/what-kills-coronavirus/</a>
+ This person went to a LOT of trouble to document which disinfectants 
+actually advertise they kill coronaviruses. Take a look at the list and 
+get an effective product!</p> <p class="rm-manual">4. It’s probably not 
+accurate to say that our immune system is inert until an infection 
+reaches a certain threshold. But it does take it a while to spin up 
+after it recognizes an invader. All we can do is be sure our immune 
+systems have the raw materials to respond properly – good nutrition and 
+supplementation that is clinically proven to assist. That and minimize 
+our exposure the best we can.</p> <p class="rm-manual">5. <a href="https://survivalblog.com/wp-content/uploads/2015/08/Wheel-of-Doom.jpg" rel="nofollow">https://survivalblog.com/wp-content/uploads/2015/08/Wheel-of-Doom.jpg</a>
+ This sure seems to me like The Real Deal. And like all of these 
+potential crises that we’ve been preparing for (for decades, some of 
+us), we must not surrender to panic or despair. Do what you know to do. 
+As Wheatley Fisher noted above, this is probably just the beginning of 
+sorrows to come. May God give you Courage! And Peace! </p> <p class="rm-manual">6. Pull together with other preppers, save as many as you can. <a href="https://survivalblog.com/save-them-by-shepherdfarmergee/" rel="nofollow">https://survivalblog.com/save-them-by-shepherdfarmergee/</a></p> <p class="rm-manual">7. Maintain perspective: </p> <p class="rm-manual">“I
+ have the same mixture of excitement and terror you get when the roller 
+coaster car is a-l-m-o-s-t to the top to begin the drop! I believe that 
+as we follow Jesus into this adventure we will see Him do amazing 
+things, we will be used by God in amazing ways, and we will grow closer 
+to Him than ever before. “…But where sin abounded, grace did much more 
+abound.” (Rom. 5:20) </p> <p class="rm-manual">As the darkness falls His
+ light within us grows brighter. We will not be alone. Though we should 
+be preparing now for all we’re worth, His hand of Providence will be our
+ best defense. Trust Him. </p> <p class="rm-manual">There is great joy 
+ahead, even in the midst of the sorrows. And beyond it all – and maybe 
+sooner than we think – the Presence of the One for whom we have so long 
+sought. </p> <p class="rm-manual">– ShepherdFarmerGeek, <a href="https://survivalblog.com/hughs-quote-of-the-day-482/" rel="nofollow">https://survivalblog.com/hughs-quote-of-the-day-482/</a></p> </article> </li> </ol>
+<p class="rm-manual">Comments are closed.</p></article>
+</body></html>

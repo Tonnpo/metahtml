@@ -1,0 +1,71 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">By <a href="http://connect.masslive.com/staff/tstening@advancelocal.net/posts.html"> Tanner Stening | tstening@masslive.com </a></p>
+<p>Boston Mayor Marty Walsh announced on Friday that the city of Boston 
+will now permit restaurants to sell grocery items during the outbreak to
+ help support social distancing measures in supermarkets.</p>
+<p>The move lets restaurants that are already permitted by the city to 
+sell items by delivery, curbside pickup, and takeout without needing to 
+obtain a retail food permit for the sale of uncooked foods.</p>
+<p>Walsh says by letting restaurants sell grocery store items, residents
+ can help alleviate “social distancing concerns in grocery stores” and 
+support restauranteurs.</p>
+<p>“This is an unprecedented time for all of us in the City of Boston, 
+and our administration is prioritizing how best to keep our residents 
+safe and healthy, while also supporting our businesses and some of our 
+City’s most vulnerable residents,” Walsh said, in a statement.</p>
+<p>Walsh said that restaurants must comply with temporary guidelines 
+spelled out by the city’s Inspectional Services Department. They 
+include: “making product information available pertaining to safe 
+handling instructions" and providing “a statement of identity, an 
+ingredient statement, the name and place of business of the food 
+manufacturer, packer, or distributor, net quantity of contents, and 
+allergen information” as required by the Food Allergen Labeling &amp; 
+Consumer Protection Act.</p>
+<p>Speaking to reporters on Friday, Walsh said that there are now 6,958 
+cases of coronavirus in Boston, up 398 from Thursday. That increase in 
+cases is the largest the city has seen to date, Walsh said.</p>
+<p class="rm-manual">Related Content:</p>
+<ul class="rm-manual">
+<li class="rm-manual"><span><a href="https://www.masslive.com/coronavirus/2020/04/coronavirus-newly-released-massachusetts-health-data-breaks-down-covid-19-cases-by-hospital-long-term-care-facility-shows-statewide-rates-of-infection.html">New Mass. health data breaks down COVID-19 cases by hospital, long-term care facility</a></span></li>
+<li class="rm-manual"><span><a href="https://www.masslive.com/coronavirus/2020/04/coronavirus-massachusetts-to-start-reporting-city-and-town-by-town-data-on-covid-19-cases.html">Mass. will now report city and town-by-town data on COVID-19 cases</a></span></li>
+<li class="rm-manual"><span><a href="https://www.masslive.com/coronavirus/2020/04/due-to-apparent-state-data-slip-up-middlefield-went-from-showing-highest-per-capita-rate-of-coronavirus-in-mass-to-having-zero-cases.html">Western Mass. town went from 89 to zero COVID-19 cases due to data slip-up</a></span></li>
+<li class="rm-manual"><span><a href="https://www.masslive.com/coronavirus/2020/04/as-more-massachusetts-cities-and-towns-mandate-face-coverings-or-masks-during-coronavirus-pandemic-how-are-officials-enforcing-the-new-rules.html">How are officials enforcing orders mandating face masks or coverings?</a></span></li>
+</ul>
+<p class="rm-manual">Note to readers: if you purchase something through one of our affiliate links we may earn a commission.</p></article>
+</body></html>

@@ -1,0 +1,440 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> In Their Own Words: One Planet, One Health </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://discover.lanl.gov/"><span>News &amp; Media</span></a> </li> <li class="rm-manual">
+<a href="#"><span>Careers</span></a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///careers/employees-retirees/index.php">Employee, Retiree resources</a></li> <li class="rm-manual"><a href="file:///careers/employees-retirees/new-hires/benefit-options/index.php">Benefits</a></li> <li class="rm-manual"><a href="file:///careers/employees-retirees/new-hires/index.php">New hires</a></li> <li class="rm-manual"><a href="file:///careers/employees-retirees/payroll-taxes.php">Payroll, taxes</a></li> <li class="rm-manual"><a href="file:///careers/employees-retirees/retirees/index.php">Retirees</a></li> <li class="rm-manual"><a href="file:///careers/employees-retirees/travel/index.php">Travel</a></li> <li class="rm-manual"><a href="file:///careers/employees-retirees/verification-of-employment.php">Verification of employment</a></li> <li class="rm-manual"><a href="file:///careers/life-at-lab/index.php">Life at the lab</a></li> <li class="rm-manual"><a href="file:///careers/stories/index.php">Career stories</a></li> <li class="rm-manual"><a href="file:///careers/diversity-inclusion/index.php">Inclusion &amp; diversity</a></li> <li class="rm-manual"><a href="file:///careers/life-at-lab/work-life-balance.php">Work-life balance</a></li> <li class="rm-manual"><a href="file:///careers/career-options/index.php">Career resources</a></li> <li class="rm-manual"><a href="file:///careers/career-options/jobs/index.php">Apply for a job</a></li> <li class="rm-manual"><a href="file:///careers/career-options/postdoctoral-research/index.php">Postdocs</a></li> <li class="rm-manual"><a href="file:///careers/career-options/student-internships/index.php">Students</a></li> <li class="rm-manual"><a href="file:///careers/index.php">Internal</a></li> </ul> </li> <li class="rm-manual">
+<a href="#"><span>Quick Links</span></a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///about/index.php">About </a></li> <li class="rm-manual"><a href="file:///community/visitors/badging/index.php">Badging</a></li> <li class="rm-manual"><a href="file:///business/procurement-opportunities.php">Business</a></li> <li class="rm-manual"><a href="file:///resources/contacts.php">Contacts</a></li> <li class="rm-manual"><a href="file:///resources/maps.php">Maps</a></li> <li class="rm-manual"><a href="file:///mission/index.php">Mission</a></li> <li class="rm-manual"><a href="https://www.lanl.gov/museum//index.php">Museum</a></li> <li class="rm-manual"><a href="file:///org/index.php">Organizations</a></li> <li class="rm-manual"><a href="file:///careers/employees-retirees/new-hires/index.php">New Hires</a></li> <li class="rm-manual"><a href="file:///discover/publications/index.php">Publications</a></li> <li class="rm-manual"><a href="http://www.lanl.gov/library//index.php">Research Library</a></li> </ul> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///mission/index.php"><span>Mission</span></a></li> <li class="rm-manual">
+<a href="#"><span>Science &amp; Innovation</span></a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///science-innovation/index.php">Science &amp; Innovation</a></li> <li class="rm-manual"><a href="file:///science-innovation/science-highlights/index.php">Science Highlights</a></li> <li class="rm-manual"><a href="file:///discover/science-briefs/index.php">Science Briefs</a></li> <li class="rm-manual"><a href="file:///science-innovation/science-facilities/index.php">Science Facilities</a></li> <li class="rm-manual"><a href="file:///science-innovation/pillars/index.php">Capability Pillars</a></li> <li class="rm-manual"><a href="file:///science-innovation/science-videos1.php">Science Videos</a></li> <li class="rm-manual"><a href="file:///org/index.php">Lab Organizations</a></li> <li class="rm-manual"><a href="http://www.lanl.gov/library/index.php">Research Library</a></li> </ul> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///science-innovation/science-programs/index.php">Science Programs</a></li> <li class="rm-manual"><a href="file:///science-innovation/science-programs/applied-energy-programs/index.php">Applied Energy Programs</a></li> <li class="rm-manual"><a href="file:///science-innovation/science-programs/civilian-nuclear-programs/index.php">Civilian Nuclear Energy Programs</a></li> <li class="rm-manual"><a href="file:///science-innovation/science-programs/ldrd/index.php">Laboratory Directed Research &amp; Development (LDRD)</a></li> <li class="rm-manual"><a href="https://www.lanl.gov/projects//national-security-education-center/index.php">National Security Education Center (NSEC)</a></li> <li class="rm-manual"><a href="file:///science-innovation/science-programs/office-of-science-programs/index.php">Office of Science Programs</a></li> </ul> </li> <li class="rm-manual">
+<a href="#"><span>Collaboration</span></a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///collaboration/user-facilities/index-old.php">User Facilities</a></li> <li class="rm-manual"><a href="http://cint.lanl.gov/index.php">CINT</a></li> <li class="rm-manual"><a href="http://lansce.lanl.gov/">LANSCE</a></li> <li class="rm-manual"><a href="https://nationalmaglab.org/user-facilities/pulsed-field-facility">NHMFL</a></li> <li class="rm-manual"><a href="https://www.lanl.gov/projects//biosurveillance-gateway/index.php">Biosurveillance Gateway</a></li> <li class="rm-manual"><a href="file:///collaboration/pathogen-database/index.php">Pathogen Databases</a></li> </ul> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.lanl.gov/projects//feynman-center/index.shtml">Feynman Center for Innovation</a></li> <li class="rm-manual"><a href="https://www.lanl.gov/projects//explosives-detection/index.php">LACED</a></li> <li class="rm-manual"><a href="https://www.lanl.gov/projects//exascale-computing-project/index.php">Exascale Computing Project</a></li> <li class="rm-manual"><a href="https://www.lanl.gov/projects//future/index.php">FUTURE</a></li> </ul> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.lanl.gov/projects//national-security-education-center/index.php">National Security Education Center (NSEC)</a></li> <li class="rm-manual"><a href="https://www.lanl.gov/projects//national-security-education-center/center-nonlinear-studies/index.php">Center for Nonlinear Studies</a></li> <li class="rm-manual"><a href="https://www.lanl.gov/projects//national-security-education-center/engineering/index.php">Engineering Institute</a></li> <li class="rm-manual"><a href="https://www.lanl.gov/projects//national-security-education-center/information-science-technology/index.php">Information Science &amp; Technology Institute</a></li> <li class="rm-manual"><a href="https://www.lanl.gov/projects//national-security-education-center/space-earth-center/index.php">Center for Space and Earth Science</a></li> <li class="rm-manual"><a href="https://www.lanl.gov/projects//national-security-education-center/institute-for-materials-science/index.php">Institute for Materials Science</a></li> <li class="rm-manual"><a href="https://www.lanl.gov/projects//national-security-education-center/seaborg/index.php">Seaborg Institute</a></li> <li class="rm-manual"><a href="file:///collaboration/fellows/index.php">Fellows</a></li> </ul> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///collaboration/research-opportunities/index.php">Research Opportunities</a></li> <li class="rm-manual"><a href="file:///collaboration/internships/service-academy-research-associates/index.php">Service Academies and ROTC Research Associates</a></li> <li class="rm-manual"><a href="https://www.lanl.gov/projects/strategic-analyses-and-assessments/index.php">Strategic Analyses and Assessments Office</a></li> </ul> </li> <li class="rm-manual">
+<a href="#"><span>Community</span></a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///community/index.php">Community Commitment</a></li> <li class="rm-manual"><a href="file:///community/giving/index.php">Giving campaigns, drives</a></li> <li class="rm-manual"><a href="file:///community/economic-development.php">Economic development</a></li> <li class="rm-manual"><a href="file:///community/grantapplication.php">Grants and Sponsorships</a></li> </ul> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///community/education/index.php">STEM Education</a></li> <li class="rm-manual"><a href="file:///community/education/stem-education-programs.php">Teachers (K-12)</a></li> <li class="rm-manual"><a href="file:///community/education/teacher-resources/index.php">Students (K-12)</a></li> <li class="rm-manual"><a href="file:///community/education/higher-education-resources/index.php">Higher education</a></li> <li class="rm-manual"><a href="file:///community/education/regional-partners/index.php">Regional education partners</a></li> <li class="rm-manual"><a href="file:///community/education/stem-challenge/index.php">NM Governor's STEM Challenge</a></li> </ul> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///community/visitors/index.php">Internal</a></li> <li class="rm-manual"><a href="file:///community/visitors/badging/index.php">Badging, Badge Office</a></li> <li class="rm-manual"><a href="file:///community/visitors/bradbury-science-museum.php">Bradbury Science Museum</a></li> <li class="rm-manual"><a href="file:///community/visitors/housing.php">Housing</a></li> <li class="rm-manual"><a href="file:///resources/maps.php">Maps</a></li> </ul> <ul class="rm-manual"> <li class="rm-manual"><p class="rm-manual">Related Resources</p></li> <li class="rm-manual"><a href="http://www.lanl.gov/calendar/">Calendar</a></li> <li class="rm-manual"><a href="file:///discover/publications/connections/index.php">Community Connections</a></li> <li class="rm-manual"><a href="file:///community/stories/index.php">Community feature stories</a></li> </ul> </li> <li class="rm-manual">
+<a href="#"><span>Environment</span></a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///environment/protection/index.php">Environmental Protection</a></li> <li class="rm-manual"><a href="file:///environment/protection/monitoring/index.php">What we monitor and why</a></li> <li class="rm-manual"><a href="file:///environment/protection/cultural-preservation/index.php">Cultural preservation</a></li> <li class="rm-manual"><a href="file:///environment/protection/trails/index.php">Taking care of our trails</a></li> <li class="rm-manual"><a href="file:///environment/protection/compliance/index.php">Obeying environmental laws</a></li> <li class="rm-manual"><a href="file:///environment/protection/wildlife-protection/index.php">Protecting Wildlife</a></li> </ul> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///environment/sustainability/index.php">Environmental Sustainability</a></li> <li class="rm-manual"><a href="file:///environment/sustainability/goals/index.php">Sustainability goals</a></li> <li class="rm-manual"><a href="file:///environment/sustainability/recycling.php">Recycling</a></li> <li class="rm-manual"><a href="file:///environment/sustainability/green-purchasing.php">Green purchasing</a></li> <li class="rm-manual"><a href="file:///environment/sustainability/pollution-prevention.php">Pollution prevention</a></li> <li class="rm-manual"><a href="file:///environment/sustainability/water-reuse.php">Reusing water</a></li> </ul> <ul class="rm-manual"> <li class="rm-manual"><p class="rm-manual">Resources</p></li> <li class="rm-manual"><a href="file:///environment/protection/environmental-management-system.php">Environmental Management System</a></li> <li class="rm-manual"><a href="file:///environment/stories/index.php">Feature stories</a></li> <li class="rm-manual"><a href="file:///environment/public-reading-room.php">Public Reading Room</a></li> </ul> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///environment/index.php">Environment Home</a></li> </ul> </li> </ul>
+<p class="rm-manual"> <span>Search</span> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///mission/index.php"><span>Mission</span></a></li> <li class="rm-manual">
+<a href="#"><span>Science &amp; Innovation</span></a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///science-innovation/index.php"> <span>Science &amp; Innovation</span> </a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///science-innovation/science-highlights/index.php">Science Highlights</a></li> <li class="rm-manual"><a href="file:///discover/science-briefs/index.php">Science Briefs</a></li> <li class="rm-manual"><a href="file:///science-innovation/science-facilities/index.php">Science Facilities</a></li> <li class="rm-manual"><a href="file:///science-innovation/pillars/index.php">Capability Pillars</a></li> <li class="rm-manual"><a href="file:///science-innovation/science-videos1.php">Science Videos</a></li> <li class="rm-manual"><a href="file:///org/index.php">Lab Organizations</a></li> <li class="rm-manual"><a href="http://www.lanl.gov/library/index.php">Research Library</a></li> </ul> </li> <li class="rm-manual"> <a href="file:///science-innovation/science-programs/index.php"> <span>Science Programs</span> </a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///science-innovation/science-programs/applied-energy-programs/index.php">Applied Energy Programs</a></li> <li class="rm-manual"><a href="file:///science-innovation/science-programs/civilian-nuclear-programs/index.php">Civilian Nuclear Energy Programs</a></li> <li class="rm-manual"><a href="file:///science-innovation/science-programs/ldrd/index.php">Laboratory Directed Research &amp; Development (LDRD)</a></li> <li class="rm-manual"><a href="https://www.lanl.gov/projects//national-security-education-center/index.php">National Security Education Center (NSEC)</a></li> <li class="rm-manual"><a href="file:///science-innovation/science-programs/office-of-science-programs/index.php">Office of Science Programs</a></li> </ul> </li> </ul> </li> <li class="rm-manual">
+<a href="#"><span>Collaboration</span></a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///collaboration/user-facilities/index-old.php"> <span>User Facilities</span> </a> <ul class="rm-manual"> <li class="rm-manual"><a href="http://cint.lanl.gov/index.php">CINT</a></li> <li class="rm-manual"><a href="http://lansce.lanl.gov/">LANSCE</a></li> <li class="rm-manual"><a href="https://nationalmaglab.org/user-facilities/pulsed-field-facility">NHMFL</a></li> <li class="rm-manual"><a href="https://www.lanl.gov/projects//biosurveillance-gateway/index.php">Biosurveillance Gateway</a></li> <li class="rm-manual"><a href="file:///collaboration/pathogen-database/index.php">Pathogen Databases</a></li> </ul> </li> <li class="rm-manual"> <a href="https://www.lanl.gov/projects//feynman-center/index.shtml"> <span>Feynman Center for Innovation</span> </a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.lanl.gov/projects//explosives-detection/index.php">LACED</a></li> <li class="rm-manual"><a href="https://www.lanl.gov/projects//exascale-computing-project/index.php">Exascale Computing Project</a></li> <li class="rm-manual"><a href="https://www.lanl.gov/projects//future/index.php">FUTURE</a></li> </ul> </li> <li class="rm-manual"> <a href="https://www.lanl.gov/projects//national-security-education-center/index.php"> <span>National Security Education Center (NSEC)</span> </a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.lanl.gov/projects//national-security-education-center/center-nonlinear-studies/index.php">Center for Nonlinear Studies</a></li> <li class="rm-manual"><a href="https://www.lanl.gov/projects//national-security-education-center/engineering/index.php">Engineering Institute</a></li> <li class="rm-manual"><a href="https://www.lanl.gov/projects//national-security-education-center/information-science-technology/index.php">Information Science &amp; Technology Institute</a></li> <li class="rm-manual"><a href="https://www.lanl.gov/projects//national-security-education-center/space-earth-center/index.php">Center for Space and Earth Science</a></li> <li class="rm-manual"><a href="https://www.lanl.gov/projects//national-security-education-center/institute-for-materials-science/index.php">Institute for Materials Science</a></li> <li class="rm-manual"><a href="https://www.lanl.gov/projects//national-security-education-center/seaborg/index.php">Seaborg Institute</a></li> <li class="rm-manual"><a href="file:///collaboration/fellows/index.php">Fellows</a></li> </ul> </li> <li class="rm-manual"> <a href="file:///collaboration/research-opportunities/index.php"> <span>Research Opportunities</span> </a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///collaboration/internships/service-academy-research-associates/index.php">Service Academies and ROTC Research Associates</a></li> <li class="rm-manual"><a href="https://www.lanl.gov/projects/strategic-analyses-and-assessments/index.php">Strategic Analyses and Assessments Office</a></li> </ul> </li> </ul> </li> <li class="rm-manual">
+<a href="#"><span>Community</span></a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///community/index.php"> <span>Community Commitment</span> </a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///community/giving/index.php">Giving campaigns, drives</a></li> <li class="rm-manual"><a href="file:///community/economic-development.php">Economic development</a></li> <li class="rm-manual"><a href="file:///community/grantapplication.php">Grants and Sponsorships</a></li> </ul> </li> <li class="rm-manual"> <a href="file:///community/education/index.php"> <span>STEM Education</span> </a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///community/education/stem-education-programs.php">Teachers (K-12)</a></li> <li class="rm-manual"><a href="file:///community/education/teacher-resources/index.php">Students (K-12)</a></li> <li class="rm-manual"><a href="file:///community/education/higher-education-resources/index.php">Higher education</a></li> <li class="rm-manual"><a href="file:///community/education/regional-partners/index.php">Regional education partners</a></li> <li class="rm-manual"><a href="file:///community/education/stem-challenge/index.php">NM Governor's STEM Challenge</a></li> </ul> </li> <li class="rm-manual"> <a href="file:///community/visitors/index.php"> <span>Internal</span> </a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///community/visitors/badging/index.php">Badging, Badge Office</a></li> <li class="rm-manual"><a href="file:///community/visitors/bradbury-science-museum.php">Bradbury Science Museum</a></li> <li class="rm-manual"><a href="file:///community/visitors/housing.php">Housing</a></li> <li class="rm-manual"><a href="file:///resources/maps.php">Maps</a></li> </ul> </li> <li class="rm-manual"> <a href="#"> <span>Related Resources</span> </a> <ul class="rm-manual"> <li class="rm-manual"><a href="http://www.lanl.gov/calendar/">Calendar</a></li> <li class="rm-manual"><a href="file:///discover/publications/connections/index.php">Community Connections</a></li> <li class="rm-manual"><a href="file:///community/stories/index.php">Community feature stories</a></li> </ul> </li> </ul> </li> <li class="rm-manual">
+<a href="#"><span>Environment</span></a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///environment/protection/index.php"> <span>Environmental Protection</span> </a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///environment/protection/monitoring/index.php">What we monitor and why</a></li> <li class="rm-manual"><a href="file:///environment/protection/cultural-preservation/index.php">Cultural preservation</a></li> <li class="rm-manual"><a href="file:///environment/protection/trails/index.php">Taking care of our trails</a></li> <li class="rm-manual"><a href="file:///environment/protection/compliance/index.php">Obeying environmental laws</a></li> <li class="rm-manual"><a href="file:///environment/protection/wildlife-protection/index.php">Protecting Wildlife</a></li> </ul> </li> <li class="rm-manual"> <a href="file:///environment/sustainability/index.php"> <span>Environmental Sustainability</span> </a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///environment/sustainability/goals/index.php">Sustainability goals</a></li> <li class="rm-manual"><a href="file:///environment/sustainability/recycling.php">Recycling</a></li> <li class="rm-manual"><a href="file:///environment/sustainability/green-purchasing.php">Green purchasing</a></li> <li class="rm-manual"><a href="file:///environment/sustainability/pollution-prevention.php">Pollution prevention</a></li> <li class="rm-manual"><a href="file:///environment/sustainability/water-reuse.php">Reusing water</a></li> </ul> </li> <li class="rm-manual"> <a href="#"> <span>Resources</span> </a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///environment/protection/environmental-management-system.php">Environmental Management System</a></li> <li class="rm-manual"><a href="file:///environment/stories/index.php">Feature stories</a></li> <li class="rm-manual"><a href="file:///environment/public-reading-room.php">Public Reading Room</a></li> </ul> </li> <li class="rm-manual"> <a href="file:///environment/index.php"> <span>Environment Home</span> </a> </li> </ul> </li> <li class="rm-manual"> <a href="https://discover.lanl.gov/"> <span>News &amp; Media</span> </a> </li> <li class="rm-manual">
+<a href="#"><span>Careers</span></a> <p class="rm-manual"> BACK </p> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///careers/employees-retirees/index.php">Employee, Retiree resources</a></li> <li class="rm-manual"><a href="file:///careers/employees-retirees/new-hires/benefit-options/index.php">Benefits</a></li> <li class="rm-manual"><a href="file:///careers/employees-retirees/new-hires/index.php">New hires</a></li> <li class="rm-manual"><a href="file:///careers/employees-retirees/payroll-taxes.php">Payroll, taxes</a></li> <li class="rm-manual"><a href="file:///careers/employees-retirees/retirees/index.php">Retirees</a></li> <li class="rm-manual"><a href="file:///careers/employees-retirees/travel/index.php">Travel</a></li> <li class="rm-manual"><a href="file:///careers/employees-retirees/verification-of-employment.php">Verification of employment</a></li> <li class="rm-manual"><a href="file:///careers/life-at-lab/index.php">Life at the lab</a></li> <li class="rm-manual"><a href="file:///careers/stories/index.php">Career stories</a></li> <li class="rm-manual"><a href="file:///careers/diversity-inclusion/index.php">Inclusion &amp; diversity</a></li> <li class="rm-manual"><a href="file:///careers/life-at-lab/work-life-balance.php">Work-life balance</a></li> <li class="rm-manual"><a href="file:///careers/career-options/index.php">Career resources</a></li> <li class="rm-manual"><a href="file:///careers/career-options/jobs/index.php">Apply for a job</a></li> <li class="rm-manual"><a href="file:///careers/career-options/postdoctoral-research/index.php">Postdocs</a></li> <li class="rm-manual"><a href="file:///careers/career-options/student-internships/index.php">Students</a></li> <li class="rm-manual"><a href="file:///careers/index.php">Internal</a></li> </ul> </li> <li class="rm-manual">
+<a href="#"><span>Quick Links</span></a> <p class="rm-manual"> BACK </p> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///about/index.php">About </a></li> <li class="rm-manual"><a href="file:///community/visitors/badging/index.php">Badging</a></li> <li class="rm-manual"><a href="file:///business/procurement-opportunities.php">Business</a></li> <li class="rm-manual"><a href="file:///resources/contacts.php">Contacts</a></li> <li class="rm-manual"><a href="file:///resources/maps.php">Maps</a></li> <li class="rm-manual"><a href="file:///mission/index.php">Mission</a></li> <li class="rm-manual"><a href="https://www.lanl.gov/museum//index.php">Museum</a></li> <li class="rm-manual"><a href="file:///org/index.php">Organizations</a></li> <li class="rm-manual"><a href="file:///careers/employees-retirees/new-hires/index.php">New Hires</a></li> <li class="rm-manual"><a href="file:///discover/publications/index.php">Publications</a></li> <li class="rm-manual"><a href="http://www.lanl.gov/library//index.php">Research Library</a></li> </ul> </li> </ul>
+<h1 class="rm-manual">In Their Own Words: One Planet, One Health</h1>
+<h1 class="rm-manual">In Their Own Words: One Planet, One Health</h1>
+<p class="rm-manual"><span>February 01, 2021</span> </p>
+<ol class="rm-manual"> <li class="rm-manual"><a href="file:///var/folders/index.php">ALL NEWS</a></li> <li class="rm-manual"><a href="file:///var/folders/lb/index.php">PUBLICATIONS</a></li> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/index.php">1663</a></li> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/index.php">FEBRUARY 2021</a></li> <li class="rm-manual"> IN THEIR OWN WORDS: ONE PLANET, ONE HEALTH </li> </ol>
+<aside class="rm-manual"> <span>Jeanne Fair</span> <span>Author</span> <span>SHARE</span> </aside><p>
+ Biologist Jeanne Fair knows that the way to anticipate pandemics is 
+through understanding the connections between humans, animals, and the 
+environment. </p>
+<p>Last February, when COVID-19 was just beginning to visibly emerge 
+from China, I was asked to participate in a Laboratory panel discussion 
+about the spread of this novel coronavirus and what it might mean for 
+the United States. Having studied emerging zoonotic diseases for 25 
+years, I knew the outlook was troublesome, but I was still optimistic. I
+ had a good idea of the extensive disruption that was coming our way, 
+and yet, when the situation escalated dramatically a month later, I 
+still found it hard to believe and harbored a strong sense of denial. </p>
+<p>Anytime I’ve given a public lecture on emerging diseases and 
+pandemics, I have shared a photo of a gravestone in Kansas that belongs 
+to my great-aunt, Margret Ann Fair, who died of the 1918 influenza at 
+the age of four. I often read her obituary to make the point that likely
+ everyone in the room has an ancestor in their family tree who died 
+during the 1918 pandemic. Like most researchers who study emerging 
+infectious diseases, I always said that it was not a question of “if” a 
+new disease could become a pandemic; it was instead a question of 
+“when.” </p>
+<p>And yet, there are days that I still can’t believe it is actually happening to us right now. </p>
+<h3>How did we know?</h3>
+<p>The reason I said it’s a question of “when” is because it is not 
+uncommon for new diseases to emerge. Pathogens that can infect multiple 
+species—such as rabies, influenza, and Ebola—are everywhere. Infectious 
+diseases frequently spill over from animals to humans and vice versa, 
+but we don’t always notice. Sometimes the pathogen is not particularly 
+virulent, meaning it does not cause severe disease. Other times a 
+pathogen may infect a “dead-end host”—one that does not transmit the 
+pathogen further. </p>
+<p>The key to a spillover becoming an international crisis is a 
+combination of transmissibility and virulence. Avian flu (H5N1), for 
+example, is extremely virulent and can make a person deathly ill in a 
+short amount of time, killing about half of the humans it infects. This 
+is scary, but with known pathogens of pandemic potential there has often
+ been a tradeoff between virulence and transmissibility. The H5N1 avian 
+influenza virus attacks us deep in the lungs and therefore is not as 
+transmissible as seasonal influenza, which replicates more in the upper 
+respiratory system. On the other hand, common colds—many of which are 
+caused by coronaviruses—are extremely transmissible but not very 
+virulent. </p>
+<blockquote> Infectious diseases frequently spill over from animals to humans and vice versa, but we don’t always notice. </blockquote>
+<p>Severe Acute Respiratory Syndrome (SARS), which emerged in 2002, is a
+ deadly disease caused by SARS-associated coronavirus (SARS-CoV). This 
+was the first severe and readily transmissible disease to emerge in many
+ decades; it quickly spread to more than 20 countries, infected about 
+8000 people, and killed 774. In 2012, a related coronavirus emerged as a
+ much more deadly disease. Middle East Respiratory Syndrome coronavirus 
+(MERS-CoV) infected about 2500 people and caused 858 deaths. 
+Fortunately, MERS was also not particularly transmissible and was 
+quickly controlled. </p>
+<p>Today’s pandemic is caused by SARS-CoV-2. It is closely related to 
+SARS-CoV and MERS-CoV, but it had the correct mix of transmissibility 
+and virulence to take the world by storm. With SARS-CoV-2 there are no 
+tradeoffs: it is easily transmitted between people and it is very deadly
+ in some. But it is that extreme variability in the disease 
+characteristics and virulence in humans that adds to the perfect storm. 
+SARS-CoV-2 can take from five short days to two entire weeks to incubate
+ in a host before it causes coronavirus disease 2019, COVID-19 for 
+short. But in some people, it never shows itself. Many who are infected 
+with SARS-CoV-2 do not experience any symptoms (they are asymptomatic) 
+or experience only mild symptoms—but they can still transmit the virus. 
+The potentially long incubation period and pre-symptomatic or 
+asymptomatic spread are some of the reasons this virus is so serious and
+ also so complicated. All of this variation in the disease and 
+transmission leads to variation in human behavior and in our response to
+ the pandemic. This variation is something we are all witnessing every 
+day. </p>
+<p>It is not possible to predict exactly when a mutation will happen to 
+make a pathogen pandemic-worthy or to anticipate when a spillover will 
+occur. However, scientists know there are situations that can increase 
+the likelihood of a spillover event, such as changes to the environment 
+and climate or significant interactions between humans and wildlife 
+(e.g., eating bushmeat or going to live meat markets). Scientists have 
+combined these attributes to predict hotspot areas for emerging 
+diseases. There is also a lot that we do know that can help with 
+prediction. If we know which specific pathogens have pandemic potential,
+ and which animals harbor those pathogens—we call them disease 
+reservoirs—then we can monitor them as part of our global 
+biosurveillance effort.</p>
+<p>SARS-CoV-2 most likely originated in bats. Bats and humans—and other 
+animals like cats—have angiotensin-converting enzyme 2 (ACE2) attached 
+to the outsides of their nasal, lung, and kidney cells. These ACE2 
+enzymes normally serve as docking stations for a protein called 
+angiotensin that helps regulate blood pressure, wound healing, and 
+inflammation. SARS-CoV-2 binds to ACE2 as a way to gain entry into 
+cells. This is how diseases can jump between species: if humans share 
+certain receptor molecules with animals, then pathogens that use those 
+receptors can spread to humans. </p>
+<figcaption>In some parts of the world, people buy food from live meat 
+markets, including bats and other wildlife. Wildlife in cages in these 
+“wet markets” are under stress, which makes them more vulnerable to 
+disease than they might be in the wild. Wet markets are one way that 
+animal diseases can spill over into humans. </figcaption><p>Humans in 
+some cultures eat wildlife, and often keep them in live meat markets 
+where refrigeration is not possible. Wild animals in cages in these “wet
+ markets” are under stress, which makes them more vulnerable to disease 
+than they might be in the wild. And this is how spillover happens: a 
+person is exposed to an infected animal and if the pathogen has new 
+mutations or is novel to that person’s immune system—and if it has the 
+ability to dock and enter the person’s cells—the emergent pathogen could
+ infect the person. If this happens, the pathogen could thus take hold 
+in a new species.</p>
+<p>The “One Health” paradigm is the concept that the environment, wild 
+animals, agriculture animals, humans, and pathogens are interconnected. 
+It is important to understand each of these compartments and their 
+connections to ensure the health of all populations on the planet. </p>
+<p>The ecology of infectious diseases is something I have been studying 
+for the last 25 years. I have been fortunate to have met the top 
+scientists around the world who study infectious diseases and spillover 
+events. These researchers are some of the most dedicated and hardworking
+ scientists anywhere, and their efforts are now focused on helping the 
+global community understand why this pandemic happened and what to do 
+before the next one.</p>
+<h3>Canaries aren’t the only harbingers</h3>
+<p>I first came to Los Alamos to do my graduate work on western 
+bluebirds. I became interested in zoology as an undergraduate—giving up 
+my previous plans to study bass violin—when I realized I just couldn’t 
+stop thinking about the natural world. During my time as a graduate 
+student at Colorado State University I worked on a United States 
+Department of Agriculture project on the impact of insecticides on 
+birds. I became interested in toxicology and understanding the effect 
+chemicals have on the immune system and other physiological processes 
+that make an animal more susceptible to infectious disease. </p>
+<blockquote> SARS-CoV-2 had the correct mix of transmissibility and virulence to take the world by storm. </blockquote>
+<p>My graduate work with the Environmental Restoration project at the 
+Lab was an opportunity to set up a network of nestboxes across the 
+Pajarito Plateau (upon which Los Alamos sits) with which to study wild 
+bird individuals and populations. We wanted to determine if stresses 
+such as legacy environmental pollution, food limitation, habitat 
+changes, or climate shifts were impacting the birds in the region. With 
+the nestboxes, we could take physiological measurements of the birds 
+that were surviving and breeding, but to thoroughly answer our questions
+ we needed a way to measure the birds’ immune systems. The year 2020 was
+ the 24th field season for the Los Alamos Nestbox Network (now operated 
+by the Lab’s Environmental Stewardship Group), and I am grateful to the 
+teams of students and staff who have dedicated their time and passion 
+into keeping this project going. As it turns out, long-term studies are 
+how we can answer these difficult questions. </p>
+<p>One of the things that attracted me to Los Alamos—and kept me here—is
+ the innovation in biotechnology and modeling. For example, the 
+invention of flow cytometry (a tool for evaluating and sorting cells) 
+and the seminal work in genomic sequencing both happened here. I saw an 
+opportunity to apply these tools to novel systems, such as wildlife and 
+infectious-disease surveillance. My colleagues Kirsten McCabe, Babetta 
+Marrone, and I worked to develop flow cytometry-based immunological 
+assays to detect antibodies in different species of birds because most 
+tests had been developed for chickens and wouldn’t work on other 
+species. In 2003, when New Mexico was hit the hardest by West Nile 
+Virus, we lost 98 percent of the black-billed magpies in the Pojoaque 
+valley below Los Alamos. This project led us to explore a central 
+question to understanding infectious diseases: Why are some species 
+susceptible while others are dead-end hosts? </p>
+<p>Species susceptibility is one aspect of studying emerging diseases, 
+as it helps focus surveillance efforts on the appropriate animal 
+populations. Furthermore, it is critical to appreciate all the factors 
+that can make an animal stressed, which also adds to its susceptibility.
+ Stress is a physiological response in the body, and some stress 
+hormones, like cortisol, are known to suppress parts of the immune 
+system, such as the inflammatory response. Being in a cage at a wet 
+market is one source of stress for an animal, but there are many others.
+ Deforestation and other human activities lead to habitat loss, forcing 
+animals to move to new areas where they may face food insecurity or new 
+predators. Biodiversity in areas around the world is a good index of a 
+healthy system; it is often inversely related to the occurences of 
+emerging zoonotic diseases and outbreaks. Environmental changes, 
+especially to the climate, can also lead to forced migration of animals.
+ Finally, environmental pollution, as we have long been studying in Los 
+Alamos, can be a source of stress if it causes damage to animals’ immune
+ systems or reproductive systems. </p>
+<figcaption>Studying wing feathers is an important part of disease 
+biosurveillance in birds to assess their health, condition, and age. 
+This is valuable for building population models for species and for 
+assessing the impacts of mass mortality events and the relative risk of 
+new spillover diseases. <span>Jeanne Fair/LANL</span></figcaption><p>Using
+ the Los Alamos Nestbox Network, our results showed that legacy 
+environmental contamination had little impact on the birds. However, we 
+observed large impact to the birds from habitat changes. The increased 
+temperatures in Northern New Mexico and resulting tree die-off at lower 
+elevations forced the birds to move to higher elevations. Furthermore, 
+in the drought year of 2002, nestling bluebirds had half the immune 
+system capacity compared to a normal year. </p>
+<p>Recently, we observed an example of multiple stresses combining to 
+cause a mass wild-bird mortality event. In September 2020, an estimated 
+one million birds died in New Mexico and southern Colorado, where they 
+had been experiencing a combination of drought, wildfire smoke, and 
+weather extremes (temperatures close to 100 degrees Fahrenheit one day 
+and snow two days later). Because of this event, we are creating a 
+Southwest Avian Health Network to connect ornithologists in New Mexico 
+to those in neighboring states.</p>
+<p>As my work progressed over the years, I began to focus my attention 
+on measuring other signatures in birds to help with assessing disease 
+susceptibility. Some of my studies focused on a sugar molecule called 
+sialic acid, which is the receptor for influenzas. Knowing that avian 
+influenza is highly pathogenic in chickens but causes minimal disease in
+ other bird species, we sought to determine if different birds have 
+varied amounts of sialic acid, which could make some more susceptible, 
+or even superspreaders, of disease. In a recent publication, we 
+demonstrated that sialic acid does indeed differ among bird species and 
+that some blood cells in birds had more human-type sialic acid than 
+expected. This is an important finding for birds, since sialic acid is 
+also a receptor for the parasite Plasmodium, which causes malaria in 
+birds and humans.</p>
+<h3>So many systems</h3>
+<p>To this day, I continue my work studying bird species’ susceptibility
+ to disease and biosurveillance in animals. However, in 2004 I also 
+began broadening my scope and looking at pandemic modeling as part of a 
+Department of Homeland Security project on H5N1 avian influenza. Our 
+project focused on modeling the impact of a pandemic on critical 
+infrastructures. We looked at hospital capacities, the impacts of 
+closing schools and limiting contacts, and the effectiveness of 
+targeting treatments if available. (With influenza, we knew that Tamiflu
+ could help but that we would have limited doses.) In 2009, we were part
+ of a multi-team effort at the Laboratory using several of our 
+epidemiological models to predict the impacts of different scenarios for
+ pharmaceutical and vaccine interventions for the spreading H1N1 
+influenza (“swine flu”) pandemic. It was exciting to work with the 
+amazing scientists and epidemiologists at Los Alamos, and it was a true 
+collaborative effort. </p>
+<blockquote> This pandemic is transformative, pushing science and collaborations to their highest potential. </blockquote>
+<p>It was during my eight years with this critical infrastructure 
+modeling team at Los Alamos, and with two Laboratory-directed 
+exploratory research projects for understanding both West Nile Virus and
+ avian influenza host heterogeneity, that I fell in love with scientific
+ collaboration. While the science was engaging and interesting, it was 
+collaboration with my colleagues that most excited me. I began to seek 
+out information to learn how to make collaborations better and how to 
+foster collaborations between my fellow researchers. I became enthralled
+ with the emerging field of the “science of team science” and what makes
+ transformative science teams. I sought everything I could read on 
+leadership, communication, and teamwork. This interest would pay off 
+later when I did an assignment in Virginia as a Biological Threat 
+Reduction Program (BTRP) Science Manager with the Defense Threat 
+Reduction Agency. </p>
+<p>Although genomic sequencing technology was advancing at a rapid pace 
+in the early 2000s, enabling scientists to evaluate the blueprints of 
+organisms and thoroughly understand how they are related and how they 
+differ, its full potential could only be realized via strong 
+international partnerships. When it comes to pathogens, the genetic 
+blueprint is vital, and current sequencing technology makes it possible 
+to study a genome relatively quickly. As we see today with COVID-19, 
+most testing is based on reverse transcriptase polymerase chain reaction
+ (RT-PCR), which matches pieces of the viral RNA from a patient to known
+ SARS-CoV-2 sequences. </p>
+<p>Accessing sequence data from around the world is critical to our 
+ability to understand biological threats such as SARS-CoV-2 and others. 
+This data availability, however, depends on two things: that other 
+countries have the technology to provide such data and that we have 
+cultivated relationships with them so that we can easily collaborate. In
+ 2011, Los Alamos began participating in two programs to promote 
+international scientific engagement: the BTRP and the Department of 
+State’s Cooperative Threat Reduction (CTR) program. Through these 
+programs, Los Alamos scientists have helped establish sequencing centers
+ in multiple countries (including the Republic of Georgia, Jordan, 
+Kenya, and Uganda), and my amazing colleagues continue to support more 
+than 29 countries worldwide with ongoing sequencing and bioinformatics 
+training. </p>
+<figcaption>Los Alamos researchers have found that tree mortality in the
+ Southwest is caused by a combination of drought, higher temperatures, 
+and bark beetles. These habitat changes have been documented by Jeanne 
+Fair and her team to have drastic consequences to bird populations, 
+including impacting their immune systems and increasing their risk for 
+carrying disease. Deforestation for agriculture and development all over
+ the world also destroys animal habitats. Such circumstances can lead to
+ pandemics when changes in habitat bring wild animals under stress into 
+closer contact with humans. </figcaption><p>I believe these 
+cooperative-engagement programs comprise some of the most important 
+international efforts by the United States. In my role as a BTRP Science
+ Manager (2013–2016), my job was to help the United States develop 
+collaborations with partner countries to build their capabilities in 
+detection, diagnostics, and reporting. As a result, biosurveillance and 
+infectious disease technologies were strengthened in these partner 
+countries, and we created strong, lasting relationships through 
+scientific diplomacy and building trust between countries. Through this 
+partnership, diagnostic laboratories around the world were better 
+prepared to respond to the COVID-19 pandemic and provide ample and 
+accurate diagnostic testing for their citizens. </p>
+<h3>When “if” becomes “now”</h3>
+<p>It is strange to spend decades studying something you hope won’t 
+happen, but here I am. This pandemic was accurately predicted—we knew 
+the hotspots where a spillover would most likely occur, and we knew that
+ coronaviruses could spill over. We also knew what to do: stamp it out 
+when it starts, test, contact trace, and quarantine. Yet here we are. </p>
+<p>Since February, I have spent my time focusing on two main areas. 
+First, my colleagues and I are supporting our BTRP partner countries by 
+sharing best practices both to improve COVID-19 sequencing and genomics 
+in their local laboratories and to help feed the international databases
+ with valuable sequences. Second, we reconvened our critical 
+infrastructure modeling team, gave it a new name, and have been 
+ferociously working on developing a modeling experiment to understand 
+the uncertainty of the pandemic. Now called MEDIAN (Modeling Epidemics 
+for Decision support with Infrastructure ANalysis), this 
+systems-dynamics model includes a range of distributions for all aspects
+ of what is going on, from disease characteristics (incubation, 
+pre-symptomatic transmission, mortality rate) to the uncertainty of 
+human behavior (quarantining, wearing masks, rates of contact tracing).</p>
+<figcaption>The epidemic curves in the graph represent different 
+scenarios for the region of Albuquerque, NM. Each scenario comprises 
+multiple variables for controlling the pandemic—such as diagnostic 
+testing time, false-negative rates, and fractions of individuals who 
+were contact traced and quarantined. Scientists can then quantify the 
+extent to which the variables are effective at lowering case numbers. 
+Statistical analysis of the scenario data indicates that contact tracing
+ and quarantining have a consistently large impact on slowing disease 
+spread, although these countermeasures are difficult to implement 
+effectively if a large fraction of cases are asymptomatic. The red line 
+shows actual cases throughout New Mexico, which were kept down by the 
+implementation of many strategies, including widespread contact tracing 
+and testing. </figcaption><p>Using MEDIAN, we are looking to identify 
+the most important factors contributing to the severity of the pandemic.
+ Our model is not about predicting how many people will be infected 
+tomorrow or will die next week—other Los Alamos models examine this 
+important aspect. Instead our goal is to take into account the 
+uncertainty and variability in the pandemic to help understand which 
+things are driving its spread and where to focus our response. </p>
+<p>This understanding is derived from specifically designed experiments 
+where we evaluate various distributions and look for key correlations. 
+For instance, we might design an experimental run that has a disease 
+incubation period of 5–14 days, with a percentage range of 
+pre-symptomatic transmission, an age distribution of mortality rates, 
+and a few other variables, each with a lot of uncertainty. Then we can 
+run 10,000 simulations overnight covering all the uncertainties and we 
+get a spaghetti figure of epidemic curves that is not that helpful. 
+However, once we have this spaghetti figure, we can use statistics to 
+pull out the most important disease and mitigation variables driving the
+ epidemic. For the COVID-19 effort, we are focusing on the role of 
+diagnostic testing. This will help us investigate the different patterns
+ associated with testing strategies. For instance, we are seeking to 
+correlate the impact of mass testing with contact tracing and quarantine
+ on the number of cases and deaths.</p>
+<h3>One day at a time</h3>
+<p>This is hard. There is still so much uncertainty with this pandemic, 
+and it can be overwhelming. However, there is much we do know that can 
+help us today and that will help us prepare for tomorrow and the next 
+emerging disease. Our work on COVID-19 is immediate and critical, but 
+the rest is still important. </p>
+<figcaption>As part of her graduate work, Jeanne Fair set up a network 
+of 400 nestboxes across the Pajarito Plateau. Taking samples from birds 
+in these nests provides data about how stresses, such as environmental 
+pollution, food limitation, habitat changes, and climate shifts, impact 
+birds in the region. The year 2020 was the 24th season for the Los 
+Alamos Nestbox Network. </figcaption><p>Our small lab group in 
+Bioscience Division is looking at the big picture of emerging disease by
+ taking into account all aspects, such as climate change, environmental 
+change, biodiversity impacts, and plant pathogens, as part of our 
+Ecological Health Security Lab. For example, understanding how long-term
+ environmental change impacts future mosquito distributions and the 
+infectious diseases they carry is one important aspect. To address this,
+ we are part of a new Laboratory-directed project to couple Earth 
+systems and epidemiological models; this infectious disease-climate team
+ is a true collaboration across many directorates and divisions at Los 
+Alamos. </p>
+<p>Ecological health security is the epitome of a complex system. Our 
+ecology is changing: our proximity to and relationships with animals are
+ evolving, our climate is adjusting, and the plants and wildlife are 
+adapting (or not). This pandemic will not be the last, but hopefully it 
+will be the worst—because we will learn from it and prepare. The 
+conditions are ripe for new diseases to catch us off guard, but we have 
+the technology and the partnerships to respond. This moment is 
+transformative, pushing science and collaborations to their highest 
+potential. </p>
+<p>I still have moments where the reality of COVID-19 hits me hard—we 
+never thought it would be this bad. But I try to stay positive and be 
+grateful each day for nature, for the people in my life, for living in 
+our amazing state of New Mexico, and for my health. I also know that 
+tough times never last, but tough people do! And to be honest, waking up
+ with a pressing purpose in the morning can be a good thing. <span>LDRD</span></p>
+<h2 class="rm-manual">More Stories</h2>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/2020-august/index.php">1663 Home </a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> </p><h5 class="rm-manual">COVID-19: Answering the Call</h5> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/covid-answering-the-call.shtml">Read More </a> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> </p><h5 class="rm-manual">What Happens Next</h5> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/what-happens-next.shtml">Read More </a> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> </p><h5 class="rm-manual">On-target Testing</h5> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/on-target-testing.shtml">Read More </a> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> </p><h5 class="rm-manual">Catching the Coronavirus</h5> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/catching-the-coronavirus.shtml">Read More </a> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> </p><h5 class="rm-manual">New Tools for the Toolbox</h5> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/new-tools-for-toolbox.shtml">Read More </a> <p class="rm-manual"></p> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual">Los Alamos National Laboratory</li> <li class="rm-manual">P.O. Box 1663</li> <li class="rm-manual">Los Alamos, NM 87545</li> <li class="rm-manual">(505) 667-5061</li> </ul>
+<ul class="rm-manual"> <li class="rm-manual">AT THE LAB</li> <li class="rm-manual"><a href="file:///business/procurement-opportunities.php">Business Opportunities</a></li> <li class="rm-manual"><a href="file:///careers/index.php">Jobs</a></li> <li class="rm-manual"><a href="file:///org/index.php">Organizations</a></li> <li class="rm-manual"><a href="http://www.lanl.gov/library/">Research Library</a></li> <li class="rm-manual"><a href="file:///collaboration/user-facilities/index-old.php">User Facilities</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual">INFORMATION</li> <li class="rm-manual"><a href="file:///resources/emergency/index.php">Emergency, Fire</a></li> <li class="rm-manual"><a href="http://www.lanl.gov/calendar//index.php">Events, Lectures</a></li> <li class="rm-manual"><a href="file:///resources/ombuds/index.php">Ombuds</a></li> <li class="rm-manual"><a href="file:///resources/index.php">Resources</a></li> <li class="rm-manual"><a href="file:///environment/public-reading-room.php">Reading Room</a></li> <li class="rm-manual"><a href="https://www.lanl.gov/museum//index.php">Science Museum</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual">FOR EMPLOYEES</li> <li class="rm-manual"><a href="https://askit.lanl.gov/">AskIT</a></li> <li class="rm-manual"><a href="https://int.lanl.gov/">LANLINSIDE</a></li> <li class="rm-manual"><a href="https://mymail.lanl.gov/">MyMail</a></li> <li class="rm-manual"><a href="file:///careers/employees-retirees/new-hires/index.php">New Hire Process</a></li> <li class="rm-manual"><a href="https://portal.lanl.gov/">SSL Portal</a></li> <li class="rm-manual"><a href="https://extrain.lanl.gov/">Training</a></li> </ul>
+<p class="rm-manual"> <a href="https://www.lanl.gov/resources/contacts.php">Contact Us</a> <span>|</span> <a href="https://www.lanl.gov/resources/web-policies/copyright-legal.php">Terms of Use/Privacy</a> <span>|</span> <a href="http://www.lanl.gov/www-team/forms/wwwgen.php?view=exthome">Site Feedback</a> </p>
+<ul class="rm-manual"> <li class="rm-manual">P.O. Box 1663</li> <li class="rm-manual">Los Alamos, NM 87545</li> <li class="rm-manual">(505) 667-5061</li> </ul>
+<p class="rm-manual"> <a href="https://www.lanl.gov/resources/contacts.php">Contact Us</a> <span>|</span> <a href="https://www.lanl.gov/resources/web-policies/copyright-legal.php">Terms of Use/Privacy</a> <span>|</span> <a href="http://www.lanl.gov/www-team/forms/wwwgen.php?view=exthome">Site Feedback</a> </p>
+<p class="rm-manual"> Managed by <a href="https://www.triadns.org/">Triad National Security, LLC</a> for the <a href="https://nnsa.energy.gov/">U.S. Dept. of Energy’s NNSA</a> <a href="https://www.lanl.gov/resources/web-policies/copyright-legal.php">Copyright 2021 Triad National Security, LLC. All Rights Reserved.</a> </p>
+<p class="rm-manual"> Managed by <a href="https://www.triadns.org/">Triad National Security, LLC</a> for the <a href="https://nnsa.energy.gov/">U.S. Dept. of Energy’s NNSA</a> </p>
+<p class="rm-manual"> <a href="https://www.lanl.gov/resources/web-policies/copyright-legal.php">Copyright 2021 Triad National Security, LLC. All Rights Reserved.</a> </p></article>
+</body></html>

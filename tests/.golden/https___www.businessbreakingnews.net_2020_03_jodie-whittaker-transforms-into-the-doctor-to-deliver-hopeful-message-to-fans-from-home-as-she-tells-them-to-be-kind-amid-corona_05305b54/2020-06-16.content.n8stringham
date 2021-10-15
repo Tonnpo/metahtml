@@ -1,0 +1,81 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">You are here: <span><a href="https://www.businessbreakingnews.net/"><span>Home</span></a></span> <span>/</span>
+ Jodie Whittaker transforms into The Doctor to deliver hopeful message 
+to fans from home as she tells them to ‘be kind’ amid coronavirus 
+outbreak</p>
+<h1 class="rm-manual">Jodie Whittaker transforms into The Doctor to 
+deliver hopeful message to fans from home as she tells them to ‘be kind’
+ amid coronavirus outbreak</h1>
+<p class="rm-manual"> · March 25, 2020 · </p>
+<p>Jodie Whittaker shared a heart-warming message with the nation amid 
+the ongoing coronavirus crisis. The actress, 37, transformed into the 
+Thirteenth Doctor for a reassuring video shared onto Twitter by BBC 
+America on Wednesday, in which her character helped those who ‘might be a
+ little bit worried’ given current circumstances. Dressed in her 
+character’s costume, and talking from indoors, she told fans of the 
+iconic sci-fi show to rest assured as ‘darkness never wins’, and also 
+advised them to ‘always listen to doctors.’ Using her platform: Jodie 
+Whittaker transformed into The Doctor to deliver hopeful message to fans
+ on Wednesday, as she told them to ‘be kind’ amid coronavirus outbreak 
+Jodie began: ‘Oh hi, this is an emergency transmission. If you’re seeing
+ the TARDIS has detected a psychological disturbance somewhere in space 
+and time, basically I think somebody somewhere might be a little bit 
+worried. ‘I’m actually self-isolating, or as I like to call it hiding 
+from an army of Sontarans but keep that to yourself. RELATED ARTICLES 
+Previous 1 2 Next Who should you ask for help if coronavirus symptoms 
+strike?… Stranger Things star David Harbour reveals season 4 release… 
+Phillip Schofield confirms This Morning backdrop behind him… Tom Holland
+ reveals… <a href="file:///go?url=aHR0cHM6Ly93d3cuZGFpbHltYWlsLmNvLnVrL3R2c2hvd2Jpei9hcnRpY2xlLTgxNTE2NTUvSm9kaWUtV2hpdHRha2VyLXRyYW5zZm9ybXMtRG9jdG9yLWRlbGl2ZXItaG9wZWZ1bC1tZXNzYWdlLWFtaWQtY29yb25hdmlydXMtb3V0YnJlYWsuaHRtbA==" rel="nofollow">Read full this story</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.businessbreakingnews.net/2019/04/new-york-city-mayor-declares-public-health-emergency-amid-measles-outbreak/">New York City Mayor Declares Public Health Emergency Amid Measles Outbreak</a></li>
+<li class="rm-manual"><a href="https://chuteu.net/2019/09/us-existing-home-sales-climb-amid-tight-supply-and-rising-prices/">US Existing Home Sales Climb Amid Tight Supply And Rising Prices</a></li>
+<li class="rm-manual"><a href="https://www.businessbreakingnews.net/2017/08/jodie-whittakers-just-so-happy-that-shes-going-to-be-a-fancy-dress-costume-for-cosplayers/">Jodie Whittaker’s Just So Happy That She’s Going to Be a “Fancy Dress Costume” for Cosplayers</a></li>
+<li class="rm-manual"><a href="https://www.businessbreakingnews.net/2017/11/comic-con-doctor-who-showrunner-blasts-jodie-whittaker-backlash/">Comic-Con: 'Doctor Who' showrunner blasts Jodie Whittaker backlash</a></li>
+<li class="rm-manual"><a href="https://www.businessbreakingnews.net/2017/11/charlie-cox-jodie-whittaker-paul-schneider-to-star-in-hello-carter/">Charlie Cox, Jodie Whittaker, Paul Schneider to star in Hello Carter</a></li>
+<li class="rm-manual"><a href="https://www.businessbreakingnews.net/2018/12/amid-measles-outbreak-unvaccinated-students-will-be-barred-from-attending-school-at-brooklyn-yeshivas-health-department-says/">Amid Measles Outbreak, Unvaccinated Students Will Be Barred From Attending School at Brooklyn Yeshivas, Health Department Says</a></li>
+<li class="rm-manual"><a href="https://www.businessbreakingnews.net/2018/10/state-sending-training-teams-to-centers-amid-fatal-outbreaks/">State sending training teams to centers amid fatal outbreaks</a></li>
+<li class="rm-manual"><a href="https://www.businessbreakingnews.net/2019/03/new-york-county-bans-unvaccinated-children-from-public-places-amid-measles-outbreak/">New York county bans unvaccinated children from public places amid measles outbreak</a></li>
+<li class="rm-manual"><a href="https://www.businessbreakingnews.net/2019/07/ai-comes-off-the-sidelines-to-deliver-for-sports-fans/">AI comes off the sidelines to deliver for sports fans</a></li>
+<li class="rm-manual"><a href="https://www.vietnamartnews.com/2015/06/john-barrowman-disappoints-trans-fans-by-telling-them-to-lighten-up-after-his-use-of-the-t-word/">John Barrowman Disappoints Trans Fans By Telling Them to “Lighten Up” After His Use of the T-Word</a></li>
+</ul>
+<blockquote class="rm-manual"> Jodie Whittaker transforms into The 
+Doctor to deliver hopeful message to fans from home as she tells them to
+ 'be kind' amid coronavirus outbreak have 332 words, post on <a href="file:///go?url=aHR0cHM6Ly93d3cuZGFpbHltYWlsLmNvLnVrL3R2c2hvd2Jpei9hcnRpY2xlLTgxNTE2NTUvSm9kaWUtV2hpdHRha2VyLXRyYW5zZm9ybXMtRG9jdG9yLWRlbGl2ZXItaG9wZWZ1bC1tZXNzYWdlLWFtaWQtY29yb25hdmlydXMtb3V0YnJlYWsuaHRtbA==" rel="nofollow">www.dailymail.co.uk</a> at March 25, 2020. This is cached page on Business Breaking News. If you want remove this page, <a href="file:///contact/" rel="nofollow">please contact us</a>.</blockquote>
+<p class="rm-manual"><span>Filed Under: <a href="https://www.businessbreakingnews.net/category/tvshowbiz/" rel="category tag">TV&amp;Showbiz</a></span> <span><a href="https://www.businessbreakingnews.net/tag/dailymail/" rel="tag">dailymail</a>, <a href="https://www.businessbreakingnews.net/tag/tvshowbiz/" rel="tag">TV&amp;Showbiz</a>, <a href="https://www.businessbreakingnews.net/tag/bbc/" rel="tag">BBC</a>, <a href="https://www.businessbreakingnews.net/tag/coronavirus/" rel="tag">Coronavirus</a>, <a href="https://www.businessbreakingnews.net/tag/jodie-whittaker-transforms-doctor-deliver-hopeful-message-amid-coronavirus-outbreak/" rel="tag">Jodie Whittaker transforms Doctor deliver hopeful message amid coronavirus outbreak</a>, <a href="https://www.businessbreakingnews.net/tag/doctor-delivers-babies/" rel="tag">doctor delivers babies</a>, <a href="https://www.businessbreakingnews.net/tag/coming-home-tell-the-world/" rel="tag">coming home tell the world</a>, <a href="https://www.businessbreakingnews.net/tag/doctor-delivering-baby/" rel="tag">doctor delivering baby</a>, <a href="https://www.businessbreakingnews.net/tag/deliver-hope/" rel="tag">deliver hope</a>, <a href="https://www.businessbreakingnews.net/tag/not-delivered-text-message/" rel="tag">not delivered text message</a>, <a href="https://www.businessbreakingnews.net/tag/delivering-difficult-messages-to-employees/" rel="tag">delivering difficult messages to employees</a>, <a href="https://www.businessbreakingnews.net/tag/jodie-whittaker-doctor-who-costume/" rel="tag">jodie whittaker doctor who costume</a>, <a href="https://www.businessbreakingnews.net/tag/jodie-whittaker-downton-abbey/" rel="tag">jodie whittaker downton abbey</a>, <a href="https://www.businessbreakingnews.net/tag/jodie-whittaker-doctor-who-outfit/" rel="tag">jodie whittaker doctor who outfit</a>, <a href="https://www.businessbreakingnews.net/tag/jodie-whittaker-dr-who/" rel="tag">jodie whittaker dr who</a></span></p></article>
+</body></html>

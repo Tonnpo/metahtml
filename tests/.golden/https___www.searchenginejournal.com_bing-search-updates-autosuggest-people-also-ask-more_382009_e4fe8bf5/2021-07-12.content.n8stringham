@@ -1,0 +1,168 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><ol class="rm-manual">
+<li class="rm-manual"><a href="https://www.searchenginejournal.com/"><span>SEJ</span></a></li>
+<li class="rm-manual"> » </li>
+<li class="rm-manual"><a href="https://www.searchenginejournal.com/category/news/"><span>News</span></a></li>
+</ol>
+<h1 class="rm-manual">Bing Improves Key Search Features</h1>
+<p class="rm-manual">Bing is rolling out several updates to improve key 
+search features including autosuggest, people also ask, and intelligent 
+answers.</p>
+<p class="rm-manual"><span><a href="https://www.searchenginejournal.com/author/matt-southern/">Matt Southern</a>September 24, 2020<span>3 min read</span></span></p>
+<p class="rm-manual"><span> SEJ STAFF</span> <a href="https://www.searchenginejournal.com/author/matt-southern/">Matt Southern</a><span>Lead News Writer at <a href="https://www.searchenginejournal.com/">Search Engine Journal</a></span></p>
+<p class="rm-manual"><span>Bio</span></p>
+<p class="rm-manual"><span>Follow</span></p>
+<p class="rm-manual"><span> / </span>September 24, 2020</p>
+<p class="rm-manual"><span> / </span></p>
+<p class="rm-manual"><span>3 min read </span></p>
+<ul class="rm-manual">
+<li class="rm-manual">
+<p class="rm-manual">294</p>
+<p class="rm-manual">SHARES</p>
+</li>
+<li class="rm-manual">
+<p class="rm-manual">4.3K</p>
+<p class="rm-manual">READS</p>
+</li>
+</ul>
+<p>Bing is improving several key search features with updates designed to provide users with a wider range of results.</p>
+<p>Now, when users search using Bing, they can expect to see:</p>
+<ul>
+<li>Better autosuggest predictions</li>
+<li>More ‘people also ask’ recommendations</li>
+<li>Intelligent answers in more regions</li>
+<li>Semantic highlighting in search snippets</li>
+</ul>
+<p>Each of these updates are made possible due to advancements Microsoft
+ has made in the areas of Natural Language Representation and Natural 
+Language Generation.</p>
+<p><span>Advertisement</span></p>
+<p><span>Continue Reading Below</span></p>
+<p>Here’s how these updates will enhance the Bing search experience going forward.</p>
+<h2>Better Autosuggest Predictions</h2>
+<p>A new technology called Next Phrase Prediction is being integrated into Bing’s autosuggest feature.</p>
+<p>What that means for users is Bing can now provide full phrase suggestions in real time for long queries.</p>
+<p>Previously, Bing’s approach to handling autosuggestions for longer 
+queries was limited to completing the current word being typed by the 
+user.</p>
+<p>Now, Bing can generate phrase suggestions for long queries before a user starts typing the next word.</p>
+<p>Here are some examples of suggestions that Bing wouldn’t have been able to show previously.</p>
+<p>In addition, since phrase suggestions are being generated in 
+real-time, autosuggest results are no longer limited to previously 
+entered queries.</p>
+<p><span>Advertisement</span></p>
+<p><span>Continue Reading Below</span></p>
+<p>As a result of this update, coverage of autosuggest completions 
+increases considerably, which improves the overall search experience.</p>
+<h2>More Questions in ‘People Also Ask’</h2>
+<p>Bing can now generate question-answer pairs in the People Also Ask (PAA) block for queries that haven’t been entered before.</p>
+<p>“We use a high-quality generative model on billions of documents to 
+generate question-answer pairs that are present within those documents.</p>
+<p>Later, when the same documents appear on the Search Engine Result 
+Page (SERP), we use the previously generated question-answer pairs to 
+help populate the PAA block, in addition to existing similar questions 
+that have previously been asked.”</p>
+<p>This update allows for greater exploration of search results by asking more questions instead of just browsing documents.</p>
+<h2>Expanding Intelligent Answers</h2>
+<p>Bing is expanding intelligent answers to 100 languages and 200+ regions, which covers almost every area Bing is available in.</p>
+<p>Previously, Bing’s intelligent answers were only available in 13 markets.</p>
+<p>Bing’s intelligent answers are similar Google’s quick answers. The 
+key difference is Bing’s intelligent answers are only displayed when the
+ same answer is backed up by multiple trusted sources.</p>
+<p>Google’s quick answers, on the other hand, are pulled from a single source.</p>
+<h2>Semantic Highlighting in Search Snippets</h2>
+<p>Bing is improving search snippets in all markets with a feature called semantic highlighting.</p>
+<p><span>Advertisement</span></p>
+<p><span>Continue Reading Below</span></p>
+<p>This feature allows Bing to highlight words in snippets beyond simple keyword matching.</p>
+<p>Semantic highlighting is designed to help users find information faster without having to read through the entire snippet.</p>
+<p>Previously, Bing’s ability to highlight snippets was limited to matching the exact keywords a user typed in the query.</p>
+<p>“Highlighting the answer in a caption is similar to Stanford’s 
+Machine Reading Comprehension test in which Microsoft was the first to 
+reach human parity on the benchmark.</p>
+<p>With Universal Semantic Highlighting, we can identify and highlight 
+answers within captions, and do it not just for English but for all 
+languages.”</p>
+<p><span>Advertisement</span></p>
+<p><span>Continue Reading Below</span></p>
+<p>Here is an example for the query “what temperature is a fever for coronavirus.”</p>
+<p>Notice how Bing doesn’t highlight the words used in the query.</p>
+<p><span>Advertisement</span></p>
+<p><span>Continue Reading Below</span></p>
+<p>Rather, Bing highlights the answer the user is looking for (100.4 degrees Fahrenheit).</p>
+<p>Expect updates similar to these in the future as Microsoft continues to make advancements in natural language processing.</p>
+<p class="rm-manual">Source: <a href="https://blogs.bing.com/search-quality-insights/september-2020/Introducing-the-next-wave-of-AI-at-Scale-innovations-in-Bing" rel="noopener">Bing Blogs</a></p>
+<p class="rm-manual"><span>Category</span><a href="https://www.searchenginejournal.com/category/news/">News</a><a href="https://www.searchenginejournal.com/category/seo/">SEO</a></p>
+<h3 class="rm-manual">Subscribe to <span>SEJ</span>
+</h3>
+<p class="rm-manual">Get our daily newsletter from SEJ's Founder Loren Baker about the latest news in the industry!</p>
+<p class="rm-manual">First Name*</p>
+<p class="rm-manual">Last Name*</p>
+<p class="rm-manual">Email*</p>
+<p class="rm-manual">Job Title*</p>
+<p class="rm-manual"><span>Topic(s) of Interest*</span></p>
+<ul class="rm-manual">
+<li class="rm-manual">SEO</li>
+<li class="rm-manual">PPC</li>
+<li class="rm-manual">Content</li>
+<li class="rm-manual">Social</li>
+</ul>
+<p class="rm-manual">By clicking the "SUBSCRIBE" button, I agree and accept the <a href="https://www.searchenginejournal.com/privacy-policy/">privacy policy</a> of Search Engine Journal.</p>
+<h2 class="rm-manual"><a href="https://www.searchenginejournal.com/author/matt-southern/">Matt Southern </a></h2>
+<p class="rm-manual">Lead News Writer at <a href="https://www.searchenginejournal.com/">Search Engine Journal</a></p>
+<p class="rm-manual">Matt Southern has been the lead news writer at Search Engine Journal since 2013. With a degree in communications, Matt ... <span><a href="https://www.searchenginejournal.com/author/matt-southern/">[Read full bio]</a></span></p>
+<ul class="rm-manual"><li class="rm-manual"><span>Suggested Articles</span></li></ul>
+<h4 class="rm-manual"><a href="https://www.searchenginejournal.com/microsoft-bing-seo-bing-webmaster-tools-with-fabrice-canel-podcast/398583/">Microsoft Bing SEO &amp; Bing Webmaster Tools with Fabrice Canel [Podcast] </a></h4>
+<h4 class="rm-manual"><a href="https://www.searchenginejournal.com/google-passage-ranking-martin-splitt/388206/">What Is Google Passage Ranking: 16 Key Points You Should Know </a></h4>
+<h4 class="rm-manual"><a href="https://www.searchenginejournal.com/google-maps-api-key-guide/403475/">How to Get and Use a Google Maps API Key for Your Business </a></h4>
+<h3 class="rm-manual">Subscribe to SEJ</h3>
+<p class="rm-manual">Subscribe to our daily newsletter to get the latest industry news.</p>
+<p class="rm-manual"> <span>Topic(s) of Interest*</span></p>
+<ul class="rm-manual">
+<li class="rm-manual">SEO</li>
+<li class="rm-manual">PPC</li>
+<li class="rm-manual">Content</li>
+<li class="rm-manual">Social</li>
+</ul>
+<p class="rm-manual">By clicking the "Subscribe" button, I agree and accept the <a href="https://www.searchenginejournal.com/privacy-policy/">privacy policy</a> of Search Engine Journal.</p>
+<h2 class="rm-manual"><a href="https://www.searchenginejournal.com/video-editing-software-for-marketing/411264/?utm_source_all=website&amp;utm_medium_all=sidebar-banner&amp;utm_campaign_all=website-sidebar-banner">6 Ways to Use Video Editing Software to Grow Your Brand Online </a></h2>
+<h2 class="rm-manual"><a href="https://www.searchenginejournal.com/webinar-lp-why-your-first-party-data-should-lead-your-organic-search-strategy/?utm_source_all=website&amp;utm_medium_all=sidebar-banner&amp;utm_campaign_all=website-sidebar-banner">Why Your First-Party Data Should Lead Your Organic Search Strategy </a></h2>
+<p class="rm-manual"><span>Wednesday, July 14 at 2 p.m. ET </span></p>
+<p class="rm-manual"><span>Read the Next Article </span></p></article>
+</body></html>

@@ -1,0 +1,76 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual">Bangkok Island Hidden Gem – Koh Kret</h1>
+<p class="rm-manual"> <span><a href="https://bangkok.today/category/travel/">Travel</a></span> </p>
+<p class="rm-manual"> <span><a href="https://bangkok.today/bangkok-island-hidden-gem-koh-kret/" rel="bookmark">December 3, 2020December 3, 2020</a></span><span><span><a href="https://bangkok.today/author/nanonite/">nanonite</a></span></span><span><a href="https://bangkok.today/bangkok-island-hidden-gem-koh-kret/#respond">Leave a Comment<span> on Bangkok Island Hidden Gem – Koh Kret</span></a></span> </p>
+<p>Ko Kret is a small island in the Chao Phraya River, just north of 
+Bangkok, Thailand. It’s known as a settlement of the Mon people, whose 
+famed terracotta is on display in the Kwan Aman Museum. This traditional
+ earthenware is still produced in potteries along the river. On the 
+northeastern tip of the island, Wat Poramai Yikawat is an important 
+Buddhist temple featuring a reclining Buddha and a leaning stupa.</p>
+<p>The island dates back to 1722, when a canal was constructed as a 
+shortcut to bypass a bend in the Om Kret branch of the Chao Phraya 
+river. As the canal was widened over the years, the section cut off 
+eventually became a separate island. The island continues to serve as a 
+refuge to the Mon tribes who dominated central Thailand between the 6th 
+and 10th centuries and have retained a distinct identity in their 
+version of Buddhism and, particularly at Ko Kret, their pottery.</p>
+<p>Here you can enjoy Craft Beer right on the river bank at Chitbeer 
+(try pronouncing that 😉 view the local pottery and even pick up a piece
+ or two for as low as 5bhat ($0.17). Rent a bicycle and take the short 
+trip around the island, see how the locals live and visit the many Wats.
+ </p>
+<h2 class="rm-manual">Post navigation</h2>
+<p class="rm-manual"><a href="https://bangkok.today/bangkoks-best-pizza/" rel="prev">Bangkok’s Best Pizza</a></p>
+<h2 class="rm-manual">Related Posts</h2>
+<h3 class="rm-manual"><a href="https://bangkok.today/best-place-in-the-world-to-chilling-with-friends/">Best Place In The World To Chilling With Friends</a></h3>
+<p class="rm-manual"> <span><a href="https://bangkok.today/best-place-in-the-world-to-chilling-with-friends/" rel="bookmark">July 18, 2017</a></span><span><span><a href="https://bangkok.today/author/nanonite/">nanonite</a></span></span> </p>
+<h3 class="rm-manual"><a href="https://bangkok.today/exploring-the-world-is-best-thing-to-do/">Exploring The World Is Best Thing To Do</a></h3>
+<p class="rm-manual"> <span><a href="https://bangkok.today/exploring-the-world-is-best-thing-to-do/" rel="bookmark">July 18, 2017</a></span><span><span><a href="https://bangkok.today/author/nanonite/">nanonite</a></span></span> </p>
+<h3 class="rm-manual"><a href="https://bangkok.today/traveling-with-friends-is-awesome/">Traveling With Friends Is Awesome</a></h3>
+<p class="rm-manual"> <span><a href="https://bangkok.today/traveling-with-friends-is-awesome/" rel="bookmark">July 17, 2017</a></span><span><span><a href="https://bangkok.today/author/nanonite/">nanonite</a></span></span> </p>
+<h3 class="rm-manual">Leave a Reply <a rel="nofollow" href="file:///bangkok-island-hidden-gem-koh-kret/#respond">Cancel reply</a>
+</h3>
+<p class="rm-manual"><span>Your email address will not be published.</span> Required fields are marked <span>*</span></p>
+<p class="rm-manual">Comment </p>
+<p class="rm-manual">Name <span>*</span> </p>
+<p class="rm-manual">Email <span>*</span> </p>
+<p class="rm-manual">Website </p>
+<p class="rm-manual"> Save my name, email, and website in this browser for the next time I comment.</p></article>
+</body></html>

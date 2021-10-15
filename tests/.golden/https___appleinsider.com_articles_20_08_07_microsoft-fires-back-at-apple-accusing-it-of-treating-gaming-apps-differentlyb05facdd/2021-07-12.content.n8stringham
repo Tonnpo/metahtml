@@ -1,0 +1,222 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual">Microsoft fires back at Apple, accusing it of treating gaming apps differently</h1>
+<p class="rm-manual"> By <a href="https://appleinsider.com/editor/Mike+Peterson">Mike Peterson</a> <span> | Aug 07, 2020</span> </p>
+<p class="rm-manual">Aug 07, 2020</p>
+<p>Hour after Apple explained why Microsoft's xCloud wouldn't be coming 
+to iOS, Microsoft shot back and accused the company of "consistently 
+treating gaming apps differently." </p>
+<p>On Wednesday, Microsoft ended its xCloud TestFlight program on iOS and said that the service would not be arriving on <a href="https://appleinsider.com/articles/20/08/05/microsoft-ends-ios-xcloud-testing-as-it-plans-to-launch-service-as-android-exclusive">iPhone and iPad</a>. In a statement on Thursday, Apple <a href="https://appleinsider.com/articles/20/08/06/apple-explains-why-microsoft-xcloud-wont-be-coming-to-the-iphone">explained</a> that it bars apps which rely on cloud streaming, per its <a href="https://appleinsider.com/inside/app-store">App Store</a> guidelines. </p>
+<p>Microsoft shot back at the Cupertino tech giant later on Thursday, issuing a <a href="https://twitter.com/iansherr/status/1291531485275656193">statement</a> to CNET that accused Apple of treating gaming apps unfairly compared to other apps on its app marketplace. </p>
+<p>"Apple stands alone as the only general purpose platform to deny 
+customers from cloud gaming and game subscription services like Xbox 
+Game Pass," a Microsoft spokesperson said. "And, it consistently treats 
+gaming apps differently, applying more lenient rules to non-gaming apps 
+even when they include interactive content." </p>
+<p>Microsoft admitted that it doesn't currently have a path to bring its
+ gaming service to the App Store. However, it also said that "we are 
+committed to finding a path to bring cloud gaming with Xbox Game Pass 
+Ultimate to the iOS platform." </p>
+<p>"We believe that the customer should be at the heart of the gaming 
+experience, and gamers tell us they want to play, connect, and share 
+anywhere, no matter where they are," Microsoft added. </p>
+<p class="">The specific rule in Apple's App Store <a href="https://developer.apple.com/app-store/review/guidelines/">guidelines</a>
+ that prohibits gaming apps from offering a catalog of games streamed 
+from the cloud is guideline 3.1.2(a), which says that "each game must be
+ downloaded directly from the App Store." </p>
+<p class="">Apple's own <a href="https://appleinsider.com/inside/apple-arcade">Apple Arcade</a>
+ is subject to the same rules. Instead of streaming the catalog from 
+Apple servers, users must individually download each Apple Arcade game 
+directly to their device before playing them. </p>
+<p class="">As AppleInsider <a href="https://appleinsider.com/articles/20/03/25/app-store-guidelines-limit-what-gaming-services-players-can-access">reported</a>
+ in March 2020, gaming services also can't offer any third-party games —
+ which would limit the number of titles available on platforms like 
+Google Stadia or Microsoft xCloud. </p>
+<p class="rm-manual"> AppleInsider has affiliate partnerships and may 
+earn commission on products purchased through affiliate links. These 
+partnerships do not influence our editorial content. </p>
+<p class="rm-manual"> <span> <a href="https://forums.appleinsider.com/discussion/217094"> 56 Comments </a> </span> </p>
+<h2 class="rm-manual">Comments (56)</h2>
+<p class="rm-manual"> <a href="https://forums.appleinsider.com/profile/InspiredCode"> </a></p><h2 class="rm-manual"><a href="https://forums.appleinsider.com/profile/InspiredCode">InspiredCode</a></h2> <span>said about 11 months ago</span> <p class="rm-manual"></p>
+<p class="rm-manual">I agree with Microsoft on this, but Apple (if they 
+say anything) will probably argue they are not a general purpose 
+platform and instead compare themselves to the Xbox store. I really wish
+ Apple would see iOS as the post-PC platform for everything.</p>
+<p class="rm-manual"> <a href="https://forums.appleinsider.com/profile/canukstorm"> </a></p><h2 class="rm-manual"><a href="https://forums.appleinsider.com/profile/canukstorm">canukstorm</a></h2> <span>said about 11 months ago</span> <p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://forums.appleinsider.com/profile/218172/InspiredCode" rel="nofollow ugc">InspiredCode</a> said:</p>
+<p class="rm-manual">I agree with Microsoft on this, but Apple (if they 
+say anything) will probably argue they are not a general purpose 
+platform and instead compare themselves to the Xbox store. I really wish
+ Apple would see iOS as the post-PC platform for everything.</p>
+<p class="rm-manual"> When you have 1.7 million apps on your platform, 
+you don't get the pleasure or the privilege of saying you're not a 
+general purpose platform. If they did, that would be a BS argument. MS 
+is the only competitor that has the size and economic clout to go after 
+Apple on this and I'm glad that they're raising the issue regarding 
+Apple's dogmatic handling of the App Store.</p>
+<p class="rm-manual"> <a href="https://forums.appleinsider.com/profile/genovelle"> </a></p><h2 class="rm-manual"><a href="https://forums.appleinsider.com/profile/genovelle">genovelle</a></h2> <span>said about 11 months ago</span> <p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://forums.appleinsider.com/profile/198259/canukstorm" rel="nofollow ugc">canukstorm</a> said:</p>
+<p class="rm-manual"><a href="https://forums.appleinsider.com/profile/218172/InspiredCode" rel="nofollow ugc">InspiredCode</a> said:</p>
+<p class="rm-manual">I agree with Microsoft on this, but Apple (if they 
+say anything) will probably argue they are not a general purpose 
+platform and instead compare themselves to the Xbox store. I really wish
+ Apple would see iOS as the post-PC platform for everything.</p>
+<p class="rm-manual"> When you have 1.7 million apps on your platform, 
+you don't get the pleasure or the privilege of saying you're not a 
+general purpose platform. If they did, that would be a BS argument. MS 
+is the only competitor that has the size and economic clout to go after 
+Apple on this and I'm glad that they're raising the issue regarding 
+Apple's dogmatic handling of the App Store.</p>
+<p class="rm-manual"> Apple is on point here. If you want to play on our
+ platform play by our rules. I may be wrong, but I’m sure Microsoft is 
+not letting Sony games stream to Xbox. Microsoft can’t be trusted. Why 
+would they undermine their own development platform? If game developers 
+were wooed to this and stopped developing for iOS directly, it would 
+make us dependent on Microsoft like we were for the first Macintosh. 
+Then when Microsoft looses interest like the tend to do, the platform 
+would suffer. </p>
+<p class="rm-manual"> <a href="https://forums.appleinsider.com/profile/sflocal"> </a></p><h2 class="rm-manual"><a href="https://forums.appleinsider.com/profile/sflocal">sflocal</a></h2> <span>said about 11 months ago</span> <p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://forums.appleinsider.com/profile/51590/genovelle" rel="nofollow ugc">genovelle</a> said:</p>
+<p class="rm-manual"><a href="https://forums.appleinsider.com/profile/198259/canukstorm" rel="nofollow ugc">canukstorm</a> said:</p>
+<p class="rm-manual"><a href="https://forums.appleinsider.com/profile/218172/InspiredCode" rel="nofollow ugc">InspiredCode</a> said:</p>
+<p class="rm-manual">I agree with Microsoft on this, but Apple (if they 
+say anything) will probably argue they are not a general purpose 
+platform and instead compare themselves to the Xbox store. I really wish
+ Apple would see iOS as the post-PC platform for everything.</p>
+<p class="rm-manual"> When you have 1.7 million apps on your platform, 
+you don't get the pleasure or the privilege of saying you're not a 
+general purpose platform. If they did, that would be a BS argument. MS 
+is the only competitor that has the size and economic clout to go after 
+Apple on this and I'm glad that they're raising the issue regarding 
+Apple's dogmatic handling of the App Store.</p>
+<p class="rm-manual"> Apple is on point here. If you want to play on our
+ platform play by our rules. I may be wrong, but I’m sure Microsoft is 
+not letting Sony games stream to Xbox. Microsoft can’t be trusted. Why 
+would they undermine their own development platform? If game developers 
+were wooed to this and stopped developing for iOS directly, it would 
+make us dependent on Microsoft like we were for the first Macintosh. 
+Then when Microsoft looses interest like the tend to do, the platform 
+would suffer. </p>
+<p class="rm-manual"> Exactly. Microsoft is being a hypocrite when one 
+realizes Microsoft is (arguably) even more stringent about the Xbox Live
+ store. </p>
+<p class="rm-manual"> <a href="https://forums.appleinsider.com/profile/CloudTalkin"> </a></p><h2 class="rm-manual"><a href="https://forums.appleinsider.com/profile/CloudTalkin">CloudTalkin</a></h2> <span>said about 11 months ago</span> <p class="rm-manual"></p>
+<p class="rm-manual"><a rel="nofollow ugc">genovelle</a> said:</p>
+<p class="rm-manual"><a rel="nofollow ugc">canukstorm</a> said:</p>
+<p class="rm-manual"><a rel="nofollow ugc">InspiredCode</a> said:</p>
+<p class="rm-manual">I agree with Microsoft on this, but Apple (if they 
+say anything) will probably argue they are not a general purpose 
+platform and instead compare themselves to the Xbox store. I really wish
+ Apple would see iOS as the post-PC platform for everything.</p>
+<p class="rm-manual"> When you have 1.7 million apps on your platform, 
+you don't get the pleasure or the privilege of saying you're not a 
+general purpose platform. If they did, that would be a BS argument. MS 
+is the only competitor that has the size and economic clout to go after 
+Apple on this and I'm glad that they're raising the issue regarding 
+Apple's dogmatic handling of the App Store.</p>
+<p class="rm-manual"> Apple is on point here. If you want to play on our
+ platform play by our rules. I may be wrong, but I’m sure Microsoft is 
+not letting Sony games stream to Xbox. Microsoft can’t be trusted. Why 
+would they undermine their own development platform? If game developers 
+were wooed to this and stopped developing for iOS directly, it would 
+make us dependent on Microsoft like we were for the first Macintosh. 
+Then when Microsoft looses interest like the tend to do, the platform 
+would suffer. </p>
+<p class="rm-manual"> Apple isn't on point. It is their platform and 
+their rules, but that doesn't make them on point. Yes you are wrong. 
+Microsoft has nothing to do with Sony games not streaming on XBox. Sony 
+ain't letting their exclusive IP play on XBoxes. If Sony would let it 
+happen, MS would sacrifice virgins to be able to have games like 
+Uncharted, God of War, or the Last of US on their console. That's not to
+ say they won't play nice in the future since the groundwork is already 
+being laid. <a rel="nofollow ugc" href="https://news.microsoft.com/2019/05/16/sony-and-microsoft-to-explore-strategic-partnership/">https://news.microsoft.com/2019/05/16/sony-and-microsoft-to-explore-strategic-partnership/</a> But make no mistake, that ball is firmly in Sony's court to play. </p>
+<p class="rm-manual">Your dev theory makes no sense at all. Any dev 
+wanting to code on either platform can do so now, without restriction. 
+iOS and XCloud gaming is fundamentally different and targeted at 
+completely different play styles. No disrespect to iOS devs, but why 
+would MS want to woo them? It's not like they have any AAA game 
+development experience. They have experience primarily in mobile game 
+development. That's not what XCloud is about. It's about bring the AAA 
+experience to any and every device possible. They're trying to bring Red
+ Dead Redemption 2 and it's gargantuan 100+GB file size to iPads.</p>
+<p class="rm-manual"> <a href="https://forums.appleinsider.com/discussion/217094#first-reply">Read More on the forums...</a> </p>
+<p class="rm-manual"> Please enable JavaScript to comment </p>
+<h2 class="rm-manual">Related Articles</h2>
+<h2 class="rm-manual"><a href="https://appleinsider.com/articles/21/07/12/exclusive-psychotherapist-georgia-dow-talks-mental-health-limiting-distractions-on-the-appleinsider-podcast">Exclusive: psychotherapist Georgia Dow talks mental health, limiting distractions, on the AppleInsider podcast</a></h2>
+<p class="rm-manual">On a special episode of the AppleInsider podcast, 
+psychotherapist Georgia Dow joins us to discuss the effect technology 
+and social media has on our mental health and how to manage 
+notifications across our devices.</p>
+<h2 class="rm-manual"><a href="https://appleinsider.com/articles/21/07/11/first-cannabis-delivery-app-lands-on-app-store-following-policy-changes">First cannabis delivery app lands on App Store following policy changes</a></h2>
+<p class="rm-manual">The first app to offer cannabis delivery has 
+launched in the App Store, a month after Apple changed App Store 
+policies allowing apps that handled sales via legal dispensaries.</p>
+<h2 class="rm-manual"><a href="https://appleinsider.com/articles/21/07/10/how-to-add-lines-and-grids-to-your-notes-on-ios-and-ipados">How to add lines and grids to your Notes on iOS and iPadOS</a></h2>
+<p class="rm-manual">Make it easier to write information down on your 
+iPad, by adding lines and grids to the background when you're using 
+Notes on iPadOS or iOS.</p>
+<h2 class="rm-manual"><a href="https://appleinsider.com/deals/apple-student-discount">Apple Student Discount</a></h2>
+<p class="rm-manual"><span>Best back-to-school bargains</span></p>
+<h2 class="rm-manual"><a href="https://appleinsider.com/deals/best-ipad-deals">M1 iPads are on sale now</a></h2>
+<p class="rm-manual"><span>Save up to $147</span></p>
+<h2 class="rm-manual"><a href="https://appleinsider.com/deals/best-macbook-air-deals">Every M1 MacBook Air is discounted</a></h2>
+<p class="rm-manual"><span>Save up to $150</span></p>
+<h2 class="rm-manual"> Latest comparisons </h2>
+<h2 class="rm-manual"><a href="https://appleinsider.com/articles/21/06/15/compared-beats-studio-buds-vs-airpods-airpods-pro-and-powerbeats-pro">Compared: Beats Studio Buds vs AirPods, AirPods Pro, and Powerbeats Pro</a></h2>
+<p class="rm-manual">With the launch of the Beats Studio Buds, Apple now
+ has a total of four wireless earbuds it sells to consumers. Here's how 
+the newcomers face against AirPods, AirPods Pro, and Beats Powerbeats 
+Pro.</p>
+<h2 class="rm-manual"><a href="https://appleinsider.com/articles/21/06/14/compared-airpods-pro-vs-sony-wf-1000xm4-true-wireless-earbuds">Compared: AirPods Pro vs Sony WF-1000XM4 true wireless earbuds</a></h2>
+<p class="rm-manual">Sony launched the WF-1000XM4 wireless earbuds in 
+June, its noise-cancelling rival to the Apple AirPods Pro. Here's how 
+Sony's latest stacks up against Apple's heavy hitter.</p>
+<h2 class="rm-manual"><a href="https://appleinsider.com/articles/21/05/03/compared-apples-second-generation-siri-remote-versus-its-predecessors">Compared: Apple's second-generation Siri Remote versus predecessors</a></h2>
+<p class="rm-manual">Apple has evolved its remote control over time, 
+with each iteration introducing physical improvements and better 
+features. After launching the second-generation Siri Remote, has Apple 
+created its best controller?</p>
+<h2 class="rm-manual"><a href="https://appleinsider.com/articles/21/05/19/compared-apple-airpods-and-airpods-pro-versus-echo-buds">Compared: Apple AirPods and AirPods Pro versus Echo Buds</a></h2>
+<p class="rm-manual">In April, Amazon upgraded its Echo Buds to make it a
+ better value-oriented rival to Apple's AirPods. Here's how Amazon's 
+offerings stack up to Apple's AirPods and AirPods Pro.</p>
+<h2 class="rm-manual"><a href="https://appleinsider.com/articles/21/04/25/compared-apple-airtag-vs-tile-pro-and-chipolo-one-spot">Compared: Apple AirTag vs Tile Pro and Chipolo One Spot</a></h2>
+<p class="rm-manual">Apple's launch of AirTag puts it into a growing 
+market of tracking accessories, but how does it compare against the Tile
+ Pro and the Find My-enabled Chipolo One Spot? We compare the trackers.</p></article>
+</body></html>

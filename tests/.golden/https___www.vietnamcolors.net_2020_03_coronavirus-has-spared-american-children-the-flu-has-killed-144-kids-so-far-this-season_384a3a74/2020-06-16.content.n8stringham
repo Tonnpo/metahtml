@@ -1,0 +1,73 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">You are here: <span><a href="https://www.vietnamcolors.net/"><span>Home</span></a></span> <span>/</span> Coronavirus has spared American children. The flu has killed 144 kids so far this season.</p>
+<h1 class="rm-manual">Coronavirus has spared American children. The flu has killed 144 kids so far this season.</h1>
+<p class="rm-manual"> · March 16, 2020 · </p>
+<p>More than 3,700 Americans have tested positive for the novel 
+coronavirus and at least 69 have died, according to data compiled by 
+Johns Hopkins University and CBS News. However, U.S. health officials 
+say a relatively small percentage of children have tested positive for 
+COVID-19 and those who have it tend to show milder symptoms. No child 
+deaths have yet been reported. By comparison, 36 million Americans have 
+gotten the flu this season and about 22,000 have died. Children have 
+been more vulnerable than years past with 144 pediatric deaths reported,
+ according to the latest statistics from the CDC. Eight more child 
+deaths were reported this week. The figures underline a recent trend — 
+while COVID-19 has largely spared children since its December outbreak 
+in China, the flu has proven particularly devastating for kids in 
+America this season. (In older people, however, coronavirus is much 
+deadlier than the flu.) The CDC’s most recent flu report says that as of
+ March 7, hospitalization rates among children aged 4 and under were the
+ highest on record at this point in the season, surpassing rates 
+reported during the 2009 H1N1 pandemic. The 144 children’s deaths also 
+mark the highest on record since the 2009 season. CBS News… <a href="file:///go?url=aHR0cHM6Ly93d3cuY2JzbmV3cy5jb20vbmV3cy9jb3JvbmF2aXJ1cy1oYXMtbGFyZ2VseS1zcGFyZWQtdXMtY2hpbGRyZW4tdGhlLWZsdS1oYXMta2lsbGVkLTE0NC1zby1mYXItdGhpcy1zZWFzb24v" rel="nofollow">Read full this story</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.vietnamcolors.net/2018/07/how-to-beat-travel-sickness-in-children-and-adults-in-the-holiday-season/">How to beat travel sickness in children and adults in the holiday season</a></li>
+<li class="rm-manual"><a href="https://www.vietnamcolors.net/2018/03/the-inheritance-young-vic-review-perhaps-the-most-important-american-play-of-the-century-so-far/">The Inheritance, Young Vic review: perhaps the most important American play of the century so far</a></li>
+<li class="rm-manual"><a href="https://www.vietnamcolors.net/2018/05/brother-of-salford-petrol-bomb-attack-victims-received-chilling-threat-before-the-four-children-were-killed/">Brother of Salford petrol bomb attack victims ‘received chilling threat’ before the four children were killed</a></li>
+<li class="rm-manual"><a href="https://www.vietnamcolors.net/2016/06/flu-killed-22-american-children-last-week/">Flu killed 22 American children last week</a></li>
+<li class="rm-manual"><a href="https://www.vietnamcolors.net/2018/05/horrific-photos-show-aftermath-of-petrol-bomb-attack-that-killed-four-kids/">Horrific photos show aftermath of petrol bomb attack that killed four kids</a></li>
+<li class="rm-manual"><a href="https://www.vietnamcolors.net/2018/05/us-nanny-who-killed-2-kids-jailed-for-life/">US nanny who killed 2 kids jailed for life</a></li>
+<li class="rm-manual"><a href="https://www.vietnamcolors.net/2018/08/children-with-special-needs-are-far-more-likely-to-be-expelled-from-school/">Children with special needs are far more likely to be expelled from school</a></li>
+<li class="rm-manual"><a href="https://www.ngong.net/2018/07/american-service-member-killed-in-afghanistan-second-u-s-death-in-6-days/">American service member killed in Afghanistan, second U.S. death in 6 days</a></li>
+<li class="rm-manual"><a href="https://www.vietnamcolors.net/2018/07/american-woman-27-killed-by-stray-bullet-outside-mexico-city-taco-restaurant/">American woman, 27, killed by stray bullet outside Mexico City taco restaurant</a></li>
+<li class="rm-manual"><a href="https://www.vietnamcolors.net/2018/04/helicopter-crash-kills-6-in-far-east-russia/">Helicopter Crash Kills 6 in Far East Russia</a></li>
+</ul>
+<blockquote class="rm-manual"> Coronavirus has spared American children. The flu has killed 144 kids so far this season. have 313 words, post on <a href="file:///go?url=aHR0cHM6Ly93d3cuY2JzbmV3cy5jb20vbmV3cy9jb3JvbmF2aXJ1cy1oYXMtbGFyZ2VseS1zcGFyZWQtdXMtY2hpbGRyZW4tdGhlLWZsdS1oYXMta2lsbGVkLTE0NC1zby1mYXItdGhpcy1zZWFzb24v" rel="nofollow">www.cbsnews.com</a> at March 16, 2020. This is cached page on Vietnam Colors. If you want remove this page, <a href="file:///contact/" rel="nofollow">please contact us</a>.</blockquote>
+<p class="rm-manual"><span>Filed Under: <a href="https://www.vietnamcolors.net/category/worldnews/" rel="category tag">WorldNews</a></span> <span><a href="https://www.vietnamcolors.net/tag/flu/" rel="tag">flu</a>, <a href="https://www.vietnamcolors.net/tag/influenza/" rel="tag">influenza</a>, <a href="https://www.vietnamcolors.net/tag/centers-for-disease-control/" rel="tag">centers for disease control</a>, <a href="https://www.vietnamcolors.net/tag/covid-19/" rel="tag">covid-19</a>, <a href="https://www.vietnamcolors.net/tag/coronavirus/" rel="tag">Coronavirus</a>, <a href="https://www.vietnamcolors.net/tag/world-health-organization/" rel="tag">World Health Organization</a>, <a href="https://www.vietnamcolors.net/tag/season-3-american-horror-story/" rel="tag">season 3 american horror story</a>, <a href="https://www.vietnamcolors.net/tag/season-4-american-horror-story/" rel="tag">season 4 american horror story</a>, <a href="https://www.vietnamcolors.net/tag/killing-season-movie/" rel="tag">killing season movie</a>, <a href="https://www.vietnamcolors.net/tag/killing-season-trailer/" rel="tag">killing season trailer</a>, <a href="https://www.vietnamcolors.net/tag/kid-that-kill/" rel="tag">kid that kill</a>, <a href="https://www.vietnamcolors.net/tag/kid-who-kill/" rel="tag">kid who kill</a>, <a href="https://www.vietnamcolors.net/tag/seasonal-flu-vaccine/" rel="tag">seasonal flu vaccine</a>, <a href="https://www.vietnamcolors.net/tag/killing-season-4/" rel="tag">killing season 4</a>, <a href="https://www.vietnamcolors.net/tag/childrens-flu-symptoms/" rel="tag">childrens flu symptoms</a>, <a href="https://www.vietnamcolors.net/tag/childrens-flu-vaccine/" rel="tag">childrens flu vaccine</a>, <a href="https://www.vietnamcolors.net/tag/american-killings/" rel="tag">american killings</a>, <a href="https://www.vietnamcolors.net/tag/american-dad-season-14/" rel="tag">american dad season 14</a>, <a href="https://www.vietnamcolors.net/tag/why-flu-season-in-winter/" rel="tag">why flu season in winter</a>, <a href="https://www.vietnamcolors.net/tag/rock-kills-kid/" rel="tag">rock kills kid</a>, <a href="https://www.vietnamcolors.net/tag/youre-gonna-go-far-kid/" rel="tag">youre gonna go far kid</a>, <a href="https://www.vietnamcolors.net/tag/cdc-flu-season/" rel="tag">cdc flu season</a>, <a href="https://www.vietnamcolors.net/tag/best-flu-medicine-for-kids/" rel="tag">best flu medicine for kids</a>, <a href="https://www.vietnamcolors.net/tag/flu-treatment-in-children/" rel="tag">flu treatment in children</a>, <a href="https://www.vietnamcolors.net/tag/when-is-cold-and-flu-season/" rel="tag">when is cold and flu season</a>, <a href="https://www.vietnamcolors.net/tag/american-dad-latest-season/" rel="tag">american dad latest season</a>, <a href="https://www.vietnamcolors.net/tag/seasonal-allergy-symptoms-in-children/" rel="tag">seasonal allergy symptoms in children</a>, <a href="https://www.vietnamcolors.net/tag/treatment-for-the-flu-in-kids/" rel="tag">treatment for the flu in kids</a>, <a href="https://www.vietnamcolors.net/tag/treatment-for-stomach-flu-in-children/" rel="tag">treatment for stomach flu in children</a>, <a href="https://www.vietnamcolors.net/tag/stomach-flu-treatment-for-children/" rel="tag">stomach flu treatment for children</a>, <a href="https://www.vietnamcolors.net/tag/stomach-flu-treatment-for-kids/" rel="tag">stomach flu treatment for kids</a>, <a href="https://www.vietnamcolors.net/tag/flu-treatment-for-kids/" rel="tag">flu treatment for kids</a>, <a href="https://www.vietnamcolors.net/tag/american-express-debit-card-for-kids/" rel="tag">american express debit card for kids</a></span></p></article>
+</body></html>

@@ -1,0 +1,147 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">May 24, 2021</p>
+<h1 class="rm-manual">BREAKING: Facebook Whistleblowers Expose LEAKED 
+INTERNAL DOCS Detailing New Effort to Secretly Censor Vaccine Concerns 
+on a Global Scale</h1>
+<h2 class="rm-manual">Facebook has responded: "We proactively announced 
+this policy on our company blog and also updated our help center with 
+this information." -Facebook company spokesperson</h2>
+<ul>
+<li class="rm-manual"><p class="rm-manual">Two Facebook Insiders have 
+come forward with internal company documents detailing a plan to curb 
+“vaccine hesitancy” (VH) on a global scale.</p></li>
+<li class="rm-manual"><p class="rm-manual">The stated goal of this 
+feature is to “drastically reduce user exposure” to VH comments. Another
+ aim of the program is to force a “decrease in other engagement of VH 
+comments including create, likes, reports [and] replies.”</p></li>
+<li class="rm-manual"><p class="rm-manual">It was such a shocking 
+revelation, that it moved not just one -- but two whistleblowers to come
+ forward to Project Veritas, so the public could be made aware of this 
+plan to stifle free speech.</p></li>
+<li class="rm-manual"><p class="rm-manual">One Facebook whistleblower said the company uses a tier system to determine how a comment should be censored or buried.</p></li>
+<li class="rm-manual"><p class="rm-manual">Comments that include 
+“shocking stories” describing potentially or actually true events, or 
+facts that can raise safety concerns” -- are demoted.</p></li>
+<li class="rm-manual"><p class="rm-manual">“True events or facts” that 
+raise concern about Covid vaccinations are fair game to be demoted and 
+hidden -- according to our source -- despite their authenticity or 
+capacity to contribute to the public good.</p></li>
+<li class="rm-manual"><p class="rm-manual">“I have to do something,” one of the Facebook insiders said.</p></li>
+<li class="rm-manual"><p class="rm-manual">Project Veritas reached out 
+to a top Facebook Spokesperson about these documents and received only a
+ brief and broad statement in reply, that failed to address our biggest 
+questions regarding transparency.</p></li>
+<li class="rm-manual"><p class="rm-manual">“They're trying to control 
+this content before it even makes it onto your page before you even see 
+it,” the other Facebook insider added. “If I lose my job, it’s like, 
+what do I do? But that’s less of a concern to me.”</p></li>
+</ul>
+<p>[Westchester, NY – May 24, 2021] Two Facebook Insiders have come 
+forward to Project Veritas with leaked internal documents, showing the 
+Big Tech giant’s plan to police “Vaccine Hesitancy” (VH) through 
+surreptitious “comment demotion.” </p>
+<p>The company has set up a tier system to rank comments on various 
+scales, based on how much the statement questions or cautions against 
+the Covid-19 vaccination. </p>
+<p>Tier 2, for instance, represents “Indirect Discouragement” of getting
+ vaccinated and according to PV’s sources, user comments such as these 
+would be heavily “suppressed.” </p>
+<p>It doesn’t matter if the comments are true, factual or represent 
+reality. The comment is demoted, buried and hidden from view of the 
+public if it clashes with this system. </p>
+<p>“It doesn’t match the narrative,” one insider explained. “The 
+narrative being, get the vaccine, the vaccine is good for you. Everyone 
+should get it. And if you don’t, you will be singled out,” </p>
+<p>One of the insiders, a Data Center Technician, leaked multiple 
+internal documents detailing an algorithm test being run on 1.5 percent 
+of Facebook and Instagram’s nearly 3.8 billion users worldwide. </p>
+<p>The goal? To, “drastically reduce user exposure to vaccine hesitancy (VH) in comments.”</p>
+<p>“They're trying to control this content before it even makes it onto your page before you even see it,” one insider said. </p>
+<h4>1. The authors of the plan are credited as Joo Ho Yeo, Nick Gibian, Hendrick Townley, Amit Bahl and Matt Gilles. </h4>
+<h4>2. The goal of the “framework” is to “identify and tier the 
+categories” of content that “could discourage vaccination in certain 
+contexts.” </h4>
+<h4>3. Facebook also established a “Vaccine Hesitancy” scoring system to establish numerical thresholds for certain content. </h4>
+<h4>4. The company instituted tiers to describe the tone of certain 
+posts, with some being categorized as “sensational/alarmist” or 
+“criticizing choice.” The responses range from outright removal to 
+comment demotions. </h4>
+<h4>5. Another document from the aforementioned Hendrick Townley 
+discusses more data points following the “experiment” with “demoting” VH
+ comments. </h4>
+<h4>6. One part of the document admits to “demoting” comments and 
+reducing the rate of likes while conducting a test of 1.5 percent of the
+ company’s audience. </h4>
+<h4>7. Other posts discussing the unique double dose of certain vaccines
+ were described as “objective_high” and outlined a “position change.” </h4>
+<h4>8. Descriptions of the type of content that falls into Tier 0, Tier 1 and Tier 2.</h4>
+<h4>9. An enforcement document obtained by one of the Insiders showed 
+Facebook’s goal of reducing the distribution of comments seemingly 
+skeptical of Covid vaccination. </h4>
+<h4>10. Facebook document details how many languages their "Vax Safety" policy will be able to detect for suppression. </h4>
+<h4>11. Facebook's "Vaccine Hesitancy" project leaders listed in company's chain of command, reporting directly to Mark Zuckerberg.</h4>
+<h4>12. Facebook's Ben Freeman sends internal message to colleagues 
+informing them of data gathering and action to be taken regarding 
+COVID-19 vaccines.</h4>
+<h4>13. Amit Bahl's job role within Facebook explained.</h4>
+<h4>14. "Vaccine Hesitancy Comment Demotion" Tier 1 and Tier 2 explained.</h4>
+<h4>15. Facebook describes how to label different types of posts.</h4>
+<h4>16. Facebook elaborates on Tier 2's "Indirect Discouragement."</h4>
+<h4>17. VAERS data analyzed by Facebook.</h4>
+<h4>18. Vaccine Hesitancy comments targeted by Facebook.</h4>
+<h4>19. Facebook describes what it classifies as "Shocking Stories" in regard to vaccines.</h4>
+<p class="rm-manual"><a href="file:///syq3snmxclc9/7zG8FPh0cBk3qh28dY90iB/10771f24b25cf9994c08bf69e74056d5/Vaccine_Hesitancy_Comment_Demotion_WATERMARKED.pdf" rel="noopener noreferrer">Read the entire Facebook Vaccine Hesitancy Comment Demotion document here.</a></p>
+<p class="rm-manual"><a href="file:///syq3snmxclc9/5m5WDtHyHDYsB7D6qu6Qg3/3a2a12c32ee5606d0fd5f81f308f8df1/Global_Operations_Primer_-_Health_Misinformation_WATERMARKED.pdf" rel="noopener noreferrer">Read the entire Facebook Global Operations Primer - Health Misinformation document here. </a></p>
+<p class="rm-manual">BE BRAVE. Do Something. Stand up. The time is now. 
+If you witness corruption, fraud, waste, or lying within Big Tech, 
+private entities, or the government — things the public needs to know — 
+Send an encrypted message to our Signal: 914-653-3110. Or contact us at <a href="mailto:VeritasTips@protonmail.com" rel="noopener noreferrer">VeritasTips@protonmail.com</a></p>
+<p class="rm-manual">About Project Veritas</p>
+<p class="rm-manual">James O'Keefe established Project Veritas in 2011 
+as a non-profit journalism enterprise to continue his undercover 
+reporting work. Today, Project Veritas investigates and exposes 
+corruption, dishonesty, self-dealing, waste, fraud, and other misconduct
+ in both public and private institutions to achieve a more ethical and 
+transparent society. O'Keefe serves as the CEO and Chairman of the Board
+ so that he can continue to lead and teach his fellow journalists, as 
+well as protect and nurture the Project Veritas culture. </p>
+<p class="rm-manual">Project Veritas is a registered 501(c)3 
+organization. Project Veritas does not advocate specific resolutions to 
+the issues raised through its investigations. <a href="file:///donate/">Donate now to support our mission. </a></p></article>
+</body></html>

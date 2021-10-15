@@ -1,0 +1,78 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">Breaking News</p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="#"> <span>Read More »</span> </a> </li> </ul>
+<p class="rm-manual"><a href="file:///breaking-news">More (<span>0</span>) »</a> </p>
+<h1 class="rm-manual">Washington, DC's Leading Local News: Weather, Traffic, Sports and more | Washington, DC | WUSA9.com</h1>
+<article class="rm-manual"> <a href="file:///section/verify">verify</a> </article><h1 class="rm-manual">VERIFY: You can still get COVID-19 if you have the flu. Everyone needs to take the same precautions.</h1>
+<p class="rm-manual">A viewer was told that people with the flu can't 
+get the new coronavirus. That's not true and could lead people to 
+harmful actions.</p>
+<p class="rm-manual"> <span>Author:</span> Jason Puckett (TEGNA), David Tregde, Mauricio Chamberlin </p>
+<p class="rm-manual"> <span>Published:</span> 11:02 PM EDT March 15, 2020 </p>
+<p class="rm-manual"> <span>Updated:</span> 11:03 PM EDT March 15, 2020 </p>
+<p>Viewer Chelsea W. sent us an email with an interesting question:</p>
+<p>“A friend said the ER told her if she tested positive for the flu it 
+was impossible to have the coronavirus at the same time... that the 2 
+viruses can’t be present in a patient at the same time. Is this true?”</p>
+<h3>THE QUESTION:</h3>
+<p>Is it impossible to get the coronavirus at the same time as the flu?</p>
+<h3>THE ANSWER:</h3>
+<p>No. Both the Centers for Disease Control and Prevention and the World
+ Health Organization said it’s possible to have COVID-19, the sickness 
+caused by the coronavirus, and the flu at the same time. They are 
+currently researching to see what interactions the viruses might have.</p>
+<p class="rm-manual">RELATED: <a href="file:///article/news/health/coronavirus/new-cdc-coronavirus-guidelines-cancel-events-with-50-or-more-people/507-21f65f5b-54cb-4b80-b17a-c2bd80e68e6c">New CDC coronavirus guidelines: Cancel events with 50 or more people</a></p>
+<p class="rm-manual">RELATED: <a href="file:///article/news/verify/verify-fact-checking-the-biden-sanders-democratic-debate/507-394b8c45-40ac-4f66-8c21-d83e3641b177">VERIFY: Fact-checking the Biden-Sanders Democratic Debate</a></p>
+<h3>WHAT WE FOUND:</h3>
+<p>A spokesperson for the CDC told VERIFY that, “It is certainly 
+possible for someone to have more than one virus or other microbial 
+infection at the same time.”</p>
+<p>The CDC separately confirmed that it’s possible to have the flu and COVID-19 simultaneously. </p>
+<p>So what does this mean for your body? Unfortunately, we don’t know yet. </p>
+<p>The WHO said they’re currently researching that exact question.</p>
+<p class="rm-manual">RELATED: <a href="file:///article/news/nation-world/president-trump-urges-public-to-relax-and-stop-hoarding/507-d9161764-2c72-497d-a0d0-29cc928387f8">President Trump urges public to 'relax' and stop hoarding</a></p>
+<p>They want to know how the coronavirus interacts with other viruses or illnesses.</p>
+<p>But they can’t say yet if it puts people at more risk or changes symptoms. </p>
+<p>Bottom line: Having the flu doesn’t prevent you from getting COVID-19.</p>
+<p>And that’s important because this false idea could lead people with 
+the flu to think they’re immune or don’t have to take the same 
+precautions to avoid COVID-19.</p>
+<p class="rm-manual">Something you’d like VERIFIED? <a href="https://c0gfs249.caspio.com/dp/6eec20000de2910608e946c8bb2f">Click here</a> to submit your story.</p>
+<p class="rm-manual">Credit: VERIFY</p></article>
+</body></html>

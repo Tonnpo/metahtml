@@ -1,0 +1,605 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///">Home</a>
+</li>
+<li class="rm-manual"> <a href="file:///coronavirus-live-news-covid-19-latest-updates.html">Coronavirus</a>
+</li>
+<li class="rm-manual">
+<a href="file:///bengaluru">Bengaluru</a><ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///bengaluru">Top Stories</a>
+</li>
+<li class="rm-manual"> <a href="file:///bengaluru#bengaluru-crime">Crime</a>
+</li>
+<li class="rm-manual"> <a href="file:///bengaluru#bengaluru-politics">Politics</a>
+</li>
+<li class="rm-manual"> <a href="file:///bengaluru#bengaluru-infrastructure">Infrastructure</a>
+</li>
+<li class="rm-manual"> <a href="file:///bengaluru#bengaluru-life-in-the-city">Life in the City</a>
+</li>
+<li class="rm-manual"> <a href="file:///bengaluru2040summit">Bengaluru 2040</a>
+</li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="file:///karnataka">Karnataka</a><ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///karnataka">Top Stories</a>
+</li>
+<li class="rm-manual"> <a href="https://20in20.deccanherald.com/">20 in '20</a>
+</li>
+<li class="rm-manual"> <a href="file:///karnataka#karnataka-politics">Politics</a>
+</li>
+<li class="rm-manual"> <a href="file:///karnataka#karnataka-districts">Districts</a>
+</li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="file:///nation">National</a><ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///nation#national-politics">Politics</a>
+</li>
+<li class="rm-manual"> <a href="file:///nation#national-north-and-central">North and Central</a>
+</li>
+<li class="rm-manual"> <a href="file:///nation#national-south">South</a>
+</li>
+<li class="rm-manual"> <a href="file:///nation#national-east-and-northeast">East and Northeast</a>
+</li>
+<li class="rm-manual"> <a href="file:///nation#national-west">West </a>
+</li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="file:///sports">Sports</a><ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///sports#sports-cricket">Cricket</a>
+</li>
+<li class="rm-manual"> <a href="file:///sports#home-f1-with-dh">Formula 1 with DH</a>
+</li>
+<li class="rm-manual"> <a href="file:///sports#sports-football">Football</a>
+</li>
+<li class="rm-manual"> <a href="file:///sports#sports-tennis">Tennis</a>
+</li>
+<li class="rm-manual"> <a href="file:///sports#sports-sportscene">Sportscene</a>
+</li>
+<li class="rm-manual"> <a href="file:///sports#sports-other-sports">Other Sports</a>
+</li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="file:///business">Business</a><ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///union-budget-2020">Budget 2020</a>
+</li>
+<li class="rm-manual"> <a href="file:///business">Business News</a>
+</li>
+<li class="rm-manual"> <a href="file:///business#business-family-finance">Family Finance</a>
+</li>
+<li class="rm-manual"> <a href="file:///business#business-technology">Technology</a>
+</li>
+<li class="rm-manual"> <a href="file:///business#business-dh-wheels">DH Wheels</a>
+</li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="file:///opinion-0">Opinion</a><ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///opinion-0#opinion-dh-views">DH Views</a>
+</li>
+<li class="rm-manual"> <a href="file:///opinion-0">Editorials</a>
+</li>
+<li class="rm-manual"> <a href="file:///opinion-0#opinion-panorama">Panorama</a>
+</li>
+<li class="rm-manual"> <a href="file:///opinion-0#opinion-comment">Comment</a>
+</li>
+<li class="rm-manual"> <a href="file:///opinion-0#opinion-in-perspective">In Perspective</a>
+</li>
+<li class="rm-manual"> <a href="file:///opinion-0#opinion-right-in-the-middle">Right in the Middle</a>
+</li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="file:///video">Videos</a><ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///video#videos-latest-videos">Latest Videos</a>
+</li>
+<li class="rm-manual"> <a href="file:///video#video-bengaluru">Bengaluru</a>
+</li>
+<li class="rm-manual"> <a href="file:///video#video-karnataka">Karnataka</a>
+</li>
+<li class="rm-manual"> <a href="file:///video#video-people">People</a>
+</li>
+<li class="rm-manual"> <a href="file:///video#video-popular">Popular </a>
+</li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="file:///supplements-0">Features</a><ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///metrolife-0">Metrolife</a>
+</li>
+<li class="rm-manual"> <a href="file:///entertainment">Entertainment</a>
+</li>
+<li class="rm-manual"> <a href="file:///supplements-0#supplements-travel">Travel</a>
+</li>
+<li class="rm-manual"> <a href="file:///spectrum-0">Spectrum</a>
+</li>
+<li class="rm-manual"> <a href="file:///sunday-herald-0">Sunday Herald</a>
+</li>
+<li class="rm-manual"> <a href="file:///living-0">Living</a>
+</li>
+<li class="rm-manual"> <a href="file:///supplements-0#supplements-dh-education">DH Education</a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="rm-manual"><a href="file:///newsletters">Newsletter</a></p>
+<p class="rm-manual">Get the best of news in your inbox everyday</p>
+<p class="rm-manual">GET IT</p>
+<p class="rm-manual"> <a href="file:///support-dh-journalism"> <span>SUPPORT DH JOURNALISM </span> </a></p>
+<ul class="rm-manual">
+<li class="rm-manual">Wednesday 27 May 2020</li>
+<li class="rm-manual">updated: 10:45 pm IST</li>
+<li class="rm-manual"><a href="http://www.deccanheraldepaper.com/">E-Paper</a></li>
+<li class="rm-manual"><a href="http://dhclassifieds.com/">Classifieds</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><span>BLR 27 ° C Clouds</span></li>
+<li class="rm-manual">
+<span>Sensex: 31605.22</span><span>+995.92</span>
+</li>
+<li class="rm-manual">
+<span>Nifty: 9314.95</span><span>+285.9</span>
+</li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"> <a href="file:///">Home</a></p></li>
+<li class="rm-manual"><p class="rm-manual"> <a href="file:///coronavirus-live-news-covid-19-latest-updates.html">Coronavirus</a></p></li>
+<li class="rm-manual">
+<p class="rm-manual"> <a href="file:///bengaluru">Bengaluru</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///bengaluru">Top Stories</a>
+</li>
+<li class="rm-manual"> <a href="file:///bengaluru#bengaluru-crime">Crime</a>
+</li>
+<li class="rm-manual"> <a href="file:///bengaluru#bengaluru-politics">Politics</a>
+</li>
+<li class="rm-manual"> <a href="file:///bengaluru#bengaluru-infrastructure">Infrastructure</a>
+</li>
+<li class="rm-manual"> <a href="file:///bengaluru#bengaluru-life-in-the-city">Life in the City</a>
+</li>
+<li class="rm-manual"> <a href="file:///bengaluru2040summit">Bengaluru 2040</a>
+</li>
+</ul>
+</li>
+<li class="rm-manual">
+<p class="rm-manual"> <a href="file:///karnataka">Karnataka</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///karnataka">Top Stories</a>
+</li>
+<li class="rm-manual"> <a href="file:///https://20in20.deccanherald.com/">20 in '20</a>
+</li>
+<li class="rm-manual"> <a href="file:///karnataka#karnataka-politics">Politics</a>
+</li>
+<li class="rm-manual"> <a href="file:///karnataka#karnataka-districts">Districts</a>
+</li>
+</ul>
+</li>
+<li class="rm-manual">
+<p class="rm-manual"> <a href="file:///nation">National</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///nation#national-politics">Politics</a>
+</li>
+<li class="rm-manual"> <a href="file:///nation#national-north-and-central">North and Central</a>
+</li>
+<li class="rm-manual"> <a href="file:///nation#national-south">South</a>
+</li>
+<li class="rm-manual"> <a href="file:///nation#national-east-and-northeast">East and Northeast</a>
+</li>
+<li class="rm-manual"> <a href="file:///nation#national-west">West </a>
+</li>
+</ul>
+</li>
+<li class="rm-manual">
+<p class="rm-manual"> <a href="file:///sports">Sports</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///sports#sports-cricket">Cricket</a>
+</li>
+<li class="rm-manual"> <a href="file:///sports#home-f1-with-dh">Formula 1 with DH</a>
+</li>
+<li class="rm-manual"> <a href="file:///sports#sports-football">Football</a>
+</li>
+<li class="rm-manual"> <a href="file:///sports#sports-tennis">Tennis</a>
+</li>
+<li class="rm-manual"> <a href="file:///sports#sports-sportscene">Sportscene</a>
+</li>
+<li class="rm-manual"> <a href="file:///sports#sports-other-sports">Other Sports</a>
+</li>
+</ul>
+</li>
+<li class="rm-manual">
+<p class="rm-manual"> <a href="file:///business">Business</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///union-budget-2020">Budget 2020</a>
+</li>
+<li class="rm-manual"> <a href="file:///business">Business News</a>
+</li>
+<li class="rm-manual"> <a href="file:///business#business-family-finance">Family Finance</a>
+</li>
+<li class="rm-manual"> <a href="file:///business#business-technology">Technology</a>
+</li>
+<li class="rm-manual"> <a href="file:///business#business-dh-wheels">DH Wheels</a>
+</li>
+</ul>
+</li>
+<li class="rm-manual"><p class="rm-manual"> <a href="file:///international">World</a></p></li>
+<li class="rm-manual">
+<p class="rm-manual"> <a href="file:///opinion-0">Opinion</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///opinion-0#opinion-dh-views">DH Views</a>
+</li>
+<li class="rm-manual"> <a href="file:///opinion-0">Editorials</a>
+</li>
+<li class="rm-manual"> <a href="file:///opinion-0#opinion-panorama">Panorama</a>
+</li>
+<li class="rm-manual"> <a href="file:///opinion-0#opinion-comment">Comment</a>
+</li>
+<li class="rm-manual"> <a href="file:///opinion-0#opinion-in-perspective">In Perspective</a>
+</li>
+<li class="rm-manual"> <a href="file:///opinion-0#opinion-right-in-the-middle">Right in the Middle</a>
+</li>
+</ul>
+</li>
+<li class="rm-manual">
+<p class="rm-manual"> <a href="file:///metrolife-0">Metrolife</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///metrolife-0">Your Bond With Bengaluru</a>
+</li>
+<li class="rm-manual"> <a href="file:///metrolife-0#metrolife-cityscape">Cityscape</a>
+</li>
+<li class="rm-manual"> <a href="file:///metrolife-0#metrolife-on-the-move">On The Move</a>
+</li>
+<li class="rm-manual"> <a href="file:///metrolife-0#metrolife-lifestyle">Lifestyle</a>
+</li>
+</ul>
+</li>
+<li class="rm-manual">
+<p class="rm-manual"> <a href="file:///video">Videos</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///video#videos-latest-videos">Latest Videos</a>
+</li>
+<li class="rm-manual"> <a href="file:///video#video-bengaluru">Bengaluru</a>
+</li>
+<li class="rm-manual"> <a href="file:///video#video-karnataka">Karnataka</a>
+</li>
+<li class="rm-manual"> <a href="file:///video#video-people">People</a>
+</li>
+<li class="rm-manual"> <a href="file:///video#video-popular">Popular </a>
+</li>
+</ul>
+</li>
+<li class="rm-manual">
+<p class="rm-manual"> <a href="file:///entertainment">Entertainment</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///entertainment#entertainment-entertainment-news">Entertainment News</a>
+</li>
+<li class="rm-manual"> <a href="file:///entertainment">DH Showtime</a>
+</li>
+<li class="rm-manual"> <a href="file:///entertainment#entertainment-dh-talkies">DH Talkies</a>
+</li>
+<li class="rm-manual"> <a href="file:///entertainment#entertainment-arts-books-culture">Arts, Books &amp; Culture</a>
+</li>
+</ul>
+</li>
+<li class="rm-manual">
+<p class="rm-manual"> <a href="file:///specials.html">Specials</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///specials.html">Insight</a>
+</li>
+<li class="rm-manual"> <a href="file:///specials.html#specials-point-blank">Point Blank</a>
+</li>
+<li class="rm-manual"> <a href="file:///specials.html#specials-sunday-spotlight">Sunday Spotlight</a>
+</li>
+</ul>
+</li>
+<li class="rm-manual"><p class="rm-manual"> <a href="file:///travel">Travel</a></p></li>
+<li class="rm-manual">
+<p class="rm-manual"> <a href="file:///spectrum-0">Spectrum</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///spectrum-0#spectrum-top-stories">Top Stories</a>
+</li>
+<li class="rm-manual"> <a href="file:///spectrum-0#spectrum-statescan">Statescan</a>
+</li>
+</ul>
+</li>
+<li class="rm-manual">
+<p class="rm-manual"> <a href="file:///living-0">Living </a></p>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///living-0">Front Page</a>
+</li>
+<li class="rm-manual"> <a href="file:///living-0#living-health-well-being">Health 'n' Well-Being</a>
+</li>
+<li class="rm-manual"> <a href="file:///living-0#living-fashion-folio">Fashion Folio</a>
+</li>
+<li class="rm-manual"> <a href="file:///living-0#living-food-fiesta">Food Fiesta</a>
+</li>
+</ul>
+</li>
+<li class="rm-manual">
+<p class="rm-manual"> <a href="file:///sunday-herald-0">Sunday Herald</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///sunday-herald-0">SH Top Stories</a>
+</li>
+<li class="rm-manual"> <a href="file:///sunday-herald-0#sunday-herald-entertainment">Entertainment</a>
+</li>
+<li class="rm-manual"> <a href="file:///sunday-herald-0#sunday-herald-articulations">Articulations</a>
+</li>
+<li class="rm-manual"> <a href="file:///sunday-herald-0#sunday-herald-art-culture">Art &amp; Culture</a>
+</li>
+<li class="rm-manual"> <a href="file:///sunday-herald-0#sunday-herald-melange">Melange</a>
+</li>
+<li class="rm-manual"> <a href="file:///sunday-herald-0#sunday-herald-books">Books</a>
+</li>
+</ul>
+</li>
+<li class="rm-manual">
+<p class="rm-manual"> <a href="file:///photos">Photos</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///photos">Pics of the Day</a>
+</li>
+<li class="rm-manual"> <a href="file:///photos#photos-dh-galleries">DH Galleries</a>
+</li>
+<li class="rm-manual"> <a href="file:///photos#photos-70-years-of-dh">70 Years of DH</a>
+</li>
+<li class="rm-manual"> <a href="file:///photos#photos-my-take">My Take</a>
+</li>
+<li class="rm-manual"> <a href="file:///photos#photos-your-space">Your Space</a>
+</li>
+</ul>
+</li>
+<li class="rm-manual"><p class="rm-manual"> <a href="file:///dh-education">DH Education</a></p></li>
+<li class="rm-manual"><p class="rm-manual"> <a href="http://www.deccanheraldepaper.com/">E-Paper</a></p></li>
+<li class="rm-manual"><p class="rm-manual"> <a href="file:///newsletters">Newsletter</a></p></li>
+</ul>
+<h3 class="rm-manual">IN BRIEF:</h3>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///national/congress-to-hold-online-agitation-on-may-28-for-monetary-aid-to-poor-842519.html">Cong to hold online agitation</a></li>
+<li class="rm-manual"><a href="file:///national/south/kerala-set-to-resume-liquor-sale-from-thursday-842487.html">Kerala to resume liquor sale</a></li>
+<li class="rm-manual"><a href="file:///sports/formula-1/vettel-to-retire-or-take-sabbatical-carlos-will-not-be-a-subservient-no2-at-ferrari-says-karun-chandhok-842439.html">Vettel to retire: Chandhok</a></li>
+<li class="rm-manual"><a href="file:///science-and-environment/cloth-masks-may-prevent-covid-19-spread-study-842384.html">Can cloth mask avert COVID-19?</a></li>
+<li class="rm-manual"><a href="file:///national/pandemic-podcast-inspiring-children-s-fitness-solutions-842325.html">Tune in to DH Pandemic Podcast</a></li>
+<li class="rm-manual"><a href="file:///opinion/main-article/when-we-failed-our-poor-governed-by-headless-chicken-842144.html">When we failed our poor</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///">Home</a></li>
+<li class="rm-manual"><a href="file:///national">National</a></li>
+<li class="rm-manual"><a href="file:///nation/east-and-northeast">East and Northeast</a></li>
+<li class="rm-manual">Second death in West Bengal due to COVID-19</li>
+</ul>
+<p class="rm-manual"> Second death in West Bengal due to COVID-19</p>
+<h1 class="rm-manual">Second death in West Bengal due to COVID-19</h1>
+<p class="rm-manual"><a href="file:///author/soumya-das">Soumya Das, </a><a href="file:///author/dhns">DHNS, </a><span> Kolkata, </span></p>
+<ul class="rm-manual">
+<li class="rm-manual"> Mar 30 2020, 10:44 ist</li>
+<li class="rm-manual">updated: Mar 30 2020, 10:44 ist</li>
+</ul>
+<p>With the death of 44-year-old COVID- 19 patient from Kalimpong, the 
+death toll in West Bengal due to the coronavirus rose to two. The woman 
+was admitted at the North Bengal Medical College and Hospital.</p>
+<p>Speaking to DH a senior official of the hospital said that she died at around 2 am on Sunday.</p>
+<p>According to sources in the Health Department, the woman returned 
+from Chennai on March 16 where she went for treatment of her daughter 
+and fell ill upon her return.</p>
+<p><a href="https://www.deccanherald.com/national/coronavirus-india-news-live-updates-statewise-total-number-of-cases-deaths-statistics-lockdown-latest-news-817763.html">Follow live updates of coronavirus cases in India here</a></p>
+<p>"When she started having acute respiratory problems she was admitted 
+to the North Bengal Medical College and Hospital on March 25. Her 
+samples were sent to National Institute of Cholera and Enteric Diseases 
+(NICED) and she tested positive for COVID-19 infection," said a senior 
+Health Department official.</p>
+<p>She was not responding to treatment and passed away late on Sunday night.</p>
+<p><a href="https://www.deccanherald.com/national/coronavirus-india-update-state-wise-total-number-of-confirmed-cases-deaths-on-march-30-819072.html">Track state-wise coronavirus positive cases tally here</a></p>
+<p>The total number of persons infected with the novel coronavirus in 
+West Bengal stands at 21. Earlier the virus claimed the life of an 
+elderly man from Dum Dum in North 24 Paraganas district.</p>
+<p class="">Meanwhile, another elderly COVID-19 positive patient from 
+the eastern fringes of Kolkata continues to remain in a critical 
+condition.</p>
+<p class="rm-manual"><a href="https://t.me/DeccanHeraldNews">Deccan Herald News now on Telegram - Click here to subscribe</a></p>
+<p class="rm-manual"> <span>DH Newsletter </span> <span><a href="file:///privacy-policy">Privacy Policy</a> </span> <span>Get top news in your inbox daily </span></p>
+<p class="rm-manual">GET IT </p>
+<p class="rm-manual"><a href="file:///tag/west-bengal">West Bengal</a></p>
+<p class="rm-manual"><a href="file:///tag/coronavirus">Coronavirus</a></p>
+<p class="rm-manual"><a href="file:///tag/covid-19">COVID-19</a></p>
+<h3 class="rm-manual"> <a href="#">Related stories</a>
+</h3>
+<p class="rm-manual"> <a href="file:///national/west/covid-19-gujarat-journalist-booked-under-sedition-for-writing-speculative-story-gets-bail-842566.html"></a></p><p class="rm-manual"></p><h4 class="rm-manual"><a href="file:///national/west/covid-19-gujarat-journalist-booked-under-sedition-for-writing-speculative-story-gets-bail-842566.html"> Gujarat journalist booked under sedition gets bail</a></h4><a href="file:///national/west/covid-19-gujarat-journalist-booked-under-sedition-for-writing-speculative-story-gets-bail-842566.html"> <p class="rm-manual"></p> </a><p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///national/jammu-kashmir-reports-biggest-single-day-spike-in-coronavirus-cases-count-crosses-1900-mark-842565.html"></a></p><p class="rm-manual"></p><h4 class="rm-manual"><a href="file:///national/jammu-kashmir-reports-biggest-single-day-spike-in-coronavirus-cases-count-crosses-1900-mark-842565.html"> COVID-19: J&amp;K reports biggest single-day COVID-19 spike</a></h4><a href="file:///national/jammu-kashmir-reports-biggest-single-day-spike-in-coronavirus-cases-count-crosses-1900-mark-842565.html"> <p class="rm-manual"></p> </a><p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///national/indias-covid-19-cases-cross-15-lakh-mark-toll-4337-842553.html"></a></p><p class="rm-manual"></p><h4 class="rm-manual"><a href="file:///national/indias-covid-19-cases-cross-15-lakh-mark-toll-4337-842553.html"> India's COVID-19 cases cross 1.5 lakh-mark, toll 4,337...</a></h4><a href="file:///national/indias-covid-19-cases-cross-15-lakh-mark-toll-4337-842553.html"> <p class="rm-manual"></p> </a><p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///national/number-of-ppe-body-coveralls-manufactured-in-india-tops-1-cr-mark-govt-842550.html"></a></p><p class="rm-manual"></p><h4 class="rm-manual"><a href="file:///national/number-of-ppe-body-coveralls-manufactured-in-india-tops-1-cr-mark-govt-842550.html"> Number of PPE manufactured in India tops 1cr mark:...</a></h4><a href="file:///national/number-of-ppe-body-coveralls-manufactured-in-india-tops-1-cr-mark-govt-842550.html"> <p class="rm-manual"></p> </a><p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///international/moscow-to-ease-coronavirus-lockdown-restrictions-from-monday-mayor-842548.html"></a></p><p class="rm-manual"></p><h4 class="rm-manual"><a href="file:///international/moscow-to-ease-coronavirus-lockdown-restrictions-from-monday-mayor-842548.html"> Moscow to ease COVID-19 lockdown rules from Monday...</a></h4><a href="file:///international/moscow-to-ease-coronavirus-lockdown-restrictions-from-monday-mayor-842548.html"> <p class="rm-manual"></p> </a><p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///national/62-believe-modi-govt-either-met-or-exceeded-their-expectations-survey-842546.html"></a></p><p class="rm-manual"></p><h4 class="rm-manual"><a href="file:///national/62-believe-modi-govt-either-met-or-exceeded-their-expectations-survey-842546.html"> 62% say Modi either met or exceeded their expectations...</a></h4><a href="file:///national/62-believe-modi-govt-either-met-or-exceeded-their-expectations-survey-842546.html"> <p class="rm-manual"></p> </a><p class="rm-manual"></p>
+<h3 class="rm-manual"> <a href="#">What's Brewing</a>
+</h3>
+<p class="rm-manual"><a href="file:///science-and-environment/timing-of-covid-19-test-may-be-key-to-its-accuracy-study-842389.html"></a></p><p class="rm-manual"></p><p class="rm-manual"><a href="file:///science-and-environment/timing-of-covid-19-test-may-be-key-to-its-accuracy-study-842389.html">Timing of COVID-19 test may be key to accuracy: Study</a></p><p class="rm-manual"></p><a href="file:///science-and-environment/collision-of-galaxies-may-have-spurred-our-solar-systems-formation-842269.html"><p class="rm-manual"></p><p class="rm-manual">Here's what may have spurred solar system's formation</p><p class="rm-manual"></p></a><a href="file:///international/twitter-places-fact-check-notification-on-donald-trump-tweet-about-mail-in-ballots-842271.html"><p class="rm-manual"></p><p class="rm-manual">Trump's tweets may be substantially fraudulent: Twitter</p><p class="rm-manual"></p></a><a href="file:///international/covid-19-most-viruses-other-germs-do-not-spread-easily-on-flights-says-cdc-842267.html"><p class="rm-manual"></p><p class="rm-manual">COVID-19: Viruses don't spread on flights, says CDC</p><p class="rm-manual"></p></a><p class="rm-manual"></p>
+<h3 class="rm-manual"><a href="#">DH Picks</a></h3>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"><a href="file:///national/coronavirus-in-india-news-live-updates-total-cases-deaths-flights-trains-today-schedule-mumbai-delhi-kolkata-bengaluru-maharashtra-gujarat-west-bengal-tamil-nadu-covid-19-tracker-today-worldometer-update-lockdown-4-latest-news-838583.html"></a></p><p class="rm-manual"></p><h4 class="rm-manual"><a href="file:///national/coronavirus-in-india-news-live-updates-total-cases-deaths-flights-trains-today-schedule-mumbai-delhi-kolkata-bengaluru-maharashtra-gujarat-west-bengal-tamil-nadu-covid-19-tracker-today-worldometer-update-lockdown-4-latest-news-838583.html"> Coronavirus news live updates: Maha records over 100 deaths... <span>Live</span>
+</a></h4><p class="rm-manual"></p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///national/east-and-northeast/tigers-took-away-their-men-amphan-their-livelihood-sunderbans-tiger-widows-struggle-to-survive-842385.html"></a></p><p class="rm-manual"></p><h4 class="rm-manual"><a href="file:///national/east-and-northeast/tigers-took-away-their-men-amphan-their-livelihood-sunderbans-tiger-widows-struggle-to-survive-842385.html"> Amphan: Sunderbans' 'tiger widows' struggle to survive</a></h4><p class="rm-manual"></p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///brandspot/a-336-million-jackpot-prize-could-be-won-by-a-player-from-india-841736.html"></a></p><p class="rm-manual"><a href="file:///brandspot/a-336-million-jackpot-prize-could-be-won-by-a-player-from-india-841736.html"> <span>Featured Content</span></a></p><h4 class="rm-manual"><a href="file:///brandspot/a-336-million-jackpot-prize-could-be-won-by-a-player-from-india-841736.html"> A $336 Million Jackpot Prize Could Be Won By...</a></h4><p class="rm-manual"></p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///national/pandemic-podcast-inspiring-children-s-fitness-solutions-842325.html"></a></p><p class="rm-manual"></p><h4 class="rm-manual"><a href="file:///national/pandemic-podcast-inspiring-children-s-fitness-solutions-842325.html"> Pandemic Podcast: Inspiring children’s fitness solution</a></h4><p class="rm-manual"></p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///national/coronavirus-india-update-state-wise-total-number-of-confirmed-cases-deaths-on-may-27-842249.html"></a></p><p class="rm-manual"></p><h4 class="rm-manual"><a href="file:///national/coronavirus-india-update-state-wise-total-number-of-confirmed-cases-deaths-on-may-27-842249.html"> COVID-19: State-wise total confirmed cases on May 27...</a></h4><p class="rm-manual"></p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///national/icmr-removes-price-cap-of-rs-4500-for-coronavirus-test-asks-state-governments-to-negotiate-with-private-laboratories-842230.html"></a></p><p class="rm-manual"></p><h4 class="rm-manual"><a href="file:///national/icmr-removes-price-cap-of-rs-4500-for-coronavirus-test-asks-state-governments-to-negotiate-with-private-laboratories-842230.html"> ICMR removes price cap of Rs 4,500 for coronavirus...</a></h4><p class="rm-manual"></p><p class="rm-manual"></p></li>
+</ul>
+<h3 class="rm-manual"><a href="#">What's Brewing</a></h3>
+<p class="rm-manual"><a href="file:///science-and-environment/timing-of-covid-19-test-may-be-key-to-its-accuracy-study-842389.html"></a></p><p class="rm-manual"></p><p class="rm-manual"><a href="file:///science-and-environment/timing-of-covid-19-test-may-be-key-to-its-accuracy-study-842389.html">Timing of COVID-19 test may be key to accuracy: Study</a></p><p class="rm-manual"></p><a href="file:///science-and-environment/collision-of-galaxies-may-have-spurred-our-solar-systems-formation-842269.html"><p class="rm-manual"></p><p class="rm-manual">Here's what may have spurred solar system's formation</p><p class="rm-manual"></p></a><a href="file:///international/twitter-places-fact-check-notification-on-donald-trump-tweet-about-mail-in-ballots-842271.html"><p class="rm-manual"></p><p class="rm-manual">Trump's tweets may be substantially fraudulent: Twitter</p><p class="rm-manual"></p></a><a href="file:///international/covid-19-most-viruses-other-germs-do-not-spread-easily-on-flights-says-cdc-842267.html"><p class="rm-manual"></p><p class="rm-manual">COVID-19: Viruses don't spread on flights, says CDC</p><p class="rm-manual"></p></a><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///horoscope"></a></p><h4 class="rm-manual"><a href="file:///horoscope">What does your star sign say?</a></h4><a href="file:///horoscope">Explore</a><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://www.deccanherald.com/nation"> National</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.deccanherald.com/nation/national-politics">Politics</a></li>
+<li class="rm-manual"><a href="https://www.deccanherald.com/nation/north-central">North and Central</a></li>
+<li class="rm-manual"><a href="https://www.deccanherald.com/south">South</a></li>
+<li class="rm-manual"><a href="https://www.deccanherald.com/nation/east-and-northeast">East and Northeast</a></li>
+<li class="rm-manual"><a href="https://www.deccanherald.com/nation/west">West</a></li>
+</ul>
+<p class="rm-manual"><a href="https://www.deccanherald.com/karnataka"> Karnataka</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.deccanherald.com/state/top-karnataka-stories-sec">Top Stories</a></li>
+<li class="rm-manual"><a href="https://www.deccanherald.com/state/politics-sec">Politics</a></li>
+<li class="rm-manual"><a href="https://www.deccanherald.com/state/districts-sec">Districts</a></li>
+</ul>
+<p class="rm-manual"><a href="https://www.deccanherald.com/bengaluru"> Bengaluru</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.deccanherald.com/bengaluru/top-bengaluru-stories">Top Stories</a></li>
+<li class="rm-manual"><a href="https://www.deccanherald.com/bengaluru/crime">Bengaluru Crime</a></li>
+<li class="rm-manual"><a href="https://www.deccanherald.com/bengaluru/politics">Politics</a></li>
+<li class="rm-manual"><a href="https://www.deccanherald.com/bengaluru/infrastructure">Infrastructure</a></li>
+<li class="rm-manual"><a href="https://www.deccanherald.com/bengaluru/life-in-the-city">Life in the City</a></li>
+</ul>
+<p class="rm-manual"><a href="https://www.deccanherald.com/sports"> Sports</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.deccanherald.com/sports/cricket">Cricket</a></li>
+<li class="rm-manual"><a href="https://www.deccanherald.com/sports/formula-1">Formula 1 with DH</a></li>
+<li class="rm-manual"><a href="https://www.deccanherald.com/sports/football">Football</a></li>
+<li class="rm-manual"><a href="https://www.deccanherald.com/sports/tennis">Tennis</a></li>
+<li class="rm-manual"><a href="https://www.deccanherald.com/sports/sportscene">Sportscene</a></li>
+<li class="rm-manual"><a href="https://www.deccanherald.com/sports/other-sports">Other Sports</a></li>
+</ul>
+<p class="rm-manual"><a href="https://www.deccanherald.com/business"> Business</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.deccanherald.com/business-sec">Business News</a></li>
+<li class="rm-manual"><a href="https://www.deccanherald.com/family-finance">Family Finance</a></li>
+<li class="rm-manual"><a href="https://www.deccanherald.com/technology">Technology</a></li>
+<li class="rm-manual"><a href="https://www.deccanherald.com/dh-wheels">DH Wheels</a></li>
+</ul>
+<p class="rm-manual">Multimedia</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.deccanherald.com/video">Videos</a></li>
+<li class="rm-manual"><a href="https://www.deccanherald.com/photos">Photos</a></li>
+</ul>
+<p class="rm-manual"><a href="https://www.deccanherald.com/opinion-0"> Opinion</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.deccanherald.com/Opinion">DH Views</a></li>
+<li class="rm-manual"><a href="https://www.deccanherald.com/first-edit">Editorials</a></li>
+<li class="rm-manual"><a href="https://www.deccanherald.com/panorama">Panorama</a></li>
+<li class="rm-manual"><a href="https://www.deccanherald.com/main-article">Comment</a></li>
+<li class="rm-manual"><a href="https://www.deccanherald.com/in-perspective">In Perspective</a></li>
+<li class="rm-manual"><a href="https://www.deccanherald.com/right-in-the-middle">Right in the Middle</a></li>
+</ul>
+<p class="rm-manual"><a href="https://www.deccanherald.com/entertainment"> Entertainment</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.deccanherald.com/entertainment-cat">Entertainment News</a></li>
+<li class="rm-manual"><a href="https://www.deccanherald.com/tag/showtime">DH Showtime</a></li>
+<li class="rm-manual"><a href="https://www.deccanherald.com/DH-Talkies">DH Talkies</a></li>
+<li class="rm-manual"><a href="https://www.deccanherald.com/arts-books-culture">Arts, Books &amp; Culture</a></li>
+</ul>
+<p class="rm-manual"><a href="https://www.deccanherald.com/national/coronavirus-india-live-updates-total-cases-deaths-covid-19-tracker-worldometer-update-lockdown-30-latest-news-835374.html">Coronavirus Live Updates</a></p>
+<p class="rm-manual"><a href="https://t.me/DeccanHeraldNews">Subscribe to DH on Telegram</a></p>
+<p class="rm-manual"><a href="https://www.deccanherald.com/national/deccan-herald-e-paper-may-27-2020-edition-842248.html">Deccan Herald E-paper: May 27</a></p>
+<p class="rm-manual"><a href="https://www.dailymotion.com/playlist/x6njdg">WATCH | Coronavirus latest updates</a></p>
+<p class="rm-manual"><a href="https://www.deccanherald.com/tag/coronavirus">Coronavirus Outbreak</a></p>
+<p class="rm-manual"><a href="https://www.deccanherald.com/national/coronavirus-india-update-state-wise-total-number-of-confirmed-cases-deaths-on-may-27-842249.html">COVID-19 | State-wise tally</a></p>
+<ul class="rm-manual">
+<p class="rm-manual">DH Picks</p>
+<li class="rm-manual"> <a href="file:///national/coronavirus-in-india-news-live-updates-total-cases-deaths-flights-trains-today-schedule-mumbai-delhi-kolkata-bengaluru-maharashtra-gujarat-west-bengal-tamil-nadu-covid-19-tracker-today-worldometer-update-lockdown-4-latest-news-838583.html">Coronavirus
+ news live updates: Maha records over 100 deaths in 25 hrs, Gujarat 
+crosses 15k cases; India's death toll crosses 4,500</a>
+</li>
+<li class="rm-manual"> <a href="file:///national/east-and-northeast/tigers-took-away-their-men-amphan-their-livelihood-sunderbans-tiger-widows-struggle-to-survive-842385.html">Amphan: Sunderbans' 'tiger widows' struggle to survive</a>
+</li>
+<li class="rm-manual"> <a href="file:///national/pandemic-podcast-inspiring-children-s-fitness-solutions-842325.html">Pandemic Podcast: Inspiring children’s fitness solution</a>
+</li>
+<li class="rm-manual"> <a href="file:///national/coronavirus-india-update-state-wise-total-number-of-confirmed-cases-deaths-on-may-27-842249.html">COVID-19: State-wise total confirmed cases on May 27</a>
+</li>
+<li class="rm-manual"> <a href="file:///national/icmr-removes-price-cap-of-rs-4500-for-coronavirus-test-asks-state-governments-to-negotiate-with-private-laboratories-842230.html">ICMR removes price cap of Rs 4,500 for coronavirus test</a>
+</li>
+</ul>
+<ul class="rm-manual">
+<p class="rm-manual">Latest stories</p>
+<li class="rm-manual"> <a href="file:///city/top-bengaluru-stories/strong-wind-heavy-rain-lash-bengaluru-for-second-consecutive-day-on-wednesday-842569.html">Strong wind, heavy rain lash Bengaluru again</a>
+</li>
+<li class="rm-manual"> <a href="file:///national/west/covid-19-gujarat-journalist-booked-under-sedition-for-writing-speculative-story-gets-bail-842566.html">Gujarat journalist booked under sedition gets bail</a>
+</li>
+<li class="rm-manual"> <a href="file:///national/jammu-kashmir-reports-biggest-single-day-spike-in-coronavirus-cases-count-crosses-1900-mark-842565.html">COVID-19: J&amp;K reports biggest single-day COVID-19 spike</a>
+</li>
+<li class="rm-manual"> <a href="file:///national/west/money-laundering-case-dhfl-promoters-wadhawans-sent-to-jail-842564.html">Money laundering: DHFL promoters Wadhawans sent to jail</a>
+</li>
+<li class="rm-manual"> <a href="file:///national/east-and-northeast/over-52-lakh-people-affected-by-heavy-rains-in-meghalaya-minister-842563.html">Over 5.2L people affected by heavy rains in Meghalaya</a>
+</li>
+</ul>
+<ul class="rm-manual">
+<p class="rm-manual">Trending news</p>
+<li class="rm-manual"><a href="file:///national/covid-19-indian-americans-welcome-relaxation-in-visa-travel-restrictions-for-oci-card-holders-840950.html"> COVID-19: Indian-Americans welcome relaxation in visa</a></li>
+<li class="rm-manual"><a href="file:///city/bengaluru-crime/weekly-curfew-will-begin-in-bengaluru-from-may-23-night-city-police-commissioner-840816.html"> 'Weekly curfew to begin in Bengaluru from May 23 night'</a></li>
+<li class="rm-manual"><a href="file:///national/south/nine-murders-committed-to-hide-one-telangana-police-solve-shocking-case-of-9-bodies-found-in-warangal-well-841730.html"> Telangana: 9 murders to hide one, cops solve case</a></li>
+<li class="rm-manual"><a href="file:///national/cyber-criminal-puts-up-truecaller-records-of-475-crore-indians-on-sale-for-rs-75000-842119.html"> Truecaller records of 4.75cr Indians on sale for Rs 75k</a></li>
+<li class="rm-manual"><a href="file:///national/east-and-northeast/dh-exclusive-shramik-special-train-leaves-gujarat-for-bihar-but-reaches-karnataka-841979.html"> Train leaves Gujarat for Bihar but reaches Karnataka</a></li>
+</ul>
+<ul class="rm-manual">
+<p class="rm-manual">Services</p>
+<li class="rm-manual"> <a href="http://printersmysore.com/">About</a>
+</li>
+<li class="rm-manual"> <a href="http://www.deccanheraldepaper.com/">Epaper</a>
+</li>
+<li class="rm-manual"> <a href="https://www.deccanherald.com/newsletters">Newsletter</a>
+</li>
+<li class="rm-manual"> <a href="https://www.deccanherald.com/archives">Archives</a>
+</li>
+<li class="rm-manual"> <a href="https://www.deccanherald.com/sitemap">Sitemap</a>
+</li>
+<li class="rm-manual"> <a href="http://dhclassifieds.com/deccanonline/">Classifieds</a>
+</li>
+<li class="rm-manual"> <a href="http://printersmysore.com/contact">Contact</a>
+</li>
+</ul>
+<ul class="rm-manual">
+<p class="rm-manual">Our group sites</p>
+<li class="rm-manual"> <a href="http://printersmysore.com/">Printers Mysore</a>
+</li>
+<li class="rm-manual"> <a href="http://www.prajavani.net/">Prajavani</a>
+</li>
+<li class="rm-manual"> <a href="http://sudhaezine.com/">Sudha</a>
+</li>
+<li class="rm-manual"> <a href="http://mayuraezine.com/">Mayura</a>
+</li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="https://www.deccanherald.com/privacy-policy">Privacy Policy</a>
+</li>
+<li class="rm-manual"> <a href="https://www.deccanherald.com/terms">Terms</a>
+</li>
+<li class="rm-manual"> <a href="https://www.deccanherald.com/disclaimer">Disclaimer</a>
+</li>
+</ul>
+<p class="rm-manual"> © 2020 The Printers (Mysore) Private Ltd.</p>
+<p class="rm-manual"> <a href="file:///support-dh-journalism"></a></p><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///support-dh-journalism">Contribute and Support Deccan Herald Digital journalism</a></h3><p class="rm-manual"></p><a href="file:///support-dh-journalism">
+</a><p class="rm-manual"><a href="file:///support-dh-journalism"> </a><a href="file:///support-dh-journalism">contribute </a> </p> <p></p></article>
+</body></html>

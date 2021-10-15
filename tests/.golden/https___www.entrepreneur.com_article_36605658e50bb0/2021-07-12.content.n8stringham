@@ -1,0 +1,120 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> <a href="file:///topic/microsoft">Microsoft</a> </p>
+<h1 class="rm-manual"> Microsoft's Cloud Generated More Revenue Than Amazon and Google Combined in 2020 </h1>
+<p class="rm-manual"> Azure, Microsoft's cloud service, outperformed its competitors, but Amazon Web Services still dominates the field. Why? </p>
+<p class="rm-manual"> Image credit: Depositphotos.com </p>
+<h2 class="rm-manual"> <span>Grow Your Business,</span> Not Your Inbox </h2>
+<p class="rm-manual">Stay informed and join our daily newsletter now!</p>
+<p class="rm-manual"> <a href="file:///author/entrepreneur-en-espanol" rel="author"> </a></p><p class="rm-manual"><a href="file:///author/entrepreneur-en-espanol" rel="author">Entrepreneur en Español</a></p><a href="file:///author/entrepreneur-en-espanol" rel="author"> </a> <p class="rm-manual"></p>
+<p class="rm-manual">Entrepreneur Staff</p>
+<p class="rm-manual"> February 24, 2021 2 min read </p>
+<p class="rm-manual">This article was translated from our <a href="file:///article/366045">Spanish edition</a> using AI technologies. Errors may exist due to this process.</p>
+<p>Tech giants compete on many grounds and one of them is the cloud . 
+Today, Amazon dominates the market for cloud services, followed by 
+Microsoft's Azure and Google Cloud . However, Microsoft reports reveal 
+that its earnings for this concept during 2020 were above those obtained
+ jointly by Amazon Web Services (AWS) and Google in the same period.</p>
+<p>Last year, the company founded by Bill Gates reported $ 59 billion in
+ cloud revenue . Azure, Microsoft's cloud , was the company's fastest 
+growing product in the last quarter of 2020, generating $ 16.7 billion. 
+This represents a growth of 34% compared to the same period of 2019.</p>
+<ul><li class="rm-manual">It may interest you: <a href="https://www.entrepreneur.com/article/366015" rel="follow">Tesla fell 25% and Elon Musk lost more than 15,000 million dollars in one day, because of Bitcoin?</a>
+</li></ul>
+<p>In contrast, Amazon Web Services made about $ 45.4 billion in revenue
+ in 2020 , while Google Cloud made $ 13 billion . Despite these figures,
+ AWS retains the largest market share, where is the catch?</p>
+<p>The figure given by Microsoft does not only reflect Azure sales, 
+since in the same statement the company explained that "the acceleration
+ in demand for our differentiated offerings boosted revenues from the 
+commercial cloud ." In other words, the results also cover OneDrive and 
+other services.</p>
+<p class="rm-manual">Credit: <a href="https://www.canalys.com/newsroom/global-cloud-market-q4-2020" rel="follow">Canalys.com</a></p>
+<p>The COVID-19 pandemic forced millions of people to work, study, 
+communicate, entertain themselves and shop online, triggering the 
+development of the cloud. The British consultancy <a href="https://www.canalys.com/newsroom/global-cloud-market-q4-2020" rel="follow">Canalys</a>
+ , specialized in technology, estimates that in 2020 global spending on 
+cloud infrastructure was about 142,000 million dollars, which represents
+ 33% more than the previous year.</p>
+<ul><li class="rm-manual">See also: <a href="https://www.entrepreneur.com/article/366029" rel="follow">Free Google classes for women entrepreneurs, here all the dates</a>
+</li></ul>
+<p class="rm-manual"> More from Entrepreneur </p>
+<p class="rm-manual"> Our Franchise Advisors will guide you through the entire franchising process, for FREE! </p>
+<ol class="rm-manual"> <li class="rm-manual">Book a one-on-one session with a Franchise Advisor</li> <li class="rm-manual">Take a survey about your needs &amp; goals</li> <li class="rm-manual">Find your ideal franchise</li> <li class="rm-manual">Learn about that franchise</li> <li class="rm-manual">Meet the franchisor</li> <li class="rm-manual">Receive the best business resources</li> </ol>
+<p class="rm-manual"> <a href="file:///franchise-advisors/buy-a-franchise?utm_campaign=FA-Buy-A-Franchise&amp;utm_source=Entrepreneur&amp;utm_medium=Article&amp;utm_content=3-Ad-Unit"> Learn More </a> </p>
+<p class="rm-manual"> Discover the franchise that’s right for you by answering some quick questions about </p>
+<ul class="rm-manual"> <li class="rm-manual">Which industry you’re interested in</li> <li class="rm-manual">Why you want to buy a franchise</li> <li class="rm-manual">What your financial needs are</li> <li class="rm-manual">Where you’re located</li> <li class="rm-manual">And more</li> </ul>
+<p class="rm-manual"> <a href="https://franchisehelp.entrepreneur.com/franchise-quiz/Industry/??utm_campaign=FranQuiz&amp;utm_source=Entrepreneur&amp;utm_medium=Article&amp;utm_content=3-Ad-Unit"> Find Your Franchise Match </a> </p>
+<p class="rm-manual"> Whether you want to learn something new, be more 
+productive, or make more money, the Entrepreneur Store has something for
+ everyone: </p>
+<ul class="rm-manual"> <li class="rm-manual">Software</li> <li class="rm-manual">Gadgets</li> <li class="rm-manual">Online Courses</li> <li class="rm-manual">Travel Essentials</li> <li class="rm-manual">Housewares</li> <li class="rm-manual">Fitness &amp; Health Devices</li> <li class="rm-manual">And More</li> </ul>
+<p class="rm-manual"> <a href="https://store.entrepreneur.com/?utm_campaign=EntrepreneurStore&amp;utm_source=Entrepreneur&amp;utm_medium=Site&amp;utm_content=3ColumnAdUnit"> Shop Now </a> </p>
+<p class="rm-manual"> <a href="https://aerbook.com/store/EntrepreneurBooks"> Related Books </a> </p>
+<h3 class="rm-manual"><a href="#296282-book">Ultimate Guide to Google Adwords</a></h3>
+<p class="rm-manual"><a href="#296282-book"> Buy From </a> </p>
+<h3 class="rm-manual">Ultimate Guide to Google Adwords</h3>
+<p class="rm-manual">Buy From</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://amzn.to/2r5YUIp"> Amazon </a></li> <li class="rm-manual"><a href="http://www.anrdoezrs.net/click-8040801-11811597?url=http%3A%2F%2Fwww.barnesandnoble.com%2Fw%2Fultimate-guide-to-google-adwords-perry-marshall%2F1100409715%3Fean%3D9781599186122&amp;cjsku=9781599186122"> Barnes &amp; Noble </a></li> <li class="rm-manual"><a href="https://geo.itunes.apple.com/us/book/ultimate-guide-to-google-adwords/id1272640756?mt=11&amp;at=11l9r7"> iBooks </a></li> <li class="rm-manual"><a href="https://www.indiebound.org/book/9781599186122?aff=EntPress"> IndieBound </a></li> <li class="rm-manual"><a href="http://www.jdoqocy.com/click-8040801-42121?url=http%3A%2F%2Fwww.booksamillion.com%2Fproduct%2F9781599186122"> Books-A-Million </a></li> <li class="rm-manual"><a href="https://play.google.com/store/books/details/Perry_Marshall_Ultimate_Guide_to_Google_AdWords?id=B04xDwAAQBAJ&amp;hl=en"> Google Play </a></li> <li class="rm-manual"><a href="http://aerbook.com/maker/productcard-3160227-2045.html"> Entrepreneur Books </a></li> <li class="rm-manual"><a href="https://800ceoread.com/products/ultimate-guide-to-google-adwords-perry-marshall-mike-rhodes-bryan-todd-english"> 800-CEO-READ </a></li> </ul>
+<h3 class="rm-manual"><a href="#231214-book">Ultimate Guide to Pay-Per-Click Advertising</a></h3>
+<p class="rm-manual"><a href="#231214-book"> Buy From </a> </p>
+<h3 class="rm-manual">Ultimate Guide to Pay-Per-Click Advertising</h3>
+<p class="rm-manual">Buy From</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://amzn.to/2gBuEMG"> Amazon </a></li> <li class="rm-manual"><a href="http://www.tkqlhce.com/click-8135521-12329216-1444331022000?url=http%3A%2F%2Fwww.barnesandnoble.com%2Fw%2Fultimate-guide-to-pay-per-click-advertising-richard-stokes%2F1100639241%3Fean%3D9781613082720&amp;cjsku=9781613082720"> Barnes &amp; Noble </a></li> <li class="rm-manual"><a href="http://geo.itunes.apple.com/us/book/ultimate-guide-to-pay-per/id817311229?mt=11&amp;at=11l9r7"> iBooks </a></li> <li class="rm-manual"><a href="http://www.indiebound.org/book/9781599185347?aff=entpress"> IndieBound </a></li> <li class="rm-manual"><a href="http://www.kqzyfj.com/click-8040801-42121?url=http%3A%2F%2Fwww.booksamillion.com%2Fproduct%2F9781599185347"> Books-A-Million </a></li> <li class="rm-manual"><a href="http://play.google.com/store/books/details/Richard_Stokes_Ultimate_Guide_to_Pay_Per_Click_Adv?id=gSYcAwAAQBAJ&amp;hl=en"> Google Play </a></li> <li class="rm-manual"><a href="http://aerbook.com/maker/productcard-1572662-2045.html"> Entrepreneur Books </a></li> <li class="rm-manual"><a href="https://800ceoread.com/products/ultimate-guide-to-pay-per-click-advertising-richard-stokes-english"> 800-CEO-READ </a></li> </ul>
+<h3 class="rm-manual"><a href="#230667-book">Ultimate Guide to Optimizing Your Website</a></h3>
+<p class="rm-manual"><a href="#230667-book"> Buy From </a> </p>
+<h3 class="rm-manual">Ultimate Guide to Optimizing Your Website</h3>
+<p class="rm-manual">Buy From</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://amzn.to/2q7VuVS"> Amazon </a></li> <li class="rm-manual"><a href="http://www.kqzyfj.com/click-8135521-12329216-1444331022000?url=http%3A%2F%2Fwww.barnesandnoble.com%2Fw%2Fultimate-guide-to-optimizing-your-website-jon-rognerud%2F1115832493%3Fean%3D9781613082577&amp;cjsku=9781613082577"> Barnes &amp; Noble </a></li> <li class="rm-manual"><a href="http://geo.itunes.apple.com/us/book/ultimate-guide-to-optimizing/id796476069?mt=11&amp;at=11l9r7"> iBooks </a></li> <li class="rm-manual"><a href="http://www.indiebound.org/book/9781599185200?aff=entpress"> IndieBound </a></li> <li class="rm-manual"><a href="http://www.tkqlhce.com/click-8040801-42121?url=http%3A%2F%2Fwww.booksamillion.com%2Fproduct%2F9781599185200"> Books-A-Million </a></li> <li class="rm-manual"><a href="http://play.google.com/store/books/details/Jon_Rognerud_Ultimate_Guide_to_Optimizing_Your_Web?id=c1ttAwAAQBAJ&amp;hl=en"> Google Play </a></li> <li class="rm-manual"><a href="http://aerbook.com/maker/productcard-1572653-2045.html"> Entrepreneur Books </a></li> <li class="rm-manual"><a href="https://800ceoread.com/products/ultimate-guide-to-optimizing-your-website-illustrated-jon-rognerud-english"> 800-CEO-READ </a></li> </ul>
+<h3 class="rm-manual"><a href="#225885-book">Ultimate Guide to Link Building</a></h3>
+<p class="rm-manual"><a href="#225885-book"> Buy From </a> </p>
+<h3 class="rm-manual">Ultimate Guide to Link Building</h3>
+<p class="rm-manual">Buy From</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://amzn.to/2fIHKuX"> Amazon </a></li> <li class="rm-manual"><a href="http://www.anrdoezrs.net/click-8135521-12329216-1444331022000?url=http%3A%2F%2Fwww.barnesandnoble.com%2Fw%2Fultimate-guide-to-link-building-eric-ward%2F1111326402%3Fean%3D9781613081808&amp;cjsku=9781613081808"> Barnes &amp; Noble </a></li> <li class="rm-manual"><a href="http://geo.itunes.apple.com/us/book/ultimate-guide-to-link-building/id599463425?mt=11&amp;at=11l9r7"> iBooks </a></li> <li class="rm-manual"><a href="http://www.indiebound.org/book/9781599184425?aff=entpress"> IndieBound </a></li> <li class="rm-manual"><a href="http://www.jdoqocy.com/click-8040801-42121?url=http%3A%2F%2Fwww.booksamillion.com%2Fproduct%2F9781599184425"> Books-A-Million </a></li> <li class="rm-manual"><a href="http://play.google.com/store/books/details/Eric_Ward_Ultimate_Guide_to_Link_Building?id=mRpbAQAAQBAJ&amp;hl=en"> Google Play </a></li> <li class="rm-manual"><a href="http://aerbook.com/maker/productcard-1572634-2045.html"> Entrepreneur Books </a></li> <li class="rm-manual"><a href="https://800ceoread.com/products/ultimate-guide-to-link-building-illustrated-eric-ward-garrett-french-english"> 800-CEO-READ </a></li> </ul>
+<h3 class="rm-manual"><a href="#223751-book">Million Dollar Web Presence</a></h3>
+<p class="rm-manual"><a href="#223751-book"> Buy From </a> </p>
+<h3 class="rm-manual">Million Dollar Web Presence</h3>
+<p class="rm-manual">Buy From</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://amzn.to/2fIHjwW"> Amazon </a></li> <li class="rm-manual"><a href="http://www.kqzyfj.com/click-8135521-11811597-1444331022000?url=http%3A%2F%2Fwww.barnesandnoble.com%2Fw%2Fmillion-dollar-web-presence-chad-barr%2F1114070334%3Fean%3D9781599184340&amp;cjsku=9781599184340"> Barnes &amp; Noble </a></li> <li class="rm-manual"><a href="http://geo.itunes.apple.com/us/book/million-dollar-web-presence/id510454376?mt=11&amp;at=11l9r7"> iBooks </a></li> <li class="rm-manual"><a href="http://www.indiebound.org/book/9781599184340?aff=EntPress"> IndieBound </a></li> <li class="rm-manual"><a href="http://www.dpbolvw.net/click-8040801-42121?url=http%3A%2F%2Fwww.booksamillion.com%2Fproduct%2F9781599184340"> Books-A-Million </a></li> <li class="rm-manual"><a href="http://play.google.com/store/books/details/Chad_Barr_Million_Dollar_Web_Presence?id=nYbZuTLYfCAC&amp;hl=en"> Google Play </a></li> <li class="rm-manual"><a href="http://aerbook.com/maker/productcard-522212-2045.html"> Entrepreneur Books </a></li> <li class="rm-manual"><a href="https://800ceoread.com/products/million-dollar-web-presence-illustrated-chad-barr-alan-weiss-english"> 800-CEO-READ </a></li> </ul>
+<h3 class="rm-manual"><a href="#222919-book">Outcome-Based Marketing: New Rules for Marketing on the Web</a></h3>
+<p class="rm-manual"><a href="#222919-book"> Buy From </a> </p>
+<h3 class="rm-manual">Outcome-Based Marketing: New Rules for Marketing on the Web</h3>
+<p class="rm-manual">Buy From</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://amzn.to/2fEc4V5"> Amazon </a></li> <li class="rm-manual"><a href="http://www.kqzyfj.com/click-8135521-11811597-1444331022000?url=http%3A%2F%2Fwww.barnesandnoble.com%2Fw%2Foutcome-based-marketing-new-rules-for-marketing-on-the-web-john-d-leavy%2F1101074691%3Fean%3D9781599184180&amp;cjsku=9781599184180"> Barnes &amp; Noble </a></li> <li class="rm-manual"><a href="http://geo.itunes.apple.com/us/book/outcome-based-marketing/id436890764?mt=11&amp;at=11l9r7"> iBooks </a></li> <li class="rm-manual"><a href="http://www.indiebound.org/book/9781599184180?aff=entpress"> IndieBound </a></li> <li class="rm-manual"><a href="http://www.kqzyfj.com/click-8040801-42121?url=http%3A%2F%2Fwww.booksamillion.com%2Fproduct%2F9781599184180"> Books-A-Million </a></li> <li class="rm-manual"><a href="http://play.google.com/store/books/details/John_D_Leavy_Outcome_Based_Marketing?id=WGpUKTaSETEC&amp;hl=en"> Google Play </a></li> <li class="rm-manual"><a href="https://800ceoread.com/products/outcome-based-marketing-illustrated-john-d-leavy-english"> 800-CEO-READ </a></li> </ul>
+<h2 class="rm-manual">Latest on Entrepreneur</h2></article>
+</body></html>

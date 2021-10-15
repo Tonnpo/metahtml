@@ -1,0 +1,128 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><ol class="rm-manual">
+<li class="rm-manual"> <a href="https://www.chiangmaicitylife.com/"> <span>Home</span></a>
+</li> › <li class="rm-manual"> <a href="https://www.chiangmaicitylife.com/clg/places/"> <span>Places</span></a>
+</li> › <li class="rm-manual"> <span>Great dog-friendly venues</span>
+</li>
+</ol>
+<p class="rm-manual"><span>Search for:</span> </p>
+<p class="rm-manual"><span>Search for:</span> </p>
+<h1 class="rm-manual">Great dog-friendly venues</h1>
+<h2 class="rm-manual">Cooped in with your pooch? Well, when life resumes, here are some fun places you can go together</h2>
+<p class="rm-manual"> By <span>Citylife</span> | Thu 6 May 2021</p>
+<p class="rm-manual"> 2021-05-06T14:25:23+07:00 2021-05-06T14:25:23+07:00 </p>
+<p>Finding dog-friendly parks isn’t that easy in this town where dogs 
+are banned from many public spaces. So as Ms. Tiggie-Winkle’s mum 
+(@mstiggiewinklexx if you want to follow her antics!), here are a few 
+places I found where she is always welcome and where we can both have a 
+good time.</p>
+<p>1. Pawtel</p>
+<p>Pawtel is a great spot to let your pet run around just out of the 
+city in Mae Rim, and it’s safe and secure. As the name suggests, this is
+ a dog lovers’ hotel and it also has an onsite café where dogs and 
+owners can hang out, relax, enjoy a cup of coffee or a good boi bone. 
+There is even a doggy pool to frolic in on a hot steamy May day. <a href="https://www.pawtelchiangmai.com/" rel="noopener">www.pawtelchiangmai.com</a></p>
+<p>2. Ketawa Pet Friendly Hotel and Cafe</p>
+<p>Situated in the tranquil area of Wat Ket, Ketawa Pet Friendly Hotel 
+and Cafe welcomes both humans and their four-footed buddies. This is a 
+casual and fun place designed to meet the needs of humans and dogs. The 
+café prepares both Thai and European dishes with all day dining. Ketawa 
+also has all that is required for pets ranging from snacks, wet and dry 
+food, toys, bowls, and sanitary accessories. You can also buy some fun 
+toys to take home so the fun can continue.</p>
+<p><a href="https://www.ketawahotel.com/" rel="noopener">www.ketawahotel.com</a></p>
+<p>3. Rosario Oasis Resort</p>
+<p>We all need to get away on a break once in a while…and our beloved 
+pets could probably do with a break too! A serious of 
+colonial-style-inspired buildings are interspersed amidst a lovely 
+garden overlooking lush green paddy fields and the moutnains beyond in 
+this dog-friendly resort for the whole family. SErving mouthwatering 
+dishes decorated beautifully with edible flowers, freshly baked goodies,
+ aromatic tea and coffee, the venue has all sorts of fun and fabulous 
+activities that guests can enjoy all day long. The kids can have fun 
+with on the playground while dogs and cats are allowed to wander the 
+grounds. Take the entire family, plus pooches, and enjoy an indulgent 
+holiday together.</p>
+<p>Facebook: <a href="https://www.facebook.com/Rosariooasis" rel="noopener">Rosario Oasis Resort</a></p>
+<p>4. Kaomai Lanna Hotel and Resort</p>
+<p>Awarded by UNESCO for New Design in Heritage Context in 2018, Kaomai 
+Lanna resort is surrounded by a large tropical garden on the way towards
+ Chom Thong. The venue features unique accommodation renovated from the 
+former tobacco curing barns and furnished with colonial style antique 
+furniture</p>
+<p>where dogs are welcomed to stay with their owners. Café Rongbom is 
+also set on site with a large evergreen area, where you can sit back and
+ enjoy your favourite cup of coffee and let your dogs romp around. It’s 
+definitely a wonderful destination for you and your buddies to chill out
+ in laid-back surroundings.</p>
+<p><a href="https://www.kaomailanna.com/" rel="noopener">www.kaomailanna.com</a></p>
+<p>5. Kao Makham Café</p>
+<p>Hosted by Parinda Garden Resort in Chom Thong district, Kao Makham 
+Café is in a tree house in a large tamarind tree. It is an idyllic venue
+ away from the hustle ‘n’ bustle of the city and a perfect spot to bring
+ along your four-legged companion. You can sit up in a round-house, 
+enjoying the spectacular panoramic views of the peaceful countryside and
+ energising your soul with a cup of coffee. Kao Makham Cafe is 
+surrounded by beautifully landscaped garden area with cute mini camping 
+style corners filled with flower plots where pets are welcome to run 
+around freely.</p>
+<p>Facebook:<a href="https://www.facebook.com/kaomakhamcoffee" rel="noopener"> เก๊ามะขาม Coffee by ปริญดารีสอร์ท อ.จอมทอง จ.เชียงใหม่</a></p>
+<p>6. No.39 Café</p>
+<p>Tucked away in Soi Wat Umong, No.39 café enthralls visitors with its 
+greenery and shady atmosphere. There are many different seating areas to
+ sit back in. You can sit inside the glass house, in an old wooden 
+cottage or lie down under shady trees overlooking the small pond. The 
+outdoor space also opens up to your beloved four-legged buds to explore.
+ There is no boundary between land and pond, be sure to keep a close eye
+ on your beloved pet. No.39 serves up hot and cold coffees, teas, 
+smoothies, as well as homemade baked products. Easy and quick dishes 
+such as breakfast set, hamburgers, French fries are available.</p>
+<p>Facebook: <a href="https://www.facebook.com/no39chiangmai" rel="noopener">No.39</a></p>
+<p>7. 123glamp</p>
+<p>If you love the idea of going camping, but just don’t enjoy spending a
+ night away from home and leaving your best bud at home, 123glamp is 
+highly recommended. Nestled in San Phi Suea area, 123glamp is an outdoor
+ glamping style café on a large green lawn by the river. The café has 
+all that campers and glampers need so you don’t need to bring any 
+camping essentials. You can relax in a tent beneath the shady trees or 
+sit on folding chairs by the river and enjoy aromatic drip coffee and 
+let your dog run around. Overnight private campgrounds can be booked in 
+advanced for parties and of course pets are welcome to stay.</p>
+<p>Facebook: <a href="https://www.facebook.com/123glamp" rel="noopener">123glamp</a></p></article>
+</body></html>

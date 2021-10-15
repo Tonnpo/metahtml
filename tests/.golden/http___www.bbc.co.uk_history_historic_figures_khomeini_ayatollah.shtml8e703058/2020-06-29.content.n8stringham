@@ -1,0 +1,121 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">BBC - History - Historic Figures: Ayatollah Khomeini (1900-1989) </p>
+<p class="rm-manual"><a href="file:///"> <span> <span>British Broadcasting Corporation</span><span>Home</span> </span> </a></p>
+<p class="rm-manual"><a>Accessibility links</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="#blq-content">Skip to content</a></li> <li class="rm-manual"><a href="#blq-local-nav">Skip to local navigation</a></li> <li class="rm-manual"><a href="#blq-nav-main">Skip to bbc.co.uk navigation</a></li> <li class="rm-manual"><a href="#blq-search">Skip to bbc.co.uk search</a></li> <li class="rm-manual"><a href="file:///accessibility/">Accessibility Help</a></li> </ul>
+<p class="rm-manual"> <a href="file:///globalresources/mothballing"> This page has been archived and is no longer updated. <span> <span>Find out more about page archiving.</span> </span> </a> </p>
+<p class="rm-manual"><a href="file:///history/">History</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///history/ancient/">Ancient History</a></li> <li class="rm-manual"><a href="file:///history/british/">British History</a></li> <li class="rm-manual"><a href="file:///history/worldwars/">World Wars</a></li> <li class="rm-manual"><a href="file:///history/historic_figures/">Historic Figures</a></li> <li class="rm-manual"><a href="file:///history/familyhistory/">Family History</a></li> <li class="rm-manual"><a href="file:///history/handsonhistory">Hands on History</a></li> <li class="rm-manual"><a href="file:///history/forkids">History for Kids</a></li> <li class="rm-manual"><a href="file:///history/on_this_day/">On This Day</a></li> </ul>
+<h1 class="rm-manual">Ayatollah Khomeini (1900-1989)</h1>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///history/historic_figures/a.shtml">a</a></li> <li class="rm-manual"><a href="file:///history/historic_figures/b.shtml">b</a></li> <li class="rm-manual"><a href="file:///history/historic_figures/c.shtml">c</a></li> <li class="rm-manual"><a href="file:///history/historic_figures/d.shtml">d</a></li> <li class="rm-manual"><a href="file:///history/historic_figures/e.shtml">e</a></li> <li class="rm-manual"><a href="file:///history/historic_figures/f.shtml">f</a></li> <li class="rm-manual"><a href="file:///history/historic_figures/g.shtml">g</a></li> <li class="rm-manual"><a href="file:///history/historic_figures/h.shtml">h</a></li> <li class="rm-manual"><a href="file:///history/historic_figures/i.shtml">i</a></li> <li class="rm-manual"><a href="file:///history/historic_figures/j.shtml">j</a></li> <li class="rm-manual"><a href="file:///history/historic_figures/k.shtml">k</a></li> <li class="rm-manual"><a href="file:///history/historic_figures/l.shtml">l</a></li> <li class="rm-manual"><a href="file:///history/historic_figures/m.shtml">m</a></li> <li class="rm-manual"><a href="file:///history/historic_figures/n.shtml">n</a></li> <li class="rm-manual"><a href="file:///history/historic_figures/o.shtml">o</a></li> <li class="rm-manual"><a href="file:///history/historic_figures/p.shtml">p</a></li> <li class="rm-manual"><a href="file:///history/historic_figures/q.shtml">q</a></li> <li class="rm-manual"><a href="file:///history/historic_figures/r.shtml">r</a></li> <li class="rm-manual"><a href="file:///history/historic_figures/s.shtml">s</a></li> <li class="rm-manual"><a href="file:///history/historic_figures/t.shtml">t</a></li> <li class="rm-manual"><a href="file:///history/historic_figures/u.shtml">u</a></li> <li class="rm-manual"><a href="file:///history/historic_figures/v.shtml">v</a></li> <li class="rm-manual"><a href="file:///history/historic_figures/w.shtml">w</a></li> <li class="rm-manual"><a href="file:///history/historic_figures/x.shtml">x</a></li> <li class="rm-manual"><a href="file:///history/historic_figures/y.shtml">y</a></li> <li class="rm-manual"><a href="file:///history/historic_figures/z.shtml">z</a></li> </ul>
+<p> <span> <span> Ayatollah Khomeini (1900-1989), Shiite Muslim and Iranian revolutionary leader. <a href="file:///history/about/copyright.shtml">©</a></span> </span> Khomeini was an Iranian religious and political leader, who in 1979 made Iran the world's first Islamic republic.</p>
+<p>Ruhollah Khomeini was born in Kohmeyn in central Iran. He became a 
+religious scholar and in the early 1920s rose to become an 'ayatollah', a
+ term for a leading Shia scholar.</p>
+<p>In 1962, Khomeini was arrested by the shah's security service for his
+ outspoken opposition to the pro-Western regime of the Shah. His arrest 
+elevated him to the status of national hero. In 1964, he was exiled, 
+living in Turkey, Iraq and then France, from where he urged his 
+supporters to overthrow the shah. By the late 1970s, the shah had become
+ deeply unpopular and there were riots, strikes and mass demonstrations 
+across the country. </p>
+<p>In January 1979, the shah's government collapsed and he and his 
+family fled into exile. On 1 February, Khomeini returned to Iran in 
+triumph. There was a national referendum and Khomeini won a landslide 
+victory. He declared an Islamic republic and was appointed Iran's 
+political and religious leader for life. Islamic law was introduced 
+across the country. His denunciation of American influence led to 
+militant Islamic students storming the US Embassy in Teheran in November
+ 1979. Some of the American hostages were held captive for more than a 
+year.</p>
+<p>In September 1980, after a territorial dispute over the Shatt al-Arab
+ waterway, Iraq launched a surprise invasion of Iran. The resulting war 
+lasted eight years and between half and one-and-a-half million people 
+died. Neither side achieved their aim of toppling the other's regime. 
+The war extinguished some of the zeal of the Islamic revolution in Iran 
+and led some Iranians to question the capabilities of their leaders.</p>
+<p>In February 1989 Khomeini provoked international controversy by 
+issuing a 'fatwa', ordering Muslims to kill the writer Salman Rushdie 
+for his novel 'The Satanic Verses'. </p>
+<p class="">Khomeini died on 4 June 1989.</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///history/historic_figures/a.shtml">a</a></li> <li class="rm-manual"><a href="file:///history/historic_figures/b.shtml">b</a></li> <li class="rm-manual"><a href="file:///history/historic_figures/c.shtml">c</a></li> <li class="rm-manual"><a href="file:///history/historic_figures/d.shtml">d</a></li> <li class="rm-manual"><a href="file:///history/historic_figures/e.shtml">e</a></li> <li class="rm-manual"><a href="file:///history/historic_figures/f.shtml">f</a></li> <li class="rm-manual"><a href="file:///history/historic_figures/g.shtml">g</a></li> <li><a href="file:///history/historic_figures/h.shtml">h</a></li> <li><a href="file:///history/historic_figures/i.shtml">i</a></li> <li><a href="file:///history/historic_figures/j.shtml">j</a></li> <li><a href="file:///history/historic_figures/k.shtml">k</a></li> <li><a href="file:///history/historic_figures/l.shtml">l</a></li> <li><a href="file:///history/historic_figures/m.shtml">m</a></li> <li><a href="file:///history/historic_figures/n.shtml">n</a></li> <li><a href="file:///history/historic_figures/o.shtml">o</a></li> <li><a href="file:///history/historic_figures/p.shtml">p</a></li> <li><a href="file:///history/historic_figures/q.shtml">q</a></li> <li><a href="file:///history/historic_figures/r.shtml">r</a></li> <li><a href="file:///history/historic_figures/s.shtml">s</a></li> <li><a href="file:///history/historic_figures/t.shtml">t</a></li> <li><a href="file:///history/historic_figures/u.shtml">u</a></li> <li><a href="file:///history/historic_figures/v.shtml">v</a></li> <li><a href="file:///history/historic_figures/w.shtml">w</a></li> <li><a href="file:///history/historic_figures/x.shtml">x</a></li> <li><a href="file:///history/historic_figures/y.shtml">y</a></li> <li><a href="file:///history/historic_figures/z.shtml">z</a></li> </ul>
+<h2 class="rm-manual"> <span>«;</span> <a href="file:///history/historic_figures">More <span>Historic Figures</span></a> </h2>
+<h2 class="rm-manual">World War One Centenary</h2>
+<ul class="rm-manual">
+<li class="rm-manual">Find out more about how the BBC is covering the <a href="http://www.bbc.co.uk/ww1/">World War One Centenary</a>, and see the latest programmes and online content</li> </ul>
+<h2 class="rm-manual">War Poetry</h2>
+<ul class="rm-manual">
+<li class="rm-manual">Has <a href="http://www.bbc.co.uk/guides/z38rq6f">Dulce et Decorum Est</a> affected our view of WW1?</li> </ul>
+<h2 class="rm-manual">BBC iD</h2>
+<p class="rm-manual"><a href="https://ssl.bbc.co.uk/id/status"> <span> BBC iD </span> </a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="https://ssl.bbc.co.uk/id/settings"> Settings </a> </li> <li class="rm-manual"> <a href="https://ssl.bbc.co.uk/id/signout"> Sign out </a> </li> </ul>
+<p class="rm-manual"> Search term: </p>
+<h2 class="rm-manual">BBC navigation</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="http://www.bbc.co.uk/news/">News</a></li> <li class="rm-manual"><a href="http://www.bbc.co.uk/sport/">Sport</a></li> <li class="rm-manual"><a href="http://www.bbc.co.uk/weather/">Weather</a></li> <li class="rm-manual"> <a href="file:///iplayer/">iPlayer</a> </li> <li class="rm-manual"><a href="file:///tv/">TV</a></li> <li class="rm-manual"><a href="file:///radio/">Radio</a></li> <li class="rm-manual"><a href="#blq-nav">More…</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///cbbc/">CBBC</a></li> <li class="rm-manual"><a href="file:///cbeebies/">CBeebies</a></li> <li class="rm-manual"><a href="file:///comedy/">Comedy</a></li> <li class="rm-manual"><a href="file:///food/">Food</a></li> <li class="rm-manual"><a href="file:///history/">History</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///learning/">Learning</a></li> <li class="rm-manual"><a href="file:///music/">Music</a></li> <li class="rm-manual"><a href="file:///science/">Science</a></li> <li class="rm-manual"><a href="file:///nature/">Nature</a></li> <li class="rm-manual"><a href="file:///local/">Local</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///northernireland/">Northern Ireland</a></li> <li class="rm-manual"><a href="file:///scotland/">Scotland</a></li> <li class="rm-manual"><a href="file:///wales/">Wales</a></li> <li class="rm-manual"><a href="file:///a-z/">Full A-Z<span> of BBC sites</span></a></li> </ul>
+<h2 class="rm-manual">BBC links</h2>
+<ul class="rm-manual">
+<li class="rm-manual"> <ul class="rm-manual">
+<li class="rm-manual"><a href="http://m.bbc.co.uk/">Mobile site</a></li> <li class="rm-manual"><a href="file:///terms/">Terms of Use</a></li> <li class="rm-manual"><a href="file:///aboutthebbc/">About the BBC</a></li> </ul>
+</li> <li class="rm-manual"> <ul class="rm-manual">
+<li class="rm-manual"><a href="file:///privacy/">Privacy</a></li> <li class="rm-manual"><a href="file:///accessibility/">Accessibility Help</a></li> </ul>
+</li> <li class="rm-manual"> <ul class="rm-manual">
+<li class="rm-manual"><a href="file:///privacy/bbc-cookies-policy.shtml">Cookies</a></li> <li class="rm-manual"><a href="file:///contact/">Contact the BBC</a></li> </ul>
+</li> <li class="rm-manual"> <ul class="rm-manual">
+<li class="rm-manual"><a href="file:///guidance/">Parental Guidance</a></li> </ul>
+</li> </ul>
+<p class="rm-manual"><span>BBC © 2014</span> <a href="file:///help/web/links/">The BBC is not responsible for the content of external sites. Read more.</a></p>
+<p class="rm-manual">This page is best viewed in an up-to-date web 
+browser with style sheets (CSS) enabled. While you will be able to view 
+the content of this page in your current browser, you will not be able 
+to get the full visual experience. Please consider upgrading your 
+browser software or enabling style sheets (CSS) if you are able to do 
+so.</p></article>
+</body></html>

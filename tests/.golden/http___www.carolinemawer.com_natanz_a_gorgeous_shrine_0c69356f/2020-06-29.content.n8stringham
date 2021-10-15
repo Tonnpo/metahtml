@@ -1,0 +1,106 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual">Natanz 2: a gorgeous shrine</h1>
+<p class="rm-manual"> <span><a href="http://www.carolinemawer.com/natanz_a_gorgeous_shrine/" rel="bookmark">January 13, 2016January 13, 2016</a></span> <span>by <span><a href="http://www.carolinemawer.com/author/admin/" rel="author"><span>admin</span></a></span></span> </p>
+<p>Many travellers stop at Natanz to see the gorgeous Ilkhanid (early 
+14th century) façade. It’s one of the most spectacular sights in Iranian
+ architecture, and it’s only an hour or so from Isfahan, on the way to 
+Kashan. With its blend of glazed tile, stucco, and terra cotta it’s been
+ described as a 3-D version of the best of Persian miniature paintings.</p>
+<p>But the shrine in Natanz isn’t just about the sumptuous facade. The <a href="http://archnet.org/sites/1645">complex developed as a grave-tomb-shrine</a>
+ after a shaykh in the Suharwardi Sufi order, ‘Abd al-Samad, died in 
+Natanz in 1299. It is now recognised as one of the best preserved shrine
+ complexes from the <a href="http://www.metmuseum.org/toah/hd/ilkh/hd_ilkh.htm">Ilkhanid era (1256–1353)</a>.</p>
+<figcaption>The muqarnas semi-dome over the khanqah portal, Natanz. Image from Archnet</figcaption><p>As
+ well as the tomb of ‘Abd al-Samad, there’s a four-iwan mosque, an 
+octagonal sanctuary, a minaret, and a mosque from the 1930’s. To fit in 
+the available space, these are squashed together, built at different 
+floor levels, and sometimes overlapping. Because of that, and the fact 
+that the complex was built (and rebuilt) over many centuries, it can 
+sometimes be difficult to work out what you are seeing. This post aims 
+to help with that.</p>
+<p>It’s useful to start by looking at the façade west to east (left to right as you face it):</p>
+<p>The western portal is what remains of an early fourteenth century <a href="https://en.wikipedia.org/wiki/Khanqah">khanqah</a>
+ – somewhere for Sufi travellers or students who wanted to stay at ‘Abd 
+al-Samad’s shrine. This khanqah was destroyed and replaced by a mosque 
+in the 1930s.</p>
+<p>Behind the central arch of the Natanz façade there is a 37-metre 
+minaret with an inscription dated AH725/1324-25AD. This was 
+substantially restored in the 1970s</p>
+<p>At the eastern end of the façade, there’s another portal, which acts 
+as an entrance into the complex through a sunken narrow corridor. An 
+inscription there says that the building is a mosque built by Zayn 
+al-Din Mastari in AH704/1304-5AD.</p>
+<figcaption>Muqarnas ceiling of the tomb in Natanz. Image: study blue</figcaption><p>As
+ you walk down into and through the sunken corridor, you’ll come to a 
+doorway into the tomb chamber. This has a glorious muqarnas ceiling – 
+and the much less glorious remnants of a – now looted – tiled mihrab and
+ walls. I’ve written more about this little room here.</p>
+<p>When you go on, you will come into a square courtyard mosque with two
+ storeys of rooms, linking four iwans. There are muqarnas in the north 
+and south iwans. Linked to the south iwan is an octagonal sanctuary.</p>
+<p>The restoration in the 1970s revealed that this sanctuary was 
+originally a freestanding pavilion. It is much earlier than the 
+courtyard mosque – as it is dated AH389/999AD. It may not look anywhere 
+near as lovely as the facade, but it is the earliest dated example of an
+ octagonal form in Iran. It was built open with columns, like the early 
+tomb towers. Buyid tombs didn’t actually need to have a body buried 
+within them – there are fascinating accounts of bodies being placed in 
+glass coffins, suspended from the ceiling. The body of someone called 
+Qabus was hung in a location where the early morning light struck it. In
+ Natanz, like in other important Shia shrines, the pavilion was built to
+ be walked around (the technical term is circumambulation). At Mecca, 
+the qa’aba is walked around counterclockwise (seven times). At Natanz, 
+pilgrims would have walked in the opposite direction: clockwise. The 
+renowned art historian, Sheila Blair, has suggested that the pavilion 
+was originally built as an imamzada or shrine for a descendant of the 
+Prophet.</p>
+<p>This is surely why the site is so jumbled – the early fourteenth 
+century development followed on from an open, octagonal pavilion built 
+three hundred years earlier.</p>
+<p class="rm-manual"><span><span>Categories </span><a href="http://www.carolinemawer.com/whats-new/" rel="category tag">Blog</a></span> </p>
+<p class="rm-manual"><span><span>Tags </span><a href="http://www.carolinemawer.com/tag/isfahan/" rel="tag">isfahan</a>, <a href="http://www.carolinemawer.com/tag/must-see-iran/" rel="tag">must see Iran</a>, <a href="http://www.carolinemawer.com/tag/natanz/" rel="tag">natanz</a>, <a href="http://www.carolinemawer.com/tag/shrine/" rel="tag">shrine</a></span> </p>
+<p class="rm-manual"><span><a href="http://www.carolinemawer.com/natanz_a_gorgeous_shrine/#respond">Leave a comment</a></span> </p>
+<p class="rm-manual"><span>Post navigation</span> </p>
+<p class="rm-manual"><span><a href="http://www.carolinemawer.com/a-palace-for-safavid-women/" rel="prev">A Palace for Safavid women</a></span></p>
+<p class="rm-manual"><span><a href="http://www.carolinemawer.com/natanz_more_than_nuclear/" rel="next">Natanz 1: more than a nuclear facility</a></span></p>
+<h3 class="rm-manual">Leave a Comment <a rel="nofollow" href="file:///natanz_a_gorgeous_shrine/#respond">Cancel reply</a>
+</h3>
+<p class="rm-manual">Comment</p>
+<p class="rm-manual">Name Email Website </p></article>
+</body></html>

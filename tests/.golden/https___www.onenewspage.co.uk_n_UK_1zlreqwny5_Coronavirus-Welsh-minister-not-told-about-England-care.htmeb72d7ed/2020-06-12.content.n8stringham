@@ -1,0 +1,52 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><table> <tbody><tr> <td> <h1 class="rm-manual">Coronavirus: Welsh minister not told about England care home tests</h1> <p class="rm-manual"> <span> Thursday, 30 April 2020</span> </p><p class=""> <span>Vaughan Gething says he was not given notice of English moves to test everyone in care homes.</span></p><p class="rm-manual"><a href="file:///news.php?nid=115718973-1879" rel="nofollow">👓 View full article</a></p><p></p><p></p> </td>
+</tr> </tbody></table>
+<table> <tbody><tr> <td> <table><tbody><tr>
+<td class="rm-manual">0 shares</td>
+<td class="rm-manual">
+<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.onenewspage.co.uk%2Fn%2FUK%2F1zlreqwny5%2FCoronavirus-Welsh-minister-not-told-about-England-care.htm" rel="nofollow">Share</a><a href="https://twitter.com/home?status=Coronavirus:%20Welsh%20minister%20not%20told%20about%20England%20care%20home%20tests%20https%3A%2F%2Fwww.onenewspage.co.uk%2Fn%2FUK%2F1zlreqwny5%2FCoronavirus-Welsh-minister-not-told-about-England-care.htm%20via%20@OneNewsPage_UK" rel="nofollow">Tweet</a><a href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.onenewspage.co.uk%2Fn%2FUK%2F1zlreqwny5%2FCoronavirus-Welsh-minister-not-told-about-England-care.htm" rel="nofollow">Save</a><a href="https://www.reddit.com/submit?url=https%3A%2F%2Fwww.onenewspage.co.uk%2Fn%2FUK%2F1zlreqwny5%2FCoronavirus-Welsh-minister-not-told-about-England-care.htm&amp;media=https%3A%2F%2Fcdn.newsserve.net%2FONPglobe256.png&amp;description=Coronavirus%3A%20Welsh%20minister%20not%20told%20about%20England%20care%20home%20tests" rel="nofollow">Post</a>
+</td>
+</tr></tbody></table> </td> </tr> <tr> <td> <h4 class="rm-manual">Related videos from verified sources</h4> <table class="rm-manual"> <tbody><tr> <td> <p> </p><p class="rm-manual"> <a href="file:///video/20200603/13091839/What-The-Latest-On-Training-Program-To.htm">What's The Latest On Training Program To Help Long-Term Care Homes?</a> </p><p class="rm-manual"> Minister Carla Qualtrough gives an update on a program to train Canadians to do support work in long-term care homes.</p><p></p> <p class="rm-manual"> <span>Credit: HuffPost Canada Duration: 01:08</span><span>Published 1 week ago</span></p> <p></p> </td> </tr> <tr> <td> <p> </p><p class="rm-manual"> <a href="file:///video/20200520/13062267/Keir-Starmer-and-Boris-Johnson-spar-over-care.htm">Keir Starmer and Boris Johnson spar over care homes and contact tracing during PMQs</a> </p><p class="rm-manual">
+ Prime Minister Boris Johnson and Leader of the Opposition Sir Keir 
+Starmer clash over contact tracing measures and care home provisions 
+during Prime Minister's Questions in the House of Commons. Sir..</p><p></p> <p class="rm-manual"> <span>Credit: PA - Press Association STUDIO Duration: 01:41</span><span>Published 3 weeks ago</span></p> <p></p> </td> </tr> <tr class="rm-manual"> <td class="rm-manual"> <p> </p><p class="rm-manual"> <a href="file:///video/20200515/13052956/April-care-home-coronavirus-deaths-reached-11-560.htm">April care home coronavirus deaths reached 11,560</a> </p><p class="rm-manual">
+ Matt Hancock has said that 31,203 people died in care homes in April, 
+of which 11,560 died with coronavirus. The health secretary said that 
+all care home residents and staff in England are now being..</p><p class="rm-manual"></p> <p class="rm-manual"> <span>Credit: ODN Duration: 01:02</span><span>Published on May 15, 2020</span></p> <p class="rm-manual"></p> </td> </tr> </tbody></table> <h4 class="rm-manual">Related news from verified sources</h4> <table class="rm-manual"> <tbody><tr class="rm-manual"> <td class="rm-manual"> <a href="file:///n/UK/1zlreqwmvx/Coronavirus-Welsh-minister-not-told-about-England-care.htm"> <h3 class="rm-manual">Coronavirus: Welsh minister not told about England care home test move</h3> </a> <span>Vaughan Gething says he was not given notice of English moves to test everyone in care homes.</span> <span>BBC News on April 30, 2020</span> </td> </tr> <tr class="rm-manual"> <td class="rm-manual"> <a href="file:///n/UK/1zlreqw4g6/Coronavirus-Welsh-health-minister-refuses-to-expand-care.htm"> <h3 class="rm-manual">Coronavirus: Welsh health minister refuses to expand care home testing</h3> </a> <span>Wales will not follow England in providing tests to all care home residents and workers.</span> <span>BBC News on April 29, 2020</span> </td> </tr> <tr class="rm-manual"> <td class="rm-manual"> <a href="file:///n/UK/1zlreqmik8/Coronavirus-Former-Savoy-chef-dies-aged-95-after.htm"> <h3 class="rm-manual">Coronavirus: Former Savoy chef dies aged 95 after outbreak at care home</h3> </a> <span>MP calls for prime minister to deliver on commitment of tests and PPE for all care workers</span> <span>Independent on April 2, 2020</span> </td> </tr> </tbody></table> <h4 class="rm-manual">Tweets about this</h4> </td> </tr> </tbody></table></article>
+</body></html>

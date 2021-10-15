@@ -1,0 +1,59 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.wsj.com/news/opinion?mod=breadcrumb"> Opinion </a> </li> <li class="rm-manual"> <a href="https://www.wsj.com/news/types/commentary-u-s?mod=breadcrumb"> Commentary </a> </li> </ul>
+<h1 class="rm-manual"> Hit Ayatollah Khamenei in His Pocketbook </h1>
+<h2 class="rm-manual">Supporters brag about his modest lifestyle, but Iran’s ruler runs a billion-dollar corporate conglomerate.</h2>
+<p class="rm-manual"> By <span>Mark Dubowitz</span> and <span>Saeed Ghasseminejad</span> </p>
+<p class="rm-manual"> Jan. 22, 2018 7:13 pm ET </p>
+<p>The Trump administration already has offered rhetorical support to 
+Iran’s antigovernment protesters. Now, nearly a month after the 
+demonstrations began, how can the U.S. provide material help? Follow the
+ money.</p>
+<p>Supreme Leader Ayatollah Ali Khamenei’s supporters brag about his 
+modest lifestyle. They fail to mention that he runs a 
+multibillion-dollar corporate conglomerate to fund his political 
+patronage networks. His three most valuable possessions are the 
+Execution of Imam Khomeini’s Order, or EIKO; the Mostazafan 
+Foundation;... </p>
+<p class="rm-manual"> To Read the Full Story </p>
+<p class="rm-manual"> <a href="https://subscribe.wsj.com/wsjsnippet"> Subscribe </a> <a href="https://accounts.wsj.com/login?target=https%3A%2F%2Fwww.wsj.com%2Farticles%2Fhit-ayatollah-khamenei-in-his-pocketbook-1516666405"> Sign In </a> </p>
+<h1 class="rm-manual"> Continue reading your article with a WSJ membership </h1>
+<p class="rm-manual"><a href="https://subscribe.wsj.com/wsjsnippet"> View Membership Options </a> </p>
+<p class="rm-manual">Sponsored Offers</p>
+<ul class="rm-manual"> <li class="rm-manual"> <span>Walmart:</span> <a href="https://www.wsj.com/coupons/walmart">Walmart coupon: $10 off all departments</a> </li> <li class="rm-manual"> <span>eBay:</span> <a href="https://www.wsj.com/coupons/ebay">20% off with eBay coupon</a> </li> <li class="rm-manual"> <span>Target:</span> <a href="https://www.wsj.com/coupons/target">Target coupon - 10% off home items</a> </li> <li class="rm-manual"> <span>Home Depot:</span> <a href="https://www.wsj.com/coupons/the-home-depot">10% off furniture using Home Depot coupon code</a> </li> <li class="rm-manual"> <span>TurboTax:</span> <a href="https://www.wsj.com/coupons/turbotax">TurboTax coupon and discount: $60 for Deluxe version</a> </li> <li class="rm-manual"> <span>DoorDash:</span> <a href="https://www.wsj.com/coupons/doordash">$7 off with DoorDash promo code</a> </li> </ul></article>
+</body></html>

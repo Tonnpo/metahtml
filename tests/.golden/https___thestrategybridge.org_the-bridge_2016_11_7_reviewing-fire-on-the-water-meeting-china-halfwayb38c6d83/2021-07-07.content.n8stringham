@@ -1,0 +1,553 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> <span><a href="file:///the-bridge?author=570ef55b4d088ec2705f3657" rel="author">T. Greer</a></span> </p>
+<p class="rm-manual"> <a href="file:///the-bridge/2016/11/7/reviewing-fire-on-the-water-meeting-china-halfway">November 7, 2016</a> </p>
+<p class="rm-manual"> <span><a href="file:///the-bridge/category/%23Reviewing" rel="tag">#Reviewing</a></span> </p>
+<h1 class="rm-manual"> <a href="file:///the-bridge/2016/11/7/reviewing-fire-on-the-water-meeting-china-halfway" rel="bookmark">#Reviewing Fire on the Water &amp; Meeting China Halfway</a> </h1>
+<p class="rm-manual"> <span><a href="file:///the-bridge?author=570ef55b4d088ec2705f3657" rel="author">T. Greer</a></span> </p>
+<p class="rm-manual"> <a href="file:///the-bridge/2016/11/7/reviewing-fire-on-the-water-meeting-china-halfway">November 7, 2016</a> </p>
+<p class="rm-manual"> <span><a href="file:///the-bridge/category/%23Reviewing" rel="tag">#Reviewing</a></span> </p>
+<p class="rm-manual"><a href="https://www.amazon.com/Fire-Water-America-Future-Pacific/dp/1612517951/ref=as_li_ss_tl?ie=UTF8&amp;qid=1475589577&amp;sr=8-1&amp;keywords=fire+on+the+water&amp;linkCode=ll1&amp;tag=theschssta-20&amp;linkId=76b5d438cc190b4a39b96534b0d5bc46">Fire on the Water: China, America, and the Future of the Pacific</a>. Robert Haddick. Annapolis, MD: Naval Institute Press, 2014.</p>
+<p class="rm-manual"><a href="https://www.amazon.com/Meeting-China-Halfway-Emerging-US-China/dp/1626161607/ref=as_li_ss_tl?ie=UTF8&amp;qid=1475589241&amp;sr=8-1&amp;keywords=meeting+china+halfway&amp;linkCode=ll1&amp;tag=theschssta-20&amp;linkId=ade5e17f47a73aa7739469253756a616">Meeting China Halfway: How To Defuse Emerging China-U.S. Rivalry</a>. Lyle Goldstein. Washington, D.C.: Georgetown University Press, 2015.</p>
+<p>A pall hangs over Asia. At the center of this disquiet lies China, a 
+nation too large and too proud for any power on its borders to long 
+ignore. Ignore it they haven’t—<a href="http://www.bloomberg.com/news/articles/2016-08-15/indonesia-to-destroy-71-boats-in-display-of-maritime-sovereignty">China’s</a> <a href="http://www.stripes.com/news/pacific/china-warns-us-south-korea-will-pay-the-price-if-thaad-is-deployed-1.432048">relations</a> <a href="http://www.reuters.com/article/us-southchinasea-china-japan-idUSKCN11Z10D">with</a> <a href="http://www.weeklystandard.com/beijing-snubs-taipei/article/2004577"> one</a> <a href="http://www.scmp.com/news/china/diplomacy-defence/article/2023080/china-wades-singaporean-envoys-media-dispute">neighbor</a> <a href="http://www.firstpost.com/world/chinas-great-betrayal-why-did-indias-eastern-neighbour-block-the-nsg-bid-2853800.html">after</a> <a href="http://www.reuters.com/article/us-australia-privatisation-ausgrid-idUSKCN10R2M1">another</a> <a href="http://edition.cnn.com/2016/05/23/politics/obama-vietnam-trip/">worsen</a>. This was not how it was supposed to be.</p>
+<p>For years Americans have held the fevered dream that they might 
+entice China to become “a responsible stakeholder” in the existing 
+international system, a system<a href="http://warontherocks.com/2016/06/the-choice-for-asia-in-the-21st-century/"> they fondly label</a>
+ “a liberal rules based order.” It was always a desperate hope. The 
+Chinese are not ruled by a liberal regime, and the regime that rules 
+them cannot stomach any order whose rules are designed to force 
+liberalism onto them. Americans were able to accommodate themselves to 
+growing Chinese power because they hoped this would change—as China grew
+ and became entangled with the wider world, the argument went, the wider
+ world would change it.</p>
+<p>It was not to be. Instead of opening themselves up to the currents of
+ global culture, the Chinese Communist Party cracked down on every part 
+of Chinese society with connections outside it, from Christian 
+congregations to feminist activists. The Party also thought China might 
+change with the wider world—and decided that the only thing to do was to
+ move first, forcing the wider world to change with China instead.</p>
+<p>Where to go from here? The Chinese have made their choice. <a href="http://scholars-stage.blogspot.com/2016/06/china-does-not-want-your-rules-based.html">They do not want our rules-based order</a>. The ball is in our court now. The hard thing is knowing what to do with it.</p>
+<p>There is no consensus on the proper response to China’s rising 
+ambitions. Two ambitious military analysts have stepped into the void, 
+each hoping their bold proposals might dispel the Asian pall and secure a
+ peaceful future for the Pacific. They approach this problem from a 
+similar starting point. Robert Haddick asks in the first chapter of <a href="https://www.amazon.com/Fire-Water-America-Future-Pacific/dp/1612517951/ref=as_li_ss_tl?ie=UTF8&amp;qid=1475589577&amp;sr=8-1&amp;keywords=fire+on+the+water&amp;linkCode=ll1&amp;tag=theschssta-20&amp;linkId=76b5d438cc190b4a39b96534b0d5bc46">Fire on the Water: China, America, and the Future of the Pacific</a> if the United States “can safely accommodate China’s rise.” His reply is unequivocal:</p>
+<blockquote>There is only one answer to that question: the United States
+ must—it has no choice. China is a great power, with rapidly expanding 
+economic, diplomatic, and military power... Both countries have an 
+obligation, for both practical and moral reasons, to find a way to 
+coexist.[1]</blockquote>
+<p>This sentiment also suffuses Lyle Goldstein’s <a href="https://www.amazon.com/Meeting-China-Halfway-Emerging-US-China/dp/1626161607/ref=as_li_ss_tl?ie=UTF8&amp;qid=1475589241&amp;sr=8-1&amp;keywords=meeting+china+halfway&amp;linkCode=ll1&amp;tag=theschssta-20&amp;linkId=ade5e17f47a73aa7739469253756a616">Meeting China Halfway: How to Defuse the Emerging U.S.-China Rivalry</a>.
+ Goldstein states in the introduction to his book that Sino-American 
+relations are “the most critical of bilateral relationships to world 
+order for the current century, and likely the ones that follow as 
+well.”[2] Both authors agree: China must be allowed some place in the 
+international system. Consequently, they both reject more militant calls
+ for regime change. Their shared goal is to use a blend of American 
+military and diplomatic assets to reach a stable and enduring peace in 
+the Western Pacific.</p>
+<p>The extraordinary thing is how two authors so thoroughly committed to
+ the same goals, and working from such similar starting assumptions, can
+ offer policy prescriptions that so sharply contradict each other. </p>
+<h3 class="">Fire On the Water</h3>
+<p class="rm-manual"> <a href="https://www.amazon.com/Fire-Water-America-Future-Pacific/dp/1612517951?SubscriptionId=0ENGV10E9K9QDNSJ5C82&amp;tag=strategbridge-20&amp;linkCode=xm2&amp;camp=2025&amp;creative=165953&amp;creativeASIN=1612517951" rel="noopener"> <span> Buy on Amazon </span> </a> </p>
+<p>Robert Haddick’s book began as a classified report for Special 
+Operations Command on the possible roles U.S. special forces might be 
+expected to play in Asia’s future. Haddick soon realized a much broader 
+review of U.S. forces’ position in the region was needed. Great changes 
+were underway in East Asia, changes in the military balance of which 
+many American leaders were not truly aware. Haddick suggests this is 
+because an absolute disparity between the total size of the two rivals’ 
+military budgets hides the weakness of the American position. What the 
+People’s Liberation Army lacks in wealth, it has gained in focus. 
+American military forces are deployed from one side of the globe to the 
+other. Their doctrine and force structures suffer from the cross-cutting
+ demands of the various theaters in which they may be asked to fight. 
+The Chinese, in contrast, have focused, laser-like, on one objective for
+ three decades: building a war machine that can keep the United States 
+Navy away from its shores.</p>
+<p>This intense focus on denying Americans access to the Chinese 
+littoral (a strategy known in military jargon as an “anti-access/area 
+denial” or <a href="http://thestrategybridge.org/the-bridge/2015/12/13/chinas-military-strategy">A2/AD strategy</a>)
+ is ideally suited to the likely shape of a future Sino-American 
+conflict. The operational contours of such a conflict will be determined
+ primarily by geography and technology. The weapons of our day, launched
+ from plane, submarine, ship, truck, or launch pad, are both able to 
+travel extremely long distances and hit carefully selected targets when 
+they arrive at their destinations. The lethality of these technologies 
+will be familiar to anyone who has seen the televised pin-prick strikes 
+of American forces in the Balkans or the Middle East. Their lethality is
+ only increased when the targets chosen are at sea or in the air. Under <a href="http://breakingdefense.com/2015/04/no-mans-sea-csbas-lethal-vision-of-future-naval-war/">a mature precision strike regime</a>
+ there will be areas where ships and aircraft simply cannot go. The wars
+ of Asia’s future will look like the Western Front in the First World 
+War, but at sea. Each side would have a zone of control, protected by an
+ interlocking network of anti-ship and anti-aircraft missiles designed 
+to keep the other from approaching. In between would lie a vast stretch 
+of no-man’s land (or in this case, water) that could only be entered 
+with great peril. Such a war would be grim, attritional, and enormously 
+expensive. In this crash of steel against steel, victory would favor the
+ side whose forces can shoot farthest, disperse fastest, stay hidden 
+longest, and, in the end, be replenished most easily.[3]</p>
+<p>The Chinese have devoted three decades to establishing advantages in 
+each of these areas. America is far less prepared for such a struggle. 
+Haddick finds problems just about everywhere, ranging from doctrine to 
+weapon platforms to basing. Many of the themes that dominate Haddick’s 
+work are clearly articulated in his critique of this last issue. 
+America’s bases suffer from a crisis of concentration in that all U.S. 
+forces in the region are located in a few select locations: six air 
+bases for the Air Force, five ports for the Navy, and three locations 
+for the vast majority of American ground forces in the region. In 
+contrast, Chinese air and missile power is widely dispersed, and many of
+ its missile launchers are completely mobile, able to hide and then 
+redeploy miles away after each volley is launched. This is a deadly 
+asymmetry. As Haddick reports, just “thirty to fifty impacts would 
+render even a large [Air Force] base unusable.”[4] China has already 
+invested in thousands of surface-to-surface missiles (SSM) that fit the 
+bill. The only real defense against their attack is anti-missile 
+batteries, and these cost far more to build and repair than the swarm of
+ missiles that will be sent streaking towards them.</p>
+<p class="rm-manual">Image from Robert Haddick, Fire on the Water: 
+China, America, and the Future of the Pacific (Annapolis: Naval 
+Institute Press, 2014), 60.</p>
+<p>Haddick reports that by 2020 the missile force will be joined by 400 or so <a href="http://nationalinterest.org/feature/russias-f-15-killer-why-america-the-world-fears-the-su-27-17082">‘Flanker’ aircraft</a>, originally designed in and purchased from Russia, but now produced indigenously as <a href="http://aircraft.wikia.com/wiki/Shenyang_J-11">the Shenyang J-11</a>.
+ Though in many respects the technical inferior to American aircraft 
+such as the F-22 and the F-35, these planes are their superiors in one 
+critical trait: range. Chinese Flankers have an unrefueled combat radius
+ of 1,500 km, putting them well within range of American air and naval 
+bases in Japan and Korea. In contrast, the new F-35, which some analysts
+ estimate <a href="https://warisboring.com/how-much-does-an-f-35-actually-cost-21f95d239398#.3gus1gvpe">comes at the cost of $330 million a copy</a>,
+ cannot travel more than 1,100 km away from its closest refueling point.
+ The Flanker’s range ensures that bases in Korea and Japan “would not be
+ able to safely host the tanker and early warning “enabler” aircraft on 
+which U.S. tactical aircraft depend. U.S. Air Force operations in the 
+Pacific would then depend on Guam, creating a risky single point of 
+failure and a focus for Chinese targeting.”[5] When China’s 5th 
+generation fighter, the J-20, goes into operation in 2018, it’s 2,000 km
+ range threatens to push tanker and targeting aircraft out of the West 
+Pacific altogether.[6]</p>
+<p>This story repeats itself again and again. An American <a href="https://en.wikipedia.org/wiki/Arleigh_Burke-class_destroyer">DDG-51 Arleigh Burke-class destroyer</a> costs $1.8 billion to build; the Russian designed <a href="https://en.wikipedia.org/wiki/P-270_Moskit">SS-N-22 Sunburn supersonic</a>
+ anti-ship cruise missile intended to destroy it only costs $2 million. 
+These missiles also out distance America’s own ship based anti-ship 
+cruise missile, the <a href="http://www.navy.mil/navydata/fact_display.asp?cid=2200&amp;tid=200&amp;ct=2">A/U/RGM-84 Harpoon</a>,
+ by more than 250 kilometers. Even worse, Chinese land-based 
+intermediate range missiles face no competition from the Americans at 
+all, as the United States and Russia banned their development in <a href="https://en.wikipedia.org/wiki/Intermediate-Range_Nuclear_Forces_Treaty">a cold war treaty meant to reduce tensions between NATO and the Soviet Union</a>.
+ This means the only assets able to pierce the Chinese area of control 
+are America’s long range stealth bombers and submarine force. These are 
+expensive platforms, and they have a limited carrying capacity. For 
+perspective, 864 Tomahawk missiles could be fired by U.S. submarines in 
+the Pacific before needing to return to port to reload—a fraction of the
+ 35,085 munitions used against the Iraqi army, a third rate power, 
+during six weeks of operations during the Gulf war.[7]</p>
+<p>Image from Robert Haddick, Fire on the Water: China, America, and the
+ Future of the Pacific (Annapolis: Naval Institute Press, 2014), 91.</p>
+<p>Haddick proposes a suite of concrete measures to tilt the military 
+balance back in favor of the United States. These range from changes in 
+organizational culture and new international arms treaties to the the 
+development of autonomous<a href="http://www.globalsecurity.org/military/systems/munitions/locaas.htm"> autonomous bomber drones</a>.
+ Haddick has a talent for explaining how otherwise obscure topics of 
+defence analysis, like the technical capabilities of weapon platforms or
+ the quirks of military doctrine, place real pressures on broader issues
+ of policy. His sharp rebuke to those who hope growing parity between 
+the two powers will create a stable foundation for long term negotiation
+ is a case in point. The main consequence of a military force as brittle
+ as Pacific Command’s, he suggests, is that if open conflict ever seems 
+to be even a remote possibility American leaders will face a powerful 
+temptation to strike early, before the Chinese have prepared their own 
+knock-out strike. Knowledge that American forces in the region can be 
+knocked out in a devastating first blow is not a recipe for peace and 
+stability.[8]</p>
+<p>Haddick hopes a more resilient, prepared, and effective U.S. fighting
+ force in the Pacific will not just change the incentives Americans 
+face, but also the incentives faced by the other powers in the region. 
+Haddick couples his description of the modernization drive of the 
+People’s Liberation Army with a discussion of China’s famous ‘salami 
+slicing’ operations near its borders. Haddick calls for a quiet but firm
+ response to these slices—but he is clear that he believes that no 
+response to these operations will be able to dissuade the Chinese from 
+their current course unless the nature of America’s military presence in
+ the region is strong and stable enough to provide a powerful deterrent.
+ The costs of failing to deter Chinese intimidation, In Haddick’s eyes, 
+are far larger than future American defeat. Haddick’s nightmare scenario
+ is a Western Pacific that has reverted to anarchy, each nation seeking 
+independent military means to deter Chinese power. Though he doesn’t 
+quite say it this way, Haddick essentially endorses the view that 
+America’s most important role in post-World War II East Asia has been to
+ keep Japan and Korea under control. Without American hegemony a fierce 
+security competition would sweep the region, as countries try to balance
+ against China and each other. In place of a stable American-led order 
+unifying the field against revanchist China would be a Hobbesian swarm 
+of nations ready to plunge one part of the continent into war after 
+another.[9]</p>
+<p>The only way to avoid such a future is if America can maintain a 
+military presence in the region robust enough to assuage the fears of 
+America’s allies while “persuading China’s leaders to continue accepting
+ the status quo in spite of China’s rising global security 
+interests.”[10] This would require a much larger military footprint in 
+the region, but the goal would be a stable peace. As Haddick concludes:</p>
+<blockquote class="">The strategy discussed in this book is not a war 
+plan. It is a strategy for managing a peacetime competition in a highly 
+dynamic region. The strategy’s success will be measured by the crises 
+that never occur, the wars that are never fought, and the long 
+continuation of the region’s prosperity and development, including 
+inside China.[11]</blockquote>
+<h3 class="">Meeting China Halfway</h3>
+<p class="rm-manual"> <a href="https://www.amazon.com/Meeting-China-Halfway-Emerging-US-China/dp/1626161607?SubscriptionId=0ENGV10E9K9QDNSJ5C82&amp;tag=strategbridge-20&amp;linkCode=xm2&amp;camp=2025&amp;creative=165953&amp;creativeASIN=1626161607" rel="noopener"> <span> Buy on Amazon </span> </a> </p>
+<p>Lyle Goldstein would endorse these metrics for the grand strategy he 
+charts in Meeting China Halfway: How to Defuse Emerging U.S. China 
+Rivalry. The means he uses to reach this destination, however, could not
+ be more different. His book’s title reveals his approach; unlike 
+Haddick, Goldstein has no interest in deterrence. The operative verb in 
+Goldstein’s work is not deter but defuse. Above all else Goldstein fears
+ what political scientists call a “security trap,” an escalating contest
+ between two powers to gain advantage over the other, each move 
+increasing the costs both must bear to remain competitive and each 
+riposte decreasing the space for withdrawal or retreat. Goldstein 
+believes that most books written to guide America away from these traps 
+lack the “concrete intellectual paradigms” and “accompanying policy 
+proposals” needed to turn high sounding rhetoric about peace and 
+prosperity into realistic guidelines for action.[12] Goldstein uses an 
+innovative concept he labels a “cooperation spiral” to provide both of 
+these things.</p>
+<p>The concept of a cooperation spiral is fairly simple. A grand bargain
+ between Chinese and American policymakers is the end goal of all 
+spirals presented in the book, but concessions and compromise do not 
+start with the great issues. Instead, cooperation spirals are “gradual, 
+evolutionary, and reciprocal” creations, intended to build trust between
+ the two sides on smaller issues. Each iteration of compromises building
+ momentum for a larger and more stable set of compromises to come.[13] 
+Thus the cooperation spiral designed to resolve cross-straits 
+relations—which in its final incarnation includes the complete cessation
+ of arms sales to Taiwan, final status negotiations between the People’s
+ Republic of China and the government of Taiwan, and a ban of any 
+permanent Communist Party of China and People’s Liberations Army 
+presence on the island—begins with much more modest concessions: a 
+limited reduction of U.S. forces on Guam from the American side, and the
+ initiation of military exchanges between the People’s Liberation Army 
+and Republic of China’s armed forces (without preconditions) on the 
+Chinese side. These early concessions are limited in scale, and if the 
+Chinese do not reciprocate, then the Americans can easily reverse them. 
+Reciprocity is key to the entire process, and this is what distinguishes
+ Goldstein’s approach from mere appeasement: he never asks the United 
+States to make painful concessions and compromises without asking an 
+equal sacrifice from the Chinese.[14]</p>
+<p>Image from Lyle Goldstein, Meeting China Halfway: How To Defuse 
+Emerging China-U.S. Rivalry (Washington DC: Georgetown University Press,
+ 2015), 284.</p>
+<p>These cooperation spirals are presented with sweeping scope. Spirals 
+are offered not only for hot-buttons like the South China Sea, the 
+Korean Peninsula, and Cross-Straits relations, but also climate change 
+and environmental concerns; Sino-American economic relations; economic 
+cooperation, competition, and investment in Africa, Latin America, and 
+the Middle East; and the two countries’ trilateral relationship with 
+both India and Japan. Each of these spirals is preceded by a survey of 
+the public debate Americans and Chinese have had about these issues in 
+prominent research articles, policy proposals, and op-eds. Goldstein’s 
+surveys of the Chinese language debates are probably the most important 
+(and certainly the most interesting) sections of the entire book, 
+providing American readers with a rare glimpse of discussions to which 
+they would not otherwise be privy.[15] His policy proposals follow 
+naturally from the literature reviews. Goldstein is aware that there is a
+ temptation to nitpick at the various proposals (one hundred in total) 
+listed in the book. He welcomes this, encouraging issue and area experts
+ to “propose superior cooperation spirals, with greater specificity, 
+realism, and thus promise to improve the relationship.”[16] This is a 
+wise approach. In international affairs, conditions change quickly 
+enough that rigid adherence to any set of proposals would leave the lot 
+of them out of date. The true meat in Goldstein’s book is in the broad 
+conceptual approach he outlines; its myriad applications simply 
+illustrate how that approach might be turned from concept into policy.</p>
+<p>It is thus in terms of broad concepts Meeting China Halfway must be 
+judged—and it is here Meeting China Halfway is most deserving censure. 
+Goldstein’s approach is simply unworkable. Any attempt to apply it in 
+the real world would be met with immediate cries of outrage that the 
+entirety of America’s foreign relations and domestic policies were being
+ sacrificed to the God of Close Sino-American Ties. Just a sampling of 
+these recommendations illustrates the problem. For the sake of various 
+cooperation spirals, Goldstein recommends that the U.S. government 
+formally acknowledge Israel as a nuclear weapons state, stop all drone 
+attacks in Pakistan, invest in high speed rail infrastructure projects 
+across the continental United States, and disband Africa Command. These 
+policies may be of themselves worthy ones, but the hope that they will 
+be widely adopted for the sake of stronger Sino-American relations is 
+fantastic.</p>
+<p>The reason for this is fairly simple: subordination of global policy 
+to Sino-American cooperation (or, for that matter, Sino-American 
+rivalry) is the subordination of the entire American bureaucracy to its 
+few China hands. As a China hand, I welcome the status and authority 
+this new conception of world affairs might grant me—but I would not want
+ to be the man tasked with telling the fellows over at AFRICOM they must
+ close up shop for the sake of improved U.S.-China relations! The 
+resistance of the non-Asianists in the U.S. bureaucracy and foreign 
+policy community to a Goldstein-style foreign policy will be too 
+ferocious to bear.</p>
+<p>The reaction of U.S. allies in the Asia-Pacific would also be 
+terrible to face. Goldstein is curiously dismissive of these allies’ 
+concerns. One can sympathize with the time constraints that shaped his 
+treatment of them—a titanic amount of research was required simply to 
+survey the existing debates inside Washington D.C. and Beijing, and it 
+would be too much to expect Goldstein to provide a thorough survey of 
+the debates being had in Seoul, Manila, Taipei, Tokyo, Singapore, and 
+New Delhi as well; but this unwillingness to consider events as seen by 
+anyone outside of Beijing or Washington leads Goldstein to bizarre 
+places. He outright dismisses Taiwan’s 23 million citizens with the curt
+ (and unsubstantiated) claim that those who seek to put Taiwanese 
+opinion first in discussions of their future “lack an objective view of 
+history, culture, and identity.”[17] Goldstein dismisses other allies’ 
+fears that Beijing’s growing strength might harm their interests by 
+comparing them to children’s “talk of monsters hiding under the bed or 
+in the closet.”[18] Patronizing comments of this sort undermine the 
+spirit of mutual understanding Goldstein claims is central to successful
+ strategy for peace. Meeting China Halfway begins with an earnest appeal
+ to not treat the Chinese with arrogance, paternalism, or undue 
+hypocrisy. This appeal would be far stronger if he avoided these same 
+vices when discussing the lesser powers in the region.[19]</p>
+<h3>Weighing Fire and Cooperation on Fundamentals</h3>
+<p>This partly answers the puzzle of how these two analysts could start 
+off so similarly but end up so far apart. Haddick thinks that serious 
+consideration of the perceptions and interests of regional powers are 
+critical to a successful China policy. Goldstein believes they can be 
+dismissed as easily as the monsters hiding in toddler’s closets. 
+Goldstein never discusses what will happen if lesser powers decide they 
+do not wish to play along with the division of Asia into two great 
+spheres of interest. This is Haddick’s nightmare scenario.</p>
+<p>But this is not their biggest difference. The essence of Goldstein’s argument is that:</p>
+<blockquote>China must make a comprehensive effort to increase the 
+transparency of its national security apparatus, reform some of its 
+long-held claims, and influence certain partners to conform to 
+international norms. In a series of de-escalatory steps, the United 
+States should reciprocate by limiting the scope of its military 
+deployments and military engagement activities.[20]</blockquote>
+<p>This is almost exactly the opposite of Haddick’s recommendations for the region.</p>
+<p>The fundamental difference between the two analysts is their theory 
+of what makes the Communist Party of China tick. Reading these two books
+ next to each other is a reminder of just how important an analyst’s 
+inner model of Chinese decision making is.[21] Under Goldstein's schema,
+ fear of American power, not contempt for American weakness, is what has
+ led the Chinese down the path they now tread. Haddick's case is built 
+on the opposite view. Not all they have to say, but a great deal of it, 
+follows from these opposing opening assumptions.</p>
+<p>It is these assumptions—these unstated models of Chinese decision making—that keep me from endorsing either argument. I have <a href="http://scholars-stage.blogspot.tw/2016/06/china-does-not-want-your-rules-based.html">presented a</a> <a href="http://scholars-stage.blogspot.tw/2016/06/arms-and-influence-in-south-china-sea.html">different</a> <a href="http://scholars-stage.blogspot.tw/2016/07/costly-signaling-in-south-china-sea.html">version</a> of what makes Beijing tick. As I (along with folks like <a href="http://www.pmo.gov.sg/mediacentre/pm-lee-hsien-loongs-interview-wall-street-journal-wsj">Lee Hisen Loong</a> and <a href="http://www.straitstimes.com/opinion/pavlovian-conditioning-and-correct-thinking-on-the-south-china-sea">Bilahauri Kaukisan</a>)
+ have argued, Xi Jinping’s regime believes that the Western-led liberal 
+order and the demands it makes on those who join it are corrosive to 
+authoritarian control, and will eventually lead to the collapse of the 
+Party.[22] For them the Party comes first. When translated into concrete
+ policy, “putting the Party first” means eliminating Western influence 
+from within and actively reshaping regional rules from without. What 
+China is doing is not an inevitable consequence of great power 
+competition, but the fruits of very specific fears of a specific ruling 
+regime.</p>
+<p>If this explanation for China’s behavior is correct, then neither 
+Haddick’s nor Goldstein’s proposals are tenable. Haddick's entire 
+strategy is predicated on the idea that you can build a military machine
+ whose might will raise the costs of conflict so high that the Chinese 
+must eventually back down. But if Zhongnanhai serves the Party before it
+ serves the country then none of that matters. The Communist Party of 
+China’s continued domination of China is justified to the Chinese public
+ on the grounds that hostile Western forces have always sought to 
+contain and cripple China, but under the guardianship of the Party, the 
+Chinese people will never be forced to bow down to foreign powers again.
+ Backing down and accepting Western order threatens their legitimacy. It
+ is an existential threat to their continued rule. The costs of war 
+cannot compete with this. In the worst case war scenario, Party leaders 
+suffer the same fate they would most likely suffer in any existential 
+crisis (violent death); at best, they get lucky and win the war. This is
+ not a recipe for stability.</p>
+<p>This model of Chinese decision making also makes Goldstein's 
+cooperation spirals exceedingly difficult, if not impossible, to 
+implement. Beijing does not just fear specific American policies—it 
+fears the entire American-led system. The Chinese can bide and endure 
+this order, but they cannot permanently compromise with it. It is hard 
+to compromise with a system whose existence threatens your survival.</p>
+<h2>There are probably less than a hundred people on this planet who 
+actually know why Beijing does what it does. They are unlikely to share 
+this information with American analysts.</h2>
+<p>One’s inner model of Chinese decision making thus matters quite a 
+lot. The most disturbing thing about reading these books together, 
+however, is that neither of these analysts, exceedingly intelligent and 
+well respected in their field, pauses to explain where their assumed 
+model of Chinese decision making comes from. These operating assumptions
+ are left unstated and unproven, despite how readily everything else 
+these authors write follow from them.</p>
+<p>The formal entrance to the Zhongnanhai compound in Beijing, the 
+central headquarters for the Communist Party of China and the State 
+Council (Central government) of the People's Republic of China. (Yanan 
+Peng/Wikimedia)</p>
+<p>This is possibly because these analysts did not realize the 
+importance of these assumptions. But it may also reflect just how 
+difficult it is to prove that the model of Chinese decision making one 
+uses is actually correct. Here I am just as guilty as every other China 
+hand; I cannot prove that my own model of Chinese decision making is the
+ right one. The best I can say is that it fits Chinese behavior over the
+ last two decades better than anything else I have seen proposed.[23] 
+But in the end neither I, nor any other analyst of Chinese foreign 
+policy, actually knows what is happening behind the walls of 
+Zhongnanhai. There are probably less than a hundred people on this 
+planet who actually know why Beijing does what it does. They are 
+unlikely to share this information with American analysts.</p>
+<h2>Our analysis is built on a foundation of sand. We offer bold 
+proclamations and precise policy proposals designed to cajole, convince,
+ or coerce a hostile nuclear power whose decision making process is 
+utterly opaque to us.</h2>
+<p>Our analysis is built on a foundation of sand. We offer bold 
+proclamations and precise policy proposals designed to cajole, convince,
+ or coerce a hostile nuclear power whose decision making process is 
+utterly opaque to us. We theorize much, and assume more, but we still do
+ not know why the Chinese do what they do. Most critically, we do not 
+know how to find the knowledge we lack. This is an intellectual 
+challenge we have not begun to meet. Understanding Zhongnanhai is a 
+wonderful methodological puzzle—but a puzzle with nuclear stakes. Until 
+we solve this puzzle, I doubt any number of policy prescriptions will be
+ enough to ensure peace in the West Pacific.</p>
+<p class="rm-manual"><a href="https://twitter.com/Scholars_Stage">T. Greer</a>
+ is a writer and analyst currently based out of Taipei. His research 
+focuses on the evolution of East Asian strategic thought from the time 
+of Sunzi to today. He blogs at <a href="http://www.scholars-stage.blogspot.tw/">The Scholar’s Stage</a>.</p>
+<p class="rm-manual">Have a response or an idea for your own article? Follow the logo below, and you too can contribute to The Bridge:</p>
+<p class="rm-manual">Enjoy what you just read? Please help spread the word to new readers by sharing it on social media.</p>
+<p class="rm-manual">Header Image: Chinese Temple (<a href="https://pixabay.com/en/china-temple-heaven-architecture-649517/">Pixbay</a>)</p>
+<h3 class="rm-manual">Notes:</h3>
+<p class="rm-manual"> [1] Robert Haddick, Fire on the Water: China, 
+America, and the Future of the Pacific (Annapolis: Naval Institute 
+Press, 2014), 48.</p>
+<p class="rm-manual"> [2] Lyle Goldstein, Meeting China Halfway: How To 
+Defuse Emerging China-U.S. Rivalry (Washington DC: Georgetown University
+ Press, 2015), 6.</p>
+<p class="rm-manual"> [3] Andrew Krepnivich, <a href="http://csbaonline.org/publications/2015/04/maritime-competition-in-a-mature-precision-strike-regime/">Maritime Warfare in a Mature Precision Strike Regime</a> (Washington DC: CSBA, 2015); Stephen Biddle and Ivan Oelrich, “<a href="http://www.mitpressjournals.org/doi/pdf/10.1162/ISEC_a_00249">Future
+ Warfare in the Western Pacific: Chinese Antiaccess/Area Denial, U.S. 
+AirSea Battle, and Command of the Commons in East Asia</a>,” International Security 41, no. 1 (2016), 7-48.</p>
+<p class="rm-manual"> [4] Haddick, Fire on the Water, 92.</p>
+<p class="rm-manual"> [5] Ibid., 94.</p>
+<p class="rm-manual"> [6] They pose a similar threat to American carrier strike groups. When armed with Chinese-built <a href="https://en.wikipedia.org/wiki/YJ-12">Yingji</a><a href="https://en.wikipedia.org/wiki/YJ-12"> 12 anti-ship cruise missiles</a>,
+ a Flanker squadron’s striking range would also outdistance the Aegis 
+air defense and reconnaissance system that defends every American 
+carrier strike group by several hundred kilometer. This would allow them
+ to fire their missile loads with little fear of being destroyed by the 
+carrier group’s defensive screen. Two or three waves of such attacks, 
+coming from different axes, would almost certainly score a hit. Even if 
+the carrier was unharmed by this barrage, the Flankers would be 
+victorious, for the carrier group, now bereft its entire defensive 
+missile bank, would be forced to retreat to safer waters lest the entire
+ strike group, with its $13 billion aircraft carrier at its center, be 
+destroyed by the next salvo. As Haddick argues, “Accepting that the 
+strike group would shoot down some Flankers before they launched their 
+anti-ship missiles, the strike group would still have to contend with 
+125 to 200 incoming ASCMs, which would make wave-top, supersonic 
+approaches to the U.S. ships. In past engagements of anti-ship missiles 
+against alerted surface warships, 32 percent of attacking missiles 
+scored hits. If only 5 percent of the ASCMs scored hits, the carrier 
+strike group’s ships would still receive five to ten missile impacts, 
+likely causing enough damage to render the group ineffective and 
+possibly defenseless against another attack.” (96-97).</p>
+<p class="rm-manual"> [7] Ibid., 72-74; 97.</p>
+<p class="rm-manual"> [8] Haddick, Fire on the Water, 115.</p>
+<p class="rm-manual"> [9] Ibid., 42-46.</p>
+<p class="rm-manual"> [10] Ibid., 51.</p>
+<p class="rm-manual"> [11] Ibid., 4-5.</p>
+<p class="rm-manual"> [12] Goldstein, Meeting China Halfway, 2</p>
+<p class="rm-manual"> [13] Ibid., 12</p>
+<p class="rm-manual"> [14] For the full cross straits cooperation cycle, see ibid, 60-72.</p>
+<p class="rm-manual"> [15] To provide one example, I suspect most 
+Americans will be just as surprised as I was to discover that many 
+prominent voices in the Chinese policy scene argue that the Obama 
+administration’s push for a climate deal is actually a covert attempt to
+ depress Chinese economic growth!</p>
+<p class="rm-manual"> [16] Ibid, 15.</p>
+<p class="rm-manual"> [17] Goldstein backs this argument up with one of 
+the most curious arguments for cross straits unity I have ever had the 
+misfortune to read. “Few Westerners realize that the Taiwan dialect is 
+called Minnan Hua, which literally means “speech of those south of the 
+Min River.” But the Min River is located not on Taiwan but in Fujian 
+Province.”(76) This is technically true, but it betrays an unfamiliarity
+ with Taiwan and its people. Outside the stray professional linguist, no
+ Taiwanese person ever refers to the local dialect as Minnan Hua. To a 
+man they all call it Taiyi (台语), “the language of Taiwan,” or as it is 
+most often translated into English, Taiwanese. It should be no surprise 
+that the use of this language is at the center of Taiwanese growing 
+nationalist sentiment.</p>
+<p class="rm-manual"> [18] Ibid, 358.</p>
+<p class="rm-manual"> [19] This hypocrisy is most glaring in Goldstein’s
+ discussions of history. Goldstein states that his “book is built on the
+ premise that history cannot be overlooked or papered over,"(14) and to 
+drive the point home, he devotes an entire chapter to the history of 
+U.S.-Chinese relations, driving in on the history of U.S. imperialism in
+ China and the psychological after effects America’s imperial presence 
+has in the China of today. This contrasts greatly with his treatment of 
+China’s own foreign adventurism. Goldstein’s gloss of the Sino-Indian 
+war of 1963, for example, devotes several paragraphs to the CIA attempt 
+to arm and train Tibetan rebels, something the Chinese still remember. 
+What he does not emphasize in this account are the events at the center 
+of India’s historical memory—Nehru’s generous and unilateral concessions
+ in favor of China in the 1950s, made in hope of a new partnership 
+between the two countries, spurned by Mao on the grounds of domestic 
+struggle. In India this rejection of Nehru’s offers is known as the 
+“great betrayal,” and the culmination of this “betrayal” in the surprise
+ attack on Indian forces in 1963 still defines Indian images of China 
+today. This history as surely as important—I would argue far more 
+important—to the future of Sino-Indian security than the CIA’s attempts 
+to infiltrate Tibet. It is not mentioned. Readers also learn nothing 
+about the violent legacy of China’s cold war policies in other countries
+ discussed, despite the that every regional single power of note either 
+fought a war directly with China or fought an insurgency funded and 
+trained by Beijing. Goldstein describes attempts to stoke the flame of 
+Maoist insurgency across southeast Asia in the 60s and 70s are as 
+“certain errors in diplomacy,”(266) but anyone remotely familiar with 
+the countries in question know they have left much larger historical 
+scars than this. These wars lie within living memory; their influence on
+ contemporary Asian politics is far clearer than the early 20th century 
+imperialism Goldstein devotes so much time to. Goldstein either does not
+ know about this history or he does not care about it.</p>
+<p class="rm-manual"> [20] Ibid., 356.</p>
+<p class="rm-manual"> [21] Haddick actually claims that his proposed 
+strategy is intended to work absent any knowledge of China’s inscrutable
+ intentions, but the rest of the book undermines this argument. Haddick 
+argues that the key to stability is ensuring that the benefits of 
+cooperating with the existing rules far exceed the costs of bucking 
+them. But this could only possibly be effective when the deterring power
+ understands how those they deter calculate benefits and costs. Though 
+Haddick refuses to explicitly state his view on Chinese intentions and 
+long term designs, his strategy implicitly says a great deal on the 
+matter.</p>
+<p class="rm-manual"> [22] “<a href="http://www.pmo.gov.sg/mediacentre/pm-lee-hsien-loongs-interview-wall-street-journal-wsj">Lee Hsien Loong interview with the </a><a href="http://www.pmo.gov.sg/mediacentre/pm-lee-hsien-loongs-interview-wall-street-journal-wsj">Wall Street </a><a href="http://www.pmo.gov.sg/mediacentre/pm-lee-hsien-loongs-interview-wall-street-journal-wsj">Journal</a>,” Prime Minister’s Office of Singapore, press release (26 March 2016); Bilahauri Kaukisan, “<a href="http://www.straitstimes.com/opinion/pavlovian-conditioning-and-correct-thinking-on-the-south-china-sea">Pavlovian conditioning and 'correct thinking' on the South China Sea</a>,” Straits Times (1 April 2016)</p>
+<p class="rm-manual"> [23] For a historical account of modern Chinese foreign policy that generally accords with this argument see John Garver, <a href="https://www.amazon.com/Chinas-Quest-History-Relations-Republic/dp/0190261056/ref=as_li_ss_tl?ref_=nav_signin&amp;&amp;linkCode=ll1&amp;tag=theschssta-20&amp;linkId=630c8735a3c9d89ee244a3741a428734">China’s Quest: The History of the Foreign Relations of the People’s Republic of China</a> (Oxford: Oxford University Press, 2016), 463-787.</p>
+<p class="rm-manual"> Tagged: <a href="file:///the-bridge/tag/China" rel="tag">China</a>, <a href="file:///the-bridge/tag/US-China+Relations" rel="tag">US-China Relations</a>, <a href="file:///the-bridge/tag/South+China+Sea" rel="tag">South China Sea</a>, <a href="file:///the-bridge/tag/AirSea+Battle" rel="tag">AirSea Battle</a>, <a href="file:///the-bridge/tag/A2%2FAD" rel="tag">A2/AD</a>, <a href="file:///the-bridge/tag/Cooperation" rel="tag">Cooperation</a>, <a href="file:///the-bridge/tag/Chinese+Communist+Party" rel="tag">Chinese Communist Party</a>, <a href="file:///the-bridge/tag/Pacific" rel="tag">Pacific</a> </p>
+<p class="rm-manual"><span>Newer Post</span><a href="file:///the-bridge/2016/11/8/the-new-russian-menace-is-a-resurgent-russia-really-a-threat-to-the-united-states" rel="prev"><span>The New Russian Menace: Is a Resurgent Russia Really a Threat to the United States?</span></a></p>
+<p class="rm-manual"><span>Older Post</span><a href="file:///the-bridge/2016/11/3/what-size-is-my-war-examining-the-concepts-of-total-and-limited-war" rel="next"><span>What Size is My War? Examining the Concepts of Total and Limited War</span></a></p></article>
+</body></html>

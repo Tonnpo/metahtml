@@ -1,0 +1,367 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> US marshals say 'affluenza' teen likely won't be deport... | AccessWDUN.com </p>
+<p class="rm-manual"> <a href="file:///">Home</a> <a href="#">Menu</a> <a href="#">Search</a> </p>
+<p class="rm-manual"> <a href="https://www.facebook.com/accessnorthga"><span>Facebook</span></a> <a href="https://twitter.com/access_wdun"><span>Twitter</span></a> <a href="file:///rss"><span>RSS</span></a> </p>
+<p class="rm-manual"> <a href="file:///weather">Currently 59.0 °F</a> </p>
+<p class="rm-manual"> <span>Thursday</span> <span>June 18th, 2020</span> <span>5:36PM</span> </p>
+<p class="rm-manual"> <span>Posted</span> 9:28PM on Wednesday 30th December 2015 <span>( 4 years ago )</span> </p>
+<h1 class="rm-manual">US marshals say 'affluenza' teen likely won't be deported for weeks as Mexico sends mom home</h1>
+<p class="rm-manual"> By <a href="file:///author/2/the-associated-press">The Associated Press</a> </p>
+<p class="rm-manual">An immigration van carrying Ethan Couch exits the 
+federal building housing the offices of the national immigration service
+ in Guadalajara, Mexico, Wednesday, Dec. 30, 2015. Couch, the Texas 
+teenager known for using an "affluenza" defense in a fatal 
+drunken-driving accident, likely won't return to the U.S. anytime soon 
+because of a Mexican judge's decision to delay his deportation. Couch 
+was transported to Mexico City, because the Mexico City facility for 
+detaining migrants is larger and better equipped to hold someone for 
+days or weeks, according to officials. (AP Photo/Jose Refugio Ruiz)</p>
+<p class="rm-manual">Related Articles</p>
+<p class="rm-manual"> <a href="file:///article/2019/12/858692">Gerrit Cole, Scott Boras ready to play `Can you top this?'</a><a href="file:///article/2019/12/858681">Trump mocks impeachment effort, talks up trade deal at rally</a><a href="file:///article/2019/12/858693">Louisville becomes latest No. 1 to lose, falls to Texas Tech</a><a href="file:///article/2019/12/858685">Corruption allegations long dogged ex-Mexico security chief</a> </p>
+<p class="rm-manual"> <a href="file:///contact?a=359312"> Contact Editor</a> </p>
+<p>MEXICO CITY (AP) — The Texas teenager known for using an "affluenza" 
+defense in a fatal drunken-driving accident likely won't return to the 
+U.S. anytime soon because of a Mexican judge's decision to delay his 
+deportation Wednesday, but a Mexico immigration official said his mother
+ was being flown to Los Angeles.</p>
+<p>Richard Hunter, chief deputy for the U.S. Marshals Service in South 
+Texas, said during a news conference in Houston that a three-day court 
+injunction granted to Ethan Couch will likely take at least two weeks to
+ resolve.</p>
+<p>Later in the day, however, the teen's mother, Tonya Couch, was put on
+ a plane to be flown from Guadalajara to Los Angeles, an official with 
+Mexico's National Immigration Institute told The Associated Press. The 
+official said she would be turned over to U.S. marshals.</p>
+<p>The official, who was not authorized to discuss the case and spoke on
+ condition of anonymity, said the woman was sent to the United States 
+because immigration authorities did not receive a judge's injunction 
+like the one that temporarily blocked her son's deportation.</p>
+<p>Ethan Couch was transported late Wednesday to Mexico City, the 
+official said. The decision to move Couch was made because the Mexico 
+City facility for detaining migrants is larger and better equipped to 
+hold someone for days or weeks. The official would not say if he was 
+being moved by air or ground.</p>
+<p>Authorities believe the 18-year-old Couch, who was sentenced only to 
+probation for the 2013 wreck in Texas, fled to Mexico with his mother in
+ November as prosecutors investigated whether he had violated his 
+probation. Both were taken into custody Monday after authorities said a 
+phone call for pizza led to their capture in the resort city of Puerto 
+Vallarta.</p>
+<p>The ruling earlier Wednesday by the Mexican court gives a judge three
+ days to decide whether the younger Couch has grounds to challenge his 
+deportation based on arguments that kicking him out of the country would
+ violate his rights.</p>
+<p>Hunter said the legal maneuver basically takes the decision out of an
+ immigration agent's hands and asks a higher authority to make the 
+deportation decision. He said such cases can often take anywhere from 
+two weeks to several months, depending on the priorities of the local 
+courts.</p>
+<p>"It also depends on the fact the Couches have legal counsel. And it 
+seems to me, if they wanted to, they could pay them as much money as 
+they want to drag this thing out," Hunter said. "We're hopeful that's 
+not the case. We're hopeful the Mexican immigration court will make a 
+quick and decisive decision and return the Couches to America."</p>
+<p>During the sentencing phase of Couch's trial in 2013, a defense 
+expert argued that his wealthy parents coddled him into a sense of 
+irresponsibility — a condition the expert termed "affluenza." The 
+condition is not recognized as a medical diagnosis by the American 
+Psychiatric Association, and its invocation during the legal proceedings
+ drew ridicule.</p>
+<p>"Couch continues to make a mockery of the system," said Fort Worth 
+attorney Bill Berenson, who represented Sergio Molina, who was paralyzed
+ and suffered severe brain damage in the crash.</p>
+<p>Couch's attorneys in the U.S. issued a statement Wednesday saying 
+they couldn't comment on the case because they weren't licensed to 
+practice law in Mexico. It wasn't immediately clear which attorneys were
+ handling the case in Mexico.</p>
+<p>Mexican police say Couch and his mother spent three days in a rented 
+condo at a resort development in Puerto Vallarta before finding an 
+apartment. One of the Couches' telephones had been used to order 
+delivery from Domino's Pizza to the condominium complex in Puerto 
+Vallarta's old town, far from the glitzy resorts of the city's newer 
+section, according to a police report issued by the Jalisco state 
+prosecutors' office.</p>
+<p>Agents from the prosecutors' office went to the complex, where a 
+tourism operator told them that the people who had occupied the condo 
+were asked to vacate because the owners were coming to stay over 
+Christmas, the report said. The Couches then moved to an apartment, and 
+the agents set up a surveillance operation in the surrounding streets.</p>
+<p>On Monday evening, two people matching the Couches' description were 
+spotted and intercepted. The police report said they behaved evasively, 
+claimed to be carrying no IDs, gave inconsistent stories about their 
+names and failed to provide proof of their legal migratory status in 
+Mexico.</p>
+<p>They were taken into custody and handed over to immigration officials.</p>
+<p>In Texas, Tarrant County Sheriff Dee Anderson said Tuesday that the 
+Couches had prepared to be gone a while, even dyeing the teenager's 
+blond hair black.</p>
+<p>"They had planned to disappear. They even had something that was 
+almost akin to a going-away party before leaving town," Anderson said. 
+He declined to detail the party, including how many people attended.</p>
+<p>Anderson said Couch and his mother apparently crossed the border in 
+her pickup and drove to Puerto Vallarta. No immediate charges were 
+planned for others who may have known about or assisted with the plan, 
+Anderson said. He noted that authorities have no evidence that Couch's 
+father, who owns a sheet metal factory in North Texas, was involved.</p>
+<p>The sheriff has said he believes the two fled in late November, after
+ a video surfaced that appears to show Ethan Couch at a party where 
+people were drinking. If found to be drinking, Couch could see his 
+probation revoked and face up to four months in jail.</p>
+<p>Authorities began searching for him and his mother after he missed a 
+mandatory appointment with his probation officer on Dec. 10.</p>
+<p>Tarrant County District Attorney Sharen Wilson said Tuesday that she 
+planned to ask that Couch's case be transferred to adult court, where he
+ could face up to 120 days in an adult jail, followed by 10 years' 
+probation. If he violates that probation, he could face up to 10 years 
+in prison per death, Wilson said.</p>
+<p>Anderson said an arrest warrant was being issued for Tonya Couch on 
+charges of hindering an apprehension, a third-degree felony that carries
+ a sentence of two to 10 years in prison.</p>
+<p>Couch was driving drunk and speeding near Fort Worth in June 2013, 
+when he crashed into a disabled SUV, killing four people and injuring 
+several others, including passengers in his pickup truck.</p>
+<p>He pleaded guilty to four counts of intoxication manslaughter and two
+ counts of intoxication assault causing serious bodily injury. A judge 
+sentenced him in juvenile court to 10 years' probation and a stint in a 
+rehabilitation center.</p>
+<p class="rm-manual">___</p>
+<p class="rm-manual">Associated Press writer E. Eduardo Castillo 
+reported this story in Mexico City and AP writer Michael Graczyk 
+reported from Houston. AP writers Elizabeth Rivera in Guadalajara, 
+Mexico; Emily Schmall in Fort Worth, Texas; and Mark Stevenson in Mexico
+ City contributed to this report.</p>
+<p class="rm-manual"> <a href="file:///author/2/the-associated-press">The Associated Press</a> </p>
+<p class="rm-manual"> The Associated Press is an American multinational 
+nonprofit news agency headquartered in New York City. The AP is owned by
+ its contributing newspapers, radio, and television stations in the 
+United States, all of which contribute stories to the AP and use 
+material written by its staff journalists. </p>
+<p class="rm-manual"> <a href="file:///author/2/the-associated-press">More Articles From The »</a> </p>
+<ul class="rm-manual"> <li class="rm-manual">
+<span>Associated Categories</span>: Associated Press (AP), AP National News, Top U.S. News short headlines, Top General short headlines</li> </ul>
+<p class="rm-manual"> © Copyright 2020 AccessWDUN.com </p>
+<p class="rm-manual"> All rights reserved. This material may not be published, broadcast, rewritten, or redistributed without permission. </p>
+<p class="rm-manual"> <a href="file:///article/2015/12/359656">THE LATEST: Bama playing for 10th championship, after beating Michigan St 38-0 in semifinal</a> </p>
+<p class="rm-manual"> ARLINGTON, Texas (AP) — The latest developments 
+from the College Football Playoff national semifinal game between 
+Alabama and Michigan State in the Cotton Bowl (all times local):10:40 
+p.m.Alabama is g... </p>
+<p class="rm-manual">11:53PM ( 3 years ago )</p>
+<p class="rm-manual"> <a href="file:///article/2015/12/359661">Sooners, Mayfield shut out in 2nd half and lose to Clemson 37-17 in Orange Bowl semifinal game</a> </p>
+<p class="rm-manual"> MIAMI GARDENS, Fla. (AP) — The Oklahoma Sooners 
+were fooled by a fake punt and stuffed on fourth down when they tried 
+some trickery of their own.And in the second half, Clemson was simply 
+the stronger... </p>
+<p class="rm-manual">11:42PM ( 3 years ago )</p>
+<p class="rm-manual"> <a href="file:///article/2015/12/359660">No more Clemsoning: Watson, stout defense lead Tigers past Oklahoma 37-17 in Orange Bowl</a> </p>
+<p class="rm-manual"> MIAMI GARDENS, Fla. (AP) — Dabo Swinney was in no 
+mood to talk about Clemsoning."Next question," the coach snapped.No 
+problem.It's time to put that term to rest.Clemson, a team once known 
+for such ine... </p>
+<p class="rm-manual">11:42PM ( 3 years ago )</p>
+<p class="rm-manual">Associated Press (AP)</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///article/2015/12/359598">The Latest: Obama returns to rented family vacation home after a round of golf</a></li>
+<li class="rm-manual"><a href="file:///article/2015/12/359594">No. 7 Ohio State, No. 8 Notre Dame not taking Fiesta Bowl lightly despite missing playoff</a></li>
+<li class="rm-manual"><a href="file:///article/2015/12/359666">Contraction in Chinese manufacturing eases in December, service industries continue expansion</a></li>
+<li class="rm-manual"><a href="file:///article/2015/12/359664">Southern and Central California to have Dungeness and rock crabs for New Year's Day</a></li>
+<li class="rm-manual"><a href="file:///article/2015/12/359491">In 2 words apiece, people around the world sum up 2015, and their hopes for year ahead</a></li>
+<li class="rm-manual"><a href="file:///article/2015/12/359665">Great-grandmother pleads no contest in courthouse attack on Las Vegas fatal DUI defendant</a></li>
+<li class="rm-manual"><a href="file:///article/2015/12/359567">Newly released emails reveal coordination among Chicago officials after police killed teen</a></li>
+<li class="rm-manual"><a href="file:///article/2015/12/359647">Police in Munich warn of 'imminent threat' of attack by Islamic State group</a></li> </ul>
+<p class="rm-manual"> <a href="file:///article/2015/12/359588">State Department says hundreds of Hillary Clinton emails have been newly classified</a> </p>
+<p class="rm-manual"> WASHINGTON (AP) — The State Department said 
+Thursday that portions of 275 emails released on New Year's Eve from 
+Hillary Clinton's time as secretary of state have been newly classified,
+ bringing 2015... </p>
+<p class="rm-manual">9:31PM ( 3 years ago )</p>
+<p class="rm-manual"> <a href="file:///article/2015/12/353886">10 Things to Know for Friday</a> </p>
+<p class="rm-manual"> Your daily look at late-breaking news, upcoming 
+events and the stories that will be talked about Friday.1. WHERE'S THE 
+PARTY?Crowds pack New York's Times Square before the midnight New Year's
+ ball dro... </p>
+<p class="rm-manual">9:26PM ( 3 years ago )</p>
+<p class="rm-manual"> <a href="file:///article/2015/12/359559">Star TCU QB Trevone Boykin charged with felony assault of officer, suspended for Alamo Bowl</a> </p>
+<p class="rm-manual"> SAN ANTONIO (AP) — Trevone Boykin's brilliant 
+college career has come to an abrupt and inglorious end even though TCU 
+has one game left to play this season.Boykin was arrested early Thursday
+ and charg... </p>
+<p class="rm-manual">9:12PM ( 3 years ago )</p>
+<p class="rm-manual">AP National News</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///article/2015/12/359663">Man charged with pinning son against couch until boy stopped breathing and died</a></li>
+<li class="rm-manual"><a href="file:///article/2015/12/359604">Police: Man accused of road-rage shooting stayed on scene, called 911; victim had arm wounds</a></li>
+<li class="rm-manual"><a href="file:///article/2015/12/359655">Federal judge blocks part of Arkansas abortion pill restrictions for 2 weeks</a></li>
+<li class="rm-manual"><a href="file:///article/2015/12/359621">THE LATEST: Clemson going to the title game, beats Oklahoma 37-17 in Orange Bowl</a></li>
+<li class="rm-manual"><a href="file:///article/2015/12/359493">Hard-fought legal battles expected in Cosby case over other accusers and decade-old testimony</a></li>
+<li class="rm-manual"><a href="file:///article/2015/12/359658">Q&amp;A: What is known, what remains a mystery in Alaska plane crash investigation</a></li>
+<li class="rm-manual"><a href="file:///article/2015/12/359564">'Affluenza' teen expected to spend weeks in Mexican immigration holding center</a></li>
+<li class="rm-manual"><a href="file:///article/2015/12/359614">Medal of Honor recipient released on bond after appearing in court on hit-and-run charge</a></li> </ul>
+<p class="rm-manual"> <a href="file:///article/2015/12/359515">Texas mother of 'affluenza' teen is jailed in Los Angeles after she was deported from Mexico</a> </p>
+<p class="rm-manual"> LOS ANGELES (AP) — The mother of a fugitive Texas 
+teen known for using an "affluenza" defense in a fatal drunken-driving 
+accident will likely remain jailed for several days in Los Angeles after
+ being... </p>
+<p class="rm-manual">7:03PM ( 3 years ago )</p>
+<p class="rm-manual"> <a href="file:///article/2015/12/359506">Rivers reach record heights in some parts of Missouri, causing traffic woes, flooding</a> </p>
+<p class="rm-manual"> ST. LOUIS (AP) — Floodwater was starting to recede
+ at some water-logged Midwestern communities Thursday, but hundreds of 
+homes were damaged, hundreds more remained evacuated, and getting 
+through St. L... </p>
+<p class="rm-manual">6:58PM ( 3 years ago )</p>
+<p class="rm-manual"> <a href="file:///article/2015/12/359630">Washington prisoner wrongly released early charged with killing teen; 2nd death tied to error</a> </p>
+<p class="rm-manual"> SEATTLE (AP) — An inmate mistakenly released from a
+ Washington state prison three months early has been charged with 
+killing a teenager when the inmate should have been locked up, officials
+ said Thurs... </p>
+<p class="rm-manual">6:56PM ( 3 years ago )</p>
+<p class="rm-manual">Top U.S. News short headlines</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///article/2015/12/359620">California condor returns to wild after 3 decades of captive breeding that saved the species</a></li>
+<li class="rm-manual"><a href="file:///article/2015/12/359495">Sexual assault charge against Bill Cosby represents betrayal for some in black community</a></li>
+<li class="rm-manual"><a href="file:///article/2015/12/359576">Hawaii raises smoking age to 21 for regular and electronic cigarettes; military supports law</a></li>
+<li class="rm-manual"><a href="file:///article/2015/12/359563">A look at how the federal criminal code regards hate speech _ what's legal and what's not</a></li>
+<li class="rm-manual"><a href="file:///article/2015/12/359310">The Latest: Mother of 'affluenza' teen arrives in Los Angeles after deportation from Mexico</a></li>
+<li class="rm-manual"><a href="file:///article/2015/12/359442">The Latest: Officials prepare to close Interstate 55 south of St. Louis as river level rises</a></li>
+<li class="rm-manual"><a href="file:///article/2015/12/359312">US marshals say 'affluenza' teen likely won't be deported for weeks as Mexico sends mom home</a></li>
+<li class="rm-manual"><a href="file:///article/2015/12/359355">Bill Cosby charged with drugging and sexually assaulting woman in his home, could go to prison</a></li> </ul>
+<p class="rm-manual"> <a href="file:///article/2015/12/359587">Ben Carson's top 2 staffers quit, question retired neurosurgeon's readiness for White House</a> </p>
+<p class="rm-manual"> DES MOINES, Iowa (AP) — Several top aides to 
+Republican presidential candidate Ben Carson resigned on Thursday, 
+citing frustration with the influence of the retired neurosurgeon's 
+business manager and... </p>
+<p class="rm-manual">4:20PM ( 3 years ago )</p>
+<p class="rm-manual"> <a href="file:///article/2015/12/358086">AP Poll: Islamic State's attacks, and global effort to crush it, voted top news story of 2015</a> </p>
+<p class="rm-manual"> NEW YORK (AP) — The far-flung attacks claimed by 
+Islamic State militants and the intensifying global effort to crush them
+ added up to a grim, gripping yearlong saga that was voted the top news 
+story o... </p>
+<p class="rm-manual">2:55PM ( 3 years ago )</p>
+<p class="rm-manual"> <a href="file:///article/2015/12/359570">Democratic presidential hopeful Martin O'Malley won't appear on primary ballot in Ohio</a> </p>
+<p class="rm-manual"> COLUMBUS, Ohio (AP) — Democratic presidential 
+candidate Martin O'Malley failed to qualify for Ohio's primary ballot 
+after falling short of the signatures needed to appear before the 
+state's voters, a... </p>
+<p class="rm-manual">2:07PM ( 3 years ago )</p>
+<p class="rm-manual">Top General short headlines</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///article/2015/12/359510">Questions and answers about the Hillary Clinton email release from State Department</a></li>
+<li class="rm-manual"><a href="file:///article/2015/12/359519">Belgium: 10th suspect arrested in Paris attacks probe, 6 others questioned over holiday plot</a></li>
+<li class="rm-manual"><a href="file:///article/2015/12/354148">10 Things to Know for Today</a></li>
+<li class="rm-manual"><a href="file:///article/2015/12/359400">Eagles CEO Jeffrey Lurie says coach following Chip Kelly needs people skills, emotional smarts</a></li>
+<li class="rm-manual"><a href="file:///article/2015/12/359303">Water rescues widespread as communities in Missouri, Illinois brace for even more flooding</a></li>
+<li class="rm-manual"><a href="file:///article/2015/12/353561">10 Things to Know for Thursday</a></li>
+<li class="rm-manual"><a href="file:///article/2015/12/359317">AP-NORC Poll: Religious liberty seen as vital in US, but for Christians more than Muslims</a></li>
+<li class="rm-manual"><a href="file:///article/2015/12/359316">Emanuel says changes in Chicago police training should emphasize force as last option, not 1st</a></li> </ul>
+<p class="rm-manual"> <a href="file:///article/2019/12/858692">Gerrit Cole, Scott Boras ready to play `Can you top this?'</a> </p>
+<p class="rm-manual"> Agent Scott Boras says Gerrit Cole will command 
+even more money than the $245 million, seven-year contract he negotiated
+ for Stephen Strasburg with Washington </p>
+<p class="rm-manual">By <a href="file:///author/2/the-associated-press">The Associated Press</a></p>
+<p class="rm-manual">9:50PM ( 29 minutes ago )</p>
+<p class="rm-manual"> <a href="file:///article/2019/12/858681">Trump mocks impeachment effort, talks up trade deal at rally</a> </p>
+<p class="rm-manual"> President Donald Trump is mocking Democrats for 
+their efforts to impeach him as he rallies supporters in the key swing 
+state of Pennsylvania </p>
+<p class="rm-manual">By <a href="file:///author/2/the-associated-press">The Associated Press</a></p>
+<p class="rm-manual">9:38PM ( 41 minutes ago )</p>
+<p class="rm-manual"> <a href="file:///article/2019/12/858693">Louisville becomes latest No. 1 to lose, falls to Texas Tech</a> </p>
+<p class="rm-manual"> Davide Moretti scored 18 points and hit successive
+ 3-pointers that helped Texas Tech knock off undefeated No. 1 Louisville
+ 70-57 on Tuesday night at Madison Square Garden </p>
+<p class="rm-manual">By <a href="file:///author/2/the-associated-press">The Associated Press</a></p>
+<p class="rm-manual">9:38PM ( 41 minutes ago )</p>
+<p class="rm-manual"> <a href="file:///article/2019/12/858685">Corruption allegations long dogged ex-Mexico security chief</a> </p>
+<p class="rm-manual"> Mexico's former security chief was dogged by so 
+many allegations of corruption and wrongdoing for so long that some said
+ it was only a matter of time before he would be arrested </p>
+<p class="rm-manual">By <a href="file:///author/2/the-associated-press">The Associated Press</a></p>
+<p class="rm-manual">9:29PM ( 50 minutes ago )</p>
+<p class="rm-manual"> <a href="file:///article/2019/12/858507">UK's Johnson pushes his Brexit message as election nears</a> </p>
+<p class="rm-manual"> Britain's Prime Minister Boris Johnson is trying 
+to get his campaign back to the issue of Brexit amid allegations that he
+ exploited a terrorist knife attack for political gain </p>
+<p class="rm-manual">By <a href="file:///author/2/the-associated-press">The Associated Press</a></p>
+<p class="rm-manual">9:26PM ( 53 minutes ago )</p>
+<p class="rm-manual"> <a href="file:///privacy">Privacy</a> | <a href="file:///terms">User Agreement</a> | <a href="file:///contact">Contact</a> | <a href="file:///about/advertising">Advertise With Us</a> </p>
+<p class="rm-manual"> 2020 © Jacobs Media Corporation. All rights reserved. <a href="https://7b1de02a7bcf9c1df487-6849f9022b05f72b83236695aa4e9a0a.ssl.cf2.rackcdn.com/uploads/files/2019/11/eeo-public-file-2018-2019.pdf">EEO Report</a>. <a href="http://www.fullmedia.com/">Website by Full Media</a> </p>
+<p class="rm-manual"> <a href="file:///account/login">Login / My Access</a> </p>
+<p class="rm-manual"><a href="#">close</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"><a href="file:///">Home</a></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="http://streamdb8web.securenetsystems.net/v5/WDUN">Listen Live</a></p></li>
+<li class="rm-manual">
+<p class="rm-manual"><a href="file:///news">News</a></p><p class="rm-manual">+</p><p class="rm-manual"></p>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"><a href="file:///news">Local &amp; State</a></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///news/national">National</a></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///news/international">International</a></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///news/business">Business</a></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///news/entertainment">Entertainment</a></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///news/health">Health</a></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///food-inspections">Food Inspections</a></p></li>
+</ul>
+</li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///obituaries">Obituaries</a></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///news/politics">Politics</a></p></li>
+<li class="rm-manual">
+<p class="rm-manual"><a href="file:///sports">Sports</a></p><p class="rm-manual">+</p><p class="rm-manual"></p>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"><a href="file:///fridaygamenight">Friday Game Night</a></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///sports/high-school">High School Sports</a></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///aroundthetrack">Around The Track</a></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///sports/college">College Sports</a></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///sports/professional">Pro Sports</a></p></li>
+</ul>
+</li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///weather">Weather</a></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///blog">Staff Blogs</a></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///clips">WDUN Show Clips</a></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="http://classifieds.accesswdun.com/">Classifieds</a></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///directory">Biz Directory</a></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///events">Calendar</a></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="https://www.accesswdunplus.com/">AccessWDUN +Plus</a></p></li>
+<li class="rm-manual">
+<p class="rm-manual"><a href="file:///about">About Us</a></p><p class="rm-manual">+</p><p class="rm-manual"></p>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"><a href="file:///contact">Contact Us</a></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///about/advertising">Advertise with Us</a></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///about/careers">Careers</a></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///socialmedia">Follow us on social media</a></p></li>
+</ul>
+</li>
+</ul>
+<p class="rm-manual"> <a href="file:///search">Search</a> </p></article>
+</body></html>

@@ -1,0 +1,333 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"><span><a href="https://spectator.org/category/news/" rel="category tag">News</a></span> </p>
+<p class="rm-manual"><span><a href="https://spectator.org/tag/politics/" rel="tag">Politics</a></span> The False Alert of Global Warming | The American Spectator | USA News and Politics </p>
+<p class="rm-manual"> Search </p>
+<p class="rm-manual"> <a href="file:///subscribe/">Subscribe</a> <a href="file:///login?v=2">Login</a> <a href="file:///">Logout</a> <a href="file:///my-account">Edit Account</a> </p>
+<p class="rm-manual"> Menu </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://spectator.org/about/">About</a></li> <li class="rm-manual"><a href="https://spectator.org/authors/">Authors</a></li> <li class="rm-manual"><a href="https://spectator.org/contact/">Contact</a></li> <li class="rm-manual"><a href="https://spectator.org/submissions/">Submissions</a></li> <li class="rm-manual"><a href="https://www.amspecfoundation.org/index.html">Foundation</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://spectator.org/category/politics/">Politics</a></li> <li class="rm-manual"><a href="https://shop.spectator.org/">Shop</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://spectator.org/magazine/">Magazine</a></li> <li class="rm-manual"><a href="https://spectator.org/category/blog/">Blog</a></li> <li class="rm-manual"><a href="https://www.amspecfoundation.org/donate.html">Donate</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://spectator.org/about/">About</a></li> <li class="rm-manual"><a href="https://spectator.org/authors/">Authors</a></li> <li class="rm-manual"><a href="https://spectator.org/contact/">Contact</a></li> <li class="rm-manual"><a href="https://spectator.org/submissions/">Submissions</a></li> <li class="rm-manual"><a href="https://www.amspecfoundation.org/index.html">Foundation</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://spectator.org/category/politics/">Politics</a></li> <li class="rm-manual"><a href="https://shop.spectator.org/">Shop</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://spectator.org/magazine/">Magazine</a></li> <li class="rm-manual"><a href="https://spectator.org/category/blog/">Blog</a></li> <li class="rm-manual"><a href="https://www.amspecfoundation.org/donate.html">Donate</a></li> </ul>
+<p class="rm-manual"> <span><a href="https://spectator.org/category/news/">News</a></span> </p>
+<p class="rm-manual"> The False Alert of Global Warming </p>
+<p class="rm-manual"> <span>by</span> <span> <a href="https://spectator.org/author/kevinportteus/" rel="author">Kevin Portteus</a> </span> </p>
+<p class="rm-manual"> July 19, 2013, 12:00 AM </p>
+<p class="rm-manual"> Editor's Picks </p>
+<p class="rm-manual"> <a href="https://spectator.org/hunter-biden-cashed-in-to-fuel-his-drug-and-sex-habits/"> Hunter Biden Cashed In to Fuel His Drug and Sex Habits </a> </p>
+<p class="rm-manual"> <span>by</span> <a href="https://spectator.org/author/gneumayr/" rel="author">George Neumayr</a> </p>
+<p class="rm-manual"> <a href="https://spectator.org/targeting-people-with-mental-illness-and-dementia-for-euthanasia/"> Targeting People With Mental Illness and Dementia for Euthanasia </a> </p>
+<p class="rm-manual"> <span>by</span> <a href="https://spectator.org/author/wesley-j-smith/" rel="author">Wesley J. Smith</a> </p>
+<p class="rm-manual"> <a href="https://spectator.org/a-red-wave-through-the-bayou/"> A Red Wave Through the Bayou </a> </p>
+<p class="rm-manual"> <span>by</span> <a href="https://spectator.org/author/smckay/" rel="author">Scott McKay</a> </p>
+<p class="rm-manual"> <a href="https://spectator.org/is-mass-immigration-killing-two-party-democracy-in-the-u-s/"> Is Mass Immigration Killing Two-Party Democracy in the U.S.? </a> </p>
+<p class="rm-manual"> <span>by</span> <a href="https://spectator.org/author/james-delmont/" rel="author">James Delmont</a> </p>
+<p class="rm-manual"> <a href="https://spectator.org/category/politics/"> More Politics </a> </p>
+<p class="rm-manual"> Hot Off</p>
+<p class="rm-manual">The Press </p>
+<p class="rm-manual"> <a href="https://spectator.org/category/politics/hither-and-yon/">Hither and Yon</a> </p>
+<p class="rm-manual"> <a href="https://spectator.org/paul-ryan-sucks/">The Blatant, Obnoxious Suckage of Paul Ryan</a> </p>
+<p class="rm-manual"><span>by</span> <span><a href="https://spectator.org/author/smckay/">Scott McKay</a></span></p>
+<p class="rm-manual"> <a href="https://spectator.org/category/politics/free-market/">Free the Market</a> </p>
+<p class="rm-manual"> <a href="https://spectator.org/ftc-illumina-grail-merger-cancer/">FTC: Let Europe Run America</a> </p>
+<p class="rm-manual"><span>by</span> <span><a href="https://spectator.org/author/jlord/">Jeffrey Lord</a></span></p>
+<p class="rm-manual"> <a href="https://spectator.org/category/politics/at-large/">At Large</a> </p>
+<p class="rm-manual"> <a href="https://spectator.org/biden-global-corporate-tax-ireland/">Ireland Snubs Biden’s Global Corporate Tax Rate Plan</a> </p>
+<p class="rm-manual"><span>by</span> <span><a href="https://spectator.org/author/stephen-michael-maclean/">Stephen MacLean</a></span></p>
+<p class="rm-manual"> <a href="https://spectator.org/category/flynn-files/">Flynn Files</a> </p>
+<p class="rm-manual"> <a href="https://spectator.org/william-manchester-fraudster-historian-memorial-day/">Remembering a Stolen Valor Fraudster–Historian This Memorial Day</a> </p>
+<p class="rm-manual"><span>by</span> <span><a href="https://spectator.org/author/danflynn/">Daniel J. Flynn</a></span></p>
+<p class="rm-manual"> <a href="https://spectator.org/category/politics/health-care/">The Right Prescription</a> </p>
+<p class="rm-manual"> <a href="https://spectator.org/media-trump-voters/">The Media Aggressively ‘Others’ Trump Voters</a> </p>
+<p class="rm-manual"><span>by</span> <span><a href="https://spectator.org/author/dcatron/">David Catron</a></span></p>
+<p>GLOBAL WARMING BECAME the environmentalists cause celebre in the late
+ 1980s. They had turned on a dime, for only a few years earlier global 
+cooling had been their mantra. They didn’t know what had caused that 
+earlier “cooling trend,” but its effects were sure to be bad. “The drop 
+in food output could begin quite soon, perhaps only in ten years,” 
+Newsweek reported in 1975. “The resulting famines could be 
+catastrophic.” </p>
+<p>Now warming is the specter, with its melting glaciers, inundated 
+cities, and the Gulf Stream reversing course. But I doubt if the enviros
+ can keep on fomenting the scare much longer. It has been based on 
+little more than extrapolated temperatures and spurious charts. What are
+ the facts? Surface temperature measurements show a global warming 
+period from about 1910 to 1940, followed by a cooling period until 1975.
+ Since then we have experienced a slight warming trend. These three 
+periods add up to a surface-temperature increase of perhaps one-degree 
+Fahrenheit for the entire 20th century.</p>
+<p>Satellite measurements of atmospheric temperatures do not agree, 
+however. They began only in 1979, and have shown no significant increase
+ over the last quarter century. Balloon readings did show an abrupt, 
+one-time increase in 1976-1977. Since then, those temperatures have 
+stabilized.</p>
+<p>Environmentalists believe that the 20th-century warming was caused by
+ human activity, primarily the burning of fossil fuels. That produces 
+carbon dioxide—one of several “greenhouse gases.” The argument is that 
+their release into the atmosphere wraps the Earth in an invisible 
+shroud. This makes the escape of heat into outer space slightly more 
+difficult than its initial absorption from sunlight. This is the 
+Greenhouse Effect. So the Earth warms up.</p>
+<p>But whether man-made carbon-dioxide emissions have caused measurable 
+temperature increases over the last 30 years is debated. Carbon dioxide 
+is itself a benign and essential substance, incidentally. Without it, 
+plants would not grow, and without plant-life animals could not live. 
+Any increase of carbon dioxide in the atmosphere causes plants, trees, 
+and forests to grow more abundantly. It should be a treehugger’s 
+delight. </p>
+<p>The surface data suggest that man-made carbon dioxide has not in fact
+ increased global temperatures. From 1940 to 1975, coal-fired plants 
+emitted fumes with great abandon and without restraint by Greens. Yet 
+the Earth cooled slightly in that time. And if man-made global warming 
+is real, atmospheric as well as surface temperatures should have 
+increased steadily. But they haven’t. There was merely that one-time 
+increase, possibly caused by a solar anomaly. In addition, an “urban 
+heat island effect” has been identified. Build a tarmac runway near a 
+weather station, and the nearby temperature readings will go up.</p>
+<p>Global warming became the focus of activism at the time of the Earth 
+Summit in Rio, in 1992. Bush the elder signed a climate-change treaty, 
+with signatories agreeing to reduce carbon dioxide emissions below 1990 
+levels. The details were worked out in Kyoto, Japan. But America was the
+ principal target, everyone knew it, and Clinton didn’t submit the 
+treaty to the Senate for ratification. The 1990 date had been carefully 
+chosen. Emissions in Germany and the Soviet Union were still high; 
+Germany had just absorbed East Germany, then still using inefficient 
+coal-fired plants. After they were modernized, Germany’s emissions 
+dropped, so the demand that they be reduced below 1990 levels had 
+already been met and became an exercise in painless moralizing.</p>
+<p>The same was true for the Soviet Union. After its collapse, in 1991, 
+economic activity fell by about one-third. As for France, most of its 
+electricity comes from nuclear power, which has no global-warming 
+effects but has been demonized for other reasons. If the enviros were 
+serious about reducing carbon dioxide they would be urging us to build 
+nuclear power plants, but that is not on their agenda. They want 
+windmills (whether or not they kill golden eagles).</p>
+<p>Under the Kyoto Protocol, U.S. emissions would have to be cut so much
+ that economic depression would have been the only certain outcome. We 
+were expected to reduce energy use by about 35 percent within ten years,
+ which might have meant eliminating one-third of all cars. You can see 
+why the enviros fell in love with the idea. </p>
+<p>Third World countries are exempt, as are China and India. Australia, 
+like the U.S., has refused to ratify. Thirty-five countries, mostly in 
+Europe, have agreed to reduce emissions. But there are no enforcement 
+mechanisms, the potential for cheating is unlimited, and the principal 
+irritation today is that the main enemy, the United States, slipped the 
+noose.</p>
+<p>Any unusual event is now likely to be linked to climate change. 
+Within 24 hours of the tsunami in December, the CBS evening news 
+displayed a graphic that had only the words “global warming” and 
+“tsunamis.” Citing unnamed “climate experts,” Dan Rather intoned:</p>
+<p>Climate experts warned today that tsunamis could become more common 
+around the world and more dangerous. They cite a number of factors, 
+including a creeping rise in sea levels believed to come from global 
+warming and growing populations along coastal areas.</p>
+<p>The claim that the globe is warming depends on knowing earlier 
+temperatures. Such information can only be obtained indirectly. Climate 
+scientists depend on tree rings, bore holes, ice cores, the skeletons of
+ marine organisms. The graph that was most effective in persuading 
+policy-makers became known as the hockey stick. The temperature line is 
+mostly horizontal, perhaps declining slightly for 900 years, then 
+abruptly heading up into a warmer range over the last 100 years. The 900
+ years are the handle, the last hundred are the blade.</p>
+<p>THE “HOCKEY STICK ” was first published in 1998 by the climatologist 
+Michael Mann of the University of Virginia, and co-authors. It was 
+immediately used by the United Nations to promote the idea that we have 
+an unprecedented crisis on our hands. But the chart also aroused 
+suspicions, because for years there had been a broad agreement among 
+climatologists that global temperatures had not been as unvarying as the
+ chart implied. There had been something called the Medieval Warm 
+Period, which persisted until the “Little Ice Age” took hold in the 14th
+ and 15th centuries. Both periods lasted for several hundred years.</p>
+<p>The warmer period, accompanied by a flowering of prosperity, 
+knowledge, and art in Europe, seems to have been wholly beneficial. 
+Agricultural yields increased, marshes and swamps—today called wetlands—
+ dried up, removing the breeding grounds of malaria-spreading 
+mosquitoes. Infant mortality fell, the population grew. Greenland was 
+settled by the Vikings, who reached a peak of prosperity in the 12th and
+ 13th centuries. They began declining in the late 14th century, with the
+ colder weather. Then the settlements perished.</p>
+<p>The warm period has been recognized in the climate textbooks for 
+decades, and it was an obvious embarrassment to those claiming that the 
+20th-century warming was a true anomaly. Also, the earlier changes 
+occurred when fossil-fuel consumption could hardly have been the 
+culprit. They would prove that warming could occur without human 
+intervention. </p>
+<p>Consider, in this context, the experience of David Deming with the 
+University of Oklahoma’s College of Geosciences. In 1995, he published a
+ paper in the journal Science, reviewing the evidence showing that bore 
+hole data showed a warming of about one degree Celsius in North America 
+over the last 100 to 150 years.</p>
+<p>Deming continues: </p>
+<p>With the publication of the article in Science, I gained significant 
+credibility in the community of scientists working on climate change. 
+They thought I was one of them, someone who wouldpervert science in the 
+service of social and politi cal causes. So one of them let his guard 
+down. A major person working in the area of climate change and global 
+warming sent me an astonishing email that said, “We have to get rid of 
+the Medieval Warm Period. ” </p>
+<p>Whether intentionally or not, that is exactly what Mann’s “hockey stick” did. </p>
+<p>Once doomsayers convince us that we are experiencing something new, 
+they feel free to claim that we face a catastrophe. They can extrapolate
+ from the minor and beneficial warming that we may (or may not) have 
+experienced in the last generation and argue that temperatures will keep
+ on rising until the ice caps melt and cities flood.</p>
+<p>Then the hockey stick was challenged by a Toronto minerals consultant
+ named Stephen McIntyre, who, remarkably, had no credentials as a 
+climatologist. He spent two years and $5,000 of his own money trying to 
+uncover Mann’s methods. Mann at first did give him some information, but
+ then cut him off saying he didn’t have time to respond to “every 
+frivolous note” from nonscientists. McIntyre was joined by another 
+Canadian, and in 2003 they published a critical article. Mann had “used 
+flawed methods that yield meaningless results. “</p>
+<p>In a rebuttal, Mann revealed new information that had not appeared in
+ his original paper. It had been published in the British journal 
+Nature, which later published a correction. McIntyre thinks there may be
+ more errors but still doesn’t know how the graph was generated. Mann 
+has refused to release his secret formula. A Wall Street Journal 
+reporter doggedly pursued the matter and contacted Mann. He told the 
+reporter: “Giving them the algorithm would be giving in to the 
+intimidation tactics that these people are engaged in.”</p>
+<p>Michael Mann now concedes it is plausible that past temperature 
+variations may have been larger than thought. Fred Singer, a leading 
+critic of warming scares and founder of the Science and Environmental 
+Policy Project, says that “the hockey stick is dead.” He was recently 
+nominated by warmists to receive the First Annual Flat Earth Award for 
+being “the year’s most prominent global warming denier.” Nominated along
+ with him were Rush Limbaugh and Michael Crichton, the thriller writer.</p>
+<p>In his recent book State of Fear, Crichton unexpectedly emerged as a 
+powerful critic of modish conclusions about global warming. He studied 
+the subject for a couple of years before writing his recent hook, to 
+which he added an appendix comparing global-warming science to eugenics.
+ Earlier, in a speech at Caltech, he had compared it to the search for 
+extraterrestrials (which he says is based on bogus science). There may 
+have been some warming as a part of a natural trend, Crichton allows. 
+But “no one knows how much of the present trend might be natural or how 
+much man-made.”</p>
+<p>“Open and frank discussion” of global warming is being suppressed, he
+ believes. One indication is that “so many of the outspoken critics of 
+global warming are retired professors.” They can speak freely because 
+they are no longer seeking grants or facing colleagues “whose grant 
+applications and career advancement may be jeopardized by their 
+criticisms.”</p>
+<p>Environmentalists have become adept at de-legitimizing their 
+opponents by saying they are “supported by industry,” but studies funded
+ by environmentalist organizations are “every bit as biased,” Crichton 
+added. They have become a special interest like any other, with 
+legislative goals and millions spent on lobbying.</p>
+<p>Myron Ebell, who works for the Competitive Enterprise Institute (CEI)
+ in Washington, D.C., one of the few groups that examines global-warming
+ claims skeptically, says that environmentalism is now a $1.5 billion 
+industry. In Washington, skeptics (like himself) are outnumbered by 
+global warming advocates perhaps by a margin of 300 to one. Yet CEI, 
+greatly underfunded by comparison with groups like the Sierra Club, 
+tends to be characterized in the media as “industry supported.” The 
+enviros’ problem is that they have “everything going for them except the
+ facts, ” Ebell says. </p>
+<p>Some environmentalists have begun to echo the complaint that they are
+ a special interest. A few months ago, Michael Shellenberger and Ted 
+Norhaus wrote a widely circulated 14,000-word essay called “The Death of
+ Environmentalism.” It “provoked a civil war among tree huggers,” 
+Nicholas D. Kristof wrote in the New York Times. In effect, it was a cry
+ of anguish: Why have we been unable to win on our top issues, 
+especially global warming? They called it “the world’s most serious 
+ecological crisis,” which “may kill hundreds of millions of human beings
+ over the next century.” They looked back to their golden age in the 
+1970s–the time when they began “using science to define the problem as 
+‘environmental.’ “</p>
+<p>“Using science” is what they were doing, all right, and the rest of 
+us were blinded by it, for about 25 years. But the problem wasn’t that 
+the use of science had led them to propose unattractive “technical 
+fixes,” when they should have been appealing to something larger in the 
+human spirit. The problem was that their science was never very good to 
+begin with. And as its inadequacies became more apparent, their scare 
+tactics became more apparent, too. </p>
+<p>To keep the money rolling in, environmentalists always need a crisis. It looks as though they will have to cook up a new one.</p>
+<p class="rm-manual"> <span>Most Popular</span> </p>
+<p class="rm-manual"> <a href="https://spectator.org/blue-state-exodus-democrat-policies-covid/"> </a></p><p class="rm-manual"><a href="https://spectator.org/blue-state-exodus-democrat-policies-covid/"> <span>1</span> </a></p><a href="https://spectator.org/blue-state-exodus-democrat-policies-covid/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://spectator.org/category/americana/pulse/">The Nation’s Pulse</a> </p>
+<p class="rm-manual"> <a href="https://spectator.org/blue-state-exodus-democrat-policies-covid/">Democrat Policies Have Created a Blue-State Exodus</a> </p>
+<p class="rm-manual"><span>by</span> <span> <a href="https://spectator.org/author/david-keltz/" rel="author">David Keltz</a> </span></p>
+<p class="rm-manual"> Americans can't escape from blue states fast enough. Even before...<a href="https://spectator.org/blue-state-exodus-democrat-policies-covid/">Read More</a> </p>
+<p class="rm-manual"> <a href="https://spectator.org/tou-thao-george-floyd/"> </a></p><p class="rm-manual"><a href="https://spectator.org/tou-thao-george-floyd/"> <span>2</span> </a></p><a href="https://spectator.org/tou-thao-george-floyd/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://spectator.org/category/on-patrol/">On Patrol</a> </p>
+<p class="rm-manual"> <a href="https://spectator.org/tou-thao-george-floyd/">Why Has the Right Let the Floyd Cops Fry?</a> </p>
+<p class="rm-manual"><span>by</span> <span> <a href="https://spectator.org/author/jackcashill/" rel="author">Jack Cashill</a> </span></p>
+<p class="rm-manual"> I told my daughter to make sure her two sons...<a href="https://spectator.org/tou-thao-george-floyd/">Read More</a> </p>
+<p class="rm-manual"> <a href="https://spectator.org/beverly-hills-palestinian-protest/"> </a></p><p class="rm-manual"><a href="https://spectator.org/beverly-hills-palestinian-protest/"> <span>3</span> </a></p><a href="https://spectator.org/beverly-hills-palestinian-protest/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://spectator.org/category/politics/ben-steins-diary/">Ben Stein's Diary</a> </p>
+<p class="rm-manual"> <a href="https://spectator.org/beverly-hills-palestinian-protest/">A Terrifying Time in Beverly Hills</a> </p>
+<p class="rm-manual"><span>by</span> <span> <a href="https://spectator.org/author/bstein/" rel="author">Ben Stein</a> </span></p>
+<p class="rm-manual"> Wednesday An upsetting afternoon. I was quietly reading the news...<a href="https://spectator.org/beverly-hills-palestinian-protest/">Read More</a> </p>
+<p class="rm-manual"> <a href="https://spectator.org/chauvin-floyd-cause-of-death/"> </a></p><p class="rm-manual"><a href="https://spectator.org/chauvin-floyd-cause-of-death/"> <span>4</span> </a></p><a href="https://spectator.org/chauvin-floyd-cause-of-death/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://spectator.org/category/politics/special-report/">Special Report</a> </p>
+<p class="rm-manual"> <a href="https://spectator.org/chauvin-floyd-cause-of-death/">Bombshell Claim: Medical Examiners Bullied Over Floyd’s Cause of Death</a> </p>
+<p class="rm-manual"><span>by</span> <span> <a href="https://spectator.org/author/george-parry/" rel="author">George Parry</a> </span></p>
+<p class="rm-manual"> Last week, counsel for Tou Thao, one of the former...<a href="https://spectator.org/chauvin-floyd-cause-of-death/">Read More</a> </p>
+<p class="rm-manual"> <a href="https://spectator.org/media-coverage-bidens-presidency/"> </a></p><p class="rm-manual"><a href="https://spectator.org/media-coverage-bidens-presidency/"> <span>5</span> </a></p><a href="https://spectator.org/media-coverage-bidens-presidency/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://spectator.org/category/politics/media-bias/">Presswatch</a> </p>
+<p class="rm-manual"> <a href="https://spectator.org/media-coverage-bidens-presidency/">Media in Full Spin Mode to Cover for Biden’s Failures</a> </p>
+<p class="rm-manual"><span>by</span> <span> <a href="https://spectator.org/author/david-keltz/" rel="author">David Keltz</a> </span></p>
+<p class="rm-manual"> Joe Biden’s presidency is spiraling out of control. By any...<a href="https://spectator.org/media-coverage-bidens-presidency/">Read More</a> </p>
+<p class="rm-manual"> <a href="https://spectator.org/black-lives-matter-hamas/"> </a></p><p class="rm-manual"><a href="https://spectator.org/black-lives-matter-hamas/"> <span>6</span> </a></p><a href="https://spectator.org/black-lives-matter-hamas/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://spectator.org/category/politics/daily-folios-and-consecutive-sentences/">Daily Folios and Consecutive Sentences</a> </p>
+<p class="rm-manual"> <a href="https://spectator.org/black-lives-matter-hamas/">Black Lives Matter Sides With Hamas</a> </p>
+<p class="rm-manual"><span>by</span> <span> <a href="https://spectator.org/author/dov-fischer/" rel="author">Dov Fischer</a> </span></p>
+<p class="rm-manual"> Well, that did not take long, did it? Black Lives...<a href="https://spectator.org/black-lives-matter-hamas/">Read More</a> </p>
+<p class="rm-manual"> Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a> </p>
+<p class="rm-manual"> Sign Up to receive <span>Our Latest Updates!</span> <a href="https://spectator.org/subscribe">Register</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://spectator.org/category/politics/">Politics</a></li> <li class="rm-manual"><a href="https://shop.spectator.org/">Shop</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://spectator.org/about/">About</a></li> <li class="rm-manual"><a href="https://spectator.org/authors/">Authors</a></li> <li class="rm-manual"><a href="https://spectator.org/contact/">Contact</a></li> <li class="rm-manual"><a href="https://spectator.org/submissions/">Submissions</a></li> <li class="rm-manual"><a href="https://www.amspecfoundation.org/index.html">Foundation</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://spectator.org/terms-of-service/">Terms of Service</a></li> <li class="rm-manual"><a href="https://spectator.org/cookie-policy/">Cookie Policy</a></li> <li class="rm-manual"><a href="https://spectator.org/privacy-policy/">Privacy Policy</a></li> </ul>
+<p class="rm-manual">Notice to Readers: The American Spectator and 
+Spectator World are marks used by independent publishing companies that 
+are not affiliated in any way. If you are looking for The Spectator 
+World please click on the following link: <a href="https://thespectator.com/world">https://thespectator.com/world</a>.</p>
+<h2 class="rm-manual">Be a Free Market Loving Patriot. Subscribe Today!</h2>
+<p class="rm-manual"> <a href="https://spectator.org/subscribe/"> <span> <span>Subscribe</span> </span> </a> </p></article>
+</body></html>

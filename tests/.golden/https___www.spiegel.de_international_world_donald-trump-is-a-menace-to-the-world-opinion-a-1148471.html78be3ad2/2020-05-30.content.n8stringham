@@ -1,0 +1,140 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h2 class="rm-manual"> <span> A Danger to the World </span> <span><span>It's Time to Get Rid of Donald Trump</span> </span> </h2>
+<p class="rm-manual"> Donald Trump has transformed the United States 
+into a laughing stock and he is a danger to the world. He must be 
+removed from the White House before things get even worse. </p>
+<p class="rm-manual"> Von <a href="https://www.spiegel.de/impressum/autor-6b3f6ef1-0001-0003-0000-000000000570"> Klaus Brinkbäumer</a></p>
+<p class="rm-manual"> 19.05.2017, 18.18 Uhr </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.spiegel.de/"> <span>Home</span>Icon: Startseite </a> </li> <li class="rm-manual"> <a href="#">Icon: Kommentare </a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.facebook.com/share.php?u=https%3A%2F%2Fwww.spiegel.de%2Finternational%2Fworld%2Fdonald-trump-is-a-menace-to-the-world-opinion-a-1148471.html&amp;t=A+Danger+to+the+World%3A+It%27s+Time+to+Get+Rid+of+Donald+Trump" rel="nofollow">Icon: Facebook </a> </li> <li class="rm-manual"> <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.spiegel.de%2Finternational%2Fworld%2Fdonald-trump-is-a-menace-to-the-world-opinion-a-1148471.html&amp;text=A+Danger+to+the+World%3A+It%27s+Time+to+Get+Rid+of+Donald+Trump&amp;via=derspiegel&amp;lang=en" rel="nofollow">Icon: Twitter </a> </li> <li class="rm-manual"> <a href="mailto:?subject=A%20Danger%20to%20the%20World:%20It%27s%20Time%20to%20Get%20Rid%20of%20Donald%20Trump%20%28DER%20SPIEGEL%29&amp;body=https%3A%2F%2Fwww.spiegel.de%2Finternational%2Fworld%2Fdonald-trump-is-a-menace-to-the-world-opinion-a-1148471.html" rel="nofollow">Icon: Mail </a> </li> <li class="rm-manual"> <a href="fb-messenger://share?link=https%3A%2F%2Fwww.spiegel.de%2Finternational%2Fworld%2Fdonald-trump-is-a-menace-to-the-world-opinion-a-1148471.html&amp;app_id=2309869772" rel="nofollow">Icon: Messenger </a> </li> <li class="rm-manual"> <a href="whatsapp://send?text=A+Danger+to+the+World%3A+It%27s+Time+to+Get+Rid+of+Donald+Trump+%28DER+SPIEGEL%29+https%3A%2F%2Fwww.spiegel.de%2Finternational%2Fworld%2Fdonald-trump-is-a-menace-to-the-world-opinion-a-1148471.html" rel="nofollow">Icon: Whatsapp </a> </li> <li class="rm-manual"> <a href="#" rel="nofollow">Icon: Link </a> </li> <li class="rm-manual"> <a href="#" rel="nofollow">Icon: teilen </a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="mailto:?subject=A%20Danger%20to%20the%20World:%20It%27s%20Time%20to%20Get%20Rid%20of%20Donald%20Trump%20%28DER%20SPIEGEL%29&amp;body=https%3A%2F%2Fwww.spiegel.de%2Finternational%2Fworld%2Fdonald-trump-is-a-menace-to-the-world-opinion-a-1148471.html" rel="nofollow"> <span> <span>Icon: Mail </span> <span>E-Mail</span> </span> </a> </li> <li class="rm-manual"> <a href="fb-messenger://share?link=https%3A%2F%2Fwww.spiegel.de%2Finternational%2Fworld%2Fdonald-trump-is-a-menace-to-the-world-opinion-a-1148471.html&amp;app_id=2309869772" rel="nofollow"> <span> <span>Icon: Messenger </span> <span>Messenger</span> </span> </a> </li> <li class="rm-manual"> <a href="whatsapp://send?text=A+Danger+to+the+World%3A+It%27s+Time+to+Get+Rid+of+Donald+Trump+%28DER+SPIEGEL%29+https%3A%2F%2Fwww.spiegel.de%2Finternational%2Fworld%2Fdonald-trump-is-a-menace-to-the-world-opinion-a-1148471.html" rel="nofollow"> <span> <span>Icon: Whatsapp </span> <span>WhatsApp</span> </span> </a> </li> <li class="rm-manual"> <a href="#" rel="nofollow"> <span> <span>Icon: Link </span> <span>Link kopieren</span> </span> </a> </li> </ul>
+<p class="rm-manual">U.S President Donald Trump</p>
+<p class="rm-manual"><span>Joshua Roberts/ REUTERS</span> </p>
+<p>Donald Trump is not fit to be president of the <a href="https://www.spiegel.de/thema/united_states_en/">United States</a>. He does not possess the requisite intellect and does <a href="https://www.spiegel.de/international/world/clinton-campaign-chair-john-podesta-on-president-trump-a-1146317.html">not understand the significance of the office he holds</a>
+ nor the tasks associated with it. He doesn't read. He doesn't bother to
+ peruse important files and intelligence reports and knows little about 
+the issues that he has identified as his priorities. His decisions are 
+capricious and they are delivered in the form of tyrannical decrees.</p>
+<p>He is a man free of morals. As has been demonstrated hundreds of 
+times, he is a liar, a racist and a cheat. I feel ashamed to use these 
+words, as sharp and loud as they are. But if they apply to anyone, they 
+apply to <a href="https://www.spiegel.de/thema/donald_trump_en/">Trump</a>.
+ And one of the media's tasks is to continue telling things as they are:
+ Trump has to be removed from the White House. Quickly. He is a danger 
+to the world.</p>
+<p>Trump is a miserable politician. He fired the FBI director simply 
+because he could. James Comey had gotten under his skin with his 
+investigation into Trump's confidants. Comey had also refused to swear 
+loyalty and fealty to Trump and to abandon the investigation. He had to 
+go.</p>
+<p> Witnessing an American Tragedy </p>
+<p>Trump is also a miserable boss. His people invent excuses for him and
+ lie on his behalf because they have to, but then Trump wakes up and 
+posts tweets that contradict what they have said. He doesn't care that 
+his spokesman, his secretary of state and his national security adviser 
+had just denied that the president had handed Russia (of all countries) 
+sensitive intelligence gleaned from Israel (of all countries). Trump 
+tweeted: Yes, yes, I did, because I can. I'm president after all.</p>
+<p>Nothing is as it should be in this White House. Everyone working 
+there has been compromised multiple times and now they all despise each 
+other - and everyone except for Trump despises Trump. Because of all 
+that, after just 120 days of the Trump administration, we are witness to
+ an American tragedy for which there are five theoretical solutions.</p>
+<p>The first is Trump's resignation, which won't happen. The second is 
+that Republicans in the House and Senate support impeachment, which 
+would be justified by the president's proven obstruction of justice, but
+ won't happen because of the Republicans' thirst for power, which they 
+won't willingly give up. The third possible solution is the invocation 
+of the 25th Amendment, which would require the cabinet to declare Trump 
+unfit to discharge the powers of the presidency. That isn't particularly
+ likely either. Fourth: The Democrats get ready to fight and win back 
+majorities in the House and Senate in midterm elections, which are 18 
+months away, before they then pursue option two, impeachment. Fifth: the
+ international community wakes up and finds a way to circumvent the 
+White House and free itself of its dependence on the U.S. Unlike the 
+preceding four options, the fifth doesn't directly solve the Trump 
+problem, but it is nevertheless necessary - and possible.</p>
+<p> No Goals and No Strategy </p>
+<p>Not quite two weeks ago, a number of experts and politicians focused 
+on foreign policy met in Washington at the invitation of the Munich 
+Security Conference. It wasn't difficult to sense the atmosphere of 
+chaos and agony that has descended upon the city.</p>
+<figcaption class="rm-manual"> <span>DER SPIEGEL</span> </figcaption><p class="rm-manual">The article you are reading originally appeared in German in issue 21/2017 (May 20, 2017) of DER SPIEGEL.</p>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <span> <a href="https://www.spiegel.de/international/frequently-asked-questions-everything-you-need-to-know-about-der-spiegel-a-789851.html"> <span> <span> <span> <span> Frequently Asked Questions: Everything You Need to Know about DER SPIEGEL </span> </span> </span> </span> </a> </span> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <span> <a href="https://www.spiegel.de/international/spiegel-rights-reprints-and-other-usages-a-460322.html"> <span> <span> <span> <span> SPIEGEL Rights, Reprints and other Usages </span> </span> </span> </span> </a> </span> </p> </li> </ul>
+<p>The U.S. elected a laughing stock to the presidency and has now made 
+itself dependent on a joke of a man. The country is, as David Brooks 
+wrote recently in <a href="https://www.spiegel.de/international/business/trump-and-the-new-york-times-a-love-hate-relationship-a-1145096.html">the New York Times</a>,
+ dependent on a child. The Trump administration has no foreign policy 
+because Trump has consistently promised American withdrawal while 
+invoking America's strength. He has promised both no wars and more wars.
+ He makes decisions according to his mood, with no strategic coherence 
+or tactical logic. Moscow and Beijing are laughing at America. 
+Elsewhere, people are worried.</p>
+<p>In the Pacific, warships - American and Chinese - circle each other 
+in close proximity. The conflict with North Korea is escalating. Who can
+ be certain that Donald Trump won't risk nuclear war simply to save his 
+own skin? Efforts to stop climate change are in trouble and many expect 
+the U.S. to withdraw from the Paris Agreement because Trump is wary of 
+legally binding measures. Crises, including those in Syria and Libya, 
+are escalating, but no longer being discussed. And who should they be 
+discussed with? Phone calls and emails to the U.S. State Department go 
+unanswered. Nothing is regulated, nothing is stable and the <a href="https://www.spiegel.de/international/germany/angela-merkel-hits-her-stride-as-german-campaign-begins-a-1146307.html">trans-Atlantic relationship</a>
+ hardly exists anymore. German Foreign Minister Sigmar Gabriel and 
+Bundestag Foreign Affairs Committee Chair Norbert Röttgen fly back and 
+forth, but Germany and the U.S. no longer understand each other. Hardly 
+any real communication takes place, there are no joint foreign policy 
+goals and there is no strategy.</p>
+<p>In "Game of Thrones," the Mad King was murdered (and the child that 
+later took his place was no better). In real life, an immature boy sits 
+on the throne of the most important country in the world. He could, at 
+any time, issue a catastrophic order that would immediately be carried 
+out. That is why the parents cannot afford to take their eyes off him 
+even for a second. They cannot succumb to exhaustion because he is so 
+taxing. They ultimately have to send him to his room - and return power 
+to the grownups.</p>
+<p class="rm-manual"><span>Icon: Der Spiegel </span> </p>
+<p class="rm-manual"> <a href="https://www.spiegel.de/kontakt?betreff=It%27s+Time+to+Get+Rid+of+Donald+Trump&amp;channel=International&amp;id=dfdb86da-0001-0001-0000-000001148471" rel="nofollow"> Feedback </a> </p>
+<p class="rm-manual"> <span>Mehr lesen über</span> </p>
+<p class="rm-manual"> <span> <span>Pfeil nach links </span> </span> </p>
+<p class="rm-manual"> <a href="https://www.spiegel.de/thema/donald_trump_en/"> <span>Donald Trump</span> </a> <a href="https://www.spiegel.de/thema/united_states_en/"> <span>United States</span> </a> <a href="https://www.spiegel.de/thema/trans_atlantic_relations_en/"> <span>Trans-Atlantic Relations</span> </a> </p>
+<p class="rm-manual"> <span> <span>Pfeil nach rechts </span> </span> </p>
+<p class="rm-manual"><span>Verwandte Artikel</span> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.spiegel.de/international/world/clinton-campaign-chair-john-podesta-on-president-trump-a-1146317.html"> <span>•</span> <span> <span> 'It Is Soul-Crushing!': Clinton Campaign Chair John Podesta on President Trump </span> </span> </a> </li> <li class="rm-manual"> <a href="https://www.spiegel.de/international/business/trump-and-the-new-york-times-a-love-hate-relationship-a-1145096.html"> <span>•</span> <span> <span> The New York Times and the President: Trump's Love-Hate Relationship with the Gray Lady </span> </span> </a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.spiegel.de/international/germany/angela-merkel-hits-her-stride-as-german-campaign-begins-a-1146307.html"> <span>•</span> <span> <span> The Global Chancellor: How Merkel Got Her Groove Back </span> </span> </a> </li> </ul></article>
+</body></html>

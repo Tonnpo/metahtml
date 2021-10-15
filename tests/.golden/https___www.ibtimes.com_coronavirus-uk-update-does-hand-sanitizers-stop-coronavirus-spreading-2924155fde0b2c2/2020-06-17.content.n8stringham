@@ -1,0 +1,92 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"><span><a href="https://www.ibtimes.com/science"><span>Science</span></a></span><span><a href="https://www.ibtimes.com/science/health"><span>Health</span></a></span></p>
+<h1 class="rm-manual">Coronavirus UK Update: Does Hand Sanitizers Stop Coronavirus From Spreading</h1>
+<p class="rm-manual"> By <span> <span><a href="file:///reporters/snow-digon" rel="author"><span>Snow Digon</span></a></span> </span> </p>
+<p class="rm-manual">02/18/20 AT 5:07 AM </p>
+<h3 class="rm-manual">KEY POINTS</h3>
+<ul class="rm-manual">
+<li class="rm-manual">Coronavirus has now claimed many lives around the world with the numbers steadily increasing</li>
+<li class="rm-manual">Many are trying to find ways and means on how to effectively prevent the virus from spreading</li>
+<li class="rm-manual">One doctor has answered whether using a hand sanitizer can prevent its spread</li>
+</ul>
+<p>The fear and anxiety that the coronavirus has brought to different 
+nations in the world are still present. Health agencies would give 
+advice on how people can protect themselves from the disease, which 
+originated from Wuhan, China. In the said country, people wear masks. 
+The WHO advises proper hygiene, especially washing hands with soap and 
+water every time.</p>
+<p>Since water is not readily available 24/7, such as when you are at a 
+location where there’s just no viable water source, people are now 
+asking if they can use hand sanitizers instead. One doctor has answered 
+this pervading question.</p>
+<p>Keeping Hands Clean</p>
+<p>Using Hand Sanitizers</p>
+<p>The doctor, however, emphasized that since washing with soap and 
+water can be impractical if you’re traveling, your best option is to use
+ a hand sanitizer. Make sure that you use it thoroughly. Before handling
+ food, it would be best to use a sanitizer.</p>
+<p>A Corroborative Opinion</p>
+<p>Another expert, Professor Stephen Turner from a prestigious 
+university in Australia, said that hand sanitizers are indeed among the 
+most effective ways to stop the spread of the virus. He added that it is
+ definite if it is a good quality kind of sanitizer.</p>
+<p>Coronavirus has already caused quite a stir all over the world. From 
+the time that the news of the virus broke out up to present, the death 
+toll has already reached more than 1,770 as of writing, with the numbers
+ continue rising.</p>
+<p>The most number of deaths were in China. Outside the origin country, 
+Japan came in second with 251, followed by Singapore with 58. The UK has
+ already reported a casualty, as well as other non-Asian countries. 
+While there is still no known cure for the virus, the WHO, including 
+health agencies of different countries, is working on the double to find
+ how to beat the deadly virus.</p>
+<p class="rm-manual"> Loading...</p>
+<p class="rm-manual">Related Stories</p>
+<p class="rm-manual"><a href="file:///us-coronavirus-travel-restrictions-prevented-140-foreigners-entry-country-month-2924060">Tough Covid-19 Restrictions See 140 Foreigners Refused Entry Into US</a></p>
+<ul class="rm-manual"><li class="rm-manual"><a href="#most-popular">Most Read</a></li></ul>
+<p class="rm-manual"> Latest News</p>
+<p class="rm-manual"><a href="file:///wednesdays-stock-market-close-us-equities-finish-mixed-ending-three-day-rally-2995939">US Equities Finish Mixed, Ending Three-Day Rally</a></p>
+<p class="rm-manual"><a href="file:///retail-news-3-more-retailers-are-considering-bankruptcy-protection-2995925">These 3 Retailers Are Teetering Towards Bankruptcy</a></p>
+<p class="rm-manual"><a href="file:///coronavirus-treatment-finally-found-what-know-about-clinical-drug-trial-merimepodib-2995808">What To Know About The Coronavirus Clinical Drug Trial Of Merimepodib</a></p>
+<p class="rm-manual"><a href="file:///amid-political-tensions-chinese-automaker-invests-1-billion-indian-plant-2995755">Amid Tensions, Chinese Automaker Invests $1 Billion In Indian Plant</a></p>
+<p class="rm-manual"><a href="file:///hsbc-resumes-plan-cut-35000-jobs-faces-criticism-over-hong-kong-security-law-2995718">HSBC Resumes Plan To Cut 35,000 Jobs</a></p>
+<p class="rm-manual"><a href="file:///dicks-sporting-goods-opens-8-outlet-stores-heres-where-they-are-located-2995771">Despite Retail Closures, Dick’s Sporting Goods Opens 8 Outlet Stores</a></p>
+<p class="rm-manual"><a href="file:///att-layoffs-2020-thousands-jobs-cut-250-stores-close-2995720">AT&amp;T Set To Lay Off Thousands Of Workers, Close 250 Stores</a></p>
+<p class="rm-manual"><a href="file:///stimulus-checks-belong-recipients-not-nursing-homes-or-senior-care-facilities-irs-2995815">Stimulus Checks Belong To Recipients, Not To Nursing Homes, IRS Says</a></p></article>
+</body></html>

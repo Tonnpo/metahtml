@@ -1,0 +1,259 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Germany, France, Switzerland close N.Korea missions amid coronavirus concern </p>
+<ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///">HOME</a> </li>
+<li class="rm-manual"> <a href="file:///news-analysis">NEWS</a> </li>
+<li class="rm-manual"> <a href="file:///research">RESEARCH</a> </li>
+<li class="rm-manual"> <a href="file:///live-discourse">LIVE DISCOURSE</a> </li>
+<li class="rm-manual"> <a href="file:///blogs">BLOG / OPINION</a> </li>
+<li class="rm-manual"> <a href="file:///press-release">SUBMIT PRESS RELEASE</a> </li>
+</ul> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///aboutus">About</a> </li>
+<li class="rm-manual"> <a href="file:///career">Career</a> </li>
+<li class="rm-manual"> <a href="file:///advertisewithus">Advertisement</a> </li>
+<li class="rm-manual"> <a href="file:///aboutus#devteam">Team</a> </li>
+<li class="rm-manual"> <a href="file:///partners/knowledge-partners">Partnership </a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///partners/knowledge-partners">Knowledge Partnership</a> </li>
+<li class="rm-manual"> <a href="file:///partners/media-partners">Media Partnership</a> </li>
+</ul> </li>
+<li class="rm-manual"> <a href="file:///aboutus#meet">Contact Us</a> </li>
+</ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///news-analysis">NEWS</a> </li>
+<li class="rm-manual"> <a href="file:///research">RESEARCH</a> </li>
+<li class="rm-manual"> <a href="file:///live-discourse">LIVE DISCOURSE</a> </li>
+<li class="rm-manual"> <a href="file:///blogs">BLOG / OPINION</a> </li>
+<li class="rm-manual"> <a href="file:///blogs/interview">INTERVIEW</a> </li>
+<li class="rm-manual"> <a href="file:///press-release">SUBMIT PRESS RELEASE</a> </li>
+</ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///news/agro-forestry">Agro-Forestry</a> </li>
+<li class="rm-manual"> <a href="file:///news/art-culture">Art &amp; Culture</a> </li>
+<li class="rm-manual"> <a href="file:///news/technology">Technology</a> </li>
+<li class="rm-manual"> <a href="file:///news/economy-business">Economy</a> </li>
+<li class="rm-manual"> <a href="file:///news/education">Education</a> </li>
+<li class="rm-manual"> <a href="file:///news/energy-extractives">Energy</a> </li>
+<li class="rm-manual"> <a href="file:///news/politics">Politics</a> </li>
+<li class="rm-manual"> <a href="file:///news/law-governance">Law &amp; Governance</a> </li>
+<li class="rm-manual"> <a href="file:///news/health">Health</a> </li>
+<li class="rm-manual"> <a href="file:///news/science-environment">Science</a> </li>
+<li class="rm-manual"> <a href="file:///news/socialgender">Social</a> </li>
+<li class="rm-manual"> <a href="file:///news/sports">Sports</a> </li>
+<li class="rm-manual"> <a href="file:///news/transport">Transport</a> </li>
+<li class="rm-manual"> <a href="file:///news/urban-development">Urban Development</a> </li>
+<li class="rm-manual"> <a href="file:///news/wash">WASH</a> </li>
+</ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///"><span>Home</span></a> </li>
+<li class="rm-manual"> <a href="file:///news"><span>News</span></a> </li> <li class="rm-manual"> <a href="file:///news/health"><span>Health</span></a> </li> <li class="rm-manual">Article</li>
+</ul>
+<h1 class="rm-manual">Germany, France, Switzerland close N.Korea missions amid coronavirus concern</h1>
+<p class="rm-manual"><span> <span><a href="file:///reuters-stories">Reuters</a></span> <span> | </span><span>Berlin</span><span> | </span><span>Updated: 09-03-2020 14:31 IST | Created: 09-03-2020 14:09 IST</span> </span> </p>
+<figcaption class="rm-manual">Representative image Image Credit: ANI</figcaption><p>Germany, <a href="file:///news?tag=France">France</a> and <a href="file:///news?tag=Switzerland">Switzerland</a> closed their missions in <a href="file:///news?tag=North+Korea">North Korea</a> and withdrew their staff on Monday amid growing concern in the isolated country about the spread of the coronavirus, the <a href="file:///news?tag=Russian">Russian</a> embassy in <a href="file:///news?tag=Pyongyang">Pyongyang</a> said. <a href="file:///news?tag=North+Korea">North Korea</a>
+ has not confirmed any cases of the coronavirus but it has ordered 
+foreigners from any country that has reported a case to spend 30 days in
+ quarantine. It has also reinforced border checks.</p>
+<p>North Korea is sandwiched between <a href="file:///news?tag=China">China</a>, where the virus emerged late last year and has infected more than 80,000 people, and <a href="file:///news?tag=South+Korea">South Korea</a>, where the virus has spread readily over the past few weeks to infect nearly 7,500 people. The <a href="file:///news?tag=Russian">Russian</a>
+ embassy said a plane belonging to North Korea's Air Koryo airline 
+carrying 80 foreign diplomats, businessmen, and relief workers left <a href="file:///news?tag=Pyongyang">Pyongyang</a> for the southeastern <a href="file:///news?tag=Russian">Russian</a> city of Vladivostok.</p>
+<p>Among them were the "full composition" of officials from <a href="file:///news?tag=Germany">Germany</a>, <a href="file:///news?tag=France">France</a>, and <a href="file:///news?tag=Switzerland">Switzerland</a>, all of which temporarily suspended work in <a href="file:///news?tag=Pyongyang">Pyongyang</a>,
+ the embassy said. Thirteen of its own employees and their family 
+members, 35 relief workers and an unspecified number of businessmen also
+ left. The group includes "Polish, <a href="file:///news?tag=Romanian">Romanian</a>, Mongolian, <a href="file:///news?tag=Egyptian">Egyptian</a> diplomats and their families who decided to wait out the quarantine in their homeland", the embassy said on Facebook.</p>
+<p>Britain's ambassador to <a href="file:///news?tag=North+Korea">North Korea</a>, Colin Crooks, said earlier in the day that his <a href="file:///news?tag=German">German</a> and <a href="file:///news?tag=French">French</a> colleagues were leaving, though he did not specify why. "Sad to say farewell this morning to colleagues from <a href="file:///news?tag=German">German</a> Embassy and <a href="file:///news?tag=French">French</a> Office in <a href="file:///news?tag=North+Korea">North Korea</a> which are closing temporarily," Crooks said on Twitter.</p>
+<p>"British Embassy remains open." Crooks shared photos showing white vans, apparently taking his <a href="file:///news?tag=French">French</a> and <a href="file:///news?tag=German">German</a> colleagues to the airport.</p>
+<p>Germany has an embassy in North Korea. <a href="file:///news?tag=France">France</a> does not have formal diplomatic relations with <a href="file:///news?tag=North+Korea">North Korea</a> but runs an office there to foster exchanges. Spokesmen for the <a href="file:///news?tag=French">French</a> and <a href="file:///news?tag=German">German</a> embassies in <a href="file:///news?tag=South+Korea">South Korea</a> were not immediately available for comment.</p>
+<p>Sweden's ambassador to <a href="file:///news?tag=North+Korea">North Korea</a>, Joachim Bergstrom, last week posted a picture on Twitter of himself in <a href="file:///news?tag=Pyongyang">Pyongyang</a> and said he was happy to be out of the compound where he was quarantined for a month. <a href="file:///news?tag=North+Korea">North Korea</a>,
+ slapped with U.N. Security Council sanctions because of its nuclear and
+ missile programs, launched multiple short-range projectiles into the 
+sea on Monday, a week after it resumed missile tests following a 
+three-month break, South Korea's military said.</p>
+<ul class="rm-manual"> <li class="rm-manual">Share</li>
+</ul>
+<ul class="rm-manual"> <li class="rm-manual">READ MORE ON: </li>
+<li class="rm-manual"> <a href="file:///news?tag=North+Korea">North Korea</a> </li>
+<li class="rm-manual"> <a href="file:///news?tag=France">France</a> </li>
+<li class="rm-manual"> <a href="file:///news?tag=Pyongyang">Pyongyang</a> </li>
+<li class="rm-manual"> <a href="file:///news?tag=Germany">Germany</a> </li>
+<li class="rm-manual"> <a href="file:///news?tag=Russian">Russian</a> </li>
+<li class="rm-manual"> <a href="file:///news?tag=China">China</a> </li>
+<li class="rm-manual"> <a href="file:///news?tag=Switzerland">Switzerland</a> </li>
+<li class="rm-manual"> <a href="file:///news?tag=South+Korea">South Korea</a> </li>
+<li class="rm-manual"> <a href="file:///news?tag=German">German</a> </li>
+<li class="rm-manual"> <a href="file:///news?tag=French">French</a> </li>
+<li class="rm-manual"> <a href="file:///news?tag=Britain">Britain</a> </li>
+<li class="rm-manual"> <a href="file:///news?tag=Romanian">Romanian</a> </li>
+<li class="rm-manual"> <a href="file:///news?tag=Egyptian">Egyptian</a> </li>
+<li class="rm-manual"> <a href="file:///news?tag=Vladivostok">Vladivostok</a> </li>
+<li class="rm-manual"> <a href="file:///news?tag=Sweden">Sweden</a> </li>
+<li class="rm-manual"> <a href="file:///news?tag=UN+Security+Council">UN Security Council</a> </li>
+</ul>
+<h2 class="rm-manual">ALSO READ</h2>
+<ul class="rm-manual"> <li class="rm-manual">
+<h3 class="rm-manual"> <a href="file:///article/health/1077060-factbox-the-details-of-britains-impending-quarantine-scheme"> FACTBOX-The details of Britain's impending quarantine scheme</a>
+</h3> </li>
+<li class="rm-manual">
+<h3 class="rm-manual"> <a href="file:///article/law-order/1076989-us-senator-cotton-cautions-britain-over-huawei-cooperation"> U.S. senator Cotton cautions Britain over Huawei cooperation</a>
+</h3> </li>
+<li class="rm-manual">
+<h3 class="rm-manual"> <a href="file:///article/sports-games/1077316-soccer-romanian-league-to-resume-on-june-12-confirms-lpf"> Soccer-Romanian league to resume on June 12, confirms LPF</a>
+</h3> </li>
+<li class="rm-manual">
+<h3 class="rm-manual"> <a href="file:///article/politics/1077081-britain-will-not-walk-away-from-hong-kong-johnson-says"> Britain will not walk away from Hong Kong, Johnson says</a>
+</h3> </li>
+<li class="rm-manual">
+<h3 class="rm-manual"> <a href="file:///article/international/1077589-britains-johnson-floyds-death-inexcusable"> Britain's Johnson: Floyd's death 'inexcusable'</a>
+</h3> </li>
+</ul>
+<p class="rm-manual"> Country</p>
+<ul class="rm-manual"> <li class="rm-manual">Germany</li>
+</ul>
+<p class="rm-manual"> Share </p>
+<h2 class="rm-manual"> <span>TRENDING</span> </h2>
+<p class="rm-manual"> <a href="file:///entertainment/article/1094967-mayors-of-central-european-capitals-call-for-tougher-eu-climate-goals"> </a></p><p class="rm-manual"><a href="file:///entertainment/article/1094967-mayors-of-central-european-capitals-call-for-tougher-eu-climate-goals"> </a></p><h3 class="rm-manual"><a href="file:///entertainment/article/1094967-mayors-of-central-european-capitals-call-for-tougher-eu-climate-goals">Mayors of central European capitals call for tougher EU climate goals</a></h3><a href="file:///entertainment/article/1094967-mayors-of-central-european-capitals-call-for-tougher-eu-climate-goals"> <p class="rm-manual"></p> </a> <a href="file:///entertainment/article/1094139-science-news-roundup-baby-dragons-take-their-bow-in-a-slovenian-cave-china-postpones-beidou-satellite-launch-over-technica"> <p class="rm-manual"> </p><h3 class="rm-manual">Science
+ News Roundup: Baby dragons take their bow in a Slovenian cave; China 
+postpones Beidou satellite launch over technical problem and more</h3> <p class="rm-manual"></p> </a> <a href="file:///entertainment/article/1094140-health-news-roundup-steroid-drug-hailed-as-breakthrough-for-seriously-ill-covid-19-patients-honduran-president-says-he-is"> <p class="rm-manual"> </p><h3 class="rm-manual">Health
+ News Roundup: Steroid drug hailed as 'breakthrough' for seriously ill 
+COVID-19 patients; Honduran president says he is infected with 
+coronavirus and more</h3> <p class="rm-manual"></p> </a> <a href="file:///entertainment/article/1094557-kung-fu-panda-4-is-under-production-why-kung-fu-panda-5-6-have-huge-possibilities"> <p class="rm-manual"> </p><h3 class="rm-manual">Kung Fu Panda 4 is under production, why Kung Fu Panda 5 &amp; 6 have huge possibilities</h3> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<h2 class="rm-manual"> <span>OPINION / BLOG / INTERVIEW</span> </h2>
+<p class="rm-manual"><a href="file:///article/international/1079144-preventive-healthcare-micro-mobility-catalyzing-future-of-urban-transport"> </a></p><p class="rm-manual"><a href="file:///article/international/1079144-preventive-healthcare-micro-mobility-catalyzing-future-of-urban-transport"> </a></p><h3 class="rm-manual"><a href="file:///article/international/1079144-preventive-healthcare-micro-mobility-catalyzing-future-of-urban-transport">Preventive healthcare, micro-mobility catalyzing future of urban transport </a></h3><a href="file:///article/international/1079144-preventive-healthcare-micro-mobility-catalyzing-future-of-urban-transport"> <p class="rm-manual">As
+ various countries are gradually easing lockdowns to increase economic 
+activities, the first challenge they are facing is -&amp;#160; to 
+introduce preventive healthcare in their transport systems to win over 
+the confidence of passengers. Howe...</p> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///article/politics/1092784-korean-council-embezzlement-scandal-underlines-need-for-greater-oversight"> </a></p><p class="rm-manual"><a href="file:///article/politics/1092784-korean-council-embezzlement-scandal-underlines-need-for-greater-oversight"> </a></p><h3 class="rm-manual"><a href="file:///article/politics/1092784-korean-council-embezzlement-scandal-underlines-need-for-greater-oversight">Korean Council embezzlement scandal underlines need for greater oversight</a></h3><a href="file:///article/politics/1092784-korean-council-embezzlement-scandal-underlines-need-for-greater-oversight"> <p class="rm-manual"> ... ...</p> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///article/business/1073735-hospitality-sector-embraces-technology-as-covid-19-forces-a-paradigm-shift"> </a></p><p class="rm-manual"><a href="file:///article/business/1073735-hospitality-sector-embraces-technology-as-covid-19-forces-a-paradigm-shift"> </a></p><h3 class="rm-manual"><a href="file:///article/business/1073735-hospitality-sector-embraces-technology-as-covid-19-forces-a-paradigm-shift">Hospitality sector embraces technology as COVID-19 forces a paradigm shift</a></h3><a href="file:///article/business/1073735-hospitality-sector-embraces-technology-as-covid-19-forces-a-paradigm-shift"> <p class="rm-manual">The
+ industry has been drastically impacted and irreversibly changed due to 
+the fallout of this pandemic, which is forcing the hospitality sector to
+ follow social distancing as opposed to the core beliefs of 
+close-proximity hospitality on wh...</p> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///article/technology/1069568-immersive-technologies-during-and-after-covid-19"> </a></p><p class="rm-manual"><a href="file:///article/technology/1069568-immersive-technologies-during-and-after-covid-19"> </a></p><h3 class="rm-manual"><a href="file:///article/technology/1069568-immersive-technologies-during-and-after-covid-19">Immersive technologies during and after COVID-19 </a></h3><a href="file:///article/technology/1069568-immersive-technologies-during-and-after-covid-19"> <p class="rm-manual">The ARVR industry is experiencing both positive and negative impacts as a result of the COVID-19 crisis....</p> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<h2 class="rm-manual"> <span>Videos</span> </h2>
+<h2 class="rm-manual"> <span>Latest News</span> </h2>
+<p class="rm-manual"><a href="file:///article/politics/1095565-factbox-whats-the-difference-between-three-us-plans-for-police-reform"> </a></p><p class="rm-manual"><a href="file:///article/politics/1095565-factbox-whats-the-difference-between-three-us-plans-for-police-reform"> </a></p><h3 class="rm-manual"><a href="file:///article/politics/1095565-factbox-whats-the-difference-between-three-us-plans-for-police-reform">FACTBOX-What's the difference between three U.S. plans for police reform</a></h3><a href="file:///article/politics/1095565-factbox-whats-the-difference-between-three-us-plans-for-police-reform"> <p class="rm-manual">President
+ Donald Trump has signed an executive order to address police misconduct
+ following the killing of an African American man, George Floyd, in 
+police custody. Democrats in the U.S. House of Representatives and 
+Republicans in the Senat...</p> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///article/business/1095559-iran-to-send-black-boxes-from-downed-ukrainian-airliner-to-ukraine--minister"> </a></p><p class="rm-manual"><a href="file:///article/business/1095559-iran-to-send-black-boxes-from-downed-ukrainian-airliner-to-ukraine--minister"> </a></p><h3 class="rm-manual"><a href="file:///article/business/1095559-iran-to-send-black-boxes-from-downed-ukrainian-airliner-to-ukraine--minister">Iran to send black boxes from downed Ukrainian airliner to Ukraine -minister</a></h3><a href="file:///article/business/1095559-iran-to-send-black-boxes-from-downed-ukrainian-airliner-to-ukraine--minister"> <p class="rm-manual">Iran
+ will send the black boxes from a downed Ukrainian airliner to Ukraine, 
+Irans Minister of Roads and Urban Development, Mohammad Eslami, said on 
+Wednesday, according to the Tasnim news agency. The Ukraine 
+International Airlines flight wa...</p> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///article/international/1095564-g7-foreign-ministers-urge-china-to-reconsider-new-security-law-on-hong-kong"> </a></p><p class="rm-manual"><a href="file:///article/international/1095564-g7-foreign-ministers-urge-china-to-reconsider-new-security-law-on-hong-kong"> </a></p><h3 class="rm-manual"><a href="file:///article/international/1095564-g7-foreign-ministers-urge-china-to-reconsider-new-security-law-on-hong-kong">G7 foreign ministers urge China to reconsider new security law on Hong Kong</a></h3><a href="file:///article/international/1095564-g7-foreign-ministers-urge-china-to-reconsider-new-security-law-on-hong-kong"> <p class="rm-manual">Foreign
+ Ministers of the Group of Seven G7 member countries on Wednesday issued
+ a joint statement strongly urging China to reconsider its decision to 
+impose national security legislation on Hong Kong. The proposed national
+ security law woul...</p> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///article/health/1095563-ireland-cuts-minimum-distance-between-pub-customers-if-food-served"> </a></p><p class="rm-manual"><a href="file:///article/health/1095563-ireland-cuts-minimum-distance-between-pub-customers-if-food-served"> </a></p><h3 class="rm-manual"><a href="file:///article/health/1095563-ireland-cuts-minimum-distance-between-pub-customers-if-food-served">Ireland cuts minimum distance between pub customers if food served</a></h3><a href="file:///article/health/1095563-ireland-cuts-minimum-distance-between-pub-customers-if-food-served"> <p class="rm-manual">Ireland
+ has halved the minimum social distance between customers in pubs to 1 
+metre 3.2 feet so long as other measures to prevent the spread of 
+COVID-19 are enforced, the government said on Wednesday. The move 
+followed complaints by restaur...</p> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> Give Feedback </p>
+<p class="rm-manual"> Name </p>
+<p class="rm-manual"> Email </p>
+<p class="rm-manual"> Message </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///">HOME</a> </li>
+<li class="rm-manual"> <a href="file:///aboutus">ABOUT</a> </li>
+<li class="rm-manual"> <a href="file:///career">CAREER</a> </li>
+<li class="rm-manual"> <a href="file:///advertisewithus">ADVERTISEMENT</a> </li>
+<li class="rm-manual"> <a href="file:///aboutus#devteam">TEAM</a> </li>
+<li class="rm-manual"> <a href="file:///partners/knowledge-partners">KNOWLEDGE PARTNERSHIP</a> </li>
+<li class="rm-manual"> <a href="file:///partners/media-partners">MEDIA PARTNERSHIP</a> </li>
+<li class="rm-manual"> <a href="file:///aboutus#meet">CONTACT US</a> </li>
+</ul>
+<p class="rm-manual"> <span>Subscribe to our Newsletter </span> </p>
+<h4 class="rm-manual">SECTORS</h4>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///news/agro-forestry">Agro-Forestry</a> </li>
+<li class="rm-manual"> <a href="file:///news/art-culture">Art &amp; Culture</a> </li>
+<li class="rm-manual"> <a href="file:///news/technology">Technology</a> </li>
+<li class="rm-manual"> <a href="file:///news/economy-business">Economy &amp; Business</a> </li>
+<li class="rm-manual"> <a href="file:///news/education">Education</a> </li>
+<li class="rm-manual"> <a href="file:///news/energy-extractives">Energy &amp; Extractives</a> </li>
+<li class="rm-manual"> <a href="file:///news/politics">Politics</a> </li>
+</ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///news/law-governance">Law &amp; Governance</a> </li>
+<li class="rm-manual"> <a href="file:///news/health">Health</a> </li>
+<li class="rm-manual"> <a href="file:///news/science-environment">Science &amp; Environment</a> </li>
+<li class="rm-manual"> <a href="file:///news/socialgender">Social &amp; Gender</a> </li>
+<li class="rm-manual"> <a href="file:///news/sports">Sports</a> </li>
+<li class="rm-manual"> <a href="file:///news/transport">Transport</a> </li>
+<li class="rm-manual"> <a href="file:///news/urban-development">Urban Development</a> </li>
+<li class="rm-manual"> <a href="file:///news/wash">WASH</a> </li>
+</ul>
+<h4 class="rm-manual">EDITIONS</h4>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///pacific">Pacific</a> </li>
+<li class="rm-manual"> <a href="file:///south-asia">South Asia</a> </li>
+<li class="rm-manual"> <a href="file:///south-east-asia">East and South East Asia</a> </li>
+<li class="rm-manual"> <a href="file:///europe-central-asia">Europe and Central Asia</a> </li>
+<li class="rm-manual"> <a href="file:///central-africa">Central Africa</a> </li>
+<li class="rm-manual"> <a href="file:///east-africa">East Africa</a> </li>
+<li class="rm-manual"> <a href="file:///southern-africa">Southern Africa</a> </li>
+<li class="rm-manual"> <a href="file:///west-africa">West Africa</a> </li>
+<li class="rm-manual"> <a href="file:///middle-east-north-africa">Middle East and North Africa</a> </li>
+<li class="rm-manual"> <a href="file:///north-america">North America</a> </li>
+<li class="rm-manual"> <a href="file:///latin-america">Latin America and Caribbean</a> </li>
+</ul>
+<h4 class="rm-manual">OTHER LINKS</h4>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///Writeforus">Write for us</a> </li>
+<li class="rm-manual"> <a href="file:///press-release">Submit Press Release</a> </li>
+<li class="rm-manual"> <a href="file:///blogs">Opinion / Blog / Analysis</a> </li>
+<li class="rm-manual"> <a href="file:///news">Agency Wire</a> </li>
+<li class="rm-manual"> <a href="file:///stories/business">Business News</a> </li>
+<li class="rm-manual"> <a href="file:///stories/entertainment">Entertainment News</a> </li>
+<li class="rm-manual"> <a href="file:///stories/technology">Technology News</a> </li>
+</ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///stories/law-order">Law-order News</a> </li>
+<li class="rm-manual"> <a href="file:///stories/lifestyle">Lifestyle News</a> </li>
+<li class="rm-manual"> <a href="file:///stories/national">National News</a> </li>
+<li class="rm-manual"> <a href="file:///stories/international">International News</a> </li>
+<li class="rm-manual"> <a href="file:///stories/headlines">Headlines</a> </li>
+<li class="rm-manual"> <a href="file:///pr-newswire">PR Newswire</a> </li>
+<li class="rm-manual"> <a href="file:///stories/other">Other</a> </li>
+</ul>
+<h4 class="rm-manual">OTHER PRODUCTS</h4>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="http://www.visionri.com/Home/Vithi" rel="noreferrer">VITHI</a> </li>
+<li class="rm-manual"> <a href="http://www.visionri.com/Home/Vyoma" rel="noreferrer">VYOMA</a> </li>
+<li class="rm-manual"> <a href="http://www.visionri.com/Home/Vyapad" rel="noreferrer">VYAPAD</a> </li>
+<li class="rm-manual"> <a href="http://www.visionri.com/Home/IdeaKM" rel="noreferrer">IDEA-KM</a> </li>
+<li class="rm-manual"> <a href="http://www.visionri.com/Home/IdeaME" rel="noreferrer">IDEA-M&amp;E</a> </li>
+</ul>
+<h4 class="rm-manual">CONNECT</h4>
+<p class="rm-manual"> Email: info@devdiscourse.com </p>
+<p class="rm-manual">Phone: +91-130-6444012, +91-7027739813, 14, 15 </p>
+<p class="rm-manual"> <span><a href="http://www.visionri.com/" rel="noreferrer"> VisionRI</a></span> | <span><a href="file:///home/disclaimer">Disclaimer</a></span> | <span><a href="file:///home/privacypolicy">Terms of use </a></span> | <span><a href="file:///home/privacypolicy#use">Privacy Policy</a></span> </p>
+<p class="rm-manual">© Copyright 2020</p></article>
+</body></html>

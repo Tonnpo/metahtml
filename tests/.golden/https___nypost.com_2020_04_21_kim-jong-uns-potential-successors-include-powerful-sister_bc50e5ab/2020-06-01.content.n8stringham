@@ -1,0 +1,179 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Kim Jong Un’s potential successors include sister Kim Yo Jong </p>
+<p class="rm-manual"><a href="#content-wrapper">Skip to main content</a> </p>
+<p class="rm-manual">Thanks for contacting us. We've received your submission.</p>
+<p class="rm-manual"><a href="#">Back to Reading</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///news/">News</a></li> <li class="rm-manual"><a href="file:///metro/">Metro</a></li> <li class="rm-manual"><a href="https://pagesix.com/">Page Six</a></li> <li class="rm-manual"><a href="file:///sports/">Sports</a></li> <li class="rm-manual"><a href="file:///business/">Business</a></li> <li class="rm-manual"><a href="file:///opinion/">Opinion</a></li> <li class="rm-manual"><a href="file:///entertainment/">Entertainment</a></li> <li class="rm-manual"><a href="file:///fashion/">Fashion</a></li> <li class="rm-manual"><a href="https://nypost.com/shopping/">NY Post Shopping</a></li> <li class="rm-manual"><a href="file:///living/">Living</a></li> <li class="rm-manual"><a href="file:///media/">Media</a></li> <li class="rm-manual"><a href="file:///tech/">Tech</a></li> <li class="rm-manual"><a href="file:///real-estate/">Real Estate</a></li> <li class="rm-manual"><a href="file:///video/">Video</a></li> <li class="rm-manual"><a href="file:///photos/">Photos</a></li> <li class="rm-manual">
+<a href="#">Sub Menu 1</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://nypost.com/covers/">Covers</a></li> <li class="rm-manual"><a href="https://nypost.com/columnists/">Columnists</a></li> <li class="rm-manual"><a href="https://nypost.com/horoscopes/">Horoscopes</a></li> <li class="rm-manual"><a href="https://nypost.com/odds/">Sports Odds</a></li> <li class="rm-manual"><a href="https://email.nypost.com/">Email Newsletters</a></li> <li class="rm-manual"><a href="https://store.nypost.com/">Store</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="https://subscribe.nypost.com/">Home Delivery</a></li> </ul> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="#">Sign in</a></li> </ul>
+<p class="rm-manual"><a href="https://nypost.com/search/"> <span>Search</span> </a> </p>
+<p class="rm-manual"> Type to Search </p>
+<p class="rm-manual"> <a href="https://nypost.com/tips/"> <span>Tips</span> </a> <a href="https://email.nypost.com/"> <span>Sign Up</span> </a> </p>
+<p class="rm-manual"> <a href="https://nypost.com/"> New York Post <span>New York Post</span> </a> </p>
+<p class="rm-manual"> <a href="file:///news/">News</a> </p>
+<h1 class="rm-manual"> Kim Jong Un’s potential successors include powerful sister Kim Yo Jong </h1>
+<p class="rm-manual">By <a href="https://nypost.com/author/ebony-bowden/"><span>Ebony Bowden</span></a></p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://nypost.com/author/ebony-bowden/"> <span>View author archive</span> </a> </li> <li class="rm-manual"> <a href="https://nypost.com/author/ebony-bowden/feed/"> <span>Get author RSS feed</span> </a> </li> </ul>
+<h4 class="rm-manual"> <span>Most Popular Today</span> </h4>
+<p class="rm-manual"><a href="https://nypost.com/2020/05/31/mayor-de-blasios-daughter-chiara-arrested-at-manhattan-protest/"> <span>1</span> <span>Mayor Bill de Blasio's daughter, Chiara, arrested at Manhattan protest</span> </a> </p>
+<p class="rm-manual"><a href="https://nypost.com/2020/05/31/accused-molotov-cocktail-hurler-is-ivy-league-educated-lawyer/"> <span>2</span> <span>Accused Molotov cocktail hurler is Ivy League-educated lawyer, community board member</span> </a> </p>
+<p class="rm-manual"><a href="https://nypost.com/2020/06/01/josina-anderson-is-out-at-espn/"> <span>3</span> <span>Josina Anderson is out at ESPN</span> </a> </p>
+<p class="rm-manual"><a href="https://nypost.com/2020/06/01/president-trump-mobilizing-us-military-to-end-george-floyd-riots/"> <span>4</span> <span>Trump mobilizes US military to end unprecedented riots</span> </a> </p>
+<p class="rm-manual"><a href="https://nypost.com/2020/06/01/molotov-cocktail-tossing-lawyers-tried-to-pass-out-explosives-cops/"> <span>5</span> <span>Molotov cocktail-tossing lawyers tried to pass out firebombs to protesters: feds</span> </a> </p>
+<p class="rm-manual"> Name<span>(required)</span> </p>
+<p class="rm-manual"> Email<span>(required)</span> </p>
+<p class="rm-manual"> Comment<span>(required)</span> </p>
+<p class="rm-manual"> April 21, 2020 <span>|</span> 3:15pm <span>|</span> <a href="#">Updated <span>April 22, 2020 | 1:08pm</span></a> </p>
+<p class="rm-manual"> <a href="#">Enlarge Image</a> </p>
+<p class="rm-manual"> <span>Kim Yo Jong, sister of North Korea's leader Kim Jong Un </span> <span>REUTERS</span> </p>
+<h4 class="rm-manual">More On:</h4>
+<h3 class="rm-manual"><a href="https://nypost.com/tag/kim-jong-un/">kim jong un</a></h3>
+<h2 class="rm-manual"><a href="https://nypost.com/2020/05/30/how-the-kim-dynasty-has-brainwashed-north-koreans-for-generations/">Discovering unicorns and other insane lies Kim Jong Un has told North Koreans</a></h2>
+<h2 class="rm-manual"><a href="https://nypost.com/2020/05/29/kim-jong-un-launches-bizarre-attack-on-teen-sex/">Kim Jong Un launches bizarre attack on teen sex</a></h2>
+<h2 class="rm-manual"><a href="https://nypost.com/2020/05/23/kim-jong-un-appears-at-military-meeting-north-korean-state-media/">Kim Jong Un emerges, North Korea state media reports</a></h2>
+<h2 class="rm-manual"><a href="https://nypost.com/2020/05/23/inside-kim-jong-uns-tremendous-mar-a-lago-style-resort/">Inside Kim Jong Un's 'tremendous' Mar-a-Lago-style resort in North Korea</a></h2>
+<p>With North Korean leader Kim Jong Un reportedly in <a href="https://nypost.com/2020/04/20/north-koreas-kim-jong-un-in-grave-danger-after-surgery-report/" rel="noopener">grave condition after surgery</a>, questions are swirling over who would replace the reclusive dictator since he has no named successor or heir apparent.</p>
+<p>The Kim family has ruled the secretive Communist country for the past
+ seven decades — with Kim taking over from his father, Kim Jong Il, 
+after his death in 2011.</p>
+<p>Power has traditionally passed through male heirs, but the 
+36-year-old despot has no male adult children — leaving Kim’s brother 
+and sister as the most obvious choices to replace him as ruler, 
+according to various reports.</p>
+<p>His sister Kim Yo Jong is a senior member of the ruling Workers’ 
+Party of Korea and is considered the most powerful woman in North Korea,
+ according to a 2019 <a href="https://nationalinterest.org/blog/korea-watch/meet-kim-yo-jong-north-korea%E2%80%99s-most-powerful-woman-68902" rel="noopener">National Interest investigation</a>.</p>
+<p>She has served as chief of staff and confidant of sorts to her older 
+brother and has been protective of his image in her role as a director 
+of the country’s propaganda department, according to the report.</p>
+<p>But North Korean politics is patriarchal and it’s unlikely a woman 
+will be made leader, however powerful she is. Kim’s wife, a former 
+cheerleader and singer, also exercises no political power, the report 
+said.</p>
+<h4 class="rm-manual">Related Video</h4>
+<p class="rm-manual"> <span> Video length 36 seconds </span> <span>:36</span> </p>
+<p class="rm-manual">Death of Kim Jong Un could create refugee crisis, require military response</p>
+<h2>Death of Kim Jong Un could create refugee crisis, require military response</h2>
+<p>This leaves Kim’s older brother, Kim Jong Chol, who was already passed over by their father when he was considering a successor.</p>
+<figcaption><span>Korean Broadcasting System video provided by the Kyodo news agency shows a man reported by the network to be Kim Jong Chol.</span><span>REUTERS</span></figcaption><p>Kim
+ Jong Un has taken steps to consolidate his power since ascending the 
+throne nine years ago, ordering the execution of his powerful uncle Jang
+ Song Thaek and his entire family in 2013 <a href="https://nypost.com/2014/01/27/kim-jong-un-ordered-execution-of-uncles-entire-family/" rel="noopener">over charges of treachery</a>.</p>
+<p>Kim also reportedly ordered the 2017 murder of his half-brother Kim 
+Jong Nam, who died after a nerve-agent attack by two female assassins <a href="https://nypost.com/2017/02/14/kim-jong-uns-half-brother-killed-by-female-assassins-with-poison/" rel="noopener">in a Kuala Lumpur airport</a>.</p>
+<p>But the dictator apparently doesn’t consider his brother a threat, 
+possibly due to the fact he has no interest in succeeding him as supreme
+ leader.</p>
+<p>According to a report by the <a href="https://www.independent.co.uk/news/world/asia/kim-jong-un-news-health-north-korea-successor-leader-a9476416.html" rel="noopener">UK Independent</a>,
+ Kim Jong Chol is more interested in staying out of the spotlight and 
+was once described by an alleged former employee as too “girlish” to 
+lead.</p>
+<p>He was last spotted at an Eric Clapton concert in London in 2015 and likes to play the guitar, the report said.</p>
+<p>If Kim dies unexpectedly due to medical complications, this could 
+result in the end of the family’s 72-year rule, according to academics.</p>
+<p>Dr. Bruce Bennett, a senior defense analyst at nonpartisan think tank
+ Rand Corporation, has warned a North Korean collapse may be on the 
+horizon.</p>
+<figcaption><span>Kim Jong Un</span><span>EPA</span></figcaption><p>“There
+ is a reasonable probability that North Korean totalitarianism will end 
+in the foreseeable future, with the very strong likelihood that this end
+ will be accompanied by considerable violence and upheaval,” Bennett <a href="https://books.google.com/books?id=wdQtAQAAQBAJ&amp;pg=PA14&amp;lpg=PA14&amp;dq=%E2%80%9CThere+is+a+reasonable+probability+that+North+Korean+totalitarianism+will+end+in+the+foreseeable+future,+with+the+very+strong+likelihood+that+this+end+will+be+accompanied+by+considerable+violence+and+upheaval.%E2%80%9D&amp;source=bl&amp;ots=CiCfthmuXO&amp;sig=ACfU3U2tlJHj3I9ZTS_V6lLPmFppFT1-RQ&amp;hl=en&amp;sa=X&amp;ved=2ahUKEwjMlK61hvroAhUCmXIEHWuRBlwQ6AEwAHoECAkQAQ#v=onepage&amp;q=%E2%80%9CThere%20is%20a%20reasonable%20probability%20that%20North%20Korean%20totalitarianism%20will%20end%20in%20the%20foreseeable%20future%2C%20with%20the%20very%20strong%20likelihood%20that%20this%20end%20will%20be%20accompanied%20by%20considerable%20violence%20and%20upheaval.%E2%80%9D&amp;f=false" rel="noopener">wrote in a 2013 paper</a>.</p>
+<p>According to both the Independent and National Interest, the 
+country’s military leaders may try to stage a grab for power without a 
+named successor, leading to fears of a humanitarian crisis.</p>
+<p>“The collapse of the government could spell disaster for China and 
+the ROK [South Korea] in terms of refugees, economic demands, 
+stabilization difficulties, and North Korean revenge,” Bennett 
+continued.</p>
+<p>“China and the ROK might favor the current North Korean system over facing these overwhelming problems,” he warned.</p>
+<p>According to reports, the United States <a href="https://nypost.com/2020/04/21/us-has-contingency-plans-in-place-if-kim-jong-un-dies-report/">has contingency plans</a> in place in the event of a mass-scale humanitarian crisis.</p>
+<p class="rm-manual"> <span>Filed under</span> <a href="https://nypost.com/tag/kim-jong-un/" rel="tag">kim jong un</a> <span>, </span> <a href="https://nypost.com/tag/north-korea/" rel="tag">north korea</a> <span>, </span> <a href="https://nypost.com/2020/04/21/">4/21/20</a> </p>
+<p class="rm-manual"> <a href="https://nypost.com/2020/04/21/skin-rashes-possible-symptom-of-coronavirus-experts-say/">Read Next</a> </p>
+<p class="rm-manual"> <a href="https://nypost.com/2020/04/21/skin-rashes-possible-symptom-of-coronavirus-experts-say/"> These types of skin rashes may be a symptom of coronavirus </a> </p>
+<h4 class="rm-manual"> <span>Trending Now</span> <span>on NYPost.com</span> </h4>
+<ol class="rm-manual"> <li class="rm-manual"> <a href="https://nypost.com/2020/06/01/president-trump-mobilizing-us-military-to-end-george-floyd-riots/"> <span>Trump mobilizes US military to end unprecedented riots</span> </a> </li> <li class="rm-manual"> <a href="https://nypost.com/2020/06/01/josina-anderson-is-out-at-espn/"> <span>Josina Anderson is out at ESPN</span> </a> </li> <li class="rm-manual"> <a href="https://nypost.com/2020/06/01/florida-police-chief-encourages-residents-to-shoot-looters/"> <span>Florida sheriff encourages residents to shoot looters breaking into homes</span> </a> </li> </ol>
+<h4 class="rm-manual">Coronavirus</h4>
+<p class="rm-manual">Stay informed with our <a href="https://email.nypost.com/?newsletter=coronavirus-updates" rel="noopener noreferrer">Coronavirus Daily Update</a> newsletter.</p>
+<p class="rm-manual"><a href="https://email.nypost.com/?newsletter=coronavirus-updates" rel="noopener noreferrer">SUBSCRIBE NOW</a></p>
+<p class="rm-manual"><a href="https://nypost.com/coronavirus/">Read Latest Updates</a></p>
+<h4 class="rm-manual"> <span>what to shop now</span> </h4>
+<h5 class="rm-manual"> <a href="https://nypost.com/2020/06/01/saks-fifth-avenue-fathers-day-sale/"> Saks Fifth Avenue offers up to 70 percent off Father's Day gifts </a> </h5>
+<h5 class="rm-manual"> <a href="https://nypost.com/article/ylighting-sale/"> YLighting takes up to 75 percent off lighting and more for Warehouse Sale </a> </h5>
+<h5 class="rm-manual"> <a href="https://nypost.com/article/lululemon-sale/"> Lululemon offers up to 50 percent off apparel, accessories and more </a> </h5>
+<h5 class="rm-manual"> <a href="https://nypost.com/article/wayfair-sale/"> Wayfair takes up to 60 percent off furniture and more for Living Room Sale </a> </h5>
+<h5 class="rm-manual"> <a href="https://nypost.com/2020/04/14/puma-sale/"> Puma takes an extra 20 percent off clearance for summer sale </a> </h5>
+<h4 class="rm-manual"> <span>Now On</span> <span>Now on Page Six</span> </h4>
+<ol class="rm-manual"> <li class="rm-manual"> <a href="https://pagesix.com/2020/06/01/restauranteur-svitlana-flom-says-911-call-video-twisted-the-entire-thing/"> <span>Restauranteur Svitlana Flom says 911 call video ‘twisted the entire thing’</span> <span>Restauranteur Svitlana Flom says 911 call video ‘twisted the entire thing’</span> </a> </li> <li class="rm-manual"> <a href="https://pagesix.com/2020/06/01/tim-gunn-has-finally-embraced-comfortable-clothes/"> <span>Tim Gunn has finally embraced comfortable clothes</span> <span>Tim Gunn has finally embraced comfortable clothes</span> </a> </li> <li class="rm-manual"> <a href="https://pagesix.com/2020/06/01/model-duckie-thot-criticizes-fashion-industrys-silence-during-protests/"> <span>Model Duckie Thot criticizes fashion industry’s silence during protests</span> <span>Model Duckie Thot criticizes fashion industry’s silence during protests</span> </a> </li> </ol>
+<p class="rm-manual"><a href="https://pagesix.com/">SEE ALL</a> </p>
+<h4 class="rm-manual"> <span>Video</span> </h4>
+<p class="rm-manual"> <a href="https://nypost.com/video/washington-protesters-tackle-man-ripping-up-sidewalk-with-a-hammer/"> <span> <span> Video length 41 seconds </span> <span>:41</span> </span> </a> </p>
+<h5 class="rm-manual"> <a href="https://nypost.com/video/washington-protesters-tackle-man-ripping-up-sidewalk-with-a-hammer/"> Washington protesters tackle man ripping up sidewalk with a hammer </a> </h5>
+<h4 class="rm-manual"> <span> Now On </span> <span>Now on Decider</span> </h4>
+<ol class="rm-manual"> <li class="rm-manual"> <a href="https://decider.com/2020/05/31/youtube-star-jake-paul-caught-hanging-with-looters-at-scottsdale-az-mall/"> <span>YouTube Star Jake Paul Caught Hanging With Looters At Scottsdale, AZ Mall</span> <span>YouTube Star Jake Paul Caught Hanging With Looters At Scottsdale, AZ Mall</span> </a> </li> </ol>
+<p class="rm-manual"><a href="https://decider.com/">SEE ALL</a> </p>
+<h4 class="rm-manual">More Stories</h4>
+<h4 class="rm-manual"> page six </h4>
+<h5 class="rm-manual"><a href="https://pagesix.com/2020/06/01/cole-sprouse-arrested-at-los-angeles-black-lives-matter-protest/">Cole Sprouse arrested at Los Angeles Black Lives Matter protest</a></h5>
+<h4 class="rm-manual"> nypost </h4>
+<h5 class="rm-manual"><a href="https://nypost.com/2020/06/01/president-trump-mobilizing-us-military-to-end-george-floyd-riots/">Trump mobilizes US military to end unprecedented riots</a></h5>
+<p class="rm-manual"> <a href="https://nypost.com/"> <span>New York Post</span> </a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://email.nypost.com/">Email Newsletters</a></li> <li class="rm-manual"><a href="https://nypost.com/mobile-apps/">Mobile Apps</a></li> <li class="rm-manual"><a href="https://nypost.com/contact/">Contact Us</a></li> <li class="rm-manual"><a href="https://nypost.com/tips/">Tips</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="#">Sections &amp; Features</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///news/">News</a></li> <li class="rm-manual"><a href="file:///tech/">Tech</a></li> <li class="rm-manual"><a href="file:///metro/">Metro</a></li> <li class="rm-manual"><a href="file:///real-estate/">Real Estate</a></li> <li class="rm-manual"><a href="https://pagesix.com/">Page Six</a></li> <li class="rm-manual"><a href="file:///video/">Video</a></li> <li class="rm-manual"><a href="file:///sports/">Sports</a></li> <li class="rm-manual"><a href="file:///photos/">Photos</a></li> <li class="rm-manual"><a href="file:///business/">Business</a></li> <li class="rm-manual"><a href="file:///alexa/">Alexa</a></li> <li class="rm-manual"><a href="file:///opinion/">Opinion</a></li> <li class="rm-manual"><a href="file:///covers/">Covers</a></li> <li class="rm-manual"><a href="file:///entertainment/">Entertainment</a></li> <li class="rm-manual"><a href="file:///horoscopes/">Horoscopes</a></li> <li class="rm-manual"><a href="file:///fashion/">Fashion</a></li> <li class="rm-manual"><a href="https://nypost.com/shopping/">NY Post Shopping</a></li> <li class="rm-manual"><a href="https://nypost.com/odds/">Sports Odds</a></li> <li class="rm-manual"><a href="file:///living/">Living</a></li> <li class="rm-manual"><a href="file:///classifieds/">Classifieds</a></li> <li class="rm-manual"><a href="file:///media/">Media</a></li> </ul> </li> <li class="rm-manual">
+<a href="#">Newsletters &amp; More</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://email.nypost.com/">Email Newsletters</a></li> <li class="rm-manual"><a href="https://nypost.com/rssfeeds/">RSS Feeds</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="https://store.nypost.com/">Store</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="https://goo.gl/5X7xvh">Post Headliners</a></li> <li class="rm-manual">
+<a href="#">Home Delivery</a> <ul class="rm-manual"> <li class="rm-manual"><a rel="noopener noreferrer" href="https://subscribe.nypost.com/">Subscribe</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="https://my.nypost.com/account/">Manage Subscription</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="https://nypost.com/home-delivery/">Delivery Help</a></li> </ul> </li> </ul> </li> <li class="rm-manual">
+<a href="#">Help/Support</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://nypost.com/customer-service/">Customer Service</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="http://nypost.help/">App FAQ &amp; Help</a></li> <li class="rm-manual">
+<a href="#">Contact Us</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://nypost.com/tips/">Tips</a></li> <li class="rm-manual"><a href="https://nypost.com/contact/">Newsroom</a></li> <li class="rm-manual"><a href="https://nypost.com/contact/">Letters to the Editor</a></li> <li class="rm-manual"><a href="http://www.nypostreprints.com/">Reprints</a></li> <li class="rm-manual"><a href="file:///careers/">Careers</a></li> </ul> </li> </ul> </li> <li class="rm-manual">
+<a href="#">Apps</a> <ul class="rm-manual"> <li class="rm-manual"><a rel="noopener noreferrer" href="https://itunes.apple.com/us/app/new-york-post-iphone-edition/id410094240?mt=8">iPhone App</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="https://itunes.apple.com/us/app/new-york-post-ipad-edition/id378590820?mt=8">iPad App</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=br.com.golmobile.nypost&amp;hl=en">Android Phone</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.nypost.tablet&amp;hl=en">Android Tablet</a></li> <li class="rm-manual">
+<a href="#">Advertise</a> <ul class="rm-manual"> <li class="rm-manual"><a rel="noopener noreferrer" href="http://advertising.nypost.com/">Media Kit</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="http://advertising.nypost.com/#contact">Contact</a></li> </ul> </li> </ul> </li> </ul>
+<h2 class="rm-manual">Post Digital Network</h2>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://pagesix.com/"> Page Six </a> </li> <li class="rm-manual"> <a href="https://pagesix.com/style"> Page Six Style </a> </li> <li class="rm-manual"> <a href="https://decider.com/"> Decider </a> </li> </ul>
+<p class="rm-manual"> <span>© 2020 NYP Holdings, Inc. All Rights Reserved</span> <a href="https://nypost.com/terms/">Terms of Use</a> <a href="https://nypost.com/privacy/">Privacy Notice</a> <a href="https://nypost.com/privacy/#adchoices">Your Ad Choices</a> <a href="https://nypost.com/sitemap/">Sitemap</a> </p>
+<p class="rm-manual"> <a href="https://nypost.com/ca-privacy-rights/">Your California Privacy Rights</a> </p>
+<p class="rm-manual"> New York Post </p>
+<p class="rm-manual"> Would you like to receive desktop browser notifications about breaking news and other major stories? </p>
+<p class="rm-manual"> Send to Email Address Your Name Your Email Address <a rel="nofollow" href="#cancel">Cancel</a> </p>
+<p class="rm-manual"> Post was not sent - check your email addresses! </p>
+<p class="rm-manual"> Email check failed, please try again </p>
+<p class="rm-manual"> Sorry, your blog cannot share posts by email. </p>
+<p class="rm-manual"> <span>click to copy</span> </p></article>
+</body></html>

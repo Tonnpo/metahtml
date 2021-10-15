@@ -1,0 +1,80 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual">COVID-19 and U.S. Apparel Imports (Updated: March 2020)</h1>
+<p>Jointly affected by the U.S.-China tariff war and the spread of the 
+coronavirus, the value of U.S. apparel imports from China see a 
+significant drop in January 2020.</p>
+<p>Specifically, the value of U.S. apparel imports from China went down 
+by as much as 36.1% month over month in January 2020. As a result, 
+China’s market shares also dropped from nearly 30% in 2019 to a new 
+record low of 23.9% in January 2020. However, it is important to note 
+that such a downward trend started in October 2019, as U.S. fashion 
+brands and retailers were eager to reduce their exposure to sourcing 
+from China.</p>
+<p>China’s lost market shares have been picked up mostly by other Asian 
+suppliers, particularly Vietnam and Bangladesh. However, there is no 
+evidence showing that U.S. fashion brands and retailers are giving more 
+apparel sourcing orders to suppliers from the Western Hemisphere. In 
+January 2020, only 8.1% of U.S. apparel imports came from CAFTA-DR 
+members (down from 10.3% in 2019) and 3.7% from NAFTA members (down from
+ 4.5% in 2019). <a href="https://www.just-style.com/analysis/us-apparel-sourcing-patterns-are-changing-heres-how_id138122.aspx">Recent studies show</a> that there’s more divergence in the products imported into the US from Asian countries and the western hemisphere.</p>
+<p>Meanwhile, according to the latest <a href="http://www.customs.gov.cn/customs/xwfb34/302425/2879130/index.html">statistics from China’s Customs</a>, the value of China’s apparel exports in the first two months of 2020 dropped by nearly 20% from a year earlier.</p>
+<h2 class="rm-manual">
+<span>Author:</span> Sheng Lu</h2>
+<p class="rm-manual"> Professor @ University of Delaware <a href="https://shenglufashion.com/author/shenglu27/" rel="author"> View all posts by Sheng Lu </a> </p>
+<p class="rm-manual"><span><span><span>Author </span> <a href="https://shenglufashion.com/author/shenglu27/">Sheng Lu</a></span></span></p>
+<p class="rm-manual"><span><span>Posted on </span><a href="https://shenglufashion.com/2020/03/07/tariff-war-coronavirus-u-s-apparel-imports-from-china-plummet-in-january-2020/" rel="bookmark">March 7, 2020May 6, 2020</a></span></p>
+<p class="rm-manual"><span><span>Categories </span><a href="https://shenglufashion.com/category/asia/" rel="category tag">Asia</a>, <a href="https://shenglufashion.com/category/china/" rel="category tag">China</a>, <a href="https://shenglufashion.com/category/fash455-course-material/" rel="category tag">FASH455 course material</a>, <a href="https://shenglufashion.com/category/international-trade/" rel="category tag">International Trade</a>, <a href="https://shenglufashion.com/category/sourcing/" rel="category tag">Sourcing</a></span></p>
+<p class="rm-manual"><span><span>Tags </span><a href="https://shenglufashion.com/tag/china/" rel="tag">China</a>, <a href="https://shenglufashion.com/tag/coronavirus/" rel="tag">Coronavirus</a>, <a href="https://shenglufashion.com/tag/tariff-war/" rel="tag">tariff war</a></span> </p>
+<h2 class="rm-manual"> 2 thoughts on “COVID-19 and U.S. Apparel Imports (Updated: March 2020)” </h2>
+<ol class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <a href="http://parroquiansa.wordpress.com/" rel="external nofollow ugc">chris cox</a> <span>says:</span> </p> <p class="rm-manual"> <a href="https://shenglufashion.com/2020/03/07/tariff-war-coronavirus-u-s-apparel-imports-from-china-plummet-in-january-2020/#comment-51821"> March 7, 2020 at 5:07 pm </a> </p> <p class="rm-manual">I
+ believe that a third factor for the decline attracts less public 
+attention even as it draws greater scrutiny from those responsible for 
+human rights in the supply chain: the mass detention of ethnic and 
+religious minorities in the Xinjiang Uygur Autonomous Region. For those 
+unfamiliar with the issue and its impact on supply chain human rights, I
+ have written about it here: <a href="https://seventhgenerationinterfaith.org/2019/11/27/raise-the-alarm-for-xinjiang/" rel="nofollow ugc">https://seventhgenerationinterfaith.org/2019/11/27/raise-the-alarm-for-xinjiang/</a></p> </article> <ol class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> Sheng Lu <span>says:</span> </p> <p class="rm-manual"> <a href="https://shenglufashion.com/2020/03/07/tariff-war-coronavirus-u-s-apparel-imports-from-china-plummet-in-january-2020/#comment-51830"> March 8, 2020 at 10:32 am </a> </p> <p class="rm-manual">Yes,
+ it could be another factor too and the issue has been a growing concern
+ to many US fashion brands and retailers sourcing from China. Look 
+forward to more systematic evaluation and empirical studies on the 
+topic.</p> </article> </li> </ol> </li> </ol>
+<p class="rm-manual">Comments are closed.</p>
+<h2 class="rm-manual">Post navigation</h2>
+<p class="rm-manual"><a href="https://shenglufashion.com/2020/03/03/evolving-patterns-and-social-economic-impacts-of-world-textiles-and-apparel-trade-discussions-questions-from-fash455/" rel="prev"><span>Previous</span> <span>Previous post:</span> <span>Evolving Patterns and Social Economic Impacts of World Textiles and Apparel Trade: Discussions Questions from FASH455</span></a></p>
+<p class="rm-manual"><a href="https://shenglufashion.com/2020/03/25/how-might-covid-19-affect-apparel-sourcing-and-trade/" rel="next"><span>Next</span> <span>Next post:</span> <span>How Might Covid-19 Affect Apparel Sourcing and Trade</span></a></p></article>
+</body></html>

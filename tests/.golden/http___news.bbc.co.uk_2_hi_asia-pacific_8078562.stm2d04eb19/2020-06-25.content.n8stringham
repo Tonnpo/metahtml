@@ -1,0 +1,124 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> BBC News - Profile: Kim Jong-un </p>
+<p class="rm-manual"><a href="http://www.bbc.co.uk/"> <span> <span>British Broadcasting Corporation</span><span>Home</span> </span> </a></p>
+<p class="rm-manual"><a>Accessibility links</a></p>
+<ul> <li class="rm-manual"><a href="#startcontent">Skip to content</a></li> <li class="rm-manual"><a href="#blq-local-nav">Skip to local navigation</a></li> <li class="rm-manual"><a href="#blq-nav-main">Skip to bbc.co.uk navigation</a></li> <li class="rm-manual"><a href="#blq-search">Skip to bbc.co.uk search</a></li> <li class="rm-manual"><a href="http://www.bbc.co.uk/accessibility/">Accessibility Help</a></li> </ul>
+<p class="rm-manual"><a href="http://news.bbc.co.uk/"><span>BBC News Updated every minute of every day</span></a></p>
+<table><tbody><tr><td> <p class="rm-manual"> <a href="file:///1/hi/video_and_audio/news_summary/8070822.stm"> One-Minute World News </a> </p> </td></tr></tbody></table>
+<table> <tbody><tr> <td> <p class="rm-manual"> <a href="file:///2/hi/default.stm">News Front Page</a> </p> <p class="rm-manual"> <a href="file:///2/hi/africa/default.stm">Africa</a> </p> <p class="rm-manual"> <a href="file:///2/hi/americas/default.stm">Americas</a> </p> <p class="rm-manual"> <a href="file:///2/hi/asia-pacific/default.stm">Asia-Pacific</a> </p> <p class="rm-manual"> <a href="file:///2/hi/europe/default.stm">Europe</a> </p> <p class="rm-manual"> <a href="file:///2/hi/middle_east/default.stm">Middle East</a> </p> <p class="rm-manual"> <a href="file:///2/hi/south_asia/default.stm">South Asia</a> </p> <p class="rm-manual"> <a href="file:///2/hi/uk_news/default.stm">UK</a> </p> <p class="rm-manual"> <a href="file:///2/hi/business/default.stm">Business</a> </p> <p class="rm-manual"> <a href="file:///2/hi/health/default.stm">Health</a> </p> <p class="rm-manual"> <a href="file:///2/hi/science/nature/default.stm">Science &amp; Environment</a> </p> <p class="rm-manual"> <a href="file:///2/hi/technology/default.stm">Technology</a> </p> <p class="rm-manual"> <a href="file:///2/hi/entertainment/default.stm">Entertainment</a> </p> <p class="rm-manual"> <a href="file:///2/hi/also_in_the_news/default.stm">Also in the news</a> </p> <p class="rm-manual">-----------------</p> <p class="rm-manual"> <a href="file:///2/hi/video_and_audio/default.stm">Video and Audio</a> </p> <p class="rm-manual">-----------------</p> <p class="rm-manual"> <a href="file:///2/hi/programmes/default.stm">Programmes</a> </p> <p class="rm-manual"> <a href="file:///2/hi/talking_point/default.stm">Have Your Say</a> </p> <p class="rm-manual"> <a href="file:///2/hi/in_pictures/default.stm">In Pictures</a> </p> <p class="rm-manual"> <a href="file:///2/hi/country_profiles/default.stm">Country Profiles</a> </p> <p class="rm-manual"> <a href="file:///2/hi/in_depth/default.stm">Special Reports</a> </p> <p> </p><h3 class="rm-manual">Related BBC sites</h3> <ul class="rm-manual"> <li class="rm-manual"><a href="http://news.bbc.co.uk/sport1/hi/default.stm">Sport</a></li> <li class="rm-manual"><a href="http://www.bbc.co.uk/weather/">Weather</a></li> <li class="rm-manual"><a href="http://www.bbc.co.uk/onthisday">On This Day</a></li> <li class="rm-manual"><a href="http://www.bbc.co.uk/blogs/theeditors/">Editors' Blog</a></li> <li class="rm-manual"><a href="http://www.bbc.co.uk/worldservice/">BBC World Service</a></li> </ul> <p class="rm-manual"></p> <p class="rm-manual">Languages</p> <ul> <li class="rm-manual"><a href="http://www.bbc.co.uk/chinese">Chinese</a></li> <li class="rm-manual"><a href="http://www.bbc.co.uk/vietnamese">Vietnamese</a></li> <li class="rm-manual"><a href="http://www.bbc.co.uk/indonesian">Indonesian</a></li> <li class="rm-manual"><a href="http://www.bbc.co.uk/burmese">Burmese</a></li> <li class="rm-manual"><a href="http://www.bbc.co.uk/worldservice/languages/">More</a></li> </ul> </td> <td> <table> <tbody><tr> <td> <p class="rm-manual"><span>Page last updated at </span>15:58 GMT, Friday, 4 June 2010 16:58 UK</p> <p><table><tbody><tr> <td class="rm-manual"><a href="http://newsvote.bbc.co.uk/mpapps/pagetools/email/news.bbc.co.uk/2/hi/asia-pacific/8078562.stm"> E-mail this to a friend </a></td> <td class="rm-manual"><a href="http://newsvote.bbc.co.uk/mpapps/pagetools/print/news.bbc.co.uk/2/hi/asia-pacific/8078562.stm?ad=1"> Printable version </a></td> </tr></tbody></table></p> </td> </tr> </tbody></table> <table> <tbody><tr> <td> <p> </p><h1 class="rm-manual"> Profile: Kim Jong-un </h1> <p></p> </td> </tr> <tr> <td> <p>Kim
+ Jong-un is believed to have been designated the next leader of North 
+Korea, succeeding his father, the "Dear Leader" Kim Jong-il. The BBC 
+News website and BBC Monitoring profile this elusive young man.</p> <table> <tbody><tr><td> <p> </p><p>The only known image of Kim Jong-un shows him as a young boy</p> <p></p> </td></tr> </tbody></table> <p>Kim Jong-un is youngest son of Kim Jong-il and his late third wife Ko Yong-hui. </p>
+<p>Born in 1983 or early 1984, the young Kim was initially not thought to be in the frame to take up his father's mantle. </p>
+<p>Analysts focused their attention on his half-brother Kim Jong-nam and older full brother Kim Jong-chol. </p>
+<p>But speculation that he was being groomed to succeed his father 
+picked up in January 2009, after a report in South Korea's Yonhap news 
+agency suggested that Kim Jong-il had picked him as heir. </p>
+<p>North Korea watchers also took his reported appointment to the 
+powerful National Defence Commission as a possible signal that he was 
+being moved into a leadership position. </p>
+<p>The defence commission is North Korea's most important government 
+body, and Kim Jong-il rules the country in his capacity as the 
+commission's chairman. </p>
+<p>On 2 June 2009, Seoul's intelligence agency reportedly briefed 
+legislators that North Korean officials had been ordered to support the 
+choice of Kim Jong-un as the next leader. </p>
+<p>However there has also been much speculation that the man being lined
+ up as the real "power behind the throne" is Chang Song-taek - the 
+husband of Kim Jong-il's sister and director of the administrative 
+department of the North Korean Workers Party. </p>
+<p>Some analysts see him acting as a "regent" to Kim Jong-un until he is ready to rule on his own. </p>
+<p>'Morning Star King'</p>
+<p>Kim Jong-un's mother, Ko Yong-hui, was thought to be Kim Jong-il's 
+favourite wife, and she clearly doted on her son, reportedly calling him
+ the "Morning Star King". </p>
+<p>In his 2003 book, "I was Kim Jong-il's chef", a Japanese man writing 
+under the pseudonym Kenji Fujimoto also claimed that Jong-un was his 
+father's favourite. </p> <table> <tbody><tr><td> <p> </p><p>Kim Jong-il reportedly suffered a stroke last year</p> <p></p> </td></tr> </tbody></table> <p>But
+ the mysterious death of Ko Yong-hui in 2004 appeared to put the younger
+ Kim firmly behind his half-brother Jong-nam in the leadership stakes. </p>
+<p>However Jong-nam's deportation from Japan in May 2001, and middle 
+brother Jong-chol's apparent "unmanliness" subsequently improved his 
+chances. </p>
+<p>Swiss-educated like his brothers, Kim Jong-un avoided Western 
+influences, returning home when not in school and dining out with the 
+North Korean ambassador. </p>
+<p>Since his return to Pyongyang, little has been made public about his character. </p>
+<p>In 2006, badges bearing his image were said to be circulating among 
+senior officials of the ruling Korean Workers' Party, arousing 
+suspicions that he had been chosen as Kim Jong-il's successor. </p>
+<p>In his father's image</p>
+<p>Said by Kim Jong-il's chef, Mr Fujimoto, to be the "spitting image" 
+of his father, the young Kim has never been photographed by the Western 
+media. </p>
+<p>The only photograph known to exist of him is one taken when he was 11
+ which Mr Fujimoto said he was given by Kim Jong-un before he left North
+ Korea. </p>
+<p>Kim Jong-un also shares some of his father's health problems, and is 
+reported to already have diabetes and heart disease due to a lack of 
+exercise. </p>
+<p>Like his film-loving father, Jong-un is said to enjoy popular culture, and is apparently a fan of NBA basketball. </p>
+<p>One South Korean newspaper, the Dong-a Ilbo, has reported that the 
+North was teaching its people a song lauding Kim Jong-un to raise his 
+profile and in January 2010, North Korean defectors reported that his 
+birthday had been designated a national holiday. </p>
+<p>But these details, as with many others in secretive North Korea, are impossible to confirm. </p> <p><table><tbody><tr> <td class="rm-manual"><a href="http://newsvote.bbc.co.uk/mpapps/pagetools/email/news.bbc.co.uk/2/hi/asia-pacific/8078562.stm"> E-mail this to a friend </a></td> <td class="rm-manual"><a href="http://newsvote.bbc.co.uk/mpapps/pagetools/print/news.bbc.co.uk/2/hi/asia-pacific/8078562.stm?ad=1"> Printable version </a></td> </tr></tbody></table></p> </td> <td class="rm-manual"> <p> </p><p> </p><p class="rm-manual"> <a href="file:///2/hi/in_depth/asia_pacific/2006/north_korea/default.stm">NORTH KOREA: SECRETIVE STATE</a> </p> <p class="rm-manual"> </p><p class="rm-manual"> <a href="file:///2/hi/in_depth/8666793.stm">Kim Jong-il 'backs' nuclear talks</a> </p> <p class="rm-manual"> <a href="file:///2/hi/asia-pacific/8662089.stm">N Korea denies defector murder plot</a> </p> <p class="rm-manual"> <a href="file:///2/hi/asia-pacific/8639065.stm">N Korea 'to seize Kumgang assets'</a> </p> <p class="rm-manual"> <a href="file:///2/hi/asia-pacific/8626710.stm">Pyongyang denies warship attack</a> </p> <p class="rm-manual"> <a href="file:///2/hi/asia-pacific/8579906.stm">N Korea 'to put US man on trial'</a> </p> <p class="rm-manual"> BACKGROUND </p> <p class="rm-manual"></p><p class="rm-manual"> <a href="file:///2/hi/asia-pacific/8648970.stm">Seoul's dilemma</a> </p><p class="rm-manual"> <a href="file:///2/hi/asia-pacific/8648970.stm"> What if North Korea did sink the Cheonan? </a> </p><p class="rm-manual"> <a href="file:///2/hi/asia-pacific/8661578.stm">Kim seeks support from old ally</a> </p> <p class="rm-manual"> <a href="file:///2/hi/asia-pacific/8500017.stm">Currency reform unsettles North Korea</a> </p> <p class="rm-manual"> <a href="file:///2/hi/asia-pacific/8110093.stm">Satellite images' revealing views</a> </p> <p class="rm-manual"> <a href="file:///2/hi/asia-pacific/7720345.stm">Who will succeed Kim Jong-il?</a> </p> <p class="rm-manual"> <a href="file:///2/hi/asia-pacific/2564241.stm">North Korea's missile programme</a> </p> <p class="rm-manual"> <a href="file:///2/hi/asia-pacific/2340405.stm">Q&amp;A: Nuclear row</a> </p> <p class="rm-manual"> <a href="file:///2/hi/asia-pacific/country_profiles/1132268.stm">Timeline: North Korea</a> </p> <p class="rm-manual"> <a href="http://news.bbc.co.uk/2/shared/spl/hi/guides/456900/456994/html/default.stm">A guide to North Korea</a> </p> <p class="rm-manual"> VIDEO REPORTS </p> <a href="file:///2/hi/europe/8184689.stm">Journalists leave N Korea</a> <p class="rm-manual"></p><p class="rm-manual"> <a href="file:///2/hi/asia-pacific/8134388.stm">Missile tests defy UN</a> </p><p class="rm-manual"> <a href="file:///2/hi/asia-pacific/8129157.stm">Food need is 'critical'</a> </p> <p></p> <p></p> <p> </p><h4><a href="file:///2/shared/bsp/hi/live_stats/html/map.stm">MOST POPULAR STORIES NOW</a></h4> <p></p> <p> </p><ul> <li>SHARED</li> <li><a href="file:///2/shared/bsp/hi/live_stats/html/map.stm">READ</a></li> <li><a href="file:///2/shared/bsp/hi/live_stats/html/map.stm">WATCHED/LISTENED</a></li> </ul> <ul> <li> <a href="http://www.bbc.co.uk/2/hi/programmes/from_our_own_correspondent/8587838.stm">Tourists flock to 'Jesus's tomb' in Kashmir</a> </li> </ul> <a href="file:///1/shared/bsp/hi/live_stats/html/map.stm">Most popular now, in detail </a> <p></p> <p> </p><ul> <li><a href="file:///2/shared/bsp/hi/live_stats/html/map.stm">SHARED</a></li> <li>READ</li> <li><a href="file:///2/shared/bsp/hi/live_stats/html/map.stm">WATCHED/LISTENED</a></li> </ul> <ul> <li> <a href="http://www.bbc.co.uk/news/uk-england-devon-40364632">BBC News</a> </li> <li> <a href="http://www.bbc.co.uk/news/uk-40366646">BBC News</a> </li> <li> <a href="http://www.bbc.co.uk/news/world-europe-40362094">BBC News</a> </li> <li> <a href="http://www.bbc.co.uk/news/uk-40363063">BBC News</a> </li> <li> <a href="http://www.bbc.co.uk/news/world-middle-east-40363671">BBC News</a> </li> <li> <a href="http://www.bbc.co.uk/news/technology-40366816">BBC News</a> </li> <li> <a href="http://www.bbc.co.uk/news/uk-england-birmingham-40364821">BBC News</a> </li> <li> <a href="http://www.bbc.co.uk/news/world-asia-china-40363281">BBC News</a> </li> <li> <a href="http://www.bbc.co.uk/news/world-us-canada-40363390">BBC News</a> </li> <li> <a href="http://www.bbc.co.uk/news/world-africa-40365245">BBC News</a> </li> </ul> <a href="file:///1/shared/bsp/hi/live_stats/html/map.stm">Most popular now, in detail </a> <p></p> <p> </p><ul> <li><a href="file:///2/shared/bsp/hi/live_stats/html/map.stm">SHARED</a></li> <li><a href="file:///2/shared/bsp/hi/live_stats/html/map.stm">READ</a></li> <li>WATCHED/LISTENED</li> </ul> <ul> <li> <a href="http://www.bbc.co.uk/news/av/uk-40358825/boris-johnson-struggles-in-interview"> BBC News</a> </li> <li> <a href="http://www.bbc.co.uk/news/av/world-us-canada-40362067/north-america-prepares-for-august-solar-eclipse"> BBC News</a> </li> <li> <a href="http://www.bbc.co.uk/news/av/world-australia-40365981/koalas-facing-extinction-in-some-australian-states"> BBC News</a> </li> <li> <a href="http://www.bbc.co.uk/news/av/uk-england-40058866/the-rise-of-the-female-fitness-model"> BBC News</a> </li> <li> <a href="http://www.bbc.co.uk/news/av/uk-40358672/theresa-may-apologises-grenfell-response-not-good-enough"> BBC News</a> </li> <li> <a href="http://www.bbc.co.uk/news/av/uk-england-beds-bucks-herts-40282863/airlander-10-world-s-longest-aircraft-hits-highest-altitude"> BBC News</a> </li> <li> <a href="http://www.bbc.co.uk/news/av/world-asia-40360168/devil-wheel-rider-it-makes-me-happy"> Indonesia's female 'devil wheel' riders</a> </li> <li> <a href="http://www.bbc.co.uk/news/av/uk-scotland-40354153/doddie-weir-will-call-me-a-big-jessie-says-tearful-brian-whittle"> BBC News</a> </li> <li> <a href="http://www.bbc.co.uk/news/av/uk-40368427/grenfell-cladding-used-on-tottenham-tower-block"> BBC News</a> </li> <li> <a href="http://www.bbc.co.uk/news/av/uk-england-suffolk-40362922/oocl-hong-kong-felixstowe-port-welcomes-world-s-biggest-ship"> BBC News</a> </li> </ul> <a href="file:///2/shared/bsp/hi/live_stats/html/map.stm">Most popular now, in detail </a> <p></p> </td> </tr> <tr><td> <p> <table> <tbody><tr> <td> <p class="rm-manual"> FEATURES, VIEWS, ANALYSIS </p> <table> <tbody><tr> <td> <p class="rm-manual"> <a href="http://www.bbc.co.uk/news/magazine-17390729">Ghost town</a> </p> <p class="rm-manual"> Has China's housing bubble burst? </p> </td>
+<td> <p class="rm-manual"> <a href="http://www.bbc.co.uk/news/magazine-18551857">The guerilla plant </a> </p> <p class="rm-manual"> How the world's oldest clove tree defied an empire </p> </td>
+<td> <p class="rm-manual"> <a href="file:///2/hi/programmes/newsnight/9705123.stm">Walking away</a> </p> <p class="rm-manual"> Why Royal Ballet principal Sergei Polunin quit </p> </td> </tr> </tbody></table> </td> </tr> </tbody></table> </p><p class="rm-manual"><span><a href="file:///1/shared/bsp/hi/live_stats/html/map.stm">Most Popular Now</a></span></p><p class="rm-manual"><a href="file:///1/shared/bsp/hi/live_stats/html/map.stm">Most Popular Now</a> | <a href="file:///1/shared/bsp/hi/live_stats/html/map.stm?lsf">56,514 people are reading stories on the site right now.</a>";</p><p></p> <p></p> </td></tr> </tbody></table> </td> </tr> </tbody></table>
+<p class="rm-manual"><a href="#blq-main"><span>Skip to top</span></a></p>
+<h4 class="rm-manual">PRODUCTS &amp; SERVICES</h4>
+<ul> <li class="rm-manual"><a href="http://newsvote.bbc.co.uk/go/news/int/story/services/-/email/news">E-mail news</a></li> <li class="rm-manual"><a href="http://news.bbc.co.uk/go/news/int/story/services/-/1/hi/help/6358397.stm">Mobiles</a></li> <li class="rm-manual"><a href="http://news.bbc.co.uk/go/news/int/story/services/-/1/hi/help/4735697.stm">Widgets &amp; Alerts</a></li> <li class="rm-manual"><a href="http://news.bbc.co.uk/go/news/int/story/services/-/1/hi/help/3223484.stm">News feeds</a></li> <li class="rm-manual"><a href="http://www.bbcworldservice.com/podcasts">Podcasts</a></li> </ul>
+<h2 class="rm-manual">BBC iD</h2>
+<p class="rm-manual"><a href="https://id.bbc.co.uk/users/signin?s=sb&amp;target_resource=http%3A%2F%2Fidentity%2Fpolicies%2Fdna%2Fadult"> Sign in</a></p>
+<p class="rm-manual"> Search term: </p>
+<h2 class="rm-manual">BBC navigation</h2>
+<ul> <li class="rm-manual"><a href="http://www.bbc.com/news">News</a></li> <li class="rm-manual"><a href="http://www.bbc.co.uk/sport/">Sport</a></li> <li class="rm-manual"><a href="http://www.bbc.co.uk/weather/">Weather</a></li> <li class="rm-manual"> <a href="http://www.bbc.com/capital/">Capital</a> </li> <li class="rm-manual"><a href="http://www.bbc.co.uk/tv/">TV</a></li> <li class="rm-manual"><a href="http://www.bbc.co.uk/radio/">Radio</a></li> <li class="rm-manual"><a href="#blq-nav">More…</a></li> </ul>
+<ul> <li class="rm-manual"><a href="http://www.bbc.co.uk/cbbc">CBBC</a></li> <li class="rm-manual"><a href="http://www.bbc.co.uk/cbeebies">CBeebies</a></li> <li class="rm-manual"><a href="http://www.bbc.co.uk/makeitdigital">Make It Digital</a></li> <li class="rm-manual"><a href="http://www.bbc.co.uk/food/">Food</a></li> <li class="rm-manual"><a href="http://www.bbc.co.uk/iwonder">iWonder</a></li> </ul>
+<ul> <li class="rm-manual"><a href="http://www.bbc.co.uk/education">Bitesize</a></li> <li class="rm-manual"><a href="http://www.bbc.co.uk/music/">Music</a></li> <li class="rm-manual"><a href="http://www.bbc.com/earth/">Earth</a></li> <li class="rm-manual"><a href="http://www.bbc.co.uk/arts">Arts</a></li> <li class="rm-manual"><a href="http://www.bbc.co.uk/taster/">Taster</a></li> </ul>
+<ul> <li class="rm-manual"><a href="http://www.bbc.co.uk/local/">Local</a></li> <li class="rm-manual"><a href="http://www.bbc.co.uk/northernireland/">Northern Ireland</a></li> <li class="rm-manual"><a href="http://www.bbc.co.uk/scotland/">Scotland</a></li> <li class="rm-manual"><a href="http://www.bbc.co.uk/wales/">Wales</a></li> </ul>
+<h2 class="rm-manual">BBC links</h2>
+<ul> <li> <ul> <li class="rm-manual"><a href="http://m.bbc.co.uk/">Mobile site</a></li> <li class="rm-manual"><a href="http://www.bbc.co.uk/terms/">Terms of Use</a></li> <li class="rm-manual"><a href="http://www.bbc.co.uk/aboutthebbc/">About the BBC</a></li> </ul> </li> <li> <ul> <li class="rm-manual"><a href="http://advertising.bbcworldwide.com/">Advertise With Us</a></li> <li class="rm-manual"><a href="http://www.bbc.co.uk/privacy/">Privacy</a></li> <li class="rm-manual"><a href="http://www.bbc.co.uk/accessibility/">Accessibility Help</a></li> </ul> </li> <li> <ul> <li class="rm-manual"><a href="http://www.bbc.co.uk/privacy/cookies/international/">Ad Choices</a></li> <li class="rm-manual"><a href="http://www.bbc.co.uk/privacy/cookies/about">Cookies</a></li> <li class="rm-manual"> <a href="http://news.bbc.co.uk/newswatch/ifs/hi/feedback/default.stm">Contact the BBC</a> </li> </ul> </li> <li> <ul> <li class="rm-manual"><a href="http://www.bbc.co.uk/guidance/">Parental Guidance</a></li> </ul> </li> </ul>
+<p class="rm-manual"><span>Copyright © 2020 BBC.</span> <a href="http://www.bbc.co.uk/help/web/links/">The BBC is not responsible for the content of external sites. Read more.</a></p>
+<p class="rm-manual">This page is best viewed in an up-to-date web 
+browser with style sheets (CSS) enabled. While you will be able to view 
+the content of this page in your current browser, you will not be able 
+to get the full visual experience. Please consider upgrading your 
+browser software or enabling style sheets (CSS) if you are able to do 
+so.</p></article>
+</body></html>

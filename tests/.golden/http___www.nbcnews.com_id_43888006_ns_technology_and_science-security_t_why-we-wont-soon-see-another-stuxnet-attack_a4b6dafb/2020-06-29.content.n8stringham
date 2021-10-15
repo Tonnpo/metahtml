@@ -1,0 +1,162 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Why we won't soon see another Stuxnet attack - Technology &amp; science - Security | NBC News </p>
+<p class="rm-manual"> <a href="#headline"><span>Jump to story headline</span></a> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://www.msn.com/">MSN</a></li> <li class="rm-manual"><a href="http://www.outlook.com/">Outlook</a></li> <li class="rm-manual"> <a href="http://www.msn.com/">More</a> <ul class="rm-manual"> <li class="rm-manual"><a href="http://autos.msn.com/">Autos</a></li> <li class="rm-manual"><a href="http://my.msn.com/">My MSN</a></li> <li class="rm-manual"><a href="http://video.msn.com/video.aspx?mkt=en-us&amp;from=MSNHP">Video</a></li> <li class="rm-manual"><a href="http://careers.msn.com/">Careers &amp; Jobs</a></li> <li class="rm-manual"><a href="http://dating.msn.com/index.aspx?TrackingID=516163&amp;BannerID=670268">Personals</a></li> <li class="rm-manual"><a href="http://local.msn.com/weather.aspx">Weather</a></li> <li class="rm-manual"><a href="http://www.delish.com/">Delish</a></li> <li class="rm-manual"><a href="http://moneycentral.msn.com/detail/stock_quote">Quotes</a></li> <li class="rm-manual"><a href="http://msn.whitepages.com/">White Pages</a></li> <li class="rm-manual"><a href="http://zone.msn.com/en-us/home">Games</a></li> <li class="rm-manual"><a href="http://realestate.msn.com/">Real Estate</a></li> <li class="rm-manual"><a href="http://wonderwall.msn.com/">Wonderwall</a></li> <li class="rm-manual"><a href="http://astrocenter.astrology.msn.com/">Horoscopes</a></li> <li class="rm-manual"><a href="http://www.bing.com/shopping?FORM=SHOPH2">Shopping</a></li> <li class="rm-manual"><a href="http://yellowpages.msn.com/">Yellow Pages</a></li> <li class="rm-manual"><a href="http://local.msn.com/news.aspx">Local Edition</a></li> <li class="rm-manual"><a href="http://local.msn.com/gas-traffic.aspx">Traffic</a></li> <li class="rm-manual"><a href="https://secure.opinionlab.com/ccc01/o.asp?ID=WpkpVtTB">Feedback</a></li> <li class="rm-manual"><a href="http://www.bing.com/maps/default.aspx?FORM=MSNNAV">Maps &amp; Directions</a></li> <li class="rm-manual"><a href="http://www.bing.com/travel/?cid=msn_nav_more&amp;FORM=MSNNAV">Travel</a></li> <li class="rm-manual"><a href="http://specials.msn.com/alphabet.aspx">Full MSN Index</a></li> </ul> </li> <li class="rm-manual"><a href="http://bing.com/?FORM=MSNBCN"><span>Bing</span></a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="http://www.nbcnews.com/">NBCNews.com</a> <span>sites &amp; shows:</span> </li> <li class="rm-manual"><a href="http://www.today.com/">TODAY</a></li> <li class="rm-manual"><a href="http://nightly.msnbc.com/">Nightly News</a></li> <li class="rm-manual"><a href="http://mtp.msnbc.com/">Meet the Press</a></li> <li class="rm-manual"><a href="http://dateline.msnbc.com/">Dateline</a></li> <li class="rm-manual"><a href="http://joe.msnbc.com/">Morning Joe</a></li> <li class="rm-manual"><a href="http://hardball.msnbc.com/">Hardball</a></li> <li class="rm-manual"><a href="http://tv.msnbc.com/shows/the-ed-show/">Ed</a></li> <li class="rm-manual"><a href="http://rachel.msnbc.com/">Maddow</a></li> <li class="rm-manual"><a href="http://tv.msnbc.com/shows/the-last-word/">The Last Word</a></li> <li class="rm-manual"><a href="http://tv.msnbc.com/">msnbc</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="http://www.nbcnews.com/">Home</a> </li> <li class="rm-manual"> <a href="http://www.nbcnews.com/id/3032525/ns/us_news/">US</a> </li> <li class="rm-manual"> <a href="http://www.nbcnews.com/id/3032507/ns/world_news/">World</a> </li> <li class="rm-manual"> <a href="http://www.nbcnews.com/id/3032553/ns/politics/">Politics</a> </li> <li class="rm-manual"> <a href="http://www.nbcnews.com/business/">Business</a> </li> <li class="rm-manual"> <a href="http://nbcsports.nbcnews.com/">Sports</a> </li> <li class="rm-manual"> <a href="http://www.today.com/entertainment/">Entertainment</a> </li> <li class="rm-manual"> <a href="http://www.nbcnews.com/health">Health</a> </li> <li class="rm-manual"> <a href="http://www.nbcnews.com/technology">Tech</a> </li> <li class="rm-manual"> <a href="http://www.nbcnews.com/science">Science</a> </li> <li class="rm-manual"> <a href="http://www.nbcnews.com/travel">Travel</a> </li> <li class="rm-manual"> <a href="http://www.nbcnews.com/id/3948437/">Local</a> </li> <li class="rm-manual"> <a href="http://www.nbcnews.com/id/3032128/ns/weather/">Weather</a> </li> </ul>
+<p class="rm-manual"> <a href="http://www.nbcnews.com/id/3033077/ns/technology_and_science-security/">Security</a> <span>on</span> <a href="http://www.nbcnews.com/"><span>NBCNews.com</span></a> </p>
+<p class="rm-manual"> Search </p>
+<h1 class="rm-manual"> Why we won't soon see another Stuxnet attack </h1>
+<h2 class="rm-manual"> Experts believe it will be a while before such a computer worm returns </h2>
+<ol class="rm-manual"> <h4 class="rm-manual">Below:</h4> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"> <span>x</span> <h6 class="rm-manual"> <span>Jump to discuss</span> <a href="#slice-2"> comments below </a> </h6> </li> <li class="rm-manual"> <a href="#slice-2"> discuss </a> </li> </ul> </li> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"> <span>x</span> <h6 class="rm-manual"> <span>Next story in Security</span> </h6> </li> <li class="rm-manual"> <a href="#slice-3"> related </a> </li> </ul> </li> </ol>
+<p rel="dc:creator" class="rm-manual"> <span> By <span rel="author">Jesse Emspak</span> </span> </p>
+<p class="rm-manual"> updated 7/25/2011 9:04:56 PM ET <span>2011-07-26T01:04:56</span> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="#">Print</a> </li> <li class="rm-manual"> Font: </li> <li class="rm-manual"><span>+</span></li> <li class="rm-manual"><span>-</span></li> </ul>
+<p> July marks one year since the world learned of Stuxnet, the 
+mysterious computer worm that launched the first successful cyberattack 
+on infrastructure facilities. </p>
+<p>Stuxnet, which crippled an Iranian nuclear-fuel processing plant, served notice that <a href="http://www.securitynewsdaily.com/chinese-military-admits-cyberwarfare-unit-exists-0824/">state-sponsored hackers are out there</a> — and that everything from power grids to water supplies could be the next target. </p>
+<p>But is that likely? Maybe not. For a number of reasons, security 
+experts think it might be a long time before we ever see anything like 
+Stuxnet again. </p>
+<p>[<a href="http://www.securitynewsdaily.com/cyberwar-unlikely-deterrence-cyber-war-0931/">Why Cyberwar Is Unlikely</a>] </p>
+<p>Stuxnet <a href="http://www.securitynewsdaily.com/microsoft-fixes-security-flaws-repairs-dangerous-malware-hole--0502/">spread from USB drive to USB drive</a> in Asia for months until it infected computers that controlled centrifuges at Natanz, Iran's main uranium-enrichment facility. </p>
+<p>The worm stealthily sped up Natanz's centrifuges to their breaking 
+points, even as it hijacked the facility's monitoring system to falsely 
+show that the machines were functioning normally. </p>
+<p>It took the Iranians weeks to catch on to what was happening, and the
+ resulting damage set back the suspected Iranian nuclear-weapons program
+ by years. </p>
+<p>Not a rogue operation No similar piece of malware has since appeared,
+ but some experts say that if one does, it will almost certainly be 
+state-supported. </p>
+<p>"Stuxnet was a highly specific operation which could only have been 
+carried out with a nation-state's backing," said Roel Schouwenberg, 
+senior malware researcher in the Boston-area office of the Russian 
+information-security firm Kaspersky Lab. </p>
+<p>The reason is the sophistication. Stuxnet attacked a very specific type of computer system — <a href="http://www.securitynewsdaily.com/power-grids-oil-refineries-staggering-level-cyberattacks-0710/">industrial supervisory control and data acquisition (SCADA) systems</a> built by the German company Siemens. </p>
+<p>No nation has admitted creating Stuxnet, but suspicion immediately fell on Israel, Iran's arch-enemy. Investigative journalists <a href="http://www.nytimes.com/2011/01/16/world/middleeast/16stuxnet.html">found evidence</a> that Israel and the United States co-operated to make the worm. </p>
+<p>Stuxnet launched a multilayered attack, first exploiting four 
+"zero-day" (previously unknown) vulnerabilities in Microsoft Windows, 
+then exploiting vulnerabilities in Siemens applications for Windows, and
+ finally taking over the programmable logic controllers — specialized 
+industrial-control computers — that ran on Siemens' own operating 
+system. </p>
+<p>Exploiting multiple zero-day vulnerabilities at once was highly 
+unusual, as was the specifically targeted nature of the malware (the 
+worm was designed to attack uranium-refinement facilities that exactly 
+matched Natanz). </p>
+<p>Those features are precisely what make it unlikely that a lone hacker will ever make anything quite like it. </p>
+<p>Out of reach of civilian budgets Costin Raiu, Kaspersky’s director of
+ global research and analysis, noted that the source code for Stuxnet 
+has never been released to the public. </p>
+<p>The hacker sites that claim to have it have so far offered only 
+fakes, making it more unlikely that anyone except a state-sponsored 
+actor with a lot of money and time could re-create it. </p>
+<p>Schouwenberg said that in any case, the data-security industry is now
+ so aware of Stuxnet, as well as the vulnerabilities that allowed it to 
+work, that any new variants would have to try a very different approach.
+ </p>
+<p>"While perhaps some of the philosophies behind Stuxnet could be used 
+in a new piece of malware," Schouwenberg said, "it is very unlikely to 
+see any code re-used for an attack on a different type of 
+network/hardware." </p>
+<p>It would also be very difficult to design another piece of malware that could go undetected for so long. </p>
+<p>Stuxnet was originally released into the wild in 2009, but <a href="http://www.securitynewsdaily.com/stuxnet-malware-hit-five-sites-before-target-report-says-0520/">it took several months</a>
+ — it was designed to use USB sticks as the infection “vector,” because 
+Natanz's SCADA systems were not Internet-connected — before the worm hit
+ enough targets to make itself noticed. </p>
+<p> Then there's the cost factor. Stuxnet was likely a 
+multi-million-dollar project. It would have required not only people 
+very familiar with industrial processes to develop it, but expensive 
+industrial hardware to test it on — not the kind of things the average 
+lone hacker is likely to have lying around. </p>
+<p>(The New York Times alleges that <a href="http://www.nytimes.com/2011/01/16/world/middleeast/16stuxnet.html">a full-scale mock-up of Natanz</a> was built for testing purposes in the Israeli desert.) </p>
+<p>Heightened awareness Schouwenberg said the simplest way for systems 
+administrators to protect against a future Stuxnet-like attack would be 
+to have their machines run only approved, or "white-listed,” software. </p>
+<p>Stuxnet did prompt a rethinking of security, agreed John Burnham, 
+vice president of corporate marketing at Massachusetts' Q1 Labs. For 
+example, Microsoft has since <a href="http://www.securitynewsdaily.com/microsoft-fixes-security-flaws-repairs-dangerous-malware-hole--0502/">disabled the "autorun" feature</a> that allowed the worm to quietly infect computers from USB drives, and vice versa. </p>
+<p>Such attacks have to be hardware specific, which makes it harder to 
+"mutate" a virus or malware — but that doesn't mean it can't happen, 
+Burnham said. </p>
+<p>"Why not take Stuxnet and adapt it to Emerson?" Burnham said, 
+referring to another large maker of SCADA industrial-control systems. </p>
+<p>A positive outcome from the Stuxnet infection, Burnham said, was that
+ the victims of cyberattacks realized the value in going public. </p>
+<p>By doing so, they alerted others to their problems, and allowed 
+systems administrators to patch vulnerabilities more quickly, blunting 
+the effectiveness of future Stuxnet-like attacks. </p>
+<p>The danger from Stuxnet-like software would not lie in <a href="http://www.securitynewsdaily.com/cyberwar-definition-cyber-war-0929/">the traditional cyberwar scenario</a>
+ of bringing down electrical grids or poisoning water supplies. Rather, 
+it would be in the disruptions such an attack would cause, which would 
+take enormous amounts of time and money to fix. </p>
+<p>For example, an attack on an electrical grid could shut down regional
+ Internet service for a short time, which could cost a company such as 
+Amazon many millions of dollars. </p>
+<p>The real problem, Burnham added, is not the attacks that have 
+happened already, or in the vulnerabilities that are already known. </p>
+<p class="rm-manual">"What about the things we haven't seen?" he said. </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://www.securitynewsdaily.com/10-worst-computer-viruses-history-0966/"> The 10 Worst Computer Viruses in History </a></li> <li class="rm-manual"><a href="http://www.securitynewsdaily.com/online-attack-would-be-act-of-war-pentagon-says-0836/"> Online Attack Would Be Act of War, Pentagon Says </a></li> <li class="rm-manual"><a href="http://anti-virus-software-review.toptenreviews.com/?a_aid=aff1070"> Antivirus Software Review </a></li>
+</ul>
+<p class="rm-manual">© 2012 SecurityNewsDaily. All rights reserved</p>
+<p class="rm-manual"> <a href="#fullstory">Show more text</a> </p>
+<h3 class="rm-manual"> <span>Discuss: </span> </h3>
+<p class="rm-manual"><a href="http://www.newsvine.com/">Discussion comments</a></p>
+<p class="rm-manual"> <span>“</span> <span>”</span> </p>
+<p class="rm-manual"> <a><span>Expand</span></a> <a><span>Collapse</span></a> </p>
+<p class="rm-manual"> , </p>
+<p class="rm-manual"> <a>Reply</a> </p>
+<p class="rm-manual"> <a href="http://www.newsvine.com/">View all <span>comments</span></a> </p>
+<p class="rm-manual"> <a href="http://www.newsvine.com/">Leave your comment</a> </p>
+<p class="rm-manual">You</p>
+<p class="rm-manual">Most active discussions</p>
+<ol class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> votes <span> comments</span> </p> </li> <li class="rm-manual"> <p class="rm-manual"> votes <span> comments</span> </p> </li> <li class="rm-manual"> <p class="rm-manual"> votes <span> comments</span> </p> </li> <li class="rm-manual"> <p class="rm-manual"> votes <span> comments</span> </p> </li> </ol>
+<p class="rm-manual"> <a href="#full-discussion">Show discussion</a> </p>
+<h3 class="rm-manual"> Related: <a href="http://www.nbcnews.com/id/3033077/ns/technology_and_science-security/"> Security</a> </h3>
+<ol class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> Security </p> <ol class="rm-manual"> <li class="rm-manual"> <a href="http://www.nbcnews.com/technology/technolog/apps-act-would-make-privacy-disclosures-mandatory-1C9870952"> <span> 'Apps act' would make privacy disclosure a must </span> </a> </li> <li class="rm-manual"> <a href="http://www.nbcnews.com/technology/bank-heist-impressed-cyber-crime-experts-1C9881411"> <span> Bank heist impressed cyber crime experts </span> </a> </li> <li class="rm-manual"> <a href="http://www.nbcnews.com/technology/technolog/us-charges-eight-45-million-cyber-crime-sche-1C9856390"> <span> US charges eight in $45 million cyber crime scheme </span> </a> </li> <li class="rm-manual"> <a href="http://www.nbcnews.com/technology/technolog/160-000-social-security-numbers-exposed-washington-state-court-hack-1C9864740"> <span> Up to 160,000 Social Security numbers exposed in Washington state court hack </span> </a> </li> <li class="rm-manual"> <a href="http://www.nbcnews.com/technology/technolog/fbi-may-be-reading-emails-without-warrant-1C9840875"> <span> FBI may be reading emails without a warrant </span> </a> </li> </ol> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="http://www.nbcnews.com/id/3032118/ns/technology_and_science/">Tech &amp; science</a> </p> <ol class="rm-manual"> <li class="rm-manual"> <a href="http://www.nbcnews.com/technology/it-or-not-10-things-facebook-changed-10-years-2D12054181"> <span> 'Like' it or not: 10 things Facebook changed in 10 years </span> </a> </li> <li class="rm-manual"> <a href="http://www.nbcnews.com/technology/senate-grills-target-cfo-data-breach-2D12054052"> <span> Senate grills Target CFO on data breach </span> </a> </li> <li class="rm-manual"> <a href="http://www.nbcnews.com/technology/some-developers-balk-apple-cracks-down-apps-track-user-info-2D12052710"> <span> Some developers balk as Apple cracks down on apps that track user info </span> </a> </li> <li class="rm-manual"> <a href="http://www.nbcnews.com/science/evolution-debate-plays-out-creationisms-home-turf-2D12044727"> <span> Evolution debate plays out on creationism's home turf </span> </a> </li> <li class="rm-manual"> <a href="http://www.nbcnews.com/technology/fbi-give-us-your-malware-your-worms-2D12052718"> <span> FBI: Give us your malware, your worms </span> </a> </li> </ol> </li> <li class="rm-manual"> <p class="rm-manual"> Related videos &amp; slideshows </p> <ol class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> Video </p> <a href="http://www.nbcnews.com/video/nightly-news/54263850"> <span> ‘Talking’ Cars? It Needs to Happen, Feds Say </span> </a> </li> <li class="rm-manual"> <p class="rm-manual"> Video </p> <a href="http://www.nbcnews.com/video/nightly-news/54273996"> <span> How Facebook Transformed the World in 10 Years </span> </a> </li> <li class="rm-manual"> <p class="rm-manual"> Video </p> <a href="http://www.nbcnews.com/video/nbc-news-channel/54268369"> <span> Target CFO: We're Moving on 'Smart Chip' Cards </span> </a> </li> <li class="rm-manual"> <p class="rm-manual"> Video </p> <a href="http://www.nbcnews.com/video/nbcnews.com/54222923"> <span> Jupiter’s Frozen Ocean Moon Could Hide Life </span> </a> </li> </ol> </li> </ol>
+<p class="rm-manual"> Search </p>
+<h3 class="rm-manual"> Most popular on msnbc.com</h3>
+<ul class="rm-manual"> <h4 class="rm-manual"> Categories</h4> <li class="rm-manual"><a href="file:///">All</a></li> <li class="rm-manual"><a href="http://www.nbcnews.com/id/3032525/ns/us_news/">US &amp; World</a></li> <li class="rm-manual"><a href="http://www.nbcnews.com/id/3032553/ns/politics/t/nbc-politics-white-house-capitol-hill-washington-election-political-news/">Politics</a></li> <li class="rm-manual"><a href="http://www.nbcnews.com/id/3032072/ns/business/">Business</a></li> <li class="rm-manual"><a href="http://nbcsports.msnbc.com/">Sports</a></li> <li class="rm-manual"><a href="http://www.nbcnews.com/id/3032084/ns/today-today_entertainment/">Entertainment</a></li> <li class="rm-manual"><a href="http://www.nbcnews.com/id/3032076/ns/health/">Health</a></li> <li class="rm-manual"><a href="http://www.nbcnews.com/id/3032118/ns/technology_and_science/">Tech &amp; science</a></li> <li class="rm-manual"><a href="http://www.nbcnews.com/id/3032123/ns/travel/">Travel</a></li> </ul>
+<table class="rm-manual"> <caption> Most popular</caption> <thead> <tr class="rm-manual"> <th class="rm-manual"> Trending </th> <th class="rm-manual"> Views </th> </tr> </thead> <tbody> <tr class="rm-manual"> <td class="rm-manual"> Loading popular content ... </td> </tr> <tr class="rm-manual"> <td class="rm-manual"> Popular stories currently unavailable </td> </tr> </tbody> </table>
+<ol class="rm-manual"> <h4 class="rm-manual"> Top videos</h4> <li class="rm-manual">Popular videos currently unavailable</li> </ol>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="http://www.nbcnews.com/">NBCNews.com</a> <span>sites &amp; shows:</span> </li> <li class="rm-manual"><a href="http://www.today.com/">TODAY</a></li> <li class="rm-manual"><a href="http://nightly.msnbc.com/">Nightly News</a></li> <li class="rm-manual"><a href="http://mtp.msnbc.com/">Meet the Press</a></li> <li class="rm-manual"><a href="http://dateline.msnbc.com/">Dateline</a></li> <li class="rm-manual"><a href="http://joe.msnbc.com/">Morning Joe</a></li> <li class="rm-manual"><a href="http://hardball.msnbc.com/">Hardball</a></li> <li class="rm-manual"><a href="http://tv.msnbc.com/shows/the-ed-show/">Ed</a></li> <li class="rm-manual"><a href="http://rachel.msnbc.com/">Maddow</a></li> <li class="rm-manual"><a href="http://tv.msnbc.com/shows/the-last-word/">The Last Word</a></li> <li class="rm-manual"><a href="http://tv.msnbc.com/">msnbc</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual">© 2020 NBCNews.com</li> <li class="rm-manual"> <a href="http://www.nbcnews.com/id/32027560/">About us</a> </li> <li class="rm-manual"> <a href="http://www.nbcnews.com/id/3303511/t/nbcnewscom-site-help/">Help</a> </li> <li class="rm-manual"> <a href="http://www.nbcnews.com/id/27365695/ns/about/t/get-ready-make-headlines/">Careers</a> </li> <li class="rm-manual"> <a href="http://www.nbcnews.com/id/32359544/ns/contact_us/">Contact</a> </li> <li class="rm-manual"> <a href="http://www.nbcnews.com/id/24057166/ns/newstools_dispatch/">Alerts</a> </li> <li class="rm-manual"> <a href="http://www.nbcnews.com/id/24057171/ns/newsware_rss_feeds/">Feeds</a> </li> <li class="rm-manual"> <a href="http://www.nbcnews.com/id/24057159/ns/newsware_podcasts/">Podcasts</a> </li> <li class="rm-manual"> <a href="http://www.nbcnews.com/id/24057048/ns/newsware_apps_and_games/">Apps</a> </li> <li class="rm-manual"> <a href="http://www.nbcnews.com/id/24052544/ns/newsware_widgets/">Widgets</a> </li> <li class="rm-manual"> <a href="http://www.nbcnews.com/id/32556806/ns/about/t/stock-data/">Stock data</a> </li> <li class="rm-manual"> <a href="http://www.nbcnews.com/id/48150786">Privacy policy</a> </li> <li class="rm-manual"> <a href="http://www.nbcnews.com/id/3303540/ns/about/t/nbcuniversal-terms-service/">Terms &amp; conditions</a> </li> <li class="rm-manual"> <a href="http://g.msn.com/AIPRIV/en-us">About our ads</a> </li> <li class="rm-manual"> <a href="#">AdChoices</a> </li> <li class="rm-manual"> <a href="http://www.nbcnews.com/html/HtmlSitemap0.html">Site map</a> </li> </ul></article>
+</body></html>

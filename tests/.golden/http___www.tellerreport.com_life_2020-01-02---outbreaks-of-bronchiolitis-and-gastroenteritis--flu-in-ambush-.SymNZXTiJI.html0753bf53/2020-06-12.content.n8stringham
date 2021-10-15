@@ -1,0 +1,182 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Outbreaks of bronchiolitis and gastroenteritis, flu in ambush - Teller Report </p>
+<p class="rm-manual">Teller Report</p>
+<p class="rm-manual">Now you can see non-English news...</p>
+<p class="rm-manual"> <a href="file:///"><span>Home</span></a> <a href="file:///news"><span>News</span></a> <a href="file:///business"><span>Business</span></a> <a href="file:///sports"><span>Sports</span></a> <a href="file:///life"><span>Life</span></a> <a href="file:///tech"><span>Tech</span></a> </p>
+<h1 class="rm-manual"> Outbreaks of bronchiolitis and gastroenteritis, flu in ambush </h1>
+<p class="rm-manual">2020-01-02T19:22:36.320Z</p>
+<p> Influenza causes tens of thousands of emergency visits each year, killing an average of 10,000 people </p>
+<p> <span> Auscultation of a patient by a general practitioner in his office.</span> <span> Drawing.</span> <span> - S. ORTOLA / 20 MINUTES</span> </p>
+<p> <span> The epidemics of bronchiolitis and gastroenteritis continued 
+to progress last week across the country, while influenza activity was 
+still "weak" but increasing, with half of the regions in the 
+"pre-epidemic" phase .</span> </p>
+<p> <span> Bronchiolitis, a common respiratory illness that affects 
+babies under the age of 2, resulted in just over 5,000 emergency room 
+visits during the week of December 23, up 10% from the previous week, 
+according to the weekly newsletter. the public health agency France.</span> </p>
+<h2> <span> A gastroenteritis epidemic during Christmas week</span> </h2>
+<p> <span> The epidemic has been underway in all metropolitan areas since the week of December 9.</span> <span>
+ About a third (35%) of children seen in the emergency room were 
+hospitalized, the vast majority (93%) of babies under one year of age.</span> <span> Bronchiolitis also motivated 797 visits by SOS Doctors (15% more than the week before).</span> <span>
+ Caused by a virus, the respiratory syncytial virus (RSV), bronchiolitis
+ is very contagious and causes coughing and difficulty breathing, which 
+becomes rapid and wheezing.</span> <span> Consultations in general 
+medicine related to gastroenteritis, they, rose sharply during the 
+Christmas week, with 289 consultations for acute diarrhea per 100,000 
+inhabitants, according to estimates by the Sentinelles network, against 
+177 the previous week.</span> </p>
+<h2> <span> Flu cases on the rise</span> </h2>
+<p> <span> Six regions of metropolitan France out of 13 were also in a 
+“pre-epidemic” situation for influenza, against four the previous week, 
+according to Public Health France.</span> <span> They are Burgundy-Franche-Comté, Brittany, Ile-de-France, Occitanie, Pays de la Loire and Provence-Alpes-Côte d'Azur.</span> <span>
+ At the national level, there were "51 consultations for influenza-like 
+illness per 100,000 inhabitants", against 46 the previous week.</span> <span>
+ "The proportion of influenza-like illness among SOS Doctors 
+consultations is also increasing slightly", to 3.7% instead of 3.5%, 
+specifies the health agency.</span> </p>
+<p> <span> 61 serious cases had to be admitted to intensive care since 
+the start of surveillance for this viral disease, 14 more in one week.</span> <span> Each year, seasonal flu affects 2 to 6 million people.</span> <span> It causes tens of thousands of emergency visits and causes an average of 10,000 deaths.</span> <span>
+ Last winter, the epidemic had resulted in lower mortality than the 
+average of previous years, but still significant, given its short 
+duration, with approximately 8,100 deaths estimated during the two 
+months of epidemic phase.</span> </p>
+<p> <span> Health</span> </p>
+<p> <span> Gastro, flu and colds ... How to keep winter illnesses away?</span> </p>
+<p> <span> Society</span> </p>
+<p> <span> Dates, reimbursement, injection in pharmacies… What you need to know about the flu vaccination campaign</span> </p>
+<ul>
+<li> <span> Influenza</span> </li>
+<li> <span> epidemic</span> </li>
+<li> <span> Gastroenteritis</span> </li>
+<li> <span> Sickness</span> </li>
+<li> <span> Health</span> </li>
+</ul>
+<p class="rm-manual">Source: <a href="file:///go/--outbreaks-of-bronchiolitis-and-gastroenteritis--flu-in-ambush-.SymNZXTiJI.html" rel="nofollow">20minf </a></p>
+<h2 class="rm-manual"><a href="https://www.google.com/search?q=site:www.tellerreport.com%20%20%20Outbreaks%20of%20bronchiolitis%20and%20gastroenteritis,%20flu%20in%20ambush">You may like</a></h2>
+<p class="rm-manual"> <a href="file:///life">Life/Entertain</a> 2020-01-04T14:16:48.816Z </p>
+<p class="rm-manual"><a href="file:///life/2020-01-04---the-shells-of-the-bay-of-mont-saint-michel-contaminated-by-gastro-.HkfF8Cz018.html"><span> The shells of the bay of Mont-Saint-Michel contaminated by gastro </span></a> </p>
+<p class="rm-manual"> <a href="file:///life">Life/Entertain</a> 2020-01-02T19:22:36.320Z </p>
+<p class="rm-manual"><a href="file:///life/2020-01-02---outbreaks-of-bronchiolitis-and-gastroenteritis--flu-in-ambush-.SymNZXTiJI.html"><span> Outbreaks of bronchiolitis and gastroenteritis, flu in ambush </span></a> </p>
+<p class="rm-manual"> <a href="file:///news">News/Politics</a> 2020-01-02T18:43:19.262Z </p>
+<p class="rm-manual"><a href="file:///news/2020-01-02---epidemics--bronchiolitis-and-gastro-still-there--the-flu-in-ambush---france-24-.HkEkCY2skL.html"><span> Epidemics: bronchiolitis and gastro still there, the flu in ambush - France 24 </span></a> </p>
+<p class="rm-manual"> <a href="file:///news">News/Politics</a> 2020-01-08T19:16:28.346Z </p>
+<p class="rm-manual"><a href="file:///news/2020-01-08---gastrointestinal-hitting-hard--flu-is-progressing-and-bronchiolitis-is-still-rampant---france-24-.S18Ecqj7xU.html"><span> Gastrointestinal hitting hard, flu is progressing and bronchiolitis is still rampant - France 24 </span></a> </p>
+<p class="rm-manual"> <a href="file:///life">Life/Entertain</a> 2020-01-23T06:52:02.704Z </p>
+<p class="rm-manual"><a href="file:///life/2020-01-23---the-flu-epidemic-extends-to-five-regions-in-mainland-france-.H1ZicGpIWL.html"><span> The flu epidemic extends to five regions in mainland France </span></a> </p>
+<p class="rm-manual"> <a href="file:///life">Life/Entertain</a> 2020-03-04T15:27:11.098Z </p>
+<p class="rm-manual"><a href="file:///life/2020-03-04---the-flu-has-killed-72-people-this-year-in-france--the-peak-probably-reached-.B1bP0urTNU.html"><span> The flu has killed 72 people this year in France, the peak probably reached </span></a> </p>
+<p class="rm-manual"> <a href="file:///life">Life/Entertain</a> 2020-01-11T15:49:52.648Z </p>
+<p class="rm-manual"><a href="file:///life/2020-01-11---23-shellfish-sectors-contaminated-by-the-gastroenteritis-virus-.BkYo0wvx8.html"><span> 23 shellfish sectors contaminated by the gastroenteritis virus </span></a> </p>
+<p class="rm-manual"> <a href="file:///life">Life/Entertain</a> 2020-01-09T13:34:45.764Z </p>
+<p class="rm-manual"><a href="file:///life/2020-01-09---winter-epidemics-still-raging-in-france-.HJeRghiVe8.html"><span> Winter epidemics still raging in France </span></a> </p>
+<p class="rm-manual"> <a href="file:///news">News/Politics</a> 2020-01-22T16:28:08.054Z </p>
+<p class="rm-manual"><a href="file:///news/2020-01-22---the-flu-epidemic-extends-to-five-regions-in-mainland-france---france-24-.HkMlXuxUb8.html"><span> The flu epidemic extends to five regions in mainland France - France 24 </span></a> </p>
+<h2 class="rm-manual"><a href="file:///life">Trends 24h</a></h2>
+<p class="rm-manual"> <a href="file:///life">Life/Entertain</a> 2020-06-12T02:07:52.896Z </p>
+<p class="rm-manual"><a href="file:///life/2020-06-12-train-derailment-on-the-keisei-oshiage-line-no-information-on-injured-tokyo-katsushika-.BJMZKQPeaL.html"><span> Train derailment on the Keisei Oshiage Line No information on injured Tokyo Katsushika </span></a> </p>
+<p class="rm-manual"> <a href="file:///life">Life/Entertain</a> 2020-06-12T04:46:58.717Z </p>
+<p class="rm-manual"><a href="file:///life/2020-06-12-%22song-joong-ki-s-opponent-is-a-lawyer%22----gaseyeon--face-and-real-name-reveal-controversy-.HJgop_FlT8.html"><span> "Song Joong-ki's opponent is a lawyer"... Gaseyeon, face and real name reveal'controversy'</span></a> </p>
+<p class="rm-manual"> <a href="file:///life">Life/Entertain</a> 2020-06-12T06:22:53.098Z </p>
+<p class="rm-manual"><a href="file:///life/2020-06-12-jay-chou-posted-a-new-song-in-the-early-morning-to-refresh-the-screen--and-then-double-twisted-and-crashed-the-server!.SJVrSkilaI.html"><span> Jay Chou posted a new song in the early morning to refresh the screen, and then double-twisted and crashed the server!</span></a> </p>
+<p class="rm-manual"> <a href="file:///life">Life/Entertain</a> 2020-06-12T10:04:58.675Z </p>
+<p class="rm-manual"><a href="file:///life/2020-06-12-japanese-actor-yamasuke-daisuke-arrests-alleged-sexual-harassment-in-women-in-their-70s.rkbQUXCxp8.html"><span> Japanese actor Yamasuke Daisuke arrests alleged sexual harassment in women in their 70s</span></a> </p>
+<p class="rm-manual"> <a href="file:///life">Life/Entertain</a> 2020-06-12T10:01:58.787Z </p>
+<p class="rm-manual"><a href="file:///life/2020-06-12-thunberga--spider-genus-named-after-environmental-activist.ryVkjzRlpL.html"><span> Thunberga: Spider genus named after environmental activist</span></a> </p>
+<p class="rm-manual"> <a href="file:///life">Life/Entertain</a> 2020-06-12T06:44:15.593Z </p>
+<p class="rm-manual"><a href="file:///life/2020-06-12-changmin-choi--announces-the-marriage-in-september-with-a-lover-who-was-in-a-relationship.SJOr4ixp8.html"><span> Changmin Choi, announces the marriage in September with a lover who was in a relationship</span></a> </p>
+<p class="rm-manual"> <a href="file:///life">Life/Entertain</a> 2020-06-12T14:08:10.211Z </p>
+<p class="rm-manual"><a href="file:///life/2020-06-12-poachers-kill--rafiki---one-of-uganda-s-last-mountain-gorillas.ByIML3ZW6L.html"><span> Poachers kill 'Rafiki', one of Uganda's last mountain gorillas</span></a> </p>
+<p class="rm-manual"> <a href="file:///life">Life/Entertain</a> 2020-06-12T04:52:53.120Z </p>
+<p class="rm-manual"><a href="file:///life/2020-06-12-polish-army-withdraws-from-accidentally-occupied-czech-territory.SkLTX5YgTU.html"><span> Polish army withdraws from accidentally occupied Czech territory</span></a> </p>
+<p class="rm-manual"> <a href="file:///life">Life/Entertain</a> 2020-06-12T06:23:10.026Z </p>
+<p class="rm-manual"><a href="file:///life/2020-06-12-walking-the-street--%22panda%22-became-popular--it-turned-out-to-be-a-chow-chow-dyed.SkzU8yoep8.html"><span> Walking the street, "Panda" became popular, it turned out to be a Chow Chow-dyed</span></a> </p>
+<p class="rm-manual"> <a href="file:///life">Life/Entertain</a> 2020-06-12T06:50:21.440Z </p>
+<p class="rm-manual"><a href="file:///life/2020-06-12-a-statue-commemorating-the-abolition-of-degraded-slavery-in-pau.rJvr2BjepL.html"><span> A statue commemorating the abolition of degraded slavery in Pau</span></a> </p>
+<h2 class="rm-manual">
+<a href="file:///life">Latest</a> </h2>
+<p class="rm-manual"> <a href="file:///life">Life/Entertain</a> 2020-06-12T19:05:33.384Z </p>
+<p class="rm-manual"><a href="file:///life/2020-06-12-aron-flam-parodying-a-swedish-tiger---risks-half-a-million-in-fines.S1SrWG8WpL.html"><span> Aron Flam parodying A Swedish Tiger - risks half a million in fines</span></a> </p>
+<p class="rm-manual"> <a href="file:///life">Life/Entertain</a> 2020-06-12T18:47:17.312Z </p>
+<p class="rm-manual"><a href="file:///life/2020-06-12-humberto-tan-%22would-be-terrified%22-during-any-media-production-in-the-us.By8T2TBZ6U.html"><span> Humberto Tan "would be terrified" during any media production in the US</span></a> </p>
+<p class="rm-manual"> <a href="file:///life">Life/Entertain</a> 2020-06-12T18:38:40.022Z </p>
+<p class="rm-manual"><a href="file:///life/2020-06-12-enforced-disappearance--withdrawal-of-nationality--and-the-use-of-the-laws-of-terrorism----alaa-al-siddiq-tells-the-story-of-her-father--who-is-detained-in-the-emirates.BJzdnirbTL.html"><span>
+ Enforced disappearance, withdrawal of nationality, and the use of the 
+laws of terrorism .. Alaa Al-Siddiq tells the story of her father, who 
+is detained in the Emirates</span></a> </p>
+<p class="rm-manual"> <a href="file:///life">Life/Entertain</a> 2020-06-12T18:17:10.292Z </p>
+<p class="rm-manual"><a href="file:///life/2020-06-12-sri-lanka--the-oldest-evidence-of-the-use-of-bows-and-arrows-outside-of-africa.SkWCjLBZTL.html"><span> Sri Lanka: the oldest evidence of the use of bows and arrows outside of Africa</span></a> </p>
+<p class="rm-manual"> <a href="file:///life">Life/Entertain</a> 2020-06-12T18:17:04.577Z </p>
+<p class="rm-manual"><a href="file:///life/2020-06-12-interpersonal-relationship--the-end-of-lustful-risk.ByYo8r-6U.html"><span> Interpersonal Relationship: The End of Lustful Risk</span></a> </p>
+<p class="rm-manual"> <a href="file:///life">Life/Entertain</a> 2020-06-12T17:50:04.611Z </p>
+<p class="rm-manual"><a href="file:///life/2020-06-12-chateau-meiland-gets-fourth-season--start-not-yet-known.BJBIxB-68.html"><span> Chateau Meiland gets fourth season, start not yet known</span></a> </p>
+<p class="rm-manual"> <a href="file:///life">Life/Entertain</a> 2020-06-12T17:43:59.279Z </p>
+<p class="rm-manual"><a href="file:///life/2020-06-12-who-excavated-the-tomb-of-caliph-omar-bin-abdul-aziz--what-is-the-secret-behind-supporting-saudi-writers-annexing-israel-to-the-west-bank-.ryNPJJBWT8.html"><span>
+ Who excavated the tomb of Caliph Omar bin Abdul Aziz? What is the 
+secret behind supporting Saudi writers annexing Israel to the West Bank?</span></a> </p>
+<p class="rm-manual"> <a href="file:///life">Life/Entertain</a> 2020-06-12T17:38:15.970Z </p>
+<p class="rm-manual"><a href="file:///life/2020-06-12-shandong-woman-was-replaced-as-an-imposter-for-college-and-accused-of-spending-money-to-buy-school-status.rJWx5TEbpL.html"><span> Shandong woman was replaced as an imposter for college and accused of spending money to buy school status</span></a> </p>
+<p class="rm-manual"> <a href="file:///life">Life/Entertain</a> 2020-06-12T17:38:10.283Z </p>
+<p class="rm-manual"><a href="file:///life/2020-06-12-sleeping-pills-and-tranquilizers-up-at-the-end-of-containment.Hy_ctT4ZaL.html"><span> Sleeping pills and tranquilizers up at the end of containment</span></a> </p>
+<p class="rm-manual"> <a href="file:///life">Life/Entertain</a> 2020-06-12T17:23:04.882Z </p>
+<p class="rm-manual"><a href="file:///life/2020-06-12-nielson-%22with-fresh-energy%22-started-a-new-album.HkZWW5N-a8.html"><span> Nielson "with fresh energy" started a new album</span></a> </p>
+<p class="rm-manual"> <a href="file:///life">Life/Entertain</a> 2020-06-12T17:22:59.081Z </p>
+<p class="rm-manual"><a href="file:///life/2020-06-12-election-update--pen-battle-over-polls-and-can-kamala-get-ready-.HJMsx9VWT8.html"><span> Election Update: Pen Battle over Polls and Can Kamala Get Ready?</span></a> </p>
+<p class="rm-manual"> <a href="file:///life">Life/Entertain</a> 2020-06-12T17:22:53.487Z </p>
+<p class="rm-manual"><a href="file:///life/2020-06-12-benh-with-michel-gu%C3%A9rin--%22today-i-am-galibier%22.HJQBecNbpU.html"><span> BenH with Michel Guérin: "Today I am Galibier"</span></a> </p>
+<p class="rm-manual"> <a href="file:///life">Life/Entertain</a> 2020-06-12T17:14:27.291Z </p>
+<p class="rm-manual"><a href="file:///life/2020-06-12-sacha-judaszko--%22saturday-will-end-up-causing-a-depression--he-will-go-on-strike%22.r1zjgdVZpU.html"><span> Sacha Judaszko: "Saturday will end up causing a depression, he will go on strike"</span></a> </p>
+<p class="rm-manual"> <a href="file:///life">Life/Entertain</a> 2020-06-12T17:11:04.689Z </p>
+<p class="rm-manual"><a href="file:///life/2020-06-12-alcohol-ankle-strap-introduced-nationally---no-longer-possible-to-bypass-.ByMWVDEWpI.html"><span> Alcohol ankle strap introduced nationally: 'no longer possible to bypass'</span></a> </p>
+<p class="rm-manual"> <a href="file:///life">Life/Entertain</a> 2020-06-12T17:10:53.384Z </p>
+<p class="rm-manual"><a href="file:///life/2020-06-12-wind-power--90-percent-of-the-wind-turbines-turn-the-wrong-way-round.ByjHXPNZp8.html"><span> Wind power: 90 percent of the wind turbines turn the wrong way round</span></a> </p>
+<p class="rm-manual"> <a href="file:///life">Life/Entertain</a> 2020-06-12T17:04:53.288Z </p>
+<p class="rm-manual"><a href="file:///life/2020-06-12-christine-berrou--%22gone-with-the-wind-maybe--but-we-mustn-t-take-our-story-as-much%22.H1oanBV-pU.html"><span> Christine Berrou: "Gone with the wind maybe, but we mustn't take our story as much"</span></a> </p>
+<p class="rm-manual"> <a href="file:///life">Life/Entertain</a> 2020-06-12T16:55:58.980Z </p>
+<p class="rm-manual"><a href="file:///life/2020-06-12-apple-music-launches-french-rap-program-presented-by-mehdi-ma%C3%AFzi.H1NDom4bpI.html"><span> Apple Music launches French rap program presented by Mehdi Maïzi</span></a> </p>
+<p class="rm-manual"> <a href="file:///life">Life/Entertain</a> 2020-06-12T16:47:04.848Z </p>
+<p class="rm-manual"><a href="file:///life/2020-06-12-egyptian-artist-amr-waked-reveals-details-of-his-recovery-from-his-son-corona.ByWZc-VWpL.html"><span> Egyptian artist Amr Waked reveals details of his recovery from his son Corona</span></a> </p>
+<p class="rm-manual"> <a href="file:///life">Life/Entertain</a> 2020-06-12T16:38:10.285Z </p>
+<p class="rm-manual"><a href="file:///life/2020-06-12-%E2%80%9Can-archaeologist-who-pounds-nazis-and-hates-snakes%E2%80%9D--indiana-jones-named-the-best-movie-hero-of-all-time.SySqOkE-T8.html"><span> “An archaeologist who pounds Nazis and hates snakes”: Indiana Jones named the best movie hero of all time</span></a> </p>
+<p class="rm-manual"> <a href="file:///life">Life/Entertain</a> 2020-06-12T16:29:16.998Z </p>
+<p class="rm-manual"><a href="file:///life/2020-06-12-guest-france---police-anger-against-castaner--%22he-works-public-opinion-to-the-detriment-of-the-police%22.BJVrwpmZ68.html"><span> Guest France - Police anger against Castaner: "he works public opinion to the detriment of the police"</span></a> </p>
+<p class="rm-manual"> <a href="file:///life/2020/06/12"> Life/Entertain 2020/06/12</a> </p>
+<p class="rm-manual"> <a href="file:///"><span>Home</span></a> <a href="file:///news"><span>News</span></a> <a href="file:///business"><span>Business</span></a> <a href="file:///sports"><span>Sports</span></a> <a href="file:///life"><span>Life</span></a> <a href="file:///tech"><span>Tech</span></a> </p>
+<p class="rm-manual">© Communities 2019 - <a href="file:///privacy">Privacy</a></p></article>
+</body></html>

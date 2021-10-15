@@ -1,0 +1,106 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual">GTK 4.0</h1>
+<p>2020 has been a very long year. What better way to end it than with a major release! Today, we released GTK 4.0.</p>
+<p>GTK 4.0 is the result of a lot of hard work by a small team of 
+dedicated developers. We will have a separate post to go over the 
+statistics, but the short summary is that since the 3.89.1 release in 
+November 2016, we’ve added over 18000 commits and made more than 20 
+development releases.</p>
+<p>Congratulations and a big thank you to everybody who has participated
+ in this effort, and in particular to Benjamin, Emmanuele, Timm, Carlos,
+ Jonas and Christian!</p>
+<h3>What’s new</h3>
+<p>It is impossible to summarize 4 years of development in a single 
+post. We’ve written detailed articles about many of the new things in 
+this release over the past year: <a href="https://blog.gtk.org/2020/01/29/data-transfer-in-gtk4/">Data transfers</a>, <a href="https://blog.gtk.org/2020/04/29/custom-widgets-in-gtk-4-input/">Event controllers</a>, <a href="https://blog.gtk.org/2020/04/27/custom-widgets-in-gtk-4-layout/">Layout managers</a>, <a href="https://blog.gtk.org/2020/04/24/custom-widgets-in-gtk-4-drawing/">Render nodes</a>, <a href="https://blog.gtk.org/2020/05/20/media-in-gtk-4/">Media playback</a>, <a href="https://blog.gtk.org/2020/06/07/scalable-lists-in-gtk-4/">Scalable lists</a>, <a href="https://blog.gtk.org/2020/09/30/gtk-3-99-2/">Shaders</a>, <a href="https://blog.gtk.org/2020/10/21/accessibility-in-gtk-4/">Accessibility</a>. Here are some of the highlights, in visual form:</p>
+<p>Media playback:</p>
+<p> <a href="https://blog.gtk.org/files/2020/05/video.webm">https://blog.gtk.org/files/2020/05/video.webm</a></p>
+<p>Drag-and-Drop:</p>
+<p>Layout managers and transforms:</p>
+<p><a href="https://blog.gtk.org/files/2020/09/flat-circle.webm">https://blog.gtk.org/files/2020/09/flat-circle.webm</a></p>
+<p>Scalable lists and grids:</p>
+<p><a href="https://blog.gtk.org/files/2020/09/colorselection3.webm">https://blog.gtk.org/files/2020/09/colorselection3.webm</a></p>
+<p>Shaders:</p>
+<p><a href="https://blog.gtk.org/files/2020/09/Screencast-from-09-30-2020-05-39-53-PM3-convert-video-online.com_.webm">https://blog.gtk.org/files/2020/09/Screencast-from-09-30-2020-05-39-53-PM3-convert-video-online.com_.webm</a></p>
+<h3>What’s old</h3>
+<p>GTK 4 is now stable, and we consider it ready for consumption. That 
+does not mean GTK 3 is dead – we will continue to support and update it 
+for the foreseeable future (the latest release, 3.24.24, quietly went 
+out a few days ago). It does mean, however, that GTK 2 has reached the 
+end of its life. We will do one final 2.x release in the coming days, 
+and we encourage everybody to port their GTK 2 applications to GTK 3 or 
+4.</p>
+<h3>How to get it</h3>
+<p>The source tarballs are available in the usual <a href="https://download.gnome.org/sources/gtk/4.0">place</a>. Binary packages should appear in major distributions soon.</p>
+<p>The GNOME 40 release will have a number of applications ported to GTK
+ 4. If you want to try GTK 4.0 today, you can use the nightly flatpak 
+builds of <a href="https://nightly.gnome.org/repo/appstream/org.gtk.Demo4.flatpakref">gtk4-demo</a> and <a href="https://nightly.gnome.org/repo/appstream/org.gtk.WidgetFactory4.flatpakref">gtk4-widget-factory</a>:</p>
+<pre>$ flatpak install https://nightly.gnome.org/repo/appstream/org.gtk.Demo4.flatpakref $ flatpak run org.gtk.Demo4</pre>
+<p>If you are itching to port your application to GTK 4, our migration guide is <a href="https://developer.gnome.org/gtk4/3.99/migrating.html">available</a> as part of the <a href="https://developer.gnome.org/gtk4/3.99/">documentation</a>.</p>
+<h3>How to support GTK</h3>
+<p>GTK could not be developed without the many volunteers who contribute
+ bug reports, patches, translations or ideas. Thanks to all of you. We 
+are also grateful to the GNOME foundation for supporting GTK with 
+development resources, infrastructure, and travel assistance.</p>
+<p><a href="https://www.gnome.org/support-gnome/">Donating</a> to the GNOME foundation is a good way to support future GTK development.</p>
+<h3>What comes next</h3>
+<p>We are very thankful for all the early testers that have provided us 
+with bug reports and feedback, which made this release much better. But 
+we fully expect that there will be a quick 4.0.1 release to fix up the 
+oversights and gotchas that only come to light after a .0 release.</p>
+<p>Now that we have a 4.0 release, we need to bring along the library 
+ecosystem to enable applications to use it. vte, webkit and 
+gtksourceview are some of the most notable libraries that tend to be 
+used together with GTK. We expect GTK 4 ports of these to be available 
+soon.</p>
+<p>If more serious issues show up, we will do a 4.2 release in time for 
+GNOME 40, otherwise we might wait until the summer for that.</p>
+<p>What the future will bring beyond GTK 4 remains to be seen. We have 
+some fun things in the pipeline, but we would also like to hear what 
+features application developers would like to see in GTK. Tell us!</p>
+<h3>A celebration</h3>
+<p>We will celebrate the 4.0 release with an (online) <a href="https://events.gnome.org/event/59/">gathering</a> this coming Friday. Feel free to drop by!</p>
+<p class="rm-manual"><span><span><span>Author </span> <a href="https://blog.gtk.org/author/mclasen/">mclasen</a></span></span></p>
+<p class="rm-manual"><span><span>Posted on </span><a href="https://blog.gtk.org/2020/12/16/gtk-4-0/" rel="bookmark">December 16, 2020</a></span></p>
+<p class="rm-manual"><span><span>Categories </span><a href="https://blog.gtk.org/category/gtk/" rel="category tag">GTK+</a></span></p>
+<p class="rm-manual"><span><span>Tags </span><a href="https://blog.gtk.org/tag/gtk4/" rel="tag">gtk4</a>, <a href="https://blog.gtk.org/tag/release/" rel="tag">Release</a>, <a href="https://blog.gtk.org/tag/stable/" rel="tag">Stable</a></span> </p>
+<h2 class="rm-manual">Post navigation</h2>
+<p class="rm-manual"><a href="https://blog.gtk.org/2020/10/21/accessibility-in-gtk-4/" rel="prev"><span>Previous</span> <span>Previous post:</span> <span>Accessibility in GTK 4</span></a></p>
+<p class="rm-manual"><a href="https://blog.gtk.org/2020/12/17/who-wrote-gtk4/" rel="next"><span>Next</span> <span>Next post:</span> <span>Who Wrote GTK4</span></a></p></article>
+</body></html>

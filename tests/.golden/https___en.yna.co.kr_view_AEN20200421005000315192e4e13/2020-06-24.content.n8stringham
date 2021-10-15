@@ -1,0 +1,138 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> No unusual activity in N. Korea, Cheong Wa Dae says, amid speculation on Kim Jong-un's health | Yonhap News Agency </p>
+<p class="rm-manual"> <a href="#container">Go to Contents</a> <a href="#nav">Go to Navigation</a> </p>
+<p class="rm-manual"> <span>10</span> </p>
+<li class="rm-manual"><a href="file:///index"><span>한국어</span></a></li>
+<li class="rm-manual"><a href="file:///index"><span>中文</span></a></li>
+<li class="rm-manual"><a href="file:///index"><span>日本語</span></a></li>
+<li class="rm-manual"><a href="file:///index"><span>عربي</span></a></li>
+<li class="rm-manual"><a href="file:///index"><span>Español</span></a></li>
+<li class="rm-manual"><a href="file:///index"><span>Français</span></a></li>
+<p class="rm-manual"> News </p>
+<p class="rm-manual"><a href="file:///news">All Headlines</a></p>
+<dl class="rm-manual"> <dt class="rm-manual"><a href="file:///national/index">National</a></dt> <dd><a href="file:///national/politics">Politics</a></dd> <dd><a href="file:///national/diplomacy">Diplomacy</a></dd> <dd><a href="file:///national/defense">Defense</a></dd> <dd><a href="file:///national/national">National</a></dd> </dl>
+<p class="rm-manual"><a href="file:///nk/index">North Korea</a></p>
+<dl class="rm-manual"> <dt class="rm-manual"><a href="file:///economy/index">Economy</a></dt> <dd><a href="file:///economy/economy">Economy</a></dd> <dd><a href="file:///economy/industy">Industry</a></dd> <dd><a href="file:///economy/retail-tourism">Retail/Tourism</a></dd> <dd><a href="file:///economy/auto">Autos</a></dd> <dd><a href="file:///economy/consumer-electronics">Consumer Electronics</a></dd> </dl>
+<dl class="rm-manual"> <dt class="rm-manual"><a href="file:///market/index">Market</a></dt> <dd><a href="file:///market/finance">Finance</a></dd> <dd><a href="file:///market/stocks">Stocks</a></dd> </dl>
+<dl class="rm-manual"> <dt class="rm-manual"><a href="file:///science/index">Science</a></dt> <dd><a href="file:///science/medicine">Welfare/Medicine</a></dd> <dd><a href="file:///science/science">Science</a></dd> </dl>
+<dl class="rm-manual"> <dt class="rm-manual"><a href="file:///culture/index">Culture</a></dt> <dd><a href="file:///culture/entertainment">Entertainment</a></dd> <dd><a href="file:///culture/movies">Movies</a></dd> <dd><a href="file:///culture/k-pop">K-pop</a></dd> <dd><a href="file:///culture/arts-culture">Arts/Culture</a></dd> </dl>
+<p class="rm-manual"><a href="file:///sports/index">Sports</a></p>
+<dl class="rm-manual"> <dt class="rm-manual"><a href="file:///image/index">Images</a></dt> <dd><a href="file:///image/k-wave">K-wave</a></dd> <dd><a href="file:///image/general">General</a></dd> <dd><a href="file:///image/nk">North Korea</a></dd> <dd><a href="file:///image/graphics">Graphics</a></dd> </dl>
+<dl class="rm-manual"> <dt class="rm-manual"><a href="file:///video/index">Videos</a></dt> <dd><a href="file:///video/korea-now/index">Korea Now</a></dd> </dl>
+<p class="rm-manual"><a href="file:///topnews/index">Top News</a></p>
+<p class="rm-manual"><a href="file:///mostviewed/index">Most Viewed</a></p>
+<p class="rm-manual"><a href="file:///paper/index">Korean Newspaper Headlines</a></p>
+<p class="rm-manual"><a href="file:///history/index">Today in Korean History</a></p>
+<p class="rm-manual"><a href="file:///summary/index">Yonhap News Summary</a></p>
+<p class="rm-manual"><a href="file:///editorials/index">Editorials from Korean Dailies</a></p>
+<p class="rm-manual"> Special </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///interviews/index">Interviews</a></li> <li class="rm-manual"><a href="file:///features/index">Features</a></li> <li class="rm-manual"><a href="file:///topics/index">Topics</a></li> <li class="rm-manual"><a href="file:///k-stories/index">Yonhap Korea Stories</a></li> </ul>
+<p class="rm-manual"> Information </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///brief/index">Korea in Brief</a></li> <li class="rm-manual"><a href="file:///link/index">Useful Links</a></li> <li class="rm-manual"><a href="file:///festivals/index">Festival Calendar</a></li> <li class="rm-manual"><a href="file:///weather/index">Weather</a></li> <li class="rm-manual"><a href="file:///ad/index">Advertise with Yonhap News Agency</a></li> </ul>
+<p class="rm-manual"> Tools </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///channel/index">RSS</a></li> <li class="rm-manual"><a href="file:///channel/mobile">Mobile Service</a></li> <li class="rm-manual"><a href="file:///sitemap/index">Sitemap</a></li> </ul>
+<p class="rm-manual"> About Yonhap </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///aboutus/index">About Us</a></li> <li class="rm-manual"><a href="file:///aboutus/yonhapnews">About Yonhap News</a></li> <li class="rm-manual"><a href="file:///aboutus/mission">Mission</a></li> <li class="rm-manual"><a href="file:///aboutus/ceo">CEO’s Message</a></li> <li class="rm-manual"><a href="file:///aboutus/history">History</a></li> <li class="rm-manual"><a href="file:///aboutus/subsidiaries">Subsidiaries</a></li> <li class="rm-manual"><a href="file:///aboutus/domesticnetwork">Domestic Network</a></li> <li class="rm-manual"><a href="file:///aboutus/globalnetwork">Global Network</a></li> <li class="rm-manual"><a href="file:///aboutus/services">Products/Services</a></li> <li class="rm-manual"><a href="file:///aboutus/headquarters">Headquarters</a></li> <li class="rm-manual"><a href="file:///aboutus/subscription">Subscription</a></li> <li class="rm-manual"><a href="file:///aboutus/copyright">Copyright</a></li> </ul>
+<p class="rm-manual"> SEARCH </p>
+<p class="rm-manual"> <span><a href="file:///search/index?query=North+Korea&amp;lang=EN">#North Korea</a></span> <span><a href="file:///search/index?query=Cheong+Wa+Dae&amp;lang=EN">#Cheong Wa Dae</a></span> </p>
+<p class="rm-manual"><a href="file:///index">Yonhap News Agency</a> </p>
+<p class="rm-manual">No unusual activity in N. Korea, Cheong Wa Dae says, amid speculation on Kim Jong-un's health</p>
+<p class="rm-manual"> <span>Today's date</span> </p>
+<p class="rm-manual"> <span>Today's weather</span> </p>
+<p class="rm-manual"> Seoul <span><a href="file:///weather/index">Full Forecast</a></span> </p>
+<p class="rm-manual"><span>구름조금</span> </p>
+<p class="rm-manual"> <span>Partly Sunny</span> <span>17.3<span>℃</span></span> <span><span>16°</span> / <span>28°</span></span> </p>
+<p class="rm-manual"> Precip 0mm </p>
+<p class="rm-manual"> Wind W 3.5m/s </p>
+<p class="rm-manual"> Humidity 45% </p>
+<p class="rm-manual"> <span>CAI</span> <span><span>Moderate</span> 80</span> </p>
+<dl class="rm-manual"> <dt class="rm-manual">PM10</dt> <dd>Good</dd> <dt class="rm-manual">DSS</dt> <dd>Very Bad</dd> <dt class="rm-manual">PM2.5</dt> <dd>Bad</dd> <dt class="rm-manual">O₃</dt> <dd>Moderate</dd> </dl>
+<dl class="rm-manual"> <dt class="rm-manual">CAI</dt> <dd>Comprehensive Air-quality Index</dd> <dt class="rm-manual">PM10</dt> <dd>Particulate Matter Less than 10㎛</dd> <dt class="rm-manual">PM2.5</dt> <dd>Particulate Matter Less than 2.5㎛</dd> <dt class="rm-manual">O₃</dt> <dd>Ozone</dd> </dl>
+<p class="rm-manual"> <span>Latest News</span> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///news">All Headlines</a> </li> <li class="rm-manual"> <a href="file:///national/index">National</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///national/politics">Politics</a></li> <li class="rm-manual"><a href="file:///national/diplomacy">Diplomacy</a></li> <li class="rm-manual"><a href="file:///national/defense">Defense</a></li> <li class="rm-manual"><a href="file:///national/national">National</a></li> </ul> </li> <li class="rm-manual"> <a href="file:///nk/index">North Korea</a> </li> <li class="rm-manual"> <a href="file:///economy/index">Economy</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///economy/economy">Economy</a></li> <li class="rm-manual"><a href="file:///economy/industy">Industry</a></li> <li class="rm-manual"><a href="file:///economy/retail-tourism">Retail/Tourism</a></li> <li class="rm-manual"><a href="file:///economy/auto">Autos</a></li> <li class="rm-manual"><a href="file:///economy/consumer-electronics">Consumer Electronics</a></li> </ul> </li> <li class="rm-manual"> <a href="file:///market/index">Market</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///market/finance">Finance</a></li> <li class="rm-manual"><a href="file:///market/stocks">Stocks</a></li> </ul> </li> <li class="rm-manual"> <a href="file:///science/index">Science</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///science/medicine">Welfare/Medicine</a></li> <li class="rm-manual"><a href="file:///science/science">Science</a></li> </ul> </li> <li class="rm-manual"> <a href="file:///culture/index">Culture</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///culture/entertainment">Entertainment</a></li> <li class="rm-manual"><a href="file:///culture/movies">Movies</a></li> <li class="rm-manual"><a href="file:///culture/k-pop">K-pop</a></li> <li class="rm-manual"><a href="file:///culture/arts-culture">Arts/Culture</a></li> </ul> </li> <li class="rm-manual"> <a href="file:///sports/index">Sports</a> </li> <li class="rm-manual"> <a href="file:///features/index">Features</a> </li> <li class="rm-manual"> <a href="file:///image/index">Images</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///image/k-wave">K-wave</a></li> <li class="rm-manual"><a href="file:///image/general">General</a></li> <li class="rm-manual"><a href="file:///image/nk">North Korea</a></li> <li class="rm-manual"><a href="file:///image/graphics">Graphics</a></li> </ul> </li> <li class="rm-manual"> <a href="file:///video/index">Videos</a> </li> </ul>
+<p class="rm-manual">URL is copied.</p>
+<h1 class="rm-manual">No unusual activity in N. Korea, Cheong Wa Dae says, amid speculation on Kim Jong-un's health</h1>
+<p class="rm-manual"> <span> <a href="file:///news">All Headlines</a> 12:18 April 21, 2020</span> </p>
+<p> SEOUL, April 21 (Yonhap) -- Cheong Wa Dae said Tuesday that South 
+Korea has not spotted any "unusual" signs in North Korea that may 
+suggest a serious problem in leader Kim Jong-un's health.</p>
+<p> Its statement came in response to multiple media reports that Kim 
+has been hospitalized after a surgery. CNN said that the United States 
+is monitoring "intelligence" that he is in "gave danger." It quoted an 
+unnamed U.S. official.</p>
+<p> With regard to the news, "We have nothing to confirm and there has 
+been no unusual activity detected in North Korea," Cheong Wa Dae 
+spokesman Kang Min-seok said in a text message to reporters.</p>
+<p class="rm-manual"> lcd@yna.co.kr</p>
+<p class="rm-manual">(END)</p>
+<p class="rm-manual"> Keywords </p>
+<p class="rm-manual"> <span><a href="file:///search/index?query=North+Korea&amp;lang=EN">#North Korea</a></span> <span><a href="file:///search/index?query=Cheong+Wa+Dae&amp;lang=EN">#Cheong Wa Dae</a></span> </p>
+<p class="rm-manual"> <span>Issue Keywords</span> </p>
+<p class="rm-manual"> <span>Most Liked</span> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <a href="file:///view/AEN20200622004152315"> <span>1</span> <h4 class="rm-manual">(2nd LD) Cheong Wa Dae says much of Bolton's memoir on Korea 'distorted,' urges U.S. gov't to address such 'dangerous' case</h4> </a> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <a href="file:///view/AEN20200622004700325"> <span>2</span> <h4 class="rm-manual">Trump threatened to pull troops if S. Korea didn't give $5 bln: Bolton memoir</h4> </a> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <a href="file:///view/AEN20200621000800325"> <span>3</span> <h4 class="rm-manual">N. Korea keeps sending small groups of troops to border sentry posts: source</h4> </a> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <a href="file:///view/AEN20200618002100320"> <span>4</span> <h4 class="rm-manual">New virus cases at 3-week high, greater Seoul gripped by more cluster infections</h4> </a> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <a href="file:///view/AEN20200619003100315"> <span>5</span> <h4 class="rm-manual">BTS' 'Map of the Soul: 7' becomes No. 1 sold album in Japan during H1</h4> </a> </article> </li> </ul>
+<p class="rm-manual"> <span>Most Saved</span> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <a href="file:///view/AEN20200622004152315"> <span>1</span> <h4 class="rm-manual">(2nd LD) Cheong Wa Dae says much of Bolton's memoir on Korea 'distorted,' urges U.S. gov't to address such 'dangerous' case</h4> </a> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <a href="file:///view/AEN20200622002400315"> <span>2</span> <h4 class="rm-manual">(Yonhap Interview) Korean tattooist inking his way toward making all tattoos legal in S. Korea</h4> </a> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <a href="file:///view/AEN20200622002154320"> <span>3</span> <h4 class="rm-manual">(4th LD) Greater Seoul already in 2nd wave of virus outbreak; new infection cases dip to 1-month low</h4> </a> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <a href="file:///view/AEN20200618005400320"> <span>4</span> <h4 class="rm-manual">3 in 10 Koreans think having kids unnecessary: survey</h4> </a> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <a href="file:///view/AEN20200621000800325"> <span>5</span> <h4 class="rm-manual">N. Korea keeps sending small groups of troops to border sentry posts: source</h4> </a> </article> </li> </ul>
+<p class="rm-manual"> <span><a href="file:///mostviewed/index">Most Viewed</a></span> <span><a href="file:///mostviewed/index">All Categories</a></span> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <a href="file:///view/AEN20200624000651325"> <span>1</span> <h4 class="rm-manual">(LEAD) N. Korean leader suspends military action plans against S. Korea</h4> </a> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <a href="file:///view/AEN20200624000600325"> <span>2</span> <h4 class="rm-manual">N. Korean leader suspends military action plans against S. Korea</h4> </a> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <a href="file:///view/AEN20200624003252325"> <span>3</span> <h4 class="rm-manual">(2nd LD) N. Korea seen removing loudspeakers from border areas: officials</h4> </a> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <a href="file:///view/AEN20200624003251325"> <span>4</span> <h4 class="rm-manual">(LEAD) N. Korea seen removing loudspeakers from border areas: sources</h4> </a> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <a href="file:///view/AEN20200624000652325"> <span>5</span> <h4 class="rm-manual">(2nd LD) N.K. suspends military action plans, halts threats against S. Korea</h4> </a> </article> </li> </ul>
+<p class="rm-manual"><span><a href="file:///mostviewed/index"><span>Most Viewed More</span></a></span> </p>
+<p class="rm-manual"> <span><a href="file:///image/index">Most Viewed Photos</a></span> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <a href="file:///view/PYH20200624187800315"> <h3 class="rm-manual">N.K. suspends military action plans against S. Korea</h3> </a> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <a href="file:///view/PYH20200623251400315"> <h3 class="rm-manual">N. Korean luxury golf club</h3> </a> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <a href="file:///view/PYH20200623107500315"> <h3 class="rm-manual">N. Korean loudspeakers</h3> </a> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <a href="file:///view/PYH20200623184200315"> <h3 class="rm-manual">Unsuccessful anti-Pyongyang balloon</h3> </a> </article> </li> </ul>
+<article class="rm-manual"> <a href="file:///view/AEN20200421005000315"> <h2 class="rm-manual">No unusual activity in N. Korea, Cheong Wa Dae says, amid speculation on Kim Jong-un's health</h2> </a> </article><article class="rm-manual"> <a href="file:///view/AEN20200421005000315"> <h2 class="rm-manual">No unusual activity in N. Korea, Cheong Wa Dae says, amid speculation on Kim Jong-un's health</h2> </a> </article><p class="rm-manual"> <span> <a href="file:///mostviewed/index"> Main Article Right Now </a> </span> </p>
+<h4 class="rm-manual"> <a href="file:///view/AEN20200624003252325?section=nk/nk"> N. Korea seen removing loudspeakers from border areas: officials</a> </h4>
+<h4 class="rm-manual"> <a href="file:///view/AEN20200624000652325?section=nk/nk"> N.K. suspends military action plans, halts threats against S. Korea</a> </h4>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///view/AEN20200624004752315?section=national/politics"> Busan gripped with virus fear following mass infections of Russian sailors</a> </li> <li class="rm-manual"> <a href="file:///view/AEN20200624000352325?section=national/defense"> Remains of 147 S. Korean soldiers return home after 70 years</a> </li> <li class="rm-manual"> <a href="file:///view/AEN20200624004253320?section=economy/economy"> S. Korean trade minister announces bid to become next WTO chief</a> </li> <li class="rm-manual"> <a href="file:///view/AEN20200624002651315?section=national/national"> Monsoon season arrives in S. Korea</a> </li> </ul>
+<p class="rm-manual"> <span><a href="file:///index">HOME</a></span> <a href="file:///news">All Headlines</a> </p>
+<dl class="rm-manual"> <dt class="rm-manual">News</dt> <dd> <p class="rm-manual"><a href="file:///news">All Headlines</a></p> <p class="rm-manual"><a href="file:///national/index">National</a></p> <p class="rm-manual"><a href="file:///nk/index">North Korea</a></p> <p class="rm-manual"><a href="file:///economy/index">Economy</a></p> <p class="rm-manual"><a href="file:///market/index">Market</a></p> <p class="rm-manual"><a href="file:///science/index">Science</a></p> </dd> <dd> <p class="rm-manual"><a href="file:///culture/index">Culture</a></p> <p class="rm-manual"><a href="file:///sports/index">Sports</a></p> <p class="rm-manual"><a href="file:///image/index">Images</a></p> <p class="rm-manual"><a href="file:///video/index">Videos</a></p> <p class="rm-manual"><a href="file:///topnews/index">Top News</a></p> <p class="rm-manual"><a href="file:///mostviewed/index">Most Viewed</a></p> </dd> <dd> <p class="rm-manual"><a href="file:///paper/index"> Korean Newspaper Headlines</a></p> <p class="rm-manual"><a href="file:///history/index">Today in Korean History</a></p> <p class="rm-manual"><a href="file:///summary/index">Yonhap News Summary</a></p> <p class="rm-manual"><a href="file:///editorials/index">Editorials from Korean Dailies</a></p> </dd> </dl>
+<dl class="rm-manual"> <dt class="rm-manual">Special</dt> <dd><a href="file:///interviews/index">Interviews</a></dd> <dd><a href="file:///features/index">Features</a></dd> <dd><a href="file:///topics/index">Topics</a></dd> <dd><a href="file:///k-stories/index">Yonhap Korea Stories</a></dd> </dl>
+<dl class="rm-manual"> <dt class="rm-manual">Information</dt> <dd> <p class="rm-manual"><a href="file:///brief/index">Korea in Brief</a></p> <p class="rm-manual"><a href="file:///link/index">Useful Links</a></p> </dd> <dd> <p class="rm-manual"><a href="file:///festivals/index">Festival Calendar</a></p> <p class="rm-manual"><a href="file:///weather/index">Weather</a></p> </dd> <dd> <p class="rm-manual"><a href="file:///ad/index">Advertise with Yonhap News Agency</a></p> </dd> </dl>
+<dl class="rm-manual"> <dt class="rm-manual">Tools</dt> <dd><a href="file:///channel/index">RSS</a></dd> <dd><a href="file:///channel/mobile">Mobile Service</a></dd> </dl>
+<dl class="rm-manual"> <dt class="rm-manual">About Yonhap</dt> <dd><a href="file:///aboutus/index">About Us</a></dd> <dd><a href="file:///aboutus/headquarters">Contact Us</a></dd> <dd><a href="file:///aboutus/subscription">Subscription</a></dd> <dd><a href="file:///aboutus/copyright">Copyright</a></dd> </dl>
+<p class="rm-manual"> <span>Copyright (c) Yonhap News Agency. All Rights Reserved.</span> </p>
+<li class="rm-manual"><a href="file:///">한국어</a></li>
+<li class="rm-manual"><a href="file:///">中文</a></li>
+<li class="rm-manual"><a href="file:///">日本語</a></li>
+<li class="rm-manual"><a href="file:///">عربي</a></li>
+<li class="rm-manual"><a href="file:///">Español</a></li>
+<li class="rm-manual"><a href="file:///">Français</a></li>
+<p class="rm-manual"> <a href="file:///index"> <span>HOME</span> </a> </p>
+<p class="rm-manual"> <span>Send Feedback</span> </p>
+<p class="rm-manual"> How can we improve? </p>
+<p class="rm-manual"> Enter your feedback here. To help protect your privacy, don't include personal information, like your name or address. </p>
+<p class="rm-manual"> Thanks for your feedback! </p></article>
+</body></html>

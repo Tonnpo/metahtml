@@ -1,0 +1,207 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> <span><span><a href="https://wtop.com/">Home</a> » <span><span><a href="https://wtop.com/news/">Latest News</a> » <span><span><span>2020-21 Best Children's Hospitals…</span></span></span></span></span></span></span> </p>
+<h1 class="rm-manual">2020-21 Best Children’s Hospitals Specialty Rankings</h1>
+<p class="rm-manual"> U.S. News &amp; World Report <span>|</span> <a href="https://twitter.com/usnews">@usnews</a> </p>
+<p class="rm-manual">June 16, 2020, 12:00 AM</p>
+<p class="rm-manual">Best Children’s Hospitals 2020-21 Pediatric 
+Specialty Rankings The results are in: U.S. News’ Best Children’s 
+Hospitals 2020-21 rankings rate eligible…</p>
+<p class="rm-manual"> <a href="https://live.wtop.com/"> <span> Listen now to WTOP News </span> <span> WTOP.com | Alexa | Google Home | WTOP App | 103.5 FM </span> </a> </p>
+<p class="rm-manual">Best Children’s Hospitals 2020-21 Pediatric Specialty Rankings</p>
+<p>The results are in: U.S. News’ Best Children’s Hospitals 2020-21 
+rankings rate eligible medical centers in 10 pediatric specialties. </p>
+<p>Ratings are based on hospital-submitted data, including measurements 
+such as survival and complex surgical outcomes, as well as use of best 
+practices, infection prevention, advanced technologies, nursing quality,
+ specialty-specific certifications and services, and expert opinion of 
+specialists in the field. Fifty of the top performing hospitals were 
+ranked in pediatric cancer, cardiology and heart surgery, diabetes and 
+endocrinology, gastroenterology and GI surgery, neonatology, nephrology,
+ neurology and neurosurgery, orthopedics, pulmonology and lung surgery 
+and urology.</p>
+<p>Pediatric Cancer</p>
+<p>To rate children’s hospitals for care in pediatric cancer, the 
+hospitals were evaluated on five-year survival, bone marrow transplant 
+services for cancers like leukemia and programs for brain tumors and 
+sarcomas, as well as infection prevention. </p>
+<p>The evaluations included other data collected via a detailed U.S. 
+News clinical survey of children’s hospitals, in addition to nominations
+ from pediatric cancer specialists and subspecialists who recommended 
+the hospital for serious pediatric oncology cases. The top three 
+hospitals for pediatric cancer are:</p>
+<p>1. Children’s Hospital of Philadelphia.</p>
+<p>2. Dana-Farber/Boston Children’s Cancer and Blood Disorders Center.</p>
+<p>3. Cincinnati Children’s Hospital Medical Center.</p>
+<p class="">See the full <a href="https://health.usnews.com/best-hospitals/pediatric-rankings/cancer">2020-21 Pediatric Cancer rankings list</a>. </p>
+<p>Pediatric Cardiology &amp; Heart Surgery</p>
+<p>To rate children’s hospitals in cardiology and heart surgery, 
+eligible hospitals were evaluated on survival after complex heart 
+surgery — such as heart transplants and corrective surgery for 
+congenital heart defects — ability to prevent infections, best 
+practices, program services and other hospital-submitted data, as well 
+as nominations from pediatric heart specialists who responded to surveys
+ in 2018, 2019 and 2020 and recommended the hospital for serious cases 
+of congenital heart disease. </p>
+<p>The top three hospitals for pediatric cardiology and heart surgery are:</p>
+<p>1. Texas Children’s Hospital in Houston.</p>
+<p>2. UPMC Children’s Hospital of Pittsburgh.</p>
+<p>3. Children’s Hospital Los Angeles.</p>
+<p>See the full <a href="https://health.usnews.com/best-hospitals/pediatric-rankings/cardiology-and-heart-surgery"> 2020-21 Pediatric Cardiology &amp; Heart Surgery rankings list</a>. </p>
+<p>Pediatric Diabetes &amp; Endocrinology</p>
+<p>Eligible hospitals were ranked in treating diabetes and endocrine 
+disorders in children based on hospital-submitted data, including 
+management of conditions such as pediatric Type 1 diabetes, weight 
+disorders and hypothyroidism, infection prevention, nurse staffing, best
+ practices and other measures, plus nominations from specialists and 
+subspecialists in pediatric endocrinology who responded to surveys and 
+recommended the children’s hospital for serious cases in endocrinology. </p>
+<p>The top three hospitals for pediatric diabetes and endocrinology are:</p>
+<p>1. Children’s Hospital of Philadelphia.</p>
+<p>2. Boston Children’s Hospital.</p>
+<p>3. Cincinnati Children’s Hospital Medical Center.</p>
+<p>See the full <a href="https://health.usnews.com/best-hospitals/pediatric-rankings/diabetes-and-endocrinology"> 2020-21 Pediatric Diabetes &amp; Endocrinology rankings list.</a> </p>
+<p>Pediatric Gastroenterology &amp; GI Surgery</p>
+<p>Fifty pediatric centers were ranked in treating digestive disorders 
+in children. Hospitals were evaluated based on hospital-submitted data 
+on liver transplant survival and treatment of inflammatory bowel issues,
+ patient volume and prevention of ICU infections, along with other data 
+and expert opinion from specialists and subspecialists in pediatric 
+gastroenterology and GI procedures. </p>
+<p>The top three ranked hospitals are:</p>
+<p>1. Children’s Hospital Colorado.</p>
+<p>2. Boston Children’s Hospital.</p>
+<p>3. Children’s Hospital of Philadelphia. </p>
+<p>See the full <a href="https://health.usnews.com/best-hospitals/pediatric-rankings/gastroenterology-and-gi-surgery">2020-21 Pediatric Gastroenterology &amp; GI Surgery rankings list</a>. </p>
+<p>Neonatology</p>
+<p>Fifty children’s hospitals were ranked in neonatology for care of 
+fragile newborns. Among the information used in the analysis were 
+hospital-submitted data on growth, patient volume, infection rates in 
+the NICU, availability of technology for procedures such as ECMO 
+(heart-lung bypass support), as well as nominations from neonatologists 
+who recommended the hospital for serious cases in the specialty. </p>
+<p>The top rated hospitals for neonatology are:</p>
+<p>1. Children’s National Hospital in Washington, D.C.</p>
+<p>2. Children’s Hospital Los Angeles.</p>
+<p>3. Lucile Packard Children’s Hospital Stanford.</p>
+<p>See the full <a href="https://health.usnews.com/best-hospitals/pediatric-rankings/neonatal-care">2020-21 Neonatology rankings list</a>. </p>
+<p>Pediatric Nephrology</p>
+<p>Children’s nephrology hospital centers were ranked for care of 
+serious kidney disorders in children. Survival following kidney 
+transplant, biopsy complications, management of dialysis and overall 
+infection prevention, along with other data collected from a detailed 
+U.S. News clinical survey of children’s hospitals, were used in the 
+evaluation, as well as expert opinion from specialists and 
+subspecialists in pediatric nephrology. </p>
+<p>The top ranked children’s hospitals in pediatric nephrology are:</p>
+<p>1. Boston Children’s Hospital.</p>
+<p>2. Texas Children’s Hospital in Houston.</p>
+<p>3. Cincinnati Children’s Hospital Medical Center.</p>
+<p>See the full <a href="https://health.usnews.com/best-hospitals/pediatric-rankings/nephrology">2020-21 Pediatric Nephrology rankings list</a>. </p>
+<p>Pediatric Neurology &amp; Neurosurgery</p>
+<p>Fifty hospitals were ranked for pediatric neurosurgery and treatment 
+of serious neurological problems such as epilepsy, head trauma and brain
+ tumors. Hospitals were evaluated on metrics such as survival following 
+complex surgery, surgical complications and infection prevention, along 
+with other data collected from a detailed U.S. News clinical survey of 
+children’s hospitals and expert opinion from specialists and 
+subspecialists in pediatric neurology who recommended the hospital for 
+serious cases in their specialty. </p>
+<p>The top ranked hospitals in pediatric neurology &amp; neurosurgery are:</p>
+<p>1. Boston Children’s Hospital.</p>
+<p>2. Texas Children’s Hospital in Houston.</p>
+<p>3. Children’s National Hospital in Washington D.C. </p>
+<p>See the full <a href="https://health.usnews.com/best-hospitals/pediatric-rankings/neurology-and-neurosurgery">2020-21 Pediatric Neurology &amp; Neurosurgery rankings</a> list. </p>
+<p>Pediatric Orthopedics</p>
+<p>Fifty-one children’s hospitals were ranked in pediatric orthopedics 
+for treatment of conditions such as scoliosis and spina bifida and 
+injuries such as complex fractures or other injuries. Hospitals were 
+evaluated on success with complex fractures, surgical complications and 
+infection prevention, along with other data collected from a detailed 
+U.S. News clinical survey of children’s orthopedic centers as well as 
+nominations from pediatric orthopedic specialists and subspecialists who
+ recommended the hospital for serious cases in their specialty. </p>
+<p>The top-ranked hospitals in pediatric orthopedics are:</p>
+<p>1. Children’s Hospital of Philadelphia.</p>
+<p>2. Boston Children’s Hospital.</p>
+<p>3. Cincinnati Children’s Hospital Medical Center. </p>
+<p>See the full <a href="https://health.usnews.com/best-hospitals/pediatric-rankings/orthopedics">2020-21 Pediatric Orthopedics rankings</a>. </p>
+<p>Pediatric Pulmonology &amp; Lung Surgery</p>
+<p>Pediatric centers that completed a detailed U.S. News clinical survey
+ of children’s hospitals were ranked for care of serious respiratory 
+problems in children. Hospitals were evaluated on successful management 
+of asthma, cystic fibrosis, muscular dystrophy and performance of lung 
+transplants, along with nominations from pediatric specialists and 
+subspecialists who recommended the hospital for serious cases in 
+pediatric pulmonology. </p>
+<p>The top-ranked hospitals in pediatric pulmonology and lung surgery are:</p>
+<p>1. Boston Children’s Hospital.</p>
+<p>2. Children’s Hospital of Philadelphia.</p>
+<p>3. Texas Children’s Hospital in Houston.</p>
+<p>See the full <a href="https://health.usnews.com/best-hospitals/pediatric-rankings/pulmonology">2020-21 Pediatric Pulmonology &amp; Lung Surgery rankings</a>. </p>
+<p>Pediatric Urology</p>
+<p>Fifty children’s medical centers were ranked for care of serious 
+urological conditions. Hospital ratings included data on infections from
+ urinary catheters, nurse staffing and patient volume, along with other 
+data collected from a detailed U.S. News clinical survey of children’s 
+hospitals, plus nominations from pediatric urologist specialists and 
+subspecialists who recommended the hospital for serious cases in 
+pediatric urology. </p>
+<p>The top-rated hospitals for pediatric urology are:</p>
+<p>1. Boston Children’s Hospital.</p>
+<p>2. Riley Hospital for Children at IU Health in Indianapolis.</p>
+<p>3. Children’s Hospital of Philadelphia. </p>
+<p>See the full <a href="https://health.usnews.com/best-hospitals/pediatric-rankings/urology">2020-21 Pediatric Urology rankings</a>. </p>
+<p class="rm-manual"> More from U.S. News</p>
+<p class="rm-manual"> <a href="https://health.usnews.com/conditions/slideshows/questions-doctors-wish-their-patients-would-ask">Questions Doctors Wish Their Patients Would Ask</a></p>
+<p class="rm-manual"> <a href="https://health.usnews.com/conditions/pain-management/slideshows/questions-to-ask-a-pain-management-doctor">Questions to Ask a Pain Management Doctor</a></p>
+<p class="rm-manual"> <a href="https://health.usnews.com/conditions/heart-disease/slideshows/best-exercises-for-heart-disease-patients">Best Exercises for Heart Disease Patients</a></p>
+<p class="rm-manual"><a href="https://health.usnews.com/health-care/best-hospitals/slideshows/best-childrens-hospitals-specialty-rankings">2020-21 Best Children’s Hospitals Specialty Rankings</a> originally appeared on <a href="https://www.usnews.com/">usnews.com</a></p>
+<h2 class="rm-manual">Related News</h2>
+<h3 class="rm-manual"> <a href="https://wtop.com/news/2020/07/judge-seeks-more-details-on-trumps-clemency-for-roger-stone/"> Judge seeks more details on Trump’s clemency for Roger Stone </a> </h3>
+<h3 class="rm-manual"> <a href="https://wtop.com/news/2020/07/storm-clouds-hang-over-trumps-attempted-campaign-reboot/"> Storm clouds hang over Trump’s attempted campaign reboot </a> </h3>
+<h3 class="rm-manual"> <a href="https://wtop.com/news/2020/07/trumps-reelection-campaign-gets-a-reboot-as-virus-persists/"> Storm clouds hang over Trump’s attempted campaign reboot </a> </h3>
+<h2 class="rm-manual">Recommended</h2>
+<h3 class="rm-manual"> <a href="https://wtop.com/maryland/2020/07/md-gov-larry-hogan-says-gop-needs-bigger-tent-after-trump/"> Maryland governor says GOP needs ‘bigger tent’ after Trump </a> </h3>
+<p class="rm-manual">New</p>
+<p class="rm-manual"><a href="https://wtop.com/loudoun-county/2020/07/loudoun-teachers-back-distance-learning-as-parents-make-choice/"> Loudoun Co. teachers back distance learning as parents make return-to-school choice </a> </p>
+<h3 class="rm-manual"> <a href="https://wtop.com/montgomery-county/2020/07/montgomery-county-back-to-school-plan-features-remote-learning-in-class-instruction/"> Montgomery Co. back-to-school plan features remote learning, in-class instruction </a> </h3>
+<h3 class="rm-manual">Related Categories: </h3>
+<p class="rm-manual"><a href="https://wtop.com/news/">Latest News</a> </p>
+<h2 class="rm-manual">More from WTOP</h2></article>
+</body></html>

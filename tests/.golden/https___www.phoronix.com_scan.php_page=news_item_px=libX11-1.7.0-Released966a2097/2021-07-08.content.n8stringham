@@ -1,0 +1,117 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> X11 Library Sees Lots Of Fixes With libX11 1.7 Release - Phoronix </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=phoronix_articles">Articles &amp; Reviews</a></li> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=phoronix_news">News Archive</a></li> <li class="rm-manual"><a href="https://www.phoronix.com/forums/">Forums</a></li> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=phoronix_premium">Premium</a></li> <li class="rm-manual"><span> Categories</span></li> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=category&amp;item=Computers">Computers</a></li> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=category&amp;item=Display+Drivers">Display Drivers</a></li> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=category&amp;item=Graphics+Cards">GPUs / Graphics Cards</a></li> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=category&amp;item=Linux+Gaming">Linux Gaming</a></li> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=category&amp;item=Memory">Memory</a></li> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=category&amp;item=Motherboards">Motherboards</a></li> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=category&amp;item=Processors">CPUs / Processors</a></li> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=category&amp;item=Software">Software</a></li> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=category&amp;item=Storage">Storage</a></li> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=category&amp;item=Operating+Systems">Operating Systems</a></li> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=category&amp;item=Peripherals">Peripherals</a></li> <li class="rm-manual">Close</li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=phoronix_articles">Articles &amp; Reviews</a> </li> <li class="rm-manual"> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=phoronix_news">News Archive</a> </li> <li class="rm-manual"> <a href="https://www.phoronix.com/forums/">Forums</a> </li> <li class="rm-manual"> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=phoronix_premium">Premium</a> </li> <li class="rm-manual"> <span> Categories</span> <p class="rm-manual"> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=category&amp;item=Computers">Computers</a> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=category&amp;item=Graphics+Cards">GPUs / Graphics Cards</a> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=category&amp;item=Linux+Gaming">Linux Gaming</a> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=category&amp;item=Memory">Memory</a> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=category&amp;item=Motherboards">Motherboards</a> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=category&amp;item=Processors">CPUs / Processors</a> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=category&amp;item=Software">Software</a> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=category&amp;item=Storage">Storage</a> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=category&amp;item=Operating+Systems">Operating Systems</a> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=category&amp;item=Peripherals">Peripherals</a> </p> </li> </ul>
+<article class="rm-manual"> We Rely On Your Support: Have you heard of <a href="https://www.phoronix.com/scan.php?page=phoronix_premium">Phoronix Premium</a>?
+ It's what complements advertisements on this site for our premium 
+ad-free service. For as little as $3 USD per month, you can help support
+ our site while the funds generated allow us to keep doing Linux 
+hardware reviews, performance benchmarking, maintain our community 
+forums, and much more. You can also consider <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=3778540">a tip via PayPal</a>. X11 Library Sees Lots Of Fixes With libX11 1.7 Release </article><p class="rm-manual">Written by <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=michaellarabel">Michael Larabel</a> in <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=news_topic&amp;q=X.Org">X.Org</a> on 21 November 2020 at 12:18 AM EST. <a href="file:///forums/node/1221013">22 Comments</a></p>
+<p> It's been seven years since the release of libX11 1.6.0 for this 
+central X11 library while on Friday was replaced by the libX11 1.7 
+series. The release is primarily made up of fixes but leading to the 
+version bump is a new API that allows for applications to recover from 
+I/O error conditions rather than being forced to exit. </p>
+<p>That API addition for libX11 1.7.0 is interesting with 
+XSetIOErrorExitHandler. But besides that are many fixes that accumulated
+ for quite a while. The fixes range from warning fixes to memory 
+allocation bugs being addressed to thread safety issues being resolved. 
+There are also new locales and other changes with libX11 1.7.0. </p>
+<p class="">Longtime X11 developer Keith Packard has been fairly out of 
+the X.Org scene recently besides his Valve contract work around VR, but 
+he is the one that put together this libX11 1.7 update with the 
+contributions of many. The list of changes for libX11 1.7 are outlined 
+on the <a href="https://lists.x.org/archives/xorg-announce/2020-November/003065.html">mailing list</a>. Meanwhile still no signs of <a href="https://www.phoronix.com/scan.php?page=search&amp;q=X.Org+Server+1.21">X.Org Server 1.21</a> moving closer but the back-ports continuing to the 1.20 series.</p>
+<p class="rm-manual"> <a href="file:///forums/node/1221013">22 Comments</a> </p>
+<p class="rm-manual"> Related News </p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=news_item&amp;px=X.Org-Server-21.1-21.0.99.1">X.Org Server 21.1 Development Snapshot Released</a></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=news_item&amp;px=XWayland-21.1.2-RC">XWayland 21.1.2 Nears With NVIDIA Hardware Acceleration</a></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=news_item&amp;px=Libinput-1.18-Released">Libinput 1.18 Released With Better Gesture Detection</a></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=news_item&amp;px=XWayland-Load-Correct-NV-GLX">X.Org Server Git Lands Latest Patches To Help NVIDIA XWayland</a></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=news_item&amp;px=X-Input-2.4-Touchpad-Gestures">X.Org Server Lands X Input 2.4 Touchpad Gestures</a></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=news_item&amp;px=XDC2021-Is-Virtual">XDC2021 Goes Virtual Again As Annual Wayland / Mesa / X.Org Summit</a></p>
+<p class="rm-manual"> About The Author </p>
+<p class="rm-manual">Michael Larabel is the principal author of 
+Phoronix.com and founded the site in 2004 with a focus on enriching the 
+Linux hardware experience. Michael has written more than 20,000 articles
+ covering the state of Linux hardware support, Linux performance, 
+graphics drivers, and other topics. Michael is also the lead developer 
+of the Phoronix Test Suite, Phoromatic, and OpenBenchmarking.org 
+automated benchmarking software. He can be followed via <a href="https://twitter.com/MichaelLarabel">Twitter</a> or contacted via <a href="http://www.michaellarabel.com/">MichaelLarabel.com</a>.</p>
+<p class="rm-manual"> Popular News This Week </p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=news_item&amp;px=Steam-On-Linux-Tap-Dance-0.9">Steam On Linux Still Tap Dancing Around 0.9% Marketshare</a></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=news_item&amp;px=Wine-6.12-Released">Wine 6.12 Released With More PE Conversion, New Themes</a></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=news_item&amp;px=Intel-DG1-Nearly-At-Desktop">Intel Discrete Graphics On Linux Nearing The Point Of A Working, Accelerated Desktop</a></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=news_item&amp;px=DragonFlyBSD-COVID">Following NetBSD, DragonFlyBSD Now Has "COVID"</a></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=news_item&amp;px=OpenZFS-2.1">OpenZFS 2.1 Released With dRAID, Compatibility Property, Better Performance</a></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=news_item&amp;px=Rust-Independence-Linux-Kernel">Latest Patches Sent Out For Adding Rust Support To The Linux Kernel</a></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=news_item&amp;px=Darktable-3.6-Released">Darktable 3.6 Released For This Free Alternative To Adobe Lightroom</a></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=news_item&amp;px=Linux-5.14-Core-Sched-Off">Linux Will Keep Core Scheduling Disabled By Default</a></p>
+<aside class="rm-manual"> Latest Linux News</aside><p class="rm-manual"> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=news_item&amp;px=VKD3D-Proton-2.4">VKD3D-Proton 2.4 Released With Better Performance, Sparse 3D Textures</a> </p>
+<p class="rm-manual"> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=news_item&amp;px=Libre-SOC-Test-ASIC-180nm">Libre-SOC Test ASIC Going To Fabrication, Using TSMC 180nm Process</a> </p>
+<p class="rm-manual"> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=news_item&amp;px=Intel-Graphics-Panel-2021">A Control Panel / UI For Intel's Linux Graphics Drivers Is Still Under Evaluation</a> </p>
+<p class="rm-manual"> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=news_item&amp;px=Linux-Mint-20.2">Linux Mint 20.2 Released With Cinnamon 5.0 Desktop</a> </p>
+<p class="rm-manual"> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=news_item&amp;px=Linux-5.13-rt1">Real-Time Patches Updated For The Linux 5.13 Kernel</a> </p>
+<p class="rm-manual"> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=news_item&amp;px=ACPI-CPPC-Freq-Invariance-5.14">ACPI CPPC CPUFreq Will Try Frequency Invariance Again For Linux 5.14</a> </p>
+<p class="rm-manual"> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=news_item&amp;px=F2FS-Linux-5.14">F2FS Brings Compression Improvements To Linux 5.14</a> </p>
+<p class="rm-manual"> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=news_item&amp;px=Intel-IGC-Mesa-2022">Intel's Mesa Drivers Using The IGC Compiler Delayed</a> </p>
+<p class="rm-manual"> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=news_item&amp;px=systemd-249">Systemd 249 Released With New Option For Simple Whole-File-System A/B Updates</a> </p>
+<p class="rm-manual"> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=news_item&amp;px=KSMBD-In-Kernel-SMB3-v5">Samsung Posts Newest "KSMBD" Linux Patches For In-Kernel SMB3 Server</a> </p>
+<p class="rm-manual"> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=news_item&amp;px=Mesa-21.2-Alternate-GBM">Mesa 21.2 Lands NVIDIA's Code For Handling Alternate GBM Backends</a> </p>
+<aside class="rm-manual"> Show Your Support, Go Premium </aside><p class="rm-manual"><a href="https://www.phoronix.com/scan.php?page=phoronix_premium">Phoronix Premium</a>
+ allows ad-free access to the site, multi-page articles on a single 
+page, and other features while supporting this site's continued 
+operations.</p>
+<aside class="rm-manual"> Latest Featured Articles</aside><p class="rm-manual"> <a href="file:///vr.php?view=30322">GCC 8 Through GCC 11 Stable Plus GCC 12 Compiler Benchmarks</a> </p>
+<p class="rm-manual"> <a href="file:///vr.php?view=30314">Linux Foundation Launches Open 3D Foundation, Amazon Lumberyard Spun As Open 3D Engine</a> </p>
+<p class="rm-manual"> <a href="file:///vr.php?view=30312">An Early Look At Windows 11 WSL2 Performance Against Ubuntu Linux</a> </p>
+<p class="rm-manual"> <a href="file:///vr.php?view=30311">Linux Leading Over Early Windows 11 Benchmarks For AMD Ryzen 9 5950X Performance</a> </p>
+<p class="rm-manual"> <a href="file:///vr.php?view=30304">NVIDIA 470 EOL Drivers For Kepler Still Obliterating Open-Source Alternative</a> </p>
+<aside class="rm-manual"> Support Phoronix </aside><p class="rm-manual">The
+ mission at Phoronix since 2004 has centered around enriching the Linux 
+hardware experience. In addition to supporting our site through 
+advertisements, you can help by <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=phoronix_premium">subscribing to Phoronix Premium</a>. You can also contribute to Phoronix through a <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=3778540">PayPal tip</a>.</p>
+<p class="rm-manual"> Phoronix Media </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://openbenchmarking.org/">OpenBenchmarking.org</a></li> </ul>
+<p class="rm-manual"> Phoronix Premium <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=phoronix_premium"></a></p><ul class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=phoronix_premium"> <li class="rm-manual">Support Phoronix</li> <li class="rm-manual">While Having Ad-Free Browsing,</li> <li class="rm-manual">Single-Page Article Viewing</li> </a></ul> <p class="rm-manual"></p>
+<p class="rm-manual"> Share </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://facebook.com/Phoronix">Facebook</a></li> <li class="rm-manual"><a href="https://twitter.com/Phoronix">Twitter</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmpsivs3j14.html?page=legal">Legal Disclaimer, Privacy Policy</a> | <a href="https://www.phoronix-media.com/?k=contact">Contact</a></p></li> <li class="rm-manual"><p class="rm-manual">Copyright © 2004 - 2021 by <a href="https://www.phoronix-media.com/">Phoronix Media</a>.</p></li> <li class="rm-manual"><p class="rm-manual">All trademarks used are properties of their respective owners. All rights reserved.</p></li> </ul></article>
+</body></html>

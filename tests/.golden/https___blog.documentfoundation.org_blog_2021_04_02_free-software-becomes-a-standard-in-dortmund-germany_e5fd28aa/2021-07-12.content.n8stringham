@@ -1,0 +1,166 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Free software becomes a standard in Dortmund, Germany - The Document Foundation Blog </p>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a rel="noopener" href="https://www.documentfoundation.org/">TDF Home</a> <ul class="rm-manual"> <li class="rm-manual"><a rel="noopener" href="https://www.documentfoundation.org/foundation/statutes/">TDF Statutes</a></li> </ul> </li> <li class="rm-manual">
+<a rel="noopener" href="https://www.libreoffice.org/">LibreOffice Home</a> <ul class="rm-manual"> <li class="rm-manual"><a rel="noopener" href="https://www.libreoffice.org/discover/libreoffice/">Discover LibreOffice</a></li> <li class="rm-manual"><a rel="noopener" href="https://devcentral.libreoffice.org/">LibreOffice DevCentral</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://blog.documentfoundation.org/tdf-docs/">Documents</a> <ul class="rm-manual"> <li class="rm-manual"><a rel="nofollow" href="https://wiki.documentfoundation.org/TDF/Ledgers">TDF Ledgers</a></li> <li class="rm-manual"><a href="https://www.documentfoundation.org/foundation/financials/">Annual Report</a></li> <li class="rm-manual"><a href="https://wiki.documentfoundation.org/Gallery_Flyers">LibreOffice Flyers</a></li> </ul> </li> <li class="rm-manual"><a href="https://blog.documentfoundation.org/pictures/">Pictures</a></li> <li class="rm-manual"><a href="https://blog.documentfoundation.org/tenders/">Tenders</a></li> <li class="rm-manual"><a href="https://www.documentfoundation.org/foundation/grant-request/">Grants</a></li> <li class="rm-manual">
+<a href="https://blog.documentfoundation.org/media-hub/">Media Hub</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://blog.documentfoundation.org/blog/category/press-releases/">Press Releases</a></li> <li class="rm-manual"><a href="https://blog.documentfoundation.org/media-hub/press-clippings/">Press Clippings</a></li> </ul> </li> <li class="rm-manual"><a href="https://www.libreoffice.org/about-us/merchandise/">Merchandise</a></li> <li class="rm-manual">
+<a rel="noopener" href="https://www.libreoffice.org/donate/">Donate</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://blog.documentfoundation.org/donations-questions-answers/">Donation help</a></li> </ul> </li> </ul>
+<p class="rm-manual"> 02 Apr 2021</p>
+<h1 class="rm-manual">Free software becomes a standard in Dortmund, Germany</h1>
+<p class="rm-manual"><span>Posted in <a href="https://blog.documentfoundation.org/blog/category/announcements/" rel="nofollow">Announcements</a>, <a href="https://blog.documentfoundation.org/blog/category/marketing/" rel="nofollow">Marketing</a>, <a href="https://blog.documentfoundation.org/blog/category/standards/" rel="nofollow">Standards</a> By <a rel="nofollow" href="https://blog.documentfoundation.org/blog/author/mikesaunders/">Mike Saunders</a> On April 2, 2021</span> </p>
+<p>LibreOffice is <a href="https://en.wikipedia.org/wiki/Free_and_open-source_software">free and open source software</a>,
+ which means that it’s much more than zero-cost. Anyone can study how it
+ works, modify it, and share those modifications with other users. (So 
+the “free” is <a href="https://fsfe.org/freesoftware/freesoftware.en.html">more about freedom than price</a>.)</p>
+<p>There are many other well-known free software projects, such as the GNU/Linux operating system, <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a> web browser, and <a href="https://www.thunderbird.net/en-US/">Thunderbird</a>
+ email client. Free software helps companies, organisations and 
+governments to reduce costs, improve reliability and free themselves 
+from dependence on a single vendor.</p>
+<p>Now, the Council of the German city of Dortmund has announced that 
+it’s moving to free and open source software, where possible. Here’s a 
+translation of the <a href="https://blog.do-foss.de/beitrag/freie-software-ist-von-jetzt-an-standard-in-dortmund/">original German blog post</a>:</p>
+<h3>Memorandum – Digitalisation 2020 to 2025</h3>
+<p>The Dortmund Council has declared digitalisation to be a political 
+leadership task in its Memorandum 2020 to 2025. In the course of this, 
+two central resolutions for free software were passed on February 11, 
+2021, for which the minutes were published on March 30:</p>
+<ul> <li>“Use of open source software where possible.”</li> <li>“Software developed by the administration or commissioned for development is made available to the general public.”</li> </ul>
+<h3>Open source wherever possible</h3>
+<p>With this resolution, city policy takes on the shaping of municipal 
+digital sovereignty and digital participation. The resolution means a 
+reversal of the burden of proof in favor of open source software – and 
+at the expense of proprietary software. In the future, the 
+administration will have to justify why open source software cannot be 
+used for every proprietary software application. Based on the report of 
+the Dortmund city administration on the investigation of the potentials 
+of free software and open standards, open source software is understood 
+in the sense of free software.</p>
+<h3>Public Money? Public Code!</h3>
+<p>So, the Council’s decision is in line with the concerns of the campaign <a href="https://publiccode.eu/">Public Money, Public Code</a>.
+ What is financed with public money should be available to the general 
+public for use. For software, this is achieved by means of a 
+corresponding free license. With this resolution, local politicians 
+ensure that the city of Dortmund not only draws from the free software 
+community, but also contributes to it. In this way, inter-communal 
+synergies can be achieved true to the motto develop together, use 
+individually.</p>
+<h3>Support for open standards</h3>
+<p>Through the Digital Dortmund Charter 2018-2030, among other things, 
+Open Standards were established as a requirement for further 
+digitalisation.</p>
+<h3>Politically unanimous in favor of Free Software</h3>
+<p>The resolution for free software is supported by a broad political 
+base. The motion was passed unanimously by the City Council of Dortmund.
+ The digitalisation motion was jointly introduced by the following 
+parliamentary groups: CDU, SPD, Die Grünen (Greens) and Die Linke (The 
+Left).</p>
+<h3>Conclusion</h3>
+<p>The city of Dortmund has ushered in the political turning point and 
+begun the exit from the proprietary era. Now it is important that the 
+city finds the appropriate means to implement this process practically, 
+by means of a proprietary exit strategy and to dissolve existing vendor 
+lock-in. For <a href="https://blog.do-foss.de/en/">Do-FOSS</a>, the 
+decision of the Memorandum 2020 to 2025 is the result of a functioning 
+democratic local discourse. The practical management work for Free 
+Software has the necessary political backing to succeed.</p>
+<h3 class="rm-manual">Related</h3>
+<h4 class="rm-manual">Comments</h4>
+<ol class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <span>By Rogge</span> </p> <p class="rm-manual">Ich will erst probieren und dann weitersehen.</p> <p class="rm-manual"> on 2021-04-02 </p> </li> <li class="rm-manual"> <p class="rm-manual"> <span>By Rogge</span> </p> <p class="rm-manual">Ich probiere gerade 7,0 aus.</p> <p class="rm-manual"> on 2021-04-02 </p> </li> <li class="rm-manual"> <p class="rm-manual"> <span>By Bernd Egert</span> </p> <p class="rm-manual">Hallo,</p><p class="rm-manual">
+ auf der Suche nach einer Möglichkeit, bei LibreOfficce im Bereich der 
+Dokumentation mizuarbeiten – manche Passagen in den Handbüchern sind 
+eher schlechte als rechte Übersetzungen aus dem Englischen -, stieß ich 
+eher zufällig auf diese Seite. Wollte nur anmerken, dass mir der Slogan 
+“Public Money? Public Code” aus dem Herzen spricht. So, jetzt suche ich 
+weiter in dem komplexen Arrangement von Sprachen, Organisationen, 
+Mailinglisten etc. nach einem Weg, mich bei Euch in meiner Freizeit (bin
+ inzwischen pensionierter ehemaliger Entwickler von Software für 
+Kommunikationsysteme) zu betätigen, denn ich nutze seit Jahren den 
+Writer als wesentliches Hilfsmittel). Mal schaun ob’s klappt.</p><p class="rm-manual"></p> <p class="rm-manual"> on 2021-04-02 </p> </li> <li class="rm-manual"> <p class="rm-manual"> <span>By Vinícius Rio</span> </p> <p class="rm-manual">That sounds good to me. Let this idea come to Brazil.</p> <p class="rm-manual"> on 2021-04-02 </p> </li> <li class="rm-manual"> <p class="rm-manual"> <span>By Anonymous</span> </p> <p class="rm-manual">Typo in conclusion: “dissolve existing vendor lock-is” *lock-in</p> <p class="rm-manual"> on 2021-04-10 </p> </li> <li class="rm-manual"> <p class="rm-manual"> <span>By Mike Saunders</span> </p> <p class="rm-manual">Fixed – thanks!</p> <p class="rm-manual"> on 2021-04-10 </p> </li> </ol>
+<ul class="rm-manual"> <li class="rm-manual">
+<h3 class="rm-manual">What is LibreOffice?</h3>
+<p class="rm-manual">LibreOffice is a free and open source office suite,
+ based on OpenOffice, with extra features, improved Microsoft Office 
+compatibility, and regular updates.</p>
+</li>
+<li class="rm-manual">
+<h3 class="rm-manual"> Subscribe to Blog Posts </h3> <p class="rm-manual"> </p><p class="rm-manual">To
+ receive an email when blog posts are published, you must confirm that 
+you have carefully read and agreed to The Document Foundation's Privacy 
+Policy</p> <p class="rm-manual">Name</p><p class="rm-manual">Email*</p> <p class="rm-manual"> I accept the <a href="https://www.documentfoundation.org/privacy">Privacy Policy</a></p><p class="rm-manual">I confirm to have carefully read and agreed to The Document Foundation's <a href="">Privacy Policy</a>.</p> <p class="rm-manual"></p> </li>
+<li class="rm-manual">
+<h3 class="rm-manual">Search</h3> </li>
+<li class="rm-manual"><h3 class="rm-manual">CII Badge</h3></li>
+<li class="rm-manual">
+<h3 class="rm-manual"> <a href="https://planet.documentfoundation.org/">TDF Planet</a>
+</h3>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://bayramcicek.com.tr/libreoffice-dev/2021/07/11/week-05-gsoc.html">Week #5 - GSoC Weekly Report - 100 Paper Cuts</a></li>
+<li class="rm-manual"><a href="https://design.blog.documentfoundation.org/2021/07/09/help-us-to-improve-libreoffice-calc-by-completing-our-survey/">Help us to improve LibreOffice Calc by completing our survey</a></li>
+<li class="rm-manual"><a href="https://www.collaboraoffice.com/company-news/gsoc-21-projects-mentored-by-collabora-for-libreoffice/">GSoC 21 Projects mentored by Collabora for LibreOffice</a></li>
+<li class="rm-manual"><a href="https://blog.documentfoundation.org/blog/2021/07/07/libreoffice-project-monthly-recap-june-2021/">LibreOffice project monthly recap: June 2021</a></li>
+<li class="rm-manual"><a href="https://qa.blog.documentfoundation.org/2021/07/06/qa-dev-report-june-2021/">QA/Dev Report: June 2021</a></li>
+<li class="rm-manual"><a href="https://libreofficemaster.blogspot.com/2021/07/libreoffice-80-ui-mockup.html">LibreOffice 8.0 UI Mockup</a></li>
+<li class="rm-manual"><a href="http://caolanm.blogspot.com/2021/07/gtk4-adapting-to-toolbar-changes.html">GTK4: Adapting to Toolbar changes</a></li>
+<li class="rm-manual"><a href="https://blog.documentfoundation.org/blog/2021/07/06/online-meeting-of-the-spanish-speaking-libreoffice-community/">Online meeting of the Spanish-speaking LibreOffice community</a></li>
+<li class="rm-manual"><a href="https://blog.documentfoundation.org/blog/2021/07/05/community-member-monday-tim-brennan-jr/">Community Member Monday: Tim Brennan Jr.</a></li>
+<li class="rm-manual"><a href="https://bayramcicek.com.tr/libreoffice-dev/2021/07/05/week-03-04-gsoc.html">Week #3 - #4 - GSoC Weekly Report - 100 Paper Cuts</a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<h3 class="rm-manual">Meta</h3> <ul class="rm-manual"> <li class="rm-manual"><a rel="nofollow" href="https://blog.documentfoundation.org/wp-login.php">Log in</a></li> <li class="rm-manual"><a href="https://blog.documentfoundation.org/feed/">Entries feed</a></li> <li class="rm-manual"><a href="https://blog.documentfoundation.org/comments/feed/">Comments feed</a></li> <li class="rm-manual"><a href="https://en-gb.wordpress.org/">WordPress.org</a></li> </ul> </li> </ul>
+<h3 class="rm-manual">Copyright</h3>
+<p class="rm-manual">Unless otherwise specified, all text and images on this website are licensed under the <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-Share Alike 3.0 License</a>.</p>
+<p class="rm-manual"> This does not include the source code of LibreOffice, which is licensed under the Mozilla Public License (<a href="http://www.libreoffice.org/download/license/">MPLv2</a>).</p>
+<h3 class="rm-manual">Trademarks</h3>
+<p class="rm-manual">LibreOffice and The Document Foundation are 
+registered trademarks of their corresponding registered owners or are in
+ actual use as trademarks in one or more countries. Their respective 
+logos and icons are also subject to international copyright laws. Use 
+thereof is explained in our <a href="https://wiki.documentfoundation.org/TDF/Policies/Trademark_Policy">Trademark Policy</a>.</p>
+<h3 class="rm-manual">Legal Information</h3>
+<p class="rm-manual"><a href="http://www.documentfoundation.org/imprint">Impressum (Legal Info)</a></p>
+<p class="rm-manual"> <a href="https://www.libreoffice.org/privacy/">Privacy Policy</a></p>
+<p class="rm-manual"> <a href="https://blog.documentfoundation.org/privacy-tools/">Privacy Tools</a></p>
+<h3 class="rm-manual">Credits</h3>
+<p class="rm-manual">Theme: Ribbon by <a href="http://mythemeshop.com/">MyThemeShop</a>.</p>
+<p class="rm-manual"> <span><a href="https://blog.documentfoundation.org/">The Document Foundation Blog</a> Copyright © 2021.</span> </p>
+<p class="rm-manual">Theme by <a href="http://mythemeshop.com/">MyThemeShop</a>. <a href="#top">Back to Top ↑</a></p></article>
+</body></html>

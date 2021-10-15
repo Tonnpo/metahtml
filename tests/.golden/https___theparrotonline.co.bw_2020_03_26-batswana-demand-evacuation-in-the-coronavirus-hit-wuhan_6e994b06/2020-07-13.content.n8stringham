@@ -1,0 +1,117 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> 26 Batswana demand evacuation in the coronavirus hit Wuhan | The Parrot Online </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://theparrotonline.co.bw/">Home</a></li> <li class="rm-manual"><a href="https://theparrotonline.co.bw/category/politics/">Politics</a></li> <li class="rm-manual"><a href="https://theparrotonline.co.bw/category/business/">Business</a></li> <li class="rm-manual"><a href="https://theparrotonline.co.bw/category/opinions/">Opinions</a></li> <li class="rm-manual"><a href="https://theparrotonline.co.bw/category/sport/">Sport</a></li> <li class="rm-manual"><a href="https://theparrotonline.co.bw/category/lifestyle/">Lifestyle</a></li> <li class="rm-manual"><a href="https://theparrotonline.co.bw/download/">Download</a></li> </ul>
+<p class="rm-manual"> <span>Search</span> </p>
+<ul class="rm-manual"><li class="rm-manual"><a href="#login-form">Sign in / Join</a></li></ul>
+<p class="rm-manual">Sign in</p>
+<p class="rm-manual">Welcome! Log into your account</p>
+<p class="rm-manual">your username</p>
+<p class="rm-manual">your password</p>
+<p class="rm-manual"><a href="#">Forgot your password? Get help</a></p>
+<p class="rm-manual">Password recovery</p>
+<p class="rm-manual">Recover your password</p>
+<p class="rm-manual">your email</p>
+<p class="rm-manual">A password will be e-mailed to you.</p>
+<p class="rm-manual"> <a href="https://theparrotonline.co.bw/"> <span>The Parrot Online</span> </a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://theparrotonline.co.bw/">Home</a></li> <li class="rm-manual">
+<a href="https://theparrotonline.co.bw/category/politics/">Politics</a> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://theparrotonline.co.bw/2020/06/factions-surface-in-the-mmadinare-constituency/" rel="bookmark">Factions surface in the Mmadinare Constituency</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://theparrotonline.co.bw/2020/06/motion-of-no-confidence-looms/" rel="bookmark">Motion of no confidence looms</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://theparrotonline.co.bw/2020/03/who-will-lead-bdps-nyec-mochotlhi-vs-gomotsegang/" rel="bookmark">Who will lead BDP’s NYEC: Mochotlhi vs Gomotsegang</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://theparrotonline.co.bw/2020/01/iec-blocks-petitioners-request/" rel="bookmark">IEC blocks Petitioner’s request</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://theparrotonline.co.bw/2019/12/boko-lost-because-bcp-didnt-want-him-healy/" rel="bookmark">Boko lost because BCP didn’t want him-Healy</a></h3> <p class="rm-manual"></p> </li> </ul> </li> <li class="rm-manual">
+<a href="https://theparrotonline.co.bw/category/business/">Business</a> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://theparrotonline.co.bw/2020/06/covid-19-motlhala-app-offers-alternatives/" rel="bookmark">COVID-19: Motlhala app offers alternatives</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://theparrotonline.co.bw/2020/04/lucara-pledges-p6-5-million-towards-the-covid-19-pandemic/" rel="bookmark">LUCARA pledges P6.5 million towards the Covid-19 pandemic</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://theparrotonline.co.bw/2020/04/fnbb-provides-relief-to-customers-and-smes-impacted-by-covid-19/" rel="bookmark">FNBB provides relief to customers and SMEs impacted by Covid-19</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://theparrotonline.co.bw/2020/03/from-operating-in-bhc-house-to-owning-college-premises/" rel="bookmark">From operating in BHC House to owning College premises</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://theparrotonline.co.bw/2020/03/batswana-can-now-own-diamond-mine/" rel="bookmark">Batswana can now own diamond mine</a></h3> <p class="rm-manual"></p> </li> </ul> </li> <li class="rm-manual">
+<a href="https://theparrotonline.co.bw/category/opinions/">Opinions</a> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://theparrotonline.co.bw/2020/02/open-letter-to-philda-kereng-please-take-care-of-our-tourists/" rel="bookmark">Open letter to Philda Kereng- Please take care of our tourists</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://theparrotonline.co.bw/2020/02/open-letter-to-fnbb/" rel="bookmark">Open letter to FNBB</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://theparrotonline.co.bw/2020/01/my-first-encounter-with-prophet-shepherd-bushiri/" rel="bookmark">My first encounter with Prophet Shepherd Bushiri</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://theparrotonline.co.bw/2020/01/government-plans-to-fuel-its-fleet-in-private-filling-stations-who-will-benefit/" rel="bookmark">Government plans to fuel its fleet in private filling Stations-who will benefit?</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://theparrotonline.co.bw/2020/01/spicing-it-up-we-women-want-to-take-charge-in-the-bedroom-too-pegging/" rel="bookmark">Spicing it up: we women want to take charge in the bedroom too-Pegging</a></h3> <p class="rm-manual"></p> </li> </ul> </li> <li class="rm-manual">
+<a href="https://theparrotonline.co.bw/category/sport/">Sport</a> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://theparrotonline.co.bw/2020/06/siku-calls-for-sport-commercialization/" rel="bookmark">Siku calls for sport commercialization</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://theparrotonline.co.bw/2020/03/troubled-bona-nurses-debts/" rel="bookmark">Troubled BONA nurses debts</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://theparrotonline.co.bw/2020/03/debswana-donates-p200-000-into-tokyo-2020-games-bnoc-wants-more/" rel="bookmark">Debswana donates P200 000 into Tokyo 2020 Games, BNOC wants more</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://theparrotonline.co.bw/2020/03/bfa-to-punish-acts-of-violence-between-supporters/" rel="bookmark">BFA to punish acts of violence between Supporters</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://theparrotonline.co.bw/2020/02/mascom-donates-sports-equipment-to-supang-memorial-school/" rel="bookmark">Mascom donates sports equipment to Supang Memorial School</a></h3> <p class="rm-manual"></p> </li> </ul> </li> <li class="rm-manual">
+<a href="https://theparrotonline.co.bw/category/lifestyle/">Lifestyle</a> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://theparrotonline.co.bw/2020/06/geoffrey-paints-it-the-african-way-with-a-lense/" rel="bookmark">Geoffrey paints it the African way with a lense</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://theparrotonline.co.bw/2020/03/sored-launches-debut-album/" rel="bookmark">SoRed launches debut album</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://theparrotonline.co.bw/2020/03/tickets-sales-have-dropped-for-soul-fill-up-with-franco/" rel="bookmark">Tickets sales have dropped for Soul fill up with Franco</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://theparrotonline.co.bw/2020/02/an-adventure-in-the-neglected-kgale-hill/" rel="bookmark">An adventure in the neglected Kgale hill</a></h3> <p class="rm-manual"></p> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://theparrotonline.co.bw/2020/02/i-have-good-relationship-with-dj-fresh-it-was-just-minor-misunderstanding-easy-b/" rel="bookmark">“I have good relationship with DJ Fresh it was just minor misunderstanding” Easy B</a></h3> <p class="rm-manual"></p> </li> </ul> </li> <li class="rm-manual"><a href="https://theparrotonline.co.bw/download/">Download</a></li> </ul>
+<p class="rm-manual"><span><a href="https://theparrotonline.co.bw/">Home</a></span> <span><a href="https://theparrotonline.co.bw/category/news/">News</a></span> <span>26 Batswana demand evacuation in the coronavirus hit Wuhan</span></p>
+<ul class="rm-manual"><li class="rm-manual"><a href="https://theparrotonline.co.bw/category/news/">News</a></li></ul>
+<h1 class="rm-manual">26 Batswana demand evacuation in the coronavirus hit Wuhan</h1>
+<p class="rm-manual"> <span>March 2, 2020</span> </p>
+<p class="rm-manual"><span>218</span></p>
+<p>Batswana in the Corona Virus hit city of Wuhan are demanding that 
+they be evacuated from the city. In a press release shared with this 
+publication, there are 21 Batswana students, 4 professionals and a 6 
+year old who are currently fighting for their sanity in the city.</p>
+<p>The release opines that from a release noting support for all 
+Batswana citizens from the Minister of International Affairs only 21 
+citizens have received an allowance of P1600. It is said that the city 
+lock down has been going for 40 Days and there are possibilities of 
+continued lock down.</p>
+<p>“We plead with our government to follow the steps of other African 
+leaders that have evacuated their people. The government through the 
+Foreign Ministry may perhaps collaborate with South Africa which is in 
+advanced stages of evacuated 130 of its citizens in Wuhan. Through such 
+an agreement our health and military departments could liase with South 
+Africa authorities to join their evacuation, ” reads a part of letter 
+released by the interim citizens committee in Wuhan.</p>
+<p>The Botswana citizens in Wuhan are saying that they believe that the 
+coalition with neighboring South Africa could help in reducing the cost 
+of evacuation. The citizens are saying that the inability of the 
+government to unable to offer the said provisions could lead to mental 
+instability and that they have no social service number to reach for 
+contact.</p>
+<p class="rm-manual"><span>Previous article</span><a href="https://theparrotonline.co.bw/2020/03/stop-insuring-government-vehicles-with-drivers-keorapetse/">“Stop Insuring government vehicles with drivers” Keorapetse</a></p>
+<p class="rm-manual"><span>Next article</span><a href="https://theparrotonline.co.bw/2020/03/bfa-to-punish-acts-of-violence-between-supporters/">BFA to punish acts of violence between Supporters</a></p>
+<p class="rm-manual"><span><a href="https://theparrotonline.co.bw/author/koketso/">koketso</a></span></p>
+<h4 class="rm-manual">
+<a href="#">RELATED ARTICLES</a><a href="#">MORE FROM AUTHOR</a>
+</h4>
+<h3 class="rm-manual"><a href="https://theparrotonline.co.bw/2020/06/factions-surface-in-the-mmadinare-constituency/" rel="bookmark">Factions surface in the Mmadinare Constituency</a></h3>
+<h3 class="rm-manual"><a href="https://theparrotonline.co.bw/2020/06/daniel-kenosi-likely-to-face-jail-time/" rel="bookmark">Daniel Kenosi likely to face Jail time</a></h3>
+<h3 class="rm-manual"><a href="https://theparrotonline.co.bw/2020/06/government-re-employ-staff-from-the-2011-national-service-strike/" rel="bookmark">Government re-employ staff from the 2011 National Service Strike</a></h3>
+<p class="rm-manual">We tackle human interest stories that everyone has 
+their ears opened for. We go where no one wants to set their foot 
+because we are the watchdog of BW.</p>
+<p class="rm-manual">Contact us: <a href="mailto:parrotonline@gmail.com">parrotonline@gmail.com</a></p>
+<h4 class="rm-manual"><span>EVEN MORE NEWS</span></h4>
+<h3 class="rm-manual"><a href="https://theparrotonline.co.bw/2020/06/factions-surface-in-the-mmadinare-constituency/" rel="bookmark">Factions surface in the Mmadinare Constituency</a></h3>
+<p class="rm-manual"> <a href="https://theparrotonline.co.bw/category/news/">News</a> <span>June 16, 2020</span> </p>
+<h3 class="rm-manual"><a href="https://theparrotonline.co.bw/2020/06/daniel-kenosi-likely-to-face-jail-time/" rel="bookmark">Daniel Kenosi likely to face Jail time</a></h3>
+<p class="rm-manual"> <a href="https://theparrotonline.co.bw/category/news/">News</a> <span>June 16, 2020</span> </p>
+<h3 class="rm-manual"><a href="https://theparrotonline.co.bw/2020/06/government-re-employ-staff-from-the-2011-national-service-strike/" rel="bookmark">Government re-employ staff from the 2011 National Service Strike</a></h3>
+<p class="rm-manual"> <a href="https://theparrotonline.co.bw/category/news/">News</a> <span>June 16, 2020</span> </p>
+<h4 class="rm-manual"><span>POPULAR CATEGORY</span></h4>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://theparrotonline.co.bw/category/news/">News<span>193</span></a></li>
+<li class="rm-manual"><a href="https://theparrotonline.co.bw/category/politics/">Politics<span>53</span></a></li>
+<li class="rm-manual"><a href="https://theparrotonline.co.bw/category/lifestyle/">Lifestyle<span>24</span></a></li>
+<li class="rm-manual"><a href="https://theparrotonline.co.bw/category/sport/">Sport<span>21</span></a></li>
+<li class="rm-manual"><a href="https://theparrotonline.co.bw/category/opinions/">Opinions<span>16</span></a></li>
+<li class="rm-manual"><a href="https://theparrotonline.co.bw/category/business/">Business<span>13</span></a></li>
+</ul>
+<p class="rm-manual"> © The Parrot Online </p></article>
+</body></html>

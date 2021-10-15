@@ -1,0 +1,142 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">im </p>
+<p class="rm-manual"> Kim Jong-un | Important7 </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="http://www.important7.com/category/latest-news/">Unknown Facts</a></li> <li class="rm-manual"><a href="http://www.important7.com/category/famous-women/">Famous Women</a></li> <li class="rm-manual">
+<a href="http://www.important7.com/category/famous-person/">Famous Person</a> <ul class="rm-manual"> <li class="rm-manual"><a href="http://www.important7.com/category/famous-person/astronaut/">Astronaut</a></li> <li class="rm-manual"><a href="http://www.important7.com/category/famous-person/nobel-prize-winner/">Nobel Prize Winner</a></li> <li class="rm-manual"><a href="http://www.important7.com/category/famous-person/philopher/">Philopher</a></li> <li class="rm-manual"><a href="http://www.important7.com/category/famous-person/poet-writer/">Poet &amp; Writer</a></li> <li class="rm-manual"><a href="http://www.important7.com/category/famous-person/singer/">Singer</a></li> <li class="rm-manual"><a href="http://www.important7.com/category/famous-person/tennis-player/">Tennis Player</a></li> <li class="rm-manual"><a href="http://www.important7.com/category/famous-person/footballer/">Footballer</a></li> <li class="rm-manual"><a href="http://www.important7.com/category/famous-person/mathematician/">Mathematician</a></li> <li class="rm-manual"><a href="http://www.important7.com/category/famous-person/scientist/">Scientist</a></li> <li class="rm-manual"><a href="http://www.important7.com/category/billionaires/">Billionaires</a></li> </ul> </li> <li class="rm-manual">
+<a href="http://www.important7.com/category/president/">President</a> <ul class="rm-manual"> <li class="rm-manual"><a href="http://www.important7.com/category/president/usa/">USA</a></li> <li class="rm-manual"><a href="http://www.important7.com/category/president/russia/">Russia</a></li> <li class="rm-manual"><a href="http://www.important7.com/category/president/south-africa/">South Africa</a></li> <li class="rm-manual"><a href="http://www.important7.com/category/president/north-korea/">North Korea</a></li> <li class="rm-manual"><a href="http://www.important7.com/category/president/france/">France</a></li> <li class="rm-manual"><a href="http://www.important7.com/category/president/india/">India</a></li> </ul> </li> <li class="rm-manual">
+<a href="http://www.important7.com/category/prime-minister/">Prime Minister</a> <ul class="rm-manual"> <li class="rm-manual"><a href="http://www.important7.com/category/prime-minister/india-prime-minister/">India</a></li> <li class="rm-manual"><a href="http://www.important7.com/category/prime-minister/united-kingdom/">United Kingdom</a></li> </ul> </li> </ul>
+<p class="rm-manual">Select Page</p>
+<h1 class="rm-manual">Kim Jong-un</h1>
+<p class="rm-manual"><span>Jun 12, 2018</span> | <a href="http://www.important7.com/category/famous-person/" rel="tag">Famous Person</a>, <a href="http://www.important7.com/category/president/north-korea/" rel="tag">North Korea</a>, <a href="http://www.important7.com/category/president/" rel="tag">President</a> | <a href="http://www.important7.com/president/kim-jong-un/#comments">0 </a> | </p>
+<p>Took Office as 3rd Supreme Leader of North Korea : 17th December, 2011</p>
+<p>Born : 8th January 1984 in <span>Pyongyang, North Korea</span></p>
+<p>Father : Kim Jong-il</p>
+<p>Mother : Ko Yong-hui</p>
+<p>Wife : Ri Sol-ju</p>
+<p>Children : Kim Ju-ae</p>
+<p>Alma mater : Kim Il-sung University and Kim Il-sung Military University</p>
+<h2>7 Amazing Facts About North Korea’s Leader Kim Jong-un :</h2>
+<p>Kim Jong-un succeeded his father as the supreme leader of North Korea
+ after the death of his father Kim Jong-il. He has since then become a 
+thorn in the flesh of many world leaders due to his unstoppable aim to 
+make North Korea a nuclear power. According to Forbes magazine Kim is 
+the 46th most powerful person in the world in 2013.</p>
+<h3>1. Youngest Child of His Father</h3>
+<p>Kim Jong-un was the youngest son of his father, nonetheless succeeded
+ him after his death. According to sources, Kim’s real age and date of 
+birth is a mystery. He is considered to be born in either 1983 or 1984.</p>
+<h3>2. He Used Fake Name to Attend School</h3>
+<p>To cover his identity, Kim used a fake name to attend a private 
+school in Switzerland. he was introduced as Pak Un to his classmates. He
+ performed poorly academically and was more interested in sporting 
+activities and music. He loved to play basketball.</p>
+<h3>3. He Underwent a Plastic Surgery</h3>
+<p>Kim has done a plastic surgery not to improve his looks but to look 
+like his grandfather, Kim Il-sung. His aim was to be seen as a father 
+figure of the nation.</p>
+<h3>4. He Has Eliminated Several Family Members</h3>
+<p>To prevent any form of rivalry, Kim has succeeded in silencing some 
+of his family members. The first to suffer such a fate was his uncle 
+Jang Sung-taek who was charged with treason and assassinated in 2013. 
+Two unknown women also assassinated his half-brother Jong-nam at the 
+Kuala Lumpur International Airport.</p>
+<h3>5. Came to Power in 2011</h3>
+<p>Kim was publicly declared as the Supreme Commander of the Korean 
+People’s Army on 24th December 2011 after the death of his father. Six 
+days later, he was officially appointed as the country’s leader.</p>
+<h3>6. His Unique Hairstyle</h3>
+<p>Kim has a unique hairstyle known as “ambitious.” Apart from him, no 
+North Korean is supposed to have the same haircut. It is rumoured that 
+men and women in the country have only 15 hairstyles to choose from.</p>
+<h3>7. The Marshal Kim</h3>
+<p>In 2012, Kim was promoted to the rank of Marshal in the army. He has 
+since then been referred to as the “Marshal Kim Jong-un”, by the state 
+media.</p>
+<p class="rm-manual">Rate:</p>
+<p class="rm-manual"> <a href="http://www.important7.com/famous-person/van-t-hoff/" rel="prev"><span>Previous</span><span>Jacobus H. van ‘t Hoff – First Nobel Prize Winner in Chemistry</span></a> </p>
+<p class="rm-manual"> <a href="http://www.important7.com/famous-person/sully-prudhomme/" rel="next"><span>Next</span><span>Sully Prudhomme – First Nobel Prize Winner in Literature</span></a> </p>
+<h3 class="rm-manual">Related Posts</h3>
+<h4 class="rm-manual"><a href="http://www.important7.com/president/benjamin-harrison/">Benjamin Harrison – 9th US President</a></h4>
+<p class="rm-manual"><span>August 25, 2017</span></p>
+<h4 class="rm-manual"><a href="http://www.important7.com/famous-person/jack-ma/">Jack Ma’s Life and Business</a></h4>
+<p class="rm-manual"><span>September 20, 2018</span></p>
+<h4 class="rm-manual"><a href="http://www.important7.com/famous-person/bobby-murphy/">Bobby Murphy</a></h4>
+<p class="rm-manual"><span>December 16, 2017</span></p>
+<h4 class="rm-manual"><a href="http://www.important7.com/famous-person/mark-zuckerberg/">Mark Zuckerberg</a></h4>
+<p class="rm-manual"><span>October 10, 2017</span></p>
+<p class="rm-manual"> <span>Search for:</span> </p>
+<h4 class="rm-manual">Recent Posts</h4>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <a href="http://www.important7.com/latest-news/7-exciting-facts-about-padma-bhushan-awards/">7 Exciting facts about Padma Bhushan Awards</a> </p><p class="rm-manual"> <span>Apr 26, 2019</span> | <a href="http://www.important7.com/category/latest-news/" rel="tag">Latest News</a> </p> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="http://www.important7.com/latest-news/7-beautiful-places-to-find-a-piece-of-mind/">7 Beautiful places to find a piece of mind</a> </p><p class="rm-manual"> <span>Apr 26, 2019</span> | <a href="http://www.important7.com/category/latest-news/" rel="tag">Latest News</a> </p> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="http://www.important7.com/famous-women/anurima-sinha-first-female-amputee-to-climb-mount-everest/">Anurima Sinha – First Female Amputee to climb Mount Everest</a> </p><p class="rm-manual"> <span>Mar 11, 2019</span> | <a href="http://www.important7.com/category/famous-women/" rel="tag">Famous Women</a> </p> <p class="rm-manual"></p> </li> </ul>
+<h4 class="rm-manual">Follow Us</h4>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.facebook.com/Important7Information/"> <h3 class="rm-manual">Facebook</h3> </a> </li> </ul>
+<h4 class="rm-manual">Archives</h4>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://www.important7.com/2019/04/">April 2019</a></li> <li class="rm-manual"><a href="http://www.important7.com/2019/03/">March 2019</a></li> <li class="rm-manual"><a href="http://www.important7.com/2019/02/">February 2019</a></li> <li class="rm-manual"><a href="http://www.important7.com/2019/01/">January 2019</a></li> <li class="rm-manual"><a href="http://www.important7.com/2018/12/">December 2018</a></li> <li class="rm-manual"><a href="http://www.important7.com/2018/11/">November 2018</a></li> <li class="rm-manual"><a href="http://www.important7.com/2018/10/">October 2018</a></li> <li class="rm-manual"><a href="http://www.important7.com/2018/09/">September 2018</a></li> <li class="rm-manual"><a href="http://www.important7.com/2018/08/">August 2018</a></li> <li class="rm-manual"><a href="http://www.important7.com/2018/07/">July 2018</a></li> <li class="rm-manual"><a href="http://www.important7.com/2018/06/">June 2018</a></li> <li class="rm-manual"><a href="http://www.important7.com/2018/05/">May 2018</a></li> <li class="rm-manual"><a href="http://www.important7.com/2018/03/">March 2018</a></li> <li class="rm-manual"><a href="http://www.important7.com/2018/02/">February 2018</a></li> <li class="rm-manual"><a href="http://www.important7.com/2018/01/">January 2018</a></li> <li class="rm-manual"><a href="http://www.important7.com/2017/12/">December 2017</a></li> <li class="rm-manual"><a href="http://www.important7.com/2017/11/">November 2017</a></li> <li class="rm-manual"><a href="http://www.important7.com/2017/10/">October 2017</a></li> <li class="rm-manual"><a href="http://www.important7.com/2017/09/">September 2017</a></li> <li class="rm-manual"><a href="http://www.important7.com/2017/08/">August 2017</a></li> <li class="rm-manual"><a href="http://www.important7.com/2017/07/">July 2017</a></li> </ul>
+<h4 class="rm-manual">Blog Authors</h4>
+<p class="rm-manual"><a href="http://www.important7.com/author/daria/"><span>Daria Moskovkina</span></a></p>
+<p class="rm-manual"><a href="mailto:dashulyamsk@gmail.com">dashulyamsk@gmail.com</a></p>
+<p class="rm-manual">Daria Moskovkina is a young e-commerce writer from 
+Russia. She studied philology and did her Bachelors in Pushkin 
+Institute. Now she’s working with brands and small e-commerce 
+businesses, IT-companies, and agencies.</p>
+<p class="rm-manual"><a href="http://www.important7.com/author/irene/"><span>Irene Wanyama</span></a></p>
+<p class="rm-manual"><a href="mailto:khasoawamyama@gmail.com">khasoawamyama@gmail.com</a></p>
+<p class="rm-manual">I am a freelance writer/transcriptionist for hire. 
+Sample my writing at 
+https://medium.com/@khasoawanyama/4-ways-to-handle-failure-successfully-ec5c46951a2c.
+ Contact me at, khasoawamyama@gmail.com</p>
+<p class="rm-manual"><a href="http://www.important7.com/author/maham/"><span>Maham Arsalan</span></a></p>
+<p class="rm-manual"><a href="mailto:mahamkhun@gmail.com">mahamkhun@gmail.com</a></p>
+<p class="rm-manual">Maham Arsalan is a freelance writer, now working as
+ a creative writer in Abtach.Ltd. She has been writing for about four 
+years now on various niches such as real estate, entertainment, 
+travelling, health, technology, SEO content and much more. She did her 
+Bachelors in Metallurgical Engineering while continuing writing on the 
+sides.</p>
+<p class="rm-manual"><a href="http://www.important7.com/author/stephen/"><span>Stephen Amponsah Mensah</span></a></p>
+<p class="rm-manual"><a href="mailto:stephenmensahamponsah2002@gmail.com">stephenmensahamponsah2002@gmail.com</a></p>
+<p class="rm-manual">Stephen Amponsah Mensah is a Ghanaian journalist 
+and freelance writer. He writes on health, lifestyle, business, 
+politics, and fashion among other subjects. Stephen has been practicing 
+journalism since 2011, with the Ghana Broadcasting Corporation and being
+ writing ever since. He believes in the power of writing and that is my 
+way of contributing to a knowledge based society. Email: 
+llvrs123@aol.com</p>
+<p class="rm-manual">Copyright © 2020 <a href="http://www.important7.com/">Important7.com</a> - Information you need to know</p></article>
+</body></html>

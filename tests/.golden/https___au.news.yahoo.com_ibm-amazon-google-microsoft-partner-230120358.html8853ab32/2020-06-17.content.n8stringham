@@ -1,0 +1,153 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">IBM, Amazon, Google and Microsoft partner with White House to provide compute resources for COVID-19 research</p>
+<p class="rm-manual"><a href="https://au.yahoo.com/news">Yahoo</a></p>
+<p class="rm-manual">Search</p>
+<ul class="rm-manual"><li class="rm-manual"><a href="https://mail.yahoo.com/?.intl=au&amp;.lang=en-AU&amp;.partner=none&amp;.src=news">Mail</a></li></ul>
+<p class="rm-manual"><a href="https://www.yahoo.com/news/"> News</a></p>
+<p class="rm-manual"><span>Follow us</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://au.news.yahoo.com/latest"> Latest</a></li>
+<li class="rm-manual"><a href="https://au.yahoo.com/topics/coronavirus/"> Coronavirus</a></li>
+<li class="rm-manual"><a href="https://au.news.yahoo.com/latest"> National</a></li>
+<li class="rm-manual"><a href="https://au.news.yahoo.com/world/"> World</a></li>
+<li class="rm-manual"><a href="https://au.news.yahoo.com/good-news"> Good News</a></li>
+<li class="rm-manual"><a href="https://au.news.yahoo.com/ever-wondered"> Ever Wondered</a></li>
+<li class="rm-manual"><a href="https://au.tv.yahoo.com/au-in-the-know"> In The Know</a></li>
+<li class="rm-manual"><a href="https://au.tv.yahoo.com/au-news-video-national-playlist-new"> Watch</a></li>
+</ul>
+<h1 class="rm-manual">IBM, Amazon, Google and Microsoft partner with White House to provide compute resources for COVID-19 research</h1>
+<p class="rm-manual">Frederic Lardinois</p>
+<p class="rm-manual"><span><span><a href="https://techcrunch.com/" rel="noopener noreferrer nofollow">TechCrunch</a></span></span>22 March 2020</p>
+<p>During today's White House coronavirus task force press conference, 
+President Trump announced the launch of a new public/private consortium 
+to "unleash the power of American supercomputing resources." The members
+ of this consortium are the White House, the Department of Energy and <a href="https://crunchbase.com/organization/ibm" rel="nofollow noopener">IBM </a>.
+ Other companies, including Google, Amazon and Microsoft, as well as a 
+number of academic institutions, are also "contributing lots of 
+different things," the president said.</p>
+<p>While Trump's comments were characteristically unclear, IBM <a href="https://newsroom.ibm.com/IBM-helps-bring-supercomputers-into-the-global-fight-against-COVID-19" rel="nofollow noopener">provided more details</a>,
+ noting that it is working with a number of national labs and other 
+institutions to offer a total of 330 petaflops of compute to various 
+projects in epidemiology, bioinformatics and molecular modeling. Amazon,
+ Google and Microsoft are also part of the consortium, which is being 
+led by IBM, the White House Office of Science and Technology Policy, and
+ the Department of Energy.</p>
+<p>IBM and its partners will coordinate the efforts to evaluate 
+proposals and provide access to high-performance computing resources to 
+those that are most likely to have an immediate impact.</p>
+<p>"How can supercomputers help us fight this virus? These 
+high-performance computing systems allow researchers to run very large 
+numbers of calculations in epidemiology, bioinformatics, and molecular 
+modeling. These experiments would take years to complete if worked by 
+hand, or months if handled on slower, traditional computing platforms," 
+writes Dario Gil, IBM's Director of Research.</p>
+<p>AWS has already <a href="https://blog.aboutamazon.com/innovation/aws-launches-initiative-to-accelerate-covid-19-diagnostics-research-and-testing?utm_source=social&amp;amp;utm_medium=tw&amp;amp;utm_term=amznnews&amp;amp;utm_content=COVID-19_AWSResearch" rel="nofollow noopener">dedicated</a>
+ $20 million to support COVID-19 research while Microsoft has already 
+announced a number of different initiatives, though mostly around 
+helping businesses cope with the fallout of this crisis. Google has now 
+launched its own <a href="https://techcrunch.com/2020/03/21/google-launches-covid-19-page-and-search-portal-with-safety-tips-official-stats-and-more-us-only-for-now/" rel="nofollow noopener">coronavirus website</a>
+ (though it's very different from the one Trump once promised) and 
+Alphabet's Verily is helping Bay Area residents find testing sites if 
+needed.</p>
+<p>After today's announcement, the White House shared statements from <a href="https://crunchbase.com/organization/microsoft" rel="nofollow noopener">Microsoft, </a>
+ Google and other partners. "We know that high performance computing can
+ reduce the time it takes to process massive data sets and perform 
+complex simulations from days to hours," said Mike Daniels, Vice 
+President, Global Public Sector at <a href="https://crunchbase.com/organization/google" rel="nofollow noopener">Google </a>
+ Cloud, in his statement. "We look forward to participating in this 
+initiative alongside leaders in technology, academia and the public 
+sector to make more resources available to COVID-19 researchers and to 
+apply Google Cloud computing capabilities toward the development of 
+potential treatments and vaccines.”</p>
+<p>Similarly, Microsoft's global head for its AI for Health Program, 
+John Kahan, notes that Microsoft wants to "make sure researchers working
+ to combat COVID-19 have access to the tools they need" by expanding 
+access to its Azure cloud and by creating more opportunities for 
+researchers to collaborate with the company's data scientists.</p>
+<p>"Today I'm also announcing the launch of a new public/private 
+consortium organized by the White House, the Department of Energy and 
+IBM to unleash the power of American supercomputing resources to fight 
+the Chinese virus," Trump, who continues to insist on calling COVID-19 
+'the Chinese virus,' said in today's press briefing.</p>
+<p>"The following leaders from private industries, academia and 
+government will be contributing and they are gonna be contributing a lot
+ of different things, but compute primarily -- computing resources to 
+help researchers discover new treatments and vaccine. They will be 
+working along with NIH and all of the people working on this. But 
+tremendous help from IBM, Google, <a href="https://crunchbase.com/organization/amazon" rel="nofollow noopener">Amazon, </a> Microsoft, MIT, Rensselaer Polytechnic Institute, the Department of Energy's, the <a href="https://crunchbase.com/organization/national-science-foundation" rel="nofollow noopener">National Science Foundation </a> and NASA. They are all contributing to this effort."</p>
+<p class="rm-manual">Update (4:45pm PT): we updated the post with statements from Google and Microsoft.</p>
+<h2 class="rm-manual">What to read next</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sports.yahoo.com/is-president-trump-playing-politics-in-supporting-colin-kaepernicks-return-to-nfl-depends-on-your-point-of-view-215316037.html"><span>Is President Trump playing politics in supporting Colin Kaepernick's return to NFL? Depends on your point of view</span></a></h3><p class="rm-manual">Yahoo Sports</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/trump-asked-xi-election-help-bolton-214337979--spt.html"><span>Trump asked Xi for election help: Bolton</span></a></h3><p class="rm-manual">Australian Associated Press</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://techcrunch.com/2020/06/17/fcc-commissioner-disparages-trumps-social-media-order-the-decision-is-ours-alone/"><span>FCC Commissioner disparages Trump's social media order: 'The decision is ours alone'</span></a></h3><p class="rm-manual">TechCrunch</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/bruce-springsteen-wants-trump-put-210222281.html"><span>Bruce Springsteen Wants Trump To ‘Put On A F**king Mask’</span></a></h3><p class="rm-manual">HuffPost</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://www.engadget.com/google-racial-equity-initiative-205924812.html"><span>Google's racial equity push includes $175 million for Black businesses</span></a></h3><p class="rm-manual">Engadget</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/mike-gundy-oklahoma-state-coach-apologises-oan-shirt-025213730.html"><span>'Disgusted': Football coach apologises for 'unacceptable' t-shirt</span></a></h3><p class="rm-manual">Yahoo Sport Australia</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://finance.yahoo.com/news/why-microsoft-and-amazon-are-calling-on-congress-to-regulate-facial-recognition-tech-tech-200005870.html"><span>Why Microsoft and Amazon are calling on Congress to regulate facial recognition tech: Tech</span></a></h3><p class="rm-manual">Yahoo Finance</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/bunnings-4-dollar-moisture-absorber-magic-rave-reviews-014727654.html"><span>People are losing their minds over 'magic' $4 Bunnings item</span></a></h3><p class="rm-manual">Yahoo Lifestyle</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://techcrunch.com/2020/06/17/twitter-begins-rolling-out-audio-tweets-on-ios/"><span>Twitter begins rolling out audio tweets on iOS</span></a></h3><p class="rm-manual">TechCrunch</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/k-pop-star-yohan-dead-tst-singer-dies-aged-28-212436359.html"><span>'Sorrowful news': K-pop star Yohan dies suddenly aged 28</span></a></h3><p class="rm-manual">Yahoo News Australia</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/nrl-2020-cameron-smith-called-out-referee-footage-ben-cummins-223743114.html"><span>Cameron Smith under fire as extraordinary footage emerges</span></a></h3><p class="rm-manual">Yahoo Sport Australia</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/renee-gracie-former-supercars-driver-racist-indians-rant-205809423.html"><span>'Not welcome here': Renee Gracie in shocking racist rant</span></a></h3><p class="rm-manual">Yahoo Sport Australia</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://www.engadget.com/twitter-test-voice-messages-human-touch-195115473.html"><span>Twitter test lets users post voice messages for 'a more human touch'</span></a></h3><p class="rm-manual">Engadget</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/masterchef-matt-preston-new-season-judges-030735640.html"><span>Former MasterChef judge's shocking admission about the new series</span></a></h3><p class="rm-manual">Yahoo Lifestyle</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/kerri-anne-kennerley-cant-resist-making-controversial-politically-incorrect-comments-055049509.html"><span>'Fire me!': Kerri-Anne Kennerley 'can't resist' making controversial comments</span></a></h3><p class="rm-manual">Yahoo Lifestyle</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/coles-green-liquid-oozes-from-sunday-roast-100357453.html"><span>'Disgusting': Woman's horror after green liquid oozes from her Coles lamb roast</span></a></h3><p class="rm-manual">Yahoo News Australia</p><p class="rm-manual"></p></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://techcrunch.com/2020/06/17/zoom-u-turns-on-no-e2e-encryption-for-free-users/"><span>Zoom U-turns on no e2e encryption for free users</span></a></h3><p class="rm-manual">TechCrunch</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/jacinda-ardern-angry-at-failure-which-has-seen-coronavirus-return-to-nz-055714227.html"><span>Jacinda Ardern slams 'unacceptable' mistake as virus returns</span></a></h3><p class="rm-manual">Yahoo News Australia</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/sister-watches-brettson-payne-fall-from-caravan-114433735.html"><span>'Little playmates': Sister watched brother, 8, fall from caravan before dying</span></a></h3><p class="rm-manual">Yahoo News Australia</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/mans-random-attack-on-92-yearold-woman-caught-on-video-032431375.html"><span>'Very upsetting': Man's random attack on 92-year-old woman caught on video</span></a></h3><p class="rm-manual">Yahoo News Australia</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://www.engadget.com/asus-zen-books-thin-light-194456009.html"><span>ASUS's latest ZenBooks are thin and light but don't skip on ports</span></a></h3><p class="rm-manual">Engadget</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/masterchef-fans-disgusted-poh-shock-dish-mustard-ice-cream-015551807.html"><span>'It's a big no!' MasterChef fans disgusted by Poh's 'shock' dish</span></a></h3><p class="rm-manual">Yahoo Lifestyle</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/tennis-news-novak-djokovic-rafael-nadal-boycott-us-open-003637451.html"><span>US Open facing player boycott after stunning virus call</span></a></h3><p class="rm-manual">Yahoo Sport Australia</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/seismic-changes-in-post-covid-19-economy-232950044.html"><span>Huge changes expected in coronavirus recovery</span></a></h3><p class="rm-manual">Yahoo Finance AU</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://www.engadget.com/twitch-studio-beta-mac-livestream-191755858.html"><span>Twitch's streaming software for newbies arrives on Mac</span></a></h3><p class="rm-manual">Engadget</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/parents-plea-after-15-year-old-stabbing-death-064605245.html"><span>Parents' remarkable decision after 15-year-old's stabbing death in Melbourne</span></a></h3><p class="rm-manual">Yahoo News Australia</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/blaze-roberts-australian-surfer-x-rated-photo-hack-041953609.html"><span>'Terrifying': Aussie surfer hits out after X-rated photo hack</span></a></h3><p class="rm-manual">Yahoo Sport Australia</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/woolies-bar-keepers-friend-transforms-gross-cleaning-mistake-045638251.html"><span>$8 Woolies item transforms 'gross' common cleaning oversight</span></a></h3><p class="rm-manual">Yahoo Lifestyle</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://techcrunch.com/2020/06/17/bose-calling-it-quits-on-ar-report-says/"><span>Bose calling it quits on audio AR platform, report says</span></a></h3><p class="rm-manual">TechCrunch</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/concerns-after-coronavirus-spike-in-one-australian-state-234906789.html"><span>Concerns after coronavirus spike in one Australian state</span></a></h3><p class="rm-manual">Yahoo News Australia</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://finance.yahoo.com/news/avod-news-leader-haystack-tv-140000177.html"><span>AVOD News Leader Haystack TV Rebrands as Haystack News; Records 145% Audience Growth Over Last 12 Months</span></a></h3><p class="rm-manual">Business Wire</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/customer-denied-service-after-kfc-drive-thru-horse-stunt-042418560.html"><span>'Disgusting': Customer outraged by treatment after KFC drive-thru stunt</span></a></h3><p class="rm-manual">Yahoo News Australia</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://au.news.yahoo.com/man-accused-of-stalking-woman-threatening-to-kill-her-baby-073311073.html"><span>Man accused of stalking woman and threatening to kill her baby</span></a></h3><p class="rm-manual">Yahoo News Australia</p><p></p></li>
+</ul></article>
+</body></html>

@@ -1,0 +1,260 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> The Islamic State: is it Isis, Isil – or possibly Daesh? | Islamic State | The Guardian </p>
+<p class="rm-manual">US edition</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///preference/edition/us">US edition</a></li>
+<li class="rm-manual"><a href="file:///preference/edition/uk">UK edition</a></li>
+<li class="rm-manual"><a href="file:///preference/edition/au">Australian edition</a></li>
+<li class="rm-manual"><a href="file:///preference/edition/int">International edition</a></li>
+</ul>
+<p class="rm-manual"><a href="file:///"><span>The Guardian - Back to home</span></a></p>
+<p class="rm-manual"><a href="https://jobs.theguardian.com/?INTCMP=jobs_uk_web_newheader">Search jobs</a><a href="https://profile.theguardian.com/signin?INTCMP=DOTCOM_NEWHEADER_SIGNIN&amp;ABCMP=ab-sign-in"> Sign in</a><a href="https://www.google.co.uk/advanced_search?q=site:www.theguardian.com">Search</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///">News</a></li>
+<li class="rm-manual"><a href="file:///commentisfree">Opinion</a></li>
+<li class="rm-manual"><a href="file:///sport">Sport</a></li>
+<li class="rm-manual"><a href="file:///culture">Culture</a></li>
+<li class="rm-manual"><a href="file:///lifeandstyle">Lifestyle</a></li>
+</ul>
+<p class="rm-manual"><span>Show</span><span>More</span><span>Show More</span></p>
+<ul class="rm-manual">
+<li class="rm-manual">News<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///us-news">US news</a></li>
+<li class="rm-manual"><a href="file:///us-news/us-elections-2020">Elections 2020</a></li>
+<li class="rm-manual"><a href="file:///world">World news</a></li>
+<li class="rm-manual"><a href="file:///environment">Environment</a></li>
+<li class="rm-manual"><a href="file:///football">Soccer</a></li>
+<li class="rm-manual"><a href="file:///us-news/us-politics">US politics</a></li>
+<li class="rm-manual"><a href="file:///business">Business</a></li>
+<li class="rm-manual"><a href="file:///technology">Tech</a></li>
+<li class="rm-manual"><a href="file:///science">Science</a></li>
+</ul>
+</li>
+<li class="rm-manual">Opinion<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///profile/editorial">The Guardian view</a></li>
+<li class="rm-manual"><a href="file:///index/contributors">Columnists</a></li>
+<li class="rm-manual"><a href="file:///tone/letters">Letters</a></li>
+<li class="rm-manual"><a href="file:///type/video+tone/comment">Opinion videos</a></li>
+<li class="rm-manual"><a href="file:///cartoons/archive">Cartoons</a></li>
+</ul>
+</li>
+<li class="rm-manual">Sport<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///football">Soccer</a></li>
+<li class="rm-manual"><a href="file:///sport/nfl">NFL</a></li>
+<li class="rm-manual"><a href="file:///sport/tennis">Tennis</a></li>
+<li class="rm-manual"><a href="file:///sport/mlb">MLB</a></li>
+<li class="rm-manual"><a href="file:///football/mls">MLS</a></li>
+<li class="rm-manual"><a href="file:///sport/nba">NBA</a></li>
+<li class="rm-manual"><a href="file:///sport/nhl">NHL</a></li>
+</ul>
+</li>
+<li class="rm-manual">Culture<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///film">Film</a></li>
+<li class="rm-manual"><a href="file:///books">Books</a></li>
+<li class="rm-manual"><a href="file:///music">Music</a></li>
+<li class="rm-manual"><a href="file:///artanddesign">Art &amp; design</a></li>
+<li class="rm-manual"><a href="file:///tv-and-radio">TV &amp; radio</a></li>
+<li class="rm-manual"><a href="file:///stage">Stage</a></li>
+<li class="rm-manual"><a href="file:///music/classicalmusicandopera">Classical</a></li>
+<li class="rm-manual"><a href="file:///games">Games</a></li>
+</ul>
+</li>
+<li class="rm-manual">Lifestyle<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///fashion">Fashion</a></li>
+<li class="rm-manual"><a href="file:///food">Food</a></li>
+<li class="rm-manual"><a href="file:///tone/recipes">Recipes</a></li>
+<li class="rm-manual"><a href="file:///lifeandstyle/love-and-sex">Love &amp; sex</a></li>
+<li class="rm-manual"><a href="file:///lifeandstyle/home-and-garden">Home &amp; garden</a></li>
+<li class="rm-manual"><a href="file:///lifeandstyle/health-and-wellbeing">Health &amp; fitness</a></li>
+<li class="rm-manual"><a href="file:///lifeandstyle/family">Family</a></li>
+<li class="rm-manual"><a href="file:///travel">Travel</a></li>
+<li class="rm-manual"><a href="file:///money">Money</a></li>
+</ul>
+</li>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://support.theguardian.com/contribute?INTCMP=side_menu_support_contribute&amp;acquisitionData=%7B%22componentType%22:%22ACQUISITIONS_HEADER%22,%22componentId%22:%22side_menu_support_contribute%22,%22source%22:%22GUARDIAN_WEB%22%7D">Make a contribution</a></li>
+<li class="rm-manual"><a href="https://support.theguardian.com/subscribe?INTCMP=side_menu_support_subscribe&amp;acquisitionData=%7B%22componentType%22:%22ACQUISITIONS_HEADER%22,%22componentId%22:%22side_menu_support_subscribe%22,%22source%22:%22GUARDIAN_WEB%22%7D">Subscribe</a></li>
+</ul>
+<li class="rm-manual"><ul class="rm-manual">
+<li class="rm-manual"><a href="https://jobs.theguardian.com/?INTCMP=jobs_us_web_newheader_dropdown">Search jobs</a></li>
+<li class="rm-manual"><a href="https://theguardian.newspapers.com/">Digital Archive</a></li>
+<li class="rm-manual"><a href="https://discountcode.theguardian.com/">Coupons</a></li>
+<li class="rm-manual"><a href="https://puzzles.theguardian.com/download">Guardian Puzzles app</a></li>
+<li class="rm-manual"><a href="https://www.theguardian.com/mobile/2014/may/29/the-guardian-for-mobile-and-tablet">The Guardian app</a></li>
+<li class="rm-manual"><a href="file:///video">Video</a></li>
+<li class="rm-manual"><a href="file:///podcasts">Podcasts</a></li>
+<li class="rm-manual"><a href="file:///inpictures">Pictures</a></li>
+<li class="rm-manual"><a href="file:///email-newsletters">Newsletters</a></li>
+<li class="rm-manual"><a href="https://www.theguardian.com/membership">Inside the Guardian</a></li>
+<li class="rm-manual"><a href="https://www.theguardian.com/weekly?INTCMP=gdnwb_mawns_editorial_gweekly_GW_TopNav_US">Guardian Weekly</a></li>
+<li class="rm-manual"><a href="file:///crosswords">Crosswords</a></li>
+</ul></li>
+<li class="rm-manual"><ul class="rm-manual">
+<li class="rm-manual"><a href="https://jobs.theguardian.com/?INTCMP=jobs_us_web_newheader_dropdown">Search jobs</a></li>
+<li class="rm-manual"><a href="https://theguardian.newspapers.com/">Digital Archive</a></li>
+<li class="rm-manual"><a href="https://discountcode.theguardian.com/">Coupons</a></li>
+<li class="rm-manual"><a href="https://puzzles.theguardian.com/download">Guardian Puzzles app</a></li>
+</ul></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///world">World</a></li>
+<li class="rm-manual"><a href="file:///world/europe-news">Europe</a></li>
+<li class="rm-manual"><a href="file:///us-news">US</a></li>
+<li class="rm-manual"><a href="file:///world/americas">Americas</a></li>
+<li class="rm-manual"><a href="file:///world/asia">Asia</a></li>
+<li class="rm-manual"><a href="file:///australia-news">Australia</a></li>
+<li class="rm-manual"><a href="file:///world/middleeast">Middle East</a></li>
+<li class="rm-manual"><a href="file:///world/africa">Africa</a></li>
+<li class="rm-manual"><a href="file:///inequality">Inequality</a></li>
+<li class="rm-manual"><a href="file:///global-development">Global development</a></li>
+</ul>
+<p class="rm-manual"><a href="https://www.theguardian.com/world/isis"><span>Islamic State</span></a></p>
+<h1 class="rm-manual">The Islamic State: is it Isis, Isil – or possibly Daesh?</h1>
+<p class="rm-manual">What should you call the terrifying organisation 
+that beheads hostages and massacres its opponents? Here we explain a 
+political and lingusitic minefield</p>
+<ul><li class="rm-manual"><a href="http://www.theguardian.com/world/middle-east-live/live/2014/sep/23/us-air-strikes-against-isis-in-syria-live-updates">Follow our live coverage of the US air strikes on Isis in Syria</a></li></ul>
+<figcaption class="rm-manual"><span>A member of the Islamic State in Syria and the Levant. Photograph: Reuters</span> Photograph: Reuters</figcaption><figcaption class="rm-manual"><span>A member of the Islamic State in Syria and the Levant. Photograph: Reuters</span> Photograph: Reuters</figcaption><p class="rm-manual"><a rel="author" href="file:///profile/ianblack">Ian Black</a></p>
+<p class="rm-manual"><a href="https://www.twitter.com/ian_black">@ ian_black</a></p>
+<p class="rm-manual"><span>Published on </span>Sun 21 Sep 2014 13.00 EDT</p>
+<p><span><span>T</span></span><span>he Islamic State – aka Isis (in 
+current Guardian house style) – is a scary and much-discussed 
+phenomenon, erasing borders, conquering vast areas of Iraq and Syria, 
+massacring its enemies and beheading hostages in slick snuff and 
+propaganda videos. Barack Obama calls it Isil. David Cameron loyally 
+follows suit. Others refer to Isis or IS. Now <a href="http://www.theguardian.com/world/2014/sep/19/france-bombs-isis-depot-iraq-islamic-state">Francois Hollande has renamed it Daesh</a>. Confused as to how to negotiate this linguistic and political minefield? You might well be.</span></p>
+<p>This terminological conflict has deep historic and cultural roots. 
+The group originated in 1999 as Jamaat al-Tawhid wal-Jihad – quite a 
+mouthful. It got simpler in 2004 when its founder, a Jordanian called <a href="http://www.theguardian.com/news/2006/jun/09/guardianobituaries.alqaida">Abu Musab al-Zarqawi</a>,
+ pledged an oath to al-Qaida, then still being run by Osama bin Laden 
+from his Pakistani hideout. Its Arabic name became Tanzim Qaidat 
+al-Jihad fi Bilad al-Rafidayn (don’t ask!) – though that was shortened 
+in English to al-Qaida in Iraq.</p>
+<p>But then it got more complicated. In 2006, under a man who now calls 
+himself Abu Bakr al-Baghdadi, it morphed into the Islamic State in Iraq 
+(Isi). In April 2013, two years into the uprising against Bashar 
+al-Assad, Isi bigged itself up as the Islamic State in Iraq and al-Sham 
+(Al Dawla al-Islamyia fil Iraq wa’al Sham) and declared a Caliphate – a 
+state for all Muslims. Al-Sham is the historic Arabic name for Syria, 
+Lebanon, and (according to some authorities) Jordan and Palestine. This 
+area is known in English (thanks to the antiquated French phrase for the
+ “lands of the rising sun”) as the Levant. Isis is the Islamic State in 
+Iraq and Syria. Isil is the Islamic State in Iraq and the Levant: thus 
+the moniker in Obama’s and Cameron’s briefing books. It’s the same 
+transatlantic solidarity that had London and Washington referring to UBL
+ (Usama Bin Laden) when everyone else used the more familiar OBL 
+(Osama).</p>
+<p>Opponents of the term Islamic State say it is neither Islamic nor a 
+state: thus the suggestion of a group of British imams to Cameron that 
+he use the expression “Un-Islamic State.” In a similar 
+legitimacy-undermining vein Egypt’s leading Islamic authority, Dar 
+al-Ifta, urged the media to use the rather heavy-handed QSIS: “Al-Qaida 
+Separatists in Iraq and Syria.”</p>
+<p>Daesh, now officially adopted by the French government, is the Arabic
+ acronym for Al Dawla al-Islamyia fil Iraq wa’al Sham, (though it 
+should, to be precise, really be rendered as Da’ish). But why the 
+change? It was never golng to be easy for the French EIIL (l’Etat 
+islamique de l’Irak et du Levant) to supplant the more widely used 
+English ISIL or ISIS (cf Nato vs Otan, EU vs UE). And it may, suggested 
+one French blogger, have been chosen for its “sonorité péjorative” 
+(dèche, douche, tache – to be broke, shower, spot). Hollande said he 
+would be using the phrase “Daesh cutthroats”.</p>
+<p>IS supporters, in any case, dislike the term Daesh as it does not 
+spell out the crucial Islamic component. In the words of Simon Collis, 
+the British Ambassador to Iraq: “Arabic speakers spit out the name 
+Da’ish with different mixtures of contempt, ridicule and hostility. 
+Da’ish is always negative.” It’s certainly entered the ever-adaptive 
+Arabic language big time: in the plural form – “daw’aish” – it means 
+bigots who impose their views on others.</p>
+<p class="rm-manual"><span>Topics</span></p>
+<ul class="rm-manual"><li class="rm-manual"><a href="file:///world/isis">Islamic State</a></li></ul>
+<ul class="rm-manual"><li class="rm-manual"><a href="file:///tone/features">features</a></li></ul>
+<ul class="rm-manual"><li class="rm-manual"><a href="https://syndication.theguardian.com/automation/?url=https%3A%2F%2Fwww.theguardian.com%2Fworld%2Fshortcuts%2F2014%2Fsep%2F21%2Fislamic-state-isis-isil-daesh&amp;type=article&amp;internalpagecode=world/shortcuts/2014/sep/21/islamic-state-isis-isil-daesh"><span>Reuse this content</span></a></li></ul>
+<h2 class="rm-manual">comments <span>( 0 )</span>
+</h2>
+<p class="rm-manual"><span><a href="https://profile.theguardian.com/signin?INTCMP=DOTCOM_COMMENTS_SIGNIN">Sign in</a> or <a href="https://profile.theguardian.com/register?INTCMP=DOTCOM_COMMENTS_REG">create your Guardian account</a> to join the discussion.</span></p>
+<h2 class="rm-manual">comments <span>( 0 )</span>
+</h2>
+<p class="rm-manual"><span><a href="https://profile.theguardian.com/signin?INTCMP=DOTCOM_COMMENTS_SIGNIN">Sign in</a> or <a href="https://profile.theguardian.com/register?INTCMP=DOTCOM_COMMENTS_REG">create your Guardian account</a> to join the discussion.</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///world">World</a></li>
+<li class="rm-manual"><a href="file:///world/europe-news">Europe</a></li>
+<li class="rm-manual"><a href="file:///us-news">US</a></li>
+<li class="rm-manual"><a href="file:///world/americas">Americas</a></li>
+<li class="rm-manual"><a href="file:///world/asia">Asia</a></li>
+<li class="rm-manual"><a href="file:///australia-news">Australia</a></li>
+<li class="rm-manual"><a href="file:///world/middleeast">Middle East</a></li>
+<li class="rm-manual"><a href="file:///world/africa">Africa</a></li>
+<li class="rm-manual"><a href="file:///inequality">Inequality</a></li>
+<li class="rm-manual"><a href="file:///global-development">Global development</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///">News</a></li>
+<li class="rm-manual"><a href="file:///commentisfree">Opinion</a></li>
+<li class="rm-manual"><a href="file:///sport">Sport</a></li>
+<li class="rm-manual"><a href="file:///culture">Culture</a></li>
+<li class="rm-manual"><a href="file:///lifeandstyle">Lifestyle</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///info/about-guardian-us">About us</a></li>
+<li class="rm-manual"><a href="file:///info/about-guardian-us/contact">Contact us</a></li>
+<li class="rm-manual"><a href="file:///info/complaints-and-corrections">Complaints &amp; corrections</a></li>
+<li class="rm-manual"><a href="https://www.theguardian.com/securedrop">SecureDrop</a></li>
+<li class="rm-manual"><a href="https://workforus.theguardian.com/">Work for us</a></li>
+<li class="rm-manual"><a href="file:///info/privacy">Privacy policy</a></li>
+<li class="rm-manual"><a href="file:///info/cookies">Cookie policy</a></li>
+<li class="rm-manual"><a href="file:///help/terms-of-service">Terms &amp; conditions</a></li>
+<li class="rm-manual"><a href="file:///help">Help</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///index/subjects/a">All topics</a></li>
+<li class="rm-manual"><a href="file:///index/contributors">All writers</a></li>
+<li class="rm-manual"><a href="https://theguardian.newspapers.com/">Digital newspaper archive</a></li>
+<li class="rm-manual"><a href="https://www.facebook.com/theguardian">Facebook</a></li>
+<li class="rm-manual"><a href="https://twitter.com/guardian">Twitter</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://advertising.theguardian.com/us/advertising">Advertise with us</a></li>
+<li class="rm-manual"><a href="file:///guardian-labs-us">Guardian Labs</a></li>
+<li class="rm-manual"><a href="https://jobs.theguardian.com/?INTCMP=NGW_FOOTER_US_GU_JOBS">Search jobs</a></li>
+<li class="rm-manual"><a href="https://discountcode.theguardian.com/">Discount Codes</a></li>
+</ul>
+<p class="rm-manual"><a href="#top"><span>Back to top</span></a></p>
+<p class="rm-manual">© 2020 Guardian News &amp; Media Limited or its affiliated companies. All rights reserved. (beta)</p></article>
+</body></html>

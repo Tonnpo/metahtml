@@ -1,0 +1,154 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p><a href="https://www.bignewsnetwork.com/news/269993286/brazil-passes-half-a-million-covid-19-deaths-70000-new-cases-per-day"></a></p><h2 class="rm-manual"><a href="https://www.bignewsnetwork.com/news/269993286/brazil-passes-half-a-million-covid-19-deaths-70000-new-cases-per-day">Brazil passes half a million COVID-19 deaths, 70,000 new cases per day</a></h2><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://www.bignewsnetwork.com/news/269989221/space-tourism-startup-flies-test-balloon-20-miles-above-florida"></a></p><h2 class="rm-manual"><a href="https://www.bignewsnetwork.com/news/269989221/space-tourism-startup-flies-test-balloon-20-miles-above-florida">Space tourism startup flies test balloon 20 miles above Florida</a></h2><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://www.bignewsnetwork.com/news/269986564/25-european-union-countries-reopen-to-american-other-tourists"></a></p><h2 class="rm-manual"><a href="https://www.bignewsnetwork.com/news/269986564/25-european-union-countries-reopen-to-american-other-tourists">25 European Union countries reopen to American, other tourists</a></h2><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://www.bignewsnetwork.com/news/269982129/biden-wants-allies-to-join-with-us-in-banning-of-wechat-and-tiktok"></a></p><h2 class="rm-manual"><a href="https://www.bignewsnetwork.com/news/269982129/biden-wants-allies-to-join-with-us-in-banning-of-wechat-and-tiktok">Biden wants allies to join with U.S. in banning of WeChat and TikTok</a></h2><p class="rm-manual"></p>
+<h1 class="rm-manual">US Diplomat: North Korean Regime Lacks Legitimacy</h1>
+<p>WASHINGTON - A senior U.S. diplomat says the North Korean regime 
+lacks legitimacy because of the hardship it causes to its citizens.</p>
+<p>At a conference on North Korea this week, Robert King, the U.S. 
+Special Envoy for North Korean Human Rights Issues, said the communist 
+country continues to make human rights violations despite international 
+concerns.</p>
+<p>"When you look at North Korea, what it has done, and the lack of 
+support it has in the international community, there is no question it 
+does not have the legitimacy it seeks and claims that it has," King 
+said.</p>
+<p>The Center for Strategic and International Studies (CSIS), a 
+Washington-based think tank, hosted the conference Tuesday to mark the 
+one year anniversary of a report by the United Nation's Commission of 
+Inquiry (COI), which accused North Korea of committing crimes against 
+humanity.</p>
+<p>The conference in Washington drew strong protests from Pyongyang. The
+ North Korean Permanent Mission to the U.N. issued a statement 
+condemning the event, calling it a "political human rights plot" against
+ the country.</p>
+<p>Recently, Pyongyang launched an aggressive campaign to counter 
+international criticisms over the country's human rights record. It has 
+also challenged some of testimony given to the U.N. panel, which 
+prompted a prominent North Korean defector to retract part of his story.
+ Shin Dong-hyuk, a former inmate of a North Korean political prison 
+camp, admitted publicly that part of his story about life in prison was 
+not completely accurate.</p>
+<p>Michael Kirby, a retired Australian judge who headed COI 
+investigation, said the U.N. report still stands despite controversy 
+over Shin's testimony, stressing Shin's actions are "immaterial" to the 
+report's overall conclusion.</p>
+<p>Kirby called on the U.N. Security Council to refer the North Korean 
+human rights issue to the International Criminal Court. Last December, 
+the U.N. General Assembly adopted a resolution calling for the council 
+to consider referring the issue to the international court.</p>
+<p>Former U.S. Assistant Secretary for East Asia and Public Affairs Kurt
+ Campbell, South Korea's Ambassador for Human Rights Jong-Hoon Lee and 
+the U.N. Special Rapporteur on the Situation of Human Rights in the DPRK
+ Marzuki Darusman also spoke at Tuesday's event. Two North Korean 
+defectors told their stories.</p>
+<p class="rm-manual">Jee Abbey Lee contributed to this report, which was produced in collaboration with the VOA Korean service</p>
+<h1 class="rm-manual">US Diplomat: North Korean Regime Lacks Legitimacy</h1>
+<h1 class="rm-manual">US Diplomat: North Korean Regime Lacks Legitimacy</h1>
+<p class="rm-manual">VoA - News </p>
+<p class="rm-manual">19th February 2015, 15:00 GMT+11</p>
+<p class="rm-manual">WASHINGTON - A senior U.S. diplomat says the North 
+Korean regime lacks legitimacy because of the hardship it causes to its 
+citizens.</p>
+<p class="rm-manual">At a conference on North Korea this week, Robert 
+King, the U.S. Special Envoy for North Korean Human Rights Issues, said 
+the communist country continues to make human rights violations despite 
+international concerns.</p>
+<p class="rm-manual">"When you look at North Korea, what it has done, 
+and the lack of support it has in the international community, there is 
+no question it does not have the legitimacy it seeks and claims that it 
+has," King said.</p>
+<p class="rm-manual">The Center for Strategic and International Studies 
+(CSIS), a Washington-based think tank, hosted the conference Tuesday to 
+mark the one year anniversary of a report by the United Nation's 
+Commission of Inquiry (COI), which accused North Korea of committing 
+crimes against humanity.</p>
+<p class="rm-manual">The conference in Washington drew strong protests 
+from Pyongyang. The North Korean Permanent Mission to the U.N. issued a 
+statement condemning the event, calling it a "political human rights 
+plot" against the country.</p>
+<p class="rm-manual">Recently, Pyongyang launched an aggressive campaign
+ to counter international criticisms over the country's human rights 
+record. It has also challenged some of testimony given to the U.N. 
+panel, which prompted a prominent North Korean defector to retract part 
+of his story. Shin Dong-hyuk, a former inmate of a North Korean 
+political prison camp, admitted publicly that part of his story about 
+life in prison was not completely accurate.</p>
+<p class="rm-manual">Michael Kirby, a retired Australian judge who 
+headed COI investigation, said the U.N. report still stands despite 
+controversy over Shin's testimony, stressing Shin's actions are 
+"immaterial" to the report's overall conclusion.</p>
+<p class="rm-manual">Kirby called on the U.N. Security Council to refer 
+the North Korean human rights issue to the International Criminal Court.
+ Last December, the U.N. General Assembly adopted a resolution calling 
+for the council to consider referring the issue to the international 
+court.</p>
+<p class="rm-manual">Former U.S. Assistant Secretary for East Asia and 
+Public Affairs Kurt Campbell, South Korea's Ambassador for Human Rights 
+Jong-Hoon Lee and the U.N. Special Rapporteur on the Situation of Human 
+Rights in the DPRK Marzuki Darusman also spoke at Tuesday's event. Two 
+North Korean defectors told their stories.</p>
+<p class="rm-manual">Jee Abbey Lee contributed to this report, which was produced in collaboration with the VOA Korean service</p>
+<p class="rm-manual">Read This Next</p>
+<dl class="rm-manual">
+<dt class="rm-manual"><a href="https://www.bignewsnetwork.com/news/269994845/bargain-hunters-send-us-stocks-flying-dow-jumps-587-points">Bargain-hunters send U.S. stocks flying, Dow jumps 587 points</a></dt>
+<dt class="rm-manual"><a href="https://www.bignewsnetwork.com/news/269994253/paypal-increases-fees-to-merchants-by-half-percent">PayPal increases fees to merchants by half percent</a></dt>
+<dt class="rm-manual"><a href="https://www.bignewsnetwork.com/news/269993281/biden-administration-suspends-trump-era-scotch-whiskey-tariff">Biden administration suspends Trump-era Scotch whiskey tariff</a></dt>
+<dt class="rm-manual"><a href="https://www.bignewsnetwork.com/news/269987033/stocks-tumble-on-asian-markets-nikkei-225-drops-more-than-900-points">Stocks tumble on Asian markets, Nikkei 225 drops more than 900 points</a></dt>
+<dt class="rm-manual"><a href="https://www.bignewsnetwork.com/news/269984256/bristol-myers-partners-with-eisai-to-develop-experimental-cancer-drug">Bristol-Myers partners with Eisai to develop experimental cancer drug</a></dt>
+</dl>
+<h2 class="rm-manual">Big News Network</h2>
+<p class="rm-manual">ASSOCIATES</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="http://www.bignewsnetwork.net/">Big News Network News Agency</a></li>
+<li class="rm-manual"><a href="http://www.midwestradionetwork.com/">Midwest Radio Network</a></li>
+<li class="rm-manual"><a href="http://www.themainstreammedia.com/">Mainstream Media</a></li>
+</ul>
+<p class="rm-manual">BIG NEWS NETWORK.COM</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///about-us">About us</a></li> <li class="rm-manual"><a href="file:///contact-us">Contact &amp; Support</a></li>
+<li class="rm-manual"><a href="file:///terms-and-conditions">Terms &amp; Conditions</a></li>
+<li class="rm-manual"><a href="file:///sitemap">Sitemap</a></li> </ul>
+<p class="rm-manual">PRODUCTS &amp; SERVICES</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///news-releases">News Releases</a></li> <li class="rm-manual"><a href="file:///subscribe-newsletter">Newsletter</a></li>
+<li class="rm-manual"><a href="file:///archive">Archive</a></li> </ul>
+<p class="rm-manual">FOLLOW US</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.facebook.com/bignewsnetwork">Facebook</a></li> <li class="rm-manual"><a href="https://twitter.com/bignewsnetwork">Twitter</a></li> <li class="rm-manual"><a href="https://plus.google.com/+BigNewsNetwork">Google+</a></li> <li class="rm-manual"><a href="file:///show-rss">RSS Feeds</a></li> </ul>
+<p class="rm-manual">Copyright © 1998-2021 Big News Network All rights reserved. <span><a href="http://www.issn.org/the-centre-and-the-network/our-mission/the-international-centre-for-the-registration-of-serial-publications-cieps/">ISSN</a>: 2616-6917</span></p></article>
+</body></html>

@@ -1,0 +1,77 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><article class="rm-manual"> News </article><h1 class="rm-manual">‘Doom’ Can Run on a Smart Fridge Thanks to Microsoft’s Game Pass Streaming</h1>
+<p class="rm-manual"> <span> <span><a href="https://www.reviewgeek.com/author/joshhendrickson/">Josh Hendrickson</a></span> <span> <span><a href="https://twitter.com/@canterrain">@canterrain</a></span></span> Oct 13, 2020, 11:24 am EDT | 1 min read </span> </p>
+<figcaption class="rm-manual"><span>Samsung/Bethesda</span></figcaption><p><span>There is a saying, ancient and wise: If it has a screen, it can probably run </span><span>Doom.</span><span> Ok, maybe that’s not a real saying, but over the years, we’ve seen </span><span>Doom</span><span> run on everything from <a href="https://redirect.viglink.com/?key=204a528a336ede4177fff0d84a044482&amp;u=https%3A%2F%2Fwww.bbc.com%2Fnews%2Ftechnology-29203776">printers</a> to <a href="https://www.pcgamer.com/heres-doom-running-on-a-pregnancy-test/">pregnancy tests</a>, and now it’s on a Samsung Smart fridge. Even better, so is every other Xbox Game Pass streaming game.</span></p>
+<p><span>We still don’t think you should buy a smart fridge; they’re 
+overpriced and leave support far too early. But if there’s one 
+compelling reason to own one, then Instagram user Richard Mallard 
+finally provided one. The games.</span></p>
+<p> <a href="https://www.instagram.com/p/CGQoq2HpHKS/?utm_source=ig_embed&amp;utm_campaign=loading"> </a></p><p><a href="https://www.instagram.com/p/CGQoq2HpHKS/?utm_source=ig_embed&amp;utm_campaign=loading"> View this post on Instagram</a></p><a href="https://www.instagram.com/p/CGQoq2HpHKS/?utm_source=ig_embed&amp;utm_campaign=loading"> </a> <p></p>
+<p><a href="https://www.instagram.com/p/CGQoq2HpHKS/?utm_source=ig_embed&amp;utm_campaign=loading">A post shared by Richard Mallard (@vapingwithtwisted420)</a></p>
+<p>No, you didn’t read that wrong. Over on Instagram, he demonstrated 
+how he managed to get Xbox Game Pass streaming (informally known as 
+xCloud) running on his smart fridge. With Xbox Game Pass streaming, you 
+can play many Xbox games on Android devices, thanks to the power of 
+streaming. Naturally, Richard started with a modern twist of the classic
+ trope—Doom Eternal.</p>
+<p> <a href="https://www.instagram.com/p/CGSU_WWpFLT/?utm_source=ig_embed&amp;utm_campaign=loading"> </a></p><p><a href="https://www.instagram.com/p/CGSU_WWpFLT/?utm_source=ig_embed&amp;utm_campaign=loading"> View this post on Instagram</a></p><a href="https://www.instagram.com/p/CGSU_WWpFLT/?utm_source=ig_embed&amp;utm_campaign=loading"> </a> <p></p>
+<p><a href="https://www.instagram.com/p/CGSU_WWpFLT/?utm_source=ig_embed&amp;utm_campaign=loading">A post shared by Richard Mallard (@vapingwithtwisted420)</a></p>
+<p><span>The key here is that Android bit; it looks like Richard managed
+ to sideload the Xbox Game Pass Android app on his Samsung refrigerator.
+ Then he paired up an Xbox controller as well. The games seem to work 
+surprisingly well in the videos he took.</span></p>
+<p><span>Let’s be honest; playing Xbox games isn’t really a compelling 
+reason to own a smart refrigerator. But if you have one, it could be fun
+ to give it a whirl. And right now, if you do own a smart fridge, you 
+can potentially do something that iPad users can’t—<a href="https://www.reviewgeek.com/53619/apples-terms-for-game-streaming-dont-bode-well-for-xcloud-and-stadia/">play Xbox games through streaming</a>.</span></p>
+<p class="rm-manual">via <a href="https://www.theverge.com/2020/10/13/21514030/microsoft-xcloud-samsung-smart-fridge-doom-enternal-xbox-games-android">The Verge</a></p>
+<p class="rm-manual"> <span>READ NEXT</span> </p>
+<ul class="rm-manual"> <li class="rm-manual">› <a href="https://www.reviewgeek.com/91821/were-not-even-sure-these-failed-startup-toys-are-legal/">We’re Not Even Sure These “Failed Startup Toys” Are Legal</a>
+</li> <li class="rm-manual">› <a href="https://www.reviewgeek.com/91808/google-drive-for-desktop-now-syncs-to-multiple-accounts-after-major-overhaul/">Google Drive for Desktop Now Syncs to Multiple Accounts After Major Overhaul</a>
+</li> <li class="rm-manual">› <a href="https://www.reviewgeek.com/91802/samsungs-free-tv-streaming-service-works-on-other-devices-now/">Samsung’s Free TV Streaming Service Works on Other Devices Now</a>
+</li> <li class="rm-manual">› <a href="https://www.reviewgeek.com/91809/redbox-launches-a-subscription-you-dont-need/">Redbox Launches a Subscription You Don’t Need</a>
+</li> <li class="rm-manual">› <a href="https://www.reviewgeek.com/91799/google-assistant-cant-solve-this-elementary-math-problem/">Google Assistant Can’t Solve This Elementary Math Problem</a>
+</li> </ul>
+<p class="rm-manual"> <span> <a href="https://www.reviewgeek.com/author/joshhendrickson/"><span>Josh Hendrickson</span></a> <span>Josh
+ Hendrickson has worked in IT for nearly a decade, including four years 
+spent repairing and servicing computers for Microsoft. He’s also a 
+smarthome enthusiast who built his own smart mirror with just a frame, 
+some electronics, a Raspberry Pi, and open-source code. <a href="https://www.reviewgeek.com/author/joshhendrickson/">Read Full Bio »</a></span> </span> </p>
+<p class="rm-manual">The above article may contain affiliate links, which help support Review Geek.</p></article>
+</body></html>

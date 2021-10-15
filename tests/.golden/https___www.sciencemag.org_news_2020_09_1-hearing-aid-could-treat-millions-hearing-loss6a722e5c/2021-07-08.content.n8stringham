@@ -1,0 +1,176 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> This $1 hearing aid could treat millions with hearing loss | Science | AAAS </p>
+<p class="rm-manual"><a href="#main-content"> Skip to main content </a> </p>
+<p class="rm-manual"> <a href="file:///">AAAS</a> </p>
+<p class="rm-manual"> <a href="https://www.sciencemag.org/">ScienceMag.org</a> </p>
+<p class="rm-manual"> <a href=""> Search <span>Search</span> </a> </p>
+<p class="rm-manual"> <a href="">X</a> </p>
+<p class="rm-manual"> <a>Advanced Search</a> </p>
+<p class="rm-manual"> <a href="file:///">Science</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="#"> <span>Contents</span> </a> </li> <li class="rm-manual"> <a href="#"> <span>News</span> </a> </li> <li class="rm-manual"> <a href="#"> <span>Careers</span> </a> </li> <li class="rm-manual"> <a href="#"> <span>Journals</span> </a> </li> </ul>
+<p class="rm-manual"> Menu </p>
+<p class="rm-manual"> <a href="https://www.sciencemag.org/coronavirus-research-commentary-and-news?intcmp=ghd_cov"></a></p><p class="rm-manual"><a href="https://www.sciencemag.org/coronavirus-research-commentary-and-news?intcmp=ghd_cov">Read our COVID-19 research and news.</a></p> <p class="rm-manual"></p>
+<p class="rm-manual">Saad Bhamla models his do-it-yourself hearing aid, built with a soldering iron and cheap supplies.</p>
+<p class="rm-manual"><span> Craig Bromley </span> </p>
+<h1 class="rm-manual">This $1 hearing aid could treat millions with hearing loss</h1>
+<p class="rm-manual"> By <a href="file:///author/christa-lest-lasserre">Christa Lesté-Lasserre</a>Sep. 23, 2020 , 2:00 PM</p>
+<p>As an undergraduate in Mumbai, India, Saad Bhamla wanted to do 
+something nice for his maternal grandparents: Buy them a pair of hearing
+ aids. But the prices were shockingly high—and far beyond his means. 
+Now, 15 years later, the bioengineer has invented a device to help 
+grandparents across the globe: a do-it-yourself hearing aid made from 
+inexpensive, easy-to-find parts. The no-frills device, described in a 
+new study, could help restore hearing to millions suffering from 
+age-related hearing loss—for less than the price of a bottle of water.</p>
+<p>The new device is “incredibly compelling,” says Frank Lin, an ear, 
+nose, and throat doctor at the Cochlear Center for Hearing and Public 
+Health at Johns Hopkins University who was not involved in the work.</p>
+<p>Globally, 230 million people aged 65 and older experience age-related
+ hearing loss. Typically, high-pitch sounds become harder to 
+distinguish, like electronic beeps and speech sounds such as “s” and 
+“th.” Conversations can seem mumbled, and background noise feels 
+distracting and invasive. Such deficiencies can be isolating, Lin says, 
+and his research suggests <a href="https://pubmed.ncbi.nlm.nih.gov/21728425/">they can also accelerate cognitive decline</a>.</p>
+<p>To regain their abilities, many seniors turn to hearing aids. Custom 
+hearing aids amplify sound in the exact frequencies that the listener 
+cannot hear. But at nearly $5000 a pair, these devices are “practically a
+ luxury item” for many in low- and middle-income countries, says Bhamla,
+ who specializes in “frugal science” at Georgia Institute of Technology.
+ Lower grade hearing aids are cheaper, but they can’t be customized, and
+ they still cost up to $500. They’re like “cheap earphones in an 
+airplane,” Bhamla says.</p>
+<p>Inspired by his grandparents and a hearing-impaired colleague—who is 
+first author on the new paper—Bhamla and his team set out to develop a 
+cheap hearing aid built with off-the-shelf parts. They soldered a 
+microphone onto a small circuit board to capture nearby sound and added 
+an amplifier and a frequency filter to specifically increase the volume 
+of high-pitch sounds above 1000 hertz. Then they added a volume control,
+ an on/off switch, and an audio jack for plugging in standard earphones,
+ as well as a battery holder. The device, dubbed LoCHAid, is the size of
+ a matchbox and can be worn like a necklace. At bulk rates, Bhamla says,
+ it would cost just under $1 to make. But anyone with the <a href="https://github.com/bhamla-lab/LoCHAid-2020-PLOS-ONE">freely available blueprints</a>
+ and a soldering iron can make their own for not much more—maybe $15 or 
+$20, Bhamla says. The parts are easy to source, he says, and putting 
+them together takes <a href="https://www.youtube.com/watch?v=e0gnbOJ3nDo">less than 30 minutes</a>.</p>
+<p>Next, Bhamla and his colleagues tested the device. They found that it <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0238922">boosted the volume of high-pitch sounds</a>
+ by 15 decibels while preserving volumes at lower pitches. It also 
+filtered out interference and sudden, loud sounds like dog barks and car
+ horns. Finally, tests with an artificial ear revealed that LoCHAid 
+might improve speech recognition, by bringing conversations closer to 
+the quality heard by healthy individuals. It complied with five out of 
+six of the World Health Organization’s preferred product recommendations
+ for hearing aids, the researchers report today in PLOS ONE.</p>
+<p>Its simplicity has a few drawbacks, however. The device can’t be 
+fine-tuned for individual needs or adapted to treat other hearing 
+issues. And even though it’s waterproof and shock resistant, the 
+scientists anticipate that LoCHAid’s parts will wear out after about a 
+year and a half. Its bulky size might deter some users, Bhamla says, 
+although a smaller version is in the works. </p>
+<p>But engineering is only half the battle. Until LoCHAid is clinically 
+tested, it cannot be sold as a “hearing aid” in most countries—including
+ the United States. Ultimately, Bhamla wants to get an approval to sell 
+the device over the counter without a prescription, like ibuprofen or 
+reading glasses. “It’s something we’re still figuring out,” he says.</p>
+<p>The next step is getting people to use the devices. In low- and 
+middle-income countries, only 3% of people with age-related hearing loss
+ wear hearing aids, and in countries like the United States, the 
+adoption rate hovers at about 20%, according to Bhamla. Aside from 
+concerns about cost, Bhamla says, “a lot of people don’t realize they 
+have hearing loss … and then there’s the social stigma of wearing the 
+aid.”</p>
+<p>But if these cheap, colorful devices take off, they could benefit 
+many people on the brink of cognitive decline, Lin says. “Theoretically,
+ if you treat hearing loss, you might modify those pathways and reduce 
+the risk of dementia.”</p>
+<p>Bhamla wants biomedical devices to be as cheap and accessible as 
+consumer electronics. He still remembers the shock of learning that he 
+couldn’t afford to help his grandparents. “I thought owning a laptop and
+ a cellphone meant I had the means to buy hearing aids, but then I 
+realized how expensive they were,” he recalls. “It was sobering.”</p>
+<p class="rm-manual">Posted in: </p>
+<ul class="rm-manual"><li class="rm-manual"><a href="file:///category/technology">Technology</a></li></ul>
+<p class="rm-manual">doi:10.1126/science.abe9371</p>
+<h3 class="rm-manual"> <a href="file:///author/christa-lest-lasserre">Christa Lesté-Lasserre</a> </h3>
+<p class="rm-manual">Christa Lesté-Lasserre is a journalist in Paris.</p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="http://twitter.com/NewsfromScience"> Twitter</a> </li> </ul>
+<h2 class="rm-manual">More from News</h2>
+<ul class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> </p><h2 class="rm-manual"> <a href="file:///news/2021/06/ancient-beetle-first-new-species-discovered-fossilized-poop">This ancient beetle is the first new species discovered in fossilized poop</a> </h2> <p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> </p><h2 class="rm-manual"> <a href="file:///news/2021/06/artificial-intelligence-could-help-biologists-classify-world-s-tiny-creatures">Artificial intelligence could help biologists classify the world’s tiny creatures</a> </h2> <p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> </p><h2 class="rm-manual"> <a href="file:///news/2021/06/new-internet-woven-spooky-quantum-links-could-supercharge-science-and-commerce">New internet woven from ‘spooky’ quantum links could supercharge science and commerce</a> </h2> <p class="rm-manual"></p> </article> </li> </ul>
+<h2 class="rm-manual">Got a tip?</h2>
+<p class="rm-manual"><a href="file:///about/got-tip">How to contact the news team</a></p>
+<h2 class="rm-manual">ScienceInsider</h2>
+<ul class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> </p><h2 class="rm-manual"> <a href="file:///news/2021/07/landmark-research-integrity-survey-finds-questionable-practices-are-surprisingly-common">Landmark research integrity survey finds questionable practices are surprisingly common</a> </h2> <p class="rm-manual"> By <a href="file:///author/jop-de-vrieze">Jop de Vrieze</a>Jul. 7, 2021</p> <p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> </p><h2 class="rm-manual"> <a href="file:///news/2021/07/australias-top-supplier-lab-mice-and-rats-shut-down-operations">Australia's top supplier of lab mice and rats to shut down operations</a> </h2> <p class="rm-manual"> By <a href="file:///author/dennis-normile">Dennis Normile</a>Jul. 7, 2021</p> <p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> </p><h2 class="rm-manual"> <a href="file:///news/2021/07/too-good-be-true-doubts-swirl-around-trial-saw-77-reduction-covid-19-mortality">‘Too good to be true’: Doubts swirl around trial that saw 77% reduction in COVID-19 mortality</a> </h2> <p class="rm-manual"> By <a href="file:///author/robert-f-service">Robert F. Service</a>Jul. 7, 2021</p> <p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> </p><h2 class="rm-manual"> <a href="file:///news/2021/07/covid-19-affects-men-and-women-differently-so-why-don-t-clinical-trials-report-gender">COVID-19 affects men and women differently. So why don’t clinical trials report gender data?</a> </h2> <p class="rm-manual"> By <a href="file:///author/cathleen-o-grady">Cathleen O’Grady</a>Jul. 6, 2021</p> <p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> </p><h2 class="rm-manual"> <a href="file:///news/2021/07/european-plan-gigantic-new-gravitational-wave-detector-passes-milestone">European plan for gigantic new gravitational wave detector passes milestone</a> </h2> <p class="rm-manual"> By <a href="file:///author/adrian-cho">Adrian Cho</a>Jul. 2, 2021</p> <p class="rm-manual"></p> </article> </li> </ul>
+<p class="rm-manual"><a href="file:///news/scienceinsider">More ScienceInsider</a></p>
+<h2 class="rm-manual">Sifter</h2>
+<ul class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> </p><h2 class="rm-manual"> <a href="file:///news/2021/06/physicists-take-most-detailed-image-atoms-date">Physicists take the most detailed image of atoms to date</a> </h2> <p class="rm-manual"> By <a href="file:///author/anil-oza">Anil Oza</a>Jun. 30, 2021</p> <p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> </p><h2 class="rm-manual"> <a href="file:///news/2021/06/dinosaurs-may-have-lived-arctic-year-round">Dinosaurs may have lived in the Arctic year-round</a> </h2> <p class="rm-manual"> By <a href="file:///author/alex-viveros">Alex Viveros</a>Jun. 25, 2021</p> <p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> </p><h2 class="rm-manual"> <a href="file:///news/2021/06/massive-comet-fly-saturn-2031">Massive comet to fly by Saturn in 2031</a> </h2> <p class="rm-manual"> By <a href="file:///author/anil-oza">Anil Oza</a>Jun. 24, 2021</p> <p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> </p><h2 class="rm-manual"> <a href="file:///news/2021/06/soil-without-life-discovered-first-time-earth">Soil without detectable life discovered in Antarctica</a> </h2> <p class="rm-manual"> By <a href="file:///author/alex-viveros">Alex Viveros</a>Jun. 18, 2021</p> <p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> </p><h2 class="rm-manual"> <a href="file:///news/2021/06/homely-mollusk-s-rock-hard-chompers-are-made-rare-minerals">This homely mollusk’s rock-hard chompers are made of rare minerals</a> </h2> <p class="rm-manual"> By <a href="file:///author/sofia-moutinho">Sofia Moutinho</a>Jun. 2, 2021</p> <p class="rm-manual"></p> </article> </li> </ul>
+<p class="rm-manual"><a href="file:///news/sifter">More Sifter</a></p>
+<p class="rm-manual"> <a href="https://science.sciencemag.org/"></a></p><h2 class="rm-manual"><a href="https://science.sciencemag.org/">Read the Latest Issue of Science</a></h2> <p class="rm-manual"></p>
+<h3 class="rm-manual">2 July 2021</h3>
+<p class="rm-manual"> Vol 373, Issue 6550 </p>
+<p class="rm-manual"><a href="https://science.sciencemag.org/">Table of Contents</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <h3 class="rm-manual">Geochemistry/Geophysics</h3>
+<a href="http://science.sciencemag.org/content/373/6550/17">A voice for the river</a> </li> <li class="rm-manual"> <h3 class="rm-manual">Biochemistry</h3>
+<a href="http://science.sciencemag.org/content/373/6550/16">Gene editor injected into the body treats disease</a> </li> <li class="rm-manual"> <h3 class="rm-manual">Asia/Pacific News</h3>
+<a href="http://science.sciencemag.org/content/373/6550/15">Did a Chinese team ‘obscure’ early coronavirus sequences?</a> </li> <li class="rm-manual"> <h3 class="rm-manual">Geochemistry/Geophysics</h3>
+<a href="http://science.sciencemag.org/content/373/6550/13">Ship gauges potential for catastrophic earthquake</a> </li> <li class="rm-manual"> <h3 class="rm-manual">Ecology</h3>
+<a href="http://science.sciencemag.org/content/373/6550/12">Black-footed albatrosses find a new home across an ocean</a> </li> <li class="rm-manual"> <h3 class="rm-manual">Anthropology</h3>
+<a href="http://science.sciencemag.org/content/373/6550/11">‘Dragon Man’ may be an elusive Denisovan</a> </li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="file:///about/about-us">About Us</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///journals">Journals</a></li> <li class="rm-manual"><a href="file:///news/about-news-science">News from Science</a></li> <li class="rm-manual"><a href="file:///about/leadership-and-management">Leadership</a></li> <li class="rm-manual"><a href="file:///about/team-members">Team Members</a></li> <li class="rm-manual"><a href="file:///page/employment-aaas">Work at AAAS</a></li> </ul>
+</li> <li class="rm-manual">
+<a href="file:///">For Advertisers</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///">Advertising Kits</a></li> <li class="rm-manual"><a href="file:///prizes">Awards and Prizes</a></li> <li class="rm-manual"><a href="file:///custom-publishing">Custom Publishing</a></li> <li class="rm-manual"><a href="file:///custom-publishing/webinars">Webinars</a></li> </ul>
+</li> <li class="rm-manual">
+<a href="file:///authors/contributing-science-family-journals">For Authors</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///scc/">Submit</a></li> <li class="rm-manual"><a href="file:///authors/contributing-science-family-journals">Information for Authors</a></li> <li class="rm-manual"><a href="file:///authors/science-journals-editorial-policies">Editorial Policies</a></li> </ul>
+</li> <li class="rm-manual">
+<a href="file:///librarian">For Librarians</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///librarian-admin-portal">Manage Your Institutional Subscription</a></li> <li class="rm-manual"><a href="file:///librarian">Information for Librarians</a></li> <li class="rm-manual"><a href="file:///subscribe-form/request-institutional-price-quote-or-complimentary-trial-online-resources">Request a Quote</a></li> <li class="rm-manual"><a href="file:///librarian-portal-frequently-asked-questions">FAQs</a></li> </ul>
+</li> <li class="rm-manual">
+<a href="file:///related-sites">Related Sites</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///">AAAS.org</a></li> <li class="rm-manual"><a href="file:///">EurekAlert!</a></li> <li class="rm-manual"><a href="file:///">Science in the Classroom</a></li> <li class="rm-manual"><a href="file:///japan-portal">Science Magazine Japanese</a></li> </ul>
+</li> <li class="rm-manual">
+<a href="file:///help">Help</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///subscriptions">Access and Subscriptions</a></li> <li class="rm-manual"><a href="file:///">Order a Single Issue</a></li> <li class="rm-manual"><a href="file:///help/reprints-and-permissions">Reprints and Permissions</a></li> <li class="rm-manual"><a href="file:///about/contact-us">Contact Us</a></li> <li class="rm-manual"><a href="file:///about/accessibility">Accessibility</a></li> </ul>
+</li> <li class="rm-manual"><a href="file:///about/email-alerts-and-rss-feeds">Stay Connected</a></li> </ul>
+<p class="rm-manual">© 2021 <a href="file:///">American Association for the Advancement of Science</a>. All rights Reserved. AAAS is a partner of <a href="file:///hinari/en/">HINARI</a>, <a href="http://www.fao.org/agora/en/">AGORA</a>, <a href="http://www.unep.org/oare/">OARE</a>, <a href="file:///">CHORUS</a>, <a href="file:///">CLOCKSS</a>, <a href="file:///">CrossRef</a> and <a href="file:///">COUNTER</a>.</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///about/terms-service">Terms of Service</a></li> <li class="rm-manual"><a href="file:///about/privacy-policy">Privacy Policy</a></li> <li class="rm-manual"><a href="file:///contact-aaas">Contact AAAS</a></li> </ul></article>
+</body></html>

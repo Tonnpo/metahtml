@@ -1,0 +1,231 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> The Review </p>
+<ul class="rm-manual"> <li class="rm-manual">
+<a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.chronicle.com%2Farticle%2Fthe-unc-scandal-no-one-talks-about&amp;text=The%20UNC%20Scandal%20No%20One%20Talks%20About"> <span>Twitter</span> </a> </li> <li class="rm-manual">
+<a href="mailto:?body=The%20UNC%20Scandal%20No%20One%20Talks%20About%0A%0Ahttps%3A%2F%2Fwww.chronicle.com%2Farticle%2Fthe-unc-scandal-no-one-talks-about%0A%0AThe%20Nikole%20Hannah-Jones%20case%20has%20Black%20scholars%20asking%20if%20they%27re%20welcome.%20It%27s%20not%20the%20first%20time."> <span>Email</span> </a> </li> <li class="rm-manual"> <a href="#"><span>Show more sharing options</span></a> </li> </ul>
+<p class="rm-manual"> <span>Share</span> </p>
+<ul class="rm-manual"> <li class="rm-manual">
+<a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.chronicle.com%2Farticle%2Fthe-unc-scandal-no-one-talks-about&amp;text=The%20UNC%20Scandal%20No%20One%20Talks%20About"> <span>Twitter</span> </a> </li> <li class="rm-manual">
+<a href="mailto:?body=The%20UNC%20Scandal%20No%20One%20Talks%20About%0A%0Ahttps%3A%2F%2Fwww.chronicle.com%2Farticle%2Fthe-unc-scandal-no-one-talks-about%0A%0AThe%20Nikole%20Hannah-Jones%20case%20has%20Black%20scholars%20asking%20if%20they%27re%20welcome.%20It%27s%20not%20the%20first%20time."> <span>Email</span> </a> </li> <li class="rm-manual"> <a href="#"><span>Copy Link URL</span><span>Copied!</span></a> </li> <li class="rm-manual"> <a href=""><span>Print</span></a> </li> </ul>
+<p class="rm-manual"> <span>By </span><a href="https://www.chronicle.com/author/andy-thomason"><span>Andy Thomason</span></a> </p>
+<p class="rm-manual"> June 22, 2021 </p>
+<p>In the summer of 2012, the biggest scandal in half a century was 
+splintering the University of North Carolina at Chapel Hill. A series of
+ phantom courses — supposedly lecture classes, but they never met in 
+person — <a href="https://www.chronicle.com/article/widespread-nature-of-chapel-hills-academic-fraud-is-laid-bare/">had been used for years</a> by athletes trying to stay eligible to play. At a university that <a href="https://www.chronicle.com/article/u-of-north-carolina-is-proud-of-its-balance-of-big-time-athletics-and-quality-academics/">had long bragged about winning “the right way,”</a> the revelation was evidence of an irresistible hypocrisy. Journalists and faculty members agitated for answers.</p>
+<p>In the midst of the controversy, a bizarre subplot developed: Five 
+thousand miles away, a physics professor named Paul Frampton sat in a 
+decrepit Argentine jail. The UNC scholar had been caught at the Buenos 
+Aires airport <a href="https://www.nytimes.com/2013/03/10/magazine/the-professor-the-bikini-model-and-the-suitcase-full-of-trouble.html">with two kilograms of cocaine in his suitcase</a>. He claimed innocence, saying he’d been tricked.</p>
+<p>The story made waves back in North Carolina, even as the athletics 
+scandal raged. The UNC administration took Frampton off the payroll as 
+he awaited trial. That move didn’t sit well with some professors. (He 
+was later <a href="https://www.newsobserver.com/news/local/article167404762.html">awarded back pay.</a>) “It makes the faculty worried,” one scholar <a href="https://www.dailytarheel.com/article/2012/08/frampton-supporters-ramp-up-efforts">told the student newspaper</a>.
+ “What if I was in that situation? Would I be treated the same way?” Two
+ faculty members set up a website to raise money for Frampton, and 
+dozens of academics — at UNC and elsewhere — wrote a public letter 
+objecting to the suspension.</p>
+<p>Reginald Hildebrand watched the saga with disappointment. As the 
+athletics scandal continued to churn, skeptical observers had — in the 
+absence of a motive or more detail about the suspect classes — turned 
+their gaze on the department in which they had been offered: African and
+ Afro-American studies.</p>
+<p>The most thorough investigation of the classes would later conclude 
+that knowledge of them inside the department had been limited to a 
+secretary, the department chair, and perhaps one or two others. But back
+ in 2012, a laser beam of suspicion settled on Hildebrand and the 
+roughly two dozen other professors in the department, which <a href="https://alumni.unc.edu/news/afam-reforms-promised-starts-with-new-name/">has since been renamed</a>.
+ Whiffs of impropriety gave people the opening they needed to say 
+exactly what they thought about Black studies. Letters flowed into the 
+local newspapers, casting aspersions on the department’s integrity. 
+“‘Black studies’ are nothing more than a politically correct sop by our 
+institutions of higher learning to a preferred minority group,” one 
+resident wrote in a letter to The News &amp; Observer, in Raleigh.</p>
+<p>One student suggested to The Daily Tar Heel — the student newspaper, 
+which I edited at the time and which published its fair share of 
+sensationalistic coverage — that the entire department should be 
+eliminated. “The actions of a single department have brought shame and 
+embarrassment onto the entire UNC community,” he wrote. A member of the 
+Board of Governors, which oversees the university system, floated the 
+idea of shutting down the department.</p>
+<p class="rm-manual">ADVERTISEMENT</p>
+<p>A lack of evidence about widespread wrongdoing in the department 
+didn’t stop the generalizations and accusations. Where, Hildebrand 
+wondered, was the faculty support? Why did professors across the 
+university seem more willing to support a white physics professor 
+ensnared in an apparent narcotics scheme than their colleagues in 
+African and Afro-American studies?</p>
+<p>The department was brought into being by student activists in the 
+late 1960s who demanded, along with peers across the country, that Black
+ scholarship be given a home at the university. In the ensuing decades, 
+advocates fought tooth and nail for each new faculty position, endured 
+criticism from outsiders who thought it wasn’t a serious discipline, and
+ waited in vain for the program to be granted departmental status.</p>
+<p>Finally, in the 1990s, African and Afro-American studies was elevated
+ to a department. Julius Nyang’oro — the chair who later resigned amid 
+the fake-classes scandal — wrote in his request for departmental status 
+that the subservient status of African American studies made it seem 
+like “some lesser academic entity to be politicized whenever there is 
+inside or outside focus on the African American population at the 
+university.”</p>
+<p>Now the unit was taking fire. The problem wasn’t the department, <a href="http://media2.newsobserver.com/content/media/2017/1/18/anatomy.pdf">Hildebrand wrote</a>
+ to The News &amp; Observer. It was that the university was attempting 
+to run a minor-league sports franchise while asking the players to 
+double as full-time students. “We are forced to confront the fact,” 
+Hildebrand said, “that this charade can only be kept going through the 
+resourceful manipulation of smoke and mirrors and by a lot of winking 
+and nodding. The system will find, or create, enough academic wiggle 
+room and gimmicks to keep things moving along.” The departmental 
+secretary, Debby Crowder, had supplied that wiggle room, Hildebrand 
+suggested, but just because the locus of the latest revelations centered
+ on the department where she worked didn’t mean that the department was 
+rotten.</p>
+<p>The silence of fellow faculty members was particularly upsetting. 
+“Such silence reads loudly as consent,” wrote one professor in the 
+department, “in the face of the ongoing firestorm whose flames would 
+consume us.” Hildebrand and his colleagues defended their department’s 
+integrity. At a meeting in the fall of 2012, the UNC faculty endorsed <a href="https://web.archive.org/web/20191201184405/http://faccoun.unc.edu/files/2011/03/Res2012-9OnAfAmStudies.pdf">a resolution</a>
+ that “affirms the integrity and validity of the intellectual 
+disciplines represented in the department of African and Afro-American 
+studies and expresses our solidarity with those members of the faculty 
+of that department whose professional lives and work have been in no way
+ connected with academic irregularities.”</p>
+<p>The faculty’s show of support came to rankle Hildebrand. Expressing 
+solidarity with only the faculty members who were “in no way connected 
+with academic irregularities” implied that the suspicion that clouded 
+the department was legitimate. “They aren’t saying, ‘Until you prove 
+he’s done something, he’s a member of this community and needs to be 
+respected as such,’” Hildebrand said in <a href="https://dc.lib.unc.edu/cdm/ref/collection/sohp/id/27514">an expansive oral-history interview</a>.
+ (He declined to be interviewed for my book, from which this essay is 
+adapted.) And the first part of the statement, the validation of the 
+department’s integrity, implied that the department needed validating. 
+The well-intentioned statement of solidarity both honored and demeaned 
+Hildebrand and his colleagues.</p>
+<p>Eamon Queeney, The Washington Post via Getty Images</p>
+<figcaption>The U. of North Carolina at Chapel Hill’s Unsung Founders 
+Memorial, dedicated in 2005, was a stone’s throw away from Silent Sam, a
+ Confederate statue that protesters tore down in 2018.</figcaption><p>It
+ reminded Hildebrand of a monument the university had erected a few 
+years before, to memorialize the enslaved people who had built much of 
+the university’s campus. But the form it took — a low, black table 
+propped up by a mass of muscular statuettes inches off the ground — 
+struck some as far from an honor. When it rained, the “unsung founders” 
+got splattered with mud, Hildebrand remembered. They were used as 
+footrests. It was hard to even see them. “Suppose we were trying to 
+honor the chancellors of this university,” Hildebrand said, “and got 
+little images of all of them, and put them as table legs, and had us put
+ our feet up on them. It would be so outrageous and unacceptable. … 
+Nobody would even consider it.” Like the faculty’s statement in support 
+of his department, the monument was both gratifying and insulting.</p>
+<p class="rm-manual">ADVERTISEMENT</p>
+<p>The conditions that prevailed in both cases amounted to something 
+“that still looks and feels and tastes like racism,” Hildebrand said.</p>
+<p>Taylor Branch, the civil-rights historian and UNC alumnus, argued in his 2011 cover story for The Atlantic, “<a href="https://www.theatlantic.com/magazine/archive/2011/10/the-shame-of-college-sports/308643/">The Shame of College Sports</a>,”
+ that big-time sports had begun to carry “an unmistakable whiff of the 
+plantation.” The saga that played out on Branch’s own campus carried 
+more than one such whiff. The African and Afro-American studies 
+department’s building stood in the shadow of a statue of a Confederate 
+soldier, erected at the height of the South’s white-supremacist terror 
+campaign, in the early 20th century, and that statue towered over the 
+Unsung Founders Memorial. (Protesters <a href="https://www.chronicle.com/package/the-rise-and-fall-of-silent-sam/">tore down the Confederate statue</a>, known as Silent Sam, in 2018.)</p>
+<p>The many Black athletes who used the phantom courses to stay eligible
+ lacked the right to earn money of their own. In being pushed by 
+advisers to take the courses, they were being deprived of an education 
+on par with their classmates. Even when the football players took the 
+field, they did so amid the legacy of a white-supremacist history. <a href="https://alumni.unc.edu/news/unc-to-remove-kenan-sr-name-from-stadium-plaque/">Until 2018</a>,
+ Kenan Stadium was named for William Rand Kenan Sr., the donor’s father,
+ who in 1898 captained a squad of machine-gunners that carried out <a href="https://www.theatlantic.com/politics/archive/2017/08/wilmington-massacre/536457/">a</a><a href="https://www.theatlantic.com/politics/archive/2017/08/wilmington-massacre/536457/"> coup d’état against Wilmington’s biracial government</a>. Historians estimate that at least dozens and possibly hundreds of people were killed in the rebellion, many of them Black.</p>
+<p>Gerry Broome, AP Photos</p>
+<figcaption>The Old Well sits in front of the South Building on the Chapel Hill campus.</figcaption><p>Just
+ think of it: Mostly Black players competing in a stadium built to honor
+ a white-supremacist killer, deprived both of the right to be 
+compensated at a market rate and of the right to a full university 
+education. Black professors who worked in the shadow of a Confederate 
+statue were shrouded in unfair suspicion. “This would not have taken the
+ bounce it did if, somehow, in the background, we weren’t talking about 
+what people perceive to be a Black department, a Black subject, and 
+Black athletes,” Hildebrand said.</p>
+<p>The department’s reputation was unjustly stained. In the wake of the 
+scandal, Hildebrand was approached after class one day by a student who 
+asked whether he thought she should mention in her graduate-school 
+application that she had majored in his department. “She felt, just by 
+saying that, it would be a signal that she wasn’t a serious student. 
+That she’d learned nothing in my class.” That was the worst shame of 
+all, the professor said — what the scandal had done to the department’s 
+students. “I felt like somebody kicked me in my stomach,” he recalled.</p>
+<p>Hildebrand also paid a personal price. As the scandal raged, he 
+attended an event in honor of the Emancipation Proclamation, a copy of 
+which was then on display at the North Carolina History Museum, in 
+Raleigh. He had heard stories about how his last name came from a 
+distant relative who, on emancipation, refused to take the name of the 
+man who had enslaved him, instead choosing Hildebrand. At the event, 
+while Hildebrand was making small talk with a former state politician, 
+she asked him what he did for a living.</p>
+<p>When he told her he taught Afro-American studies at UNC, she laughed in his face.</p>
+<p class="rm-manual">ADVERTISEMENT</p>
+<p>The recent decision <a href="https://www.chronicle.com/article/what-the-hell-happened">not to award Nikole Hannah-Jones tenure</a> has brought public reminders of other episodes: the <a href="https://indyweek.com/news/orange/nikole-hannah-jones-unc-chapel-hill-black-women-professors/">denial of tenure to Sonja Haynes Stone</a>, a Black female professor of African American studies, in 1979; <a href="https://www.theassemblync.com/short-form/say-his-name-james-cates/">the killing of a Black town resident named James Cates</a>
+ on the campus, in 1970; the university’s refusal to remove Silent Sam 
+just a few years ago; and then the system’s decision, later thrown out 
+by a state judge, to <a href="https://www.chronicle.com/article/uncs-silent-sam-settlement-sparked-a-backlash-now-a-judge-has-overturned-the-deal/">give Silent Sam to the Sons of Confederate Veterans</a>, and to pay the group $2.5 million.</p>
+<p>The public scapegoating of the African and Afro-American studies 
+department has not entered into this conversation — perhaps because the 
+department is still viewed as complicit in the scandal. If so, that 
+mistake must be corrected. Though Crowder and Nyang’oro were found to 
+have presided over the infamous phantom courses, the root cause of the 
+scandal was the contortions that so-called amateurism in big-time sports
+ inflicts on campuses like UNC.</p>
+<p>The collateral damage suffered by the department’s scholars was among
+ the most lasting and shameful consequences of the scandal. It also 
+revealed the extent to which Black scholarship still was not valued 
+nearly half a century after the creation of the department. Had the 
+irregular classes been found in Frampton’s physics department, would 
+letter writers and board members have called for its elimination? Would 
+newspapers have allowed public conversation to center on the 
+discipline’s validity? Of course not.</p>
+<p>Any institution’s priorities can be ascertained by whom it chooses to
+ side with when the ship starts taking on water. Black scholars under 
+siege or the shiny athletic brand? Black student activists or a 
+Confederate statue? A qualified Black journalist seeking tenure or those
+ who despise her work? It is no wonder that the <a href="http://www.ncpolicywatch.com/2021/06/17/chapel-hill-student-body-president-its-past-time-for-a-genuine-reckoning-at-unc/">student</a><a href="http://www.ncpolicywatch.com/2021/06/17/chapel-hill-student-body-president-its-past-time-for-a-genuine-reckoning-at-unc/">-</a><a href="http://www.ncpolicywatch.com/2021/06/17/chapel-hill-student-body-president-its-past-time-for-a-genuine-reckoning-at-unc/">body president has urged</a> Black students and professors to stay away from Chapel Hill.</p>
+<p class="rm-manual">This essay has been adapted from <a href="https://www.press.umich.edu/10171336/discredited">Discredited: The UNC Scandal and College Athletics’ Amateur Ideal</a>, slated for release by the University of Michigan Press on August 27.</p>
+<p class="rm-manual"> <span>We welcome your thoughts and questions about this article. Please <a href="mailto:editor@chronicle.com">email the editors</a> or <a href="mailto:letters@chronicle.com">submit a letter</a> for publication.</span> </p>
+<p class="rm-manual"><a href="https://www.chronicle.com/tag/equity-diversity">Equity &amp; Diversity</a><a href="https://www.chronicle.com/tag/politics">Politics</a><a href="https://www.chronicle.com/tag/scholarship-and-research">Scholarship and Research</a><a href="https://www.chronicle.com/tag/faculty-life">Faculty Life</a><a href="https://www.chronicle.com/tag/athletics">Athletics</a><a href="https://www.chronicle.com/tag/opinion">Opinion</a><a href="https://www.chronicle.com/tag/commentary">Commentary</a></p>
+<p class="rm-manual"> <a href="https://www.chronicle.com/author/andy-thomason">Andy Thomason</a> </p>
+<p class="rm-manual"> Andy Thomason is an assistant managing editor at The Chronicle and the author of the forthcoming book <a href="https://www.press.umich.edu/10171336/discredited">Discredited: The UNC Scandal and College Athletics’ Amateur Ideal.</a> </p></article>
+</body></html>

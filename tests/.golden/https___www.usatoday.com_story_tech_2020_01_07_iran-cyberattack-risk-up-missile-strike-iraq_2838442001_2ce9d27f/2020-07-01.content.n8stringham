@@ -1,0 +1,135 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"><a href="file:///tech/">TECH</a></p>
+<h1 class="rm-manual">The risk of an Iran cyberattack is up after missile strike on Iraqi military bases with US troops</h1>
+<p class="rm-manual"><a href="file:///staff/2647487001/jessica-guynn/">Jessica Guynn</a></p>
+<p class="rm-manual">USA TODAY</p>
+<p>Americans should be on heightened alert for cyberattacks after <a href="https://www.usatoday.com/story/news/world/2020/01/07/iran-state-tv-tehran-fires-iraqi-base-housing-us-troops-ain-assad/2837693001/" rel="noopener">Iran fired more than a dozen missiles</a> at two military bases in Iraq where U.S. troops are stationed late Tuesday.</p>
+<p>The FBI said Wednesday that the bureau is “aware of the continued 
+possibility that retaliatory actions could be taken against the United 
+States and its interests abroad.”</p>
+<p>“While there is no specific or credible threat to the homeland at 
+this time, we urge the public to be vigilant and report any suspicious 
+activity to law enforcement,” the FBI said.</p>
+<p>On Monday Homeland Security <a href="https://www.us-cert.gov/ncas/alerts/aa20-006a" rel="noopener">urged cybersecurity teams</a> to "enhance monitoring of network and email traffic," including for email phishing attempts.</p>
+<p>Iran, which has been linked to cyber attacks against Saudi Arabia and
+ the Sands Las Vegas casino owned by Sheldon Adelson, could target 
+private businesses and government infrastructure to avenge last week's 
+killing of its top military commander as tensions between Tehran and 
+Washington <a href="https://www.usatoday.com/story/news/politics/2020/01/06/iran-tension-soleimani-explainer/2822590001/" rel="noopener">reach one of their highest points</a> since the 1979 Iranian revolution, security researchers say.</p>
+<p>In retaliation for the U.S. drone strike that killed Qasem Soleimani 
+in Baghdad, Iran could go after the power and electricity you use, the 
+smart devices you carry or your bank account, they say. </p>
+<p>"As these escalations continue to play out and definitely in wake of 
+Soleimani's death, America needs to be prepared for retaliation," said 
+Graham Brookie, director of the Atlantic Council's Digital Forensic 
+Research Lab. "Are we being attacked online? No, not that we can prove 
+and not that is having an impact that is blatant or at scale or moving 
+the needle on public conversation or crippling any infrastructure."</p>
+<p>Cyberwar with Iran:<a href="https://www.usatoday.com/story/tech/2020/01/03/how-much-damage-could-iran-cyber-attacks-do/2803599001/" rel="noopener">How vulnerable is America?</a></p>
+<p>A cyber conflict has been <a href="https://www.usatoday.com/story/tech/2020/01/03/how-much-damage-could-iran-cyber-attacks-do/2803599001/" rel="noopener">silently raging for years</a>.
+ Even if no attack from Iran occurs in coming weeks, "the danger zone 
+will extend for years," warned Steven Bellovin, a computer science 
+professor at Columbia University School of Engineering. </p>
+<p>For nearly a decade, Iran has been building up its cyber arsenal and 
+is now considered among the major nation-state threats to the security 
+of the U.S.</p>
+<p>"The Iranian regime has demonstrated greater appetite towards 
+destructive or disruptive cyber-attacks in peacetime than any other 
+nation," <a href="https://www.f-secure.com/en/consulting/our-thinking/understanding-the-cyber-threat-from-iran" rel="noopener">say</a> Ed Parsons and George Michael, who research cyber threats to the private sector.</p>
+<p>Secretary of State Mike Pompeo acknowledged last week that Iran could unleash cyberattacks.</p>
+<p>“The Iranians have a deep and complex cyber capability, to be sure,” 
+Pompeo said on Fox News. “Know that we have certainly considered that 
+risk."</p>
+<p>On Saturday, the Department of Homeland Security <a href="https://www.dhs.gov/sites/default/files/ntas/alerts/20_0104_ntas_bulletin.pdf" rel="noopener">warned</a>
+ Americans that Iran is capable of launching cyberattacks with 
+“temporary disruptive effects” against critical U.S. infrastructure, 
+though it had “no information indicating a specific, credible threat to 
+the Homeland.” </p>
+<p>'This was an act of war':<a href="https://www.usatoday.com/story/news/politics/2020/01/07/iran-missile-strikes-us-bases-reaction/2838233001/" rel="noopener">Lawmakers react to Iran's missile strike on US military bases</a></p>
+<p>The National Terrorism System advisory recommended that Americans 
+take precautions by backing up data and using two-factor authentication 
+for sensitive accounts.</p>
+<p>Acting Homeland Security Secretary Chad Wolf <a href="https://twitter.com/DHS_Wolf/status/1213585937881534467" rel="noopener">tweeted</a>
+ that the bulletin was intended to “inform &amp; reassure the American 
+public, state/local governments &amp; private partners that DHS is 
+actively monitoring &amp; preparing for any specific, credible threat, 
+should one arise.”</p>
+<p>On Sunday, a federal website went offline after a <a href="https://www.usatoday.com/story/news/nation/2020/01/05/iran-hack-homeland-security-website-hacked-image-bloody-trump/2818308001/" rel="noopener">hacker uploaded photos to the site that included an Iranian flag and an image depicting a bloodied President Donald Trump</a> being punched in the face.</p>
+<p>The images appeared on the Federal Depository Library Program 
+program's website late Saturday before the site was taken offline. The 
+Cybersecurity and Infrastructure Security Agency, a division of the 
+Department of Homeland Security, said it was monitoring the situation.</p>
+<p>"We are aware the website of the Federal Depository Library Program 
+was defaced with pro-Iranian, anti-US messaging," the cybersecurity 
+agency said in a statement. "At this time, there is no confirmation that
+ this was the action of Iranian state-sponsored actors. The website was 
+taken offline and is no longer accessible."</p>
+<p>The statement added that "in these times of increased threats" all 
+organizations should increase cyber monitoring, back up IT systems, 
+implement secure authentication and have an incident response plan ready
+ should a hack take place.</p>
+<p>CrowdStrike, a cybersecurity firm that warned of increasing 
+cyberattacks by Iran earlier this year, said Monday that industries such
+ as oil and gas and electricity could be targets.</p>
+<p>“CrowdStrike Intelligence believes that Iranian adversaries are 
+likely to leverage a broad range of means, including cyber operations, 
+against U.S. and allied interests,” the company said. “Our current 
+assessment is that organizations in the financial, defense, government, 
+and oil and gas sectors are the most likely targets for retaliation 
+activity.”</p>
+<p>What we know:<a href="https://www.usatoday.com/story/news/politics/2020/01/07/u-s-military-bases-attacked-iranian-missiles-what-we-know/2838092001/" rel="noopener">US military bases attacked by Iran have hosted Trump and Pence, damage unclear</a></p>
+<p>CrowdStrike said it was monitoring for denial of service and ransomware attacks, tools frequently deployed by Iranian hackers.</p>
+<p>Iran intensified its cyber warfare capabilities after the Stuxnet 
+computer worm, a program believed to have been run by the United States 
+and Israel, was uncovered. The worm destroyed nuclear centrifuges at the
+ Natanz uranium enrichment plant.</p>
+<p>“Stuxnet caused Iran to really wake up: 'Hey this cyber stuff is 
+really powerful. We can do this, too.' And unlike nuclear weapons, it 
+doesn’t take a huge industrial infrastructure," Bellovin said.</p>
+<p>"Iran’s abilities have gotten noticeably stronger over the last 10 
+years," with hackers targeting major U.S. financial institutions, 
+universities and companies, he said.</p>
+<p>Bellovin warns that it could take years for Iran to launch a 
+cyberattack. American companies should shore up their defenses 
+accordingly, he said.</p>
+<p>"I worry about companies letting down their guard," Bellovin said. 
+"If people get an alert and then after three weeks revert to business as
+ usual, two years from now they may find themselves hit badly."</p>
+<p class="rm-manual">Contributing: Kevin Johnson</p></article>
+</body></html>

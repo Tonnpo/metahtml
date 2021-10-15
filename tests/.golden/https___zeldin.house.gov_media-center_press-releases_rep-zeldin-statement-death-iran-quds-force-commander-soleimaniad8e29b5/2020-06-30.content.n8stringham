@@ -1,0 +1,101 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Rep. Zeldin Statement on Death of Iran Quds Force Commander Soleimani | Congressman Lee Zeldin </p>
+<p class="rm-manual"> <a href="#main-content">Skip to main content</a> </p>
+<ul class="rm-manual"> <li class="rm-manual">
+<a href="file:///about/full-biography">About</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///about/full-biography">Biography</a></li> <li class="rm-manual"><a href="file:///about/votes-and-legislation">Votes and Legislation</a></li> <li class="rm-manual"><a href="file:///about/committees-and-caucuses">Committees and Caucuses</a></li> </ul>
+</li> <li class="rm-manual">
+<a href="file:///contact">Contact</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///contact/email-me">Email Me</a></li> <li class="rm-manual"><a href="file:///contact/newsletter">Newsletter Subscribe</a></li> <li class="rm-manual"><a href="file:///contact/offices">Offices</a></li> <li class="rm-manual"><a href="file:///contact/request-appearance">Request an Appearance</a></li> <li class="rm-manual"><a href="file:///contact/press">Press Inquiries</a></li> </ul>
+</li> <li class="rm-manual">
+<a href="file:///media-center">News</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///media-center/press-releases">Press Releases</a></li> <li class="rm-manual"><a href="file:///media-center/in-the-news">In the News</a></li> <li class="rm-manual"><a href="file:///media-center/social-media">Social Media</a></li> <li class="rm-manual"><a href="file:///media-center/videos">Videos</a></li> </ul>
+</li> <li class="rm-manual">
+<a href="file:///services">Serving You</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///artcompetition">Art Competition</a></li> <li class="rm-manual"><a href="file:///services/help-with-a-federal-agency">Help with a Federal Agency</a></li> <li class="rm-manual"><a href="file:///smallbusinessassistance">Federal Assistance for Small Businesses During Coronavirus</a></li> <li class="rm-manual"><a href="file:///services/flags">Flags</a></li> <li class="rm-manual"><a href="file:///coronavirus">Important Info to Protect You &amp; Your Family from Coronavirus</a></li> <li class="rm-manual"><a href="file:///services/internships-district-office">Internships - District Office</a></li> <li class="rm-manual"><a href="file:///serving-you/internships-washington-dc">Internships - Washington D.C.</a></li> <li class="rm-manual"><a href="file:///serve">Service Academy Nominations</a></li> <li class="rm-manual"><a href="file:///services/tours-and-tickets">Tour Requests</a></li> <li class="rm-manual"><a href="file:///services/commendations-and-greetings">Commendations and Greetings</a></li> <li class="rm-manual"><a href="file:///services/resources">Resources</a></li> </ul>
+</li> <li class="rm-manual"><a href="https://zeldin.house.gov/accomplishments">Accomplishments</a></li> </ul>
+<p class="rm-manual">Search form</p>
+<p class="rm-manual"> Search </p>
+<p class="rm-manual">You are here</p>
+<ol class="rm-manual">
+<li class="rm-manual"><a href="file:///">Home</a></li>
+<li class="rm-manual">
+<span>»</span><a href="file:///media-center">News</a>
+</li>
+<li class="rm-manual">
+<span>»</span><a href="file:///media-center/press-releases">Press Releases</a>
+</li>
+</ol>
+<h1 class="rm-manual">Rep. Zeldin Statement on Death of Iran Quds Force Commander Soleimani</h1>
+<p class="rm-manual"> January 2, 2020 </p>
+<p class="rm-manual"> Press Release </p>
+<p><span><span>WASHINGTON - Congressman Lee Zeldin (R, NY-1) issued the 
+following statement on the death of Qassim Soleimani, head of Iran’s 
+Quds Force, who was killed in a U.S. airstrike at Baghdad International 
+Airport.</span></span></p>
+<p><span><span>“The days of rolling US senior leaders at the negotiating
+ table and killing U.S. soldiers on the battlefield with impunity are 
+over,” </span><span>said Congressman Zeldin.</span><span> “Thank you to 
+all of our nation’s brave men and women who served very necessary 
+justice to Quds Force commander Qassim Soleimani. </span><span>The United States of America is the greatest nation on earth with the greatest military ever.</span><span>”</span></span></p>
+<p><span><span>Rep. Zeldin also posted the following tweets </span><a href="https://twitter.com/RepLeeZeldin/status/1212919939239161857?s=20" rel="noopener noreferrer"><span>here</span></a><span> and </span><a href="https://twitter.com/RepLeeZeldin/status/1212927173742518272?s=20" rel="noopener noreferrer"><span>here</span></a><span>.</span></span></p>
+<h2 class="rm-manual">News</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///media-center/press-releases">Press Releases</a></li> <li class="rm-manual"><a href="file:///media-center/in-the-news">In the News</a></li> <li class="rm-manual"><a href="file:///media-center/social-media">Social Media</a></li> <li class="rm-manual"><a href="file:///media-center/videos">Videos</a></li> </ul>
+<h2 class="rm-manual"><a href="file:///contact/offices">Contact Us</a></h2>
+<h3 class="rm-manual"><a href="file:///contact/offices/washington-dc-office">Washington, DC Office</a></h3>
+<p class="rm-manual">2441 Rayburn House Office Building</p>
+<p class="rm-manual"><span>Washington</span>, <span>DC</span> <span>20515</span></p>
+<p class="rm-manual">Phone: (202) 225-3826</p>
+<h3 class="rm-manual"><a href="file:///contact/offices/patchogue-office">Main District Office</a></h3>
+<p class="rm-manual">31 Oak Street</p>
+<p class="rm-manual">Suite 20</p>
+<p class="rm-manual"><span>Patchogue</span>, <span>NY</span> <span>11772</span></p>
+<p class="rm-manual">Phone: (631) 289-1097</p>
+<p class="rm-manual"> Fax: (866) 404-6613</p>
+<h3 class="rm-manual"><a href="file:///contact/offices/east-end-office">East End Office</a></h3>
+<p class="rm-manual">30 West Main Street</p>
+<p class="rm-manual">Suite 201</p>
+<p class="rm-manual"><span>Riverhead</span>, <span>NY</span> <span>11901</span></p>
+<p class="rm-manual">Phone: (631) 209-4235</p>
+<p class="rm-manual">(Tues, Wed, Thurs, 10AM - 2PM)</p>
+<p class="rm-manual"> *By appointment only</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///tools">Tools</a></li> <li class="rm-manual"><a href="file:///accessibility">Accessibility</a></li> <li class="rm-manual"><a href="file:///privacy">Privacy</a></li> <li class="rm-manual"><a href="file:///copyright">Copyright</a></li> </ul></article>
+</body></html>

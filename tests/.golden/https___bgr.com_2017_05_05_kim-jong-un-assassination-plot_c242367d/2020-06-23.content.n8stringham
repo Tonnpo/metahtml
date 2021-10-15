@@ -1,0 +1,108 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> North Korea says the
+ US planned biochemical attack to kill supreme leader Kim Jong-Un – BGR 
+North Korea says the US planned biochemical attack to kill supreme 
+leader Kim Jong-Un – BGR </p>
+<p class="rm-manual"> Click to Skip Ad </p>
+<p class="rm-manual">Closing in...</p>
+<ul class="rm-manual"> <li class="rm-manual"><span><a href="https://bgr.com/tech/">Tech</a></span></li> <li class="rm-manual"><span><a href="https://bgr.com/entertainment/">Entertainment</a></span></li> <li class="rm-manual"><span><a href="https://bgr.com/deals/">Deals</a></span></li> <li class="rm-manual"><span><a href="https://bgr.com/business/">Business</a></span></li> <li class="rm-manual"><span><a href="https://bgr.com/science/">Science</a></span></li> <li class="rm-manual"><span><a href="https://bgr.com/lifestyle/">Lifestyle</a></span></li> <li class="rm-manual"><span><a href="https://bgr.com/about-bgr/">About</a></span></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual">1</p> <p class="rm-manual"> </p><p class="rm-manual">Deals</p> <h4 class="rm-manual"><a href="https://bgr.com/2020/06/23/amazon-deals-of-the-day-on-june-23/">Today’s top deals: 3M N95 face masks, Purell in stock, Clorox wipes, $24 Roku player, Samsung QLED TVs, more</a></h4> <p class="rm-manual"></p> </li> <li class="rm-manual"> <a href="https://bgr.com/tech/">Tech</a> <a href="https://bgr.com/deals/">Deals</a> </li> </ul>
+<p class="rm-manual"> <a href="https://bgr.com/2020/06/23/amazon-big-style-all-the-best-deals-on-tuesday/">Amazon's Big Style Event: Click here to see all the hottest deals in Amazon's week-long fashion sale!</a> </p>
+<p class="rm-manual">Politics</p>
+<h1 class="rm-manual">North Korea says the US planned biochemical attack to kill supreme leader Kim Jong-Un</h1>
+<p class="rm-manual"> <span><span>Image source: AP/REX/Shutterstock</span></span> </p>
+<p class="rm-manual"> By <a href="https://bgr.com/author/chris-smith/">Chris Smith</a> <a href="https://twitter.com/chris_writes"><span>@chris_writes</span></a> </p>
+<p class="rm-manual">May 5th, 2017 at 8:51 AM</p>
+<p>Does the US want to assassinate North Korean dictator Kim Jong-Un? If
+ real, a plan like that would certainly address a bunch of problems for 
+the Trump administration, and for the rest of the world. Or, it would be
+ just the kind of pretext the totalitarian regime north of the wall 
+needs to start a nuclear war.</p>
+<p>Well, it turns out North Korea really believes that the US and South 
+Korea have been working together to kill Kim by using biochemical 
+weapons.</p>
+<p class="rm-manual"><a href="https://bgr.com/2017/05/04/iphone-8-leaked-image-design-render/">Don't Miss<span>:</span> <span>New iPhone 8 design leak may bring some very good news</span></a></p>
+<p>According to <a href="http://edition.cnn.com/2017/05/05/asia/north-korea-kim-assassination/" rel="nofollow">CNN</a>, North Korean state news agency KCNA uncovered a “hideous” plot by a terrorist group that attempted to kill the supreme leader.</p>
+<p>In a 1,800-word report, the agency said that the plot involved a 
+North Korean citizen and the use of “biochemical substances including 
+radioactive substance and nano poisonous substance” to target Kim during
+ a major event such as a military parade. No evidence whatsoever was 
+provided in the report.</p>
+<p>This CNN paragraph tells the whole story and reads like a synopsis 
+for an action movie that Hollywood should really consider making.</p>
+<p>KCNA laid out the alleged plot in great detail, saying it was hatched
+ in 2014 when the South Korean and US intelligence agencies recruited a 
+North Korean working in the timber industry in eastern Russia. Further 
+contacts were made over subsequent years, and the assassination attempt 
+was to have taken place at a military parade, KCNA said.</p>
+<p>The report didn’t say when the plot was foiled, but only that it was “uncovered and smashed” recently.</p>
+<p>CNN points out that South Korea’s plans to kill Kim aren’t secret — 
+well not all of them. There is at least one retaliatory plan that 
+includes targeting North Korea’s leadership if South Korea feels 
+threatened by nuclear attack.</p>
+<p class="rm-manual"> Tags: <a href="https://bgr.com/tag/kim-jong-un/" rel="tag">Kim Jong Un</a> </p>
+<p class="rm-manual"> Chris Smith started writing about gadgets as a 
+hobby, and before he knew it he was sharing his views on tech stuff with
+ readers around the world. Whenever he's not writing about gadgets he 
+miserably fails to stay away from them, although he desperately tries. 
+But that's not necessarily a bad thing. </p>
+<h3 class="rm-manual">Trending</h3>
+<ol class="rm-manual"> <li class="rm-manual"> <a href="#"> <span>1</span> </a> </li> <li class="rm-manual"> <a href="https://bgr.com/2020/06/23/new-stimulus-check-trump-commits-to-new-package-details-coming-soon/"> <span>2</span> <span>Trump says new stimulus checks are finally on the way – here’s everything you need to know</span> </a> </li> <li class="rm-manual"> <a href="https://bgr.com/2020/06/22/new-stimulus-checks-coronavirus-payment-irs-trump-administration/"> <span>3</span> <span>Some people are getting new stimulus checks up to $4,000/month right now</span> </a> </li> <li class="rm-manual"> <a href="https://bgr.com/2020/06/23/marvel-movies-2020-spider-man-3-cameo-jk-simmons/"> <span>4</span> <span>Marvel’s most controversial post-credits scene ever will lead to more cameos</span> </a> </li> <li class="rm-manual"> <a href="https://bgr.com/2020/06/23/you-wont-believe-how-many-americans-this-study-says-have-been-infected-with-coronavirus-5846036/"> <span>5</span> <span>You won’t believe how many Americans this study says have been infected with coronavirus</span> </a> </li> </ol>
+<h3 class="rm-manual">BGR Top Deals</h3>
+<ol class="rm-manual"> <li class="rm-manual"> <a href="https://bgr.com/2020/06/23/amazon-deals-of-the-day-on-june-23/?utm_source=bgr&amp;utm_campaign=topdeals"> <span>1</span> <span>Today’s top deals: 3M N95 face masks, Purell in stock, Clorox wipes, $24 Roku player, Samsung QLED TVs, more</span> </a> </li> <li class="rm-manual"> <a href="https://bgr.com/2020/06/23/amazon-big-style-all-the-best-deals-on-tuesday/?utm_source=bgr&amp;utm_campaign=topdeals"> <span>2</span> <span>Amazon’s Big Style Sale: All the best deals you can get on Tuesday</span> </a> </li> <li class="rm-manual"> <a href="https://bgr.com/2020/06/23/purell-is-in-stock-at-amazon-and-so-is-hand-sanitizer-thats-even-stronger/?utm_source=bgr&amp;utm_campaign=topdeals"> <span>3</span> <span>Purell is in stock at Amazon, and so is hand sanitizer that’s even stronger</span> </a> </li> <li class="rm-manual"> <a href="https://bgr.com/2020/06/22/coronavirus-tips-new-cdc-guidelines-for-protection-from-covid-19/?utm_source=bgr&amp;utm_campaign=topdeals"> <span>4</span> <span>New CDC guidelines say you need these 7 things to combat coronavirus</span> </a> </li> <li class="rm-manual"> <a href="https://bgr.com/2020/06/23/ray-ban-sunglasses-deals-in-amazon-big-style-sale/?utm_source=bgr&amp;utm_campaign=topdeals"> <span>5</span> <span>All the best deals on Ray-Ban and Oakley sunglasses in Amazon’s Big Style Sale</span> </a> </li> </ol>
+<p class="rm-manual"> <a href="https://bgr.com/2017/05/04/internet-privacy-law-politicians-vote/" rel="prev">Politicians who voted to gut web privacy are now being shamed on huge billboards</a> </p>
+<h2 class="rm-manual"><a href="https://bgr.com/">Picked For You</a></h2>
+<h3 class="rm-manual"><a href="https://bgr.com/2020/06/23/ios-14-hidden-features-email-browser-default-back-tap-camera/">10 of the best iOS 14 features that Apple didn’t have time to talk about</a></h3>
+<p class="rm-manual"> <span>By <span><a href="https://bgr.com/author/chris-smith/" rel="author">Chris Smith</a></span></span> <span>10 hours ago</span> </p>
+<h3 class="rm-manual"><a href="https://bgr.com/2020/06/21/coronavirus-vaccine-emergency-approval-before-november-presidential-election/">The first coronavirus vaccines could be approved before the November election</a></h3>
+<p class="rm-manual"> <span>By <span><a href="https://bgr.com/author/chris-smith/" rel="author">Chris Smith</a></span></span> <span>2 days ago</span> </p>
+<h3 class="rm-manual"><a href="https://bgr.com/2020/06/22/best-buy-sale-wwdc-2020-apple-deals/">Best Buy has amazing Apple deals for WWDC 2020 – here are the best ones</a></h3>
+<p class="rm-manual"> <span>By <span><a href="https://bgr.com/author/zach-epstein/" rel="author">Zach Epstein</a></span></span> <span>1 day ago</span> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://bgr.com/advertising/"> Advertise </a></li> <li class="rm-manual"><a href="https://bgr.com/about-bgr/"> About </a></li> <li class="rm-manual"><a href="https://bgr.com/contact/"> Contact </a></li> </ul>
+<p class="rm-manual">Copyright 2020 BGR Media, LLC</p>
+<p class="rm-manual">PMC Entertainment</p>
+<p class="rm-manual"> Powered by </p>
+<p class="rm-manual"><a href="https://wpvip.com/?utm_source=vip_powered_wpcom&amp;utm_medium=web&amp;utm_campaign=VIP%20Footer%20Credit&amp;utm_term=bgr.com" rel="generator nofollow">WordPress.com VIP</a> | </p>
+<p class="rm-manual"><a href="https://pmc.com/privacy-policy/">Privacy Policy</a> | </p>
+<p class="rm-manual"><a href="https://pmc.com/privacy-policy/#california">California Privacy Rights</a> | </p>
+<p class="rm-manual"><a href="https://optout.aboutads.info/">AdChoices</a> | </p>
+<p class="rm-manual"><a href="#">EU Privacy Preferences</a> | </p>
+<p class="rm-manual"><a href="https://pmc.com/terms-of-use/">Terms Of Use</a> | </p>
+<p class="rm-manual"><a href="https://pmc.com/opt-out/">Do Not Sell My Personal Information</a> </p></article>
+</body></html>

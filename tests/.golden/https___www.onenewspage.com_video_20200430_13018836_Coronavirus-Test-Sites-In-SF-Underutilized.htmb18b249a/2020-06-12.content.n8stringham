@@ -1,0 +1,56 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><table> <tbody><tr><td> <table> <tbody><tr> <td> <h1 class="rm-manual">Coronavirus Test Sites In SF Underutilized</h1> </td> </tr> <tr> <td> <p class="rm-manual">Video Credit: CBS 5 SF KPIX - Duration: 02:58s - Published on April 30, 2020</p> <p></p><p>Coronavirus Test Sites In SF Underutilized</p> <p>A coronavirus testing facility in San Francisco is being underutilized according to the numbers.</p> <p>Wilson Walker pressed SF Mayor London Breed for an explanation.</p> <p></p> </td>
+</tr> </tbody></table> <table><tbody><tr>
+<td class="rm-manual">0 shares</td>
+<td class="rm-manual">
+<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.onenewspage.com%2Fvideo%2F20200430%2F13018836%2FCoronavirus-Test-Sites-In-SF-Underutilized.htm" rel="nofollow">Share</a><a href="https://twitter.com/home?status=Coronavirus%20Test%20Sites%20In%20SF%20Underutilized%20https%3A%2F%2Fwww.onenewspage.com%2Fvideo%2F20200430%2F13018836%2FCoronavirus-Test-Sites-In-SF-Underutilized.htm%20via%20@One_News_Page" rel="nofollow">Tweet</a><a href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.onenewspage.com%2Fvideo%2F20200430%2F13018836%2FCoronavirus-Test-Sites-In-SF-Underutilized.htm&amp;media=https%3A%2F%2Fvideo.newsserve.net%2Fv%2F20200430%2F2004300156-Coronavirus-Test-Sites-In-SF-Underutilized_hires.jpg&amp;description=Coronavirus%20Test%20Sites%20In%20SF%20Underutilized" rel="nofollow">Save</a><a href="https://www.reddit.com/submit?url=https%3A%2F%2Fwww.onenewspage.com%2Fvideo%2F20200430%2F13018836%2FCoronavirus-Test-Sites-In-SF-Underutilized.htm" rel="nofollow">Post</a>
+</td>
+</tr></tbody></table> </td></tr> <tr class="rm-manual"> <td class="rm-manual"> <h4 class="">Related news from verified sources</h4> <table class="rm-manual"> <tbody><tr class="rm-manual"> <td class="rm-manual"> <h3 class="rm-manual"><a href="file:///n/US/1zlreqmi5d/Controversial-coronavirus-testing-sites-under-investigation-for-scams.htm">Controversial coronavirus testing sites under investigation for 'scams' in Kentucky</a></h3> <span>Controversial pop-up coronavirus test sites in Louisville, Kentucky, charged $200 for tests. An...</span> <span>USATODAY.com - Published on April 2, 2020</span> </td> </tr> <tr class="rm-manual"> <td class="rm-manual"> <h3 class="rm-manual"><a href="file:///n/US/1zlreqvssp/Sean-Penn-joins-the-fight-against-coronavirus-with.htm">Sean Penn joins the fight against coronavirus with his nonprofit</a></h3> <span>Actor and activist Sean Penn has joined the fight against the coronavirus with his nonprofit, CORE....</span> <span>CBS News - Published on April 28, 2020</span> </td> </tr> <tr class="rm-manual"> <td class="rm-manual"> <h3 class="rm-manual"><a href="file:///n/Technology/1zlreqw12r/Apple-Maps-now-shows-COVID-19-testing-sites.htm">Apple Maps now shows COVID-19 testing sites</a></h3> <span>Photo by Amelia Holowaty Krales / The Verge Apple Maps will now show COVID-19 testing sites in all...</span> <span>The Verge - Published on April 29, 2020</span> </td> </tr> </tbody></table> </td> </tr> <tr class="rm-manual"><td class="rm-manual"> <h4 class="rm-manual">Tweets about this</h4> </td></tr> <tr class="rm-manual"> <td class="rm-manual"> <h4 class="rm-manual">Related videos from verified sources</h4> <table> <tbody><tr> <td> <p></p><p><a href="file:///video/20200612/13110079/new-CVS-drive-thru-testing-sites-open.htm">2 new CVS drive-thru testing sites open today</a></p><p>Today,
+ 2 more CVS drive-thru testing sites cor COVID-19 will open in the 
+valley. The first location is near Maryland Parkway and Sahara. The 
+second is near Green Valley Parkway and Sunset.</p><p></p><p><span>Credit: KTNV Channel 13 Las Vegas Duration: 00:15</span><span>Published 5 hours ago</span></p><p></p>
+</td>
+</tr> <tr> <td> <p></p><p><a href="file:///video/20200611/13108267/new-CVS-drive-thru-testing-sites-to.htm">2 new CVS drive-thru testing sites to open tomorrow</a></p><p>Two
+ more CVS drive-thru testing sites will open tomorrow in the East 
+Valley. You must register in advance at CVS.com to get tested.</p><p></p><p><span>Credit: KTNV Channel 13 Las Vegas Duration: 00:23</span><span>Published 1 day ago</span></p><p></p>
+</td>
+</tr> <tr> <td> <p></p><p><a href="file:///video/20200604/13093649/Antibody-Testing-Begins-At-Hard-Rock-Stadium-Miami.htm">Antibody Testing Begins At Hard Rock Stadium, Miami Beach Convention Center COVID-19 Testing Sites</a></p><p>State-run COVID-19 testing sites are now offering free antibody tests as well starting today, June 4. Katie Johnston reports.</p><p></p><p><span>Credit: CBS Dallas Digital Duration: 00:21</span><span>Published 1 week ago</span></p><p></p>
+</td>
+</tr> </tbody></table> </td> </tr> </tbody></table></article>
+</body></html>

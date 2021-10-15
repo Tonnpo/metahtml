@@ -1,0 +1,194 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual">Microsoft unleashes ‘Death Star’ on SolarWinds hackers in extraordinary response to breach</h1>
+<p class="rm-manual"><span>by <span><a href="https://www.geekwire.com/author/christopher-budd/" rel="author">Christopher Budd</a></span></span> on December 16, 2020 at 3:20 pmDecember 22, 2020 at 11:00 am</p>
+<p class="rm-manual"> <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.geekwire.com%2F2020%2Fmicrosoft-unleashes-death-star-solarwinds-hackers-extraordinary-response-breach%2F&amp;via=GeekWire&amp;text=Microsoft%20unleashes%20%E2%80%98Death%20Star%E2%80%99%20on%20SolarWinds%20hackers%20in%20extraordinary%20response%20to%20breach&amp;related=ChristopherBudd%3AAuthor"> Tweet</a> <a href="mailto:?subject=Microsoft%20unleashes%20%E2%80%98Death%20Star%E2%80%99%20on%20SolarWinds%20hackers%20in%20extraordinary%20response%20to%20breach&amp;body=Article%20from%20GeekWire:%0D%0A%0D%0AMicrosoft%20unleashes%20%E2%80%98Death%20Star%E2%80%99%20on%20SolarWinds%20hackers%20in%20extraordinary%20response%20to%20breach%0D%0A%0D%0Ahttps%3A%2F%2Fwww.geekwire.com%2F2020%2Fmicrosoft-unleashes-death-star-solarwinds-hackers-extraordinary-response-breach%2F%0D%0A"> Email</a> </p>
+<p class="rm-manual"> <a href="https://www.geekwire.com/2021-geekwire-awards/">Watch the 2021 GeekWire Awards</a> </p>
+<figcaption class="rm-manual">Microsoft CEO Satya Nadella. (GeekWire Photo / Kevin Lisota)</figcaption><p class="rm-manual">[Editor’s
+ Note: Independent security consultant Christopher Budd worked 
+previously in Microsoft’s Security Response Center for 10 years.]</p>
+<p>“Now witness the firepower of this fully armed and operational Battle Station.” – <a href="https://www.youtube.com/watch?v=g7-tskP0OzI">Emperor Palpatine, Return of the Jedi</a></p>
+<p>Analysis: This week Microsoft took a series of dramatic steps against the recent <a href="https://www.zdnet.com/article/microsoft-fireeye-confirm-solarwinds-supply-chain-attack/">SolarWinds supply chain attack</a>.
+ In the size, speed and scope of its actions, Microsoft has reminded the
+ world that it can still muster firepower like no one else as a 
+nearly-overwhelming force for good.</p>
+<p>Through four steps over four days, Microsoft flexed the muscle of its
+ legal team and its control of the Windows operating system to nearly 
+obliterate the actions of some of the most sophisticated offensive 
+hackers out there. In this case, the adversary is believed to be <a href="https://attack.mitre.org/groups/G0016/">APT29</a>, aka <a href="https://en.wikipedia.org/wiki/Cozy_Bear">Cozy Bear</a>,
+ the group many believe to be associated with Russian intelligence, and 
+best known for carrying out the 2016 hack against the Democratic 
+National Committee (DNC).</p>
+<h4 class="rm-manual">FOLLOW-UP: <a href="https://www.geekwire.com/2020/microsoft-says-internal-probe-finds-malicious-solarwinds-code-no-sign-impact-yet/">Microsoft says internal probe finds malicious SolarWinds code, no sign of further impact yet</a>
+</h4>
+<p>While details are continuing to emerge, the SolarWinds supply chain 
+attack is already the most significant attack in recent memory. 
+According to <a href="https://www.solarwinds.com/securityadvisory">SolarWinds</a>, <a href="https://blogs.microsoft.com/on-the-issues/2020/12/13/customers-protect-nation-state-cyberattacks/">Microsoft</a>, <a href="https://www.fireeye.com/blog/products-and-services/2020/12/global-intrusion-campaign-leverages-software-supply-chain-compromise.html">FireEye</a>, and <a href="https://cyber.dhs.gov/ed/21-01/">the Cybersecurity and Infrastructure Security Agency (CISA)</a>
+ the attackers compromised a server used to build updates for the 
+SolarWinds Orion Platform, a product used for IT infrastructure 
+management. The attackers used this compromised build server to insert 
+backdoor malware into the product (<a href="https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-description?Name=Behavior:Win32/Solorigate.C!dha&amp;ThreatID=2147771132">called Solorigate</a> by Microsoft or <a href="https://www.fireeye.com/blog/threat-research/2020/12/evasive-attacker-leverages-solarwinds-supply-chain-compromises-with-sunburst-backdoor.html">SUNBURST</a> by FireEye).</p>
+<p>According to <a href="https://www.solarwinds.com/securityadvisory/faq">SolarWinds</a>,
+ this malware was present as a Trojan horse in updates from March 
+through June 2020. This means any customers who downloaded the Trojaned 
+updates also got the malware. While not all customers who got the 
+malware have seen it used for attacks, it has been leveraged for broader
+ attacks against the networks of some strategically critical and 
+sensitive organizations.</p>
+<p>Those attacked <a href="https://www.zdnet.com/article/solarwinds-said-no-other-products-were-compromised-in-recent-hack/">include</a>
+ FireEye, the US Treasury Department, the US Department of Commerce’s 
+National Telecommunications and Information Administration (NTIA), the 
+Department of Health’s National Institutes of Health (NIH), the 
+Cybersecurity and Infrastructure Agency (CISA), the Department of 
+Homeland Security (DHS), and the US Department of State.</p>
+<p>Everyone who has worked on this case directly has spoken to the 
+sophisticated nature of the attack. The breadth, strategic importance 
+and security expertise of the victims bear this out. While nearly every 
+attack is called “sophisticated” by victims who try and shield 
+themselves from criticism, the security community is nearly unanimous in
+ its verdict that the term is merited in this case.</p>
+<p>The speed, scope and scale of Microsoft’s response were 
+unprecedented. Specifically, Microsoft did four things over the course 
+of four days that effectively undid the work of the attackers.</p>
+<p>1) On Dec. 13, the day this became public, Microsoft <a href="https://msrc-blog.microsoft.com/2020/12/13/customer-guidance-on-recent-nation-state-cyber-attacks/">announced</a>
+ that it removed the digital certificates that the Trojaned files used. 
+These digital certificates allowed Microsoft Windows systems to believe 
+that those compromised files were trustworthy. In this single act, 
+Microsoft literally overnight told all Windows systems to stop trusting 
+those compromised files which could stop them from being used.</p>
+<p>2) That same day, Microsoft announced that it was updating Microsoft 
+Windows Defender, the antimalware capability built into Windows, to 
+detect and alert if it found the Trojaned file on the system.</p>
+<p>3) Next, on Tuesday, Dec. 15, Microsoft and others <a href="https://www.zdnet.com/article/microsoft-and-industry-partners-seize-key-domain-used-in-solarwinds-hack/">moved</a> to “<a href="https://en.wikipedia.org/wiki/DNS_sinkhole">sinkhole</a>”
+ one of the domains that the malware uses for command and control (C2): 
+avsvmcloud[.]com. SInkholing is a legal and technical tactic to deprive 
+attackers of control over malware. In Sinkholing, an organization like 
+Microsoft goes to court to wrest control of a domain being used for 
+malicious purposes away from its current holder, the attacker.</p>
+<p>When successful, the organization can then use its ownership of that 
+domain to sever the attacker’s control over the malware and the systems 
+the malware controls. Sinkholed domains can also be used to help 
+identify compromised systems: when the malware reaches out to the 
+sinkholed domain for instructions, the new owners can identify those 
+systems and attempt to locate and warn the owners. Sinkholing is a 
+tactic that was first used in big attacks in the 2008-2009 battle 
+against <a href="https://en.wikipedia.org/wiki/Conficker">Conficker</a> and has been a standard tactic in Microsoft’s toolkit for years, including most recently against <a href="https://www.zdnet.com/article/microsoft-and-other-tech-companies-orchestrate-takedown-of-trickbot-botnet/">TrickBot</a>.</p>
+<p>4) Finally, today, Wednesday, Dec. 16, Microsoft basically changed 
+its phasers from “stun” to “kill” by changing Windows Defender’s default
+ action for Solorigate from “Alert” to “<a href="https://www.microsoft.com/security/blog/2020/12/15/ensuring-customers-are-protected-from-solorigate/">Quarantine</a>,”
+ a drastic action that could cause systems to crash but will effectively
+ kill the malware when it finds it. This action is important, too, 
+because it gives other security companies license now to follow suit 
+with this drastic step: Microsoft’s size and leadership of its platform 
+give cover to other security companies that they wouldn’t otherwise 
+have.</p>
+<p>Taken together, these steps amount to Microsoft first neutralizing 
+and then killing the malware while wresting control over the malware’s 
+infrastructure from the attackers. By the end of this week, the 
+attackers will be left with barely a fraction of the systems under their
+ control.</p>
+<p>They may still have access to compromised networks through other 
+means: that’s what incident responders are likely working on now. And 
+there’s no undoing whatever they did while the infiltration went 
+unnoticed for months. But still, these actions together come as close to
+ obliterating an attack as we’ve seen, which is all the more notable 
+because of the likely attackers.</p>
+<p>In the end, this all reminds us how much power Microsoft has at its 
+disposal. Between its control of the Windows operating system, its 
+robust legal team, and its position in the industry, it has the power to
+ change the world nearly overnight if it wants to. And when it chooses 
+to train that power on an adversary, it really is the equivalent of the 
+Death Star: able to completely destroy a planet in a single blast.</p>
+<p>Fortunately these days, Microsoft is sparing in its use of its power. But as I’ve noted before, <a href="https://www.geekwire.com/2020/pluton-processor-microsoft-shows-strength-proves-trustworthy-computing-still-matters/">we should never mistake Microsoft’s gentleness for weakness</a>.</p>
+<p>And anyway, what’s the point in having a Death Star if you don’t get to use it (for good) sometimes?</p>
+<p class="rm-manual"> Email address </p>
+<p class="rm-manual"> GeekWire Daily — Top headlines daily </p>
+<p class="rm-manual"> GeekWire Weekly — Most-read stories of the week, delivered Sunday </p>
+<p class="rm-manual"> Breaking News Alerts — Important news as it happens </p>
+<p class="rm-manual"> GeekWire Startups — News, analysis, insights from the Pacific Northwest startup ecosystem, delivered Friday </p>
+<p class="rm-manual"> GeekWire Podcasts — Weekly update with our latest audio episodes </p>
+<p class="rm-manual"> GeekWire Mid-week Update — Most-read stories so far this week, delivered Wednesday </p>
+<p class="rm-manual"> GeekWire Local Deals — Special offers for Pacific Northwest area readers </p>
+<p class="rm-manual">Christopher Budd works for Avast and focuses on 
+communications in the areas of online security and privacy, incident 
+response, and crisis communications. Among many roles in the industry he
+ was a ten-year veteran of the Microsoft Security Response Center 
+(MSRC). He combines his prior career as an engineer with his 
+communications expertise to help bridge the gap between the technical 
+and communications realms. Follow him on Twitter <a href="https://twitter.com/intent/user?screen_name=christopherbudd">@christopherbudd</a>.</p>
+<p class="rm-manual"> <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.geekwire.com%2F2020%2Fmicrosoft-unleashes-death-star-solarwinds-hackers-extraordinary-response-breach%2F&amp;via=GeekWire&amp;text=Microsoft%20unleashes%20%E2%80%98Death%20Star%E2%80%99%20on%20SolarWinds%20hackers%20in%20extraordinary%20response%20to%20breach&amp;related=ChristopherBudd%3AAuthor"> Tweet</a> <a href="mailto:?subject=Microsoft%20unleashes%20%E2%80%98Death%20Star%E2%80%99%20on%20SolarWinds%20hackers%20in%20extraordinary%20response%20to%20breach&amp;body=Article%20from%20GeekWire:%0D%0A%0D%0AMicrosoft%20unleashes%20%E2%80%98Death%20Star%E2%80%99%20on%20SolarWinds%20hackers%20in%20extraordinary%20response%20to%20breach%0D%0A%0D%0Ahttps%3A%2F%2Fwww.geekwire.com%2F2020%2Fmicrosoft-unleashes-death-star-solarwinds-hackers-extraordinary-response-breach%2F%0D%0A"> Email</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.geekwire.com/2020/amazon-asks-cdc-prioritize-essential-workers-covid-19-vaccine-earliest-appropriate-time/" rel="prev"><h6 class="rm-manual">Previous Story</h6>
+<span>Amazon asks CDC to prioritize its essential workers for COVID-19 vaccine at ‘earliest appropriate time’</span></a> </li> <li class="rm-manual"> <a href="https://www.geekwire.com/2020/nasa-adds-blue-origins-new-glenn-rocket-launch-services-catalog/" rel="next"><h6 class="rm-manual">Next Story</h6>
+<span>NASA adds Blue Origin’s upcoming New Glenn rocket to its launch services catalog</span></a> </li> </ul>
+<p class="rm-manual"> Filed Under: <a href="https://www.geekwire.com/microsoft/" rel="category tag">Microsoft</a> Tagged With: <a href="https://www.geekwire.com/tag/cybersecurity/" rel="tag">cybersecurity</a> • <a href="https://www.geekwire.com/tag/microsoft/" rel="tag">Microsoft</a> • <a href="https://www.geekwire.com/tag/solarwinds/" rel="tag">solarwinds</a></p>
+<h3 class="rm-manual">Send Us a Tip</h3>
+<p class="rm-manual">Have a scoop that you'd like GeekWire to cover? Let us know.</p>
+<p class="rm-manual"> <a href="file:///tips/">Send Us a Tip</a> </p>
+<h3 class="rm-manual">Related Stories</h3>
+<p class="rm-manual"><a href="https://www.geekwire.com/2020/solarwinds-hackers-targeting-cloud-services-unprecedented-cyberattack/">How the SolarWinds hackers are targeting cloud services in unprecedented cyberattack</a></p>
+<p class="rm-manual"><a href="https://www.geekwire.com/2020/microsoft-says-internal-probe-finds-malicious-solarwinds-code-no-sign-impact-yet/">Microsoft says internal probe finds malicious SolarWinds code, no sign of further impact yet</a></p>
+<p class="rm-manual"><a href="https://www.geekwire.com/2020/week-literally-exploded-tech-security-startups-grapple-solarwinds-fallout/">‘The week has literally exploded’: Tech security startups grapple with SolarWinds fallout</a></p>
+<p class="rm-manual"><a href="https://www.geekwire.com/2020/microsoft-says-solarwinds-hackers-viewed-source-code-internal-defenses-thwarted-damage/">Microsoft says SolarWinds hackers viewed source code, but its defenses thwarted further access</a></p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.geekwire.com/2020/amazon-asks-cdc-prioritize-essential-workers-covid-19-vaccine-earliest-appropriate-time/" rel="prev"><h6 class="rm-manual">Previous Story</h6>
+<span>Amazon asks CDC to prioritize its essential workers for COVID-19 vaccine at ‘earliest appropriate time’</span></a> </li> <li class="rm-manual"> <a href="https://www.geekwire.com/2020/nasa-adds-blue-origins-new-glenn-rocket-launch-services-catalog/" rel="next"><h6 class="rm-manual">Next Story</h6>
+<span>NASA adds Blue Origin’s upcoming New Glenn rocket to its launch services catalog</span></a> </li> </ul>
+<p class="rm-manual">Like what you're reading? Subscribe to GeekWire's free newsletters to catch every headline</p>
+<p class="rm-manual"> Email address </p>
+<p class="rm-manual"> GeekWire Daily - Top headlines daily </p>
+<p class="rm-manual"> GeekWire Weekly - Most-read stories of the week, delivered Sunday </p>
+<p class="rm-manual"> Breaking News Alerts - Important news as it happens </p>
+<p class="rm-manual"> GeekWire Startups - News, analysis, insights from the Pacific Northwest startup ecosystem, delivered Friday </p>
+<p class="rm-manual"> GeekWire Podcasts — Weekly update with our latest audio episodes </p>
+<p class="rm-manual"> GeekWire Mid-week Update — Most-read stories so far this week, delivered Wednesday </p>
+<p class="rm-manual"> GeekWire Local Deals — Special offers for Pacific Northwest area readers </p>
+<h3 class="rm-manual">Most Popular on GeekWire</h3>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"><a href="https://www.geekwire.com/2021/amazon-elevates-two-execs-senior-leadership-team-new-ceo-andy-jassy/">Amazon elevates two more execs to its senior leadership team under new CEO Andy Jassy</a></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="https://www.geekwire.com/2021/jeff-bezos-blue-origin-space-venture-due-encounter-maximum-dynamic-pressure/">Jeff Bezos’ Blue Origin space venture approaches period of maximum dynamic pressure</a></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="https://www.geekwire.com/2021/helping-amazon-reinvent-commerce-jeff-wilke-turns-attention-reviving-u-s-manufacturing/">After helping Amazon reinvent commerce, Jeff Wilke turns attention to reviving U.S. manufacturing</a></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="https://www.geekwire.com/2021/couple-finally-catches-break-waves-dream-bring-man-made-surf-seattle-area/">Couple finally catches a surf break in dream to bring man-made wave facility to Seattle area</a></p></li>
+</ul>
+<h3 class="rm-manual">Job Listings on GeekWork</h3>
+<p class="rm-manual"><a href="https://www.geekwire.com/jobs/job/senior-backend-software-engineer-analytics/">Senior Backend Software Engineer, Analytics</a>HIGHSPOT</p>
+<p class="rm-manual"><a href="https://www.geekwire.com/jobs/job/support-specialist-dach/">Support Specialist, DACH</a>HIGHSPOT</p>
+<p class="rm-manual"><a href="https://www.geekwire.com/jobs/job/principal-backend-software-engineer/">Principal Backend Software Engineer</a>HIGHSPOT</p>
+<p class="rm-manual"><a href="https://www.geekwire.com/jobs/job/software-engineer-ii-7/">Software Engineer II</a>Chewy, Inc.</p>
+<p class="rm-manual"><a href="https://www.geekwire.com/jobs/job/senior-frontend-software-engineer-content/">Senior Frontend Software Engineer, Content</a>HIGHSPOT</p>
+<p class="rm-manual"><a href="https://www.geekwire.com/jobs/job/software-development-engineer-2-engagement/">Software Development Engineer 2, Engagement</a>HIGHSPOT</p>
+<p class="rm-manual">Find more jobs on <a href="file:///jobs/">GeekWork</a>. Employers, <a href="file:///jobs/pricing/">post a job here</a>.</p></article>
+</body></html>

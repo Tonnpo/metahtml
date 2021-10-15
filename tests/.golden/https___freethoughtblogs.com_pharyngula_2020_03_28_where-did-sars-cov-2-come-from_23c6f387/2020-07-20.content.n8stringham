@@ -1,0 +1,644 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> <span><a href="https://freethoughtblogs.com/pharyngula/2020/03/28/i-know-what-im-doing-tonight-2/">I know what I’m doing tonight</a> »</span> <span>« <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/its-saturday/">It’s Saturday?</a></span> </p>
+<h1 class="rm-manual">Where did SARS-CoV-2 come from?</h1>
+<p>I’ve been seeing some wild speculation that this pandemic is the 
+product of genetic engineering — that it’s a biowarfare weapon that 
+escaped from a lab somewhere. This is nonsense. I’ll refer you to an 
+article in Nature Medicine, <a href="https://www.nature.com/articles/s41591-020-0820-9">The proximal origin of SARS-CoV-2</a>, which discusses a systematic analysis of the structure of SARS-CoV-2 in comparison to other coronaviruses. </p>
+<p>It is improbable that SARS-CoV-2 emerged through laboratory 
+manipulation of a related SARS-CoV-like coronavirus. As noted above, the
+ RBD of SARS-CoV-2 is optimized for binding to human ACE2 with an 
+efficient solution different from those previously predicted. 
+Furthermore, if genetic manipulation had been performed, one of the 
+several reverse-genetic systems available for betacoronaviruses would 
+probably have been used. However, the genetic data irrefutably show that
+ SARS-CoV-2 is not derived from any previously used virus backbone. 
+Instead, we propose two scenarios that can plausibly explain the origin 
+of SARS-CoV-2: (i) natural selection in an animal host before zoonotic 
+transfer; and (ii) natural selection in humans following zoonotic 
+transfer. We also discuss whether selection during passage could have 
+given rise to SARS-CoV-2.</p>
+<p>A little translation: the virus has a spike protein that binds to an 
+enzyme on the surfaces of cells, called angiotensin converting enzyme, 
+or ACE. This enzyme is important in regulating blood pressure, and is 
+expressed by cells in lung capillaries (fun fact: your lungs play an 
+endocrine role in sending out signals that maintain blood pressure). 
+This is one reason the virus has such a dangerous respiratory effect — 
+the lungs are the primary targets, where it can use the spike protein to
+ bind to cells that express ACE and drill into them.</p>
+<p>The RBD is the Receptor Binding Domain of the viral spike, and is the
+ most variable part of the virus. This makes sense: the RBD is the key 
+the virus uses to get access to your cells, and it varies because it 
+confers target specificity. So there are all these different varieties 
+of coronavirus, most of which don’t bother humans because they lack the 
+human key — they are adapted to invade other animals’ cells. SARS-CoV-2 
+has acquired a spike with a human unlock code. Could some cunning 
+super-villain have modified the spike?</p>
+<p>Not likely, for several reasons. The virus has other similarities to 
+coronaviruses in other animals; it’s not a de novo construct, but is a 
+member of a large family of viruses. The modification to the spike 
+protein is unusual. It works, but it’s not one that scientific experts 
+would have used — they would have used something that would have been 
+previously modeled. Then also bioengineers have lots of clever tools 
+that could be used to stuff a desired sequence into a virus, but they 
+all leave tool marks, little scraps of the molecule used to do the 
+replacement. Those marks aren’t there. The best explanation is that 
+we’re just seeing natural selection amplifying random variations in the 
+spike.</p>
+<p>While the analyses above suggest that SARS-CoV-2 may bind human ACE2 
+with high affinity, computational analyses predict that the interaction 
+is not ideal and that the RBD sequence is different from those shown in 
+SARS-CoV to be optimal for receptor binding. Thus, the high-affinity 
+binding of the SARS-CoV-2 spike protein to human ACE2 is most likely the
+ result of natural selection on a human or human-like ACE2 that permits 
+another optimal binding solution to arise. This is strong evidence that 
+SARS-CoV-2 is not the product of purposeful manipulation.</p>
+<p>Yeah, see, if I were a nefarious super-villain, we already have an 
+even better RBD we could yank out of other viruses, and I would have 
+used that to build a deadly virus. But instead, the SARS-CoV-2 RBD is 
+some clunky variation that came out of nowhere, by accident, without any
+ other signs of intentional manipulation.</p>
+<p>They also consider the possibility that this was an accidental 
+variation acquired in a lab — if you pass a virus through a lot of host 
+cells in a cell culture system, it will continue to evolve, and you 
+might imagine the RBD might acquire a random variation that allows it to
+ thrive in those cells, and then it accidentally escapes the lab. This 
+is also unlikely, because it shares a lot of similarities with the 
+pangolin coronaviruses. It’s more likely to have arisen from an existing
+ pool of related viruses in the wild, then either acquired its novel 
+binding site there, or after infecting humans and experiencing selection
+ for better binding to human cells.</p>
+<p>The best strategy is to look for intermediates in animals, or in the 
+sequences of humans who were infected early in the pandemic.</p>
+<p>The identification of a potential intermediate host of SARS-CoV-2, as
+ well as sequencing of the virus from very early cases, would similarly 
+be highly informative. Irrespective of the exact mechanisms by which 
+SARS-CoV-2 originated via natural selection, the ongoing surveillance of
+ pneumonia in humans and other animals is clearly of utmost importance.</p>
+<p>Sorry, conspiracy theorists. The best explanation is evolution and natural selection, not Evil Intelligent Design.</p>
+<p class="rm-manual">The viral spike protein. The RBD is in green.</p>
+<p class="rm-manual"> <span><a href="https://freethoughtblogs.com/pharyngula/2020/03/28/i-know-what-im-doing-tonight-2/">I know what I’m doing tonight</a> »</span> <span>« <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/its-saturday/">It’s Saturday?</a></span> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <span><a href="https://freethoughtblogs.com/pharyngula/author/pharyngula/" rel="author"><span>PZ Myers</span></a></span>
+</li> <li class="rm-manual"> 28 March 2020</li> <li class="rm-manual"> <span><a href="https://freethoughtblogs.com/pharyngula/category/science/" rel="category tag">Science</a></span>
+</li> <li class="rm-manual"> <a href="file:///wp-login.php?redirect_to=https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/">Log in to comment</a> </li> </ul>
+<h3 class="rm-manual">Comments</h3>
+<ol class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>InitHello</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037358">28 March 2020 at 12:33 pm</a> </p> <p class="rm-manual">Gosh, I wonder if this cave, or a similar cave, was involved in this mutation.</p> <p class="rm-manual"><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5708621/" rel="nofollow">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5708621/</a></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>nomadiq</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037360">28 March 2020 at 12:39 pm</a> </p> <p class="rm-manual">I
+ think the similarities to the Pangolin Coronaviruses is interesting. 
+Even one of the amino acid mismatches between pangolin and covid19 can 
+be explained by a single base pair change (I forget the amino acid 
+change, I’m up a hill hiking – can’t dig it out right now).</p> <p class="rm-manual">I’m
+ no virologist, so maybe this is naive, but is it possible for a human 
+host to be exposed to two zoonotic Coronaviruses and then have them 
+recombine? – the sequence from Pangolin is just so close. And iirc it 
+has bat virus elements too. Live Pangolins are found in the wet markets 
+(illegally) were the virus allegedly originated as are bats.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>blf</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037362">28 March 2020 at 12:52 pm</a> </p> <p class="rm-manual">One
+ of the mildly deranged penguin’s “theories” is the virus was 
+deliberately “designed” by the impeached hair furor in Wacko House — so 
+yeah, not intelligently designed, but nonetheless evil, very evil — to 
+be branded TrumpCures!™ and marketed by Jared Kushner, with a 
+“presidential” decree (and the help of fox) that everyone must buy some 
+or else he’ll keep on twittering. We can’t have the cure be worse than 
+the problem was, she claims, one of the early marketing / placement 
+eventsbellows. She suspects he needs the money to pay the interest he 
+owes to Putin.</p> <p class="rm-manual">She claims he rambled the early 
+tests were to be in the Big Wahoonie, which someone deciphered to mean 
+Big China’s Wuhan. She thinks he’s probably mad the Patrician hinted 
+he’d appoint Obama ambassador.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span><a href="https://freethoughtblogs.com/pervertjustice/" rel="external nofollow">Crip Dyke, Right Reverend Feminist FuckToy of Death &amp; Her Handmaiden</a></span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037365">28 March 2020 at 1:16 pm</a> </p> <blockquote class="rm-manual"><p class="rm-manual">I’m
+ no virologist, so maybe this is naive, but is it possible for a human 
+host to be exposed to two zoonotic Coronaviruses and then have them 
+recombine? –</p></blockquote> <p class="rm-manual">Also not a biologist,
+ but I do know this is possible. How frequently does this happen? How 
+probable is it? How reasonable an explanation for the SARS-CoV-2 viral 
+features would that make? Those questions I can’t answer, and it might 
+be that in this particular case such recombination literally can’t 
+possibly explain the features and can be excluded from the set of 
+hypotheses that exhibit the minimal possible threshold of plausibility. 
+I’m saying nothing about this virus, since I don’t know.</p> <p class="rm-manual">But in general, can that kind of thing happen? Yep.</p> <p class="rm-manual"><a href="https://www.historyofvaccines.org/content/articles/viruses-and-evolution" rel="nofollow">Take flu viruses for example:</a></p> <blockquote class="rm-manual">
+<p class="rm-manual">Antigenic Shift</p> <p class="rm-manual">Antigenic 
+shift is a process by which two or more different types of influenza A 
+combine to form a virus radically different from the ancestor strains. 
+The virus that results has a new HA or NA subtype. Antigenic shift may 
+result in global disease spread, or pandemic, because humans will have 
+few or no antibodies to block infection. However, if the new influenza A
+ subtype does not easily pass from person to person, the disease 
+outbreak will be limited.</p> <p class="rm-manual">Antigenic shift 
+occurs in two ways. First, antigenic shift can occur through genetic 
+recombination, or reassortment, when two or more different influenza A 
+viruses infect the same host cell and combine their genetic material. 
+Influenza A viruses can infect birds, pigs, and humans, and major 
+antigenic shifts can occur when these virus types combine. For example, a
+ pig flu virus and a human flu virus could combine in a bird, resulting 
+in a radically different flu type. If the virus infects humans and is 
+efficiently transmitted among them, a pandemic may occur.</p>
+</blockquote> <p class="rm-manual">There are important differences 
+between corona viruses and influenza viruses, and from what I’ve heard 
+(and this may not be reliable, remember IANAVirologist) the flu virus is
+ apparently especially adept at swapping out proteins through 
+recombination. This is why you can have a couple of viruses, say, one 
+with HA group 1 and NA group 3 (making it an H1N3 flu) combine with an 
+H7N1 flu inside a host and, at least in theory, end up with three viral 
+forms as the two combine, taking the H1 from the first virus and the N1 
+from the second virus to become a third strain, in this hypothetical an 
+H1N1 flu.</p> <p class="rm-manual">Now, if the original two types were 
+not particularly virulent, you might end up with the new variant being 
+more transmissible and eventually one person coming into contact with 
+the recombinant host is successfully infected with the new strain but 
+not successfully infected by the two originating strains. Now you have a
+ pure H1N1 infection that can be passed on as a single type of flu 
+without the others and you wouldn’t necessarily (without a lot of work 
+and a far better understanding of virology than my tidbits of half-baked
+ knowledge) be able to know which strains of flu produced it – just that
+ one of them had an H1 protein and another had an N1 protein. The 
+NA-protein of the first and the HA-protein of the second could (at least
+ in theory) be forever unknown.</p> <p class="rm-manual">So your 
+conjecture isn’t laughably impossible, at least not from the point of 
+view of viruses in general. Whether coronaviruses are able to do this 
+might be a separate question from whether or not viruses in general 
+might sometimes have this capacity.</p> <p class="rm-manual">My best 
+guess, however, would be that coronaviruses do have this capability, but
+ not to the degree that influenza viruses have it (since I’ve heard 
+science journalists say that influenza is more capable than the average 
+virus of such recombination, and without specific evidence we’d be best 
+assuming that coronaviruses only exhibit an average ability for viruses 
+to do this, which would be non-zero, but less than flu viruses).</p> <p class="rm-manual">Hope
+ that helps. If you want real info though, i suggest digging through 
+google scholar a bit. There’s always good stuff to find there.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>KG</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037366">28 March 2020 at 1:17 pm</a> </p> <p class="rm-manual">I
+ hadn’t known about the similarities to pangolin coronaviruses – only 
+those of bats – although I’d heard the idea that pangolins were an 
+intermediate host. That perhaps makes it more likely the Wuhan “wet 
+market” was indeed the source (although I’ve read the very first cases 
+had no known connection to it, rather than an accidental escape from one
+ of the two nearby research labs that have, apparently, <a href="https://web.archive.org/web/20200214144447/https:/www.researchgate.net/publication/339070128_The_possible_origins_of_2019-nCoV_coronavirus" rel="nofollow">been working on bat coronaviruses</a>.
+ Either way, the Chinese government can’t escape a degree of 
+responsibility – it has been encouraging peasant farmers to farm 
+wildlife for sale in these markets.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span><a href="https://healthvsmedicine.blogspot.com/" rel="external nofollow">cervantes</a></span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037372">28 March 2020 at 1:48 pm</a> </p> <p class="rm-manual">I take an ACE inhibitor. Is that good or bad?</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span><a href="https://hic-est-charly.blogspot.com/" rel="external nofollow">Charly</a></span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037374">28 March 2020 at 1:54 pm</a> </p> <p class="rm-manual">I
+ just had a spat with one of my friends who started to spout conspiracy 
+nonsense at me. He complained that there are no scientists who explain 
+this in plain language, so I sent him links to some. Those were 
+immediately dismissed as USA-paid influencers. After that I have told 
+him to stop pestering me with his idiocy, because it is obvious that I 
+cannot say or do anything that would change his mind and any discussion 
+is therefore a waste of time.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span><a href="https://www.facebook.com/profile.php?id=1159674804" rel="external nofollow">robertbaden</a></span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037378">28 March 2020 at 2:04 pm</a> </p> <p class="rm-manual">KG,</p> <p class="rm-manual">Ever have bison? Our local grocery stores have it for sale.</p><p class="rm-manual"> Then there is the pet trade here.</p><p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>Nerd of Redhead, Dances OM Trolls</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037380">28 March 2020 at 2:08 pm</a> </p> <p class="rm-manual">cervantes#6 <a href="https://www.medscape.com/viewarticle/927646" rel="nofollow">The EMA says keeping taking the ACE inhibitor.</a></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>yannoupoika</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037382">28 March 2020 at 2:12 pm</a> </p> <p class="rm-manual">Thank you for the information. My wife thinks it’s some conspiracy started in Harvard. I totally disagreed with her.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>Owlmirror</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037383">28 March 2020 at 2:14 pm</a> </p> <p class="rm-manual">Also in Nature: <a href="https://www.nature.com/articles/s41586-020-2169-0" rel="nofollow">Identifying SARS-CoV-2 related coronaviruses in Malayan pangolins</a></p> <p class="rm-manual">There’s a disclaimer that this is an unedited manuscript — basically a preprint. Nevertheless.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>Mark</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037384">28 March 2020 at 2:15 pm</a> </p> <p class="rm-manual">The
+ conspiracy theories I’ve read so far include 1) China created the virus
+ to attack the US 2) China created the virus to reduce its own 
+population. Both have the obvious effect of damaging the Chinese and 
+world economies. And can’t population reduction can be achieved without 
+murdering people in such an elaborate and indiscriminate fashion? 
+Conspiracy theories are based on the premise that the conspirators are 
+morons who leave clues sitting around like breadcrumbs for amateur, 
+Google detectives to follow. We all know China created the virus because
+ bats and pangolins are Scientologists. Enough said.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>davidc1</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037386">28 March 2020 at 2:20 pm</a> </p> <p class="rm-manual">@12 Them Chinese ,i knewed it all the time .</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>spinynorman8</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037387">28 March 2020 at 2:23 pm</a> </p> <p class="rm-manual">A few science notes:</p> <p class="rm-manual">1)
+ The cell surface protein that SARS-CoV2 binds to is ACE2 (not ACE). 
+They both function to regulate blood pressure, but play different roles.
+ ACE converts angiotensinogen to angiotensin 1 (Agt1), which has the 
+effect of constricting blood vessels. This is why ACE inhibitors are 
+prescribed for people with hypertension. ACE2 converts Agt1 to Agt2, 
+which dilates blood vessels.</p> <p class="rm-manual">This also means 
+that if you are currently on an ACE inhibitor you shouldn’t have 
+anything to worry about, and the recommendation from health care 
+professionals is to stay on the drug. Uncontrolled hypertension may be a
+ risk factor for SARS-CoV2 infection, as it turns out, and this may be 
+explained by compensatory changes that the body enacts under these 
+circumstances…an upregulation of ACE2, which has anti-hypertensive 
+effects.</p> <p class="rm-manual">The basic idea is that anything that 
+enhances the binding of SARS-CoV2 to ACE2 can elevate your risk, 
+including increased levels of ACE2 protein, or other co-factors that may
+ promote the interaction.</p> <p class="rm-manual">2) ACE2 is indeed 
+expressed in airway epithelial cells but also on many other cells of the
+ body. Among these are those lining the gut, and also in the brain and 
+other organs. There is some recent evidence that the anosmia associated 
+with infections in some patients has to do with the effect on olfactory 
+neuroepithelial cells in the nasal cavity, for example.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span><a href="https://freethoughtblogs.com/intransitive/" rel="external nofollow">Intransitive</a></span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037388">28 March 2020 at 2:39 pm</a> </p> <p class="rm-manual">Charly (#7) –</p> <p class="rm-manual">The
+ worst conspiracy “theory” types are the ones who should know better. 
+I’ve met some with the education to understand PZM’s explanations but 
+still cling to fictions. Ignorance is one thing, wilful ignorance 
+another.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>unclefrogy</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037392">28 March 2020 at 3:32 pm</a> </p> <p class="rm-manual">in
+ this case at least I think some people reach for the conspiracy theory 
+because it offers a degree of safety or security. No matter how 
+complicated , implausible and contradictory the conspiracy may be it is 
+of human design or even alien design and thus it is something we can 
+identify and fight. It gives a focus of human scale to it. It is not 
+indifferent nature over which we have little power or control. That kind
+ of reality is too frightening for many people. The idea that we are 
+that fragile and precarious is something to avoid thinking about at all 
+costs. Not thinking about it does not however change the reality any.</p><p class="rm-manual">
+ The understanding of the path that this virus took to get to us and how
+ it spread is very interesting while not changing our own vulnerable 
+position it recognizes it and offers the possibility of understanding 
+how nature works and allowing us to work with it better.</p><p class="rm-manual"> uncle frogy</p><p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>chrislawson</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037394">28 March 2020 at 3:41 pm</a> </p> <p class="rm-manual">My COVID-19 conspiracy theory is that it was released by Amazon and Netflix.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>chrislawson</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037395">28 March 2020 at 3:43 pm</a> </p> <p class="rm-manual">Those scaly ant-eating bastards insist we’re all golins.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>nomadiq</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037396">28 March 2020 at 3:52 pm</a> </p> <p class="rm-manual">@4 CD: thanks for opening up the discussion s boy more. Very interesting.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>chrislawson</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037398">28 March 2020 at 3:55 pm</a> </p> <p class="rm-manual">unclefrogy@16–</p> <p class="rm-manual">I
+ don’t think a desire for security can be the answer because most 
+conspiracy theories posit a world that is less safe. Others have said 
+it’s a desire for certainty, but that doesn’t explain the many 
+conspiracy theories that reject knowledge that is as certain as we can 
+ever get. Possibly it’s something to do with the human psychological 
+trend to see our successes as our own work and our failures due to 
+external forces, but even then I don’t see why people have to construct 
+such ridiculous stories when there are far more coherent ones to choose 
+from.</p> <p class="rm-manual">The funny thing is I have known myself to
+ occasionally construct minor conspiracy theories to explain things — I 
+suspect everyone does to some extent — although never anything as 
+bizarre as flat-earthism or as harmful as dissing victims of school 
+massacres. And when I look back, I can’t see what the psychological 
+benefit was to myself, the person who was feeling it.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>chrislawson</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037399">28 March 2020 at 3:59 pm</a> </p> <p class="rm-manual">Instransitive@15–</p> <p class="rm-manual">Yes.
+ One of my family members worked in science and high-tech industry his 
+whole life, and yet he was forwarding patently ridiculous COVID-19 hoax 
+emails to everyone in his address book.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>wzrd1</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037401">28 March 2020 at 4:43 pm</a> </p> <p class="rm-manual">@6, there are two ACE receptors, ACE inhibitors target ACE1, which would if activated, increase blood pressure.</p><p class="rm-manual"> ACE2, when activated, lowers blood pressure and also lowers inflammation and alas, ACE2 is what the virus binds to.</p><p class="rm-manual"> So, keep taking your ACE inhibitors, hypertension isn’t a solution to a possible infection or anything else.</p><p class="rm-manual">
+ I take a beta blocker and calcium channel blocker, plus antithyroid 
+medication to keep my blood pressure something survivable. As I’m out of
+ work and have no health insurance, that means no BP or thyroid meds, so
+ I’m severely hypertensive.</p><p class="rm-manual"> Based upon modeling
+ that I’ve read on the effects of infection with COVID-19 strain, 
+hypertension and inflammation go through the roof and with elders with 
+poor BP control, the effects of infection are devastating.</p><p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>unclefrogy</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037402">28 March 2020 at 4:50 pm</a> </p> <p class="rm-manual">@20</p><p class="rm-manual"> I think conspiracy theories have a similar root to anthropomorphizing nature such as the habit of creating gods.</p><p class="rm-manual">
+ it is an attempt to put reality into an understandable order often 
+without enough information to actually understand what is actually 
+happening. Often helped along with fear which adds determination to the 
+belief.</p><p class="rm-manual"> I often catch myself creating liberate 
+scenarios about how someone came into the yard and stolled my tool that 
+was right over here when in reality I forgot where I left it. In this 
+case I deflected it outside of me to some shadowy some else and my fear 
+of some of the people around me made the idea appealing.</p><p class="rm-manual"> not all conspiracies theories but most</p><p class="rm-manual"> uncle frogy</p><p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>lemiserable</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037405">28 March 2020 at 5:33 pm</a> </p> <p class="rm-manual">Covid-19 RAPES the cell which it infects.</p> <p class="rm-manual">Donald trump RAPES 50 women and runs for president!. Is elected!</p> <p class="rm-manual">Joe Biden RAPES Tara Reade (and others?) and runs for president!</p> <p class="rm-manual">We voted for rapists. We VOTED FOR COVID-19!</p> <p class="rm-manual">Casting your ballot for Joe Biden? Casting your ballot for Donald Trump? Then you vote for rape.</p> <p class="rm-manual">Write in Bernie! Write in Yang! Write in your mother! Lets be done with all of this.</p> <p class="rm-manual">I hope I am understood. I love you all.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>logicalcat</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037408">28 March 2020 at 5:51 pm</a> </p> <p class="rm-manual">Covid-19 doesn’t rape anything. Fuck off.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>Owlmirror</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037410">28 March 2020 at 6:16 pm</a> </p> <p class="rm-manual">Another pangolin paper:</p><p class="rm-manual"> <a href="https://www.cell.com/current-biology/fulltext/S0960-9822(20)30360-2" rel="nofollow">Probable Pangolin Origin of SARS-CoV-2 Associated with the COVID-19 Outbreak</a></p><p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>DanDare</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037413">28 March 2020 at 6:57 pm</a> </p> <p class="rm-manual">Chrislawson@20
+ and uncle froggy @23 there is also the desire to be the person who 
+holds esoteric knowledge. ‘I am in control and important because I know 
+stuff you don’t ‘</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>unclefrogy</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037414">28 March 2020 at 7:03 pm</a> </p> <p class="rm-manual">@27</p><p class="rm-manual"> absolutely</p><p class="rm-manual"> also in promoting it it helps to identify “us” who understand apart from those who are part of the conspiracy or just victims</p><p class="rm-manual"> uncle frogy</p><p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>hemidactylus</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037419">28 March 2020 at 8:22 pm</a> </p> <p class="rm-manual">As
+ if we ain’t got enough to freak out about nature is seriously fucking 
+with a bunch of states using a scary tornado outbreak. But as we know 
+that is intentionally engineered using HAARP because interdimensional 
+asshats love their schadenfreude. No lizards…nature sucks!</p> <p class="rm-manual"><a href="https://www.spc.noaa.gov/products/outlook/day1otlk_2000_prt.html" rel="nofollow">https://www.spc.noaa.gov/products/outlook/day1otlk_2000_prt.html</a></p> <p class="rm-manual">BTW
+ I’ve always thought pangolins were really interesting mammals. Sad they
+ may have got wrapped up along with some oblivious bats in this 
+catastrophic mess 😞</p> <p class="rm-manual">Pandemic plus tornadoes. 
+Not cool. Not looking forward to hurricane season if COVID is still 
+kicking around and people gotta risk evacuating into protective 
+shelters. That’s really gonna be a shitshow if CAT 4-5 storms come 
+knocking while sickness is widespread. Worst case scenario ever. I hate 
+my pessimistic consequence oriented outlook.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>lemiserable</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037420">28 March 2020 at 8:27 pm</a> </p> <p class="rm-manual">#25 logicalcat</p> <p class="rm-manual">Did the cell consent to be penetrated? No.</p> <p class="rm-manual">Did Tara Reade consent? No.</p> <p class="rm-manual">Did the dozens of Trumps victim’s consent? No.</p> <p class="rm-manual">Listen carefully to things which you do not want to hear. They will help you grow.</p> <p class="rm-manual">Joe
+ Biden is the rapist virus which has infiltrated the Democratic Party. 
+We, the membrane attack complex, will destroy Joe Biden by sacrificing 
+the Democratic Party with our C9 complement proteins. We will drive our 
+beta barrels Into the heart of DNC corruption.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span><a href="https://www.facebook.com/profile.php?id=100000629884790" rel="external nofollow">garydargan</a></span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037425">28 March 2020 at 8:53 pm</a> </p> <p class="rm-manual">I
+ read the Nature Medicine article when it first came out but missed the 
+(very personal) sting in it. The virus attaches to ACE2 so it locks onto
+ human cells expressing the ACE2 enzyme on their surface. These 
+particularly occur in the lungs hence the severe respiratory problems. I
+ have sarcoidosis and one of its symptoms is high levels of ACE along 
+with significant lung fibrosis. In my case the levels are well above 
+normal even for sarcoidosis sufferers. I need a deeper bunker.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>logicalcat</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037428">28 March 2020 at 10:01 pm</a> </p> <p class="rm-manual">@30</p> <p class="rm-manual">I never even heard of Tara Reade until your post. I hope its not true since its fucked up.</p> <p class="rm-manual">At
+ the same time I find it crass to apply the label of rape for what 
+viruses do to cells. Cells cannot consent. Viruses cannot think. Its 
+belittling a real problem and applying it where its not needed. You got 
+something to say about Biden, go ahead. You don’t need to compare 
+viruses to rapists to do that.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>jrkrideau</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037429">28 March 2020 at 10:14 pm</a> </p> <p class="rm-manual">@ 12 Mark</p><p class="rm-manual"> The conspiracy theories I’ve read so far …</p><p class="rm-manual">
+ You missed the one where the virus was introduced accidentally or on 
+purpose by the US contingent which was participating in the 2019 
+Military World Games held in Wuhan in late October 2019.</p><p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>KG</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037438">29 March 2020 at 5:53 am</a> </p> <blockquote class="rm-manual"><p class="rm-manual">Ever have bison? Our local grocery stores have it for sale. – robertbaden@8</p></blockquote> <p class="rm-manual">No:
+ I’m a vegetarian, and also a non-American. What was your point? There 
+are good reasons to deplore the wildlife farming that the Chinese 
+government has encouraged, quite apart from the enhanced risk of 
+zoonoses – such as the suffering of the animals involved, and the effect
+ on ecosystems and threatened species; and there are many Chinese 
+critics of the practice. But as far as zoonoses are concerned, SARS-CoV 
+(the 2003 virus) appears to have emerged from the same sources, and that
+ should have been enough of a warning to the Chinese government. <a href="https://www.theguardian.com/commentisfree/2020/mar/25/new-virus-china-covid-19-food-markets" rel="nofollow">Here</a>
+ is an informative article on the wider context: agribusiness (again, 
+encouraged by the Chinese government, although also involving foreign 
+corporations) has pushed small farmers in China out of their traditional
+ markets, and even of their land into marginal areas closer to wildlife,
+ and the wildlife farming has transformed what was a source of 
+subsistence for the rural poor into a luxury trade in cities.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span><a href="https://freethoughtblogs.com/pervertjustice/" rel="external nofollow">Crip Dyke, Right Reverend Feminist FuckToy of Death &amp; Her Handmaiden</a></span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037440">29 March 2020 at 9:15 am</a> </p> <p class="rm-manual">@lemiserable</p> <blockquote class="rm-manual"><p class="rm-manual">Covid-19 RAPES the cell which it infects.</p></blockquote> <p class="rm-manual">No. It doesn’t. Rape is a thing. It’s hard enough to do accurate rape education without this bullshit.</p> <p class="rm-manual">Please stop spouting this nonsense.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>Steve Caldwell</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037525">30 March 2020 at 12:03 am</a> </p> <p class="rm-manual">A reader wrote to the Electoral Vote news/commentary web site asking for their views on the Tara Reade story.</p> <p class="rm-manual">The
+ Electoral Vote site (electoral-vote.com) is an excellent resource run 
+by two college professors — one who works in the field of computer 
+science/statistics and the other who is a historian. A recurring feature
+ on their web site is fielding reader questions on Saturdays.</p> <p class="rm-manual">Here is what they said about this on the Electoral Vote site on Saturday (content warning — description of a sexual assault):</p> <blockquote class="rm-manual">
+<p class="rm-manual">Just so everyone is on the same page, the story 
+being referenced is Tara Reade’s claim that she was sexually assaulted 
+by Joe Biden back in 1993, while she was working for him. Here is the 
+key portion of her narrative:</p> <p class="rm-manual">He just had me up
+ against the wall. I was wearing like a skirt, a business skirt. I 
+wasn’t wearing stockings. It was kind of a hot day that day, and I was 
+wearing heels…I remember I was wearing a blouse, and he just had me up 
+against the wall. And the wall was cold. It happened all at once…his 
+hands were on me and underneath my clothes. Yeah, and he went down my 
+skirt but then up inside it, and he penetrated me with his fingers, and 
+he was kissing me at the same time, and he was saying something to me. 
+He said several things. I can’t remember everything he said.</p> <p class="rm-manual">Biden, of course, has denied this.</p> <p class="rm-manual">It
+ does not appear to be centrally coordinated; in fact, it started on one
+ end of the political spectrum and then jumped to the other. You’re 
+right that the story definitely did not gain traction, despite the fact 
+that many mainstream outlets took a look at it. Here are some guesses as
+ to why:</p> <p class="rm-manual">** The “#MeToo Moment” Has Passed: 
+There was a period of time there, right after the Harvey Weinstein and 
+Bill Cosby stories broke, that the mere whiff of sexual impropriety was 
+career-ending. Perhaps the most obvious person caught up in this was 
+former senator Al Franken, who was compelled to resign his office before
+ an investigation could be conducted. It is the case that sexual assault
+ claims are taken much more seriously these days than they used to be, 
+as well they should. But we seem to have exited the time in which a mere
+ accusation was seen as proof of guilt.</p> <p class="rm-manual">** Is 
+Reade Trustworthy?: The general progression of events does not increase 
+confidence in Reade’s account. The first problem is that she didn’t tell
+ anyone at the time that she was assaulted, and she did not come forward
+ with the story until a quarter-century had passed. Second, she came 
+forward previously, and was one of the women who accused Biden of 
+inappropriate hugging/touching, but didn’t mention anything beyond that.
+ Third, she has been an outspoken anti-Biden and pro-Sanders voice on 
+social media (and, in fact, when she made the assault allegations, she 
+did so to a staunchly left-leaning website, The Intercept). None of this
+ proves she is lying, but it certainly does raise some concerns about 
+her veracity and her motivations.</p> <p class="rm-manual">** Out of 
+Character for Biden: There is no question that Biden grew up with a 
+1950s/1960s sense of boundaries, a sense out of step with where we’re at
+ today. But, unlike Bill Clinton, Brett Kavanaugh, Anthony Wiener, and 
+other plausibly accused alleged perpetrators of sexual assault, Biden’s 
+never been associated with any misconduct beyond that. There is a huge 
+chasm between “inappropriate hug” and “violent sexual assault.” It’s 
+highly unusual for someone to jump over that chasm with no 
+intermediate/gateway steps. It’s even more unusual for it to happen 
+exactly one time. And thus far, nobody else has come forward with claims
+ like Reade’s.</p> <p class="rm-manual">** Right Wing Framing: After The
+ Intercept ran the story, right-wing media grabbed it and ran with it. 
+Interestingly, most of them had a headline or a lede that included the 
+formulation “Joe Biden Said He Believes All Women. Does He Believe Tara 
+Reade?” That’s a very unusual framing, one that downplays the more 
+serious crime of sexual assault, and plays up Biden’s alleged hypocrisy 
+(which is, of course, not a crime). Framing things in that way certainly
+ makes it seem like even the right-wingers don’t really think Biden 
+assaulted Reade, and instead they’re trying to use this as a “gotcha.”</p> <p class="rm-manual">**
+ Going to the Well Too Many Times: Shamefully, a number of folks (most 
+commonly hacky right-wing operatives) have tried to use 100% fabricated 
+claims of sexual misconduct to smear political opponents. The most 
+notable case of this is probably the comically inept Jacob Wohl, who 
+tried to smear special counsel Robert Mueller in this manner, and then 
+tried it again with Pete Buttigieg. This has undoubtedly put the idea in
+ people’s minds that when a sexual assault claim seems like in might 
+fail the smell test, it might just be a political hit job.</p> <p class="rm-manual">Anyhow,
+ these are our guesses. We think it’s instructive that Donald Trump has 
+yet to deploy this against Biden. If there was any chance it could 
+stick, and was going to become an element of the 2020 campaign, surely 
+the President would have tossed it out there already.</p> <p class="rm-manual">And yes, propaganda is best ignored.</p>
+</blockquote> <p class="rm-manual">Source — <a href="https://www.electoral-vote.com/evp2020/Pres/Maps/Mar28.html" rel="nofollow">https://www.electoral-vote.com/evp2020/Pres/Maps/Mar28.html</a></p> <p class="rm-manual">There
+ was a reader response to their commentary on the Tara Reade story today
+ (Sunday is the day they run reader comments). Here is what one reader 
+said in response:</p> <blockquote class="rm-manual">
+<p class="rm-manual">I really appreciate you answering the question 
+about Tara Reade and the anti-Biden propaganda push. You make excellent 
+points, but I have two comments.</p> <p class="rm-manual">First, you 
+left out what happened with the Time’s Up fund, who declined to fund 
+legal and PR fees for Reade because the appearance of them being 
+political would threaten their 501(c)(3) status. In response, some sites
+ have cried “cover-up.” However, Time’s Up could have safely helped Tara
+ Reade (despite Joe Biden being a presidential candidate) as long as 
+they used their normal procedure to decide whether to help. Doesn’t it 
+make more sense that they used their normal procedure to evaluate 
+Reade’s claims, and (they, like you) found them unconvincing?</p> <p class="rm-manual">Second,
+ you say that this story did not gain traction, and you also say that it
+ is instructive that Trump has not deployed this against Biden, but you 
+ignore something important. Does Trump know a better way to harm Biden 
+with this than using it against him directly (and appearing to be the 
+pot calling the kettle black).</p> <p class="rm-manual">In the last 
+week, I have been inundated with messages from my relatives and friends 
+who are Sanders supporters, all of them saying exactly the same thing: 
+that because of this one accusation of sexual assault, they refuse to 
+vote for Biden for president. So this is splintering the Democrats, 
+which can only help Trump. I have no idea who is spreading this, but it 
+seems to be working, and there are plenty of actors (Republicans, 
+Sanders supporters, Russians, etc.) who would benefit. Plus, this is 
+eerily similar to the way that fear, uncertainty, and doubt was used 
+against Clinton during the 2016 election.</p>
+</blockquote> <p class="rm-manual">Source — <a href="https://www.electoral-vote.com/evp2020/Pres/Maps/Mar29.html" rel="nofollow">https://www.electoral-vote.com/evp2020/Pres/Maps/Mar29.html</a></p> <p class="rm-manual">I’m
+ not saying that the mainstream media (NY Times, Washington Post, AP, 
+BBC, etc) is always right but it’s instructive that they haven’t touched
+ this story about Biden.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>logicalcat</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037544">30 March 2020 at 4:26 am</a> </p> <p class="rm-manual">Trigger warning discussing rape and rape denial-ism, just in case.</p> <p class="rm-manual">Ive
+ never been a victim of sexual assault, but after hearing many accounts 
+Ive noticed that it never went from “He touched me inappropriately” to 
+“He raped me” in regards to recalling what happened. I know from reading
+ accounts that memory of the event is not reliable, but that’s with the 
+details. Never seen a victim not recall the actual attack or recall it 
+as something that was a lot milder. Especially not during MeToo when the
+ accusations were made public.</p> <p class="rm-manual">I’ll be blunt 
+here. I don’t believe her. I understand why the whole must believe women
+ is a thing from reading this blog. I understand that not believing 
+women is why so many rapists get away with what they did. Its why I 
+included the trigger warning because I don’t want to upset people who’ve
+ been through this bullshit. But I also think enough time has passed 
+with MeToo for it to be weaponized. And Ive hung around Sanders 
+supporters long enough to know that the more zealous among us are 
+perfectly capable of doing this. For fucks sake, with Hillary Clinton, a
+ common nickname for her was Killary. They accused her of both 
+assassinating Seth Rich, and of committing a war crime which is 
+impossible since she doesn’t command the armed forces and never have.</p> <p class="rm-manual">It doesn’t pass the smell test. And its one of the many reasons why I’ve grown a dislike for “progressives”.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span><a href="https://freethoughtblogs.com/primatechess/" rel="external nofollow">Brony, Social Justice Cenobite</a></span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037648">30 March 2020 at 1:53 pm</a> </p> <p class="rm-manual">@36</p><p class="rm-manual"> Steve Caldwell I’m responding to the quote you provided, and I understand the author is passing on info in some of this</p><p class="rm-manual">
+ But we seem to have exited the time in which a mere accusation was seen
+ as proof of guilt.&lt;\q&gt; That’s a big red flag to me. When getting 
+an investigation is like pulling teeth I always want to see the reality 
+to go with what they think “seen as proof of guilt” is.</p><p class="rm-manual"></p> <p class="rm-manual">The
+ first problem is that she didn’t tell anyone at the time that she was 
+assaulted, and she did not come forward with the story until a 
+quarter-century had passed.&lt;\q&gt; In a system that doesn’t take 
+sexual harassment and assault seriously this isn’t surprising.</p> <p class="rm-manual">Second,
+ she came forward previously, and was one of the women who accused Biden
+ of inappropriate hugging/touching, but didn’t mention anything beyond 
+that. &lt;\q&gt; So what? This person must not have actually listened to
+ the interview because they explained why they didn’t tell the rest, 
+they didn’t think they were being taken seriously so they didn’t go on 
+to the more difficult material.</p> <p class="rm-manual">Third, she has 
+been an outspoken anti-Biden and pro-Sanders voice on social media (and,
+ in fact, when she made the assault allegations, she did so to a 
+staunchly left-leaning website, The Intercept).&lt;\q&gt; A person’s 
+politics don’t mean they weren’t a sexual assault victim. I was hoping 
+for better from the left.</p> <p class="rm-manual">Going to the Well Too
+ Many Times: Shamefully, a number of folks (most commonly hacky 
+right-wing operatives) have tried to use 100% fabricated claims of 
+sexual misconduct to smear political opponents.&lt;\q&gt; Anyone using 
+false claims to judge uninvestigated claims is prejudiced.</p> <p class="rm-manual">They
+ can be as upset as they want but it’s not the accusers fault if some 
+people can’t let an investigation happen while being willing to vote for
+ the accused until the investigation is done.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span><a href="https://freethoughtblogs.com/primatechess/" rel="external nofollow">Brony, Social Justice Cenobite</a></span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037650">30 March 2020 at 1:58 pm</a> </p> <p class="rm-manual">@logicalcat 37</p> <p class="rm-manual">&lt;</p> <p class="rm-manual">blockquote&gt;Ive
+ never been a victim of sexual assault, but after hearing many accounts 
+Ive noticed that it never went from “He touched me inappropriately” to 
+“He raped me” in regards to recalling what happened.&lt;\blockquote&gt;</p><p class="rm-manual"> Can you expand on this? I’m not quite sure what you mean.</p><p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span><a href="https://freethoughtblogs.com/primatechess/" rel="external nofollow">Brony, Social Justice Cenobite</a></span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037652">30 March 2020 at 1:59 pm</a> </p> <p class="rm-manual">I swear things look fine in the comment box. I’m not sure what I’m doing wrong with the formatting.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>logicalcat</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037672">30 March 2020 at 2:43 pm</a> </p> <p class="rm-manual">@40 Brony.</p> <p class="rm-manual">Basically
+ Biden’s accuser accused him of being creepy with respect to boundaries 
+during the CreepyJoe controversy about Biden’s inappropriate touching 
+and lack of respect to boundaries. And then now during the primary that 
+same accusation now turned to “Actually he raped me”. Ive never seen a 
+victim of rape change her story in such a way. I find it suspect 
+primarily because Ive never seen this before. Ive never seen a victim of
+ sexual assault downplay their own assault during MeToo era. Maybe it is
+ true, but its suspect. Especially now late into the primary, where a 
+lot of Sanderites are still fighting for their candidate, and still 
+believe he can win. I fully admit that I might be wrong as I’ve never 
+been a victim of this.</p> <p class="rm-manual">And yes I did read the 
+entire interview. Saying “I didn’t think anyone would believe me” during
+ a time when most people would believe you with “believe all women” 
+doesn’t sound convincing. Especially during a time when the pressure on 
+Biden’s inappropriateness was not just highlighted but national 
+conversation. Saying she didn’t think anyone would take her seriously 
+during a time when Biden’s inappropriateness was national conversation 
+is not convincing. And as a Sanders supporter I know the worst among us 
+are perfectly capable of false allegations. This is why I mention Seth 
+Rich conspiracy and “Killary Clinton”.</p> <p class="rm-manual">I think 
+as a leftist this person understands rape culture enough to use it 
+effectively. Its what I would have done if I wanted to take down Biden.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>logicalcat</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037674">30 March 2020 at 2:43 pm</a> </p> <p class="rm-manual">What I would have done if I was a terrible person I mean.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span><a href="https://freethoughtblogs.com/primatechess/" rel="external nofollow">Brony, Social Justice Cenobite</a></span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037677">30 March 2020 at 2:57 pm</a> </p> <p class="rm-manual">@logicalcat</p><p class="rm-manual"> Link the before and after language you are referring to please.</p><p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>a_ray_in_dilbert_space</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037682">30 March 2020 at 3:25 pm</a> </p> <p class="rm-manual">The
+ problem with today’s hyper-partisan politics is that there are lots of 
+actors who will lie through their teeth to help their candidate or hurt a
+ candidate they don’t like. We had people telling us that decorated war 
+veteran John Kerry was a coward. We had people telling us that Barrack 
+Obama was a radical Muslim Kenyan socialist.</p><p class="rm-manual"> We had people telling us that Hillary Clinton was a murderer and a cannibal.</p><p class="rm-manual">
+ We’ve had people telling us that Liz Warren was keeping a sex slave boy
+ toy, the Pete Buttigieg was a rapist, that Bernie Sanders was at deaths
+ door.</p><p class="rm-manual"></p> <p class="rm-manual">We do not have 
+any way of definitively proving or disproving any of this. What we do 
+have is Donald Trump’s own voice bragging about sexual assault and 
+perving on under-age beauty contestants. And more important, we have 3 
+years of evidence of what an unmitigated disaster this man has been for 
+the country.</p> <p class="rm-manual">Anyone would be better.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span><a href="https://freethoughtblogs.com/primatechess/" rel="external nofollow">Brony, Social Justice Cenobite</a></span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037687">30 March 2020 at 3:52 pm</a> </p> <p class="rm-manual">@a_ray_in_dilbert_space 45</p><p class="rm-manual"> Where is the accuser responsable for anyone’s partisanship but their own?</p><p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>a_ray_in_dilbert_space</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037691">30 March 2020 at 4:12 pm</a> </p> <p class="rm-manual">That
+ is just it–we cannot know her motivations. We cannot assess her 
+veracity. We know that several similar falsehoods have been advanced in 
+this campaign and before. Without independent evidence, we have no way 
+to assess the claims.</p> <p class="rm-manual">Kavanaugh’s accuser was supported by several consistent accounts that supported her account.</p> <p class="rm-manual">DJT has confessed.</p> <p class="rm-manual">WRT
+ Biden, we have one accusation, but we also have several folks saying 
+that “Yes, Biden is sometimes clueless, but this doesn’t sound like 
+him.”</p> <p class="rm-manual">And even if it were true, he still isn’t as vile a predator as the current occupant.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span><a href="https://lofty76.wordpress.com/" rel="external nofollow">Lofty</a></span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037702">30 March 2020 at 5:24 pm</a> </p> <p class="rm-manual">@40 Brony</p> <p class="rm-manual">For
+ starters you’re using a back slash \ not a forward slash / in the 
+closing tags, secondly you’re hitting some other key (enter?) after the 
+opening tag bracket before the b. Preview is your friend.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span><a href="https://freethoughtblogs.com/primatechess/" rel="external nofollow">Brony, Social Justice Cenobite</a></span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037715">30 March 2020 at 6:42 pm</a> </p> <p class="rm-manual">@a_ray_in_dilbert_space 46</p><p class="rm-manual"> Past falsehoods do not affect independent accusations.</p><p class="rm-manual"></p> <p class="rm-manual">Biden’s accuser is not affected by those other people. You need to be talking about Biden’s accuser if you see a problem.</p> <p class="rm-manual">The investigation is to get the evidence.</p> <p class="rm-manual">Your
+ paraphrases are not an acceptable replacement for what people actually 
+complain about. Donald Trump is irrelevant to Biden’s accuser.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span><a href="https://freethoughtblogs.com/primatechess/" rel="external nofollow">Brony, Social Justice Cenobite</a></span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037716">30 March 2020 at 6:45 pm</a> </p> <p class="rm-manual">@Lofty 47</p><p class="rm-manual">
+ Thank you. I’ll watch for that. I’m pretty sure I used preview. I 
+didn’t see the formatting in the preview but the text in the comment box
+ looked fine. Maybe I just missed something.</p><p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>logicalcat</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037759">31 March 2020 at 3:29 am</a> </p> <p class="rm-manual">@ Brony</p> <p class="rm-manual">here’s the original allegation. <a href="https://www.theunion.com/news/local-news/nevada-county-woman-says-joe-biden-inappropriately-touched-her-while-working-in-his-u-s-senate-office/" rel="nofollow">https://www.theunion.com/news/local-news/nevada-county-woman-says-joe-biden-inappropriately-touched-her-while-working-in-his-u-s-senate-office/</a></p> <p class="rm-manual">You
+ cant just say other accusations have no bearing on this one because 
+these things don’t happen in a vacuum. When the “left progressives” are 
+actively accusing candidates they don’t like of murder without evidence,
+ they’ve poison the well. False rape allegations would be the next step.
+ People already tried to do it, but not leftists. It was only a matter 
+of time considering the conspiracy theories they delve with.</p> <p class="rm-manual">And
+ lets me be clear, I’m no centrist (though Ive been called one by these 
+people) and I don’t care for Biden. I voted Sanders. Even voted early. 
+My problem is that since last election Ive viewed progressives as a 
+whole negatively through my experience being among them. Many of them 
+prefer a right wing president over an establishment democrat. Their 
+anti-establishmentarianism is less about making the world better than it
+ is a dogmatic mantra that must be upheld. This wouldn’t be 
+uncharacteristic of that bunch.</p> <p class="rm-manual">At the end of 
+the day there’s no way of knowing whether the accusation was true or 
+not. This is a case involving politics now. Not Hollywood, or academia, 
+or other institutions of power where false allegations of anything are 
+rare and false allegations of rape specifically are even rarer still. 
+No, false allegations here are the norm. Pizzagate, her emails, Seth 
+Rich, dnc rigging the primary, Hillary committing war crimes somehow, 
+Benghazi, I could go on and on.</p> <p class="rm-manual">To paraphrase 
+someone from Biden’s staff “Women have the right to tell their story, 
+and reporters have the obligation to vet those claims.” So vet away. If 
+more evidence that he did it surfaces, then we know the truth now. Right
+ now as it stands, she has a lot going against her. The changing the 
+story for one, and the fact that her past tweets before 2016 election 
+about Biden have been positive. Those are two things working against 
+her. On a personal level, her being pro Sanders is a red flag, but thats
+ on me and my experience.</p> <p class="rm-manual">I also want to hear 
+the opinions of victims on this. Maybe I’m being an idiot, I don’t know.
+ I’m a man whose never been sexually assaulted. Physically and 
+emotionally abused yes, but not sexually. My opinion on the accusations 
+doesn’t carry much weight.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span><a href="https://freethoughtblogs.com/primatechess/" rel="external nofollow">Brony, Social Justice Cenobite</a></span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037858">31 March 2020 at 2:12 pm</a> </p> <p class="rm-manual">@logicalcat 50</p><p class="rm-manual"> Are you kidding me?</p><p class="rm-manual">
+ Quote the problems with the accusers before and after story. Either 
+you’ve seen something of you haven’t. I’m not taking your word for what 
+you see.</p><p class="rm-manual"></p> <p class="rm-manual">&lt;</p> <p class="rm-manual">blockquote&gt;You
+ cant just say other accusations have no bearing on this one because 
+these things don’t happen in a vacuum. When the “left progressives” are 
+actively accusing candidates they don’t like of murder without evidence,
+ they’ve poison the well. False rape allegations would be the next 
+step.&lt;\blockquote&gt;</p><p class="rm-manual"> I can and I will 
+because that’s your bearing to show. It’s prejudice to bring that up 
+without a reason. Independent accusers aren’t necessarily part of 
+something nefarious and without evidence the process of investigation 
+needs to be started.</p><p class="rm-manual"></p> <blockquote class="rm-manual"><p class="rm-manual">My problem is…</p></blockquote> <p class="rm-manual">You
+ can stop there because an accuser shouldn’t have to care about your 
+problems before they have their claims heard. Your position on the 
+political spectrum doesn’t change the fact that your political 
+difficulty is yours.</p> <p class="rm-manual">&lt;</p> <p class="rm-manual">blockquote&gt;At the end of the day there’s no way of knowing whether the accusation was true or not.&lt;\blockquote&gt;</p><p class="rm-manual"> Rejected. That’s your assertion and you are politically motivated against collecting evidence.</p><p class="rm-manual"></p> <p class="rm-manual">&lt;</p> <p class="rm-manual">blockquote&gt;The
+ changing the story for one, and the fact that her past tweets before 
+2016 election about Biden have been positive. Those are two things 
+working against her. On a personal level, her being pro Sanders is a red
+ flag, but thats on me and my experience.&lt;\blockquote&gt;</p><p class="rm-manual"> You haven’t shown a changed story. You asserted it and link dropped.</p><p class="rm-manual">
+ I seen countless stories from victims who have had to pretend to be 
+fine because they were dependant or would be risking their careers if 
+they spoke out.</p><p class="rm-manual"> And your suspicion about the sexual assault claims of an in-group political opponent are rejected.</p><p class="rm-manual"></p> <p class="rm-manual">This is pathetic and sad.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span><a href="https://freethoughtblogs.com/primatechess/" rel="external nofollow">Brony, Social Justice Cenobite</a></span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037859">31 March 2020 at 2:16 pm</a> </p> <p class="rm-manual">Something
+ between my phone and the site is messed up. Those spaces in the 
+blockquote formatting weren’t in the comment box on my phone. Preview 
+still shows the problem, but those spaces aren’t there. Wtf.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>a_ray_in_dilbert_space</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037873">31 March 2020 at 2:59 pm</a> </p> <p class="rm-manual">Brony and Logicalcat,</p> <p class="rm-manual">This should be investigated. I am less concerned by her being pro-Sanders than I am by her being pro-Putin.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>blf</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037878">31 March 2020 at 3:18 pm</a> </p> <p class="rm-manual">Brony@51/@52, I suspect there are two different things going:</p> <p class="rm-manual">1st, In several (but not all) places the closing blockquote tag seems to be <code class="rm-manual">&lt;\blockquote&gt;</code> — with a backslash (\). It should be a forward slash (/); e.g., <code class="rm-manual">&lt;/blockquote&gt;</code>.</p> <p class="rm-manual">2nd, In all(?) the other cases, there is no closing blockquote tag at all.</p> <p class="rm-manual">The “spaces” are an opaque warning there is an HTML problem; specifically, a matching closing <code class="rm-manual">&lt;/blockquote&gt;</code> is not present.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span><a href="https://freethoughtblogs.com/primatechess/" rel="external nofollow">Brony, Social Justice Cenobite</a></span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037910">31 March 2020 at 7:33 pm</a> </p> <p class="rm-manual">@blf</p><p class="rm-manual"> I appreciate it. I checked the slashes to make sure they were going in the right direction. Maybe I just need to slow down.</p><p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>logicalcat</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037952">1 April 2020 at 12:43 am</a> </p> <p class="rm-manual">@a Ray In Dilbert Space</p> <p class="rm-manual">Never
+ did I say her claims shouldn’t be heard nor shouldn’t be investigated. 
+In my last comment I pretty much said investigate away. If he did it we 
+will know soon enough.</p> <p class="rm-manual">@Brony</p> <p class="rm-manual">My
+ link is the link for her original accusation. Compared to the recent 
+one she changed it significantly. Your failure to piece that together is
+ your failure not mines. I didn’t quote them directly side by side 
+because one of them is graphic. Do I need to quote them in full? Or are 
+you capable of reading two articles?</p> <p class="rm-manual">She also 
+tweeted positively about Biden prior to 2016 (when all this purity 
+politics nonsense gained traction). This was all years after she stopped
+ working on the Hill, so there wouldn’t be any fear of her jeopardizing 
+her career. I’m very much aware of rape culture. Learned most of it 
+through this website and the commentariat especially.</p> <p class="rm-manual">Whats
+ sad and pathetic is that you accused me of being politically motivated 
+against collecting evidence when in my last post I strictly said 
+investigate away, if he’s found guilty we will know. You are clearly 
+projecting here. The evidence is not on her side and you don’t like 
+that.</p> <p class="rm-manual">You say its my bearing to show? I did. Or
+ did you forget I mentioned pizzagate, her emails, Seth Rich, dnc 
+rigging the primary, and so many other false allegations intended for 
+political reasons. You conveniently ignored this. If you believe this 
+accusation exists in a vacuum independent of those, then you do not 
+believe in reality. These are all examples that the political landscape 
+of today is one where false allegations and conspiracies are the norm, 
+especially towards the establishment by Sandernistas. Thus, poisoning 
+the well. When Trumpers do the same shit we call it out immediately, but
+ when its one of our own our hypocrisy are bare for all to see. To 
+repeat: when Trumpers do the same shit we call it out, but when its our 
+own we behave like hypocrites. Ive also never insinuated she made it up 
+precisely because of this, only that it makes it suspect and that I, me 
+myself and I, don’t believe her personally. You do believe her. Great. 
+Let the investigation show who was right. But if there’s not an 
+investigation, we will know why. Its because of all the shit I just 
+mentioned poisoning it all.</p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span>Porivil Sorrens</span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037953">1 April 2020 at 1:09 am</a> </p> <p class="rm-manual">@56</p><p class="rm-manual">
+ Yikes, please never imply that we’re on the same political side again. I
+ don’t want to be grouped in with people bending over backwards to 
+defend geriatric rapists.</p><p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <span><a href="https://freethoughtblogs.com/primatechess/" rel="external nofollow">Brony, Social Justice Cenobite</a></span> <span>says</span> </p> <p class="rm-manual"> <a href="https://freethoughtblogs.com/pharyngula/2020/03/28/where-did-sars-cov-2-come-from/#comment-2037956">1 April 2020 at 1:38 am</a> </p> <p class="rm-manual">@logicalcat 56</p><p class="rm-manual">
+ I don’t see any quotes. I can’t even begin to see if your reasoning or 
+logic is sound until you have the courage to show me the change to her 
+story that you claim to see.</p><p></p> </article> </li> </ol></article>
+</body></html>

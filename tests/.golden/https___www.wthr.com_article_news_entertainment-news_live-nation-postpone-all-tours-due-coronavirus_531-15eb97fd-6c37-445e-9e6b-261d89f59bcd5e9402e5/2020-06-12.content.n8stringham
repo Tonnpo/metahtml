@@ -1,0 +1,53 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual">13 WTHR Indianapolis | Indianapolis Local News &amp; Weather</h1>
+<article class="rm-manual"> <a href="file:///section/entertainment-news">entertainment-news</a> </article><h1 class="rm-manual">Live Nation to postpone all tours due to coronavirus</h1>
+<p class="rm-manual">As more concerns arise about the coronavirus, Live Nation is putting a pause on its tours.</p>
+<p class="rm-manual">(Getty/Cesare Ferrari)</p>
+<p class="rm-manual"> <span>Author:</span> WTHR.com staff </p>
+<p class="rm-manual"> <span>Published:</span> 2:52 PM EDT March 12, 2020 </p>
+<p class="rm-manual"> <span>Updated:</span> 1:35 PM EDT March 13, 2020 </p>
+<p>INDIANAPOLIS (WTHR) — As more concerns arise about the coronavirus, Live Nation is putting a pause on its tours.</p>
+<p>On March 12, <a href="https://www.nytimes.com/2020/03/12/arts/music/coachella-concerts-coronavirus.html">the New York Times</a>
+ reported that Live Nation will instruct "its touring shows to prepare 
+to return home." This will affect tours domestically and 
+internationally.</p>
+<p>The company is hitting pause on current touring arena shows through the end of the month. </p>
+<p>Tours that will be affected include Billie Eilish and Elton John along with many others.</p>
+<p>Live Nation is instructing its employees to work remotely,<a href="https://www.billboard.com/articles/business/touring/9333748/live-nation-global-pause-tours-concerts-coronavirus"> according to Billboard.</a> It plans to re-evaluate the situation at the beginning of April.</p></article>
+</body></html>

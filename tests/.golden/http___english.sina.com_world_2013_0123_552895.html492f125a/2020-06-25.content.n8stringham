@@ -1,0 +1,112 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> DPRK slams Kim Jong Un plastic surgery reports - World News - SINA English </p>
+<p class="rm-manual"> <span>News</span> </p>
+<p class="rm-manual"><a href="http://english.sina.com/index.html"><span>Home</span></a></p>
+<p class="rm-manual"><a href="http://english.sina.com/index.html"><span>News</span></a> </p>
+<table class="rm-manual"> <tbody><tr class="rm-manual">
+<td class="rm-manual"><dl class="rm-manual"> <dt class="rm-manual"><a href="http://english.sina.com/news/china/">China</a></dt> <dd><a href="http://english.sina.com/news/china/politics.html">Politics</a></dd> <dd><a href="http://english.sina.com/news/china/society.html">Society</a></dd> <dd><a href="http://english.sina.com/news/china/in-depth.html">In-depth</a></dd> <dd><a href="http://english.sina.com/news/china/real-time.html">Real-time</a></dd> </dl></td> <td class="rm-manual"><dl class="rm-manual"> <dt class="rm-manual"><a href="http://english.sina.com/news/world/">World</a></dt> <dd><a href="http://english.sina.com/news/world/asia-pacific.html">Asia-Pacific</a></dd> <dd><a href="http://english.sina.com/news/world/news.html">News</a></dd> <dd><a href="http://english.sina.com/news/world/world-view.html">World View</a></dd> <dd><a href="http://english.sina.com/news/world/odds.html">Odds</a></dd> </dl></td> <td class="rm-manual"><dl class="rm-manual"> <dt class="rm-manual"><a href="http://english.sina.com/news/biz-tech/">Business &amp; Professions</a></dt> <dd><a href="http://english.sina.com/news/biz-tech/economy.html">Economy</a></dd> <dd><a href="http://english.sina.com/news/biz-tech/business.html">Business</a></dd> <dd><a href="http://english.sina.com/news/biz-tech/scitech.html">Science &amp; Tech</a></dd> <dd><a href="http://english.sina.com/news/biz-tech/stocks.html">Stocks</a></dd> </dl></td> <td class="rm-manual"><dl class="rm-manual"> <dt class="rm-manual"><a href="http://english.sina.com/news/entertainment/">Entertainment</a></dt> <dd><a href="http://english.sina.com/news/entertainment/celebrity.html">Celebrity</a></dd> <dd><a href="http://english.sina.com/news/entertainment/movie.html">Movie</a></dd> <dd><a href="http://english.sina.com/news/entertainment/music.html">Music</a></dd> <dd><a href="http://english.sina.com/news/entertainment/tv.html">TV</a></dd> <dd><a href="http://english.sina.com/news/entertainment/fashion.html">Fashion</a></dd> </dl></td> <td class="rm-manual"><dl class="rm-manual"> <dt class="rm-manual"><a href="http://english.sina.com/news/sports/">Sports</a></dt> <dd><a href="http://english.sina.com/news/sports/soccer.html">Soccer</a></dd> <dd><a href="http://english.sina.com/news/sports/basketball.html">Basketball</a></dd> <dd><a href="http://english.sina.com/news/sports/tennis-golf.html">Tennis &amp; Golf</a></dd> <dd><a href="http://english.sina.com/news/sports/others.html">Others</a></dd> </dl></td> <td class="rm-manual"><dl class="rm-manual"> <dt class="rm-manual"><a href="http://english.sina.com/news/culture/">Cultural Bridge</a></dt> <dd><a href="http://english.sina.com/news/culture/cultural-exchange.html">Cultural Exchange</a></dd> <dd><a href="http://english.sina.com/news/culture/heritage-art.html">Heritage &amp; Art</a></dd> <dd><a href="http://english.sina.com/news/culture/travel.html">Travel</a></dd> <dd><a href="http://english.sina.com/news/culture/people-to-people.html">People to People</a></dd> </dl></td> </tr> </tbody></table>
+<p class="rm-manual"><a href="http://english.sina.com/weibo/"><span>Weibo</span></a></p>
+<p class="rm-manual"><a href="http://english.sina.com/column/index.html"><span>Column &amp; Blog</span></a></p>
+<p class="rm-manual"><a href="http://english.sina.com/life-city/index.html"><span>Life &amp; City</span></a></p>
+<p class="rm-manual"><a href="http://bbs.english.sina.com/"><span>Talk Sina</span></a></p>
+<p class="rm-manual"><a href="http://english.sina.com/photo/"><span>Photo</span></a></p>
+<p class="rm-manual"><a href="http://english.sina.com/video/"><span>Video</span></a></p>
+<p class="rm-manual"><a href="http://english.sina.com/specialcoverage/"><span>Special Coverage</span></a></p>
+<p class="rm-manual"><a href="http://sina.echineselearning.com/english/"><span>Learn Chinese</span></a></p>
+<p class="rm-manual"><a href="file:///news/world/">World</a></p>
+<p class="rm-manual"><span>&gt;</span><a href="file:///news/world/news.html">News</a></p>
+<p class="rm-manual">Hot Words:</p>
+<p class="rm-manual"><a href="http://search.sina.com.cn/?c=english&amp;sort=time&amp;q=Earthquake">Earthquake</a><a href="http://search.sina.com.cn/?c=english&amp;sort=time&amp;q=Diaoyu%20Islands">Diaoyu Islands</a><a href="http://search.sina.com.cn/?c=english&amp;sort=time&amp;q=Israel">Israel</a><a href="http://search.sina.com.cn/?c=english&amp;sort=time&amp;q=Davos">Davos</a></p>
+<h1 class="rm-manual">DPRK slams Kim Jong Un plastic surgery reports</h1>
+<p class="rm-manual"> <span>2013-01-24 06:42:47 GMT</span><span>2013-01-24 14:42:47(Beijing Time)</span> <span>SINA.com</span> </p>
+<p><span>A combination photo of Kim Il Sung and Kim Jong Un</span></p>
+<p>Pyongyang has finally responded to persistent rumours that leader Kim
+ Jong Un had plastic surgery to look like his revered grandfather, 
+issuing an angry denial criticising "sordid" media reports.</p>
+<p>Speculation that Kim's resemblance to the country's founding leader, 
+Kim Il Sung, is not 100 percent natural has been around for some time, 
+though with little or no supporting evidence.</p>
+<p>The rumors have been partly fed by the undeniable fact that Kim Jong 
+Un has sought to evoke memories of his grandfather in numerous ways, 
+through his dress, haircut, gestures and public appearances.</p>
+<p>And there is a clear physical resemblance. But Pyongyang's patience with reports of plastic surgery appears to have run out.</p>
+<p>"The false report... released by enemies is a hideous criminal act 
+which the party, state, army and people can never tolerate," the 
+official Korean Central News Agency (KCNA) said in a commentary 
+Wednesday.</p>
+<p>Insisting that the very idea of Kim, who is in his late 20s, 
+undergoing plastic surgery was "unimaginable," KCNA flatly rejected what
+ it described as "sordid hackwork by rubbish media."</p>
+<p>While the focus of the commentary's fury was the South Korean media, 
+it seems Pyongyang's anger was triggered by a Chinese report last week 
+that was widely picked up by newspapers in the South.</p>
+<p>China's Shenzhen TV cited a diplomatic source who, on a private visit
+ to Pyongyang, had spoken to a DPRK official who confirmed the plastic 
+surgery rumors.</p>
+<p>KCNA referenced the Chinese report, but saved its real vitriol for 
+the South Korean newspapers. "Those hurting the dignity of the supreme 
+leadership of the nation should not expect any mercy or leniency.</p>
+<p>"Time will clearly show what dear price the human scum and media in 
+the service of traitors of South Korea, slaves of capital, will have to 
+pay," it said.</p>
+<p>Kim Il Sung died in 1994. He is officially referred to as "The Great 
+Leader" and is designated in the constitution as the country's "Eternal 
+President". His birthday is a public holiday.</p>
+<p>Possibly concerned that the Shenzhen TV report may have caused 
+offence, China's official Xinhua news agency issued a report Tuesday, 
+citing two of its correspondents in Pyongyang who rejected the plastic 
+surgery rumors.</p>
+<p class="rm-manual"> | <a href="">PRINT</a> | <a href="file:///rss/scroll.xml">RSS</a> </p>
+<p class="rm-manual">Editor: <span>Mei Jingya</span></p>
+<p class="rm-manual"><span>Related News</span></p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://english.sina.com/world/p/2013/0122/552254.html">Kim Jong Un undergone plastic surgery to resemble grandfather: report</a></li> </ul>
+<p class="rm-manual"><span>Add Comment</span></p>
+<table class="rm-manual"> <tbody><tr class="rm-manual"> <td class="rm-manual"><span>Name</span></td> </tr> <tr class="rm-manual"> <td class="rm-manual"> English Only</td> </tr> </tbody></table>
+<p class="rm-manual"> Please read our <a href="http://corp.sina.com.cn/eng/sina_item_eng.htm">Terms of Service</a>.
+ Messages that harass, abuse or threaten others; have obscene or 
+otherwise objectionable content; have spam, commercial or advertising 
+content or links may be removed. </p>
+<p class="rm-manual">SINA English is the English-language destination 
+for news and information about China. Find general information on life, 
+culture and travel in China through our news and special reports or find
+ business partners through our online Business Directory. For investment
+ opportunities with SINA, please click the link "Investor" below.</p>
+<p class="rm-manual">| <a href="http://corp.sina.com.cn/eng/">About SINA</a> | <a href="http://corp.sina.com.cn/eng/sina_rela_eng.htm">Investor</a> | <a href="http://mediakit.sina.com/">Media Kit</a> | <a href="mailto:english@staff.sina.com.cn">Comments or Question?</a> |</p>
+<p class="rm-manual">Copyright &amp;copy 1996-2013 SINA Corporation, All Rights Reserved </p></article>
+</body></html>

@@ -1,0 +1,170 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Protests in the United States Over the Death of George Floyd and Other Weekend Reads </p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/"> <span>Foreign Policy Magazine</span> </a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="#">Sign In</a> </li> <li class="rm-manual"> <a href="file:///subscribe"> <span>Subscribe</span> </a> <a href="file:///subscribe"> <span>Upgrade to Insider</span> </a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///category/latest/">Latest</a> </li> <li class="rm-manual"> <a href="file:///channel/news/">News</a> </li> <li class="rm-manual"> <a href="file:///channel/analysis/">Analysis</a> </li> <li class="rm-manual"> <a href="file:///podcasts/">Podcasts</a> </li> <li class="rm-manual"> <a href="file:///the-magazine/">The Magazine</a> </li> <li class="rm-manual"> <a>Channels</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///channel/economics/">Economics</a></li> <li class="rm-manual"><a href="file:///channel/security-2/">Security</a></li> <li class="rm-manual"><a href="file:///category/elephants-in-the-room/">Elephants in the Room</a></li> <li class="rm-manual"><a href="file:///category/shadow-government/">Shadow Government</a></li> <li class="rm-manual"><a href="file:///channel/her-power/">Her Power</a></li> </ul> <span> Close </span> </li> <li class="rm-manual"> <a href="file:///newsletters/">Newsletters</a> </li> </ul>
+<p class="rm-manual"><a href="file:///fpinsider/"><span>Your </span>FP Insider Access:</a></p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///power-maps">Power Maps</a></li> <li class="rm-manual"><a href="file:///conference-calls">Conference Calls</a></li> <li class="rm-manual"><a href="file:///special-reports">Special Reports</a></li> <li class="rm-manual"><a href="file:///podcasts/ispy">I Spy Plus</a></li> </ul>
+<p class="rm-manual"> Search </p>
+<h2 class="rm-manual">latest</h2>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/06/china-united-states-george-floyd-protests/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/06/china-united-states-george-floyd-protests/">Our Top Weekend Reads</a></h3><a href="https://foreignpolicy.com/2020/06/06/china-united-states-george-floyd-protests/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual">China condemns America's human rights record, the 
+United States is sliding into illiberalism, and workers will be the most
+ vulnerable when businesses reopen.</p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/category/five-reads/"> 5 Top Reads </a> <span>|</span> </p>
+<address class="rm-manual"> <a href="https://foreignpolicy.com/author/dan-haverty/" rel="author"> Dan Haverty</a>
+</address>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/05/india-police-brutality-george-floyd-protests-united-states/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/05/india-police-brutality-george-floyd-protests-united-states/">Indians Are Supporting George Floyd—and Ignoring Police Brutality in Their Own Country</a></h3><a href="https://foreignpolicy.com/2020/06/05/india-police-brutality-george-floyd-protests-united-states/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual">There are no protests to mark the systematic 
+mistreatment of the country’s poor, lower-caste communities, or other 
+minority groups.</p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/category/analysis/argument/"> Argument </a> <span>|</span> </p>
+<address class="rm-manual"> <a href="https://foreignpolicy.com/author/raksha-kumar/" rel="author"> Raksha Kumar</a>
+</address>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/05/nypd-sees-coordination-protests-counterintelligence-police-brutality/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/05/nypd-sees-coordination-protests-counterintelligence-police-brutality/">The NYPD Sees Coordination in Protests. It’s Incentivized To.</a></h3><a href="https://foreignpolicy.com/2020/06/05/nypd-sees-coordination-protests-counterintelligence-police-brutality/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual">Since 9/11, federal funding for counterintelligence has shifted the way New York and other cities are policed.</p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/category/analysis/argument/"> Argument </a> <span>|</span> </p>
+<address class="rm-manual"> <a href="https://foreignpolicy.com/author/jake-bittle/" rel="author"> Jake Bittle</a>
+</address>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/05/coronavirus-vladimir-putin-russia/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/05/coronavirus-vladimir-putin-russia/">The Coronavirus Could Hit Putin Most of All</a></h3><a href="https://foreignpolicy.com/2020/06/05/coronavirus-vladimir-putin-russia/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual">New surveys show a surprising decline in the 
+Russian president’s popularity. The pandemic will accelerate a trend of 
+mistrust in the Kremlin.</p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/category/analysis/argument/"> Argument </a> <span>|</span> </p>
+<address class="rm-manual"> <a href="https://foreignpolicy.com/author/maria-snegovaya/" rel="author"> Maria Snegovaya</a><span>,</span> <a href="https://foreignpolicy.com/author/denis-volkov/" rel="author"> Denis Volkov</a><span>,</span> <a href="https://foreignpolicy.com/author/stepan-goncharov/" rel="author"> Stepan Goncharov</a>
+</address>
+<p class="rm-manual"> <a href="file:///category/latest/">See All Stories</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://foreignpolicy.com/staff/">Meet the Staff</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/events">FP Events</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/fp-analytics/">FP Analytics</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/fp-peacegames/">FP PeaceGames</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://foreignpolicy.com/subscription-services/">Subscription Services</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/reprint-permissions/">Reprint Permissions</a></li> <li class="rm-manual"><a href="https://foreignpolicy.submittable.com/submit">Writer’s Guidelines</a></li> <li class="rm-manual"><a href="file:///employment-opportunities/">Work at FP</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://fpguide.foreignpolicy.com/2020-career">FP Guides – Graduate Education</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/fp-for-education/">FP For Education</a></li> <li class="rm-manual"><a href="file:///magazine">FP Archive</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/buy-back-issues/">Buy Back Issues</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://foreignpolicy.com/advertise-with-foreign-policy/">Advertise with FP</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/privacy/">Privacy Policy</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/contact-us/">Contact Us</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="#">Sign In</a> </li> <li class="rm-manual"> <a href="file:///subscribe"> <span>Subscribe</span> </a> <a href="file:///subscribe"> <span>Upgrade</span> </a> </li> </ul>
+<p class="rm-manual"> Search </p>
+<p class="rm-manual"> <span> 5 Top Reads: </span> <span> Our Top Weekend Reads </span> <span> Our Top Weekend Reads... </span> </p>
+<p class="rm-manual">DON'T LOSE ACCESS: Your IP access to ForeignPolicy.com will expire on June 15.</p>
+<p class="rm-manual">To ensure uninterrupted reading, please contact Rachel Mines, sales director, at <a href="mailto:rachel.mines@foreignpolicy.com">rachel.mines@foreignpolicy.com</a>.</p>
+<p class="rm-manual"><a href="https://foreignpolicy.com/category/five-reads/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/category/five-reads/">5 Top Reads</a></h3> <p class="rm-manual"></p>
+<h1 class="rm-manual">Our Top Weekend Reads</h1>
+<h2 class="rm-manual">China condemns America's human rights record, the 
+United States is sliding into illiberalism, and workers will be the most
+ vulnerable when businesses reopen.</h2>
+<address class="rm-manual"> <span>By</span> <a href="https://foreignpolicy.com/author/dan-haverty/" rel="author"> Dan Haverty</a>
+</address>
+<p class="rm-manual"><span>|</span> June 6, 2020, 7:00 AM </p>
+<p> People gather in the rain outside the White House for a peaceful protest against police brutality in Washington on June 4. <span>Sarah Silbiger/Getty Images</span> </p>
+<p>China’s condemnation of racism and police brutality in the United 
+States looks hypocritical in comparison to its own human rights record.</p>
+<p>Meanwhile, the strategic approach that led to China’s coronavirus response dates back further than President Xi Jinping’s rule.</p>
+<p>And as businesses across the world begin the process of reopening 
+after the pandemic, workers will be the group most vulnerable to another
+ outbreak.</p>
+<p>Here are Foreign Policy’s top weekend reads.</p>
+<p>People gather in the rain outside of the White House for a peaceful protest against police brutality in Washington on June 4. <span>Sarah Silbiger/Getty Image</span> </p>
+<h4>1. <a href="https://foreignpolicy.com/2020/06/05/us-injustice-protests-china-condemnation-cynical/">As U.S. Injustices Rage, China’s Condemnation Reeks of Cynicism</a>
+</h4>
+<p>The Chinese Communist Party is condemning the United States for its 
+record on police brutality and racism, but China’s own human rights 
+record raises questions about its motivations, Ho-fung Hung writes.</p>
+<p>Chinese President Xi Jinping, right, shakes hands with former 
+President Hu Jintao at the Great Hall of the People in Beijing on Oct. 
+24, 2017.<span>Wang Zhao/AFP via Getty Images</span> </p>
+<h4>2. <a href="https://foreignpolicy.com/2020/06/04/china-xi-jingping-hu-jintao-aggression-ideology/">China’s Steps Backward Began Under Hu Jintao</a>
+</h4>
+<p>Xi’s predecessor presided over changes to the Chinese Communist 
+Party’s internal system that set the stage for the reckless response to 
+the coronavirus pandemic, Dan Blumenthal writes.</p>
+<p>A stuffed doll of Pepe the Frog sits at the main entrance of the Hong
+ Kong Polytechnic University campus in Hong Kong on Nov. 23, 2019. <span>Anthony Kwan/Getty Images</span> </p>
+<h4>3. <a href="https://foreignpolicy.com/2020/06/01/canada-may-host-the-worlds-first-incel-show-trial/">Canada May Host the World’s First Incel Show Trial</a>
+</h4>
+<p>A 17-year-old who allegedly killed a woman in Toronto due to his own 
+sexual frustrations will be charged with terrorism. Simon Cottee asks 
+whether men who identify with the online “incel” community should be 
+treated as terrorists.</p>
+<p>U.S. President Donald Trump leaves the White House to go to St. John’s Church in Washington on June 1. <span>BRENDAN SMIALOWSKI/AFP via Getty Images</span> </p>
+<h4>4. <a href="https://foreignpolicy.com/2020/06/03/trump-military-george-floyd-protests/">A Moment of National Shame and Peril—and Hope</a>
+</h4>
+<p>The Trump administration’s response to protests in Washington could 
+mark the country’s slide into illiberalism, John Allen writes.</p>
+<p>Employees eat lunch at a Dongfeng Honda auto plant in Wuhan, China, shortly after returning to work, on March 23. <span>STR/AFP via Getty Images</span> </p>
+<h4>5. <a href="https://foreignpolicy.com/2020/06/02/as-economies-reopen-its-the-law-of-the-jungle-for-workers/">As Economies Reopen, It’s the Law of the Jungle for Workers</a>
+</h4>
+<p>As communities and businesses around the world decide on the next 
+tentative steps to loosen lockdowns and return to business, exposure to a
+ possible second wave of coronavirus infections is the main worry, 
+Michael Moran writes.</p>
+<p class="rm-manual">Dan Haverty is an editorial fellow at Foreign Policy. Twitter: <a href="http://www.twitter.com/dan_haverty">@dan_haverty</a></p>
+<p class="rm-manual"> <a href="file:///comments_view/?view_post_comments=https%3A%2F%2Fforeignpolicy.com%2F2020%2F06%2F06%2Fchina-united-states-george-floyd-protests%2F">View Comments</a> </p>
+<p class="rm-manual"> <span>Tags:</span> <a href="https://foreignpolicy.com/tag/china/"> China</a><span>,</span><a href="https://foreignpolicy.com/tag/protests/"> protests</a><span>,</span><a href="https://foreignpolicy.com/tag/united-states/"> United States</a></p>
+<p class="rm-manual">Latest</p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/06/china-united-states-george-floyd-protests/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/06/china-united-states-george-floyd-protests/">Our Top Weekend Reads</a></h3><a href="https://foreignpolicy.com/2020/06/06/china-united-states-george-floyd-protests/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> June 6, 2020, 7:00 AM </p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/05/india-police-brutality-george-floyd-protests-united-states/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/05/india-police-brutality-george-floyd-protests-united-states/">Indians Are Supporting George Floyd—and Ignoring Police Brutality in Their Own Country</a></h3><a href="https://foreignpolicy.com/2020/06/05/india-police-brutality-george-floyd-protests-united-states/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> June 5, 2020, 10:03 PM </p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/05/nypd-sees-coordination-protests-counterintelligence-police-brutality/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/05/nypd-sees-coordination-protests-counterintelligence-police-brutality/">The NYPD Sees Coordination in Protests. It’s Incentivized To.</a></h3><a href="https://foreignpolicy.com/2020/06/05/nypd-sees-coordination-protests-counterintelligence-police-brutality/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> June 5, 2020, 9:13 PM </p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/05/coronavirus-vladimir-putin-russia/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/05/coronavirus-vladimir-putin-russia/">The Coronavirus Could Hit Putin Most of All</a></h3><a href="https://foreignpolicy.com/2020/06/05/coronavirus-vladimir-putin-russia/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> June 5, 2020, 6:12 PM </p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/05/pandemic-protests-trump-national-security-interview-kori-schake-jake-sullivan/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/05/pandemic-protests-trump-national-security-interview-kori-schake-jake-sullivan/">The Pandemic and the Protests</a></h3><a href="https://foreignpolicy.com/2020/06/05/pandemic-protests-trump-national-security-interview-kori-schake-jake-sullivan/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> June 5, 2020, 5:01 PM </p>
+<p class="rm-manual"> <a href="file:///category/latest/">See All Stories</a> </p>
+<p class="rm-manual"><span>Trending</span></p>
+<ol class="rm-manual"> <li class="rm-manual"> <p class="rm-manual">1</p> <p class="rm-manual"> <a href="file:///2020/06/03/trump-military-george-floyd-protests/">A Moment of National Shame and Peril—and Hope</a> </p> </li> <li class="rm-manual"> <p class="rm-manual">2</p> <p class="rm-manual"> <a href="file:///2020/06/05/china-globalization-weaponizing-trade-communist-party/">China Is Weaponizing Globalization</a> </p> </li> <li class="rm-manual"> <p class="rm-manual">3</p> <p class="rm-manual"> <a href="file:///2020/06/05/india-police-brutality-george-floyd-protests-united-states/">Indians Are Supporting George Floyd—and Ignoring Police Brutality in Their Own Country</a> </p> </li> <li class="rm-manual"> <p class="rm-manual">4</p> <p class="rm-manual"> <a href="file:///2020/06/05/trump-george-floyd-protests-letter-military-leaders/">Hundreds of Former National Security Officials Condemn Trump’s Response to Protests</a> </p> </li> <li class="rm-manual"> <p class="rm-manual">5</p> <p class="rm-manual"> <a href="file:///2020/06/05/coronavirus-vladimir-putin-russia/">The Coronavirus Could Hit Putin Most of All</a> </p> </li> </ol>
+<p class="rm-manual">Voices</p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/05/coronavirus-pandemic-covid-lessons-united-states-9-11/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/05/coronavirus-pandemic-covid-lessons-united-states-9-11/">The United States Will Learn Nothing From the Pandemic</a></h3><a href="https://foreignpolicy.com/2020/06/05/coronavirus-pandemic-covid-lessons-united-states-9-11/"> </a> <p class="rm-manual"></p>
+<address class="rm-manual"> <a href="https://foreignpolicy.com/author/micah-zenko/" rel="author"> Micah Zenko</a> </address>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/04/george-floyd-protests-arab-spring-parallels-tahrir-square/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/04/george-floyd-protests-arab-spring-parallels-tahrir-square/">Yes, Lafayette Square Is Tahrir Square</a></h3><a href="https://foreignpolicy.com/2020/06/04/george-floyd-protests-arab-spring-parallels-tahrir-square/"> </a> <p class="rm-manual"></p>
+<address class="rm-manual"> <a href="https://foreignpolicy.com/author/steven-a-cook/" rel="author"> Steven A. Cook</a> </address>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/01/travel-bubbles-borders-flights-coronavirus-uk-france-air-bridge/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/01/travel-bubbles-borders-flights-coronavirus-uk-france-air-bridge/">Welcome to a World of Bubbles</a></h3><a href="https://foreignpolicy.com/2020/06/01/travel-bubbles-borders-flights-coronavirus-uk-france-air-bridge/"> </a> <p class="rm-manual"></p>
+<address class="rm-manual"> <a href="https://foreignpolicy.com/author/james-crabtree/" rel="author"> James Crabtree</a> </address>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://foreignpolicy.com/staff/">Meet the Staff</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/events">FP Events</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/fp-analytics/">FP Analytics</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/fp-peacegames/">FP PeaceGames</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://foreignpolicy.com/subscription-services/">Subscription Services</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/reprint-permissions/">Reprint Permissions</a></li> <li class="rm-manual"><a href="https://foreignpolicy.submittable.com/submit">Writer’s Guidelines</a></li> <li class="rm-manual"><a href="file:///employment-opportunities/">Work at FP</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://fpguide.foreignpolicy.com/2020-career">FP Guides – Graduate Education</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/fp-for-education/">FP For Education</a></li> <li class="rm-manual"><a href="file:///magazine">FP Archive</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/buy-back-issues/">Buy Back Issues</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://foreignpolicy.com/advertise-with-foreign-policy/">Advertise with FP</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/privacy/">Privacy Policy</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/contact-us/">Contact Us</a></li> </ul>
+<p class="rm-manual">Powered by <a href="https://wpvip.com/?utm_source=vip_powered_wpcom&amp;utm_medium=web&amp;utm_campaign=VIP%20Footer%20Credit&amp;utm_term=foreignpolicy.com" rel="generator nofollow">WordPress.com VIP</a></p>
+<p class="rm-manual">© 2020, The Slate Group</p></article>
+</body></html>

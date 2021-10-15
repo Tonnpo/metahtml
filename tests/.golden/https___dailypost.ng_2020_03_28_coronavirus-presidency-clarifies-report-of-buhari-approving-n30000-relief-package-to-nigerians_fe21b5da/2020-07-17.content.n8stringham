@@ -1,0 +1,89 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Coronavirus: Presidency clarifies report of Buhari approving N30,000 relief package to Nigerians - Daily Post Nigeria </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="http://dailypost.ng/">Home</a></li> <li class="rm-manual"><a href="https://dailypost.ng/hot-news/">News</a></li> <li class="rm-manual"><a href="https://dailypost.ng/politics/">Politics</a></li> <li class="rm-manual"><a href="https://dailypost.ng/metro/">Metro</a></li> <li class="rm-manual"><a href="https://dailypost.ng/sport-news/">Sport</a></li> <li class="rm-manual"><a href="https://dailypost.ng/entertainment/">Entertainment</a></li> <li class="rm-manual"><a href="https://dailypost.ng/opinion/">Opinion</a></li> <li class="rm-manual"><a href="https://dailypost.ng/education/">Education</a></li> <li class="rm-manual"><a href="https://dailypost.ng/health/">Health</a></li> <li class="rm-manual"><a href="https://dailypost.ng/interview/">Interview</a></li> <li class="rm-manual"><a href="http://dailypost.com.gh/">Daily Post Ghana</a></li> </ul>
+<h2 class="rm-manual">Daily Post Nigeria</h2>
+<h4 class="rm-manual">Coronavirus: Presidency clarifies report of Buhari approving N30,000 relief package to Nigerians</h4>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="http://dailypost.ng/">Home</a></li> <li class="rm-manual"><a href="https://dailypost.ng/hot-news/">News</a></li> <li class="rm-manual"><a href="https://dailypost.ng/politics/">Politics</a></li> <li class="rm-manual"><a href="https://dailypost.ng/metro/">Metro</a></li> <li class="rm-manual"><a href="https://dailypost.ng/entertainment/">Entertainment</a></li> <li class="rm-manual"><a href="https://dailypost.ng/sport-news/">Sport</a></li> </ul>
+<h3 class="rm-manual"><a href="https://dailypost.ng/hot-news/"><span>News</span></a></h3>
+<h1 class="rm-manual">Coronavirus: Presidency clarifies report of Buhari approving N30,000 relief package to Nigerians</h1>
+<p class="rm-manual">Published</p>
+<p class="rm-manual">on</p>
+<p class="rm-manual"><span>March 28, 2020</span> </p>
+<p class="rm-manual">By</p>
+<p class="rm-manual"><span><a href="https://dailypost.ng/author/don-silas/" rel="author">Don Silas</a></span> </p>
+<p>The Presidency on Saturday, dismissed reports that President 
+Muhammadu Buhari has approved N30,000 relief package to be given to 
+every Nigerian with a verified Bank Verification Number (BVN) to cushion
+ hardships occasioned by the coronavirus (COVID-19) pandemic outbreak 
+across the country.</p>
+<p>Reports surfaced on social media claiming that the President’s 
+Special Adviser on Media and Publicity, Mr. Femi Adesina, has announced 
+the presidential approval of the N30,000 package in a statement.</p>
+<p>”The President announced the relief package to be given out N30,000 
+to every Nigerian who has a verified BVN account to ease pressure posed 
+by the order to lockdown economic activities.</p>
+<p>“The N30,000 relief fund will be given to every Nigerian with 
+verified BVN account. I am sure the fund will go a long way to help 
+Nigerians stock up their home during the stay-at-home order by the 
+Government,” the statement had quoted Adesina as saying.</p>
+<p><a href="https://dailypost.ng/2020/07/17/naf-pilot-tolulope-arotiles-life-was-cut-governors-forum/"></a></p><p class="rm-manual"><a href="https://dailypost.ng/2020/07/17/naf-pilot-tolulope-arotiles-life-was-cut-governors-forum/"><span>NEWS:</span> <span>NAF pilot: Tolulope Arotile's life was cut - Governors' Forum</span></a></p><p></p>
+<p>However, the presidential aide, said the supposed approval by the 
+President was concocted by those he described as ”fake news peddlers.”</p>
+<p>Adesina, on his official Twitter handle on Saturday, said: “Fake news
+ peddlers have concocted a statement, purportedly issued by me, saying 
+FG will pay N30,000 to each Nigerian with BVN, to help them stock up 
+before an impending national lockdown. Not me.</p>
+<p>”The so-called statement is hereby disclaimed.”</p>
+<p class="rm-manual">Meanwhile, the number of <a href="https://dailypost.ng/2020/03/28/breaking-coronavirus-nigeria-records-8-new-cases-of-covid-19/">COVID-19 cases</a> in Nigeria as it stands is 89, according to NCDC.</p>
+<ul class="rm-manual"><li class="rm-manual"><a href="https://dailypost.ng/2020/03/29/nigerian-newspapers-10-things-you-need-to-know-this-sunday-morning-44/">Nigerian newspapers: 10 things you need to know this Sunday morning</a></li></ul>
+<ul class="rm-manual"><li class="rm-manual"><a href="https://dailypost.ng/2020/04/14/covid-19-pay-us-via-bvn-nigerians-tell-buhari/">COVID-19: 'Pay us via BVN' - Nigerians tell Buhari</a></li></ul>
+<ul class="rm-manual"><li class="rm-manual"><a href="https://dailypost.ng/2020/04/09/presidency-attacks-lawan-gbajabiamila-over-n-power-others/">Presidency attacks Lawan, Gbajabiamila over N-Power, others</a></li></ul>
+<p class="rm-manual"><a href="https://dailypost.ng/2020/07/17/india-joins-us-brazil-records-over-1-million-covid-19-cases/"></a></p><p class="rm-manual"><a href="https://dailypost.ng/2020/07/17/india-joins-us-brazil-records-over-1-million-covid-19-cases/"><span>NEWS:</span> <span>India joins US, Brazil, records over 1 million COVID-19 cases</span></a></p><p class="rm-manual"></p>
+<ul class="rm-manual"><li class="rm-manual"><a href="https://dailypost.ng/2020/04/18/nigerian-newspapers-10-things-you-need-to-know-this-saturday-morning-61/">Nigerian newspapers: 10 things you need to know this Saturday morning</a></li></ul>
+<ul class="rm-manual"><li class="rm-manual"><a href="https://dailypost.ng/2020/04/06/coronavirus-lagos-gov-sanwo-olu-must-be-probed-pdp-vows/">Coronavirus: Lagos Gov, Sanwo-Olu must be probed - PDP vows</a></li></ul>
+<ul class="rm-manual"><li class="rm-manual"><a href="https://dailypost.ng/2020/03/28/covid-19-be-wary-of-scammers-no-relief-fund-approved-by-fg-minister/">COVID-19: Be wary of scammers, no relief fund approved by FG - Minister</a></li></ul>
+<p class="rm-manual"> <span>Related Topics:</span><span><a href="https://dailypost.ng/tag/buhari/" rel="tag">buhari</a><a href="https://dailypost.ng/tag/coronavirus/" rel="tag">Coronavirus</a></span> </p>
+<h4 class="rm-manual"> <span>You may like</span> </h4>
+<ul class="rm-manual"> <a href="https://dailypost.ng/2020/07/17/buhari-tasked-to-investigate-tolulope-arotiles-death/" rel="bookmark"> <li class="rm-manual"> <p class="rm-manual">Buhari tasked to investigate Tolulope Arotile’s death</p> </li> </a> <a href="https://dailypost.ng/2020/07/17/buhari-warns-ministers-heads-of-departments-agencies-against-disrespecting-lawmakers/" rel="bookmark"> <li class="rm-manual"> <p class="rm-manual">Buhari warns Ministers, heads of departments, agencies against disrespecting lawmakers</p> </li> </a> <a href="https://dailypost.ng/2020/07/17/katsina-rep-member-mashi-said-buhari-should-leave-like-yaradua-for-osinbajo-apc/" rel="bookmark"> <li class="rm-manual"> <p class="rm-manual">Katsina Rep member, Mashi said Buhari should leave like Yar’Adua for Osinbajo – APC</p> </li> </a> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://dailypost.ng/advertise/">Advertise</a></li> <li class="rm-manual"><a href="https://dailypost.ng/contact/">Contact Us</a></li> <li class="rm-manual"><a href="https://dailypost.ng/disclaimer/">Disclaimer</a></li> <li class="rm-manual"><a href="https://dailypost.ng/privacy-policy/">Privacy-Policy</a></li> <li class="rm-manual"><a href="https://dailypost.ng/terms/">Terms</a></li> </ul>
+<p class="rm-manual">Copyright © Daily Post - Nigeria News</p></article>
+</body></html>

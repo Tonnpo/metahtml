@@ -1,0 +1,156 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> North Korea Publicly Rebukes China, Its Truest Ally, For Kim Jong-Un Plastic Surgery Rumor | Beijing Cream </p>
+<p class="rm-manual"> Search for: </p>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="#">Categories</a> <ul class="rm-manual"> <li class="rm-manual"><a href="http://beijingcream.com/category/general/">General</a></li> <li class="rm-manual"><a href="http://beijingcream.com/category/beiwatch/">BeiWatch</a></li> <li class="rm-manual"><a href="http://beijingcream.com/category/culture/">5000 Years</a></li> <li class="rm-manual"><a href="http://beijingcream.com/category/art/">Wok of Art</a></li> <li class="rm-manual"><a href="http://beijingcream.com/category/sports/">One Dream</a></li> <li class="rm-manual"><a href="http://beijingcream.com/category/links/">The East is Read</a></li> </ul> </li> <li class="rm-manual">
+<a href="http://beijingcream.com/bylines">Bylines</a> <ul class="rm-manual"> <li class="rm-manual"><a href="http://beijingcream.com/category/by-anthony-tao/">By Anthony Tao</a></li> <li class="rm-manual"><a href="http://beijingcream.com/category/by-rfh/">By RFH</a></li> <li class="rm-manual"><a href="http://beijingcream.com/category/by-tar-nation/">By TAR Nation</a></li> <li class="rm-manual"><a href="http://beijingcream.com/category/by-beige-wind/">By Beige Wind</a></li> <li class="rm-manual"><a href="http://beijingcream.com/category/by-beijing-cream/">By Beijing Cream</a></li> <li class="rm-manual"><a href="http://beijingcream.com/category/by-morgan-short/">By Morgan Short</a></li> <li class="rm-manual"><a href="http://beijingcream.com/bylines">OTHERS &gt;&gt;</a></li> </ul> </li> <li class="rm-manual">
+<a href="#">The Cream Factory</a> <ul class="rm-manual"> <li class="rm-manual"><a href="http://beijingcream.com/tag/three-shots-with/">Three Shots With</a></li> <li class="rm-manual"><a href="http://beijingcream.com/tag/laowai-comics/">Laowai Comics</a></li> <li class="rm-manual"><a href="http://beijingcream.com/tag/dispatches-from-xinjiang/">Dispatches From Xinjiang</a></li> <li class="rm-manual"><a href="http://beijingcream.com/tag/to-serve-people/">To Serve People</a></li> <li class="rm-manual"><a href="http://beijingcream.com/tag/drake/">That Asshole Drake</a></li> <li class="rm-manual"><a href="http://beijingcream.com/tag/sindicator/">Sindicator</a></li> <li class="rm-manual"><a href="http://beijingcream.com/tag/beijing-slice/">Beijing Slice</a></li> <li class="rm-manual"><a href="http://beijingcream.com/tag/chinagog/">Chinagog</a></li> <li class="rm-manual"><a href="http://beijingcream.com/tag/traffic-light/">Traffic Light</a></li> <li class="rm-manual"><a href="http://beijingcream.com/tag/yishus/">Yishus</a></li> <li class="rm-manual"><a href="http://beijingcream.com/tag/the-licentiates-ledger/">The Licentiate’s Ledger</a></li> </ul> </li> <li class="rm-manual">
+<a href="#">Features</a> <ul class="rm-manual"> <li class="rm-manual"><a href="http://beijingcream.com/tag/bloc-party/">Bloc Party</a></li> <li class="rm-manual"><a href="http://beijingcream.com/tag/week-in-review/">Week in Review</a></li> <li class="rm-manual"><a href="http://beijingcream.com/tag/50-sense/">50 Sense</a></li> <li class="rm-manual"><a href="http://beijingcream.com/tag/outro/">Outro</a></li> <li class="rm-manual"><a href="http://beijingcream.com/tag/censorship/">Censorship</a></li> <li class="rm-manual"><a href="http://beijingcream.com/tag/fight/">Fight</a></li> <li class="rm-manual"><a href="http://beijingcream.com/tag/the-road/">The Road</a></li> <li class="rm-manual"><a href="http://beijingcream.com/tag/poetry-night/">Poetry Night</a></li> <li class="rm-manual"><a href="http://beijingcream.com/tag/who-is-china-daily-following/">Who Is China Daily Following</a></li> <li class="rm-manual"><a href="http://beijingcream.com/tag/chillax/">Chillax</a></li> <li class="rm-manual"><a href="http://beijingcream.com/tag/c4/">C4</a></li> <li class="rm-manual"><a href="http://beijingcream.com/tag/picture-of-the-day/">Picture of the Day</a></li> <li class="rm-manual"><a href="http://beijingcream.com/tag/art-review/">Art Review</a></li> </ul> </li> <li class="rm-manual"><a href="http://beijingcream.com/category/creme-de-la-creme">Creme de la Creme</a></li> <li class="rm-manual"><a href="http://beijingcream.com/tag/creamcast/">The Creamcast</a></li> <li class="rm-manual"><a href="http://beijingcream.com/three-shots-with/">3 Shots</a></li> </ul>
+<h1 class="rm-manual">North Korea Publicly Rebukes China, Its Truest Ally, For Kim Jong-Un Plastic Surgery Rumor</h1>
+<p class="rm-manual">By <span><a href="http://beijingcream.com/category/by-anthony-tao" rel="author">Anthony Tao</a></span> January 27, 2013 5:29 pm Comments: <a href="http://beijingcream.com/2013/01/north-korea-publicly-rebukes-china-its-truest-ally-for-kim-jong-un-plastic-surgery-rumor/#comments">1</a></p>
+<p class="rm-manual">Image via NKNews.org</p>
+<p>When the Korean Central News Agency uses terms such as “hostile 
+forces” and “paid media” to describe a “smear campaign against the 
+DPRK,” the usual targets are South Korea and the US. Indeed, <a href="http://www.kcna.co.jp/item/2013/201301/news23/20130123-21ee.html">in its latest release</a>,
+ which is a resplendent sun in the smoggy skies outside the DPRK that 
+everyone should go read right now, KCNA calls out its neighbor to the 
+south, referring to them as “rats”:</p>
+<p>The sun will always give off its light even though rats make 
+nonsensical remarks moving around ditch, while finding it hard to raise 
+their heads to the bright human world.</p>
+<p>But look who else is implicated in the same article:</p>
+<p>Some media of China should draw a serious lesson from the fact that 
+in November last year they echoed the false propaganda of forces hostile
+ to the DPRK only to suffer international shame and they got accusation 
+even at home that “they are deceived as they are cheating people.”</p>
+<p>They are obliged to feel ashamed and repentant for playing the role 
+of a guide to spreading anti-DPRK misinformation in breach of 
+objectivity, impartiality and accuracy though they should perform their 
+mission and role as a leader and organizer of genuine public opinion.</p>
+<p>What is this “some media” that the KCNA is talking about?</p>
+<p>AFP has <a href="http://www.google.com/hostednews/afp/article/ALeqM5gCJkeFOkf5nNdT68VOiCqXkACmTA?docId=CNG.e4128e96b7becc3855634b1eeeb61408.491">figured it out</a>:</p>
+<p>While the focus of the commentary’s fury was the South Korean media, 
+it seems Pyongyang’s anger was triggered by a Chinese report last week 
+that was widely picked up by newspapers in the South.</p>
+<p>China’s Shenzhen TV cited a diplomatic source who, on a private visit
+ to Pyongyang, had spoken to a North Korean official who confirmed the 
+plastic surgery rumours.</p>
+<p>But the Shenzhen story was last November. Why point it out now? <a href="http://www.washingtonpost.com/blogs/worldviews/wp/2013/01/25/kim-jong-eun-surgery-rumors-force-open-a-sliver-of-daylight-with-china/">asks Max Fisher of the Washington Post</a>. And why do so publicly, risking ill-will with a country that provides investment and aid?</p>
+<p>This all comes at a time when Beijing had been struggling a bit to 
+keep Pyongyang close. In a post at Johns Hopkins’s Korea-focused blog 38
+ North, analyst Stephanie Kleine-Ahlbrandt argues that the relationship 
+is souring a bit. “Kim Jong Un is determined to set a course for greater
+ political independence from Beijing,” she writes. “This has left China 
+in a state that one insider has referred to as ‘desperate’ over its 
+rocky relations with the country since Kim Jong Un came to power.” She 
+says she’s found no evidence that Beijing is anything less than fully 
+committed to its policy of maintaining regional stability and a reliably
+ pro-Beijing regime in North Korea.</p>
+<p>Fisher points out that Global Times recently <a href="http://timesofindia.indiatimes.com/world/china/China-media-threatens-North-Korea-aid-cut-over-atomic-test/articleshow/18178034.cms">chastised Pyongyang</a>, which was unusual. Continuing:</p>
+<p>So what does all of this mean? Maybe nothing; maybe this brief 
+flare-up, and the Chinese censors’ quick response, just demonstrates how
+ serious Beijing is about keeping the status quo. But it’s also possible
+ that this could be the start of a trend, in which China’s increasingly 
+noisy media ends up drawing attention to the fault-lines in the 
+Beijing-Pyongyang alliance, and possibly even adding one or two. That 
+doesn’t mean that the Kim Jong Eun rumors are going to alter Chinese 
+foreign policy, but it could become a small but important factor if that
+ relationship ever significantly worsens.</p>
+<p>We’ll see.</p>
+<p class="">By the way, for the record, there’s no way that <a href="http://beijingcream.com/2012/11/chinese-state-medias-peoples-daily-reports-that-kim-jong-un-was-named-the-onions-sexiest-man-alive/">sexy man Kim Jong-un</a> would never need surgery.</p>
+<p class="rm-manual"><a href="http://www.washingtonpost.com/blogs/worldviews/wp/2013/01/25/kim-jong-eun-surgery-rumors-force-open-a-sliver-of-daylight-with-china/">Kim Jong Eun surgery rumors force open a sliver of daylight with China</a> (The Washington Post, h/t <a href="http://www.twitter.com/alicialui1">Alicia</a>) (Image via <a href="http://www.nknews.org/2013/01/china-issues-censorship-order-on-official-north-korea-reporting/">NK News</a>)</p>
+<p class="rm-manual"><span>Tags:</span> <a href="http://beijingcream.com/tag/north-korea/" rel="tag">North Korea</a></p>
+<h3 class="rm-manual">
+<span>One</span> Response to “North Korea Publicly Rebukes China, Its Truest Ally, For Kim Jong-Un Plastic Surgery Rumor”</h3>
+<ol class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> Johnson <p class="rm-manual"><a href="http://beijingcream.com/2013/01/north-korea-publicly-rebukes-china-its-truest-ally-for-kim-jong-un-plastic-surgery-rumor/#comment-216860">January 28th, 2013 1:16am </a></p> <section class="rm-manual"> <p class="rm-manual">People don’t realize China and NK aren’t as good friends as they like to think.</p> </section> <a href="file:///2013/01/north-korea-publicly-rebukes-china-its-truest-ally-for-kim-jong-un-plastic-surgery-rumor/?replytocom=216860#respond">Reply</a> </article> </li> </ol>
+<h3 class="rm-manual">Leave a Reply</h3>
+<p class="rm-manual"><a rel="nofollow" href="file:///2013/01/north-korea-publicly-rebukes-china-its-truest-ally-for-kim-jong-un-plastic-surgery-rumor/#respond">Click here to cancel reply.</a></p>
+<ul class="rm-manual"> <li class="rm-manual"> Name (required) </li> <li class="rm-manual"> Mail (required) (will not be published) </li> <li class="rm-manual"> Website </li> </ul>
+<p class="rm-manual">XHTML: You can use these tags: </p>
+<code class="rm-manual">&lt;a href="" title=""&gt; &lt;abbr title=""&gt;
+ &lt;acronym title=""&gt; &lt;b&gt; &lt;blockquote cite=""&gt; 
+&lt;cite&gt; &lt;code&gt; &lt;del datetime=""&gt; &lt;em&gt; &lt;i&gt; 
+&lt;q cite=""&gt; &lt;strike&gt; &lt;strong&gt; </code><p class="rm-manual"> 7 − four = </p>
+<p class="rm-manual"> Notify me of followup comments via e-mail. You can also <a href="http://beijingcream.com/comment-subscriptions?srp=9520&amp;sra=s">subscribe</a> without commenting.</p>
+<h4 class="rm-manual">Post Stream</h4>
+<p class="rm-manual"> <a href="http://beijingcream.com/2017/10/like-a-hammer-to-the-head-review-arthur-meursalts-party-members/"> “Like a hammer to the head” Review: Arthur Meursalt’s ‘Party Members’ </a> </p>
+<p class="rm-manual">October 27, 2017 9:40 am</p>
+<p class="rm-manual"> <a href="http://beijingcream.com/2017/09/jiang-zemin-cult-following-meme-immortality/"> Jiang Zemin: How China’s Forgotten President Achieved a Cult Following and Meme Immortality </a> </p>
+<p class="rm-manual">September 26, 2017 3:45 pm</p>
+<p class="rm-manual"> <a href="http://beijingcream.com/2017/08/we-found-her-the-worst-mother-in-law-in-china/"> We Found Her, The Worst Mother-In-Law In China </a> </p>
+<p class="rm-manual">August 8, 2017 3:21 pm</p>
+<p class="rm-manual"> <a href="http://beijingcream.com/2017/08/shuo-is-the-chinese-street-artist-we-need/"> SHUO Is The Chinese Street Artist We Need — And One You Need To Know </a> </p>
+<p class="rm-manual">August 8, 2017 9:00 am</p>
+<p class="rm-manual"> <a href="http://beijingcream.com/2017/08/beijing-cream-is-now-on-wechat/"> Beijing Cream is now on WeChat </a> </p>
+<p class="rm-manual">August 1, 2017 12:42 pm</p>
+<p class="rm-manual"> <a href="http://beijingcream.com/2017/07/11-ways-of-looking-at-donald-trump-in-a-chinese-pla-uniform-a-story/"> 11 Ways of Looking at Donald Trump in a Chinese PLA Uniform: A Story </a> </p>
+<p class="rm-manual">July 31, 2017 6:07 pm</p>
+<p class="rm-manual"> <a href="http://beijingcream.com/2017/07/in-beijing-20-million-people-pretend-to-live/"> In Beijing, 20 Million People Pretend to Live :: 在北京，有2000万人假装在生活 (full translation) </a> </p>
+<p class="rm-manual">July 27, 2017 2:09 am</p>
+<p class="rm-manual"> <a href="http://beijingcream.com/2017/07/dissidentpooh-is-the-china-twitter-account-of-our-times/"> @DissidentPooh Is The China Twitter Account Of Our Times </a> </p>
+<p class="rm-manual">July 18, 2017 2:19 pm</p>
+<p class="rm-manual"> <a href="http://beijingcream.com/2017/07/liu-xiaobo-is-dead-and-the-beijing-sky-is-in-uproar/"> Liu Xiaobo Is Dead, And The Beijing Sky Is In Uproar </a> </p>
+<p class="rm-manual">July 13, 2017 11:38 pm</p>
+<p class="rm-manual"> <a href="http://beijingcream.com/2017/05/cast-of-beijings-art-premier-talk-success-censorship-sandwiches/"> Cast of Beijing’s ‘Art’ premier talk success, censorship, sandwiches </a> </p>
+<p class="rm-manual">May 11, 2017 10:47 am</p>
+<p class="rm-manual"> <a href="http://beijingcream.com/2017/05/rock-off-briefly-memorializing-sanlituns-best-and-only-punk-rock-dive-bar/"> Rock Off: Briefly memorializing Sanlitun’s best and only punk-rock dive bar </a> </p>
+<p class="rm-manual">May 5, 2017 2:17 pm</p>
+<p class="rm-manual"> <a href="http://beijingcream.com/2017/04/forbes-editor-gets-drunk-posts-dreadful-china-article/"> Forbes editor gets drunk, posts dreadful China article </a> </p>
+<p class="rm-manual">April 25, 2017 2:03 pm</p>
+<p class="rm-manual"> <a href="http://beijingcream.com/2016/11/trump/"> This is a good and appropriate tweet </a> </p>
+<p class="rm-manual">November 9, 2016 5:28 pm</p>
+<p class="rm-manual"> <a href="http://beijingcream.com/2016/04/dfxj-uyghur-urbanism-in-recent-modernist-poetry/"> Dispatches From Xinjiang: Uyghur Urbanism in Recent Modernist Poetry </a> </p>
+<p class="rm-manual">April 21, 2016 3:00 pm</p>
+<p class="rm-manual"> <a href="http://beijingcream.com/2016/03/acclaimed-feminist-roxane-gay-cancels-visit-to-beijing-literary-festival/"> Acclaimed Feminist Roxane Gay Cancels Visit To Beijing Literary Festival </a> </p>
+<p class="rm-manual">March 13, 2016 11:54 am</p>
+<p class="rm-manual"> <a href="http://beijingcream.com/2016/03/new-rules-how-chinas-latest-laws-for-foreign-media-affect-us-and-you/"> New Rules: How China’s Latest Laws For Foreign Media Affect Us And You </a> </p>
+<p class="rm-manual">March 10, 2016 10:00 am</p>
+<p class="rm-manual"> <a href="http://beijingcream.com/2016/03/mega-fail-how-a-bestselling-american-futurist-lost-his-way-in-china/"> Mega Fail: How A Bestselling American Futurist Lost His Way In China </a> </p>
+<p class="rm-manual">March 1, 2016 1:14 pm</p>
+<p class="rm-manual"> <a href="http://beijingcream.com/2016/02/watch-hong-kongs-fishball-riots/"> Watch: Hong Kong’s Fishball Riots </a> </p>
+<p class="rm-manual">February 9, 2016 7:14 pm</p>
+<p class="rm-manual"> <a href="http://beijingcream.com/2016/01/ursula-gauthier-wrote-a-bad-article-and-in-china-thats-a-crime/"> Ursula Gauthier Wrote A Bad Article, And In China That’s A Crime </a> </p>
+<p class="rm-manual">January 5, 2016 10:00 am</p>
+<p class="rm-manual"> <a href="http://beijingcream.com/2015/12/its-a-white-christmas-in-beijing/"> It’s A White Christmas In Beijing </a> </p>
+<p class="rm-manual">December 25, 2015 5:25 pm</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="http://beijingcream.com/about/">About</a></li> <li class="rm-manual"><a href="http://beijingcream.com/advertise/">Advertise with Beijing Cream</a></li> <li class="rm-manual"><a href="http://beijingcream.com/week-in-review/">Week In Review Archives</a></li> </ul>
+<p class="rm-manual">© 2020 Beijing Cream.</p></article>
+</body></html>
