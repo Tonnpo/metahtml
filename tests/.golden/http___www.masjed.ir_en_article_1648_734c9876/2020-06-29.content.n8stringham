@@ -1,0 +1,178 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Sheikh Abdol Samad Mosque of Natanz </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="http://www.masjed.ir/en/home"><span>Home</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/news"><span>News</span></a></li>
+<li class="rm-manual">
+<span><a href="http://www.masjed.ir/en/about"><span>About us</span></a></span><ul class="rm-manual">
+<li class="rm-manual"><a href="http://www.masjed.ir/en/about/history"><span>Histroy</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/about/missions"><span>Missions and strategies</span></a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<span><a href="http://www.masjed.ir/en/mosques"><span>The historical mosques of Iran</span></a></span><ul class="rm-manual">
+<li class="rm-manual"><a href="http://www.masjed.ir/en/mosques/tehran"><span>Tehran</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/mosques/alborz"><span>Alborz</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/mosques/ardabil"><span>Ardabil</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/mosques/chaharmahalbakhtiari"><span>Chaharmahal&amp;Bakhtiari province</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/mosques/eastazerbaijan"><span>East Azerbaijan</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/mosques/fars"><span>Fars</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/mosques/hamedan"><span>Hamedan</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/mosques/isfahan"><span>Isfahan</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/mosques/kerman"><span>Kerman</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/mosques/kermanshah"><span>Kermanshah</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/mosques/khorasanrazavi"><span>Khorasan Razavi</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/mosques/lorestan"><span>Lorestan</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/mosques/qazvin"><span>Qazvin</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/mosques/qom"><span>Qom</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/mosques/semnan"><span>Semnan</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/mosques/sistanandbalouchestan"><span>Sistan And balouchestan</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/mosques/southkhorasan"><span>South Khorasan Province</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/mosques/westazerbaijan"><span>West Azerbaijan</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/mosques/zanjan"><span>Zanjan</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/mosques/boushehr"><span>Boushehr</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/mosques/northkhorasan"><span>north khorasan</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/mosques/khouzestan"><span>khouzestan</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/mosques/kurdestan"><span>kurdestan</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/mosques/kohgilouyeh"><span>kohgilouyeh and buyer ahmad</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/mosques/golestan"><span>golestan</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/mosques/gilan"><span>gilan</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/mosques/mazandaran"><span>mazandaran</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/mosques/markazi"><span>markazi</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/mosques/hormozgan"><span>hormozgan</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/mosques/yazd"><span>yazd</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/mosques/ilam"><span>Ilam</span></a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<span><a href="http://www.masjed.ir/en/imams"><span>Introducing The Imams</span></a></span><ul class="rm-manual">
+<li class="rm-manual"><a href="http://www.masjed.ir/en/imams/martyr"><span>Martyr Imams</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/imams/schloar"><span>Scholar Imams</span></a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<span><a href="http://www.masjed.ir/en/lectures"><span>Lectures</span></a></span><ul class="rm-manual">
+<li class="rm-manual"><a href="http://www.masjed.ir/en/lectures/bahmanpour"><span>Sheikh Bahmanpour</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/lectures/shanawaz"><span>Sheikh Shanawaz Mahdavi</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/lectures/osmanattar"><span>Osman Attar</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/lectures/saeidtabar"><span>Saeid Tabar</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/lectures/nahjulbalagah"><span>Nahjul balagah</span></a></li>
+</ul>
+</li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/worldwidemosques"><span>Worldwide Mosques</span></a></li>
+<li class="rm-manual">
+<span><a href="http://www.masjed.ir/en/library"><span>Library</span></a></span><ul class="rm-manual">
+<li class="rm-manual">
+<a href="http://www.masjed.ir/en/library/articles"><span>Articles</span></a><ul class="rm-manual">
+<li class="rm-manual"><a href="http://www.masjed.ir/en/library/articles/educationandsocity"><span>Education and socity</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/library/articles/quranandhadith7596"><span>Quran and Hadith</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/library/articles/history7597"><span>History</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/library/articles/lawsandworship7598"><span>Law and Worship</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/library/articles/bliefandcreed7599"><span>Blief and Creed</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/library/articles/mosques"><span>Mosque</span></a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="http://www.masjed.ir/en/library/books"><span>Books</span></a><ul class="rm-manual">
+<li class="rm-manual"><a href="http://www.masjed.ir/en/library/books/educationandsocity"><span>Education and socity</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/library/books/quranandhadith"><span>Quran and Hadith</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/library/books/history"><span>History</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/library/books/lawsandworship"><span>Law and Worship</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/library/books/bliefandcreed"><span>Blief and Creed</span></a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/library/books/mosque"><span>Mosque</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="rm-manual">
+<span><a href="http://www.masjed.ir/en/forum"><span>Forum</span></a></span><ul class="rm-manual"><li class="rm-manual"><a href="http://www.masjed.ir/en/forum/forumlist"><span>Forum List</span></a></li></ul>
+</li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/contactus"><span>Contact us</span></a></li>
+</ul>
+<h2 class="rm-manual">Articles</h2>
+<h1 class="rm-manual"> Sheikh Abdol Samad Mosque of Natanz </h1>
+<p class="rm-manual"> <span>Vahid Pourtajrishi</span> <span>6/27/2014</span></p>
+<p><span>Sheikh Abd al-Samad Esfahani was a noted holy man in Ilkhanid 
+Iran who died at the end of the 13th Hijri Century. In the early 14th 
+century (1308) the Il-Khanid Vizier Zain al-Din Mastari built the tomb 
+and mosque and dedicated it to his master Sheikh Abdolsamad.</span> <span>"The
+ center of the façade is composed as a triple arcade, behind the central
+ arch of which there is a minaret with an inscription dated 725/1324-25.
+ Another portal on the eastern end of the façade provides entry to the 
+complex by way of a sunken narrow corridor. An inscription on this 
+portal reveals that the building is a mosque built by Zayn al-Din 
+Mastari in 704/ 1304-5." The Sheikh Abdolsamad is an important example 
+of Persian architecture. The mosque incorporates Kharazmshahi and 
+IlKhanid design elements, "As mentioned before like the Khawrazmshahi 
+porticoes the porticoes built by Ilkhanid architects are higher than 
+Seljuk ones. In other words compared to the height of the portico the 
+entrance is larger. Meanwhile in order to engross the size of the 
+portico two columns are set at the sides of the porticoes at the facing.
+ An example of such architecture can be found in the tomb of Sheikh 
+Abdolsamad in Natanz (Wilber 83). The ceiling of Khawrazmshahi portico 
+is arched and ribbed and differ from that used by Ilkhanid masons."</span></p>
+<p><span>"The frieze originally decorated the tomb of the sufi shaykh 
+Abd al-Samad at Natanz, built by the vizier Zaynal-Din and completed in 
+the spring of 1308. Part of a larger religious complex, "the tomb is a 
+chamber approximately six meter square erected on the site of 
+Abdal-Samad's residence across a lane from the mosque. As at Bastan the 
+shape is traditional, but the interior is decorated with the finest 
+fittings Zayn al-Din couldprocure. The walls were all revetted with a 
+(...)dado of luster tiles (...) often recognizable by a friezeof paired 
+birds whose heads were later defaced by somezealous iconoclast (S. Blair
+ - J. Bloom, op. cit.,p. 10; see also the more detailed study by Sheila 
+Blair,The Ilkhanid Shrine Complex at Natanz, Iran,Cambridge, 
+Massachusetts, 1986, pp. 50, 64, and pl.53)." The inscription on the 
+frieze may have run above six rows of star and cross tiles."</span></p>
+<p class="rm-manual"> <span>Tag</span>:<a href="file:///en/articles?cat=637">Isfahan</a> </p>
+<p class="rm-manual"> Average Rate:0.0 (0 votes) </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="#"><span>1</span></a></li>
+<li class="rm-manual"><a href="#"><span>2</span></a></li>
+<li class="rm-manual"><a href="#"><span>3</span></a></li>
+<li class="rm-manual"><a href="#"><span>4</span></a></li>
+<li class="rm-manual"><a href="#"><span>5</span></a></li> </ul>
+<p class="rm-manual"> <span>If you want to submit a comment, you should login to the system first. To login please click the login button.</span> </p>
+<p class="rm-manual"> <a href=""><span>Login</span></a> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://www.masjed.ir/en/news">News</a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/about">About us</a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/education">Education</a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/allnews">all News</a></li>
+<li class="rm-manual"><a href="http://www.masjed.ir/en/contactus">Contact us</a></li> </ul>
+<p class="rm-manual"> 2020 Masjed All Rights Reserved. </p></article>
+</body></html>

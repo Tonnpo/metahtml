@@ -1,0 +1,180 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">Mystery Surrounds Kim Jong Un’s Health After Surgery Reports</p>
+<p class="rm-manual"><a href="https://uk.news.yahoo.com/">Yahoo</a></p>
+<p class="rm-manual">Search</p>
+<ul class="rm-manual"><li class="rm-manual"><a href="https://mail.yahoo.com/?.intl=uk&amp;.lang=en-GB&amp;.partner=none&amp;.src=news">Mail</a></li></ul>
+<p class="rm-manual"><a href="https://uk.news.yahoo.com/"> News</a></p>
+<p class="rm-manual"><span>Follow us</span></p>
+<ul class="rm-manual">
+<li><a href="https://uk.yahoo.com/topics/coronavirus-news"> Coronavirus</a></li>
+<li><a href="https://uk.news.yahoo.com/uk/"> UK</a></li>
+<li><a href="file:///tagged/ukoriginal"> Yahoo Originals</a></li>
+<li><a href="https://uk.news.yahoo.com/tv-celebrity"> TV + Celebrity</a></li>
+<li><a href="https://uk.news.yahoo.com/360"> The 360</a></li>
+<li><a href="https://uk.news.yahoo.com/world/"> World</a></li>
+<li><a href="https://uk.finance.yahoo.com/"> Finance</a></li>
+<li><a href="https://uk.sports.yahoo.com/"> Sport</a></li>
+<li><a href="https://uk.style.yahoo.com/"> Style</a></li>
+<li class="rm-manual"><a href="https://uk.movies.yahoo.com/"> Movies</a></li>
+<li class="rm-manual"><a href="https://uk.news.yahoo.com/motoring/"> Motoring</a></li>
+<li class="rm-manual"><a href="https://uk.news.yahoo.com/science-tech/"> Science &amp; Tech</a></li>
+<li class="rm-manual"><a href="https://uk.news.yahoo.com/weather/"> Weather</a></li>
+<li class="rm-manual"><a href="https://uk.news.yahoo.com/video"> News Video</a></li>
+<li class="rm-manual"><a href="https://uk.news.yahoo.com/viral"> Viral</a></li>
+</ul>
+<h1 class="rm-manual">Mystery Surrounds Kim Jong Un’s Health After Surgery Reports</h1>
+<p class="rm-manual">Jennifer Jacobs and Shinhye Kang</p>
+<p class="rm-manual"><span><span><a href="https://www.bloomberg.com/" rel="noopener noreferrer nofollow">Bloomberg</a></span></span>21 April 2020</p>
+<p class="rm-manual">(Bloomberg) --</p>
+<p>Mystery surrounded Kim Jong Un’s health after U.S. and South Korean 
+officials gave differing accounts of the North Korean leader’s condition
+ following his unusual absence from recent holiday celebrations.</p>
+<p>Kim was in critical condition after undergoing cardiovascular surgery
+ last week and the Trump administration wasn’t sure of his current 
+health, said U.S. officials, who asked not to be identified. One of the 
+officials said the White House was told that Kim took a turn for the 
+worse after the procedure, while CNN earlier cited a U.S. official with 
+direct knowledge saying the 36-year-old leader may be in “grave danger.”</p>
+<p>Meanwhile, South Korean President Moon Jae-in’s office said that Kim 
+was conducting “normal activities” in a rural part of the country 
+assisted by close aides and no special movements were detected. Moon 
+spokesman Kang Min-seok said earlier there was nothing to confirm on the
+ speculation over Kim’s health.</p>
+<p>North Korea’s state-run news broadcast at 6:30 p.m. local time made 
+no mention of Kim, and the official Korean Central News Agency didn’t 
+provide an update on his condition. Kim Min-ki, head of the intelligence
+ committee in South Korea’s parliament, told Yonhap News Agency he 
+believes there’s no unusual signs regarding Kim’s health after he was 
+briefed by the country’s spy agency.</p>
+<p>The news around Kim’s health spurred the benchmark Kospi gauge to 
+extend losses to as much as 3% while the won slid as much as 1.7% 
+against the dollar. The Kospi closed 1% lower.</p>
+<p>The health of Kim, overweight and a heavy smoker, is one of North 
+Korea’s most closely guarded secrets, typically only known by a handful 
+of people in the inner circle of leadership. While North Korea had 
+scaled down major events as it battles the coronavirus pandemic, 
+speculation about Kim had been growing since his unprecedented absence 
+from April 15 celebrations for the birthday of his grandfather and state
+ founder Kim Il Sung, one of the biggest days on the country’s calendar.</p>
+<p>Even the most well-informed North Korea experts find it hard to tell 
+what’s happening in the secretive state. The Daily NK, a Seoul-based 
+website that gathers information from informants inside the isolated 
+nation, separately reported that Kim underwent a “cardiovascular 
+surgical procedure” and was now mostly recovered. Reuters cited an 
+official with the Chinese Communist Party’s International Liaison 
+Department saying that Kim wasn’t believed to be critically ill.</p>
+<p>“I saw some reports, but I don’t know what these sources are,” 
+Chinese foreign ministry spokesman Geng Shuang told reporters in Beijing
+ Tuesday afternoon.</p>
+<p>U.S. National Security Advisor Robert O’Brien told reporters on 
+Tuesday morning that the Trump administration is “watching the reports 
+closely.” “It’s just hard to know, we’re keeping a close eye on it,” he 
+said.</p>
+<p>Any leadership crisis in North Korea could potentially have serious 
+ramifications for regional stability, as well as for talks with the U.S.
+ over the country’s nuclear arsenal. Kim, who took power in 2011 
+following his father’s 17-year reign, developed the capability to 
+deliver a nuclear warhead to any part of the U.S. before engaging in 
+direct talks with President Donald Trump over his arsenal and sanctions 
+imposed on the state.</p>
+<p>“When Kim Jong Un came to power, his path to leadership had been 
+carefully cultivated by his father’s guidance and maneuvering,” said 
+Mintaro Oba, a former U.S. diplomat who was specialized in Korean 
+Peninsula issues. “Now, there is no clear transition plan and no clear 
+future leader.”</p>
+<p>White Horse</p>
+<p>Kim has been shown in state media in recent months appearing at 
+military drills and riding a white horse on the country’s revered Mt. 
+Paektu, where state propaganda says his grandfather used as a guerrilla 
+base to fight Japanese colonial occupiers. North Korea’s state media 
+reported on April 11 that Kim attended a Politburo meeting of the ruling
+ Workers’ Party. The next day it said he inspected a military unit, but 
+didn’t reveal the date of that visit.</p>
+<p>The South Korean Unification Ministry said Friday it was 
+“inappropriate” to speculate about the reasons for Kim’s absence. Kim 
+has made 17 public appearances this year that were mentioned in state 
+media -- at a pace of a little more than one a week -- the ministry 
+said. That’s slightly down from 84 public appearances last year.</p>
+<p>South Korean intelligence said Kim Jong Un married Ri Sol Ju, a 
+former singer, in 2009. They are thought to have three children, but 
+there is no official mention of their offspring. Dennis Rodman, the 
+offbeat basketball great who visited Kim in North Korea, said in 2013 he
+ held the leader’s baby girl in his arms, a daughter named Ju Ae.While 
+there’s been little time for him to groom a successor, Kim raised the 
+status of his younger sister Kim Yo Jong as a key player in the 
+secretive state. She was thrust into the global spotlight when she 
+served as envoy to the 2018 Winter Olympics in Pyeongchang, South Korea,
+ and became the first member of the immediate ruling family to visit 
+Seoul.</p>
+<p class="rm-manual">(Updates with U.S. comment in ninth paragraph)</p>
+<p class="rm-manual">For more articles like this, please visit us at <a href="https://www.bloomberg.com/" rel="nofollow noopener">bloomberg.com</a></p>
+<p class="rm-manual"><a href="https://www.bloomberg.com/subscriptions/67obqkd5zdp5lj8/?utm_source=yahoo_usn" rel="nofollow noopener">Subscribe now</a> to stay ahead with the most trusted business news source.</p>
+<p class="rm-manual">©2020 Bloomberg L.P.</p>
+<h2 class="rm-manual">What to read next</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///joe-biden-george-floyd-protest-wilmington-064212758.html"><span>Biden Visits George Floyd Protest Site, Urges Americans To Turn 'Anguish Into Purpose'</span></a></h3><p class="rm-manual">HuffPost</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///latest-india-climbs-7th-biggest-061136233.html"><span>The Latest: India climbs to 7th biggest outbreak in world</span></a></h3><p class="rm-manual">Associated Press</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///scientists-hunt-pandemic-hotspots-race-060404613.html"><span>Scientists hunt pandemic hotspots in race to test vaccines</span></a></h3><p class="rm-manual">Reuters</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///uk-hospitals-trial-five-drugs-060033908.html"><span>UK hospitals to trial five new drugs in search for coronavirus treatment</span></a></h3><p class="rm-manual">The Guardian</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///couple-who-spent-20-years-restoring-sixbedroom-manor-house-fight-plans-for-guarry-100-m-away-072821974.html"><span>Couple who spent 20 years restoring six-bedroom manor house fight plans for quarry 100m away</span></a></h3><p class="rm-manual">Yahoo News UK</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/normal-safe-beaches-125352073.html"><span>The New Normal: How safe are the beaches?</span></a></h3><p class="rm-manual">Reuters Videos</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///man-reported-second-dominic-cummings-072200609.html"><span>Man who reported second Dominic Cummings trip admits he 'made that up'</span></a></h3><p class="rm-manual">Evening Standard</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///uk-records-113-daily-deaths-164154198.html"><span>UK records 113 daily deaths - lowest figure since lockdown began</span></a></h3><p class="rm-manual">The Telegraph</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/burglars-posed-police-officers-jailed-151141885.html"><span>Burglars who posed as police officers jailed for combined 12 years</span></a></h3><p class="rm-manual">PA Media: Video</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///un-forced-cut-aid-yemen-063015841.html"><span>UN forced to cut aid to Yemen, even as virus increases need</span></a></h3><p class="rm-manual">Associated Press</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///pamela-anderson-wears-her-iconic-baywatch-swimsuit-to-hang-out-at-home-it-still-fits-174124867.html"><span>Pamela Anderson wears her iconic 'Baywatch' swimsuit to hang out at home: 'It still fits'</span></a></h3><p class="rm-manual">Yahoo Celebrity</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///coronavirus-spain-bans-british-holidays-135535763.html"><span>Spanish health minister bans British holidaymakers 'until UK's coronavirus situation improves'</span></a></h3><p class="rm-manual">Yahoo News UK</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///high-streets-shops-opening-social-distancing-104956147.html"><span>High streets are preparing for the return of shoppers with special measures to enforce social distancing</span></a></h3><p class="rm-manual">Yahoo Style UK</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/zane-powles-schools-reopening-best-090000012.html"><span>Zane Powles on schools reopening: “The best place for our children is in school, certainly our more vulnerable ones”</span></a></h3><p class="rm-manual">Yahoo UK News Video</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///john-oliver-loses-tucker-carlson-063006653.html"><span>John Oliver Loses It on Tucker Carlson Over Protest Coverage: ‘Fuck You!’</span></a></h3><p class="rm-manual">The Daily Beast</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///coronavirus-ryanair-boss-quarantine-useless-162356620.html"><span>Ryanair boss: Most Brits will ignore quarantine rules and write 'Mickey Mouse, Walt Disney Street' on arrival card</span></a></h3><p class="rm-manual">Yahoo News UK</p><p class="rm-manual"></p></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///full-september-return-unlikely-schools-061304284.html"><span>Full September return unlikely, with schools warning: ‘it’s not business as usual’</span></a></h3><p class="rm-manual">The Guardian</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///archaeologists-discover-remarkably-intact-ancient-181900599.html"><span>Archaeologists discover remarkably intact ancient shipwreck</span></a></h3><p class="rm-manual">AOL.com</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/row-between-donald-trump-twitter-122432098.html"><span>What is the row between Donald Trump and Twitter about?</span></a></h3><p class="rm-manual">PA Media: Video</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///indias-cautious-states-open-even-062524820.html"><span>India's cautious states open up even as virus cases rise</span></a></h3><p class="rm-manual">Associated Press</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///families-public-swimming-pool-july-122006426.html"><span>Families may need to arrive and leave in their swimwear for a day out at the pool from July</span></a></h3><p class="rm-manual">Yahoo Style UK</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///george-floyds-family-condolence-call-161300182.html"><span>George Floyd's family say condolence call from Trump was rushed and he didn't let them speak</span></a></h3><p class="rm-manual">The Independent</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///boris-johnson-gamble-one-lie-091155112.html"><span>How Boris Johnson’s gamble on one lie too many pushed the British public over the edge</span></a></h3><p class="rm-manual">The Independent</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///video/man-designs-video-game-spoofing-111636526.html"><span>Man designs video game spoofing Dominic Cummings' drive to Barnard Castle</span></a></h3><p class="rm-manual">PA Media: Video</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///uk-government-reveals-might-able-094600410.html"><span>UK government reveals when you might be able to go on a foreign holiday again</span></a></h3><p class="rm-manual">Cosmo</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///trump-taken-underground-bunker-protests-032910832.html"><span>Trump taken to underground bunker as protests grew outside White House: Reports</span></a></h3><p class="rm-manual">USA TODAY</p><p></p></li>
+</ul></article>
+</body></html>

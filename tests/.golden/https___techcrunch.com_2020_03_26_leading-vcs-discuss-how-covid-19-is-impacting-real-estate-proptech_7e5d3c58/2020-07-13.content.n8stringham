@@ -1,0 +1,68 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Leading VCs discuss how COVID-19 is impacting real estate &amp; proptech – TechCrunch </p>
+<h1 class="rm-manual">Leading VCs discuss how COVID-19 is impacting real estate &amp; proptech</h1>
+<p class="rm-manual"> <a href="https://techcrunch.com/author/arman-tabatabai/"> Arman Tabatabai </a> <span> 4 months </span> </p>
+<p><span>Several months ago</span>, <a href="https://techcrunch.com/2019/11/14/where-top-vcs-are-investing-in-real-estate-and-proptech-part-1-of-2/">we surveyed more than 20 leading real estate VCs</a>
+ to learn about what was exciting them most in the real estate tech 
+sector and hear their opinions on proptech trends like co-working, 
+flexible office space and remote office space.</p>
+<p>Since we published our survey, COVID-19 has flipped the real estate 
+sector on its head as more companies move toward mandatory remote work, 
+retail businesses are forced to temporarily shut their doors and 
+high-traffic properties thin out. Suddenly, the traditionally 
+predictable world of real estate is more chaotic and unclear than ever.</p>
+<p>What are the short and long-term impacts of pandemic-induced 
+volatility? Does this open up opportunities for proptech startups or 
+shutter them? What does this mean from an investing point of view? We 
+asked several of the VCs that participated in our last survey to update 
+us on how COVID-19 is impacting real estate startups, non-proptech 
+companies in general and the broader real estate market overall:</p>
+<ul> <li class="rm-manual">Christopher Yip, <a href="https://www.ret.vc/team/">RET Ventures</a>
+</li> <li class="rm-manual">Nima Wedlake, <a href="https://thomvest.com/team/nima-wedlake/">Thomvest Ventures</a>
+</li> <li class="rm-manual">Merritt Hummer, <a href="https://www.baincapitalventures.com/team/merritt-hummer/">Bain Capital Ventures</a>
+</li> <li class="rm-manual">Micah Kotch, <a href="https://www.urban-x.com/team/">Urban-X</a>
+</li> <li class="rm-manual">Andrew Ackerman, <a href="https://www.dreamit.com/team">Dreamit Ventures</a>
+</li> <li class="rm-manual">Stonly Baptiste, <a href="https://urban.us/about-us/stonly-baptiste/">Urban Us</a>
+</li> </ul>
+<h2 class="rm-manual">Christopher Yip, RET Ventures</h2>
+<p class="rm-manual">Despite its banner year in 2019, proptech will not 
+be immune to the pressures venture-backed companies face in a market 
+pullback, and we are preparing ourselves and our portfolio companies for
+ a bumpy year.</p></article>
+</body></html>

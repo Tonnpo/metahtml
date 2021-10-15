@@ -1,0 +1,153 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Kim Jong Un Memes Explode As Leader Reportedly in 'Grave Danger' </p>
+<p class="rm-manual"><a href="#content">Skip to content</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.dailydot.com/topics/debug/">Tech</a></li> <li class="rm-manual"><a href="https://www.dailydot.com/topics/unclick/">Internet Culture</a></li> <li class="rm-manual"><a href="https://www.dailydot.com/topics/upstream/">Streaming</a></li> <li class="rm-manual"><a href="https://www.dailydot.com/topics/irl/">IRL</a></li> <li class="rm-manual">
+<a href="https://www.dailydot.com/about/">About</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.dailydot.com/about/">About Us</a></li> <li class="rm-manual"><a href="https://www.dailydot.com/contact-us/">Contact</a></li> <li class="rm-manual"><a href="https://www.dailydot.com/jobs/">Jobs</a></li> <li class="rm-manual"><a href="https://www.dailydot.com/terms-of-use/">Terms of Use</a></li> <li class="rm-manual"><a href="https://www.dailydot.com/privacy-policy/">Privacy Policy</a></li> <li class="rm-manual"><a href="https://www.dailydot.com/ethics-policy/">Ethics Policy</a></li> </ul> </li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.dailydot.com/topics/debug/">Tech</a></li> <li class="rm-manual"><a href="https://www.dailydot.com/topics/unclick/">Internet Culture</a></li> <li class="rm-manual"><a href="https://www.dailydot.com/topics/upstream/">Streaming</a></li> <li class="rm-manual"><a href="https://www.dailydot.com/topics/irl/">IRL</a></li> <li class="rm-manual">
+<a href="https://www.dailydot.com/about/">About</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.dailydot.com/about/">About Us</a></li> <li class="rm-manual"><a href="https://www.dailydot.com/contact-us/">Contact</a></li> <li class="rm-manual"><a href="https://www.dailydot.com/jobs/">Jobs</a></li> <li class="rm-manual"><a href="https://www.dailydot.com/terms-of-use/">Terms of Use</a></li> <li class="rm-manual"><a href="https://www.dailydot.com/privacy-policy/">Privacy Policy</a></li> <li class="rm-manual"><a href="https://www.dailydot.com/ethics-policy/">Ethics Policy</a></li> </ul> </li> </ul>
+<h1 class="rm-manual">Kim Jong Un memes explode following reports that he’s in ‘grave danger’</h1>
+<h3 class="rm-manual">Schadenfreude abounded on Twitter.</h3>
+<p class="rm-manual"> Apr 21, 2020, 8:30 am* </p>
+<p class="rm-manual"><a href="https://www.dailydot.com/topics/unclick/"> </a></p><p class="rm-manual"><a href="https://www.dailydot.com/topics/unclick/">Internet Culture</a></p><a href="https://www.dailydot.com/topics/unclick/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://www.dailydot.com/author/bryan-rolli/"> </a></p><p class="rm-manual"><a href="https://www.dailydot.com/author/bryan-rolli/">Bryan Rolli</a></p><a href="https://www.dailydot.com/author/bryan-rolli/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <span> <a href="https://www.shutterstock.com/image-photo/april-26-2019-vladivostok-primorsky-krai-1385497733">Alexander Khitrov/Shutterstock</a> </span> <span>(Licensed)</span> </p>
+<p>North Korean leader Kim Jong Un is reportedly in “grave danger” following a surgery, according to a U.S. official cited by <a href="https://www.cnn.com/2020/04/20/politics/kim-jong-un-north-korea/index.html">CNN</a>.</p>
+<p>The 36-year-old leader reportedly underwent a cardiovascular system 
+procedure on April 12, according to South Korean newspaper Daily NK, 
+which covers North Korea. Kim reportedly received the surgery for 
+“excessive smoking, obesity, and overwork.” </p>
+<p>South Korea on Tuesday morning played down concerns, according to the <a href="https://www.washingtonpost.com/world/asia_pacific/kim-jong-un-no-signs-that-north-korean-leader-is-in-grave-danger-south-says/2020/04/21/0a40c438-8380-11ea-81a3-9690c9881111_story.html">Washington Post</a>. Meanwhile, <a href="https://www.politico.com/news/2020/04/21/us-kim-jong-uns-health-national-security-adviser-197982">Politico</a> reports that the U.S. is keeping a close watch on his condition.</p>
+<p>Speculation about Kim’s health ramped up when he missed the birthday 
+celebration for his grandfather and founder of North Korea, Kim Il-sung,
+ on April 15. It is considered North Korea’s most important holiday.</p>
+<p>Ascertaining reliable information about Kim Jong Un is difficult, as 
+North Korea has no free press and almost never offers insight into its 
+leadership decisions. In a statement given to reporters, South Korea’s 
+Presidential Blue House said it has seen “no unusual signs” regarding 
+Kim’s health, while the Unification Ministry and Defense Ministry gave 
+“no comment” to CNN.</p>
+<p>In lieu of comment from the North Korean government on Kim’s health, 
+Twitter users provided their own—and, unsurprisingly, they came in the 
+form of memes. </p>
+<h2>Kim Jong Un memes</h2>
+<p>Many users joked that Kim was headed to the Gulag—the Russian prison 
+featured in Call of Duty: Warzone where players killed in combat can 
+fight one-on-one for a chance to return to the game—which has become a 
+popular meme over the past week and a half. </p>
+<p>Kim Jung Un to the surgeon who botched his surgery in the gulag <a href="https://t.co/LHxabn0vfS">pic.twitter.com/LHxabn0vfS</a></p>
+<p>— Plathanos 🐝🇩🇴 #HIVESZN (@SavinTheBees) </p>
+<p><a href="https://twitter.com/SavinTheBees/status/1252425772469379075?ref_src=twsrc%5Etfw">April 21, 2020</a></p>
+<p>Kim Jung Un wondering why Michael Jackson and 2PAC are fighting in the gulag <a href="https://t.co/lxYmqSCjI8">pic.twitter.com/lxYmqSCjI8</a></p>
+<p>— Reformed Angie (@AngieeFN) </p>
+<p><a href="https://twitter.com/AngieeFN/status/1252570312878718977?ref_src=twsrc%5Etfw">April 21, 2020</a></p>
+<p>Kim Jung Un and Hitler fighting in the gulag waiting for their turn <a href="https://t.co/yCuDnimAFf">https://t.co/yCuDnimAFf</a></p>
+<p>— Liam Garcia-Quish (@YoungKingLGQ) </p>
+<p><a href="https://twitter.com/YoungKingLGQ/status/1252452102904913920?ref_src=twsrc%5Etfw">April 21, 2020</a></p>
+<p>When everyone thinks Kim Jung Un dies but he won his gulag match <a href="https://t.co/aWR1fF96V2">pic.twitter.com/aWR1fF96V2</a></p>
+<p>— Swaim Train (@VapeNicSuckDic) </p>
+<p><a href="https://twitter.com/VapeNicSuckDic/status/1252427220833845249?ref_src=twsrc%5Etfw">April 21, 2020</a></p>
+<p>kim jung un fighting Osama bin Laden so he can leave the gulag <a href="https://t.co/uUWak9Sfol">pic.twitter.com/uUWak9Sfol</a></p>
+<p>— HORNY (@ysltaffy) </p>
+<p><a href="https://twitter.com/ysltaffy/status/1252560523767537666?ref_src=twsrc%5Etfw">April 21, 2020</a></p>
+<p>Kim jung un boutta fight Carole Baskins dead husband in the gulag</p>
+<p>— Plathanos 🐝🇩🇴 #HIVESZN (@SavinTheBees) </p>
+<p><a href="https://twitter.com/SavinTheBees/status/1252424698769469441?ref_src=twsrc%5Etfw">April 21, 2020</a></p>
+<p>Some Twitter users chalked Kim Jong Un’s health scare up to karmic 
+retribution for claiming North Korea had seen no coronavirus cases, 
+despite being bordered by China and South Korea—two of the first 
+countries to be infected. Others mocked Kim’s surgeon for what they 
+perceived to be either incompetence or malicious intent. In general, 
+Twitter searches for “Kim Jung Un” and “#KimJongUn” produced a lot of 
+schadenfreude.</p>
+<p> https://twitter.com/1stdayoutthefed/status/1252449874458673153?s=20 </p>
+<p>Kim Jung Un's surgeon <a href="https://t.co/MyEXFvp8jQ">pic.twitter.com/MyEXFvp8jQ</a></p>
+<p>— Stought (@Jackstoughton) </p>
+<p><a href="https://twitter.com/Jackstoughton/status/1252452826862804992?ref_src=twsrc%5Etfw">April 21, 2020</a></p>
+<p> https://twitter.com/simmons_szn/status/1252427950751805442?s=20 </p>
+<p>This is the doctor who did surgery on Kim Jung Un <a href="https://t.co/M7e5ny6mlh">pic.twitter.com/M7e5ny6mlh</a></p>
+<p>— Gabriel💯 (@RielFine) </p>
+<p><a href="https://twitter.com/RielFine/status/1252457685221609472?ref_src=twsrc%5Etfw">April 21, 2020</a></p>
+<p>kim jung un’s surgeon after successfully fleeing the country <a href="https://t.co/r6eU9Tvn9O">pic.twitter.com/r6eU9Tvn9O</a></p>
+<p>— Dr. Cum (@chadwifsmallpp) </p>
+<p><a href="https://twitter.com/chadwifsmallpp/status/1252557462110179330?ref_src=twsrc%5Etfw">April 21, 2020</a></p>
+<p>Kim Jung Un’s surgeon at the South Korean border <a href="https://t.co/qNs1ZiePnA">pic.twitter.com/qNs1ZiePnA</a></p>
+<p>— Don’t (@HoodieBoomstick) </p>
+<p><a href="https://twitter.com/HoodieBoomstick/status/1252428358836600839?ref_src=twsrc%5Etfw">April 21, 2020</a></p>
+<p>Kim Jung Un might be dead??? </p>
+<p>Possible first W of 2020! Let's go! <a href="https://t.co/ftANZkhWyr">pic.twitter.com/ftANZkhWyr</a></p>
+<p>— Jamie Jones (@unibroward4405) </p>
+<p><a href="https://twitter.com/unibroward4405/status/1252502923931553792?ref_src=twsrc%5Etfw">April 21, 2020</a></p>
+<p>North Koreans after they cut the camera's at Kim Jong Un's funeral:<a href="https://twitter.com/hashtag/KimJongUn?src=hash&amp;ref_src=twsrc%5Etfw">#KimJongUn</a> <a href="https://t.co/RNf06Q34PX">pic.twitter.com/RNf06Q34PX</a></p>
+<p>— dayummm (@dayummmthreads) </p>
+<p><a href="https://twitter.com/dayummmthreads/status/1252458977230651392?ref_src=twsrc%5Etfw">April 21, 2020</a></p>
+<p>The boys are heading to North Korea<a href="https://twitter.com/hashtag/KimJongUn?src=hash&amp;ref_src=twsrc%5Etfw">#KimJongUn</a> <a href="https://t.co/BYb8ApXoZA">pic.twitter.com/BYb8ApXoZA</a></p>
+<p>— The Bad Guy (@BadGuy209) </p>
+<p><a href="https://twitter.com/BadGuy209/status/1252417536039088128?ref_src=twsrc%5Etfw">April 21, 2020</a></p>
+<p>2020: Kim Jung Un will die but a global pandemic will occur <a href="https://t.co/5wen6AMaHs">pic.twitter.com/5wen6AMaHs</a></p>
+<p>— Kirbz 🇵🇷🏳️‍🌈 @ Xenoblade: DE (@ShinyKirbz) </p>
+<p><a href="https://twitter.com/ShinyKirbz/status/1252456871270723586?ref_src=twsrc%5Etfw">April 21, 2020</a></p>
+<p>Kim Jong Un falling to hell <a href="https://t.co/T2evgNByRr">https://t.co/T2evgNByRr</a></p>
+<p>— Plathanos 🐝🇩🇴 #HIVESZN (@SavinTheBees) </p>
+<p><a href="https://twitter.com/SavinTheBees/status/1252515607473459201?ref_src=twsrc%5Etfw">April 21, 2020</a></p>
+<p>Other Twitter users still poked fun at the efforts of smaller Twitter
+ accounts to strike while the iron was hot and craft the perfect Kim 
+Jong Un meme tweet. </p>
+<p>Small accounts trying to come up with with a “Kim Jung Un” banger <a href="https://t.co/XHNrPKfisC">pic.twitter.com/XHNrPKfisC</a></p>
+<p>— President. (RT PINNED) (@known_designer) </p>
+<p><a href="https://twitter.com/known_designer/status/1252558839142121472?ref_src=twsrc%5Etfw">April 21, 2020</a></p>
+<p class="rm-manual">Reports on Kim Jong Un’s health are likely to change over the next few days.</p>
+<p class="rm-manual">READ MORE:</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.dailydot.com/unclick/best-coronavirus-memes/">The best coronavirus memes to get you through a quarantine</a></li>
+<li class="rm-manual"><a href="https://www.dailydot.com/unclick/kim-jong-un-bent-over/">Kim Jong-un bent over is the Internet’s new favorite meme</a></li>
+<li class="rm-manual"><a href="https://www.dailydot.com/unclick/trump-north-korea-memes/">As Trump met with North Korea, the internet was memeing</a></li>
+</ul>
+<p class="rm-manual">H/T <a href="https://www.cnn.com/2020/04/20/politics/kim-jong-un-north-korea/index.html">CNN</a></p>
+<p class="rm-manual"> <span>Share this article</span> </p>
+<p class="rm-manual"> *First Published: Apr 21, 2020, 8:29 am </p>
+<h4 class="rm-manual"> <a href="https://www.dailydot.com/author/bryan-rolli/">Bryan Rolli</a> </h4>
+<p class="rm-manual">Bryan Rolli is a reporter who specializes in 
+streaming entertainment. He writes about music and film for Forbes, 
+Billboard, and the Austin American-Statesman. He met Flavor Flav in two 
+separate Las Vegas bowling alleys and still can’t stop talking about it.</p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.dailydot.com/irl/tiktok-half-blackface/"> <p class="rm-manual">TikTok teen slammed for doing half-blackface to denounce racism</p> </a> </li> <li class="rm-manual"> <a href="https://www.dailydot.com/irl/k-pop-bluelivesmatter-memes/"> <p class="rm-manual">K-pop fans hijack #BlueLivesMatter with memes and blue Power Rangers</p> </a> </li> <li class="rm-manual"> <a href="https://www.dailydot.com/irl/john-boyega-black-lives-matter-london-protest-speech/"> <p class="rm-manual">‘Now is the time’: John Boyega joins Black Lives Matter protest in London</p> </a> </li> <li class="rm-manual"> <a href="https://www.dailydot.com/upstream/batwoman-ryan-wilder-recasting-notice/"> <p class="rm-manual">Leaked casting sheet shows the CW is casting a new character to play Batwoman</p> </a> </li> </ul>
+<p class="rm-manual">Get the Daily Dot in your inbox</p></article>
+</body></html>

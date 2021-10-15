@@ -1,0 +1,172 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">Rose McGowan slams Trump over Soleimani, apologizes to Iran</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.yahoo.com/"><p class="rm-manual">Home</p></a></li>
+<li class="rm-manual"><a href="https://mail.yahoo.com/?.intl=us&amp;.lang=en-US">Mail</a></li>
+<li class="rm-manual"><a href="https://news.yahoo.com/">News</a></li>
+<li class="rm-manual"><a href="https://finance.yahoo.com/">Finance</a></li>
+<li class="rm-manual"><a href="https://sports.yahoo.com/">Sports</a></li>
+<li class="rm-manual"><a href="https://www.yahoo.com/entertainment/">Entertainment</a></li>
+<li class="rm-manual"><a href="https://search.yahoo.com/search/">Search</a></li>
+<li class="rm-manual"><a href="https://mobile.yahoo.com/">Mobile</a></li>
+<li class="rm-manual"><a href="https://everything.yahoo.com/">More</a></li>
+</ul>
+<p class="rm-manual"><a href="https://www.yahoo.com/entertainment">Yahoo</a></p>
+<p class="rm-manual">Search</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="#Navigation">Skip to Navigation</a></li>
+<li class="rm-manual"><a href="#Main">Skip to Main Content</a></li>
+<li class="rm-manual"><a href="#Aside">Skip to Related Content</a></li>
+</ul>
+<ul class="rm-manual"><li class="rm-manual"><a href="https://mail.yahoo.com/?.intl=us&amp;.lang=en-US&amp;.partner=none&amp;.src=entertainment">Mail</a></li></ul>
+<p class="rm-manual"><a href="https://www.yahoo.com/entertainment/"> Entertainment Home</a></p>
+<p class="rm-manual"><span>Follow Us</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.yahoo.com/entertainment/tagged/the-it-list"> The It List</a></li>
+<li class="rm-manual"><a href="https://www.yahoo.com/entertainment/tv/"> TV</a></li>
+<li class="rm-manual"><a href="https://www.yahoo.com/entertainment/movies/"> Movies</a></li>
+<li class="rm-manual"><a href="https://www.yahoo.com/entertainment/celebrity/"> Celebrity</a></li>
+<li class="rm-manual"><a href="https://www.yahoo.com/entertainment/music/"> Music</a></li>
+<li class="rm-manual"><a href="https://www.yahoo.com/lifestyle/tagged/shopping"> Shopping</a></li>
+<li class="rm-manual"><a href="https://www.yahoo.com/entertainment/buildseries"> BUILD</a></li>
+<li class="rm-manual"><a href="https://www.yahoo.com/entertainment/tagged/videos/"> Videos</a></li>
+</ul>
+<h1 class="rm-manual">Rose McGowan slams Trump over Soleimani killing, apologizes to Iran: 'Please do not kill us'</h1>
+<p class="rm-manual"><a href="https://www.yahoo.com/author/taryn-ryder-608">Taryn Ryder</a></p>
+<p class="rm-manual"><span><span><a href="https://www.yahoo.com/celebrity">Yahoo Celebrity</a></span></span>January 3, 2020</p>
+<p><a href="https://www.yahoo.com/entertainment/tagged/rose-mcgowan">Rose McGowan</a> has been trending on Twitter for bashing President Donald Trump after it was confirmed he ordered the drone strike <a href="https://www.yahoo.com/news/trump-soleimeni-drone-strike-years-ago-150630560.html">that killed Iran’s top general</a>,
+ Qassem Soleimani. The Charmed actress apologized to Iran on behalf of 
+"52%" of Americans and compared the Trump administration to a "terrorist
+ regime."</p>
+<p>"Dear #Iran, The USA has disrespected your country, your flag, your 
+people. 52% of us humbly apologize. We want peace with your nation. We 
+are being held hostage by a terrorist regime. We do not know how to 
+escape. Please do not kill us," she wrote using the hashtag 
+"#Soleimani."</p>
+<p>She then called the president a "<a href="https://twitter.com/rosemcgowan/status/1212977622994636800" rel="nofollow noopener">d***head</a>."</p>
+<p>Dear <a href="https://twitter.com/hashtag/Iran?src=hash&amp;ref_src=twsrc%5Etfw">#Iran</a>,
+ The USA has disrespected your country, your flag, your people. 52% of 
+us humbly apologize. We want peace with your nation. We are being held 
+hostage by a terrorist regime. We do not know how to escape. Please do 
+not kill us. <a href="https://twitter.com/hashtag/Soleimani?src=hash&amp;ref_src=twsrc%5Etfw">#Soleimani</a> <a href="https://t.co/YE54CqGCdr">pic.twitter.com/YE54CqGCdr</a></p>
+<p>— rose mcgowan (@rosemcgowan) </p>
+<p><a href="https://twitter.com/rosemcgowan/status/1212976832544460801?ref_src=twsrc%5Etfw">January 3, 2020</a> </p>
+<p>McGowan <a href="https://twitter.com/rosemcgowan/status/1212981181215584257" rel="nofollow noopener">continued</a>,
+ "Of course #Soleimani was an evil evil man who did evil evil things. 
+But that at this moment is not the f***ing point. The United States is 
+morally corrupt and acts illegally. It is only logical to appeal to 
+Iran’s pride by apologizing. I’m taking one for the team. 
+#TeamStayAlive."</p>
+<p>The 46-year-old actress and activist clarified she doesn't "side with Iran" or "the USA."</p>
+<p>I do not side with Iran, but I most definitely do not side with the USA <a href="https://twitter.com/hashtag/TeamStayAlive?src=hash&amp;ref_src=twsrc%5Etfw">#TeamStayAlive</a> <a href="https://t.co/ShWtvgWYqj">https://t.co/ShWtvgWYqj</a></p>
+<p>— rose mcgowan (@rosemcgowan) </p>
+<p><a href="https://twitter.com/rosemcgowan/status/1212985493190856705?ref_src=twsrc%5Etfw">January 3, 2020</a> </p>
+<p>McGowan also posted some confusing tweets about her political 
+preferences. "I will never vote Republican. I want the Democrats to win 
+because we are less likely to die," she declared, adding, "I am a 
+conscientious objector to the USA..."</p>
+<p>I will never vote Republican. I want the Democrats to win because we 
+are less likely to die. I am a conscientious objector to the USA, it’s 
+policies, lies, corruption, nationalism, racism, and deep misogyny. It 
+is our right and duty as citizens to dissent.</p>
+<p>— rose mcgowan (@rosemcgowan) </p>
+<p><a href="https://twitter.com/rosemcgowan/status/1212990453735448577?ref_src=twsrc%5Etfw">January 3, 2020</a> </p>
+<p>But she followed that up by <a href="https://twitter.com/rosemcgowan/status/1212987537511403525" rel="nofollow noopener">tweeting</a>,
+ "I’m a registered Republican in California. I loathe the Clintons. I 
+hate Trump. I will not vote Republican, but I cannot vote Democrat. I’d 
+rather know what evil I’m getting, so I’ll go Republican. This is about 
+WWIII, so none of that s*** matters anyway. #TeamStayAlive #RoseArmy"</p>
+<p>"Move to Iran" started to trend along with McGowan's name. By Friday 
+morning, the Scream star said she had "freaked out because we may have 
+any impending war."</p>
+<p>"Sometimes it’s okay to freak out on those in power," she added. 
+"That is what so many Brave soldiers have fought for. That is democracy.
+ I do not want any more American soldiers killed."</p>
+<p>Ok, so I freaked out because we may have any impending war. Sometimes
+ it’s okay to freak out on those in power. It’s our right. That is what 
+so many Brave soldiers have fought for. That is democracy. I do not want
+ any more American soldiers killed. That’s it.</p>
+<p>— rose mcgowan (@rosemcgowan) </p>
+<p><a href="https://twitter.com/rosemcgowan/status/1213101280278790150?ref_src=twsrc%5Etfw">January 3, 2020</a> </p>
+<p>McGowan isn't the only celebrity to slam President Trump over 
+Soleimani’s death. John Cusack accused him of being in "full fascist 101
+ mode."</p>
+<p>Trump in full fascist 101 mode-,steal and lie - untill there’s nothing left and start a war - </p>
+<p>He’s so idiotic he doesn’t know he just attacked Iran </p>
+<p>And that’s not like anywhere else</p>
+<p>— John Cusack (@johncusack) </p>
+<p><a href="https://twitter.com/johncusack/status/1212915214041190400?ref_src=twsrc%5Etfw">January 3, 2020</a> </p>
+<p>Trolls bots and morons - think an act of war - is </p>
+<p>“Sympathizing with a terror regime “ </p>
+<p>No it’s just more war</p>
+<p>— John Cusack (@johncusack) </p>
+<p><a href="https://twitter.com/johncusack/status/1213113385056919554?ref_src=twsrc%5Etfw">January 3, 2020</a> </p>
+<p class="rm-manual">Read more from Yahoo Entertainment:</p>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"><a href="https://www.yahoo.com/entertainment/kate-hudson-reveals-her-postholidays-weight-i-wasnt-impressed-151146362.html">Kate Hudson reveals her post-holidays weight: ‘I wasn’t impressed’</a></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="https://www.yahoo.com/entertainment/nick-gordon-dies-the-latest-in-a-series-of-tragedies-since-whitney-houstons-death-220708928.html">Nick Gordon dies: The latest in a series of tragedies since Whitney Houston's death</a></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="https://www.yahoo.com/entertainment/amanda-bynes-resurfaces-on-instagram-with-what-appears-to-be-a-large-face-tattoo-155636757.html">Amanda Bynes resurfaces on Instagram with what appears to be a large face tattoo</a></p></li>
+</ul>
+<p class="rm-manual">Want daily pop culture news delivered to your inbox? <a href="https://ad.doubleclick.net/ddm/trackclk/N360801.1913355YAHOOADMANAGER/B21889679.232649067;dc_trk_aid=430121719;dc_trk_cid=107915321;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=" rel="nofollow noopener">Sign up here</a> for Yahoo Entertainment &amp; Lifestyle’s newsletter.</p>
+<h2 class="rm-manual">What to Read Next</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://www.yahoo.com/entertainment/ryan-seacrest-announces-breakup-shayna-001700475.html"><span>Ryan Seacrest Announces Breakup From Shayna Taylor as He Vacations With Mystery Woman</span></a></h3><p class="rm-manual">E!</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://www.yahoo.com/entertainment/marsai-martin-black-ish-reacts-022013610.html"><span>'Black-ish' star Marsai Martin, 15, reacts to critics of her looks during BET Awards: 'Let me live'</span></a></h3><p class="rm-manual">USA TODAY Entertainment</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://www.yahoo.com/entertainment/california-coronavirus-governor-gavin-newsom-201301053.html"><span>California
+ Coronavirus Update: Governor Gavin Newsom Indicates L.A. County Could 
+Close Back Down Soon: “We Will Be Stepping Up Our Enforcement”</span></a></h3><p class="rm-manual">Deadline</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://www.yahoo.com/entertainment/chris-cuomo-tells-fla-gov-desantis-to-shush-after-he-railed-against-the-media-for-coronavirus-coverage-064734269.html"><span>Chris Cuomo tells Fla. Gov. DeSantis to shush after he railed against the media for coronavirus coverage</span></a></h3><p class="rm-manual">Yahoo Entertainment</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://www.yahoo.com/entertainment/shawn-johnson-opens-body-image-234413243.html"><span>Shawn Johnson Opens Up About Body Image Struggles, Drug Use and Going from '110 Lbs. to Pregnant'</span></a></h3><p class="rm-manual">People</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://www.yahoo.com/entertainment/sacha-baron-cohen-crashes-wing-170629574.html"><span>Sacha Baron Cohen Crashes Right Wing Event, Leads Absurd Sing-Along</span></a></h3><p class="rm-manual">Deadline</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://www.yahoo.com/entertainment/john-wayne-not-racist-son-says-name-statue-california-airport-012715228.html"><span>'John Wayne was not a racist,' son says amid calls to take name and statue down at California airport</span></a></h3><p class="rm-manual">Yahoo Celebrity</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://www.yahoo.com/entertainment/dr-dres-wife-nicole-young-181512213.html"><span>Dr. Dre's Wife Nicole Young Files for Divorce After 24 Years of Marriage</span></a></h3><p class="rm-manual">People</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://www.yahoo.com/entertainment/black-ish-star-marsai-martin-003150922.html"><span>Black-ish Star Marsai Martin Shuts Down Criticism of Her BET Awards Appearance</span></a></h3><p class="rm-manual">E!</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://www.yahoo.com/entertainment/katy-perry-reveals-past-suicidal-thoughts-orlando-bloom-split-180259168.html"><span>Katy Perry reveals she had suicidal thoughts in 2017: 'I just crashed'</span></a></h3><p class="rm-manual">Yahoo Celebrity</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://www.yahoo.com/entertainment/kylie-jenner-says-she-cutting-143801455.html"><span>Kylie Jenner Says She’s "Cutting Off These Quarantine Pounds" as She Poses in a Bikini</span></a></h3><p class="rm-manual">E!</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://www.yahoo.com/entertainment/los-angeles-mayor-eric-garcetti-005011442.html"><span>Los
+ Angeles Mayor Eric Garcetti Bans Fourth Of July Fireworks Displays, 
+Prohibits Gatherings With People You Don’t Live With, Puts “Hard Pause” 
+On Movie Theater Reopenings</span></a></h3><p class="rm-manual">Deadline</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://www.yahoo.com/entertainment/cnn-van-jones-calls-daily-194108803.html"><span>CNN’s Van Jones Calls Daily Beast Reporting on His White House Involvement ‘False, Sensational’</span></a></h3><p class="rm-manual">The Wrap</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://www.yahoo.com/entertainment/90-day-fianc-stars-darcey-184458204.html"><span>'90 Day Fiancé' stars Darcey and Stacey Silva confirm spinoff series about family life and love</span></a></h3><p class="rm-manual">Entertainment Weekly</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://www.yahoo.com/entertainment/kelsea-ballerini-calls-fellow-country-125421096.html"><span>Kelsea Ballerini calls out fellow country singer Chase Rice for crowded concert footage</span></a></h3><p class="rm-manual">Yahoo Entertainment</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://www.yahoo.com/entertainment/malcolm-jenkins-asks-nfl-owners-for-help-in-turning-players-initiatives-into-actual-legislation-062549078.html"><span>Malcolm Jenkins asks NFL owners for help in turning players' initiatives into actual legislation</span></a></h3><p class="rm-manual">Yahoo Entertainment</p><p class="rm-manual"></p></li>
+</ul>
+<ul class="rm-manual"><li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://www.yahoo.com/entertainment/chase-rice-no-apologies-regrets-225339771.html"><span>Chase Rice: No Apologies or Regrets Over Controversial Live Show, But ‘Please Go by the Laws’ Next Time</span></a></h3><p class="rm-manual">Variety</p><p></p></li></ul></article>
+</body></html>

@@ -1,0 +1,56 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"><a href="https://coronavirus-realtime.com/category/cnn/" rel="category tag">CNN</a></p>
+<h1 class="rm-manual">2020 F1 season could start behind closed doors, says managing director Ross Brawn</h1>
+<p class="rm-manual"><a href="https://coronavirus-realtime.com/2020/04/09/2020-f1-season-could-start-behind-closed-doors-says-managing-director-ross-brawn/">April 9, 2020</a> </p>
+<p class="rm-manual"><a href="https://coronavirus-realtime.com/author/myadmin/">coronavirus update</a> </p>
+<p class="rm-manual"> <a href="https://coronavirus-realtime.com/2020/04/09/2020-f1-season-could-start-behind-closed-doors-says-managing-director-ross-brawn/#respond">No Comments</a> </p>
+<p>The 2020 Formula One season could be a “closed event” when it does 
+restart, according to the sports’ managing director Ross Brawn.<a href="https://edition.cnn.com/2020/04/09/motorsport/brawn-formula-1-season-start-closed-event-coronavirus-spt-intl/index.html" rel="noopener noreferrer">Read more</a></p>
+<h2 class="rm-manual">Post navigation</h2>
+<p class="rm-manual"><a href="https://coronavirus-realtime.com/2020/04/09/us-citizens-in-lebanon-decline-repatriation-offer-saying-its-safer-in-beirut/" rel="prev">US citizens in Lebanon decline repatriation offer, saying it’s ‘safer’ in Beirut</a></p>
+<p class="rm-manual"><a href="https://coronavirus-realtime.com/2020/04/09/mlb-network-morning-show-crew-still-giving-fans-their-baseball-fix/" rel="next">MLB Network morning show crew still giving fans their baseball fix</a></p>
+<h3 class="rm-manual">Leave a Reply <a rel="nofollow" href="file:///2020/04/09/2020-f1-season-could-start-behind-closed-doors-says-managing-director-ross-brawn/#respond">Cancel reply</a>
+</h3>
+<p class="rm-manual"><span>Your email address will not be published.</span></p>
+<p class="rm-manual">Comment </p>
+<p class="rm-manual">Name </p>
+<p class="rm-manual">Email </p>
+<p class="rm-manual">Website </p>
+<p class="rm-manual"> Save my name, email, and website in this browser for the next time I comment.</p></article>
+</body></html>

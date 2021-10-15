@@ -1,0 +1,287 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Dennis Rodman Opens Up About North Korea and Kim Jong-un </p>
+<ul class="rm-manual">
+<li class="rm-manual"> <h4 class="rm-manual"><a href="https://dujour.com/gallery/wedding-trend-sunglasses-fit-for-a-bride/">Wedding Trend: Sunglasses Fit For a Bride</a></h4>
+</li>
+<li class="rm-manual"> <h4 class="rm-manual"><a href="https://dujour.com/style/fendi-new-collaboration-artist-joashua-vides-peekaboo-bag/">Fendi Collaborates With Artist Joshua Vides</a></h4>
+</li>
+<li class="rm-manual"> <h4 class="rm-manual"><a href="https://dujour.com/beauty/shop-japanese-american-skincare-brand-seiseo-jbeauty/">Meet The Marie Kondo of Skincare</a></h4>
+</li>
+<li class="rm-manual"> <h4 class="rm-manual"><a href="https://dujour.com/style/grand-seiko-luxury-watches-celebrates-60-year-anniversary/">Grand Seiko Celebrates 60 Years</a></h4>
+</li>
+<li class="rm-manual"> <h4 class="rm-manual"><a href="https://dujour.com/gallery/tour-dujour-tyler-perrys-former-15-million-home/">Tour DuJour: Tyler Perry’s Former $15 Million Home</a></h4>
+</li>
+<li class="rm-manual"> <h4 class="rm-manual"><a href="https://dujour.com/cities/houston/drunk-elephant-new-hair-body-products-tiffany-masterson-interview/">Drunk Elephant is Branching Out</a></h4>
+</li>
+<li class="rm-manual"> <h4 class="rm-manual"><a href="https://dujour.com/culture/interview-greg-kelly-reports-newsmax-ray-kelly-nyc/">A Man With a New York State of Mind</a></h4>
+</li>
+<li class="rm-manual"> <h4 class="rm-manual"><a href="https://dujour.com/gallery/order-from-these-reopened-restaurants-in-the-hamptons/">You Can Order From These Restaurants in The Hamptons</a></h4>
+</li>
+<li class="rm-manual"> <h4 class="rm-manual"><a href="https://dujour.com/style/a-first-look-at-diors-new-high-jewelry-collection/">A First Look At Dior’s New High Jewelry Collection</a></h4>
+</li>
+<li class="rm-manual"> <h4 class="rm-manual"><a href="https://dujour.com/culture/global-wildlife-conservation-capturing-africas-antelope-valley/">Capturing Africa’s Antelope Valley</a></h4>
+</li>
+<li class="rm-manual"> <h4 class="rm-manual"><a href="https://dujour.com/lifestyle/how-to-lounge-in-luxury-summer-season-sunbeds/">How to Lounge in Luxury</a></h4>
+</li>
+<li class="rm-manual"> <h4 class="rm-manual"><a href="https://dujour.com/gallery/cleanse-your-face-with-our-favorite-micellar-waters-bioderma-vichy-elemis/">Cleanse Your Face With Our Favorite Micellar Waters</a></h4>
+</li>
+<li class="rm-manual"> <h4 class="rm-manual"><a href="https://dujour.com/lifestyle/drink-dujour-mezza-summer-sparkler-cocktail-recipe/">Drink DuJour: Mezza Summer Sparkler</a></h4>
+</li>
+<li class="rm-manual"> <h4 class="rm-manual"><a href="https://dujour.com/culture/sound-bite-ashe-michael-love-michael-niall-horan-lewis-del-mar-new-songs/">Sound Bite: Ashe, Michael Love Michael, and Lewis Del Mar</a></h4>
+</li>
+<li class="rm-manual"> <h4 class="rm-manual"><a href="https://dujour.com/gallery/out-and-about-with-binnshots-own-dujours-jason-binn/">Out and About With BinnShot’s Own DuJour’s Jason Binn</a></h4>
+</li>
+<li class="rm-manual"> <h4 class="rm-manual"><a href="https://dujour.com/lifestyle/the-weekend-travel-guide-savannah-georgia/">The Weekender: Savannah, Georgia</a></h4>
+</li>
+<li class="rm-manual"> <h4 class="rm-manual"><a href="https://dujour.com/lifestyle/room-request-lido-house-newport-beach-california-hotel/">Room Request! Lido House</a></h4>
+</li>
+<li class="rm-manual"> <h4 class="rm-manual"><a href="https://dujour.com/culture/discover-more-than-love-for-actress-natalie-wood/">Discover More Than Love For Actress Natalie Wood</a></h4>
+</li>
+<li class="rm-manual"> <h4 class="rm-manual"><a href="https://dujour.com/gallery/watch-icons-and-celebrity-fans/">The Ultimate Watch Icons and Their Celebrity Admirers</a></h4>
+</li>
+<li class="rm-manual"> <h4 class="rm-manual"><a href="https://dujour.com/gallery/5-special-wedding-invitation-ideas/">5 Special Wedding Invitation Ideas</a></h4>
+</li>
+</ul>
+<p class="rm-manual"> <a href="file:///"> image/svg+xml </a></p>
+<p class="rm-manual">Newsletter</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://dujour.com/news/">News</a></li>
+<li class="rm-manual"><a href="https://dujour.com/style/">Style</a></li>
+<li class="rm-manual"><a href="https://dujour.com/beauty/">Beauty</a></li>
+<li class="rm-manual"><a href="https://dujour.com/culture/">Culture</a></li>
+<li class="rm-manual"><a href="https://dujour.com/lifestyle/">Lifestyle</a></li>
+<li class="rm-manual"><a href="https://dujour.com/design/">Design</a></li>
+<li class="rm-manual"><a href="https://dujour.com/events/">Events</a></li>
+<li class="rm-manual"><a href="http://dujour.com/cities/"><span>Cities</span></a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://dujour.com/news/">News</a></li>
+<li class="rm-manual"><a href="https://dujour.com/style/">Style</a></li>
+<li class="rm-manual"><a href="https://dujour.com/beauty/">Beauty</a></li>
+<li class="rm-manual"><a href="https://dujour.com/culture/">Culture</a></li>
+<li class="rm-manual"><a href="https://dujour.com/lifestyle/">Lifestyle</a></li>
+<li class="rm-manual"><a href="https://dujour.com/design/">Design</a></li>
+<li class="rm-manual"><a href="https://dujour.com/events/">Events</a></li>
+<li class="rm-manual"><a href="http://dujour.com/cities/"><span>Cities</span></a></li>
+</ul>
+<p class="rm-manual"><span><span><a href="https://dujour.com/">Home</a> » <span><a href="https://dujour.com/culture/">Culture</a> » Rodman’s Revelations</span></span></span></p>
+<h1 class="rm-manual"> Rodman’s Revelations</h1>
+<p class="rm-manual">After his controversial trips to North Korea caused
+ an international firestorm, the NBA Hall of Famer mostly shunned the 
+media. Now Dennis Rodman is ready to talk</p>
+<p class="rm-manual">Written by <a href="https://dujour.com/contributors/lindsay-silberman/">Lindsay Silberman</a></p>
+<p class="rm-manual">Photographed by Alex John Beck</p>
+<p class="rm-manual">Produced by Jason Binn</p>
+<p class="rm-manual">Dennis Rodman; photo by Alex John Beck</p>
+<p>DJ: You’ve said in the past that Kim Jong-un <a href="http://abcnews.go.com/blogs/politics/2013/03/dennis-rodman-kim-jong-un-wants-president-obama-to-call-him/">wants President Obama to call him</a>. Can you elaborate on that?</p>
+<p>DR: He really, really wants to talk to Obama. He can’t say it enough.
+ He wants to talk to him to try to open that door a little bit. He’s 
+saying that he doesn’t want to bomb anybody. He said, “I don’t want to 
+kill Americans.” He loves Americans.</p>
+<p>DJ: Have you ever seen anything alarming in your time there?</p>
+<p>DR: It’s just like any other country, you go to Russia, Germany, 
+you’re gonna see soldiers all over the place. You see soldiers that 
+carry guns and sit at the airports. It’s just like that.</p>
+<p>DJ: But the difference is that in North Korea there are hundreds of thousands of people suffering and starving in labor camps.</p>
+<p>DR: You name any country in the world… Which country does not have that shit? Every country has that.</p>
+<p>DJ: When you hear that people are dying of malnourishment and being overworked—have you been in the fields, have you seen that?</p>
+<p>DR: I’ve seen it. They work for peanuts. But like I said, he’s not 
+like his grandfather or father. He’s not like that. He’s actually trying
+ to change it. He’s actually doing cool things for these people, and 
+that’s why they love him so much.</p>
+<p>DJ: And the accusations about him <a href="http://www.businessinsider.com/south-korean-kim-jong-un-killed-uncles-family-2014-1">having his family members killed</a>…</p>
+<p>DR: You could say anything here about North Korea and people would 
+believe it. The last time I went there, when they said they killed his 
+girlfriend, they killed his uncle, they just fed him to the dogs… They 
+were standing right behind me.</p>
+<p>DJ: You’re saying that the uncle that the North Korean government itself <span><a href="http://www.kcna.co.jp/item/2013/201312/news13/20131213-05ee.html">confirms was executed</a> is actually alive?</span></p>
+<p>DR: He was standing right there.</p>
+<p>DJ: Are you ever concerned about your safety when you’re over there?</p>
+<p>DR: I love my country. I love my country to death. And there’s no 
+other place in the world I’d rather live. But if I go to North Korea—the
+ next time I go to North Korea—the fear for me of not coming back… It 
+won’t be because of North Korea. So I’m just letting you know right now…
+ [long pause] That’s the real truth. Read between the lines on that one.</p>
+<p>DJ: So you think the American government would have a problem with you coming back into the country?</p>
+<p>DR: When I go there, it’s going to be a problem coming back. Because 
+they could actually stop me from coming back. They could actually pull 
+my passport. They already told me that. They’re afraid of me because I 
+know so much.</p>
+<p>DJ:<span> “They” being…?</span></p>
+<p>DR: Americans. Our government. They’ve got to be careful what they 
+say, what they do, so I respect that. But for me, I mean, it’s freedom 
+of speech. I’m not hurting anybody, I’m not putting anybody in danger, 
+I’m just telling what I see. I have that leverage now that no one in the
+ world has.</p>
+<p>DJ: Is it true you’re being indicted by the U.S. Treasury?</p>
+<p>DR: They want to indict me. And I’m like, “For what?” Treason. 
+They’ve threatened me. They said I gave his wife a fur coat, a dress, I 
+gave all these gifts. I was like, “I did? No I didn’t!”</p>
+<p>DJ: Have you ever asked the U.S. government for support?</p>
+<p>DR: I said six months ago [to the government], “Why don’t you guys 
+help me?” They didn’t even give me a f–king response, so I was like, f–k
+ it. I just wish people would actually take advantage of the situation 
+that I have, instead of ridiculing me about everything I do. It’s so 
+unfair. It’s very hard to try to do something like that in North Korea 
+by yourself when the government don’t want to help you.</p>
+<p>DJ: Why do you think that is?</p>
+<p>DR: If Magic Johnson went over there, it would have been a whole 
+different story. He would have had so many people helping him to do some
+ good stuff for the world. But I did this all by myself. I want to go 
+back and take a couple people with me so they could actually see it and 
+say, “Hey, you know what? It’s actually true what he’s been saying.”</p>
+<p>DJ: Who do you have in mind?</p>
+<p>DR: I asked Oprah to go with me next time. I’ve asked quite a few people.</p>
+<p>DJ: Does this make you more interested in politics or less?</p>
+<p>DR: People put me in a category as this diplomat, this ambassador, 
+which I don’t want to be. This is a sports thing. In 10 to 15 years, 
+this is going to be historical. Watch. Because I went there for sports. 
+No one’s ever done that! It’s using sports to open the doors for 
+communication around the world. Going through sports, not through 
+politics. So that people can see North Korea in a great light. That 
+little kid is changing North Korea for the better, and once we see that,
+ maybe he’ll just loosen up and start opening the door for the people of
+ the world. That’s it.</p>
+<p class="rm-manual"><a href="http://dujour.com/article/dennis-rodman-north-korea-kim-jong-un-video/42902">Click here to watch a video from the interview.</a></p>
+<p class="rm-manual">(This interview has been condensed and edited for clarity. Photographed on location at <a href="http://www.turnberryislemiami.com/">Turnberry Isle Miami</a>.)</p>
+<h3 class="rm-manual">MORE:</h3>
+<p class="rm-manual"><a href="http://dujour.com/article/inside-white-collar-prisons-bernie-kerik-jack-abramoff">The Secrets of White Collar Prisons</a></p>
+<p class="rm-manual"> <a href="http://dujour.com/article/scarface-30-years-later-al-pacino-michelle-pfeiffer">30 Years After Scarface, the Cast Reveals All</a></p>
+<p class="rm-manual"> <a href="http://dujour.com/article/walter-kirn-blood-will-out-interview-clark-rockefeller-imposter">“Clark Rockefeller:” The Great Confabulator</a></p>
+<p class="rm-manual">Pages: <a href="https://dujour.com/culture/dennis-rodman-north-korea-kim-jong-un-interview/">1</a> <span>2</span></p>
+<p class="rm-manual"><span>Tags:</span></p>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="https://dujour.com/tag/interviews/">Interviews</a>,</li>
+<li class="rm-manual"><a href="https://dujour.com/tag/sports/">Sports</a></li>
+</ul>
+<p class="rm-manual"> <span>GALLERIES</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"> <h1 class="rm-manual"><a href="https://dujour.com/gallery/wedding-trend-sunglasses-fit-for-a-bride/">Wedding Trend: Sunglasses Fit For a Bride</a></h1>
+</li>
+<li class="rm-manual"> <h1 class="rm-manual"><a href="https://dujour.com/gallery/tour-dujour-tyler-perrys-former-15-million-home/">Tour DuJour: Tyler Perry’s Former $15 Million Home</a></h1>
+</li>
+<li class="rm-manual"> <h1 class="rm-manual"><a href="https://dujour.com/gallery/order-from-these-reopened-restaurants-in-the-hamptons/">You Can Order From These Restaurants in The Hamptons</a></h1>
+</li>
+</ul>
+<p class="rm-manual"> <span>STORIES DUJOUR</span></p>
+<ul class="rm-manual">
+<li class="rm-manual">
+<h2 class="rm-manual"><a href="https://dujour.com/style/fendi-new-collaboration-artist-joashua-vides-peekaboo-bag/">Fendi Collaborates With Artist Joshua Vides</a></h2>
+<p class="rm-manual"> The Italian luxury brand tapped this California visual artist for its Pre-Fall collection<a href="https://dujour.com/style/fendi-new-collaboration-artist-joashua-vides-peekaboo-bag/"> More</a></p>
+</li>
+<li class="rm-manual">
+<h2 class="rm-manual"><a href="https://dujour.com/beauty/shop-japanese-american-skincare-brand-seiseo-jbeauty/">Meet The Marie Kondo of Skincare</a></h2>
+<p class="rm-manual"> Japanese American skincare brand Seiseo JBeauty sparks joy<a href="https://dujour.com/beauty/shop-japanese-american-skincare-brand-seiseo-jbeauty/"> More</a></p>
+</li>
+<li class="rm-manual">
+<h2 class="rm-manual"><a href="https://dujour.com/style/grand-seiko-luxury-watches-celebrates-60-year-anniversary/">Grand Seiko Celebrates 60 Years</a></h2>
+<p class="rm-manual"> The Japanese brand is making an indelible mark as a luxury watch leader<a href="https://dujour.com/style/grand-seiko-luxury-watches-celebrates-60-year-anniversary/"> More</a></p>
+</li>
+<li class="rm-manual">
+<h2 class="rm-manual"><a href="https://dujour.com/cities/houston/drunk-elephant-new-hair-body-products-tiffany-masterson-interview/">Drunk Elephant is Branching Out</a></h2>
+<p class="rm-manual"> Drunk Elephant founder Tiffany Masterson makes the jump to hair and body care<a href="https://dujour.com/cities/houston/drunk-elephant-new-hair-body-products-tiffany-masterson-interview/"> More</a></p>
+</li>
+<li class="rm-manual">
+<h2 class="rm-manual"><a href="https://dujour.com/culture/interview-greg-kelly-reports-newsmax-ray-kelly-nyc/">A Man With a New York State of Mind</a></h2>
+<p class="rm-manual"> Journalist and news personality Greg Kelly debuts a new series with an eye on New York City<a href="https://dujour.com/culture/interview-greg-kelly-reports-newsmax-ray-kelly-nyc/"> More</a></p>
+</li>
+<li class="rm-manual">
+<h2 class="rm-manual"><a href="https://dujour.com/style/a-first-look-at-diors-new-high-jewelry-collection/">A First Look At Dior’s New High Jewelry Collection</a></h2>
+<p class="rm-manual"> Jewelry Designer Victoire de Castellane creates a modern homage to Art Deco<a href="https://dujour.com/style/a-first-look-at-diors-new-high-jewelry-collection/"> More</a></p>
+</li>
+</ul>
+<p class="rm-manual"> <span>What to Click Next</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://dujour.com/cities/houston/drunk-elephant-new-hair-body-products-tiffany-masterson-interview/">Drunk Elephant is Branching Out</a></h3><p class="rm-manual"> Drunk Elephant founder Tiffany Masterson makes the jump to hair and body care<a href="https://dujour.com/cities/houston/drunk-elephant-new-hair-body-products-tiffany-masterson-interview/"> More</a></p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://dujour.com/culture/interview-greg-kelly-reports-newsmax-ray-kelly-nyc/">A Man With a New York State of Mind</a></h3><p class="rm-manual"> Journalist and news personality Greg Kelly debuts a new series with an eye on New York City<a href="https://dujour.com/culture/interview-greg-kelly-reports-newsmax-ray-kelly-nyc/"> More</a></p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://dujour.com/culture/sound-bite-ashe-michael-love-michael-niall-horan-lewis-del-mar-new-songs/">Sound Bite: Ashe, Michael Love Michael, and Lewis Del Mar</a></h3><p class="rm-manual"> Discover five of our favorite new songs released this week<a href="https://dujour.com/culture/sound-bite-ashe-michael-love-michael-niall-horan-lewis-del-mar-new-songs/"> More</a></p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://dujour.com/cities/wolffer-estate-vineyard-joey-wolffer-interview/">Meet Long Island’s Wolf of Wine</a></h3><p class="rm-manual"> Winery scion Joey Wölffer celebrates 10 years in business<a href="https://dujour.com/cities/wolffer-estate-vineyard-joey-wolffer-interview/"> More</a></p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://dujour.com/gallery/shop-unexpected-fathers-day-gifts/">The Father’s Day Gifts Your Dad Will Never See Coming</a></h3><p class="rm-manual"> Shop these unexpected gift ideas for the fathers in your life<a href="https://dujour.com/gallery/shop-unexpected-fathers-day-gifts/"> More</a></p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://dujour.com/culture/sound-bite-harry-hudson-and-kosine-honne-new-songs/">Sound Bite: Harry Hudson, Alessia Cara, and Kosine</a></h3><p class="rm-manual"> Listen to our top five new favorite songs from this week <a href="https://dujour.com/culture/sound-bite-harry-hudson-and-kosine-honne-new-songs/"> More</a></p><p class="rm-manual"></p></li>
+</ul>
+<p class="rm-manual"> <span>Connect With DuJour</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><h5 class="rm-manual"> <a href="http://https//www.facebook.com/DuJour-146786422111039/?ref=br_tf"> Follow us on Facebook for insider access </a>
+</h5></li>
+<li class="rm-manual"><h5 class="rm-manual"> <a href="http://pinterest.com/dujourmedia/"> See the latest in luxury on Pinterest </a>
+</h5></li>
+<li class="rm-manual"><h5 class="rm-manual"> <a href="http://instagram.com/dujourmedia"> Get behind-the-scenes pictures on Instagram </a>
+</h5></li>
+<li class="rm-manual"><h5 class="rm-manual"> <a href="http://twitter.com/DuJourMedia"> Read the news DuJour on Twitter </a>
+</h5></li>
+<li class="rm-manual"><h5 class="rm-manual"> <a href="http://dujourmedia.tumblr.com/"> Discover where luxury lives on Tumblr </a>
+</h5></li>
+</ul>
+<p class="rm-manual"> Next</p>
+<p class="rm-manual"><a href="https://dujour.com/culture/the-real-dennis-rodman-photos/">The Real Rodman</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://dujour.com/about/">About</a></li>
+<li class="rm-manual"><a href="https://dujour.com/advertising/">Advertising</a></li>
+<li class="rm-manual"><a href="https://dujour.com/packages/dujour-videos/">Videos</a></li>
+<li class="rm-manual"><a href="https://dujour.com/terms-and-privacy/">Terms &amp; Privacy</a></li>
+<li class="rm-manual"><a href="https://dujour.com/contact-us/">Contact Us</a></li>
+<li class="rm-manual"><a href="http://dujour.com/feed/">RSS</a></li>
+<li class="rm-manual"><a href="https://dujour.com/sitemap/">Site Map</a></li>
+<li class="rm-manual"><a href="http://dujour.com/archive/">Issue Archive</a></li>
+<li class="rm-manual"><a href="http://dujour.com/contributors/">Contributors</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://dujour.com/news/">News</a></li>
+<li class="rm-manual"><a href="https://dujour.com/style/">Style</a></li>
+<li class="rm-manual"><a href="https://dujour.com/beauty/">Beauty</a></li>
+<li class="rm-manual"><a href="https://dujour.com/culture/">Culture</a></li>
+<li class="rm-manual"><a href="https://dujour.com/lifestyle/">Lifestyle</a></li>
+<li class="rm-manual"><a href="https://dujour.com/design/">Design</a></li>
+<li class="rm-manual"><a href="https://dujour.com/events/">Events</a></li>
+<li class="rm-manual"><a href="http://dujour.com/cities/"><span>Cities</span></a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///wall-of-fame">Wall of Fame</a></li>
+<li class="rm-manual"><a href="http://www.binnshots.com/#welcome">Binnshot</a></li>
+</ul>
+<p class="rm-manual"> <a href="https://itunes.apple.com/us/app/dujour-magazine/id685874094"></a></p><p class="rm-manual"><a href="https://itunes.apple.com/us/app/dujour-magazine/id685874094"> Download Our Free App</a></p><a href="https://itunes.apple.com/us/app/dujour-magazine/id685874094"> </a><p class="rm-manual"></p>
+<p class="rm-manual"> Subscribe to DuJour</p>
+<p class="rm-manual"> <a href="https://itunes.apple.com/us/app/dujour-magazine/id685874094"></a></p><p class="rm-manual"><a href="https://itunes.apple.com/us/app/dujour-magazine/id685874094"> Download Our Free App</a></p><a href="https://itunes.apple.com/us/app/dujour-magazine/id685874094"> </a><p class="rm-manual"></p>
+<p class="rm-manual"> <a href="http://www.ezsubscription.com/duj/subscribe?type=demo"></a></p><p class="rm-manual"><a href="http://www.ezsubscription.com/duj/subscribe?type=demo"> Subscribe to DuJour</a></p><a href="http://www.ezsubscription.com/duj/subscribe?type=demo"> </a><p class="rm-manual"></p>
+<p class="rm-manual">© DUJOUR MEDIA. ALL RIGHTS RESERVED</p>
+<h4 class="rm-manual">Share This Article</h4>
+<p class="rm-manual"> From: </p>
+<p class="rm-manual"> To: </p></article>
+</body></html>

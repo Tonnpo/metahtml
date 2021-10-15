@@ -1,0 +1,436 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Apple Watch Likely to Gain Blood Pressure, Blood Glucose, and Blood Alcohol Monitoring - MacRumors </p>
+<p class="rm-manual"><a href="#maincontent">Skip to Content</a></p>
+<p class="rm-manual">Got a tip for us?<span><a href="mailto:tips@macrumors.com?Subject=MacRumors%20Submission">Let us know</a></span> </p>
+<ul class="rm-manual"> <li class="rm-manual">a. <a href="mailto:tips@macrumors.com?Subject=MacRumors%20Submission">Send us an email</a>
+</li> <li class="rm-manual">b. <a href="https://www.macrumors.com/share.php">Anonymous form</a>
+</li> </ul>
+<p class="rm-manual"><a rel="noopener noreferrer" href="https://instagram.com/macrumors/">Instagram</a><a rel="noopener noreferrer" href="https://www.facebook.com/MacRumors">Facebook</a><a rel="noopener noreferrer" href="https://twitter.com/MacRumors">Twitter</a><a rel="noopener noreferrer" href="file:///macrumors">YouTube</a><a rel="noopener noreferrer" href="https://www.macrumors.com/push/">Notifications</a><a rel="noopener noreferrer" href="http://feeds.macrumors.com/MacRumors-All">RSS</a><a rel="noopener noreferrer" href="https://macrumors.us5.list-manage.com/subscribe?u=7d0106b433773bd0aef5828e0&amp;id=3989954cde">Newsletter</a></p>
+<p class="rm-manual"><a href="#maincontent">Skip to Content</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.macrumors.com/">Front Page </a></li>
+<li class="rm-manual">
+<a href="file:///roundup/"><span>Roundups Show Roundups</span></a><ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/airpods/">AirPods</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/airpods-max/">AirPods Max</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/airpods-pro/">AirPods Pro</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/apple-car/">Apple Car</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/best-apple-deals/">Apple Deals</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/apple-glasses/">Apple Glasses</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/apple-pay/">Apple Pay</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/displays/">Apple Pro Display XDR</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/apple-retail-stores/">Apple Stores</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/apple-tv/">Apple TV</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/apple-watch-se/">Apple Watch SE</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/apple-watch/">Apple Watch Series 6</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/carplay/">CarPlay</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/homepod/">HomePod</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/homepod-mini/">HomePod mini</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/imac/">iMac</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/ios-14/">iOS 14</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/ios-15/">iOS 15</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/ipad/">iPad</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/ipad-air/">iPad Air </a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/ipad-mini/">iPad mini 5</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/ipad-pro/">iPad Pro</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/ipados-14/">iPadOS 14</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/ipados-15/">iPadOS 15</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/iphone-11/">iPhone 11</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/iphone-12/">iPhone 12</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/iphone-12-pro/">iPhone 12 Pro</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/iphone-13/">iPhone 13</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/iphone-se/">iPhone SE 2020</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/iphone-xr/">iPhone XR</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/ipod-touch/">iPod touch</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/mac-mini/">Mac mini</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/mac-pro/">Mac Pro</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/macbook-air/">MacBook Air</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/macbook-pro-13/">MacBook Pro 13"</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/macbook-pro/">MacBook Pro 16"</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/macos-big-sur/">macOS Big Sur</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/macos-12/">macOS Monterey</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/watchos-7/">watchOS 7</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/watchos-8/">watchOS 8 </a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/wwdc/">WWDC 2021</a></li>
+</ul>
+</li>
+<li class="rm-manual"><a href="https://www.macrumors.com/guide/">Guides</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/how-to/">How Tos</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/review/">Reviews</a></li>
+<li class="rm-manual"><a href="https://buyersguide.macrumors.com/">Buyer's Guide</a></li>
+<li class="rm-manual"><a href="https://forums.macrumors.com/">Forums</a></li>
+</ul>
+<p class="rm-manual"><a rel="noopener noreferrer" href="https://instagram.com/macrumors/">Instagram</a><a rel="noopener noreferrer" href="https://www.facebook.com/MacRumors">Facebook</a><a rel="noopener noreferrer" href="https://twitter.com/MacRumors">Twitter</a><a rel="noopener noreferrer" href="file:///macrumors">YouTube</a><a rel="noopener noreferrer" href="https://www.macrumors.com/push/">Notifications</a><a rel="noopener noreferrer" href="http://feeds.macrumors.com/MacRumors-All">RSS</a><a rel="noopener noreferrer" href="https://macrumors.us5.list-manage.com/subscribe?u=7d0106b433773bd0aef5828e0&amp;id=3989954cde">Newsletter</a></p>
+<p class="rm-manual"><a href="https://forums.macrumors.com/">Visit Forums</a></p>
+<p class="rm-manual">Close Search</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/iphone-13/">iPhone 13</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/ios-15/">iOS 15</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/macbook-air/">MacBook Air</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/macbook-pro-13/">MacBook Pro 13"</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/macbook-pro/">MacBook Pro 16"</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/apple-watch/">Apple Watch Series 6</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/ipados-15/">iPadOS 15</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/displays/">Apple Pro Display XDR</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/mac-pro/">Mac Pro</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/apple-tv/">Apple TV</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/homepod-mini/">HomePod mini</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/ipad/">iPad</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/airpods-max/">AirPods Max</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/airpods-pro/">AirPods Pro</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/apple-glasses/">Apple Glasses</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/airpods/">AirPods</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/best-apple-deals/">Apple Deals</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/apple-watch-se/">Apple Watch SE</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/homepod/">HomePod</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/imac/">iMac</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/ios-14/">iOS 14</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/ipad-air/">iPad Air </a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/ipad-mini/">iPad mini 5</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/ipad-pro/">iPad Pro</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/iphone-11/">iPhone 11</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/iphone-12/">iPhone 12</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/iphone-12-pro/">iPhone 12 Pro</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/iphone-se/">iPhone SE 2020</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/iphone-xr/">iPhone XR</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/ipod-touch/">iPod touch</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/mac-mini/">Mac mini</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/macos-big-sur/">macOS Big Sur</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/macos-12/">macOS Monterey</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/watchos-8/">watchOS 8 </a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/apple-car/">Apple Car</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/apple-retail-stores/">Apple Stores</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/wwdc/">WWDC 2021</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/carplay/">CarPlay</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/ipados-14/">iPadOS 14</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/watchos-7/">watchOS 7</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/apple-pay/">Apple Pay</a></li>
+</ul>
+<p class="rm-manual"><a href="https://www.macrumors.com/roundup/">All <span>&gt;</span></a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.macrumors.com/">Front Page </a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/roundup/">Roundups </a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/guide/">Guides</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/how-to/">How Tos</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/review/">Reviews</a></li>
+<li class="rm-manual"><a href="https://buyersguide.macrumors.com/">Buyer's Guide</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/guide/upcoming-apple-products/">Upcoming Products</a></li>
+<li class="rm-manual"><a href="https://forums.macrumors.com/">Forums</a></li>
+<li class="rm-manual"><a href="https://www.macrumors.com/archive/">Archives</a></li>
+<li class="rm-manual"><a href="mailto:tips@macrumors.com">Tips / Contact Us</a></li>
+<li class="rm-manual"><p class="rm-manual"><a rel="noopener noreferrer" href="https://instagram.com/macrumors/">Instagram</a><a rel="noopener noreferrer" href="https://www.facebook.com/MacRumors">Facebook</a><a rel="noopener noreferrer" href="https://twitter.com/MacRumors">Twitter</a><a rel="noopener noreferrer" href="file:///macrumors">YouTube</a><a rel="noopener noreferrer" href="https://www.macrumors.com/push/">Notifications</a><a rel="noopener noreferrer" href="http://feeds.macrumors.com/MacRumors-All">RSS</a><a rel="noopener noreferrer" href="https://macrumors.us5.list-manage.com/subscribe?u=7d0106b433773bd0aef5828e0&amp;id=3989954cde">Newsletter</a></p></li>
+</ul>
+<h1 class="rm-manual">Apple Watch Likely to Gain Blood Pressure, Blood Glucose, and Blood Alcohol Monitoring</h1>
+<p class="rm-manual">Monday May 3, 2021 4:03 am PDT by <a href="https://www.macrumors.com/author/hartley-charlton/" rel="author">Hartley Charlton</a></p>
+<p>The Apple Watch may gain the ability to measure blood pressure, blood
+ glucose, and blood alcohol levels, according to newly-revealed 
+information about one of Apple's chosen business partners.</p>
+<p>Apple has been revealed to be the largest customer of the British electronics start-up Rockley Photonics, <a href="https://www.telegraph.co.uk/technology/2021/05/01/apple-watch-could-add-blood-sugar-alcohol-readings-deal-uk-tech/">The Telegraph</a> reports.</p>
+<p>Rockley Photonics has developed non-invasive optical sensors for 
+detecting multiple blood-related health metrics, including blood 
+pressure, blood glucose, and blood alcohol levels, many of which are 
+only normally detectable with more invasive dedicated medical equipment.
+ Rockley's sensors beam infrared light through a user's skin, much like 
+the existing sensors on the back of the Apple Watch for detecting heart 
+rate and blood oxygen levels.</p>
+<p>Rockley's disclosure that its biggest client is Apple came about as 
+the company prepares to go public in New York. The company's filings 
+said that Apple accounted for the majority of its revenue over the last 
+two years and that it has an ongoing "supply and development agreement" 
+with the company, under which it expects to continue to heavily rely on 
+Apple for most of its revenue.</p>
+<p>Given the growth of Rockley Photonics and the scale of Apple's 
+partnership with the company, it seems to be virtually inevitable that 
+the company's health sensor technology will be coming to the Apple Watch
+ sooner rather than later.</p>
+<p>The company has established an office in San Jose, in addition to 
+facilities in Oxford, Cardiff, Cork, and Helsinki. Rockley has said that
+ its next-generation sensors could be in consumer smartwatches and other
+ electronics as soon as next year. This would presumably align with the 
+launch of Apple Watch Series 8 models.</p>
+<p>Until now, rumors had indicated that the upcoming Apple Watch Series 7 would be <a href="https://www.macrumors.com/2021/01/25/apple-watch-series-7-blood-glucose-monitoring/">gaining blood glucose monitoring</a>,
+ but Rockley's comments may indicate that the feature has been delayed 
+until 2022. It is also possible that blood glucose monitoring could 
+still come to the Apple Watch Series 7 this year, followed by a 
+significant expansion of Rockley's technology in the device next year 
+with features like blood pressure and blood alcohol monitoring.</p>
+<p class="rm-manual">Related Roundup: <a href="https://www.macrumors.com/roundup/apple-watch/">Apple Watch Series 6</a></p>
+<p class="rm-manual">Tag: <a href="https://www.macrumors.com/guide/telegraph-co-uk/">telegraph.co.uk</a></p>
+<p class="rm-manual">Buyer's Guide: <a href="https://buyersguide.macrumors.com/#Apple_Watch">Apple Watch (Caution)</a></p>
+<p class="rm-manual">Related Forum: <a href="https://forums.macrumors.com/forums/apple-watch.172">Apple Watch</a></p>
+<p class="rm-manual">[ <a href="https://forums.macrumors.com/threads/apple-watch-likely-to-gain-blood-pressure-blood-glucose-and-blood-alcohol-monitoring.2294589/">209 comments</a> ]</p>
+<h2 class="rm-manual">Top Rated Comments</h2>
+<p class="rm-manual"><a href="https://forums.macrumors.com/posts/29848356" rel="nofollow">Corsig</a></p>
+<p class="rm-manual">9 weeks ago</p>
+<p class="rm-manual">I would absolutely love this. It would make the iwatch a must have for so many people</p>
+<p class="rm-manual">Score: 57 Votes (<a href="https://forums.macrumors.com/posts/29848356/react?reaction_id=1" rel="nofollow">Like</a> | <a href="https://forums.macrumors.com/posts/29848356/react?reaction_id=8" rel="nofollow">Disagree</a>)</p>
+<p class="rm-manual"><a href="https://forums.macrumors.com/posts/29848392" rel="nofollow">LarrySW</a></p>
+<p class="rm-manual">9 weeks ago</p>
+<blockquote class="rm-manual"> Blood alcohol would be a game changer and likely make me finally get a new Apple Watch.</blockquote>
+<p class="rm-manual">Are you that close to the legal limit on such a frequent basis?</p>
+<p class="rm-manual">Score: 55 Votes (<a href="https://forums.macrumors.com/posts/29848392/react?reaction_id=1" rel="nofollow">Like</a> | <a href="https://forums.macrumors.com/posts/29848392/react?reaction_id=8" rel="nofollow">Disagree</a>)</p>
+<p class="rm-manual"><a href="https://forums.macrumors.com/posts/29848413" rel="nofollow">UBS28</a></p>
+<p class="rm-manual">9 weeks ago</p>
+<p class="rm-manual">Well, police officer, my Apple Watch said my alcohol level is fine ......</p>
+<p class="rm-manual">Score: 44 Votes (<a href="https://forums.macrumors.com/posts/29848413/react?reaction_id=1" rel="nofollow">Like</a> | <a href="https://forums.macrumors.com/posts/29848413/react?reaction_id=8" rel="nofollow">Disagree</a>)</p>
+<p class="rm-manual"><a href="https://forums.macrumors.com/posts/29848501" rel="nofollow">velocityg4</a></p>
+<p class="rm-manual">9 weeks ago</p>
+<p class="rm-manual">Siri: Your blood alcohol is 0.12 percent and it’s 
+3AM. Are you sure you want to make that call right now? Perhaps you 
+should sleep it off.</p>
+<p class="rm-manual">Score: 35 Votes (<a href="https://forums.macrumors.com/posts/29848501/react?reaction_id=1" rel="nofollow">Like</a> | <a href="https://forums.macrumors.com/posts/29848501/react?reaction_id=8" rel="nofollow">Disagree</a>)</p>
+<p class="rm-manual"><a href="https://forums.macrumors.com/posts/29848368" rel="nofollow">dynAdZ</a></p>
+<p class="rm-manual">9 weeks ago</p>
+<p class="rm-manual">These features would be a massive game-changer that
+ would only widen the gap between any competitor in the wearables 
+market. Major benefit for diabetics etc.</p>
+<p class="rm-manual">And blood alcohol monitoring? How cool is this?</p>
+<p class="rm-manual">Score: 31 Votes (<a href="https://forums.macrumors.com/posts/29848368/react?reaction_id=1" rel="nofollow">Like</a> | <a href="https://forums.macrumors.com/posts/29848368/react?reaction_id=8" rel="nofollow">Disagree</a>)</p>
+<p class="rm-manual"><a href="https://forums.macrumors.com/posts/29848367" rel="nofollow">Wando64</a></p>
+<p class="rm-manual">9 weeks ago</p>
+<p class="rm-manual">I would love this, but I'll believe it when I see it.</p>
+<p class="rm-manual">Score: 30 Votes (<a href="https://forums.macrumors.com/posts/29848367/react?reaction_id=1" rel="nofollow">Like</a> | <a href="https://forums.macrumors.com/posts/29848367/react?reaction_id=8" rel="nofollow">Disagree</a>)</p>
+<p class="rm-manual"><a href="https://forums.macrumors.com/threads/apple-watch-likely-to-gain-blood-pressure-blood-glucose-and-blood-alcohol-monitoring.2294589/">Read All Comments</a></p>
+<h2 class="rm-manual">Top Stories</h2>
+<h3 class="rm-manual"><a href="https://www.macrumors.com/2021/07/05/2021-iphone-13-name-report/">2021 iPhone Rumored to Be Named 'iPhone 13' With Same 'Mini,' 'Pro,' and 'Pro Max' Variants As Last Year</a></h3>
+<p class="rm-manual">Monday July 5, 2021 2:03 am PDT by <a href="https://www.macrumors.com/author/sami-fathi/" rel="author">Sami Fathi</a></p>
+<p class="rm-manual">The upcoming 2021 iPhone will be named "iPhone 13" 
+with the naming scheme of "mini," "Pro," and "Pro Max" variants for the 
+entire lineup, according to the Economic Daily News. According to the 
+report, citing sources and "supply chain" checks, Apple plans to market 
+the upcoming iPhones as the "iPhone 13." Furthermore, the report says 
+that Apple will stick with the "mini," "Pro," and "Pro...</p>
+<p class="rm-manual"><a href="https://www.macrumors.com/2021/07/05/2021-iphone-13-name-report/">Read Full Article</a> • <a href="https://forums.macrumors.com/threads/2021-iphone-rumored-to-be-named-iphone-13-with-same-mini-pro-and-pro-max-variants-as-last-year.2303273/">127 comments</a></p>
+<h3 class="rm-manual"><a href="https://www.macrumors.com/2021/07/06/m2-macbook-air-to-arrive-in-2022/">M2 Chip Rumored to Arrive in 2022 With Redesigned MacBook Air</a></h3>
+<p class="rm-manual">Tuesday July 6, 2021 5:58 am PDT by <a href="https://www.macrumors.com/author/hartley-charlton/" rel="author">Hartley Charlton</a></p>
+<p class="rm-manual">Apple is planning to launch the "M2" chip with 
+redesigned MacBook Air models in the first half of 2022, according to 
+the leaker known as "Dylandkt." On Twitter, Dylandkt claimed that a new 
+MacBook Air model is "on track" to launch in the first half of 2022, 
+featuring an M2 chip and a more colorful design. They also claimed that 
+the "M1X" chip is being reserved for high-end "Pro" Macs, which...</p>
+<p class="rm-manual"><a href="https://www.macrumors.com/2021/07/06/m2-macbook-air-to-arrive-in-2022/">Read Full Article</a> • <a href="https://forums.macrumors.com/threads/m2-chip-rumored-to-arrive-in-2022-with-redesigned-macbook-air.2303408/">184 comments</a></p>
+<h3 class="rm-manual"><a href="https://www.macrumors.com/2021/07/04/iphone-13-larger-wireless-charging-coil/">Rumor: iPhone 13 to Feature Larger Wireless Charging Coils, Possibly for Reverse Wireless Charging</a></h3>
+<p class="rm-manual">Sunday July 4, 2021 3:04 am PDT by <a href="https://www.macrumors.com/author/sami-fathi/" rel="author">Sami Fathi</a></p>
+<p class="rm-manual">Apple plans to include a "slightly bigger" wireless
+ charging coil in this year's iPhone 13 lineup, which will not only 
+yield improved heat management and higher wattage, but could be paving 
+the way towards reverse wireless charging, according to a new rumor from
+ Max Weinbach (via EverythingApplePro). Image Credit: EverythingApplePro
+ According to the rumor, Apple plans to make the physical...</p>
+<p class="rm-manual"><a href="https://www.macrumors.com/2021/07/04/iphone-13-larger-wireless-charging-coil/">Read Full Article</a> • <a href="https://forums.macrumors.com/threads/rumor-iphone-13-to-feature-larger-wireless-charging-coils-possibly-for-reverse-wireless-charging.2303175/">143 comments</a></p>
+<h3 class="rm-manual"><a href="https://www.macrumors.com/2021/07/06/iphone-14-pro-motion-120hz-display/">All iPhone 14 Models May Feature 120Hz ProMotion Displays</a></h3>
+<p class="rm-manual">Tuesday July 6, 2021 6:41 am PDT by <a href="https://www.macrumors.com/author/sami-fathi/" rel="author">Sami Fathi</a></p>
+<p class="rm-manual">Apple could offer its ProMotion display technology,
+ which allows for a higher 120Hz refresh rate, across all models of the 
+2022 iPhone lineup after it's expected to debut the technology in the 
+iPhone for the first time later this year. It's been widely reported 
+that Apple plans to include a 120Hz refresh rate in this year's iPhone 
+13 lineup, but exclusive to only the high-end iPhone 13 Pro...</p>
+<p class="rm-manual"><a href="https://www.macrumors.com/2021/07/06/iphone-14-pro-motion-120hz-display/">Read Full Article</a> • <a href="https://forums.macrumors.com/threads/all-iphone-14-models-may-feature-120hz-promotion-displays.2303413/">111 comments</a></p>
+<h3 class="rm-manual"><a href="https://www.macrumors.com/2021/07/01/apple-macbook-pro-in-september/">DigiTimes: Apple to Announce Redesigned 14-inch and 16-inch MacBook Pro in September</a></h3>
+<p class="rm-manual">Thursday July 1, 2021 12:46 am PDT by <a href="https://www.macrumors.com/author/sami-fathi/" rel="author">Sami Fathi</a></p>
+<p class="rm-manual">After months of rumors and speculation, Apple plans
+ to announce its redesigned 14-inch and 16-inch MacBook Pro featuring 
+mini-LED displays, an all-new design, and a faster Apple silicon 
+processor in September of this year, according to a report from 
+DigiTimes. According to the paywalled report, which revealed that Apple 
+is planning a significant investment in bolstering mini-LED 
+production,...</p>
+<p class="rm-manual"><a href="https://www.macrumors.com/2021/07/01/apple-macbook-pro-in-september/">Read Full Article</a> • <a href="https://forums.macrumors.com/threads/digitimes-apple-to-announce-redesigned-14-inch-and-16-inch-macbook-pro-in-september.2302899/">189 comments</a></p>
+<h3 class="rm-manual"><a href="https://www.macrumors.com/2021/07/06/iphone-13-pro-max-camera-module-case/">Case Allegedly Designed for Upcoming iPhone 13 Pro Shows Significantly Larger Camera Module</a></h3>
+<p class="rm-manual">Tuesday July 6, 2021 1:21 am PDT by <a href="https://www.macrumors.com/author/sami-fathi/" rel="author">Sami Fathi</a></p>
+<p class="rm-manual">A new image shared by the Weibo account 
+"UnclePanPan," brought to light on Twitter by DuanRui, shows an iPhone 
+12 Pro in a case allegedly designed for the upcoming iPhone 13 Pro, 
+revealing the true extent of the camera modules size increase for the 
+upcoming high-end iPhone. Dummy models of the entire iPhone 13 lineup 
+were shared last week, showing repositioned camera modules for the 
+standard ...</p>
+<p class="rm-manual"><a href="https://www.macrumors.com/2021/07/06/iphone-13-pro-max-camera-module-case/">Read Full Article</a> • <a href="https://forums.macrumors.com/threads/case-allegedly-designed-for-upcoming-iphone-13-pro-shows-significantly-larger-camera-module.2303379/">127 comments</a></p>
+<h3 class="rm-manual"><a href="https://www.macrumors.com/2021/07/05/att-causing-more-ad-spending-on-android/">Apple's App Tracking Transparency Framework Causing Advertisers to Spend More Money Targeting Android Users</a></h3>
+<p class="rm-manual">Monday July 5, 2021 4:42 am PDT by <a href="https://www.macrumors.com/author/sami-fathi/" rel="author">Sami Fathi</a></p>
+<p class="rm-manual">Mobile advertisers are beginning to spend 
+significantly more money targeting Android users thanks to Apple's 
+implementation of a framework on iOS, severely impacting the amount of 
+data companies can collect about users on iPhone and iPad. As reported 
+by The Wall Street Journal, following the April roll-out of ATT, or the 
+App Tracking Transparency framework, which requires that all apps on...</p>
+<p class="rm-manual"><a href="https://www.macrumors.com/2021/07/05/att-causing-more-ad-spending-on-android/">Read Full Article</a> • <a href="https://forums.macrumors.com/threads/apples-app-tracking-transparency-framework-causing-advertisers-to-spend-more-money-targeting-android-users.2303286/">74 comments</a></p>
+<h3 class="rm-manual"><a href="https://www.macrumors.com/2021/07/03/top-stories-ios-15-macos-monterey-public-betas/">Top Stories: iOS 15 and macOS Monterey Public Betas, iPhone 13 and MacBook Pro Rumors, and More</a></h3>
+<p class="rm-manual">Saturday July 3, 2021 6:00 am PDT by <a href="https://www.macrumors.com/author/macrumors-staff/" rel="author">MacRumors Staff</a></p>
+<p class="rm-manual">Happy public beta week! This week saw the release 
+of a complete set of public betas for Apple's major upcoming operating 
+system updates, giving everyone the chance to check out all of the new 
+features and changes. Subscribe to the MacRumors YouTube channel for 
+more videos. We also saw a slew of rumors on everything from the iPhone 
+13 and the MacBook Pro to AirPods and the Apple Watch Series...</p>
+<p class="rm-manual"><a href="https://www.macrumors.com/2021/07/03/top-stories-ios-15-macos-monterey-public-betas/">Read Full Article</a> • <a href="https://forums.macrumors.com/threads/top-stories-ios-15-and-macos-monterey-public-betas-iphone-13-and-macbook-pro-rumors-and-more.2303106/">24 comments</a></p>
+<h3 class="rm-manual"><a href="https://www.macrumors.com/2021/07/05/apple-to-decentralize-silicon-valley-retain-talent/">Apple Looks Beyond Silicon Valley to Improve Recruitment and Retention</a></h3>
+<p class="rm-manual">Monday July 5, 2021 4:49 am PDT by <a href="https://www.macrumors.com/author/tim-hardwick/" rel="author">Tim Hardwick</a></p>
+<p class="rm-manual">Apple is "ramping up efforts to decentralize out of
+ Silicon Valley," following difficulties recruiting and retaining talent
+ at its Apple Park headquarters in California, according to Bloomberg 
+journalist Mark Gurman. In the second edition of his new Power On 
+newsletter for Bloomberg, Gurman suggests that Apple is prepared to 
+jettison its tradition of attracting technologists to Cupertino in...</p>
+<p class="rm-manual"><a href="https://www.macrumors.com/2021/07/05/apple-to-decentralize-silicon-valley-retain-talent/">Read Full Article</a> • <a href="https://forums.macrumors.com/threads/apple-looks-beyond-silicon-valley-to-improve-recruitment-and-retention.2303288/">202 comments</a></p>
+<h3 class="rm-manual"><a href="https://www.macrumors.com/2021/07/06/tim-cook-sun-valley-conference-2021/">Apple CEO Tim Cook Reportedly Attending Sun Valley Conference Known as 'Summer Camp for Billionaires'</a></h3>
+<p class="rm-manual">Tuesday July 6, 2021 6:30 am PDT by <a href="https://www.macrumors.com/author/joe-rossignol/" rel="author">Joe Rossignol</a></p>
+<p class="rm-manual">Apple CEO Tim Cook is attending the Sun Valley 
+Conference in Sun Valley, Idaho this week alongside many high-profile 
+guests, including Facebook CEO Mark Zuckerberg, according to NPR. 
+Described as a "summer camp for billionaires," the annual media 
+conference is hosted by private investment firm Allen &amp; Company and 
+allows media and tech moguls to negotiate deals in between leisure 
+activities such...</p>
+<p class="rm-manual"><a href="https://www.macrumors.com/2021/07/06/tim-cook-sun-valley-conference-2021/">Read Full Article</a> • <a href="https://forums.macrumors.com/threads/apple-ceo-tim-cook-reportedly-attending-sun-valley-conference-known-as-summer-camp-for-billionaires.2303410/">64 comments</a></p>
+<h2 class="rm-manual">Next Article</h2>
+<p class="rm-manual"><a href="https://www.macrumors.com/2021/07/07/nomad-leather-cover-magsafe/">Nomad Launches Leather Cover for Apple's MagSafe Charger</a></p>
+<h2 class="rm-manual">Guides</h2>
+<p class="rm-manual"><a href="https://www.macrumors.com/how-to/install-ios-15-public-beta/">How to Install the iOS 15</a></p>
+<p class="rm-manual">iOS 15 is in Public Beta. Here's how to install it.</p>
+<p class="rm-manual"><a href="https://www.macrumors.com/how-to/install-macos-monterey-public-beta/">How to Install macOS Monterey</a></p>
+<p class="rm-manual">macOS Monterey is now in public beta. Here's how to install it.</p>
+<p class="rm-manual"><a href="https://www.macrumors.com/guide/ios-14-6-features/">iOS 14.6 Features</a></p>
+<p class="rm-manual"> Out Now!</p>
+<p class="rm-manual">Apple Card Family, podcast subscriptions, and upcoming Apple Music support for Spatial Audio and Lossless.</p>
+<p class="rm-manual"><a href="https://www.macrumors.com/guide/airtags/">AirTags</a></p>
+<p class="rm-manual">Learn all about Apple's new location trackers.</p>
+<p class="rm-manual">• <a href="https://www.macrumors.com/guide/m2/">Apple M2 Chip</a> </p>
+<p class="rm-manual">• <a href="https://www.macrumors.com/guide/m1/">Apple Silicon M1 Guide</a> </p>
+<p class="rm-manual"><a href="https://www.macrumors.com/guide/">See more guides</a></p>
+<h2 class="rm-manual">Upcoming</h2>
+<p class="rm-manual"><a href="https://www.macrumors.com/roundup/ios-15/">iOS 15</a></p>
+<p class="rm-manual"> Fall 2021</p>
+<p class="rm-manual">New features for FaceTime calls, tools to reduce 
+distractions, a new notifications experience, added privacy features, 
+complete redesigns for Safari, Weather, and Maps, and more.</p>
+<p class="rm-manual"><a href="https://www.macrumors.com/roundup/macos-12/">macOS Monterey</a></p>
+<p class="rm-manual"> Fall 2021</p>
+<p class="rm-manual">Updates for Safari, FaceTime, and many other apps, 
+Universal Control to let a single mouse or trackpad control multiple 
+devices, new Shortcuts app, machine-learning Live Text detection and 
+Visual Lookup, and more.</p>
+<p class="rm-manual"><a href="https://www.macrumors.com/guide/14-inch-macbook-pro/">MacBook Pro</a></p>
+<p class="rm-manual"> Mid–Late 2021</p>
+<p class="rm-manual">Redesigned with flat edges, Apple silicon, more ports, improved display, no Touch Bar, and the return of MagSafe charging.</p>
+<p class="rm-manual"><a href="https://www.macrumors.com/guide/airpods-3/">AirPods 3</a></p>
+<p class="rm-manual"> 2nd Half of 2021</p>
+<p class="rm-manual">Rumored design changes include shorter stems like 
+current AirPods Pro, but without advanced features like active noise 
+cancellation.</p>
+<p class="rm-manual">• <a href="https://www.macrumors.com/guide/airpods-pro-2/">AirPods Pro 2</a> </p>
+<p class="rm-manual">• <a href="https://www.macrumors.com/roundup/iphone-13/">iPhone 13</a> </p>
+<p class="rm-manual">• <a href="https://www.macrumors.com/roundup/apple-glasses/">Apple Glasses</a> </p>
+<p class="rm-manual"><a href="https://www.macrumors.com/guide/upcoming-apple-products/">See full product calendar</a></p>
+<p class="rm-manual">MacRumors attracts a broad audience of both 
+consumers and professionals interested in the latest technologies and 
+products. We also boast an active community focused on purchasing 
+decisions and technical aspects of the iPhone, iPod, iPad, and Mac 
+platforms.</p>
+<p class="rm-manual"><a href="https://www.macrumors.com/contact.php">Advertise on MacRumors</a></p>
+<h2 class="rm-manual">Our Staff</h2>
+<p class="rm-manual"><a href="https://www.macrumors.com/author/arnold-kim/">Arnold Kim</a></p>
+<p class="rm-manual">Editorial Director</p>
+<p class="rm-manual"><a href="mailto:arn@normalkid.com">Email</a> <span>•</span> <a href="https://twitter.com/arnoldkim">Twitter</a> </p>
+<p class="rm-manual"><a href="https://www.macrumors.com/author/eric-slivka/">Eric Slivka</a></p>
+<p class="rm-manual">Editor in Chief</p>
+<p class="rm-manual"><a href="mailto:ericslivka@macrumors.com">Email</a> <span>•</span> <a href="https://twitter.com/eslivka">Twitter</a> </p>
+<p class="rm-manual"><a href="https://www.macrumors.com/author/juli-clover/">Juli Clover</a></p>
+<p class="rm-manual">Senior Editor</p>
+<p class="rm-manual"><a href="mailto:juli@macrumors.com">Email</a> <span>•</span> <a href="https://twitter.com/julipuli">Twitter</a> </p>
+<p class="rm-manual"><a href="https://www.macrumors.com/author/joe-rossignol/">Joe Rossignol</a></p>
+<p class="rm-manual">Editor</p>
+<p class="rm-manual"><a href="mailto:joe@macrumors.com">Email</a> <span>•</span> <a href="https://twitter.com/rsgnl">Twitter</a> </p>
+<p class="rm-manual"><a href="https://www.macrumors.com/author/mitchel-broussard/">Mitchel Broussard</a></p>
+<p class="rm-manual">Deals Editor</p>
+<p class="rm-manual"><a href="mailto:mitchel@macrumors.com">Email</a> <span>•</span> <a href="https://twitter.com/mbrsrd">Twitter</a></p>
+<p class="rm-manual"><a href="https://www.macrumors.com/author/tim-hardwick/">Tim Hardwick</a></p>
+<p class="rm-manual">Editor</p>
+<p class="rm-manual"><a href="mailto:tim@macrumors.com">Email</a> <span>•</span> <a href="https://twitter.com/waxeditorial">Twitter</a></p>
+<p class="rm-manual"><a href="https://www.macrumors.com/author/hartley-charlton/">Hartley Charlton</a></p>
+<p class="rm-manual">Editor</p>
+<p class="rm-manual"><a href="mailto:hartley@macrumors.com">Email</a> <span>•</span> <a href="https://twitter.com/hartleycharlton">Twitter</a></p>
+<p class="rm-manual"><a href="https://www.macrumors.com/author/marianne-schultz/">Marianne Schultz</a></p>
+<p class="rm-manual">Project Manager</p>
+<p class="rm-manual"><a href="mailto:marianne@macrumors.com">Email</a> <span>•</span> <a href="https://twitter.com/emschultz">Twitter</a></p>
+<p class="rm-manual"><a href="https://www.macrumors.com/author/dan-barbera/">Dan Barbera</a></p>
+<p class="rm-manual">Video Content Producer</p>
+<p class="rm-manual"><a href="mailto:dan@macrumors.com">Email</a> <span>•</span> <a href="https://twitter.com/danbarbera">Twitter</a></p>
+<p class="rm-manual"><a href="https://www.macrumors.com/author/ryan-barrieau/">Ryan Barrieau</a></p>
+<p class="rm-manual">Graphic Designer</p>
+<p class="rm-manual"><a href="mailto:ryan@macrumors.com">Email</a> <span>•</span><a href="https://twitter.com/graphicalryan">Twitter</a></p>
+<p class="rm-manual"><a href="https://www.macrumors.com/author/chris-jenkins/">Chris Jenkins</a></p>
+<p class="rm-manual">Contributing Writer</p>
+<p class="rm-manual"><a href="mailto:chris.j@macrumors.com">Email</a> <span>•</span> <a href="https://twitter.com/ic_apple">Twitter</a></p>
+<p class="rm-manual"><a href="https://www.macrumors.com/author/steve-moser/">Steve Moser</a></p>
+<p class="rm-manual">Contributing Writer</p>
+<p class="rm-manual"><a href="mailto:contact@stevemoser.org">Email</a> <span>•</span> <a href="https://twitter.com/SteveMoser">Twitter</a></p>
+<p class="rm-manual"><a href="https://www.macrumors.com/author/frank-mcshan/">Frank McShan</a></p>
+<p class="rm-manual">Contributing Writer</p>
+<p class="rm-manual"><a href="mailto:frank@macrumors.com">Email</a> <span>•</span> <a href="https://twitter.com/frankmcshan">Twitter</a></p>
+<p class="rm-manual"><a href="https://www.macrumors.com/author/sami-fathi/">Sami Fathi</a></p>
+<p class="rm-manual">Contributing Writer</p>
+<p class="rm-manual"><a href="mailto:sami@macrumors.com">Email</a> <span>•</span> <a href="https://twitter.com/SamiFathi_">Twitter</a></p>
+<h2 class="rm-manual">Related Links</h2>
+<p class="rm-manual"><a href="https://toucharcade.com/">Touch Arcade</a></p>
+<p class="rm-manual"><a href="https://toucharcade.com/2021/07/07/switcharcade-round-up-a-plague-tale-innocence-cloud-version-blitz-breaker-and-todays-other-new-releases-and-sales/">SwitchArcade Round-Up: ‘A Plague Tale: Innocence – Cloud Version’, ‘Blitz Breaker’, and Today’s Other New Releases and Sales</a></p>
+<p class="rm-manual"><a href="https://toucharcade.com/2021/07/07/among-us-vent-cleaning-update-download-patch-notes-ios-android-free-nintendo-switch-physical-release/">The
+ ‘Among Us’ Vent Cleaning Update Is Out Now on iOS, Android, Switch, and
+ PC Bringing in the Vent Cleaning Task, New Languages, and More</a></p>
+<p class="rm-manual"><a href="https://toucharcade.com/2021/07/07/tesla-force-iphone-ipad-beta-testing/">10tons is Looking for Beta Testers for the iOS Version of ‘Tesla Force’</a></p>
+<p class="rm-manual"><a href="https://toucharcade.com/2021/07/07/human-fall-flat-forest-level-dlc-free-download-ios-android-update/">New “Forest” Level Available Now in ‘Human: Fall Flat’ on Mobile</a></p>
+<p class="rm-manual"><a href="https://toucharcade.com/2021/07/06/new-titles-announced-for-apple-arcade-july-6th/">‘Ultimate
+ Rivals: The Court’ Launching on Apple Arcade this Week, ‘Super Stickman
+ Golf 3+’, ‘Super Leap Day’, and ‘Detonation Racing’ All Coming Soon</a></p>
+<p class="rm-manual"><a href="https://toucharcade.com/2021/07/06/embracelet-android-release-date/">Unique Coming of Age Adventure ‘Embracelet’ Heading to Android this Week</a></p>
+<p class="rm-manual"><a href="https://toucharcade.com/2021/07/06/switcharcade-round-up-doki-doki-literature-club-plus-review-ys-ix-and-todays-other-new-releases-plus-the-latest-sales/">SwitchArcade Round-Up: ‘Doki Doki Literature Club Plus’ Review, ‘Ys IX’ and Today’s Other New Releases, Plus the Latest Sales</a></p>
+<p class="rm-manual"><a href="https://toucharcade.com/2021/07/06/best-iphone-game-updates-hearthstone-marvel-future-fight-spire-blast-gangstar-vegas-and-more/">Best iPhone Game Updates: ‘Hearthstone’, ‘Marvel Future Fight’, ‘Spire Blast’, ‘Gangstar Vegas’, and More</a></p>
+<p class="rm-manual"><a href="file:///MacRumors">YouTube</a></p>
+<p class="rm-manual"><a href="file:///watch?v=-KAA1Z3L0JQ">Kensington StudioCaddy: Charge &amp; Dock All Your Apple Devices!</a></p>
+<p class="rm-manual"><a href="file:///watch?v=66fstK2D0l8">MacBook Pros Coming Sept, AirPods Pro 2, Redesigned Apple Watch &amp; More!</a></p>
+<p class="rm-manual"><a href="file:///watch?v=xKpCGjBPorI">Xbox Cloud Gaming on iOS &amp; iPadOS Hands On!</a></p>
+<p class="rm-manual"><a href="file:///watch?v=M9l6-wQ_9gQ">New MacBook Pros &amp; AirPods 3!</a></p>
+<p class="rm-manual"><a href="file:///watch?v=H7S9R21O-0U">Turn Any Speaker into AirPlay 2 Speaker (Belkin Soundform Connect)</a></p>
+<p class="rm-manual">Copyright © 2000-2021 MacRumors.com, LLC. </p>
+<p class="rm-manual"><a href="https://www.macrumors.com/privacydmca.html">Privacy / DMCA contact / Affiliate and FTC Disclosure</a></p>
+<p class="rm-manual"><a href="https://www.macrumors.com/accessibility/">Accessibility Statement</a></p>
+<p class="rm-manual">[ <a href="https://www.macrumors.com/mr-toggleFeatured.php">Featured On/Off</a> ] [ <a href="https://www.macrumors.com/mr-toggleExpand.php">Full Articles On/Off</a> ] [ <a href="https://www.macrumors.com/mr-toggleFluid.php?fluid=0">Fluid</a> | <a href="https://www.macrumors.com/mr-toggleFluid.php?fluid=2">Fluid HD</a> ] [ <a href="https://www.macrumors.com/mr-toggleDark.php?mode=0">Auto</a> | <a href="https://www.macrumors.com/mr-toggleDark.php?mode=2">Light</a> | <a href="https://www.macrumors.com/mr-toggleDark.php?mode=1">Dark</a> ]</p></article>
+</body></html>

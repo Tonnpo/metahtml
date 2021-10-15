@@ -1,0 +1,204 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"><a href="https://www.chronicle.com/blogs/headcount/"><span>Head Count</span></a> </p>
+<p class="rm-manual">Admissions and enrollment.</p>
+<ul class="rm-manual"> <li class="rm-manual">
+<a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.chronicle.com%2Fblogs%2Fheadcount%2Fbreakaway-group-seeks-retro-common-app&amp;text=Breakaway%20Group%20Seeks%20%27Retro%20Common%20App%27"> <span>Twitter</span> </a> </li> <li class="rm-manual">
+<a href="mailto:?body=Breakaway%20Group%20Seeks%20%27Retro%20Common%20App%27%0A%0Ahttps%3A%2F%2Fwww.chronicle.com%2Fblogs%2Fheadcount%2Fbreakaway-group-seeks-retro-common-app%0A%0AColleges%20in%20a%20new%20admissions-application%20consortium%20want%20an%20alternative%20to%20the%20Common%20Application%27s%20%22diluted%20brand.%22"> <span>Email</span> </a> </li> <li class="rm-manual"> <a href="#"><span>Show more sharing options</span></a> </li> </ul>
+<p class="rm-manual"> <span>Share</span> </p>
+<ul class="rm-manual"> <li class="rm-manual">
+<a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.chronicle.com%2Fblogs%2Fheadcount%2Fbreakaway-group-seeks-retro-common-app&amp;text=Breakaway%20Group%20Seeks%20%27Retro%20Common%20App%27"> <span>Twitter</span> </a> </li> <li class="rm-manual">
+<a href="mailto:?body=Breakaway%20Group%20Seeks%20%27Retro%20Common%20App%27%0A%0Ahttps%3A%2F%2Fwww.chronicle.com%2Fblogs%2Fheadcount%2Fbreakaway-group-seeks-retro-common-app%0A%0AColleges%20in%20a%20new%20admissions-application%20consortium%20want%20an%20alternative%20to%20the%20Common%20Application%27s%20%22diluted%20brand.%22"> <span>Email</span> </a> </li> <li class="rm-manual"> <a href="#"><span>Copy Link URL</span><span>Copied!</span></a> </li> <li class="rm-manual"> <a href=""><span>Print</span></a> </li> </ul>
+<h1 class="rm-manual"> Breakaway Group Seeks ‘Retro Common App’ </h1>
+<p class="rm-manual"> <span>By </span><a href="https://www.chronicle.com/author/eric-hoover"><span>Eric Hoover</span></a> </p>
+<p class="rm-manual"> November 2, 2014 </p>
+<p>When a bandwagon becomes crowded, passengers get antsy. “The more the
+ merrier” might sound good at first, but as popularity grows, the load 
+has a way of weighing down the wheels. Sooner or later, a new bandwagon 
+comes along.</p>
+<p>Perhaps that’s a useful way of thinking about the latest news from the college-admissions realm. As The Chronicle first <a href="http://chronicle.com/article/Elite-Colleges-Explore/149761/">reported on Friday,</a>
+ a group of highly selective colleges is exploring the possibility of 
+creating a shared application that students could use to apply to one or
+ more of the participating institutions. Those behind the venture seek 
+to build an alternative to the Common Application—only with a much 
+smaller membership, bound by different requirements, according to a 
+confidential May 12 <a href="http://chronicle.com/items/biz/pdf/Application%20System%20RFP%20draft%205-16-14.pdf">draft</a> of a request for proposals obtained by The Chronicle.</p>
+<p>The new online system, tentatively scheduled to make its debut in 2016, could change how many students apply to college.</p>
+<p><a href="http://chronicle.com/blogs/headcount/files/2014/11/Eligible-Institutions-Currently-Interested-in-the-Coalition-Application-Solution.pdf">Possible participants include</a>
+ Emory, Harvard, Princeton, Vanderbilt, and Yale Universities; Carleton,
+ Dartmouth, Pomona, Smith, and Williams Colleges; and the University of 
+Chicago. The “Coalition,” as the group refers to itself in the document,
+ also might include several public institutions, such as the 
+Universities of Illinois, Maryland, and North Carolina, and the College 
+of William &amp; Mary.</p>
+<p>The Coalition wants to use the new platform “to recast the nature of 
+using common forms to apply to college,” the request for proposals says.
+ The institutions involved “believe that a common umbrella for 
+membership, focused on academically talented students as well as 
+affordability for qualified applicants with need, could make it much 
+easier for students to understand, apply for, and … to receive 
+need-based financial aid.”</p>
+<p>In an interview with The Chronicle on Friday, Jeremiah Quinlan, dean 
+of undergraduate admission at Yale, described the group’s plans as far 
+from firm. To date, the consortium includes 32 private and public 
+colleges. Eventually, he speculated, the group could include 50 to 75 
+members, a fraction of the 548 colleges worldwide that use the Common 
+Application.</p>
+<p>Although the new consortium has yet to determine membership criteria 
+or how it might characterize itself, some standards have emerged, Mr. 
+Quinlan said. Participating private colleges must meet the full 
+financial need of the students they admit; public universities must have
+ six-year graduation rates of at least 70 percent.</p>
+<p>“We don’t want to create another Common Application,” Mr. Quinlan 
+said. “The desire is to give some sort of definition to the group. The 
+Common App does not have that.”</p>
+<p>At least not as much as it once did, some admissions officials 
+believe. As the Common Application’s membership has swelled, more than 
+doubling since 2004-5, the nonprofit group has wrestled with its 
+identity. Once a small confederation of small private colleges, the 
+association now includes large public institutions, like the 
+Universities of Connecticut and of Michigan.</p>
+<p>For years the Common Application was open only to those institutions 
+that conduct “holistic” reviews, in which admissions staffs look at more
+ than an applicant’s test scores and high-school grades. But in 
+September, the organization <a href="http://chronicle.com/blogs/headcount/common-app-changes-membership-requirements/39017">announced</a>
+ that it would remove that requirement, effective next year. The change 
+greatly expands the roster of potential members, since many colleges and
+ universities do not require additional materials such as essays or 
+short-answer responses.</p>
+<p>Although some admissions officials applauded the Common Application 
+for becoming less exclusive, others lamented it. One admissions dean who
+ supports the plan for a new application calls the Common Application 
+“kind of a diluted brand.” (The Common App’s interim chief executive, 
+Paul Mott, could not be reached for comment over the weekend.)</p>
+<p>Given the concerns about dilution, a new brand, used by a relatively 
+small number of colleges, might have been inevitable. In September, Jon 
+Boeckenstedt, associate vice president for enrollment management and 
+marketing at DePaul University, made a prescient comment. A likely 
+scenario, he told The Chronicle, was that “the most-selective 
+institutions would break away to form their own ‘retro Common App’ with 
+the panache of the original.”</p>
+<p>That’s a fair description of what’s happening, it seems. Although 
+discussions of the new system arose from frustrations with the Common 
+Application’s many <a href="http://chronicle.com/article/Common-App-Is-Experiencing/142473/">glitches during the 2013-14 admissions cycle,</a>
+ it’s clear that the admissions officials involved seek more than a 
+back-up application, a second egg basket to use in case the Common App 
+goes haywire again. Otherwise, the colleges might be content to join the
+ Universal College Application, used by 46 colleges.</p>
+<p>“We are exploring new technology,” said Mr. Quinlan, at Yale. “It’s 
+clear to us that there are some potential options out there that could 
+even change the nature of what applying to college looks like.”</p>
+<p>How? Although Mr. Quinlan emphasized that the details, like the 
+Coalition itself, are “still very much in development,” he offered a few
+ possibilities for the as-yet-unbuilt application. A “planning space” in
+ which applicants may store a portfolio of their work before they are 
+ready to start the application process. A feature that would allow 
+students to share their portfolios with college counselors, 
+community-based organizations, and mentors, who could comment on the 
+materials. A more-intuitive, user-friendly design interface. An April 20
+ memorandum obtained by The Chronicle asks: “Does technology exist to 
+increase flexibility for students to upload responses and creatively 
+answer applications (video, artistic, fonts, colors …)?”</p>
+<p>The consortium also intends to use the platform to make a statement 
+about affordability, according to Mr. Quinlan and other deans who have 
+participated in planning discussions. That is, the affordability of 
+participating colleges.</p>
+<p>That April memo, sent among members of the group, includes a list of 
+“potential messaging and talking points.” One: “Colleges and 
+universities committed to meeting students’ full demonstrated financial 
+need spend significant institutional resources in support of financial 
+aid. Such schools want to make sure applicants and their families know 
+about the availability of need-based aid and believe families and 
+students will have improved access to such information through the 
+online admissions application system being developed.”</p>
+<p>How the colleges might use the application to send a message about 
+college costs and the financial assistance they offer remains to be 
+seen. Details, such as how, exactly, the colleges might define “meets 
+full need” (with grants? with grants and loans?) have not been hammered 
+out, Mr. Quinlan said.</p>
+<p>Still, expect proponents of the new venture to frame their message 
+around the goal of promoting access, just as the Common Application cast
+ its recent decision to remove its holistic-review requirement as a 
+means of “reducing barriers to access.” But would that be the 
+consortium’s sole purpose?</p>
+<p>No, according to one admissions dean who plans to participate in it. 
+Although he envisions the platform as a means of reaching out to 
+high-achieving students who lack financial resources, he described a 
+second motive. “It’s also self-serving,” he said, “in the way that we’re
+ all self-serving.”</p>
+<p>The power of association is strong. A new application platform, 
+marketed in a particular way, just might help a small band of colleges 
+and universities distinguish themselves further—to stand apart from the 
+big crowd of institutions now gathered beneath the Common App’s banner.</p>
+<p>News of the consortium reminded DePaul’s Mr. Boeckenstedt of the <a href="http://newsoffice.mit.edu/1992/history-0903">Overlap Group.</a>
+ One line from the request for proposals stood out for him: “There is 
+also interest in establishing a new collaborative option for individual 
+higher-education institutions as they work in their own ways to enroll 
+the very best and most diverse freshman classes they can.”</p>
+<p>Mr. Boeckenstedt, who said he could only speculate on the new 
+application system, shared some thoughts in an email to The Chronicle: 
+“As I look at the uber-selectives, some of whom are clearly waist-deep 
+in the arms race to reach the ‘as close to zero as possible’ admit rate,
+ I wonder if this new system isn’t really designed to do the same thing 
+via admissions. That is, deciding among themselves what information to 
+share, such as the other schools applied to, rank order, or other 
+information that would allow them to use precious admissions slots only 
+on those students with the highest propensity to enroll at their 
+institutions. Alternatively, it could be a way to parcel out the 
+low-income students among themselves, in a way that limits their 
+exposure.”</p>
+<p>Marie Bigham, director of college counseling at the Greenhill School,
+ in Dallas, told The Chronicle that she had thought a lot about what a 
+new application option might mean for students. “I applaud anybody,” she
+ said, “who can look at our current college-admissions process, and who 
+wants to think about it in a more-creative way—who can say, How can we 
+do this better?”</p>
+<p>Still, Ms. Bigham was skeptical. “If you have a fairly small, narrow,
+ and, in terms of selectivity, elite group of schools say they’re going 
+to develop a whole new process,” she said, “how does that help kids who 
+already struggle to find their way through the process we have? I’m 
+worried that this is going to become another list of colleges that gets 
+fetishized, that it just becomes the Common App for the most elite, 
+selective, or rich.”</p>
+<p>In an email, Mr. Quinlan reiterated that the Coalition was a work in 
+progress. “I can tell you that we are focused on improving the student’s
+ information and experience through this process,” he wrote.</p>
+<p class="">The new bandwagon’s course has yet to be determined, but one thing is certain: Plenty of people are eager to see where it goes.</p>
+<p class="rm-manual"> <a href="https://www.chronicle.com/author/eric-hoover">Eric Hoover</a> </p>
+<p class="rm-manual"> Eric Hoover writes about the challenges of getting to, and through, college. Follow him on Twitter <a href="https://twitter.com/erichoov">@erichoov</a>, or email him, at <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/eric.hoover@chronicle.com">eric.hoover@chronicle.com</a>. </p></article>
+</body></html>

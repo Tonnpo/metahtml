@@ -1,0 +1,81 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual">U.S. Designates Islamic Revolutionary Guard Corps As Foreign Terrorist Organization</h1>
+<address class="rm-manual"> By <span><span>Julian Hayda</span> </span>
+</address>
+<p class="rm-manual">April 9, 2019, 6:12 p.m. CT </p>
+<figcaption class="rm-manual"><span>In this picture taken on Sunday, 
+Sept. 21, 2008, Iranian Revolutionary Guards members march during a 
+parade ceremony, marking the 28th anniversary of the onset of the 
+Iran-Iraq war (1980-1988), in front of the mausoleum of the late 
+revolutionary founder Ayatollah Ruhollah Khomeini, just outside Tehran, 
+Iran.</span> <span>Vahid Salemi / AP Photo</span></figcaption><figcaption class="rm-manual"><span>In
+ this picture taken on Sunday, Sept. 21, 2008, Iranian Revolutionary 
+Guards members march during a parade ceremony, marking the 28th 
+anniversary of the onset of the Iran-Iraq war (1980-1988), in front of 
+the mausoleum of the late revolutionary founder Ayatollah Ruhollah 
+Khomeini, just outside Tehran, Iran.</span> <span>Vahid Salemi / AP Photo</span></figcaption><h1 class="rm-manual"> U.S. Designates Islamic Revolutionary Guard Corps As Foreign Terrorist Organization </h1>
+<address class="rm-manual"> By <span><span>Julian Hayda</span> </span>
+</address>
+<p class="rm-manual">April 9, 2019, 6:12 p.m. CT </p>
+<p>Secretary of State Mike Pompeo announced, this week, that the Islamic
+ Revolutionary Guard Corps (IRGC) will be designated as a foreign 
+terrorist organization. The IRGC is a branch of Iran’s armed forces. 
+Pompeo’s announcement marks the first time that U.S. has given that 
+designation to part of another country’s government. Just prior to 
+Israel’s elections on April 9, Israeli Prime Minister Benjamin Netanyahu
+ tweeted his gratitude, writing in Hebrew, “Thank you, my dear friend, 
+President Donald Trump, for answering another one of my important 
+requests.” Worldview producer Julian Hayda went to Chicago's Lincoln 
+Park neighborhood this morning to ask people on the street whether 
+they'd heard of any terrorist attacks conducted by the Revolutionary 
+Guards.</p>
+<h2 class="rm-manual"> Related stories </h2>
+<ul class="rm-manual">
+<li class="rm-manual"><article class="rm-manual"><p class="rm-manual"> </p><h2 class="rm-manual"><a href="file:///stories/can-new-sanctions-strategy-for-venezuela-and-iran-be-effective/b66d92cc-0dd0-4cb1-90ab-d6ffffb67f1a"> Can New Sanctions Strategy for Venezuela and Iran Be Effective? </a></h2> <p class="rm-manual">Feb. 5, 2019</p> <span> read more </span> <p class="rm-manual"></p> </article></li>
+<li class="rm-manual"><article class="rm-manual"><p class="rm-manual"> </p><h2 class="rm-manual"><a href="file:///stories/us-doubles-down-on-post-deal-iran-strategy-amid-growing-tension-in-both-countries/7aa37f76-a601-4b6d-8714-9cb6a06cc00e"> U.S. Doubles Down On Post-Deal Iran Strategy Amid Growing Tension In Both Countries </a></h2> <p class="rm-manual">Feb. 14, 2019</p> <span> read more </span> <p class="rm-manual"></p> </article></li>
+<li class="rm-manual"><article class="rm-manual"><p class="rm-manual"> </p><h2 class="rm-manual"><a href="file:///stories/chicago-area-activists-engage-in-citizen-diplomacy-with-iran/66cd56dc-d48a-4dad-8ffe-150ff7e3c14b"> Chicago-Area Activists Engage In Citizen Diplomacy With Iran </a></h2> <p class="rm-manual">April 3, 2019</p> <span> read more </span> <p class="rm-manual"></p> </article></li>
+</ul>
+<h2 class="rm-manual"> Top stories </h2>
+<ul class="rm-manual">
+<li class="rm-manual"><article class="rm-manual"><p class="rm-manual"> </p><h2 class="rm-manual"><a href="file:///stories/advocates-blast-chicago-plan-to-sweep-up-drug-corner-teens-before-july-4/5ed35122-8b84-4319-a0bc-21b9e291cd2f"> Advocates Blast Chicago Plan To Sweep Up ‘Drug Corner’ Teens Before July 4 </a></h2> <span> read more </span> <p class="rm-manual"></p> </article></li>
+<li class="rm-manual"><article class="rm-manual"><p class="rm-manual"> </p><h2 class="rm-manual"><a href="file:///stories/whats-that-building-the-humboldt-park-boathouse/516fc49a-7e22-4983-8517-686fc7f95341"> What's That Building? The Humboldt Park Boathouse </a></h2> <span> read more </span> <p class="rm-manual"></p> </article></li>
+<li class="rm-manual"><article class="rm-manual"><p class="rm-manual"> </p><h2 class="rm-manual"><a href="file:///stories/eu-sets-new-list-of-approved-travel-partners-the-us-isnt-on-it/1764dfec-ab4b-4101-9668-e71a8c81f0b0"> EU Sets New List Of Approved Travel Partners. The U.S. Isn’t On It. </a></h2> <span> read more </span> <p class="rm-manual"></p> </article></li>
+<li class="rm-manual"><article class="rm-manual"><p class="rm-manual"> </p><h2 class="rm-manual"><a href="file:///stories/therapeutic-advice-from-an-infectious-disease-expert/077464bf-7f85-4d63-806c-7629aa33d90b"> LISTEN: Some Therapeutic Advice From An Infectious Disease Expert </a></h2> <span> read more </span> <p></p> </article></li>
+</ul></article>
+</body></html>

@@ -1,0 +1,195 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> MSNBC's Chris Hayes calls out Paul Gosar for Tweeting 'Wuhan virus,' suffers catastrophic blowback </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://noqreport.com/about/">About</a></li> <li class="rm-manual"><a href="https://noqreport.com/contact/">Advertise</a></li> <li class="rm-manual"><a href="https://noqreport.com/contact/">Careers</a></li> <li class="rm-manual"><a href="https://noqreport.com/contact/">Contact</a></li> </ul>
+<p class="rm-manual"> Tuesday, July 14, 2020</p>
+<p class="rm-manual"> No Result </p>
+<p class="rm-manual"> View All Result </p>
+<p class="rm-manual"> <a href="https://feedburner.google.com/fb/a/mailverify?uri=NoqReport&amp;loc=en_US"> NEWSLETTER </a> </p>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="https://noqreport.com/">Home</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://noqreport.com/category/news/">News</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/opinions/">Opinions</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/quotes/">Quotes</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://noqreport.com/category/us-news/">U.S. News</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://noqreport.com/category/us-news/economy/">Economy</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/us-news/crime/">Guns and Crime</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/us-news/military/">Military</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://noqreport.com/category/world-news/">World</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://noqreport.com/category/world-news/africa/">Africa</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/world-news/americas/">The Americas</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/world-news/asia/">Asia</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/world-news/eu/">EU</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/world-news/middle-east/">Middle East</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/world-news/pacific/">Pacific</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/world-news/terrorism/">Terrorism</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://noqreport.com/category/politics/">Politics</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://noqreport.com/category/politics/election-2020/">Election 2020</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/politics/candidate-spotlight/">Candidate Spotlight</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/politics/republicans/">Republicans</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/politics/democrats/">Democrats</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/politics/libertarians/">Libertarians</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/politics/foreign-affairs/">Foreign Affairs</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/politics/legislation/">Legislation</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/politics/judiciary/">Judiciary</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/politics/conservatism/">Conservatism</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/politics/federalism/">Federalism</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/politics/state-and-local/">State and Local</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://noqreport.com/category/culture/">Culture</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://noqreport.com/category/culture/religion/">Religion</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/culture/biblical-messages/">Biblical Messages</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/culture/education/">Education</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/culture/entertainment/">Entertainment and Sports</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/culture/news-media/">News Media</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/culture/immigration/">Immigration</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/culture/philanthopy/">Philanthopy</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://noqreport.com/category/tech/">Tech</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://noqreport.com/category/tech/big-tech/">Big Tech</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/tech/cybersecurity/">Cybersecurity</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/tech/healthcare/">Healthcare</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/tech/science/">Science</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/tech/automotive/">Automotive</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/tech/gadgets/">Gadgets</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://noqreport.com/category/offbeat/">Offbeat</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://noqreport.com/category/offbeat/conspiracy-theory/">Conspiracy Theory</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/offbeat/fiction/">Fiction</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/offbeat/reviews/">Reviews</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/offbeat/satire/">Satire</a></li> </ul> </li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="https://noqreport.com/">Home</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://noqreport.com/category/news/">News</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/opinions/">Opinions</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/quotes/">Quotes</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://noqreport.com/category/us-news/">U.S. News</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://noqreport.com/category/us-news/economy/">Economy</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/us-news/crime/">Guns and Crime</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/us-news/military/">Military</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://noqreport.com/category/world-news/">World</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://noqreport.com/category/world-news/africa/">Africa</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/world-news/americas/">The Americas</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/world-news/asia/">Asia</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/world-news/eu/">EU</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/world-news/middle-east/">Middle East</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/world-news/pacific/">Pacific</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/world-news/terrorism/">Terrorism</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://noqreport.com/category/politics/">Politics</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://noqreport.com/category/politics/election-2020/">Election 2020</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/politics/candidate-spotlight/">Candidate Spotlight</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/politics/republicans/">Republicans</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/politics/democrats/">Democrats</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/politics/libertarians/">Libertarians</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/politics/foreign-affairs/">Foreign Affairs</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/politics/legislation/">Legislation</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/politics/judiciary/">Judiciary</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/politics/conservatism/">Conservatism</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/politics/federalism/">Federalism</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/politics/state-and-local/">State and Local</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://noqreport.com/category/culture/">Culture</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://noqreport.com/category/culture/religion/">Religion</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/culture/biblical-messages/">Biblical Messages</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/culture/education/">Education</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/culture/entertainment/">Entertainment and Sports</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/culture/news-media/">News Media</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/culture/immigration/">Immigration</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/culture/philanthopy/">Philanthopy</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://noqreport.com/category/tech/">Tech</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://noqreport.com/category/tech/big-tech/">Big Tech</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/tech/cybersecurity/">Cybersecurity</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/tech/healthcare/">Healthcare</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/tech/science/">Science</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/tech/automotive/">Automotive</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/tech/gadgets/">Gadgets</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://noqreport.com/category/offbeat/">Offbeat</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://noqreport.com/category/offbeat/conspiracy-theory/">Conspiracy Theory</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/offbeat/fiction/">Fiction</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/offbeat/reviews/">Reviews</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/offbeat/satire/">Satire</a></li> </ul> </li> </ul>
+<p class="rm-manual"> No Result </p>
+<p class="rm-manual"> View All Result </p>
+<p class="rm-manual"> No Result </p>
+<p class="rm-manual"> View All Result </p>
+<p class="rm-manual"><span> <a href="https://noqreport.com/">Home</a> </span><span> <a href="https://noqreport.com/category/culture/">Culture</a> </span><span> <a href="https://noqreport.com/category/culture/news-media/">News Media</a> </span></p>
+<h1 class="rm-manual">MSNBC’s Chris Hayes calls out Paul Gosar for Tweeting ‘Wuhan virus,’ suffers catastrophic blowback</h1>
+<h2 class="rm-manual">The social justice media makes everything up as they go.</h2>
+<p class="rm-manual"> <span>by</span> <a href="https://noqreport.com/author/lorie-wimble/">Lorie Wimble</a> </p>
+<p class="rm-manual"> <a href="https://noqreport.com/2020/03/09/msnbcs-chris-hayes-calls-out-paul-gosar-for-tweeting-wuhan-virus-suffers-catastrophic-blowback/">March 9, 2020</a> </p>
+<p class="rm-manual"> <span><span>in</span> <a href="https://noqreport.com/category/tech/healthcare/" rel="category tag">Healthcare</a>, <a href="https://noqreport.com/category/culture/news-media/" rel="category tag">News Media</a>, <a href="https://noqreport.com/category/opinions/" rel="category tag">Opinions</a> </span> </p>
+<p>Poor Chris Hayes. The MSNBC host can’t seem to catch a break, make a 
+lucid point, or do anything that doesn’t further embarrass himself. It’s
+ shameful enough to be working for the least relevant news channel in 
+America, but he can’t seem to avoid sticking his Twitter foot in his 
+mobile mouth.</p>
+<p>The latest episode of “How to Trigger a Social Justice Journalist” 
+came from Representative Paul Gosar. The Congressman attended CPAC and 
+came in contact with someone who is infected, so he has chosen to 
+self-quarantine for a short time until he’s sure he doesn’t carry the 
+disease. It wasn’t the fact that he may have contracted the disease or 
+that he’s self-quarantined that triggered Hayes. It was the name he used
+ for the coronavirus that tickled Hayes’ higher sensibilities.</p>
+<p>Just astoundingly gross to call it the Wuhan Virus. <a href="https://t.co/cMrsA59xTH">https://t.co/cMrsA59xTH</a></p>
+<p>— Chris Hayes (@chrislhayes) <a href="https://twitter.com/chrislhayes/status/1236829231633620999?ref_src=twsrc%5Etfw">March 9, 2020</a></p>
+<p>The World Health Organization gave this coronavirus the name 
+“COVID-19” because they, as fellow modern day social justice warriors, 
+did not want it associated with China. They are, after all, <a href="https://noqreport.com/2020/02/23/we-must-not-trust-the-pro-china-who-for-coronavirus-information/">beholden to China</a>
+ in many ways, and after their efforts to help cover up the disease 
+failed, they turned to language-control as their preferred method of 
+saving face for Xi Jinping.</p>
+<p>On cue, the American progressive mainstream media embraced the name, 
+but more importantly they embraced the odd naming protocol and echoed 
+the unhinged notion that associating the disease with China is somehow 
+racist. As Jack Posobiec pointed out, it has always been a common 
+practice to name diseases after their place of original.</p>
+<p>West Nile Virus</p>
+<p>Zika Virus</p>
+<p>Ebola Virus</p>
+<p>German Measels</p>
+<p>Spanish Flu</p>
+<p>Marburg Virus</p>
+<p>Rocky Mountain Spotted Fever</p>
+<p>Norovirus</p>
+<p>Stockholm Syndrome</p>
+<p>Lyme Disease</p>
+<p>Wuhan Virus</p>
+<p>All named after places</p>
+<p>— Jack Posobiec (@JackPosobiec) <a href="https://twitter.com/JackPosobiec/status/1236842501534822400?ref_src=twsrc%5Etfw">March 9, 2020</a></p>
+<p>Responses to Hayes on Twitter were mostly positive, as is commonly 
+the case when a social justice journalist attempts virtue signaling to 
+lambaste a Republican, but there were a handful of powerful messages 
+directed at Hayes that let him know many are not impressed by his 
+progressive sensibilities.</p>
+<p>Is it, though? Ebola was named for a river in the Congo. Zika, for a forest in Uganda. Lyme disease for Lyme, Connecticut. <a href="https://t.co/yTlURWxr3l">https://t.co/yTlURWxr3l</a></p>
+<p>— Angela Morabito (@AngelaLMorabito) <a href="https://twitter.com/AngelaLMorabito/status/1236835085460148224?ref_src=twsrc%5Etfw">March 9, 2020</a></p>
+<p>It's astounding that MSNBC calls itself a news network.</p>
+<p>— Mark Dice (@MarkDice) <a href="https://twitter.com/MarkDice/status/1236840508988612608?ref_src=twsrc%5Etfw">March 9, 2020</a></p>
+<p>Virus originated in Wuhan. Calm down. Not everything needs to be a social justice crisis <a href="https://t.co/5gPpBkRFfj">https://t.co/5gPpBkRFfj</a></p>
+<p>— Jon Levine (@LevineJonathan) <a href="https://twitter.com/LevineJonathan/status/1236841056790097920?ref_src=twsrc%5Etfw">March 9, 2020</a></p>
+<p>Is it also astoundingly gross when Chinese in Asia call it the Wuhan Virus? <a href="https://t.co/oTsTl4ZFpN">pic.twitter.com/oTsTl4ZFpN</a></p>
+<p>— Ian Miles Cheong (@stillgray) <a href="https://twitter.com/stillgray/status/1236835671181946881?ref_src=twsrc%5Etfw">March 9, 2020</a></p>
+<p>MSNBC's Chris Hayes rushes in to defend communist China, which:</p>
+<p>-Lied about the virus</p>
+<p>-Silenced whistleblowers</p>
+<p>-Stopped the WHO from entering for weeks; still has not let CDC in</p>
+<p>-Forcing Uyghurs to work in factories right now (same people they have locked in concentration camps) <a href="https://t.co/pf4NmscWzb">https://t.co/pf4NmscWzb</a></p>
+<p>— Ryan Saavedra (@RealSaavedra) <a href="https://twitter.com/RealSaavedra/status/1236843262964457472?ref_src=twsrc%5Etfw">March 9, 2020</a></p>
+<p>Is something wrong with you “reporters?” No, I’m serious. You’re so 
+soft &amp; fragile today you can’t use the name of the area where the 
+virus is from? Let me guess…. you think it’s “racist” too. Though Wuhan 
+is not a race. ?‍♀️</p>
+<p>— SeldenGADawgs (@SeldenGADawgs) <a href="https://twitter.com/SeldenGADawgs/status/1236836894572511234?ref_src=twsrc%5Etfw">March 9, 2020</a></p>
+<p>The Chinese Gov’t willfully buried news of an outbreak of a virus 
+that came from either 1) its illegal trade of animal parts or 2) a 
+bioweapons lab accident.</p>
+<p>It has since killed thousands of innocents and caused global economic calamity.</p>
+<p>Your outrage, per usual, is misplaced. <a href="https://t.co/dUNy7mY8pR">https://t.co/dUNy7mY8pR</a></p>
+<p>— Bryan Dean Wright (@BryanDeanWright) <a href="https://twitter.com/BryanDeanWright/status/1236841760023703552?ref_src=twsrc%5Etfw">March 9, 2020</a></p>
+<p>Ok Chris. <a href="https://t.co/DWw4lA7LbJ">https://t.co/DWw4lA7LbJ</a> <a href="https://t.co/MkfX2M64qW">https://t.co/MkfX2M64qW</a></p>
+<p>— Mike Cernovich (@Cernovich) <a href="https://twitter.com/Cernovich/status/1236843180261126145?ref_src=twsrc%5Etfw">March 9, 2020</a></p>
+<p>No, it isn't "astoundingly gross to call it the Wuhan Virus." </p>
+<p>Please explain why you think it's "astoundingly gross." <a href="https://t.co/0e1Bd4zN2l">https://t.co/0e1Bd4zN2l</a></p>
+<p>— Ian Miles Cheong (@stillgray) <a href="https://twitter.com/stillgray/status/1236835819815464960?ref_src=twsrc%5Etfw">March 9, 2020</a></p>
+<p>The problem isn’t with Hayes’ response. The problem is he has been 
+made to feel like he needs to express outrage over everything that 
+doesn’t match the Democrats’ rhetoric. This isn’t only on the MSNBC 
+host. He’s doing what he believes is his job, and that belief is 
+predicated on reinforcement from his fans, colleagues, and bosses. 
+Anytime a progressive journalist in the recent past has said anything 
+positive about a Republican, they’ve been destroyed for it. Any time 
+they attack Republicans, especially President Trump, they get rewarded 
+for their “Resistance.” I’m not making excuses for the so-called 
+journalist, but it’s understandable that he would override his 
+intellect, common sense, and any remnants of journalistic integrity he 
+has left.</p>
+<p>The left is determined to make any reaction to the coronavirus from 
+Republicans seem like racism, complacency, or a combination of the two. 
+This is why they were universally attacking the President for his travel
+ ban, then less than three weeks later universally condemning him for 
+not doing enough to stop it. Whatever the President says, they instantly
+ and invariably take the opposite stance regardless of facts or past 
+perspectives.</p>
+<p>It takes a truly mediocre person like Chris Hayes to come up with 
+such vile rhetoric. A man may be infected by the coronavirus and Hayes 
+was outraged because he didn’t use the manufactured social justice 
+warrior name for it. Mainstream media is a punchline.</p>
+<h3 class="rm-manual">American Conservative Movement</h3>
+<h5 class="rm-manual">Join fellow patriots as we form a grassroots 
+movement to advance the cause of conservatism. We have two priorities 
+until election day: Stopping Democrats and supporting strong 
+conservative candidates. We currently have 7500+ patriots with us in a 
+very short time. If you are interested, please join us to receive 
+updates.</h5>
+<section class="rm-manual"> <span> First Name </span> <span> Last Name </span> <span> Email Address </span> <span> Phone Number </span> <span> Comments </span> </section><p class="rm-manual"><a href="https://mixi.media/" rel="nofollow">Mixi.Media News</a></p>
+<p class="rm-manual"><span>Tags:</span> <a href="https://noqreport.com/tag/chris-hayes/" rel="tag">Chris Hayes</a><a href="https://noqreport.com/tag/coronavirus/" rel="tag">Coronavirus</a><a href="https://noqreport.com/tag/covid-19/" rel="tag">Covid-19</a><a href="https://noqreport.com/tag/featured/" rel="tag">Featured</a><a href="https://noqreport.com/tag/mainstream-media/" rel="tag">Mainstream Media</a><a href="https://noqreport.com/tag/media/" rel="tag">Media</a><a href="https://noqreport.com/tag/msnbc/" rel="tag">MSNBC</a><a href="https://noqreport.com/tag/paul-gosar/" rel="tag">Paul Gosar</a><a href="https://noqreport.com/tag/top-story/" rel="tag">Top Story</a></p>
+<h3 class="rm-manual"> <a href="https://noqreport.com/author/lorie-wimble/"> Lorie Wimble </a> </h3>
+<p class="rm-manual"> Former liberal who recently realized I've been a 
+federalist the whole time. GOP fooled me into hating what I thought was 
+conservatism. Now with a new sheriff in the White House I see the light.
+ </p>
+<h3 class="rm-manual">Dear Readers...</h3>
+<h3 class="rm-manual">Our Podcast...</h3>
+<h3 class="rm-manual"><span>Mixi Media</span></h3>
+<p class="rm-manual"><a href="https://mixi.media/" rel="nofollow">Mixi.Media News</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://noqreport.com/about/">About</a></li> <li class="rm-manual"><a href="https://noqreport.com/contact/">Advertise</a></li> <li class="rm-manual"><a href="https://noqreport.com/contact/">Careers</a></li> <li class="rm-manual"><a href="https://noqreport.com/contact/">Contact</a></li> </ul>
+<p class="rm-manual"> © 2020 NOQ Report </p>
+<p class="rm-manual"> No Result </p>
+<p class="rm-manual"> View All Result </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://noqreport.com/">Home</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/politics/">Politics</a></li> <li class="rm-manual"><a href="https://noqreport.com/category/tech/science/">Science</a></li> </ul>
+<p class="rm-manual">© 2020 NOQ Report</p></article>
+</body></html>

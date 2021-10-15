@@ -1,0 +1,93 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1>Influenza (Flu)</h1>
+<p class="rm-manual"> <a href="#collapse_244555ee3989708451"> Minus </a> </p>
+<p class="rm-manual">Related Pages</p>
+<p class="rm-manual"> <span>alert icon</span> </p>
+<p class="rm-manual"> <a href="https://www.cdc.gov/coronavirus/2019-nCoV/index.html"> <span>Find information on coronavirus disease 2019 (COVID-19).</span> </a> </p>
+<p class="rm-manual"> <a href="file:///flu/prevent/index.html#prevent-video"> </a></p><p class="rm-manual"><a href="file:///flu/prevent/index.html#prevent-video">Join the Fight Against Flu! Everyone 6 months and older needs a flu vaccine each year.</a></p><a href="file:///flu/prevent/index.html#prevent-video"> </a> <a href="file:///flu/prevent/index.html"> <p class="rm-manual">Flu vaccination has been shown to prevent flu illnesses, doctors' visits and hospitalizations and can be life-saving in children</p> </a> <a href="file:///flu/about/burden/preliminary-in-season-estimates.htm"> <p class="rm-manual">2018-2019 U.S. Flu Season: Preliminary Burden Estimates</p> </a> <a href="file:///flu/weekly/fluviewinteractive.htm"> <p class="rm-manual">FluView Interactive: Surveillance Data the Way You Want It!</p> </a> <a href="file:///flu/weekly/flusight/index.html"> <p class="rm-manual">Can we predict flu? Learn about CDC's efforts to predict flu activity and find the latest flu forecasts each week</p> </a> <p class="rm-manual"></p>
+<h4 class="">Influenza Updates:</h4>
+<ul> <li>Laboratory-confirmed <a href="https://www.cdc.gov/flu/weekly/index.htm">flu activity</a> is low at this time.</li> <li> A <a href="https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/index.html">COVID-19 pandemic</a> is ongoing.</li> </ul>
+<h4>CDC Recommends:</h4>
+<ul> <li>
+<a href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html">See CDC guidance</a> on how to protect yourself &amp; others from COVID-19.</li> </ul>
+<p><a href="file:///flu/weekly/index.htm">Flu Report</a></p>
+<p><a href="file:///flu/prevent/index.html">Prevent Flu</a></p>
+<p>Everyone 6 months &amp; older should receive a yearly flu vaccine. </p>
+<p><a href="file:///flu/prevent/index.html">Prevention</a></p>
+<p><a href="file:///flu/symptoms/index.html">Symptoms &amp; Diagnosis</a></p>
+<p>Flu can cause mild to severe illness. Learn the symptoms of flu.</p>
+<p><a href="file:///flu/symptoms/index.html">Symptoms</a></p>
+<p><a href="file:///flu/treatment/index.html">Treatment</a></p>
+<p>Prescription medications called antiviral drugs can be used to treat flu.</p>
+<p><a href="file:///flu/treatment/index.html">Treatment</a></p>
+<p><a href="file:///flu/weekly/fluactivitysurv.htm">Flu Activity &amp; Surveillance</a></p>
+<p>Laboratory confirmed flu activity as reported by clinical laboratories remains low. </p>
+<p><a href="file:///flu/weekly/index.htm">Activity</a></p>
+<p><a href="file:///flu/about/index.html"></a></p><p><a href="file:///flu/about/index.html"><span>book icon</span></a></p><a href="file:///flu/about/index.html">
+<p>About Flu</p>
+<p>Learn about flu season and get answers to questions.</p> </a><a href="file:///flu/season/index.html"><p><span>chart icon</span></p>
+<p>Flu Season</p>
+<p>Find information about current and past flu seasons.</p> </a><a href="file:///flu/highrisk/index.htm"><p><span>people icon</span></p>
+<p>People at High Risk</p>
+<p>Understand who is at high risk from flu.</p> </a><p></p>
+<p><a href="file:///flu/resource-center/index.htm"></a></p><p><a href="file:///flu/resource-center/index.htm"><span>people icon</span></a></p><a href="file:///flu/resource-center/index.htm">
+<p>Communication Resource Center</p>
+<p>Find resources to promote flu prevention.</p> </a><a href="file:///flu/professionals/index.htm"><p><span>medical icon</span></p>
+<p>Health Professionals</p>
+<p>Learn what CDC recommends this season.</p> </a><a href="file:///flu/spotlights/index.htm"><p><span>alert icon</span></p>
+<p>Flu News &amp; Spotlights</p>
+<p>Read about CDC's work with flu.</p> </a><p></p>
+<p>Flu Vaccine Finder</p>
+<p> Everyone six months of age or older needs a flu vaccine. </p>
+<h5>Find the flu shot near you.</h5>
+<p>Need to fill a prescription for flu antivirals?</p>
+<p><a href="https://www.medfinder.org/"><span>external icon</span>Find Flu Medication</a></p>
+<p>Other Types of Influenza</p>
+<ul> <li><a href="file:///flu/pandemic-resources/index.htm"> Pandemic</a></li> <li><a href="file:///flu/avianflu/index.htm"> Avian</a></li> <li><a href="file:///flu/swineflu/index.htm">Swine/Variant</a></li> </ul>
+<ul> <li><a href="file:///flu/other/index.html"> Flu in Animals</a></li> <li><a href="file:///flu/other/canine-flu/index.html"> Canine Flu</a></li> <li><a href="file:///flu/other/animal-flu.html"> Animal to Human</a></li> </ul>
+<p class="rm-manual">Stay Connected with Flu</p>
+<p class="rm-manual"> <a href="https://www.facebook.com/CDC"><span>fb icon</span></a> <a href="https://twitter.com/CDCFlu"><span>twitter icon</span></a> <a href="https://tools.cdc.gov/medialibrary/index.aspx#/results/language/english/page/1/sort/desc/group/0/query/influenza"><span>syndication icon</span></a> <a href="https://www.youtube.com/playlist?list=PL0E50E20C63FC98D0&amp;feature=plcp"><span>youtube icon</span></a> <a href="https://tools.cdc.gov/campaignproxyservice/subscriptions.aspx?topic_id=USCDC_7_3"><span>email icon</span></a> </p>
+<p class="rm-manual">What's New</p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.cdc.gov/flu/weekly/index.htm">Weekly U.S. Influenza Surveillance Report</a> <span>Friday, June 12, 2020</span> </li> <li class="rm-manual"> <a href="file:///flu/spotlights/2019-2020/study-flu-complications.html">New Study Expands Understanding of Influenza-associated Complications</a> <span>Friday, March 20, 2020</span> </li> <li class="rm-manual"> <a href="file:///flu/spotlights/2019-2020/interim-flu-vaccine-effectiveness.htm">Interim
+ Flu Vaccine Effectiveness Estimates for the 2019-20 Flu Season Show Flu
+ Vaccines Providing Substantial Protection, Especially in Children</a> <span>Thursday, February 20, 2020</span> </li> <li class="rm-manual"> <a href="file:///flu/spotlights/2019-2020/portable-testing-kit.htm">CDCâ€™s portable flu testing kit allows for faster, on-site detection of viruses that could cause the next pandemic</a> <span>Thursday, February 6, 2020</span> </li> <li class="rm-manual"> <a href="file:///flu/spotlights/2019-2020/vaccine-stronger-immune.htm">Study confirms that some flu vaccines cause a stronger immune response among older adults</a> <span>Thursday, December 12, 2019</span> </li> </ul>
+<p class="rm-manual"><a href="file:///flu/whatsnew.htm">More</a></p>
+<p class="rm-manual"> Page last reviewed: <span>June 12, 2020</span> </p>
+<p class="rm-manual">Content source: <a href="https://www.cdc.gov/">Centers for Disease Control and Prevention</a>, <a href="https://www.cdc.gov/ncird/index.html">National Center for Immunization and Respiratory Diseases (NCIRD)</a> </p></article>
+</body></html>

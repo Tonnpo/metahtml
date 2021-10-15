@@ -1,0 +1,135 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">Utah homeless up slightly from 2016, but down since 2010 </p>
+<p class="rm-manual"><a href="file:///support">SUBSCRIBE</a><a href="file:///support">SUBSCRIBE</a></p>
+<h1 class="rm-manual">Utah homeless up slightly from 2016, but down since 2010</h1>
+<p class="rm-manual">Francisco Kjolseth | The Salt Lake Tribune Evidence
+ of homelessness in downtown Salt Lake City is clear. The state is 
+releasing new year-to-year data that indicates an increase in 
+homelessness, as much as 17 percent among families. This comes as the 
+Legislature and other political leaders are making serious attempts to 
+address the issue and in the recent lawmaking session, approved $9.25 
+million to begin developing a new network of smaller shelters and 
+coordinated services.</p>
+<p class="rm-manual">By The Associated Press</p>
+<p class="rm-manual"><span> | Dec. 6, 2017, 8:56 p.m.</span></p>
+<p class="rm-manual"><span> | Updated: 10:16 p.m.</span></p>
+<p>Salt Lake City • Federal housing officials say Utah's homeless 
+population increased slightly last year but the number of veterans and 
+families with children experiencing homelessness continues a seven-year 
+decline.</p>
+<p>The Department of Housing and Urban Development announced the results
+ Wednesday of its annual count of the homeless on a single night last 
+January.</p>
+<p>It says more than 2,800 homeless were counted in Utah communities. 
+That's an increase of 1.6 percent from 2016, but about a 13 percent 
+decrease since 2010.</p>
+<p>Families with children experiencing homelessness dropped about 1 percent from last year and more than 28 percent since 2010.</p>
+<p>The 220 U.S. veterans who were homeless in Utah was about a third fewer than January 2016 — down 36 percent from 2010.</p>
+<p>About 2,500 homeless persons were counted in emergency shelters or 
+transitional housing on the January night while 278 were unsheltered.</p>
+<p class="rm-manual"><span>By The Associated Press</span></p>
+<p class="rm-manual"><a href="file:///donate">Donate to the newsroom now.</a> The Salt Lake Tribune, Inc. is a 501(c)(3) public charity and contributions are tax deductible</p>
+<p class="rm-manual"><a href="file:///news/2017/12/06/utah-homeless-up-slightly-from-2016-but-down-since-2010/comments/#twt-comments"><span><span>Comments: (</span><span>0</span>)</span></a></p>
+<p class="rm-manual"><a href="#"></a></p><h2 class="rm-manual"><a href="#">RELATED STORIES</a></h2><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///"></a></p><h2 class="rm-manual"><a href="file:///">Politics</a></h2><a href="file:///">
+<h3 class="rm-manual">UTA says its ridership is down because homeless riders were swept up in Operation Rio Grande</h3></a><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///"></a></p><h2 class="rm-manual"><a href="file:///">Politics</a></h2><a href="file:///">
+<h3 class="rm-manual">After millions spent on homelessness, Utah lawmakers have a question: ‘Did we get what we paid for?’</h3></a><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///"></a></p><h2 class="rm-manual"><a href="file:///">Health</a></h2><a href="file:///">
+<h3 class="rm-manual">Utah’s hepatitis A outbreak among the homeless is one of three big flare-ups around the country</h3></a><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///"></a></p><h2 class="rm-manual"><a href="file:///">Politics</a></h2><a href="file:///">
+<h3 class="rm-manual">Operation Rio Grande, the campaign focused on homelessness in Utah, will now try to find jobs for those without homes</h3></a><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///"></a></p><h2 class="rm-manual"><a href="file:///">Politics</a></h2><a href="file:///">
+<h3 class="rm-manual">Homeless shelter stays are up — slightly — just not as high as the state said last week</h3></a><p class="rm-manual"></p>
+<p class="rm-manual"><a href="#"></a></p><h2 class="rm-manual"><a href="#">THE LATEST</a></h2><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///sports/2021/03/01/welcome-back-optimism/"></a></p><h3 class="rm-manual"><a href="file:///sports/2021/03/01/welcome-back-optimism/">Welcome back: Optimism abounds as MLB’s spring includes fans</a></h3><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///opinion/commentary/2021/03/01/talia-boyd-who-is-really/"></a></p><h3 class="rm-manual"><a href="file:///opinion/commentary/2021/03/01/talia-boyd-who-is-really/">Talia Boyd: Who is really listening to uranium-impacted communities?</a></h3><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///sports/byu-cougars/2021/03/01/byu-unveil-new-look/"></a></p><h3 class="rm-manual"><a href="file:///sports/byu-cougars/2021/03/01/byu-unveil-new-look/">BYU to unveil new look in 2021; Cougars add future games with Ole Miss and Dixie State</a></h3><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///sports/utah-state-sports/2021/03/01/utah-state-teetering-ncaa/"></a></p><h3 class="rm-manual"><a href="file:///sports/utah-state-sports/2021/03/01/utah-state-teetering-ncaa/">Utah State teetering on the NCAA Tournament bubble after sweeping Nevada at home</a></h3><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///news/2021/03/01/did-you-sign-up/"></a></p><h3 class="rm-manual"><a href="file:///news/2021/03/01/did-you-sign-up/">Did you sign up for a coronavirus vaccine and then have your appointment canceled? Let us know.</a></h3><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///opinion/commentary/2021/03/01/pete-vordenberg-americans/"></a></p><h3 class="rm-manual"><a href="file:///opinion/commentary/2021/03/01/pete-vordenberg-americans/">Pete Vordenberg: Americans can work together to work against climate change</a></h3><p class="rm-manual"></p>
+<h5 class="rm-manual">CONNECT</h5>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.facebook.com/saltlaketribune/"> <span>Facebook</span></a></li>
+<li class="rm-manual"><a href="https://twitter.com/sltrib/"> <span>Twitter</span></a></li>
+<li class="rm-manual"><a href="https://www.instagram.com/sltrib/"> <span>Instagram</span></a></li>
+<li class="rm-manual"><a href="https://www.youtube.com/user/sltrib/"> <span>YouTube</span></a></li>
+<li class="rm-manual"><a href="file:///rss/"> <span>RSS</span></a></li>
+</ul>
+<h5 class="rm-manual">SUBSCRIPTIONS</h5>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://simplecirc.com/subscribe/the-salt-lake-tribune/"><span>Subscribe to print + digital</span></a></li>
+<li class="rm-manual"><a href="file:///support/"><span>Subscribe to digital only</span></a></li>
+<li class="rm-manual"><a href="file:///free/"><span>Free digital for print subscribers</span></a></li>
+<li class="rm-manual"><a href="file:///newsletters/"><span>Email newsletters</span></a></li>
+<li class="rm-manual"><a href="https://simplecirc.com/subscriber_login/the-salt-lake-tribune/"><span>Login to your print account</span></a></li>
+<li class="rm-manual"><a href="file:///my-account/"><span>Login to your digital account</span></a></li>
+<li class="rm-manual"><a href="file:///digital-subscriptions-faq/"><span>Subscription FAQs</span></a></li>
+<li class="rm-manual"><a href="file:///contact-us/"><span>Help and contact info</span></a></li>
+</ul>
+<h5 class="rm-manual">ABOUT US</h5>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///about-us/#our-history/"><span>History and mission</span></a></li>
+<li class="rm-manual"><a href="file:///about-us/#nonprofit/"><span>Our nonprofit model</span></a></li>
+<li class="rm-manual"><a href="file:///board-and-advisers/"><span>Board and advisers</span></a></li>
+<li class="rm-manual"><a href="file:///staff/"><span>Officers and staff</span></a></li>
+<li class="rm-manual"><a href="file:///first-amendment-society/"><span>First Amendment Society</span></a></li>
+<li class="rm-manual"><a href="file:///reports/"><span>Donors and tax filing</span></a></li>
+<li class="rm-manual"><a href="file:///privacy-policy/"><span>Privacy policy</span></a></li>
+<li class="rm-manual"><a href="file:///privacy-policy/#california/"><span>California privacy</span></a></li>
+<li class="rm-manual"><a href="file:///policies-and-ethics/"><span>Editorial policies and ethics</span></a></li>
+</ul>
+<h5 class="rm-manual">MORE</h5>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///advertise-with-us/"><span>Advertise with us</span></a></li>
+<li class="rm-manual"><a href="file:///legal-notices/"><span>Legal notices</span></a></li>
+<li class="rm-manual"><a href="https://store.sltrib.com/"><span>Store</span></a></li>
+<li class="rm-manual"><a href="file:///podcasts/"><span>Podcasts</span></a></li>
+<li class="rm-manual"><a href="https://archive.sltrib.com/"><span>Archives</span></a></li>
+<li class="rm-manual"><a href="file:///tips/"><span>Story tip line</span></a></li>
+<li class="rm-manual"><a href="file:///how-to-support-the-salt-lake-tribune"><span>Support The Tribune</span></a></li>
+<li class="rm-manual"><a href="file:///donate/"><span>Donate</span></a></li>
+<li class="rm-manual"><a href="#"><span>Cookie Preferences</span></a></li>
+</ul>
+<p class="rm-manual"><a href="file:///about-us">ABOUT US</a><a href="file:///terms-of-service">TERMS OF SERVICE</a><a href="file:///privacy-policy">PRIVACY POLICY</a><a href="file:///policies-and-ethics">EDITORIAL POLICY</a><a href="file:///advertise-with-us">ADVERTISE</a><a href="file:///contact-us">CONTACT US</a><a href="file:///contact-us">HELP</a><a href="#">COOKIE PREFERENCES</a></p>
+<p class="rm-manual"><a href="file:///support">SUPPORT</a><a href="file:///newsletters">EMAIL NEWSLETTERS</a><a href="file:///podcasts">PODCASTS</a><a href="file:///tips">NEWS TIPS</a><a href="https://apps.apple.com/ai/app/salt-lake-tribune-eedition/id995297003">APP STORE</a><a href="https://play.google.com/store/apps/details?id=com.saltlaketribune.android.prod&amp;hl=en_US&amp;gl=US">GOOGLE PLAY</a><a href="file:///donate">DONATE</a></p>
+<p class="rm-manual">Report a missed paper by emailing <a href="mailto:subscribe@sltrib.com">subscribe@sltrib.com</a> or calling <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/801-237-2900">801-237-2900</a></p>
+<p class="rm-manual">For e-edition questions or comments, contact customer support <a href="tel:801-237-2900">801-237-2900</a> or email <a href="mailto:subscribe@sltrib.com">subscribe@sltrib.com</a></p>
+<p class="rm-manual">sltrib.com © 1996- 2021 The Salt Lake Tribune. All rights reserved.</p></article>
+</body></html>

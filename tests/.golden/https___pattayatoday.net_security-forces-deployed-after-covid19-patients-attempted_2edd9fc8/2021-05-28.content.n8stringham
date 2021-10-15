@@ -1,0 +1,163 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Security forces deployed after Covid19 patients attempted to flee field </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://pattayatoday.net/covid-19-stats-thailand/">COVID-19 Stats Thailand</a></li> <li class="rm-manual">
+<a href="https://pattayatoday.net/category/news/">News</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://pattayatoday.net/category/pattaya-news/">Pattaya News</a></li> <li class="rm-manual"><a href="https://pattayatoday.net/category/national-news/">National News</a></li> <li class="rm-manual"><a href="https://pattayatoday.net/category/international-news/">International News</a></li> </ul> </li> <li class="rm-manual"><a href="https://pattayatoday.net/category/visa-information/">Visa Information</a></li> <li class="rm-manual"><a href="https://pattayatoday.net/category/netflix-and-chill/">TV &amp; Movies</a></li> <li class="rm-manual"><a href="https://pattayatoday.net/submit-news/">Submit News</a></li> <li class="rm-manual"><a href="https://pattayatoday.net/advertise-inquiry/">Advertise</a></li> <li class="rm-manual">
+<a href="https://pattayatoday.net/contact-pattayatoday/">Contact</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://pattayatoday.net/contact-important-pattaya-locations/">Contact Important Pattaya Locations</a></li> </ul> </li> </ul>
+<p class="rm-manual"> <span>Search</span> </p>
+<p class="rm-manual"><a href="https://pattayatoday.net/"><span><span>PattayaToday</span><span>Pattaya News &amp; Events!</span></span></a></p>
+<p class="rm-manual"><a href="https://pattayatoday.net/"><span><span>PATTAYATODAY</span><span>Pattaya News &amp; Events!</span></span></a></p>
+<p class="rm-manual">Sign in</p>
+<p class="rm-manual">Welcome! Log into your account</p>
+<p class="rm-manual">your username</p>
+<p class="rm-manual">your password</p>
+<p class="rm-manual"><a href="#">Forgot your password? Get help</a></p>
+<p class="rm-manual">Password recovery</p>
+<p class="rm-manual">Recover your password</p>
+<p class="rm-manual">your email</p>
+<p class="rm-manual">A password will be e-mailed to you.</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://pattayatoday.net/category/pattaya-news/"><p class="rm-manual">Pattaya News</p></a></li> <li class="rm-manual"><a href="https://pattayatoday.net/category/national-news/"><p class="rm-manual">National News</p></a></li> <li class="rm-manual"><a href="https://pattayatoday.net/category/international-news/"><p class="rm-manual">International News</p></a></li> <li class="rm-manual"><a href="https://pattayatoday.net/category/visa-information/"><p class="rm-manual">Visa Information</p></a></li> </ul>
+<p class="rm-manual"><a href="#login-form"><span>Sign in / Join</span></a></p>
+<p class="rm-manual"> <span>27.4</span> <span>C</span> </p>
+<p class="rm-manual">Pattaya</p>
+<p class="rm-manual"><a href="https://pattayatoday.net/"><span><span>PattayaToday</span><span>Pattaya News &amp; Events!</span></span></a></p>
+<p class="rm-manual">Saturday, May 29, 2021</p>
+<p class="rm-manual">type here...</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://pattayatoday.net/covid-19-stats-thailand/"><p class="rm-manual">COVID-19 Stats Thailand</p></a></li> <li class="rm-manual">
+<a href="https://pattayatoday.net/category/news/"><p class="rm-manual">News</p></a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://pattayatoday.net/category/pattaya-news/"><p class="rm-manual">Pattaya News</p></a></li> <li class="rm-manual"><a href="https://pattayatoday.net/category/national-news/"><p class="rm-manual">National News</p></a></li> <li class="rm-manual"><a href="https://pattayatoday.net/category/international-news/"><p class="rm-manual">International News</p></a></li> </ul> </li> <li class="rm-manual"><a href="https://pattayatoday.net/category/visa-information/"><p class="rm-manual">Visa Information</p></a></li> <li class="rm-manual"><a href="https://pattayatoday.net/category/netflix-and-chill/"><p class="rm-manual">TV &amp; Movies</p></a></li> <li class="rm-manual"><a href="https://pattayatoday.net/submit-news/"><p class="rm-manual">Submit News</p></a></li> <li class="rm-manual"><a href="https://pattayatoday.net/advertise-inquiry/"><p class="rm-manual">Advertise</p></a></li> <li class="rm-manual">
+<a href="https://pattayatoday.net/contact-pattayatoday/"><p class="rm-manual">Contact</p></a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://pattayatoday.net/contact-important-pattaya-locations/"><p class="rm-manual">Contact Important Pattaya Locations</p></a></li> </ul> </li> </ul>
+<p class="rm-manual"><a href="https://pattayatoday.net/"><span><span>PATTAYATODAY</span><span>Pattaya News &amp; Events!</span></span></a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://pattayatoday.net/covid-19-stats-thailand/"><p class="rm-manual">COVID-19 Stats Thailand</p></a></li> <li class="rm-manual">
+<a href="https://pattayatoday.net/category/news/"><p class="rm-manual">News</p></a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://pattayatoday.net/category/pattaya-news/"><p class="rm-manual">Pattaya News</p></a></li> <li class="rm-manual"><a href="https://pattayatoday.net/category/national-news/"><p class="rm-manual">National News</p></a></li> <li class="rm-manual"><a href="https://pattayatoday.net/category/international-news/"><p class="rm-manual">International News</p></a></li> </ul> </li> <li class="rm-manual"><a href="https://pattayatoday.net/category/visa-information/"><p class="rm-manual">Visa Information</p></a></li> <li class="rm-manual"><a href="https://pattayatoday.net/category/netflix-and-chill/"><p class="rm-manual">TV &amp; Movies</p></a></li> <li class="rm-manual"><a href="https://pattayatoday.net/submit-news/"><p class="rm-manual">Submit News</p></a></li> <li class="rm-manual"><a href="https://pattayatoday.net/advertise-inquiry/"><p class="rm-manual">Advertise</p></a></li> <li class="rm-manual">
+<a href="https://pattayatoday.net/contact-pattayatoday/"><p class="rm-manual">Contact</p></a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://pattayatoday.net/contact-important-pattaya-locations/"><p class="rm-manual">Contact Important Pattaya Locations</p></a></li> </ul> </li> </ul>
+<p class="rm-manual"><a href="https://pattayatoday.net/category/featured/"> Featured</a><a href="https://pattayatoday.net/category/national-news/"> National News</a><a href="https://pattayatoday.net/category/news/"> News</a></p>
+<h1 class="rm-manual">Security forces deployed after Covid19 patients attempted to flee field hospital during power outage in Phetchaburi</h1>
+<p class="rm-manual"><span>By</span> <a href="https://pattayatoday.net/author/editor/">Editor</a></p>
+<p class="rm-manual">May 29, 2021</p>
+<p class="rm-manual"><a href="https://pattayatoday.net/security-forces-deployed-after-covid19-patients-attempted/#respond"><span>0</span></a></p>
+<p class="rm-manual"><span>2</span></p>
+<h2 class="rm-manual"><span>Must read</span></h2>
+<h3 class="rm-manual"><a href="https://pattayatoday.net/security-forces-deployed-after-covid19-patients-attempted/" rel="bookmark">Security forces deployed after Covid19 patients attempted to flee field hospital during power outage in Phetchaburi</a></h3>
+<p class="rm-manual"> <span> <span>May 29, 2021</span> </span> </p>
+<h3 class="rm-manual"><a href="https://pattayatoday.net/2-out-of-62-gays-arrested-during-a-sex-party-in-faros/" rel="bookmark">2 out of 62 gays arrested during a sex party in Faros sauna in Bangkok tested positive for the Covid19 virus</a></h3>
+<p class="rm-manual"> <span> <span>May 29, 2021</span> </span> </p>
+<h3 class="rm-manual"><a href="https://pattayatoday.net/at-least-73-children-killed-by-junta-forces-in-myanmar/" rel="bookmark">At least 73 children killed by junta forces in Myanmar, death toll continues to rise!</a></h3>
+<p class="rm-manual"> <span> <span>May 29, 2021</span> </span> </p>
+<h3 class="rm-manual"><a href="https://pattayatoday.net/bangkok-police-arrest-woman-with-large-amounts/" rel="bookmark">Bangkok police arrest woman with large amounts of counterfeit money strolling through a department store on Silom Road</a></h3>
+<p class="rm-manual"> <span> <span>May 29, 2021</span> </span> </p>
+<p class="rm-manual"><a href="https://pattayatoday.net/author/editor/">Editor</a></p>
+<p class="rm-manual">Security forces were required to be deployed last 
+night after 500 Covid19 patients, all residents of Myanmar, attempted to
+ escape from a field hospital in Phetchaburi province during a power 
+outage, a news source reports.</p>
+<p class="rm-manual">The field hospital was set up at Cal-Comp 
+Electronics Thailand’s factory in Khao Yoi District, about 100 
+kilometres southwest of Bangkok after 682 employees tested positive 
+earlier this month.</p>
+<p class="rm-manual">“Around 6:00 pm an electrical failure occurred in 
+the hospital, causing electrical fans to stop working,” the source said.
+ About 500 patients tried to escape from the building due to the hot and
+ busy conditions. ”</p>
+<p class="rm-manual">More than 50 police officers from Khao Yoi Police 
+Station, 15 Military Province soldiers and public health personnel in 
+PPE suits had to be deployed to control the situation, which remains 
+unresolved this Friday morning.</p>
+<p class="rm-manual">Catch up on more stories <a href="https://pattayatoday.net/">here</a></p>
+<p class="rm-manual">Follow us on Facebook <a href="https://www.facebook.com/PattayaTodayOnline">here</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><span>Tags</span></li>
+<li class="rm-manual"><a href="https://pattayatoday.net/tag/covid19-patients/">Covid19 patients</a></li>
+</ul>
+<p class="rm-manual"><span>Previous article</span><a href="https://pattayatoday.net/2-out-of-62-gays-arrested-during-a-sex-party-in-faros/">2 out of 62 gays arrested during a sex party in Faros sauna in Bangkok tested positive for the Covid19 virus</a></p>
+<h4 class="rm-manual"><span>More articles</span></h4>
+<h3 class="rm-manual"><a href="https://pattayatoday.net/2-out-of-62-gays-arrested-during-a-sex-party-in-faros/" rel="bookmark">2 out of 62 gays arrested during a sex party in Faros sauna in Bangkok tested positive for the Covid19 virus</a></h3>
+<p class="rm-manual"> <span> <span>May 29, 2021</span> </span> </p>
+<h3 class="rm-manual"><a href="https://pattayatoday.net/at-least-73-children-killed-by-junta-forces-in-myanmar/" rel="bookmark">At least 73 children killed by junta forces in Myanmar, death toll continues to rise!</a></h3>
+<p class="rm-manual"> <span> <span>May 29, 2021</span> </span> </p>
+<h3 class="rm-manual"><a href="https://pattayatoday.net/bangkok-police-arrest-woman-with-large-amounts/" rel="bookmark">Bangkok police arrest woman with large amounts of counterfeit money strolling through a department store on Silom Road</a></h3>
+<p class="rm-manual"> <span> <span>May 29, 2021</span> </span> </p>
+<h4 class="rm-manual"><span>Latest article</span></h4>
+<h3 class="rm-manual"><a href="https://pattayatoday.net/security-forces-deployed-after-covid19-patients-attempted/" rel="bookmark">Security forces deployed after Covid19 patients attempted to flee field hospital during power outage in Phetchaburi</a></h3>
+<p class="rm-manual"> <span> <span>May 29, 2021</span> </span> </p>
+<h3 class="rm-manual"><a href="https://pattayatoday.net/2-out-of-62-gays-arrested-during-a-sex-party-in-faros/" rel="bookmark">2 out of 62 gays arrested during a sex party in Faros sauna in Bangkok tested positive for the Covid19 virus</a></h3>
+<p class="rm-manual"> <span> <span>May 29, 2021</span> </span> </p>
+<h3 class="rm-manual"><a href="https://pattayatoday.net/at-least-73-children-killed-by-junta-forces-in-myanmar/" rel="bookmark">At least 73 children killed by junta forces in Myanmar, death toll continues to rise!</a></h3>
+<p class="rm-manual"> <span> <span>May 29, 2021</span> </span> </p>
+<h3 class="rm-manual"><a href="https://pattayatoday.net/bangkok-police-arrest-woman-with-large-amounts/" rel="bookmark">Bangkok police arrest woman with large amounts of counterfeit money strolling through a department store on Silom Road</a></h3>
+<p class="rm-manual"> <span> <span>May 29, 2021</span> </span> </p>
+<h3 class="rm-manual"><a href="https://pattayatoday.net/thai-soldiers-open-fire-on-cambodian-migrant-workers/" rel="bookmark">Thai soldiers open fire on Cambodian migrant workers</a></h3>
+<p class="rm-manual"> <span> <span>May 28, 2021</span> </span> </p>
+<p class="rm-manual"><a href="https://pattayatoday.net/"><span><span>PATTAYATODAY</span><span>Pattaya News &amp; Events!</span></span></a></p>
+<p>Here at PattayaToday, we try to provide Pattaya news on a daily 
+basis, sometimes there isn’t anything to report apart from negative 
+news, which we feel is not what Pattaya should be promoting, for that 
+type of news there are other outlets. </p>
+<p> PattayaToday wants to support Pattaya by providing uplifting Pattaya
+ news, positive news and information makes us smile and makes us feel 
+welcome. Pattaya news shouldn’t always be about the bad and negative 
+that happened around Pattaya. </p>
+<p> If you have a story that you feel is great that people should know 
+about, or perhaps you have something new added to your restaurant menu, 
+maybe you’re selling something new you want people around here to know 
+about, or maybe you know of an event that is charitable or something 
+uplifting you want to share, reach out to us, we are happy to publish it
+ free of charge! </p>
+<p class="rm-manual"> 2021 © PattayaToday</p>
+<h4 class="rm-manual"><span>About Us</span></h4>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://pattayatoday.net/category/pattaya-news/">Pattaya News</a></li> <li class="rm-manual"><a href="https://pattayatoday.net/category/national-news/">National News</a></li> <li class="rm-manual"><a href="https://pattayatoday.net/category/international-news/">International News</a></li> <li class="rm-manual"><a href="https://pattayatoday.net/category/visa-information/">Visa Information</a></li> </ul>
+<h4 class="rm-manual"><span>Popular Category</span></h4>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://pattayatoday.net/category/national-news/"><span>National News</span><span>5689</span></a></li>
+<li class="rm-manual"><a href="https://pattayatoday.net/category/pattaya-news/"><span>Pattaya News</span><span>4948</span></a></li>
+<li class="rm-manual"><a href="https://pattayatoday.net/category/good-reads/"><span>Good Reads</span><span>754</span></a></li>
+<li class="rm-manual"><a href="https://pattayatoday.net/category/news/"><span>News</span><span>503</span></a></li>
+<li class="rm-manual"><a href="https://pattayatoday.net/category/international-news/"><span>International News</span><span>54</span></a></li>
+<li class="rm-manual"><a href="https://pattayatoday.net/category/travel/"><span>Travel</span><span>50</span></a></li>
+</ul>
+<h4 class="rm-manual"><span>Editor Picks</span></h4>
+<h3 class="rm-manual"><a href="https://pattayatoday.net/security-forces-deployed-after-covid19-patients-attempted/" rel="bookmark">Security forces deployed after Covid19 patients attempted to flee field hospital during power outage in Phetchaburi</a></h3>
+<p class="rm-manual"> <span> <span>May 29, 2021</span> </span> </p>
+<h3 class="rm-manual"><a href="https://pattayatoday.net/2-out-of-62-gays-arrested-during-a-sex-party-in-faros/" rel="bookmark">2 out of 62 gays arrested during a sex party in Faros sauna in Bangkok tested positive for the Covid19 virus</a></h3>
+<p class="rm-manual"> <span> <span>May 29, 2021</span> </span> </p>
+<p class="rm-manual"> <a rel="amphtml" href="https://pattayatoday.net/security-forces-deployed-after-covid19-patients-attempted/?amp"> Go to mobile version </a> </p></article>
+</body></html>

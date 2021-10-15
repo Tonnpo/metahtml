@@ -1,0 +1,61 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h2 class="rm-manual"> Date-expired foodstuffs destroyed in Bhojpur </h2>
+<h3 class="rm-manual"><a href="https://english.khabarhub.com/author/newsadmin/"> Khabarhub </a></h3>
+<p class="rm-manual">February 21, 2019</p>
+<p class="rm-manual"> <span> <span> &lt; 1</span> <span>MIN READ</span></span> </p>
+<p>BHOJPUR: The District Administration Office (DAO) of Bhokpur has 
+destroyed date-expired foodstuffs stored in different shops and hotels 
+in Bhojpur district. Upendra Neupane, Assistant Chief District Officer 
+informed that the team has destroyed food stuff worth around Rs 100,000.</p>
+<p>The team from the DAO monitored the food condition and seized a huge 
+quantity of date expired biscuits and soft drinks from various shops and
+ hotels.</p>
+<p>They have seized the stuff from Pradhan Hotel, Sajina Grocery, KFC 
+Hotel, Usha Hotel, Binita Hotel and Sumnima Guest House of Bhojpur. 
+Neupane said that action would be taken against the shop and hotel 
+owners if they continue to sell date-expired foodstuffs .</p>
+<h4 class="rm-manual">Just In</h4>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://english.khabarhub.com/2020/25/107127/"> <h3 class="rm-manual">APF BOP to be establised at Pancheshwor</h3> </a> <p class="rm-manual">BAITADI: The Nepal government is preparing to establish a Border Out Post (BOP)</p> </li> <li class="rm-manual"> <a href="https://english.khabarhub.com/2020/25/107116/"> <h3 class="rm-manual">Over 500 manpower companies on verge of scrapping</h3> </a> <p class="rm-manual">KATHMANDU: With the coronavirus pandemic taking a toll on people’s health</p> </li> <li class="rm-manual"> <a href="https://english.khabarhub.com/2020/25/107120/"> <h3 class="rm-manual">COVID-19 death toll reaches 25 in Nepal as 55-yr-old dies in Pokhara</h3> </a> <p class="rm-manual">KATHMANDU: The death toll from coronavirus pandemic in Nepal has reached 25</p> </li> <li class="rm-manual"> <a href="https://english.khabarhub.com/2020/25/106923/"> <h3 class="rm-manual">Hoteliers in favor of resuming business by taking safety measures</h3> </a> <p class="rm-manual">KATHMANDU: The Federation of Hotel Entrepreneurs has demanded that hoteliers</p> </li> <li class="rm-manual"> <a href="https://english.khabarhub.com/2020/25/107110/"> <h3 class="rm-manual">Two fugitives held for bomb explosion after 10 yrs</h3> </a> <p class="rm-manual">KATHMANDU: Police have arrested two individuals who had absconded after</p> </li> <li class="rm-manual"> <a href="https://english.khabarhub.com/2020/25/106950/"> <h3 class="rm-manual">Popular film-maker Schumacher passes away</h3> </a> <p class="rm-manual">KATHMANDU: Popular Film Director Joel Schumacher has died at the age of</p> </li> <li class="rm-manual"> <a href="https://english.khabarhub.com/2020/24/106953/"> <h3 class="rm-manual">Sudurpaschim State Assembly meeting postponed</h3> </a> <p class="rm-manual">DHANGADHI: The Sudurpaschim State Assembly meeting has been adjourned on</p> </li> <li class="rm-manual"> <a href="https://english.khabarhub.com/2020/24/106933/"> <h3 class="rm-manual">Google says news publishers retain 95% of revenue with its Ad Manager</h3> </a> <p class="rm-manual">SAN FRANCISCO: As traditional media outlets ask social media giants to give</p> </li> <li class="rm-manual"> <a href="https://english.khabarhub.com/2020/24/106935/"> <h3 class="rm-manual">COVID-19: New Delhi revises coronavirus response plan</h3> </a> <p class="rm-manual">NEW DELHI: The New Delhi government has revised its Covid response plan in an</p> </li> <li class="rm-manual"> <a href="https://english.khabarhub.com/2020/24/107096/"> <h3 class="rm-manual">Consensus shown during hard times praiseworthy: President tells parties</h3> </a> <p class="rm-manual">KATHMANDU: President Bidhya Devi Bhandari congratulated all political parties</p> </li> </ul>
+<h2 class="rm-manual">Related News</h2>
+<p class="rm-manual"> <a href="https://english.khabarhub.com/2020/25/107127/"> </a></p><p class="rm-manual"><a href="https://english.khabarhub.com/2020/25/107127/"> </a></p><h2 class="rm-manual"><a href="https://english.khabarhub.com/2020/25/107127/">APF BOP to be establised at Pancheshwor</a></h2><a href="https://english.khabarhub.com/2020/25/107127/"> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://english.khabarhub.com/2020/25/107116/"> </a></p><p class="rm-manual"><a href="https://english.khabarhub.com/2020/25/107116/"> </a></p><h2 class="rm-manual"><a href="https://english.khabarhub.com/2020/25/107116/">Over 500 manpower companies on verge of scrapping</a></h2><a href="https://english.khabarhub.com/2020/25/107116/"> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://english.khabarhub.com/2020/25/107120/"> </a></p><p class="rm-manual"><a href="https://english.khabarhub.com/2020/25/107120/"> </a></p><h2 class="rm-manual"><a href="https://english.khabarhub.com/2020/25/107120/">COVID-19 death toll reaches 25 in Nepal as 55-yr-old dies in Pokhara</a></h2><a href="https://english.khabarhub.com/2020/25/107120/"> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://english.khabarhub.com/2020/25/106923/"> </a></p><p class="rm-manual"><a href="https://english.khabarhub.com/2020/25/106923/"> </a></p><h2 class="rm-manual"><a href="https://english.khabarhub.com/2020/25/106923/">Hoteliers in favor of resuming business by taking safety measures</a></h2><a href="https://english.khabarhub.com/2020/25/106923/"> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://english.khabarhub.com/2020/25/107110/"> </a></p><p class="rm-manual"><a href="https://english.khabarhub.com/2020/25/107110/"> </a></p><h2 class="rm-manual"><a href="https://english.khabarhub.com/2020/25/107110/">Two fugitives held for bomb explosion after 10 yrs</a></h2><a href="https://english.khabarhub.com/2020/25/107110/"> <p></p> </a> <p></p></article>
+</body></html>

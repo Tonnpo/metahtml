@@ -1,0 +1,73 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> COVID-19: South Africa records first 2 deaths as cases exceed 1000 - Daily Post Nigeria </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="http://dailypost.ng/">Home</a></li> <li class="rm-manual"><a href="https://dailypost.ng/hot-news/">News</a></li> <li class="rm-manual"><a href="https://dailypost.ng/politics/">Politics</a></li> <li class="rm-manual"><a href="https://dailypost.ng/metro/">Metro</a></li> <li class="rm-manual"><a href="https://dailypost.ng/sport-news/">Sport</a></li> <li class="rm-manual"><a href="https://dailypost.ng/entertainment/">Entertainment</a></li> <li class="rm-manual"><a href="https://dailypost.ng/opinion/">Opinion</a></li> <li class="rm-manual"><a href="https://dailypost.ng/education/">Education</a></li> <li class="rm-manual"><a href="https://dailypost.ng/health/">Health</a></li> <li class="rm-manual"><a href="https://dailypost.ng/interview/">Interview</a></li> <li class="rm-manual"><a href="http://dailypost.com.gh/">Daily Post Ghana</a></li> </ul>
+<h2 class="rm-manual">Daily Post Nigeria</h2>
+<h4 class="rm-manual">COVID-19: South Africa records first 2 deaths as cases exceed 1000</h4>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="http://dailypost.ng/">Home</a></li> <li class="rm-manual"><a href="https://dailypost.ng/hot-news/">News</a></li> <li class="rm-manual"><a href="https://dailypost.ng/politics/">Politics</a></li> <li class="rm-manual"><a href="https://dailypost.ng/metro/">Metro</a></li> <li class="rm-manual"><a href="https://dailypost.ng/entertainment/">Entertainment</a></li> <li class="rm-manual"><a href="https://dailypost.ng/sport-news/">Sport</a></li> </ul>
+<h3 class="rm-manual"><a href="https://dailypost.ng/hot-news/"><span>News</span></a></h3>
+<h1 class="rm-manual">COVID-19: South Africa records first 2 deaths as cases exceed 1000</h1>
+<p class="rm-manual">Published</p>
+<p class="rm-manual">on</p>
+<p class="rm-manual"><span>March 27, 2020</span> </p>
+<p class="rm-manual">By</p>
+<p class="rm-manual"><span><a href="https://dailypost.ng/author/fikayo-olowolagba/" rel="author">Fikayo Olowolagba</a></span> </p>
+<p>South Africa on Thursday recorded its first two deaths from coronavirus.</p>
+<p>The health minister, Zweli Mkhize made the announcement on Friday even as the country’s cases increased beyond 1000.</p>
+<p>Mkhize confirmed that the two deaths occurred at different hospitals in Western Cape, South Africa.</p>
+<p>“This morning, we wake South Africans up with sad news that we now have our first deaths resulting from Covid-19.</p>
+<p>“The two deaths happened at the Western Cape. One at a private hospital and the other at a public hospital.</p>
+<p>“We will give more details later on.</p>
+<p>“As at Friday morning, the number of positive coronavirus cases in the country had surpassed 1,000,” he said.</p>
+<p><a href="https://dailypost.ng/2020/07/16/covid-19-nigerian-striker-paul-onuachus-second-coronavirus-test-result-released/"></a></p><p class="rm-manual"><a href="https://dailypost.ng/2020/07/16/covid-19-nigerian-striker-paul-onuachus-second-coronavirus-test-result-released/"><span>NEWS:</span> <span>COVID-19: Nigerian striker, Paul Onuachu’s second Coronavirus test result released</span></a></p><p></p>
+<p>Meanwhile, Cyril Ramaphosa on Thursday <a href="https://dailypost.ng/2020/03/26/coronavirus-test-result-of-south-african-president-ramaphosa-out/">tested negative to Coronavirus</a> after concerns of him having contact with infected individuals were raised.</p>
+<ul class="rm-manual"><li class="rm-manual"><a href="https://dailypost.ng/2020/05/11/covid-19-south-africa-records-595-new-cases-in-24-hours-tops-nigeria/">COVID-19: South Africa records 595 new cases in 24 hours, tops Nigeria</a></li></ul>
+<ul class="rm-manual"><li class="rm-manual"><a href="https://dailypost.ng/2020/04/17/covid-19-egypt-overtakes-south-africa-as-death-toll-hits-961-on-continent/">COVID-19: Egypt overtakes South Africa as death toll hits 961 on continent</a></li></ul>
+<ul class="rm-manual"><li class="rm-manual"><a href="https://dailypost.ng/2020/04/18/covid-19-africas-death-toll-hits-1016-as-egypt-south-africa-morocco-algeria-top-list/">COVID-19: Africa’s death toll hits 1016 as Egypt, South Africa, Morocco, Algeria top list</a></li></ul>
+<ul class="rm-manual"><li class="rm-manual"><a href="https://dailypost.ng/2020/05/08/nigeria-among-top-five-countries-in-africa-with-most-covid-19-cases-deaths/">Nigeria among top five countries in Africa with most COVID-19 cases, deaths</a></li></ul>
+<ul class="rm-manual"><li class="rm-manual"><a href="https://dailypost.ng/2020/05/01/coronavirus-comoros-records-first-case-as-africas-death-toll-hits-1600/">Coronavirus: Comoros records first case as Africa’s death toll hits 1,600</a></li></ul>
+<ul class="rm-manual"><li class="rm-manual"><a href="https://dailypost.ng/2020/05/14/covid-19-who-gives-latest-update-on-africa-countries-as-lesotho-records-first-case/">COVID-19: WHO gives latest update on Africa countries as Lesotho records first case</a></li></ul>
+<p class="rm-manual"> <span>Related Topics:</span><span><a href="https://dailypost.ng/tag/covid-19/" rel="tag">Covid-19</a><a href="https://dailypost.ng/tag/south-africa/" rel="tag">South Africa</a></span> </p>
+<h4 class="rm-manual"> <span>You may like</span> </h4>
+<ul class="rm-manual"> <a href="https://dailypost.ng/2020/07/17/ogun-discharges-12-covid-19-patients-confirms-14-new-cases/" rel="bookmark"> <li class="rm-manual"> <p class="rm-manual">Ogun discharges 12 COVID-19 patients, confirms 14 new cases</p> </li> </a> <a href="https://dailypost.ng/2020/07/17/federal-high-court-chief-judge-john-tsoho-tests-positive-for-covid-19/" rel="bookmark"> <li class="rm-manual"> <p class="rm-manual">Federal High Court Chief Judge, John Tsoho tests positive for COVID-19</p> </li> </a> <a href="https://dailypost.ng/2020/07/17/fct-discharges-21-patients-records-23-new-covid-19-cases/" rel="bookmark"> <li class="rm-manual"> <p class="rm-manual">FCT discharges 21 patients, records 23 new COVID-19 cases</p> </li> </a> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://dailypost.ng/advertise/">Advertise</a></li> <li class="rm-manual"><a href="https://dailypost.ng/contact/">Contact Us</a></li> <li class="rm-manual"><a href="https://dailypost.ng/disclaimer/">Disclaimer</a></li> <li class="rm-manual"><a href="https://dailypost.ng/privacy-policy/">Privacy-Policy</a></li> <li class="rm-manual"><a href="https://dailypost.ng/terms/">Terms</a></li> </ul>
+<p class="rm-manual">Copyright © Daily Post - Nigeria News</p></article>
+</body></html>

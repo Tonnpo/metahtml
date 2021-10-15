@@ -1,0 +1,453 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">Iran - Statistics &amp; Facts | Statista</p>
+<p class="rm-manual"><a href="https://www.statista.com/">Statista Logo</a></p>
+<p class="rm-manual"><span>Try our corporate solution for free!</span><span>Contact us</span></p>
+<p class="rm-manual">Are you interested in testing our corporate solutions? Please do not hesitate to contact me.</p>
+<p class="rm-manual"><span>Esther Shaulova</span><span>Operations Manager</span><span>Mon - Fri, 9am - 6pm (EST)</span></p>
+<p class="rm-manual"><a href="mailto:esther.shaulova@statista.com">esther.shaulova@statista.com</a><a href="tel:+12124195770">+1 (212) 419-5770</a></p>
+<ul class="rm-manual"><li class="rm-manual"><ul class="rm-manual">
+<li class="rm-manual"><span>statista.com</span></li>
+<li class="rm-manual"><a href="https://es.statista.com/">statista.es</a></li>
+<li class="rm-manual"><a href="https://de.statista.com/">statista.de</a></li>
+<li class="rm-manual"><a href="https://fr.statista.com/">statista.fr</a></li>
+</ul></li></ul>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="file:///accounts/">Prices &amp; Access </a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///accounts/"> Single Accounts </a></li>
+<li class="rm-manual"><a href="file:///accounts/corporate/"> Corporate Solutions </a></li>
+<li class="rm-manual"><a href="file:///accounts/education/"> Universities </a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="file:///markets/"> Statistics </a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///markets/">All Industries</a></li>
+<li class="rm-manual"><a href="file:///markets/415/consumer-goods-fmcg/">Consumer Goods &amp; FMCG</a></li>
+<li class="rm-manual"><a href="file:///markets/424/internet/">Internet</a></li>
+<li class="rm-manual"><a href="file:///markets/417/media-advertising/">Media &amp; Advertising</a></li>
+<li class="rm-manual"><a href="file:///markets/423/retail-trade/">Retail &amp; Trade</a></li>
+<li class="rm-manual"><a href="file:///markets/409/sports-recreation/">Sports &amp; Recreation</a></li>
+<li class="rm-manual"><a href="file:///markets/418/technology-telecommunications/">Technology &amp; Telecommunications</a></li>
+<li class="rm-manual"><a href="file:///markets/419/transportation-logistics/">Transportation &amp; Logistics</a></li>
+<li class="rm-manual"><a href="file:///markets/420/travel-tourism-hospitality/">Travel, Tourism &amp; Hospitality</a></li>
+</ul>
+<p class="rm-manual"> Most-viewed Statistics </p>
+<p class="rm-manual"><a href="file:///statistics/recent/"> Recent Statistics </a><a href="file:///statistics/popular/"> Popular Statistics </a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///statistics/264810/number-of-monthly-active-facebook-users-worldwide/"><p class="rm-manual"> Facebook: number of monthly active users worldwide 2008-2020 </p></a></li>
+<li class="rm-manual"><a href="file:///statistics/271496/global-market-share-held-by-smartphone-vendors-since-4th-quarter-2009/"><p class="rm-manual"> Smartphone market share worldwide by vendor 2009-2020 </p></a></li>
+<li class="rm-manual"><a href="file:///statistics/276623/number-of-apps-available-in-leading-app-stores/"><p class="rm-manual"> Number of apps available in leading app stores 2020 </p></a></li>
+<li class="rm-manual"><a href="file:///statistics/262858/change-in-opec-crude-oil-prices-since-1960/"><p class="rm-manual"> OPEC oil price annually 1960-2020 </p></a></li>
+<li class="rm-manual"><a href="file:///statistics/274326/big-mac-index-global-prices-for-a-big-mac/"><p class="rm-manual"> Big Mac index - global prices for a Big Mac 2020 </p></a></li>
+</ul>
+<p class="rm-manual"> Topics </p>
+<p class="rm-manual"><a href="file:///topics/"> Topic Overview </a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///topics/840/smartphones/"><p class="rm-manual"> Smartphones - Statistics &amp; Facts </p></a></li>
+<li class="rm-manual"><a href="file:///topics/1164/social-networks/"><p class="rm-manual"> Social media - Statistics &amp; Facts </p></a></li>
+</ul>
+<p class="rm-manual">Top Study</p>
+<p class="rm-manual"><a href="file:///study/10653/e-commerce-worldwide-statista-dossier/"><span>View Study</span></a></p>
+<p class="rm-manual"><a href="file:///markets/"> Industry Overview </a></p>
+</li>
+<li class="rm-manual">
+<a href="file:///studies-and-reports/"> Reports </a><p class="rm-manual"> Report Shop </p>
+<p class="rm-manual"><a href="file:///studies-and-reports/all-reports">Search our database</a></p>
+<p class="rm-manual"><a href="file:///studies-and-reports/digital-and-trends"></a></p><p class="rm-manual"><a href="file:///studies-and-reports/digital-and-trends">Digital &amp; Trends</a></p><a href="file:///studies-and-reports/digital-and-trends">
+<p class="rm-manual">Digital &amp; Trend Reports</p>
+<p class="rm-manual">Overview and forecasts on trending topics</p></a><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///studies-and-reports/industries"></a></p><p class="rm-manual"><a href="file:///studies-and-reports/industries">Industries</a></p><a href="file:///studies-and-reports/industries">
+<p class="rm-manual">Industry Reports</p>
+<p class="rm-manual">Industry insights and forecasts</p></a><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///studies-and-reports/brands-and-companies"></a></p><p class="rm-manual"><a href="file:///studies-and-reports/brands-and-companies">Companies</a></p><a href="file:///studies-and-reports/brands-and-companies">
+<p class="rm-manual">Company Reports</p>
+<p class="rm-manual">Key figures and rankings about companies</p></a><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///studies-and-reports/consumers"></a></p><p class="rm-manual"><a href="file:///studies-and-reports/consumers">Consumers</a></p><a href="file:///studies-and-reports/consumers">
+<p class="rm-manual">Consumer Reports</p>
+<p class="rm-manual">Consumer insights and preferences in various industries</p></a><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///studies-and-reports/politics-and-society"></a></p><p class="rm-manual"><a href="file:///studies-and-reports/politics-and-society">Politics &amp; Society</a></p><a href="file:///studies-and-reports/politics-and-society">
+<p class="rm-manual">Politics &amp; Society Reports</p>
+<p class="rm-manual">Detailed information about political and social topics</p></a><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///studies-and-reports/regions-and-countries"></a></p><p class="rm-manual"><a href="file:///studies-and-reports/regions-and-countries">Countries</a></p><a href="file:///studies-and-reports/regions-and-countries">
+<p class="rm-manual">Country Reports</p>
+<p class="rm-manual">All key figures about regions and countries</p></a><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///studies-and-reports/"> Find your information in our database containing over 20,000 reports </a></p>
+</li>
+<li class="rm-manual">
+<span>Outlooks </span><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///outlook/consumer-markets"><p class="rm-manual"><span>Consumer Market Outlook </span></p><p class="rm-manual">Everything you need to know about Consumer Goods</p><p class="rm-manual"></p></a></li>
+<li class="rm-manual"><a href="file:///outlook/digital-markets"><p class="rm-manual"><span>Digital Market Outlook </span></p><p class="rm-manual">Identify market potentials of the digital future</p><p class="rm-manual"></p></a></li>
+<li class="rm-manual"><a href="file:///outlook/mobility-markets"><p class="rm-manual"><span>Mobility Market Outlook </span></p><p class="rm-manual">Key topics in mobility</p><p class="rm-manual"></p></a></li>
+<li class="rm-manual"><a href="file:///outlook/country-outlook"><p class="rm-manual"><span>Country Outlook </span></p><p class="rm-manual">Key economic and social indicators</p><p class="rm-manual"></p></a></li>
+<li class="rm-manual"><a href="file:///outlook/technology-outlook"><p class="rm-manual"><span>Technology Market Outlook <span> Update </span></span></p><p class="rm-manual">Insights into the world's most important technology markets</p><p class="rm-manual"></p></a></li>
+<li class="rm-manual"><a href="file:///outlook/advertising-media"><p class="rm-manual"><span>Advertising &amp; Media Outlook <span> New </span></span></p><p class="rm-manual">Figures and insights about the advertising and media world</p><p class="rm-manual"></p></a></li>
+<li class="rm-manual"><a href="file:///outlook/industry-outlook"><p class="rm-manual"><span>Industry Outlook <span> New </span></span></p><p class="rm-manual">Everything you need to know about the industry development</p><p class="rm-manual"></p></a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<span>Tools </span><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///publication-finder"><p class="rm-manual"><span>Publication Finder </span></p><p class="rm-manual">Find studies from all around the internet</p><p class="rm-manual"></p></a></li>
+<li class="rm-manual"><a href="file:///search/?companies=1&amp;sortMethod=revenueDesc&amp;accuracy=or" rel="noopener nofollow"><p class="rm-manual"><span>Company Database <span>New</span></span></p><p class="rm-manual">Sales and employment figures at a glance</p><p class="rm-manual"></p></a></li>
+<li class="rm-manual"><a href="file:///business-plan-export"><p class="rm-manual"><span>Business Plan Export </span></p><p class="rm-manual">Data sets for your business plan</p><p class="rm-manual"></p></a></li>
+</ul>
+</li>
+<li class="rm-manual"><a href="file:///chartoftheday/"> Infographics </a></li>
+<li class="rm-manual">
+<a href="file:///aboutus/"> Services </a><p class="rm-manual"> The Statistics Portal </p>
+<p class="rm-manual"> Directly accessible data for 170 industries from 50 countries and over 1 Mio. facts. </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///aboutus/"> About Statista </a></li>
+<li class="rm-manual"><a href="file:///aboutus/trust">Why trust Statista </a></li>
+<li class="rm-manual"><a href="file:///getting-started">First Steps and Help Centre </a></li>
+<li class="rm-manual"><a href="file:///statistic-portal/">Tools and Tutorials explained in our Media Centre </a></li>
+</ul>
+<p class="rm-manual"> Research &amp; Analysis </p>
+<p class="rm-manual"></p><p class="rm-manual"> Customized Research &amp; Analysis projects: </p><a href="https://www.statista-research.com/en/" rel="noopener"> Market Research &amp; Market Data Modelling </a><p class="rm-manual"> Quick Analysis with our professional Research Service: </p><a href="https://ask.statista.com/" rel="noopener"> AskStatista </a><p class="rm-manual"> Unique content meets Design: </p><a href="https://www.statista.com/page/whitepaper"> Whitepaper Configurator </a><p class="rm-manual"></p>
+<p class="rm-manual"> Content &amp; Information Design </p>
+<p class="rm-manual"> Content Marketing &amp; Information Design for your projects: </p>
+<ul class="rm-manual">
+<li class="rm-manual">Customized infographic service</li>
+<li class="rm-manual">Presentation Design</li>
+<li class="rm-manual">Animated videos</li>
+<li class="rm-manual">Whitepapers, E-Books, etc.</li>
+</ul>
+<p class="rm-manual"><a href="https://content-design.statista.com/?utm_source=statista&amp;utm_medium=referral&amp;utm_campaign=top_navigation_link_en" rel="noopener">More Information </a></p>
+<p class="rm-manual"> eCommerceDB.com </p>
+<p class="rm-manual"></p><p class="rm-manual"> KPIs for more than 20,000 online stores </p><ul class="rm-manual">
+<li class="rm-manual">Rankings by country</li>
+<li class="rm-manual">Rankings by category</li>
+</ul><a href="https://ecommercedb.com/" rel="noopener"> Go to database </a><p class="rm-manual"></p>
+</li>
+<li class="rm-manual"><a href="file:///customercloud/global-consumer-survey"><span> Global Survey </span><span> New </span></a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><span>Prices &amp; Access</span></li>
+<li class="rm-manual"><a href="file:///accounts/">Single Accounts</a></li>
+<li class="rm-manual"><a href="file:///accounts/corporate/">Corporate Solutions</a></li>
+<li class="rm-manual"><a href="file:///accounts/education/">Universities</a></li>
+<li class="rm-manual"><span>Statistics</span></li>
+<li class="rm-manual"><a href="file:///statistics/popular/">Popular Statistics</a></li>
+<li class="rm-manual"><a href="file:///topics/">Topics</a></li>
+<li class="rm-manual"><a href="file:///markets/">Markets</a></li>
+<li class="rm-manual"><a href="file:///studies-and-reports/">Reports</a></li>
+<li class="rm-manual"><span>Outlooks</span></li>
+<li class="rm-manual"><a href="file:///outlook/consumer-markets">Consumer Market</a></li>
+<li class="rm-manual"><a href="file:///outlook/digital-markets">Digital Market</a></li>
+<li class="rm-manual"><a href="file:///outlook/mobility-markets">Mobility Market</a></li>
+<li class="rm-manual"><a href="file:///outlook/country-outlook">Country Outlook</a></li>
+<li class="rm-manual"><a href="file:///outlook/technology-outlook">Technology Market</a></li>
+<li class="rm-manual"><a href="file:///outlook/advertising-media">Advertising &amp; Media</a></li>
+<li class="rm-manual"><a href="file:///outlook/industry-outlook">Industry Outlook</a></li>
+<li class="rm-manual"><span>Tools</span></li>
+<li class="rm-manual"><a href="file:///publication-finder">Publication Finder</a></li>
+<li class="rm-manual"><a href="file:///search/?companies=1">Company Database</a></li>
+<li class="rm-manual"><a href="file:///business-plan-export">Business Plan Export</a></li>
+<li class="rm-manual"><a href="file:///chartoftheday/">Infographics</a></li>
+<li class="rm-manual"><span>Services</span></li>
+<li class="rm-manual"><a href="https://content-design.statista.com/?utm_source=statista&amp;utm_medium=referral&amp;utm_campaign=top_navigation_link_en" rel="noopener">Content &amp; Information Design</a></li>
+<li class="rm-manual"><a href="https://www.statista-research.com/en/" rel="noopener">Research projects</a></li>
+<li class="rm-manual"><a href="https://ask.statista.com/" rel="noopener">Ask Statista</a></li>
+<li class="rm-manual"><a href="file:///customercloud/global-consumer-survey">Global Consumer Survey</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://de.statista.com/">DE</a></li>
+<li class="rm-manual"><a href="https://es.statista.com/">ES</a></li>
+<li class="rm-manual"><a href="https://fr.statista.com/">FR</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="file:///markets/422/international/"><span>International</span></a><span>›</span>
+</li>
+<li class="rm-manual"><a href="file:///markets/422/topic/553/iran/"><span>Iran</span></a></li>
+</ul>
+<h2 class="rm-manual"> Iran - Statistics &amp; Facts </h2>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="#topicHeader__wrapper">Overview</a></li>
+<li class="rm-manual"><a href="#dossierSummary">Key figures</a></li>
+<li class="rm-manual"><a href="#dossierContents__outerWrapper">Statistics</a></li>
+</ul>
+<p class="rm-manual"><span> Published by <a href="file:///aboutus/our-research-commitment">H. Plecher</a>, </span><span> Dec 6, 2017 </span></p>
+<article> Iran, once Persia, is a major player in the Middle East. It 
+has a large land territory and is centrally located in Eurasia and 
+Western Asia. It has a wide array of neighbors including Turkmenistan, 
+Afghanistan, Pakistan, Azerbaijan, Armenia, Turkey and Iraq. It is also 
+close to Kuwait, Saudi Arabia and the United Arab Emirates which are 
+located south and east of the Persian Gulf. <a href="file:///statistics/294102/total-population-of-iran/">Iran’s population</a> is slowly growing and estimated to have surpassed the 80-million-inhabitants mark as of 2016. The <a href="file:///statistics/294115/iran-fertility-rate/">fertility rate</a> is just slightly below the natural replacement rate, while <a href="file:///statistics/294186/iran-life-expectancy/">life expectancy</a> is slowly but steadily increasing. Overall, few people are <a href="file:///statistics/294213/iran-age-structure/">over the age of 65</a>. The capital of Iran is Tehran, and most of the country's population lives in or close to <a href="file:///statistics/455841/urbanization-in-iran/">urban areas</a>. </article><p><a href="file:///statistics/226274/perceived-threat-of-a-nuclear-armed-iran-by-neighboring-countries/">Neighboring countries</a>
+ and the world have been skeptical of Iran’s nuclear program for the 
+last 15 years. Iran’s nuclear activity is worrisome for many nations 
+around the world and it is feared that Iran’s actions could fuel a 
+nuclear arms race in an already unstable region. Due to these worries, 
+Iran has faced a number of international sanctions to stymie its nuclear
+ capacity. Iran’s economy has suffered because of these international 
+sanctions; even though Iran has the <a href="file:///statistics/237065/share-of-oil-reserves-of-the-leading-ten-countries/">fourth largest oil reserves globally</a>, <a href="file:///statistics/451444/possible-impact-of-lifting-sanctions-against-iran-on-oil-production/">daily oil production</a> has decreased significantly since the first sanctions from the United States were put in place back in 1978. </p>
+<p> Increased sanctions in 2012 had a significant impact on <a href="file:///statistics/294233/iran-gross-domestic-product-gdp/">Iran's GDP</a> thereafter, resulting in a short spell of negative <a href="file:///statistics/294301/iran-gross-domestic-product-gdp-growth/">growth rates</a> and turmoil. During the same period, Iran's <a href="file:///statistics/294320/iran-inflation-rate/">inflation rate</a> soared dramatically, reaching over 30 percent. This has been difficult for Iranians, especially as the average <a href="file:///statistics/294245/iran-gross-domestic-product-gdp-per-capita/">per capita GDP</a> dropped significantly at the time in addition to experiencing relatively high rates of <a href="file:///statistics/294305/iran-unemployment-rate/">unemployment</a>.
+ Due to Iran’s troubled relations with the west and many of its 
+neighbors in the Middle East, trade has been limited to countries 
+outside these regions for both <a href="file:///statistics/294379/iran-main-export-partners/">exports</a> and <a href="file:///statistics/294389/iran-main-import-partners/">imports</a>. This has been challenging for Iranian economy. </p>
+<p> Iran is working towards improving its international relations and 
+remove sanctions by making its nuclear activities transparent. However, 
+Iran has accumulated a wide range of enemies in the region, and the <a href="file:///topics/4216/the-syrian-civil-war/">war in Syria</a>
+ and contradictory opinions regarding who to support in the region, 
+could intensify already stressed relations. Most recently, relations 
+with Saudi Arabia have deteriorated dramatically, when Iranians 
+protested the execution of 47 men, including a Shiite cleric, on 
+terrorism-related charges in Saudi Arabia. The protesters attacked the 
+Saudi embassy in Tehran, and Saudi Arabia cut all diplomatic ties with 
+Iran in return. </p>
+<p><span> This text provides general information. Statista assumes no 
+liability for the information given being complete or correct. Due to 
+varying update cycles, statistics can display more up-to-date data than 
+referenced in the text. </span></p>
+<h3>Interesting statistics</h3>
+<p>In the following 4 chapters, you will quickly find the 36 most important statistics relating to "Iran".</p>
+<p>Statistics on the topic</p>
+<ul>
+<li><a href="#dossierSummary__chapter1">Population</a></li>
+<li><a href="#dossierSummary__chapter2">Economy</a></li>
+<li><a href="#dossierSummary__chapter3">National Finances</a></li>
+<li><a href="#dossierSummary__chapter4">MENA region</a></li>
+</ul>
+<p><a href="file:///statistics/294102/total-population-of-iran/"></a></p><p><a href="file:///statistics/294102/total-population-of-iran/"> Iran: Total population (in million inhabitants) </a></p><a href="file:///statistics/294102/total-population-of-iran/">
+<p> 82.36m </p></a><a href="file:///statistics/294108/iran-population-growth/"><p> Iran: Population growth </p>
+<p> 1.39% </p></a><a href="file:///statistics/294115/iran-fertility-rate/"><p> Iran: Fertility rate </p>
+<p> 2.12 </p></a><p></p>
+<h3> Population </h3>
+<ul>
+<li><a href="file:///statistics/294102/total-population-of-iran/"><p>Total population of Iran 2024</p></a></li>
+<li><a href="file:///statistics/294108/iran-population-growth/"><p>Population growth of Iran 2008-2018</p></a></li>
+<li><a href="file:///statistics/294115/iran-fertility-rate/"><p>Fertility rate of Iran 2017</p></a></li>
+<li><a href="file:///statistics/976951/crude-birth-rate-in-iran/"><p>Crude birth rate in Iran 2007-2017</p></a></li>
+<li><a href="file:///statistics/294186/iran-life-expectancy/"><p>Life expectancy in Iran 2017</p></a></li>
+<li><a href="file:///statistics/294213/iran-age-structure/"><p>Age structure in Iran 2008-2018</p></a></li>
+<li><a href="file:///statistics/580185/death-rate-in-iran/"><p>Death rate in Iran 2017</p></a></li>
+<li><a href="file:///statistics/806946/infant-mortality-in-iran/"><p>Infant mortality rate in Iran 2018</p></a></li>
+<li><a href="file:///statistics/455841/urbanization-in-iran/"><p>Urbanization in Iran 2018</p></a></li>
+</ul>
+<h3> Economy </h3>
+<ul>
+<li><a href="file:///statistics/294233/iran-gross-domestic-product-gdp/"><p>Gross domestic product of Iran 2021</p></a></li>
+<li><a href="file:///statistics/294245/iran-gross-domestic-product-gdp-per-capita/"><p>Gross domestic product per capita of Iran 2024</p></a></li>
+<li><a href="file:///statistics/294301/iran-gross-domestic-product-gdp-growth/"><p>Growth of the gross domestic product of Iran 2021</p></a></li>
+<li><a href="file:///statistics/294534/iran-share-of-economic-sectors-in-gdp/"><p>Share of economic sectors in Iran's gross domestic product 2017</p></a></li>
+<li><a href="file:///statistics/294305/iran-unemployment-rate/"><p>Unemployment rate of Iran 2019</p></a></li>
+<li><a href="file:///statistics/294320/iran-inflation-rate/"><p>Inflation rate of Iran 2021</p></a></li>
+<li><a href="file:///statistics/294360/iran-import-of-goods/"><p>Import of goods from Iran 2018</p></a></li>
+<li><a href="file:///statistics/822561/import-of-commodities-to-iran/"><p>Import of commodities to Iran 2018</p></a></li>
+<li><a href="file:///statistics/294389/iran-main-import-partners/"><p>Main import partners of Iran 2017</p></a></li>
+<li><a href="file:///statistics/294339/iran-export-of-goods/"><p>Export of goods from Iran 2018</p></a></li>
+<li><a href="file:///statistics/822559/export-of-commodities-from-iran/"><p>Export of commodities from Iran 2018</p></a></li>
+<li><a href="file:///statistics/264170/oil-exports-of-iran-by-region-2008/"><p>Oil exports by region - Iran 2008-2018</p></a></li>
+<li><a href="file:///statistics/294379/iran-main-export-partners/"><p>Main export partners of Iran 2017</p></a></li>
+<li><a href="file:///statistics/294365/iran-trade-balance/"><p>Trade balance of Iran 2018</p></a></li>
+<li><a href="file:///statistics/683786/made-in-index-attributes-associated-with-products-made-in-iran/"><p>Made-In Index: Attributes associated with products made in Iran 2017</p></a></li>
+<li><a href="file:///statistics/682578/made-in-country-index-iran-by-country/"><p>Made-In Country Index: perception of products made in Iran, by country 2017</p></a></li>
+</ul>
+<h3> National Finances </h3>
+<ul>
+<li><a href="file:///statistics/531622/national-debt-of-iran/"><p>National debt of Iran 2014-2024</p></a></li>
+<li><a href="file:///statistics/294544/iran-national-debt-in-relation-to-gross-domestic-product/"><p>Iran's national debt in relation to gross domestic product 2024</p></a></li>
+<li><a href="file:///statistics/810424/ratio-of-military-expenditure-to-gross-domestic-product-gdp-iran/"><p>Ratio of military expenditure to gross domestic product (GDP) in Iran 2018</p></a></li>
+<li><a href="file:///statistics/294580/iran-budget-balance-in-relation-to-gross-domestic-product/"><p>Iran's budget balance in relation to gross domestic product 2021</p></a></li>
+</ul>
+<h3> MENA region </h3>
+<ul>
+<li><a href="file:///statistics/804633/total-population-of-the-mena-countries/"><p>Total population of the MENA countries 2018</p></a></li>
+<li><a href="file:///statistics/804798/life-expectancy-at-birth-in-the-mena-countries/"><p>Life expectancy at birth in the MENA countries 2018</p></a></li>
+<li><a href="file:///statistics/804761/gdp-of-the-mena-countries/"><p>Gross domestic product of the MENA countries in 2018</p></a></li>
+<li><a href="file:///statistics/804765/gross-domestic-product-gdp-per-capita-in-the-mena-countries/"><p>Gross domestic product (GDP) per capita in the MENA countries 2018</p></a></li>
+<li><a href="file:///statistics/804771/inflation-rate-in-the-mena-countries/"><p>Inflation rate in the MENA countries 2018</p></a></li>
+<li><a href="file:///statistics/804838/trade-balance-of-goods-in-the-mena-countries/"><p>Trade balance of goods in the MENA countries 2018</p></a></li>
+<li><a href="file:///statistics/804774/national-debt-of-the-mena-countries-in-relation-to-gross-domestic-product-gdp/"><p>National debt of MENA countries in relation to gross domestic product (GDP) 2018</p></a></li>
+</ul>
+<h3> Dossier on the topic </h3>
+<p> All important statistics are prepared by our experts – available for direct download as PPT &amp; PDF! </p>
+<p><a href="file:///study/20812/iran-statista-dossier/"> Go to report </a></p>
+<p><span>TOP SELLER</span></p>
+<h3> Important key figures </h3>
+<p>The most important key figures provide you with a compact summary of 
+the topic of "Iran" and take you straight to the corresponding 
+statistics.</p>
+<h4>Economy</h4>
+<ul>
+<li>
+<a href="file:///statistics/294233/iran-gross-domestic-product-gdp/"><p> Iran: Gross domestic product (GDP) (in billion international dollars) </p>
+<p> 1,491.45bn Int$ </p></a><p>Detailed statistics</p>
+<p>Gross domestic product of Iran 2021</p>
+</li>
+<li>
+<a href="file:///statistics/294245/iran-gross-domestic-product-gdp-per-capita/"><p> Iran: Gross domestic product (GDP) per capita (in U.S. dollars) </p>
+<p> 5,416.53 USD </p></a><p>Detailed statistics</p>
+<p>Gross domestic product per capita of Iran 2024</p>
+</li>
+<li>
+<a href="file:///statistics/294305/iran-unemployment-rate/"><p> Iran: Unemployment rate </p>
+<p> 11.99% </p></a><p>Detailed statistics</p>
+<p>Unemployment rate of Iran 2019</p>
+</li>
+<li>
+<a href="file:///statistics/294320/iran-inflation-rate/"><p> Iran: Inflation rate (compared to previous year) </p>
+<p> 41.06% </p></a><p>Detailed statistics</p>
+<p>Inflation rate of Iran 2021</p>
+</li>
+<li>
+<a href="file:///statistics/294360/iran-import-of-goods/"><p> Iran: Import of goods (in billion U.S. dollars) </p>
+<p> 49.35bn USD </p></a><p>Detailed statistics</p>
+<p>Import of goods from Iran 2018</p>
+</li>
+<li>
+<a href="file:///statistics/294339/iran-export-of-goods/"><p> Iran: Export of goods (in billion U.S. dollars) </p>
+<p> 105bn USD </p></a><p>Detailed statistics</p>
+<p>Export of goods from Iran 2018</p>
+</li>
+<li>
+<a href="file:///statistics/294365/iran-trade-balance/"><p> Iran: Trade balance (in billion U.S. dollars) </p>
+<p> 55.65bn USD </p></a><p>Detailed statistics</p>
+<p>Trade balance of Iran 2018</p>
+</li>
+<li>
+<a href="file:///statistics/294379/iran-main-export-partners/"><p> Iran's main export partner </p>
+<p> China </p></a><p>Detailed statistics</p>
+<p>Main export partners of Iran 2017</p>
+</li>
+<li>
+<a href="file:///statistics/294389/iran-main-import-partners/"><p> Iran's main import partner </p>
+<p> United Arab Emirates </p></a><p>Detailed statistics</p>
+<p>Main import partners of Iran 2017</p>
+</li>
+<li>
+<a href="file:///statistics/682578/made-in-country-index-iran-by-country/"><p> Share of Pakistanis who have a positive perception of Iranian products </p>
+<p> 41% </p></a><p>Detailed statistics</p>
+<p>Made-In Country Index: perception of products made in Iran, by country 2017</p>
+</li>
+</ul>
+<h4>National Finances</h4>
+<ul>
+<li>
+<a href="file:///statistics/294544/iran-national-debt-in-relation-to-gross-domestic-product/"><p> Iran: National debt in relation to gross domestic product (GDP) </p>
+<p> 32.18% </p></a><p>Detailed statistics</p>
+<p>Iran's national debt in relation to gross domestic product 2024</p>
+</li>
+<li>
+<a href="file:///statistics/294580/iran-budget-balance-in-relation-to-gross-domestic-product/"><p> Iran: Budget balance in relation to gross domestic product (GDP) </p>
+<p> -5.59% </p></a><p>Detailed statistics</p>
+<p>Iran's budget balance in relation to gross domestic product 2021</p>
+</li>
+</ul>
+<h4 class="rm-manual"> More interesting topics </h4>
+<h3 class="rm-manual"> Related topics </h3>
+<p class="rm-manual"><a href="file:///topics/1087/nuclear-power/"></a></p><p class="rm-manual"><a href="file:///topics/1087/nuclear-power/"> Global nuclear power </a></p><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///topics/1620/afghanistan/"></a></p><p class="rm-manual"><a href="file:///topics/1620/afghanistan/"> Afghanistan </a></p><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///topics/1630/saudi-arabia/"></a></p><p class="rm-manual"><a href="file:///topics/1630/saudi-arabia/"> Saudi Arabia </a></p><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///topics/2378/syria/"></a></p><p class="rm-manual"><a href="file:///topics/2378/syria/"> Syria </a></p><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///topics/2666/pakistan/"></a></p><p class="rm-manual"><a href="file:///topics/2666/pakistan/"> Pakistan </a></p><p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///topics/4216/the-syrian-civil-war/"></a></p><p class="rm-manual"><a href="file:///topics/4216/the-syrian-civil-war/"> The Syrian Civil War </a></p><p class="rm-manual"></p>
+<h4 class="rm-manual"> Infographics on the topic </h4>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///chart/20454/real-gdp-growth-of-iran/" rel="noopener"><p class="rm-manual">Real GDP growth of Iran</p></a></li>
+<li class="rm-manual"><a href="file:///chart/18023/how-iran-is-bankrolling-regional-instability/" rel="noopener"><p class="rm-manual">How Iran Is Bankrolling Regional Instability</p></a></li>
+<li class="rm-manual"><a href="file:///chart/18109/seaborne-oil-transiting-possible-chokepoints/" rel="noopener"><p class="rm-manual">seaborne oil transiting possible chokepoints</p></a></li>
+</ul>
+<h4 class="rm-manual"> Other studies on the topic </h4>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///study/10654/nuclear-power-in-the-united-states--statista-dossier/"><p class="rm-manual"> Nuclear power in the United States </p></a></li>
+<li class="rm-manual"><a href="file:///study/10750/global-oil-industry-and-market-statista-dossier/"><p class="rm-manual"> Global oil industry </p></a></li>
+<li class="rm-manual"><a href="file:///study/10861/iaea--nuclear-technology-review-2011/"><p class="rm-manual"> IAEA - Nuclear Technology Review 2012 </p></a></li>
+<li class="rm-manual"><a href="file:///study/16334/saudi-arabia-statista-dossier/"><p class="rm-manual"> Saudi Arabia </p></a></li>
+<li class="rm-manual"><a href="file:///study/28396/nuclear-power-reactors-worldwide-2015/"><p class="rm-manual"> IAEA - Nuclear Power Reactors in the World 2015 </p></a></li>
+<li class="rm-manual"><a href="file:///study/48445/iran/"><p class="rm-manual"> Iran 2020 </p></a></li>
+</ul>
+<h2 class="rm-manual">Contact</h2>
+<h3 class="rm-manual">Get in touch with us. We are happy to help.</h3>
+<p class="rm-manual">Esther Shaulova</p>
+<p class="rm-manual">Operations Manager<span>– Contact (United States)</span></p>
+<p class="rm-manual">Email</p>
+<p class="rm-manual"><a href="mailto:support@statista.com">support@statista.com</a></p>
+<p class="rm-manual">Tel</p>
+<p class="rm-manual"><a href="fon:+1%20212%20419-5770">+1 212 419-5770</a></p>
+<p class="rm-manual">Mon - Fri, 9am - 6pm (EST)</p>
+<p class="rm-manual">Ziyan Zhang</p>
+<p class="rm-manual">Customer Relations<span>– Contact (Asia)</span></p>
+<p class="rm-manual">Email</p>
+<p class="rm-manual"><a href="mailto:asia.support@statista.com">asia.support@statista.com</a></p>
+<p class="rm-manual">Tel</p>
+<p class="rm-manual"><a href="fon:+91%2080%20490164-28">+91 80 490164-28</a></p>
+<p class="rm-manual">Mon - Fri, 11:30am - 10pm (IST)</p>
+<p class="rm-manual">Lodovica Biagi</p>
+<p class="rm-manual">Director of Operations<span>– Contact (Europe)</span></p>
+<p class="rm-manual">Email</p>
+<p class="rm-manual"><a href="mailto:eu.support@statista.com">eu.support@statista.com</a></p>
+<p class="rm-manual">Tel</p>
+<p class="rm-manual"><a href="fon:+44%20(0)20%208189%207000">+44 (0)20 8189 7000</a></p>
+<p class="rm-manual">Mon - Fri, 9:30am - 5pm (GMT)</p>
+<p class="rm-manual">Catalina Rodriguez</p>
+<p class="rm-manual">Key Account Manager - LATAM<span>– Contact (Latin America)</span></p>
+<p class="rm-manual">Email</p>
+<p class="rm-manual"><a href="mailto:support@statista.com">support@statista.com</a></p>
+<p class="rm-manual">Tel</p>
+<p class="rm-manual"><a href="fon:+1%20212%20419-8277">+1 212 419-8277</a></p>
+<p class="rm-manual">Mon - Fri, 9am - 6pm (EST)</p>
+<p class="rm-manual">Yes, let me download!</p>
+<p class="rm-manual">...and make my research life easier.</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///">Home</a></li>
+<li class="rm-manual"><a href="file:///aboutus/">About Statista</a></li>
+<li class="rm-manual"><a href="file:///working-at-statista/">Career</a></li>
+<li class="rm-manual"><a href="file:///contact/">Contact</a></li>
+<li class="rm-manual"><a href="file:///help/">Help &amp; FAQ</a></li>
+<li class="rm-manual"><a href="file:///bugreport/">Report Bug</a></li>
+<li class="rm-manual"><a href="file:///mediapartners/">Our Media Partners </a></li>
+<li class="rm-manual"><a href="file:///imprint/#privacy">Privacy</a></li>
+<li class="rm-manual"><a href="file:///imprint/">Imprint</a></li>
+</ul>
+<p class="rm-manual">Menu</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///accounts/"> Prices &amp; Access </a></li>
+<li class="rm-manual"><a href="file:///statistics/popular/"> Popular Statistics </a></li>
+<li class="rm-manual"><a href="file:///markets/"> Industries </a></li>
+<li class="rm-manual"><a href="file:///chartoftheday/"> Infographics </a></li>
+<li class="rm-manual"><a href="https://content-design.statista.com/?utm_source=statista&amp;utm_medium=referral&amp;utm_campaign=top_navigation_link_en" rel="noopener"> Content &amp; Design projects </a></li>
+<li class="rm-manual"><a href="https://www.statista-research.com/en/" rel="noopener"> Research projects </a></li>
+<li class="rm-manual"><a href="https://ask.statista.com/" rel="noopener"> AskStatista </a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://de.statista.com/"><span> statista.de </span></a></li>
+<li class="rm-manual"><a href="https://es.statista.com/"><span> statista.es </span></a></li>
+<li class="rm-manual"><a href="https://fr.statista.com/"><span> statista.fr </span></a></li>
+</ul></article>
+</body></html>

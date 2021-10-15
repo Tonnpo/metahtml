@@ -1,0 +1,78 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> 'The US is planning to eliminate Kim Jong-un - Foreign Affairs - Israel National News </p>
+<p class="rm-manual"><a href="#main">jump to content</a> </p>
+<p class="rm-manual"> <span><span> Login </span></span> </p>
+<p class="rm-manual">Top tags: <span> <a href="file:///News/Tag.aspx/257">Iran</a> <a href="file:///News/Tag.aspx/2437">Binyamin Netanyahu</a> <a href="file:///News/Tag.aspx/2495">IDF</a> <a href="file:///News/Tag.aspx/13425">Donald Trump</a> <a href="file:///News/Tag.aspx/19807">Coronavirus</a> <a href="file:///News/Tag.aspx/48071">2020 elections</a> </span><a href="file:///More/ActivePage.aspx/Info">Advertise</a> </p>
+<table> <tbody><tr> <td> <p class="rm-manual"><a rel="v:url" href="file:///">Main</a><a href="file:///News/" rel="v:url">All News</a><a href="file:///News/Section.aspx/23" rel="v:url">Foreign Affairs</a><span>'The US is planning to eliminate Kim Jong-un</span></p> <article> <p> </p><h1 class="rm-manual"> 'The US is planning to eliminate Kim Jong-un</h1><p class="rm-manual">High-level Pentagon source says US finalizing plan to eliminate North Korean dictator.</p> <p> </p><p class="rm-manual"> Chana Roberts , <span><span>08/04/17 21:26</span></span> </p> <p></p> <p></p> <p></p><p class="rm-manual">Kim Jong-Un</p><p class="rm-manual">Reuters</p><p></p><p></p> <p>US
+ intelligence agencies are finalizing a plan to eliminate North Korean 
+leader Kim Jong-un, an anonymous high-level Pentagon source said.</p> <p>One
+ source claims that according to a leaked document, the US plan includes
+ disguising a small building opposite Kim's primary office in the DPRK 
+building.</p> <p>The disguise would turn the smaller building into a "Pizza Hut" selling both normal and poisoned pizzas.</p> <p>According
+ to a South Korean military official, the US will work under South 
+Korean command. US special agents will form a special brigade under 
+South Korean command, which the natives would tailor to meet the area's 
+unique requirements.</p> <p>Speaking about the possibility of 
+eliminating Kim, US Navy Admiral James Stavridis, who also served as 
+NATO Supreme Allied Commander Europe, said, "decapitation is always a 
+tempting strategy when you're faced with a highly unpredictable and 
+highly dangerous leader.</p> <p>"The question you have to ask yourself 
+is what happens the day after you decapitate? I think that in North 
+Korea, it's an enormous unknown."</p> <p>In March, UN Ambassador Nikki Haley warned that the US <a href="file:///News/News.aspx/226402">had not ruled</a> out military action as an option to eliminate North Korea as a nuclear threat.</p> <p>Trump
+ also told reporters he would "certainly be prepared to act alone 
+against North Korea" but also said he "thinks China will want to be 
+stepping up."</p> <p>The White House did not comment on the leaks, but 
+sources in US President Donald Trump's administration said the president
+ is outraged by the leak, which is purportedly caused by those who were 
+previously loyal to former US President Barack Obama.</p> <p class="rm-manual">Tags:<span><a href="file:///News/Tag.aspx/421">US</a>, <a href="file:///News/Tag.aspx/590">China</a>, <a href="file:///News/Tag.aspx/1074">North Korea</a>, <a href="file:///News/Tag.aspx/2397">assassination</a>, <a href="file:///News/Tag.aspx/6312">WMD</a>, <a href="file:///News/Tag.aspx/40379">Trump</a></span></p> </article> </td> </tr>
+</tbody></table>
+<table><tbody><tr> <td class="rm-manual">© Arutz Sheva, All Rights Reserved<p><a href="file:///">Home page</a> | <a href="file:///More/ActivePage.aspx/Contact">Contact</a> | <a href="file:///More/ActivePage.aspx/Privacy">Privacy Policy</a> | <a href="file:///More/ActivePage.aspx/Staff">Staff</a> | <a href="file:///More/ActivePage.aspx/Info">Advertise with us</a> | <a href="http://www.beteltours.com/">Israel Tours</a> | <a href="http://www.inn.co.il/"> חדשות ערוץ 7</a> </p>
+</td> </tr></tbody></table>
+<table><tbody> <tr>
+<td class="rm-manual">
+<h4 class="rm-manual">Main</h4> <a href="#">Homepage</a> <a href="file:///News/Section.aspx/46">Op-Eds</a><a href="file:///News/Section.aspx/47">Judaism</a> <a href="file:///Forecast.aspx">Forecast</a> <a href="file:///More/ActivePage.aspx/Useful">Services</a> <a href="file:///More/Album.aspx/3001">Caricature</a><a href="file:///More/Album.aspx/2">Israel Pics</a> </td>
+<td class="rm-manual">
+<h4 class=""><a href="file:///">News</a></h4> <a href="file:///More/ActivePage.aspx/AreaEmail">Send Us Breaking News</a> <a href="file:///News/AllFlashes.aspx">News Briefs</a> </td>
+<td class="rm-manual">
+<h4 class="">More</h4>
+<a href="file:///Blogs/">Blogs</a><a href="file:///Blogs/Blog.aspx/39">Once-Over</a>
+</td>
+<td class="rm-manual">
+<h4 class="rm-manual">Radio</h4> <a href="file:///News/Section.aspx/4">Recorded Shows</a><a href="file:///Radio/Jukebox.aspx">Jukebox</a> </td> </tr> </tbody></table></article>
+</body></html>

@@ -1,0 +1,162 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual">Article v is deliberately vague</h1>
+<p class="rm-manual">By <span><span><a href="https://newswithviews.com/author/guest/" rel="author">Guest Writer</a></span></span><span>|</span><span>2016-11-23T13:05:00-05:00</span><span>November 23rd, 2016</span><span>|</span></p>
+<p>There seems to be needless concern over Article V, the amending 
+clause of the U.S. Constitution. Both friend and foe of the Constitution
+ complain that, while the Founding Fathers gave the people a way to 
+initiate the convention process, they dropped the ball by failing to 
+establish procedures and regulations for the convention itself.</p>
+<p>Was the omission of regulations a mistake? No. Article V is wisely, 
+purposely, and deliberately vague. Those who complain that our founders 
+left Article V strangely incomplete, fail to understand the most 
+fundamental principle of a free and sovereign people.</p>
+<p>Constitutional conventions are the government-making systems of free 
+citizens. Conventions are sovereign assemblies. They comprise all power,
+ including the power to establish the agenda, the rules, the 
+regulations, the ratifying method, and all procedures by which the 
+people might create, modify, or abolish their government. The convention
+ system is the concentration of sovereign power by which “WE THE 
+PEOPLE….[did] ordain and establish this Constitution for the United 
+States of America.”</p>
+<p>Why does Article V lack instructions for future conventions? — 
+because no sitting convention can dictate to the next convention. The 
+1787 Convention could not make regulations for the next convention 
+because the next convention would be just a sovereign as the first 
+Convention — just as free to make its own rules as was the Convention at
+ Philadelphia in 1787. For that reason Article V is purposely, 
+deliberately, and brilliantly vague.</p>
+<p>The following is found in the Records of the Federal Convention of 1787:</p>
+<p>Mr. Madison did not see why Congress would not be as much bound to 
+propose amendments applied for by two-thirds of the States as to call a 
+Convention on the like application. He saw no objection however against 
+providing a Convention for the purpose of amendments, except only that 
+difficulties might arise as to the form, the quorum, and etc. which in 
+Constitutional regulations ought to be as much as possible avoided. 
+(author’s emphasis)</p>
+<p>Why, despite foreseeable difficulties, should constitutional 
+regulations be avoided? — because, as we have already noted, today’s 
+convention cannot establish procedures for tomorrow’s convention. For 
+that reason Article V requires the state legislatures only to apply, 
+only to initiate the convention process. Article V provides no 
+instructions regarding the form, the quorum, or regulations regarding 
+the control of the convention which the state is simply asking Congress 
+to call. The reason for this is simple: State legislatures have only the
+ statutory power granted by their state constitutions; they have no 
+structural authority, no government-making power.</p>
+<p>As a general rule, when one principle is understood, it casts a 
+little light on related principles. For example: State legislatures are 
+not greater than their creators. This principle was affirmed during the 
+1787 Convention while the deputies were considering resolutions on who 
+should ratify the new plan.</p>
+<p>The record states:</p>
+<p>Col. Mason considered a reference of the plan to the authority of the
+ people as one of the most important and essential of the Resolutions. 
+The Legislatures have no power to ratify it. They are the mere creatures
+ of the State Constitutions, and cannot be greater than their creators….
+ Whither then must we resort? To the people with whom all power remains 
+that has not been given up in the Constitutions derived from them. It 
+was of great moment he observed that this doctrine should be cherished 
+as the basis of free Government.</p>
+<p>During that same discussion (July 23) James Madison made a similar observation:</p>
+<p>Mr. Madison thought it clear that the Legislatures were incompetent 
+to the proposed changes. These changes would make essential inroads on 
+the State constitutions, and it would be a novel and dangerous doctrine 
+that a Legislature could change the constitution under which it held its
+ existence.</p>
+<p>The basis of free government is that neither the legislature nor the 
+Congress can determine the power and scope of the Constitution to which 
+they owe their existence. A system under which lawmakers determine the 
+limits of their power is the definition of a dictatorship. The doctrine 
+that legislatures were not qualified to legislate changes in the 
+constitutions under which they serve, was well-established at the 
+founding of our country.</p>
+<p>Today’s state legislators who seek to bring about a “limited” 
+convention ignore the fact that during the first 100 years of American 
+history all state applications for a convention were brilliantly vague —
+ purposely absent even the subject for which the convention had been 
+called.</p>
+<p>A constitutional convention is not “simply an extension of the state 
+legislature.” This widely asserted idea is a corruption of the authority
+ of a free and sovereign people. Only the people have government-making 
+and government-modifying authority. A state legislator has only the 
+powers delegated to him by his state constitution, which most assuredly 
+excludes the power to regulate a constitutional convention, or make 
+rules for a “convention of states,” or to run an “Article V convention,”
+ or to exercise structural authority in any form or under any pretext.</p>
+<p>A state’s application for a convention that does anything more than 
+initiate the convention process, as required by Article V, amounts to a 
+usurpation of the authority of the people who alone have power to set 
+the terms and determine the scope of their convention. Government is 
+nothing more than the creature and cannot be greater than its creator.</p>
+<p>Most current applications for a convention contain rules, 
+regulations, and limitations on the purpose and scope of the requested 
+convention. The “limitation language” in these bills is calculated to 
+allay the very real concerns of state legislators who have been 
+reluctant to support the uncharted road to a modern convention.</p>
+<p>In addition to illegal (completely unenforceable) limitations 
+contained in the state resolutions, the convention lobby is pushing 
+“delegate responsibility” bills that impose severe penalties on 
+convention delegates who might stray into constitutional changes not 
+specifically authorized by the state’s resolution. It would be hard to 
+find a more serious violation of the doctrine of civilian sovereignty 
+than is found in such bills. Convention limitation bills, in any form, 
+constitute the “novel and dangerous doctrine” of which James Madison has
+ spoken.</p>
+<p>It is a curious thing that after 227 years the convention lobby has 
+“just discovered” that state legislatures have an amazing array of 
+powers unknown to America’s Founding Fathers. And it is equally curious 
+that the convention lobby ignores the authority of a sovereign people 
+which in 1787 was “cherished as the basis of free government.”</p>
+<p class="rm-manual"> Please, click on “Mass E-mailing” below and send this article to all your friends.</p>
+<p class="rm-manual">© 2016 Don Fotheringham – All Rights Reserved</p>
+<h2 class="rm-manual"> About the Author: <a href="https://newswithviews.com/author/guest/" rel="author">Guest Writer</a> </h2>
+<h4 class="rm-manual">Subscribe To Daily Email Alerts</h4>
+<p class="rm-manual"><span>Your Name </span></p>
+<p class="rm-manual"><span>Email (required) *</span></p>
+<p class="rm-manual">Select list(s) to subscribe to<span>National</span></p>
+<p class="rm-manual"><span> Yes, I would like to receive Email Alerts from NewsWithViews.com</span></p>
+<p class="rm-manual">Constant Contact Use. Please leave this field blank.</p>
+<p class="rm-manual">By submitting this form, you are consenting to 
+receive marketing emails from: News With Views, P.O. Box 990, Spring 
+Branch, TX, 78070-9998, https://www.newswithviews.com. You can revoke 
+your consent to receive emails at any time by using the SafeUnsubscribe®
+ link, found at the bottom of every email. <a href="https://www.constantcontact.com/legal/service-provider">Emails are serviced by Constant Contact</a></p>
+<h4 class="rm-manual">Latest Articles</h4>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://newswithviews.com/social-justice-affordable-housing-and-government-tyranny/">Social Justice, Affordable Housing, and Government Tyranny</a> <span>June 22, 2021</span> </li> <li class="rm-manual"> <a href="https://newswithviews.com/the-communist-lies-of-white-skin-privilege-part-2/">The Communist Lies of “White Skin Privilege”, Part 2</a> <span>June 22, 2021</span> </li> <li class="rm-manual"> <a href="https://newswithviews.com/for-white-boys-who-think-of-suicide/">For White Boys Who Think of Suicide</a> <span>June 21, 2021</span> </li> <li class="rm-manual"> <a href="https://newswithviews.com/covid-injections-whistleblowers-horrific-number-of-dead/">COVID Injections: Whistleblowers &amp; Horrific Number of Dead</a> <span>June 21, 2021</span> </li> <li class="rm-manual"> <a href="https://newswithviews.com/putin-is-impressed-by-the-american-gestapo/">Putin Is Impressed by the American Gestapo</a> <span>June 21, 2021</span> </li> </ul></article>
+</body></html>

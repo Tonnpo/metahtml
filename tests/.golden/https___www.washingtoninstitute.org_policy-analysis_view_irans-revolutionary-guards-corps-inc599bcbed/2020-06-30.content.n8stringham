@@ -1,0 +1,217 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Iran's Revolutionary Guards Corps, Inc. - The Washington Institute for Near East Policy </p>
+<p class="rm-manual"> <a href="https://www.washingtoninstitute.org/">Ideas. Action. Impact. The Washington Institute for Near East Policy</a> <a href="https://www.washingtoninstitute.org/">The Washington Institute: Improving the Quality of U.S. Middle East Policy</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///ar/">اللغة العربية</a></li> <li class="rm-manual"><a href="file:///fa/">فارسی</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.washingtoninstitute.org/"> <span>Home</span></a>
+</li> <li class="rm-manual"> <a href="#"> <span>Policy Analysis</span></a>
+</li> <li class="rm-manual"> <a href="https://www.washingtoninstitute.org/experts"> <span>Experts</span></a>
+</li> <li class="rm-manual"> <a href="https://www.washingtoninstitute.org/press-room"> <span>Press Room</span></a>
+</li> <li class="rm-manual"> <a href="https://www.washingtoninstitute.org/about"> <span>About</span></a>
+</li> <li class="rm-manual"> <a href="https://www.washingtoninstitute.org/support"> <span>Support</span></a>
+</li> <li class="rm-manual"> <a href="#"> <span>Menu</span></a>
+</li> <li class="rm-manual"> <a href="https://www.washingtoninstitute.org/fikraforum"> <span>Fikra Forum</span></a>
+</li> </ul>
+<h4 class="rm-manual">Issues</h4>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.washingtoninstitute.org/policy-analysis/topic/arab-and-islamic-politics">Arab and Islamic Politics</a></li> <li class="rm-manual"><a href="https://www.washingtoninstitute.org/policy-analysis/topic/arab-israeli-relations">Arab-Israeli Relations</a></li> <li class="rm-manual"><a href="https://www.washingtoninstitute.org/policy-analysis/topic/democracy-and-reform">Democracy and Reform</a></li> <li class="rm-manual"><a href="https://www.washingtoninstitute.org/policy-analysis/topic/energy-and-economics">Energy and Economics</a></li> <li class="rm-manual"><a href="https://www.washingtoninstitute.org/policy-analysis/topic/gulf-and-energy-policy">Gulf and Energy Policy</a></li> <li class="rm-manual"><a href="https://www.washingtoninstitute.org/policy-analysis/topic/military-and-security">Military and Security</a></li> <li class="rm-manual"><a href="https://www.washingtoninstitute.org/policy-analysis/topic/peace-process">Peace Process</a></li> <li class="rm-manual"><a href="https://www.washingtoninstitute.org/policy-analysis/topic/proliferation">Proliferation</a></li> <li class="rm-manual"><a href="https://www.washingtoninstitute.org/policy-analysis/topic/terrorism">Terrorism</a></li> <li class="rm-manual"><a href="https://www.washingtoninstitute.org/policy-analysis/topic/u.s.-policy">U.S. Policy</a></li> </ul>
+<h4 class="rm-manual">Regions</h4>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.washingtoninstitute.org/policy-analysis/topic/egypt">Egypt</a></li> <li class="rm-manual"><a href="https://www.washingtoninstitute.org/policy-analysis/topic/iran">Iran</a></li> <li class="rm-manual"><a href="https://www.washingtoninstitute.org/policy-analysis/topic/iraq">Iraq</a></li> <li class="rm-manual"><a href="https://www.washingtoninstitute.org/policy-analysis/topic/israel">Israel</a></li> <li class="rm-manual"><a href="https://www.washingtoninstitute.org/policy-analysis/topic/jordan">Jordan</a></li> <li class="rm-manual"><a href="https://www.washingtoninstitute.org/policy-analysis/topic/lebanon">Lebanon</a></li> <li class="rm-manual"><a href="https://www.washingtoninstitute.org/policy-analysis/topic/north-africa">North Africa</a></li> <li class="rm-manual"><a href="https://www.washingtoninstitute.org/policy-analysis/topic/palestinians">Palestinians</a></li> <li class="rm-manual"><a href="https://www.washingtoninstitute.org/policy-analysis/topic/persian-gulf-states">Persian Gulf States </a></li> <li class="rm-manual"><a href="https://www.washingtoninstitute.org/policy-analysis/topic/syria">Syria</a></li> <li class="rm-manual"><a href="https://www.washingtoninstitute.org/policy-analysis/topic/turkey">Turkey</a></li> </ul>
+<p class="rm-manual"> <a href="https://www.washingtoninstitute.org/policy-analysis/all">Browse All Analysis</a> <a href="https://www.washingtoninstitute.org/about/research-programs">Research Programs</a> </p>
+<p class="rm-manual"><a href="#"><span>Close</span></a></p>
+<h4 class="rm-manual">Other Pages</h4>
+<h1 class="rm-manual">Policy Analysis</h1>
+<p class="rm-manual">Copyright 2020 The Washington Institute - printed with permission</p>
+<p class="rm-manual">PolicyWatch 1273</p>
+<h1 class="rm-manual"> Iran's Revolutionary Guards Corps, Inc. </h1>
+<p class="rm-manual"> <a href="https://www.washingtoninstitute.org/experts/view/khalaji-mehdi">Mehdi Khalaji</a> </p>
+<p class="rm-manual"> Also available in </p>
+<p class="rm-manual">Policy #1273</p>
+<p class="rm-manual"> August 17, 2007 </p>
+<p>Understanding the impact of Washington's expected designation of 
+Iran's Islamic Revolutionary Guard Corps (IRGC) as a foreign terrorist 
+organization requires knowing what role the Revolutionary Guards play in
+ Iranian society. Apart from being a military force with naval, air, and
+ ground components organized in parallel to the conventional Iranian 
+military, the Revolutionary Guards are the spine of the current 
+political structure and a major player in the Iranian economy.</p>
+<p>Backbone of the Regime</p>
+<p>In his 1988 last will and testament, Ayatollah Ruhollah Khomeini 
+called on the military forces "to follow the regulation of 
+non-interference of the military in the affairs of political parties" 
+and "keep themselves away from political games." In the years since, the
+ opposite has occurred. Once a theocratic state, the Islamic Republic 
+has evolved into a "garrison state," to use an American political 
+science term, in which the military dominates political, economic, and 
+cultural life, and preserves the regime from domestic rather than 
+external opponents. The Iranian constitution forbids the supreme leader 
+from being fully autocratic, but Ayatollah Ali Khamenei has used his 
+position as commander-in-chief of the armed forces, especially his tight
+ control over the Revolutionary Guards, to expand his power.</p>
+<p>Khamenei has appointed many former Revolutionary Guards commanders to
+ top political positions, blurring the line between military and civil 
+authority. Former IRGC senior officers hold significant positions 
+throughout the Iranian government: the president, Mahmoud Ahmadinezhad; 
+the secretary of the Supreme Council of National Security, Ali Larijani;
+ the head of state television and radio services, Ezzatolah Zarghami; 
+the secretary of the Expediency Council (charged with interpreting 
+policy when the president and Majlis disagree), Mohsen Rezai; and the 
+head of the powerful Mostazafan Foundation, Mohammad Farouzandeh; as 
+well as several cabinet ministers and many members of parliament 
+(Majlis).</p>
+<p>The Revolutionary Guards actively prevent steps toward democratic 
+reforms. For example, in 1999, following student protests, the 
+conservative newspaper Jomhouri-e Eslami published a letter by 
+twenty-four Revolutionary Guards senior officers to the reformist 
+president Mohammad Khatami. The Revolutionary Guards, the letter 
+threatened, "cannot tolerate the situation anymore" and would take 
+action if Khatami did not change his policies. It was no idol threat. 
+The IRGC's "Special Force" is trained for scenarios of suppressing 
+political or social uprisings in urban settings -- especially in Tehran.
+ </p>
+<p>The Revolutionary Guards also possess their own large and capable 
+intelligence agency. The "Unit of Reservation of Information" exists in 
+parallel with and is quite influential within the Ministry of 
+Intelligence. Like the ministry, the Revolutionary Guards' intelligence 
+unit operates both within Iran and abroad. The IRGC also has 
+responsibility for Iran's strategic missile force of Shahab missiles and
+ is thought to control the country's suspected nuclear weapons program. 
+Several Revolutionary Guards commanders have been named in UN Security 
+Council resolutions applying sanctions intended to force Iran to reveal 
+more information about nuclear projects.</p>
+<p>Economic Force</p>
+<p>The Revolutionary Guards are also an important component of the 
+Iranian economy. They operate legal businesses, register themselves as 
+foreign companies, and engage in illegal smuggling.</p>
+<p>Following the end of the Iran-Iraq War in 1988, the Majlis enacted 
+legislation permitting the IRGC to use "its engineering capability in 
+rebuilding the country's economy." However, no oversight body exists 
+with the capability of supervising the Revolutionary Guards' economic 
+activities. IRGC-owned companies like the Bahman Group, which assembles 
+Mazda cars in Iran, are examples of the Revolutionary Guards' expansion 
+into a variety of economic sectors. </p>
+<p>Speaking at a ceremony announcing a $1.3 billion no-bid contract 
+between Iran's Oil Ministry and the Khatam al-Anbia firm in June 2006, 
+Revolutionary Guards Brig. Abdurreza Abedzadeh, Khatam al-Anbia's 
+reconstruction deputy, stated that the company had completed 1,220 
+industrial and mining projects over the previous sixteen years, with 247
+ projects currently underway. Three days later, a $2.4 billion contract 
+was concluded with the Tehran Metro Company between the IRGC-owned 
+National Company of Building working with the Mostazafan Foundation. The
+ Oil Ministry also ceded the fifteenth and sixteenth phases of expansion
+ of the South Pars oil field to Khatam al-Anbia under a $2.5 billion 
+contract. In July 2007, the Ministry of Energy agreed that Revolutionary
+ Guards contractors would operate all public infrastructures projects 
+involving water, electricity, and bridges in western Iran. All contracts
+ were awarded on a no-bid basis in violation of Iranian law on open 
+bidding processes. </p>
+<p>In 1999, then-speaker of the Majlis Mehdi Karrubi explicitly detailed
+ the sixty unauthorized docks controlled by the Revolutionary Guards. 
+Ali Qanbari, then a Majlis member, further explained, "One-third of 
+country's import takes place through illegal markets, underground 
+economy, and unauthorized docks". Several hours after the May 8, 2004, 
+official opening of the new Imam Khomeini Airport in Tehran, the 
+Revolutionary Guards closed it, citing security fears over the presence 
+of the Turkish-Austrian consortium Tepe-Akfen-Vie. Iranian sources later
+ revealed that the Revolutionary Guards had been using the old airport 
+to import goods tariff-free and feared losing that ability. </p>
+<p>Some reports suggest that the Revolutionary Guards have used force to
+ assume control of large economic projects. In July 2005, soon after 
+Oriental Oil Kish, one of the largest private oil companies in Iran, 
+refused the IRGC's demand for equal partnership, Cyrus Nasseri, the 
+company's vice-chairman and a senior nuclear negotiator, was arrested 
+and the Revolutionary Guards seized an offshore oil rig being rented by 
+Oriental Oil from a Romanian firm. The Fars News Agency later wrote that
+ negotiations were underway to transfer the ownership of the company to 
+the Revolutionary Guards. Under the banner of economic privatization, 
+the government has circumvented Iranian law to cede ownership of public 
+companies to the Revolutionary Guards at below-market prices through 
+no-bid contracts. </p>
+<p>Less information is available about the Revolutionary Guards' role in
+ foreign firms ostensibly belonging to private individuals. Many rumors,
+ of uncertain accuracy, circulate, for instance about al-Makassib, a 
+huge company based in Dubai. It is not clear who controls the firm, 
+though its most public face is that of Nasser Vaez Tabassi, apparently a
+ U.S. citizen, who is the son of Ayatollah Abbas Vaez Tabassi, one of 
+the most powerful men in Iran in his role as the custodian of the Imam 
+Reza Holy Shrine in Mashhad, which the Wall Street Journal describes as a
+ $6 billion a year enterprise. </p>
+<p>Conclusion</p>
+<p>Iranian writers widely use the economic jargon "rent-seeking" to 
+describe those who prosper thanks to their political connections rather 
+than their business acumen. Under Khamenei, the role of the 
+Revolutionary Guards has expanded exponentially. Under Ahmadinezhad, the
+ IRGC's influence in government ministries and state firms has grown 
+apace. Its next target may be the Majlis. Ahead of a July 2007 
+registration deadline, more than fifty Revolutionary Guards commanders 
+resigned in order to qualify as candidates for the next parliamentary 
+election. </p>
+<p>The IRGC is a major obstacle to democratization and economic 
+privatization. Imposing sanctions on the Revolutionary Guards could help
+ promote democratic reform and stability in the region. However, choking
+ off the IRGC's financial resources will not be easy; it is quite adept 
+at diversifying its sophisticated economic activities. The Revolutionary
+ Guards have demonstrated both skill in politics and contempt for the 
+law. As former Washington Institute visiting fellow Mohsen Sazegara, a 
+founder of the IRGC in 1979, put it, "What was once a revolutionary 
+guard is now a mafia." </p>
+<p>Mehdi Khalaji, a Shiite theologian by training, is the Next Generation Fellow at the Washington Institute.</p>
+<p class="rm-manual"> <span>Share</span> </p>
+<p class="rm-manual"><a href="file:///policy-analysis/pdf/irans-revolutionary-guards-corps-inc" rel="nofollow">View Page As Printable PDF</a></p>
+<p class="rm-manual">More On</p>
+<p class="rm-manual">Topics</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///policy-analysis/topic/terrorism">Terrorism</a></li> <li class="rm-manual"><a href="file:///policy-analysis/topic/u.s.-policy">U.S. Policy</a></li> </ul>
+<p class="rm-manual">Countries</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///policy-analysis/topic/iran">Iran</a></li> </ul>
+<h2 class="rm-manual">About The Authors</h2>
+<h3 class="rm-manual"><a href="https://www.washingtoninstitute.org/experts/view/khalaji-mehdi"> Mehdi Khalaji</a></h3>
+<p class="rm-manual">Mehdi Khalaji, a Qom-trained Shiite theologian, is the Libitzky Family Fellow at The Washington Institute.</p>
+<p class="rm-manual">Stay up to date on pressing policy issues in the middle east</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://info.washingtoninstitute.org/acton/form/19961/0002:d-0001/0/-/-/-/-/index.htm">Setup custom email alerts</a></li> <li class="rm-manual"><a href="file:///subscribe">Customize your rss feed</a></li> </ul>
+<p class="rm-manual">The Washington Institute seeks to advance a 
+balanced and realistic understanding of American interests in the Middle
+ East and to promote the policies that secure them. | <a href="file:///about">About the Institute</a></p>
+<p class="rm-manual"> The Institute is a 501(c)3 organization; all donations are tax deductible. | <a href="file:///support">Support the Institute</a></p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.washingtoninstitute.org/about/contact-us">Contact</a></li> <li class="rm-manual"><a href="https://www.washingtoninstitute.org/about/privacy-policy">Privacy Policy</a></li> <li class="rm-manual"><a href="https://www.washingtoninstitute.org/about/rights-and-permissions">Rights &amp; Permissions</a></li> <li class="rm-manual"><a href="https://www.washingtoninstitute.org/about/employment">Employment</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://www.washingtoninstitute.org/policy-analysis/all/54/all/1969-12-31/2012-09-18/25#browse">Maps &amp; Graphics</a></li> <li class="rm-manual"><a href="http://www.washingtoninstitute.org/policy-analysis/all/all/all/25#categories=673&amp;page=25%7C0">Video &amp; Multimedia</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://www.facebook.com/WashingtonInstitute">Facebook</a></li> <li class="rm-manual"><a href="http://twitter.com/#!/washinstitute">Twitter</a></li> <li class="rm-manual"><a href="http://www.youtube.com/user/WashingtonInstitute">You Tube</a></li> <li class="rm-manual"><a href="http://feeds.soundcloud.com/users/soundcloud:users:214995804/sounds.rss">Podcast</a></li> <li class="rm-manual"><a href="https://www.washingtoninstitute.org/subscribe">RSS</a></li> <li class="rm-manual"><a href="http://info.washingtoninstitute.org/acton/form/19961/0002:d-0001/0/-/-/-/-/index.htm">Get Email Alerts</a></li> </ul>
+<p class="rm-manual">© 2018 All rights reserved.</p>
+<p class="rm-manual">The Washington Institute for Near East Policy</p>
+<p class="rm-manual">1111 19th Street NW Suite 500, Washington D.C. 20036</p>
+<p class="rm-manual">Tel: 202-452-0650</p>
+<p class="rm-manual">Fax: 202-223-5364</p></article>
+</body></html>

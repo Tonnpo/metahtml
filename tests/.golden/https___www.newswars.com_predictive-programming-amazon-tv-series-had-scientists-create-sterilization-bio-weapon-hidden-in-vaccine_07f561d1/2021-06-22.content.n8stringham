@@ -1,0 +1,47 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p>A scene from the Amazon produced UTOPIA
+ 2020 series based on the graphic novel. Watch this report showing how 
+close truth is to reality.</p>
+<p>Alex Jones breaks down the lawsuit that calls out the Covid vaccine for targeting <a href="https://www.infowars.com/posts/doctors-raise-alarm-over-covid-vaccine-linked-to-infertility/">women’s fertility</a>:</p>
+<p class="rm-manual">The Big Tech purge is here! Follow <a href="https://www.infowars.com/posts/the-big-tech-crackdown-is-accelerating-follow-infowars-on-these-growing-alternative-platforms/">Infowars and Alex Jones on other growing platforms</a> now to stay informed as the information blackout accelerates.</p>
+<h4 class="rm-manual">WATCH ALL SHOWS</h4>
+<h4 class="rm-manual">AUDIO</h4>
+<p class="rm-manual"> Your browser does not support the audio element. </p>
+<p class="rm-manual"> <a href="http://xml.nfowars.net/Alex.rss">Podcast</a> | <a href="https://play.google.com/store/apps/details?id=com.infowars.official">Google Play</a> | <a href="file:///stream/live">Radio</a> </p></article>
+</body></html>

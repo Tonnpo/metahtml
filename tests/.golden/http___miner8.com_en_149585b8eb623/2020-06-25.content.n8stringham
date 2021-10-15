@@ -1,0 +1,104 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><ul class="rm-manual">
+<li class="rm-manual"> <a href="http://miner8.com/en"> <span>Top Page</span> </a> &gt; </li>
+<li class="rm-manual"> <a href="http://miner8.com/en/entertainment"> <span>Entertainment</span> </a> &gt; </li>
+<li class="rm-manual"> <a href="http://miner8.com/en/14958">Who is Kim Jong-kook’s girlfriend? Lovelife about Kim Jong-kook</a> </li>
+</ul>
+<h1 class="rm-manual">Who is Kim Jong-kook’s girlfriend? Lovelife about Kim Jong-kook</h1>
+<p class="rm-manual"><span>Updated: 2017-05-18</span><span><a href="http://miner8.com/en/entertainment" rel="category tag">Entertainment</a></span><span><a href="http://miner8.com/en/korea-19">Korea</a></span></p>
+<p>Kim Jong-kook (born 25 April 1976) is a South Korean singer and TV personality. </p>
+<p>He was initially part of the Korean duo Turbo, however, he later pursued a successful career as a solo artist.</p>
+<p> Apart from being a 3 Daesang Award Winner Singer, he is also an 
+active participant in variety shows such as X-man and Family Outing 
+(since episode 19). </p>
+<p>Currently, he is a cast member in the variety show, Running Man.</p>
+<h2>Girlfriend</h2>
+<h3>Rumor: <a href="http://miner8.com/en/13735">Song Ji-hyo</a>
+</h3>
+<p>A fortune teller on the South Korean TV Show “Running Man” predicted 
+that stars Song Ji-hyo and Kim Jong-kook have an astonishing 
+compatibility: over 80%!</p>
+<p>This led fans to speculate on an actual marriage, and these comment 
+were subsequently picked up by some media reporters who took them as 
+facts. It was soon proved to be false, but it kept our hearts pounding 
+for a while.</p>
+<h3><a href="http://miner8.com/en/23828">Yoon Eun Hye</a></h3>
+<p>Kim Jong-kook, Yoon Eun Hye is the type of ideal. Kim Jong-kook is stated as follows about Yoon Eun-hye.</p>
+<p>“I can actually when I was dating great if. If someone approached her, I thought I must protect her.”</p>
+<h2>Ex Girlfriend</h2>
+<h3><a href="http://miner8.com/en/29154">Moon Geun-young</a></h3>
+<p>Kim Jong-kook said: also Moon Geun-young. </p>
+<p>“She is of 5.5 feet tall, not too thin, and the type of preference 
+with a round face. I like her big eyes. Because my eyes are small.”</p>
+<h3>Ex Girlfriend 2</h3>
+<p>There is no rumor about his girlfriend. </p>
+<p>He talks about his ideal woman on TV shows, but the real lover information is not reported at all.</p>
+<h2>His Ideal type of woman</h2>
+<p>Kim Jong-kook speaking in appearance, Yoon Eun Hye is the type of ideal.</p>
+<p>Kim Jong-kook was a public confession to Yoon Eun-hye in the variety program, but refused.</p>
+<h2>How he thinks about marriage</h2>
+<p>He spoke with the elementary school fan has increased by variety 
+program “Running Man,” he said that he also want children and get 
+married. </p>
+<p>Followed by Kim Jong Kook believes that “I want to live in” normal 
+“rather than celebrities. Currently, please think that thinking is not 
+yet to the marriage. If I want to get married, want to talk to clearly 
+public”</p>
+<p> , he added. </p>
+<h2>His/Her Ideal situation of dating</h2>
+<p>He doesn’t speak about his ideal situation of dating. </p>
+<h2>How his fan think about his lover</h2>
+<p>His fans are very concerning about his marriage because his age is alomost 40 years old.</p>
+<p>But there is no rumor about his lover, that’s why his fans are so concerned about his love life.</p>
+<h2>List of Love story Dramas/Movies He/She Appeared On</h2>
+<p>Old Miss Diary</p>
+<p> The Girl Who Sees Smell</p>
+<p> Running Man</p>
+<p> Escape Crisis No.1</p>
+<h2>List of Love Songs He Sings</h2>
+<p>Only Wind, Only Wind</p>
+<p> White Love</p>
+<p> Recollection</p>
+<p> Happy Virus</p>
+<p> How Come You Don’t Know</p>
+<p> etc..</p>
+<h2 class="rm-manual">Keyword</h2>
+<h2 class="rm-manual">Writer</h2>
+<h3 class="rm-manual"> <a href="http://miner8.com/en/author/shuta" rel="author nofollow"> Shuta Akabane </a> </h3></article>
+</body></html>

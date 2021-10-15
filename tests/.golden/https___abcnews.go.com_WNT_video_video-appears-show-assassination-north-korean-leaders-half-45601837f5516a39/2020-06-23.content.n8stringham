@@ -1,0 +1,100 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Video appears to show assassination of North Korean leader's half-brother Video - ABC News </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="#"> <span>Sections</span> </a> <ul class="rm-manual"> <li class="rm-manual"> <h1 class="rm-manual"> <span>Sections</span> </h1> </li> <li class="rm-manual"> <a href="file:///"> <span>Top Stories</span> </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/Video"> <span>Video</span> </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/Live"> <span>Live</span> </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/US"> <span>U.S.</span> </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/Politics"> <span>Politics</span> </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/Elections"> <span>2020 Elections</span> </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/Health/Coronavirus"> <span>Coronavirus</span> </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/International"> <span>International</span> </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/Entertainment"> <span>Entertainment</span> </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/Business"> <span>Business</span> </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/Technology"> <span>Technology</span> </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/Lifestyle"> <span>Lifestyle</span> </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/Health"> <span>Health</span> </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/VR"> <span>Virtual Reality</span> </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/alerts/weather"> <span>Weather</span> </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/US/tip-share-abc-news/story?id=61304290"> <span>Tips</span> </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/Sports"> <span>Sports</span> </a> </li> <li class="rm-manual"> <a href="https://fivethirtyeight.com/"> <span>FiveThirtyEight</span> </a> </li> </ul> </li> <li class="rm-manual"> <a href="#"> <span>Shows</span> </a> <ul class="rm-manual"> <li class="rm-manual"> <h1 class="rm-manual"> <span>Shows</span> </h1> </li> <li class="rm-manual"> <a href="https://www.goodmorningamerica.com/"> <span>Good Morning America</span> </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/WN"> <span>World News Tonight</span> </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/Nightline"> <span>Nightline</span> </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/2020"> <span>20/20</span> </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/ThisWeek"> <span>This Week</span> </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/TheView"> <span>The View</span> </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/WhatWouldYouDo"> <span>What Would You Do?</span> </a> </li> </ul> </li> <li class="rm-manual"> <a href="#"> <span>More</span> </a> <ul class="rm-manual"> <li class="rm-manual"> <a href="http://disneyprivacycenter.com/"> <span>Privacy Policy</span> </a> </li> <li class="rm-manual"> <a href="https://disneyprivacycenter.com/notice-to-california-residents/"> <span>Your CA Privacy Rights</span> </a> </li> <li class="rm-manual"> <a href="https://disneyprivacycenter.com/kids-privacy-policy/english/"> <span>Children's Online Privacy Policy</span> </a> </li> <li class="rm-manual"> <a href="http://preferences-mgr.truste.com/?type=abcnews&amp;affiliateId=11"> <span>Interest-Based Ads</span> </a> </li> <li class="rm-manual"> <a href="http://disneytermsofuse.com/"> <span>Terms of Use</span> </a> </li> <li class="rm-manual"> <a href="https://privacy.thewaltdisneycompany.com/en/dnsmi/"> <span>Do Not Sell My Info</span> </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/contact"> <span>Contact Us</span> </a> </li> <li class="rm-manual"> <h1 class="rm-manual"> <span>ABC News Network <span> | </span> © 2020 ABC News Internet Ventures. All rights reserved.</span> </h1> </li> </ul> </li> <li class="rm-manual"> <a href="#"> <span>Search</span> </a> </li> </ul>
+<p class="rm-manual"> <a href="#"><span>Menu</span></a> </p>
+<p class="rm-manual"> <span>Interest Successfully Added</span> <span> We'll notify you here with news about <span>AlertTag</span> </span> <span>Turn on desktop notifications for breaking stories about interest? </span> <span>Off</span> <span>On</span> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <span>Notifications</span> </p> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual">Notifications For Interests:</p> </li> </ul> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual">Breaking</p> </li> <li class="rm-manual"> <p class="rm-manual"> Interests <span><a href="file:///myinterests?cid=clicksource_nc_seeall">See All</a></span> </p> </li> </ul> <p class="rm-manual"> To save your interests across all devices <a href="#">Log In</a> or <a href="#">Sign Up</a> </p> <p class="rm-manual"> <span>Turn on desktop notifications for breaking news?</span> <span>Off</span> <span>On</span> </p> </li> <li class="rm-manual"> <a href="#">Log In</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://abcnews.go.com/Video"> Video </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/Live">Live</a> </li> <li class="rm-manual"> <a href="#">Shows</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.goodmorningamerica.com/"> <span>Good Morning America</span> <span>Good Morning America</span> </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/WN"> <span>World News Tonight</span> <span>World News Tonight</span> </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/Nightline"> <span>Nightline</span> <span>Nightline</span> </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/2020"> <span>20/20</span> <span>20/20</span> </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/ThisWeek"> <span>This Week</span> <span>This Week</span> </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/TheView"> <span>The View</span> <span>The View</span> </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/WhatWouldYouDo"> <span>What Would You Do?</span> <span>What Would You Do?</span> </a> </li> </ul> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/Elections">2020 Elections</a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/Health/Coronavirus">Coronavirus</a> </li> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://abcnews.go.com/US"> U.S. </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/Politics"> Politics </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/International"> International </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/Entertainment"> Entertainment </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/Business"> Business </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/Technology"> Technology </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/Lifestyle"> Lifestyle </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/Health"> Health </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/VR"> Virtual Reality </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/alerts/weather"> Weather </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/US/tip-share-abc-news/story?id=61304290"> Tips </a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/Sports"> Sports </a> </li> <li class="rm-manual"> <a href="https://fivethirtyeight.com/"> FiveThirtyEight </a> </li> </ul> <ul class="rm-manual"> <li class="rm-manual"> <a href="http://disneyprivacycenter.com/"><span>Privacy Policy</span><span>Privacy Policy</span></a> </li> <li class="rm-manual"> <a href="https://disneyprivacycenter.com/notice-to-california-residents/"><span>Your CA Privacy Rights</span><span>Your CA Privacy Rights</span></a> </li> <li class="rm-manual"> <a href="https://disneyprivacycenter.com/kids-privacy-policy/english/"><span>Children's Online Privacy Policy</span><span>Children's Online Privacy Policy</span></a> </li> <li class="rm-manual"> <a href="http://preferences-mgr.truste.com/?type=abcnews&amp;affiliateId=11"><span>Interest-Based Ads</span><span>Interest-Based Ads</span></a> </li> <li class="rm-manual"> <a href="http://disneytermsofuse.com/"><span>Terms of Use</span><span>Terms of Use</span></a> </li> <li class="rm-manual"> <a href="https://privacy.thewaltdisneycompany.com/en/dnsmi/"><span>Do Not Sell My Info</span><span>Do Not Sell My Info</span></a> </li> <li class="rm-manual"> <a href="https://abcnews.go.com/contact"><span>Contact Us</span><span>Contact Us</span></a> </li> </ul> <ul class="rm-manual"> <li class="rm-manual"> <span>ABC News Network <span> | </span> © 2020 ABC News Internet Ventures. All rights reserved.</span> </li> </ul> </li> </ul>
+<h1 class="rm-manual">Video appears to show assassination of North Korean leader's half-brother</h1>
+<p class="rm-manual"><a href="">More</a></p>
+<p class="rm-manual">The video seems to show the half-brother of Kim Jong-un being poisoned in Malaysia. </p>
+<p class="rm-manual"> <span>1:40</span> | <span>02/20/17</span> </p>
+<p class="rm-manual">Coming up in the next <span>{{countdown}} {{countdownlbl}}</span></p>
+<p class="rm-manual">Coming up next:</p>
+<p class="rm-manual">{{nextVideo.title}}</p>
+<p class="rm-manual">{{nextVideo.description}}</p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%7B%7BnextVideo.url%7D%7D">Skip to this video now </a></p>
+<p class="rm-manual">Related</p>
+<p class="rm-manual">Now Playing:</p>
+<p class="rm-manual">{{currentVideo.title}}</p>
+<p class="rm-manual"> <a href=""> <span>Resume Playing Video</span> </a> </p>
+<p class="rm-manual"><a href="">Play Video </a></p>
+<p class="rm-manual">Comments</p>
+<p class="rm-manual">Related Extras</p>
+<p class="rm-manual">Related Videos</p>
+<p class="rm-manual">Video Transcript</p>
+<p class="rm-manual">Transcript for <span> Video appears to show assassination of North Korean leader's half-brother</span></p>
+<p> Their funerals held today. Tom? Thank you. And now to what appears 
+to be the assassination of the brother of Kim Jung un. Here's Matt 
+Gutman. Reporter: All it took was 2.3 seconds to deliver death. Tonight,
+ grainy airport security video obtained by a Japanese TV station 
+purportedly showing a single swift move in which one of the women sneaks
+ up on Kim jung-nam from behind and covered his face with a cloth laced 
+with a liquid. It was poison. Moments later, this image showing Kim 
+jong-nam desperately seeking help from airport security. He died minutes
+ later on the way to the hospital. There's every indication based on 
+North Korea's history that this was a targeted kill. Reporter: Police 
+say these two women are the killers, one of them in the now infamous 
+"lol" shirt. Police say CCTV video shows her tracking Kim jong-nam 
+through the Kuala Lumpur airport. Both now under arrest. Investigators 
+say the other woman claims she thought she was part of a comedy show 
+prank. Authorities have conducted two autopsies on the man with the 
+playboy reputation. ABC news has learned he enjoyed frequenting places 
+like this Singapore girls' bar, but north Korea has rejected the 
+autopsies. There's a manhunt for four suspects in Malaysia. Authorities 
+think this has many of the characteristics of a north Korean purge. 
+Remember, North Korea's leader, Kim Jong-un is accused of killing his 
+own uncles and others. Thank you. To Iraq, and a new wave of military 
+attacks to retake mosul from ISIS. </p>
+<p class="rm-manual">This transcript has been automatically generated and may not be 100% accurate.</p>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"><a href="file:///GMA/video/arrests-made-apparent-assassination-kim-jong-uns-half-45529330"> Arrests made in apparent assassination of Kim Jong Un's half brother</a></p> <p class="rm-manual">One
+ man and two women have been arrested by Malaysian police after the 
+death of North Korean leader Kim Jong Un's exiled half brother, Kim Jong
+ Nam.</p> </li> <li class="rm-manual"> <p class="rm-manual"><a href="file:///International/video/kim-jong-uns-half-brother-killed-malaysia-reports-45488830"> Kim Jong Un's half-brother killed in Malaysia: Reports</a></p> <p class="rm-manual">The
+ half-brother of North Korean leader Kim Jong Un was assassinated on 
+Monday at Kuala Lumpur's international airport, according to South 
+Korean media outlets citing government sources.</p> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"><span>Now Playing:</span> Arrests made in apparent assassination of Kim Jong Un's half brother</p> </li> <li class="rm-manual"> <p class="rm-manual"><span>Now Playing:</span> Kim Jong Un's half-brother killed in Malaysia: Reports</p> </li> <li class="rm-manual"> <p class="rm-manual"><span>Now Playing:</span> Zoo in Tokyo reopens</p> </li> <li class="rm-manual"> <p class="rm-manual"><span>Now Playing:</span> Turtle migration, Rayshard Brooks, primary voting: World in Photos, June 23</p> </li> <li class="rm-manual"> <p class="rm-manual"><span>Now Playing:</span> Mexican musicians receive food from Colectivo Agrega foundation</p> </li> <li class="rm-manual"> <p class="rm-manual"><span>Now Playing:</span> Forest fire forces residents to evacuate homes in Sicily</p> </li> <li class="rm-manual"> <p class="rm-manual"><span>Now Playing:</span> Flamingos, nursing home and Brazil: World in Photos, June 22</p> </li> <li class="rm-manual"> <p class="rm-manual"><span>Now Playing:</span> American among three dead in stabbing attack in U.K.</p> </li> <li class="rm-manual"> <p class="rm-manual"><span>Now Playing:</span> Towering column of ash and gas erupts from Indonesian volcano</p> </li> <li class="rm-manual"> <p class="rm-manual"><span>Now Playing:</span> Italian rescue team saves stranded dog </p> </li> <li class="rm-manual"> <p class="rm-manual"><span>Now Playing:</span> Helicopter ambulances land in UK park after stabbing attack</p> </li> <li class="rm-manual"> <p class="rm-manual"><span>Now Playing:</span> Wishing Prince William a happy 38th birthday! </p> </li> <li class="rm-manual"> <p class="rm-manual"><span>Now Playing:</span> BLM protests, Supreme Court decision, graduation ceremonies: World in Photos, June 19</p> </li> <li class="rm-manual"> <p class="rm-manual"><span>Now Playing:</span> Lightning breaks through clouds in rural Estonia</p> </li> <li class="rm-manual"> <p class="rm-manual"><span>Now Playing:</span> Military jets perform flypast over Paris</p> </li> <li class="rm-manual"> <p class="rm-manual"><span>Now Playing:</span> Here are the 29 countries where same-sex marriage is officially legal</p> </li> <li class="rm-manual"> <p class="rm-manual"><span>Now Playing:</span> Oriel College wants to remove statue of colonialist Cecil Rhodes</p> </li> <li class="rm-manual"> <p class="rm-manual"><span>Now Playing:</span> Newborn otters step out for first time at the London Zoo</p> </li> <li class="rm-manual"> <p class="rm-manual"><span>Now Playing:</span> Man calmly removes python from sink</p> </li> <li class="rm-manual"> <p class="rm-manual"><span>Now Playing:</span> Manitoba motorist rescues deer</p> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"><span>Now Playing:</span> {{itm.title}}</p> </li> </ul>
+<p class="rm-manual">{"duration":"1:40","description":"The video seems 
+to show the half-brother of Kim Jong-un being poisoned in Malaysia. 
+","mediaType":"default","section":"ABCNews/WNT","id":"45601837","title":"Video
+ appears to show assassination of North Korean leader's 
+half-brother","url":"/WNT/video/video-appears-show-assassination-north-korean-leaders-half-45601837"}</p></article>
+</body></html>

@@ -1,0 +1,129 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> <a href="file:///topics/Author/Arthur%20MacMillan">Arthur MacMillan</a> </p>
+<p class="rm-manual">April 9, 2019</p>
+<p class="rm-manual">April 9, 2019</p>
+<h1 class="rm-manual">The Islamic Revolutionary Guards Corps: A defensive weapon turned offensive</h1>
+<p class="rm-manual">Explainer: A military force created after Iran's 1979 revolution conducts operations at home and abroad</p>
+<figcaption class="rm-manual">In this Sept. 22, 2014 file photo, members
+ of the Iran's Revolutionary Guard march during an annual military 
+parade at the mausoleum of Ayatollah Khomeini, outside Tehran, Iran. AP</figcaption><p class="rm-manual"> <a href="file:///topics/Author/Arthur%20MacMillan">Arthur MacMillan</a> </p>
+<p class="rm-manual">April 9, 2019</p>
+<p class="rm-manual">April 9, 2019</p>
+<p>As an exiled cleric, Ayatollah Ruhollah Khomeini spent his wilderness
+ years planning what an Islamic Republic would look like. By the time he
+ returned to Iran, thunderously in 1979, he had decided that security 
+would not be left to military men who had served Shah Mohamed Reza 
+Pahlavi.</p>
+<p>Instead, he <a href="https://www.thenational.ae/world/the-americas/united-states-designates-iran-s-islamic-revolutionary-guard-corps-as-a-terrorist-organisation-1.846568">founded a force of guardians</a>
+ who would be loyal to him. Calling them the Islamic Revolutionary 
+Guards Corps (IRGC), drawn from the pious and often poorest Shiite 
+neighbourhoods, their job was to protect the new republic from any 
+threat at home or abroad. In the past 40 years it has done both.</p>
+<p>Until his death in 1989, the force answered to Khomeini. And ever 
+since its commander-in-chief has been supreme leader Ayatollah Ali 
+Khamenei. The stipulation that the IRGC reports to a religious leader 
+rather than the country's elected president is testament to two things: 
+Khomeini’s paranoia about a coup being led by men in uniform still loyal
+ to the Shah, and his determination that the revolution never be undone.</p>
+<p>The IRGC's principal task – from inception – is that Iran remains an Islamic Republic.</p>
+<p>The IRGC, which is said to number about 120,000 among its land, air 
+and naval divisions, established its credentials as a fighting force 
+during the Iran-Iraq War. Defending the country – into a stalemate 
+against the much-better supplied forces of Saddam Hussein – naturally 
+endeared its members to Iranians.</p>
+<p>Those who died – always referred to as martyrs – are commemorated on 
+murals in cities, particularly in Tehran. The reverence is sincere among
+ all Iranians. Much more contentious are the IRGC's activities abroad. 
+The bombings of the US Marine barracks and the American embassy in 
+Beirut, attributed to Lebanon's Shiite militia Hezbollah, were made 
+possible by Iranian support and training.</p>
+<h2 class="rm-manual">Read More</h2>
+<p class="rm-manual"><a href="https://www.thenational.ae/world/mena/hezbollah-launches-crowdfunding-to-make-up-missing-millions-1.846102">Hezbollah launches crowdfunding to make up missing millions</a></p>
+<p class="rm-manual"><a href="https://www.thenational.ae/world/mena/reports-of-us-blacklisting-revolutionary-guard-prompts-iranian-warning-1.845709">Reports of US blacklisting Revolutionary Guard prompts Iranian warning</a></p>
+<p class="rm-manual"><a href="https://www.thenational.ae/world/mena/us-targets-inner-circle-of-hezbollah-ally-and-iran-s-man-in-lebanon-1.845563">US targets inner circle of Hezbollah ally and 'Iran's man' in Lebanon</a></p>
+<p class="rm-manual"><a href="https://www.thenational.ae/world/mena/qassem-soleimani-iran-s-shadowy-general-and-spymaster-1.748982">Qassem Soleimani: Iran's shadowy general and spymaster</a></p>
+<p class="rm-manual">Numerous assassinations abroad have been blamed on 
+the IRGC's elite foreign wing, the Quds Force headed by Maj Gen Qasem 
+Soleimani, the man who has overseen Iran’s campaign in the Syrian war. 
+But the US-led invasion of Iraq in 2003 would lead to anti-US militias 
+receiving Iranian training and weapons that would later kill American 
+forces. The IRGC's organisational and fighting skills were pivotal to 
+saving Syrian President Bashar Al Assad's regime.</p>
+<p class="rm-manual">As is usually the case, the Iranian force operated 
+in the shadows, initially denying any role at all in Syria. When it no 
+longer could do so it downplayed its influence before conducting a 
+calibrated attempt to capitalise on its appeal among a nationalist 
+audience at home.</p>
+<p class="rm-manual">The role of the IRGC in Iran's economy, however, 
+has never been popular among the wider Iranian population. Corruption is
+ endemic. US and European sanctions imposed during the presidency of 
+Mahmoud Ahmadinejad (2005-2013) – on account of Iran's nuclear programme
+ – increased the IRGC's clout as it controlled borders and expanded its 
+business interests.</p>
+<p class="rm-manual">Iran's subsequent president, Hassan Rouhani, is an 
+unpopular figure among the IRGC's highest echelons as he has tried to 
+limit their non-military activities but he has always been one step 
+behind what has become an economic leviathan. The IRGC knows that 
+Iranian presidents come and go, while the supreme leader – Iran has had 
+only two in 40 years – will remain its only master.</p>
+<p class="rm-manual">The US designation of the IRGC as a foreign 
+terrorist organisation could hit its economic interests. But it could 
+also awaken the defensive instincts that Khomeini considered the force's
+ reason for being. If the latter happens, the Quds Force would be at the
+ forefront of any attempt to inflict damage on any forces deemed a 
+threat.</p>
+<p class="rm-manual">Updated: April 9, 2019 10:21 AM</p>
+<p class="rm-manual">Editor's Picks</p>
+<p class="rm-manual"> <a href="file:///opinion/editorial/six-months-on-we-must-now-prepare-for-the-pandemic-s-next-phase-1.1042469"> </a></p><p class="rm-manual"><a href="file:///opinion/editorial/six-months-on-we-must-now-prepare-for-the-pandemic-s-next-phase-1.1042469">Six months into coronavirus, what have we learnt?</a></p><a href="file:///opinion/editorial/six-months-on-we-must-now-prepare-for-the-pandemic-s-next-phase-1.1042469"> </a> <a href="file:///opinion/editorial"> <h4 class="rm-manual">Editorial</h4> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///business/uae-mulls-return-of-boeing-737-max-to-its-airspace-regulator-says-1.1042578"> </a></p><p class="rm-manual"><a href="file:///business/uae-mulls-return-of-boeing-737-max-to-its-airspace-regulator-says-1.1042578">UAE mulls return of Boeing 737 Max to its airspace, regulator says </a></p><a href="file:///business/uae-mulls-return-of-boeing-737-max-to-its-airspace-regulator-says-1.1042578"> </a> <a href="file:///business"> <h4 class="rm-manual">Business</h4> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///business/economy/global-tourism-could-lose-up-to-3-3-trillion-due-to-pandemic-un-says-1.1042426"> </a></p><p class="rm-manual"><a href="file:///business/economy/global-tourism-could-lose-up-to-3-3-trillion-due-to-pandemic-un-says-1.1042426">Global tourism could lose up to $3.3 trillion due to pandemic, UN says</a></p><a href="file:///business/economy/global-tourism-could-lose-up-to-3-3-trillion-due-to-pandemic-un-says-1.1042426"> </a> <a href="file:///business/economy"> <h4 class="rm-manual">Economy</h4> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///lifestyle/motoring/supercar-blondie-could-earn-1-4-million-a-year-according-to-new-rich-list-but-she-says-that-s-not-accurate-1.1042508"> </a></p><p class="rm-manual"><a href="file:///lifestyle/motoring/supercar-blondie-could-earn-1-4-million-a-year-according-to-new-rich-list-but-she-says-that-s-not-accurate-1.1042508">Supercar Blondie could make $1.4m per year from social media</a></p><a href="file:///lifestyle/motoring/supercar-blondie-could-earn-1-4-million-a-year-according-to-new-rich-list-but-she-says-that-s-not-accurate-1.1042508"> </a> <a href="file:///lifestyle/motoring"> <h4 class="rm-manual">Motoring</h4> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///arts-culture/art/a-guide-to-museums-and-galleries-that-have-reopened-across-the-uae-1.1026944"> </a></p><p class="rm-manual"><a href="file:///arts-culture/art/a-guide-to-museums-and-galleries-that-have-reopened-across-the-uae-1.1026944">A guide to museums and galleries that have reopened across the UAE</a></p><a href="file:///arts-culture/art/a-guide-to-museums-and-galleries-that-have-reopened-across-the-uae-1.1026944"> </a> <a href="file:///arts-culture/art"> <h4 class="rm-manual">Art</h4> </a> <p class="rm-manual"></p>
+<p class="rm-manual">Most Popular</p>
+<p class="rm-manual"> <a href="file:///world/coronavirus-live-uae-reports-402-new-cases-after-62-028-further-tests-1.1042256"> </a></p><p class="rm-manual"><a href="file:///world/coronavirus-live-uae-reports-402-new-cases-after-62-028-further-tests-1.1042256">UAE reports 402 new cases after 62,028 further tests</a></p><a href="file:///world/coronavirus-live-uae-reports-402-new-cases-after-62-028-further-tests-1.1042256"> </a> <a href="file:///world"> <h4 class="rm-manual">World</h4> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///world/mena/coronavirus-live-us-cases-could-reach-100-000-a-day-top-expert-anthony-fauci-warns-1.1021139"> </a></p><p class="rm-manual"><a href="file:///world/mena/coronavirus-live-us-cases-could-reach-100-000-a-day-top-expert-anthony-fauci-warns-1.1021139">Coronavirus live: US cases could reach 100,000 a day, top expert Anthony Fauci warns </a></p><a href="file:///world/mena/coronavirus-live-us-cases-could-reach-100-000-a-day-top-expert-anthony-fauci-warns-1.1021139"> </a> <a href="file:///world/mena"> <h4 class="rm-manual">MENA</h4> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///world/mena/annexation-unlikely-on-wednesday-says-israeli-foreign-minister-1.1042118"> </a></p><p class="rm-manual"><a href="file:///world/mena/annexation-unlikely-on-wednesday-says-israeli-foreign-minister-1.1042118">Annexation unlikely on Wednesday, says Israeli foreign minister</a></p><a href="file:///world/mena/annexation-unlikely-on-wednesday-says-israeli-foreign-minister-1.1042118"> </a> <a href="file:///world/mena"> <h4 class="rm-manual">MENA</h4> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///world/dubai-millionaire-sanjay-shah-returns-to-uk-court-in-fight-to-pay-legal-fees-1.1041895"> </a></p><p class="rm-manual"><a href="file:///world/dubai-millionaire-sanjay-shah-returns-to-uk-court-in-fight-to-pay-legal-fees-1.1041895">Dubai millionaire Sanjay Shah accused of £1.5bn tax fraud back in court</a></p><a href="file:///world/dubai-millionaire-sanjay-shah-returns-to-uk-court-in-fight-to-pay-legal-fees-1.1041895"> </a> <a href="file:///world"> <h4 class="rm-manual">World</h4> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///world/france-threatens-turkey-with-sanctions-over-libya-intervention-1.1042596"> </a></p><p class="rm-manual"><a href="file:///world/france-threatens-turkey-with-sanctions-over-libya-intervention-1.1042596">France threatens Turkey with sanctions over Libya intervention</a></p><a href="file:///world/france-threatens-turkey-with-sanctions-over-libya-intervention-1.1042596"> </a> <a href="file:///world"> <h4 class="rm-manual">World</h4> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///world/coronavirus-live-uae-reports-402-new-cases-after-62-028-further-tests-1.1042256"> </a></p><p class="rm-manual"><a href="file:///world/coronavirus-live-uae-reports-402-new-cases-after-62-028-further-tests-1.1042256">UAE reports 402 new cases after 62,028 further tests</a></p><a href="file:///world/coronavirus-live-uae-reports-402-new-cases-after-62-028-further-tests-1.1042256"> </a> <a href="file:///world"> <h4 class="rm-manual">World</h4> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///world/mena/coronavirus-live-us-cases-could-reach-100-000-a-day-top-expert-anthony-fauci-warns-1.1021139"> </a></p><p class="rm-manual"><a href="file:///world/mena/coronavirus-live-us-cases-could-reach-100-000-a-day-top-expert-anthony-fauci-warns-1.1021139">Coronavirus live: US cases could reach 100,000 a day, top expert Anthony Fauci warns </a></p><a href="file:///world/mena/coronavirus-live-us-cases-could-reach-100-000-a-day-top-expert-anthony-fauci-warns-1.1021139"> </a> <a href="file:///world/mena"> <h4 class="rm-manual">MENA</h4> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///world/mena/annexation-unlikely-on-wednesday-says-israeli-foreign-minister-1.1042118"> </a></p><p class="rm-manual"><a href="file:///world/mena/annexation-unlikely-on-wednesday-says-israeli-foreign-minister-1.1042118">Annexation unlikely on Wednesday, says Israeli foreign minister</a></p><a href="file:///world/mena/annexation-unlikely-on-wednesday-says-israeli-foreign-minister-1.1042118"> </a> <a href="file:///world/mena"> <h4 class="rm-manual">MENA</h4> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///world/dubai-millionaire-sanjay-shah-returns-to-uk-court-in-fight-to-pay-legal-fees-1.1041895"> </a></p><p class="rm-manual"><a href="file:///world/dubai-millionaire-sanjay-shah-returns-to-uk-court-in-fight-to-pay-legal-fees-1.1041895">Dubai millionaire Sanjay Shah accused of £1.5bn tax fraud back in court</a></p><a href="file:///world/dubai-millionaire-sanjay-shah-returns-to-uk-court-in-fight-to-pay-legal-fees-1.1041895"> </a> <a href="file:///world"> <h4 class="rm-manual">World</h4> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///world/france-threatens-turkey-with-sanctions-over-libya-intervention-1.1042596"> </a></p><p class="rm-manual"><a href="file:///world/france-threatens-turkey-with-sanctions-over-libya-intervention-1.1042596">France threatens Turkey with sanctions over Libya intervention</a></p><a href="file:///world/france-threatens-turkey-with-sanctions-over-libya-intervention-1.1042596"> </a> <a href="file:///world"> <h4 class="rm-manual">World</h4> </a> <p></p></article>
+</body></html>

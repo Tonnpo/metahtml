@@ -1,0 +1,72 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> FRED Adds 
+“Redlining” Data from Aaronson, Hartley, and Mazumder | St. Louis Fed 
+Economic ResearchSt. Louis Fed Economic Research </p>
+<p class="rm-manual"> <a href="file:///"><span>Economic Research <span>Federal Reserve Bank of St. Louis</span></span></a> </p>
+<p class="rm-manual">Searching</p>
+<p class="rm-manual"><a href="#"> <span>Search</span> All Research Division content</a> </p>
+<p class="rm-manual"><a href="#"> <span>Search</span> Only FRED economic data</a> </p>
+<p class="rm-manual"><a href="#"> <span>Search</span> Only FRASER digital library</a> </p>
+<p class="rm-manual"><a href="#"> <span>Search</span> Only published research and working papers</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///econ/"> Economists </a> <p class="rm-manual"> <a href="file:///econ/">Research Economists</a> <a href="file:///econ/#fellow">Research Fellows</a> <a href="file:///econ/#emeritus">Emeritus</a> <a href="file:///research-associates">Research Associates</a> <a href="file:///econ/#all">View all A-Z</a> </p> </li> <li class="rm-manual"> <a href="file:///publications/"> Research and Publications </a> <p class="rm-manual"> <a href="file:///wp/">Working Papers</a> <a href="file:///publications/">St. Louis Fed Publications</a> <a href="file:///resources/covid-19/">COVID-19 Research</a> <a href="https://fedinprint.org/">Fed in Print</a> <a href="https://ideas.repec.org/">RePEc IDEAS</a> <a href="https://research.stlouisfed.org/regecon/">Eighth District Economy</a> </p> </li> <li class="rm-manual"> <a href="file:///about.html"> The Research Division </a> <p class="rm-manual"> <a href="file:///about.html">About</a> <a href="file:///publications/research-news/">Research News</a> <a href="file:///careers/">Careers</a> <a href="file:///conferences/">Events</a> <a href="file:///info-services.html">Information Services</a> <a href="file:///staff/">Research Staff</a> </p> </li> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.econlowdown.org/">econlowdown</a> </li> <li class="rm-manual"> <a href="https://fraser.stlouisfed.org/">FRASER</a> </li> <li class="rm-manual"> <a href="https://fred.stlouisfed.org/">FRED</a> </li> <li class="rm-manual"> <a href="#">|</a> </li> <li class="rm-manual"> <span> <a href="file:///useraccount/">My Account</a> </span> </li> </ul> </li> </ul>
+<p class="rm-manual"><a href="#content-container">Skip to main content</a> </p>
+<p class="rm-manual">Ssi / Header.php</p>
+<p class="rm-manual"><a href="file:///feed/">RSS Feed </a></p>
+<h2 class="rm-manual">Recent Posts</h2>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://news.research.stlouisfed.org/2021/06/fred-adds-redlining-data-from-aaronson-hartley-and-mazumder/">FRED Adds “Redlining” Data from Aaronson, Hartley, and Mazumder</a> </li> <li class="rm-manual"> <a href="https://news.research.stlouisfed.org/2021/06/fred-adds-industry-productivity-dataset-from-bureau-of-labor-statistics/">FRED Adds Industry Productivity Dataset from Bureau of Labor Statistics</a> </li> <li class="rm-manual"> <a href="https://news.research.stlouisfed.org/2021/06/fredcast-will-be-retired-in-august-2021/">FREDcast Will Be Retired in August 2021</a> </li> <li class="rm-manual"> <a href="https://news.research.stlouisfed.org/2021/05/fred-adds-u-s-mortgage-high-yield-indexes-from-andrew-davidson-and-co/">FRED Adds U.S. Mortgage High Yield Indexes from Andrew Davidson and Co.</a> </li> <li class="rm-manual"> <a href="https://news.research.stlouisfed.org/2021/05/chicago-feds-midwest-economy-index-to-be-discontinued-in-june-2021/">Chicago Fed’s Midwest Economy Index To Be Discontinued in June 2021</a> </li> </ul>
+<h1 class="rm-manual"><a href="https://news.research.stlouisfed.org/2021/06/fred-adds-redlining-data-from-aaronson-hartley-and-mazumder/" rel="bookmark">FRED Adds “Redlining” Data from Aaronson, Hartley, and Mazumder</a></h1>
+<p class="rm-manual"> <span>Posted on</span> <a href="https://news.research.stlouisfed.org/2021/06/fred-adds-redlining-data-from-aaronson-hartley-and-mazumder/" rel="bookmark">June 22, 2021</a> </p>
+<p>FRED has <a href="https://fred.stlouisfed.org/release?rid=491">20 new series</a> of summary statistics from <a href="https://www.chicagofed.org/publications/working-papers/2017/wp2017-12" rel="noreferrer noopener">“The Effects of the 1930s HOLC ‘Redlining’ Maps,”</a>
+ which is a recently updated working paper (August 2020) by Daniel 
+Aaronson, Daniel Hartley, and Bhash Mazumder of the Chicago Fed.</p>
+<p>These authors study the effects of the 1930s-era HOLC “redlining” 
+maps on the long-run trajectories of neighborhoods. They calculate 
+summary statistics based on U.S. Census estimates for each area matched 
+to the geocoded HOLC neighborhoods. These neighborhoods are based on the
+ geocoded renderings of the original Home Owners Loan Corporation (HOLC)
+ maps for 149 cities.</p>
+<p class="rm-manual"> <span> <span>Posted in</span> <a href="https://news.research.stlouisfed.org/category/fred-announcements/" rel="category tag">FRED Announcements</a> </span> </p>
+<h3 class="rm-manual">SUBSCRIBE TO THE RESEARCH DIVISION NEWSLETTER</h3>
+<h3 class="rm-manual"><a href="file:///">Research Division</a></h3>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///contactus/">Contact</a></li> <li class="rm-manual"><a href="file:///conferences/">Events</a></li> <li class="rm-manual"><a href="file:///careers/">Careers</a></li> <li class="rm-manual"><a href="file:///rss/">RSS</a></li> <li class="rm-manual"><a href="file:///legal.html">Legal and Privacy</a></li> </ul>
+<p class="rm-manual"> One Federal Reserve Bank Plaza</p>
+<p class="rm-manual"> St. Louis, MO 63102 </p>
+<p class="rm-manual"> <a href="https://www.stlouisfed.org/about-us/resources/visiting-the-st-louis-fed">Information for Visitors</a> </p>
+<p class="rm-manual"> <a href="https://twitter.com/stlouisfed"> follow @stlouisfed </a> </p></article>
+</body></html>

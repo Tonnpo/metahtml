@@ -1,0 +1,332 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Why North Korean and Russian state media are joining forces to fight "fake news" | NK News </p>
+<p class="rm-manual">May 31, 2020</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.nknews.org/pro">NK <span>Pro</span></a></li>
+<li class="rm-manual"><a href="https://kcnawatch.org/">KCNA <span>Watch</span></a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/category/north-korea-news-podcast">NK <span>Cast</span></a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="#">News</a><ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.nknews.org/category/news/">News</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/category/featured-content/investigation/">Investigation</a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="#">Analysis &amp; Opinion</a><ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.nknews.org/category/featured-content/nk-analysis/">Analysis</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/category/featured-content/interview/">Interviews</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/category/featured-content/opinion-analysis/">Opinion</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/category/expert-surveys/">Expert Surveys</a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="#">Topics</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///tag/aviation/">Aviation</a></li>
+<li class="rm-manual"><a href="file:///tag/business/">Business</a></li>
+<li class="rm-manual"><a href="file:///tag/companies/">Companies</a></li>
+<li class="rm-manual"><a href="file:///tag/culture/">Culture</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/tag/cyber/">Cyber</a></li>
+<li class="rm-manual"><a href="file:///tag/defector-issues/">Defector Issues</a></li>
+<li class="rm-manual"><a href="file:///tag/economy/">Economy</a></li>
+<li class="rm-manual"><a href="file:///tag/foreign-relations/">Foreign Relations</a></li>
+<li class="rm-manual"><a href="file:///tag/history/">History</a></li>
+<li class="rm-manual"><a href="file:///tag/human-security-human-rights/">Human Security / Human Rights</a></li>
+<li class="rm-manual"><a href="file:///tag/inter-korean/">Inter-Korean</a></li>
+<li class="rm-manual"><a href="file:///tag/leadership/">Leadership</a></li>
+<li class="rm-manual"><a href="file:///tag/military-affairs/">Military Affairs</a></li>
+<li class="rm-manual"><a href="file:///tag/misc/">Misc.</a></li>
+<li class="rm-manual"><a href="file:///tag/missiles/">Missiles</a></li>
+<li class="rm-manual"><a href="file:///tag/sanctions/">Sanctions</a></li>
+<li class="rm-manual"><a href="file:///tag/shipping/">Shipping</a></li>
+<li class="rm-manual"><a href="file:///tag/trade-data/">Trade Data</a></li>
+<li class="rm-manual"><a href="file:///tag/wmd/">WMD</a></li>
+</ul>
+</li>
+<li class="rm-manual"><a href="file:///gallery/">Photos</a></li>
+<li class="rm-manual">
+<a href="file:///ask-a-north-korean/">Ask a North Korean</a><ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.nknews.org/category/nk-voices/ask-a-north-korean/">Ask A North Korean</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/category/nk-voices/defector-survey-2014/">Defector Survey 2014</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/category/nk-voices/a-north-korean-in-new-york/">A North Korean In New York</a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="#">Tools &amp; Data</a><ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.nknews.org/pro/nk-leadership-tracker/">NK Leadership Tracker</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/pro/north-korea-company-database/">NK Company Database</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/pro/north-korea-ship-tracking/">NK Ship Tracker</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/pro/coronavirus-in-north-korea-tracker/">COVID-19 Tracker</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/pro/import-export/">NK Import / Export Map</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/pro/north-korea-statistics-database/">NK Leading Indicators</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/pro/documents/">NK Document Repository</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/pro/institutional-directory/">NK Institutional Directory</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/pro/create-chart/">NK Chart Generator</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/pro/nk-aggregator/">NK Aggregator</a></li>
+</ul>
+</li>
+<li class="rm-manual"><a href="https://www.nknews.org/category/north-korea-news-podcast/latest">Podcast</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="#">News</a><ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.nknews.org/category/news/">News</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/category/featured-content/investigation/">Investigation</a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="#">Analysis &amp; Opinion</a><ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.nknews.org/category/featured-content/nk-analysis/">Analysis</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/category/featured-content/interview/">Interviews</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/category/featured-content/opinion-analysis/">Opinion</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/category/expert-surveys/">Expert Surveys</a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="#">Topics</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///tag/aviation/">Aviation</a></li>
+<li class="rm-manual"><a href="file:///tag/business/">Business</a></li>
+<li class="rm-manual"><a href="file:///tag/companies/">Companies</a></li>
+<li class="rm-manual"><a href="file:///tag/culture/">Culture</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/tag/cyber/">Cyber</a></li>
+<li class="rm-manual"><a href="file:///tag/defector-issues/">Defector Issues</a></li>
+<li class="rm-manual"><a href="file:///tag/economy/">Economy</a></li>
+<li class="rm-manual"><a href="file:///tag/foreign-relations/">Foreign Relations</a></li>
+<li class="rm-manual"><a href="file:///tag/history/">History</a></li>
+<li class="rm-manual"><a href="file:///tag/human-security-human-rights/">Human Security / Human Rights</a></li>
+<li class="rm-manual"><a href="file:///tag/inter-korean/">Inter-Korean</a></li>
+<li class="rm-manual"><a href="file:///tag/leadership/">Leadership</a></li>
+<li class="rm-manual"><a href="file:///tag/military-affairs/">Military Affairs</a></li>
+<li class="rm-manual"><a href="file:///tag/misc/">Misc.</a></li>
+<li class="rm-manual"><a href="file:///tag/missiles/">Missiles</a></li>
+<li class="rm-manual"><a href="file:///tag/sanctions/">Sanctions</a></li>
+<li class="rm-manual"><a href="file:///tag/shipping/">Shipping</a></li>
+<li class="rm-manual"><a href="file:///tag/trade-data/">Trade Data</a></li>
+<li class="rm-manual"><a href="file:///tag/wmd/">WMD</a></li>
+</ul>
+</li>
+<li class="rm-manual"><a href="file:///gallery/">Photos</a></li>
+<li class="rm-manual">
+<a href="file:///ask-a-north-korean/">Ask a North Korean</a><ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.nknews.org/category/nk-voices/ask-a-north-korean/">Ask A North Korean</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/category/nk-voices/defector-survey-2014/">Defector Survey 2014</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/category/nk-voices/a-north-korean-in-new-york/">A North Korean In New York</a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="#">Tools &amp; Data</a><ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.nknews.org/pro/nk-leadership-tracker/">NK Leadership Tracker</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/pro/north-korea-company-database/">NK Company Database</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/pro/north-korea-ship-tracking/">NK Ship Tracker</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/pro/coronavirus-in-north-korea-tracker/">COVID-19 Tracker</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/pro/import-export/">NK Import / Export Map</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/pro/north-korea-statistics-database/">NK Leading Indicators</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/pro/documents/">NK Document Repository</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/pro/institutional-directory/">NK Institutional Directory</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/pro/create-chart/">NK Chart Generator</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/pro/nk-aggregator/">NK Aggregator</a></li>
+</ul>
+</li>
+<li class="rm-manual"><a href="https://www.nknews.org/category/north-korea-news-podcast/latest">Podcast</a></li>
+</ul>
+<p class="rm-manual">Why North Korean and Russian state media are joining forces to fight “fake news”</p>
+<p class="rm-manual">Pyongyang hopes to use Russia's multilingual news outlets to shift the international narrative on the DPRK</p>
+<p class="rm-manual"><a href="https://www.nknews.org/content_author/anthony-v-rinna/">Anthony V. Rinna</a> <span>October 31, 2019</span></p>
+<p class="rm-manual"> <a href=""> SHARE</a> </p>
+<p class="rm-manual"><a href="https://www.nknews.org/content_author/anthony-v-rinna/">Anthony V. Rinna</a> <span>October 31, 2019</span></p>
+<p class="rm-manual">Image: DPRK Today</p>
+<p><span>This week a delegation from Russia’s RT news service </span><a href="https://www.facebook.com/RusEmbDPRK/"><span>spent three days in Pyongyang</span></a><span>
+ with officials from the DPRK’s radio and telecommunications committee. 
+Also present at meetings between North Korean and Russian media 
+officials was Moscow’s ambassador to the DPRK, Alexander Matsegora. </span></p>
+<p><span>The meeting comes weeks after senior representatives from across Russia’s media landscape </span><a href="https://www.nknews.org/2019/10/n-korea-hopes-russian-state-media-helps-fight-fake-news-in-dprk-coverage-tass/"><span>convened in Pyongyang</span></a><span>
+ to meet with officials from KCNA. Among those present were officials 
+from Russia’s TASS news agency, Channel One Russia, and the Russian 
+Agency for Press and Mass Media.</span></p>
+<p><span>During the meeting, which took place from October 7-8, the 
+North Korean and Russian sides agreed on measures to fight against “fake
+ news” coverage of the DPRK in the international media. </span></p>
+<p><span>At the gathering of media officials in early October, the 
+director of the North Korean foreign ministry’s press department Cho 
+Yong Sam </span><a href="https://tass.ru/mezhdunarodnaya-panorama/6972279"><span>claimed</span></a><span>
+ that TASS was well-known among the North Korean people for its 
+objectivity in reporting on North Korean affairs, and stated that the 
+media had a crucial role to play in solidifying the DPRK-Russia 
+friendship. </span></p>
+<p><span>The allusion to “friendship” between DPRK and Russia media 
+ultimately ties the two media landscapes back to the wider goals of 
+Moscow and Pyongyang’s bilateral partnership, as codified by the 
+friendship treaty the two countries signed in 2000.</span></p>
+<figcaption>The RT delegation that visited Pyongyang from October 26-29 | Photo: Russian Embassy in the DPRK</figcaption><p><span>Indeed,
+ in two countries lacking a free and independent press, interactions 
+between North Korean and Russia media inevitably have wider strategic 
+implications beyond simply conveying news. </span></p>
+<p><span>Both TASS and RT are connected to the Russian government: TASS 
+is a state-controlled corporation, while RT receives funding from 
+Moscow. </span></p>
+<p><span>TASS for its part is the only Russian media outlet with a permanent bureau in Pyongyang. </span></p>
+<p><span>Given the immense power of information, North Korea and 
+Russia’s steps toward cooperation in media are a significant area where 
+the two states can advance their interests free from problematic issues 
+such as sanctions. </span></p>
+<p><span>Indeed, particularly from Moscow’s point of view, the main 
+issue of contention is the widespread negative perception of the DPRK, 
+as well as the Russian Federation’s relationship with Pyongyang.</span></p>
+<p><span>Moscow and Pyongyang think in the same way when it comes to combating negative images of themselves in the West</span></p>
+<p><span>In the internet age, where the international media, and 
+information in general, is overwhelmingly available in English and where
+ the West has great sway over the narrative of several topics, the 
+Russian Federation has been keen to counter by promoting a more positive
+ image of itself and its partners. </span></p>
+<p><span>International media coverage of the DPRK-Russia relationship 
+itself can be a touchy area for Moscow, given the possibility that 
+Russia’s role in North Korean affairs could perpetuate the idea that the
+ Kremlin is backing a rogue state.</span></p>
+<p><span>A case-in-point in how political sensitivities factor into 
+media coverage of North Korea is the issue of how the DPRK managed to 
+acquire some of its nuclear know-how. </span></p>
+<p><span>Throughout 2017, Russian media and Ukraine-based Russian-language outlets </span><a href="https://www.nknews.org/2017/09/proliferation-blame-the-ukraine-russia-spat-over-n-korean-missiles/"><span>sparred</span></a><span>
+ over whether or not a lack of security in Ukrainian nuclear facilities 
+immediately following the Cold War may have played a role in the DPRK’s 
+development of nuclear capabilities. </span></p>
+<p><span>Russia-based outlets were particularly happy to cite an August 2017 </span><a href="https://www.nytimes.com/2017/08/14/world/asia/north-korea-missiles-ukraine-factory.html"><span>New York Times</span><span> piece</span></a><span> pointing a finger at Ukraine for a lack of diligence in securing materials the North could use to advance its technology. </span></p>
+<p><span>Likewise, widespread accusations in 2018 that the Russian Federation was deliberately violating UN sanctions against the DPRK </span><a href="https://www.nknews.org/2018/08/why-russia-is-likely-still-in-compliance-with-un-resolutions/"><span>drew condemnation</span></a><span> from some of Moscow’s top Korea hands as “fake news.”</span></p>
+<figcaption>A Russian media delegation visiting Mangyongdae, the supposed birthplace of Kim Il Sung, in October | Photo: DPRK Today</figcaption><p><span>The
+ recent series of meetings between North Korean and Russian officials – 
+both in media and government – naturally raises the question of </span><span>why</span><span> Moscow and Pyongyang are interested in cooperation and in shaping the narrative of the DPRK.</span></p>
+<p><span>From the North Korean end, collaboration with Russia’s media 
+landscape provides an opportunity for Pyongyang to portray a softer 
+image of itself than it is otherwise normally able to.</span></p>
+<p><span>Several news outlets affiliated with the Russian government, 
+including RT and Sputnik, produce content in several languages. The main
+ purpose behind Russian media’s multilingual outreach is to help promote
+ a positive image of the Russian Federation as part of </span><a href="https://www.ecfr.eu/debate/russian_soft_power_at_home_and_abroad"><span>Moscow’s soft power strategy</span></a><span>. </span></p>
+<p><span>Pyongyang’s most likely goal is to rely on Russian media’s global outreach to shift the narrative on North Korea.</span></p>
+<p><span>From the Russian end, a positive view of the DPRK also serves the Kremlin’s interests. </span></p>
+<p><span>If the generally negative view of North Korea held in the West 
+persists, Moscow’s goals vis-à-vis the DPRK will become more difficult 
+to achieve. </span></p>
+<p><span>Principal among these is sanctions relief.</span></p>
+<p><span>The Russian government continues to insist on lifting UN 
+sanctions against the DPRK, in part so that Moscow can pursue its 
+economic interests across the entire Korean peninsula. </span></p>
+<p><span>Yet if the general public, as well as policymakers across the 
+globe, continue to perceive the DPRK as a threat, interest in reducing 
+or even abolishing sanctions is not likely to take root.</span></p>
+<p><span>Of course, even within the United States there has been 
+disagreement over the way the DPRK has been portrayed in the most 
+influential outlets.</span></p>
+<p><span>Interactions between North Korean and Russia media inevitably have wider strategic implications beyond simply conveying news</span></p>
+<p><span>North Korea’s cooperation with Russian news outlets, however, 
+does not appear to be directed at attempting to promote a more positive 
+image of the DPRK within Russia itself, as this is hardly necessary. </span></p>
+<p><span>Not only do Russian intelligence agencies </span><a href="http://dcafsp.tripod.com/readings/Russia.pdf"><span>tend to assess</span></a><span>
+ the threat posed by the DPRK with less alarm than the U.S. does, 
+Russian citizens themselves view the threat of North Korea’s nuclear 
+program as being pretty low, at least </span><span>according to a </span><a href="https://www.pnp.ru/politics/rossiyane-vidyat-ugrozu-primeneniya-kndr-yadernogo-oruzhiya-opros.html"><span>survey</span></a><span> conducted by a Russian state pollster. </span></p>
+<p><span>So, media cooperation between Moscow and Pyongyang represents a
+ prime opportunity for the DPRK in particular to convey a more favorable
+ image of itself. If negative perceptions of North Korea can be 
+diminished, this would also serve Russia’s interests as well, as it 
+could lead to a lessening of North Korea’s isolation on the 
+international stage.</span></p>
+<p><span>Indeed, just as the DPRK and the Russian Federation </span><a href="https://www.nknews.org/2019/10/what-to-make-of-this-weeks-north-korean-russian-parliamentary-talks-in-moscow/"><span>share a sense of solidarity</span></a><span>
+ in facing international sanctions, Moscow and Pyongyang think in the 
+same way when it comes to combating negative images of themselves in the
+ West.</span></p>
+<p>Edited by James Fretwell</p>
+<p>Featured image: DPRK Today</p>
+<p><span>This week a delegation from Russia's RT news service </span><a href="https://www.facebook.com/RusEmbDPRK/"><span>spent three days in Pyongyang</span></a><span>
+ with officials from the DPRK's radio and telecommunications committee. 
+Also present at meetings between North Korean and Russian media 
+officials was Moscow's ambassador to the DPRK, Alexander Matsegora. </span></p>
+<p><span>The meeting comes weeks after senior representatives from across Russia's media landscape </span><a href="https://www.nknews.org/2019/10/n-korea-hopes-russian-state-media-helps-fight-fake-news-in-dprk-coverage-tass/"><span>convened in Pyongyang</span></a><span>
+ to meet with officials from KCNA. Among those present were officials 
+from Russia's TASS news agency, Channel One Russia, and the Russian 
+Agency for Press and Mass Media.</span></p>
+<h3 class="rm-manual">Trending</h3>
+<h3 class="rm-manual">Related Articles</h3>
+<p class="rm-manual"> <a href="https://www.nknews.org/2020/05/german-russian-un-missions-clash-over-cause-of-north-korea-humanitarian-crisis/">German, Russian UN missions clash over cause of North Korea humanitarian crisis</a></p>
+<p class="rm-manual"> <a href="https://www.nknews.org/2020/05/north-korea-denies-cyber-crime-accusations-says-u-s-seeks-to-provoke-mfa/">North Korea denies cyber-crime accusations, says U.S. seeks to “provoke”: MFA</a></p>
+<p class="rm-manual"> <a href="https://www.nknews.org/2020/05/puppetry-of-the-peninsula-the-two-koreas-and-the-pursuit-of-freedom/">Puppetry of the peninsula: the two Koreas and the pursuit of freedom</a></p>
+<h3 class="rm-manual">About the Author</h3>
+<h4 class="rm-manual">Anthony V. Rinna</h4>
+<p class="rm-manual">Anthony V. Rinna is a Senior Editor with the Sino-NK research group. He's lived in South Korea since 2014.</p>
+<p class="rm-manual"><a href="https://www.nknews.org/content_author/anthony-v-rinna/">View more articles by Anthony V. Rinna</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.nknews.org/about-us/">About</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/contact/">Contact</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/opportunities/">Opportunities</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/frequently-asked-questions-about-nk-news/">FAQ</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/privacy-policy/">Privacy Policy</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/terms-and-conditions-nk-news-pro/">Terms &amp; Conditions</a></li>
+<li class="rm-manual"><a href="https://www.nknews.org/terms-and-conditions-nk-news-pro/">T&amp;C</a></li>
+</ul>
+<p class="rm-manual">© 2020, <a href="https://www.korearisk.com/">Korea Risk Group</a> (NK Consulting Inc.). All Rights Reserved</p>
+<p class="rm-manual">Specialist news and analysis, </p>
+<p class="rm-manual"> research tools, and unique data sets</p>
+<h2 class="rm-manual">PLEASE USE A DIFFERENT WEB BROWSER</h2>
+<p class="rm-manual">Internet Explorer is not compatible with this website. We instead recommend using Chrome, Edge, Firefox or Safari.</p>
+<h3 class="rm-manual">Why are we not supporting Internet Explorer?</h3>
+<p class="rm-manual">Microsoft ceased supporting IE 10 and older in 2016.</p>
+<p class="rm-manual">In addition, Microsoft cyber-security chief Chris Jackson has been urging users to stop using the browser since February 2019.</p>
+<h3 class="rm-manual">The authoritative, independent source for news, opinion and analysis on North Korea</h3>
+<p class="rm-manual">Join the influential community of members who rely on NK News original news and in-depth reporting</p>
+<p class="rm-manual"><a href="https://signup.nknews.org/">Learn More</a></p>
+<h3 class="rm-manual">Sign in to NK News</h3>
+<p class="rm-manual">Enter your details below</p>
+<p class="rm-manual"> Email Address </p>
+<p class="rm-manual"> Password </p>
+<p class="rm-manual">This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
+<p class="rm-manual"> <a href="">Forgot Password?</a></p>
+<p class="rm-manual">Don't have an account? <a href="">SIGN UP</a></p>
+<h3 class="rm-manual">The authoritative, independent source for news, opinion and analysis on North Korea</h3>
+<p class="rm-manual">Join the influential community of members who rely on NK News original news and in-depth reporting</p>
+<p class="rm-manual"><a href="https://signup.nknews.org/">Learn More</a></p>
+<p class="rm-manual">Already have an account? <a href="">SIGN IN</a></p>
+<h3 class="rm-manual">The authoritative, independent source for news, opinion and analysis on North Korea</h3>
+<p class="rm-manual">Join the influential community of members who rely on NK News original news and in-depth reporting</p>
+<p class="rm-manual"><a href="https://signup.nknews.org/">Learn More</a></p>
+<h3 class="rm-manual">Forgot Password</h3>
+<p class="rm-manual">Please enter your username or email address. You will receive a link to create a new password via email.</p>
+<p class="rm-manual"> Email Address </p>
+<p class="rm-manual">This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
+<p class="rm-manual">Don't have an account? <a href="">SIGN UP</a></p></article>
+</body></html>

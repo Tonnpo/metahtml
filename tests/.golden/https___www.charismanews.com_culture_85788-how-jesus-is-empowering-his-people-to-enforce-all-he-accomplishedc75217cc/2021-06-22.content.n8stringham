@@ -1,0 +1,122 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> How Jesus Is Empowering His People to Enforce All He Accomplished — Charisma News </p>
+<h1 class="rm-manual"><a href="https://www.charismanews.com/">Charisma News</a></h1>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///">Home</a></li> <li class="rm-manual"><a href="file:///us">U.S.</a></li> <li class="rm-manual"><a href="file:///world">World</a></li> <li class="rm-manual">
+<a href="file:///politics">Politics</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///politics/opinion">Opinion</a></li> <li class="rm-manual"><a href="file:///politics/elections">Elections</a></li> <li class="rm-manual"><a href="file:///politics/issues">Issues</a></li> <li class="rm-manual"><a href="file:///politics/primaries">Primaries</a></li> <li class="rm-manual"><a href="file:///politics/events">Events</a></li> <li class="rm-manual"><a href="file:///politics/press-releases">Press Releases</a></li> </ul> </li> <li class="rm-manual"><a href="file:///video">Video</a></li> <li class="rm-manual"><a href="file:///culture">Culture</a></li> <li class="rm-manual"><a href="file:///marketplace">Marketplace</a></li> <li class="rm-manual">
+<a href="file:///opinion">Opinion</a> <p class="rm-manual">Featured Blogs</p> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///opinion/standing-with-israel">Standing With Israel</a></li> <li class="rm-manual"><a href="file:///opinion/in-the-line-of-fire">In the Line of Fire</a></li> <li class="rm-manual"><a href="file:///opinion/the-flaming-herald">The Flaming Herald</a></li> <li class="rm-manual"><a href="file:///opinion/american-dispatch">American Dispatch</a></li> <li class="rm-manual"><a href="file:///opinion/renewing-america">Renewing America</a></li> <li class="rm-manual"><a href="file:///opinion/behind-the-lens">Behind the Lens</a></li> <li class="rm-manual"><a href="file:///opinion/from-the-frontlines">From the Frontlines</a></li> <li class="rm-manual"><a href="file:///opinion/watchman-on-the-wall">Watchman on the Wall</a></li> <li class="rm-manual"><a href="file:///opinion/the-pulse">The Pulse</a></li> <li class="rm-manual"><a href="file:///opinion/heres-the-deal">Here's the Deal</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://strangmail.com/subscribe/signup/">Digital Magazine</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///magazine/daily">Charisma Digital</a></li> </ul> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.charismanews.com/">Home</a> </li> <li class="rm-manual"> <a href="https://www.charismapodcastnetwork.com/?utm_source=charismanews.com&amp;utm_medium=mobile%20menu" rel="noopener">Podcasts</a> </li> <li class="rm-manual"> <a href="file:///search"> Search</a> </li> <li class="rm-manual"> <a href="file:///us">US</a> </li> <li class="rm-manual"> <a href="file:///world">World</a> </li> <li class="rm-manual"> <a href="file:///politics">Politics</a> </li> <li class="rm-manual"> <a href="file:///video">Video</a> </li> <li class="rm-manual"> <a href="file:///culture">Culture</a> </li> <li class="rm-manual"> <a href="file:///marketplace">Marketplace</a> </li> <li class="rm-manual"> <a href="file:///opinion">Opinion</a><ul class="rm-manual"> <li class="rm-manual"><a href="file:///opinion/standing-with-israel">Standing With Israel</a></li> <li class="rm-manual"><a href="file:///opinion/in-the-line-of-fire">In the Line of Fire</a></li> <li class="rm-manual"><a href="file:///opinion/the-flaming-herald">The Flaming Herald</a></li> <li class="rm-manual"><a href="file:///opinion/american-dispatch">American Dispatch</a></li> <li class="rm-manual"><a href="file:///opinion/renewing-america">Renewing America</a></li> <li class="rm-manual"><a href="file:///opinion/behind-the-lens">Behind the Lens</a></li> <li class="rm-manual"><a href="file:///opinion/from-the-frontlines">From the Frontlines</a></li> <li class="rm-manual"><a href="file:///opinion/watchman-on-the-wall">Watchman on the Wall</a></li> <li class="rm-manual"><a href="file:///opinion/the-pulse">The Pulse</a></li> <li class="rm-manual"><a href="file:///opinion/heres-the-deal">Here's the Deal</a></li> </ul> </li> <li class="rm-manual"><a href="file:///search"> <span>Search</span></a></li> </ul>
+<h1 class="rm-manual"><a href="http://www.charismanews.com/">Charisma News</a></h1>
+<h1 class="rm-manual">Big News:</h1>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://charismanews.com/search/?searchword=Interview&amp;areas%5B0%5D=gitags">Interview</a></li> <li class="rm-manual"><a href="http://charismanews.com/search/?searchword=Podcast&amp;areas%5B0%5D=gitags">Podcast</a></li> </ul>
+<p class="rm-manual">The touch of real paper One year, $24.97</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://www.charismapodcastnetwork.com/?utm_source=charismanews.com&amp;utm_medium=top%20of%20page%20text&amp;utm_campaign=crosspromotions" rel="noopener">Charisma Podcast Network</a></li> <li class="rm-manual"><a href="https://www.charismacaucus.com/?utm_source=charismanews.com&amp;utm_medium=top%20of%20page%20text&amp;utm_campaign=crosspromotions" rel="noopener">Charisma Caucus</a></li> <li class="rm-manual"><a href="http://modernenglishversion.com/?utm_source=charismanews.com&amp;utm_medium=text_topOfPage&amp;utm_campaign=crosspromotions" rel="noopener">MEV Bible</a></li> <li class="rm-manual"><a href="https://www.charismamag.com/?utm_source=charismanews.com&amp;utm_medium=text_topOfPage&amp;utm_campaign=crosspromotions" rel="noopener">Charisma Magazine</a></li> <li class="rm-manual"><a href="https://www.charismamag.com/life/men/?utm_source=charismanews.com&amp;utm_medium=text_topOfPage&amp;utm_campaign=crosspromotions" rel="noopener">New Man</a></li> <li class="rm-manual"><a href="https://www.charismamag.com/life/women/?utm_source=charismanews.com&amp;utm_medium=text_topOfPage&amp;utm_campaign=crosspromotions" rel="noopener">SpiritLed Woman</a></li> <li class="rm-manual"><a href="https://ministrytodaymag.com/?utm_source=charismanews.com&amp;utm_medium=text_topOfPage&amp;utm_campaign=crosspromotions" rel="noopener">Ministry Today</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> You are here: </li> <li class="rm-manual"> <a href="file:///"><span>Home</span></a> </li> <li class="rm-manual"> <a href="file:///culture"><span>Culture</span></a> </li> <li class="rm-manual"> <span> How Jesus Is Empowering His People to Enforce All He Accomplished </span> </li> </ul>
+<p class="rm-manual"> <a href="file:///culture">⇑ back to "<span>Culture</span>"</a> </p>
+<h1 class="rm-manual"> <a href="file:///culture/85788-how-jesus-is-empowering-his-people-to-enforce-all-he-accomplished"> How Jesus Is Empowering His People to Enforce All He Accomplished</a> </h1>
+<h1 class="rm-manual"> <a href="file:///culture/85788-how-jesus-is-empowering-his-people-to-enforce-all-he-accomplished"> How Jesus Is Empowering His People to Enforce All He Accomplished</a> </h1>
+<aside class="rm-manual"> <span> 9:00AM EDT 6/21/2021 </span> <span> <a href="file:///component/search/?searchword=Michael%20Lombardo&amp;ordering=newest&amp;searchphrase=exact&amp;areas%5B0%5D=authors">Michael Lombardo</a> </span> </aside><figcaption class="rm-manual"> (<span>Lightstock</span>)</figcaption><p>The
+ Bible clearly tells us that Jesus conquered sin, death, the grave and 
+Satan. He legally took the authority from Satan and gave His people 
+authority in the earth to do the same works that He did.</p>
+<p>When Jesus stated on the cross, "it is finished," He meant it, and He
+ left no loose ends. If this is the case, how come people are still 
+dying, sin is still rampant, and we aren't seeing the full effects of 
+what He accomplished?</p>
+<p>We are living in a critical time in human history. All things have 
+been subjected to Christ rightfully and legally, but we haven't yet seen
+ all things subjected to Him in the natural. Why? Because God has never 
+wanted to usher in His kingdom apart from human participation.</p>
+<p>Jesus set the stage and made everything possible, and now He's 
+empowering His people to enforce all that He accomplished. Not only 
+that, but God will never control and force the human heart to receive 
+Him, so there must be a time period where people can have the option to 
+respond and turn to Him.</p>
+<p>Yes, the devil is defeated, but the Bible still calls him the prince 
+of the power of the air because he is still deceiving unbelievers and 
+blinding them to the truth. The good news is, his time is short. As 
+believers, in this "already" but "not yet" time frame, we get to partner
+ with Holy Spirit to see those trapped under the evils grip come into 
+faith and life.</p>
+<p>On the latest episode of Awaken Podcast, Michael Lombardo explores 
+this subject deeply and shares hope for those who are battling in faith 
+with the reality that we aren't currently seeing a full manifestation of
+ Christ's victory all around us. It's time for us as believers to live 
+within this tension and to never give up pursuing everything Christ 
+purchased for us. </p>
+<p class="rm-manual">Connect with Michael Lombardo at <a href="http://www.lifepouredoutintl.org/">lifepouredoutintl.org</a> and <a href="https://www.facebook.com/michaellombardolpo/">on Facebook</a>. Order his book, <a href="https://www.amazon.com/Immersed-His-Glory-Supernatural-Experiencing-ebook/dp/B076GV28BS">Immersed in His Glory</a> here.</p>
+<p class="rm-manual">Follow breaking news like this and more in our new platform, <a href="https://www.charismaplusapp.com/">CHARISMA PLUS</a>.</p>
+<p class="rm-manual">To contact us or to submit an article, <a href="mailto:jeff.struss@charismamedia.com">click here</a>.</p>
+<p class="rm-manual">Get Charisma's best content delivered right to your inbox! Never miss a big news story again. <a href="https://www.charismanews.com/newsletters/?utm_source=charismanews.com&amp;utm_medium=mid-article%20text&amp;utm_campaign=plg_cm_midarticletextinjector">Click here to subscribe to the Charisma News newsletter</a>.</p>
+<p class="rm-manual">Five ways to deepen your relationship with God, increase your faith and save money!</p>
+<ul class="rm-manual">
+<li class="rm-manual">Deepen Your Relationship with God with a FREE eCourse: <a href="https://www.charismacourses.com/collections?category=free-mini-course"> Click Here</a> to view all of our free e-Courses. Favorite topics include Fear, Forgiveness, Holy Spirit, Supernatural, and How to Hear God.</li>
+<li class="rm-manual">Super Discounts and Close-Out Specials: <a href="https://shop.charismamag.com/collections/bundle-deals">Click Here</a> to view all our bundles and close-out specials and save up to 86%! Prayer, Holy Spirit, Anointing, the Supernatural and more.</li>
+<li class="rm-manual">God Wants to Anoint Women Now: Rise up and enter 
+the anointing of Deborah, Anna, Esther, Ruth and Hannah. You were called
+ to go higher. <a href="https://shop.charismamag.com/collections/bundle-deals/products/anointing-complete-bundle">Click Here to learn more</a>.</li>
+<li class="rm-manual">Change Your Atmosphere and Circumstances Through 
+Prayer! John Eckhardt's prayer bundle gives you six powerful books to 
+help you pray and change any situation. <a href="https://shop.charismamag.com/collections/bundle-deals/products/all-6-john-eckhardt-prayers-that-books-holy-spirit-series">Click Here</a>.</li>
+<li class="rm-manual">HUGE Bible Sale!: <a href="https://shop.charismamag.com/collections/bible-with-free-gift">Click Here</a> to save up to 50% off a great selection of Bibles. Plus, get a free gift with each order!</li>
+</ul>
+<p class="rm-manual">Subscription Special: <a href="https://shop.charismamag.com/collections/subscription/products/charisma-free-book-born-for-significance-print-magazine-subscription">Subscribe to Charisma</a>
+ for Only $24.97 and get a free gift. With your subscription, you'll 
+receive Born For Significance by best-selling author Bill Johnson. <a href="https://shop.charismamag.com/collections/subscription/products/charisma-free-book-born-for-significance-print-magazine-subscription">View Offer</a></p>
+<p class="rm-manual">Attention Pastors and Leaders: Leadership training 
+and development are crucial for success. Enroll in a FREE 1-hour 
+leadership mini-course by Dr. Mark Rutland. <a href="https://online.thenicl.com/pages/mini-course">View Details</a></p>
+<aside class="rm-manual"> See an error in this article? <a href="mailto:webmaster@charismamedia.com?subject=Website%20correction%20for%20https://www.charismanews.com/culture/85788-how-jesus-is-empowering-his-people-to-enforce-all-he-accomplished" rel="nofollow">Send us a correction</a> </aside><aside class="rm-manual">Related topics: <a href="file:///component/search/?searchword=Faith&amp;areas%5B0%5D=gitags">Faith</a> | <a href="file:///component/search/?searchword=Forgiveness&amp;areas%5B0%5D=gitags">Forgiveness</a> | <a href="file:///component/search/?searchword=Podcast&amp;areas%5B0%5D=gitags">Podcast</a> | <a href="file:///component/search/?searchword=Salvation&amp;areas%5B0%5D=gitags">Salvation</a> | <a href="file:///component/search/?searchword=Satan&amp;areas%5B0%5D=gitags">Satan</a></aside><p class="rm-manual">advertisement</p>
+<p class="rm-manual">advertisement</p>
+<p class="rm-manual">advertisement</p>
+<p class="rm-manual">advertisement</p>
+<h2 class="rm-manual">Charisma Media is...</h2>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.charismamag.com/?utm_source=charismanews.com&amp;utm_medium=text_footer&amp;utm_campaign=crosspromotions" rel="noopener">Charisma Magazine</a></li> <li class="rm-manual"><a href="https://www.charismanews.com/">Charisma News</a></li> <li class="rm-manual"><a href="https://www.charismapodcastnetwork.com/?utm_source=charismanews.com&amp;utm_medium=footer&amp;utm_campaign=crosspromotions" rel="noopener">Charisma Podcast Network</a></li> <li class="rm-manual"><a href="https://www.ministrytodaymag.com/?utm_source=charismanews.com&amp;utm_medium=text_footer&amp;utm_campaign=crosspromotions" rel="noopener">Ministry Today</a></li> <li class="rm-manual"><a href="https://spiritledwoman.com/?utm_source=charismanews.com&amp;utm_medium=text_footer&amp;utm_campaign=crosspromotions" rel="noopener">Spiritled Woman</a></li> <li class="rm-manual"><a href="https://newmanmag.com/?utm_source=charismanews.com&amp;utm_medium=text_footer&amp;utm_campaign=crosspromotions" rel="noopener">New Man</a></li> <li class="rm-manual"><a href="https://www.vidacristiana.com/?utm_source=charismanews.com&amp;utm_medium=text_footer&amp;utm_campaign=crosspromotions" rel="noopener">Vida Cristiana</a></li> </ul>
+<h2 class="rm-manual">Site Map</h2>
+<h3 class="rm-manual">Sections</h3>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.charismanews.com/us" rel="noopener">U.S.</a></li> <li class="rm-manual"><a href="https://www.charismanews.com/world" rel="noopener">World</a></li> <li class="rm-manual"><a href="https://www.charismanews.com/politics" rel="noopener">Politics</a></li> <li class="rm-manual"><a href="https://www.charismanews.com/culture" rel="noopener">Culture</a></li> <li class="rm-manual"><a href="https://www.charismanews.com/marketplace" rel="noopener">Marketplace</a></li> <li class="rm-manual"><a href="https://www.charismanews.com/opinion" rel="noopener">Opinion</a></li> <li class="rm-manual"><a href="https://www.charismamag.com/" rel="noopener">Charisma Magazine Site</a></li> <li class="rm-manual"><a href="https://shop.charismamag.com/products/charisma-24-97-subscription?utm_source=Charisma%20News&amp;utm_medium=Footer" rel="noopener">Subscribe to Charisma Magazine</a></li> </ul>
+<h3 class="rm-manual">About</h3>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.charismanews.com/about-charisma-media" rel="noopener">About Charisma Media</a></li> <li class="rm-manual"><a href="https://www.charismanews.com/about" rel="noopener">About Charisma News</a></li> <li class="rm-manual"><a href="https://www.charismanews.com/charisma-media-editors" rel="noopener">Meet the Editors</a></li> <li class="rm-manual"><a href="https://www.charismanews.com/writers-guidelines" rel="noopener">Writers' Guidelines</a></li> <li class="rm-manual"><a href="https://www.charismamag.com/about/privacy-policy" rel="noopener">Privacy Policy</a></li> <li class="rm-manual"><a href="https://www.charismamag.com/about/statement-of-faith" rel="noopener">Statement of Faith</a></li> </ul>
+<h3 class="rm-manual">Training</h3>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.thenicl.com/" rel="noopener">NICL</a></li> </ul>
+<h3 class="rm-manual">Connect</h3>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.charismanews.com/contact-charisma-news" rel="noopener">Contact Us</a></li> <li class="rm-manual"><a href="http://charismamediaconsulting.com/" rel="noopener">Advertise With Us</a></li> <li class="rm-manual"><a href="https://www.charismanews.com/contact-charisma-news" rel="noopener">Customer Service</a></li> <li class="rm-manual"><a href="https://www.charismanews.com/newsletters/?sc=chmnews_site_footer&amp;utm_medium=SiteFooter_Newsletters" rel="noopener">Newsletters</a></li> <li class="rm-manual"><a href="https://www.charismamobile.com/" rel="noopener">Charisma News Smartphone App</a></li> <li class="rm-manual"><a href="https://www.charismapodcastnetwork.com/?utm_source=charismanews.com&amp;utm_medium=footer&amp;utm_campaign=crosspromotions" rel="noopener">Charisma Podcast Network</a></li> <li class="rm-manual"><a href="https://charismamedia.com/work-with-us/" rel="noopener">Careers</a></li> </ul>
+<p class="rm-manual">Charisma News - Informing believers with news from a Spirit-filled perspective</p>
+<p class="rm-manual"> © Copyright 2021 <a href="http://www.charismamedia.com/" rel="noopener">Charisma Media</a>, All Rights Reserved. </p></article>
+</body></html>

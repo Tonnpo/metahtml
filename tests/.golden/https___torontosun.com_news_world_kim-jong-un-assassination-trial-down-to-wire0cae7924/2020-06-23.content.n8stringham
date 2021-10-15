@@ -1,0 +1,138 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Kim Jong-un assassination trial down to wire | Toronto Sun </p>
+<p class="rm-manual"> <a href="https://local.torontosun.com/categories/shop-local"> </a></p><p class="rm-manual"><a href="https://local.torontosun.com/categories/shop-local"><span>COVID-19</span><span>See local businesses open during COVID</span><span>Learn More &gt;</span></a></p><a href="https://local.torontosun.com/categories/shop-local"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <span>Hot Topics</span> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///tag/coronavirus">COVID-19</a> </li> <li class="rm-manual"> <a href="file:///tag/what-made-him-kill">What made him kill</a> </li> <li class="rm-manual"> <a href="https://torontosun.com/watch">Video</a> </li> <li class="rm-manual"> <a href="http://torontosun.remembering.ca/">Obituaries</a> </li> <li class="rm-manual"> <a href="http://classifieds.torontosun.com/">Classifieds</a> </li> <li class="rm-manual"> <a href="https://jobs.torontosun.com/">Jobs</a> </li> <li class="rm-manual"> <a href="file:///flyercity">This Week's Flyers</a> </li> <li class="rm-manual"> <a href="https://torontosun.com/sponsored/business-sponsored/connecting-with-local-businesses-whats-open-during-the-covid-19-crisis/?utm_source=Postmedia_nav&amp;utm_medium=tsun-content&amp;utm_campaign=covid-crisis">Open during COVID</a> </li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///">Home</a></li> <li class="rm-manual">
+<a href="https://torontosun.com/category/news">News</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/category/news">All News</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/news/local-news">Toronto &amp; GTA</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/news/provincial">Ontario</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/news/national">Canada</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/news/world">World</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/news/crime">Crime</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/news/weird">Weird</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/business">Money</a></li> <li class="rm-manual">
+<a href="https://torontosun.com/category/technology">Technology</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/category/technology">All Technology</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/technology/gaming">Gaming</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/technology/personal-tech">Gadgets</a></li> </ul> </li> <li class="rm-manual"><a href="https://torontosun.com/weather">Weather</a></li> <li class="rm-manual"><a href="https://torontosun.com/traffic">Traffic</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://torontosun.com/category/sports">Sports</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/category/sports">All Sports</a></li> <li class="rm-manual"><a href="https://torontosun.com/scores">Scores and Stats</a></li> <li class="rm-manual">
+<a href="https://torontosun.com/category/sports/hockey">Hockey</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/category/sports/hockey">All Hockey</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/hockey/nhl/toronto-maple-leafs">Toronto Maple Leafs</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/hockey/nhl">NHL</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://torontosun.com/category/sports/football">Football</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/category/sports/football">All Football</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/football/cfl/toronto-argonauts">Toronto Argonauts</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/football/cfl">CFL</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/football/nfl">NFL</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://torontosun.com/category/sports/baseball">Baseball</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/category/sports/baseball">All Baseball</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/baseball/toronto-blue-jays">Toronto Blue Jays</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/baseball/mlb">MLB</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://torontosun.com/category/sports/basketball">Basketball</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/category/sports/basketball">All Basketball</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/basketball/nba/toronto-raptors">Toronto Raptors</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/basketball/nba">NBA</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://torontosun.com/category/sports/lacrosse">Lacrosse</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/category/sports/lacrosse">All Lacrosse</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/lacrosse/nll/toronto-rock">Toronto Rock</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/lacrosse/nll">NLL</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://torontosun.com/category/sports/soccer">Soccer</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/category/sports/soccer">All Soccer</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/soccer/mls/toronto-fc">Toronto FC</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/soccer/mls">MLS</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://torontosun.com/category/sports/golf">Golf</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/category/sports/golf">All Golf</a></li> <li class="rm-manual"><a href="http://torontosun.sportstonews.com/">Golf Videos</a></li> </ul> </li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/sports-picks">Sports Picks</a></li> <li class="rm-manual">
+<a>More Sports</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/category/sports/curling">Curling</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/horse-racing">Horse Racing</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/mma">MMA</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/auto-racing">Motorsports</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/tennis">Tennis</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/other-sports">Other Sports</a></li> </ul> </li> </ul> </li> <li class="rm-manual">
+<a href="https://torontosun.com/category/opinion">Opinion</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/category/opinion">All Opinion</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/opinion/editorials">Editorials</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/opinion/columnists">Columnists</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/opinion/cartoons">Editorial Cartoons</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/opinion/letters">Letters</a></li> <li class="rm-manual"><a href="https://torontosun.com/send-letter">Send Letter to the Editor</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://torontosun.com/category/entertainment">Entertainment</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/category/entertainment">All Entertainment</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/entertainment/books">Books</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/entertainment/celebrity">Celebrity</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/entertainment/movies">Movies</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/entertainment/music">Music</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/entertainment/theatre">Stage</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/entertainment/television">Television</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://torontosun.com/category/life">Life</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/category/life">All Life</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/life/food">Eat</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/life/fashion-beauty">Fashion &amp; Beauty</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/life/relationships">Relationships</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/life/sex-files">Sex Files</a></li> <li class="rm-manual">
+<a href="https://torontosun.com/category/health">Health</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/category/health">All Health</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/health/diet-fitness">Diet &amp; Fitness</a></li> </ul> </li> <li class="rm-manual"><a href="https://torontosun.com/category/life/homes">Homes</a></li> <li class="rm-manual">
+<a href="https://torontosun.com/category/travel">Travel</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/category/travel">All Travel</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/travel/local-travel">Ontario Travel</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/travel/travel-canada">Travel Canada</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/travel/europe">Travel Europe</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/travel/international">Travel International</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/travel/usa">Travel USA</a></li> </ul> </li> </ul> </li> <li class="rm-manual">
+<a href="https://torontosun.com/sunshine-girl">More</a> <ul class="rm-manual"> <li class="rm-manual">
+<a href="https://torontosun.com/category/sunshine-girls">Sunshine Girls</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/category/sunshine-girls">Today’s Sunshine Girl</a></li> <li class="rm-manual"><a href="https://torontosun.com/become-a-sunshine-girl">Become a Sunshine Girl</a></li> </ul> </li> <li class="rm-manual">
+<a href="http://classifieds.torontosun.com/">Classifieds</a> <ul class="rm-manual"> <li class="rm-manual"><a href="http://torontosun.remembering.ca/">Obituaries</a></li> <li class="rm-manual"><a href="http://classifieds.torontosun.com/">All Classifieds</a></li> <li class="rm-manual"><a href="http://torontosun.adperfect.com/">Place an Ad</a></li> <li class="rm-manual"><a href="http://classifieds.torontosun.com/">Announcements</a></li> <li class="rm-manual"><a href="http://classifieds.torontosun.com/">Browse Listings</a></li> <li class="rm-manual"><a href="https://torontosun.com/flyercity">This Week’s Flyers</a></li> <li class="rm-manual"><a href="https://jobs.torontosun.com/">Jobs</a></li> </ul> </li> <li class="rm-manual">
+<a href="http://driving.ca/">Driving</a> <ul class="rm-manual"> <li class="rm-manual"><a href="http://driving.ca/">All Driving</a></li> <li class="rm-manual"><a href="http://driving.ca/category/auto-news">Auto News</a></li> <li class="rm-manual"><a href="http://driving.ca/category/reviews">Reviews</a></li> <li class="rm-manual"><a href="http://driving.ca/car-comparison">Car Comparison</a></li> <li class="rm-manual"><a href="http://driving.ca/buyers-guide/2015">Buyers Guide</a></li> </ul> </li> <li class="rm-manual"><a href="https://torontosun.com/category/contests">Contests</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/special-sections">Special Sections</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/homes-sections">Homes Sections</a></li> <li class="rm-manual">
+<a href="http://canoe.com/">On Canoe.com</a> <ul class="rm-manual"> <li class="rm-manual"><a href="http://lifewise.canoe.com/Puzzles/">Puzzles</a></li> <li class="rm-manual"><a href="http://lifewise.canoe.com/Horoscopes/">Horoscopes</a></li> <li class="rm-manual"><a href="http://lifewise.canoe.com/Comics/">Comics</a></li> </ul> </li> </ul> </li> <li class="rm-manual">
+<a href="https://torontosun.com/subscription">Subscription</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/subscription">Subscribe</a></li> <li class="rm-manual"><a href="https://torontosun.com/subscription/my-subscription">My Subscription</a></li> <li class="rm-manual"><a href="https://torontosun.com/edit-profile">Edit Profile</a></li> <li class="rm-manual"><a href="https://torontosun.com/subscription/subscribe-to-tv-book">Subscribe to TV Book</a></li> <li class="rm-manual"><a href="http://eedition.torontosun.com/">Read e-Edition</a></li> </ul> </li> </ul>
+<h1 class="rm-manual">Kim Jong-un assassination trial down to wire</h1>
+<p class="rm-manual"> <a href="https://torontosun.com/author/bhunter469"><span>Brad Hunter</span><span>More from Brad Hunter</span></a> </p>
+<p class="rm-manual">Published: April 8, 2018 </p>
+<p class="rm-manual">Updated: April 8, 2018 4:27 PM EDT </p>
+<p class="rm-manual">Filed Under:</p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://torontosun.com/"><span>Toronto SUN</span></a> </li> <li class="rm-manual"> <a href="https://torontosun.com/category/news"><span>News</span></a> </li> <li class="rm-manual"> <a href="https://torontosun.com/category/news/world"><span>World</span></a> </li> </ul>
+<h2 class="rm-manual"> <span>Related</span> </h2>
+<ul class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <span><a href="https://torontosun.com/category/news/world">World</a></span><h4 class="rm-manual"><a href="https://torontosun.com/news/world/pubs-restaurants-and-hotels-to-reopen-as-england-eases-social-distancing/wcm/c15ac7ff-9ae1-4dc1-aa65-035f573d76ec" rel="bookmark">Pubs, restaurants and hotels to reopen as England eases social distancing </a></h4> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <span><a href="https://torontosun.com/category/news/world">World</a></span><h4 class="rm-manual"><a href="https://torontosun.com/news/world/wirecard-ex-boss-braun-arrested-as-creditors-hunt-lost-billions/wcm/92aa5403-94bc-4ae4-b08a-5d6cce78c8ae" rel="bookmark">Wirecard ex-boss Braun arrested as creditors hunt lost billions </a></h4> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <span><a href="https://torontosun.com/category/news/world">World</a></span><h4 class="rm-manual"><a href="https://torontosun.com/news/world/trump-urges-arrests-after-statue-targeted-near-white-house/wcm/60b00672-e853-464f-8385-2b934dd6cee2" rel="bookmark">Trump urges arrests after statue targeted near White House </a></h4> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <span><a href="https://torontosun.com/category/news/crime">Crime</a></span><h4 class="rm-manual"><a href="https://torontosun.com/news/crime/former-south-africa-president-zuma-appears-in-court-for-resumed-graft-trial/wcm/7af8a2eb-b838-4054-9be7-d5f04027b30b" rel="bookmark">Former South Africa president Zuma appears in court for resumed graft trial </a></h4> </article> </li> </ul>
+<p> <span>Indonesia’s Siti Aisyah, 25, and Vietnam’s Doan Thi Huong, 29, pictured are on trial for the murder of Kim Jong-nam. </span> </p>
+<p><span>Hovering like a ghoulish spectre over the fates of two women is a length of rope.</span></p>
+<p><span>If found guilty of murdering the estranged half-brother of 
+North Korean despot Kim Jong Un, the pair will surely swing in the 
+Malaysian breeze.</span></p>
+<p><span>But that prospect may be an executioner’s pipe dream.</span></p>
+<p> <span> Murdered Kim Jong-nam and his estranged brother, North Koreas tubby tyrant, Kim Jong-un. THE ASSOCIATED PRESS</span> </p>
+<p><span>Last week, Malaysian prosecutors wrapped up their case against Indonesia’s Siti Aisyah, 25, and Vietnam’s Doan Thi Huong, 29.</span></p>
+<p><span>The ditzy duo were busted for the brazen assassination of Kim Jong Nam at Kuala Lumpur’s busy airport on Feb. 13, 2017.</span></p>
+<p><span>Aisyah and Huang are accused of smearing VX nerve agent on 
+Kim’s face at the behest of North Korean intelligence operatives who 
+fled Malaysia.</span></p>
+<p> <span> Party girls Siti Aisyah, right, and Doan Thi Huong are in a world of hurt. THE ASSOCIATED PRESS</span> </p>
+<p><span> The two party girls have pleaded not guilty, claiming they believed they were taking part in a reality TV prank.</span></p>
+<p><span>Their murder trial began last fall and has been punctuated by 
+protracted breaks. The prosecution interviewed 34 witnesses and closing 
+arguments begin on June 27.</span></p>
+<p><span>Bizarrely, in Malaysia after closing arguments, the judge 
+decides whether there is a strong enough case against the hard-partying 
+pair. If there isn’t, they walk.</span></p>
+<p><span>But if he decides he’s heard enough, they will then be called to make their defence.</span></p>
+<p> <span> Doan Thi Huong, 29, heads into court in Malaysia. THE ASSOCIATED PRESS</span> </p>
+<p><span>Part of the problem for the prosecution is proving Aisyah and Huang intended to kill Kim or if they were merely scapegoats.</span></p>
+<p><span>What’s been printed about the women’s selfie-satisfying lifestyles, the latter argument is increasingly holding more water.</span></p>
+<p><span>So far, the defence believes the prosecution’s case has one critical hole: Motive.</span></p>
+<p><span>Why would two fame-seeking nightlife fixtures want to murder the exiled Kim Jong nam?</span></p>
+<p> <span> Doan Thi Huong, 29, is in a world of hurt.</span> </p>
+<p><span>Neither wore gloves during the assassination and they didn’t 
+get rid of their tainted clothes. In fact, they didn’t even attempt to 
+escape or flee the crime scene.</span></p>
+<p><span>Huong’s lawyer, Hisyam Teh Poh Teik, characterized the police 
+investigation as sloppy and biased. He says the duo have been deprived 
+of a fair trial.</span></p>
+<p><span>“We are confident with the innocence of our client because that’s the truth,” Teh said.</span></p>
+<p> <span> Doan Thi Huong, 29, is in a world of hurt.</span> </p>
+<p><span>But prosecutors say there are deep connections between the tippling twosome and North Korean intelligence.</span></p>
+<p><span>“We believe we have a good case,” Iskandar Ahmad told reporters.</span></p>
+<p><span>Intelligence sources believe Kim Jong Nam — who fell out of 
+favour with the regime because of an ill-considered jaunt to Disneyland 
+Tokyo — was considered a threat to his half-brother.</span></p>
+<p class="rm-manual"> <span>Comments</span> <span><a href="#comments">Share your thoughts</a></span> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/tag/assassination">Assassination </a></li>
+<li class="rm-manual"><a href="https://torontosun.com/tag/court">Court </a></li> </ul>
+<h2 class="rm-manual"><span>Related Posts</span></h2>
+<ul class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <h4 class="rm-manual"><a href="https://torontosun.com/news/local-news/sex-predator-should-never-have-been-free-to-violate-teen-victims-mom" rel="bookmark">Sex predator should never have been free to violate teen: Victim's mom </a></h4> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <h4 class="rm-manual"><a href="https://torontosun.com/news/local-news/covid-19-freedom-judge-grants-bail-to-accused-carjacker-already-facing-kidnapping-charges" rel="bookmark">Judge grants bail to accused carjacker already facing kidnapping charges </a></h4> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <h4 class="rm-manual"><a href="https://torontosun.com/news/national/supreme-court-to-review-ontario-ruling-that-jeopardized-multiple-verdicts" rel="bookmark">Supreme Court to review Ontario ruling that jeopardized multiple verdicts </a></h4> </article> </li> </ul>
+<h2 class="rm-manual"><span>Top Stories</span></h2>
+<ul class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <h4 class="rm-manual"><a href="https://torontosun.com/news/local-news/woman-who-killed-cyclist-while-drunk-driving-faces-new-impaired-driving-charges" rel="bookmark">Woman, who killed cyclist while drunk driving, faces new impaired driving charges </a></h4> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <h4 class="rm-manual"><a href="https://torontosun.com/news/crime/toronto-cop-named-in-tow-truck-police-radio-theft-probe" rel="bookmark">Toronto cop named in tow truck police radio theft probe </a></h4> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <h4 class="rm-manual"><a href="https://torontosun.com/sports/hockey/nhl/ed-willes-the-story-behind-the-story-about-auston-matthews-positive-test-is-bewildering/wcm/ca147dc8-7349-4f1f-923e-793f88fa2101" rel="bookmark"> WILLES: Story behind the story about Matthews' positive test is bewildering </a></h4> </article> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <h4 class="rm-manual"><a href="https://torontosun.com/entertainment/celebrity/oven-dodger-winona-ryder-recounts-ugly-mel-gibson-encounter" rel="bookmark">Winona Ryder recounts ugly Mel Gibson encounter </a></h4> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <h4 class="rm-manual"><a href="https://torontosun.com/news/local-news/margaret-wente-resigns-contentious-toronto-college-appointment-after-uproar" rel="bookmark">Margaret Wente resigns Massey College appointment after uproar </a></h4> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <h4 class="rm-manual"><a href="https://torontosun.com/news/local-news/hamilton-police-seeking-woman-in-arson-investigation" rel="bookmark">Hamilton police seeking woman in arson investigation </a></h4> </article> </li> </ul>
+<h2 class="rm-manual"><span>Comments</span></h2>
+<p class="rm-manual">We encourage all readers to share their views on 
+our articles and blog posts. We are committed to maintaining a lively 
+but civil forum for discussion, so we ask you to avoid personal attacks,
+ and please keep your comments relevant and respectful. If you encounter
+ a comment that is abusive, click the "X" in the upper right corner of 
+the comment box to report spam or abuse. We are using Facebook 
+commenting. <a href="file:///facebook-commenting-faqs">Visit our FAQ page</a> for more information.</p>
+<p class="rm-manual">Connect with Toronto SUN</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://torontosun.com/subscription">Subscribe</a></li> <li class="rm-manual"><a href="https://torontosun.com/edit-profile">Edit Profile</a></li> <li class="rm-manual"><a href="https://torontosun.com/ways-to-read">Ways to Read</a></li> <li class="rm-manual"><a href="https://torontosun.com/faqs">FAQS</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://torontosun.com/sitemap">Sitemap</a></li> <li class="rm-manual"><a href="https://www.postmediasolutions.com/?itm_source=ts&amp;itm_medium=website&amp;itm_campaign=ps-eg&amp;itm_term=&amp;itm_content=advertise%20with%20us&amp;groupkey=&amp;offer_code=">Advertise</a></li> <li class="rm-manual"><a href="https://torontosun.com/contact-us">Contact Us</a></li> </ul>
+<p class="rm-manual">© 2020 Postmedia Network Inc. All rights reserved. <span>Unauthorized distribution, transmission or republication strictly prohibited.</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="http://www.postmediaadvertising.com/privacy-statement/">Privacy – Updated</a></li> <li class="rm-manual"><a href="http://www.canada.com/aboutus/termsofservice.html">Terms</a></li> <li class="rm-manual"><a href="http://www.canada.com/aboutus/copyright.html">Copyright &amp; Permissions</a></li> <li class="rm-manual"><a href="https://adregistry.postmedia.com/">Digital Ad Registry</a></li> </ul></article>
+</body></html>

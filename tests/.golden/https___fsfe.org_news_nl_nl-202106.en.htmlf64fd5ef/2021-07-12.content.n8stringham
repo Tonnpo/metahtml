@@ -1,0 +1,162 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"><a href="file:///news/newsletter.en.html">Newsletter</a></p>
+<h1 class="rm-manual">Rising demands for Dutch digital autonomy +++ REUSE Booster +++ Torsten Grote</h1>
+<p class="rm-manual"> <span>onÂ </span>2021-06-28Â </p>
+<p> Dutch digital public services rely increasingly on monopolistic 
+companies; the FSFE Dutch team actively demands digital rights. In June,
+ we launched REUSE Booster to share legal advice with Free Software 
+projects on copyright. We interviewed Torsten Grote, a member of the 
+FSFE, who stressed the need to Free our Androids early on. </p>
+<h2>Dutch Digital Autonomy is undermined; demands for Free Software are rising </h2>
+<p> The Netherlands is becoming dependent on a digital infrastructure 
+that is dominated by a small number of monopolistic companies. Although 
+the Dutch Cyber Security Council recognises the consequent risk, their 
+report neglects focusing on Open Standards and Free Software, the proven
+ best practices to face this problem. The FSFE calls on the Dutch 
+government to stand firm and <a href="file:///news/2021/news-20210521-01.en.html">get a grip on their digital security and autonomy by adhering to Open Standards and Free Software</a>, in line with their earlier commitment to use Free Software by default. </p>
+<p> Our team emphatically defends digital rights in the Netherlands. In 
+2018, Jos van den Oever noticed that the 'Debat Direct' app could not be
+ downloaded to his Firefox OS phone. In other words, the official 
+application for parliamentary debates was not available under a Free 
+Software license. Jos' request to get the app's source code was denied, 
+and he brought the case to court. The Council of State ruled on 31 March
+ 2021 that the Parliament does not have to publish the source code. As a
+ result, the <a href="file:///news/2021/news-20210611-01.en.html">participation app remains closed</a> to those who wish to use only Free Software apps. </p>
+<p> Jos van den Oever, the person behind this initiative, is a FSFE 
+volunteer and part of our country team Netherlands. Its members kept in 
+touch even during the pandemic, when they had to replace booths for 
+online meetings. Nico Rikken, one of the two coordinators, shares his 
+experiences about this transition in a blogpost, and <a href="https://blogs.fsfe.org/nico.rikken/2021/06/23/how-the-netherlands-group-grew-in-covid-times/">calls anyone interested to join the FSFE community based in the Netherlands</a>. </p>
+<figcaption>FSFE spot in a non-profit hacker-camp. The Netherlands, 2017.</figcaption><h2>REUSE Booster supports Free Software projects with licensing</h2>
+<p> REUSE has facilitated the licensing of Free Software projects. 
+Developers are given standardised ways to mark all files in a project 
+with their chosen license and copyright notice. A tutorial, a set of 
+FAQs, a helper tool, and an API have been made available to lower the 
+threshold and save time. </p>
+<p> With REUSE Booster, the FSFE takes this initiative a step further. <a href="file:///news/2021/news-20210609-01.en.html">Free Software projects can seek tailored support</a>
+ with licensing and copyright by legal experts now. Each project will be
+ evaluated individually and the recommendations will apply to its 
+particular situation. <a href="https://reuse.software/booster/">Register</a> until 8 July to get your Free Software project on board. </p>
+<h2>20 Years FSFE: Envisioning free operating systems in smartphones with Torsten Grote</h2>
+<p> In our fourth birthday publication we reminisce about the emergence of the first smartphones. We are <a href="file:///news/2021/news-20210625-01.en.html">interviewing</a>
+ Torsten Grote, who explored Free Software alternatives for smartphones 
+as early as 2012. A programmer as well as a Free Software activist, 
+Torsten shares his memories of the developments of alternative operating
+ systems and applications for smartphones. Finally, we would not miss 
+this chance to ask him what options there are today for liberating our 
+phones. </p>
+<p>This year the FSFE celebrates its 20th anniversary. <a href="https://my.fsfe.org/donate?referrer=newsletter">Support our work for the next 20 years to come</a></p>
+<h2>Internal: The FSFE is migrating its IRC presence to Libera Chat.</h2>
+<p> <a href="file:///news/2021/news-20210525-01.en.html">Learn how to join us</a>.
+ We are moving from Freenode to Libera Chat, following the migration of 
+its network of volunteer staff. We share our thoughts that led the FSFE 
+to migrate its IRC presence. </p>
+<h2>What we have done</h2>
+<ul> <li> On June 28th, Erik Albers, Sustainability Programme Manager of the FSFE, spoke at the Round Table <a href="https://www.greens-efa.eu/en/article/event/how-do-we-shape-and-grow-a-green-tech-sector">"How do we shape and grow a green tech sector?"</a>
+ organised by the Greens/EFA. In his presentation, Erik Albers explained
+ the role software design plays on the environmental impact of digital 
+technologies. The Round Table is part of a wider effort of the 
+Greens/EFA to compose a digital green manifesto. </li> <li> On June 23rd, Lucas Lasota, FSFE Deputy Legal Coordinator and Research Associate at Humboldt University of Berlin, moderated a <a href="https://box.hu-berlin.de/f/02071075f39248f6a2f6/">round table</a>
+ on cybersecurity, human rights, and digital sovereignty together with 
+Katerina Yordanova and Elisabetta Biasin from the KU Leuven Centre for 
+IT &amp; IP Law. </li> <li> On June 23rd, Irmhild Rogalla gave a talk in
+ the FSFE Women group meeting about the accessibility of video 
+conferencing tools, supporting a conferencing platform for all. The <a href="https://wiki.fsfe.org/Teams/Women">FSFE Women group</a>
+ meets on a monthly basis, and keeps it casual while providing an open 
+space to discuss recent developments in the area of Free Software. Often
+ meetings focus on one specific topic. </li> <li> On June 19th, Matthias Kirschner, FSFE's President, <a href="https://peertube.tv/videos/watch/1fd019fd-2fcf-4777-8b3a-59ac647ab542">presented</a>
+ "20 Years FSFE: The long way for software freedom" at the openSUSE 
+Conference to inform people on our work as an independent organisation. </li> <li> On June 18th, Bonnie Mehring, FSFE's junior project manager, <a href="https://peertube.social/videos/watch/c3ae2ad6-f2e0-4168-a28b-f7b2c73e154f">presented</a>
+ "Public Money? Public Code!: A campaign framework to promote software 
+freedom" at the openSUSE Conference. In the talk, she explained how the 
+campaign framework can be used to push for the adoption of 
+Free-Software-friendly policies in your area; be it your public 
+administration, your library, your university, your city, your region, 
+or your country. </li> <li> On June 16th, the <a href="https://wiki.fsfe.org/action/show/LocalGroups/BNL">Netherlands-based FSFE</a>
+ team held its regular monthly meeting. The meeting is open to 
+everybody, and can switch to English if not everybody understands Dutch.
+ </li> <li> On June 10th, Erik Albers participated in the <a href="https://www.ressourcenwende.net/veranstaltung/zukunftswerkstatt-smart-living-nachhaltig-gerecht-selbstbestimmt/">"Zukunftswerkstatt Smart Living"</a>, where experts analyse sustainable design options for the ongoing digitization of our everyday life. </li> <li> On June 5th, Lina Ceballos and Alexander Sander gave a 'Public Money? Public Code!' <a href="https://wiki.fsfe.org/Activities/ContactingAdministrationsForPMPC">workshop</a> for our Italian community members. </li> <li> On June 4th, Lucas Lasota participated at the <a href="https://peertube.social/videos/watch/e73c6cf0-2ef0-4b1e-8b2c-441ecd055a2a">Impropedia show</a> to talk about Free Software, Router Freedom, and Digital Rights. The event was hosted by KuZe Potsdam. </li> <li> On June 1st, Alexander Sander participated in the GnuLinuxNews-Podcast GLN011. He <a href="https://gnulinux.ch/gln011-podcast">talked</a> about Free Software during the Corona crisis (DE). </li> <li> On June 1st, FSFE's Alexander Sander <a href="https://peertube.social/videos/watch/585c88dd-4f2b-450c-9ffc-66005f11e030">presented</a>
+ the Public Money? Public Code! campaign in Netzpolitischer Abend, 
+organised by Digitale Gesellschaft, and stressed that there are now no 
+political excuses not to implement the concept. </li> <li> On May 27th, 
+the FSFE Berlin local group met for their regular meeting which focuses 
+on Education. Miriam from "Die Lernwerkstatt" introduced this 
+organisation and gave a talk on the design of digital learning with tips
+ on related platforms and techniques. A group discussion followed. In 
+the Berlin Fellowship group, everyone is invited to discuss "Free 
+Software and Education", share experiences, and work on liberating 
+knowledge and education in Berlin and beyond. </li> <li> On May 26th, Alexander Sander gave a <a href="https://public-money.confetti.events/">talk</a>
+ explaining why and how public administrations should use Free Software.
+ He highlighted the benefits of this practice for public 
+administrations, the economy and the society. The current procurement 
+models and an outlook for the coming years were discussed. </li> </ul>
+<h2 class="rm-manual">Get active</h2>
+<p class="rm-manual"> Pack your T-shirt and educate those around you on 
+the definition of Free Software during your summer holidays. If we have 
+the right to use, study, share, and improve it, then it is Free 
+Software. Our T-shirts are made of 100% organic cotton, and our <a href="file:///order/index.en.html">collection</a> includes a variety of colours and slogans. </p>
+<h2 class="rm-manual">Contribute to our newsletter</h2>
+<p class="rm-manual"> If you would like to share any thoughts, pictures,
+ or news, please send them to us. As always, the address is 
+newsletter@fsfe.org. We're looking forward to hearing from you! If you 
+also want to support us and our work, join our community and support us 
+with a donation or a <a href="https://my.fsfe.org/donate?referrer=newsletter">monthly contribution</a>.
+ Thanks to our community and all the volunteers, supporters, and donors 
+who make our work possible. And thanks to our translators, who enable 
+you to read this newsletter in your native languages. </p>
+<p class="rm-manual"> Your editor, Fani Partsafyllidou </p>
+<p class="rm-manual"> The biggest financial impact the FSFE faces in 
+these times of physical distancing is the cancellation of Free Software 
+conferences, including our own events. To keep the software freedom 
+movement solid and alive, please consider <a href="https://my.fsfe.org/donate?referrer=newsletter">donating a part of your conference budget to Free Software organisations, including the FSFE</a>. </p>
+<p class="rm-manual"><a href="https://community.fsfe.org/t/702">Discuss this </a></p>
+<h2 class="rm-manual">Tags</h2>
+<ul class="rm-manual"><li class="rm-manual"><a href="file:///tags/tagged-newsletter.en.html">Newsletter</a></li></ul>
+<h3 class="rm-manual">Subscribe to FSFE's monthly newsletter</h3>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///news/newsletter.en.html">Newsletters</a></li> <li class="rm-manual"><a href="file:///news/news.en.html">Latest News</a></li> <li class="rm-manual"><a href="file:///events/events.en.html">Upcoming Events</a></li> <li class="rm-manual"><a href="https://planet.fsfe.org/">Planet blogs</a></li> <li class="rm-manual"><a href="file:///contact/community.en.html">Free Software Discussions</a></li> </ul>
+<p class="rm-manual"><a href="https://my.fsfe.org/support">Become a supporter</a></p>
+<h3 class="rm-manual">About the FSFE</h3>
+<p class="rm-manual"> Free Software Foundation Europe is a charity that empowers users to control technology. </p>
+<p class="rm-manual"> Software is deeply involved in all aspects of our 
+lives. It is important that this technology empowers rather than 
+restricts us. Free Software gives everybody the rights to use, study, 
+share, and improve software. These rights help support other fundamental
+ rights like freedom of speech, freedom of press, and privacy. </p>
+<p class="rm-manual"><a href="file:///about/about.en.html">Learn more</a></p></article>
+</body></html>

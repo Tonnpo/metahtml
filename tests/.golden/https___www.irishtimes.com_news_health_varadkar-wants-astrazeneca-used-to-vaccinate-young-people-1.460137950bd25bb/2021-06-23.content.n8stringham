@@ -1,0 +1,247 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Varadkar wants AstraZeneca used to vaccinate young people </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="#"> <span>Search</span> </a> </li> <li class="rm-manual"><a href="file:///newsletters"> <span>Newsletters</span></a></li> <li class="rm-manual"><a href="file:///games/crosswords"> <span>Crossword</span></a></li> <li class="rm-manual"><a href="http://notices.irishtimes.com/"> <span>Notices</span></a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="#"> <span>My Account</span> </a> </li> <li class="rm-manual"> <a href="file:///digital-subscriptions">Subscribe</a> </li> <li class="rm-manual"> <a href="#"> <span>Sign In</span> </a> </li> </ul>
+<p class="rm-manual"><a href="file:///"> <span>The Irish Times</span> </a></p>
+<p class="rm-manual">Wed, Jun 23, 2021</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///"><span>The Irish Times</span></a></li> <li class="rm-manual"><a href="file:///news">News </a></li> <li class="rm-manual"><a href="file:///sport">Sport </a></li> <li class="rm-manual"><a href="file:///business">Business </a></li> <li class="rm-manual"><a href="file:///opinion">Opinion </a></li> <li class="rm-manual"><a href="file:///life-and-style">Life &amp; Style </a></li> <li class="rm-manual"><a href="file:///culture">Culture </a></li> <li class="rm-manual"><a href="file:///more">More </a></li> <li class="rm-manual"><a href="file:///video">Video </a></li> <li class="rm-manual"><a href="file:///podcasts">Podcasts </a></li> <li class="rm-manual"><a href="https://execjobs.irishtimes.com/">Executive Jobs </a></li> <li class="rm-manual"> <a href="#"> <span>Search</span> </a> </li> <li class="rm-manual"> <a href="file:///subscribe">Subscribe</a> </li> <li class="rm-manual"> <a href="#"> <span>My Account</span> </a> </li> <li class="rm-manual"> <a href="#">Sign In</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///news">News</a></li> <li class="rm-manual">
+<a href="file:///news/health">Health</a> </li> <li class="rm-manual">
+<a href="file:///news/health/coronavirus">Coronavirus</a> </li> </ul>
+<p class="rm-manual"><a href="#"><span>All News</span> </a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///news/ireland">Ireland</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///news/ireland/irish-news">Irish News</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///news/world">World</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///news/world/uk">UK</a> </li> <li class="rm-manual"> <a href="file:///news/world/europe">Europe</a> </li> <li class="rm-manual"> <a href="file:///news/world/us">US</a> </li> <li class="rm-manual"> <a href="file:///news/world/africa">Africa</a> </li> <li class="rm-manual"> <a href="file:///news/world/middle-east">Middle East</a> </li> <li class="rm-manual"> <a href="file:///news/world/asia-pacific">Asia-Pacific</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///news/politics">Politics</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///news/ireland/shared-island">Shared Island</a> </li> <li class="rm-manual"> <a href="file:///election2020">Election2020</a> </li> <li class="rm-manual"> <a href="file:///news/politics/oireachtas">Oireachtas</a> </li> <li class="rm-manual"> <a href="file:///news/politics/poll">Poll</a> </li> <li class="rm-manual"> <a href="file:///news/elections">Elections</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///news/crime-and-law">Crime &amp; Law</a> </li> <li class="rm-manual"> <a href="file:///news/social-affairs">Social Affairs</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///news/social-affairs/mother-and-baby-homes">Mother and Baby Homes</a> </li> <li class="rm-manual"> <a href="file:///news/social-affairs/religion-and-beliefs">Religion &amp; Beliefs</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///news/health">Health</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///news/health/coronavirus">Coronavirus</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///news/education">Education</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///student-hub">Student Hub</a> </li> <li class="rm-manual"> <a href="file:///student-hub/2nd-level-student-hub">2nd Level Hub</a> </li> <li class="rm-manual"> <a href="file:///news/education/parents">Parents</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///your-subscription/subscriber-only-articles">Subscriber Only</a> </li> <li class="rm-manual"> <a href="file:///news/world/brexit">Brexit</a> </li> <li class="rm-manual"> <a href="file:///news/crime-and-law/courts">Courts</a> </li> <li class="rm-manual"> <a href="file:///news/environment">Environment</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///news/environment/climate-change">Climate Change</a> </li> <li class="rm-manual"> <a href="file:///news/environment/heritage-habitat">Heritage &amp; Habitat</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///news/science">Science</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///news/science/space">Space</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///news/consumer">Consumer</a> </li> <li class="rm-manual"> <a href="file:///news/offbeat">Offbeat</a> </li> <li class="rm-manual"> <a href="file:///news/highlights">Highlights</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <span>Specials</span> <ul class="rm-manual"> <li class="rm-manual">
+<a href="file:///news/health/coronavirus">Coronavirus</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///podcasts">Podcasts</a> <ul class="rm-manual"> <li class="rm-manual">
+<a href="file:///news/politics/inside-politics">Inside Politics</a> </li> <li class="rm-manual">
+<a href="file:///news/world/world-view">World View</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///your-subscription/subscription-tour">Subscriptions</a> <ul class="rm-manual"> <li class="rm-manual">
+<a href="https://www.irishtimes.com/digital-edition">ePaper</a> </li> <li class="rm-manual">
+<a href="file:///archive">Newspaper Archive</a> </li> </ul> </li> </ul>
+<h1 class="rm-manual">Varadkar wants AstraZeneca used to vaccinate young people</h1>
+<h2 class="rm-manual"> Policy change could help slow spread of Delta variant but will take at least two weeks </h2>
+<p class="rm-manual"> about 9 hours ago </p>
+<p class="rm-manual"> <a href="file:///profile/mark-paul-7.2443308">Mark Paul</a> </p>
+<p>Tánaiste Leo Varadkar says there ‘will, potentially, be hundreds of 
+thousands of spare AstraZeneca ones in a couple of weeks’. Photograph: 
+Niall Carson/PA Wire </p>
+<p>The Tánaiste, <a href="file:///topics/topics-7.1213540?article=true&amp;tag_person=Leo+Varadkar">Leo Varadkar</a>, has confirmed he wants to see <a href="file:///topics/topics-7.1213540?article=true&amp;tag_company=AstraZeneca">AstraZeneca</a>
+ vaccines used on young people to slow the spread of the Delta variant 
+of the virus, which is most prevalent in people in their late teens and 
+early 20s.</p>
+<p>However, he said it could not happen for “a couple of weeks” at the earliest and he does not know when Niac, the <a href="file:///topics/topics-7.1213540?article=true&amp;tag_organisation=National+Immunisation+Advisory+Committee">National Immunisation Advisory Committee</a>, which makes recommendations on vaccine use, would be in a position to approve such a change to the rollout strategy.</p>
+<p>Currently, adenovirus vaccines such as AstraZeneca and the one-shot <a href="file:///topics/topics-7.1213540?article=true&amp;tag_company=Johnson">Johnson</a> &amp; Johnson are restricted for use in older cohorts due to fears they may cause rare blood clots in younger people.</p>
+<ul> <li class="rm-manual"> <a href="file:///news/health/covid-19-vaccine-tracker-how-many-people-have-been-inoculated-in-ireland-1.4481095"> <span>Covid-19 Vaccine Tracker: How many people have been inoculated in Ireland?</span> </a> </li> <li class="rm-manual"> <a href="file:///news/social-affairs/religion-and-beliefs/hse-advises-cashel-emly-archdiocese-to-defer-communions-and-confirmations-1.4601776"> <span>HSE advises Cashel-Emly archdiocese to defer communions and confirmations</span> </a> </li> <li class="rm-manual"> <a href="file:///news/health/over-200-delta-variant-cases-in-state-as-eu-agency-warns-on-easing-restrictions-1.4601619"> <span>Over 200 Delta variant cases in State, as EU agency warns on easing restrictions</span> </a> </li> </ul>
+<p class="rm-manual"> <a href="https://www.irishtimes.com/news/health/coronavirus/coronavirus-data-dashboard">Coronavirus Data Dashboard</a> </p>
+<p>The J&amp;J jab, for example, may only be used in people under 50 if 
+there is no mRNA shot such as Pfizer-BioNTech or Moderna available.</p>
+<p>Mr Varadkar said on Wednesday morning that, depending on delivery 
+schedules, there may be “hundreds of thousands” of spare AstraZeneca 
+vaccines available in coming weeks after the State has administered 
+second doses of it to those aged over 60.</p>
+<p>When asked if the spares could be quickly deployed in those aged over
+ 18 to slow the Delta spread, he agreed and said “it would be a shame 
+not to use them”. Other European countries such as the Netherlands have 
+opened up their adenovirus vaccine stocks to those aged over 18 on an 
+opt-in basis.</p>
+<p>He said the Government still had no revised delivery date for the 
+bulk of the 600,000 Johnson &amp; Johnson vaccines it was supposed to 
+receive by the end of June. Only a small fraction of the delivery has 
+arrived and those are being administered in pharmacies only to those 
+aged over 50.</p>
+<p>“There are no spare Johnson and Johnson vaccines. But there will, 
+potentially, be hundreds of thousands of spare AstraZeneca ones in a 
+couple of weeks,” he said.</p>
+<h3 class="rm-manual">News Digests</h3>
+<p class="rm-manual"><span>Stay on top of the latest news</span></p>
+<p class="rm-manual"><a href="https://www.irishtimes.com/newsletters/daily-newsletters">SIGN UP HERE</a> </p>
+<ul class="rm-manual"> <li class="rm-manual">Topics:</li> <li class="rm-manual"> <a href="file:///topics/topics-7.1213540?article=true&amp;tag_person=Leo+Varadkar">Leo Varadkar</a> </li> <li class="rm-manual"> <a href="file:///topics/topics-7.1213540?article=true&amp;tag_organisation=National+Immunisation+Advisory+Committee">National Immunisation Advisory Committee</a> </li> <li class="rm-manual"> <a href="file:///topics/topics-7.1213540?article=true&amp;tag_company=AstraZeneca">AstraZeneca</a> </li> <li class="rm-manual"> <a href="file:///topics/topics-7.1213540?article=true&amp;tag_company=J%26J">J&amp;J</a> </li> <li class="rm-manual"> <a href="file:///topics/topics-7.1213540?article=true&amp;tag_company=Johnson">Johnson</a> </li> </ul>
+<h2 class="rm-manual">Read More</h2>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///news/ireland/irish-news/publicans-in-no-man-s-land-seek-clarity-on-reopening-from-government-1.4601661">Publicans ‘in no man’s land’ seek clarity on reopening from Government </a> </li> <li class="rm-manual"> <a href="file:///news/health/vaccines-the-only-effective-intervention-against-covid-hiqa-1.4601621">Vaccines the only effective intervention against Covid – Hiqa </a> </li> <li class="rm-manual"> <a href="file:///news/health/deliveries-of-johnson-johnson-vaccine-near-worst-case-estimates-1.4601362">Deliveries of Johnson &amp; Johnson vaccine ‘near worst-case estimates’ </a> </li> <li class="rm-manual"> <a href="file:///culture/music/all-together-now-festival-postponed-for-second-year-in-a-row-1.4601522">All Together Now festival postponed for second year in a row </a> </li> <li class="rm-manual"> <a href="file:///news/crime-and-law/courts/coroner-s-court/coroner-calls-for-awareness-of-meningitis-strain-following-sudden-death-of-woman-24-1.4601476">Coroner calls for awareness of meningitis strain following sudden death of woman (24) </a> </li> <li class="rm-manual"> <a href="file:///news/health/delta-variant-now-accounts-for-half-of-all-new-covid-19-cases-in-northern-ireland-1.4601431">Delta variant now accounts for half of all new Covid-19 cases in Northern Ireland </a> </li> <li class="rm-manual"> <a href="file:///news/world/africa/we-are-not-winning-africa-fights-crippling-third-wave-of-covid-infections-1.4601352">‘We are not winning.’ Africa fights crippling third wave of Covid infections </a> </li> <li class="rm-manual"> <a href="file:///news/health/decision-on-indoor-hospitality-to-be-made-closer-to-july-5th-donnelly-says-1.4601214">Decision on indoor hospitality to be made closer to July 5th, Donnelly says </a> </li> <li class="rm-manual"> <a href="file:///news/education/physical-distancing-and-pods-to-remain-in-schools-after-summer-1.4601222">Physical distancing and pods to remain in schools after summer </a> </li> <li class="rm-manual"> <a href="file:///news/ireland/irish-news/fears-delta-variant-could-delay-reopening-of-indoor-hospitality-from-july-5th-1.4600741">Fears Delta variant could delay reopening of indoor hospitality from July 5th </a> </li> <li class="rm-manual"> <a href="file:///business/work/pandemic-spurs-concerns-of-women-stepping-back-from-work-1.4600637">Pandemic spurs concerns of women ‘stepping back from work’ </a> </li> <li class="rm-manual"> <a href="file:///news/health/number-of-fully-vaccinated-people-in-60s-lagging-behind-younger-groups-1.4600785">Number of fully vaccinated people in 60s lagging behind younger groups </a> </li> <li class="rm-manual"> <a href="file:///opinion/equality-must-be-at-the-heart-of-the-pandemic-recovery-1.4600658">Equality must be at the heart of the pandemic recovery </a> </li> <li class="rm-manual"> <a href="file:///news/health/india-declares-new-delta-plus-covid-variant-to-be-of-concern-1.4600830">India declares new ‘Delta plus’ Covid variant to be of concern </a> </li> <li class="rm-manual"> <a href="file:///news/education/d%C3%A1il-group-hears-of-children-refusing-to-go-back-to-school-1.4600766">Dáil group hears of children refusing to go back to school </a> </li> <li class="rm-manual"> <a href="file:///news/ireland/irish-news/new-pop-up-covid-test-centre-in-athlone-to-tackle-outbreak-of-delta-variant-1.4600381">New pop-up Covid test centre in Athlone to tackle outbreak of Delta variant </a> </li> <li class="rm-manual"> <a href="file:///news/ireland/irish-news/president-pays-tribute-to-primary-pupils-who-missed-out-on-milestones-1.4600774">President pays tribute to primary pupils who missed out on milestones </a> </li> <li class="rm-manual"> <a href="file:///news/ireland/irish-news/being-labelled-as-covid-19-vectors-made-children-feel-stigmatised-tds-told-1.4600738">Being labelled as Covid-19 ‘vectors’ made children feel stigmatised, TDs told </a> </li> <li class="rm-manual"> <a href="file:///news/world/us/white-house-urges-young-adults-to-get-vaccinated-against-covid-19-1.4600734">White House urges young adults to get vaccinated against Covid-19 </a> </li> <li class="rm-manual"> <a href="file:///news/politics/oireachtas/concern-that-covid-measures-viewed-as-garda-not-health-regulations-agsi-says-1.4600725">Concern that Covid measures viewed as Garda not health regulations, AGSI says </a> </li> <li class="rm-manual"> <a href="file:///news/politics/oireachtas/government-to-bring-in-emergency-legislation-for-serving-alcohol-in-outdoor-areas-this-week-1.4600529">Government to bring in emergency legislation for serving alcohol in outdoor areas this week </a> </li> <li class="rm-manual"> <a href="file:///news/politics/high-proportion-of-population-will-soon-need-vaccine-booster-cabinet-told-1.4600293">High proportion of population will soon need vaccine booster, Cabinet told </a> </li> <li class="rm-manual"> <a href="file:///news/world/africa/south-africa-to-host-world-s-first-covid-19-vaccine-technology-transfer-hub-1.4600654">South Africa to host world’s first Covid-19 vaccine technology transfer hub </a> </li> <li class="rm-manual"> <a href="file:///news/politics/over-60s-should-be-fully-vaccinated-to-protect-from-delta-variant-before-travel-resumes-kelly-1.4600613">Over 60s should be fully vaccinated to protect from Delta variant before travel resumes - Kelly </a> </li> <li class="rm-manual"> <a href="file:///news/ireland/irish-news/explainer-will-the-increase-in-delta-variant-impact-the-reopening-1.4600643">Explainer: Will the increase in Delta variant impact the reopening? </a> </li> <li class="rm-manual"> <a href="file:///news/world/europe/society-is-changing-netherlands-examines-post-covid-economy-and-society-1.4600639">‘Society is changing’: Netherlands examines post-Covid economy and society </a> </li> <li class="rm-manual"> <a href="file:///news/health/hse-will-not-provide-free-pcr-tests-to-unvaccinated-for-travel-purposes-minister-says-1.4600388">HSE will not provide free PCR tests to unvaccinated for travel purposes, Minister says </a> </li> </ul>
+<p class="rm-manual"> <a href="file:///news/health/coronavirus"> </a></p><p class="rm-manual"><a href="file:///news/health/coronavirus"> </a></p><h2 class="rm-manual"><a href="file:///news/health/coronavirus"> Coronavirus </a></h2><a href="file:///news/health/coronavirus"> <p class="rm-manual">Everything you need to know about the Covid-19 outbreak</p> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<h3 class="rm-manual"> More from The Irish Times </h3>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///news/health">Health</a></li> </ul>
+<p class="rm-manual"><a href="file:///news/health/q-a-why-has-the-national-maternity-hospital-project-become-such-a-mess-1.4601745"> <span>Q&amp;A: Why has the National Maternity Hospital project become such a mess?</span> </a> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///news/health">Health</a></li> </ul>
+<p class="rm-manual"><a href="file:///news/health/minister-suggests-tallaght-could-be-site-for-national-maternity-hospital-instead-boylan-1.4601238"> <span>Minister suggests Tallaght could be site for National Maternity Hospital instead – Boylan</span> </a> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///life-and-style/health-family/fitness">Fitness</a></li> </ul>
+<p class="rm-manual"><a href="file:///life-and-style/health-family/fitness/co-galway-one-walk-one-run-one-hike-one-swim-one-cycle-one-park-and-one-outdoor-gym-1.4592247"> <span>Co Galway: one walk, one run, one hike, one swim, one cycle, one park and one outdoor gym</span> </a> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///life-and-style/health-family">Health &amp; Family</a></li> </ul>
+<p class="rm-manual"><a href="file:///life-and-style/health-family/my-mother-is-toxic-and-tries-to-control-all-aspects-of-my-life-1.4590931"> <span>‘My mother is toxic and tries to control all aspects of my life’</span> </a> </p>
+<h3 class="rm-manual"> More in Sponsored </h3>
+<p class="rm-manual"> <a href="file:///sponsored/aldi/i-love-variety-that-s-one-of-the-things-i-really-like-about-this-job-1.4583499"> <span>“I love variety, that’s one of the things I really like about this job”</span> </a> </p>
+<p class="rm-manual"> <a href="file:///sponsored/ulster-university/women-s-vision-in-transition-photobook-a-picture-is-worth-a-thousand-words-1.4596454"> <span>Women’s Vision in Transition photobook: A picture is worth a thousand words</span> </a> </p>
+<p class="rm-manual"> <a href="file:///sponsored/pfizer/discover-gene-therapy-the-next-generation-of-medicine-1.4594006"> <span>Discover gene therapy, the next generation of medicine </span> </a> </p>
+<p class="rm-manual"> <a href="file:///sponsored/dyson/easy-ways-to-achieve-more-downtime-at-home-1.4592876"> <span>Easy ways to achieve more downtime at home</span> </a> </p>
+<p class="rm-manual"> <a href="file:///covid-19-lives-lost"> <span>Covid-19: Lives Lost</span> <span>The rich, full and cherished lives of the people behind the numbers</span> </a> </p>
+<p class="rm-manual"> <a href="https://www.irishtimes.com/news/health/coronavirus#cc-guides"> <span>Coronavirus</span> <span>Explore our guides to help you through the pandemic</span> </a> </p>
+<h2 class="rm-manual"> <a href="file:///life-and-style/health-family"><span> Health &amp; Family </span></a> </h2>
+<p class="rm-manual"> <a href="file:///life-and-style/health-family/fitness/co-galway-one-walk-one-run-one-hike-one-swim-one-cycle-one-park-and-one-outdoor-gym-1.4592247"> <span>Co Galway: one walk, one run, one hike, one swim, one cycle, one park and one outdoor gym</span> </a> </p>
+<p class="rm-manual"> <a href="file:///life-and-style/health-family/my-mother-is-toxic-and-tries-to-control-all-aspects-of-my-life-1.4590931"> <span>‘My mother is toxic and tries to control all aspects of my life’</span> </a> </p>
+<p class="rm-manual"> <a href="file:///life-and-style/health-family/parenting/adults-forget-that-teenagers-feel-certain-things-more-keenly-than-they-do-1.4588595"> <span>Adults forget that teenagers feel certain things more keenly than they do</span> </a> </p>
+<p class="rm-manual"> <a href="file:///life-and-style/health-family/parenting/how-the-digital-world-has-given-some-people-voices-and-taken-others-away-1.4594195"> <span>How the digital world has given some people voices – and taken others’ away</span> </a> </p>
+<p class="rm-manual"> <a href="file:///life-and-style/health-family/do-you-ever-feel-like-a-weed-a-plant-growing-where-it-is-not-valued-1.4581126"> <span>Do you ever feel like a weed – a plant growing where it is not valued?</span> </a> </p>
+<h2 class="rm-manual"> <a href="file:///your-subscription/subscriber-only-articles"><span> Subscriber Only </span></a> </h2>
+<p class="rm-manual"> <a href="file:///news/politics/four-in-10-under-35s-in-dublin-say-they-want-to-buy-a-first-home-but-cannot-afford-it-1.4597347"> <span> <span> <span>2:41</span> </span> </span> <span>Four in 10 under-35s in Dublin say they want to buy a first home but cannot afford it</span> </a> </p>
+<p class="rm-manual"> <a href="file:///news/politics/division-between-young-and-old-on-covid-19-restrictions-poses-challenge-1.4596527"> <span>Division between young and old on Covid-19 restrictions poses challenge</span> </a> </p>
+<p class="rm-manual"> <a href="file:///news/politics/irish-times-poll-battles-between-larger-parties-increasingly-fought-along-socio-economic-lines-1.4595441"> <span>Irish Times poll: Battles between larger parties increasingly fought along socio-economic lines</span> </a> </p>
+<h2 class="rm-manual"> <a href="file:///news/ireland/irish-news"><span>Latest Ireland</span></a> </h2>
+<p class="rm-manual"> <a href="file:///news/crime-and-law/courts/high-court/dpp-challenges-decision-to-send-evidence-in-suspect-child-porn-case-abroad-for-analysis-1.4601810"> DPP challenges decision to send evidence in suspect child porn case abroad for analysis </a> 22:27 </p>
+<p class="rm-manual"> <a href="file:///news/crime-and-law/reward-offered-for-information-in-relation-to-killing-of-former-bbc-presenter-1.4601793"> Reward offered for information in relation to killing of former BBC presenter </a> 22:18 </p>
+<p class="rm-manual"> <a href="file:///news/crime-and-law/anti-spit-hoods-have-no-proven-effect-on-covid-spread-policing-authority-says-1.4601782"> Anti-spit hoods have no proven effect on Covid spread, Policing Authority says </a> 22:02 </p>
+<p class="rm-manual"> <a href="file:///news/social-affairs/religion-and-beliefs/hse-advises-cashel-emly-archdiocese-to-defer-communions-and-confirmations-1.4601776"> HSE advises Cashel-Emly archdiocese to defer communions and confirmations </a> 21:57 </p>
+<p class="rm-manual"> <a href="file:///news/politics/oireachtas/use-of-special-criminal-court-in-lisa-smith-case-is-sharply-criticised-by-td-1.4601771"> Use of Special Criminal Court in Lisa Smith case is sharply criticised by TD </a> 21:51 </p>
+<h2 class="rm-manual">Most Read in News</h2>
+<h3 class="rm-manual"> <span>1</span> <a href="file:///news/ireland/irish-news/uk-government-must-tell-the-truth-and-implement-ni-protocol-chris-patten-1.4601733"> <span>UK government must ‘tell the truth’ and implement NI protocol – Chris Patten</span> </a> </h3>
+<h3 class="rm-manual"> <span>2</span> <a href="file:///news/crime-and-law/courts/high-court/couple-wrongly-advised-of-fatal-foetal-abnormality-settle-case-and-seek-meeting-with-minister-1.4601627"> <span>Couple wrongly advised of fatal foetal abnormality settle case and seek meeting with Minister</span> </a> </h3>
+<h3 class="rm-manual"> <span>3</span> <a href="file:///news/health/minister-suggests-tallaght-could-be-site-for-national-maternity-hospital-instead-boylan-1.4601238"> <span>Minister suggests Tallaght could be site for National Maternity Hospital instead – Boylan</span> </a> </h3>
+<h3 class="rm-manual"> <span>4</span> <a href="file:///news/world/europe/antivirus-creator-john-mcafee-found-dead-in-prison-1.4601743"> <span>Antivirus creator John McAfee found dead in prison</span> </a> </h3>
+<h3 class="rm-manual"> <span>5</span> <a href="file:///news/health/over-200-delta-variant-cases-in-state-as-eu-agency-warns-on-easing-restrictions-1.4601619"> <span>Over 200 Delta variant cases in State, as EU agency warns on easing restrictions</span> </a> </h3>
+<p class="rm-manual"> <a href="file:///digital-subscriptions"> <span>Real news has value</span> <span>SUBSCRIBE</span> </a> </p>
+<h2 class="rm-manual">Daily Today</h2>
+<p class="rm-manual">Daily</p>
+<p class="rm-manual">Stay on top of the latest news with our daily newsletters each morning, lunchtime and evening</p>
+<p class="rm-manual"><a href="file:///newsletters/daily-newsletters">Sign up</a></p>
+<h5 class="rm-manual"><a href="file:///subscribe">Subscribe</a></h5>
+<h5 class="rm-manual"><a href="file:///about-us">About Us</a></h5>
+<h5 class="rm-manual"><a href="file:///policy-and-terms">Policy &amp; Terms</a></h5>
+<h5 class="rm-manual"> <a>Cookie Settings</a> </h5>
+<h5 class="rm-manual">Subscribe</h5>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///your-subscription/subscription-tour">Why Subscribe?</a></li> <li class="rm-manual">
+<a href="file:///subscriptions">Subscription Bundles</a> </li> <li class="rm-manual"><a href="file:///about-us/help/digital-subscriptions">Digital Subscriptions FAQs</a></li> <li class="rm-manual">
+<a href="file:///gift">Gift Subscriptions</a> </li> <li class="rm-manual">
+<a href="http://www.newsdelivery.ie/">Home Delivery</a> </li> </ul>
+<h5 class="rm-manual">Irish Times Products &amp; Services</h5>
+<ul class="rm-manual"> <li class="rm-manual">
+<a href="file:///digital-edition">ePaper</a> </li> <li class="rm-manual">
+<a href="file:///games/crosswords">Crosswords</a> </li> <li class="rm-manual">
+<a href="file:///archive">Newspaper Archive</a> </li> <li class="rm-manual">
+<a href="file:///static/articleindex/">Article Archive</a> </li> <li class="rm-manual">
+<a href="file:///more/ebooks">eBooks</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual">
+<a href="file:///newsletters">Newsletters</a> </li> <li class="rm-manual"><a href="https://recruitireland.com/">Recruit Ireland</a></li> <li class="rm-manual"><a href="file:///pagesales">Page Sales</a></li> <li class="rm-manual"><a href="file:///photosales">Photo Sales</a></li> <li class="rm-manual"><a href="https://discountcodes.irishtimes.com/">Discount Codes</a></li> </ul>
+<h5 class="rm-manual">About Us</h5>
+<ul class="rm-manual"> <li class="rm-manual">
+<a href="file:///about-us/advertise">Advertise</a> </li> <li class="rm-manual">
+<a href="file:///about-us/contact-us">Contact Us</a> </li> <li class="rm-manual">
+<a href="file:///about-us/the-irish-times-trust">The Irish Times Trust CLG</a> </li> <li class="rm-manual">
+<a href="file:///about-us/career-opportunities">Careers</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual">Our Partners</li> <li class="rm-manual"><a href="https://www.rewardingtimes.ie/">Rewarding Times</a></li> <li class="rm-manual"><a href="https://www.myhome.ie/">MyHome.ie</a></li> <li class="rm-manual"><a href="https://www.top1000.ie/">Top 1000</a></li> <li class="rm-manual"><a href="https://www.thegloss.ie/">The Gloss</a></li> <li class="rm-manual"><a href="https://www.irishtimestraining.com/">Irish Times Training</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual">
+<a href="file:///policy-and-terms/terms-conditions">Terms &amp; Conditions</a> </li> <li class="rm-manual">
+<a href="file:///policy-and-terms/privacy-policy">Privacy Policy</a> </li> <li class="rm-manual">
+<a href="file:///policy-and-terms/cookie-policy">Cookie Information</a> </li> <li class="rm-manual"><a>Cookie Settings</a></li> <li class="rm-manual">
+<a href="file:///policy-and-terms/community-standards">Community Standards</a> </li> <li class="rm-manual">
+<a href="file:///policy-and-terms/copyright">Copyright</a> </li> <li class="rm-manual">
+<a href="file:///about-us/help">FAQs</a> </li> </ul>
+<p class="rm-manual">© <span>2018</span> THE IRISH TIMES</p>
+<p class="rm-manual">For the best site experience please enable JavaScript in your browser settings</p>
+<h4 class="rm-manual">Sign In</h4>
+<p class="rm-manual"><a href="file:///myaccount/forgot">Forgot Password?</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///about-us/help/digital-subscriptions"> Digital Subscriptions FAQs </a> </li> <li class="rm-manual"> <a href="file:///your-subscription/subscriber-only-articles"> Subscriber Only Articles </a> </li> <li class="rm-manual"> <a href="file:///epaper">The ePaper</a> </li> <li class="rm-manual"> <a href="file:///subscriber-rewards"> Subscriber Rewards </a> </li> <li class="rm-manual"> <a href="file:///your-subscription/subscription-tour"> Subscriber Tour </a> </li> <li class="rm-manual"> <a href="file:///apps">Breaking news app</a> </li> <li class="rm-manual"> <a href="file:///myaccount"> My Account </a> </li> <li class="rm-manual"> <a href="file:///more/ebooks"> eBooks </a> </li> <li class="rm-manual"> <a href="file:///newsletters"> Email Newsletters </a> </li> <li class="rm-manual"> <a href="file:///cross-mobile-message"> Crossword Club </a> </li> <li class="rm-manual"> <a href="file:///arch-mobile-message"> Newspaper Archive </a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><span>Sign Out</span></li> </ul>
+<p class="rm-manual"> <span><a href="file:///subscribe">SUBSCRIBE</a></span> </p>
+<p class="rm-manual"> <a href="file:///weather/"> </a></p><p class="rm-manual"><a href="file:///weather/"> Wed 23/6/2021 </a></p><a href="file:///weather/"> </a> <p class="rm-manual"></p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///news">News</a> <ul class="rm-manual"> <li class="rm-manual">
+<a href="file:///news/health/coronavirus">Coronavirus</a> </li> <li class="rm-manual">
+<a href="file:///news/ireland">Ireland</a> </li> <li class="rm-manual">
+<a href="file:///news/world">World</a> </li> <li class="rm-manual">
+<a href="file:///news/politics">Politics</a> </li> <li class="rm-manual">
+<a href="file:///news/crime-and-law">Crime &amp; Law</a> </li> <li class="rm-manual">
+<a href="file:///news/health">Health</a> </li> <li class="rm-manual">
+<a href="file:///news/education">Education</a> </li> <li class="rm-manual">
+<a href="file:///your-subscription/subscriber-only-articles">Subscriber Only</a> </li> <li class="rm-manual">
+<a href="https://www.irishtimes.com/digital-edition">ePaper</a> </li> <li class="rm-manual">
+<a href="file:///news/world/brexit">Brexit</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///sport">Sport</a> <ul class="rm-manual"> <li class="rm-manual">
+<a href="file:///sport/euro-2020">Euro 2020</a> </li> <li class="rm-manual">
+<a href="file:///sport/gaelic-games">Gaelic Games</a> </li> <li class="rm-manual">
+<a href="file:///sport/soccer">Soccer</a> </li> <li class="rm-manual">
+<a href="file:///sport/rugby">Rugby</a> </li> <li class="rm-manual">
+<a href="file:///sport/golf">Golf</a> </li> <li class="rm-manual">
+<a href="file:///sport/racing">Racing</a> </li> <li class="rm-manual">
+<a href="file:///sport/other-sports">Other Sports</a> </li> <li class="rm-manual">
+<a href="file:///sport/women-in-sport">Women in Sport</a> </li> <li class="rm-manual">
+<a href="file:///sport/comment">Comment</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///business">Business</a> <ul class="rm-manual"> <li class="rm-manual">
+<a href="file:///business/economy">The Economy</a> </li> <li class="rm-manual">
+<a href="file:///business/your-money">Your Money</a> </li> <li class="rm-manual">
+<a href="file:///business/companies">Companies</a> </li> <li class="rm-manual">
+<a href="file:///business/technology">Technology</a> </li> <li class="rm-manual">
+<a href="file:///business/work">Work</a> </li> <li class="rm-manual">
+<a href="file:///business/commercial-property">Commercial Property</a> </li> <li class="rm-manual">
+<a href="file:///business/comment">Comment</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///opinion">Opinion</a> <ul class="rm-manual"> <li class="rm-manual">
+<a href="file:///opinion/editorial">Editorials</a> </li> <li class="rm-manual">
+<a href="file:///opinion/letters">Letters</a> </li> <li class="rm-manual">
+<a href="file:///opinion/columnists">Columnists</a> </li> <li class="rm-manual">
+<a href="file:///opinion/an-irishman-s-diary">An Irishman's Diary</a> </li> <li class="rm-manual">
+<a href="file:///opinion/opinion-analysis">Opinion &amp; Analysis</a> </li> <li class="rm-manual">
+<a href="file:///opinion/martyn-turner">Martyn Turner</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///life-and-style">Life &amp; Style</a> <ul class="rm-manual"> <li class="rm-manual">
+<a href="file:///life-and-style/food-and-drink">Food &amp; Drink</a> </li> <li class="rm-manual">
+<a href="file:///life-and-style/homes-and-property">Homes &amp; Property</a> </li> <li class="rm-manual">
+<a href="file:///life-and-style/health-family">Health &amp; Family</a> </li> <li class="rm-manual">
+<a href="file:///life-and-style/people">People</a> </li> <li class="rm-manual">
+<a href="file:///life-and-style/travel">Travel</a> </li> <li class="rm-manual">
+<a href="file:///life-and-style/motors">Motors</a> </li> <li class="rm-manual">
+<a href="file:///life-and-style/fashion">Fashion</a> </li> <li class="rm-manual">
+<a href="file:///life-and-style/abroad">Abroad</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///culture">Culture</a> <ul class="rm-manual"> <li class="rm-manual">
+<a href="file:///culture/books">Books</a> </li> <li class="rm-manual">
+<a href="file:///culture/film">Film</a> </li> <li class="rm-manual">
+<a href="file:///culture/music">Music</a> </li> <li class="rm-manual">
+<a href="file:///culture/stage">Stage</a> </li> <li class="rm-manual">
+<a href="file:///culture/art-and-design">Art &amp; Design</a> </li> <li class="rm-manual">
+<a href="file:///culture/tv-radio-web">TV, Radio, Web</a> </li> <li class="rm-manual">
+<a href="file:///culture/tuarasc%C3%A1il">Tuarascáil</a> </li> <li class="rm-manual">
+<a href="file:///culture/heritage">Heritage</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///more">More</a> <ul class="rm-manual"> <li class="rm-manual">
+<a href="file:///you-are-what-you-read">You are what you read</a> </li> <li class="rm-manual">
+<a href="file:///more/ebooks">eBooks</a> </li> <li class="rm-manual">
+<a href="file:///offers">Offers</a> </li> <li class="rm-manual">
+<a href="https://execjobs.irishtimes.com/">Jobs</a> </li> <li class="rm-manual">
+<a href="http://notices.irishtimes.com/">Family Notices</a> </li> <li class="rm-manual">
+<a href="file:///competitions">Competitions</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///video">Video</a> </li> <li class="rm-manual"> <a href="file:///podcasts">Podcasts</a> <ul class="rm-manual"> <li class="rm-manual">
+<a href="file:///news/health/confronting-coronavirus">Confronting Coronavirus</a> </li> <li class="rm-manual">
+<a href="file:///news/politics/inside-politics">Inside Politics</a> </li> <li class="rm-manual">
+<a href="file:///life-and-style/people/the-women-s-podcast">The Women's Podcast</a> </li> <li class="rm-manual">
+<a href="file:///business/business-podcast">Inside Business</a> </li> <li class="rm-manual">
+<a href="file:///sport/added-time-sports-podcast">Added Time</a> </li> <li class="rm-manual">
+<a href="file:///news/world/world-view">World View</a> </li> <li class="rm-manual">
+<a href="file:///life-and-style/people/back-to-yours">Back to Yours</a> </li> <li class="rm-manual">
+<a href="file:///culture/books/the-book-club/the-book-club-podcast">The Irish Times Book Club</a> </li> </ul> </li> <li class="rm-manual"> <a href="https://execjobs.irishtimes.com/">Executive Jobs</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///games/crosswords">Crosswords</a></li> <li class="rm-manual"><a href="file:///newsletters">Newsletters</a></li> <li class="rm-manual"><a href="http://notices.irishtimes.com/">Notices</a></li> </ul>
+<p class="rm-manual"> <a href="file:///myaccount/forgot">Forgot Password?</a> </p>
+<p class="rm-manual">Invalid email or password.</p>
+<p class="rm-manual"> <span>Not an Irish Times subscriber? <a href="file:///subscribe">Subscribe</a></span> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///about-us/help/digital-subscriptions"> Digital Subscriptions FAQs <span>Frequently asked questions about your digital subscription</span> </a> </li> <li class="rm-manual"> <a href="file:///your-subscription/subscriber-only-articles"> Subscriber Only Articles <span>Specially selected and available only to our subscribers</span> </a> </li> <li class="rm-manual"> <a href="file:///subscriber-rewards"> Subscriber Rewards <span>Exclusive offers, discounts and invitations</span> </a> </li> <li class="rm-manual"> <a href="file:///your-subscription/subscription-tour"> Subscriber Tour <span>Explore the features of your subscription</span> </a> </li> <li class="rm-manual"> <a href="file:///games/crosswords"> Crossword Club <span>Digital Simplex and Crosaire crosswords</span> </a> </li> <li class="rm-manual"> <a href="file:///premium/loginpage"> Newspaper Archive <span>150 years of Irish Times journalism</span> </a> </li> <li class="rm-manual"> <a href="file:///myaccount"> My Account <span>Manage your account</span> </a> </li> <li class="rm-manual"> <a href="file:///more/ebooks"> eBooks <span>Carefully curated selections of Irish Times writing</span> </a> </li> <li class="rm-manual"> <a href="file:///newsletters"> Email Newsletters <span>Sign up to get the stories you want delivered to your inbox</span> </a> </li> <li class="rm-manual"> <a href="file:///epaper"> The ePaper <span>An exact digital replica of the printed paper</span> </a> </li> <li class="rm-manual"> <a href="file:///apps"> Breaking news app <span>Our Apple and Android apps to read on the go</span> </a> </li> <li class="rm-manual"> <a href="#">Sign Out</a> </li> </ul></article>
+</body></html>

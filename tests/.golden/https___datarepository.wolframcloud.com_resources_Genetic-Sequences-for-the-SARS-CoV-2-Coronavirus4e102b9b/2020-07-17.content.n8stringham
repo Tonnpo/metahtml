@@ -1,0 +1,155 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual">Genetic Sequences for the SARS-CoV-2 Coronavirus</h1>
+<p>Nucleotide sequences of the SARS-CoV-2 virus (the virus associated 
+with the COVID-19 disease, formerly known as 2019-nCoV) including 
+location, collection time and similar supporting data. (This data was 
+imported and made computable at 8 am CDT on July 16, 2020.) </p>
+<h2>Details</h2>
+<p>This data is imported from the National Center for Biotechnology Information (NCBI) and formatted for computation.</p>
+<p>Properties provided with each sequence include: “Accession”, 
+“Length”, “Authors”, “Publications”, “GeographicLocation”, 
+“DetailedGeographicLocation”, “Host”, “Sequence”, “CollectionDate”, 
+“ReleaseDate”, “InclusionDate”, “SequenceType”, “NucleotideStatus”, 
+“GenBankTitle”, “IsolationSource” and “BioSample”.</p>
+<p>Additional content elements include:</p>
+<table> <tbody><tr> <td> <span>"CollectionHistogram"</span> </td> <td> <span>a <span><a href="https://reference.wolfram.com/language/ref/DateHistogram.html"><span>DateHistogram</span></a></span> of when the sequences were collected</span> </td> </tr> <tr> <td> <span>"ReleaseHistogram"</span> </td> <td> <span>a <span><a href="https://reference.wolfram.com/language/ref/DateHistogram.html"><span>DateHistogram</span></a></span> of when the sequences were released to the public</span> </td> </tr> <tr> <td> <span>"InclusionHistogram"</span> </td> <td> <span>a <span><a href="https://reference.wolfram.com/language/ref/DateHistogram.html"><span>DateHistogram</span></a></span> of when the sequences were included in the source for this data</span> </td> </tr> <tr> <td> <span>"AffectedLocations"</span> </td> <td> <span>a world map showing where these sequences were collected</span> </td> </tr> <tr> <td> <span>"AlignmentDifferences"</span> </td> <td> <span>a <span><a href="https://reference.wolfram.com/language/ref/Dataset.html"><span>Dataset</span></a></span> containing alignment differences with the reference sequence</span> </td> </tr> </tbody></table>
+<h2>Examples</h2>
+<ul> <li><a href="https://www.wolframcloud.com/env/cc33e40a-6286-4f3c-8d13-6fff7b1e2702?src=CloudBasicCopiedContent#sidebar=basic-notebook-links">Open in Cloud</a></li> <li><a href="http://www.wolframcloud.com/files/cc33e40a-6286-4f3c-8d13-6fff7b1e2702?contentDisposition=attachment">Download Notebook</a></li> </ul>
+<h3>Basic Examples</h3>
+<p>Get a <span><a href="https://reference.wolfram.com/language/ref/Dataset.html"><span>Dataset</span></a></span> containing rows for each sequence:</p>
+<table><tbody><tr><td>In[1]:=</td></tr></tbody></table>
+<table><tbody><tr><td>Out[1]=</td></tr></tbody></table>
+<p>Return the latest date a sequence was included:</p>
+<table><tbody><tr><td>In[2]:=</td></tr></tbody></table>
+<table><tbody><tr><td>Out[2]=</td></tr></tbody></table>
+<p>Count the different lengths of sequences provided, which corresponds well to the part of the virus that was sequenced:</p>
+<table><tbody><tr><td>In[3]:=</td></tr></tbody></table>
+<table><tbody><tr><td>Out[3]=</td></tr></tbody></table>
+<p>The lengths of sequences break down into two categories, 
+corresponding to more complete sequences versus specific genetic 
+regions:</p>
+<table><tbody><tr><td>In[4]:=</td></tr></tbody></table>
+<table><tbody><tr><td>Out[4]=</td></tr></tbody></table>
+<p>Most of these SARS-CoV-2 samples are collected from humans, but not all:</p>
+<table><tbody><tr><td>In[5]:=</td></tr></tbody></table>
+<table><tbody><tr><td>Out[5]=</td></tr></tbody></table>
+<h3>Scope &amp; Additional Elements</h3>
+<p>Get a date histogram of collection dates:</p>
+<table><tbody><tr><td>In[6]:=</td></tr></tbody></table>
+<table><tbody><tr><td>Out[6]=</td></tr></tbody></table>
+<p>See a date histogram of release dates:</p>
+<table><tbody><tr><td>In[7]:=</td></tr></tbody></table>
+<table><tbody><tr><td>Out[7]=</td></tr></tbody></table>
+<p>See a date histogram of inclusion dates:</p>
+<table><tbody><tr><td>In[8]:=</td></tr></tbody></table>
+<table><tbody><tr><td>Out[8]=</td></tr></tbody></table>
+<p>Show the locations where the sequences were gathered:</p>
+<table><tbody><tr><td>In[9]:=</td></tr></tbody></table>
+<table><tbody><tr><td>Out[9]=</td></tr></tbody></table>
+<p>Obtain the available alignment differences with the reference sequence:</p>
+<table><tbody><tr><td>In[10]:=</td></tr></tbody></table>
+<table><tbody><tr><td>Out[10]=</td></tr></tbody></table>
+<h3>Visualizations</h3>
+<p>A phylogenetic tree comparison of the most-common complete genomes by
+ location shows clusters that are broadly distributed. Dropping the 
+trailing sequences of adenine terms avoids arbitrary differences from 
+varying poly(A) RNA tail lengths, which may be sequencing artifacts and 
+shouldn&amp;CloseCurlyQuote;t affect viral adaptivity:</p>
+<table><tbody><tr><td>In[11]:=</td></tr></tbody></table>
+<table><tbody><tr><td>Out[12]=</td></tr></tbody></table>
+<table><tbody><tr><td>In[13]:=</td></tr></tbody></table>
+<table><tbody><tr><td>Out[13]=</td></tr></tbody></table>
+<p>A similar visualization can be created for samples where more 
+detailed geographic information is supplied. In this visualization of 
+most-common sequences reported for US states, we see the emergence of 
+clusters containing interesting regional blocks as shown in the map 
+below:</p>
+<table><tbody><tr><td>In[14]:=</td></tr></tbody></table>
+<table><tbody><tr><td>Out[14]=</td></tr></tbody></table>
+<table><tbody><tr><td>In[15]:=</td></tr></tbody></table>
+<table><tbody><tr><td>Out[15]=</td></tr></tbody></table>
+<p>When visualizing the similarity of the most common sequence by week 
+of sequence collection, while one does observe that similar times tend 
+to cluster together, there is some overlap (such as between the week of 
+Dec. 30, 2019 and the week of Feb. 17, 2020), illustrating that the 
+virus has not only seen evolution, but significant continuity:</p>
+<table><tbody><tr><td>In[16]:=</td></tr></tbody></table>
+<table><tbody><tr><td>Out[17]=</td></tr></tbody></table>
+<h3>Analysis</h3>
+<p>Using the provided alignment differences, we can see where along the 
+viral genome changes have been detected over time. We see that while 
+mutations are relatively uniformly distributed, there are certainly 
+changes more commonly measured than others:</p>
+<table><tbody><tr><td>In[18]:=</td></tr></tbody></table>
+<table><tbody><tr><td>Out[19]=</td></tr></tbody></table>
+<p>It is also possible to treat these genetic differences as lists of features:</p>
+<table><tbody><tr><td>In[20]:=</td></tr></tbody></table>
+<table><tbody><tr><td>Out[21]=</td></tr></tbody></table>
+<p>By doing so, it is possible to perform a fairly wide variety of 
+analysis. Here, we determine all of the genetic differences that always 
+occur together in the sampled sequences, taking advantage of the fact 
+that when differences always occur together they must occur in the same 
+number of sequences:</p>
+<table><tbody><tr><td>In[22]:=</td></tr></tbody></table>
+<table><tbody><tr><td>Out[23]=</td></tr></tbody></table>
+<h2>Bibliographic Citation</h2>
+<p> Wolfram Research, "Genetic Sequences for the SARS-CoV-2 Coronavirus" from the Wolfram Data Repository (2020) <a href="https://doi.org/10.24097/wolfram.03304.data">https://doi.org/10.24097/wolfram.03304.data</a> </p>
+<h2>License Information</h2>
+<p>Public Domain</p>
+<h2>Data Resource History</h2>
+<ul> <li>Date Created: <span>3 February 2020</span>
+</li> <li>Updated: <span>16 July 2020</span>
+</li> </ul>
+<h2>Source Metadata</h2>
+<ul> <li>Title: <span>Severe acute respiratory syndrome coronavirus 2 data hub: Search, retrieve, and analyze SARS-CoV-2 GenBank data.</span>
+</li> <li>Creator: <span>National Center for Biotechnology Information</span>
+</li> <li>Publisher: <span>NCBI Virus: Sequences for discovery</span>
+</li> <li>Date: <span>16 July 2020</span>
+</li> <li>Language: <span>English</span>
+</li> </ul>
+<h2 class="rm-manual">See Also</h2>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://resources.wolframcloud.com/FunctionRepository/resources/562d05d8-fc55-4fe9-beb8-4e6746b1f1da">PhylogeneticTreePlot</a></li> <li class="rm-manual"><a href="https://datarepository.wolframcloud.com/resources/f303ad23-93f5-4f54-9748-1e8ca4b820b3">Protein Sequences for the SARS-CoV-2 Coronavirus</a></li> <li class="rm-manual"><a href="https://datarepository.wolframcloud.com/resources/f9fe12c8-797b-473f-9263-3008e5a3d3e4">CDC Primers for SARS-CoV-2 Research</a></li> <li class="rm-manual"><a href="https://datarepository.wolframcloud.com/resources/dba89a96-2b3a-4254-8824-cb1f9e01a94b">Epidemic Data for Novel Coronavirus COVID-19</a></li> <li class="rm-manual"><a href="https://datarepository.wolframcloud.com/resources/732a817d-f81e-4eca-a562-3323ba36145a">Patient Medical Data for Novel Coronavirus COVID-19</a></li> </ul>
+<h2 class="rm-manual">Data Downloads</h2>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.wolframcloud.com/obj/07a074b2-c02e-4e0d-b41b-1bc75d846696">CSV</a></li> <li class="rm-manual"><a href="https://www.wolframcloud.com/obj/00671c0c-2e57-48bb-bb26-9b906dc213b5">TSV</a></li> <li class="rm-manual"><a href="https://www.wolframcloud.com/obj/769178f7-d4e8-4b90-bd6f-76bcc0ab264e">JSON</a></li> <li class="rm-manual"><a href="https://www.wolframcloud.com/obj/da836989-b98c-4ac3-926e-e14cdeafffea">WL</a></li> </ul>
+<h2 class="rm-manual">Publisher Information</h2>
+<ul class="rm-manual"> <li class="rm-manual">Contributed By: <span>John Cassel, Wolfram|Alpha</span>
+</li> <li class="rm-manual">Publisher of Record: <span>Wolfram Research</span>
+</li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://datarepository.wolframcloud.com/contact-us"> <span>Give Feedback</span> </a> </li> <li class="rm-manual"> <a href="#top"> <span>Top</span> </a> </li> </ul></article>
+</body></html>

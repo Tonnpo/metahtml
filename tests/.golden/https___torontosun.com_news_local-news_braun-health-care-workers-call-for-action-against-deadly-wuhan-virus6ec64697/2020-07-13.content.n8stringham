@@ -1,0 +1,181 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> BRAUN: Health-care workers call for action against deadly Wuhan virus | Toronto Sun </p>
+<p class="rm-manual"> <a href="https://local.torontosun.com/categories/shop-local"> </a></p><p class="rm-manual"><a href="https://local.torontosun.com/categories/shop-local"><span>COVID-19</span><span>See local businesses open during COVID</span><span>Learn More &gt;</span></a></p><a href="https://local.torontosun.com/categories/shop-local"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <span>Hot Topics</span> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///tag/coronavirus">COVID-19</a> </li> <li class="rm-manual"> <a href="file:///tag/what-made-him-kill">What made him kill</a> </li> <li class="rm-manual"> <a href="https://torontosun.com/watch">Video</a> </li> <li class="rm-manual"> <a href="http://torontosun.remembering.ca/">Obituaries</a> </li> <li class="rm-manual"> <a href="http://classifieds.torontosun.com/">Classifieds</a> </li> <li class="rm-manual"> <a href="https://jobs.torontosun.com/">Jobs</a> </li> <li class="rm-manual"> <a href="file:///flyercity">This Week's Flyers</a> </li> <li class="rm-manual"> <a href="https://torontosun.com/sponsored/business-sponsored/connecting-with-local-businesses-whats-open-during-the-covid-19-crisis/?utm_source=Postmedia_nav&amp;utm_medium=tsun-content&amp;utm_campaign=covid-crisis">Open during COVID</a> </li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///">Home</a></li> <li class="rm-manual">
+<a href="https://torontosun.com/category/news">News</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/category/news">All News</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/news/local-news">Toronto &amp; GTA</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/news/provincial">Ontario</a></li> <li class="rm-manual">
+<a href="https://torontosun.com/category/news/national">Canada</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/category/news/national/reopening-canada">Reopening Canada</a></li> </ul> </li> <li class="rm-manual"><a href="https://torontosun.com/category/news/world">World</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/news/crime">Crime</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/news/weird">Weird</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/business">Money</a></li> <li class="rm-manual">
+<a href="https://torontosun.com/category/technology">Technology</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/category/technology">All Technology</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/technology/gaming">Gaming</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/technology/personal-tech">Gadgets</a></li> </ul> </li> <li class="rm-manual"><a href="https://torontosun.com/weather">Weather</a></li> <li class="rm-manual"><a href="https://torontosun.com/traffic">Traffic</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://torontosun.com/category/sports">Sports</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/category/sports">All Sports</a></li> <li class="rm-manual"><a href="https://torontosun.com/scores">Scores and Stats</a></li> <li class="rm-manual">
+<a href="https://torontosun.com/category/sports/hockey">Hockey</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/category/sports/hockey">All Hockey</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/hockey/nhl/toronto-maple-leafs">Toronto Maple Leafs</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/hockey/nhl">NHL</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://torontosun.com/category/sports/football">Football</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/category/sports/football">All Football</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/football/cfl/toronto-argonauts">Toronto Argonauts</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/football/cfl">CFL</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/football/nfl">NFL</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://torontosun.com/category/sports/baseball">Baseball</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/category/sports/baseball">All Baseball</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/baseball/toronto-blue-jays">Toronto Blue Jays</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/baseball/mlb">MLB</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://torontosun.com/category/sports/basketball">Basketball</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/category/sports/basketball">All Basketball</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/basketball/nba/toronto-raptors">Toronto Raptors</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/basketball/nba">NBA</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://torontosun.com/category/sports/lacrosse">Lacrosse</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/category/sports/lacrosse">All Lacrosse</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/lacrosse/nll/toronto-rock">Toronto Rock</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/lacrosse/nll">NLL</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://torontosun.com/category/sports/soccer">Soccer</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/category/sports/soccer">All Soccer</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/soccer/mls/toronto-fc">Toronto FC</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/soccer/mls">MLS</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://torontosun.com/category/sports/golf">Golf</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/category/sports/golf">All Golf</a></li> <li class="rm-manual"><a href="http://torontosun.sportstonews.com/">Golf Videos</a></li> </ul> </li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/sports-picks">Sports Picks</a></li> <li class="rm-manual">
+<a>More Sports</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/category/sports/curling">Curling</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/horse-racing">Horse Racing</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/mma">MMA</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/auto-racing">Motorsports</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/tennis">Tennis</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/sports/other-sports">Other Sports</a></li> </ul> </li> </ul> </li> <li class="rm-manual">
+<a href="https://torontosun.com/category/opinion">Opinion</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/category/opinion">All Opinion</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/opinion/editorials">Editorials</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/opinion/columnists">Columnists</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/opinion/cartoons">Editorial Cartoons</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/opinion/letters">Letters</a></li> <li class="rm-manual"><a href="https://torontosun.com/send-letter">Send Letter to the Editor</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://torontosun.com/category/entertainment">Entertainment</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/category/entertainment">All Entertainment</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/entertainment/books">Books</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/entertainment/celebrity">Celebrity</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/entertainment/movies">Movies</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/entertainment/music">Music</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/entertainment/theatre">Stage</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/entertainment/television">Television</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://torontosun.com/category/life">Life</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/category/life">All Life</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/life/food">Eat</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/life/fashion-beauty">Fashion &amp; Beauty</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/life/relationships">Relationships</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/life/sex-files">Sex Files</a></li> <li class="rm-manual">
+<a href="https://torontosun.com/category/health">Health</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/category/health">All Health</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/health/diet-fitness">Diet &amp; Fitness</a></li> </ul> </li> <li class="rm-manual"><a href="https://torontosun.com/category/life/homes">Homes</a></li> <li class="rm-manual">
+<a href="https://torontosun.com/category/travel">Travel</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/category/travel">All Travel</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/travel/local-travel">Ontario Travel</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/travel/travel-canada">Travel Canada</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/travel/europe">Travel Europe</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/travel/international">Travel International</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/travel/usa">Travel USA</a></li> </ul> </li> </ul> </li> <li class="rm-manual">
+<a href="https://torontosun.com/sunshine-girl">More</a> <ul class="rm-manual"> <li class="rm-manual">
+<a href="https://torontosun.com/category/sunshine-girls">Sunshine Girls</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/category/sunshine-girls">Today’s Sunshine Girl</a></li> <li class="rm-manual"><a href="https://torontosun.com/become-a-sunshine-girl">Become a Sunshine Girl</a></li> </ul> </li> <li class="rm-manual">
+<a href="http://classifieds.torontosun.com/">Classifieds</a> <ul class="rm-manual"> <li class="rm-manual"><a href="http://torontosun.remembering.ca/">Obituaries</a></li> <li class="rm-manual"><a href="http://classifieds.torontosun.com/">All Classifieds</a></li> <li class="rm-manual"><a href="http://torontosun.adperfect.com/">Place an Ad</a></li> <li class="rm-manual"><a href="http://classifieds.torontosun.com/">Announcements</a></li> <li class="rm-manual"><a href="http://classifieds.torontosun.com/">Browse Listings</a></li> <li class="rm-manual"><a href="https://torontosun.com/flyercity">This Week’s Flyers</a></li> <li class="rm-manual"><a href="https://jobs.torontosun.com/">Jobs</a></li> </ul> </li> <li class="rm-manual">
+<a href="http://driving.ca/">Driving</a> <ul class="rm-manual"> <li class="rm-manual"><a href="http://driving.ca/">All Driving</a></li> <li class="rm-manual"><a href="http://driving.ca/category/auto-news">Auto News</a></li> <li class="rm-manual"><a href="http://driving.ca/category/reviews">Reviews</a></li> <li class="rm-manual"><a href="http://driving.ca/car-comparison">Car Comparison</a></li> <li class="rm-manual"><a href="http://driving.ca/buyers-guide/2015">Buyers Guide</a></li> </ul> </li> <li class="rm-manual"><a href="https://torontosun.com/category/contests">Contests</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/special-sections">Special Sections</a></li> <li class="rm-manual"><a href="https://torontosun.com/category/homes-sections">Homes Sections</a></li> <li class="rm-manual">
+<a href="http://canoe.com/">On Canoe.com</a> <ul class="rm-manual"> <li class="rm-manual"><a href="http://lifewise.canoe.com/Puzzles/">Puzzles</a></li> <li class="rm-manual"><a href="http://lifewise.canoe.com/Horoscopes/">Horoscopes</a></li> <li class="rm-manual"><a href="http://lifewise.canoe.com/Comics/">Comics</a></li> </ul> </li> </ul> </li> <li class="rm-manual">
+<a href="https://torontosun.com/subscription">Subscription</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/subscription">Subscribe</a></li> <li class="rm-manual"><a href="https://torontosun.com/subscription/my-subscription">My Subscription</a></li> <li class="rm-manual"><a href="https://torontosun.com/edit-profile">Edit Profile</a></li> <li class="rm-manual"><a href="https://torontosun.com/subscription/subscribe-to-tv-book">Subscribe to TV Book</a></li> <li class="rm-manual"><a href="http://eedition.torontosun.com/">Read e-Edition</a></li> </ul> </li> </ul>
+<h1 class="rm-manual">BRAUN: Health-care workers call for action against deadly Wuhan virus</h1>
+<p class="rm-manual"> <a href="https://torontosun.com/author/lbraunscribe"><span>Liz Braun</span><span>More from Liz Braun</span></a> </p>
+<p class="rm-manual">Published: January 20, 2020 </p>
+<p class="rm-manual">Updated: January 20, 2020 6:41 PM EST </p>
+<p class="rm-manual">Filed Under:</p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://torontosun.com/"><span>Toronto SUN</span></a> </li> <li class="rm-manual"> <a href="https://torontosun.com/category/news"><span>News</span></a> </li> <li class="rm-manual"> <a href="https://torontosun.com/category/news/local-news"><span>Toronto &amp; GTA</span></a> </li> </ul>
+<h2 class="rm-manual"> <span>Related</span> </h2>
+<ul class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <span><a href="https://torontosun.com/category/news">News</a></span><h4 class="rm-manual"><a href="https://torontosun.com/news/local-news/braun-we-must-stay-vigilant-as-global-covid-numbers-skyrocket" rel="bookmark">BRAUN: We must stay vigilant as global COVID numbers skyrocket </a></h4> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <span><a href="https://torontosun.com/category/news">News</a></span><h4 class="rm-manual"><a href="https://torontosun.com/news/local-news/citys-36th-homicide-caps-a-violent-weekend" rel="bookmark">21-year-old shot in drive-by at Toronto plaza dies </a></h4> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <span><a href="https://torontosun.com/category/news/world">World</a></span><h4 class="rm-manual"><a href="https://torontosun.com/news/world/child-killed-in-new-york-latest-horror-story-of-u-s-gun-violence" rel="bookmark">Child killed in New York latest horror story of U.S. gun violence </a></h4> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <span><a href="https://torontosun.com/category/news">News</a></span><h4 class="rm-manual"><a href="https://torontosun.com/news/local-news/cops-probing-possible-abduction-of-woman-in-downtown-toronto" rel="bookmark">Cops probing possible abduction of woman in downtown Toronto </a></h4> </article> </li> </ul>
+<p> <span>Medical staff members carry a patient into the Jinyintan 
+hospital, where patients infected by a mysterious SARS-like virus are 
+being treated, in Wuhan in China's central Hubei province on January 18,
+ 2020.</span><span><span>STR</span> / <span>AFP via Getty Images</span></span> </p>
+<p>Wake up, Canada.</p>
+<p>That’s the unofficial word from frontline health-care workers as increasingly dire news about the Wuhan coronavirus comes out.</p>
+<p>The 2019-novel coronavirus (2019-nCoV) from Wuhan in China’s Hubei Province was first reported at the end of December.</p>
+<p>Since then, 198 cases have been reported in Wuhan, with three deaths 
+in that city; there are several cases now being reported in Beijing and 
+Shanghai and in Guangdong, Sichuan and Yunnan provinces. Health care 
+workers in China are among the affected.</p>
+<p>Thailand, South Korea and Japan have also reported cases of the 
+illness, which is part of the same family of coronaviruses as Severe 
+Acute Respiratory Syndrome (SARS), which killed 800 people globally 
+during 2002-03. SARS also began in China, where officials initially 
+tried to conceal the severity of the situation.</p>
+<p> <span> A man wears a mask while riding on mobike past the closed 
+Huanan Seafood Wholesale Market, which has been linked to cases of 
+Coronavirus, on Jan. 17, 2020 in Wuhan, Hubei province, China. (Getty 
+Images)</span> </p>
+<p>Symptoms of the coronavirus that originated in Wuhan include fever and difficulty in breathing.</p>
+<p>Scientists with the MRC Centre for Global Infectious Disease Analysis at Imperial College in London <a href="https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/news--wuhan-coronavirus/">released a paper</a>
+ three days ago that said 1,700 is a more likely number of cases in 
+Wuhan, based on the population and time between infection and detection.
+ <span>The report concluded, “</span><span>Surveillance should be 
+expanded to include all hospitalized cases of pneumonia or severe 
+respiratory disease in the Wuhan area,” and connected cities.</span></p>
+<p>According to AFP,<a href="https://news.yahoo.com/sars-virus-spreads-china-nearly-140-cases-015137885.html">person to person</a> transmission was confirmed Monday by respiratory expert Zhong Nanshan.</p>
+<p>The news is particularly worrisome as Wuhan is a major transportation
+ hub and hundreds of millions of people in China will travel by train 
+and plane this week to take part in Lunar New Year celebrations — the 
+largest annual human migration on the planet.</p>
+<p>The large crowds and close quarters of mass travel are an ideal environment for the transmission of this or any other influenza.</p>
+<p>Public Health Canada says there is low risk of infection here.</p>
+<p>Arrival screens in the international airports in Toronto, Montreal 
+and Vancouver will include messages asking travellers from Wuhan to 
+speak to border service personnel if they have any symptoms of the 
+flu-like virus.</p>
+<p>According to Toronto emergency room physician Brett Belchetz, that’s not good enough.</p>
+<p>Belchetz believes Canada needs thermal scanners at ports of entry, 
+just as other countries have. He has first-hand experience that incoming
+ passengers often lie about their health and where they’ve travelled.</p>
+<p>Belchetz was the admitting physician for the youngest patient who died in Toronto of SARS during the 2002-03 crisis.</p>
+<p>That patient lied about his symptoms and his travel history, he added.</p>
+<p> “We cannot rely on patients being honest,” said Belchetz. “We must 
+become much more pro-active about this. The reaction — to rely on 
+patients admitting symptoms, is definitely not adequate.</p>
+<p>“And you can’t be too careful here. You can never be too careful.”</p>
+<p>Doris Grinspun, CEO of the Registered Nurses’ Association of Ontario 
+(RNAO), expressed exactly the same concerns, insisting, “we have to be 
+smart, especially at the airports.”</p>
+<p class="">It was her organization that called for the public inquiry 
+into SARS “because, at the time, there was, in fact, no plan in place — 
+believe it or not!”</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://torontosun.com/news/world/as-coronavirus-spreads-to-more-chinese-cities-lunar-new-year-travel-adds-to-containment-worries/wcm/0130520e-2652-4d44-b976-c784d343d452">As coronavirus spreads to more Chinese cities, Lunar New Year travel adds to containment worries</a></li> <li class="rm-manual"><a href="https://torontosun.com/news/local-news/deadly-virus-looking-back-at-torontos-sars-outbreak">DEADLY VIRUS: Looking back at Toronto's SARS outbreak</a></li> <li class="rm-manual"><a href="https://torontosun.com/news/world/china-reports-new-cases-in-wuhan-virus-outbreak/wcm/178c618a-36bb-4c05-afd2-2811b09d4816">China reports new cases in Wuhan virus outbreak</a></li> </ul>
+<p>The nurses association has alerted politicians and public health 
+agencies that the time has come to follow the precautionary principle — 
+and move fast to put in place whatever measures are required to prevent 
+harm.</p>
+<p><span>D</span><span>uring SARS, recalled Grinspun, what unfolded instead was a reactionary principle.</span></p>
+<p><span>(An example: nurses were asked not to wear surgical masks so as
+ not to frighten patients, as the SARS crisis was believed to be over. 
+It was not over.)</span></p>
+<p><span>A simple question on border control forms: “Have you been in 
+China?” would be a good start, said Grinspun, who also believes that 
+self-reporting isn’t useful. Better to get something on a form that has 
+the person’s name on it, and can be traced back to him or her.</span></p>
+<p>There’s a better incentive to tell the truth.</p>
+<p>As well, there should be official warnings to emergency room doctors 
+and all other primary medical sites, such as walk-in clinics.</p>
+<p>“We don’t want to create panic,” said Grinspun. “We just want to be 
+smart. We want them to listen to health-care professionals on the front 
+line of this.</p>
+<p>“Last time, they did not.”</p>
+<p>No health care professionals interviewed for this story were 
+impressed with the anti-virus efforts so far. As one doctor put it, 
+“infection control and hallway medicine don’t really co-exist.”</p>
+<p>Asked for a statement on the coronavirus, a health ministry spokesman
+ offered a list of steps undertaken to ensure health and safety; the 
+first step was monitoring our hospitals for potential cases of the 
+coronavirus.</p>
+<p>Someone will need to tell Health Minister Christine Elliott that at 
+the point she has cases being identified in a hospital, it’s already too
+ late.</p>
+<p class="rm-manual"> <span>Comments</span> <span><a href="#comments">Share your thoughts</a></span> </p>
+<h2 class="rm-manual"><span>Related Posts</span></h2>
+<ul class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <h4 class="rm-manual"><a href="https://torontosun.com/news/local-news/braun-we-must-stay-vigilant-as-global-covid-numbers-skyrocket" rel="bookmark">BRAUN: We must stay vigilant as global COVID numbers skyrocket </a></h4> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <h4 class="rm-manual"><a href="https://torontosun.com/sports/hockey/nhl/simmons-nhl-sold-us-out-canadian-broadcast-worker-says-government-sold-us-out" rel="bookmark">SIMMONS: 'NHL sold us out,' Canadian broadcast worker says. 'Government sold us out' </a></h4> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <h4 class="rm-manual"><a href="https://torontosun.com/sports/hockey/goalies-shine-on-day-1-of-leaf-camp" rel="bookmark">Goalies shine on Day 1 of Leaf camp </a></h4> </article> </li> </ul>
+<h2 class="rm-manual"><span>Top Stories</span></h2>
+<ul class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <h4 class="rm-manual"><a href="https://torontosun.com/sports/hockey/nhl/simmons-nhl-sold-us-out-canadian-broadcast-worker-says-government-sold-us-out" rel="bookmark">SIMMONS: 'NHL sold us out,' Canadian broadcast worker says. 'Government sold us out' </a></h4> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <h4 class="rm-manual"><a href="https://torontosun.com/opinion/columnists/lilley-trudeau-apologizes-but-his-mistake-is-costing-plenty" rel="bookmark">LILLEY: Trudeau apologizes but his mistake is costing plenty </a></h4> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <h4 class="rm-manual"><a href="https://torontosun.com/news/provincial/ontario-reports-116-new-cases-of-covid-19-three-deaths" rel="bookmark">Most of Ontario to move to Stage 3, but not Greater Toronto Area </a></h4> </article> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <h4 class="rm-manual"><a href="https://torontosun.com/sports/hockey/nhl/toronto-maple-leafs/traikos-maple-leafs-need-matthews-at-his-post-covid-best" rel="bookmark">TRAIKOS: Maple Leafs need Matthews at his post-COVID best </a></h4> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <h4 class="rm-manual"><a href="https://torontosun.com/opinion/columnists/bonokoski-trudeau-fails-to-learn-from-past-ethics-scandals" rel="bookmark">BONOKOSKI: Trudeau fails to learn from past ethics scandals </a></h4> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <h4 class="rm-manual"><a href="https://torontosun.com/news/provincial/niagara-u-s-sightseeing-boat-maid-of-the-mist-blows-canadas-hornblower-out-of-the-water-with-no-of-passengers" rel="bookmark">Canadians lauded when it comes to Niagara Falls sightseeing boats </a></h4> </article> </li> </ul>
+<h2 class="rm-manual"><span>Comments</span></h2>
+<p class="rm-manual">We encourage all readers to share their views on 
+our articles and blog posts. We are committed to maintaining a lively 
+but civil forum for discussion, so we ask you to avoid personal attacks,
+ and please keep your comments relevant and respectful. If you encounter
+ a comment that is abusive, click the "X" in the upper right corner of 
+the comment box to report spam or abuse. We are using Facebook 
+commenting. <a href="file:///facebook-commenting-faqs">Visit our FAQ page</a> for more information.</p>
+<p class="rm-manual">Connect with Toronto SUN</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://torontosun.com/subscription">Subscribe</a></li> <li class="rm-manual"><a href="https://torontosun.com/edit-profile">Edit Profile</a></li> <li class="rm-manual"><a href="https://torontosun.com/ways-to-read">Ways to Read</a></li> <li class="rm-manual"><a href="https://torontosun.com/faqs">FAQS</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://torontosun.com/sitemap">Sitemap</a></li> <li class="rm-manual"><a href="https://www.postmediasolutions.com/?itm_source=ts&amp;itm_medium=website&amp;itm_campaign=ps-eg&amp;itm_term=&amp;itm_content=advertise%20with%20us&amp;groupkey=&amp;offer_code=">Advertise</a></li> <li class="rm-manual"><a href="https://torontosun.com/contact-us">Contact Us</a></li> </ul>
+<p class="rm-manual">© 2020 Postmedia Network Inc. All rights reserved. <span>Unauthorized distribution, transmission or republication strictly prohibited.</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="http://www.postmediaadvertising.com/privacy-statement/">Privacy – Updated</a></li> <li class="rm-manual"><a href="http://www.canada.com/aboutus/termsofservice.html">Terms</a></li> <li class="rm-manual"><a href="http://www.canada.com/aboutus/copyright.html">Copyright &amp; Permissions</a></li> <li class="rm-manual"><a href="https://adregistry.postmedia.com/">Digital Ad Registry</a></li> </ul></article>
+</body></html>

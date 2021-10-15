@@ -1,0 +1,336 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> “Engaged journalism” is taking us back to the “public journalism” debates of the 1990s » Nieman Journalism Lab </p>
+<li class="rm-manual"><a href="https://nieman.harvard.edu/fellowships/">Fellowships</a></li>
+<li class="rm-manual"><a href="https://www.niemanreports.org/">Reports</a></li>
+<li class="rm-manual"><a href="https://www.niemanlab.org/">Lab</a></li>
+<li class="rm-manual"><a href="https://www.niemanstoryboard.org/">Storyboard</a></li>
+<p class="rm-manual"> <span>Nieman Foundation at <a href="https://www.harvard.edu/">Harvard</a></span> </p>
+<p class="rm-manual">HOME</p>
+<p class="rm-manual"><a href="https://www.niemanlab.org/about/">About</a></p>
+<p class="rm-manual"><a href="https://www.niemanlab.org/fuego/">Fuego</a></p>
+<p class="rm-manual"><a href="https://www.niemanlab.org/subscribe/">Subscribe</a></p>
+<p class="rm-manual"><a href="https://www.niemanlab.org/archives/">Archives</a></p>
+<p class="rm-manual"><a href="https://nieman.harvard.edu/">Foundation</a></p>
+<p class="rm-manual"><a href="https://www.niemanreports.org/">Reports</a></p>
+<p class="rm-manual"><a href="https://www.niemanstoryboard.org/">Storyboard</a></p>
+<p class="rm-manual">LATEST STORY</p>
+<p class="rm-manual"><a href="https://www.niemanlab.org/2021/05/by-the-way-nearly-40-of-americans-already-believe-covid-19-was-made-in-a-lab/">Nearly 40% of Americans already believe Covid-19 leaked from a lab. What happens if they turn out to be right?</a> </p>
+<p class="rm-manual"> <a href="https://www.niemanlab.org/hubs/business-models/">Business Models</a> <a href="https://www.niemanlab.org/mobilemajority/">Mobile &amp; Apps</a> <a href="https://www.niemanlab.org/hubs/audience-social/">Audience &amp; Social</a> <a href="https://www.niemanlab.org/hubs/aggregation-discovery/">Aggregation &amp; Discovery</a> <a href="https://www.niemanlab.org/hubs/reporting-production/">Reporting &amp; Production</a> </p>
+<p class="rm-manual"> <a href="https://www.niemanlab.org/about/">ABOUT</a> <a href="https://www.niemanlab.org/subscribe/">SUBSCRIBE</a> </p>
+<p class="rm-manual"><a href=""><span>MENU </span></a></p>
+<ul class="rm-manual"> <a href="https://www.niemanlab.org/hubs/business-models/"><li class="rm-manual">Business Models</li></a> <a href="https://www.niemanlab.org/mobilemajority/"><li class="rm-manual">Mobile<span> &amp; Apps</span>
+</li></a> <a href="https://www.niemanlab.org/hubs/audience-social/"><li class="rm-manual">Audience<span> &amp; Social</span>
+</li></a> <a href="https://www.niemanlab.org/hubs/aggregation-discovery/"><li class="rm-manual">Aggregation<span> &amp; Discovery</span>
+</li></a> <a href="https://www.niemanlab.org/hubs/reporting-production/"><li class="rm-manual">Reporting<span> &amp; Production</span>
+</li></a> </ul>
+<ul class="rm-manual"> <a href="https://www.niemanlab.org/translations/"><li class="rm-manual">Translations</li></a> <a href="https://www.niemanlab.org/fuego/"><li class="rm-manual">Fuego</li></a> </ul>
+<p class="rm-manual">April 3, 2020, 10:45 a.m.</p>
+<h2 class="rm-manual"> “Engaged journalism” is taking us back to the “public journalism” debates of the 1990s</h2>
+<p class="rm-manual">Plus new research into algorithmic polarization, computational news discovery, gender differences in political news, and more.</p>
+<p class="rm-manual"> <span>By </span><span><a href="https://www.niemanlab.org/author/mcoddingtonslewis/" rel="author">Mark Coddington and Seth Lewis</a></span> <span>April 3, 2020, 10:45 a.m.</span> </p>
+<p class="rm-manual"> April 3, 2020, 10:45 a.m.</p>
+<p>Editor’s note: Longtime Nieman Lab readers know the bylines of <a href="https://twitter.com/markcoddington">Mark Coddington</a> and <a href="https://twitter.com/SethCLewis">Seth Lewis</a>. Mark <a href="https://www.niemanlab.org/author/mcoddington/">wrote the weekly This Week in Review column</a> for us from 2010 to 2014; <a href="https://www.niemanlab.org/author/slewis/">Seth’s written for us</a>
+ off and on since 2010. Both are working journalists who then became 
+journalism academics, and I’ve always appreciated the emphasis they put 
+on connecting conceptual work with the lives of actual journalists.</p>
+<p>Earlier this year, they debuted a new monthly newsletter called <a href="https://rq1.substack.com/">RQ1</a>
+ — academic-speak for Research Question 1, the first vertebra in a 
+research paper’s spine. Each issue includes a brief essay on some 
+subject being discussed recently in the literature and a roundup of 
+other interesting research from the past month. They’ve agreed to let us
+ bring it to you here on Nieman Lab. So you should definitely <a href="https://rq1.substack.com/">go sign up for RQ1</a> to get it in your inbox — but you’ll also be able to see each edition here.</p>
+<p>Welcome to the third edition of RQ1. For those who are new, we are <a href="http://markcoddington.com/">Mark Coddington</a> and <a href="http://sethlewis.org/">Seth Lewis</a>
+ — two former journalists turned academics, now teaching and researching
+ at Washington and Lee University (Mark) and the University of Oregon 
+(Seth).</p>
+<p>In trying to keep pace with all the new research about news and 
+journalism, we hope to give you each month a quick breakdown of a 
+notable piece of new research, and also to highlight some other 
+interesting work you might want to check out. We can’t cover it all, of 
+course, so consider this a good-faith sampling of some of the most 
+interesting findings in news research. If you have ideas or suggestions,
+ please shoot us a reply — we’d love to hear from you.</p>
+<p>Here’s what we found in this month’s news research.</p>
+<h3>A persistent pursuit to reform U.S. journalism</h3>
+<p>For decades, critics have argued that journalists and news 
+organizations (particularly in the U.S.) are too disconnected from their
+ audiences. Journalists, these critics have said, struggle to fully 
+appreciate people’s concerns, dismiss opportunities to involve them in 
+news-making, and altogether fail to develop a more <a href="https://www.tandfonline.com/doi/abs/10.1080/17512786.2013.859840">mutually beneficial relationship</a>
+ with the communities that journalism is expected to serve in the first 
+place. In recent years, this critique and its push to reform journalism 
+has taken the form of “<a href="https://www.niemanlab.org/2019/12/engaged-journalism-its-finally-happening/">engaged journalism</a>,”
+ which, broadly speaking, suggests that public trust in news will 
+improve as the public has a more active, rather than passive, part to 
+play in the news agenda. But where did this concept of engaged 
+journalism come from, and why does it sound so familiar to the similarly
+ styled <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/ncr.58">“public journalism” movement</a> that emerged in the 1990s but failed to take hold in American journalism?</p>
+<p>A <a href="https://ijoc.org/index.php/ijoc/article/view/11955">new (open-access) paper in the </a><a href="https://ijoc.org/index.php/ijoc/article/view/11955">International Journal of Communication</a>
+ offers some answers. To better understand how the journalism community 
+has explained (to itself) the need first for public journalism and later
+ for engaged journalism — as well as how journalists have come to 
+envision their audiences through both reform movements — the authors 
+conducted a close reading of dozens of trade-press articles published 
+during the public journalism period (1992-2001) and the rise of engaged 
+journalism (2005-2018).</p>
+<p>In their analysis, <a href="https://ijoc.org/index.php/ijoc/article/view/11955">Patrick Ferrucci, Jacob L. Nelson, and Miles P. Davis identify three key themes</a>
+ about the apparent need for public journalism and engaged journalism, 
+as championed by their advocates in trade magazines: “First, journalism 
+is in trouble and needs fixing; second, there is a need to remodel how 
+journalists think and act; and third, the industry needs a market-driven
+ or nakedly capitalistic approach due to an economic downturn.”</p>
+<p>Then, looking at how the public journalism and engaged journalism 
+movements imagine the news audience, they point to three assumptions 
+that are consistent in the trade-press discourse of both time periods: 
+“First, the audience includes marginalized populations who want to 
+contribute to the news production process, yet are traditionally not 
+allowed to do so. Second, the audience knows more about its needs than 
+journalists do. And third, the audience is disdainful of journalists’ 
+elitist approach to their work.”</p>
+<p>There’s a striking similarity between the diagnoses of and 
+prescriptions for what ails journalism in both cases: namely, allow 
+audiences to participate because they want to as civically minded people
+ who can help improve news quality in the process, and because doing so 
+may help the bottom line at the same time — a win-win. This belief has 
+“an obvious, intuitive appeal,” the authors write, “because it suggests 
+that the news industry has a great deal of autonomy when it comes to 
+solving its profession’s most pressing problems.”</p>
+<p>Overall, the consistent ethos of these reform efforts indicates that 
+even if public journalism failed in its 1990s form, its spirit lives on 
+in engaged journalism today. And it suggests that the debate about the 
+role of the audience in news — a debate at least as old as the “<a href="https://ijoc.org/index.php/ijoc/article/view/343">Lippmann-Dewey Debate</a>”
+ more than a century ago — will persist for some time, even if it’s 
+unlikely to be resolved anytime soon or, perhaps, lead to the kind of 
+significant change in the way news is produced that reformers hope.</p>
+<p>Even more, the authors wonder, reformers’ focus on the audience 
+relationship and their assumption that journalists can fix things on 
+their own may be misleading, particularly at a time when larger 
+structural forces — such as the economics of digital advertising and the
+ power of platform companies — may pose more existential problems for 
+the future of journalism.</p>
+<h3>Research roundup</h3>
+<p>Here are some other studies that caught our eye this past month.</p>
+<p> <span><a href="https://academic.oup.com/joc/article/70/1/114/5761879">Gender differences in political media coverage: A meta-analysis</a>. By Daphne Joanna Van der Pas and Loes Aaldering, in Journal of Communication.</span></p>
+<p>It might seem self-evident that political news coverage is unfair to 
+female politicians, but research in this area has been divided, with 
+some scholars concluding that women receive less attention than their 
+male counterparts and others arguing that we’ve moved toward gender 
+parity in political news. Van der Pas and Aaldering analyze a massive 
+amount of data (90 quantitative studies covering 750,000 media stories 
+over decades) and find that women in politics do indeed get less media 
+attention than men — 17 percentage points less on the whole. The 
+numerous secondary factors they examine are fascinating: In one 
+particularly surprising finding, the gender bias in amount of coverage 
+virtually disappears in majoritarian political systems where politics is
+ more personal than party-oriented.</p>
+<p> <span><a href="https://journals.sagepub.com/doi/full/10.1177/1464884920913436">The culture of free: Construct explication and democratic ramifications for readers’ willingness to pay for public affairs news</a>. By Manuel Goyanes, Marton Demeter, and Laura de Grado, in Journalism.</span></p>
+<p>Goyanes and his colleagues pose a question that has vexed most of the
+ world’s newsrooms over the past decade — Why won’t more people pay for 
+news? — by interviewing several dozen digital news consumers in Spain. 
+Their answer is encompassed in a concept they call “the culture of 
+free,” which has four characteristics: A belief that news is a public 
+good that should be free, habits of consuming news for free, freely 
+available competition among news sources, and a notion of news 
+consumption as a sort of mindless free-time filler. A key aspect of the 
+study’s argument is that these news non-payers don’t believe the news 
+they consume is low-quality; they just believe it must be available for 
+free. That view has been encouraged by the homogenization and 
+commodification of news in recent years, the authors argue.</p>
+<p> <span><a href="https://www.tandfonline.com/doi/full/10.1080/21670811.2020.1738254">Protecting news companies and their readers: Exploring social media policies in Latin American newsrooms</a>. By Summer Harlow, in Digital Journalism.</span></p>
+<p>As journalists move into their second decade of widespread 
+professional social media use, guidelines from their employers continue 
+to be one of the main places where the tensions over what that use 
+should look like play out. In a survey of journalists across 20 Latin 
+American countries, Harlow finds that most Latin American journalists 
+don’t have social media guidelines in their newsrooms, suggesting that 
+social media still isn’t very institutionalized in many of those 
+countries. As journalists understand them, those policies are focused on
+ what not to do, as a way to protect professional norms and the news 
+organization’s image. This defensive mindset does extend to emphasizing 
+respect for readers and sources, but not to protecting journalists 
+themselves from harassment.</p>
+<p> <span><a href="https://journals.sagepub.com/doi/full/10.1177/1940161220907018">Populist attitudes and selective exposure to online news: A cross-country analysis combining web tracking and surveys</a>. By Sebastian Stier, Nora Kirkizh, Caterina Froio, and Ralph Schroeder, in The International Journal of Press/Politics.</span></p>
+<p>Stier and his colleagues address a longstanding issue of interest to 
+researchers — where partisans, in this case populists, get their news — 
+through a remarkably comprehensive method. They collect web tracking 
+data from more than 7,000 people across Europe and the U.S. and tie it 
+to survey data from the same people, so they can make precise 
+connections between their political attitudes and their actual news 
+consumption habits. It turns out populists do indeed consume less legacy
+ news media than others, but they still consume a lot more legacy news 
+than they do hyperpartisan news. The results also vary widely by 
+country: Populists only consume more hyperpartisan news in countries 
+(like the U.S. and Germany) where the hyperpartisan news ecosystem is 
+very strong and where such attitudes aren’t found in legacy media (as 
+they are in the U.K. tabloids).</p>
+<p> <span><a href="https://www.tandfonline.com/doi/full/10.1080/21670811.2020.1736946">Computational news discovery: Towards design considerations for editorial orientation algorithms in journalism</a>. By Nicholas Diakopoulos, in Digital Journalism.</span></p>
+<p>Through interviews with journalists, Diakopoulos goes deep into how 
+newsrooms use what he calls “computational news discovery”: tools that 
+use algorithms to flag potentially newsworthy events or information. He 
+finds that despite the algorithmic intervention, the process of turning 
+those leads into news is still a deeply human and variable one. The 
+tools are still subject to the immense demands on journalists’ 
+attention, at some times helping direct that attention but at others 
+merely diverting it. The tools also highlight the extreme complexity 
+and, as Diakopoulos calls it, “configurability” of newsworthiness, as 
+journalists’ sense of what is actually newsworthy depends heavily on 
+idiosyncratic factors and organizational influences.</p>
+<p> <span><a href="https://www.tandfonline.com/doi/full/10.1080/10584609.2020.1713267">Sorting the news: How ranking by popularity polarizes our politics</a>. By Yotam Shmargad and Samara Klar, in Political Communication.</span></p>
+<p>Shmargad and Klar are interested in the role that algorithmic 
+rankings based on social inputs (like the ones on Facebook and Reddit) 
+have in users’ news attitudes toward the news they’re consuming — 
+specifically, whether those rankings have a politically polarizing 
+effect. They use an experiment to build rankings based on popularity 
+among Republicans and Democrats, and find that when users are given 
+rankings based on cues from a un-like-minded network (e.g., 
+conservatives with a liberal-ranked list), they actually express support
+ for some articles that oppose their own views. But the good news ends 
+there: Those participants show less political engagement and more 
+frustration with media representativeness as a result, and the 
+participants who get algorithms that support their own views find their 
+partisan reactions to news heightened.</p>
+<p><span><a href="https://www.tandfonline.com/doi/full/10.1080/23736992.2020.1736079">Electoral reckonings: Press criticism of presidential campaign coverage, 2000-2016.</a> By Elizabeth Bent, Kimberly Kelling, and Ryan J. Thomas, in Journal of Media Ethics.</span></p>
+<p>One of the longstanding routines of U.S. presidential campaign 
+coverage is the news media’s criticism of its own coverage, especially 
+as critics grapple with the election’s results after the fact. This trio
+ of University of Missouri researchers examine this press criticism over
+ the last five election cycles to find trends in the coverage itself. 
+They find that many of the critiques circle around a few recurring 
+themes, most prominently a failure to exercise independent judgment, 
+especially as it relates to use and misuse of polling data. They also 
+found repeated criticism of the news media’s failure to properly 
+represent the electorate, whether “values voters” in 2004, a more 
+diverse voting base in 2008, or white working-class voters in 2016. 
+Notably, they see a dramatic shift in the tone of criticism in 2016, as 
+the change called for went from incremental to an overhaul, and the 
+rhetoric around the role of technology turned negative for the first 
+time.</p>
+<p>If you want to go deeper, there’s a lot more where these studies came from. <a href="http://journalismresearchnews.org/research-of-march-2020/">Journalism Research News</a> has a comprehensive list of journalism research published in March.</p>
+<p class="rm-manual">POSTED <a href="https://www.niemanlab.org/2020/04/03/">April 3, 2020</a>, 10:45 a.m.</p>
+<p class="rm-manual">SHARE THIS STORY</p>
+<p class="rm-manual"> <a href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fwww.niemanlab.org%2F2020%2F04%2Fengaged-journalism-is-taking-us-back-to-the-public-journalism-debates-of-the-1990s%2F&amp;related=jbenton&amp;text=%E2%80%9CEngaged+journalism%E2%80%9D+is+taking+us+back+to+the+%E2%80%9Cpublic+journalism%E2%80%9D+debates+of+the+1990s&amp;tw_p=tweetbutton&amp;url=https%3A%2F%2Fnie.mn%2F348YKBx&amp;via=NiemanLab"> TWITTER </a> <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.niemanlab.org/2020/04/engaged-journalism-is-taking-us-back-to-the-public-journalism-debates-of-the-1990s/"> FACEBOOK</a> <a href="file:///email-this/?post_id=181654"> EMAIL</a> <a href="https://www.tumblr.com/share/link?url=https%3A%2F%2Fwww.niemanlab.org%2F2020%2F04%2Fengaged-journalism-is-taking-us-back-to-the-public-journalism-debates-of-the-1990s%2F&amp;name=%E2%80%9CEngaged+journalism%E2%80%9D+is+taking+us+back+to+the+%E2%80%9Cpublic+journalism%E2%80%9D+debates+of+the+1990s"> TUMBLR</a> <a href="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fwww.niemanlab.org%2F2020%2F04%2Fengaged-journalism-is-taking-us-back-to-the-public-journalism-debates-of-the-1990s%2F&amp;name=%E2%80%9CEngaged+journalism%E2%80%9D+is+taking+us+back+to+the+%E2%80%9Cpublic+journalism%E2%80%9D+debates+of+the+1990s"> LINKEDIN</a> </p>
+<p class="rm-manual"> <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.niemanlab.org/2020/04/engaged-journalism-is-taking-us-back-to-the-public-journalism-debates-of-the-1990s/"> </a></p><p class="rm-manual"><a href="https://www.facebook.com/sharer/sharer.php?u=https://www.niemanlab.org/2020/04/engaged-journalism-is-taking-us-back-to-the-public-journalism-debates-of-the-1990s/"> SHARE ON FACEBOOK</a></p> <a href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fwww.niemanlab.org%2F2020%2F04%2Fengaged-journalism-is-taking-us-back-to-the-public-journalism-debates-of-the-1990s%2F&amp;related=jbenton&amp;text=%E2%80%9CEngaged+journalism%E2%80%9D+is+taking+us+back+to+the+%E2%80%9Cpublic+journalism%E2%80%9D+debates+of+the+1990s&amp;tw_p=tweetbutton&amp;url=https%3A%2F%2Fnie.mn%2F348YKBx&amp;via=NiemanLab"> <p class="rm-manual"> TWEET </p></a> <p class="rm-manual"></p>
+<p class="rm-manual"><span><a href="https://www.niemanlab.org/2020/04/engaged-journalism-is-taking-us-back-to-the-public-journalism-debates-of-the-1990s/#disqus_thread">Show comments</a> </span><span>Hide comments</span></p>
+<p class="rm-manual"><span>Show tags</span><span>Hide tags</span></p>
+<p class="rm-manual"><a href="#">Cite this article</a><a href="#">Hide citations</a></p>
+<p class="rm-manual"><a href="#">CLOSE</a></p>
+<p class="rm-manual">MLA</p>
+<p class="rm-manual">Coddington and Seth Lewis, Mark. "“Engaged 
+journalism” is taking us back to the “public journalism” debates of the 
+1990s." Nieman Journalism Lab. Nieman Foundation for Journalism at 
+Harvard, 3 Apr. 2020. Web. 28 May. 2021. </p>
+<p class="rm-manual">APA</p>
+<p class="rm-manual">Coddington and Seth Lewis, M. (2020, Apr. 3). 
+“Engaged journalism” is taking us back to the “public journalism” 
+debates of the 1990s. Nieman Journalism Lab. Retrieved May 28, 2021, 
+from 
+https://www.niemanlab.org/2020/04/engaged-journalism-is-taking-us-back-to-the-public-journalism-debates-of-the-1990s/</p>
+<p class="rm-manual">Chicago</p>
+<p class="rm-manual">Coddington and Seth Lewis, Mark. "“Engaged 
+journalism” is taking us back to the “public journalism” debates of the 
+1990s." Nieman Journalism Lab. Last modified April 3, 2020. Accessed May
+ 28, 2021. 
+https://www.niemanlab.org/2020/04/engaged-journalism-is-taking-us-back-to-the-public-journalism-debates-of-the-1990s/.</p>
+<p class="rm-manual">Wikipedia</p>
+<p class="rm-manual">{{cite web</p>
+<p class="rm-manual"> | url = https://www.niemanlab.org/2020/04/engaged-journalism-is-taking-us-back-to-the-public-journalism-debates-of-the-1990s/</p>
+<p class="rm-manual"> | title = “Engaged journalism” is taking us back to the “public journalism” debates of the 1990s</p>
+<p class="rm-manual"> | last = Coddington and Seth Lewis</p>
+<p class="rm-manual"> | first = Mark</p>
+<p class="rm-manual"> | work = [[Nieman Journalism Lab]]</p>
+<p class="rm-manual"> | date = 3 April 2020</p>
+<p class="rm-manual"> | accessdate = 28 May 2021</p>
+<p class="rm-manual"> | ref = {{harvid|Coddington and Seth Lewis|2020}}</p>
+<p class="rm-manual"> }}</p>
+<p class="rm-manual"><span>The latest from Nieman Lab</span></p>
+<p class="rm-manual"><a href="https://www.niemanlab.org/2021/05/by-the-way-nearly-40-of-americans-already-believe-covid-19-was-made-in-a-lab/"></a></p><p class="rm-manual"></p><p class="rm-manual"><a href="https://www.niemanlab.org/2021/05/by-the-way-nearly-40-of-americans-already-believe-covid-19-was-made-in-a-lab/">Nearly 40% of Americans already believe Covid-19 leaked from a lab. What happens if they turn out to be right?</a></p><p class="rm-manual"><a href="https://www.niemanlab.org/2021/05/by-the-way-nearly-40-of-americans-already-believe-covid-19-was-made-in-a-lab/"><span>Laura Hazard Owen</span></a></p><p class="rm-manual"></p><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://www.niemanlab.org/2021/05/the-local-news-crisis-will-be-solved-one-community-at-a-time/"></a></p><p class="rm-manual"></p><p class="rm-manual"><a href="https://www.niemanlab.org/2021/05/the-local-news-crisis-will-be-solved-one-community-at-a-time/">The local news crisis will be solved one community at a time</a></p><p class="rm-manual"><a href="https://www.niemanlab.org/2021/05/the-local-news-crisis-will-be-solved-one-community-at-a-time/"><span>Ellen Clegg and Dan Kennedy</span></a></p><p class="rm-manual"></p><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://www.niemanlab.org/2021/05/body-cameras-help-monitor-police-but-what-do-they-mean-for-citizens-privacy/"></a></p><p class="rm-manual"></p><p class="rm-manual"><a href="https://www.niemanlab.org/2021/05/body-cameras-help-monitor-police-but-what-do-they-mean-for-citizens-privacy/">Body cameras help monitor police — but what do they mean for citizens’ privacy?</a></p><p class="rm-manual"><a href="https://www.niemanlab.org/2021/05/body-cameras-help-monitor-police-but-what-do-they-mean-for-citizens-privacy/"><span>Bryce Newell</span></a></p><p class="rm-manual"></p><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://www.niemanlab.org/2021/05/white-evangelicals-watch-fox-news-hindus-and-muslims-are-more-likely-to-watch-cnn/"></a></p><p class="rm-manual"></p><p class="rm-manual"><a href="https://www.niemanlab.org/2021/05/white-evangelicals-watch-fox-news-hindus-and-muslims-are-more-likely-to-watch-cnn/">White evangelicals watch Fox News; Hindus and Muslims are more likely to watch CNN</a></p><p class="rm-manual"><a href="https://www.niemanlab.org/2021/05/white-evangelicals-watch-fox-news-hindus-and-muslims-are-more-likely-to-watch-cnn/"><span>Ryan Burge</span></a></p><p class="rm-manual"></p><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://www.niemanlab.org/2021/05/the-binders-isnt-a-secret-anymore-where-does-the-giant-facebook-group-go-from-here/"></a></p><p class="rm-manual"></p><p class="rm-manual"><a href="https://www.niemanlab.org/2021/05/the-binders-isnt-a-secret-anymore-where-does-the-giant-facebook-group-go-from-here/">The Binders isn’t a secret anymore. Where does the giant Facebook group go from here?</a></p><p class="rm-manual"><a href="https://www.niemanlab.org/2021/05/the-binders-isnt-a-secret-anymore-where-does-the-giant-facebook-group-go-from-here/"><span>Kate Dwyer</span></a></p><p class="rm-manual"></p> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://www.niemanlab.org/2021/05/by-the-way-nearly-40-of-americans-already-believe-covid-19-was-made-in-a-lab/"> </a></p><p class="rm-manual"><a href="https://www.niemanlab.org/2021/05/by-the-way-nearly-40-of-americans-already-believe-covid-19-was-made-in-a-lab/"> Nearly 40% of Americans already believe Covid-19 leaked from a lab. What happens if they turn out to be right? </a></p><p class="rm-manual"><a href="https://www.niemanlab.org/2021/05/by-the-way-nearly-40-of-americans-already-believe-covid-19-was-made-in-a-lab/">Plus: “Media news consumption is by far the strongest independent predictor of QAnon beliefs.”</a></p><a href="https://www.niemanlab.org/2021/05/by-the-way-nearly-40-of-americans-already-believe-covid-19-was-made-in-a-lab/"> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://www.niemanlab.org/2021/05/the-local-news-crisis-will-be-solved-one-community-at-a-time/"> </a></p><p class="rm-manual"><a href="https://www.niemanlab.org/2021/05/the-local-news-crisis-will-be-solved-one-community-at-a-time/"> The local news crisis will be solved one community at a time </a></p><p class="rm-manual"><a href="https://www.niemanlab.org/2021/05/the-local-news-crisis-will-be-solved-one-community-at-a-time/">Though the collapse of community journalism is real enough, we believe that its causes are only partly understood.</a></p><a href="https://www.niemanlab.org/2021/05/the-local-news-crisis-will-be-solved-one-community-at-a-time/"> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://www.niemanlab.org/2021/05/body-cameras-help-monitor-police-but-what-do-they-mean-for-citizens-privacy/"> </a></p><p class="rm-manual"><a href="https://www.niemanlab.org/2021/05/body-cameras-help-monitor-police-but-what-do-they-mean-for-citizens-privacy/"> Body cameras help monitor police — but what do they mean for citizens’ privacy? </a></p><p class="rm-manual"><a href="https://www.niemanlab.org/2021/05/body-cameras-help-monitor-police-but-what-do-they-mean-for-citizens-privacy/">There
+ are potential social costs to deploying body-worn cameras, including 
+possible invasions of privacy when sensitive moments are recorded or 
+made public.</a></p><a href="https://www.niemanlab.org/2021/05/body-cameras-help-monitor-police-but-what-do-they-mean-for-citizens-privacy/"> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://www.niemanlab.org/2021/05/by-the-way-nearly-40-of-americans-already-believe-covid-19-was-made-in-a-lab/?widg=simplesingle"><span>Laura Hazard Owen</span></a></p><p class="rm-manual"><a href="https://www.niemanlab.org/2021/05/by-the-way-nearly-40-of-americans-already-believe-covid-19-was-made-in-a-lab/?widg=simplesingle">Nearly 40% of Americans already believe Covid-19 leaked from a lab. What happens if they turn out to be right?</a></p><a href="https://www.niemanlab.org/2021/05/by-the-way-nearly-40-of-americans-already-believe-covid-19-was-made-in-a-lab/?widg=simplesingle">
+<p class="rm-manual">Plus: “Media news consumption is by far the strongest independent predictor of QAnon beliefs.”</p></a><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://www.niemanlab.org/2021/05/the-local-news-crisis-will-be-solved-one-community-at-a-time/?widg=simplesingle"><span>Ellen Clegg and Dan Kennedy</span></a></p><p class="rm-manual"><a href="https://www.niemanlab.org/2021/05/the-local-news-crisis-will-be-solved-one-community-at-a-time/?widg=simplesingle">The local news crisis will be solved one community at a time</a></p><a href="https://www.niemanlab.org/2021/05/the-local-news-crisis-will-be-solved-one-community-at-a-time/?widg=simplesingle">
+<p class="rm-manual">Though the collapse of community journalism is real enough, we believe that its causes are only partly understood.</p></a><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://www.niemanlab.org/2021/05/body-cameras-help-monitor-police-but-what-do-they-mean-for-citizens-privacy/?widg=simplesingle"><span>Bryce Newell</span></a></p><p class="rm-manual"><a href="https://www.niemanlab.org/2021/05/body-cameras-help-monitor-police-but-what-do-they-mean-for-citizens-privacy/?widg=simplesingle">Body cameras help monitor police — but what do they mean for citizens’ privacy?</a></p><a href="https://www.niemanlab.org/2021/05/body-cameras-help-monitor-police-but-what-do-they-mean-for-citizens-privacy/?widg=simplesingle">
+<p class="rm-manual">There are potential social costs to deploying 
+body-worn cameras, including possible invasions of privacy when 
+sensitive moments are recorded or made public.</p></a><p class="rm-manual"></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.niemanlab.org/subscribe/">Subscribe</a></li> <li class="rm-manual"><a href="https://twitter.com/niemanlab">Twitter</a></li> <li class="rm-manual"><a href="https://facebook.com/niemanlab">Facebook</a></li> <li class="rm-manual"><a href="https://www.niemanlab.org/feed/">RSS</a></li> <li class="rm-manual"><a href="https://www.niemanlab.org/about/">About</a></li> <li class="rm-manual"><a href="https://www.niemanlab.org/contact/">Contact</a></li> <li class="rm-manual"><a href="https://www.niemanlab.org/archives/">Archives</a></li> <li class="rm-manual"><a href="https://www.niemanlab.org/encyclo/">Encyclo</a></li> <li class="rm-manual"><a href="https://www.niemanlab.org/fuego/">Fuego</a></li>
+</ul>
+<p class="rm-manual"> Help advance the Nieman Foundation’s mission “to promote and elevate the standards of journalism” <a href="https://secure.post.harvard.edu/olc/pub/HAA/onlinegiving/showGivingForm.jsp?form_id=128128">by making a donation</a>. </p>
+<p class="rm-manual"> <a href="https://nieman.harvard.edu/"> </a></p><p class="rm-manual"><a href="https://nieman.harvard.edu/">To promote and elevate the standards of journalism</a></p><a href="https://nieman.harvard.edu/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://www.niemanreports.org/"> </a></p><p class="rm-manual"><a href="https://www.niemanreports.org/">Covering thought leadership in journalism</a></p><a href="https://www.niemanreports.org/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://www.niemanlab.org/"> </a></p><p class="rm-manual"><a href="https://www.niemanlab.org/">Pushing to the future of journalism</a></p><a href="https://www.niemanlab.org/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://www.niemanstoryboard.org/"> </a></p><p class="rm-manual"><a href="https://www.niemanstoryboard.org/">Exploring the art and craft of story</a></p><a href="https://www.niemanstoryboard.org/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> © 2021 by the President and Fellows of Harvard College<span> / </span><a href="https://www.niemanlab.org/about/#copyright">Some rights reserved</a> </p>
+<p class="rm-manual"> <a href="https://www.harvard.edu/">Harvard</a> <a href="https://trademark.harvard.edu/pages/trademark-notice">Trademark</a> <a href="https://www.harvard.edu/privacy-statement">Privacy</a> <a href="https://accessibility.huit.harvard.edu/digital-accessibility-policy">Digital Accessibility</a> </p>
+<p class="rm-manual"> Walter Lippmann House One Francis Ave. Cambridge, MA 02138 617 495 2237 </p>
+<p class="rm-manual">The Nieman Journalism Lab is a collaborative 
+attempt to figure out how quality journalism can survive and thrive in 
+the Internet age.</p>
+<p class="rm-manual">It’s a project of the <a href="https://nieman.harvard.edu/">Nieman Foundation for Journalism at Harvard University</a>.</p>
+<p class="rm-manual">Follow us</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.niemanlab.org/subscribe/">Subscribe to our email</a></li> <li class="rm-manual"><a href="https://twitter.com/niemanlab">Follow us on Twitter</a></li> <li class="rm-manual"><a href="https://facebook.com/niemanlab">Like us on Facebook</a></li> <li class="rm-manual"><a href="https://www.niemanlab.org/iphoneapp">Download our iPhone app</a></li> <li class="rm-manual"><a href="https://www.niemanlab.org/feed/">Subscribe via RSS</a></li>
+</ul>
+<p class="rm-manual"><a href="https://www.niemanlab.org/subscribe/">Subscribe to our work →</a></p>
+<p class="rm-manual">The basics</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.niemanlab.org/about/">About us</a></li> <li class="rm-manual"><a href="https://www.niemanlab.org/contact/">Contact</a></li> <li class="rm-manual"><a href="https://www.niemanlab.org/archives/">Archives</a></li>
+</ul>
+<p class="rm-manual">Projects</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.niemanlab.org/encyclo/">Encyclo</a></li> <li class="rm-manual"><a href="https://www.niemanlab.org/fuego/">Fuego</a></li> <li class="rm-manual"><a href="https://www.niemanlab.org/twitter/">Tweet archive</a></li>
+</ul>
+<p class="rm-manual"><a href="https://www.niemanlab.org/about/">About us →</a></p>
+<p class="rm-manual">Director</p>
+<p class="rm-manual"><a href="https://www.niemanlab.org/author/jbenton/">Joshua Benton</a></p>
+<p class="rm-manual">Staff writers</p>
+<p class="rm-manual"><a href="https://www.niemanlab.org/author/jellis/">Justin Ellis</a></p>
+<p class="rm-manual"> <a href="https://www.niemanlab.org/author/codonovan/">Caroline O’Donovan</a></p>
+<p class="rm-manual"> © President and Fellows of Harvard College, unless otherwise noted. <a href="https://www.niemanlab.org/about/#copyright">Some rights reserved.</a> </p></article>
+</body></html>

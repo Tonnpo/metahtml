@@ -1,0 +1,253 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Why Are There So Few Coronavirus Cases in India, Pakistan, and Bangladesh? </p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/"> <span>Foreign Policy Magazine</span> </a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="#">Sign In</a> </li> <li class="rm-manual"> <a href="file:///subscribe"> <span>Subscribe</span> </a> <a href="file:///subscribe"> <span>Upgrade to Insider</span> </a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///category/latest/">Latest</a> </li> <li class="rm-manual"> <a href="file:///channel/news/">News</a> </li> <li class="rm-manual"> <a href="file:///channel/analysis/">Analysis</a> </li> <li class="rm-manual"> <a href="file:///podcasts/">Podcasts</a> </li> <li class="rm-manual"> <a href="file:///the-magazine/">The Magazine</a> </li> <li class="rm-manual"> <a>Channels</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///channel/economics/">Economics</a></li> <li class="rm-manual"><a href="file:///channel/security-2/">Security</a></li> <li class="rm-manual"><a href="file:///category/elephants-in-the-room/">Elephants in the Room</a></li> <li class="rm-manual"><a href="file:///category/shadow-government/">Shadow Government</a></li> <li class="rm-manual"><a href="file:///channel/her-power/">Her Power</a></li> </ul> <span> Close </span> </li> <li class="rm-manual"> <a href="file:///newsletters/">Newsletters</a> </li> </ul>
+<p class="rm-manual"><a href="file:///fpinsider/"><span>Your </span>FP Insider Access:</a></p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///power-maps">Power Maps</a></li> <li class="rm-manual"><a href="file:///conference-calls">Conference Calls</a></li> <li class="rm-manual"><a href="file:///special-reports">Special Reports</a></li> <li class="rm-manual"><a href="file:///podcasts/ispy">I Spy Plus</a></li> </ul>
+<p class="rm-manual"> Search </p>
+<h2 class="rm-manual">latest</h2>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/06/china-united-states-george-floyd-protests/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/06/china-united-states-george-floyd-protests/">Our Top Weekend Reads</a></h3><a href="https://foreignpolicy.com/2020/06/06/china-united-states-george-floyd-protests/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual">China condemns America's human rights record, the 
+United States is sliding into illiberalism, and workers will be the most
+ vulnerable when businesses reopen.</p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/category/five-reads/"> 5 Top Reads </a> <span>|</span> </p>
+<address class="rm-manual"> <a href="https://foreignpolicy.com/author/dan-haverty/" rel="author"> Dan Haverty</a>
+</address>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/05/india-police-brutality-george-floyd-protests-united-states/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/05/india-police-brutality-george-floyd-protests-united-states/">Indians Are Supporting George Floyd—and Ignoring Police Brutality in Their Own Country</a></h3><a href="https://foreignpolicy.com/2020/06/05/india-police-brutality-george-floyd-protests-united-states/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual">There are no protests to mark the systematic 
+mistreatment of the country’s poor, lower-caste communities, or other 
+minority groups.</p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/category/analysis/argument/"> Argument </a> <span>|</span> </p>
+<address class="rm-manual"> <a href="https://foreignpolicy.com/author/raksha-kumar/" rel="author"> Raksha Kumar</a>
+</address>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/05/nypd-sees-coordination-protests-counterintelligence-police-brutality/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/05/nypd-sees-coordination-protests-counterintelligence-police-brutality/">The NYPD Sees Coordination in Protests. It’s Incentivized To.</a></h3><a href="https://foreignpolicy.com/2020/06/05/nypd-sees-coordination-protests-counterintelligence-police-brutality/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual">Since 9/11, federal funding for counterintelligence has shifted the way New York and other cities are policed.</p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/category/analysis/argument/"> Argument </a> <span>|</span> </p>
+<address class="rm-manual"> <a href="https://foreignpolicy.com/author/jake-bittle/" rel="author"> Jake Bittle</a>
+</address>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/05/coronavirus-vladimir-putin-russia/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/05/coronavirus-vladimir-putin-russia/">The Coronavirus Could Hit Putin Most of All</a></h3><a href="https://foreignpolicy.com/2020/06/05/coronavirus-vladimir-putin-russia/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual">New surveys show a surprising decline in the 
+Russian president’s popularity. The pandemic will accelerate a trend of 
+mistrust in the Kremlin.</p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/category/analysis/argument/"> Argument </a> <span>|</span> </p>
+<address class="rm-manual"> <a href="https://foreignpolicy.com/author/maria-snegovaya/" rel="author"> Maria Snegovaya</a><span>,</span> <a href="https://foreignpolicy.com/author/denis-volkov/" rel="author"> Denis Volkov</a><span>,</span> <a href="https://foreignpolicy.com/author/stepan-goncharov/" rel="author"> Stepan Goncharov</a>
+</address>
+<p class="rm-manual"> <a href="file:///category/latest/">See All Stories</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://foreignpolicy.com/staff/">Meet the Staff</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/events">FP Events</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/fp-analytics/">FP Analytics</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/fp-peacegames/">FP PeaceGames</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://foreignpolicy.com/subscription-services/">Subscription Services</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/reprint-permissions/">Reprint Permissions</a></li> <li class="rm-manual"><a href="https://foreignpolicy.submittable.com/submit">Writer’s Guidelines</a></li> <li class="rm-manual"><a href="file:///employment-opportunities/">Work at FP</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://fpguide.foreignpolicy.com/2020-career">FP Guides – Graduate Education</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/fp-for-education/">FP For Education</a></li> <li class="rm-manual"><a href="file:///magazine">FP Archive</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/buy-back-issues/">Buy Back Issues</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://foreignpolicy.com/advertise-with-foreign-policy/">Advertise with FP</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/privacy/">Privacy Policy</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/contact-us/">Contact Us</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="#">Sign In</a> </li> <li class="rm-manual"> <a href="file:///subscribe"> <span>Subscribe</span> </a> <a href="file:///subscribe"> <span>Upgrade</span> </a> </li> </ul>
+<p class="rm-manual"> Search </p>
+<p class="rm-manual"> <span> South Asia Brief: </span> <span> A Coronavirus Mystery: Why Are There So Few Cases in South Asia? </span> <span> A Coronavirus Mystery: Why Are The... </span> </p>
+<p class="rm-manual">DON'T LOSE ACCESS: Your IP access to ForeignPolicy.com will expire on June 15.</p>
+<p class="rm-manual">To ensure uninterrupted reading, please contact Rachel Mines, sales director, at <a href="mailto:rachel.mines@foreignpolicy.com">rachel.mines@foreignpolicy.com</a>.</p>
+<p class="rm-manual"><a href="https://foreignpolicy.com/category/south-asia-brief/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/category/south-asia-brief/">South Asia Brief</a></h3> <p class="rm-manual"></p>
+<h1 class="rm-manual">A Coronavirus Mystery: Why Are There So Few Cases in South Asia?</h1>
+<h2 class="rm-manual">India, Pakistan, and Bangladesh are home to nearly
+ a quarter of the world’s population but account for only 2 percent of 
+confirmed cases of COVID-19.</h2>
+<address class="rm-manual"> <span>By</span> <a href="https://foreignpolicy.com/author/ravi-agrawal/" rel="author"> Ravi Agrawal</a>
+</address>
+<p class="rm-manual"><span>|</span> April 30, 2020, 4:52 PM </p>
+<p> Residents of a slum in Kolkata, India, line up to receive relief packages on April 30. <span>DIBYANGSHU SARKAR/AFP via Getty Images</span> </p>
+<p>Welcome to Foreign Policy’s weekly South Asia Brief. Today, we 
+attempt to explain why there are so few coronavirus cases across the 
+region. Plus: Another deadly attack rocks Afghanistan, a constitutional 
+crisis brews in Sri Lanka, and the death of two Bollywood legends.</p>
+<p>If you would like to receive South Asia Brief in your inbox every Thursday, please sign up <a href="http://foreignpolicy.com/newsletters">here</a>.</p>
+<p>Why Aren’t There More Coronavirus Cases in South Asia?</p>
+<p>Let’s face it: Everyone expected worse. More than three months after 
+the first recorded case of the coronavirus in South Asia, the region has
+ only around 60,000 confirmed infections. By comparison, the United 
+States has more than 1 million, while Spain and Italy both have 
+confirmed more than 200,000. Put another way, South Asia’s countries 
+account for one-quarter of the world’s population but only 2 percent of 
+its coronavirus infections. Why?</p>
+<p>Parsing the numbers. South Asia’s relatively low case numbers are a 
+bit of a puzzle, especially given high population density and poor 
+health care systems across the region. An immediate reaction is to call 
+into question its testing capacity. India has so far <a href="https://www.icmr.gov.in/">conducted</a>
+ only 830,201 tests, or 614 for every 1 million people—among the lowest 
+rates of testing in the world. But if India’s low rate of testing were 
+hiding a massive outbreak, it would show up in other ways. Only 4 
+percent of India’s coronavirus tests have returned <a href="https://www.cnn.com/2020/04/28/india/india-coronavirus-outbreak-explained-intl-hnk/index.html">positive</a>, compared with around 17 percent in the United States, implying that the virus is less widespread in India.</p>
+<p>Another indicator of a larger outbreak would be the number of deaths.
+ But here the data also shows South Asia in a favorable light. While the
+ United States has <a href="https://foreignpolicy.com/2020/03/04/mapping-coronavirus-outbreak-infographic/">recorded</a>
+ more than 60,000 deaths from COVID-19, India counts only 1,079 so far. 
+Those numbers are likely higher—only one-fifth of deaths in India tend 
+to be medically certified—but it is not as if there has been a massive 
+surge in hospital admissions.</p>
+<p>Using India’s data as a proxy for the region, the likely takeaway 
+would be that South Asian countries have either succeeded in flattening 
+their curves for now or that they are still in the early stages of their
+ outbreaks. If it’s the latter, then the current state of lockdown 
+ensures the coronavirus won’t spread too rapidly.</p>
+<p>Successful approach? Has South Asia succeeded where Western countries
+ have failed? Countries such as India and Bangladesh have imposed 
+stricter lockdowns than the West—and earlier in their respective 
+outbreaks. In that sense, South Asian economies should be commended for 
+moving quickly in response to the shutdowns in other countries. With the
+ exception of Pakistan, which for a while allowed flights to China, most
+ of the region’s countries imposed strict restrictions on international 
+and domestic travel.</p>
+<p>Even that doesn’t completely explain the low number of cases. After 
+all, even after closing the borders, the number of cases rose 
+internally. And many South Asian countries made vital errors. India 
+announced its nationwide lockdown with no prior notice, leaving millions
+ of migrant workers displaced and vulnerable. Across the region, 
+gatherings of religious groups took place in early March, leading to 
+coronavirus clusters.</p>
+<p>To their credit, authorities seem to have had some success in contact
+ tracing and imposing quarantines. One theory goes that the region’s 
+youthful demographics give it an advantage. India, for example, has a <a href="https://en.wikipedia.org/wiki/List_of_countries_by_median_age">median age</a>
+ of 28, compared with 38 in the United States. (The median ages in 
+Afghanistan, Bangladesh, and Pakistan are 18, 26, and 24, respectively.)
+ But even here, if there are many asymptomatic cases among young people,
+ then those may eventually show up in infections among elderly 
+populations—and that has yet to be recorded.</p>
+<p>Other theories are more tenuous. For example, the World Health Organization says there is <a href="https://www.who.int/news-room/commentaries/detail/bacille-calmette-gu%C3%A9rin-(bcg)-vaccination-and-covid-19">no evidence</a>
+ that the Bacillus Calmette-Guérin vaccine—widely deployed in South Asia
+ to fight tuberculosis—provides protection from the coronavirus. Nor is 
+there proof that warmer weather slows the spread of the coronavirus.</p>
+<p>Summer strategy. There is no real end to the pandemic unless the 
+world can develop a vaccine. That means it’s too soon to declare any 
+country’s approach a success. And there lies the real problem for South 
+Asia. Countries are already easing some of their early restrictions. 
+India’s government has <a href="https://www.business-standard.com/article/current-affairs/govt-eases-lockdown-rules-allows-all-local-and-standalone-shops-to-open-120042500051_1.html">allowed</a>
+ the opening of neighborhood shops, as well as some work in 
+construction, agriculture, and manufacturing. Pakistan has allowed 
+mosques to open for Ramadan prayers. Bangladesh is reopening some of its
+ garment factories, a vital part of its economy. These reversals could 
+lead to spikes in rates of infections.</p>
+<p>Lawmakers will have to weigh the dangers of further outbreaks against
+ a growing restlessness among their populations. In Surat, India, a 
+crowd of migrant workers <a href="https://www.thehindu.com/news/national/other-states/hundreds-of-migrant-workers-protest-in-surat-for-third-time-in-less-than-a-month/article31453039.ece">turned violent</a>,
+ throwing stones at glass windows at a construction site and damaging 
+vehicles. They want to work or go home to their villages, and something 
+has to give. But there are no perfect choices.</p>
+<p>What We’re Following</p>
+<p>Sri Lanka’s constitutional crisis. Sri Lanka’s opposition <a href="https://news.yahoo.com/sri-lanka-faces-cash-crunch-without-parliament-amid-102541374.html">says</a>
+ state spending will become illegal beginning on Friday unless the 
+government urgently recalls Parliament. President Gotabaya Rajapaksa 
+used his constitutional powers to <a href="https://www.aljazeera.com/news/2020/03/sri-lankan-parliament-dissolved-elections-set-april-200302193858515.html">dissolve</a>
+ Parliament last month in a bid to call for elections six months ahead 
+of schedule. Before he did so, legislators voted to allow spending by 
+the state until April 30. Given the national lockdown, however, it is 
+now unclear when Sri Lanka will be able to conduct a viable national 
+vote.</p>
+<p>Suicide bombing in Afghanistan. Despite the ongoing U.S.-led peace talks and the start of the holy month of Ramadan, a <a href="https://www.reuters.com/article/us-afghanistan-attacks/bombing-near-afghan-capital-kills-three-amid-unabated-violence-idUSKCN22B0HD">suicide bombing</a>
+ near Kabul on Wednesday killed three people and wounded at least a 
+dozen others. No one has claimed responsibility for the attack. The 
+bombing took place the day after a Taliban attack on checkpoints in 
+Semangan province that killed nine Afghan security officials. Meanwhile,
+ as Stefanie Glinski <a href="https://foreignpolicy.com/2020/04/28/afghanistan-coronavirus-lockdown-starvation-war/">reports</a> for Foreign Policy, the coronavirus lockdown presents most Afghans with an impossible choice: get sick or go hungry.</p>
+<p>Religious freedom in India. A top religious freedom watchdog is urging the U.S. State Department to <a href="https://www.nytimes.com/aponline/2020/04/28/us/ap-rel-global-religious-freedom.html">designate</a>
+ India as a “country of particular concern.” In its annual report, the 
+bipartisan U.S. Commission on International Religious Freedom called 
+India’s treatment of religious minorities “troublesome.” An Indian 
+government spokesperson called the report “biased and tendentious.” But 
+criticism of India is now quite widespread: Several Gulf states have 
+expressed outrage over hateful social media posts, as Al Jazeera <a href="https://www.aljazeera.com/news/2020/04/arabs-speaking-islamophobia-india-200423112102197.html">reports</a>.</p>
+<p>Question of the Week</p>
+<p>As if the coronavirus pandemic were not enough, Indian officials 
+report that farms across the region face a new threat this summer that 
+could endanger food security. What is the threat?</p>
+<p>A) Locusts</p>
+<p> B) Too little rainfall</p>
+<p> C) Too much rainfall</p>
+<p> D) Labor shortages</p>
+<p>Scroll down for the answer. </p>
+<p>Odds and Ends</p>
+<p>Irrfan Khan attends a photocall during the annual Dubai International
+ Film Festival on Dec. 8, 2017 in Dubai, United Arab Emirates. </p>
+<p>Bollywood deaths. In 24 hours, Bollywood lost two major stars—but 
+neither to COVID-19. Irrfan Khan, renowned for his roles in Life of Pi, 
+Slumdog Millionaire, The Lunchbox, and several Bollywood hits, <a href="https://www.bbc.com/news/amp/world-asia-india-52468343">died</a> at 53 in Mumbai on Tuesday of infections related to a rare cancer. Just a few hours later, the actor Rishi Kapoor <a href="https://www.cnn.com/style/article/rishi-kapoor-death-intl-hnk/index.html">succumbed</a> to leukemia, also in Mumbai. Kapoor, the star of films such as Bobby (1973) and Om Shanti Om (1980), was 67.</p>
+<p>And the Answer Is…</p>
+<p>A) Locusts.</p>
+<p>A giant locust storm from the Horn of Africa could be <a href="https://www.thehindu.com/news/national/after-covid-19-indias-next-challenge-could-be-mega-sized-locust-attack-this-summer/article31429925.ece">headed</a>
+ toward South Asia this summer, according to the Hindu. The locusts 
+could travel over a land corridor from Iran or pass over the Indian 
+Ocean and attack farms in peninsular India. Locusts can consume an 
+alarming amount of food: A one square kilometer swarm can eat as much 
+food in one day as 35,000 people.</p>
+<p>That’s it for this week.</p>
+<p class="rm-manual">We welcome your feedback at <a href="http://foreignpolicy.com/">newsletters@foreignpolicy.com</a>. You can find older editions of South Asia Brief<a href="http://click1.crm.foreignpolicy.com/izbmmfqcqgmwyyybwbgfzwtqrhwfftcbzbychzdycbcgn_owwttrfkfjdtwlwrtjkwj.html?a=14520&amp;b=South+Asia+Brief+OC"> here</a>. For more from FP, subscribe <a href="https://foreignpolicy.com/subscribe/">here</a> or<a href="http://click1.crm.foreignpolicy.com/xsbrrmqcqgrtdddptpgmstnqyvtmmncpspdcvsbdcpcgc_owwttrfkfjdtwlwrtjkwj.html?a=14520&amp;b=South+Asia+Brief+OC"> sign up</a> for our other newsletters.</p>
+<p class="rm-manual">Ravi Agrawal is the managing editor of Foreign Policy. Twitter: <a href="http://www.twitter.com/RaviReports">@RaviReports</a></p>
+<p class="rm-manual"> <a href="file:///comments_view/?view_post_comments=https%3A%2F%2Fforeignpolicy.com%2F2020%2F04%2F30%2Fcoronavirus-mystery-why-so-few-cases-south-asia-india-pandemic-lockdown%2F">View Comments</a> </p>
+<p class="rm-manual"> <span>Tags:</span> <a href="https://foreignpolicy.com/tag/health/"> Health</a><span>,</span><a href="https://foreignpolicy.com/tag/india/"> India</a><span>,</span><a href="https://foreignpolicy.com/tag/south-asia/"> South Asia</a></p>
+<p class="rm-manual">Latest</p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/06/china-united-states-george-floyd-protests/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/06/china-united-states-george-floyd-protests/">Our Top Weekend Reads</a></h3><a href="https://foreignpolicy.com/2020/06/06/china-united-states-george-floyd-protests/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> June 6, 2020, 7:00 AM </p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/05/india-police-brutality-george-floyd-protests-united-states/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/05/india-police-brutality-george-floyd-protests-united-states/">Indians Are Supporting George Floyd—and Ignoring Police Brutality in Their Own Country</a></h3><a href="https://foreignpolicy.com/2020/06/05/india-police-brutality-george-floyd-protests-united-states/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> June 5, 2020, 10:03 PM </p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/05/nypd-sees-coordination-protests-counterintelligence-police-brutality/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/05/nypd-sees-coordination-protests-counterintelligence-police-brutality/">The NYPD Sees Coordination in Protests. It’s Incentivized To.</a></h3><a href="https://foreignpolicy.com/2020/06/05/nypd-sees-coordination-protests-counterintelligence-police-brutality/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> June 5, 2020, 9:13 PM </p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/05/coronavirus-vladimir-putin-russia/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/05/coronavirus-vladimir-putin-russia/">The Coronavirus Could Hit Putin Most of All</a></h3><a href="https://foreignpolicy.com/2020/06/05/coronavirus-vladimir-putin-russia/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> June 5, 2020, 6:12 PM </p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/05/pandemic-protests-trump-national-security-interview-kori-schake-jake-sullivan/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/05/pandemic-protests-trump-national-security-interview-kori-schake-jake-sullivan/">The Pandemic and the Protests</a></h3><a href="https://foreignpolicy.com/2020/06/05/pandemic-protests-trump-national-security-interview-kori-schake-jake-sullivan/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> June 5, 2020, 5:01 PM </p>
+<p class="rm-manual"> <a href="file:///category/latest/">See All Stories</a> </p>
+<p class="rm-manual"><span>Trending</span></p>
+<ol class="rm-manual"> <li class="rm-manual"> <p class="rm-manual">1</p> <p class="rm-manual"> <a href="file:///2020/06/03/trump-military-george-floyd-protests/">A Moment of National Shame and Peril—and Hope</a> </p> </li> <li class="rm-manual"> <p class="rm-manual">2</p> <p class="rm-manual"> <a href="file:///2020/06/05/coronavirus-vladimir-putin-russia/">The Coronavirus Could Hit Putin Most of All</a> </p> </li> <li class="rm-manual"> <p class="rm-manual">3</p> <p class="rm-manual"> <a href="file:///2020/06/05/india-police-brutality-george-floyd-protests-united-states/">Indians Are Supporting George Floyd—and Ignoring Police Brutality in Their Own Country</a> </p> </li> <li class="rm-manual"> <p class="rm-manual">4</p> <p class="rm-manual"> <a href="file:///2020/06/05/china-globalization-weaponizing-trade-communist-party/">China Is Weaponizing Globalization</a> </p> </li> <li class="rm-manual"> <p class="rm-manual">5</p> <p class="rm-manual"> <a href="file:///2020/06/05/trump-george-floyd-protests-letter-military-leaders/">Hundreds of Former National Security Officials Condemn Trump’s Response to Protests</a> </p> </li> </ol>
+<p class="rm-manual">Voices</p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/05/coronavirus-pandemic-covid-lessons-united-states-9-11/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/05/coronavirus-pandemic-covid-lessons-united-states-9-11/">The United States Will Learn Nothing From the Pandemic</a></h3><a href="https://foreignpolicy.com/2020/06/05/coronavirus-pandemic-covid-lessons-united-states-9-11/"> </a> <p class="rm-manual"></p>
+<address class="rm-manual"> <a href="https://foreignpolicy.com/author/micah-zenko/" rel="author"> Micah Zenko</a> </address>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/04/george-floyd-protests-arab-spring-parallels-tahrir-square/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/04/george-floyd-protests-arab-spring-parallels-tahrir-square/">Yes, Lafayette Square Is Tahrir Square</a></h3><a href="https://foreignpolicy.com/2020/06/04/george-floyd-protests-arab-spring-parallels-tahrir-square/"> </a> <p class="rm-manual"></p>
+<address class="rm-manual"> <a href="https://foreignpolicy.com/author/steven-a-cook/" rel="author"> Steven A. Cook</a> </address>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/01/travel-bubbles-borders-flights-coronavirus-uk-france-air-bridge/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/01/travel-bubbles-borders-flights-coronavirus-uk-france-air-bridge/">Welcome to a World of Bubbles</a></h3><a href="https://foreignpolicy.com/2020/06/01/travel-bubbles-borders-flights-coronavirus-uk-france-air-bridge/"> </a> <p class="rm-manual"></p>
+<address class="rm-manual"> <a href="https://foreignpolicy.com/author/james-crabtree/" rel="author"> James Crabtree</a> </address>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://foreignpolicy.com/staff/">Meet the Staff</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/events">FP Events</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/fp-analytics/">FP Analytics</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/fp-peacegames/">FP PeaceGames</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://foreignpolicy.com/subscription-services/">Subscription Services</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/reprint-permissions/">Reprint Permissions</a></li> <li class="rm-manual"><a href="https://foreignpolicy.submittable.com/submit">Writer’s Guidelines</a></li> <li class="rm-manual"><a href="file:///employment-opportunities/">Work at FP</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://fpguide.foreignpolicy.com/2020-career">FP Guides – Graduate Education</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/fp-for-education/">FP For Education</a></li> <li class="rm-manual"><a href="file:///magazine">FP Archive</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/buy-back-issues/">Buy Back Issues</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://foreignpolicy.com/advertise-with-foreign-policy/">Advertise with FP</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/privacy/">Privacy Policy</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/contact-us/">Contact Us</a></li> </ul>
+<p class="rm-manual">Powered by <a href="https://wpvip.com/?utm_source=vip_powered_wpcom&amp;utm_medium=web&amp;utm_campaign=VIP%20Footer%20Credit&amp;utm_term=foreignpolicy.com" rel="generator nofollow">WordPress.com VIP</a></p>
+<p class="rm-manual">© 2020, The Slate Group</p></article>
+</body></html>

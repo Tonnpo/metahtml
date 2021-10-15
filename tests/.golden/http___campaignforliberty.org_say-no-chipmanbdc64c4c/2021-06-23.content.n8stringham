@@ -1,0 +1,76 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h2 class="rm-manual">National Blog</h2>
+<h1 class="rm-manual">Say "no" to Chipman</h1>
+<p class="rm-manual"> POSTED BY <a href="file:///author/jm_admin">John McCardell</a> <a>June 14, 2021</a> </p>
+<p>Despite all the well-documented baggage he has, anti-gun zealot and 
+leader of the Waco raid David Chipman, and now President Biden’s pick to
+ lead the ATF, will be voted on by the Senate Judiciary Committee on 
+Thursday, June 17.</p>
+<p>Could they have made a worse pick for the person to head up the ATF?</p>
+<p><a href="https://www.chooseliberty.org/david-chipman-do-not-confirm/?source_code=cblog">Sign the petition to your U.S. Senators demanding they vote AGAINST David Chipman’s confirmation.</a></p>
+<p>After you sign, I strongly urge you to forward the petition link to a friend.</p>
+<p>David Chipman said during his hearing in the Senate last month that any law-abiding gun owner is a potential criminal.</p>
+<p>Did he forget the definition of “law-abiding?”</p>
+<p>Chipman’s record is clearly anti-Second Amendment. And we can't 
+ignore his involvement in Waco, where adults and children were 
+tragically killed due to the actions of the federal government.</p>
+<p>It’s not a familiar name to many, but Chipman’s role in one of the 
+worst tragedies involving the U.S. government killing citizens on our 
+soil cannot be denied.</p>
+<p>He certainly doesn’t deny it.</p>
+<p>While he was an agent for the ATF, Chipman was stationed in Waco, TX 
+from 1993 to 1998 and was pictured in front of the aftermath of the 
+assault on the Branch Davidian compound. After a 51-day standoff with 
+the members of the compound in February of 1993, the compound was raided
+ by a combination of federal agents from the FBI, ATF, and local law 
+enforcement.</p>
+<p>The Branch Davidians were suspected of possessing “illegal weapons.”</p>
+<p>Chipman later claimed that the Branch Davidians had shot down 
+helicopters with those weapons, a claim which was completely refuted by a
+ U.S. House of Representatives’ report.</p>
+<p>The end result after the standoff, teargassing, and gun fights 
+instigated by the ATF was 4 dead federal agents and 78 members of the 
+Branch Davidians, <span>including 25 children who were killed in the fires that engulfed the compound.</span></p>
+<p>To this day, the ATF commemorates Waco and the agents who died without acknowledging the horrible tragedy of all the <span>innocent children who were killed</span> in the raid that followed.</p>
+<p>And now Joe Biden thinks the best way to recreate that kind of 
+“success” would be to put that same agent who was stationed in Waco, in 
+charge of the entire ATF.</p>
+<p>Chipman does not belong anywhere near a position of power over our right to defend ourselves. <a href="https://www.chooseliberty.org/david-chipman-do-not-confirm/?source_code=cblog">Sign your petition now</a>.</p>
+<p class="rm-manual"> <a href="http://www.printfriendly.com/">Print PDF</a> </p></article>
+</body></html>

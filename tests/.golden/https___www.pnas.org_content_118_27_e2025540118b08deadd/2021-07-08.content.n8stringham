@@ -1,0 +1,976 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Mapping pollution 
+exposure and chemistry during an extreme air quality event (the 2018 
+Kīlauea eruption) using a low-cost sensor network | PNAS </p>
+<p class="rm-manual"> <a href="#main-content">Skip to main content</a> </p>
+<h2 class="rm-manual"><span><span>Main menu</span></span></h2>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///">Home</a></li> <li class="rm-manual">
+<a href="file:///content/current">Articles</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///content/current">Current</a></li> <li class="rm-manual"><a href="file:///content/early/recent">Special Feature Articles - Most Recent</a></li> <li class="rm-manual"><a href="file:///page/about/special-features">Special Features</a></li> <li class="rm-manual"><a href="file:///page/about/colloquia">Colloquia</a></li> <li class="rm-manual"><a href="file:///page/about/collected-papers">Collected Articles</a></li> <li class="rm-manual"><a href="https://www.pnas.org/page/about/classics">PNAS Classics</a></li> <li class="rm-manual"><a href="file:///content/by/year">List of Issues</a></li> </ul>
+</li> <li class="rm-manual">
+<a href="https://www.pnas.org/portal/front-matter">Front Matter</a><ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.pnas.org/portal/front-matter">Front Matter Portal</a></li> <li class="rm-manual"><a href="https://blog.pnas.org/">Journal Club</a></li> </ul>
+</li> <li class="rm-manual">
+<a href="file:///page/about/press">News</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///page/about/press">For the Press</a></li> <li class="rm-manual"><a href="https://www.pnas.org/twip">This Week In PNAS</a></li> <li class="rm-manual"><a href="file:///page/media/news">PNAS in the News</a></li> </ul>
+</li> <li class="rm-manual"><a href="file:///page/media/podcasts">Podcasts</a></li> <li class="rm-manual">
+<a href="https://www.pnas.org/authors">Authors</a><ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.pnas.org/authors">Information for Authors</a></li> <li class="rm-manual"><a href="https://www.pnas.org/authors/editorial-and-journal-policies">Editorial and Journal Policies</a></li> <li class="rm-manual"><a href="https://www.pnas.org/authors/submitting-your-manuscript">Submission Procedures</a></li> <li class="rm-manual"><a href="https://www.pnas.org/authors/fees-and-licenses">Fees and Licenses</a></li> </ul>
+</li> <li class="rm-manual"><a href="https://www.pnascentral.org/cgi-bin/main.plex">Submit</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.pnascentral.org/cgi-bin/main.plex">Submit</a></li> <li class="rm-manual">
+<a href="file:///page/about">About</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///page/about/editorial-board">Editorial Board</a></li> <li class="rm-manual"><a href="file:///page/about/staff-directory">PNAS Staff</a></li> <li class="rm-manual"><a href="file:///page/about/faq">FAQ</a></li> <li class="rm-manual"><a href="file:///page/about/accessibility">Accessibility Statement</a></li> <li class="rm-manual"><a href="file:///page/about/rights-permissions">Rights and Permissions</a></li> <li class="rm-manual"><a href="file:///content/site-map">Site Map</a></li> </ul>
+</li> <li class="rm-manual"><a href="file:///page/about/staff-directory">Contact</a></li> <li class="rm-manual"><a href="https://blog.pnas.org/">Journal Club</a></li> <li class="rm-manual">
+<a href="file:///page/subscriptions/subscribers">Subscribe</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///page/subscriptions/rates">Subscription Rates</a></li> <li class="rm-manual"><a href="file:///page/subscriptions/subs-faq">Subscriptions FAQ</a></li> <li class="rm-manual"><a href="file:///page/subscriptions/open-access">Open Access</a></li> <li class="rm-manual"><a href="file:///page/subscriptions/recommend-form">Recommend PNAS to Your Librarian</a></li> </ul>
+</li> </ul>
+<h2 class="rm-manual"><span><span>User menu</span></span></h2>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///user/login?destination=/content/118/27/e2025540118">Log in</a></li> <li class="rm-manual"><a href="file:///cart"> <span>My Cart</span></a></li> </ul>
+<h2 class="rm-manual"><span><span>Search</span></span></h2>
+<p class="rm-manual"> Search for this keyword </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///search">Advanced search</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///user/login?destination=/content/118/27/e2025540118">Log in</a></li> <li class="rm-manual"><a href="file:///cart"> <span>My Cart</span></a></li> </ul>
+<p class="rm-manual"> Search for this keyword </p>
+<p class="rm-manual"><a href="file:///search">Advanced Search</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///">Home</a></li> <li class="rm-manual">
+<a href="file:///content/current">Articles</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///content/current">Current</a></li> <li class="rm-manual"><a href="file:///content/early/recent">Special Feature Articles - Most Recent</a></li> <li class="rm-manual"><a href="file:///page/about/special-features">Special Features</a></li> <li class="rm-manual"><a href="file:///page/about/colloquia">Colloquia</a></li> <li class="rm-manual"><a href="file:///page/about/collected-papers">Collected Articles</a></li> <li class="rm-manual"><a href="https://www.pnas.org/page/about/classics">PNAS Classics</a></li> <li class="rm-manual"><a href="file:///content/by/year">List of Issues</a></li> </ul>
+</li> <li class="rm-manual">
+<a href="https://www.pnas.org/portal/front-matter">Front Matter</a><ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.pnas.org/portal/front-matter">Front Matter Portal</a></li> <li class="rm-manual"><a href="https://blog.pnas.org/">Journal Club</a></li> </ul>
+</li> <li class="rm-manual">
+<a href="file:///page/about/press">News</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///page/about/press">For the Press</a></li> <li class="rm-manual"><a href="https://www.pnas.org/twip">This Week In PNAS</a></li> <li class="rm-manual"><a href="file:///page/media/news">PNAS in the News</a></li> </ul>
+</li> <li class="rm-manual"><a href="file:///page/media/podcasts">Podcasts</a></li> <li class="rm-manual">
+<a href="https://www.pnas.org/authors">Authors</a><ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.pnas.org/authors">Information for Authors</a></li> <li class="rm-manual"><a href="https://www.pnas.org/authors/editorial-and-journal-policies">Editorial and Journal Policies</a></li> <li class="rm-manual"><a href="https://www.pnas.org/authors/submitting-your-manuscript">Submission Procedures</a></li> <li class="rm-manual"><a href="https://www.pnas.org/authors/fees-and-licenses">Fees and Licenses</a></li> </ul>
+</li> <li class="rm-manual"><a href="https://www.pnascentral.org/cgi-bin/main.plex">Submit</a></li> </ul>
+<p class="rm-manual"><span>Research Article</span></p>
+<h1 class="rm-manual">Mapping pollution exposure and chemistry during an
+ extreme air quality event (the 2018 Kīlauea eruption) using a low-cost 
+sensor network</h1>
+<p class="rm-manual"><span><span><a href="https://orcid.org/0000-0003-3820-7982"> <span>View ORCID Profile</span></a>Ben Crawford</span>, <span><a href="https://orcid.org/0000-0001-5111-4671"> <span>View ORCID Profile</span></a>David H. Hagan</span>, <span><a href="https://orcid.org/0000-0001-5177-1401"> <span>View ORCID Profile</span></a>Ilene Grossman</span>, <span>Elizabeth Cole</span>, <span>Lacey Holland</span>, <span><a href="https://orcid.org/0000-0003-2894-5738"> <span>View ORCID Profile</span></a>Colette L. Heald</span>, and <span><a href="https://orcid.org/0000-0002-6275-521X"> <span>View ORCID Profile</span></a>Jesse H. Kroll</span></span></p>
+<ol>
+<li><address>aDepartment of Civil and Environmental Engineering, <span>Massachusetts Institute of Technology</span>, Cambridge, MA 02139;</address></li>
+<li><address>b<span>The Kohala Center</span>, Waimea, Hawai‘i Island, HI 96743;</address></li>
+<li><address>cSchool of Ocean and Earth Science and Technology, University of Hawai‘i at Mānoa, Honolulu, HI 96822</address></li>
+</ol>
+<p> <span> <span>See all</span><span>Hide</span> authors and affiliations</span> </p>
+<p> <span>PNAS </span><span>July 6, 2021 </span><span>118 </span><span>(27) </span><span>e2025540118; </span><span><a href="https://doi.org/10.1073/pnas.2025540118">https://doi.org/10.1073/pnas.2025540118</a> </span> </p>
+<p>Ben Crawford </p>
+<p><span>a</span>Department of Civil and Environmental Engineering, <span>Massachusetts Institute of Technology</span>, Cambridge, MA 02139;</p>
+<ul>
+<li><a href="file:///lookup/google-scholar?link_type=googlescholar&amp;gs_type=author&amp;author%5B0%5D=Ben%2BCrawford%2B">Find this author on Google Scholar</a></li> <li><a href="file:///lookup/external-ref?access_num=Crawford%20B&amp;link_type=AUTHORSEARCH">Find this author on PubMed</a></li> <li><a href="file:///search/author1%3ABen%2BCrawford%2B" rel="nofollow">Search for this author on this site</a></li> <li><a href="https://orcid.org/0000-0003-3820-7982">ORCID record for Ben Crawford </a></li> <li><span>For correspondence: <a href="mailto:benjamin.crawford@ucdenver.edu">benjamin.crawford@ucdenver.edu</a> <a href="mailto:jhkroll@mit.edu">jhkroll@mit.edu</a></span></li> </ul>
+<p>David H. Hagan </p>
+<p><span>a</span>Department of Civil and Environmental Engineering, <span>Massachusetts Institute of Technology</span>, Cambridge, MA 02139;</p>
+<ul>
+<li><a href="file:///lookup/google-scholar?link_type=googlescholar&amp;gs_type=author&amp;author%5B0%5D=David%2BH.%2BHagan%2B">Find this author on Google Scholar</a></li> <li><a href="file:///lookup/external-ref?access_num=Hagan%20DH&amp;link_type=AUTHORSEARCH">Find this author on PubMed</a></li> <li><a href="file:///search/author1%3ADavid%2BH.%2BHagan%2B" rel="nofollow">Search for this author on this site</a></li> <li><a href="https://orcid.org/0000-0001-5111-4671">ORCID record for David H. Hagan </a></li> </ul>
+<p>Ilene Grossman </p>
+<p><span>b</span><span>The Kohala Center</span>, Waimea, Hawai‘i Island, HI 96743;</p>
+<ul>
+<li><a href="file:///lookup/google-scholar?link_type=googlescholar&amp;gs_type=author&amp;author%5B0%5D=Ilene%2BGrossman%2B">Find this author on Google Scholar</a></li> <li><a href="file:///lookup/external-ref?access_num=Grossman%20I&amp;link_type=AUTHORSEARCH">Find this author on PubMed</a></li> <li><a href="file:///search/author1%3AIlene%2BGrossman%2B" rel="nofollow">Search for this author on this site</a></li> <li><a href="https://orcid.org/0000-0001-5177-1401">ORCID record for Ilene Grossman </a></li> </ul>
+<p>Elizabeth Cole </p>
+<p><span>b</span><span>The Kohala Center</span>, Waimea, Hawai‘i Island, HI 96743;</p>
+<ul>
+<li><a href="file:///lookup/google-scholar?link_type=googlescholar&amp;gs_type=author&amp;author%5B0%5D=Elizabeth%2BCole%2B">Find this author on Google Scholar</a></li> <li><a href="file:///lookup/external-ref?access_num=Cole%20E&amp;link_type=AUTHORSEARCH">Find this author on PubMed</a></li> <li><a href="file:///search/author1%3AElizabeth%2BCole%2B" rel="nofollow">Search for this author on this site</a></li> </ul>
+<p>Lacey Holland </p>
+<p><span>c</span>School of Ocean and Earth Science and Technology, University of Hawai‘i at Mānoa, Honolulu, HI 96822</p>
+<ul>
+<li><a href="file:///lookup/google-scholar?link_type=googlescholar&amp;gs_type=author&amp;author%5B0%5D=Lacey%2BHolland%2B">Find this author on Google Scholar</a></li> <li><a href="file:///lookup/external-ref?access_num=Holland%20L&amp;link_type=AUTHORSEARCH">Find this author on PubMed</a></li> <li><a href="file:///search/author1%3ALacey%2BHolland%2B" rel="nofollow">Search for this author on this site</a></li> </ul>
+<p>Colette L. Heald </p>
+<p><span>a</span>Department of Civil and Environmental Engineering, <span>Massachusetts Institute of Technology</span>, Cambridge, MA 02139;</p>
+<ul>
+<li><a href="file:///lookup/google-scholar?link_type=googlescholar&amp;gs_type=author&amp;author%5B0%5D=Colette%2BL.%2BHeald%2B">Find this author on Google Scholar</a></li> <li><a href="file:///lookup/external-ref?access_num=Heald%20CL&amp;link_type=AUTHORSEARCH">Find this author on PubMed</a></li> <li><a href="file:///search/author1%3AColette%2BL.%2BHeald%2B" rel="nofollow">Search for this author on this site</a></li> <li><a href="https://orcid.org/0000-0003-2894-5738">ORCID record for Colette L. Heald </a></li> </ul>
+<p>Jesse H. Kroll </p>
+<p><span>a</span>Department of Civil and Environmental Engineering, <span>Massachusetts Institute of Technology</span>, Cambridge, MA 02139;</p>
+<ul>
+<li><a href="file:///lookup/google-scholar?link_type=googlescholar&amp;gs_type=author&amp;author%5B0%5D=Jesse%2BH.%2BKroll%2B">Find this author on Google Scholar</a></li> <li><a href="file:///lookup/external-ref?access_num=Kroll%20JH&amp;link_type=AUTHORSEARCH">Find this author on PubMed</a></li> <li><a href="file:///search/author1%3AJesse%2BH.%2BKroll%2B" rel="nofollow">Search for this author on this site</a></li> <li><a href="https://orcid.org/0000-0002-6275-521X">ORCID record for Jesse H. Kroll </a></li> <li><span>For correspondence: <a href="mailto:benjamin.crawford@ucdenver.edu">benjamin.crawford@ucdenver.edu</a> <a href="mailto:jhkroll@mit.edu">jhkroll@mit.edu</a></span></li> </ul>
+<ol><li><p>Edited by Ronald C. Cohen, University of California, 
+Berkeley, CA, and accepted by Editorial Board Member Akkihebbal R. 
+Ravishankara May 4, 2021 (received for review December 11, 2020)</p></li></ol>
+<p><a href="file:///content/118/27/e2025540118#sec-7">This article has been updated</a></p>
+<ul>
+<li><a href="file:///content/118/27/e2025540118">Article</a></li> <li><a href="file:///content/118/27/e2025540118/tab-figures-data">Figures &amp; SI</a></li> <li><a href="file:///content/118/27/e2025540118/tab-article-info">Info &amp; Metrics</a></li> <li><a href="file:///content/pnas/118/27/e2025540118.full.pdf"> PDF</a></li> </ul>
+<h2>Significance</h2>
+<p>Poor air quality is a global public health issue, contributing to 
+millions of premature deaths per year worldwide. Low-cost air quality 
+sensors are a promising tool to improve monitoring capabilities. In this
+ study, we built and deployed a low-cost sensor network for emergency 
+response during an extreme air quality event, the 2018 Kīlauea Lower 
+East Rift Zone eruption. This network was used to estimate fine-scale 
+population exposures to multiple pollutants, to measure the chemical 
+transformation of volcanic emissions, and to provide real-time 
+observations as part of emergency management efforts.</p>
+<h2>Abstract</h2>
+<p>Extreme air quality episodes represent a major threat to human health
+ worldwide but are highly dynamic and exceedingly challenging to 
+monitor. The 2018 Kīlauea Lower East Rift Zone eruption (May to August 
+2018) blanketed much of Hawai‘i Island in “vog” (volcanic smog), a 
+mixture of primary volcanic sulfur dioxide (SO2) gas and secondary 
+particulate matter (PM). This episode was captured by several monitoring
+ platforms, including a low-cost sensor (LCS) network consisting of 30 
+nodes designed and deployed specifically to monitor PM and SO2 during 
+the event. Downwind of the eruption, network stations measured peak 
+hourly PM2.5 and SO2 concentrations that exceeded 75 μg m−3 and 1,200 
+parts per billion (ppb), respectively. The LCS network’s high spatial 
+density enabled highly granular estimates of human exposure to both 
+pollutants during the eruption, which was not possible using preexisting
+ air quality measurements. Because of overlaps in population 
+distribution and plume dynamics, a much larger proportion of the 
+island’s population was exposed to elevated levels of fine PM than to 
+SO2. Additionally, the spatially distributed network was able to resolve
+ the volcanic plume’s chemical evolution downwind of the eruption. 
+Measurements find a mean SO2 conversion time of ∼36 h, demonstrating the
+ ability of distributed LCS networks to observe reaction kinetics and 
+quantify chemical transformations of air pollutants in a real-world 
+setting. This work also highlights the utility of LCS networks for 
+emergency response during extreme episodes to complement existing air 
+quality monitoring approaches.</p>
+<ul>
+<li><a href="file:///keyword/air-quality" rel="nofollow">air quality</a></li>
+<li><a href="file:///keyword/low-cost-sensors" rel="nofollow">low-cost sensors</a></li>
+<li><a href="file:///keyword/volcanoes" rel="nofollow">volcanoes</a></li>
+</ul>
+<p>Outdoor air pollution leads to the deaths of millions of people per 
+year, representing the single largest environmental risk factor for 
+premature mortality worldwide (<a href="#ref-1">1</a>). Air quality (AQ)
+ monitoring is critical to understand and ultimately minimize people’s 
+exposure to harmful air pollutants; however, surface-based measurements 
+remain relatively sparse in much of the world (<a href="#ref-2">2</a>). 
+Moreover, a substantial (though poorly quantified) fraction of humans’ 
+exposure to air pollutants occurs during extreme AQ events in which 
+pollution levels are dramatically elevated relative to mean levels. 
+Examples include the 1948 Donora, Pennsylvania smog event (<a href="#ref-3">3</a>), the London Fog of 1952 (<a href="#ref-4">4</a>), the Great Smog of Delhi (<a href="#ref-5">5</a>), the Beijing “Airpocalypse” in 2013 (<a href="#ref-6">6</a>), and recent severe wildfires in North America and Australia (<a href="#ref-7">7</a>, <a href="#ref-8">8</a>).
+ During such events, hazardous pollutants such as particulate matter 
+(PM) can be primary (emitted directly) or secondary (formed via 
+atmospheric reactions) (<a href="#ref-9">9</a>). The variable confluence
+ of primary emissions, meteorological transport dynamics, and complex 
+secondary chemical processes makes AQ monitoring during extreme episodes
+ exceptionally challenging. There is currently no established approach 
+or strategy to monitor pollutant distribution or human exposure during 
+these episodes.</p>
+<p>Here, we track and characterize a recent extreme AQ event, the 2018 
+lower East Rift Zone (LERZ) eruption of Kīlauea Volcano (Island of 
+Hawai‘i, USA, May to August 2018), using a low-cost air quality sensor 
+network. Prior to this event, Kīlauea had been continuously erupting 
+since 1983 (<a href="#ref-10">10</a>). As the nearly constant 
+northeasterly trade winds transported the plume downwind around the 
+southern coast of the Island, the primary sulfur dioxide (SO2) emissions
+ oxidized to form sulfuric acid, leading to elevated levels of fine PM 
+on the island’s downwind western side (the Kona coast) (<a href="#ref-11">11</a>).
+ The SO2 and PM (collectively known as “vog,” for “volcanic smog”) from 
+this effusive eruption had for decades been recognized as a local AQ 
+nuisance and health hazard (<a href="#ref-12">12</a>, <a href="#ref-13">13</a>)
+ for the island’s ∼175,000 residents and even for residents in 
+neighboring islands. Prior to May 2018, both satellite measurements and a
+ regulatory network (five stations operated by Hawai‘i Department of 
+Health) showed levels of SO2 and PM that were substantially elevated 
+above those of background (marine) air (<a href="#F1">Fig. 1</a>).</p>
+<ul>
+<li><a href="https://www.pnas.org/content/pnas/118/27/e2025540118/F1.large.jpg?download=true">Download figure</a></li> <li><a href="https://www.pnas.org/content/pnas/118/27/e2025540118/F1.large.jpg">Open in new tab</a></li> <li><a href="file:///highwire/powerpoint/989039">Download powerpoint</a></li> </ul>
+<p><span>Fig. 1.</span> </p>
+<p>Satellite- and ground-based monitoring of air quality before, during,
+ and after the LERZ eruption. (A and B) Satellite observations of column
+ integrated SO2 and aerosol optical depth (AOD) from May to July, 
+comparing the average of 3 y prior to the eruption (2015 to 2017), the 
+year of the eruption (2018), and the year following the eruption (2019).
+ SO2 (shown in Dobson Units [DU]) and AOD measurements are taken from 
+the Ozone Mapping and Profiler Suite (OMPS) instrument aboard Suomi 
+National Polar-orbiting Partnership (NPP) (50 km product, Version 2) and
+ the Moderate Resolution Imaging Spectroradiometer (MODIS) instrument 
+aboard the Aqua platform (10 km product, Collection 6.1), respectively. 
+Daily satellite observations are gridded and averaged at 0.5° × 0.5° 
+horizontal resolution. (C and D) Concentrations of SO2 and PM2.5 for all
+ of 2018, as measured by the Hawai‘i Department of Health ground-level 
+regulatory station at Ocean View.</p>
+<p>In May 2018, the eruption entered an intense phase with Kīlauea experiencing its largest rift eruption in more than 200 y (<a href="#ref-14">14</a>).
+ On May 3, eruptive fissures opened in a residential neighborhood in the
+ LERZ, pumping out lava and emitting substantially elevated amounts of 
+SO2 (&gt;50,000 tons a day−1) (<a href="#ref-14">14</a>) directly into a
+ populated area. During the course of the 3-mo–long eruption, lava 
+covered 35.5 km2 of land, more than 700 homes were destroyed, and 
+thousands of residents were displaced. The elevated SO2 emissions led to
+ exceedingly poor AQ not only in the immediate vicinity of the eruption 
+but also across the wider region. The order-of-magnitude step change in 
+SO2 emissions and resulting secondary PM was clearly visible from space (<a href="#F1">Fig. 1 A and B</a>) and was also measured by the ground-based regulatory network (<a href="#F1">Fig. 1 C and D</a>).</p>
+<p>The measurements in <a href="#F1">Fig. 1</a> established the LERZ eruption as an extreme AQ event, and recent studies have used satellite and in situ measurements (<a href="#ref-15">15</a><a href="#ref-16"><span>⇓</span></a>–<a href="#ref-17">17</a>)
+ to explore air quality implications and plume dynamics during the 
+eruption. For example, analysis of regulatory network data found that 
+24-h average PM2.5 concentrations exceeded US Environmental Protection 
+Agency (EPA) AQ thresholds eight times during the eruption in certain 
+locations, compared to zero times during the previous 8 y (<a href="#ref-17">17</a>).
+ However, such measurements are typically designed to monitor 
+regional-scale AQ and therefore provide limited details about the 
+fine-scale spatiotemporal distribution of air pollutants. Satellite 
+measurements are limited both spatially and temporally (because of 
+overpass intervals of 1 to 3 d, pixel sizes of ∼tens of km, cloud cover,
+ and limited vertical resolution). Ground-based regulatory measurements 
+provide improved temporal resolution and networks are strategically 
+placed to monitor ambient AQ in populated regions but are generally not 
+designed to monitor fine-scale exposure from dynamic plumes during 
+extreme events. On the Island of Hawai‘i, the average resident lived ∼17
+ km from the nearest regulatory AQ station (closer than the United 
+States average of 22 km), and while this network provides continuous, 
+high-quality measurements at key locations, this is too sparse for 
+high-resolution estimates of residents’ pollutant exposure given the 
+high temporal and spatial variability of the volcanic plume.</p>
+<h2>Results and Discussion</h2>
+<p>In order to complement existing measurements and provide improved 
+estimates of the pollutants’ spatial variability, human exposures, and 
+rate of interconversion, we built and deployed a network of low-cost 
+sensor (LCS) nodes to measure SO2 and PM throughout the region. The 
+relative affordability and small size of LCS enables many network nodes 
+to be deployed within a small area, thereby providing distributed 
+measurements with a much higher spatial resolution than is possible with
+ traditional AQ networks (<a href="#ref-18">18</a><a href="#ref-19"><span>⇓</span></a>–<a href="#ref-20">20</a>). LCS networks have recently been deployed in different locations worldwide (<a href="#ref-20">20</a><a href="#ref-21"><span>⇓</span></a><a href="#ref-22"><span>⇓</span></a>–<a href="#ref-23">23</a>);
+ while LCSs are generally less accurate and precise than regulatory AQ 
+instruments, recent work has demonstrated that LCS calibration via 
+colocation with regulatory-grade monitors can enable robust measurements
+ (<a href="#ref-24">24</a><a href="#ref-25"><span>⇓</span></a>–<a href="#ref-26">26</a>).
+ Our deployment during the eruption occurred in two phases. First, an 
+initial small-scale deployment in the LERZ, enabling civil authorities 
+and local residents to monitor SO2 levels and make emergency management 
+decisions, was carried out beginning May 14. These sensors had already 
+been built and used in Hawai‘i (<a href="#ref-24">24</a>) and were among
+ the first SO2 measurements in the area. Next, a total of 30 new sensor 
+units were built (measuring SO2 and PM), calibrated using the regulatory
+ stations’ measurements, and deployed throughout the Island beginning 
+May 23. Details of the sensor unit design and calibration are provided 
+in the <a href="#sec-2">Materials and Methods</a> and <a href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.2025540118/-/DCSupplemental">SI Appendix</a>.
+ After this deployment, the network had one node per ∼5,800 people and 
+the average resident lived 4.6 km from an AQ measurement (<a href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.2025540118/-/DCSupplemental">SI Appendix</a>).
+ By comparison, the US- and globally averaged distances to a 
+regulatory-grade AQ measurement are 22 km and 220 km, respectively (<a href="#ref-2">2</a>).</p>
+<p>Average SO2 and PM levels measured by a subset of the network during July 15 to August 1 are shown in <a href="#F2">Fig. 2</a>.
+ This subset (20 PM2.5 and 17 SO2 sensors) includes all sensors that 
+operated nearly continuously throughout this measurement period (the 
+full timeseries is shown in the <a href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.2025540118/-/DCSupplemental">SI Appendix</a>).
+ Both the regulatory and LCS networks measured similar overall trends in
+ volcanic pollution downwind of the volcano; the highest SO2 
+concentrations were observed just downwind of the eruption, whereas the 
+highest PM2.5 levels were further downwind, along the western (Kona) 
+coast. LCS network stations measured peak hourly SO2 concentrations 
+&gt;1,200 parts per billion (ppb) and peak hourly PM2.5 concentrations 
+&gt;75 μg ⋅ m−3 (<a href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.2025540118/-/DCSupplemental">SI Appendix</a>).
+ The LCS network also revealed pollution gradients in populated areas 
+that were imperceptible to the regulatory network, with substantial 
+variability on finer (5 to 20 km) scales. For example, along the Kona 
+coast, average PM2.5 loadings at nearby sites varied by more than a 
+factor of two (from 9 to 25 μg ⋅ m−3) during the measurement period, 
+likely because of differences in elevation, topography, and local winds.
+ Sensors were also placed in areas that previously had been unaffected 
+by “vog” and were without long-term monitoring stations, revealing 
+elevated levels of pollutants there as well. For instance, in areas of 
+the northern Kona coast, average PM2.5 ranged from 5 to 18 μg ⋅ m−3 with
+ several short-lived episodes (&lt;8 h) in which PM2.5 exceeded 30 μg ⋅ 
+m−3.</p>
+<ul>
+<li><a href="https://www.pnas.org/content/pnas/118/27/e2025540118/F2.large.jpg?download=true">Download figure</a></li> <li><a href="https://www.pnas.org/content/pnas/118/27/e2025540118/F2.large.jpg">Open in new tab</a></li> <li><a href="file:///highwire/powerpoint/989035">Download powerpoint</a></li> </ul>
+<p><span>Fig. 2.</span> </p>
+<p>Average concentrations of SO2 (A) and PM2.5 (B), as measured by the 
+LCS network (colored circles) and the regulatory network stations (gray 
+circles). Data are from a 15-d period from July 15 to August 1, 2018; 
+only the LCS nodes that were in near-continuous operation during this 
+time are shown. For SO2, 17 sensors are shown, accounting for 70,414 
+people within 5 km. For PM2.5, 20 are shown, accounting for 86,856 
+people within 5 km. In total, there are 16 stations with both SO2 and 
+PM2.5 measurements, accounting for 73,013 people within 5 km (<a href="#F3">Fig. 3</a>). The full time series for all sensors are shown <a href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.2025540118/-/DCSupplemental">SI Appendix, Figs. S3 and S5</a>.</p>
+<p>The high spatial resolution of the LCS network also enables 
+fine-grained estimates of residents’ exposure to pollutants in terms of 
+both average exposures (<a href="#F3">Fig. 3 A and B</a>) and hourly exposure distributions (<a href="#F3">Fig. 3 C and D</a>). Fine-grained exposure estimates have long been viewed as a primary advantage of distributed sensor networks (e.g., ref. <a href="#ref-18">18</a>),
+ but there exist few, if any, examples of such networks used to 
+quantitatively estimate population-wide exposure distributions. With 
+this sensor-based analysis (covering the &gt;70,000 people within 5 km 
+of a sensor node), we are able to resolve the fine structure of 
+pollutant exposure during this extreme AQ event, analogous to previous 
+global population-scaled annual exposure estimates based on satellite 
+data and models (<a href="#ref-27">27</a>). The choice of a 5-km buffer is somewhat arbitrary but is intended as a compromise between population coverage (<a href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.2025540118/-/DCSupplemental">SI Appendix</a>)
+ and spatial variability of point measurements as the plume chemically 
+transforms and dynamically adjusts to underlying surface conditions. 
+During the eruption, the highest SO2 levels were experienced primarily 
+by those just downwind of the vents (<a href="#F3">Fig. 3A</a>), with 
+5.3% of the sampled population exposed to elevated (&gt;35 ppb) average 
+levels of SO2. The LCS SO2 hourly exposure distribution (<a href="#F3">Fig. 3C</a>)
+ shows an extended high-concentration tail, with 2% of all hourly 
+exposures exceeding 75 ppb (the US EPA 1-h standard, though Hawai‘i uses
+ the pre-2010 threshold of 140 ppb). In comparison, cumulative hourly 
+SO2 exposures from the regulatory network (composed of five stations 
+covering nearly 30,000 people) are 25% of the LCS network’s cumulative 
+total (<a href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.2025540118/-/DCSupplemental">SI Appendix, Fig. S9</a>).
+ However, the population-weighted average SO2 concentrations measured by
+ the two networks are not significantly different (9.8 ppb and 9.2 ppb) 
+because of highest SO2 concentrations occurring primarily in sparsely 
+populated areas (<a href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.2025540118/-/DCSupplemental">SI Appendix, Fig. S8</a>).</p>
+<ul>
+<li><a href="https://www.pnas.org/content/pnas/118/27/e2025540118/F3.large.jpg?download=true">Download figure</a></li> <li><a href="https://www.pnas.org/content/pnas/118/27/e2025540118/F3.large.jpg">Open in new tab</a></li> <li><a href="file:///highwire/powerpoint/989041">Download powerpoint</a></li> </ul>
+<p><span>Fig. 3.</span> </p>
+<p>Population exposure to volcanic pollutants, measured by the LCS 
+network over the 15-d study period. (A and B) Mean pollutant 
+distribution as a function of cumulative near-node population (residents
+ living within 5 km of each node: 73,013 total). Bar width is 
+proportional to nearby population, and bar height is the average 
+pollutant concentration measured by each node. Sensor nodes are 
+differentiated by color, as shown on the inset map. Stations are 
+arranged from lowest to highest average concentration. (C and D) 
+Population distribution as a function of hourly exposure frequency to 
+SO2 and PM2.5. Here, the distribution of hourly concentrations 
+experienced by each sensor node is weighted by population within 5 km of
+ the node and arranged by average concentration. Estimation of near-node
+ population is given in the <a href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.2025540118/-/DCSupplemental">SI Appendix</a>. Hourly population-weighted time series data to create (C and D) is shown in <a href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.2025540118/-/DCSupplemental">SI Appendix, Fig. S9</a>. An equivalent figure using regulatory network data are shown for comparison in <a href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.2025540118/-/DCSupplemental">SI Appendix, Fig. S10</a>.</p>
+<p>Exposure to secondary PM2.5 was more widespread; elevated average 
+levels (&gt;10 μg ⋅ m−3, World Health Organization annual standard) were
+ experienced by nearly half (46.7%) of the sampled population (<a href="#F3">Fig. 3B</a>),
+ with 6.7% of hourly exposures exceeding 35 µg ⋅ m−3 (the US EPA 24 h 
+standard). The LCS PM2.5 population-weighted distribution (<a href="#F3">Fig. 3D</a>)
+ also displays a clear bimodal structure, representing the overlap of 
+spatial population and plume dynamics; a large fraction of the sampled 
+population (mostly in the Hilo area) lives upwind of the volcano and 
+therefore mostly experienced background levels of PM2.5, whereas 
+population centers downwind of the vents experienced uniformly elevated 
+PM levels over the entire course of the eruption. Because of the greater
+ number of LCS stations in densely populated regions exposed to high 
+levels of PM2.5, cumulative hourly PM2.5 exposures from the regulatory 
+network during the study period are 28% of the LCS network (<a href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.2025540118/-/DCSupplemental">SI Appendix, Fig. S9</a>).
+ Additionally, the population-weighted average PM2.5 concentration from 
+the LCS network is substantially higher than that of the regulatory 
+network (12.9 µg ⋅ m−3 to 8.2 µg ⋅ m−3; <a href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.2025540118/-/DCSupplemental">SI Appendix, Fig. S8</a>),
+ demonstrating the importance of dense monitoring networks to complement
+ existing measurements for accurate population-wide exposure 
+distributions.</p>
+<p>The highly variable concentrations (<a href="#F2">Fig. 2</a>) and exposures (<a href="#F3">Fig. 3</a>)
+ throughout the island arise not only from differences in location 
+relative to the fissures and the plume but also from the dynamic 
+chemical evolution of the volcanic pollutants (the oxidation of SO2 to 
+form PM). Such secondary transformations of pollutants represent major 
+challenges in AQ monitoring, which spatially dense LCS networks are 
+well-suited to address. The high spatial resolution of our LCS network, 
+with stations placed at different distances (i.e., plume transport 
+times) downwind of the fissure, enables this chemical transformation to 
+be mapped. <a href="#F4">Fig. 4</a> shows the evolution of the plume 
+chemistry (described by the measured SO2/PM2.5 ratio) as a function of 
+plume age, which is calculated using an atmospheric dispersion model (<a href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.2025540118/-/DCSupplemental">SI Appendix</a>). The ratio is highest at stations closest to the eruption, with a clear decay as the plume ages.</p>
+<ul>
+<li><a href="https://www.pnas.org/content/pnas/118/27/e2025540118/F4.large.jpg?download=true">Download figure</a></li> <li><a href="https://www.pnas.org/content/pnas/118/27/e2025540118/F4.large.jpg">Open in new tab</a></li> <li><a href="file:///highwire/powerpoint/989040">Download powerpoint</a></li> </ul>
+<p><span>Fig. 4.</span> </p>
+<p>Chemical evolution of the vog plume (SO2/PM2.5 ratio), as measured by
+ LCS nodes (circles) and regulatory stations (triangles) downwind of the
+ volcano during the July 15 to August 1 study period. This quantifies 
+the rate of the chemical transformation of SO2 (gas) to sulfuric acid 
+(PM), yielding an estimated timescale of 7.6 × 10−6 ⋅ s−1 (lifetime of 
+36 h). Measurement uncertainties (vertical error bars) were determined 
+separately for SO2 and PM2.5 sensors during instrument calibration 
+against reference instruments (<a href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.2025540118/-/DCSupplemental">SI Appendix</a>).
+ Plume age uncertainties (horizontal error bars) are the interquartile 
+range of model parcel travel times between the LERZ and measurement 
+location during each hour of the study period.</p>
+<p>The rate of change in plume composition (<a href="#F4">Fig. 4</a>) 
+implies a mean SO2 loss rate (kSO2) of 7.6 × 10−6 ⋅ s−1 (±4.8 × 10−7 ⋅ 
+s−1) for an atmospheric SO2 oxidation lifetime (τox) of 36 h. While 
+there are several uncertainties and assumptions in this calculation (see
+ <a href="#sec-2">Materials and Methods</a>), this value is consistent with known atmospheric SO2 oxidation kinetics (<a href="#ref-28">28</a>)
+ and suggests some role of not only gas phase oxidation but also 
+conversion within cloud droplets or particles as well. Moreover, these 
+reaction kinetics are comparable to those of other volcanoes worldwide (<a href="#ref-29">29</a>), within bounds of previous measurements at Kīlauea (<a href="#ref-11">11</a>, <a href="#ref-17">17</a>, <a href="#ref-30">30</a><a href="#ref-31"><span>⇓</span></a>–<a href="#ref-32">32</a>), and in broad agreement with a recent estimate from the same eruption (<a href="#ref-17">17</a>). Previous studies have used a range of measurement approaches—single-point, ground-based SO2 photometer observations (<a href="#ref-31">31</a>), time-dependent downwind SO2 and sulfate measurements (<a href="#ref-30">30</a>), satellite SO2 measurements (<a href="#ref-32">32</a>), and SO2 and PM measurements from AQ stations (<a href="#ref-17">17</a>)—which
+ varied substantially in temporal and spatial coverage. The range of 
+lifetimes of SO2 from Kīlauea reported in the literature, τox = ∼9 h (<a href="#ref-31">31</a>) to ∼22 d (<a href="#ref-30">30</a>),
+ likely results from complex plume SO2 dynamics, the measurement 
+approach used, and differences in atmospheric conditions (e.g., solar 
+radiation, temperature, and moisture) and plume composition (e.g., 
+aerosols, water, and oxidants). An advantage of using LCS measurements 
+in this case is that in situ measurements over multiple days from a 
+relatively large number of spatially distributed stations are used to 
+aggregate highly variable plume meteo-chemical conditions. This study 
+validates the use of distributed LCS networks for monitoring not only 
+air pollutant concentrations but also plume chemical evolution.</p>
+<p>In all, the LERZ eruption lasted for ∼13 wk before ending abruptly in
+ early August 2018. After the sudden cessation of volcanic activity, AQ 
+conditions improved appreciably across the island as SO2 levels fell 
+immediately and PM2.5 returned to background levels after 7 to 10 d (<a href="#F1">Fig. 1 C and D</a>).
+ While unexpected, this extreme AQ event provided the opportunity to 
+rapidly implement an LCS network, demonstrating the strengths of LCS for
+ aiding in emergency response, measuring populations’ exposure to 
+pollution, and characterizing regional atmospheric chemistry. Key 
+features of this network were the individual nodes’ low cost, small 
+physical footprint, stand-alone power, and real-time communications, all
+ of which allowed for rapid, flexible deployment. Two nodes were even 
+lost in the lava flow, highlighting the resilience of networks composed 
+of multiple low-cost nodes.</p>
+<p>This environment—with its small number of pollutants, point sources 
+emitting into a clean environment, and relatively simple chemistry and 
+meteorology—is in many ways an ideal scenario for monitoring AQ using 
+LCS. Nonetheless, this general approach can be extended to other, more 
+complex environments as well. The present work highlights the need for 
+multipollutant LCS nodes that are already calibrated and readily 
+deployable; the characterization of other extreme AQ events, such as 
+wildfires and urban smog, requires that these nodes measure a number of 
+additional pollutants (not just PM and SO2 but also O3, NO2, and CO) as 
+well as species that can provide insight into pollutant sources and 
+secondary chemical processes (such as NO, VOCs, and CO2). Furthermore, 
+knowledge of background pollutant levels and atmospheric dynamics is 
+necessary to isolate contributions from the event and constrain reaction
+ kinetics. These are included in the present analysis and will be even 
+more important in regions with higher baseline concentrations or more 
+complex meteorology. This underscores the need for improved 
+characterization of regional background pollutant levels (from prior 
+regulatory, satellite, or LCS measurements) and local meteorological 
+conditions (from wind measurements and dispersion models) in such cases.
+ Because of the chemical complexity of wildfire and urban smog 
+pollution, LCS measurements will also benefit from future technological 
+improvements, such as in-line dryers to obviate the need for uncertain 
+relative humidity corrections, and low-cost techniques for measuring PM 
+and VOC composition to provide insight into pollutant sources, 
+chemistry, and impacts. LCS networks thus offer the potential for 
+characterizing pollutant exposure and chemistry under a wide range of 
+conditions and represent an important high-resolution component of 
+multiplatform systems to monitor and characterize extreme AQ events.</p>
+<h2>Materials and Methods</h2>
+<h3>LCSs and Network Design.</h3>
+<p>Custom multipollutant AQ sensor (MPAQS) sensor nodes were built to 
+measure sulfur dioxide gas (Alphasense SO2-B4 electrochemical sensor) 
+and PM (Alphasense OPC-N2) concentrations, as well as auxiliary 
+measurements of air temperature (TA) and relative humidity (RH). 
+Additionally, six SO2-only nodes (<a href="#ref-24">24</a>) and five 
+PM-only nodes (Plantower PMS5003 nephelometer) were used to supplement 
+the MPAQS network. Communications and data transmission are via 3G 
+cellular microcontroller (Particle Electron). Sensor units are powered 
+by rechargeable batteries and solar panels (Voltaic Systems). All 
+sensors sample at 1 Hz and data are recorded to local storage, with 
+1-min averages transmitted to a custom cloud database. Total materials 
+cost for each MPAQS node is approximately 1,000 US dollars.</p>
+<p>The SO2 and PM sensors were calibrated via colocation outdoors with 
+regulatory-grade monitors run by the Hawai‘i Department of Health (<a href="#ref-33">33</a>).
+ SO2 calibration algorithms are based on sensor-specific nonlinear 
+relations to air temperature and linear sensitivity to ambient SO2 
+concentrations (<a href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.2025540118/-/DCSupplemental">SI Appendix</a>). PM mass measurements are statistically corrected for ambient RH due to hygroscopic uptake by sulfate aerosols (<a href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.2025540118/-/DCSupplemental">SI Appendix</a>).
+ This type of field calibration approach is advantageous because 
+instruments are exposed to dynamic and realistic ambient environmental 
+conditions, which can be challenging to achieve under controlled 
+laboratory settings (e.g., ref. <a href="#ref-24">24</a>).</p>
+<p>Sensor nodes were placed primarily at schools, public health clinics,
+ and community centers in residential areas, and each individual setting
+ and placement was unique according to specific site characteristics and
+ constraints (<a href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.2025540118/-/DCSupplemental">SI Appendix</a>).
+ Nodes were placed 3 to 15 m above ground level on rooftops (on tripods,
+ electrical masts, etc.) or in open areas on facility grounds (on masts,
+ tree trunks, and utility poles). Although sensors were deployed to more
+ than 30 locations around the Island (<a href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.2025540118/-/DCSupplemental">SI Appendix</a>),
+ several nodes experienced intermittent communications interruptions, 
+power issues, or sensor component failures (in particular, several SO2 
+electrochemical sensors failed, likely because of high ambient 
+humidity). In total, there were 16 locations during the 2-wk study 
+period with sufficient data quality and continuity for both SO2 and 
+PM2.5 (<a href="#F2">Figs. 2</a> and <a href="#F3">3</a>; 16 locations with PM2.5 and SO2, 1 location with SO2 only, and 4 locations with PM2.5 only).</p>
+<h3>Population Exposure Data and Analysis.</h3>
+<p>Spatial population data are 2015 Census Designated Place (CDP) level 
+populations from the Hawai‘i State Data Center. The CDP polygons are 
+rasterized assuming uniform density within each CDP (<a href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.2025540118/-/DCSupplemental">SI Appendix</a>).
+ The data are based on night-time residential population, and there are 
+likely uncertainties based on nonresident populations (e.g., tourists 
+and temporary workers), diurnal commuter patterns, and spatial 
+settlement patterns (e.g., variations in housing density and informal 
+encampments).</p>
+<p>In <a href="#F3">Fig. 3</a>, the 5-km buffer is intended as a 
+compromise between spatial variability and representativeness of point 
+measurements and population coverage. To avoid population double 
+counting when stations are within 5 km, one half of the total number of 
+residents living in the overlapping buffer zone is assigned to each 
+station.</p>
+<p>There are two methods used to calculate the 5-km population-weighted exposures shown in <a href="#F3">Fig. 3</a>. First, total population exposure (xi) for each node (i) (<a href="#F3">Fig. 3 A and B</a>)
+ is calculated by multiplying the number of residents within 5 km of the
+ sensor node (pi) by the mean observed concentrations ([ci]) of SO2 
+(person ppb) and PM2.5 (person μg m−3): <span><span>xi=pi[ci]</span></span>. Second, time-integrated exposure distributions (<a href="#F3">Fig. 3 C and D</a> and <a href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.2025540118/-/DCSupplemental">SI Appendix, Fig. S9</a>)
+ for each node (xt,i) are calculated as the summed product of population
+ and smoothed (three-bin moving window) binned frequency counts (j) of 
+hourly SO2 (person ppb hours) and PM2.5 concentrations (person μg ⋅ m−3 
+hours): <span><span>xt,i=∑j=1npi[cj]</span></span>.</p>
+<h3>SO2 to PM Conversion Rate.</h3>
+<p>The mean SO2 reaction rate is calculated based on observed SO2 and 
+PM2.5 at 13 stations downwind of the eruption. The SO2 and PM2.5 
+concentrations are converted to mass concentrations of sulfur (S in 
+units of μg ⋅ m−3) and the fraction of total gas phase S (fS) is<span><span>fS=SSO2/SSO2+SPM2.5.</span><span>[1]</span></span></p>
+<p>This procedure assumes all remaining PM2.5 is secondary sulfuric acid
+ aerosols, originating from volcanic SO2 emissions. (The mass 
+concentration of liquid water had been subtracted already as part of the
+ PM RH-correction; <a href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.2025540118/-/DCSupplemental">SI Appendix</a>.)
+ This approach neglects background levels of nonvolcanic aerosols (∼5 µg
+ ⋅ m−3 based on the network average PM2.5 measured from September 1 to 
+30, 2018 after the eruption had ceased). This fractional conversion is 
+advantageous because reaction rates calculated using SO2 measurements 
+alone can be overestimated due to nonoxidative SO2 losses from 
+deposition or dilution (<a href="#ref-30">30</a>).</p>
+<p>An exponential decay function (λ) is then fit to the downwind measurement points:<span><span>fS= fS0e−kSO2t,</span><span>[2]</span></span></p>
+<p>where t is the mean plume travel time between the LERZ and 
+measurement locations from July 15 to August 1, 2018, calculated using a
+ particle dispersion meteorological model (<a href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.2025540118/-/DCSupplemental">SI Appendix</a>).
+ Here, kSO2 represents the first-order decay constant of SO2 and so the 
+mean SO2 lifetime is equal to kSO2−1. To incorporate measurement and 
+plume age model uncertainties into confidence and prediction intervals 
+(95%) (<a href="#F4">Fig. 4</a>), the decay function is fit to an array 
+of random points uniformly sampled within the uncertainty bounds at each
+ measurement point (n = 10 points at each location; total n = 130). 
+Measurement uncertainties were determined for SO2 and PM2.5 sensors 
+during instrument calibration against reference instruments (SO2 mean 
+absolute error [MAE] is 7.3 ppb and PM2.5 MAE is 4.5 µg ⋅ m−3) and 
+modeled plume age uncertainties are the interquartile range of 
+calculated parcel travel times between the LERZ and measurement location
+ during each hour of the study period (<a href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.2025540118/-/DCSupplemental">SI Appendix</a>).</p>
+<p>The plume SO2 conversion rate (kSO2) fit to all downwind stations (n =
+ 13) is 7.6 × 10−6 s-1(τox = 36.3 h), while the kSO2 fit to only the LCS
+ network stations (n = 10) is 7.2 × 10−6 ⋅ s−1 (τox = 38.3 h), a 
+statistically insignificant difference demonstrating the ability of the 
+low-cost network to observe reaction kinetics. Additionally, there is 
+not a dramatic difference when kSO2 is fitted to measurements that have 
+had approximate background PM2.5 levels subtracted (kSO2 = 6.0 × 10−6 ⋅ 
+s−1; τox = 46.4 h). However, kSO2 fit using plume ages estimated from an
+ observed mean wind speed at a single location and downwind linear 
+distance is 1.9 × 10−5 ⋅ s−1 (τox = 15 h), substantially faster than the
+ rate using plume ages calculated from the particle dispersion model. 
+This demonstrates the importance of local meteorological variations, 
+especially in areas of complex terrain, to estimate reaction kinetics.</p>
+<h2>Data Availability</h2>
+<p>All study data are included in the article and/or <a href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.2025540118/-/DCSupplemental">SI Appendix</a>.</p>
+<h2 class="rm-manual">Change History</h2>
+<p class="rm-manual">June 23, 2021: The author line has been updated.</p>
+<h2 class="rm-manual">Acknowledgments</h2>
+<p class="rm-manual">This work was supported by Assistance Agreement 
+Grant RD83618301 awarded by the US EPA to the Massachusetts Institute of
+ Technology (MIT). It has not been formally reviewed by the EPA. The 
+views expressed in this document are solely those of the authors and do 
+not necessarily reflect those of the agency. The EPA does not endorse 
+any products or commercial services mentioned in this publication. 
+Additional funding was provided by the MIT Tata Center and MIT’s 
+Department of Civil and Environmental Engineering. We acknowledge James 
+Ciszewski and Lisa Wallace at the Hawai‘i Department of Health for early
+ logistical support; Tamar Elias, Clive Oppenheimer, John Saffell, Don 
+Thomas, and Steven Businger for support and useful input; Kathy Vandiver
+ (MIT); Liam Kernell (The Kohala Center); and the many people who 
+assisted with this project and provided site access for the sensors: 
+Wendy Baker, Eric Johnson, Steve Hirakami, and Terri York (Hawai‘i 
+Academy of Arts and Sciences); Chris King-Gates (Volcano School of Arts 
+and Sciences); Ben Duke and Una Burns (West Hawai‘i Explorations 
+Academy); Justin Brown and John Hayes (Kealakehe High); Derek Okawa (Bay
+ Clinic Health Centers); Milton Cortez (Hamakua-Kohala Health Centers); 
+Kelly Lacks (Malamalama Waldorf School); Ted Brattstrom (Ka‘u High 
+School); Darlene Javar (Na‘alehu Elementary School); Ken Watanabe 
+(Waiakea Elementary School); Joan and Greg Guithues and Rick Ward (Ocean
+ View Community Association); Rachel Silverman (Innovations Public 
+Charter School); Karen Miller and Glenn Gray (Holualoa Elementary); 
+Noreen Kunitomo (Honaunau Elementary); Bill Chen and Nia Lovell (Kahakai
+ Elementary); Kaliko Grace (Kailapa Community Center); Shawn Suzuki 
+(Konawaena High); Wayne Higaki (North Hawaii Community Hospital); Bob 
+Zellner (Laupahoehoe High); Roseanna Konoa and Pancho Aldana (Big Island
+ Noni Processing, Kalapana); David Benitez (US National Park Service); 
+Jonathan and Oliver Grayson; and Christine Phelps (Pohakuloa Training 
+Area).</p>
+<h2 class="rm-manual">Footnotes</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"><a href="#xref-fn-3-1">↵</a>1Present address: Department of Geography and Environmental Sciences, University of Colorado, Denver, CO 80204.</p></li>
+<li class="rm-manual">
+<a href="#xref-corresp-1-1">↵</a>2To whom correspondence may be addressed. Email: <span><span>benjamin.crawford{at}ucdenver.edu</span></span> or <span><span>jhkroll{at}mit.edu</span></span>.</li>
+<li class="rm-manual"><p class="rm-manual"><a href="#xref-fn-4-1">↵</a>3Present address: QuantAQ, Inc., Somerville, MA 02143.</p></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual">Author contributions: B.C., 
+D.H.H., E.C., C.L.H., and J.H.K. designed research; B.C., D.H.H., I.G., 
+L.H., and J.H.K. performed research; B.C. and C.L.H. analyzed data; and 
+B.C. and J.H.K. wrote the paper with contributions from D.H.H., I.G., 
+E.C., L.H., and C.L.H.</p></li>
+<li class="rm-manual"><p class="rm-manual">The authors declare no competing interest.</p></li>
+<li class="rm-manual"><p class="rm-manual">This article is a PNAS Direct Submission. R.C.C. is a guest editor invited by the Editorial Board.</p></li>
+<li class="rm-manual"><p class="rm-manual">This article contains supporting information online at <a href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.2025540118/-/DCSupplemental">https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.2025540118/-/DCSupplemental</a>.</p></li>
+</ul>
+<ul class="rm-manual"><li class="rm-manual">Copyright © 2021 the Author(s). Published by PNAS.</li></ul>
+<p class="rm-manual">This open access article is distributed under <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution License 4.0 (CC BY)</a>.</p>
+<h2 class="rm-manual">References</h2>
+<ol class="rm-manual">
+<li class="rm-manual">
+<a href="#xref-ref-1-1">↵</a><p class="rm-manual"></p><ol class="rm-manual"><li class="rm-manual">
+<span> <span>S. S.</span> <span>Lim</span></span> <span>et al</span>
+</li></ol>., <span>A comparative risk assessment of burden of disease 
+and injury attributable to 67 risk factors and risk factor clusters in 
+21 regions, 1990-2010: A systematic analysis for the global burden of 
+disease study 2010</span>. Lancet <span>380</span>, <span>2224</span>–<span>2260</span> (<span>2012</span>).<p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%7Bopenurl%7D?query=rft.jtitle%253DLancet%26rft.volume%253D380%26rft.spage%253D2224%26rft_id%253Dinfo%253Adoi%252F10.1016%252FS0140-6736%252812%252961766-8%26rft_id%253Dinfo%253Apmid%252F23245609%26rft.genre%253Darticle%26rft_val_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Ajournal%26ctx_ver%253DZ39.88-2004%26url_ver%253DZ39.88-2004%26url_ctx_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx"><span>OpenUrl</span></a><a href="file:///lookup/external-ref?access_num=10.1016/S0140-6736(12)61766-8&amp;link_type=DOI"><span>CrossRef</span></a><a href="file:///lookup/external-ref?access_num=23245609&amp;link_type=MED&amp;atom=%2Fpnas%2F118%2F27%2Fe2025540118.atom"><span>PubMed</span></a></p>
+</li>
+<li class="rm-manual">
+<a href="#xref-ref-2-1">↵</a><p class="rm-manual"></p><ol class="rm-manual"><li class="rm-manual">
+<span> <span>R. V.</span> <span>Martin</span></span> <span>et al</span>
+</li></ol>., <span>No one knows which city has the highest concentration of fine particulate matter</span>. Atmos. Environ. X <span>3</span>, <span>100040</span> (<span>2019</span>).<p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%7Bopenurl%7D?query=rft.jtitle%253DAtmos.%2BEnviron.%2BX%26rft.volume%253D3%26rft.spage%253D100040%26rft.genre%253Darticle%26rft_val_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Ajournal%26ctx_ver%253DZ39.88-2004%26url_ver%253DZ39.88-2004%26url_ctx_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx"><span>OpenUrl</span></a></p>
+</li>
+<li class="rm-manual">
+<a href="#xref-ref-3-1">↵</a><p class="rm-manual"></p><ol class="rm-manual"><li class="rm-manual"><span> <span>B.</span> <span>Roueche</span></span></li></ol>, <span>The fog</span>. The New Yorker (<span>1950</span>). <a href="https://www.newyorker.com/magazine/1950/09/30/the-fog">https://www.newyorker.com/magazine/1950/09/30/the-fog</a>. Accessed 1 June 2021.<p class="rm-manual"></p>
+</li>
+<li class="rm-manual">
+<a href="#xref-ref-4-1">↵</a><p class="rm-manual"></p><ol class="rm-manual">
+<li class="rm-manual">
+<span> <span>M. L.</span> <span>Bell</span></span>, </li>
+<li class="rm-manual"><span> <span>D. L.</span> <span>Davis</span></span></li>
+</ol>, <span>Reassessment of the lethal London fog of 1952: Novel 
+indicators of acute and chronic consequences of acute exposure to air 
+pollution</span>. Environ. Health Perspect. <span>109</span> (<span>suppl. 3</span>), <span>389</span>–<span>394</span> (<span>2001</span>).<p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%7Bopenurl%7D?query=rft.jtitle%253DEnviron.%2BHealth%2BPerspect.%26rft.volume%253D109%26rft.spage%253D389%26rft_id%253Dinfo%253Adoi%252F10.2307%252F3434786%26rft_id%253Dinfo%253Apmid%252F11427388%26rft.genre%253Darticle%26rft_val_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Ajournal%26ctx_ver%253DZ39.88-2004%26url_ver%253DZ39.88-2004%26url_ctx_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx"><span>OpenUrl</span></a><a href="file:///lookup/external-ref?access_num=10.2307/3434786&amp;link_type=DOI"><span>CrossRef</span></a><a href="file:///lookup/external-ref?access_num=11427388&amp;link_type=MED&amp;atom=%2Fpnas%2F118%2F27%2Fe2025540118.atom"><span>PubMed</span></a></p>
+</li>
+<li class="rm-manual">
+<a href="#xref-ref-5-1">↵</a><p class="rm-manual"></p><ol class="rm-manual"><li class="rm-manual"><span> <span>S.</span> <span>Singh</span></span></li></ol>, <span>The Great Smog of India</span> (<span>Penguin Random House India Private Limited</span>, <span>2018</span>).<p class="rm-manual"></p>
+</li>
+<li class="rm-manual">
+<a href="#xref-ref-6-1">↵</a><p class="rm-manual"></p><ol class="rm-manual"><li class="rm-manual">
+<span> <span>J. M.</span> <span>Ferreri</span></span> <span>et al</span>
+</li></ol>., <span>The January 2013 Beijing “Airpocalypse” and its acute effects on emergency and outpatient visits at a Beijing hospital</span>. Air Qual. Atmos. Health <span>11</span>, <span>301</span>–<span>309</span> (<span>2018</span>).<p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%7Bopenurl%7D?query=rft.jtitle%253DAir%2BQual.%2BAtmos.%2BHealth%26rft.volume%253D11%26rft.spage%253D301%26rft.genre%253Darticle%26rft_val_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Ajournal%26ctx_ver%253DZ39.88-2004%26url_ver%253DZ39.88-2004%26url_ctx_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx"><span>OpenUrl</span></a></p>
+</li>
+<li class="rm-manual">
+<a href="#xref-ref-7-1">↵</a><p class="rm-manual"></p><ol class="rm-manual">
+<li class="rm-manual">
+<span> <span>P.</span> <span>Yu</span></span>, </li>
+<li class="rm-manual">
+<span> <span>R.</span> <span>Xu</span></span>, </li>
+<li class="rm-manual">
+<span> <span>M. J.</span> <span>Abramson</span></span>, </li>
+<li class="rm-manual">
+<span> <span>S.</span> <span>Li</span></span>, </li>
+<li class="rm-manual"><span> <span>Y.</span> <span>Guo</span></span></li>
+</ol>, <span>Bushfires in Australia: A serious health emergency under climate change</span>. Lancet Planet. Health <span>4</span>, <span>e7</span>–<span>e8</span> (<span>2020</span>).<p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%7Bopenurl%7D?query=rft.jtitle%253DLancet%2BPlanet.%2BHealth%26rft.volume%253D4%26rft.spage%253D7e%26rft.genre%253Darticle%26rft_val_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Ajournal%26ctx_ver%253DZ39.88-2004%26url_ver%253DZ39.88-2004%26url_ctx_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx"><span>OpenUrl</span></a></p>
+</li>
+<li class="rm-manual">
+<a href="#xref-ref-8-1">↵</a><p class="rm-manual"></p><ol class="rm-manual"><li class="rm-manual">
+<span> <span>C. G.</span> <span>Jones</span></span> <span>et al</span>.; <span>The CARES Surveillance Group</span>
+</li></ol>, <span>Out-of-hospital cardiac arrests and wildfire-related particulate matter during 2015-2017 California wildfires</span>. J. Am. Heart Assoc. <span>9</span>, <span>e014125</span> (<span>2020</span>).<p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%7Bopenurl%7D?query=rft.jtitle%253DJ.%2BAm.%2BHeart%2BAssoc.%26rft.volume%253D9%26rft.spage%253De014125%26rft.genre%253Darticle%26rft_val_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Ajournal%26ctx_ver%253DZ39.88-2004%26url_ver%253DZ39.88-2004%26url_ctx_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx"><span>OpenUrl</span></a></p>
+</li>
+<li class="rm-manual">
+<a href="#xref-ref-9-1">↵</a><p class="rm-manual"></p><ol class="rm-manual"><li class="rm-manual">
+<span> <span>R. J.</span> <span>Huang</span></span> <span>et al</span>
+</li></ol>., <span>High secondary aerosol contribution to particulate pollution during haze events in China</span>. Nature <span>514</span>, <span>218</span>–<span>222</span> (<span>2014</span>).<p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%7Bopenurl%7D?query=rft.jtitle%253DNature%26rft.volume%253D514%26rft.spage%253D218%26rft_id%253Dinfo%253Adoi%252F10.1038%252Fnature13774%26rft_id%253Dinfo%253Apmid%252F25231863%26rft.genre%253Darticle%26rft_val_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Ajournal%26ctx_ver%253DZ39.88-2004%26url_ver%253DZ39.88-2004%26url_ctx_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx"><span>OpenUrl</span></a><a href="file:///lookup/external-ref?access_num=10.1038/nature13774&amp;link_type=DOI"><span>CrossRef</span></a><a href="file:///lookup/external-ref?access_num=25231863&amp;link_type=MED&amp;atom=%2Fpnas%2F118%2F27%2Fe2025540118.atom"><span>PubMed</span></a></p>
+</li>
+<li class="rm-manual">
+<a href="#xref-ref-10-1">↵</a><p class="rm-manual"></p><ol class="rm-manual">
+<li class="rm-manual">
+<span> <span>T.</span> <span>Elias</span></span>, </li>
+<li class="rm-manual"><span> <span>A.</span> <span>Jefferson Sutton</span></span></li>
+</ol>, <span>“Sulfur dioxide emission rates from Kīlauea Volcano, Hawai‘i, 2007–2010” (Tech. Rep. 2012-1107, US Geological Survey, 2012)</span>.<p class="rm-manual"></p>
+</li>
+<li class="rm-manual">
+<a href="#xref-ref-11-1">↵</a><p class="rm-manual"></p><ol class="rm-manual">
+<li class="rm-manual">
+<span> <span>A. K.</span> <span>Pattantyus</span></span>, </li>
+<li class="rm-manual">
+<span> <span>S.</span> <span>Businger</span></span>, </li>
+<li class="rm-manual"><span> <span>S. G.</span> <span>Howell</span></span></li>
+</ol>, <span>Review of sulfur dioxide to sulfate aerosol chemistry at Kīlauea Volcano, Hawai’i</span>. Atmos. Environ. <span>185</span>, <span>262</span>–<span>271</span> (<span>2018</span>).<p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%7Bopenurl%7D?query=rft.jtitle%253DAtmos.%2BEnviron.%26rft.volume%253D185%26rft.spage%253D262%26rft.genre%253Darticle%26rft_val_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Ajournal%26ctx_ver%253DZ39.88-2004%26url_ver%253DZ39.88-2004%26url_ctx_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx"><span>OpenUrl</span></a></p>
+</li>
+<li class="rm-manual">
+<a href="#xref-ref-12-1">↵</a><p class="rm-manual"></p><ol class="rm-manual"><li class="rm-manual">
+<span> <span>S.</span> <span>Businger</span></span> <span>et al</span>
+</li></ol>., <span>Observing and forecasting vog dispersion from Kīlauea volcano, Hawai’i</span>. Bull. Am. Meteorol. Soc. <span>96</span>, <span>1667</span>–<span>1686</span> (<span>2015</span>).<p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%7Bopenurl%7D?query=rft.jtitle%253DBull.%2BAm.%2BMeteorol.%2BSoc.%26rft.volume%253D96%26rft.spage%253D1667%26rft.genre%253Darticle%26rft_val_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Ajournal%26ctx_ver%253DZ39.88-2004%26url_ver%253DZ39.88-2004%26url_ctx_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx"><span>OpenUrl</span></a></p>
+</li>
+<li class="rm-manual">
+<a href="#xref-ref-13-1">↵</a><p class="rm-manual"></p><ol class="rm-manual">
+<li class="rm-manual">
+<span> <span>B. M.</span> <span>Longo</span></span>, </li>
+<li class="rm-manual">
+<span> <span>W.</span> <span>Yang</span></span>, </li>
+<li class="rm-manual">
+<span> <span>J. B.</span> <span>Green</span></span>, </li>
+<li class="rm-manual">
+<span> <span>F. L.</span> <span>Crosby</span></span>, </li>
+<li class="rm-manual"><span> <span>V. L.</span> <span>Crosby</span></span></li>
+</ol>, <span>Acute health effects associated with exposure to volcanic air pollution (vog) from increased activity at Kilauea Volcano in 2008</span>. J. Toxicol. Environ. Health A <span>73</span>, <span>1370</span>–<span>1381</span> (<span>2010</span>).<p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%7Bopenurl%7D?query=rft.jtitle%253DJournal%2Bof%2Btoxicology%2Band%2Benvironmental%2Bhealth.%2BPart%2BA%26rft.stitle%253DJ%2BToxicol%2BEnviron%2BHealth%2BA%26rft.aulast%253DLongo%26rft.auinit1%253DB.%2BM.%26rft.volume%253D73%26rft.issue%253D20%26rft.spage%253D1370%26rft.epage%253D1381%26rft.atitle%253DAcute%2Bhealth%2Beffects%2Bassociated%2Bwith%2Bexposure%2Bto%2Bvolcanic%2Bair%2Bpollution%2B%2528vog%2529%2Bfrom%2Bincreased%2Bactivity%2Bat%2BKilauea%2BVolcano%2Bin%2B2008.%26rft_id%253Dinfo%253Adoi%252F10.1080%252F15287394.2010.497440%26rft_id%253Dinfo%253Apmid%252F20818536%26rft.genre%253Darticle%26rft_val_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Ajournal%26ctx_ver%253DZ39.88-2004%26url_ver%253DZ39.88-2004%26url_ctx_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx"><span>OpenUrl</span></a><a href="file:///lookup/external-ref?access_num=10.1080/15287394.2010.497440&amp;link_type=DOI"><span>CrossRef</span></a><a href="file:///lookup/external-ref?access_num=20818536&amp;link_type=MED&amp;atom=%2Fpnas%2F118%2F27%2Fe2025540118.atom"><span>PubMed</span></a></p>
+</li>
+<li class="rm-manual">
+<a href="#xref-ref-14-1">↵</a><p class="rm-manual"></p><ol class="rm-manual"><li class="rm-manual">
+<span> <span>C. A.</span> <span>Neal</span></span> <span>et al</span>
+</li></ol>., <span>The 2018 rift eruption and summit collapse of Kīlauea Volcano</span>. Science <span>363</span>, <span>367</span>–<span>374</span> (<span>2019</span>).<p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%7Bopenurl%7D?query=rft.jtitle%253DScience%26rft_id%253Dinfo%253Adoi%252F10.1126%252Fscience.aav7046%26rft_id%253Dinfo%253Apmid%252F30538164%26rft.genre%253Darticle%26rft_val_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Ajournal%26ctx_ver%253DZ39.88-2004%26url_ver%253DZ39.88-2004%26url_ctx_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx"><span>OpenUrl</span></a><a href="file:///lookup/ijlink/YTozOntzOjQ6InBhdGgiO3M6MTQ6Ii9sb29rdXAvaWpsaW5rIjtzOjU6InF1ZXJ5IjthOjQ6e3M6ODoibGlua1R5cGUiO3M6NDoiQUJTVCI7czoxMToiam91cm5hbENvZGUiO3M6Mzoic2NpIjtzOjU6InJlc2lkIjtzOjEyOiIzNjMvNjQyNS8zNjciO3M6NDoiYXRvbSI7czoyOToiL3BuYXMvMTE4LzI3L2UyMDI1NTQwMTE4LmF0b20iO31zOjg6ImZyYWdtZW50IjtzOjA6IiI7fQ=="><span><span>Abstract</span><span>/</span><span><span>FREE </span>Full Text</span></span></a></p>
+</li>
+<li class="rm-manual">
+<a href="#xref-ref-15-1">↵</a><p class="rm-manual"></p><ol class="rm-manual"><li class="rm-manual">
+<span> <span>J. P.</span> <span>Vernier</span></span> <span>et al</span>
+</li></ol>., <span>VolKilau: Volcano rapid response balloon campaign during the 2018 Kilauea eruption</span>. Bull. Am. Meteorol. Soc. <span>101</span>, <span>E1602</span>–<span>E1618</span> (<span>2020</span>).<p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%7Bopenurl%7D?query=rft.jtitle%253DBull.%2BAm.%2BMeteorol.%2BSoc.%26rft.volume%253D101%26rft.spage%253DE1602%26rft.genre%253Darticle%26rft_val_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Ajournal%26ctx_ver%253DZ39.88-2004%26url_ver%253DZ39.88-2004%26url_ctx_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx"><span>OpenUrl</span></a></p>
+</li>
+<li class="rm-manual">
+<a href="#xref-ref-16-1">↵</a><p class="rm-manual"></p><ol class="rm-manual"><li class="rm-manual">
+<span> <span>Y.</span> <span>Tang</span></span> <span>et al</span>
+</li></ol>., <span>Air quality impacts of the 2018 Mt. Kilauea volcano 
+eruption in Hawaii: A regional chemical transport model study with 
+satellite-constrained emissions</span>. Atmos. Environ. <span>237</span>, <span>117648</span> (<span>2020</span>).<p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%7Bopenurl%7D?query=rft.jtitle%253DAtmos.%2BEnviron.%26rft.volume%253D237%26rft.spage%253D117648%26rft.genre%253Darticle%26rft_val_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Ajournal%26ctx_ver%253DZ39.88-2004%26url_ver%253DZ39.88-2004%26url_ctx_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx"><span>OpenUrl</span></a></p>
+</li>
+<li class="rm-manual">
+<a href="#xref-ref-17-1">↵</a><p class="rm-manual"></p><ol class="rm-manual"><li class="rm-manual">
+<span> <span>R. C.</span> <span>Whitty</span></span> <span>et al</span>
+</li></ol>., <span>Spatial and temporal variations in SO2 and PM2.5 levels around Kīlauea Volcano, Hawai’i during 2007–2018</span>. Front. Earth Sci. <span>8</span>, <span>36</span> (<span>2020</span>).<p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%7Bopenurl%7D?query=rft.jtitle%253DFront.%2BEarth%2BSci.%26rft.volume%253D8%26rft.spage%253D36%26rft.genre%253Darticle%26rft_val_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Ajournal%26ctx_ver%253DZ39.88-2004%26url_ver%253DZ39.88-2004%26url_ctx_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx"><span>OpenUrl</span></a></p>
+</li>
+<li class="rm-manual">
+<a href="#xref-ref-18-1">↵</a><p class="rm-manual"></p><ol class="rm-manual"><li class="rm-manual">
+<span> <span>E. G.</span> <span>Snyder</span></span> <span>et al</span>
+</li></ol>., <span>The changing paradigm of air pollution monitoring</span>. Environ. Sci. Technol. <span>47</span>, <span>11369</span>–<span>11377</span> (<span>2013</span>).<p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%7Bopenurl%7D?query=rft.jtitle%253DEnviron.%2BSci.%2BTechnol.%26rft.volume%253D47%26rft.spage%253D11369%26rft.genre%253Darticle%26rft_val_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Ajournal%26ctx_ver%253DZ39.88-2004%26url_ver%253DZ39.88-2004%26url_ctx_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx"><span>OpenUrl</span></a></p>
+</li>
+<li class="rm-manual">
+<a href="#xref-ref-19-1">↵</a><p class="rm-manual"></p><ol class="rm-manual"><li class="rm-manual">
+<span> <span>A. C.</span> <span>Rai</span></span> <span>et al</span>
+</li></ol>., <span>End-user perspective of low-cost sensors for outdoor air pollution monitoring</span>. Sci. Total Environ. <span>607-608</span>, <span>691</span>–<span>705</span> (<span>2017</span>).<p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%7Bopenurl%7D?query=rft.jtitle%253DSci.%2BTotal%2BEnviron.%26rft.volume%253D607608%26rft.spage%253D691%26rft.genre%253Darticle%26rft_val_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Ajournal%26ctx_ver%253DZ39.88-2004%26url_ver%253DZ39.88-2004%26url_ctx_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx"><span>OpenUrl</span></a></p>
+</li>
+<li class="rm-manual">
+<a href="#xref-ref-20-1">↵</a><p class="rm-manual"></p><ol class="rm-manual"><li class="rm-manual">
+<span> <span>A. A.</span> <span>Shusterman</span></span> <span>et al</span>
+</li></ol>., <span>The Berkeley atmospheric CO2 observation network: Initial evaluation</span>. Atmos. Chem. Phys. <span>16</span>, <span>13449</span>–<span>13463</span> (<span>2016</span>).<p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%7Bopenurl%7D?query=rft.jtitle%253DAtmos.%2BChem.%2BPhys.%26rft.volume%253D16%26rft.spage%253D13449%26rft.genre%253Darticle%26rft_val_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Ajournal%26ctx_ver%253DZ39.88-2004%26url_ver%253DZ39.88-2004%26url_ctx_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx"><span>OpenUrl</span></a></p>
+</li>
+<li class="rm-manual">
+<a href="#xref-ref-21-1">↵</a><p class="rm-manual"></p><ol class="rm-manual"><li class="rm-manual">
+<span> <span>R.</span> <span>Subramanian</span></span> <span>et al</span>
+</li></ol>., <span>Air quality in Puerto Rico in the aftermath of Hurricane Maria: A case study on the use of lower cost air quality monitors</span>. ACS Earth Space Chem. <span>2</span>, <span>1179</span>–<span>1186</span> (<span>2018</span>).<p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%7Bopenurl%7D?query=rft.jtitle%253DACS%2BEarth%2BSpace%2BChem.%26rft.volume%253D2%26rft.spage%253D1179%26rft.genre%253Darticle%26rft_val_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Ajournal%26ctx_ver%253DZ39.88-2004%26url_ver%253DZ39.88-2004%26url_ctx_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx"><span>OpenUrl</span></a></p>
+</li>
+<li class="rm-manual">
+<a href="#xref-ref-22-1">↵</a><p class="rm-manual"></p><ol class="rm-manual">
+<li class="rm-manual">
+<span> <span>F. D.</span> <span>Pope</span></span>, </li>
+<li class="rm-manual">
+<span> <span>M.</span> <span>Gatari</span></span>, </li>
+<li class="rm-manual">
+<span> <span>D.</span> <span>Ng’ang’a</span></span>, </li>
+<li class="rm-manual">
+<span> <span>A.</span> <span>Poynter</span></span>, </li>
+<li class="rm-manual"><span> <span>R.</span> <span>Blake</span></span></li>
+</ol>, <span>Airborne particulate matter monitoring in Kenya using calibrated low-cost sensors</span>. Atmos. Chem. Phys. <span>18</span>, <span>15403</span>–<span>15418</span> (<span>2018</span>).<p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%7Bopenurl%7D?query=rft.jtitle%253DAtmos.%2BChem.%2BPhys.%26rft.volume%253D18%26rft.spage%253D15403%26rft.genre%253Darticle%26rft_val_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Ajournal%26ctx_ver%253DZ39.88-2004%26url_ver%253DZ39.88-2004%26url_ctx_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx"><span>OpenUrl</span></a></p>
+</li>
+<li class="rm-manual">
+<a href="#xref-ref-23-1">↵</a><p class="rm-manual"></p><ol class="rm-manual">
+<li class="rm-manual">
+<span> <span>J. J.</span> <span>Caubel</span></span>, </li>
+<li class="rm-manual">
+<span> <span>T. E.</span> <span>Cados</span></span>, </li>
+<li class="rm-manual">
+<span> <span>C. V.</span> <span>Preble</span></span>, </li>
+<li class="rm-manual"><span> <span>T. W.</span> <span>Kirchstetter</span></span></li>
+</ol>, <span>A distributed network of 100 black carbon sensors for 100 days of air quality monitoring in west Oakland, California</span>. Environ. Sci. Technol. <span>53</span>, <span>7564</span>–<span>7573</span> (<span>2019</span>).<p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%7Bopenurl%7D?query=rft.jtitle%253DEnviron.%2BSci.%2BTechnol.%26rft.volume%253D53%26rft.spage%253D7564%26rft.genre%253Darticle%26rft_val_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Ajournal%26ctx_ver%253DZ39.88-2004%26url_ver%253DZ39.88-2004%26url_ctx_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx"><span>OpenUrl</span></a></p>
+</li>
+<li class="rm-manual">
+<a href="#xref-ref-24-1">↵</a><p class="rm-manual"></p><ol class="rm-manual"><li class="rm-manual">
+<span> <span>D. H.</span> <span>Hagan</span></span> <span>et al</span>
+</li></ol>., <span>Calibration and assessment of electrochemical air quality sensors by co-location with regulatory-grade instruments</span>. Atmos. Meas. Tech. <span>11</span>, <span>315</span>–<span>328</span> (<span>2018</span>).<p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%7Bopenurl%7D?query=rft.jtitle%253DAtmos.%2BMeas.%2BTech.%26rft.volume%253D11%26rft.spage%253D315%26rft.genre%253Darticle%26rft_val_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Ajournal%26ctx_ver%253DZ39.88-2004%26url_ver%253DZ39.88-2004%26url_ctx_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx"><span>OpenUrl</span></a></p>
+</li>
+<li class="rm-manual">
+<a href="#xref-ref-25-1">↵</a><p class="rm-manual"></p><ol class="rm-manual"><li class="rm-manual">
+<span> <span>L. R.</span> <span>Crilley</span></span> <span>et al</span>
+</li></ol>., <span>Evaluation of a low-cost optical particle counter (Alphasense OPC-N2) for ambient air monitoring</span>. Atmos. Meas. Tech. <span>11</span>, <span>709</span>–<span>720</span> (<span>2018</span>).<p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%7Bopenurl%7D?query=rft.jtitle%253DAtmos.%2BMeas.%2BTech.%26rft.volume%253D11%26rft.spage%253D709%26rft.genre%253Darticle%26rft_val_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Ajournal%26ctx_ver%253DZ39.88-2004%26url_ver%253DZ39.88-2004%26url_ctx_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx"><span>OpenUrl</span></a></p>
+</li>
+<li class="rm-manual">
+<a href="#xref-ref-26-1">↵</a><p class="rm-manual"></p><ol class="rm-manual"><li class="rm-manual">
+<span> <span>N.</span> <span>Zimmerman</span></span> <span>et al</span>
+</li></ol>., <span>A machine learning calibration model using random forests to improve sensor performance for lower-cost air quality monitoring</span>. Atmos. Meas. Tech. <span>11</span>, <span>291</span>–<span>313</span> (<span>2018</span>).<p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%7Bopenurl%7D?query=rft.jtitle%253DAtmos.%2BMeas.%2BTech.%26rft.volume%253D11%26rft.spage%253D291%26rft.genre%253Darticle%26rft_val_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Ajournal%26ctx_ver%253DZ39.88-2004%26url_ver%253DZ39.88-2004%26url_ctx_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx"><span>OpenUrl</span></a></p>
+</li>
+<li class="rm-manual">
+<a href="#xref-ref-27-1">↵</a><p class="rm-manual"></p><ol class="rm-manual"><li class="rm-manual">
+<span> <span>M.</span> <span>Brauer</span></span> <span>et al</span>
+</li></ol>., <span>Ambient air pollution exposure estimation for the global burden of disease 2013</span>. Environ. Sci. Technol. <span>50</span>, <span>79</span>–<span>88</span> (<span>2016</span>).<p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%7Bopenurl%7D?query=rft.jtitle%253DEnviron.%2BSci.%2BTechnol.%26rft.volume%253D50%26rft.spage%253D79%26rft_id%253Dinfo%253Adoi%252F10.1021%252Facs.est.5b03709%26rft_id%253Dinfo%253Apmid%252F26595236%26rft.genre%253Darticle%26rft_val_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Ajournal%26ctx_ver%253DZ39.88-2004%26url_ver%253DZ39.88-2004%26url_ctx_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx"><span>OpenUrl</span></a><a href="file:///lookup/external-ref?access_num=10.1021/acs.est.5b03709&amp;link_type=DOI"><span>CrossRef</span></a><a href="file:///lookup/external-ref?access_num=26595236&amp;link_type=MED&amp;atom=%2Fpnas%2F118%2F27%2Fe2025540118.atom"><span>PubMed</span></a></p>
+</li>
+<li class="rm-manual">
+<a href="#xref-ref-28-1">↵</a><p class="rm-manual"></p><ol class="rm-manual">
+<li class="rm-manual">
+<span> <span>R.</span> <span>von Glasow</span></span>, </li>
+<li class="rm-manual">
+<span> <span>N.</span> <span>Bobrowski</span></span>, </li>
+<li class="rm-manual"><span> <span>C.</span> <span>Kern</span></span></li>
+</ol>, <span>The effects of volcanic eruptions on atmospheric chemistry</span>. Chem. Geol. <span>263</span>, <span>131</span>–<span>142</span> (<span>2009</span>).<p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%7Bopenurl%7D?query=rft.jtitle%253DChemical%2BGeology%26rft.stitle%253DChemical%2BGeology%26rft.volume%253D263%26rft.issue%253D1-4%26rft.spage%253D131%26rft.epage%253D142%26rft.atitle%253DThe%2Beffects%2Bof%2Bvolcanic%2Beruptions%2Bon%2Batmospheric%2Bchemistry%26rft_id%253Dinfo%253Adoi%252F10.1016%252Fj.chemgeo.2008.08.020%26rft.genre%253Darticle%26rft_val_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Ajournal%26ctx_ver%253DZ39.88-2004%26url_ver%253DZ39.88-2004%26url_ctx_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx"><span>OpenUrl</span></a><a href="file:///lookup/external-ref?access_num=10.1016/j.chemgeo.2008.08.020&amp;link_type=DOI"><span>CrossRef</span></a></p>
+</li>
+<li class="rm-manual">
+<a href="#xref-ref-29-1">↵</a><p class="rm-manual"></p><ol class="rm-manual">
+<li class="rm-manual">
+<span> <span>C.</span> <span>Oppenheimer</span></span>, </li>
+<li class="rm-manual">
+<span> <span>B.</span> <span>Scaillet</span></span>, </li>
+<li class="rm-manual"><span> <span>R. S.</span> <span>Martin</span></span></li>
+</ol>, <span>Sulfur degassing from volcanoes: Source conditions, surveillance, plume chemistry and earth system impacts</span>. Rev. Mineral. Geochem. <span>73</span>, <span>363</span>–<span>421</span> (<span>2011</span>).<p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%7Bopenurl%7D?query=rft.jtitle%253DReviews%2Bin%2BMineralogy%2Band%2BGeochemistry%26rft.stitle%253DReviews%2Bin%2BMineralogy%2Band%2BGeochemistry%26rft.aulast%253DOppenheimer%26rft.auinit1%253DC.%26rft.volume%253D73%26rft.issue%253D1%26rft.spage%253D363%26rft.epage%253D421%26rft.atitle%253DSulfur%2BDegassing%2BFrom%2BVolcanoes%253A%2BSource%2BConditions%252C%2BSurveillance%252C%2BPlume%2BChemistry%2Band%2BEarth%2BSystem%2BImpacts%26rft_id%253Dinfo%253Adoi%252F10.2138%252Frmg.2011.73.13%26rft.genre%253Darticle%26rft_val_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Ajournal%26ctx_ver%253DZ39.88-2004%26url_ver%253DZ39.88-2004%26url_ctx_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx"><span>OpenUrl</span></a><a href="file:///lookup/ijlink/YTozOntzOjQ6InBhdGgiO3M6MTQ6Ii9sb29rdXAvaWpsaW5rIjtzOjU6InF1ZXJ5IjthOjQ6e3M6ODoibGlua1R5cGUiO3M6NDoiRlVMTCI7czoxMToiam91cm5hbENvZGUiO3M6NToiZ3NybWciO3M6NToicmVzaWQiO3M6ODoiNzMvMS8zNjMiO3M6NDoiYXRvbSI7czoyOToiL3BuYXMvMTE4LzI3L2UyMDI1NTQwMTE4LmF0b20iO31zOjg6ImZyYWdtZW50IjtzOjA6IiI7fQ=="><span><span><span>FREE </span>Full Text</span></span></a></p>
+</li>
+<li class="rm-manual">
+<a href="#xref-ref-30-1">↵</a><p class="rm-manual"></p><ol class="rm-manual"><li class="rm-manual">
+<span> <span>J. H.</span> <span>Kroll</span></span> <span>et al</span>.; <span>TREX XII</span>; <span>TREX XI</span>
+</li></ol>, <span>Atmospheric evolution of sulfur emissions from 
+Kīlauea: Real-time measurements of oxidation, dilution, and 
+neutralization within a volcanic plume</span>. Environ. Sci. Technol. <span>49</span>, <span>4129</span>–<span>4137</span> (<span>2015</span>).<p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%7Bopenurl%7D?query=rft.jtitle%253DEnviron.%2BSci.%2BTechnol.%26rft.volume%253D49%26rft.spage%253D4129%26rft.genre%253Darticle%26rft_val_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Ajournal%26ctx_ver%253DZ39.88-2004%26url_ver%253DZ39.88-2004%26url_ctx_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx"><span>OpenUrl</span></a></p>
+</li>
+<li class="rm-manual">
+<a href="#xref-ref-31-1">↵</a><p class="rm-manual"></p><ol class="rm-manual"><li class="rm-manual">
+<span> <span>J. N.</span> <span>Porter</span></span> <span>et al</span>
+</li></ol>., <span>Sun photometer and lidar measurements of the plume from the Hawaii Kilauea Volcano Pu‘u O’o vent: Aerosol flux and SO2 lifetime</span>. Geophys. Res. Lett. <span>29</span>, <span>30</span>–<span>31</span> (<span>2002</span>).<p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%7Bopenurl%7D?query=rft.jtitle%253DGeophys.%2BRes.%2BLett.%26rft.volume%253D29%26rft.spage%253D30%26rft.genre%253Darticle%26rft_val_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Ajournal%26ctx_ver%253DZ39.88-2004%26url_ver%253DZ39.88-2004%26url_ctx_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx"><span>OpenUrl</span></a></p>
+</li>
+<li class="rm-manual">
+<a href="#xref-ref-32-1">↵</a><p class="rm-manual"></p><ol class="rm-manual"><li class="rm-manual">
+<span> <span>S.</span> <span>Beirle</span></span> <span>et al</span>
+</li></ol>., <span>Estimating the volcanic emission rate and atmospheric lifetime of SO2 from space: A case study for Kīlauea Volcano, Hawaii</span>. Atmos. Chem. Phys. <span>14</span>, <span>8309</span>–<span>8322</span> (<span>2014</span>).<p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%7Bopenurl%7D?query=rft.stitle%253DAtmos%2BChem%2BPhys%26rft.aulast%253DBeirle%26rft.auinit1%253DS.%26rft.volume%253D14%26rft.issue%253D16%26rft.spage%253D8309%26rft.epage%253D8322%26rft.atitle%253DEstimating%2Bthe%2Bvolcanic%2Bemission%2Brate%2Band%2Batmospheric%2Blifetime%2Bof%2BSO%2B%2526lt%253Bsub%2526gt%253B2%2526lt%253B%252Fsub%2526gt%253B%2Bfrom%2Bspace%253A%2Ba%2Bcase%2Bstudy%2Bfor%2BKilauea%2Bvolcano%252C%2BHawai%2529%2Bi%26rft_id%253Dinfo%253Adoi%252F10.5194%252Facp-14-8309-2014%26rft.genre%253Darticle%26rft_val_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Ajournal%26ctx_ver%253DZ39.88-2004%26url_ver%253DZ39.88-2004%26url_ctx_fmt%253Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx"><span>OpenUrl</span></a><a href="file:///lookup/external-ref?access_num=10.5194/acp-14-8309-2014&amp;link_type=DOI"><span>CrossRef</span></a></p>
+</li>
+<li class="rm-manual">
+<a href="#xref-ref-33-1">↵</a><p class="rm-manual"></p><ol class="rm-manual"><li class="rm-manual"><span>Hawaii Department of Health</span></li></ol>, Clean Air Branch, Hawaii ambient air quality data. <a href="https://health.hawaii.gov/cab/hawaii-ambient-air-quality-data/">https://health.hawaii.gov/cab/hawaii-ambient-air-quality-data/</a>. Accessed 1 June 2021.<p class="rm-manual"></p>
+</li>
+</ol>
+<p class="rm-manual"><span><a href="file:///content/118/27/e2101649118" rel="prev"> <span>Previous</span></a></span><span><a href="file:///content/118/27/e2019339118" rel="next"><span>Next</span> </a></span></p>
+<p class="rm-manual"><a href="file:///"> <span>Article Alerts</span></a></p>
+<p class="rm-manual"> User Name <span>*</span> </p>
+<p class="rm-manual"> Password <span>*</span> </p>
+<p class="rm-manual"><a href="file:///"> <span>Email Article</span></a></p>
+<p class="rm-manual">Thank you for your interest in spreading the word on PNAS.</p>
+<p class="rm-manual">NOTE: We only request your email address so that 
+the person you are recommending the page to knows that you wanted them 
+to see it, and that it is not junk mail. We do not capture any email 
+address.</p>
+<p class="rm-manual"> Your Email <span>*</span> </p>
+<p class="rm-manual"> Your Name <span>*</span> </p>
+<p class="rm-manual"> Send To <span>*</span> </p>
+<p class="rm-manual">Enter multiple addresses on separate lines or separate them with commas.</p>
+<p class="rm-manual"> You are going to email the following <a href="file:///content/118/27/e2025540118">Mapping
+ pollution exposure and chemistry during an extreme air quality event 
+(the 2018 Kīlauea eruption) using a low-cost sensor network</a> </p>
+<p class="rm-manual"> Message Subject (Your Name) has sent you a message from PNAS </p>
+<p class="rm-manual"> Message Body (Your Name) thought you would like to see the PNAS web site. </p>
+<p class="rm-manual"> Your Personal Message </p>
+<p class="rm-manual"><span>CAPTCHA</span></p>
+<p class="rm-manual">This question is for testing whether or not you are a human visitor and to prevent automated spam submissions.</p>
+<p class="rm-manual"><a href="file:///highwire/citation/989033/download"> <span>Citation Tools</span></a></p>
+<p class="rm-manual">Mapping pollution exposure and chemistry during an 
+extreme air quality event (the 2018 Kīlauea eruption) using a low-cost 
+sensor network</p>
+<p class="rm-manual"><span><span><span>Ben</span> <span>Crawford</span></span>, <span><span>David H.</span> <span>Hagan</span></span>, <span><span>Ilene</span> <span>Grossman</span></span>, <span><span>Elizabeth</span> <span>Cole</span></span>, <span><span>Lacey</span> <span>Holland</span></span>, <span><span>Colette L.</span> <span>Heald</span></span>, <span><span>Jesse H.</span> <span>Kroll</span></span></span></p>
+<p class="rm-manual"><span>Proceedings of the National Academy of Sciences </span><span>Jul 2021, </span><span>118 </span><span>(27) </span><span>e2025540118; </span><span><span>DOI:</span> 10.1073/pnas.2025540118 </span></p>
+<h2 class="rm-manual">Citation Manager Formats</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///highwire/citation/989033/bibtext">BibTeX</a></li> <li class="rm-manual"><a href="file:///highwire/citation/989033/bookends">Bookends</a></li> <li class="rm-manual"><a href="file:///highwire/citation/989033/easybib">EasyBib</a></li> <li class="rm-manual"><a href="file:///highwire/citation/989033/endnote-tagged">EndNote (tagged)</a></li> <li class="rm-manual"><a href="file:///highwire/citation/989033/endnote-8-xml">EndNote 8 (xml)</a></li> <li class="rm-manual"><a href="file:///highwire/citation/989033/medlars">Medlars</a></li> <li class="rm-manual"><a href="file:///highwire/citation/989033/mendeley">Mendeley</a></li> <li class="rm-manual"><a href="file:///highwire/citation/989033/papers">Papers</a></li> <li class="rm-manual"><a href="file:///highwire/citation/989033/refworks-tagged">RefWorks Tagged</a></li> <li class="rm-manual"><a href="file:///highwire/citation/989033/reference-manager">Ref Manager</a></li> <li class="rm-manual"><a href="file:///highwire/citation/989033/ris">RIS</a></li> <li class="rm-manual"><a href="file:///highwire/citation/989033/zotero">Zotero</a></li> </ul>
+<p class="rm-manual"> <a href="file:///page/about/rights-permissions"> <span><span>Request </span>Permissions</span> </a> </p>
+<p class="rm-manual"> <a href="file:///"> <span>Share</span></a> </p>
+<p class="rm-manual">Mapping pollution exposure and chemistry during an 
+extreme air quality event (the 2018 Kīlauea eruption) using a low-cost 
+sensor network</p>
+<p class="rm-manual"><span><span><span>Ben</span> <span>Crawford</span></span>, <span><span>David H.</span> <span>Hagan</span></span>, <span><span>Ilene</span> <span>Grossman</span></span>, <span><span>Elizabeth</span> <span>Cole</span></span>, <span><span>Lacey</span> <span>Holland</span></span>, <span><span>Colette L.</span> <span>Heald</span></span>, <span><span>Jesse H.</span> <span>Kroll</span></span></span></p>
+<p class="rm-manual"><span>Proceedings of the National Academy of Sciences </span><span>Jul 2021, </span><span>118 </span><span>(27) </span><span>e2025540118; </span><span><span>DOI:</span> 10.1073/pnas.2025540118 </span></p>
+<p class="rm-manual"> <span> Share This Article: </span> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://www.mendeley.com/import/?url=https%3A//www.pnas.org/content/118/27/e2025540118&amp;title=Mapping%20pollution%20exposure%20and%20chemistry%20during%20an%20extreme%20air%20quality%20event%20%28the%202018%20K%C4%ABlauea%20eruption%29%20using%20a%20low-cost%20sensor%20network" rel="nofollow"> Mendeley</a></li> </ul>
+<h2 class="rm-manual"><span>Article Classifications</span></h2>
+<ul class="rm-manual">
+<li class="rm-manual">Physical Sciences</li>
+<li class="rm-manual"><a href="file:///category/earth-atmospheric-and-planetary-sciences">Earth, Atmospheric, and Planetary Sciences</a></li>
+</ul>
+<p class="rm-manual"> <a href="file:///content/118/27.toc">Table of Contents</a> </p>
+<p class="rm-manual"><a href="https://www.pnascentral.org/cgi-bin/main.plex">Submit</a></p>
+<p class="rm-manual">Sign up for the PNAS Highlights newsletter to get in-depth stories of science sent to your inbox twice a month: </p>
+<h2 class="rm-manual"><span> Sign up for Article Alerts</span></h2>
+<h2 class="rm-manual"><span>Jump to section</span></h2>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="file:///content/118/27/e2025540118">Article</a><ul class="rm-manual">
+<li class="rm-manual"><a href="#abstract-2">Abstract</a></li>
+<li class="rm-manual"><a href="#sec-1">Results and Discussion</a></li>
+<li class="rm-manual"><a href="#sec-2">Materials and Methods</a></li>
+<li class="rm-manual"><a href="#sec-6">Data Availability</a></li>
+<li class="rm-manual"><a href="#sec-7">Change History</a></li>
+<li class="rm-manual"><a href="#ack-1">Acknowledgments</a></li>
+<li class="rm-manual"><a href="#fn-group-1">Footnotes</a></li>
+<li class="rm-manual"><a href="#ref-list-1">References</a></li>
+</ul>
+</li>
+<li class="rm-manual"><a href="file:///content/118/27/e2025540118/tab-figures-data">Figures &amp; SI</a></li>
+<li class="rm-manual"><a href="file:///content/118/27/e2025540118/tab-article-info">Info &amp; Metrics</a></li>
+<li class="rm-manual"><a href="file:///content/118/27/e2025540118.full.pdf"> PDF</a></li>
+</ul>
+<h2 class="rm-manual"><span>You May Also be Interested in</span></h2>
+<p class="rm-manual"><a href="https://www.pnas.org/content/118/15/e2015094118">Global warming and marine biodiversity </a></p>
+<p class="rm-manual">A study reports a dip in marine biodiversity at the
+ equator and suggests ocean warming has created conditions inhospitable 
+for some species.</p>
+<p class="rm-manual">Image credit: Mark J. Costello.</p>
+<p class="rm-manual"><a href="https://www.pnas.org/content/118/15/e2021077118">Human hands as infrared emitters</a></p>
+<p class="rm-manual">The human hand can act as a powerless infrared radiation source in encryption, decryption, and signal generation. </p>
+<p class="rm-manual">Image credit: Shun An.</p>
+<p class="rm-manual"><a href="https://www.pnas.org/content/118/16/e2013833118">Higher-education diversity rationales</a></p>
+<p class="rm-manual">A prevailing rationale for diversity in higher 
+education is associated with better educational outcomes for White than 
+Black students.</p>
+<p class="rm-manual">Image credit: Pixabay/naassomz1.</p>
+<p class="rm-manual"><a href="https://www.pnas.org/content/118/27/e2110558118">Inner Workings: Big wildfires mobilize mercury. What are the risks?</a></p>
+<p class="rm-manual">Researchers are far from understanding all the downstream effects on surface water, not to mention human and ecological health.</p>
+<p class="rm-manual">Image credit: US Geological Survey/Jonathan Stock.</p>
+<p class="rm-manual"><a href="http://blog.pnas.org/2021/07/emotional-associations-more-than-knowledge-determine-how-much-people-care-about-the-deep-sea/">Journal Club: Emotional reactions dictate how much people care about the deep sea</a></p>
+<p class="rm-manual">Widespread deep sea mining may be on the horizon. 
+Researchers are starting to understand how and why people care about 
+protecting this unusual ecosystem.</p>
+<p class="rm-manual">Image credit: Dante Fenolio/ScienceSource.</p>
+<h3 class="rm-manual"> Similar Articles</h3>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.pnascentral.org/cgi-bin/main.plex"> <span>Submit Manuscript</span></a></li> <li class="rm-manual"><a href="https://twitter.com/PNASNews"> <span>Twitter</span></a></li> <li class="rm-manual"><a href="https://www.youtube.com/channel/UCYjvFEQMgH6ou8fSYfiOKCw"> <span>Youtube</span></a></li> <li class="rm-manual"><a href="https://www.facebook.com/pages/PNAS/18262365099"> <span>Facebook</span></a></li> <li class="rm-manual"><a href="file:///page/about/rss"> <span>RSS Feeds</span></a></li> <li class="rm-manual"><a href="file:///alerts"> <span>Email Alerts</span></a></li> </ul>
+<h2 class="rm-manual"><span>Articles</span></h2>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///content/current">Current Issue</a></li> <li class="rm-manual"><a href="file:///content/early/recent">Special Feature Articles – Most Recent</a></li> <li class="rm-manual"><a href="file:///content/by/year">List of Issues</a></li> </ul>
+<h2 class="rm-manual"><span>PNAS Portals</span></h2>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.pnas.org/portal/anthropology">Anthropology</a></li> <li class="rm-manual"><a href="https://www.pnas.org/portal/chemistry">Chemistry</a></li> <li class="rm-manual"><a href="https://www.pnas.org/page/about/classics">Classics</a></li> <li class="rm-manual"><a href="https://www.pnas.org/portal/front-matter">Front Matter</a></li> <li class="rm-manual"><a href="https://www.pnas.org/portal/physics">Physics</a></li> <li class="rm-manual"><a href="https://www.pnas.org/portal/sustainability">Sustainability Science</a></li> <li class="rm-manual"><a href="https://www.pnas.org/portal/teaching-resources">Teaching Resources</a></li> </ul>
+<h2 class="rm-manual"><span>Information </span></h2>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///page/authors/authors">Authors</a></li> <li class="rm-manual"><a href="file:///page/about/editorial-board">Editorial Board</a></li> <li class="rm-manual"><a href="https://www.pnas.org/page/reviewers">Reviewers</a></li> <li class="rm-manual"><a href="https://www.pnas.org/page/subscriptions/subscribers">Subscribers</a></li> <li class="rm-manual"><a href="https://www.pnas.org/librarians">Librarians</a></li> <li class="rm-manual"><a href="file:///page/about/press">Press</a></li> <li class="rm-manual"><a href="https://www.pnas.org/page/about/cozzarelli-prize">Cozzarelli Prize</a></li> <li class="rm-manual"><a href="file:///content/site-map">Site Map</a></li> <li class="rm-manual"><a href="file:///page/updates">PNAS Updates</a></li> <li class="rm-manual"><a href="https://www.pnas.org/page/about/faq">FAQs</a></li> <li class="rm-manual"><a href="https://www.pnas.org/page/about/accessibility">Accessibility Statement</a></li> <li class="rm-manual"><a href="https://www.pnas.org/page/about/rights-permissions">Rights &amp; Permissions</a></li> <li class="rm-manual"><a href="https://www.pnas.org/page/about">About</a></li> <li class="rm-manual"><a href="https://www.pnas.org/page/about/staff-directory">Contact</a></li> </ul>
+<p class="rm-manual"><a href="file:///feedback">Feedback</a> <a href="file:///page/authors/terms">Privacy/Legal</a></p>
+<p class="rm-manual">Copyright © 2021 National Academy of Sciences. 
+Online ISSN 1091-6490. PNAS is a partner of CHORUS, COPE, CrossRef, 
+ORCID, and Research4Life.</p></article>
+</body></html>

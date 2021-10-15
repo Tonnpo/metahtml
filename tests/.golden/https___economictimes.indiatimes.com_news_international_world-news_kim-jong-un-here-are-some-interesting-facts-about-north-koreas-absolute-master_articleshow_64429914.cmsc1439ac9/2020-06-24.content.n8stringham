@@ -1,0 +1,462 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">Kim Jong Un: Kim Jong Un: Here are some interesting facts about North Korea's absolute master - The Economic Times </p>
+<p class="rm-manual"><span>SECTIONS</span></p>
+<p class="rm-manual">ENGLISH</p>
+<p class="rm-manual"><a href="https://economictimes.indiatimes.com/hindi">हिन्दी</a><a href="http://gujarati.economictimes.indiatimes.com/" rel="nofollow">ગુજરાતી</a></p>
+<p class="rm-manual">ET APPS</p>
+<p class="rm-manual"><a href="https://market.android.com/details?id=com.et.reader.activities" rel="nofollow">ET Android App</a><a href="http://itunes.apple.com/us/app/the-economic-times/id474766725?ls=1&amp;mt=8" rel="nofollow">ET iPhone App</a><a href="http://itunes.apple.com/us/app/the-economic-times-for-ipad/id479227473?ls=1&amp;mt=8" rel="nofollow">ET iPad App</a><a href="https://play.google.com/store/apps/details?id=com.et.wealth&amp;hl=en" rel="nofollow">ET Wealth Android App</a><a href="http://appworld.blackberry.com/webstore/content/54009?lang=en" rel="nofollow">ET Blackberry App</a><a href="https://play.google.com/store/apps/details?id=com.et.market&amp;hl=en" rel="nofollow">ET Markets Android App</a><a href="https://itunes.apple.com/in/app/et-markets/id895812527?mt=8" rel="nofollow">ET Markets iPhone App</a><a href="http://ad.apsalar.com/api/v1/ad?re=0&amp;st=876405430363&amp;h=b25110aca06ccea4b2efc9218dfb2a6a1bb46c89" rel="nofollow">ET Money Android App</a></p>
+<p class="rm-manual"><a href="https://prime.economictimes.indiatimes.com/?utm_source=economictimes.indiatimes.com&amp;utm_medium=Homepage_Header1&amp;utm_campaign=ETPrimedistribution">ET PRIME</a></p>
+<p class="rm-manual"><a href="https://epaper.timesgroup.com/">E-PAPER</a></p>
+<p class="rm-manual"><a href="">SIGN-IN</a></p>
+<h2 class="rm-manual">World News</h2>
+<p class="rm-manual"><span><a href="file:///news/latest-news">LATEST NEWS</a></span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///news/international/business/johnson-johnson-told-to-pay-2-1-billion-over-cancer-causing-talc-powder/articleshow/76552155.cms">Johnson &amp; Johnson told to pay $2.1 billion over cancer-causing talc powder</a></li>
+<li class="rm-manual"><a href="file:///news/politics-and-nation/modi-govt-has-unlocked-corona-pandemic-petrol-diesel-prices-rahul-gandhi/articleshow/76551818.cms">Modi govt has unlocked corona pandemic, petrol-diesel prices: Rahul Gandhi</a></li>
+<li class="rm-manual"><a href="file:///news/international/world-news/human-error-caused-pakistan-plane-crash-that-killed-97-initial-report/articleshow/76551539.cms">Human error caused Pakistan plane crash that killed 97: Initial report</a></li>
+<li class="rm-manual"><a href="file:///news/politics-and-nation/low-intensity-quake-hits-rohtak-8th-since-april-12/articleshow/76551268.cms">Low intensity quake hits Rohtak; 8th since April 12</a></li>
+<li class="rm-manual"><a href="file:///news/economy/indicators/india-ratings-sees-a-historic-slump-in-growth-due-to-coronavirus/articleshow/76550614.cms">India Ratings sees a historic slump in growth due to coronavirus</a></li>
+<li class="rm-manual"><a href="file:///news/politics-and-nation/manish-sisodia-asks-amit-shah-to-scrap-rule-requiring-covid-19-patient-to-visit-govt-facility-for-assessment/articleshow/76546533.cms">Manish Sisodia asks Amit Shah to scrap rule requiring Covid-19 patient to visit govt facility for assessment</a></li>
+<li class="rm-manual"><a href="file:///news/international/business/google-to-invest-up-to-2-bn-in-polish-data-centre-paper-says/articleshow/76545688.cms">Google to invest up to $2 bn in Polish data centre, paper says</a></li>
+<li class="rm-manual"><a href="file:///news/international/world-news/beware-the-second-coronavirus-wave-british-medics-warn-politicians/articleshow/76545410.cms">Beware the second coronavirus wave, British medics warn politicians</a></li>
+<li class="rm-manual"><a href="file:///news/international/world-news/brazil-tests-covid-19-shot-without-deal-to-use-it-if-it-works/articleshow/76545080.cms">Brazil tests covid-19 shot, without deal to use it if it works</a></li>
+</ul>
+<p class="rm-manual"><a href="file:///"> Home</a></p>
+<p class="rm-manual"><a href="file:///markets">Markets</a><a href="file:///news">News</a><a href="file:///industry">Industry</a><a href="file:///small-biz">RISE</a><a href="file:///news/politics-nation">Politics</a><a href="file:///personal-finance">Wealth</a><a href="file:///mutual-funds">MF</a></p>
+<p class="rm-manual"><a href="file:///tech">Tech</a><a href="file:///jobs">Jobs</a><a href="file:///opinion">Opinion</a><a href="https://blogs.economictimes.indiatimes.com/">Blogs</a><a href="file:///nri">NRI</a><a href="file:///panache">Panache</a><a href="file:///multimedia">Multimedia</a><a href="file:///et-now">ET NOW</a></p>
+<p class="rm-manual"><a href="file:///news">News</a></p>
+<p class="rm-manual"><a href="file:///news/podcasts/podcastlist/66647137.cms">Podcast</a></p>
+<p class="rm-manual"><a href="file:///news/economy">Economy</a></p>
+<p class="rm-manual"><a href="file:///news/economy/agriculture">Agriculture</a><a href="file:///news/economy/finance">Finance</a><a href="file:///news/economy/foreign-trade">Foreign Trade</a><a href="file:///news/economy/indicators">Indicators</a><a href="file:///news/economy/infrastructure">Infrastructure</a><a href="file:///news/economy/policy">Policy</a></p>
+<p class="rm-manual"><a href="file:///industry">Industry</a></p>
+<p class="rm-manual"><a href="file:///news/politics-nation">Politics and Nation</a></p>
+<p class="rm-manual"><a href="file:///news/defence">Defence</a></p>
+<p class="rm-manual"><a href="https://economictimes.indiatimes.com/news/defence/national">Defence National</a><a href="https://economictimes.indiatimes.com/news/defence/international">International</a><a href="https://economictimes.indiatimes.com/news/defence/industry">Industry</a></p>
+<p class="rm-manual"><a href="file:///news/company">Company</a></p>
+<p class="rm-manual"><a href="file:///news/company/corporate-trends">Corporate Trends</a><a href="file:///news/company/deals/articlelist/46199813.cms">Deals</a></p>
+<p class="rm-manual"><a href="file:///news/international">International</a></p>
+<p class="rm-manual"><a href="">More</a></p>
+<p class="rm-manual"><a href="file:///news/elections">Elections</a><a href="file:///news/elections/lok-sabha">Lok Sabha</a><a href="file:///news/elections/lok-sabha/uttar-pradesh">Uttar Pradesh</a><a href="file:///news/elections/lok-sabha/maharashtra">Maharashtra</a><a href="file:///news/elections/lok-sabha/west-bengal">West Bengal</a><a href="file:///news/elections/lok-sabha/bihar">Bihar</a><a href="file:///news/elections/lok-sabha/tamil-nadu">Tamil Nadu</a><a href="file:///news/elections/lok-sabha/india">India</a><a href="file:///news/elections/assembly">Assembly Elections</a><a href="file:///news/elections/assembly-elections/delhi">Delhi</a><a href="file:///news/elections/assembly-elections/jharkhand">Jharkhand</a><a href="file:///news/elections/assembly/maharashtra">Maharashtra</a><a href="file:///news/elections/assembly/haryana">Haryana</a><a href="file:///news/elections/mizoram-assembly-elections-news-updates">Mizoram</a><a href="file:///news/telangana-assembly-elections-news-updates">Telangana</a><a href="file:///news/chhattisgarh-assembly-elections-news-updates">Chhattisgarh</a><a href="file:///news/madhya-pradesh-assembly-elections-news-updates">Madhya Pradesh</a><a href="file:///news/rajasthan-assembly-elections-news-updates">Rajasthan</a><a href="file:///news/et-explains">ET Explains</a><a href="file:///news/sports">Sports</a><a href="file:///news/science">Science</a><a href="file:///news/india-unlimited">India Unlimited</a><a href="file:///news/india-unlimited/swachh-bharat">Swachh Bharat</a><a href="file:///news/india-unlimited/make-in-india">Make in India</a><a href="file:///news/india-unlimited/smart-cities">Smart Cities</a><a href="file:///news/india-unlimited/24x7-power">24X7 Power</a><a href="file:///news/india-unlimited/model-villages">Model Villages</a><a href="file:///news/india-unlimited/financial-inclusion">Financial Inclusion</a><a href="file:///news/india-unlimited/tax-reforms">Tax Reforms</a><a href="file:///news/india-unlimited/digital-governance">Digital Governance</a><a href="file:///news/india-unlimited/visit-india">Visit India</a><a href="file:///news/india-unlimited/csr">CSR</a><a href="file:///et2good4good">ET 2Good 4Good</a><a href="file:///csrcompendium2017">CSR Compendium</a><a href="file:///csr_practitionerseries.cms">CSR Practitioner Series</a><a href="file:///news/india-unlimited/csr/news/articlelist/47068904.cms">News</a><a href="file:///news/india-unlimited/csr/policy/articlelist/47068917.cms">Policy</a><a href="file:///news/india-unlimited/csr/analysis-trends/articlelist/47068925.cms">Analysis &amp; Trends</a><a href="file:///news/india-unlimited/csr/initiatives/articlelist/47068922.cms">Initiatives</a><a href="file:///home/environment/articlelist/2647163.cms">Environment</a><a href="file:///cleanairinitiative.cms">Clean Air Initiative</a><a href="file:///news/environment/global-warming">Global Warming</a><a href="file:///news/environment/the-good-earth">The Good Earth</a><a href="file:///news/environment/developmental-issues">Developmental Issues</a><a href="file:///news/environment/flora-fauna">Flora &amp; Fauna</a><a href="file:///news/environment/pollution">Pollution</a><a href="file:///news/environment/wild-wacky">Wild &amp; Wacky</a><a href="file:///environment/earth-summit">Earth Summit</a><a href="file:///tv">ET TV</a><a href="file:///news/latest-news">Latest News</a><a href="file:///news/latest-news/most-read">Most Read</a><a href="file:///news/latest-news/most-shared">Most Shared</a><a href="file:///news/latest-news/most-commented">Most Commented</a></p>
+<p class="rm-manual"><a href="file:///news/international/business">Business</a><a href="file:///news/international/world-news">World News</a></p>
+<p class="rm-manual"><span><a href="file:///">Business News</a></span>›<span><a href="file:///news">News</a></span>›<span><a href="file:///news/international">International</a></span>›<span><a href="file:///news/international/world-news">World News</a></span>›<span>Kim Jong Un: Here are some interesting facts about North Korea's absolute master</span> </p>
+<p class="rm-manual"><a href="https://economictimes.indiatimes.com/marketstats/pid-40,exchange-nse,sortby-value,sortorder-desc.cms">Benchmarks </a></p>
+<p class="rm-manual"><a href="https://economictimes.indiatimes.com/marketstats/pid-40,exchange-nse,sortby-value,sortorder-desc.cms">Nifty</a></p>
+<p class="rm-manual"><span>10,305.30</span><span>-165.7</span></p>
+<p class="rm-manual"><a href="file:///markets/stocks/stock-screener">Stock Screener</a><span>Search, Select &amp; Invest in Top Stocks</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///markets/stocks/stock-screener/DII_BUYING"><span>Stocks with DII Buying</span></a></li>
+<li class="rm-manual"><a href="file:///markets/stocks/stock-screener/FII_BUYING"><span>Stocks with FII Buying</span></a></li>
+<li class="rm-manual"><a href="file:///markets/stocks/stock-screener/FII_SELLING"><span>Stocks with FII Selling</span></a></li>
+</ul>
+<p class="rm-manual"><a rel="nofollow" href="https://www.etmoney.com/mutual-funds/axis-long-term-equity-direct-plan-growth/15255?utm_source=economic-times&amp;utm_medium=web&amp;utm_campaign=market-band"></a></p><p class="rm-manual"><a rel="nofollow" href="https://www.etmoney.com/mutual-funds/axis-long-term-equity-direct-plan-growth/15255?utm_source=economic-times&amp;utm_medium=web&amp;utm_campaign=market-band">FEATURED FUNDS</a></p><a rel="nofollow" href="https://www.etmoney.com/mutual-funds/axis-long-term-equity-direct-plan-growth/15255?utm_source=economic-times&amp;utm_medium=web&amp;utm_campaign=market-band">
+<p class="rm-manual">Axis Long Term Equity Direct Plan-Growth</p>
+<p class="rm-manual"><span>★★★★★</span></p>
+<p class="rm-manual">5Y Return</p>
+<p class="rm-manual"><span>8.53 % </span></p>
+<p class="rm-manual">Invest Now</p></a><a rel="nofollow" href="https://www.etmoney.com/mutual-funds/kotak-standard-multicap-fund-direct-growth/16699?utm_source=economic-times&amp;utm_medium=web&amp;utm_campaign=market-band"><p class="rm-manual">FEATURED FUNDS</p>
+<p class="rm-manual">Kotak Standard Multicap Fund Regular-Growth</p>
+<p class="rm-manual"><span>★★★★</span><span>★</span></p>
+<p class="rm-manual">5Y Return</p>
+<p class="rm-manual"><span>7.36 % </span></p>
+<p class="rm-manual">Invest Now</p></a><a rel="nofollow" href="https://www.etmoney.com/mutual-funds/icici-prudential-bluechip-fund-direct-growth/15408?utm_source=economic-times&amp;utm_medium=web&amp;utm_campaign=market-band"><p class="rm-manual">FEATURED FUNDS</p>
+<p class="rm-manual">ICICI Prudential Bluechip Fund Direct-Growth</p>
+<p class="rm-manual"><span>★★★★</span><span>★</span></p>
+<p class="rm-manual">5Y Return</p>
+<p class="rm-manual"><span>6.76 % </span></p>
+<p class="rm-manual">Invest Now</p></a><a rel="nofollow" href="https://www.miraeassetmf.co.in/funds/mirae-asset-tax-saver-fund?utm_source=ET&amp;utm_medium=cpc&amp;utm_campaign=tax&amp;utm_term=buy%20now"><p class="rm-manual">FEATURED FUNDS</p>
+<p class="rm-manual">Mirae Asset Tax Saver Fund Direct-Growth</p>
+<p class="rm-manual"><span>★★★★★</span></p>
+<p class="rm-manual">3Y Return</p>
+<p class="rm-manual"><span>6.71 % </span></p>
+<p class="rm-manual">Invest Now</p></a><a rel="nofollow" href="https://www.etmoney.com/mutual-funds/mirae-asset-large-cap-fund-direct-growth/16138?utm_source=economic-times&amp;utm_medium=web&amp;utm_campaign=scheme-pages"><p class="rm-manual">FEATURED FUNDS</p>
+<p class="rm-manual">Mirae Asset Large Cap Fund Regular- Growth</p>
+<p class="rm-manual"><span>★★★★★</span></p>
+<p class="rm-manual">5Y Return</p>
+<p class="rm-manual"><span>7.65 % </span></p>
+<p class="rm-manual">Invest Now</p></a><p class="rm-manual"></p>
+<p class="rm-manual">Stock Analysis, IPO, Mutual Funds, Bonds &amp; More</p>
+<p class="rm-manual"><a href="file:///marketstats/pid-0,pageno-1,sortby-percentchange,sortorder-desc,sort-intraday.cms?marketcap=largecap%252Cmidcap"><span>Market Watch</span></a></p>
+<h1 class="rm-manual">Kim Jong Un: Here are some interesting facts about North Korea's absolute master</h1>
+<h2 class="rm-manual">From allegedly obliterating family members to 
+executing an ex-girlfriend to killing a deputy with mortars, Kim makes 
+sure he continues to North Korea's absolute master.</h2>
+<p class="rm-manual">By </p>
+<p class="rm-manual"><span><a rel="author" href="file:///etreporter/author-Joyshree%20Baruah-479242254.cms">Joyshree Baruah</a></span></p>
+<p class="rm-manual">, ET Bureau</p>
+<p class="rm-manual"><span>|</span></p>
+<p class="rm-manual">Last Updated: Jun 02, 2018, 11.12 PM IST</p>
+<p>Call him the Young Master, Marshal, Brilliant Comrade or Yongmyong-Han Tongji, North Korean leader <a href="file:///topic/Kim-Jong-Un">Kim Jong Un</a>
+ is one of a kind. From allegedly obliterating family members to 
+executing an ex-girlfriend to killing a deputy with mortars — not to 
+mention nuclear proliferation — Kim makes sure he continues to <a href="file:///topic/North-Korea">North Korea</a>'s absolute master. As he meets US President <a href="file:///topic/Donald-Trump">Donald Trump</a> on June 12, ET Magazine checks out Kim's reign as a leader. </p>
+<p>* Kim is the first North Korean leader to be born after the country's founding in 1948. </p>
+<p> * He may be the youngest world leader, but no one is sure of his actual age. Some say he was born in either 1982, 1983 or 1984 </p>
+<p>* At 27, he underwent plastic surgery to allegedly resemble his grandfather Kim Il Sung </p>
+<p>* At 29, the Onion announced him as the “Sexiest Man Alive” for the year 2012. </p>
+<p>* Onion is a satirical news source, so we can figure </p>
+<p> * When his father passed away, he made sure his death was grieved 
+wholeheartedly by North Koreans. Those who didn’t go to the mourning 
+events were reportedly being sentenced to labour camps for six months. </p>
+<p> * At the demise of his grandfather Kim Il Sung, his father Kim Jong Il made sure that the country grieved massively </p>
+<p>* Members of the Moranbong Band, were specially hand-picked by the 
+Kim to form North Korea's first-ever all-female band. The quintet made 
+their debut in 2012 </p>
+<p>* The Interview, a 2014 American action-comedy film stars Seth Rogen 
+and James Franco as journalists who set up an interview with Kim Jong 
+Un, and are recruited by the CIA to assassinate him </p>
+<p>* The North Korean government threatened action against the US if 
+Columbia Pictures released the film. Columbia delayed the release and 
+re-edited the film to make it more acceptable to North Korea. </p>
+<p>* In November, the computer systems of parent company <a href="file:///topic/Sony">Sony</a>
+ Pictures Entertainment were hacked by the "Guardians of Peace", a group
+ the FBI claims has ties to North Korea. The group also threatened 
+terrorist attacks against cinemas that showed the film. Major cinema 
+chains opted not to release the film, leading Sony to release it for 
+online rental </p>
+<p>* His haircut is very popular in the country and even has a name — 
+Ambitious. Male university students were asked to copy his haircut. 
+Apparently, North Koreans must abide by one of 28 approved haircuts — 
+unmarried women must have short hair, young men’s hair should be less 
+than 2 inches, older men can go as long as 2¾ inches </p>
+<p> From strange fibs to outrageous lies, here are some of the craziest claims by the North Korean dictator: </p>
+<p> Wonder Drug </p>
+<p>North Korea has created a wonder drug which not only cures AIDS, but 
+also eradicates Ebola and cancer. Known as Kumdang 2, the scientists 
+refused to share the drug’s details </p>
+<p> Unicorns </p>
+<p>In 2012, researchers claimed to have discovered a real-life unicorn 
+lair, just a short distance away from a sacred temple in Pyongyang </p>
+<p> Child Prodigy? </p>
+<p>In 2015, according to a new curriculum Kim reportedly could drive by 
+the time he was three, was winning yachting races at nine, and was also 
+an expert artist and musical composer at a young age </p>
+<p> Here is a brief timeline of Kim Jong Un's life April 2009: Appointed to North Korea's National Defense Commission </p>
+<p> September 2010: Promoted to four-star general and named 
+vice-chairman of the Central Military Commission as well as to the 
+Central Committee of the Workers' Party of Korea </p>
+<p> December 2011: After the death of his father Kim Jong Il, Kim assumes command of the North Korean army </p>
+<p> July 2012: Kim is given the title marshal of the army </p>
+<p> March 2014: Kim is unanimously elected as Deputy to the Supreme People's Assembly (SPA) of the DPRK, with 100% turnout </p>
+<p> December 2015: Kim claims North Korea has added the hydrogen bomb to its nuclear arsenal </p>
+<p> July 2016: The Obama administration imposes sanctions on Kim and 10 
+other regime officials for their alleged complicity in human rights 
+abuses against the North Korean people. The move marks the first time 
+Washington has sanctioned Kim personally </p>
+<p> September 2016: South Korea's Defense Minister announces that South 
+Korea has elite troops on standby ready to assassinate Kim Jong Un if 
+the country feels threatened by North Korean nuclear weapons </p>
+<p> January 2017: Kim claims North Korea is almost ready to begin testing intercontinental ballistic missiles </p>
+<p> February 2017: Kim's half-brother, Kim Jong Nam, dies after being 
+poisoned at Malaysia's Kuala Lumpur International Airport. South Korea's
+ intelligence agency later says that Kim ordered his death </p>
+<p class="rm-manual">Agencies</p>
+<p> September 2017: Trump threatens to "totally destroy" North Korea if 
+the US is forced to defend itself or an ally. Kim makes a rare 
+statement, saying Trump will "pay dearly" and "I will surely and 
+definitely tame the mentally deranged US dotard with fire" </p>
+<p> February 2018: Extends a formal invitation to South Korean President
+ Moon Jae-in to travel to North Korea. Kim Yo Jong, Kim Jong Un's 
+younger sister, presents the invite at Seoul's presidential palace, 
+marking the first time that a member of the North's ruling dynasty has 
+visited since the Korean War, which ended in an armistice in 1953 </p>
+<p> March 2018: The White House announces that Trump has agreed to meet 
+Kim. The talks would be the first between a sitting US president and a 
+North Korean leader </p>
+<p> March 2018: Kim makes a surprise trip to Beijing and meets with 
+President Xi Jinping. The trip is Kim's first abroad since he took the 
+reins after his father, Kim Jong Il, died in late 2011 </p>
+<p class="rm-manual">Agencies</p>
+<p> April 2018: During a day-long summit, Kim and Moon Jae-in pledge to 
+formally end the Korean War, 65 years after hostilities ceased </p>
+<p class="rm-manual">Agencies</p>
+<p class="rm-manual"> (Source: edition.cnn.com, therichest.cim, media reports) </p>
+<p class="rm-manual">Read more on</p>
+<p class="rm-manual"><a href="file:///topic/Kim-Jong-Un">Kim Jong Un</a></p>
+<p class="rm-manual"><a href="file:///topic/sony">sony</a></p>
+<p class="rm-manual"><a href="file:///topic/North-Korea">North Korea</a></p>
+<p class="rm-manual"><a href="file:///topic/Sunday-ET">Sunday ET</a></p>
+<p class="rm-manual"><a href="file:///topic/Donald-Trump">Donald Trump</a></p>
+<p class="rm-manual"><a href="file:///topic/north-korea-us">north korea us</a></p>
+<p class="rm-manual"><a href="file:///topic/North-Korea-nuclear-missile">North Korea nuclear missile</a></p>
+<p class="rm-manual">(Catch all the <a href="file:///news">Business News</a>, <a href="file:///breakingnewslist.cms">Breaking News</a> Events and <a href="file:///news/latest-news">Latest News</a> Updates on <a href="file:///">The Economic Times</a>.)</p>
+<h3 class="rm-manual">Also Read </h3>
+<p class="rm-manual"><a href="file:///news/international/world-news/donald-trump-says-glad-kim-jong-un-is-back-and-well/articleshow/75513577.cms">Donald Trump says 'glad' Kim Jong Un 'is back, and well'</a></p>
+<p class="rm-manual"><a href="file:///news/international/world-news/n-koreas-kim-jong-un-appears-in-public-amid-health-rumours/articleshow/75500131.cms">N Korea's Kim Jong Un appears in public amid health rumours</a></p>
+<p class="rm-manual"><a href="file:///news/international/world-news/kim-jong-un-mystery-grows-with-reports-of-trains-medical-teams/articleshow/75396124.cms">Kim Jong Un mystery grows with reports of trains, medical teams</a></p>
+<p class="rm-manual"><a href="file:///magazines/panache/when-kim-jong-uns-influential-aunt-turned-to-dr-d-for-advice/articleshow/74168309.cms">When Kim Jong-Un's influential aunt turned to Dr D for advice</a></p>
+<p class="rm-manual"><a href="file:///news/international/world-news/have-a-very-good-idea-about-status-of-kim-jong-un-trump/articleshow/75420357.cms">Have a very good idea about status of Kim Jong Un: Trump</a></p>
+<p class="rm-manual"><a href="file:///news/international/world-news/heir-unapparent-if-north-korea-faces-succession-who-might-replace-kim/articleshow/75390136.cms">Heir unapparent: If North Korea faces succession, who might replace Kim Jong Un?</a></p>
+<p class="rm-manual">Comments</p>
+<p class="rm-manual">Add Your Comments</p>
+<p class="rm-manual">Commenting feature is disabled in your country/region.</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="#">Related</a></li>
+<li class="rm-manual"><a href="#">Most Read</a></li>
+<li class="rm-manual"><a href="#">Most Shared</a></li>
+</ul>
+<ul class="rm-manual"><li class="rm-manual"><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///news/international/world-news/donald-trump-says-glad-kim-jong-un-is-back-and-well/articleshow/75513577.cms">Donald Trump says 'glad' Kim Jong Un 'is back, and well'</a></li>
+<li class="rm-manual"><a href="file:///news/international/world-news/n-koreas-kim-jong-un-appears-in-public-amid-health-rumours/articleshow/75500131.cms">N Korea's Kim Jong Un appears in public amid health rumours</a></li>
+<li class="rm-manual"><a href="file:///news/international/world-news/kim-jong-un-mystery-grows-with-reports-of-trains-medical-teams/articleshow/75396124.cms">Kim Jong Un mystery grows with reports of trains, medical teams</a></li>
+<li class="rm-manual"><a href="file:///magazines/panache/when-kim-jong-uns-influential-aunt-turned-to-dr-d-for-advice/articleshow/74168309.cms">When Kim Jong-Un's influential aunt turned to Dr D for advice</a></li>
+<li class="rm-manual"><a href="file:///news/international/world-news/have-a-very-good-idea-about-status-of-kim-jong-un-trump/articleshow/75420357.cms">Have a very good idea about status of Kim Jong Un: Trump</a></li>
+<li class="rm-manual"><a href="file:///news/international/world-news/heir-unapparent-if-north-korea-faces-succession-who-might-replace-kim/articleshow/75390136.cms">Heir unapparent: If North Korea faces succession, who might replace Kim Jong Un?</a></li>
+</ul></li></ul>
+<h3 class="rm-manual">Top Trending News</h3>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///news/defence/rajnath-singh-to-not-meet-chinese-counterpart-in-moscow/liveblog/76541456.cms">India China LIVE news</a></li>
+<li class="rm-manual"><a href="file:///hindi/markets/commodities/news/gold-rate-today-24-june-2020/articleshow/76543538.cms">सोने का भाव आज</a></li>
+<li class="rm-manual"><a href="file:///news/narendra-modi">Narendra Modi</a></li>
+<li class="rm-manual"><a href="file:///news/pm-modi-speech-highlights">PM Modi Speech Highlights</a></li>
+<li class="rm-manual"><a href="file:///news/coronavirus-in-kerala">Coronavirus in Kerala</a></li>
+<li class="rm-manual"><a href="file:///news/economy">Economy News</a></li>
+<li class="rm-manual"><a href="file:///news/defence">Defence News</a></li>
+<li class="rm-manual"><a href="file:///morning-brief">Morning News</a></li>
+<li class="rm-manual"><a href="file:///breakingnewslist.cms">Breaking News</a></li>
+<li class="rm-manual"><a href="file:///news/chennai-news">Chennai News</a></li>
+<li class="rm-manual"><a href="file:///news/delhi-news">Delhi News</a></li>
+<li class="rm-manual"><a href="file:///news/mumbai-news">Mumbai News</a></li>
+<li class="rm-manual"><a href="file:///news/bangalore-news">Bangalore News</a></li>
+<li class="rm-manual"><a href="file:///news/kolkata-news">Kolkata News</a></li>
+<li class="rm-manual"><a href="file:///news/latest-news">Latest News</a></li>
+<li class="rm-manual"><a href="file:///headlines.cms">News Headlines</a></li>
+</ul>
+<h2 class="rm-manual">Browse Companies</h2>
+<p class="rm-manual"><a href="file:///currentquote.cms?ticker=a">A</a></p>
+<p class="rm-manual"><a href="file:///currentquote.cms?ticker=b">B</a></p>
+<p class="rm-manual"><a href="file:///currentquote.cms?ticker=c">C</a></p>
+<p class="rm-manual"><a href="file:///currentquote.cms?ticker=d">D</a></p>
+<p class="rm-manual"><a href="file:///currentquote.cms?ticker=e">E</a></p>
+<p class="rm-manual"><a href="file:///currentquote.cms?ticker=f">F</a></p>
+<p class="rm-manual"><a href="file:///currentquote.cms?ticker=g">G</a></p>
+<p class="rm-manual"><a href="file:///currentquote.cms?ticker=h">H</a></p>
+<p class="rm-manual"><a href="file:///currentquote.cms?ticker=i">I</a></p>
+<p class="rm-manual"><a href="file:///currentquote.cms?ticker=j">J</a></p>
+<p class="rm-manual"><a href="file:///currentquote.cms?ticker=k">K</a></p>
+<p class="rm-manual"><a href="file:///currentquote.cms?ticker=l">L</a></p>
+<p class="rm-manual"><a href="file:///currentquote.cms?ticker=m">M</a></p>
+<p class="rm-manual"><a href="file:///currentquote.cms?ticker=n">N</a></p>
+<p class="rm-manual"><a href="file:///currentquote.cms?ticker=o">O</a></p>
+<p class="rm-manual"><a href="file:///currentquote.cms?ticker=p">P</a></p>
+<p class="rm-manual"><a href="file:///currentquote.cms?ticker=q">Q</a></p>
+<p class="rm-manual"><a href="file:///currentquote.cms?ticker=r">R</a></p>
+<p class="rm-manual"><a href="file:///currentquote.cms?ticker=s">S</a></p>
+<p class="rm-manual"><a href="file:///currentquote.cms?ticker=t">T</a></p>
+<p class="rm-manual"><a href="file:///currentquote.cms?ticker=u">U</a></p>
+<p class="rm-manual"><a href="file:///currentquote.cms?ticker=v">V</a></p>
+<p class="rm-manual"><a href="file:///currentquote.cms?ticker=w">W</a></p>
+<p class="rm-manual"><a href="file:///currentquote.cms?ticker=x">X</a></p>
+<p class="rm-manual"><a href="file:///currentquote.cms?ticker=y">Y</a></p>
+<p class="rm-manual"><a href="file:///currentquote.cms?ticker=z">Z</a></p>
+<p class="rm-manual"><span>|</span></p>
+<p class="rm-manual"><a href="file:///currentquote.cms?ticker=1">1</a></p>
+<p class="rm-manual"><a href="file:///currentquote.cms?ticker=2">2</a></p>
+<p class="rm-manual"><a href="file:///currentquote.cms?ticker=3">3</a></p>
+<p class="rm-manual"><a href="file:///currentquote.cms?ticker=4">4</a></p>
+<p class="rm-manual"><a href="file:///currentquote.cms?ticker=5">5</a></p>
+<p class="rm-manual"><a href="file:///currentquote.cms?ticker=6">6</a></p>
+<p class="rm-manual"><a href="file:///currentquote.cms?ticker=7">7</a></p>
+<p class="rm-manual"><a href="file:///currentquote.cms?ticker=8">8</a></p>
+<p class="rm-manual"><a href="file:///currentquote.cms?ticker=9">9</a></p>
+<p class="rm-manual">Trending Now</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///news/international">World News</a></li>
+<li class="rm-manual"><a href="file:///news/narendra-modi">Narendra Modi</a></li>
+<li class="rm-manual"><a href="file:///news/gdp-growth">GDP Growth</a></li>
+<li class="rm-manual"><a href="file:///news/politics-nation">Politics News</a></li>
+<li class="rm-manual"><a href="file:///news/nita-ambani">Nita Ambani</a></li>
+<li class="rm-manual"><a href="file:///news/anil-ambani">Anil Ambani</a></li>
+<li class="rm-manual"><a href="file:///news/nirmala-sitharaman">Nirmala Sitharaman</a></li>
+<li class="rm-manual"><a href="file:///news/defence">Defence</a></li>
+<li class="rm-manual"><a href="file:///news/economy">Economy</a></li>
+<li class="rm-manual"><a href="file:///headlines.cms">Headlines Today</a></li>
+</ul>
+<p class="rm-manual">Popular Categories</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://economictimes.indiatimes.com/news/podcasts/podcastlist/66647137.cms">Podcast</a></li>
+<li class="rm-manual"><a href="https://economictimes.indiatimes.com/news/newsblogs/articlelist/65098458.cms">Newsblogs</a></li>
+<li class="rm-manual"><a href="https://economictimes.indiatimes.com/news/economy">Economy</a></li>
+<li class="rm-manual"><a href="https://economictimes.indiatimes.com/industry">Industry</a></li>
+<li class="rm-manual"><a href="https://economictimes.indiatimes.com/news/politics-nation">Politics and Nation</a></li>
+<li class="rm-manual"><a href="https://economictimes.indiatimes.com/news/defence">Defence</a></li>
+<li class="rm-manual"><a href="https://economictimes.indiatimes.com/news/company">Company</a></li>
+<li class="rm-manual"><a href="https://economictimes.indiatimes.com/news/international">International</a></li>
+<li class="rm-manual"><a href="https://economictimes.indiatimes.com/news/elections">Elections</a></li>
+<li class="rm-manual"><a href="https://economictimes.indiatimes.com/news/et-explains">ET Explains</a></li>
+<li class="rm-manual"><a href="https://economictimes.indiatimes.com/news/sports">Sports</a></li>
+<li class="rm-manual"><a href="https://economictimes.indiatimes.com/news/science">Science</a></li>
+<li class="rm-manual"><a href="https://economictimes.indiatimes.com/news/india-unlimited">India Unlimited</a></li>
+<li class="rm-manual"><a href="https://economictimes.indiatimes.com/home/environment/articlelist/2647163.cms">Environment</a></li>
+<li class="rm-manual"><a href="https://economictimes.indiatimes.com/tv">ET TV</a></li>
+<li class="rm-manual"><a href="https://economictimes.indiatimes.com/news/latest-news">Latest News</a></li>
+</ul>
+<p class="rm-manual">Hot on Web</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///news/defence/rajnath-singh-to-not-meet-chinese-counterpart-in-moscow/liveblog/76541456.cms">India China border news LIVE</a></li>
+<li class="rm-manual"><a href="file:///sensex-nifty-live-today-2020-06-24/liveblog/76541674.cms">Sensex today</a></li>
+<li class="rm-manual"><a href="file:///news/newsblogs/latest-daily-news-and-updates-june-24/liveblog/76541532.cms">News LIVE updates</a></li>
+<li class="rm-manual"><a href="file:///mf/analysis/what-are-balanced-funds/articleshow/76549177.cms">What are balanced funds</a></li>
+<li class="rm-manual"><a href="file:///markets/commodities/news/gold-prices-up-on-safe-haven-demand/articleshow/76543182.cms">Gold rate today</a></li>
+<li class="rm-manual"><a href="file:///markets/global-markets">Global markets</a></li>
+<li class="rm-manual"><a href="file:///mf/analysis/best-value-funds-to-invest-in-2020/articleshow/76456820.cms">Best value funds to invest in 2020</a></li>
+<li class="rm-manual"><a href="file:///breakingnewslist.cms">Breaking news</a></li>
+<li class="rm-manual"><a href="file:///state-bank-of-india/stocks/companyid-11984.cms">SBI share price</a></li>
+<li class="rm-manual"><a href="file:///yes-bank-ltd/stocks/companyid-16552.cms">YES Bank share price</a></li>
+<li class="rm-manual"><a href="file:///markets/sgx-nifty">SGX Nifty</a></li>
+<li class="rm-manual"><a href="file:///indices/sensex_30_companies">Sensex Live</a></li>
+<li class="rm-manual"><a href="file:///indian-railway-catering-tourism-corporation-ltd/stocks/companyid-16705.cms">IRCTC share price</a></li>
+<li class="rm-manual"><a href="file:///infosys-ltd/stocks/companyid-10960.cms">Infosys share price</a></li>
+<li class="rm-manual"><a href="file:///markets/forex/indian-rupee">Rupee</a></li>
+<li class="rm-manual"><a href="file:///wealth/personal-finance-news/aadhaar-card">Aadhaar Card</a></li>
+<li class="rm-manual"><a href="file:///wealth/tax/how-to-save-income-tax-here-are-6-investments-with-tax-free-income/articleshow/62567377.cms">How to save Income Tax</a></li>
+</ul>
+<p class="rm-manual">In Case you missed it</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///news/politics-and-nation/low-intensity-quake-hits-rohtak-8th-since-april-12/articleshow/76551268.cms">Earthquake in Rohtak Today</a></li>
+<li class="rm-manual"><a href="file:///news/international/world-news/powerful-earthquake-shakes-southern-mexico-at-least-5-dead/articleshow/76543766.cms">Mexico Earthquake News</a></li>
+<li class="rm-manual"><a href="file:///news/defence/indian-chinese-militaries-agree-to-disengage-from-friction-points-in-eastern-ladakh-sources/articleshow/76527092.cms">Indian Army</a></li>
+<li class="rm-manual"><a href="file:///news/politics-and-nation/india-reports-14821-new-covid-cases-445-deaths-in-last-24-hours/videoshow/76503321.cms">Coronavirus India Updates</a></li>
+<li class="rm-manual"><a href="file:///news/narendra-modi-announcements">Narendra Modi announcements</a></li>
+<li class="rm-manual"><a href="file:///news/gita-gopinath">Gita Gopinath</a></li>
+<li class="rm-manual"><a href="file:///news/coronavirus-in-delhi">Coronavirus in Delhi</a></li>
+<li class="rm-manual"><a href="file:///news/amartya-sen">Amartya Sen</a></li>
+<li class="rm-manual"><a href="file:///news/delhi-fog">Delhi Fog</a></li>
+<li class="rm-manual"><a href="file:///news/delhi-winters">Delhi Winters</a></li>
+<li class="rm-manual"><a href="file:///news/mumbai-fire">Mumbai Fire</a></li>
+<li class="rm-manual"><a href="file:///news/whatsapp-down">WhatsApp Down</a></li>
+<li class="rm-manual"><a href="file:///news/instagram-down">Instagram Down</a></li>
+<li class="rm-manual"><a href="file:///news/facebook-down">Facebook Down</a></li>
+<li class="rm-manual"><a href="file:///news/snapchat-down">Snapchat Down</a></li>
+<li class="rm-manual"><a href="file:///news/twitter-down">Twitter Down</a></li>
+</ul>
+<p class="rm-manual">ET Verticals</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a rel="nofollow" href="https://auto.economictimes.indiatimes.com/">Auto News</a></li>
+<li class="rm-manual"><a rel="nofollow" href="https://retail.economictimes.indiatimes.com/">Retail New</a></li>
+<li class="rm-manual"><a rel="nofollow" href="https://health.economictimes.indiatimes.com/">Health News</a></li>
+<li class="rm-manual"><a rel="nofollow" href="https://telecom.economictimes.indiatimes.com/">Telecom News</a></li>
+<li class="rm-manual"><a rel="nofollow" href="https://energy.economictimes.indiatimes.com/">Energy News</a></li>
+<li class="rm-manual"><a rel="nofollow" href="https://cio.economictimes.indiatimes.com/">IT News</a></li>
+<li class="rm-manual"><a rel="nofollow" href="https://realty.economictimes.indiatimes.com/">Real Estate News</a></li>
+<li class="rm-manual"><a rel="nofollow" href="https://brandequity.economictimes.indiatimes.com/">Marketing &amp; Advertising News</a></li>
+<li class="rm-manual"><a rel="nofollow" href="https://tech.economictimes.indiatimes.com/">Technology News</a></li>
+<li class="rm-manual"><a rel="nofollow" href="https://cfo.economictimes.indiatimes.com/">CFO News</a></li>
+<li class="rm-manual"><a rel="nofollow" href="https://ciso.economictimes.indiatimes.com/">IT Security News</a></li>
+</ul>
+<p class="rm-manual">More from our network</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://economictimes.indiatimes.com/hindi">इकनॉमिक टाइम्स</a></li>
+<li class="rm-manual"><a href="https://gujarati.economictimes.indiatimes.com/" rel="nofollow">ઈકોનોમિક ટાઈમ્સ</a></li>
+<li class="rm-manual"><a rel="nofollow" href="https://www.punemirror.in/">Pune Mirror</a></li>
+<li class="rm-manual"><a rel="nofollow" href="https://bangaloremirror.indiatimes.com/">Bangalore Mirror</a></li>
+<li class="rm-manual"><a rel="nofollow" href="https://www.ahmedabadmirror.com/">Ahmedabad Mirror</a></li>
+<li class="rm-manual"><a rel="nofollow" href="http://www.itsmyascent.com/">ItsMyAscent</a></li>
+<li class="rm-manual"><a rel="nofollow" href="https://www.educationtimes.com/">Education Times</a></li>
+<li class="rm-manual"><a rel="nofollow" href="https://www.brandcapital.co.in/">Brand Capital</a></li>
+<li class="rm-manual"><a rel="nofollow" href="https://mumbaimirror.indiatimes.com/">Mumbai Mirror</a></li>
+<li class="rm-manual"><a rel="nofollow" href="https://www.timesnownews.com/">Times Now</a></li>
+<li class="rm-manual"><a rel="nofollow" href="https://www.indiatimes.com/">Indiatimes</a></li>
+<li class="rm-manual"><a rel="nofollow" href="https://maharashtratimes.indiatimes.com/">महाराष्ट्र टाइम्स</a></li>
+<li class="rm-manual"><a rel="nofollow" href="https://vijaykarnataka.indiatimes.com/">ವಿಜಯ ಕರ್ನಾಟಕ</a></li>
+<li class="rm-manual"><a rel="nofollow" href="http://www.adageindia.in/">AdAge India</a></li>
+<li class="rm-manual"><a rel="nofollow" href="https://eisamay.indiatimes.com/">Eisamay</a></li>
+<li class="rm-manual"><a rel="nofollow" href="https://in.ign.com/">IGN India</a></li>
+<li class="rm-manual"><a rel="nofollow" href="https://www.iamgujarat.com/">IamGujarat</a></li>
+<li class="rm-manual"><a href="https://timesofindia.indiatimes.com/" rel="nofollow">Times of India</a></li>
+<li class="rm-manual"><a href="https://tamil.samayam.com/" rel="nofollow">Samayam Tamil</a></li>
+<li class="rm-manual"><a href="https://telugu.samayam.com/" rel="nofollow">Samayam Telugu</a></li>
+<li class="rm-manual"><a href="https://www.misskyra.com/" rel="nofollow">Miss Kyra</a></li>
+<li class="rm-manual"><a href="https://www.bombaytimes.com/" rel="nofollow">Bombay Times</a></li>
+<li class="rm-manual"><a href="https://www.filmipop.com/" rel="nofollow">Filmipop</a></li>
+<li class="rm-manual"><a href="https://www.mxplayer.in/" rel="nofollow">MX Player</a></li>
+<li class="rm-manual"><a href="https://subscribe.timesgroup.com/subscription" rel="nofollow">Newspaper Subscription</a></li>
+<li class="rm-manual"><a href="https://timesprime.com/" rel="nofollow">Times Prime</a></li>
+<li class="rm-manual"><a href="https://www.colombiaonline.com/" rel="nofollow">Colombia</a></li>
+</ul>
+<p class="rm-manual">Other useful Links</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="http://www.timesinternet.in/">About Us</a></li>
+<li class="rm-manual"><a href="https://prime.economictimes.indiatimes.com/?utm_source=economictimes.indiatimes.com&amp;utm_medium=Footer&amp;utm_campaign=ETPrimedistribution">Subscribe to ET Prime</a></li>
+<li class="rm-manual">
+<span> Call 1800 1200 004 (Toll Free)</span><a href="">Book your Newspaper Subscription</a>
+</li>
+<li class="rm-manual"><a href="https://ads.colombiaonline.com/expresso/selfservice/loginSelfService.htm">Create Your Own Ad</a></li>
+<li class="rm-manual"><a href="http://advertise.indiatimes.com/">Advertise with Us</a></li>
+<li class="rm-manual"><a href="http://www.indiatimes.com/termsandcondition">Terms of Use &amp; Grievance Redressal</a></li>
+<li class="rm-manual"><a href="file:///privacypolicy.cms">Privacy policy</a></li>
+<li class="rm-manual">
+<p class="rm-manual">Company Name: Times Internet Limited</p>
+<p class="rm-manual">Registered Office Address: 9-10,Bahardurshah Zafar Marg, New Delhi - 110002</p>
+<p class="rm-manual">Corporate Identity Number: U74999DL1999PLC135531</p>
+<p class="rm-manual">Grievance Officer: Deepak Ajwani</p>
+<p class="rm-manual">Email: grievance.et@timesinternet.in</p>
+<a href="">Contact Us</a>
+</li>
+<li class="rm-manual"><a href="https://economictimes.indiatimes.com/rss.cms">RSS</a></li>
+</ul>
+<h3 class="rm-manual">Follow us on</h3>
+<h3 class="rm-manual">Download et app</h3>
+<p class="rm-manual"><a href="https://economictimes.indiatimes.com/subscription.cms"></a></p><h4 class="rm-manual"><a href="https://economictimes.indiatimes.com/subscription.cms">subscribe to our newsletter</a></h4><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://prime.economictimes.indiatimes.com/?utm_source=economictimes.indiatimes.com&amp;utm_medium=footer&amp;utm_campaign=ETPrimedistribution"></a></p><h4 class="rm-manual"><a href="https://prime.economictimes.indiatimes.com/?utm_source=economictimes.indiatimes.com&amp;utm_medium=footer&amp;utm_campaign=ETPrimedistribution">Become a member</a></h4><p class="rm-manual"></p>
+<p class="rm-manual">Copyright © 2020 Bennett, Coleman &amp; Co. Ltd. All rights reserved. For reprint rights: <a href="http://timescontent.com/" rel="nofollow">Times Syndication Service</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///news/international/world-news/kim-jong-un-here-are-some-interesting-facts-about-north-koreas-absolute-master/articleshow/64429914.cms"><p class="rm-manual"><span>1</span></p>
+<p class="rm-manual">Kim Jong Un: Here are some interesting facts about North Korea's absolute master</p></a></li>
+<li class="rm-manual"><a href="file:///news/international/world-news/human-error-caused-pakistan-plane-crash-that-killed-97-initial-report/articleshow/76551539.cms"><p class="rm-manual">Human error caused Pakistan plane crash that killed 97: Initial report</p></a></li>
+<li class="rm-manual"><a href="file:///news/international/world-news/beware-the-second-coronavirus-wave-british-medics-warn-politicians/articleshow/76545410.cms"><p class="rm-manual">Beware the second coronavirus wave, British medics warn politicians</p></a></li>
+<li class="rm-manual"><a href="file:///news/international/world-news/brazil-tests-covid-19-shot-without-deal-to-use-it-if-it-works/articleshow/76545080.cms"><p class="rm-manual">Brazil tests covid-19 shot, without deal to use it if it works</p></a></li>
+<li class="rm-manual"><a href="file:///news/international/world-news/powerful-earthquake-shakes-southern-mexico-at-least-5-dead/articleshow/76543766.cms"><p class="rm-manual">Powerful earthquake shakes southern Mexico, at least 5 dead</p></a></li>
+<li class="rm-manual"><a href="file:///news/international/world-news/white-house-health-advisor-dr-anthony-fauci-says-virus-is-not-under-control-in-the-us/articleshow/76543370.cms"><p class="rm-manual">White House health advisor Dr. Anthony Fauci says virus is not under control in the US</p></a></li>
+<li class="rm-manual"><a href="file:///news/international/world-news/chinese-communist-partys-use-of-force-integral-part-of-beijings-rise-to-power/articleshow/76542487.cms"><p class="rm-manual">Chinese Communist Party’s use of force integral part of Beijing’s rise to power</p></a></li>
+<li class="rm-manual"><a href="file:///news/international/world-news/china-occupies-nepal-village-land-deafening-silence-from-oli-govt/articleshow/76539082.cms"><p class="rm-manual">China occupies Nepal village, land; deafening silence from Oli govt</p></a></li>
+<li class="rm-manual"><a href="file:///news/international/world-news/food-delivery-man-may-be-beijings-coronavirus-new-super-spreader/articleshow/76537428.cms"><p class="rm-manual">Food delivery man may be Beijing's coronavirus new super spreader</p></a></li>
+<li class="rm-manual"><a href="file:///news/international/world-news/saudi-to-allow-around-1000-pilgrims-to-perform-hajj-minister/articleshow/76530096.cms"><p class="rm-manual">Saudi to allow around 1,000 pilgrims to perform hajj: Minister</p></a></li>
+<li class="rm-manual"><a href="file:///news/international/world-news/uk-pm-to-set-july-4-date-to-end-covid-19-lockdown-with-bars-reopening/articleshow/76529078.cms"><p class="rm-manual">UK PM to set July 4 date to end COVID-19 lockdown with bars reopening</p></a></li>
+</ul>
+<h4 class="rm-manual">To post this comment you must</h4>
+<p class="rm-manual">Log In/Connect with:</p>
+<p class="rm-manual"><a href="#">The Economic Times</a></p>
+<p class="rm-manual">or</p>
+<h3 class="rm-manual">Fill in your details:</h3>
+<p class="rm-manual">Will be displayed</p>
+<p class="rm-manual">Will not be displayed</p>
+<p class="rm-manual">Will be displayed</p>
+<h3 class="rm-manual">Share this Comment:</h3>
+<p class="rm-manual">Post to Twitter</p></article>
+</body></html>

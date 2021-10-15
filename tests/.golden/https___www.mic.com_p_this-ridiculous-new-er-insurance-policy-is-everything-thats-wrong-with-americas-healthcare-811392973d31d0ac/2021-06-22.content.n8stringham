@@ -1,0 +1,129 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">This ridiculous new ER insurance policy is everything that's wrong with America's healthcare</p>
+<p class="rm-manual"> dlewis33/E+/Getty Images</p>
+<h1 class="rm-manual">This ridiculous new ER insurance policy is everything that's wrong with America's healthcare</h1>
+<p class="rm-manual"><span>By </span><a href="file:///profile/melissa-pandika-18145055">Melissa Pandika</a></p>
+<p class="rm-manual">June 9, 2021</p>
+<p>No one should have to go without potentially lifesaving emergency 
+care out of fear that they might not be able to afford it. But 
+physicians say that health insurance behemoth UnitedHealthcare will 
+create exactly this scenario through <a href="https://medcitynews.com/2021/06/emergency-physicians-oppose-new-unitedhealth-policy-enabling-retroactive-ed-claims-denial/?rf=1" rel="noreferrer">a new policy that would allow it to retroactively deny emergency department claims</a>,
+ MedCity News reported. Expecting people with zero medical training to 
+somehow diagnose themselves is messed-up, period â€” but especially now,
+ when worrisome symptoms like a fever or nausea could very well indicate
+ COVID-19.</p>
+<p>Starting July 1, UnitedHealthcare can deny or limit coverage for an 
+emergency department (ED) visit if the insurance company determines it 
+wasnâ€™t, in fact, an emergency, according to MedCity News. The outlet 
+explained that UnitedHealthcare will make this call based on the 
+patientâ€™s condition, the type and number of diagnostic services they 
+receive, and other external factors.</p>
+<p>The insurer implemented the policy â€” which would apply to fully 
+insured members in most states â€” as a means of reducing ED costs, 
+Tracey Lempner, UnitedHealthcareâ€™s director of communications, told 
+MedCity News. â€œUnnecessary use of the emergency room costs nearly $32 
+billion annually, driving up healthcare costs for everyone,â€ she wrote
+ in an email to the outlet. â€œWe are taking steps to make care more 
+affordable, encouraging people who do not have a healthcare emergency to
+ seek treatment in a more appropriate setting, such as an urgent care 
+center.â€ Per MedCity News, providers can submit an attestation if they
+ consider the visit an emergency, in which case UnitedHealthcare would 
+probably still cover it.</p>
+<p>But in a letter to UnitedHealthcare, Richard J. Pollack, president 
+and CEO of the American Hospital Association wrote that â€œthreatening 
+patients with a financial penalty for making the wrong decision could 
+have a chilling effect on seeking emergency careâ€ and highlighted <a href="https://www.aha.org/lettercomment/2021-06-08-letter-unitedhealthcare-retroactive-denial-coverage-emergency-level-care" rel="noreferrer">the danger of delaying emergency care during the pandemic</a>.</p>
+<p>Pollackâ€™s letter also described UnitedHealthcareâ€™s confusing, contradictory advice to its members: On the one hand, <a href="https://www.uhc.com/member-resources/know-your-care-options/urgent-care" rel="noreferrer">the insurance companyâ€™s website urges them to beeline it to the ER</a>
+ or call 911 if they think theyâ€™re experiencing on emergency. It then 
+lists symptoms that the payer says would warrant urgent care (rather 
+than emergency room care), like stomach pain, diarrhea, and abnormal 
+vaginal bleeding â€” but Pollack noted that these same symptoms could 
+also indicate a medical emergency.</p>
+<p>The American College of Emergency Physicians (ACEP) shares Pollackâ€™s <a href="https://twitter.com/EmergencyDocs/status/1402350787083264002" rel="noreferrer">concern that UnitedHealthcareâ€™s policy could dissuade people from seeking emergency care</a>.
+ â€œIn many instances, even physicians cannot know if a patientâ€™s 
+symptoms require emergency treatment without conducting a comprehensive 
+medical examination,â€ ACEP wrote in a statement shared on Twitter. 
+"Reckless policies like this will leave millions fearful of seeking 
+medical care just as we're getting hold of the pandemic," the 
+organization tweeted alongside the statement. </p>
+<p>Indeed, in response to UnitedHealthcareâ€™s new policy, Dr. Megan 
+Ranney, M.D., M.P.H., a physician at Brown Emergency Medicine, tweeted 
+examples of seemingly innocuous symptoms that turned out to be 
+emergencies upon further evaluation. â€œIâ€™ve taken care of people with
+ â€˜indigestionâ€™ who had heart attacks,â€ she wrote. â€œPeople with 
+â€˜pink eyeâ€™ who had vision-threatening infections. Ppl with a 
+'tension headache' who had brain bleed.â€ Itâ€™s scary to imagine what 
+wouldâ€™ve happened if these patients hadnâ€™t gone to the ER because 
+they weren't sure if their symptoms amounted to an emergency â€” at 
+least in the eyes of an insurance company.</p>
+<p>ACEP also tweeted that <a href="https://twitter.com/EmergencyDocs/status/1402407121694625796" rel="noreferrer">they believe UnitedHealthcareâ€™s policy is unlawful</a> because it violates the <a href="https://www.emergencyphysicians.org/article/access/prudent-layperson-standard" rel="noreferrer">Prudent Layperson Standard</a>,
+ which requires insurance companies to cover emergency care based on a 
+patientâ€™s symptoms, not their diagnosis. Lempner, however, told 
+MedCity News that if a patient ends up getting treatment for a 
+non-emergent issue (like pink eye) during an ED visit, the company will 
+cover it based on the patient's benefit plan. </p>
+<p>As MedCity News notes, this differs from <a href="https://www.npr.org/2018/05/23/613649094/anthem-policy-discouraging-avoidable-emergency-room-visits-faces-criticism#:~:text=McNew%2FGetty%20Images-,The%20health%20insurance%20company%20Anthem%20has%20introduced%20a%20policy%20discouraging,%22avoidable%22%20emergency%20room%20visits.&amp;text=Under%20the%20health%20insurance%20company's,actually%20have%20an%20emergency%20condition" rel="noreferrer">Anthemâ€™s similar, highly-criticized policy</a>,
+ which took effect in 2017. Under that policy, if an ED diagnosis falls 
+under a list of non-emergent conditions, Anthem will evaluate the visit 
+and may choose not to cover it. <a href="https://www.healthleadersmedia.com/finance/doctors-sue-anthem-over-dangerous-er-coverage-policy" rel="noreferrer">ACEP and the Medical Association of Georgia sued Anthemâ€™s Blue Cross Shield of Georgia</a> over the policy in 2018 and are currently in the midst of that battle.</p>
+<p>The somewhat bright side, according to MedCity News: When challenged,
+ Anthem overturned most of the 12,000 ED claims it denied â€” perhaps 
+suggesting that UnitedHealthcareâ€™s policy might not be as rigid, 
+either. But none of this changes the fact that it forces patients into 
+the cruel position of making a risky decision about their health â€” and
+ during a pandemic, no less. </p>
+<p class="rm-manual">More like this</p>
+<p class="rm-manual"><a href="file:///p/this-anti-vaxx-doctor-is-seriously-telling-lawmakers-vaccinated-people-are-magnetized-81141975"></a></p><p class="rm-manual"><a href="file:///p/this-anti-vaxx-doctor-is-seriously-telling-lawmakers-vaccinated-people-are-magnetized-81141975">This anti-vaxx doctor is seriously telling lawmakers vaccinated people are "magnetized"</a></p><a href="file:///p/this-anti-vaxx-doctor-is-seriously-telling-lawmakers-vaccinated-people-are-magnetized-81141975">
+<p class="rm-manual"><span>By </span><span>Tracey Anne Duncan</span></p></a><a href="file:///p/the-benefits-of-liquid-chlorophyll-explained-81227464"><p class="rm-manual">The benefits of liquid chlorophyll, explained</p>
+<p class="rm-manual"><span>By </span><span>Melissa Pandika</span></p></a><a href="file:///p/covid-19-antiviral-pills-could-be-our-reality-by-the-end-of-this-year-81239781"><p class="rm-manual">COVID-19 antiviral pills could be our reality by the end of this year</p>
+<p class="rm-manual"><span>By </span><span>Tracey Anne Duncan</span></p></a><p class="rm-manual"></p>
+<p class="rm-manual">Stay up to date</p>
+<h2 class="rm-manual">Stories that fuel conversations.</h2>
+<p class="rm-manual">Enter your email address:</p>
+<p class="rm-manual"><a href="file:///current"><span>Current</span></a><a href="file:///innovation"><span>Innovation</span></a><a href="file:///wellbeing"><span>Wellbeing</span></a><a href="file:///culture"><span>Culture</span></a><a href="file:///election-2020-make-it-count"><span>Election</span></a></p>
+<p class="rm-manual">Company</p>
+<p class="rm-manual"><a href="https://www.bdg.com/" rel="noreferrer">About Us</a></p>
+<p class="rm-manual"><a href="file:///masthead">Masthead</a></p>
+<p class="rm-manual"><a href="file:///newsletter">Newsletter</a></p>
+<p class="rm-manual"><a href="file:///terms">Terms</a></p>
+<p class="rm-manual"><a href="file:///privacy">Privacy</a></p>
+<p class="rm-manual"><a href="file:///archive">Archive</a></p>
+<p class="rm-manual">Connect With Mic</p>
+<p class="rm-manual">Â© 2021 Bustle Digital Group. All rights reserved.</p></article>
+</body></html>

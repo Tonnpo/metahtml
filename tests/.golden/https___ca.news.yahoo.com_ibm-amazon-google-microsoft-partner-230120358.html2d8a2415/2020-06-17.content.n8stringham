@@ -1,0 +1,155 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">IBM, Amazon, Google and Microsoft partner with White House to provide compute resources for COVID-19 research</p>
+<p class="rm-manual"><a href="https://ca.news.yahoo.com/">Yahoo</a></p>
+<p class="rm-manual">Search</p>
+<ul class="rm-manual"><li class="rm-manual"><a href="https://mail.yahoo.com/?.intl=ca&amp;.lang=en-CA&amp;.partner=none&amp;.src=news">Mail</a></li></ul>
+<p class="rm-manual"><a href="https://ca.news.yahoo.com/"> News</a></p>
+<p class="rm-manual"><span>Follow Us</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://ca.news.yahoo.com/tagged/coronavirus"> Coronavirus</a></li>
+<li class="rm-manual"><a href="https://ca.news.yahoo.com/tagged/pollca"> Vote 'n' Vent</a></li>
+<li class="rm-manual"><a href="https://ca.news.yahoo.com/blogs/"> Originals</a></li>
+<li class="rm-manual"><a href="https://ca.news.yahoo.com/canada/"> Canada</a></li>
+<li class="rm-manual"><a href="https://ca.news.yahoo.com/world/"> World</a></li>
+<li class="rm-manual"><a href="https://ca.finance.yahoo.com/"> Business</a></li>
+<li class="rm-manual"><a href="https://ca.news.yahoo.com/celebrity"> Entertainment</a></li>
+<li class="rm-manual"><a href="https://ca.sports.yahoo.com/"> Sports</a></li>
+<li class="rm-manual"><a href="https://ca.news.yahoo.com/science-tech/"> Science &amp; Tech</a></li>
+<li class="rm-manual"><a href="https://ca.weather.yahoo.com/"> Weather</a></li>
+</ul>
+<h1 class="rm-manual">IBM, Amazon, Google and Microsoft partner with White House to provide compute resources for COVID-19 research</h1>
+<p class="rm-manual">Frederic Lardinois</p>
+<p class="rm-manual"><span><span><a href="https://techcrunch.com/" rel="noopener noreferrer nofollow">TechCrunch</a></span></span>March 22, 2020</p>
+<p>During today's White House coronavirus task force press conference, 
+President Trump announced the launch of a new public/private consortium 
+to "unleash the power of American supercomputing resources." The members
+ of this consortium are the White House, the Department of Energy and <a href="https://crunchbase.com/organization/ibm" rel="nofollow noopener">IBM </a>.
+ Other companies, including Google, Amazon and Microsoft, as well as a 
+number of academic institutions, are also "contributing lots of 
+different things," the president said.</p>
+<p>While Trump's comments were characteristically unclear, IBM <a href="https://newsroom.ibm.com/IBM-helps-bring-supercomputers-into-the-global-fight-against-COVID-19" rel="nofollow noopener">provided more details</a>,
+ noting that it is working with a number of national labs and other 
+institutions to offer a total of 330 petaflops of compute to various 
+projects in epidemiology, bioinformatics and molecular modeling. Amazon,
+ Google and Microsoft are also part of the consortium, which is being 
+led by IBM, the White House Office of Science and Technology Policy, and
+ the Department of Energy.</p>
+<p>IBM and its partners will coordinate the efforts to evaluate 
+proposals and provide access to high-performance computing resources to 
+those that are most likely to have an immediate impact.</p>
+<p>"How can supercomputers help us fight this virus? These 
+high-performance computing systems allow researchers to run very large 
+numbers of calculations in epidemiology, bioinformatics, and molecular 
+modeling. These experiments would take years to complete if worked by 
+hand, or months if handled on slower, traditional computing platforms," 
+writes Dario Gil, IBM's Director of Research.</p>
+<p>AWS has already <a href="https://blog.aboutamazon.com/innovation/aws-launches-initiative-to-accelerate-covid-19-diagnostics-research-and-testing?utm_source=social&amp;amp;utm_medium=tw&amp;amp;utm_term=amznnews&amp;amp;utm_content=COVID-19_AWSResearch" rel="nofollow noopener">dedicated</a>
+ $20 million to support COVID-19 research while Microsoft has already 
+announced a number of different initiatives, though mostly around 
+helping businesses cope with the fallout of this crisis. Google has now 
+launched its own <a href="https://techcrunch.com/2020/03/21/google-launches-covid-19-page-and-search-portal-with-safety-tips-official-stats-and-more-us-only-for-now/" rel="nofollow noopener">coronavirus website</a>
+ (though it's very different from the one Trump once promised) and 
+Alphabet's Verily is helping Bay Area residents find testing sites if 
+needed.</p>
+<p>After today's announcement, the White House shared statements from <a href="https://crunchbase.com/organization/microsoft" rel="nofollow noopener">Microsoft, </a>
+ Google and other partners. "We know that high performance computing can
+ reduce the time it takes to process massive data sets and perform 
+complex simulations from days to hours," said Mike Daniels, Vice 
+President, Global Public Sector at <a href="https://crunchbase.com/organization/google" rel="nofollow noopener">Google </a>
+ Cloud, in his statement. "We look forward to participating in this 
+initiative alongside leaders in technology, academia and the public 
+sector to make more resources available to COVID-19 researchers and to 
+apply Google Cloud computing capabilities toward the development of 
+potential treatments and vaccines.”</p>
+<p>Similarly, Microsoft's global head for its AI for Health Program, 
+John Kahan, notes that Microsoft wants to "make sure researchers working
+ to combat COVID-19 have access to the tools they need" by expanding 
+access to its Azure cloud and by creating more opportunities for 
+researchers to collaborate with the company's data scientists.</p>
+<p>"Today I'm also announcing the launch of a new public/private 
+consortium organized by the White House, the Department of Energy and 
+IBM to unleash the power of American supercomputing resources to fight 
+the Chinese virus," Trump, who continues to insist on calling COVID-19 
+'the Chinese virus,' said in today's press briefing.</p>
+<p>"The following leaders from private industries, academia and 
+government will be contributing and they are gonna be contributing a lot
+ of different things, but compute primarily -- computing resources to 
+help researchers discover new treatments and vaccine. They will be 
+working along with NIH and all of the people working on this. But 
+tremendous help from IBM, Google, <a href="https://crunchbase.com/organization/amazon" rel="nofollow noopener">Amazon, </a> Microsoft, MIT, Rensselaer Polytechnic Institute, the Department of Energy's, the <a href="https://crunchbase.com/organization/national-science-foundation" rel="nofollow noopener">National Science Foundation </a> and NASA. They are all contributing to this effort."</p>
+<p class="rm-manual">Update (4:45pm PT): we updated the post with statements from Google and Microsoft.</p>
+<h2 class="rm-manual">What to Read Next</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://uk.finance.yahoo.com/news/trump-administration-proposes-rolling-back-215720550.html"><span>Trump administration proposes rolling back protections for big tech</span></a></h3><p class="rm-manual">Reuters</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sports.yahoo.com/is-president-trump-playing-politics-in-supporting-colin-kaepernicks-return-to-nfl-depends-on-your-point-of-view-215316037.html"><span>Is President Trump playing politics in supporting Colin Kaepernick's return to NFL? Depends on your point of view</span></a></h3><p class="rm-manual">Yahoo Sports</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/john-bolton-trump-sought-xis-195753155.html"><span>John Bolton: Trump sought Xi's help with re-election</span></a></h3><p class="rm-manual">BBC</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://techcrunch.com/2020/06/17/fcc-commissioner-disparages-trumps-social-media-order-the-decision-is-ours-alone/"><span>FCC Commissioner disparages Trump's social media order: 'The decision is ours alone'</span></a></h3><p class="rm-manual">TechCrunch</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://uk.news.yahoo.com/trump-gives-duda-pre-election-212411146.html"><span>Trump gives Duda pre-election boost with invite to White House</span></a></h3><p class="rm-manual">The Guardian</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/coronavirus-covid19-canada-latest-updates-190048955.html"><span>COVID-19 in Canada: U.S. spikes are 'warning signal' for Canada, Ontario urges border stays closed</span></a></h3><p class="rm-manual">Yahoo News Canada</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/video/wildfires-burn-arizona-national-forests-204533319.html"><span>Wildfires burn in Arizona national forests</span></a></h3><p class="rm-manual">Canadian Press Videos</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/reportedly-caused-kelly-clarkson-brandon-153054370.html"><span>This Is Reportedly What Caused Kelly Clarkson and Brandon Blackstock's Divorce</span></a></h3><p class="rm-manual">Glamour</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/greens-elizabeth-may-wants-inquiry-155149964.html"><span>Singh removed from Commons after calling BQ MP racist over blocked RCMP motion</span></a></h3><p class="rm-manual">The Canadian Press</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/video/senate-gop-unveil-police-reform-183503317.html"><span>Senate GOP unveil police reform bill</span></a></h3><p class="rm-manual">Reuters Videos</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/c-o-r-r-e-212200950.html"><span>/C O R R E C T I O N from Source -- Reboot Communications Ltd./</span></a></h3><p class="rm-manual">CNW Group</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/hooray-cra-cerb-extended-changes-163056199.html"><span>Hooray! CRA’s CERB Will Be Extended — But There Will Be Changes</span></a></h3><p class="rm-manual">The Motley Fool</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/todays-parent-breastfeeding-baby-cover-213143253.html"><span>Amazing Cover Shot Challenges The Biggest Taboo For New Moms</span></a></h3><p class="rm-manual">HuffPost Canada</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/apartment-comes-fridge-painted-look-145553078.html"><span>Man uncovers bizarre kitchen feature in apartment listing: 'I'm furious about this'</span></a></h3><p class="rm-manual">In The Know</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/video/ava-duvernay-astounded-huge-spike-161725056.html"><span>Ava Duvernay astounded by huge spike in viewership of '13th'</span></a></h3><p class="rm-manual">Reuters Videos</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://uk.finance.yahoo.com/news/zoom-end-end-encryption-users-210505617.html"><span>Zoom will provide end-to-end encryption to all users after privacy backlash</span></a></h3><p class="rm-manual">The Guardian</p><p class="rm-manual"></p></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/un-security-council-vote-canada-133840871.html"><span>Canada's UN Security Council Bid Fails After 4-Year Campaign</span></a></h3><p class="rm-manual">HuffPost Canada</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/report-60-beijing-flights-cancelled-034050829.html"><span>US coronavirus outbreaks spur debate over personal freedoms</span></a></h3><p class="rm-manual">The Canadian Press</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/amanda-kloots-laments-nick-cordero-112830845.html"><span>Amanda Kloots laments Nick Cordero missing son Elvis' first steps while he remains hospitalized</span></a></h3><p class="rm-manual">USA TODAY Entertainment</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/video/know-cerb-extension-150555965.html"><span>What you need to know about CERB’s extension</span></a></h3><p class="rm-manual">Global News</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.style.yahoo.com/save-up-to-250-off-select-macs-and-i-pads-and-get-air-pods-for-free-204853634.html"><span>Apple's Back To School sale is already on: Save up to $250 off select Macs and iPads — and get free AirPods, too</span></a></h3><p class="rm-manual">Yahoo Canada Style</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/wife-u-rep-andy-barr-080650903.html"><span>Wife of U.S. Rep. Andy Barr dies unexpectedly at age 39</span></a></h3><p class="rm-manual">Associated Press</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/voice-just-announced-nick-jonas-174800971.html"><span>'The Voice' Just Announced Nick Jonas' Replacement and His Fans Are Not Happy</span></a></h3><p class="rm-manual">Good Housekeeping</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/matt-gaetz-shouts-down-democratic-202123380.html"><span>Matt Gaetz Shouts Down Democratic Rep. Cedric Richmond: ‘Who the Hell Do You Think You Are?!’</span></a></h3><p class="rm-manual">The Daily Beast</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/video/flash-floods-cause-traffic-jams-140000805.html"><span>Flash floods cause traffic jams in Cheltenham, South West England</span></a></h3><p class="rm-manual">Newsflare</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/coronavirus-health-minister-says-app-171716135.html"><span>Coronavirus: Health minister says app should roll out by winter</span></a></h3><p class="rm-manual">BBC</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/gop-cowards-meidas-touch-ad-122404692.html"><span>GOP Cowardice On Trump Takes Center Stage In Scathing New Supercut</span></a></h3><p class="rm-manual">HuffPost</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/jagmeet-singh-bloc-racist-apology-205236121.html"><span>Jagmeet Singh Ejected From House of Commons After Calling Bloc MP A ‘Racist’</span></a></h3><p class="rm-manual">HuffPost Canada</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/craig-melvin-well-behaved-children-190353898.html"><span>TODAY show host Craig Melvin addresses comments about his 'well-behaved' children</span></a></h3><p class="rm-manual">Yahoo Canada Style</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/video/giant-tortoises-home-saving-species-053254522.html"><span>Giant tortoises go home after saving their species</span></a></h3><p class="rm-manual">Reuters Videos</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://www.instyle.com/celebrity/michael-strahan-live-with-kelly-couldnt-speak-up"><span>Michael Strahan Said He Couldn't "Speak Up" During His Time at Live With Kelly</span></a></h3><p class="rm-manual">InStyle</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/3-states-coronavirus-record-040155375.html"><span>3 States See Record High In Daily Coronavirus Infections After Reopening</span></a></h3><p class="rm-manual">HuffPost</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/video/u-border-officials-seize-2-220234508.html"><span>U.S. border officials seize 2.5 tonnes of pot worth over $10 million</span></a></h3><p class="rm-manual">Global News</p><p></p></li>
+</ul></article>
+</body></html>

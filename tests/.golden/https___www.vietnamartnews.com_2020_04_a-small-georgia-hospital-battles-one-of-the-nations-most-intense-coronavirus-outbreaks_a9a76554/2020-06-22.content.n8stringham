@@ -1,0 +1,72 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">You are here: <span><a href="https://www.vietnamartnews.com/"><span>Home</span></a></span> <span>/</span> A small Georgia hospital battles one of the nation’s most intense coronavirus outbreaks</p>
+<h1 class="rm-manual">A small Georgia hospital battles one of the nation’s most intense coronavirus outbreaks</h1>
+<p class="rm-manual"> · April 8, 2020 · </p>
+<p>Before Mandy Hall lined up to have her temperature taken, don a 
+surgical mask and step through the glass doors of the hospital, she 
+recited a line from the Old Testament. Perhaps this is the moment for 
+which you were created.It was not yet 7 a.m., and the small emergency 
+room was already crammed with dozens of COVID-19 patients struggling to 
+breathe.Ambulances were pulling up into the emergency bay as the 
+47-year-old frontline nurse and director of emergency services at Phoebe
+ Putney Memorial Hospital put on freshly laundered Caribbean blue 
+scrubs, fit a N95 mask under her surgical mask and huddled with staff to
+ prepare for the coming onslaught. Advertisement Soon, her unit would 
+have no available beds and start lining critical patients in gurneys 
+along a back hallway.“What if patients continue to flood in?” she said 
+as paramedics delivered a man on a stretcher. “What if, at some point, 
+we don’t have a place to fit them? I don’t think it’s a matter of if it 
+happens. It’s a matter of when.”Far from the big coastal hubs of 
+Seattle, Los Angeles and New York, this hospital in the remote southwest
+ Georgia city of Albany — more than 35 miles… <a href="file:///go?url=aHR0cHM6Ly93d3cubGF0aW1lcy5jb20vd29ybGQtbmF0aW9uL3N0b3J5LzIwMjAtMDQtMDgvaW4tc291dGh3ZXN0LWdlb3JnaWEtYS1zbWFsbC1ob3NwaXRhbC1iYXR0bGVzLW9uZS1vZi10aGUtd29ybGRzLW1vc3QtaW50ZW5zZS1jb3JvbmF2aXJ1cy1vdXRicmVha3M=" rel="nofollow">Read full this story</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.vietnamartnews.com/2014/10/georgias-battle-for-the-ballot-box/">Georgia’s Battle for the Ballot Box</a></li>
+<li class="rm-manual"><a href="https://www.vietnamartnews.com/2019/12/georgia-tech-tops-hawaii-for-3rd-at-diamond-head-classic/">Georgia Tech tops Hawaii for 3rd at Diamond Head Classic</a></li>
+<li class="rm-manual"><a href="https://www.vietnamartnews.com/2019/12/congressman-john-lewis-says-cancer-is-his-latest-battle/">Congressman John Lewis says cancer is his latest battle</a></li>
+<li class="rm-manual"><a href="https://www.vietnamartnews.com/2019/12/edwards-georgia-host-ga-southern/">Edwards, Georgia host Ga. Southern</a></li>
+<li class="rm-manual"><a href="https://www.vietnamdance.com/2019/09/georgia-state-player-says-fcs-team-will-give-us-a-tougher-battle-than-tennessee/">Georgia State player says FCS team ‘will give us a tougher battle than’ Tennessee</a></li>
+<li class="rm-manual"><a href="https://www.vietnamartnews.com/2019/12/georgias-kemp-submits-bid-to-remake-health-insurance-market/">Georgia’s Kemp submits bid to remake health insurance market</a></li>
+<li class="rm-manual"><a href="https://www.aseanbreakingnews.com/2019/12/spate-of-infants-death-in-government-hospital-rocks-kota-77-kids-die-in-december/">Spate of infants' death in government hospital rocks Kota, 77 kids die in December</a></li>
+<li class="rm-manual"><a href="https://www.vietnamartnews.com/2019/12/death-of-77-infants-in-month-in-govt-hospital-rocks-kota/">Death of 77 infants in month in govt. hospital rocks Kota</a></li>
+<li class="rm-manual"><a href="https://www.vietnamartnews.com/2019/12/nurse-shortage-forces-nhs-hospital-to-shut-critical-care-beds/">Nurse shortage forces NHS hospital to shut critical-care beds</a></li>
+<li class="rm-manual"><a href="https://www.vietnamartnews.com/2019/12/georgia-southern-tops-texas-st-67-64/">Georgia Southern tops Texas St. 67-64</a></li>
+</ul>
+<blockquote class="rm-manual"> A small Georgia hospital battles one of the nation’s most intense coronavirus outbreaks have 302 words, post on <a href="file:///go?url=aHR0cHM6Ly93d3cubGF0aW1lcy5jb20vd29ybGQtbmF0aW9uL3N0b3J5LzIwMjAtMDQtMDgvaW4tc291dGh3ZXN0LWdlb3JnaWEtYS1zbWFsbC1ob3NwaXRhbC1iYXR0bGVzLW9uZS1vZi10aGUtd29ybGRzLW1vc3QtaW50ZW5zZS1jb3JvbmF2aXJ1cy1vdXRicmVha3M=" rel="nofollow">www.latimes.com</a> at April 8, 2020. This is cached page on Vietnam Art News. If you want remove this page, <a href="file:///contact/" rel="nofollow">please contact us</a>.</blockquote>
+<p class="rm-manual"><span>Filed Under: <a href="https://www.vietnamartnews.com/category/world-nation/" rel="category tag">World &amp; Nation</a></span> <span><a href="https://www.vietnamartnews.com/tag/world-nation/" rel="tag">World &amp; Nation</a>, <a href="https://www.vietnamartnews.com/tag/coronavirus-pandemic/" rel="tag">Coronavirus Pandemic</a>, <a href="https://www.vietnamartnews.com/tag/small-hospital-designs/" rel="tag">small hospital designs</a>, <a href="https://www.vietnamartnews.com/tag/small-hospital-design/" rel="tag">small hospital design</a>, <a href="https://www.vietnamartnews.com/tag/national-rehabilitation-hospital-dublin/" rel="tag">national rehabilitation hospital dublin</a>, <a href="https://www.vietnamartnews.com/tag/small-animal-hospital-glasgow/" rel="tag">small animal hospital glasgow</a>, <a href="https://www.vietnamartnews.com/tag/national-guard-hospital-jeddah/" rel="tag">national guard hospital jeddah</a>, <a href="https://www.vietnamartnews.com/tag/hospital-pharmacist-jobs-in-georgia/" rel="tag">hospital pharmacist jobs in georgia</a>, <a href="https://www.vietnamartnews.com/tag/national-hospital-quality-measures/" rel="tag">national hospital quality measures</a>, <a href="https://www.vietnamartnews.com/tag/national-hospital-ratings/" rel="tag">national hospital ratings</a>, <a href="https://www.vietnamartnews.com/tag/top-hospitals-in-georgia/" rel="tag">top hospitals in georgia</a>, <a href="https://www.vietnamartnews.com/tag/top-hospitals-in-the-nation/" rel="tag">top hospitals in the nation</a>, <a href="https://www.vietnamartnews.com/tag/top-hospitals-in-nation/" rel="tag">top hospitals in nation</a>, <a href="https://www.vietnamartnews.com/tag/kennestone-hospital-marietta-georgia/" rel="tag">kennestone hospital marietta georgia</a>, <a href="https://www.vietnamartnews.com/tag/kennestone-hospital-in-marietta-georgia/" rel="tag">kennestone hospital in marietta georgia</a>, <a href="https://www.vietnamartnews.com/tag/kennestone-hospital-georgia/" rel="tag">kennestone hospital georgia</a>, <a href="https://www.vietnamartnews.com/tag/national-flag-football-georgia/" rel="tag">national flag football georgia</a>, <a href="https://www.vietnamartnews.com/tag/university-hospital-augusta-georgia/" rel="tag">university hospital augusta georgia</a>, <a href="https://www.vietnamartnews.com/tag/the-nation-of-georgia/" rel="tag">the nation of georgia</a></span></p></article>
+</body></html>

@@ -1,0 +1,81 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual">The definitive end of Internet Explorer: Microsoft will retire the browser in 2022</h1>
+<p class="rm-manual"><span><span><a href="https://then24.com/">Home</a> » <span><a href="https://then24.com/category/sciencetech/">Sci&amp;Tech</a> » The definitive end of Internet Explorer: Microsoft will retire the browser in 2022</span></span></span> </p>
+<ul class="rm-manual"> <li class="rm-manual">
+<span>Post author:</span><a href="https://then24.com/author/then24_3gjf02/" rel="author">The News 24</a>
+</li> <li class="rm-manual">
+<span>Post published:</span>May 19, 2021</li> <li class="rm-manual">
+<span>Post category:</span><a href="https://then24.com/category/sciencetech/" rel="category tag">Sci&amp;Tech</a>
+</li> <li class="rm-manual">
+<span>Post comments:</span><a href="https://then24.com/2021/05/19/the-definitive-end-of-internet-explorer-microsoft-will-retire-the-browser-in-2022/#respond">0 Comments</a>
+</li> </ul>
+<p>The end of an era. Next June 2022, after more than 25 years, Internet
+ Explorer will come to an end. Microsoft has announced that they will 
+withdraw browser support in favor of Microsoft Edge. “The future of 
+Internet Explorer in Windows 10 is in Microsoft Edge”, has indicated a 
+person in charge of the company.</p>
+<p>As indicated in the official blog, Internet Explorer 11 for desktop 
+will no longer be supported on June 15, 2022 and will retire. </p>
+<h2>Goodbye to the consumer version</h2>
+<p>It must be said, this withdrawal will not be for everyone but it will
+ be for most consumer users and versions of Windows 10 aimed at 
+consumers. Microsoft will keep Internet Explorer on Windows 10’s 
+Long-Term Servicing Channel (LTSC) for example. This is done to continue
+ offering support to companies that depend directly on the browser to 
+carry out their operations. </p>
+<p>What will Internet Explorer users be able to do? The few that remain,
+ they will be able to use Microsoft Edge instead. Microsoft Edge 
+includes for some years an “IE mode” that allows ActiveX controls and 
+support for pages that are still based on Internet Explorer standards. 
+Microsoft is committed to supporting this mode until at least 2029.</p>
+<p>Throughout these last months Microsoft has repeatedly announced the 
+end of support Internet Explorer gradually. No support in Microsoft 
+Teams and no support in Microsoft 365 shortly. It also redirects to 
+Microsoft Edge when opening some web pages.</p>
+<p>Since Microsoft Edge appeared in 2015, the company has done its best 
+to promote its use to users as opposed to Internet Explorer. The great 
+advantage of Microsoft Edge is that it is a browser that is based on 
+Chromium, so it is much more adapted to current Internet standards.</p>
+<p class="rm-manual">Via | Windows Blogs</p>
+<p class="rm-manual">Disclaimer: If you need to update/edit/remove this news or article then please contact our support team <a href="https://then24.com/how-do-i-request-the-removal-of-an-article/">Learn more</a></p>
+<p class="rm-manual"> Please enable JavaScript to view the </p>
+<p class="rm-manual"><a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a> </p>
+<h3 class="rm-manual">Advertisement</h3>
+<h3 class="rm-manual">Advertisement</h3></article>
+</body></html>

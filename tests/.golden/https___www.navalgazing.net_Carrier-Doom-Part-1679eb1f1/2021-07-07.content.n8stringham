@@ -1,0 +1,403 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Naval Gazing Main/Why the Carriers Are Not Doomed Part 1 </p>
+<ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual">
+<li class="rm-manual"> <a rel="nofollow" href="https://www.navalgazing.net/Carrier-Doom-Part-1">View</a> </li>
+<li class="rm-manual"> <a rel="nofollow" href="https://www.navalgazing.net/Carrier-Doom-Part-1?action=bi_be">Edit</a> </li>
+<li class="rm-manual"> <a rel="nofollow" href="https://www.navalgazing.net/Carrier-Doom-Part-1?action=diff">History</a> </li>
+<li class="rm-manual"> <a rel="nofollow" href="https://www.navalgazing.net/Carrier-Doom-Part-1?action=print">Print</a> </li>
+</ul> </li> </ul>
+<p class="rm-manual">January 05, 2018 </p>
+<h1 class="rm-manual"><a href="https://www.navalgazing.net/Carrier-Doom-Part-1">Why the Carriers Are Not Doomed Part 1</a></h1>
+<p>Claims that US carriers are very vulnerable to missile attack, and 
+will be sunk immediately in any upcoming war, are quite common. They’re 
+also wrong. The carriers are surprisingly survivable, and the prowess of
+ missiles is usually grossly exaggerated. </p>
+<p> <span> <span>USS Nimitz, USS Ronald Reagan and USS Theodore Roosevelt operating together, November 2017</span></span></p>
+<p>The first line of defense is the fact that the sea is very 
+big[Citation Needed] and ships are small and mobile. Obviously, improved
+ radar and modern navigational systems have made it easier to <a href="https://www.navalgazing.net/Information-Communication-and-Naval-Warfare-Part-1">find and track ships at sea</a>
+ since WWII. Clouds and darkness are no longer serious obstacles, and 
+it’s harder (though not impossible) to mess up your navigation. But 
+there are still problems. A typical radar system will tell you that 
+there is something there, but it won’t tell you what it is. You can make
+ guesses based on where contacts are, but a smart opponent will do all 
+he can to frustrate this. Carrier groups, for instance, never operate in
+ the “bullseye” formation made famous in photos, and often do their best
+ to look like merchant traffic.<a href="#fn1_1">1</a> </p>
+<p> <span> <span>The George Washington Battle Group demonstrating the bullseye formation</span></span></p>
+<p>The preferred way to solve the identification problem is <a href="https://www.navalgazing.net/Electronic-Warfare-Part-1">electronic signal measures (ESM)</a>.
+ At the most basic, if there is a radar that is only installed on 
+carriers, and you detect it coming from a ship, then you know it’s a 
+carrier. On a more sophisticated level, most military radars are 
+essentially hand-built, and it is possible to take a ‘fingerprint’ and 
+identify a specific radar remotely. The US, Russia, and China all have 
+sea-surveillance ESM satellites. However, these can be defeated by 
+emissions control, or EMCON.<a href="#fn1_2">2</a> While this obviously limits a ship’s capabilities, <a href="https://www.navalgazing.net/Signalling-Part-4">satellite communications</a>
+ allow ships to avoid most of the disadvantages of EMCON. A satellite 
+can transmit to the surface over a broad area, and a ship can send a 
+tight beam back to the satellite, which is very difficult to intercept. 
+The ship can rely on data from remote sensors (including ESM and IR 
+satellites) to learn of an incoming attack, and only break EMCON after 
+it thinks it has been located. </p>
+<p> <span> <span>A long-duration exposure showing a pair of US Naval Ocean Surveillance Satellites</span></span></p>
+<p>But what about other alternatives? Optical cameras don’t require 
+cooperation from the target, but are stymied by clouds and darkness. IR 
+cameras can't see through the atmosphere to sea level very well. Modern <a href="https://en.wikipedia.org/wiki/Synthetic-aperture_radar" rel="nofollow">Synthetic Aperture Radar</a> (SAR) platforms like <a href="https://en.wikipedia.org/wiki/TerraSAR-X" rel="nofollow">TerraSAR-X</a>/<a href="https://en.wikipedia.org/wiki/TanDEM-X" rel="nofollow">TanDEM-X</a>
+ are quite capable of identifying ships from space. However, they can 
+only see a limited swath of the ocean, particularly in the 
+higher-resolution modes that are required to get firm identification. 
+The combined TerraSAR-X/TanDEM-X cost approximately $400 million. Jane’s
+ says that it can image 90% of Earth’s surface within 2 days, although 
+there are several different resolution modes and I don't know exactly 
+how this was calculated.<a href="#fn1_3">3</a> The X-band radar used is badly affected by rain,<a href="#fn1_4">4</a> and <a href="https://www.navalgazing.net/The-Reagan-Maritime-Strategy">the US used to hide ships from Soviet radar satellites in bad weather</a>. I’m not sure how effective electronic warfare is against this kind of system, and sources differ on the matter. </p>
+<p> <span> <span>TerraSAR-X and TanDEM-X in formation</span></span></p>
+<p>But what about non-space-based options? Can’t we just send out planes or drones to look for the carriers? </p>
+<p>The obvious problem we come to again is emissions. A radar can 
+usually be detected at least twice as far away as it can detect 
+anything. The obvious solution for the carrier is to use some form of 
+low-power low probability of intercept (LPI) radio to vector fighters 
+out to kill the snooper, or even simply brief them on deck and send them
+ out under full EMCON. The <a href="https://en.wikipedia.org/wiki/Northrop_Grumman_E-2_Hawkeye" rel="nofollow">E-2 Hawkeye</a>
+ has a very good ESM system, and with tankers and cleverness, could 
+manage to at the very least significantly mitigate the ‘flaming datum’ 
+problem. Optical surveillance, besides being flummoxed by clouds, has a 
+very limited range compared to radar, and is best used for identifying 
+targets found by radar. The obvious suggestion is drones, but drones 
+have issues of their own. A search plane could be sent out under EMCON 
+with orders to only report back if they find something. This isn’t 
+really viable for drones, which can then be shot down on the basis of 
+their transmissions.<a href="#fn1_5">5</a> Also, drones of the size necessary for effective sea surveillance are large and relatively expensive. </p>
+<p> <span> <span>An E-2D Hawkeye</span></span></p>
+<p>But eventually, the carrier’s luck will run out, and the bad guys will locate them, and they’ll die, right? </p>
+<p>Not so fast. A location, particularly one that is targeting-grade, is
+ inherently perishable, and if your opponent knows you’ve got it, then 
+it’s going to spoil even more quickly. Essentially, you have to get your
+ weapons near the target before the area where the target can be gets 
+bigger than the area the weapons can search, and then make sure that 
+those weapons lock on to the right target. This is true regardless of 
+the nature of the weapons, although different weapons have very 
+different parameters for search and lock-on. One example would be an air
+ strike. Spending a lot of time searching for the carrier is a good way 
+to get killed by defending fighters, but the attacking aircraft can 
+still compensate for some degree of imprecision in the fix, and make 
+sure the target they're going after is what they want to hit instead of 
+something else that happened to be nearby. </p>
+<p> <span> <span>An F-14 intercepting a Tu-95 Bear</span></span></p>
+<p>A missile is much less capable of such compensation, and this has 
+been a long-term problem with anti-ship missiles. The US has stopped 
+installing <a href="https://www.navalgazing.net/Harpoon">Harpoon missiles</a>
+ (range of ~70 nm) on destroyers, and removed the submarine-launched 
+version from service, out of fear of hitting the wrong target. The 
+original <a href="https://www.navalgazing.net/Tomahawk-Part-2">Tomahawk Anti-Ship Missile</a>,
+ which had an effective range of over 200 nm, was going to solve this 
+problem by using ESM, looking for the radars of a hostile ship. However,
+ this was problematic, and in exercises, the hit rate was around 25%. 
+Some Soviet missiles had datalinks to allow updates after launch, but 
+these required a platform within sensor range of the target. </p>
+<p> <span> <span>Iowa launching a Harpoon</span></span></p>
+<p>Ballistic missiles have an even bigger problem. Unlike a cruise 
+missile, they cannot wait and search for a target. The first ASBM, the 
+Soviet SS-NX-13, was designed to home in on radar emissions, but never 
+entered service, as it would have displaced ballistic missiles on 
+submarines, the numbers of which were limited by treaty. The guidance 
+mechanism of the <a href="https://en.wikipedia.org/wiki/DF-21#DF-21D" rel="nofollow">DF-21D</a>
+ is not known, but there are only a few options. Optical guidance is 
+right out, as it doesn’t work at night or in bad weather. IR does work 
+at night, but is still vulnerable to bad weather, a common problem at 
+sea. Radar might work, but is vulnerable to countermeasures and there 
+are limits on what can be done with a platform the size of a missile 
+warhead, particularly in terms of <a href="https://www.navalgazing.net/Electronic-Warfare-Part-3">non-cooperative identification</a>. In plain English, the missile can’t tell the carrier from a destroyer with a blip enhancer or a merchantman. <a href="https://www.navalgazing.net/Anti-Radiation-Missiles">Home-on-radar</a> is an option, but can be foiled by not using radar or using a different kind of radar than the missile is expecting.<a href="#fn1_6">6</a> </p>
+<p> <span> <span>A DF-21D missile</span></span></p>
+<p>All of this gives a very limited window for the attacker to take a 
+targeting-grade sighting and get the data to the weapons. This is 
+usually ignored in popular articles, but it’s very important. Every 
+minute, a carrier at full speed gets another ~900 m away from the 
+initial fix. The internet makes instant, reliable communication seem 
+easy, but the list of outages and failures due to various bad actors 
+should be a reminder that this kind of communication is difficult and 
+vulnerable to disruption. Throw in an active and very hostile power, and
+ the network is likely to be seriously disrupted at best, and brought 
+down at worst. China might have made the investment in targeting 
+platforms and communications to be able to effectively target something 
+like the DF-21D, although we can’t be sure how well their efforts will 
+work until it’s tried for real. Enemyistan almost certainly hasn’t. 
+Early US attempts at this kind of targeting often saw data delayed by an
+ hour or more, and they were not facing the full array of 
+countermeasures that a major power can bring to bear. If the delay is 
+too great, then there’s nothing in the missile’s field of view when it 
+shows up, and it either plunges into the sea or takes out something it 
+thinks is a carrier, but turns out to be a Danish <a href="https://www.navalgazing.net/Merchant-Ships-Container-Ships">container ship</a>. </p>
+<p> <span> <span>A Danish container ship</span></span></p>
+<p>None of this should be taken to mean that the US carriers are 
+completely safe from detection. There are ways to find ships at sea, but
+ they are expensive and difficult, and their effectiveness can’t be 
+absolutely certain. That said, these problems are an important part of 
+the equation, and someone who ignores them when discussing the matter 
+should not be taken seriously. </p>
+<p>The difficulty of finding the carrier is only the first line of defense. <a href="https://www.navalgazing.net/Carrier-Doom-Part-2">Next time</a>, I'll discuss the active defenses a carrier can mount to an attack. </p>
+<p><span>1</span> See <a href="http://www.navweaps.com/index_tech/tech-031.php" rel="nofollow">this article</a> for a more detailed explanation of how this is done. <a href="#fnr1_1">⇑</a> </p>
+<p><span>2</span> Basically, you just don't use the radio or radar. This is common practice in western navies. <a href="#fnr1_2">⇑</a> </p>
+<p><span>3</span> The best data I have suggests that you can get data 
+between 20 and 45 degrees off-nadir, which translates into the ability 
+to look at areas between 170 and 460 km off the ground track, on one 
+side. This is probably enough to fix and identify a carrier that has 
+already been roughly located, although the finer modes have swath widths
+ of only 10-30 km. <a href="#fnr1_3">⇑</a> </p>
+<p><span>4</span> For some reason, Airbus fails to mention this in their marketing literature <a href="#fnr1_4">⇑</a> </p>
+<p><span>5</span> Directional satcom works much better on ships than on airplanes. <a href="#fnr1_5">⇑</a> </p>
+<p><span>6</span> The SPY-1 radar of Aegis has special modes to fool radar-homing missiles. <a href="#fnr1_6">⇑</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual">by bean </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Carrier-Doom-Part-1#blogit-comment-list">14 comment(s)</a> </li>
+</ul>
+<h2 class="rm-manual">Comments</h2>
+<ol class="rm-manual">
+<li class="rm-manual"> <span>May 19, 2021</span><span>ike said...</span> <span><p class="rm-manual">Out
+ of curiosity, how much easier does finding a carrier in war time get if
+ you have a spy among the crew? Carrier crews are big enough to have 
+drug-dealers and prostitution rings, so it is not that unlikely.</p> </span> </li>
+<li class="rm-manual"> <span>May 19, 2021</span><span>bean said...</span> <span><p class="rm-manual">I'm
+ not sure. You could definitely give someone a homing beacon, and they 
+could almost certainly smuggle it onboard, but I'm sure that the Navy 
+has thought of this and probably has some ESM equipment dedicated to 
+picking up any signal. If nothing else, the Hawkeye flies over 
+occasionally and listens. Also, there's the issue that the spy would 
+know they're on a major target, which isn't good for morale.</p> </span> </li>
+<li class="rm-manual"> <span>May 19, 2021</span><span><a href="http://hotmail.com/" rel="nofollow">Doctorpat</a> said...</span> <span><p class="rm-manual">You could </p> <ul class="rm-manual"> <li class="rm-manual">Have
+ your agent smuggle the homing beacon on board just before he transfers 
+off the ship. That way he doesn't stay on board the target. (Where it 
+could be hidden is left as an exercise for someone who knows a LOT more 
+about carriers than I do.)</li> <li class="rm-manual">Tell your agent 
+that the purpose is tracking the ship during peacetime. Which is 
+probably what it would be used for. ALMOST all the time.</li> <li class="rm-manual">Your
+ beacon doesn't put out a signal until it receives a wake-up a signal 
+that your ship/aircraft/missile has sent out. So listening for such as 
+signal doesn't help until it's been activated, at which point it may be 
+too late. (There are ways of detecting radio circuits that work even 
+when they are unpowered, but if you know about such things there are 
+ways to stealth them up too.)</li> </ul> </span> </li>
+<li class="rm-manual"> <span>May 20, 2021</span><span>ike said...</span> <span><p class="rm-manual">Would
+ it even need to be a ship-to-ship signal? I don't know much about 
+technology, but I would think that something that periodically emailed 
+its GPS coordinates to plan@gmail.com wouldn't be too large or 
+expensive.</p> </span> </li>
+<li class="rm-manual"> <span>May 20, 2021</span><span>Lambert said...</span> <span><p class="rm-manual">There's
+ no internet connection in the open ocean apart from via satellite. I 
+assume ships have some way to officially connect to the internet via 
+Iridium or DoD comsats but they'd never let random sailors use it to 
+send unvetted messages during wartime. You could try to smuggle your own
+ satphone on board but I hope the SIGINT people would notice if you 
+tried to use it. Also they don't work so well when you're inside a big 
+metal box so you'd have to transmit from the deck. </p> </span> </li>
+<li class="rm-manual"> <span>May 20, 2021</span><span>bean said...</span> <span><p class="rm-manual">I
+ wouldn't totally rule out smuggling a beacon aboard, but I think the 
+risks of it being discovered are too high for them to count on this. 
+Email is definitely out, as they'll be monitoring that and locking it 
+down in wartime. And I'm very sure that the USN's security people are 
+already several levels deeper on this than we can get.</p> </span> </li>
+<li class="rm-manual"> <span>May 20, 2021</span><span>Ian Argent said...</span> <span><p class="rm-manual">A hidden beacon smuggled aboard is a movie-plot level threat. I laugh in its face "HAHAHAHAHAHA"</p> <p class="rm-manual">Let
+ me tell you of my experiences using FRS radios aboard a cruise ship. 
+They had maybe 50 yards range below decks, and the batteries (expensive 
+lithium cells) barely lasted the cruise (and were mostly in standby 
+during the period). (Which is why we ended up buying the internet 
+package last time - it meant we could use IMs and VoIP to communicate.)</p> <p class="rm-manual">A
+ beacon hidden in the bilges is worthless, and even one up on deck needs
+ a honking big power pack to be worthwhile. Physics hates this plan.</p> <p class="rm-manual">And then the CVBG's emissions checks when they go to EMCON detect it anyway.</p> </span> </li>
+<li class="rm-manual"> <span>May 20, 2021</span><span>John Schilling said...</span> <span><p class="rm-manual">Even
+ if your beacon is cleverly designed to remain inert until the opportune
+ moment, which is harder than it might seem, it's not going to work from
+ inside a big metal box. It's going to need to have an antenna with a 
+view of the sky. And if it's anywhere on the flight or hangar deck, it's
+ going to be fairly quickly spotted on a FOD walk.</p> <p class="rm-manual">There
+ might be a few places on the superstructure that don't get that 
+treatment, but they're going to be small areas with restricted crew 
+access and the crewmen with access will have a pretty good idea of what 
+does or doesn't belong in their workspace.</p> </span> </li>
+<li class="rm-manual"> <span>May 21, 2021</span><span>Blackshoe said...</span> <span><p class="rm-manual">As
+ John notes, something that could be visible from space high up on the 
+island that could respond to on-demand pinging from satellites is 
+doable. Wouldn't even be hard to do, really. But (as John also notes!) 
+there's a limited number of people who would have access to do it, and 
+they'd be smart enough to know why it's being done. There's probably 
+also EMI issues that are going to be hard to solve. </p> </span> </li>
+<li class="rm-manual"> <span>May 21, 2021</span><span>bean said...</span> <span><blockquote class="rm-manual"> <p class="rm-manual">There’s probably also EMI issues that are going to be hard to solve. </p> </blockquote> <p class="rm-manual">That's
+ actually a really good point. China successfully figures out how to 
+build and conceal a beacon so that nobody notices, tries to turn it on, 
+and discovers that it was fried the first time the air-search radar was 
+switched on.</p> <p class="rm-manual">(This isn't a joke. Naval aircraft
+ have much higher standards for operating near radars and the like than 
+their land-based counterparts because the radar is right next to them 
+instead of sitting a ways away. This has caused problems when they've 
+tried to operate Army helicopters from carriers.)</p> </span> </li>
+<li class="rm-manual"> <span>May 21, 2021</span><span>Lambert said...</span> <span><p class="rm-manual">An
+ object that you hide on an enemy vessel to compromise it at some point 
+in the future? That just sounds like a limpet mine with extra steps.</p> </span> </li>
+<li class="rm-manual"> <span>May 21, 2021</span><span>Blackshoe said...</span> <span><p class="rm-manual">USS FIRSTSHIP once fried a bunch of electronics on a civilian ship by keeping SPY on too high a power at too close a range. </p> </span> </li>
+<li class="rm-manual"> <span>June 06, 2021</span><span>Ian Argent said...</span> <span><p class="rm-manual">Via
+ the Soviet Battleships Pt 3 Comments and commentor muddywaters, 
+apparently some of the antiship missiles the Iraqis were using in the 
+first Gulf War:</p> <p class="rm-manual">"[W]were also susceptible to 
+HERO (hazard of electromagnetic radiation to ordnance) meaning if stored
+ near a powerful radar they might spontaneously explode."</p> <p class="rm-manual">https://wwiiafterwwii.wordpress.com/2019/07/21/missile-attack-on-battleship-uss-missouri/</p> </span> </li>
+<li class="rm-manual"> <span>June 06, 2021</span><span>Ian Argent said...</span> <span><p class="rm-manual">Err, Iran-Iraq War (And earlier), not the GW.</p> </span> </li>
+</ol>
+<h3 class="rm-manual"> Comments from SlateStarCodex:</h3>
+<h2 class="rm-manual">Leave a comment</h2>
+<p class="rm-manual">All comments are reviewed before being displayed. </p>
+<p class="rm-manual">Name (required):</p>
+<p class="rm-manual"> E-mail (required, will not be published):</p>
+<p class="rm-manual">Website:</p>
+<p class="rm-manual"> You can use <a href="https://daringfireball.net/projects/markdown/syntax" rel="nofollow">Markdown</a> in comments! </p>
+<p class="rm-manual">Enter value: </p>
+<p class="rm-manual">Search</p>
+<ul class="rm-manual"><li class="rm-manual"> <ul class="rm-manual"><li class="rm-manual">
+<a rel="nofollow" href="https://www.navalgazing.net/Carrier-Doom-Part-1?action=login">login</a> </li></ul> <p class="rm-manual"> Useful Posts </p>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/About">About</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Naval-Gazing-Index">Topical Index</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Top-Posts">Top Posts</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Naval-Gazing-Virtual-Meetup">Virtual Meetups</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/SSC-Index">SSC Naval Gazing Posts</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Bibliography">Bibliography</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Links-Index">Link Index</a> </li>
+</ul> <p class="rm-manual"> Recent Comments </p>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Open-Thread-81#bi_ID20210706T193007">To my understanding, Indian military aircraft procurement is possibly the worst …</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Open-Thread-81#bi_ID20210706T185333">Huh. I'd heard that the ship's dimensions were a major constraint for *Vikramadi…</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Open-Thread-81#bi_ID20210706T174938">Apparently actual Rafales are too large to fit comfortably aboard the elevators …</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Open-Thread-81#bi_ID20210706T173232">What's wrong with actual Rafales? Doesn't India already operate them? If they ar…</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Open-Thread-81#bi_ID20210706T143921">India has announced that it's started work on an indigenous carrier aircraft. Th…</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Open-Thread-81#bi_ID20210706T050418">Sure, there are any number of different ways the *Nimitz* personnel could have h…</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/The-Battle-of-Jutland#bi_ID20210706T034116">This is a summary article; if you want details like that, see [the longer series…</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/The-Battle-of-Jutland#bi_ID20210705T234234">Re: "a miscommunication left Jellicoe with the impression that the Germans were …</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Open-Thread-81#bi_ID20210705T234117">One F14 doing a full afterburner flyover of Pearl 3 hours before the Japanese go…</a> </li>
+</ul> <h4 class="rm-manual"><a href="https://www.navalgazing.net/?action=rss">RSS Feed</a></h4> <p class="rm-manual"> Categories </p>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Tags/Airlines">Airlines</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Tags/Amphibious">Amphibious</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Tags/Armament">Armament</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Tags/Aurora">Aurora</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Tags/Aviation">Aviation</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Tags/Battles">Battles</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Tags/Battleships">Battleships</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Tags/BB-61">BB 61</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Tags/Coastal-Defenses">Coastal Defenses</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Tags/Design">Design</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Tags/Engineering">Engineering</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Tags/Falklands">Falklands</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Tags/ICNW">ICNW</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Tags/Intro">Intro</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Tags/Jutland">Jutland</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Tags/Links">Links</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Tags/Logistics">Logistics</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Tags/Merchant">Merchant</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Tags/Modern">Modern</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Tags/Naval-Gazing">Naval Gazing</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Tags/News">News</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Tags/Nuclear">Nuclear</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Tags/Open">Open</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Tags/Pictures">Pictures</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Tags/Protection">Protection</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Tags/Review">Review</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Tags/Riverine">Riverine</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Tags/RTW2">RTW 2</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Tags/Russia">Russia</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Tags/SYWTBABB">SYWTBABB</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Tags/SYWTBAMN">SYWTBAMN</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Tags/Undersea">Undersea</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Tags/WW2">WW 2</a> </li>
+<li class="rm-manual">
+<a href="https://www.navalgazing.net/Tags/WWI">WWI</a> </li>
+</ul> </li></ul>
+<p class="rm-manual">Page last modified on January 05, 2021, at 07:47 AM </p>
+<ul class="rm-manual"> <li class="rm-manual">
+<a href="http://pmwiki.com/Cookbook/Minimous">Minimous</a> theme originally by <a href="http://andytson.com/blog/2010/01/minimous-posterous-minimalist-look-in-wordpress/">Andy Thompson</a>, adapted by <a href="http://solidgone.org/Skins">David Gilbert</a>
+</li> <li class="rm-manual">powered by <a href="http://pmwiki.com/Cookbook/BlogIt">BlogIt</a>
+</li> </ul></article>
+</body></html>

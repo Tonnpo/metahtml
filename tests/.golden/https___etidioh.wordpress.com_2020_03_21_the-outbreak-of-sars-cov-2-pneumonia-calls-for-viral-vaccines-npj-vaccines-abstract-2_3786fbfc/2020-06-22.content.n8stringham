@@ -1,0 +1,86 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual">The #Outbreak of #SARS-CoV-2 #Pneumonia Calls for Viral #Vaccines (npj Vaccines, abstract)</h1>
+<p class="rm-manual">[Source: US National Library of Medicine, full page: (<a href="https://pubmed.ncbi.nlm.nih.gov/32194995/" rel="noopener">LINK</a>). Abstract, edited.]</p>
+<p class="rm-manual">NPJ Vaccines, 5, 18 2020 Mar 6 eCollection 2020</p>
+<p class="rm-manual"><span>The Outbreak of SARS-CoV-2 Pneumonia Calls for Viral Vaccines</span></p>
+<p class="rm-manual">Weilong Shang 1, Yi Yang 1, Yifan Rao 1, Xiancai Rao 1</p>
+<p class="rm-manual">Affiliation: 1 Department of Microbiology, College 
+of Basic Medical Sciences, Army Medical University (Third Military 
+Medical University), 400038 Chongqing, China.</p>
+<p class="rm-manual">PMID: 32194995 PMCID: PMC7060195 DOI: 10.1038/s41541-020-0170-0</p>
+<p class=""><span>Abstract</span></p>
+<p class="">The outbreak of 2019-novel coronavirus disease (COVID-19) 
+that is caused by SARS-CoV-2 has spread rapidly in China, and has 
+developed to be a Public Health Emergency of International Concern. 
+However, no specific antiviral treatments or vaccines are available yet.
+ This work aims to share strategies and candidate antigens to develop 
+safe and effective vaccines against SARS-CoV-2.</p>
+<p class="rm-manual">Keywords: Infection; Microbiology; Pathogenesis; Vaccines.</p>
+<p class="rm-manual">© The Author(s) 2020.</p>
+<p class="rm-manual">–</p>
+<p class="rm-manual">Keywords: SARS-CoV-2; COVID-19; Vaccines.</p>
+<p class="rm-manual">——</p>
+<h2 class="rm-manual">Published by</h2>
+<h3 class="rm-manual">Giuseppe Michieli</h3>
+<p class="rm-manual"> I am an Italian blogger, active since 2005 with 
+main focus on emerging infectious diseases such as avian influenza, 
+SARS, antibiotics resistance, and many other global Health issues. Other
+ fields of interest are: climate change, global warming, geological and 
+biological sciences. My activity consists mainly in collection and 
+analysis of news, public services updates, confronting sources and 
+making decision about what are the 'signals' of an impending crisis (an 
+outbreak, for example). When a signal is detected, I follow traces 
+during the entire course of an event. I started in 2005 my blog ''A 
+TIME'S MEMORY'', now with more than 40,000 posts and 3 millions of web 
+interactions. Subsequently I added an Italian Language blog, then 
+discontinued because of very low traffic and interest. I contributed for
+ seven years to a public forum (FluTrackers.com) in the midst of the 
+Ebola epidemic in West Africa in 2014, I left the site to continue alone
+ my data tracking job. <a href="https://etidioh.wordpress.com/author/gimi69/" rel="author"> View all posts by Giuseppe Michieli </a> </p>
+<p class="rm-manual"><span><span>Posted on </span><a href="https://etidioh.wordpress.com/2020/03/21/the-outbreak-of-sars-cov-2-pneumonia-calls-for-viral-vaccines-npj-vaccines-abstract-2/" rel="bookmark">March 21, 2020</a></span></p>
+<p class="rm-manual"><span><span><span>Author </span><a href="https://etidioh.wordpress.com/author/gimi69/">Giuseppe Michieli</a></span></span></p>
+<p class="rm-manual"><span><span>Categories </span><a href="https://etidioh.wordpress.com/category/uncategorized/" rel="category tag">Uncategorized</a></span></p>
+<p class="rm-manual"><span><span>Tags </span><a href="https://etidioh.wordpress.com/tag/abstract/" rel="tag">abstract</a>, <a href="https://etidioh.wordpress.com/tag/covid-19/" rel="tag">COVID-19</a>, <a href="https://etidioh.wordpress.com/tag/research-2/" rel="tag">research</a>, <a href="https://etidioh.wordpress.com/tag/sars-cov-2/" rel="tag">sars-cov-2</a>, <a href="https://etidioh.wordpress.com/tag/vaccines-2/" rel="tag">vaccines</a></span> </p>
+<h2 class="rm-manual">Post navigation</h2>
+<p class="rm-manual"><a href="https://etidioh.wordpress.com/2020/03/21/network-based-drug-repurposing-for-novel-coronavirus-2019-ncov-sars-cov-2-cell-discov-abstract/" rel="prev"><span>Previous</span> <span>Previous post:</span> <span>#Network-based #Drug #Repurposing for Novel #Coronavirus 2019-nCoV/SARS-CoV-2 (Cell Discov., abstract)</span></a></p>
+<p class="rm-manual"><a href="https://etidioh.wordpress.com/2020/03/21/covid19-a-recommendation-to-examine-the-effect-of-hydroxychloroquine-in-preventing-infection-and-progression-j-antimicrob-chemother-abstract-2/" rel="next"><span>Next</span> <span>Next post:</span> <span>#COVID19:
+ A Recommendation to Examine the Effect of #Hydroxychloroquine in 
+Preventing #Infection and #Progression (J Antimicrob Chemother., 
+abstract)</span></a></p></article>
+</body></html>

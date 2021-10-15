@@ -1,0 +1,204 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Why North Korea Isn’t Interested in Economic Reform - The PeninsulaThe Peninsula </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="http://blog.keia.org/category/south-korea/">South Korea</a></li> <li class="rm-manual"><a href="http://blog.keia.org/category/north-korea/">North Korea</a></li> <li class="rm-manual"><a href="http://blog.keia.org/category/inter-korean/">Inter-Korean Affairs</a></li> <li class="rm-manual"><a href="http://blog.keia.org/category/korea-abroad/">Korea Abroad</a></li> <li class="rm-manual"><a href="http://blog.keia.org/site-contributors/">Contributors</a></li> </ul>
+<h3 class="rm-manual">Categorized | <a href="http://blog.keia.org/category/inter-korean/" rel="category tag">Inter-Korean</a>, <a href="http://blog.keia.org/category/slider/" rel="category tag">slider</a>
+</h3>
+<h2 class="rm-manual"><a href="http://blog.keia.org/2013/04/why-north-korea-isnt-interested-in-economic-reform/" rel="bookmark">Why North Korea Isn’t Interested in Economic Reform</a></h2>
+<p class="rm-manual">Posted on 08 April 2013. <span>Tags: <a href="http://blog.keia.org/tag/economics/" rel="tag">economics</a>, <a href="http://blog.keia.org/tag/kaesong-industrial-complex/" rel="tag">Kaesong Industrial Complex</a>, <a href="http://blog.keia.org/tag/trade/" rel="tag">trade</a></span></p>
+<p class="rm-manual">By Troy Stangarone</p>
+<p>As often happens with North Korea, there have recently been 
+suggestions that the regime may be interested in engaging in economic 
+reforms. The latest hopes spring from the <a href="http://english.yonhapnews.co.kr/northkorea/2013/04/02/28/0401000000AEN20130402005600315F.HTML">appointment of Pak Pong-ju</a>,
+ a noted economic reformer, as prime minister and the replacement of 
+most ministers of industry with officials believed to have been part of a
+ task force established by Kim Jong-un to revive the economy. In 
+conjunction with the appointments, Pyongyang announced a dual track 
+policy of building the economy while also enhancing its nuclear weapons 
+program. However, it would be premature to assume that these are true 
+signs of a potential economic opening.</p>
+<p>For years, the Chinese have been encouraging the North Koreans to 
+follow their path to reform with little success. After the passing of 
+Kim Jong-il, there were hopes that Kim Jong-un would embrace reform. 
+Shortly after taking power, he remarked that North Koreans should <a href="http://www.nytimes.com/2012/04/16/world/asia/kim-jong-un-north-korean-leader-talks-of-military-superiority-in-first-public-speech.html">“never have to tighten their belts again”</a> and later that fall told a delegation from China that he was focused on <a href="http://www.nytimes.com/2012/08/04/world/asia/kim-jong-un-calls-for-greater-north-korean-prosperity.html">“developing the economy and improving people’s livelihoods.”</a></p>
+<p>However, in contrast to North Korea’s pledges to conduct this past 
+December’s satellite launch and their third nuclear test, there has been
+ relatively little follow through on the economic side. Over last summer
+ and fall, expectations built that North Korea would engage in limited 
+industrial and agricultural reforms. When North Korea announced that it 
+would convene its parliament last September, there were <a href="http://www.nytimes.com/2012/09/06/world/asia/north-korea-may-be-preparing-economic-reforms.html">hopes that it would announce economic reforms</a>
+ designed to introduce incentives for producers to increase production 
+and allowed select factories more say in what they produced and how. If 
+successful, the reforms would be spread to the whole economy.</p>
+<p>At the same time, North Korea mooted the possibility of agricultural reforms. A small number of farms would be allowed to <a href="http://articles.washingtonpost.com/2012-09-03/world/35496587_1_kim-jong-eun-new-leader-north-korea">sell portions of their harvest</a> in markets. If successful, the experiment would be spread to the rest of the agricultural sector. However, the <a href="http://www.dailynk.com/english/read.php?cataId=nk09002&amp;num=9907">test cases did not take place</a>,
+ as harvests disappointed and feeding the military was seen as a 
+priority. At best those reforms have been put off, if not shelved 
+completely.</p>
+<p>The prospects for current reforms also look doubtful. Shortly after 
+announcing its new economic policy and shuffling cabinet officials, 
+North Korea proceeded to <a href="http://news.yahoo.com/nkorea-refuses-let-skoreans-enter-042653455.html">close the border with South Korea</a> and prevent the flow of goods and people into the Kaesong Industrial Complex. While <a href="http://news.mk.co.kr/english/newsRead.php?sc=30800005&amp;cm=General&amp;year=2013&amp;no=254469&amp;selFlag=sc&amp;relatedcode=&amp;wonNo=&amp;sID=308">the tactic is not new</a>, it is also not the step of a regime that takes economic development seriously.</p>
+<p>Further complicating the situation at Kaesong, North Korea announced that it “<a href="http://www.nytimes.com/2013/04/09/world/asia/north-korea.html?hp&amp;_r=0">will temporarily suspend the operations in the zone and examine the issue of whether it will allow its existence or close it.”</a>
+ This additional action, if North Korea follows through, is 
+unprecedented. The current border closing had already forced at least <a href="http://www.nytimes.com/2013/04/08/world/asia/south-korea-warns-of-missile-launch-by-north.html?partner=rss&amp;emc=rss">13 South Korean businesses </a>to
+ suspend operations, and if North Korea follows through and removes its 
+workers, the other 110 companies located in the industrial zone would 
+also have to suspend operations.</p>
+<p>While all of the South Korean businesses operating in Kaesong face 
+short term losses, North Korea’s actions could also impact the long term
+ prospects of the industrial zone and its own economic reform measures. 
+Businesses, especially the foreign investment that would be needed 
+revive the North Korean economy; require stability and assurances that 
+their access to goods and services will not be cut off at the whim of 
+the government.</p>
+<p>Prior to the announcement on Kaesong, there had been speculation in the South Korean press there were <a href="http://koreajoongangdaily.joinsmsn.com/news/article/Article.aspx?aid=2969673">divisions within the regime</a>
+ on what steps to take next, with the press reporting that the military 
+was strongly pushing for Kaesong to be closed, while the party supported
+ maintaining the complex. Even if this is not the case, Pyongyang’s 
+actions at Kaesong cast doubt on the prospects of there being a 
+consensus to move towards reviving the economy in North Korea.</p>
+<p>Additionally, Pyongyang’s unfriendly business policies do not just 
+extend to South Korea. While North Korea has an investment law in place,
+ it does not always apply even to its allies. Last fall the <a href="http://in.finance.yahoo.com/news/chinese-firm-says-north-korea-185547650.html">Chinese firm Xiyang Group</a>
+ went public with its story of being cheated out of a $37.1 million 
+investment in North Korea. It claims that it is but one of dozens of 
+Chinese firms that have experienced similar problems. Efforts at 
+developing an industrial complex similar to Kaesong along the Chinese 
+border have also been slow moving.</p>
+<p>If North Korea is to take substantive steps to revive its economy and
+ move towards normal economic growth, it will have to move beyond taking
+ arbitrary and capricious actions. It will need to move towards the rule
+ of law, which at the same time would constrain the power of the current
+ regime. This would allow markets to take hold, for which the regime 
+would have to commit to refraining from actions such as the 2009 
+currency reform that was designed reign in the markets and reduce the 
+profits made by traders. The regime will also need to accept the 
+development of alternative centers of power as lower and mid-level 
+functionaries in the regime, and over time those not associated with the
+ regime, acquire wealth and influence through their business ventures. 
+This would also require Pyongyang to move beyond its tactics of using 
+escalating tensions to illicit aid and concessions from other nations.</p>
+<p>Under Kim Jong-il, these were steps the regime was unwilling to take 
+for fear of suffering the same fate as the communist regimes of Eastern 
+Europe and there were few signs of the regime being voluntarily willing 
+to loosen its hold on the country. During periods of famine and when the
+ public distribution system would break down the regime would tolerate 
+the emergence of markets, but it also would push to scale them back as 
+circumstances changed. It is unclear if Kim Jong-un and his advisors 
+view the situation the same, but the pattern to date is much like his 
+father’s, military strength is favored over economic reform.</p>
+<p>If the regime is still reticent to undertake economic reforms, the 
+recent move by Pyongyang to again stress the importance of reviving the 
+economy may be a tactical move. Having previously written into its 
+constitution that it is a nuclear weapons state and recently announced 
+that its nuclear weapons are the <a href="http://www.cbsnews.com/8301-202_162-57577165/north-korea-nuclear-weapons-are-the-nations-life/">“nation’s life” and will not be traded for “billions of dollars,”</a>
+ North Korea needs a means through which to deescalate the current 
+crisis and a path for future talks with the United States, South Korea 
+and others. If its nuclear weapons are truly off of the table, Pyongyang
+ needs a basis for future negotiations. By restarting its nuclear 
+facilities and offering the prospect of economic reform, North Korea may
+ be trying to establish a baseline for future talks where it offers the 
+prospect of a reformed economy for the price of its nuclear facilities, 
+but not its weapons.</p>
+<p>In light of North Korea’s past failures to follow through with real 
+economic reform measures, the recent announcements by Pyongyang should 
+be viewed more as a tactical move than a shift in policy. Rather than 
+hope that North Korea has turned a corner on reform, a more prudent 
+course would be to determine if North Korea follows through on proposed 
+reforms and adjust accordingly. Unfortunately, the actions at Kaesong do
+ not make this look likely. However, if Pyongyang were to implement 
+genuine economic reform measures, the United States and South Korea 
+should be prepared to take actions that would reinforce those reforms.</p>
+<p class="rm-manual">Troy Stangarone is Senior Director for 
+Congressional Affairs and Trade for the Korea Economic Institute. The 
+views expressed here are his own.</p>
+<h3 class="rm-manual">Related</h3>
+<h3 class="rm-manual">One Response to “Why North Korea Isn’t Interested in Economic Reform”</h3>
+<h3 class="rm-manual">Trackbacks/Pingbacks</h3>
+<ol class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <a href="http://blog.keia.org/2016/01/purposefully-empty-handed-north-koreas-hollow-search-for-investment/" rel="external nofollow">Purposefully Empty Handed?: North Korea’s Hollow Search for Investment | The Peninsula</a> <span>says:</span> </p> <p class="rm-manual"><a href="http://blog.keia.org/2013/04/why-north-korea-isnt-interested-in-economic-reform/#comment-657"> 01/13/2016 at 13:31</a> </p> <p class="rm-manual">[…]
+ of these tandem developments is that they highlight either the DPRK’s 
+misunderstanding of or indifference towards the global economy despite 
+overtly stating otherwise. The latter is the more likely […]</p> <p class="rm-manual"><a rel="nofollow" href="http://blog.keia.org/2013/04/why-north-korea-isnt-interested-in-economic-reform/?replytocom=657#respond">Reply</a></p> </li> </ol>
+<h3 class="rm-manual">Leave a Reply</h3>
+<p class="rm-manual"><a rel="nofollow" href="file:///2013/04/why-north-korea-isnt-interested-in-economic-reform/#respond">Click here to cancel reply.</a></p>
+<p class="rm-manual"> Name (required)</p>
+<p class="rm-manual"> Mail (will not be published) (required)</p>
+<p class="rm-manual"> Website</p>
+<p class="rm-manual"> Notify me of follow-up comments by email.</p>
+<p class="rm-manual"> Notify me of new posts by email.</p>
+<h3 class="rm-manual">About The Peninsula</h3>
+<p class="rm-manual">The Peninsula blog is a project of the Korea 
+Economic Institute. It is designed to provide a wide ranging forum for 
+discussion of the foreign policy, economic, and social issues that 
+impact the Korean peninsula. The views expressed on The Peninsula are 
+those of the authors alone, and should not be taken to represent the 
+views of either the editors or the Korea Economic Institute. For 
+questions, comments, or to submit a post to The Peninsula, please 
+contact us at ts@keia.org. </p>
+<h3 class="rm-manual">Latest News</h3>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://asia.nikkei.com/Politics/International-relations/UK-turns-on-China-over-Hong-Kong-Huawei-and-coronavirus">UK turns on China over Hong Kong, Huawei and coronavirus - Nikkei Asian Review</a></li>
+<li class="rm-manual"><a href="https://europeansting.com/2020/06/06/how-communities-are-dealing-with-economy-society-and-education-in-covid-19-crisis/">How communities are dealing with economy, society and education in COVID-19 crisis - The European Sting</a></li>
+<li class="rm-manual"><a href="https://www.wsj.com/articles/the-deficit-myth-review-years-of-magical-thinking-11591396579">‘The Deficit Myth’ Review: Years of Magical Thinking - The Wall Street Journal</a></li>
+<li class="rm-manual"><a href="https://www.marketwatch.com/story/no-masks-please-were-british-when-it-comes-to-face-coverings-europeans-americans-and-asians-have-very-different-views-2020-06-05">‘No
+ masks please, we’re British:’ When it comes to face coverings, 
+Europeans, Americans and Asians have very different views - MarketWatch</a></li>
+<li class="rm-manual"><a href="https://www.ft.com/content/a67b6326-723d-320f-b293-fb11d3f38a6c">Coronavirus: US one-day death rate remains above 1000 — as it happened - Financial Times</a></li>
+</ul>
+<h3 class="rm-manual">Tag Cloud</h3>
+<p class="rm-manual"><a href="http://blog.keia.org/tag/aid/">aid</a> <a href="http://blog.keia.org/tag/china/">china</a> <a href="http://blog.keia.org/tag/culture/">Culture</a> <a href="http://blog.keia.org/tag/development/">development</a> <a href="http://blog.keia.org/tag/diplomacy/">diplomacy</a> <a href="http://blog.keia.org/tag/economics/">economics</a> <a href="http://blog.keia.org/tag/education/">education</a> <a href="http://blog.keia.org/tag/election-2016/">election 2016</a> <a href="http://blog.keia.org/tag/elections/">elections</a> <a href="http://blog.keia.org/tag/energy/">energy</a> <a href="http://blog.keia.org/tag/environment/">environment</a> <a href="http://blog.keia.org/tag/fta/">FTA</a> <a href="http://blog.keia.org/tag/human-rights/">Human Rights</a> <a href="http://blog.keia.org/tag/japan/">Japan</a> <a href="http://blog.keia.org/tag/kaesong-industrial-complex/">Kaesong Industrial Complex</a> <a href="http://blog.keia.org/tag/kim-jong-il/">Kim Jong-Il</a> <a href="http://blog.keia.org/tag/kim-jong-un/">Kim Jong-un</a> <a href="http://blog.keia.org/tag/korus-fta/">Korus FTA</a> <a href="http://blog.keia.org/tag/leadership-transition/">leadership transition</a> <a href="http://blog.keia.org/tag/media/">media</a> <a href="http://blog.keia.org/tag/middle-east/">Middle East</a> <a href="http://blog.keia.org/tag/military-affairs/">military affairs</a> <a href="http://blog.keia.org/tag/moon-jae-in/">Moon Jae-In</a> <a href="http://blog.keia.org/tag/north-korea-2/">north korea</a> <a href="http://blog.keia.org/tag/nuclear-weapons/">nuclear weapons</a> <a href="http://blog.keia.org/tag/park-geun-hye/">Park Geun-hye</a> <a href="http://blog.keia.org/tag/pathology/">pathology</a> <a href="http://blog.keia.org/tag/politics/">politics</a> <a href="http://blog.keia.org/tag/polling-data/">polling data</a> <a href="http://blog.keia.org/tag/president-obama/">President Obama</a> <a href="http://blog.keia.org/tag/russia/">russia</a> <a href="http://blog.keia.org/tag/samsung/">samsung</a> <a href="http://blog.keia.org/tag/sanctions/">sanctions</a> <a href="http://blog.keia.org/tag/security/">security</a> <a href="http://blog.keia.org/tag/six-party-talks/">Six Party Talks</a> <a href="http://blog.keia.org/tag/social-issues/">social issues</a> <a href="http://blog.keia.org/tag/soft-power/">soft power</a> <a href="http://blog.keia.org/tag/south-korea/">South Korea</a> <a href="http://blog.keia.org/tag/sports/">sports</a> <a href="http://blog.keia.org/tag/succession/">succession</a> <a href="http://blog.keia.org/tag/technology/">technology</a> <a href="http://blog.keia.org/tag/tourism/">tourism</a> <a href="http://blog.keia.org/tag/trade/">trade</a> <a href="http://blog.keia.org/tag/us-rok-relations/">US - ROK Relations</a> <a href="http://blog.keia.org/tag/wmd/">WMD</a></p>
+<h3 class="rm-manual">Top Posts &amp; Pages</h3>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="http://blog.keia.org/2020/06/north-korea-broadside-balloons/"> What Is Behind North Korea's Latest Broadside Against Balloons? </a> </li> <li class="rm-manual"> <a href="http://blog.keia.org/2019/12/climate-change-critical-assuring-u-s-leadership-korean-peninsula-northeast-asia/"> Climate Change is Critical to Assuring U.S. leadership on the Korean Peninsula and Northeast Asia </a> </li> <li class="rm-manual"> <a href="http://blog.keia.org/2020/05/can-south-korea-find-middle-way-u-s-china/"> Can South Korea Find A Middle Way Between the U.S. and China? </a> </li> <li class="rm-manual"> <a href="http://blog.keia.org/2020/06/korean-sentiments-toward-china-continue-worsen/"> Korean Sentiments Toward China Continue to Worsen </a> </li> <li class="rm-manual"> <a href="http://blog.keia.org/2020/06/revised-data-privacy-law-gains-support/"> Revised Data Privacy Law Gains More Support </a> </li> <li class="rm-manual"> <a href="http://blog.keia.org/2020/02/united-states-can-help-north-korea-coronavirus/"> What the United States Can Do to Help North Korea with the Coronavirus </a> </li> <li class="rm-manual"> <a href="http://blog.keia.org/2016/07/ten-korean-words-that-dont-exist-in-english/"> Ten Korean Words that Don't Exist in English </a> </li> <li class="rm-manual"> <a href="http://blog.keia.org/2020/05/regionalism-fading-shadow/"> Regionalism: Fading Shadow or Unyielding Ghost? </a> </li> <li class="rm-manual"> <a href="http://blog.keia.org/2020/05/fake-news-pyongyang-north-korea-using-internet/"> Fake News from Pyongyang! How North Korea is Using the Internet </a> </li> <li class="rm-manual"> <a href="http://blog.keia.org/2020/05/north-korea-turns-bonds-address-financial-distress/"> North Korea Turns to Bonds to Address Financial Distress </a> </li> </ul>
+<h2 class="rm-manual">What Is Behind North Korea’s Latest Broadside Against Balloons?</h2>
+<p class="rm-manual">By Robert R. King In a tough statement, Kim 
+Yo-jong, the sister of Kim Jong-un, issued a particularly vicious attack
+ on North Korean defectors, particularly those ...</p>
+<h2 class="rm-manual">Partisan Divide On Legacy of Wartime Sexual Slavery</h2>
+<p class="rm-manual">This briefing comes from Korea View, a weekly 
+newsletter published by the Korea Economic Institute. Korea View aims to
+ cover developments that reveal trends on the ...</p>
+<h2 class="rm-manual">Korean Sentiments Toward China Continue to Worsen</h2>
+<p class="rm-manual">This briefing comes from Korea View, a weekly 
+newsletter published by the Korea Economic Institute. Korea View aims to
+ cover developments that reveal trends on the ...</p>
+<p class="rm-manual"> <span> <a href="#">Home</a> | <a href="#">About KEI</a> | <a href="#">Contact Us</a> | <a href="#">Direction to KEI</a> | <a href="#">Site Map</a> <span>© 2007-2011 Korea Economic Institute | All Rights Reserved. Web Design by Blue Water Media</span></span> <span>Korea Economic Institute of America 1800 K Street NW, Suite 1010, Washington DC, 20006 p. 202.464.1982 | f. 202.464.1987</span> </p>
+<p class="rm-manual"> Send to Email Address Your Name Your Email Address <a rel="nofollow" href="#cancel">Cancel</a> </p>
+<p class="rm-manual"> Post was not sent - check your email addresses! </p>
+<p class="rm-manual"> Email check failed, please try again </p>
+<p class="rm-manual"> Sorry, your blog cannot share posts by email. </p></article>
+</body></html>

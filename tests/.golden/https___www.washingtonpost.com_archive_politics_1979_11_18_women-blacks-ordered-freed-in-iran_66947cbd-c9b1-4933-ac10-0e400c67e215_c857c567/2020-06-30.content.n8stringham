@@ -1,0 +1,177 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Women, Blacks Ordered Freed in Iran - The Washington Post </p>
+<p class="rm-manual"> <span>1</span> </p>
+<p class="rm-manual">Desktop notifications are on | <a href="">Turn off</a> </p>
+<p class="rm-manual">Get breaking news alerts from <span> The Washington Post </span></p>
+<p class="rm-manual">Turn on desktop notifications?</p>
+<p class="rm-manual"> <span>Yes</span> <span>Not now</span> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="#"> Sections </a> </li> <li class="rm-manual"> <a href="https://www.washingtonpost.com/?tid=tst_homelink">Home</a> </li> </ul>
+<p class="rm-manual"> <a href="https://www.washingtonpost.com/"> The Washington Post logo </a></p><p class="rm-manual"><a href="https://www.washingtonpost.com/"> <span>Democracy Dies in Darkness</span> </a></p><a href="https://www.washingtonpost.com/"> </a> <p class="rm-manual"></p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://subscribe.washingtonpost.com/acq?promo=o2_gift_wpfd20&amp;destination=https://www.washingtonpost.com/archive/politics/1979/11/18/women-blacks-ordered-freed-in-iran/66947cbd-c9b1-4933-ac10-0e400c67e215/&amp;tid=nav_giftsub_logged_out"> <span>Gift Subscriptions</span> </a> </li> <li class="rm-manual"> <a href="https://subscribe.washingtonpost.com/acquisition/?nid=top_pb_subscribe&amp;promo=o2&amp;oscode=RPWH&amp;acqEntType=mktg_onsite_archive&amp;destination=https://www.washingtonpost.com/archive/politics/1979/11/18/women-blacks-ordered-freed-in-iran/66947cbd-c9b1-4933-ac10-0e400c67e215/&amp;tid=nav_subscribe_logged_out"> <span>Try 1 month for $1</span> </a> <a href="https://subscribe.washingtonpost.com/acq?promo=o2_gift_wpfd20&amp;destination=https://www.washingtonpost.com/archive/politics/1979/11/18/women-blacks-ordered-freed-in-iran/66947cbd-c9b1-4933-ac10-0e400c67e215/&amp;tid=nav_giftsub_logged_out"> <span>Gift Subscriptions</span> </a> </li> <li class="rm-manual"> <a> <span>Username</span> </a> </li> <li class="rm-manual"> <a href="https://www.washingtonpost.com/subscribe/signin/?tid=nav_sign_in"> <span>Sign In</span> </a> </li> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.washingtonpost.com/my-post/#/?tid=nav_acctmgnt_menu">My Post</a></li> <li class="rm-manual"><a href="https://www.washingtonpost.com/my-post/#/my-reading-list?tid=nav_acctmgnt_menu"> My Reading List</a></li> <li class="rm-manual"><a href="https://subscribe.washingtonpost.com/profile/#/?destination=https://www.washingtonpost.com/?refresh=true&amp;tid=nav_acctmgnt_menu">Account Settings</a></li> <li class="rm-manual"><a href="https://subscribe.washingtonpost.com/newsletters?tid=nav_acctmgnt_menu">Newsletters &amp; alerts</a></li> <li class="rm-manual"><a href="https://subscribe.washingtonpost.com/acq?promo=g_d&amp;tid=nav_acctmgnt_menu">Gift subscriptions</a></li> <li class="rm-manual"><a href="http://help.washingtonpost.com/ics/support/ticketnewwizard.asp?tid=nav_acctmgnt_menu">Contact us</a></li> <li class="rm-manual"><a href="http://help.washingtonpost.com/ics/support/KBSplash.asp?tid=nav_acctmgnt_menu">Help desk</a></li> </ul> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.washingtonpost.com/my-post/#/?tid=nav_acctmgnt_menu">My Post</a></li> <li class="rm-manual"><a href="https://www.washingtonpost.com/my-post/#/my-reading-list?tid=nav_acctmgnt_menu"> My Reading List</a></li> <li class="rm-manual"><a href="https://subscribe.washingtonpost.com/profile/#/?destination=https://www.washingtonpost.com/?refresh=true&amp;tid=nav_acctmgnt_menu">Account Settings</a></li> <li class="rm-manual"><a href="https://subscribe.washingtonpost.com/newsletters?tid=nav_acctmgnt_menu">Newsletters &amp; alerts</a></li> <li class="rm-manual"><a href="https://subscribe.washingtonpost.com/acq?promo=g_d&amp;tid=nav_acctmgnt_menu">Gift subscriptions</a></li> <li class="rm-manual"><a href="http://help.washingtonpost.com/ics/support/ticketnewwizard.asp?tid=nav_acctmgnt_menu">Contact us</a></li> <li class="rm-manual"><a href="http://help.washingtonpost.com/ics/support/KBSplash.asp?tid=nav_acctmgnt_menu">Help desk</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="http://www.washingtonpost.com/archive/politics/1979/11/18/women-blacks-ordered-freed-in-iran/66947cbd-c9b1-4933-ac10-0e400c67e215/?outputType=accessibility&amp;nid=menu_nav_accessibilityforscreenreader">Accessibility for screenreader</a> </li> </ul>
+<h1 class="rm-manual">Women, Blacks Ordered Freed in Iran</h1>
+<p class="rm-manual">Add to list</p>
+<p class="rm-manual">On my list</p>
+<p class="rm-manual"> <span>By </span> <span>Jonathan C. R</span> <span>and</span> </p>
+<p class="rm-manual"> <span>al</span> </p>
+<p class="rm-manual"><span>November 18, 1979</span> </p>
+<p>Ayatollah Ruhollah Khomeini yesterday ordered the release and 
+immediate deportation of women and blacks among the 70 hostages held at 
+the American Embassy here since its siezure two weeks ago by Iranian 
+militants.</p>
+<p>The state radio said the militants holding the embassy had accepted 
+Khomeini's directive to free the estimated 10 women and blacks.</p>
+<p>But shortly before midnight, 11 hours after Khomeini made the 
+announcement, the ayatollah's son, Ahmad, emerged from the embassy and 
+said the hostages would not be released until at least today.</p>
+<p>The younger Khomeini, assigned to work out the details of the 
+release, gave no explanation for the delay. There was speculation that 
+disagreements had arisen among the students holding the hostages or that
+ Iranian authorities were attempting to keep the release and movement of
+ the hostages secret.</p>
+<p>President Carter, in a statement issued by the White House, welcomed 
+the announcement that some of the Americans would be released and urged 
+that Iranian authorities move to release the remaining hostages.</p>
+<p>"We strongly urge that the authorities in Iran now move to secure the
+ safe release of all those still being held," Carter said. "Their ordeal
+ is not over. The United States will continue to work in every channel 
+open to it to achieve that end."</p>
+<p>Khomeini justified his clemency on grounds that "Islam reserves 
+special rights for women" and that "blacks for a long time have lived 
+under oppression and pressure in America and may have been sent [to Iran
+ under duress.]"</p>
+<p>But the 79-year-old spiritual leader stressed in a sharply 
+anti-American statement that the other hostages will remain in custody 
+until the United States accepts Iran's demands for ousted Shah Mohammad 
+Reza Pahlavi's extradtion.</p>
+<p>Revolutionary Council members privately expressed hope that 
+Khomeini's move to release some of the hostages would produce a 
+conciliatory American gesture capable of helping resolve the deepening 
+U.S-Iranian crisis.</p>
+<p>Sadegh Ghotbzadeh, director of Iran's radio and television and a 
+Revolutionary Council member, said he negotiated for more than two hours
+ at the embassy to overcome the "hard feelings" of the militant Islamic 
+students even after they listened to Khomeini's announcement on the 1 
+p.m. radio news.</p>
+<p>When the release of women and black hostages was first broached 
+Thursday by Ghotbzadeh and Foreign Minister Abol Hassan Bani-Sadr, the 
+students rejected the proposal.</p>
+<p>In a telephone conversation with Bani-Sadr Thursday, students leaders
+ insisted that only direct orders from Khomeini would change their mind,
+ according to informed sources.</p>
+<p>Friday night in Qom, the holy city 80 miles south of here where 
+Khomeini resides, the ayatollah agreed that "immediate action" was 
+required, according to Ghotbzadeh.</p>
+<p>Khomeini basically favored the principles of releasing the women and 
+blacks, Ghotbzadeh said, but had been "hesitant to interfere with the 
+students," who have become one of the many power centers in 
+revolutionary Iran.</p>
+<p>But Khomeini finally decided to act decisively when told "without his
+ intervention the negotiations would go on and on" with the students, 
+Ghotbzadeh said.</p>
+<p>The students' refusal to obey the Revolutionary Council increasingly 
+has cast doubts about the cohesiveness of the supposed ruling body and 
+even about the normally uncontested authority of Khomeini.</p>
+<p>Judging from the total silence of the crowd massed outside the 
+embassy when loudspeakers broadcast his release orders, Khomeini could 
+have freed all of the hostages without causing a stir. Nonetheless, the 
+crowd almost immediately went back to shouting slogans condemming 
+President Carter and the shah and praising the ayatollah.</p>
+<p>Bani-Sadr has said that he and others told Khomeini from the 
+beginning of the siege that holding the hostages was counterproductive 
+because it was misunderstood throughout the entire world.</p>
+<p>Some Revolutionary Council members argued along with Western 
+ambassadors that the hostages' detention conditions were unacceptable, 
+especially having their hands tied when being taken out for exercies. 
+They also noted the decided lack of support from other Moslem countries 
+for the hostage-taking and the generally bad image it has given Iran's 
+revolution.</p>
+<p>The Palestine Liberation Organizationhs representative in Tehran said
+ the PLO first suggested the release of the blacks in recognition of its
+ own rapprochement with American blacks following Andrew Young's 
+resignation as U.S. ambassador to the United Nations last summer.</p>
+<p>Hours after Khomeini's orders were broadcast, student leaders said 
+they were still checking the records of the men and women to be released
+ to ensure compliance with the ayatollah's insistence that they be 
+freed, "provided they are innocent of epsionage."</p>
+<p>In what some analysts suggested was a deliberate effort to protect 
+themselves from accusations of caving in to the United States, the 
+ayatollah's language in his message to the students was as sharply 
+worded as ever.</p>
+<p>He described the embassy as a "center of conspiracy and espionage" 
+and said "the people inside who have plotted against the Islamic 
+movement do not deserve international political respect."</p>
+<p>The Iranian revolutionaries have argued that diplomatic immunity 
+guaranteed foreign missions does not apply to the U.S. Embassy because 
+it was really a spy center.</p>
+<p>"Threats and all-out propaganda by the American, government are not 
+worth a penny," he said, "nor are military threats or economic blockades
+ by America wise or important."</p>
+<p>That was taken as an allusion to Carter's decisions this week to 
+boycott Iranian oil purchases and to freeze Iranian government assets in
+ the United States.</p>
+<p>"Carter is making a big mistake to think all governments in the world are serving him blindly," the ayatollah added.</p>
+<p>"He will soon realize his big mistake," he said. "The Iranian nation 
+has risen to prevent this nest of espionage from continuing its shameful
+ activities."</p>
+<p>"Until the extradition of the traitor Mohammad Reza [Pahlavi] and the
+ return of his money, the nest of espionage and professional spies will 
+remain as they are.</p>
+<p>"Dear students, give some women and blacks whose spying is not 
+certain to the Foreign Ministry in order to have them deported, 
+immediately." he said.</p>
+<p>Taken at face value Khomeini's conditions for releasing the remaining
+ hostages were considerably tougher than those outlined throughout the 
+week that progressively scaled down Iranian demands.</p>
+<p>The last offer, made by the foreign minister, asked only that the 
+United States accept an investigative commission to talk to the shah, 
+and it no longer demanded his immediate extradition as a precondition.</p>
+<p class="">The Revolutionary Council also has considered asking the 
+students to release the fewer than 10 non-American hostages. But 
+Khomeini made no mention of them in his statement.</p>
+<p class="rm-manual"><a href="https://www.washingtonpost.com/subscribe/signin/?next_url=">Subscriber sign in</a></p>
+<h3 class="rm-manual">We noticed you’re blocking ads!</h3>
+<p class="rm-manual"><span>Keep supporting great journalism by turning 
+off your ad blocker. Or purchase a subscription for unlimited access to 
+real news you can count on.</span></p>
+<p class="rm-manual"><a href="https://subscribe.washingtonpost.com/acq/?promo=o12"><span>Try 1 month for $1</span></a></p>
+<p class="rm-manual"><a href="https://www.washingtonpost.com/steps-for-disabling-adblocker/2016/09/14/a8c3d4d2-7aac-11e6-bd86-b7bbd53d2b5d_story.html">Unblock ads</a></p>
+<p class="rm-manual"><span>Questions about why you are seeing this?</span> <a href="https://helpcenter.washingtonpost.com/hc/en-us/requests/new?ticket_form_id=502668">Contact us</a></p></article>
+</body></html>

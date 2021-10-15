@@ -1,0 +1,274 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Doomed to cooperate </p>
+<p class="rm-manual"> Search Site </p>
+<p class="rm-manual"><a href="https://www.lanl.gov/about/index.php">About</a> <a href="https://www.lanl.gov/mission/index.php">Mission</a> <a href="https://www.lanl.gov/business/index.php">Business</a> <a href="https://www.lanl.gov/newsroom/index.shtml">Newsroom</a> <a href="https://www.lanl.gov/discover/publications/index.php">Publications</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///science-innovation/index.php">Science &amp; Innovation</a></li> <li class="rm-manual"><a href="file:///collaboration/index.php">Collaboration</a></li> <li class="rm-manual"><a href="file:///careers/index.php">Careers</a></li> <li class="rm-manual"><a href="file:///community/index.php">Community</a></li> <li class="rm-manual"><a href="file:///environment/index.php">Environment</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <h3 class="rm-manual"><a href="file:///science-innovation/index.php">Science &amp; Innovation</a></h3> </li> <li class="rm-manual"><a href="file:///science-innovation/science-highlights/index.php">Science Highlights</a></li> <li class="rm-manual"><a href="file:///discover/science-briefs/index.php">Science Briefs</a></li> <li class="rm-manual"><a href="file:///science-innovation/science-facilities/index.php">Science Facilities</a></li> <li class="rm-manual"><a href="file:///science-innovation/pillars/index.php">Capability Pillars</a></li> <li class="rm-manual"><a href="file:///science-innovation/science-videos1.php">Science Videos</a></li> <li class="rm-manual"><a href="file:///org/index.php">Lab Organizations</a></li> <li class="rm-manual"><a href="http://www.lanl.gov/library/index.php">Research Library</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <h3 class="rm-manual"><a href="file:///science-innovation/science-programs/index.php">Science Programs</a></h3> </li> <li class="rm-manual"><a href="file:///science-innovation/science-programs/applied-energy-programs/index.php">Applied Energy Programs</a></li> <li class="rm-manual"><a href="file:///science-innovation/science-programs/civilian-nuclear-programs/index.php">Civilian Nuclear Energy Programs</a></li> <li class="rm-manual"><a href="file:///science-innovation/science-programs/ldrd/index.php">Laboratory Directed Research &amp; Development (LDRD)</a></li> <li class="rm-manual"><a href="https://www.lanl.gov/projects//national-security-education-center/index.php">National Security Education Center (NSEC)</a></li> <li class="rm-manual"><a href="file:///science-innovation/science-programs/office-of-science-programs/index.php">Office of Science Programs</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <h3 class="rm-manual"><a href="file:///projects/feynman-center/">Richard P. Feynman Center for Innovation</a></h3> </li> <li class="rm-manual"> <h3 class="rm-manual"><a href="file:///projects/explosives-detection/">Los Alamos Collaboration for Explosives Detection (LACED)</a></h3> </li> <li class="rm-manual"> <h3 class="rm-manual"><a href="file:///sensornexus/index">SensorNexus</a></h3> </li> <li class="rm-manual"> <h3 class="rm-manual"><a href="https://www.lanl.gov/projects//exascale-computing-project/index.php">Exascale Computing Project (ECP)</a></h3> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <h3 class="rm-manual"><a href="file:///science-innovation/user-facilities/index.php">User Facilities</a></h3> </li> <li class="rm-manual"><a href="http://cint.lanl.gov/">Center for Integrated Nanotechnologies (CINT)</a></li> <li class="rm-manual"><a href="http://lansce.lanl.gov/">Los Alamos Neutron Science Center (LANSCE)</a></li> <li class="rm-manual"><a href="https://nationalmaglab.org/user-facilities/pulsed-field-facility">National High Magnetic Field Laboratory (NHMFL)</a></li> <li class="rm-manual"> <h3 class="rm-manual"><a href="https://www.lanl.gov/projects//biosurveillance-gateway/index.php">Biosurveillance Gateway</a></h3> </li> <li class="rm-manual"> <h3 class="rm-manual"><a href="file:///collaboration/pathogen-database/index.php">Pathogen Databases</a></h3> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <h3 class="rm-manual"><a href="https://www.lanl.gov/projects//national-security-education-center/index.php">National Security Education Center (NSEC)</a></h3> </li> <li class="rm-manual"><a href="file:///collaboration/research-opportunities/nonlinear-studies.php">Center for Nonlinear Studies</a></li> <li class="rm-manual"><a href="https://www.lanl.gov/projects//national-security-education-center/engineering/index.php">Engineering Institute</a></li> <li class="rm-manual"><a href="https://www.lanl.gov/projects//national-security-education-center/information-science-technology/index.php">Information Science &amp; Technology Institute</a></li> <li class="rm-manual"><a href="https://www.lanl.gov/projects//national-security-education-center/space-earth-center/index.php">Center for Space and Earth Science</a></li> <li class="rm-manual"><a href="file:///national-security-education-center/institute-for-materials-science/index-old">Institute for Materials Science</a></li> <li class="rm-manual"><a href="http://seaborg.lanl.gov/">Seaborg Institute</a></li> <li class="rm-manual"> <h3 class="rm-manual"><a href="file:///collaboration/fellows/index.php">Fellows</a></h3> </li> <li class="rm-manual"> <h3 class="rm-manual"><a href="file:///conferences/">Conferences</a></h3> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <h3 class="rm-manual"><a href="file:///collaboration/research-opportunities/index.php">Research Opportunities</a></h3> </li> <li class="rm-manual"><a href="http://cint.lanl.gov/">Center for Integrated Nanotechnologies</a></li> <li class="rm-manual"><a href="http://lansce.lanl.gov/facilities/lujan/">Lujan Neutron Scattering Center</a></li> <li class="rm-manual"><a href="https://nationalmaglab.org/user-facilities/pulsed-field-facility">National High Magnetic Field Lab</a></li> <li class="rm-manual"><a href="file:///collaboration/research-opportunities/quantum-institute.php">Quantum Institute</a></li> <li class="rm-manual"> <h3 class="rm-manual"><a href="file:///collaboration/internships/index.php">Internships</a></h3> </li> <li class="rm-manual"><a href="file:///collaboration/internships/service-academy-research-associates/">Service Academies Research Associates (SARA)</a></li> <li class="rm-manual"> <h3 class="rm-manual"><a href="https://www.lanl.gov/projects/strategic-analyses-and-assessments/index.php">Strategic Analyses and Assessments (SAA) Office</a></h3> </li> <li class="rm-manual"> <h3 class="rm-manual"><a href="file:///collaboration/postdocs-students/index.php">Postdocs, Students</a></h3> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <h3 class="rm-manual"><a href="file:///careers/employees-retirees/index.php">Employee, Retiree Resources</a></h3> </li> <li class="rm-manual"><a href="file:///careers/employees-retirees/new-hires/benefit-options/index.php">Benefits</a></li> <li class="rm-manual"><a href="file:///careers/employees-retirees/new-hires/index.php">New Hire</a></li> <li class="rm-manual"><a href="file:///careers/employees-retirees/payroll-taxes.php">Payroll, Taxes</a></li> <li class="rm-manual"><a href="file:///careers/employees-retirees/retirees/index.php">Retirees</a></li> <li class="rm-manual"><a href="file:///careers/employees-retirees/travel/index.php">Travel</a></li> <li class="rm-manual"><a href="file:///careers/employees-retirees/verification-of-employment.php">Verification of Employment</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <h3 class="rm-manual"><a href="file:///careers/life-at-lab/index.php">Life at the Lab</a></h3> </li> <li class="rm-manual"><a href="file:///careers/stories/index.php">Career Stories</a></li> <li class="rm-manual"><a href="file:///careers/diversity-inclusion/index.php">Inclusion &amp; Diversity</a></li> <li class="rm-manual"><a href="file:///careers/life-at-lab/work-life-balance.php">Work-Life Balance</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <h3 class="rm-manual"><a href="file:///careers/career-options/index.php">Career Resources</a></h3> </li> <li class="rm-manual"><a href="file:///careers/career-options/jobs/index.php">Apply for a Job</a></li> <li class="rm-manual"><a href="file:///careers/career-options/postdoctoral-research/index.php">Postdocs</a></li> <li class="rm-manual"><a href="file:///careers/career-options/student-internships/index.php">Students</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <h3 class="rm-manual"><a href="file:///community/index.php">Community Commitment</a></h3> </li> <li class="rm-manual"><a href="file:///community/giving/index.php">Giving Campaigns, Drives</a></li> <li class="rm-manual"><a href="file:///community/economic-development.php">Economic Development</a></li> <li class="rm-manual"><a href="file:///community/scholarships-lanl-foundation.php">Employee Funded Scholarships</a></li> <li class="rm-manual"><a href="file:///community/grantapplication.php">Grants and Sponsorships</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <h3 class="rm-manual"><a href="file:///community/education/index.php"> STEM Education</a></h3> </li> <li class="rm-manual"><a href="file:///community/education/stem-education-programs.php">Programs</a></li> <li class="rm-manual"><a href="file:///community/education/teacher-resources/index.php">Teachers (K–12)</a></li> <li class="rm-manual"><a href="file:///community/education/student-resources/index.php">Students (K–12)</a></li> <li class="rm-manual"><a href="file:///community/education/higher-education-resources/index.php">Higher Education</a></li> <li class="rm-manual"><a href="file:///community/education/regional-partners/index.php">Regional Education Partners</a></li> <li class="rm-manual"><a href="https://www.lanl.gov/community/education/stem-challenge/index.php">NM Governor's STEM Challenge</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <h3 class="rm-manual"><a href="file:///community/visitors/index.php">Visitors</a></h3> </li> <li class="rm-manual"><a href="file:///community/visitors/badging/index.php">Badging, Badge Office</a></li> <li class="rm-manual"><a href="file:///community/visitors/bradbury-science-museum.php">Bradbury Science Museum</a></li> <li class="rm-manual"><a href="file:///community/visitors/housing.php">Housing</a></li> <li class="rm-manual"><a href="file:///resources/maps-old.php">Maps</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <h3 class="rm-manual">Related Resources</h3> </li> <li class="rm-manual"><a href="http://www.lanl.gov/calendar/">Calendar</a></li> <li class="rm-manual"><a href="file:///discover/publications/connections/">Community Connections</a></li> <li class="rm-manual"><a href="file:///discover/publications/index.php">Other Publications</a></li> <li class="rm-manual"><a href="file:///community/stories/index.php">Community Feature Stories</a></li> <li class="rm-manual"><a href="file:///community/community-leaders-survey.php">Community Leaders Survey</a></li> <li class="rm-manual"><a href="file:///resources/contacts.php">Contacts</a></li> <li class="rm-manual"> <a href="file:///newsroom/video/playlist-community">Videos</a>
+</li> <li class="rm-manual"><a href="file:///community/speakers-bureau/index.php">Speakers' Bureau</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <h3 class="rm-manual"><a href="file:///environment/protection/index.php">Environmental Protection</a></h3> </li> <li class="rm-manual"><a href="file:///environment/protection/monitoring/index.php">What We Monitor &amp; Why</a></li> <li class="rm-manual"><a href="file:///environment/protection/cultural-preservation/index.php">Cultural Preservation</a></li> <li class="rm-manual"><a href="file:///environment/protection/trails/index.php">Taking Care of our Trails</a></li> <li class="rm-manual"><a href="file:///environment/protection/compliance/index.php">Obeying Environmental Laws</a></li> <li class="rm-manual"><a href="file:///environment/protection/wildlife-protection/index.php">Protecting Wildlife</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <h3 class="rm-manual"><a href="file:///environment/sustainability/index.php">Environmental Sustainability</a></h3> </li> <li class="rm-manual"><a href="file:///environment/sustainability/goals/index.php">Sustainability Goals</a></li> <li class="rm-manual"><a href="file:///environment/sustainability/recycling.php">Recycling</a></li> <li class="rm-manual"><a href="file:///environment/sustainability/green-purchasing.php">Green Purchasing</a></li> <li class="rm-manual"><a href="file:///environment/sustainability/pollution-prevention.php">Pollution Prevention</a></li> <li class="rm-manual"><a href="file:///environment/sustainability/water-reuse.php">Reusing Water</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <h3 class="rm-manual"><a>Resources</a></h3> </li> <li class="rm-manual"><a href="file:///environment/protection/environmental-management-system.php">Environmental Management System</a></li> <li class="rm-manual"><a href="file:///environment/protection/environmental-outreach.php">Environmental Outreach</a></li> <li class="rm-manual"><a href="file:///environment/stories/index.php">Feature Stories</a></li> <li class="rm-manual"><a href="file:///environment/public-reading-room.php">Public Reading Room: Environmental Documents, Reports</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.lanl.gov/index.shtml">Home</a></li> <li class="rm-manual"><a href="http://www.lanl.gov/calendar/index.php">Calendar</a></li> <li class="rm-manual"><a href="http://www.lanl.gov/search-m.php">Search</a></li> <li class="rm-manual"><a href="http://www.lanl.gov/resources/contacts.php">Contacts</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="file:///var/folders/index.php">All News</a> » </li>
+<li class="rm-manual">
+<a href="file:///var/folders/lb/index.php">Publications</a> » </li>
+<li class="rm-manual">
+<a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/index.php">National Security Science</a> » </li>
+<li class="rm-manual">
+<a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/index.php">Summer 2020</a> » </li>
+<li class="rm-manual">Doomed to cooperate</li>
+</ul>
+<p class="rm-manual"><a href="file:///discover/publications/national-security-science/2020-winter/index.php"><span>Latest Issue:</span>Winter 2020</a></p>
+<p class="rm-manual"><a href="file:///discover/publications/national-security-science/archive.php">All Issues » </a></p>
+<h1 class="rm-manual">Doomed to cooperate</h1>
+<p class="rm-manual">Former Laboratory Director Siegfried Hecker recalls
+ the relationship between the United States and Russia at the end of the
+ Cold War.</p>
+<p class="rm-manual">July 6, 2020</p>
+<p class="rm-manual">On February 23, 1992, Hecker (right) greets 
+physicist Yuli Khariton (left), who oversaw the creation of the Soviet 
+Union’s first atomic bomb. <span>CREDIT: Siegfried Hecker</span></p>
+<h2 class="rm-manual">Contact </h2>
+<ul class="rm-manual">
+<li class="rm-manual">Editor</li>
+<li class="rm-manual">Whitney Spivey</li>
+<li class="rm-manual"><a href="mailto:magazine@lanl.gov"> Email </a></li>
+</ul>
+<p class="rm-manual">“We all arrived in the 20th century in the same 
+nuclear boat. A movement by one of us will affect all of us, so 
+therefore we are doomed to cooperate.”<span>- Siegfried Hecker</span></p>
+<p class="rm-manual">By J. Weston Phippen</p>
+<p>It was 1965. Siegfried Hecker, a student at Case Western Reserve 
+University in Cleveland, Ohio, was looking for a summer job. “I picked 
+up this brochure that said Los Alamos Scientific Laboratory,” Hecker 
+remembers. “Of course, I knew the fame of Los Alamos, but what really 
+got my attention was a photo of the <a href="https://www.pajarito.ski/">Pajarito ski mountain</a>.”</p>
+<p>Hecker, who’d grown up skiing in Austria, ended up coming to Los 
+Alamos, where he “probably put in more vertical feet skiing on Pajarito 
+than anyone else at the Lab at the time.” He went on to serve as the 
+president of the Los Alamos Ski Club, and more important, as the fifth 
+director of the Laboratory.</p>
+<p>When Hecker took the helm at Los Alamos in January 1986, the space 
+shuttle Challenger exploded. In April, the FBI informed him it was 
+investigating a spy at the Lab. That same month, the Chernobyl Nuclear 
+Power Plant suffered a catastrophic explosion and fire. But the most 
+trying times were still to come.</p>
+<p>When the Soviet Union collapsed in late 1991, no one knew what would 
+happen to the hundreds of thousands of kilograms of nuclear material the
+ Soviet Union had controlled. The United States feared that Soviet 
+researchers, who’d spent decades advancing nuclear science, might now 
+sell their knowledge to other countries. So, for the first time since 
+the Cold War began, America began to pivot from competing with the 
+Soviets to working with them.</p>
+<p>Fortunately, the Lab had built a relationship with many of the Soviet
+ Union’s top nuclear scientists. It had started in 1988 with the Joint 
+Verification Experiment (JVE), during which U.S. and Soviet nuclear 
+weapons scientists worked together at each other’s nuclear testing 
+sites. The JVE was actually two experiments done to evaluate methods of 
+measuring the yields of nuclear tests. Those methods, when proven 
+accurate, would enable the 1990 ratification of the Threshold Test Ban 
+Treaty, which limited nuclear tests to 150 kilotons. From that 
+experience, Hecker says, “We learned that if things are going to turn 
+out well in the nuclear sciences you have to cooperate.”</p>
+<p>NSS spoke with Hecker about this momentous period in history.</p>
+<p>The foundation for cooperation was laid in the late 1980s. How did it develop? </p>
+<p>The Soviet Union was changing dramatically during Mikhail Gorbachev’s
+ time. Gorbachev and President Ronald Reagan met at the Reykjavik Summit
+ in 1986, and they initially thought they might be able to get rid of 
+nuclear weapons. Well, it turns out they didn’t get there. But they did 
+decide the two countries would work together more, and they ended up 
+ratifying a treaty four years later.</p>
+<p>This was the so-called Threshold Test Ban Treaty [signed in 1974 but 
+unratified until 1990], and as a result it was decided that the U.S. and
+ Soviet nuclear labs were going to conduct joint tests at their 
+respective sites. Our test in Nevada was scheduled for August 1988, and 
+the Soviets would be onsite to measure yield. The device that would be 
+tested was a Los Alamos device, so to a degree, I was responsible.</p>
+<p>The treaty limited tests to 150-kiloton yields; were you nervous you’d be over? </p>
+<p>We picked a device that would be very close to 150 kilotons. So 
+moments before detonation, I’m sitting there in the control room, and 
+across from me were the Soviets. I think to myself, We’re going to push 
+this button, and I hope to God our guys are right. How embarrassing 
+would it be if it went off at 200 kilotons? But then I think what would 
+be even worse is if nothing happened—with the world watching, and the 
+Soviets seeing that our test didn’t work. What that would have done to 
+the faith in our entire nuclear arsenal would have been devastating.</p>
+<p>Well, eventually we detonated the device, and it was pretty close to 
+150 kilotons. But the other significant moment happened afterward at a 
+steakhouse.</p>
+<p>What happened there? </p>
+<p>We’d often gone to this steakhouse to eat after a test, so we were 
+sitting down having a steak and beer. This time, of course, the Soviets 
+are sitting across from us. So I said to one of the Russian scientists 
+sitting by me, “It worked, you guys made all your measurements, and it 
+all went great, don’t you think?” He seemed unimpressed, then said what 
+we should be doing in the future is not these joint verification 
+experiments but joint science experiments. Essentially, joining our 
+research together. That moment really stuck in my mind. It was a moment 
+when both sides realized the world was changing dramatically, and it 
+really did benefit us to cooperate.</p>
+<p>Russian theoretical physicist Evgeny Avrorin (right) congratulates 
+Siegfried Hecker on Los Alamos National Laboratory’s 50th anniversary. 
+Photo: courtesy Siegfried Hecker</p>
+<p>How evenly were we and the Soviets matched, as far as nuclear technology? Were you able to tell? </p>
+<p>In 1992, we visited the Russian nuclear laboratories. This is when we
+ could best assess how good these guys were. In the first half of the 
+20th century, they had some of the best scientists in the world, so we 
+knew they were good. It wasn’t until these meetings, though, that we 
+realized they were just good as we were.</p>
+<p>The United States had a major advantage over the Russians in 
+electronics and computers, particularly computers. The Russians didn’t 
+have a private computer industry. So we thought that, for example, we 
+would be significantly ahead of them in modeling and simulation. Then 
+during that first visit in 1992, they showed us some of the 
+three-dimensional calculations they’d done related to implosions, and 
+they were exquisite. I asked them, “How can you do this? Your computers 
+are 1,000 times worse than ours.” They said, “In America, you have these
+ big, powerful computers. You got lazy. We didn’t have them, so we had 
+to think better than you.”</p>
+<p>In 1991, the Soviet Union collapsed. As the director of Los Alamos, were you concerned about Soviet nuclear weapons? </p>
+<p>The greatest concern was what we called loose nukes—loose fissile 
+material [material that can sustain a nuclear chain reaction], loose 
+people, and loose exports of this knowledge. Before that moment, we’d 
+focused mostly on what weapons the Russian government had in its hands. 
+When the Soviet Union collapsed, suddenly we were concerned that the 
+weapons might leave Russia. Its nuclear program’s collapse coincided 
+with economic collapse, so the U.S. worried about not only the physical 
+nuclear material leaving the country but also a massive brain drain, 
+with all these scientists going elsewhere to work on nuclear programs.</p>
+<p>You led an unprecedented effort to work with these Russian scientists
+ at their nuclear labs, some of which didn’t even appear on maps. What 
+was it like trying to set up these meetings? </p>
+<p>From that initial meeting in Russia we’d developed a list of things 
+that we could work on together. This list included a lot of fundamental 
+research and some things like nuclear safeguards [ensuring the peaceful 
+use of nuclear materials]. I went to Washington, D.C., and the main 
+response was, “No way are we going to do all those things.” They said 
+they were mostly concerned about brain drain and about Russian nuclear 
+scientists selling their knowledge to other countries. And the Russian 
+government was very concerned about the Americans learning too much. So 
+the governmental discussions weren’t getting anywhere.</p>
+<p>By 1994, it grew easier, and gradually the governments opened up. The
+ Department of Energy’s deputy secretary at the time, Charles Curtis, 
+finally gave me the go-ahead to start working more closely with the 
+Russians. That’s when we began working with them to do a better job of 
+securing and safeguarding their nuclear materials.</p>
+<p>How did you overcome that kind of political opposition? </p>
+<p>These political systems couldn’t just turn on a dime. Of course, 
+there were risks—risks that the other side would learn something you 
+didn’t want them to know. But we tried to focus on the scientific areas 
+where we could work together.</p>
+<p>As scientists and engineers, we spoke the same language. We were able
+ to demonstrate how much of an advantage it would be to work toward our 
+common interests. And in that way, we brought the politicians along. If 
+you go back to the book [<a href="https://www.losalamoshistory.org/store/p265/Doomed_to_Cooperate.html">Doomed to Cooperate</a>,
+ edited by Hecker in 2016] and look at the foreword by Charles Curtis, 
+he wrote that we, the scientists, helped build trust where there was 
+none.</p>
+<p>If you want to avoid a world of nuclear war, nuclear proliferation, 
+and nuclear accidents, you need cooperation. The title for the book came
+ from a Russian who said, “We all arrived in the 20th century in the 
+same nuclear boat. A movement by one of us will affect all of us, so 
+therefore we are doomed to cooperate.”</p>
+<p>What would have happened if we didn’t cooperate? </p>
+<p>After the dissolution of the Soviet Union, it looked like a perfect 
+storm. They had more nuclear weapons coming back to be disassembled than
+ ever in history. The most dangerous part of a nuclear weapon’s life is 
+when it’s being disassembled, and I was almost certain there’d be an 
+accident.</p>
+<p>It takes about six kilograms of plutonium or a few tens of kilograms 
+of highly enriched uranium to build a bomb. The best we knew, the 
+Russians had somewhere close to 150,000 kilograms of plutonium and 
+somewhere around 1.3 kilograms of highly enriched uranium. The thought 
+that none of it would get into the hands of another country was … well, I
+ never thought it would be possible. And the Russian scientists didn’t 
+go anywhere either. The brain drain never materialized. These were 
+incredibly patriotic people who were willing to weather horrible 
+economic conditions. So I attribute the success to them, and to the 
+relationships we were able to build.</p>
+<p>You capture these relationships in <a href="https://www.losalamoshistory.org/store/p265/Doomed_to_Cooperate.html">Doomed to Cooperate</a>. How did the book come to be? </p>
+<p>We started work on the book with the idea that our colleagues in the 
+Russian labs would be co-editors of the book. As 2014 arrived, after the
+ invasion of Crimea, they said they could no longer work on the book. 
+But they told us, “Look, you have our articles. They’ve already been 
+cleared through classification, so use them.” All that did was make me 
+more determined than ever to finish the book.</p>
+<p>A good part of the book demonstrates how important cooperation is in 
+the nuclear world. I’ve taken this as a mantra, so to speak.</p>
+<p>Hecker (left) and Russian scientist Lev Ryabev in 2015. Photo: courtesy Siegfried Hecker</p>
+<p class="rm-manual">Siegfried Hecker is the author of <a href="https://www.losalamoshistory.org/store/p265/Doomed_to_Cooperate.html">Doomed to Cooperate</a>.
+ The two-volume book tells the story of nuclear scientists from two 
+former enemy nations, Russia and the United States, who reached across 
+political, geographic, and cultural divides to confront, together, the 
+nuclear threats that resulted from the collapse of the Soviet Union.</p>
+<h2 class="rm-manual">IN THIS ISSUE</h2>
+<h3 class="rm-manual">Letters</h3>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/letters.php">The history issue</a></li> </ul>
+<h3 class="rm-manual">Abstracts</h3>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/presidential-visits.php">Presidential visits</a></li> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/laboratory-names.php">What's in a name?</a></li> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/nearly-oppenheimer.php">The man who was nearly Oppenheimer</a></li> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/nobel-prizes.php">Nobel Prizes</a></li> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/switchable-explosives.php">Switchable explosives</a></li> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/space-clutter.php">The space-clutter dilemma</a></li> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/rocky-flats-archive.php">Raiders of the lost archive</a></li> </ul>
+<h3 class="rm-manual">Features</h3>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/trinity-feature.shtml">The Trinity test</a></li> <li class="rm-manual">
+<a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/enola-gay-feature.shtml">The mission that changed the world</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tibbets.php">Generations of tradition</a></li> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/little-boy.php">Why wasn't Little Boy tested?</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/vela-feature.shtml">Cold War watchmen</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/grbs.php">The mystery flash that changed astrophysics</a></li> </ul> </li> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/china.php">Behind the bamboo curtain</a></li> </ul>
+<h3 class="rm-manual">Analysis</h3>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/analysis.php">Doomed to cooperate</a></li> </ul>
+<h3 class="rm-manual">Being Essential</h3>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/being-essential.php">Forged in fire</a></li> </ul>
+<p class="rm-manual"><a href="https://www.lanl.gov/resources/contacts.php">Contacts</a> | <a href="https://www.lanl.gov/newsroom/media-contacts/index.php">Media</a> | <a href="https://www.lanl.gov/calendar/index.php">Calendar</a> </p>
+<p class="rm-manual"> <a href="http://int.lanl.gov/">Inside</a> | <a href="https://www.lanl.gov/resources/web-policies/copyright-legal.php">Terms of Use, Privacy</a> | <a href="https://www.lanl.gov/www-team/forms/wwwgen.php?view=exthome">Site Feedback</a> </p>
+<p class="rm-manual">Managed by <a href="https://www.triadns.org/">Triad National Security, LLC</a> for the <a href="https://nnsa.energy.gov/">U.S. Dept. of Energy's NNSA</a> | </p>
+<p class="rm-manual"><a href="https://www.lanl.gov/resources/web-policies/copyright-legal.php">Copyright 2021 Triad National Security, LLC. All Rights Reserved.</a></p>
+<p class="rm-manual">Operated by <a href="https://www.triadns.org/">Triad National Security, LLC</a> for the </p>
+<p class="rm-manual"> <a href="http://nnsa.energy.gov/">U.S. Department of Energy's NNSA</a></p>
+<p class="rm-manual"> <a href="http://www.lanl.gov/resources/web-policies/copyright-legal.php">© Copyright Triad National Security, LLC.</a></p></article>
+</body></html>

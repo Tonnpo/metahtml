@@ -1,0 +1,150 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Kim Jong Il Dies: North Korea Looks to His Son Kim Jong Un - TIME </p>
+<p class="rm-manual"> <a href="http://time.com/"> </a></p><h2 class="rm-manual"><a href="http://time.com/">Time.com</a></h2><a href="http://time.com/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="http://time.com//digital-account/">MY ACCOUNT</a> <a href="#">SIGN IN</a> <a href="https://auth.time.com/logout.php?turl=http://time.com/">SIGN OUT</a> <a href="https://time.com/subscribe-header-time">SUBSCRIBE</a> <a href="https://time.com/subscribe-header-time">SUBSCRIBE</a> </p>
+<p class="rm-manual"> <a href="http://time.com/"> <span>Home</span> </a> <a href="http://time.com/us/"> <span>U.S.</span> </a> <a href="http://time.com/politics/"> <span>Politics</span> </a> <a href="http://time.com/world/"> <span>World</span> </a> <a href="http://time.com/business/"> <span>Business</span> </a> <a href="http://time.com/tech/"> <span>Tech</span> </a> <a href="http://time.com/health/"> <span>Health</span> </a> <a href="http://time.com/time-health/?iid=HB_time_TFH"> <span>TIME Health</span> </a> <a href="http://time.com/entertainment/"> <span>Entertainment</span> </a> <a href="http://time.com/science/"> <span>Science</span> </a> <a href="http://time.com/newsfeed/"> <span>Newsfeed</span> </a> <a href="http://time.com/living/"> <span>Living</span> </a> <a href="http://time.com/sports/"> <span>Sports</span> </a> <a href="http://time.com/history/"> <span>History</span> </a> <a href="http://time.com/vault/"> <span>The TIME Vault</span> </a> <a href="http://time.com/magazine/"> <span>Magazine</span> </a> <a href="http://time.com/ideas/"> <span>Ideas</span> </a> <a href="http://labs.time.com/"> <span>TIME Labs</span> </a> </p>
+<p class="rm-manual"> <a href="http://time.com/photography/"> <span>Photography</span> </a> <a href="http://time.com/videos/"> <span>Videos</span> </a> <a href="http://time.com/section/the-goods/"> <span>The Goods</span> </a> <a href="http://time.com/press-room/"> <span>Press Room</span> </a> </p>
+<p class="rm-manual"> <a href="http://time.com/time100">The 100 Most Influential People</a> <a href="http://time.com/collection/next-generation-leaders/">Next Generation Leaders</a> <a href="http://time.com/poy">Person of the Year</a> <a href="http://time.com/world-trade-center/">Top of the World</a> </p>
+<p class="rm-manual"> <a href="https://time.com/subscribe-header-time">Subscribe</a> <a href="http://time.com/v5-newsletters">Newsletters</a> <a href="mailto:feedback@time.com">Feedback</a> <a href="http://time.com/privacy/generic_privacy_new.html">Privacy Policy</a> <a href="http://time.com/privacy/generic_privacy_new.html#california">Your California Privacy Rights</a> <a href="http://time.com/privacy/privacy_terms_service.html">Terms of Use</a> <a href="http://subscription-assets.timeinc.com/prod/assets/themes/magazines/default/template-resources/html/legal/ti-corp-behavioral.html">Ad Choices </a> </p>
+<p class="rm-manual"> <a href="http://content.time.com/time/rss">RSS</a> <a href="http://subscription-assets.time.com/prod/assets/themes/magazines/SUBS/templates/velocity/site/td-learnmore1111/lp.html">TIME Apps</a> <a href="https://www.timeforkids.com/">TIME for Kids</a> <a href="http://www.timemediakit.com/">Advertising</a> <a href="http://content.time.com/time/reprints">Reprints and Permissions</a> <a href="http://time.com/html-sitemap/">Site Map</a> <a href="http://subscription-assets.time.com/prod/assets/themes/magazines/SUBS/templates/velocity/site/td-learnmore1111/lp.html">Help</a> <a href="https://w1.buysub.com/servlet/CSGateway?cds_mag_code=TIM">Customer Service</a> <span>© 2019 TIME USA, LLC. All rights reserved.</span> </p>
+<p class="rm-manual"><a href="https://time.com/subscribe-header-time">Subscribe</a> </p>
+<p class="rm-manual"> <span><a href="#signin">Sign In</a><a href="https://time.com/subscribe-header-time">Subscribe</a></span> </p>
+<h1 class="rm-manual">Kim Jong Il's Death: North Korea Waits for Kim Jong Un to Consolidate Power</h1>
+<p class="rm-manual"> <span>By Bill Powell </span> <span>Monday, Dec. 19, 2011</span> </p>
+<figcaption class="rm-manual">Yao Dawei / Xinhua / AP</figcaption><p>Kim
+ Jong Un, third from left, the third son of North Korean Leader Kim Jong
+ Il, applauds while watching the Arirang mass games performance staged 
+to celebrate the 65th anniversary of the founding of the Workers' Party 
+of Korea, in Pyongyang, North Korea, Oct. 9, 2010. </p>
+<h3 class="rm-manual">Related</h3>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="http://globalspin.blogs.time.com/2011/12/19/kim-jong-ils-life-myth-mystery-and-mayhem/">Kim Jong Il: A Life Shrouded in Myth, Mystery, Mayhem</a></li>
+<li class="rm-manual"><a href="http://content.time.com/time/world/article/0,8599,2102776,00.html">Concerns Spread Across Asia</a></li>
+<li class="rm-manual"><a href="http://newsfeed.time.com/2011/12/19/global-leaders-react-to-the-death-of-north-korean-dictator-kim-jong-il/">Global Reaction to the News</a></li>
+<li class="rm-manual"><a href="http://content.time.com/time/world/article/0,8599,2102764,00.html">A Nightmare Before Christmas for Wary North Korean Neighbors</a></li>
+<li class="rm-manual"><a href="http://content.time.com/time/photogallery/0,29307,2102766,00.html"> North Korea Marks a Dictator's Passing</a></li>
+<li class="rm-manual"><a href="http://content.time.com/time/photogallery/0,29307,2022599,00.html"> Images of North Korea's Heir Apparent</a></li>
+<li class="rm-manual"><a href="http://content.time.com/time/photogallery/0,29307,1840297,00.html"> Photos: The Bizarre Life of the Dear Leader</a></li>
+</ul>
+<p class="rm-manual"> Follow <a href="http://twitter.com/TIME/">@TIME</a></p>
+<p>The iconic painting hangs everywhere in North Korea — in the offices 
+of party functionaries and in homes, in factories and in schools. Kim Il
+ Sung, founder of the Democratic People's Republic of Korea (DPRK), is 
+depicted with his son Kim Jong Il. They are standing in front of Mount 
+Paektu, a sacred site where, legend has it, the first kingdom of Korea 
+was formed. The image is the most familiar representation of a ruling 
+dynasty that has, in just two generations, ground North Korea into 
+abject poverty and international isolation. Both men are gone now — the 
+Dear Leader Kim Jong Il dying on Dec. 17 of a heart attack at age 69, 
+just as his father did 17 years ago. In the wake of his departure, all 
+eyes are on the young man who isn't in the picture: 29-year-old Kim Jong
+ Un.</p>
+<p>Since the late summer of 2008, when Kim Jong Il suffered a severe 
+stroke, cadres in the ruling Workers' Party have been carefully grooming
+ his third son, Kim Jong Un, for succession. Officially, that was to 
+come in 2012, when North Korea will celebrate the 100th anniversary of 
+Kim Il Sung's birth. The first indication that the succession plan still
+ holds was Pyongyang's announcement on Dec. 19 of the formation of a 
+232-member "funeral commission," which will be headed by the younger 
+Kim. The funeral is scheduled for Dec. 28. </p>
+<aside><a href="http://www.time.com/time/photogallery/0,29307,2102766,00.html">(See pictures of North Korea's longtime dictator Kim Jong Il.)</a></aside><p>Little
+ is known about Kim Jong Un. He attended a school for a couple of years 
+in Bern, Switzerland, where he apparently became a fan of the National 
+Basketball Association, and Michael Jordan in particular. (Whether that 
+is true or just a cute biographical detail invented by North Korean 
+propagandists is unclear.) He was always said to be his father's 
+favorite, particularly after his older half brother Kim Jong Nam became 
+something of an embarrassment by famously turning up in Japan in 2001 
+with a phony passport, asking to visit Tokyo Disneyland. (He later began
+ hanging out in casinos in Macau.)</p>
+<p>Of late, Kim Jong Un has gained prominence in North Korea, putting on
+ weight and bearing an unmistakable resemblance to his beefy grandfather
+ Kim Il Sung. Most diplomatic and intelligence sources say there is 
+little reason to suspect that his position as the heir is anything other
+ than legitimate. Since 2008, he has been in charge of North Korea's 
+police and intelligence services, two key ministries of political 
+control. </p>
+<aside><a href="http://www.time.com/time/photogallery/0,29307,2022599,00.html">(See pictures of North Korea's heir apparent, Kim Jong Un.)</a></aside><p>Last
+ year, he was given general's stars in the military and named vice 
+chairman of the powerful Central Military Committee. Kim Jong Un's 
+father had worked steadily to align his own interests with those of the 
+military — one of the reasons, NGO officials have said, that so much 
+food aid over the years intended for the general population has been 
+diverted to the army. The Dear Leader's steadfast pursuit of a nuclear 
+arsenal — and his unwillingness to trade the North's nuclear capability 
+for economic favors from the outside world — was also in alignment with 
+the military's wishes. "One has to presume the son would never have been
+ put in this position [of] heir apparent had the generals not approved,"
+ says a diplomatic source in Seoul.</p>
+<p>Less certain is the political future and fate of the Dear Leader's 
+brother-in-law Chang Sung Taek. After Kim Jong Il's stroke, Chang 
+emerged as a regent-like figure, apparently on hand to guide Kim Jong Un
+ should the young man have to assume leadership suddenly. However, on a 
+recent visit to Pyongyang by TIME, a person who has met occasionally 
+with Kim Jong Il (including earlier this year) asserted that Chang no 
+longer occupies such a position. If that is true, it could be an 
+indication of political infighting at the highest echelons of the DPRK. </p>
+<aside><a href="http://www.time.com/time/photogallery/0,29307,1840297,00.html">(See pictures of the rise of Kim Jong Il.)</a></aside><p>Kim
+ Jong Il's death comes just days after a bilateral meeting in Beijing 
+between U.S. and DPRK officials, at which U.S. special envoy for human 
+rights Robert King held talks with a senior DPRK foreign ministry 
+official. Unconfirmed press reports in Seoul say Pyongyang agreed to 
+allow inspectors from the International Atomic Energy Agency back into 
+the country to impose a moratorium on nuclear and missile tests and to 
+suspend its uranium-enrichment program, in return for 240,000 tons of 
+food aid. However, analysts believe that this diplomatic momentum may be
+ slowed by Kim Jong Il's death. As Kim Jong Un consolidates his 
+political power, "North Korea will become even more inward-looking, at 
+least for a while," says Bruce Klingner, senior fellow at the Heritage 
+Institute and a former North Korea watcher at the CIA.</p>
+<p>The good news, for an outside world that lives in fear of erratic 
+behavior from the North, is that the younger Kim has had three years to 
+prepare for the assumption of dictatorial power. "There's less of a 
+concern about instability now than had Kim Jong Il died three years 
+ago," Klingner says. At the same time, the DPRK has gone through a 
+transition like this only once before, and that was when Kim Jong Il was
+ 52 years old. The country is once again having problems feeding itself,
+ its economy is moribund, and problems are falling to a 29-year-old. 
+It's a safe bet that if North Korea's propaganda artists haven't already
+ prepared new iconography depicting the youngest Kim alongside his 
+father and grandfather at Mount Paektu, they're busy doing so now.</p>
+<p class="rm-manual">— With reporting by Stephen Kim / Seoul</p>
+<aside class="rm-manual"><a href="http://www.time.com/time/photogallery/0,29307,1857430,00.html">See "North Korea's Next Kim: Dad's Favorite, Kim Jong Un."</a></aside><aside class="rm-manual"><a href="http://www.time.com/time/specials/packages/0,28757,2101344,00.html">See TIME's Top 10 Everything of 2011.</a></aside><ul class="rm-manual"> <li class="rm-manual"> <a href="http://time.com/">Home</a> </li> <li class="rm-manual"> <a href="http://time.com/section/us/">U.S.</a> </li> <li class="rm-manual"> <a href="http://time.com/section/politics/">Politics</a> </li> <li class="rm-manual"> <a href="http://time.com/section/world/">World</a> </li> <li class="rm-manual"> <a href="http://time.com/section/business/">Business</a> </li> <li class="rm-manual"> <a href="http://time.com/section/tech/">Tech</a> </li> <li class="rm-manual"> <a href="http://time.com/section/health/">Health</a> </li> <li class="rm-manual"> <a href="http://time.com/section/science/">Science</a> </li> <li class="rm-manual"> <a href="http://time.com/section/entertainment/">Entertainment</a> </li> <li class="rm-manual"> <a href="http://time.com/section/newsfeed/">Newsfeed</a> </li> <li class="rm-manual"> <a href="http://time.com/section/living/">Living</a> </li> <li class="rm-manual"> <a href="http://time.com/section/ideas/">Ideas</a> </li> <li class="rm-manual"> <a href="http://time.com/section/parents/">Parents</a> </li> <li class="rm-manual"> <a href="http://time.com/section/sports/">Sports</a> </li> <li class="rm-manual"> <a href="http://time.com/section/history/">History</a> </li> <li class="rm-manual"> <a href="http://time.com/vault/">The TIME Vault</a> </li> <li class="rm-manual"> <a href="http://time.com/magazine/">Magazine</a> </li> <li class="rm-manual"> <a href="https://www.magazine.store/time/">Subscribe</a> </li> <li class="rm-manual"> <a href="https://subscription.time.com/storefront/subscribe-to-time/link/1023465.html">Give a Gift</a> </li> <li class="rm-manual"> <a href="http://time.com/section/the-goods/">The Goods</a> </li> <li class="rm-manual"> <a href="http://www.timeincshop.com/storefront/link/1046165.html?utm_source=mag.time.com&amp;utm_medium=referral&amp;utm_campaign=cmr-ms-time-footer">Shop TIME</a> </li> <li class="rm-manual"> <a href="http://time.com/section/press-room/">Press Room</a> </li> <li class="rm-manual"> <a href="https://cloud.newsletters.time.com/newsletters?source=time_footer">Newsletters</a> </li> <li class="rm-manual"> <a href="https://w1.buysub.com/servlet/CSGateway?cds_mag_code=TIM">Customer Service</a> </li> <li class="rm-manual"> <a href="http://time.com/html-sitemap/">Site Map</a> </li> <li class="rm-manual"> <a href="http://time.com/privacy/generic_privacy_new.html">Privacy Policy</a> </li> <li class="rm-manual"> <a href="http://time.com/privacy/generic_privacy_new.html#california">Your California Privacy Rights</a> </li> <li class="rm-manual"> <a href="http://time.com/privacy/privacy_terms_service.html">Terms of Use</a> </li> <li class="rm-manual"> <a href="http://www.timemediakit.com/">Advertising</a> </li> <li class="rm-manual"> <a href="http://subscription-assets.timeinc.com/prod/assets/themes/magazines/default/template-resources/html/legal/ti-corp-behavioral.html">Ad Choices </a> </li> <li class="rm-manual"> <a href="http://time.com/longform/join-time/">Careers</a> </li> </ul>
+<p class="rm-manual"><span>© 2019 TIME USA, LLC. All rights reserved.</span> </p></article>
+</body></html>

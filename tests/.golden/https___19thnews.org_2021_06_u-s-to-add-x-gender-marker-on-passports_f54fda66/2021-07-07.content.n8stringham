@@ -1,0 +1,139 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h2 class="rm-manual">Republish This Story</h2>
+<p class="rm-manual">* Please read before republishing *</p>
+<p class="rm-manual">We’re happy to make this story available to republish for free under an <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" rel="noopener">Attribution-NonCommercial-NoDerivatives Creative Commons license</a> as long as you follow our republishing guidelines, which require that you credit The 19th and retain our pixel. <a href="file:///republishing-guidelines/">See our full guidelines for more information</a>.</p>
+<p class="rm-manual">To republish, simply copy the HTML at right, which 
+includes our tracking pixel, all paragraph styles and hyperlinks, the 
+author byline and credit to The 19th. Have questions? Please email <a href="file:///cdn-cgi/l/email-protection#2c4f5e494d58455a496c1d15584442495b5f02435e4b" rel="noopener"><span>[email protected]</span></a>.</p>
+<p class="rm-manual">— The Editors</p>
+<p class="rm-manual">Loading...</p>
+<h2 class="rm-manual">Modal Gallery</h2>
+<p class="rm-manual"> <span>/</span> </p>
+<h2 class="rm-manual">Menu</h2>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://19thnews.org/about/">Our Mission</a> </li> <li class="rm-manual"> <a href="https://19thnews.org/team/">Our Team</a> </li> <li class="rm-manual"> <a href="https://19thnews.org/archive/">Latest Stories</a> </li> <li class="rm-manual"> <a href="https://www.crowdcast.io/19thnews">Upcoming Events</a> </li> <li class="rm-manual"> <a href="https://summit.19thnews.org/">2020 Summit</a> </li> <li class="rm-manual"> <a href="https://19thnews.org/contact-us/">Contact Us</a> </li> <li class="rm-manual"> <a href="https://19thnews.org/newsletter/">Newsletter</a> </li> <li class="rm-manual"> <a href="https://19thnews.org/membership/">Donate</a> </li> <li class="rm-manual"> <a href="https://19thnews.org/19th-jobs/">Work With Us</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> </p><p class="rm-manual">From the Collection</p> <h2 class="rm-manual"> <a href="https://19thnews.org/collections/changing-child-care/">Changing Child Care</a> </h2> <ul class="rm-manual"> <li class="rm-manual"> <h3 class="rm-manual"> <a href="https://19thnews.org/2021/06/minnesota-to-let-incarcerated-mothers-be-with-their-newborns/">Minnesota offers conditional release so that incarcerated mothers can be with their newborns</a> </h3> <p class="rm-manual"> <span>Jean Lee</span> · June 11 </p> </li> <li class="rm-manual"> <h3 class="rm-manual"> <a href="https://19thnews.org/2021/06/summer-camps-closures-moms-workforce/">Summer camps haven't fully recovered. That could hurt working moms.</a> </h3> <p class="rm-manual"> <span>Chabeli Carrazana</span> · June 9 </p> </li> <li class="rm-manual"> <h3 class="rm-manual"> <a href="https://19thnews.org/2021/06/child-tax-credit-poorest-families/">This policy could cut child poverty in half — if it reaches those who need it most</a> </h3> <p class="rm-manual"> <span>Chabeli Carrazana</span> · June 3 </p> </li> </ul> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> </p><p class="rm-manual">From the Collection</p> <h2 class="rm-manual"> <a href="https://19thnews.org/collections/next-gen-gop/">Next-Gen GOP</a> </h2> <ul class="rm-manual"> <li class="rm-manual"> <h3 class="rm-manual"> <a href="https://19thnews.org/2020/11/election-2020-republican-women-congress/">A banner year for Republican women</a> </h3> <p class="rm-manual"> <span>Amanda Becker</span> · November 11 </p> </li> <li class="rm-manual"> <h3 class="rm-manual"> <a href="https://19thnews.org/2020/11/election-results-2020-republican-women-us-house-of-representatives/">Republican women could double representation in the U.S. House</a> </h3> <p class="rm-manual"> <span>Amanda Becker</span> · November 4 </p> </li> <li class="rm-manual"> <h3 class="rm-manual"> <a href="https://19thnews.org/2020/08/elise-stefanik-wants-to-elect-more-republican-women-into-office/">U.S. Rep. Elise Stefanik wants to elect more Republican women into office</a> </h3> <p class="rm-manual"> <span>Barbara Rodriguez</span> · August 13 </p> </li> </ul> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> </p><p class="rm-manual">From the Collection</p> <h2 class="rm-manual"> <a href="https://19thnews.org/collections/on-the-rise/">On The Rise</a> </h2> <ul class="rm-manual"> <li class="rm-manual"> <h3 class="rm-manual"> <a href="https://19thnews.org/2021/06/meet-ketanji-brown-jackson-a-likely-contender-for-the-supreme-court/">Meet Ketanji Brown Jackson, a likely contender for the Supreme Court</a> </h3> <p class="rm-manual"> <span>Jean Lee</span> · June 14 </p> </li> <li class="rm-manual"> <h3 class="rm-manual"> <a href="https://19thnews.org/2021/06/maryland-women-gun-violence/">How women in Maryland are trying to stop gun violence</a> </h3> <p class="rm-manual"> <span>Barbara Rodriguez</span> · June 10 </p> </li> <li class="rm-manual"> <h3 class="rm-manual"> <a href="https://19thnews.org/2021/06/virginia-democrats-are-picking-a-gubernatorial-nominee-there-is-an-opening-to-make-history/">Virginia Democrats pick Terry McAuliffe as nominee for governor</a> </h3> <p class="rm-manual"> <span>Amanda Becker</span> · June 8 </p> </li> </ul> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> </p><p class="rm-manual">From the Collection</p> <h2 class="rm-manual"> <a href="https://19thnews.org/collections/pandemic-within-a-pandemic/">Pandemic Within a Pandemic</a> </h2> <ul class="rm-manual"> <li class="rm-manual"> <h3 class="rm-manual"> <a href="https://19thnews.org/2021/06/darnella-frazier-teen-filmed-george-floyds-murder-wins-honorary-pulitzer/">Darnella Frazier, the teen who filmed George Floyd’s murder, wins honorary Pulitzer</a> </h3> <p class="rm-manual"> <span>Errin Haines</span> · June 11 </p> </li> <li class="rm-manual"> <h3 class="rm-manual"> <a href="https://19thnews.org/2021/06/black-women-wage-gap/">Barriers for Black women set U.S. economy back by $500 billion, report finds</a> </h3> <p class="rm-manual"> <span>Chabeli Carrazana</span> · June 8 </p> </li> <li class="rm-manual"> <h3 class="rm-manual"> <a href="https://19thnews.org/2021/04/latinas-wealth-gap-pandemic-unidos-report/">How the pandemic has widened the Latina wealth gap</a> </h3> <p class="rm-manual"> <span>Chabeli Carrazana</span> · April 19 </p> </li> </ul> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> </p><p class="rm-manual">From the Collection</p> <h2 class="rm-manual"> <a href="https://19thnews.org/collections/portraits-of-a-pandemic/">Portraits of a Pandemic</a> </h2> <ul class="rm-manual"> <li class="rm-manual"> <h3 class="rm-manual"> <a href="https://19thnews.org/2020/10/for-family-caregivers-covid-is-a-mental-health-crisis-in-the-making/">For family caregivers, COVID is a mental health crisis in the making</a> </h3> <p class="rm-manual"> <span>Shefali Luthra</span> · October 8 </p> </li> <li class="rm-manual"> <h3 class="rm-manual"> <a href="https://19thnews.org/2020/09/a-new-database-tracks-covid-19s-effects-on-sex-and-gender/">A new database tracks COVID-19’s effects on sex and gender</a> </h3> <p class="rm-manual"> <span>Shefali Luthra</span> · September 15 </p> </li> <li class="rm-manual"> <h3 class="rm-manual"> <a href="https://19thnews.org/2020/08/pregnant-in-a-pandemic-the-perfect-storm-for-a-crisis/">Pregnant in a pandemic: The 'perfect storm for a crisis'</a> </h3> <p class="rm-manual"> <span>Shefali Luthra</span> · August 25 </p> </li> </ul> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> </p><p class="rm-manual">From the Collection</p> <h2 class="rm-manual"> <a href="https://19thnews.org/collections/19th-explains/">The 19th Explains</a> </h2> <ul class="rm-manual"> <li class="rm-manual"> <h3 class="rm-manual"> <a href="https://19thnews.org/2021/06/the-19th-explains-what-did-title-ix-changes-just-do-for-trans-students/">The 19th Explains: What did Title IX changes just do for trans students?</a> </h3> <p class="rm-manual"> <span>Mariel Padilla</span> · June 23 </p> </li> <li class="rm-manual"> <h3 class="rm-manual"> <a href="https://19thnews.org/2021/06/the-19th-explains-everything-you-need-to-know-to-get-the-child-tax-credit/">The 19th Explains: Everything you need to know to get the child tax credit</a> </h3> <p class="rm-manual"> <span>Chabeli Carrazana</span> · June 21 </p> </li> <li class="rm-manual"> <h3 class="rm-manual"> <a href="https://19thnews.org/2021/06/the-19th-explains-how-to-manage-post-pandemic-social-anxiety/">The 19th Explains: How to manage post-pandemic social anxiety</a> </h3> <p class="rm-manual"> <span>Shefali Luthra</span> · June 18 </p> </li> </ul> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> </p><p class="rm-manual">From the Collection</p> <h2 class="rm-manual"> <a href="https://19thnews.org/collections/the-electability-myth/">The Electability Myth</a> </h2> <ul class="rm-manual"> <li class="rm-manual"> <h3 class="rm-manual"> <a href="https://19thnews.org/2021/06/how-ranked-choice-voting-elevates-women-and-people-of-color-seeking-office/">How ranked-choice voting elevates women and people of color seeking office</a> </h3> <p class="rm-manual"> <span>Barbara Rodriguez</span> · June 17 </p> </li> <li class="rm-manual"> <h3 class="rm-manual"> <a href="https://19thnews.org/2021/04/this-candidate-says-she-quit-twitter-because-of-online-harassment/">This candidate says she quit Twitter because of online harassment</a> </h3> <p class="rm-manual"> <span>Barbara Rodriguez</span> · April 17 </p> </li> <li class="rm-manual"> <h3 class="rm-manual"> <a href="https://19thnews.org/2020/11/despite-historic-2020-gains-lgbtq-candidates-faced-homophobic-attacks/">Despite historic 2020 gains, LGBTQ+ candidates faced homophobic attacks</a> </h3> <p class="rm-manual"> <span>Kate Sosin</span> · November 11 </p> </li> </ul> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> </p><p class="rm-manual">From the Collection</p> <h2 class="rm-manual"> <a href="https://19thnews.org/collections/the-impact-of-aging/">The Impact of Aging</a> </h2> <ul class="rm-manual"> <li class="rm-manual"> <h3 class="rm-manual"> <a href="https://19thnews.org/2021/05/cdc-finds-older-women-left-behind-covid-vaccinations/">With COVID vaccinations, CDC finds older women are being left behind</a> </h3> <p class="rm-manual"> <span>Shefali Luthra</span> · May 11 </p> </li> <li class="rm-manual"> <h3 class="rm-manual"> <a href="https://19thnews.org/2021/04/home-care-american-jobs-plan/">A first-of-its-kind investment in home care is in the works. But will it be enough?</a> </h3> <p class="rm-manual"> <span>Chabeli Carrazana</span>, <span>Shefali Luthra</span> · April 15 </p> </li> <li class="rm-manual"> <h3 class="rm-manual"> <a href="https://19thnews.org/2021/04/covid-vaccine-eligibility-opens-up-older-women-left-behind/">As COVID vaccine eligibility opens up, older women struggle to get a shot</a> </h3> <p class="rm-manual"> <span>Shefali Luthra</span> · April 8 </p> </li> </ul> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> </p><p class="rm-manual">From the Collection</p> <h2 class="rm-manual"> <a href="https://19thnews.org/collections/voting-rights/">Voting Rights</a> </h2> <ul class="rm-manual"> <li class="rm-manual"> <h3 class="rm-manual"> <a href="https://19thnews.org/2021/07/kagan-dissent-brnovich-dnc-supreme-court-voting-rights/">Justice Kagan warns Supreme Court has weakened voting protections at ‘perilous moment’</a> </h3> <p class="rm-manual"> <span>Amanda Becker</span> · July 1 </p> </li> <li class="rm-manual"> <h3 class="rm-manual"> <a href="https://19thnews.org/2021/06/stacey-abrams-fair-fight-action-georgia-voting-law-purged-voters/">Stacey Abrams group activating tool for Georgia voters to check if they are about to be purged</a> </h3> <p class="rm-manual"> <span>Errin Haines</span> · June 29 </p> </li> <li class="rm-manual"> <h3 class="rm-manual"> <a href="https://19thnews.org/2021/06/texas-walkout-voting-rights-women/">Meet some of the women behind the walkout over Texas voting bill</a> </h3> <p class="rm-manual"> <span>Barbara Rodriguez</span> · June 28 </p> </li> </ul> <p class="rm-manual"></p> </li> </ul> <p class="rm-manual"><a href="https://19thnews.org/collections/">View all collections</a></p> </li> <li class="rm-manual"> <h2 class="rm-manual">Explore by Topic</h2> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://19thnews.org/topics/business-economy/">Business &amp; Economy</a> </li> <li class="rm-manual"> <a href="https://19thnews.org/topics/coronavirus/">Coronavirus</a> </li> <li class="rm-manual"> <a href="https://19thnews.org/topics/education/">Education</a> </li> <li class="rm-manual"> <a href="https://19thnews.org/topics/election-2020/">Election 2020</a> </li> <li class="rm-manual"> <a href="https://19thnews.org/topics/environment-climate/">Environment &amp; Climate</a> </li> <li class="rm-manual"> <a href="https://19thnews.org/topics/health/">Health</a> </li> <li class="rm-manual"> <a href="https://19thnews.org/topics/immigration/">Immigration</a> </li> <li class="rm-manual"> <a href="https://19thnews.org/topics/inside-the-19th/">Inside The 19th</a> </li> <li class="rm-manual"> <a href="https://19thnews.org/topics/justice/">Justice</a> </li> <li class="rm-manual"> <a href="https://19thnews.org/topics/lgbtq/">LGBTQ+</a> </li> <li class="rm-manual"> <a href="https://19thnews.org/topics/politics/">Politics</a> </li> <li class="rm-manual"> <a href="https://19thnews.org/topics/race/">Race</a> </li> <li class="rm-manual"> <a href="https://19thnews.org/topics/technology/">Technology</a> </li> </ul> <p class="rm-manual"> <a href="https://19thnews.org/topics/">View All Topics</a></p> </li> </ul>
+<aside class="rm-manual"> <a href="https://19thnews.org/"> <span>Home</span> </a> </aside><ul class="rm-manual"> <li class="rm-manual"> <a href="https://19thnews.org/about/">Our Mission</a> </li> <li class="rm-manual"> <a href="https://19thnews.org/team/">Our Team</a> </li> <li class="rm-manual"> <a href="https://19thnews.org/archive/">Latest Stories</a> </li> <li class="rm-manual"> <a href="https://www.crowdcast.io/19thnews">Upcoming Events</a> </li> <li class="rm-manual"> <a href="https://summit.19thnews.org/">2020 Summit</a> </li> <li class="rm-manual"> <a href="https://19thnews.org/contact-us/">Contact Us</a> </li> <li class="rm-manual"> <a href="https://19thnews.org/newsletter/">Newsletter</a> </li> <li class="rm-manual"> <a href="https://19thnews.org/membership/">Donate</a> </li> <li class="rm-manual"> <a href="https://19thnews.org/19th-jobs/">Work With Us</a> </li> </ul>
+<p class="rm-manual">We’re an independent, nonprofit newsroom reporting on gender, politics and policy. <a href="file:///about">Read our story</a>.</p>
+<h3 class="rm-manual">The 19th News(letter)</h3>
+<h4 class="rm-manual">News that represents you, in your inbox every weekday.</h4>
+<p class="rm-manual"> <a href="file:///membership/">Donate to get our member newsletter</a> </p>
+<p class="rm-manual">The 19th thanks our sponsors. <a href="file:///sponsorship/">Become one</a>.</p>
+<p class="rm-manual"> <span>The new rule marks the most substantial change to federal documents for transgender people in more than a decade.</span> <span>(Joe Raedle/Getty Images)</span> </p>
+<p class="rm-manual"> <a href="https://19thnews.org/topics/lgbtq/"> LGBTQ+ </a> </p>
+<h1 class="rm-manual"> U.S. to add ‘X’ gender marker on passports </h1>
+<p class="rm-manual"><span>Transgender and intersex Americans will have 
+the power to identify their own gender on travel documents without 
+providing medical documentation by the end of this year, an 
+administration official said.</span></p>
+<p class="rm-manual">By</p>
+<p class="rm-manual"> <a href="file:///author/kate-sosin">Kate Sosin</a>, <a href="file:///author/orion-rummler">Orion Rummler</a> </p>
+<p class="rm-manual">Published</p>
+<p class="rm-manual">2021-06-30 07:38</p>
+<p class="rm-manual">7:38</p>
+<p class="rm-manual">June 30, 2021</p>
+<p class="rm-manual">am</p>
+<p>For the first time ever, the federal government will allow nonbinary 
+and intersex people to obtain IDs and passports with an “X” gender 
+marker instead of an “M” or “F.” <a href="https://travel.state.gov/content/travel/en/passports/need-passport/selecting-your-gender-marker.html" rel="noreferrer noopener">The interim policy</a>
+ also removes the requirement that transgender people provide proof of 
+gender transition from a physician, allowing gender diverse Americans to
+ self identify. </p>
+<p>According to a source within the administration, nonbinary Americans 
+are expected to be able to obtain the interim X gender markers by the 
+end of the year. The new rule marks the most substantial change to 
+federal documents for transgender people since 2010, when the Obama 
+administration put in place a <a href="https://transequality.org/know-your-rights/passports">policy to allow trans Americans to update their passports</a>. </p>
+<p>The State Department’s announcement Wednesday makes good on one of President Joe Biden’s <a href="https://19thnews.org/2021/02/biden-administration-suggests-it-will-add-x-gender-markers-to-federal-documents/">campaign promises</a> and comes after months of prodding <a href="https://www.aclu.org/press-releases/six-figure-aclu-ad-buy-urges-president-biden-issue-executive-order-providing">from the ACLU</a>
+ and LGBTQ+ advocacy groups, which argued that inaccurate identification
+ barred people from traveling and completing job applications.</p>
+<p><a href="https://www.lgbtmap.org/equality-maps/identity_document_laws">Twenty states and Washington, D.C.</a>,
+ already issue IDs with “X” gender markers, and Illinois, Indiana and 
+New York have passed laws to roll out gender neutral IDs in the coming 
+months or years. That has left many trans, nonbinary and intersex 
+Americans with licenses listing their gender as “X” and passports that 
+say “M” or “F.” </p>
+<p>According to the <a href="https://transequality.org/sites/default/files/docs/usts/USTS-Full-Report-Dec17.pdf">2015 U.S. Trans Survey</a>
+ conducted by the National Center for Transgender Equality, nearly half 
+(46 percent) of trans and nonbinary people in the United States don’t 
+have identification that lists their correct name or gender. Advocates 
+say that leaves many vulnerable to violence or discrimination any time 
+they have to use an ID to travel, interact with police, go to a bank or <a href="https://19thnews.org/2020/08/trans-americans-voting-rights-pandemic/">even vote</a>. </p>
+<p>Advocates have lobbied for removing gender markers altogether from 
+some federal documents, but experts say removing them from passports is 
+impossible due to international travel requirements. Advocates say that 
+getting gender diverse people accurate IDs, however, can be life saving.
+ </p>
+<h3 class="rm-manual">A newsletter you can relate to.</h3>
+<h4 class="rm-manual">Storytelling that represents you, delivered to your inbox.</h4>
+<figcaption>Dana Zzyym, a Navy veteran, was the plaintiff in a federal 
+discrimination lawsuit filed by Lambda Legal against the U.S. State 
+Department seeking more gender options for passports. (AP Photo/David 
+Zalubowski)</figcaption><p>“Improved access to accurate passports will 
+have such a profound impact on the lives of trans, intersex and 
+nonbinary folks across the country,” said Arli Christian, a campaign 
+strategist with the ACLU. “But the work doesn’t stop here. We will keep 
+working with the administration to make sure we see these important 
+changes to gender change policies across all federal agencies.”</p>
+<p>The policy comes on the heels of a protracted legal battle that 
+spanned three presidential administrations. Dana Zzyym, an intersex Navy
+ veteran, sued the State Department with LGBTQ+ legal organization 
+Lambda Legal in 2016 to obtain an accurate passport. More than a year 
+ago, the U.S. Court of Appeals for the Tenth Circuit ordered the State 
+Department to issue Zzyym a passport with a gender marker “X.” </p>
+<p>“I’ve been at this fight for so long,” Zzyym said in a statement. “I 
+am optimistic that, with the incredible support and work of Lambda Legal
+ and the Intersex Campaign for Equality, I will soon receive an accurate
+ passport, one that reflects who I truly am.”</p>
+<h3 class="rm-manual">Have a seat at our table</h3>
+<h4 class="rm-manual">Share your story. See yourself in the news. Support our community.</h4>
+<p class="rm-manual"> <a href="file:///membership/"> Become a Member </a> </p>
+<p class="rm-manual"> <a href="file:///newsletter/">Sign up for our newsletter</a> </p>
+<h4 class="rm-manual">Up Next</h4>
+<p class="rm-manual"> <a href="https://19thnews.org/topics/lgbtq/"> LGBTQ+ </a> </p>
+<h1 class="rm-manual">
+<a href="https://19thnews.org/2021/06/supreme-court-ends-gavin-grimms-legal-fight-over-transgender-bathroom-access/"> Supreme Court won’t rule on transgender bathroom access in schools</a> </h1>
+<p class="rm-manual">The justices declined to hear a Virginia school 
+board's appeal, agreeing with a lower court that schools cannot bar 
+transgender students from using bathrooms that match their gender 
+identity.</p>
+<p class="rm-manual"> <a href="https://19thnews.org/2021/06/supreme-court-ends-gavin-grimms-legal-fight-over-transgender-bathroom-access/">Read the Story</a> </p>
+<p class="rm-manual">The 19th</p>
+<p class="rm-manual"> The 19th is a 501(c)(3) tax-exempt organization. Our stories are <a href="https://19thnews.org/republishing-guidelines/">free to republish in accordance with these guidelines</a>.</p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://19thnews.org/membership/">Donate</a> </li> <li class="rm-manual"> <a href="https://19thnews.org/newsletter/">Subscribe to the Newsletter</a> </li> <li class="rm-manual"> <a href="https://www.crowdcast.io/19thnews">Attend an Event</a> </li> <li class="rm-manual"> <a href="https://19thnews.org/19th-jobs/">Work Here</a> </li> <li class="rm-manual"> <a href="https://19thnews.org/contact-us/">Contact Us</a> </li> <li class="rm-manual"> <a href="https://19thnews.org/about/">About Us</a> </li> <li class="rm-manual"> <a href="https://19thnews.org/community-guidelines/">Community Guidelines</a> </li> <li class="rm-manual"> <a href="https://19thnews.org/membership/">Membership</a> </li> <li class="rm-manual"> <a href="https://19thnews.org/faq-our-membership-program/">Membership FAQ</a> </li> <li class="rm-manual"> <a href="https://19thnews.org/major-gifts/">Major Gifts</a> </li> <li class="rm-manual"> <a href="https://19thnews.org/sponsorship/">Sponsorship</a> </li> <li class="rm-manual"> <a href="https://19thnews.org/terms-of-service/">Privacy</a> </li> </ul></article>
+</body></html>

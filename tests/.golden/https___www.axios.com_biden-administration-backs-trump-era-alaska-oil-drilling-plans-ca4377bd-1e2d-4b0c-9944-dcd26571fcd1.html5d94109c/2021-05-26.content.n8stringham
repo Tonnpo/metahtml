@@ -1,0 +1,367 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">Biden administration backs Trump-era Alaska oil drilling plans - Axios</p>
+<p class="rm-manual"><a href="#maincontent">Skip to main content</a></p>
+<ul class="rm-manual"><li class="rm-manual"><a href="https://www.axios.com/newsletters">Sign up</a></li></ul>
+<p class="rm-manual"><span>Please enter a non-empty search term.</span></p>
+<h2 class="rm-manual">Sections</h2>
+<p class="rm-manual"><a href="https://www.axios.com/politics-policy">Politics &amp; Policy</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/hard-truths/">Hard Truths</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/politics-policy/black-lives-matter-movement/">Black Lives Matter movement</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/politics-policy/joe-biden/">Joe Biden</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/politics-policy/donald-trump/">Donald Trump</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/politics-policy/policymaking/">Policymaking</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/politics-policy/immigration/">Immigration</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/technology">Technology</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/technology/big-tech/">Big Tech</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/technology/misinformation/">Misinformation</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/technology/5g/">5G</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/technology/data-privacy/">Data privacy</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/technology/surveillance/">Surveillance</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/technology/automation-and-ai/">Automation and AI</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/economy-business">Economy &amp; Business</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/economy-business/media/">Media</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/economy-business/stock-market/">Stock market</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/economy-business/jobs/">Jobs</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/economy-business/transportation/">Transportation</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/economy-business/retail/">Retail</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/economy-business/trade-war/">Trade war</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/health">Health</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/health/coronavirus/">Coronavirus</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/health/health-care-costs/">Health care costs</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/health/affordable-care-act/">Affordable Care Act</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/health/medicare-for-all/">Medicare for All</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/health/vaping/">Vaping</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/health/public-health/">Public health</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/world">World</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/world/china/">China</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/world/north-korea/">North Korea</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/world/iran/">Iran</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/world/russia/">Russia</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/world/israel/">Israel</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/energy-environment">Energy &amp; Environment</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/energy-environment/climate-change/">Climate change</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/energy-environment/alternative-energy/">Alternative energy</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/energy-environment/oil-companies/">Oil companies</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/energy-environment/electric-vehicles/">Electric vehicles</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/science">Science</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/science/space/">Space</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/science/extreme-weather/">Extreme weather</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/sports">Sports</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/sports/nfl-nba-mlb-nhl/">NFL, NBA, MLB &amp; NHL</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/sports/ncaa/">NCAA</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/sports/sports-betting/">Sports betting</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/sports/olympics/">2021 Olympics</a></p>
+<h5 class="rm-manual">Axios gets you smarter, faster with news &amp; information that matters.</h5>
+<p class="rm-manual"><a href="https://www.axios.com/about/">Our mission statement</a>Arrow</p>
+<h6 class="rm-manual">About</h6>
+<p class="rm-manual"><a href="https://www.axios.com/about/">About Axios</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/advertise/">Advertise with us</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/careers/">Careers</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/events/">Events</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/hbo/">Axios on HBO</a></p>
+<p class="rm-manual"><a href="https://www.axioshq.com/?utm_source=axios&amp;utm_medium=site&amp;utm_campaign=axioshq&amp;utm_content=nav">Axios HQ</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/legal/">Privacy and terms</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/legal/ccpa/">Online tracking choices</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/contact/">Contact us</a></p>
+<h6 class="rm-manual">Subscribe</h6>
+<p class="rm-manual"><a href="https://www.axios.com/newsletters/">Axios newsletters</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/app/">Axios app</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/podcasts/">Axios podcasts</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/get-smart/">Courses</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/referral/">Earn Axios rewards</a></p>
+<h5 class="rm-manual">Axios Local</h5>
+<p class="rm-manual">Get smarter, faster about your hometown.</p>
+<p class="rm-manual"><a href="https://www.axios.com/local/">Sign up</a>Arrow</p>
+<p class="rm-manual"><a href="https://www.axios.com/twin-cities/"><span>Twin Cities</span></a><span>Coming soon</span></p>
+<p class="rm-manual"><a href="https://www.axios.com/tampa-bay/"><span>Tampa Bay</span></a><span>Coming soon</span></p>
+<p class="rm-manual"><a href="https://www.axios.com/des-moines/"><span>Des Moines</span></a><span>Coming soon</span></p>
+<p class="rm-manual"><a href="https://charlotte.axios.com/"><span>Charlotte</span></a><span>Coming soon</span></p>
+<p class="rm-manual"><a href="https://www.axios.com/denver/"><span>Denver</span></a><span>Coming soon</span></p>
+<p class="rm-manual"><a href="https://www.axios.com/nw-arkansas/"><span>NW Arkansas</span></a><span>Coming soon</span></p>
+<p class="rm-manual">Menu</p>
+<h2 class="rm-manual">Sections</h2>
+<h3 class="rm-manual"><a href="https://www.axios.com/politics-policy">Politics &amp; Policy</a></h3>
+<p class="rm-manual"><a href="https://www.axios.com/hard-truths/">Hard Truths</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/politics-policy/black-lives-matter-movement">Black Lives Matter movement</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/politics-policy/joe-biden">Joe Biden</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/politics-policy/donald-trump">Donald Trump</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/politics-policy/policymaking">Policymaking</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/politics-policy/immigration">Immigration</a></p>
+<h3 class="rm-manual"><a href="https://www.axios.com/technology">Technology</a></h3>
+<p class="rm-manual"><a href="https://www.axios.com/technology/big-tech">Big Tech</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/technology/misinformation">Misinformation</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/technology/5g">5G</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/technology/data-privacy">Data privacy</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/technology/surveillance">Surveillance</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/technology/automation-and-ai">Automation and AI</a></p>
+<h3 class="rm-manual"><a href="https://www.axios.com/economy-business">Economy &amp; Business</a></h3>
+<p class="rm-manual"><a href="https://www.axios.com/economy-business/media">Media</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/economy-business/stock-market">Stock market</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/economy-business/jobs">Jobs</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/economy-business/transportation">Transportation</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/economy-business/retail">Retail</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/economy-business/trade-war">Trade war</a></p>
+<h3 class="rm-manual"><a href="https://www.axios.com/health">Health</a></h3>
+<p class="rm-manual"><a href="https://www.axios.com/health/coronavirus">Coronavirus</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/health/health-care-costs">Health care costs</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/health/affordable-care-act">Affordable Care Act</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/health/medicare-for-all">Medicare for All</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/health/vaping">Vaping</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/health/public-health">Public health</a></p>
+<h3 class="rm-manual"><a href="https://www.axios.com/world">World</a></h3>
+<p class="rm-manual"><a href="https://www.axios.com/world/china">China</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/world/north-korea">North Korea</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/world/iran">Iran</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/world/russia">Russia</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/world/israel">Israel</a></p>
+<h3 class="rm-manual"><a href="https://www.axios.com/energy-environment">Energy &amp; Environment</a></h3>
+<p class="rm-manual"><a href="https://www.axios.com/energy-environment/climate-change">Climate change</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/energy-environment/alternative-energy">Alternative energy</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/energy-environment/oil-companies">Oil companies</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/energy-environment/electric-vehicles">Electric vehicles</a></p>
+<h3 class="rm-manual"><a href="https://www.axios.com/science">Science</a></h3>
+<p class="rm-manual"><a href="https://www.axios.com/science/space">Space</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/science/extreme-weather">Extreme weather</a></p>
+<h3 class="rm-manual"><a href="https://www.axios.com/sports">Sports</a></h3>
+<p class="rm-manual"><a href="https://www.axios.com/sports/nfl-nba-mlb-nhl">NFL, NBA, MLB &amp; NHL</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/sports/ncaa">NCAA</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/sports/sports-betting">Sports betting</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/sports/olympics">2021 Olympics</a></p>
+<h2 class="rm-manual">Local news</h2>
+<p class="rm-manual"><a href="https://www.axios.com/twin-cities/">Twin Cities</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/tampa-bay/">Tampa Bay</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/des-moines/">Des Moines</a></p>
+<p class="rm-manual"><a href="https://charlotte.axios.com/">Charlotte</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/denver/">Denver</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/nw-arkansas/">NW Arkansas</a></p>
+<h2 class="rm-manual">About</h2>
+<p class="rm-manual"><a href="https://www.axios.com/about/">About Axios</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/advertise/">Advertise with us</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/careers/">Careers</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/events/">Events</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/hbo/">Axios on HBO</a></p>
+<p class="rm-manual"><a href="https://www.axioshq.com/?utm_source=axios&amp;utm_medium=site&amp;utm_campaign=axioshq&amp;utm_content=nav">Axios HQ</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/legal/">Privacy and terms</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/legal/ccpa/">Online tracking choices</a></p>
+<p class="rm-manual"><a href="https://www.axios.com/contact/">Contact us</a></p>
+<h2 class="rm-manual">Sign up for our daily briefing</h2>
+<h3 class="rm-manual">Make your busy days simpler with Axios AM/PM. Catch up on what's new and why it matters in just 5 minutes.</h3>
+<p class="rm-manual">Enter your email address</p>
+<p class="rm-manual">Please enter a valid email.</p>
+<p class="rm-manual">Please enter a valid email.</p>
+<p class="rm-manual">Subscription failed</p>
+<p class="rm-manual">Thank you for subscribing!</p>
+<h2 class="rm-manual">Catch up on the day's biggest business stories</h2>
+<h3 class="rm-manual">Subscribe to Axios Closer for insights into the day’s business news and trends and why they matter</h3>
+<p class="rm-manual">Enter your email address</p>
+<p class="rm-manual">Please enter a valid email.</p>
+<p class="rm-manual">Please enter a valid email.</p>
+<p class="rm-manual">Subscription failed</p>
+<p class="rm-manual">Thank you for subscribing!</p>
+<h2 class="rm-manual">Stay on top of the latest market trends</h2>
+<h3 class="rm-manual">Subscribe to Axios Markets for the latest market trends and economic insights. Sign up for free.</h3>
+<p class="rm-manual">Enter your email address</p>
+<p class="rm-manual">Please enter a valid email.</p>
+<p class="rm-manual">Please enter a valid email.</p>
+<p class="rm-manual">Subscription failed</p>
+<p class="rm-manual">Thank you for subscribing!</p>
+<h2 class="rm-manual">Sports news worthy of your time</h2>
+<h3 class="rm-manual">Binge on the stats and stories that drive the sports world with Axios Sports. Sign up for free.</h3>
+<p class="rm-manual">Enter your email address</p>
+<p class="rm-manual">Please enter a valid email.</p>
+<p class="rm-manual">Please enter a valid email.</p>
+<p class="rm-manual">Subscription failed</p>
+<p class="rm-manual">Thank you for subscribing!</p>
+<h2 class="rm-manual">Tech news worthy of your time</h2>
+<h3 class="rm-manual">Get our smart take on technology from the Valley and D.C. with Axios Login. Sign up for free.</h3>
+<p class="rm-manual">Enter your email address</p>
+<p class="rm-manual">Please enter a valid email.</p>
+<p class="rm-manual">Please enter a valid email.</p>
+<p class="rm-manual">Subscription failed</p>
+<p class="rm-manual">Thank you for subscribing!</p>
+<h2 class="rm-manual">Get the inside stories</h2>
+<h3 class="rm-manual">Get an insider's guide to the new White House with Axios Sneak Peek. Sign up for free.</h3>
+<p class="rm-manual">Enter your email address</p>
+<p class="rm-manual">Please enter a valid email.</p>
+<p class="rm-manual">Please enter a valid email.</p>
+<p class="rm-manual">Subscription failed</p>
+<p class="rm-manual">Thank you for subscribing!</p>
+<h2 class="rm-manual">The Axios App</h2>
+<h3 class="rm-manual">Your personalized feed of scoops, breaking news and newsletters — on your phone.</h3>
+<h3 class="rm-manual">Download for free.</h3>
+<h2 class="rm-manual">Catch up on coronavirus stories and special reports, curated by Mike Allen everyday</h2>
+<h3 class="rm-manual">Catch up on coronavirus stories and special reports, curated by Mike Allen everyday</h3>
+<p class="rm-manual">Enter your email address</p>
+<p class="rm-manual">Please enter a valid email.</p>
+<p class="rm-manual">Please enter a valid email.</p>
+<p class="rm-manual">Subscription failed</p>
+<p class="rm-manual">Thank you for subscribing!</p>
+<h2 class="rm-manual">Want a daily digest of the top Denver news?</h2>
+<h3 class="rm-manual">Get a daily digest of the most important stories affecting your hometown with Axios Denver</h3>
+<p class="rm-manual">Enter your email address</p>
+<p class="rm-manual">Please enter a valid email.</p>
+<p class="rm-manual">Please enter a valid email.</p>
+<p class="rm-manual">Subscription failed</p>
+<p class="rm-manual">Thank you for subscribing!</p>
+<h2 class="rm-manual">Want a daily digest of the top Des Moines news?</h2>
+<h3 class="rm-manual">Get a daily digest of the most important stories affecting your hometown with Axios Des Moines</h3>
+<p class="rm-manual">Enter your email address</p>
+<p class="rm-manual">Please enter a valid email.</p>
+<p class="rm-manual">Please enter a valid email.</p>
+<p class="rm-manual">Subscription failed</p>
+<p class="rm-manual">Thank you for subscribing!</p>
+<h2 class="rm-manual">Want a daily digest of the top Twin Cities news?</h2>
+<h3 class="rm-manual">Get a daily digest of the most important stories affecting your hometown with Axios Twin Cities</h3>
+<p class="rm-manual">Enter your email address</p>
+<p class="rm-manual">Please enter a valid email.</p>
+<p class="rm-manual">Please enter a valid email.</p>
+<p class="rm-manual">Subscription failed</p>
+<p class="rm-manual">Thank you for subscribing!</p>
+<h2 class="rm-manual">Want a daily digest of the top Tampa Bay news?</h2>
+<h3 class="rm-manual">Get a daily digest of the most important stories affecting your hometown with Axios Tampa Bay</h3>
+<p class="rm-manual">Enter your email address</p>
+<p class="rm-manual">Please enter a valid email.</p>
+<p class="rm-manual">Please enter a valid email.</p>
+<p class="rm-manual">Subscription failed</p>
+<p class="rm-manual">Thank you for subscribing!</p>
+<h2 class="rm-manual">Want a daily digest of the top Charlotte news?</h2>
+<h3 class="rm-manual">Get a daily digest of the most important stories affecting your hometown with Axios Charlotte</h3>
+<p class="rm-manual">Enter your email address</p>
+<p class="rm-manual">Please enter a valid email.</p>
+<p class="rm-manual">Please enter a valid email.</p>
+<p class="rm-manual">Subscription failed</p>
+<p class="rm-manual">Thank you for subscribing!</p>
+<h2 class="rm-manual">Sign up for Axios NW Arkansas</h2>
+<h3 class="rm-manual">Stay up-to-date on the most important and interesting stories affecting NW Arkansas, authored by local reporters</h3>
+<p class="rm-manual">Enter your email address</p>
+<p class="rm-manual">Please enter a valid email.</p>
+<p class="rm-manual">Please enter a valid email.</p>
+<p class="rm-manual">Subscription failed</p>
+<p class="rm-manual">Thank you for subscribing!</p>
+<p class="rm-manual">Enter your email address</p>
+<p class="rm-manual">Please enter a valid email.</p>
+<p class="rm-manual">Please enter a valid email.</p>
+<p class="rm-manual">Subscription failed</p>
+<p class="rm-manual">Thank you for subscribing!</p>
+<p class="rm-manual"><span>36 mins ago - <a href="file:///energy-environment">Energy &amp; Environment</a></span></p>
+<h1 class="rm-manual">Biden administration backs Trump-era Alaska oil drilling plans</h1>
+<p class="rm-manual"><a href="https://www.axios.com/authors/rfalconer/">Rebecca Falconer</a></p>
+<p>An aerial view of Nuiqsut, Alaska, near the oil drilling project. Photo: Bonnie Jo Mount/The Washington Post via Getty Images</p>
+<p>The Biden administration on Wednesday defended in the U.S. District 
+Court for Alaska a massive ConocoPhillips oil and gas project approved 
+during the Trump-era, per the <a href="https://www.nytimes.com/2021/05/26/climate/biden-alaska-drilling.html?smtyp=cur&amp;smid=fb-nytimes">New York Times</a>.</p>
+<p>Why it matters: President <a href="https://www.axios.com/biden-arctic-national-wildlife-refuge-protections-dd482f58-73a1-480d-8e83-b310604b135e.html">Biden has pledged</a> to <a href="https://www.axios.com/clean-energy-jobs-transition-biden-c656cb47-fe7e-4a8c-9737-981e006aff6f.html">move away</a>
+ from fossil fuels. But the project has the backing of officials 
+including Sen. Lisa Murkowski (R-Alaska) — who's viewed as a potential 
+ally for Biden in his attempts to push through policies in an evenly 
+divided Senate, the NYT notes.</p>
+<p>Driving the news: Some tribal leaders and unions also back the 
+project, but environmental groups say the Trump administration didn't 
+consider the effects the Willow drilling project in part of the <a href="https://www.axios.com/trump-oil-gas-alaska-drilling-blm-13f8466c-8304-4098-b39f-250a49125348.html">National Petroleum Reserve</a> would have on wildlife and climate-change, according <a href="https://news.yahoo.com/court-order-delays-construction-conocophillips-220353415.html">to Reuters.</a> </p>
+<ul><li>A judge temporarily blocked the project in May after the environmental groups filed a lawsuit.</li></ul>
+<p>What they're saying: The Biden administration didn't clarify how its 
+stance fit with climate policies, but it said in the filing sufficient 
+considerations had been made in regards to greenhouse gas emissions 
+considerations and the effects the project would have on "fish, caribou 
+and polar bear habitat," the Times reports.</p>
+<ul>
+<li>The filing noted that Conoco has "valid lease rights" and can 
+"develop its leases 'subject to reasonable regulation,'" per the NYT.</li>
+<li>Representatives for the Interior Department did not immediately respond to Axios' request for comment.</li>
+</ul>
+<h2 class="rm-manual">Go deeper</h2>
+<p class="rm-manual"><a href="https://www.axios.com/authors/AFreedman/">Andrew Freedman</a></p>
+<p class="rm-manual"><span>Updated 13 hours ago - <a href="file:///energy-environment">Energy &amp; Environment</a></span></p>
+<h3 class="rm-manual"><a href="https://www.axios.com/shell-ruling-emissions-greenhouse-court-orders-7749a980-1613-4a1c-b2f0-4bc72c7bb5dd.html">Dutch court orders Shell to cut its emissions in landmark ruling</a></h3>
+<p class="rm-manual">A Royal Dutch Shell Plc logo on a fence at the 
+Shell Pernis refinery in Rotterdam, Netherlands, on Tuesday, April 27, 
+2021. Shell reports first quarter earnings on April 29. (Peter 
+Boer/Bloomberg via Getty Images)</p>
+<p class="rm-manual">In a precedent-setting ruling, a Dutch court ruled 
+Wednesday in favor of environmentalists and more than 17,000 residents 
+of the Netherlands, by ordering Royal Dutch Shell to cut its emissions 
+of greenhouse gases. </p>
+<p class="rm-manual">Why it matters: It’s the first court ruling that 
+orders a major oil company to make its emissions plans more consistent 
+with Paris Climate Agreement targets, and it could spur legal action 
+against other oil and gas firms.</p>
+<p class="rm-manual"><a href="https://www.axios.com/shell-ruling-emissions-greenhouse-court-orders-7749a980-1613-4a1c-b2f0-4bc72c7bb5dd.html">Go deeper (1 min. read)<span>Arrow</span></a></p>
+<p class="rm-manual"><a href="https://www.axios.com/authors/ogonzalez/">Oriana Gonzalez</a></p>
+<p class="rm-manual"><span>May 25, 2021 - <a href="file:///politics-policy">Politics &amp; Policy</a></span></p>
+<h3 class="rm-manual"><a href="https://www.axios.com/trump-absolute-immunity-swalwell-lawsuit-1e478a3b-4715-4a10-9cfc-059c9d332d8e.html">Trump claims he has "absolute immunity" from Swalwell lawsuit</a></h3>
+<p class="rm-manual">Photo: Joe Raedle/Getty Images</p>
+<p class="rm-manual">Former President Trump on Monday asked a federal 
+judge to dismiss a lawsuit filed by Rep. Eric Swalwell (D-Calif.) over 
+his role in the Jan. 6 Capitol riots because he has "absolute immunity."</p>
+<p class="rm-manual">Driving the news: In a <a href="https://storage.courtlistener.com/recap/gov.uscourts.dcd.228356/gov.uscourts.dcd.228356.14.1.pdf">memo</a>,
+ Trump's attorney said the lawsuit "directly attacks" the First 
+amendment, adding that the congressman took comments the former 
+president made out of context and that the court should dismiss the 
+lawsuit because "[t]he President's absolute immunity forecloses the 
+jurisdiction of this Court."</p>
+<p class="rm-manual"><a href="https://www.axios.com/trump-absolute-immunity-swalwell-lawsuit-1e478a3b-4715-4a10-9cfc-059c9d332d8e.html">Go deeper (1 min. read)<span>Arrow</span></a></p>
+<p class="rm-manual"><a href="https://www.axios.com/authors/isaric/">Ivana Saric</a></p>
+<p class="rm-manual"><span>3 hours ago - <a href="file:///economy-business">Economy &amp; Business</a></span></p>
+<h3 class="rm-manual"><a href="https://www.axios.com/ap-emily-wilder-firing-mishandle-staff-protect-5c931cdd-0b25-43fe-9aae-6f3004028b3d.html">AP admits mishandling Emily Wilder's firing, vows to protect staff from online attacks</a></h3>
+<p class="rm-manual">Photo: Beata Zawrzel/NurPhoto via Getty Images</p>
+<p class="rm-manual">Senior managers at the Associated Press admitted during a staff meeting on Wednesday that they mishandled the <a href="https://twitter.com/vv1lder/status/1396142932583874563">dismissal of Emily Wilder</a>, though management maintained the news associate's termination was "the right decision," the <a href="https://www.washingtonpost.com/media/2021/05/26/ap-wilder-firing/">Washington Post</a> reports.</p>
+<p class="rm-manual">Why it matters: The firing of the junior staffer 
+sparked widespread backlash and a broader conversation about media 
+companies' social media policies and the responsibility of outlets to 
+protect their reporters from internet trolls.</p>
+<p class="rm-manual"><a href="https://www.axios.com/ap-emily-wilder-firing-mishandle-staff-protect-5c931cdd-0b25-43fe-9aae-6f3004028b3d.html">Go deeper (1 min. read)<span>Arrow</span></a></p>
+<h6 class="rm-manual">Axios gets you smarter, faster with news &amp; information that matters.</h6>
+<p class="rm-manual"><span>Copyright Axios Media, 2021</span></p>
+<h2 class="rm-manual">About</h2>
+<p class="rm-manual"><span><a href="https://www.axios.com/about/">About Axios</a></span></p>
+<p class="rm-manual"><span><a href="https://www.axios.com/advertise/">Advertise with us</a></span></p>
+<p class="rm-manual"><span><a href="https://www.axios.com/careers/">Careers</a></span></p>
+<p class="rm-manual"><span><a href="https://www.axios.com/events/">Events</a></span></p>
+<p class="rm-manual"><span><a href="https://www.axios.com/hbo/">Axios on HBO</a></span></p>
+<p class="rm-manual"><span><a href="https://www.axioshq.com/?utm_source=axios&amp;utm_medium=site&amp;utm_campaign=axioshq&amp;utm_content=footer">Axios HQ</a></span></p>
+<p class="rm-manual"><span><a href="https://www.axios.com/legal/">Privacy and terms</a></span></p>
+<p class="rm-manual"><span><a href="https://www.axios.com/legal/ccpa/">Online tracking choices</a></span></p>
+<p class="rm-manual"><span><a href="https://www.axios.com/contact/">Contact us</a></span></p>
+<h2 class="rm-manual">Subscribe</h2>
+<p class="rm-manual"><span><a href="https://www.axios.com/newsletters/">Axios newsletters</a></span></p>
+<p class="rm-manual"><span><a href="https://www.axios.com/app/">Axios app</a></span></p>
+<p class="rm-manual"><span><a href="https://www.axios.com/podcasts/">Axios podcasts</a></span></p>
+<p class="rm-manual"><span><a href="https://www.axios.com/get-smart/">Courses</a></span></p>
+<p class="rm-manual"><span><a href="https://www.axios.com/referral/">Earn Axios rewards</a></span></p></article>
+</body></html>

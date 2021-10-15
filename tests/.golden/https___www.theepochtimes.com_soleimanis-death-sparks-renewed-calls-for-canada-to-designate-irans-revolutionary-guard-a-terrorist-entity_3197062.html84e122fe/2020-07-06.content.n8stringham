@@ -1,0 +1,150 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> <span><a href="https://www.facebook.com/sharer/sharer.php?u=https://www.theepochtimes.com/soleimanis-death-sparks-renewed-calls-for-canada-to-designate-irans-revolutionary-guard-a-terrorist-entity_3197062.html">Facebook</a></span><span><a href="https://twitter.com/intent/tweet?text=Soleimani%E2%80%99s%20Death%20Sparks%20Renewed%20Calls%20for%20Canada%20to%20Designate%20Iran%E2%80%99s%20Revolutionary%20Guard%20a%20Terrorist%20Entity&amp;url=https://www.theepochtimes.com/soleimanis-death-sparks-renewed-calls-for-canada-to-designate-irans-revolutionary-guard-a-terrorist-entity_3197062.html&amp;via=epochtimes">Tweet</a></span><span><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.theepochtimes.com/soleimanis-death-sparks-renewed-calls-for-canada-to-designate-irans-revolutionary-guard-a-terrorist-entity_3197062.html">LinkedIn</a></span><span><a href="mailto:?subject=Soleimani%E2%80%99s%20Death%20Sparks%20Renewed%20Calls%20for%20Canada%20to%20Designate%20Iran%E2%80%99s%20Revolutionary%20Guard%20a%20Terrorist%20Entity&amp;body=Soleimani%E2%80%99s%20Death%20Sparks%20Renewed%20Calls%20for%20Canada%20to%20Designate%20Iran%E2%80%99s%20Revolutionary%20Guard%20a%20Terrorist%20Entity%20https://www.theepochtimes.com/soleimanis-death-sparks-renewed-calls-for-canada-to-designate-irans-revolutionary-guard-a-terrorist-entity_3197062.html">Email</a></span> </p>
+<p class="rm-manual">RELATED</p>
+<p class="rm-manual"><a href="https://www.theepochtimes.com/iraq-playing-balancing-act-between-us-and-iran-by-passing-resolution-to-expel-foreign-troops-say-analysts_3194950.html">Iraq Playing Balancing Act Between US and Iran by Passing Resolution to Expel Foreign Troops, Say Analysts</a></p>
+<p class="rm-manual"><a href="https://www.theepochtimes.com/iraq-playing-balancing-act-between-us-and-iran-by-passing-resolution-to-expel-foreign-troops-say-analysts_3194950.html"><span>0</span></a> </p>
+<p class="rm-manual"><a href="https://www.theepochtimes.com/stampede-kills-32-at-funeral-for-iran-general-killed-in-us-airstrike_3196118.html">Stampede Kills 56 at Funeral for Iran General Killed in US Airstrike</a></p>
+<p class="rm-manual"><a href="https://www.theepochtimes.com/stampede-kills-32-at-funeral-for-iran-general-killed-in-us-airstrike_3196118.html"><span>0</span></a> </p>
+<p class="rm-manual">Iranian-Canadians gather in Toronto on Jan. 3, 
+2020, to celebrate the death of Gen. Qasem Soleimani in Iraq on Jan. 2. 
+The killing has sparked renewed calls to designate the Islamic 
+Revolutionary Guard Corps as a terrorist organization. (The Canadian 
+Press/Cole Burston) </p>
+<p class="rm-manual"> <a href="https://www.theepochtimes.com/c-canada2"> Canada </a> </p>
+<h1 class="rm-manual"><span>Soleimani’s Death Sparks Renewed Calls for Canada to Designate Iran’s Revolutionary Guard a Terrorist Entity</span></h1>
+<p class="rm-manual">By <span><a href="https://www.theepochtimes.com/author-lee-harding">Lee Harding</a></span></p>
+<p class="rm-manual"> <span>January 7, 2020</span> <span>Updated: January 8, 2020</span> </p>
+<p class="rm-manual"><span><a href="#Print"><span>Print</span></a></span></p>
+<p>The killing of a top Iranian general by a U.S. airstrike has reignited debate over Canada’s engagement with <a href="https://www.theepochtimes.com/t-iran">Iran</a> and renewed calls to designate the Islamic Revolutionary Guard Corps as a <a href="https://www.theepochtimes.com/t-terrorist">terrorist</a> organization.</p>
+<p>Qasem Soleimani, leader of Iran’s Quds Force, was killed by a missile
+ fired at his convoy as it left Baghdad airport in Iraq on Jan. 2. His 
+death has elevated tensions in the Middle East and prompted threats of 
+retaliation from Iran.</p>
+<p>The increased tensions are a concern for Canada, which has almost 850
+ troops as part of NATO’s contingent in the region, including 500 in 
+Iraq.</p>
+<p>Minister of Foreign Affairs François-Philippe Champagne has called on
+ all sides “to exercise restraint and pursue de-escalation,” while 
+noting that Canada “has long been concerned by the Islamic Revolutionary
+ Guard Corps’ Quds Force, led by Qasem Soleimani, whose aggressive 
+actions have had a destabilizing effect in the region and beyond.”</p>
+<p>Canada declared the Quds Force to be a terrorist organization in 
+2017. A year later, the Liberals supported a Conservative motion to 
+designate the entire Islamic Revolutionary Guard Corps (IRGC) as 
+terrorist, but that has not happened.</p>
+<p>“The Conservative Opposition once again calls upon the Trudeau 
+government to finally list the IRGC as a terrorist entity after 18 
+months of foot-dragging,” says a joint statement by Conservative MPs 
+Erin O’Toole and James Bezan issued after the airstrike.</p>
+<p>“The Liberals voted for the measure, yet have done nothing to 
+recognize the destructive and destabilizing influence of the IRGC.”</p>
+<p>Bahrain and Saudi Arabia denounced the IRGC as a terrorist 
+organization in 2018. The United States made the same designation in 
+2019 and asked its allies to do the same.</p>
+<p>Kaveh Shahrooz, senior fellow with the Macdonald-Laurier Institute’s 
+Centre for Advancing Canada’s Interests Abroad, wholeheartedly supports 
+the idea.</p>
+<p>He says the designation “would severely increase pressure on Iran’s 
+dictatorial government, putting every person and business on notice that
+ they will face serious terrorism charges in Canada for engaging in any 
+relationship that assists the IRGC.”</p>
+<p>Last November, Iran’s supreme leader Ayatollah Ali Khamenei ordered a
+ crackdown on protesters against his regime. As a result, the IRGC 
+killed as many as 1,500 of Iran’s own citizens, Reuters reported.</p>
+<p>“They are an incredibly repressive and violent and deeply corrupt 
+organization,” says Shahrooz. “This is a really nefarious, malevolent 
+force that Canada ought to oppose.”</p>
+<p>It’s unclear why the government has not yet made the designation. 
+Fear of reprisals from Iran might be one reason. Another could be 
+Canada’s quest for a U.N. Security Council seat, given that one-quarter 
+of the countries that vote are majority Muslim nations.</p>
+<p>“That’s the elephant in the room now,” Shahrooz said. “And perhaps 
+the calculation is that perhaps if we don’t antagonize Iran, we may be 
+able to either get their support or at the very least not have them 
+actively oppose us in that quest.”</p>
+<p>Retired Maj.-Gen. Denis Thompson wonders whether Canada can 
+legitimately designate the IRGC as terrorist, given its official role in
+ a sovereign country.</p>
+<p>“I would say that it isn’t the Canadian government’s position to 
+declare the Iranian Revolutionary Guard a terrorist organization, nor 
+for that matter most organizations even if they’re perceived as evil … 
+if they are linked to a legitimate government. And that to me is where 
+the issue lies.”</p>
+<p>Conservative MP Garnett Genuis disagrees.</p>
+<p>“There’s a good argument that it functions just like any other 
+terrorist entity, not like a state actor. But in any event its actions, 
+and not just whether it claims to be a state actor, should be the basis 
+for its listing.”</p>
+<p>Under the Iranian constitution, the IRGC defends the Islamic regime, 
+and the national army defends the citizens and country. The IRGC was put
+ in place by Iranian regime founder Ayatollah Ruhollah Khomeini in 1979 
+to prevent a military coup from forces that might be loyal to the 
+deposed shah.</p>
+<p>As Shahrooz put it in a column he co-authored in 2019, “It’s a 
+fighting force devoted solely to imposing the Iranian theocracy at home,
+ exporting it abroad, and lining its own pockets.”</p>
+<p>Following Soleimani’s death, Iran offered an $80 million bounty for 
+Trump’s assassination. The president has said he ordered the airstrike 
+because Soleimani was plotting to kill American diplomats and military 
+personnel.</p>
+<p class="rm-manual">Soleimani was the architect of almost every 
+significant intelligence and military operation that Iran conducted for 
+the past two decades. This included the backing of militias in Iraq, 
+Syria, and Lebanon, as well as terrorist attacks and plots in many 
+countries around the world.</p>
+<p class="rm-manual"><a href="https://www.theepochtimes.com/top-news">TOP NEWS</a></p>
+<p class="rm-manual"><span><a href="https://www.theepochtimes.com/c-india">India</a></span></p>
+<p class="rm-manual"><a href="https://www.theepochtimes.com/china-begins-pulling-back-troops-near-site-of-india-border-clash-indian-sources-say_3413433.html"></a></p><p class="rm-manual"><a href="https://www.theepochtimes.com/china-begins-pulling-back-troops-near-site-of-india-border-clash-indian-sources-say_3413433.html">China Begins Pulling Back Troops Near Site of India Border Clash, Indian Sources Say</a></p><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://www.theepochtimes.com/china-begins-pulling-back-troops-near-site-of-india-border-clash-indian-sources-say_3413433.html"><span>0</span></a></p>
+<p class="rm-manual"><span><a href="https://www.theepochtimes.com/c-judiciary">Judiciary</a></span></p>
+<p class="rm-manual"><a href="https://www.theepochtimes.com/supreme-court-unanimously-upholds-faithless-elector-laws_3413610.html"></a></p><p class="rm-manual"><a href="https://www.theepochtimes.com/supreme-court-unanimously-upholds-faithless-elector-laws_3413610.html">Supreme Court Unanimously Upholds ‘Faithless Elector’ Laws</a></p><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://www.theepochtimes.com/supreme-court-unanimously-upholds-faithless-elector-laws_3413610.html"><span>0</span></a></p>
+<p class="rm-manual"><span><a href="https://www.theepochtimes.com/c-trump-presidency">Trump Administration</a></span></p>
+<p class="rm-manual"><a href="https://www.theepochtimes.com/trump-considering-executive-orders-on-china-immigration-manufacturing_3413517.html"></a></p><p class="rm-manual"><a href="https://www.theepochtimes.com/trump-considering-executive-orders-on-china-immigration-manufacturing_3413517.html">Trump Considering Executive Orders on China, Immigration, Manufacturing</a></p><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://www.theepochtimes.com/trump-considering-executive-orders-on-china-immigration-manufacturing_3413517.html"><span>0</span></a></p>
+<p class="rm-manual"><span><a href="https://www.theepochtimes.com/c-economy">Economy</a></span></p>
+<p class="rm-manual"><a href="https://www.theepochtimes.com/meadows-stimulus-package-checks-will-be-crafted-in-mid-july_3413525.html"></a></p><p class="rm-manual"><a href="https://www.theepochtimes.com/meadows-stimulus-package-checks-will-be-crafted-in-mid-july_3413525.html">Meadows: Stimulus Package, Checks Will Be Crafted in Mid-July</a></p><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://www.theepochtimes.com/meadows-stimulus-package-checks-will-be-crafted-in-mid-july_3413525.html"><span>0</span></a></p>
+<p class="rm-manual"><span><a href="https://www.theepochtimes.com/c-hongkong-current-affairs">HK Current Affairs</a></span></p>
+<p class="rm-manual"><a href="https://www.theepochtimes.com/new-security-law-ushers-authoritarian-era-for-hong-kong_3411803.html"></a></p><p class="rm-manual"><a href="https://www.theepochtimes.com/new-security-law-ushers-authoritarian-era-for-hong-kong_3411803.html">New Security Law Ushers in Authoritarian Era for Hong Kong</a></p><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://www.theepochtimes.com/new-security-law-ushers-authoritarian-era-for-hong-kong_3411803.html"><span>0</span></a></p>
+<p class="rm-manual"><span><a href="https://www.theepochtimes.com/c-companies">Companies</a></span></p>
+<p class="rm-manual"><a href="https://www.theepochtimes.com/buffetts-berkshire-to-buy-dominion-energy-gas-assets-for-4-billion_3413451.html"></a></p><p class="rm-manual"><a href="https://www.theepochtimes.com/buffetts-berkshire-to-buy-dominion-energy-gas-assets-for-4-billion_3413451.html">Developers Cancel Long-Delayed, $8 Billion Atlantic Coast Pipeline</a></p><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://www.theepochtimes.com/buffetts-berkshire-to-buy-dominion-energy-gas-assets-for-4-billion_3413451.html"><span>0</span></a></p></article>
+</body></html>

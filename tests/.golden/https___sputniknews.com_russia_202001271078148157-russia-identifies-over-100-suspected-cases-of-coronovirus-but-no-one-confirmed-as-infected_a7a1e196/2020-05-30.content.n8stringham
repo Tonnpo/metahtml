@@ -1,0 +1,358 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">Russia Identifies Over 100 Suspected Cases of Coronavirus, But No One Confirmed as Infected - Sputnik International </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///">Sputnik International</a></li>
+<li class="rm-manual"><a href="#">all editions</a></li>
+</ul>
+<p class="rm-manual"><span><a>Log in</a><a>Register</a></span><span><a>Log out</a></span></p>
+<p class="rm-manual"><span>04:41 GMT</span></p>
+<p class="rm-manual"><span>31 May 2020</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///">Home</a></li>
+<li class="rm-manual"><a href="file:///world/">World</a></li>
+<li class="rm-manual"><a href="file:///business/">Business</a></li>
+<li class="rm-manual"><a href="file:///analysis/">Opinion</a></li>
+<li class="rm-manual"><a href="file:///science/">Tech</a></li>
+<li class="rm-manual"><a href="file:///viral/">Viral</a></li>
+<li class="rm-manual"><a href="file:///radio/">Radio</a></li>
+<li class="rm-manual"><a href="file:///multimedia/">Multimedia</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///uk/">UK</a></li>
+<li class="rm-manual"><a href="file:///us/">US</a></li>
+<li class="rm-manual"><a href="file:///india/">India</a></li>
+<li class="rm-manual"><a href="file:///europe/">Europe</a></li>
+<li class="rm-manual"><a href="file:///russia/">Russia</a></li>
+<li class="rm-manual"><a href="file:///middleeast/">Middle East</a></li>
+<li class="rm-manual"><a href="file:///latam/">Latin America</a></li>
+<li class="rm-manual"><a href="file:///asia/">Asia &amp; Pacific</a></li>
+<li class="rm-manual"><a href="file:///africa/">Africa</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///radio_brave_new_world/">Brave New World</a></li>
+<li class="rm-manual"><a href="file:///radio_by_any_means/">By Any Means Necessary</a></li>
+<li class="rm-manual"><a href="file:///radio_double_down/">Double Down</a></li>
+<li class="rm-manual"><a href="file:///radio_loud_and_clear/">Loud &amp; Clear</a></li>
+<li class="rm-manual"><a href="file:///radio_the_critical_hour/">The Critical Hour</a></li>
+<li class="rm-manual"><a href="file:///radio_fault_lines/">Fault Lines</a></li>
+<li class="rm-manual"><a href="file:///radio-shooting-from-the-lip/">Shooting from the Lip</a></li>
+<li class="rm-manual"><a href="file:///radio-moats/">The Mother of All Talk Shows</a></li>
+<li class="rm-manual"><a href="file:///radio-political-misfits/">Political Misfits</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///cartoons/">Cartoons</a></li>
+<li class="rm-manual"><a href="file:///infographics/">Infographics</a></li>
+<li class="rm-manual"><a href="file:///video/">Video</a></li>
+<li class="rm-manual"><a href="file:///photo/">Photo</a></li>
+</ul>
+<p class="rm-manual">Listen Live</p>
+<p class="rm-manual"><a href="file:///search/">Search</a></p>
+<p class="rm-manual"><a href="file:///tags/covid-19/"></a></p><p class="rm-manual"><a href="file:///tags/covid-19/"> COVID-19 global data</a></p><a href="file:///tags/covid-19/">
+<p class="rm-manual">Confirmed cases: </p>
+<p class="rm-manual">Recoveries: </p>
+<p class="rm-manual">Deaths: </p></a><p class="rm-manual"></p>
+<p class="rm-manual"><a href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">JHU CSSE</a></p>
+<h1 class="rm-manual">Russia Identifies Over 100 Suspected Cases of Coronavirus, But No One Confirmed as Infected</h1>
+<p class="rm-manual"><span><span> © AP Photo / Michael Sohn</span></span></p>
+<p class="rm-manual"><a href="file:///russia/">Russia</a></p>
+<p class="rm-manual">08:54 GMT 27.01.2020(updated 10:13 GMT 27.01.2020) <span>Get short URL</span></p>
+<p class="rm-manual">Topic: </p>
+<p class="rm-manual"><a href="file:///trend/coronavirus_outbreak_china_2020/">2020 Coronavirus Outbreak (<span>459</span>) </a></p>
+<p class="rm-manual"><a href="file:///russia/202001271078148157-russia-identifies-over-100-suspected-cases-of-coronovirus-but-no-one-confirmed-as-infected/#comments"> 0 </a><span>3</span><span>13</span></p>
+<p class="rm-manual">https://cdn1.img.sputniknews.com/img/107810/10/1078101027_0:132:3026:1834_1200x675_80_0_0_6d7fea4265f746abf018c7ef90f18060.jpg</p>
+<p class="rm-manual">Sputnik International</p>
+<p class="rm-manual">https://cdn2.img.sputniknews.com/i/logo.png</p>
+<p class="rm-manual">Sputnik</p>
+<p class="rm-manual">https://cdn2.img.sputniknews.com/i/logo.png</p>
+<p class="rm-manual">https://sputniknews.com/russia/202001271078148157-russia-identifies-over-100-suspected-cases-of-coronovirus-but-no-one-confirmed-as-infected/</p>
+<p class="rm-manual">At least 80 people have died in China due to the 
+deadly infection, with over 2,700 cases confirmed in the country. At the
+ moment, medical authorities have placed several cities on lockdown, 
+while numerous countries are introducing measures to stop the spread of 
+the disease.</p>
+<blockquote class="rm-manual">"At the moment, we have identified more 
+than 100 people who have clinical signs of an infectious disease, and at
+ the same time have a history of visiting China. Each of them was 
+identified promptly, isolated, <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%22At%20the%20moment,%20we%20have%20identified%20more%20than%20100%20people%20who%20have%20clinical%20signs%20of%20an%20infectious%20disease,%20and%20at%20the%20same%20time%20have%20a%20history%20of%20visiting%20China.%20Each%20of%20them%20was%20identified%20promptly,%20isolated,%20placed%20in%20a%20hospital%20in%20a%20boxed%20ward,%20and%20fully%20examined.%20In%20each%20case,%20the%20aetiology%20of%20infectious%20disease%20has%20been%20established%22,%20head%20of%20the%20Russian%20consumer%20protection%20agency%20Rospotrebnadzor%20Olga%20Popova%20stated%20on%20Monday." rel="noopener">placed in a hospital in a boxed ward,</a>
+ and fully examined. In each case, the aetiology of infectious disease 
+has been established", head of the Russian consumer protection agency 
+Rospotrebnadzor Olga Popova stated on Monday.</blockquote>
+<p class="rm-manual">She also expressed hope that a vaccine against the 
+coronavirus would be created soon, adding that at least two Russian 
+laboratories are currently working to develop one.</p>
+<p class="rm-manual"><span> © AP Photo / Dake Kang</span></p>
+<p class="rm-manual">Проверка пассажиров в аэропорте китайского города Ухань</p>
+<p>According to the official, over 80 percent of those infected by the 
+new virus are in their sixties or older, and all those in critical 
+condition usually have other diseases.</p>
+<p>Popova also stated that over 1.3 million people were examined in the 
+country, due to the infection threat, and two new test kits were created
+ in Russia to track down cases of coronavirus.</p>
+<p>Beijing previously had to suspend Chinese New Year festivities to prevent new breakouts.</p>
+<p>Cases of<a href="https://sputniknews.com/asia/202001271078147486-fifth-case-of-coronavirus-confirmed-in-australia---nsw-chief-health-officer/" rel="noopener"> pneumonia caused by the new virus</a>
+ have been reported in other countries, including Thailand, Japan, 
+Vietnam, South Korea, Malaysia, Singapore, Nepal, France, Portugal, the 
+United States, Canada, and Australia.</p>
+<p class="rm-manual"><a href="file:///services/likes/like/?article_id=1078148157&amp;value=1">3</a><a href="file:///services/likes/like/?article_id=1078148157&amp;value=-1">13</a></p>
+<p class="rm-manual">Topic:</p>
+<p class="rm-manual"><a href="file:///trend/coronavirus_outbreak_china_2020/">2020 Coronavirus Outbreak (<span>459</span>) </a></p>
+<p class="rm-manual">Tags:</p>
+<p class="rm-manual"><a href="file:///tags/organization_Rospotrebnadzor/">Rospotrebnadzor</a>, <a href="file:///tags/tag_Rospotrebnadzor/">Rospotrebnadzor</a>, <a href="file:///tags/coronavirus/">coronavirus</a>, <a href="file:///tags/geo_Russia/">Russia</a></p>
+<p class="rm-manual"><span>TrackDo not track</span><a>Community standards</a>Discussion</p>
+<p class="rm-manual"><span>Comment via Sputnik</span><span>Comment via Facebook</span></p>
+<p class="rm-manual">By clicking the "Post" button, you provide your 
+explicit consent to the processing of your Facebook account data to 
+enable you to comment to the news on our website using this account. You
+ can find a detailed description of how we use your data in our <a href="https://sputniknews.com/docs/about/privacy_policy.html#social-media">Privacy Policy</a>.</p>
+<p class="rm-manual">You can withdraw your consent by deleting all your posted comments.</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a>Сomment</a></li>
+<li class="rm-manual">
+<p class="rm-manual"> Thank you! Your comment will be reviewed by the moderator for compliance with the <a>Rules</a> </p>
+<p class="rm-manual"><a>Add more</a></p>
+</li>
+<li class="rm-manual"><p class="rm-manual"> <a>Post limit reached. Please try again in a minute.</a> </p></li>
+<li class="rm-manual"><p class="rm-manual"> Your comment contains a link, so it can't be published on our site </p></li>
+</ul>
+<h3 class="rm-manual">All comments</h3>
+<p class="rm-manual"><a>Show more comments (20)</a></p>
+<p class="rm-manual"><a>Show new comments (0)</a></p>
+<ul class="rm-manual"><li class="rm-manual"><a>Сomment</a></li></ul>
+<ul class="rm-manual"><li class="rm-manual">
+<p class="rm-manual"><a>Reply</a></p>
+<p class="rm-manual"></p><h5 class="rm-manual">
+<span>in reply to</span><a>(Show commentHide comment)</a>
+</h5><p class="rm-manual"> <span> | </span><span> | <a>Edit</a> | <a>Delete</a></span></p><p class="rm-manual"></p>
+</li></ul>
+<p class="rm-manual"> Thank you! Your comment will be reviewed by the moderator for compliance with the <a>Rules</a> </p>
+<h6 class="rm-manual">News</h6>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="#latest-tab">Latest</a></li>
+<li class="rm-manual"><a href="#mostread-tab">Most Read</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual">
+<span><span>04:36 GMT </span></span><a href="file:///world/202005311079472318-covid-19-live-updates-number-of-infected-surpasses-6-million-worldwide/">COVID-19 Live Updates: Number of Infected Surpasses 6 Million Worldwide</a>
+</li>
+<li class="rm-manual">
+<span><span>04:30 GMT </span></span><a href="file:///videoclub/202005311079470081-shopping-buddies-golden-retrievers-visit-a-store/">Shopping Buddies: Golden Retrievers Visit a Store</a>
+</li>
+<li class="rm-manual">
+<span><span>04:19 GMT </span></span><a href="file:///us/202005311079471928-new-video-shows-george-floyd-appeared-to-be-struggling-with-police-before-pinned-to-ground/">New Video Shows George Floyd Appeared to Be Struggling With Police Before Pinned to Ground</a>
+</li>
+<li class="rm-manual">
+<span><span>03:46 GMT </span></span><a href="file:///uk/202005311079470015-tory-lead-over-labour-plummets-to-just-4-percent-as-uk-government-plagued-by-scandal/">Tory Lead Over Labour Plummets to Just 4 Percent as UK Government Plagued by Scandal</a>
+</li>
+<li class="rm-manual">
+<span><span>03:36 GMT </span></span><a href="file:///us/202005311079470067-new-study-suggests-pangolins-may-have-incubated-coronavirus/">New Study Suggests Pangolins May Have Incubated Coronavirus</a>
+</li>
+</ul>
+<p class="rm-manual"><a href="file:///archive/">All news</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///latam/202005291079454720-us-turns-away-two-ships-carrying-iranian-fuel-from-venezuela-under-sanctions-threat/">US Turns Away Two Ships Carrying Iranian Fuel From Venezuela Under Sanctions Threat</a></li>
+<li class="rm-manual"><a href="file:///us/202005301079465522-live-updates-us-cities-descend-into-chaos-as-protests-over-george-floyds-death-continue-raging/">Live Updates: US Cities Impose Curfews, Police Use Tear Gas as Protests Over Floyd's Death Flare</a></li>
+<li class="rm-manual"><a href="file:///us/202005291079458387-videos-officer-charged-as-new-footage-shows-several-cops-kneeling-on-george-floyd/">Videos: Officer Charged as New Footage Shows Several Cops Kneeling on George Floyd</a></li>
+<li class="rm-manual"><a href="file:///asia/202005291079458722-photos-chinese-army-training-ground-has-full-scale-model-of-taiwans-presidential-palace/">Photos: Chinese Army Training Ground Has Full-Scale Model of Taiwan’s Presidential Palace</a></li>
+<li class="rm-manual"><a href="file:///military/202005291079455521-russia-scrambles-su-27-su-30-fighters-to-intercept-us-strategic-bombers-over-black-baltic-seas/">Russia Scrambles Su-27, Su-30 Fighters to Intercept US Strategic Bombers Over Black, Baltic Seas</a></li>
+</ul>
+<p class="rm-manual"><a href="file:///archive/">All news</a></p>
+<h6 class="rm-manual"><a href="file:///multimedia/">Multimedia</a></h6>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="#photo-tab">Photo</a></li>
+<li class="rm-manual"><a href="#video-tab">Cartoons</a></li>
+<li class="rm-manual"><a href="#infographics-tab">Infographics</a></li>
+</ul>
+<p class="rm-manual"><a href="file:///photo/202005301079441477-Gentlemen-Prefer-Blondes-Famous-Dark-Haired-Women-Who-Drive-Men-Crazy/">Gentlemen Prefer Blondes? Famous Dark-Haired Women Who Drive Men Crazy</a></p>
+<p class="rm-manual"><a href="file:///cartoons/202005291079448835-undo-retweet/">Undo Retweet</a></p>
+<p class="rm-manual"><a href="file:///75-victory-multimedia/202004221079058115-ppsh-41-the-legendary-machine-gun-that-helped-win-wwii/">PPSh-41: The Legendary Machine Gun That Helped Win WWII</a></p>
+<dl class="rm-manual">
+<dt class="rm-manual"><a href="file:///news/">News</a></dt>
+<dd>
+<a href="file:///">Home</a><a href="file:///world/">World</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///uk/">UK</a></li>
+<li class="rm-manual"><a href="file:///us/">US</a></li>
+<li class="rm-manual"><a href="file:///india/">India</a></li>
+<li class="rm-manual"><a href="file:///europe/">Europe</a></li>
+<li class="rm-manual"><a href="file:///russia/">Russia</a></li>
+<li class="rm-manual"><a href="file:///middleeast/">Middle East</a></li>
+<li class="rm-manual"><a href="file:///latam/">Latin America</a></li>
+<li class="rm-manual"><a href="file:///asia/">Asia &amp; Pacific</a></li>
+<li class="rm-manual"><a href="file:///africa/">Africa</a></li>
+</ul>
+</dd>
+</dl>
+<dl class="rm-manual"><dd>
+<a href="file:///business/">Business</a><a href="file:///military/">Military &amp; Intelligence</a><a href="file:///society/">Society</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///environment/">Environment</a></li>
+<li class="rm-manual"><a href="file:///viral/">Viral</a></li>
+<li class="rm-manual"><a href="file:///art_living/">Life</a></li>
+<li class="rm-manual"><a href="file:///science/">Tech</a></li>
+</ul>
+<a href="file:///sport/">Sport</a>
+</dd></dl>
+<dl class="rm-manual">
+<dt class="rm-manual"><a href="file:///">Analysis &amp; Opinion</a></dt>
+<dd>
+<a href="file:///analysis/">Opinion</a><a href="file:///columnists/">Columnists</a><a href="file:///interviews/">Interviews</a>
+</dd>
+</dl>
+<dl class="rm-manual">
+<dt class="rm-manual"><a href="file:///multimedia/">Multimedia</a></dt>
+<dd>
+<a href="file:///photo/">Photo</a><a href="file:///infographics/">Infographics</a><a href="file:///cartoons/">Cartoons</a><a href="file:///video/">Video</a>
+</dd>
+</dl>
+<dl class="rm-manual">
+<dt class="rm-manual"><a href="file:///radio/">Radio</a></dt>
+<dd>
+<a href="file:///radio_shows/">Shows</a><a href="file:///in_depth/">In Depth</a>
+</dd>
+</dl>
+<dl class="rm-manual">
+<dt class="rm-manual">Sputnik</dt>
+<dd>
+<a href="http://sputniknews.com/docs/about/index.html">About Us</a><a href="file:///agency_news/">Press Info</a><a href="file:///docs/products/index.html">Products</a><a href="file:///docs/products/mobile.html">Apps</a><a href="file:///docs/about/terms_of_use.html">Terms of Use</a><a href="file:///docs/about/feedback.html">Contact Us</a><a href="file:///docs/about/cookie.html">Cookie Policy</a><a href="file:///docs/about/privacy_policy.html">Privacy Policy</a><a href="file:///docs/about/feedbackprivacy.html">Privacy Feedback</a>
+</dd>
+</dl>
+<p class="rm-manual"> © 2020 Sputnik. All rights reserved </p>
+<p class="rm-manual"> Register</p>
+<p class="rm-manual">E-mail:</p>
+<p class="rm-manual">Screen Name:</p>
+<p class="rm-manual">Password:</p>
+<p class="rm-manual">Confirm password:</p>
+<p class="rm-manual"><a>Log in</a><a href="file:///docs/about/privacy_policy.html">Privacy Policy</a></p>
+<p class="rm-manual"> By checking this box, you provide your explicit 
+consent to the processing of your personal data to create an account on 
+the Sputnik website for posting comments to news. You can find a 
+detailed description of how we use your data in our <a href="https://sputniknews.com/docs/about/privacy_policy.html#your-personal-account">Privacy Policy</a>. You can withdraw your consent by using the <a href="https://sputniknews.com/docs/about/feedbackprivacy.html">feedback form</a> or the method specified in the <a href="https://sputniknews.com/docs/about/privacy_policy.html#right-to-withdraw-consent">Privacy Policy</a>. </p>
+<p class="rm-manual">* All fields are required</p>
+<p class="rm-manual"> Please confirm your e-mail to continue. Confirmation instructions have been sent to </p>
+<p class="rm-manual"><a>Ok</a></p>
+<p class="rm-manual"> Password recovery</p>
+<p class="rm-manual">Enter e-mail</p>
+<p class="rm-manual">Please type the code</p>
+<p class="rm-manual"><a>Log in</a><a href="file:///docs/about/privacy_policy.html">Privacy Policy</a></p>
+<p class="rm-manual"> Success! Instructions to recover your password have been sent to </p>
+<p class="rm-manual"><a>Ok</a></p>
+<p class="rm-manual"> Registration</p>
+<p class="rm-manual">Do you have a Sputniknews.com account?</p>
+<p class="rm-manual"><a>Yes</a><a>No</a></p>
+<p class="rm-manual"> Registration</p>
+<h3 class="rm-manual"> Hello, ! </h3>
+<p class="rm-manual">E-mail:</p>
+<p class="rm-manual">Password:</p>
+<p class="rm-manual">Remember me</p>
+<p class="rm-manual"><a>I do not have a Sputniknews.com account</a></p>
+<p class="rm-manual"><a>Register</a><a>Forgot your password?</a><a href="file:///docs/about/privacy_policy.html">Privacy Policy</a></p>
+<p class="rm-manual"><a>Ok</a></p>
+<p class="rm-manual"> Registration</p>
+<h3 class="rm-manual"> Hello, ! </h3>
+<p class="rm-manual">E-mail:</p>
+<p class="rm-manual">Screen Name:</p>
+<p class="rm-manual"><a href="file:///id/">Log in</a></p>
+<p class="rm-manual"><a>I have a Sputniknews.com account</a></p>
+<p class="rm-manual"> I agree to the processing of my personal data for 
+the purpose of creating a personal account on this site using social 
+media plugins, in compliance with the <a href="file:///docs/about/privacy_policy.html">Privacy Policy</a> </p>
+<p class="rm-manual"><a>Ok</a></p>
+<p class="rm-manual"> Delete account</p>
+<p class="rm-manual">Are you sure you want to delete your Sputniknews.com account?</p>
+<p class="rm-manual"><a>Yes</a><a>No</a></p>
+<p class="rm-manual">Your account has been deleted! You can restore your
+ account within 30 days by following the link sent to the e-mail address
+ you entered during registration.</p>
+<p class="rm-manual"><a>Close</a></p>
+<h3 class="rm-manual"> Hello, !</h3>
+<p class="rm-manual">We are committed to protecting your personal 
+information and we have updated our Privacy Policy to comply with the 
+General Data Protection Regulation (GDPR), a new EU regulation that went
+ into effect on May 25, 2018.</p>
+<p class="rm-manual">Please review our <a href="file:///docs/about/privacy_policy.html">Privacy Policy</a>. It contains details about the types of data we collect, how we use it, and your data protection rights.</p>
+<p class="rm-manual">Since you already shared your personal data with us
+ when you created your personal account, to continue using it, please 
+check the box below:</p>
+<p class="rm-manual"> I agree to the processing of my personal data for 
+the purpose of creating a personal account on this site, in compliance 
+with the Privacy Policy. </p>
+<p class="rm-manual">If you do not want us to continue processing your data, please <a>click here</a> to delete your account.</p>
+<p class="rm-manual">If you have any questions or concerns about our Privacy Policy, please contact us at: <a href="mailto:privacy@sputniknews.com">privacy@sputniknews.com</a>.</p>
+<p class="rm-manual"> Votre message a été envoyé! </p>
+<p class="rm-manual"> Community standards</p>
+<p class="rm-manual">The fact of registration and authorization of users
+ on Sputnik websites via users’ account or accounts on social networks 
+indicates acceptance of these rules.</p>
+<p class="rm-manual">Users are obliged abide by national and 
+international laws. Users are obliged to speak respectfully to the other
+ participants in the discussion, readers and individuals referenced in 
+the posts.</p>
+<p class="rm-manual">The websites’ administration has the right to 
+delete comments made in languages ​​other than the language of the 
+majority of the websites’ content.</p>
+<p class="rm-manual">In all language versions of the sputniknews.com websites any comments posted can be edited.</p>
+<p class="rm-manual">A user comment will be deleted if it:</p>
+<ul class="rm-manual"> <li class="rm-manual">does not correspond with the subject of the post;</li> <li class="rm-manual">promotes hatred and discrimination on racial, ethnic, sexual, religious or social basis or violates the rights of minorities;</li> <li class="rm-manual">violates the rights of minors, causing them harm in any form, including moral damage;</li> <li class="rm-manual">contains ideas of extremist nature or calls for other illegal activities;</li> <li class="rm-manual">contains
+ insults, threats to other users, individuals or specific organizations,
+ denigrates dignity or undermines business reputations;</li> <li class="rm-manual">contains insults or messages expressing disrespect to Sputnik;</li> <li class="rm-manual">violates privacy, distributes personal data of third parties without their consent or violates privacy of correspondence;</li> <li class="rm-manual">describes or references scenes of violence, cruelty to animals;</li> <li class="rm-manual">contains information about methods of suicide, incites to commit suicide;</li> <li class="rm-manual">pursues
+ commercial objectives, contains improper advertising, unlawful 
+political advertisement or links to other online resources containing 
+such information;</li> <li class="rm-manual">promotes products or services of third parties without proper authorization;</li> <li class="rm-manual">contains
+ offensive language or profanity and its derivatives, as well as hints 
+of the use of lexical items falling within this definition;</li> <li class="rm-manual">contains spam, advertises spamming, mass mailing services and promotes get-rich-quick schemes;</li> <li class="rm-manual">promotes the use of narcotic / psychotropic substances, provides information on their production and use;</li> <li class="rm-manual">contains links to viruses and malicious software;</li> <li class="rm-manual">is part of an organized action involving large volumes of comments with identical or similar content ("flash mob");</li> <li class="rm-manual">“floods” the discussion thread with a large number of incoherent or irrelevant messages;</li> <li class="rm-manual">violates etiquette, exhibiting any form of aggressive, humiliating or abusive behavior ("trolling");</li> <li class="rm-manual">doesn’t
+ follow standard rules of the English language, for example, is typed 
+fully or mostly in capital letters or isn’t broken down into sentences.</li> </ul>
+<p class="rm-manual">The administration has the right to block a user’s 
+access to the page or delete a user’s account without notice if the user
+ is in violation of these rules or if behavior indicating said violation
+ is detected.</p>
+<p class="rm-manual">Users can initiate the recovery of their account / unlock access by contacting the moderators at <a href="mailto:moderator@sputniknews.com">moderator@sputniknews.com</a></p>
+<p class="rm-manual">The letter must contain:</p>
+<ul class="rm-manual"> <li class="rm-manual">Subject - the restoration of account / unlock access</li> <li class="rm-manual">User ID</li> <li class="rm-manual">An explanation of the actions which were in violation of the rules above and resulted in the lock.</li> </ul>
+<p class="rm-manual">If the moderators deem it possible to restore the account / unlock access, it will be done.</p>
+<p class="rm-manual">In the case of repeated violations of the rules 
+above resulting in a second block of a user’s account, access cannot be 
+restored.</p>
+<p class="rm-manual">To contact the team of moderators, write to <a href="mailto:moderator@sputniknews.com">moderator@sputniknews.com</a></p>
+<p class="rm-manual"> Log in</p>
+<p class="rm-manual">E-mail:</p>
+<p class="rm-manual">Password:</p>
+<p class="rm-manual">Remember me</p>
+<p class="rm-manual"><a>Register</a><a>Forgot your password?</a><a href="file:///docs/about/privacy_policy.html">Privacy Policy</a></p>
+<p class="rm-manual">Other ways to sign in:</p>
+<p class="rm-manual"><a>Ok</a></p></article>
+</body></html>

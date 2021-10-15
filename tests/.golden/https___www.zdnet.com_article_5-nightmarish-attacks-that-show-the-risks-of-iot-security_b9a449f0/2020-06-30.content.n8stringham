@@ -1,0 +1,259 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">Five nightmarish attacks that show the risks of IoT security | ZDNet </p>
+<ul class="rm-manual">
+<li class="rm-manual"> <a> Edition: </a> <ul class="rm-manual">
+<li class="rm-manual"> <a> Asia </a> </li> <li class="rm-manual"> <a> Australia </a> </li> <li class="rm-manual"> <a> Europe </a> </li> <li class="rm-manual"> <a> India </a> </li> <li class="rm-manual"> <a> United Kingdom </a> </li> <li class="rm-manual"> <a> United States </a> </li> <li class="rm-manual"><span>ZDNet around the globe:</span></li> <li class="rm-manual"> <a href="http://www.zdnet.com.cn/" rel="noopener noreferrer nofollow"> ZDNet China </a> </li> <li class="rm-manual"> <a href="http://www.zdnet.fr/" rel="noopener noreferrer nofollow"> ZDNet France </a> </li> <li class="rm-manual"> <a href="http://www.zdnet.de/" rel="noopener noreferrer nofollow"> ZDNet Germany </a> </li> <li class="rm-manual"> <a href="http://www.zdnet.co.kr/" rel="noopener noreferrer nofollow"> ZDNet Korea </a> </li> <li class="rm-manual"> <a href="http://japan.zdnet.com/" rel="noopener noreferrer"> ZDNet Japan </a> </li> </ul>
+</li> </ul>
+<p class="rm-manual"> <a>Search</a> </p>
+<p class="rm-manual"> What are you looking for? </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///video/"> Videos </a></li>
+<li class="rm-manual"><a href="file:///topic/windows-10/"> Windows 10 </a></li>
+<li class="rm-manual"><a href="file:///topic/5g/"> 5G </a></li>
+<li class="rm-manual"><a href="file:///topic/5g-what-it-means-for-iot/"> IoT </a></li>
+<li class="rm-manual"><a href="file:///topic/cloud/"> Cloud </a></li>
+<li class="rm-manual"><a href="file:///topic/artificial-intelligence/"> AI </a></li>
+<li class="rm-manual"><a href="file:///topic/security/"> Security </a></li>
+<li class="rm-manual">
+<a>more</a><ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.techrepublic.com/premium/" rel="noopener noreferrer"> TR Premium </a></li>
+<li class="rm-manual"><a href="file:///topic/coronavirus-business-and-technology-in-a-pandemic/"> Coronavirus </a></li>
+<li class="rm-manual"><a href="file:///topic/working-from-home-the-future-of-business-is-remote/"> Working from Home </a></li>
+<li class="rm-manual"><a href="file:///topic/innovation/"> Innovation </a></li>
+<li class="rm-manual"><a href="file:///topic/zdnet-recommends/"> ZDNet Recommends </a></li>
+<li class="rm-manual"><a href="file:///article/get-the-tonya-hall-innovation-show-as-a-zdnet-podcast/"> Tonya Hall Show </a></li>
+<li class="rm-manual"><a href="file:///topic/executive-guides/"> Executive Guides </a></li>
+<li class="rm-manual"><a href="https://academy.zdnet.com/"> ZDNet Academy </a></li>
+<li class="rm-manual"><a href="file:///topic/"> See All Topics </a></li>
+<li class="rm-manual"><a href="https://www.techrepublic.com/resource-library/whitepapers/" rel="noopener noreferrer"> White Papers </a></li>
+<li class="rm-manual"><a href="file:///"> Downloads </a></li>
+<li class="rm-manual"><a href="file:///reviews/"> Reviews </a></li>
+<li class="rm-manual"><a href="file:///pictures/"> Galleries </a></li>
+<li class="rm-manual"><a href="file:///video/"> Videos </a></li>
+<li class="rm-manual"><a href="https://www.techrepublic.com/forums/" rel="noopener noreferrer"> TechRepublic Forums </a></li>
+</ul>
+</li>
+<li class="rm-manual"><a href="file:///newsletters/">Newsletters</a></li>
+<li class="rm-manual"><a href="file:///blog/">All Writers</a></li>
+<li class="rm-manual"><span><ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.zdnet.com/members/preferences/" rel="nofollow">Preferences</a></li>
+<li class="rm-manual"><a href="https://www.zdnet.com/members/community/" rel="nofollow">Community</a></li>
+<li class="rm-manual"><a href="https://www.zdnet.com/members/newsletters/" rel="nofollow">Newsletters</a></li>
+<li class="rm-manual"><a href="https://www.zdnet.com/user/logout/" rel="nofollow">Log Out</a></li>
+</ul></span></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual">
+<li class="rm-manual"> <p class="rm-manual"> </p><p class="rm-manual"> What are you looking for? </p> <p class="rm-manual"></p> </li> </ul> </li> <li class="rm-manual"> <a>Menu</a> <ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///video/"> Videos </a> </li> <li class="rm-manual"> <a href="file:///topic/windows-10/"> Windows 10 </a> </li> <li class="rm-manual"> <a href="file:///topic/5g/"> 5G </a> </li> <li class="rm-manual"> <a href="file:///topic/5g-what-it-means-for-iot/"> IoT </a> </li> <li class="rm-manual"> <a href="file:///topic/cloud/"> Cloud </a> </li> <li class="rm-manual"> <a href="file:///topic/artificial-intelligence/"> AI </a> </li> <li class="rm-manual"> <a href="file:///topic/security/"> Security </a> </li> <li class="rm-manual"> <a href="https://www.techrepublic.com/premium/" rel="noopener noreferrer"> TR Premium </a> </li> <li class="rm-manual"> <a href="file:///topic/coronavirus-business-and-technology-in-a-pandemic/"> Coronavirus </a> </li> <li class="rm-manual"> <a href="file:///topic/working-from-home-the-future-of-business-is-remote/"> Working from Home </a> </li> <li class="rm-manual"> <a href="file:///topic/innovation/"> Innovation </a> </li> <li class="rm-manual"> <a href="file:///topic/zdnet-recommends/"> ZDNet Recommends </a> </li> <li class="rm-manual"> <a href="file:///article/get-the-tonya-hall-innovation-show-as-a-zdnet-podcast/"> Tonya Hall Show </a> </li> <li class="rm-manual"> <a href="file:///topic/executive-guides/"> Executive Guides </a> </li> <li class="rm-manual"> <a href="https://academy.zdnet.com/"> ZDNet Academy </a> </li> <li class="rm-manual"> <a href="file:///topic/"> See All Topics </a> </li> <li class="rm-manual"> <a href="https://www.techrepublic.com/resource-library/whitepapers/" rel="noopener noreferrer"> White Papers </a> </li> <li class="rm-manual"> <a href="file:///"> Downloads </a> </li> <li class="rm-manual"> <a href="file:///reviews/"> Reviews </a> </li> <li class="rm-manual"> <a href="file:///pictures/"> Galleries </a> </li> <li class="rm-manual"> <a href="file:///video/"> Videos </a> </li> <li class="rm-manual"> <a href="https://www.techrepublic.com/forums/" rel="noopener noreferrer"> TechRepublic Forums </a> </li> </ul>
+</li> <li class="rm-manual"> <ul class="rm-manual">
+<li class="rm-manual"> <span> <ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.zdnet.com/members/preferences/" rel="nofollow">Preferences</a></li> <li class="rm-manual"><a href="https://www.zdnet.com/members/community/" rel="nofollow">Community</a></li> <li class="rm-manual"><a href="https://www.zdnet.com/members/newsletters/" rel="nofollow">Newsletters</a></li> <li class="rm-manual"><a href="https://www.zdnet.com/user/logout/" rel="nofollow">Log Out</a></li> </ul></span> </li> </ul>
+</li> <li class="rm-manual"> <a>us</a> <ul class="rm-manual">
+<li class="rm-manual"> <a> Asia </a> </li> <li class="rm-manual"> <a> Australia </a> </li> <li class="rm-manual"> <a> Europe </a> </li> <li class="rm-manual"> <a> India </a> </li> <li class="rm-manual"> <a> United Kingdom </a> </li> <li class="rm-manual"> <a> United States </a> </li> <li class="rm-manual"><span>ZDNet around the globe:</span></li> <li class="rm-manual"> <a href="http://www.zdnet.com.cn/" rel="noopener noreferrer nofollow"> ZDNet China </a> </li> <li class="rm-manual"> <a href="http://www.zdnet.fr/" rel="noopener noreferrer nofollow"> ZDNet France </a> </li> <li class="rm-manual"> <a href="http://www.zdnet.de/" rel="noopener noreferrer nofollow"> ZDNet Germany </a> </li> <li class="rm-manual"> <a href="http://www.zdnet.co.kr/" rel="noopener noreferrer nofollow"> ZDNet Korea </a> </li> <li class="rm-manual"> <a href="http://japan.zdnet.com/" rel="noopener noreferrer"> ZDNet Japan </a> </li> </ul> </li> </ul>
+<p class="rm-manual"> <a href="#"> Special Feature</a> </p>
+<ul class="rm-manual">
+<p class="rm-manual">Inside this Special Feature</p> <li class="rm-manual"> <a href="file:///topic/cybersecurity-in-an-iot-and-mobile-world/"> <span>Cybersecurity in an IoT and Mobile World</span> </a> </li> <li class="rm-manual"> <a href="file:///article/5-nightmarish-attacks-that-show-the-risks-of-iot-security/"> <span>Five nightmarish attacks that show the risks of IoT security</span> </a> </li> <li class="rm-manual"> <a href="file:///article/ransomware-why-the-crooks-are-ditching-bitcoin-and-where-they-are-going-next/"> <span>Ransomware: Why the crooks are ditching bitcoin and where they are going next</span> </a> </li> <li class="rm-manual"> <a href="file:///article/cloud-computing-why-a-major-cyber-attack-could-be-as-costly-as-a-hurricane/"> <span>Cloud computing: Why a major cyber-attack could be as costly as a hurricane</span> </a> </li> <li class="rm-manual"> <a href="file:///article/amazon-the-least-transparent-tech-company/"> <span>Amazon won't say if it hands your Echo data to the government</span> </a> </li> <li class="rm-manual"> <a href="file:///article/why-intel-x86-must-die-our-cloud-centric-future-depends-on-open-source-chips-meltdown/"> <span>Why Intel x86 must die: Our cloud-centric future depends on open source chips</span> </a> </li> <li class="rm-manual"> <a href="file:///article/intel-amt-security-loophole-could-allow-hackers-to-seize-control-of-laptops/"> <span>Intel AMT security loophole could allow hackers to seize control of laptops</span> </a> </li> <li class="rm-manual"> <a href="file:///article/cyber-security-growth-network-wants-the-world-to-buy-australian/"> <span>​Cyber Security Growth Network wants the world to buy Australian</span> </a> </li> <li class="rm-manual"> <a href="file:///article/free-pdf-download-cybersecurity-in-an-iot-and-mobile-world/"> <span>Free PDF download: Cybersecurity in an IoT and mobile world</span> </a> </li> <li class="rm-manual"> <a href="file:///article/securing-the-iot-a-question-of-checks-and-balances/"> <span>Securing the IoT: A question of checks and balances</span> </a> </li> <li class="rm-manual"> <a href="file:///article/cybersecurity-in-an-iot-and-mobile-world-the-key-trends/"> <span>Cybersecurity in an IoT and mobile world: The key trends</span> </a> </li> <li class="rm-manual"> <a href="file:///article/infographic-almost-half-of-companies-say-cybersecurity-readiness-has-improved-in-the-past-year/"> <span>Infographic: Almost half of companies say cybersecurity readiness has improved in the past year</span> </a> </li> <li class="rm-manual"> <a href="file:///article/cyberweapons-are-now-in-play-from-us-sabotage-of-a-north-korean-missile-test-to-hacked-emergency/"> <span>Cyberweapons are now in play: From US sabotage of a North Korean missile test to hacked emergency sirens in Dallas</span> </a> </li> </ul>
+<p class="rm-manual"> <span>Part of a ZDNet Special Feature: </span> <a href="file:///topic/cybersecurity-in-an-iot-and-mobile-world/">Cybersecurity in an IoT and Mobile World</a> </p>
+<h1 class="rm-manual">Five nightmarish attacks that show the risks of IoT security</h1>
+<p class="rm-manual">The Internet of Things is not going away -- and 
+neither are the attacks that exploit device vulnerabilities. Here are 
+five incidents that illustrate what users and device developers need to 
+do to prevent breaches.</p>
+<p class="rm-manual"> By <a rel="author" href="file:///meet-the-team/us/jack+wallen/"> <span>Jack Wallen</span> </a> | June 1, 2017 -- 16:31 GMT (09:31 PDT) | Topic: <a href="file:///topic/cybersecurity-in-an-iot-and-mobile-world/">Cybersecurity in an IoT and Mobile World</a> </p>
+<p class="rm-manual">IoT surge lures hackers: Top five attacks</p>
+<p class="rm-manual"> <a> Watch Now</a> </p>
+<p>When it first appeared, the Internet of Things (IoT) seemed to be 
+nothing more than an idea with no substance. What was it? Was it the new
+ 'IT' (remember that)? Eventually, IoT came to fruition and consumers 
+lapped it up. Smart thermostats, toasters, locks, lighting, Echo, Google
+ Home... the list goes on and on. As more homes and businesses adopt 
+such devices, you can imagine what follows. Security breaches.</p>
+<p>Over the last few years, there have been quite a few IoT-centric 
+attacks. And yet despite the attacks on the rise, IoT continues to enjoy
+ an even greater surge in popularity. Should you consider discontinuing 
+the adoption/deployment of IoT devices -- and forego the convenience of 
+tech evolution?</p>
+<p>Let's take a look at some of the worst attacks on IoT devices over 
+the last few years and what you can do to prevent falling victim to 
+vulnerabilities.</p>
+<h2>1: Stuxnet</h2>
+<p>I wanted to start off with this particular attack (which occurred 
+between 2010 and 2014), because it perfectly illustrates the inherent 
+danger in IoT devices. Although the devices <a href="https://www.zdnet.com/article/special-report-stuxnet-may-be-the-hiroshima-of-our-time/">Stuxnet</a>
+ targeted -- industrial programmable logic controllers (PLCs) -- aren't 
+typical IoT devices per today's standards, they are considered 'smart 
+controllers' and fall into the category. The attack was purportedly 
+launched to sabotage the uranium enrichment facility in Natanz, Iran. 
+Many experts believe that Stuxnet destroyed up to 1,000 centrifuges. 
+Stuxnet was not a typical IoT attack, because it relied on the PLC 
+devices to be connected to a machine running the Windows operating 
+system. Even so, this should have served as a clear warning sign that 
+smart devices can be compromised.</p>
+<p>The lesson to be learned from this attack? Mission-critical devices 
+that rely on a standard PC platform should not be attached to a WAN 
+unless absolutely necessary and need to be safeguarded from access by 
+non-critical personnel.</p>
+<h2>2: Mirai botnet</h2>
+<p>The year 2016 had plenty of major attacks to call its own. One such attack was the <a href="https://www.zdnet.com/article/dyn-confirms-mirai-botnet-involved-in-distributed-denial-of-service-attack/">Mirai botnet</a>.
+ This particular botnet infected numerous IoT devices (primarily older 
+routers and IP cameras), then used them to flood DNS provider Dyn with a
+ DDoS attack. The Mirai botnet took down Etsy, GitHub, Netflix, Shopify,
+ SoundCloud, Spotify, Twitter, and a number of other major websites. 
+This piece of malicious code took advantage of devices running 
+out-of-date versions of the Linux kernel and relied on the fact that 
+most users do not change the default usernames/passwords on their 
+devices.</p>
+<h3 class="rm-manual"> <span>Special Feature</span> </h3>
+<p class="rm-manual"> <a href="http://www.techrepublic.com/resource-library/whitepapers/special-report-cybersecurity-in-an-iot-and-mobile-world-free-pdf/" rel="noopener noreferrer"> Special report: Cybersecurity in an IoT and mobile world </a> </p>
+<p class="rm-manual">This ebook, based on the latest ZDNet/TechRepublic 
+special feature, looks at the risks of IoT and mobile and offers 
+strategies and recommendations that can help protect your organization 
+against cyberattack.</p>
+<p class="rm-manual"> <a href="http://www.techrepublic.com/resource-library/whitepapers/special-report-cybersecurity-in-an-iot-and-mobile-world-free-pdf/" rel="noopener noreferrer">Read More</a> </p>
+<p>The lesson to be learned from this attack is a bit more complicated 
+than a simple fix. Many companies cut manufacturing costs by not 
+including enough storage space on their devices to allow for the 
+updating of the Linux kernel. Because of this, a lot of IoT devices are 
+running kernels that include vulnerabilities. It is on the shoulders of 
+the manufacturers to accept this shortcoming and enable every device for
+ regularly scheduled kernel updates. Until this issue is resolved, IoT 
+devices will continue to suffer under the weight of exploits.</p>
+<p>It should go without saying that if your IoT device is password 
+protected, you should change the default password (and username, if 
+possible) immediately.</p>
+<h2>3: Cold in Finland</h2>
+<p>In November 2016, cybercriminals <a href="https://www.theregister.co.uk/2016/11/09/finns_chilling_as_ddos_knocks_out_building_control_system/" rel="noopener noreferrer nofollow">shut down the heating</a>
+ of two buildings in the city of Lappeenranta, Finland. This was another
+ DDoS attack; in this case, the attack managed to cause the heating 
+controllers to continually reboot the system so that the heating never 
+actually kicked in. Because the temperatures in Finland dip well below 
+freezing at that time of year, this attack was significant.</p>
+<p>The lesson learned from this attack? Your network needs to be 
+frequently monitored for DDoS (and other) attacks. The second you see 
+suspect activity on your network... act.</p>
+<h2>4: Brickerbot</h2>
+<p>This attack worked in similar fashion to the Mirai botnet, in that it
+ relied upon a DDoS attack and users not changing the default 
+username/password of their device. The biggest difference between <a href="https://www.zdnet.com/article/homeland-security-warns-of-brickerbot-malware-that-destroys-unsecured-internet-connected-devices/">Brickerbot</a>
+ and Mirai botnet is that Brickerbot (as the name implies) simply kills 
+the device. This could be a serious hit on a company's bottom line if a 
+large deployment of IoT devices are rolled out, only to have them 
+simultaneously bricked.</p>
+<p>The lesson learned here is that if your devices include a default username/password, you should immediately change them.</p>
+<h2>5: The botnet barrage</h2>
+<p>This year, Verizon Wireless <a href="http://www.verizonenterprise.com/resources/reports/rp_data-breach-digest-2017-sneak-peek_xg_en.pdf" rel="noopener noreferrer nofollow">released a report</a>
+ that included an unnamed university that saw more than 5,000 IoT 
+devices attacked. When senior members of the campus IT staff started 
+receiving numerous complaints about slow or inaccessible network 
+connectivity, they discovered their name servers were producing a high 
+volume of alerts and showed an abnormal number of sub-domains related to
+ seafood. It turned out more than 5,000 discrete systems were found to 
+be making hundreds of DNS lookups every 15 minutes. The botnet spread 
+via brute force attack to break through weak passwords on IoT devices.</p>
+<p>The lesson learned here? Again, always be on the alert for suspect 
+network activity and make sure to secure your IoT devices with stronger 
+than usual passwords.</p>
+<h2>Conclusion</h2>
+<p>From looking at these attacks, it should be clear that the onus for 
+preventing takedown by IoT is on both the user and the device developer.
+ Going forward, every IoT device should ship with an updated 
+kernel/firmware and include the ability to regularly update as new 
+vulnerabilities are found. At the same time, anyone who deploys an IoT 
+device needs to take the time to change the default user/password 
+combination (if available) and constantly be on the lookout for suspect 
+network activity. Finally, developers should seriously consider making 
+default password change a requirement upon initial deployment of the 
+device.</p>
+<p>The Internet of Things is not going away. Neither are the attacks on 
+such devices. With just a bit of care during setup and a constant 
+watchful eye on your network, you can prevent security breaches by way 
+of IoT devices.</p>
+<p class="rm-manual">Read more</p>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="http://www.techproresearch.com/downloads/cybersecurity-in-an-iot-and-mobile-world/" rel="noopener noreferrer nofollow">Research: Defenses, response plans, and greatest concerns about cybersecurity in an IoT and mobile world</a> (Tech Pro Research)</li>
+<li class="rm-manual"><a href="https://www.zdnet.com/article/internet-of-things-security-what-happens-when-every-device-is-smart-and-you-dont-even-know-it/">Internet of Things security: What happens when every device is smart and you don't even know it?</a></li>
+<li class="rm-manual">
+<a href="http://www.techproresearch.com/article/iot-projects-allow-for-failure-but-plan-for-success/" rel="noopener noreferrer nofollow">IoT projects: Allow for failure but plan for success</a> (Tech Pro Research)</li>
+<li class="rm-manual"><a href="https://www.zdnet.com/article/cisco-launches-iot-platform-partners-with-microsoft-azure/">Cisco launches IoT platform, partners with Microsoft Azure</a></li>
+<li class="rm-manual"><a href="https://www.zdnet.com/article/microsoft-launches-iot-as-a-service-offering-for-enterprises/">Microsoft launches 'IoT-as-a-service' offering for enterprises</a></li>
+</ul>
+<h3 class="rm-manual">Related Topics:</h3>
+<p class="rm-manual"><a href="file:///topic/internet-of-things/"> Internet of Things </a> </p>
+<p class="rm-manual"><a href="file:///topic/security-tv/"> Security TV </a> </p>
+<p class="rm-manual"><a href="file:///topic/data-management/"> Data Management </a> </p>
+<p class="rm-manual"><a href="file:///topic/cxo/"> CXO </a> </p>
+<p class="rm-manual"><a href="file:///topic/data-centers/"> Data Centers </a> </p>
+<p class="rm-manual"> By <a rel="author" href="file:///meet-the-team/us/jack+wallen/"> <span>Jack Wallen</span> </a> | June 1, 2017 -- 16:31 GMT (09:31 PDT) | Topic: <a href="file:///topic/cybersecurity-in-an-iot-and-mobile-world/">Cybersecurity in an IoT and Mobile World</a> </p>
+<p class="rm-manual"> <a href="#comments-show-ccb93be2-936b-49d2-a1ec-524a4e4e59d0"> Show Comments </a> </p>
+<p class="rm-manual"> <a>LOG IN TO COMMENT</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///members/preferences/">My Profile</a></li> <li class="rm-manual"><a href="file:///user/logout/">Log Out</a></li> </ul>
+<p class="rm-manual"><span> | <a href="http://cbsi.force.com/CBSi/zdnetcommunityfaq" rel="noopener noreferrer nofollow">Community Guidelines</a> </span> </p>
+<h3 class="rm-manual"> <span>Join Discussion</span> </h3>
+<p class="rm-manual"> <a>Add Your Comment</a> </p>
+<p class="rm-manual"> <a href="#comments-ccb93be2-936b-49d2-a1ec-524a4e4e59d0">Add Your Comment</a> </p>
+<p class="rm-manual">Please review our terms of service to complete your newsletter subscription.</p>
+<p class="rm-manual">By registering, you agree to the <a href="http://www.cbsinteractive.com/legal/cbsi/terms-of-use" rel="noopener noreferrer">Terms of Use</a> and acknowledge the data practices outlined in the <a href="https://www.cbsinteractive.com/legal/cbsi/privacy-policy/highlights" rel="noopener noreferrer">Privacy Policy</a>.</p>
+<p class="rm-manual">You will also receive a complimentary subscription 
+to the ZDNet's Tech Update Today and ZDNet Announcement newsletters. You
+ may unsubscribe from these newsletters at any time.</p>
+<p class="rm-manual">You agree to receive updates, alerts, and 
+promotions from the CBS family of companies - including ZDNet’s Tech 
+Update Today and ZDNet Announcement newsletters. You may unsubscribe at 
+any time.</p>
+<p class="rm-manual"> By signing up, you agree to receive the selected 
+newsletter(s) which you may unsubscribe from at any time. You also agree
+ to the <a href="http://www.cbsinteractive.com/legal/cbsi/terms-of-use" rel="noopener noreferrer">Terms of Use</a> and acknowledge the data collection and usage practices outlined in our <a href="https://www.cbsinteractive.com/legal/cbsi/privacy-policy/highlights" rel="noopener noreferrer">Privacy Policy</a>. </p>
+<h2 class="rm-manual"><span>Newsletters</span></h2>
+<div> <a href="file:///newsletters/"> <p class="rm-manual"> <span>See</span> All </p> </a> </div>
+<div> <a href="file:///members/newsletters/"> <p class="rm-manual"> <span>See</span> All </p> </a> </div>
+<h2 class="rm-manual"> <span>Related Stories</span> </h2>
+<ul class="rm-manual">
+<li class="rm-manual"> <p class="rm-manual">Security</p> <p class="rm-manual"><a href="file:///article/australian-electoral-legislation-amendments-leave-door-open-to-electronic-voting/">Australian electoral legislation amendments leave door open to electronic voting</a></p> </li> <li class="rm-manual"> <p class="rm-manual">Security</p> <p class="rm-manual"><a href="file:///article/us-bans-dual-use-techology-exports-to-hong-kong-over-chinas-new-security-laws/">US bans export of dual-use techology to Hong Kong over China's new security laws</a></p> </li> <li class="rm-manual"> <p class="rm-manual">Security</p> <p class="rm-manual"><a href="file:///article/new-south-wales-to-implement-sector-wide-cyber-strategy/">New South Wales to implement sector-wide cybersecurity strategy</a></p> </li> <li class="rm-manual"> <p class="rm-manual">Security</p> <p class="rm-manual"><a href="file:///article/us-cyber-command-says-foreign-hackers-will-most-likely-exploit-new-pan-os-security-bug/">US Cyber Command says foreign hackers will most likely exploit new PAN-OS security bug</a></p> </li> </ul>
+<p class="rm-manual"> <a href="https://www.zdnet.com/">ZDNet</a> </p>
+<p class="rm-manual">Connect with us</p>
+<p class="rm-manual">© 2020 CBS Interactive. All rights reserved. <a href="http://legalterms.cbsinteractive.com/privacy" rel="nofollow noopener noreferrer">Privacy Policy</a> | <a href="http://legalterms.cbsinteractive.com/cookies" rel="nofollow noopener noreferrer">Cookies</a> | <a href="http://legalterms.cbsinteractive.com/adchoice" rel="nofollow noopener noreferrer">Ad Choice</a> | <a href="file:///advertise/" rel="nofollow">Advertise</a> | <a href="http://legalterms.cbsinteractive.com/terms-of-use" rel="nofollow noopener noreferrer">Terms of Use</a> | <a href="http://legalterms.cbsinteractive.com/eula" rel="nofollow noopener noreferrer">Mobile User Agreement</a> </p>
+<p class="rm-manual"> Visit other CBS Interactive sites: </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.zdnet.com/topic/">Topics</a></li> <li class="rm-manual"><a href="https://www.zdnet.com/pictures/">Galleries</a></li> <li class="rm-manual"><a href="https://www.zdnet.com/video/">Videos</a></li> <li class="rm-manual"><a href="http://narratives.zdnet.com/">Sponsored Narratives</a></li> <li class="rm-manual"><a href="https://ca.privacy.cbs/" rel="noopener noreferrer nofollow">CA Privacy/Info We Collect</a></li> <li class="rm-manual"><a href="https://ca.privacy.cbs/donotsell" rel="noopener noreferrer nofollow">CA Do Not Sell My Info</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///about/">About ZDNet</a></li> <li class="rm-manual"><a href="file:///meet-the-team/">Meet The Team</a></li> <li class="rm-manual"><a href="https://www.zdnet.com/blog/">All Authors</a></li> <li class="rm-manual"><a href="file:///rssfeeds/">RSS Feeds</a></li> <li class="rm-manual"><a href="file:///sitemap/">Site Map</a></li> <li class="rm-manual"><a href="file:///reprints/">Reprint Policy</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="https://www.zdnet.com/members/preferences/" rel="nofollow">Manage</a> | <a href="https://www.zdnet.com/user/logout/" rel="nofollow">Log Out</a> </li> <li class="rm-manual"> <a rel="nofollow">Join</a> | <a rel="nofollow">Log In</a> </li> <li class="rm-manual"> <a href="file:///about/" rel="nofollow">Membership</a> </li> <li class="rm-manual"><a href="file:///newsletters/">Newsletters</a></li> <li class="rm-manual"><a href="https://cbsi.secure.force.com/CBSi/knowledgehome?referer=zdnet.com" rel="noopener noreferrer nofollow">Site Assistance</a></li> <li class="rm-manual"><a href="https://academy.zdnet.com/">ZDNet Academy</a></li> <li class="rm-manual"><a href="https://www.techrepublic.com/forums/" rel="nofollow noopener noreferrer">TechRepublic Forums</a></li> </ul></article>
+</body></html>

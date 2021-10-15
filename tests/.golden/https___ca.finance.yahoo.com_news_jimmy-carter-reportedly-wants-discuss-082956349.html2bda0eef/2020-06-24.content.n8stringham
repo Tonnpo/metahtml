@@ -1,0 +1,199 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">Jimmy Carter reportedly wants to discuss 'permanent peace' with North Korea's Kim Jong Un</p>
+<p class="rm-manual"><a href="https://ca.finance.yahoo.com/">Yahoo</a></p>
+<p class="rm-manual">Search</p>
+<p class="rm-manual"><span>No matching results for ''</span></p>
+<p class="rm-manual"><span>Tip: Try a valid symbol or a specific company name for relevant results</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://login.yahoo.com/config/login?.intl=ca&amp;.lang=en-CA&amp;.src=finance&amp;.done=https%3A%2F%2Fca.finance.yahoo.com%2Fnews%2Fjimmy-carter-reportedly-wants-discuss-082956349.html">Sign in</a></li>
+<li class="rm-manual"><a href="https://mail.yahoo.com/?.intl=ca&amp;.lang=en-CA&amp;.partner=none&amp;.src=finance">Mail</a></li>
+</ul>
+<p class="rm-manual"><a href="https://finance.yahoo.com/"> Finance</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://ca.finance.yahoo.com/watchlists"> Watchlists</a></li>
+<li class="rm-manual"><a href="https://ca.finance.yahoo.com/portfolios"> My Portfolio</a></li>
+<li class="rm-manual"><a href="https://ca.finance.yahoo.com/screener"> My Screeners</a></li>
+<li class="rm-manual"><a href="https://ca.finance.yahoo.com/topic/yahoo-originals"> Yahoo Originals</a></li>
+<li class="rm-manual"><a href="https://ca.finance.yahoo.com/personal-finance"> Personal Finance</a></li>
+<li class="rm-manual"><a href="https://ca.finance.yahoo.com/topic/technology"> Tech</a></li>
+<li class="rm-manual"><p href="#" class="rm-manual"> Market Data</p></li>
+<li class="rm-manual"><p href="#" class="rm-manual"> Industry News</p></li>
+</ul>
+<p class="rm-manual"><span>Canada markets closed</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><h3 class="rm-manual">
+<a href="https://ca.finance.yahoo.com/quote/%5EGSPTSE?p=%5EGSPTSE">S&amp;P/TSX</a><span>15,294.38</span><p class="rm-manual"><span>-270.37</span><span> (<span>-1.74%</span> )</span></p>
+</h3></li>
+<li class="rm-manual"><h3 class="rm-manual">
+<a href="https://ca.finance.yahoo.com/quote/%5EGSPC?p=%5EGSPC">S&amp;P 500</a><span>3,050.33</span><p class="rm-manual"><span>-80.96</span><span> (<span>-2.59%</span> )</span></p>
+</h3></li>
+<li class="rm-manual"><h3 class="rm-manual">
+<a href="https://ca.finance.yahoo.com/quote/%5EDJI?p=%5EDJI">DOW</a><span>25,445.94</span><p class="rm-manual"><span>-710.16</span><span> (<span>-2.72%</span> )</span></p>
+</h3></li>
+<li class="rm-manual"><h3 class="rm-manual">
+<a href="https://ca.finance.yahoo.com/quote/CADUSD=X?p=CADUSD=X">CAD/USD</a><span>0.7328</span><p class="rm-manual"><span>-0.0005</span><span> (<span>-0.07%</span> )</span></p>
+</h3></li>
+<li class="rm-manual"><h3 class="rm-manual">
+<a href="https://ca.finance.yahoo.com/quote/CL=F?p=CL=F">CRUDE OIL</a><span>37.74</span><p class="rm-manual"><span>-0.27</span><span> (<span>-0.71%</span> )</span></p>
+</h3></li>
+<li class="rm-manual"><h3 class="rm-manual">
+<a href="https://ca.finance.yahoo.com/quote/BTC-CAD?p=BTC-CAD">BTC-CAD</a><span>12,688.78</span><p class="rm-manual"><span>-9.53</span><span> (<span>-0.08%</span> )</span></p>
+</h3></li>
+<li class="rm-manual"><h3 class="rm-manual">
+<a href="https://ca.finance.yahoo.com/quote/%5ECMC200?p=%5ECMC200">CMC Crypto 200</a><span>189.96</span><p class="rm-manual"><span>-7.48</span><span> (<span>-3.79%</span> )</span></p>
+</h3></li>
+<li class="rm-manual"><h3 class="rm-manual">
+<a href="https://ca.finance.yahoo.com/quote/GC=F?p=GC=F">GOLD FUTURES</a><span>1,772.00</span><p class="rm-manual"><span>-3.10</span><span> (<span>-0.17%</span> )</span></p>
+</h3></li>
+</ul>
+<h1 class="rm-manual">Jimmy Carter reportedly wants to discuss 'permanent peace' with North Korea's Kim Jong Un</h1>
+<p class="rm-manual">Sam Meredith</p>
+<p class="rm-manual"><span><span><a href="http://www.cnbc.com/" rel="noopener noreferrer nofollow">CNBC</a></span></span>October 10, 2017</p>
+<p class="rm-manual">Getty Images. Former U.S. President Jimmy Carter 
+has reportedly said he would be prepared to meet North Korean leader Kim
+ Jong Un in an attempt to bring "permanent peace" to the Korean 
+Peninsula.</p>
+<p>Former U.S. President Jimmy Carter has</p>
+<p>reportedly said</p>
+<p>he would be prepared to meet North Korean leader</p>
+<p>Kim Jong Un</p>
+<p>in an attempt to bring "permanent peace" to the Korean Peninsula.</p>
+<p>"Should former President Carter be able to visit North Korea, he 
+would like to meet with North Korean leader Kim Jong-un and discuss a 
+peace treaty between the United States and the North, and a complete 
+denuclearization of North Korea," Park Han-shik, professor of 
+international affairs at the University of Georgia, said in an interview
+ published by South Korea's JoongAng Daily on Tuesday.Park claimed that 
+Carter visited his home at the end of September and told him that he 
+wanted to "contribute toward establishing a permanent peace regime on 
+the Korean Peninsula."</p>
+<p>Carter's comments could</p>
+<p>further aggravate</p>
+<p>President</p>
+<p>Donald Trump</p>
+<p>after media reports surfaced last month which said a senior U.S. 
+state department official had been sent by the White House to ask Carter
+ not to speak publicly about the geopolitical crisis.</p>
+<p class="rm-manual">Click here to read more at the JoongAng Daily</p>
+<p class="rm-manual">.</p>
+<p class="rm-manual">Former U.S. President Jimmy Carter has</p>
+<p class="rm-manual">reportedly said</p>
+<p class="rm-manual">he would be prepared to meet North Korean leader</p>
+<p class="rm-manual">Kim Jong Un</p>
+<p class="rm-manual">in an attempt to bring "permanent peace" to the Korean Peninsula.</p>
+<p class="rm-manual">"Should former President Carter be able to visit 
+North Korea, he would like to meet with North Korean leader Kim Jong-un 
+and discuss a peace treaty between the United States and the North, and a
+ complete denuclearization of North Korea," Park Han-shik, professor of 
+international affairs at the University of Georgia, said in an interview
+ published by South Korea's JoongAng Daily on Tuesday.</p>
+<p class="rm-manual">Park claimed that Carter visited his home at the 
+end of September and told him that he wanted to "contribute toward 
+establishing a permanent peace regime on the Korean Peninsula."</p>
+<p class="rm-manual">Carter's comments could</p>
+<p class="rm-manual">further aggravate</p>
+<p class="rm-manual">President</p>
+<p class="rm-manual">Donald Trump</p>
+<p class="rm-manual">after media reports surfaced last month which said a
+ senior U.S. state department official had been sent by the White House 
+to ask Carter not to speak publicly about the geopolitical crisis.</p>
+<p class="rm-manual">Click here to read more at the JoongAng Daily</p>
+<p>.</p>
+<p class="rm-manual">More From CNBC </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="http://www.cnbc.com/id/104761144?__source=yahoo%7Cfinance%7Crelated%7Cstory%7Cstory&amp;par=yahoo&amp;doc=104762752" rel="nofollow noopener">Trump EPA will start rolling back Clean Power Plan on Tuesday, Scott Pruitt says</a></li>
+<li class="rm-manual"><a href="http://www.cnbc.com/id/104760928?__source=yahoo%7Cfinance%7Crelated%7Cstory%7Cstory&amp;par=yahoo&amp;doc=104762752" rel="nofollow noopener">Schumer, Pelosi say Trump's immigration demands 'can't be serious'</a></li>
+<li class="rm-manual"><a href="http://www.cnbc.com/id/104758094?__source=yahoo%7Cfinance%7Crelated%7Cstory%7Cstory&amp;par=yahoo&amp;doc=104762752" rel="nofollow noopener">GOP's tax plan has a bigger break for the rich than eliminating the estate tax</a></li>
+</ul>
+<p class="rm-manual"><span><a href="file:///recent-quotes"><span>Recently Viewed</span></a></span></p>
+<p class="rm-manual"><span>Your list is empty.</span></p>
+<h2 class="rm-manual">What to Read Next</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/carnival-becomes-latest-fallen-angel-213040539.html"><span>Carnival Becomes Latest Fallen Angel While Covid Halts Cruises</span></a></h3><p class="rm-manual">Bloomberg</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/190-000-repayments-1-300-153043113.html"><span>190,000 Repayments and 1,300 Tips: The CRA Wants its CERB Back</span></a></h3><p class="rm-manual">The Motley Fool</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/aurora-cannabis-to-lay-off-700-staff-expects-60-m-charge-plans-to-close-5-facilities-153743222.html"><span>Aurora Cannabis to lay off 700 staff, expects $60M charge, plans to close 5 facilities</span></a></h3><p class="rm-manual">Yahoo Finance Canada</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/3-dividend-aristocrats-buy-hold-174412163.html"><span>3 Dividend Aristocrats to Buy and Hold Forever</span></a></h3><p class="rm-manual">The Motley Fool</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/fitch-strips-canada-aaa-rating-170836075.html"><span>Canada Becomes First to Lose AAA Status at Fitch on Virus Woes</span></a></h3><p class="rm-manual">Bloomberg</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/most-competitive-economies-canada-us-164713746.html"><span>Most Competitive Economies Ranking Puts Canada Ahead Of U.S. For 1st Time</span></a></h3><p class="rm-manual">HuffPost Canada</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/brands-beware-lessons-from-the-downfall-of-aunt-jemima-and-uncle-ben-211248464.html"><span>Brands beware: Lessons from the downfall of Aunt Jemima and Uncle Ben</span></a></h3><p class="rm-manual">Yahoo Finance</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/canadians-at-greater-risk-of-banking-app-fraud-due-to-covid-19-trends-171659105.html"><span>Canadians at greater risk of banking app fraud due to COVID-19 trends</span></a></h3><p class="rm-manual">Yahoo Finance Canada</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/jack-ma-dethroned-chinas-richest-081628467.html"><span>Jack Ma Dethroned as China's Richest by Tencent's Pony Ma</span></a></h3><p class="rm-manual">Bloomberg</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/canopy-growth-sees-70-b-pot-market-by-2023-driven-by-us-legalization-163623970.html"><span>Canopy Growth sees $70B pot market by 2023, driven by U.S. legalization</span></a></h3><p class="rm-manual">Yahoo Finance Canada</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/attorneys-general-sue-education-secretary-betsy-de-vos-over-gainful-employment-rule-205153783.html"><span>19 attorneys general sue Education Secretary Betsy DeVos over gainful employment rule</span></a></h3><p class="rm-manual">Yahoo Finance</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/cra-emergency-300-tax-free-000003409.html"><span>CRA Update: Emergency $300 Tax-Free Payment for OAS Retirees</span></a></h3><p class="rm-manual">The Motley Fool</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/consumer-covid-19-hangover-means-a-slow-return-to-normal-for-businesses-115208524.html"><span>Consumer ‘COVID-19 hangover’ means a slow return to normal for businesses</span></a></h3><p class="rm-manual">Yahoo Finance Canada</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/bc-residents-are-missing-out-on-164-million-unclaimed-cash-125739112.html"><span>B.C. residents are missing out on $164 million unclaimed cash</span></a></h3><p class="rm-manual">Yahoo Finance Canada</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/blackberry-bb-q1-earnings-revenues-222510061.html"><span>BlackBerry (BB) Q1 Earnings and Revenues Surpass Estimates</span></a></h3><p class="rm-manual">Zacks</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/toke-meets-tech-pot-shops-are-copying-amazon-and-uber-eats-201548075.html"><span>Toke meets tech: Pot shops take a page from Amazon and Uber Eats</span></a></h3><p class="rm-manual">Yahoo Finance Canada</p><p class="rm-manual"></p></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://finance.yahoo.com/news/apples-switch-from-intel-to-its-own-chips-is-its-smartest-move-in-years-tech-192919533.html"><span>Apple’s switch from Intel to its own chips is its smartest move in years: Tech</span></a></h3><p class="rm-manual">Yahoo Finance</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/walmart-canada-reviewing-all-lives-matter-items-for-sale-on-marketplace-site-123950806.html"><span>Walmart Canada reviewing "All Lives Matter" items for sale on Marketplace site</span></a></h3><p class="rm-manual">Yahoo Finance Canada</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/trudeau-announces-voluntary-contact-tracing-app-to-slow-spread-of-covid-19-152712343.html"><span>Trudeau announces contact tracing app to track spread of COVID-19</span></a></h3><p class="rm-manual">Yahoo Finance Canada</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/asia-stocks-set-drop-virus-213045146.html"><span>Stocks Drop, U.S. Futures Down on Virus Worries: Markets Wrap</span></a></h3><p class="rm-manual">Bloomberg</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/canadians-exempt-u-visa-rules-014452696.html"><span>Canadians exempt from new U.S. visa rules, immigration lawyers' group says</span></a></h3><p class="rm-manual">The Canadian Press</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/trump-is-no-longer-the-best-candidate-for-business-191731801.html"><span>Trump is no longer the best candidate for business</span></a></h3><p class="rm-manual">Yahoo Finance</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/record-cases-across-u-imf-231816634.html"><span>Record Cases Across U.S.; IMF Sees Deeper Slowdown: Virus Update</span></a></h3><p class="rm-manual">Bloomberg</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/north-american-stock-markets-down-135216306.html"><span>North American stock markets plunge on fears about rising COVID-19 infections</span></a></h3><p class="rm-manual">The Canadian Press</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/stock-market-news-live-june-25-2020-221532895.html"><span>Stock market news live updates: Stock futures open slightly higher after selloff</span></a></h3><p class="rm-manual">Yahoo Finance</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/coronavirus-update-ny-nj-ct-slap-restrictions-on-travelers-as-outlook-darkens-in-other-states-190809231.html"><span>Coronavirus update: NY, NJ, CT slap restrictions on travelers as outlook darkens in key states</span></a></h3><p class="rm-manual">Yahoo Finance</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/pentagon-names-20-chinese-firms-231556532.html"><span>Pentagon Names 20 Chinese Firms It Says Are Military-Controlled</span></a></h3><p class="rm-manual">Bloomberg</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/cerb-extension-know-211530788.html"><span>CERB Extension: What You Need to Know</span></a></h3><p class="rm-manual">The Motley Fool</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/investors-favoring-companies-let-people-210000741.html"><span>Investors Are Favoring Firms That Let People Work From Home</span></a></h3><p class="rm-manual">Bloomberg</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/westjet-lay-off-more-3-183655140.html"><span>WestJet to lay off more than 3,300 workers under restructuring plan</span></a></h3><p class="rm-manual">The Canadian Press</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/latest-india-reports-highest-spike-050042101.html"><span>The Latest: South Korea's virus resurgence has 28 more cases</span></a></h3><p class="rm-manual">The Canadian Press</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/canopy-growth-tsx-weed-stock-130522622.html"><span>Canopy Growth (TSX:WEED) Stock: $0 or $100?</span></a></h3><p class="rm-manual">The Motley Fool</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/blackberry-misses-quarterly-revenue-estimates-211431801.html"><span>Canada's BlackBerry quarterly revenue misses estimates on virus hit</span></a></h3><p class="rm-manual">Reuters</p><p class="rm-manual"></p></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/asia-stocks-set-drop-virus-213045146.html"><span>Stocks Drop, U.S. Futures Down on Virus Worries: Markets Wrap</span></a></h3><p class="rm-manual">Bloomberg</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/canadians-exempt-u-visa-rules-014452696.html"><span>Canadians exempt from new U.S. visa rules, immigration lawyers' group says</span></a></h3><p class="rm-manual">The Canadian Press</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/trump-is-no-longer-the-best-candidate-for-business-191731801.html"><span>Trump is no longer the best candidate for business</span></a></h3><p class="rm-manual">Yahoo Finance</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/record-cases-across-u-imf-231816634.html"><span>Record Cases Across U.S.; IMF Sees Deeper Slowdown: Virus Update</span></a></h3><p class="rm-manual">Bloomberg</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/north-american-stock-markets-down-135216306.html"><span>North American stock markets plunge on fears about rising COVID-19 infections</span></a></h3><p class="rm-manual">The Canadian Press</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/stock-market-news-live-june-25-2020-221532895.html"><span>Stock market news live updates: Stock futures open slightly higher after selloff</span></a></h3><p class="rm-manual">Yahoo Finance</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/coronavirus-update-ny-nj-ct-slap-restrictions-on-travelers-as-outlook-darkens-in-other-states-190809231.html"><span>Coronavirus update: NY, NJ, CT slap restrictions on travelers as outlook darkens in key states</span></a></h3><p class="rm-manual">Yahoo Finance</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/pentagon-names-20-chinese-firms-231556532.html"><span>Pentagon Names 20 Chinese Firms It Says Are Military-Controlled</span></a></h3><p class="rm-manual">Bloomberg</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/cerb-extension-know-211530788.html"><span>CERB Extension: What You Need to Know</span></a></h3><p class="rm-manual">The Motley Fool</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/investors-favoring-companies-let-people-210000741.html"><span>Investors Are Favoring Firms That Let People Work From Home</span></a></h3><p class="rm-manual">Bloomberg</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/westjet-lay-off-more-3-183655140.html"><span>WestJet to lay off more than 3,300 workers under restructuring plan</span></a></h3><p class="rm-manual">The Canadian Press</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/latest-india-reports-highest-spike-050042101.html"><span>The Latest: South Korea's virus resurgence has 28 more cases</span></a></h3><p class="rm-manual">The Canadian Press</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.finance.yahoo.com/news/canopy-growth-tsx-weed-stock-130522622.html"><span>Canopy Growth (TSX:WEED) Stock: $0 or $100?</span></a></h3><p class="rm-manual">The Motley Fool</p><p></p></li>
+</ul></article>
+</body></html>

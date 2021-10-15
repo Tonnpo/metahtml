@@ -1,0 +1,280 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> News of Kim Jong-un heart surgery sparks flurry of speculation - Washington Times </p>
+<p class="rm-manual">JavaScript is required for full functionality on 
+this website, but scripting is currently disabled. Please enable 
+JavaScript and reload this page.</p>
+<p class="rm-manual"><a href="#content">Skip to content</a></p>
+<p class="rm-manual">Reliable Reporting. The Right Opinion. </p>
+<p class="rm-manual"> <a href="file:///subscribe/?subscribe-button-header"> Subscribe </a> </p>
+<p class="rm-manual"> Welcome</p>
+<p class="rm-manual"> Sign In </p>
+<p class="rm-manual"> <a href="">Sign In</a> <a href="https://washingtontimes-dc.newsmemory.com/?utm_source=washingtontimes&amp;utm_medium=header">Today's E-Edition</a> <a href="file:///subscribe/?subscribe-button-header">Subscribe</a> </p>
+<p class="rm-manual"> <a href="">Sign Out</a> <a href="https://washingtontimes-dc.newsmemory.com/?utm_source=washingtontimes&amp;utm_medium=header">Today's E-Edition</a> <a href="file:///my-account/?utm_source=twt&amp;utm_medium=link&amp;utm_campaign=my-account-dropdown">My Account</a> <a href="file:///subscribe/?subscribe-button-header">Subscribe</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="">News</a> <ul class="rm-manual"> <li class="rm-manual">
+<a href="file:///news/politics/">Politics</a> </li> <li class="rm-manual">
+<a href="file:///specials/coronavirus-covid-19-pandemic-updates/">COVID-19 Updates </a> </li> <li class="rm-manual">
+<a href="file:///news/national/">National</a> </li> <li class="rm-manual">
+<a href="file:///news/world/">World</a> </li> <li class="rm-manual">
+<a href="file:///news/security/">Security</a> </li> <li class="rm-manual">
+<a href="file:///news/business-economy/">Business &amp; Economy</a> </li> <li class="rm-manual">
+<a href="file:///news/local/">D.C. Local</a> </li> <li class="rm-manual">
+<a href="file:///media-spotlight/">Media Spotlight</a> </li> <li class="rm-manual">
+<a href="file:///news/inside-politics/">Inside Politics</a> </li> <li class="rm-manual">
+<a href="file:///news/inside-the-beltway/">Inside the Beltway</a> </li> <li class="rm-manual">
+<a href="file:///news/waste-fraud-abuse/">Waste, Fraud &amp; Abuse</a> </li> <li class="rm-manual">
+<a href="file:///news/inside-the-ring/">Inside the Ring</a> </li> <li class="rm-manual">
+<a href="file:///culture/">Culture</a> </li> <li class="rm-manual">
+<a href="file:///culture/entertainment/">Entertainment</a> </li> <li class="rm-manual">
+<a href="file:///culture/technology/">Technology</a> </li> <li class="rm-manual">
+<a href="https://www.legacy.com/washingtontimes/">Obituaries</a> </li> <li class="rm-manual">
+<a href="file:///news/today/">Just the Headlines</a> </li> <li class="rm-manual">
+<a href="file:///specials/trump-central/">Trump Central</a> </li> <li class="rm-manual">
+<a href="file:///elections/">Campaign 2020</a> </li> <li class="rm-manual">
+<a href="file:///multimedia/">Photo Galleries</a> </li> <li class="rm-manual">
+<a href="file:///specials/dive-deeper/">Dive Deeper</a> </li> </ul> </li> <li class="rm-manual"> <a href="">Policy</a> <ul class="rm-manual"> <li class="rm-manual">
+<a href="file:///specials/energy-environment-news/">Energy &amp; Environment</a> </li> <li class="rm-manual">
+<a href="file:///specials/banking-finance/">Banking &amp; Finance</a> </li> <li class="rm-manual">
+<a href="file:///specials/health-care-reform/">Health Care Reform</a> </li> <li class="rm-manual">
+<a href="file:///specials/second-amendment-and-gun-control/">Second Amendment</a> </li> <li class="rm-manual">
+<a href="file:///specials/immigration-reform/">Immigration Reform</a> </li> <li class="rm-manual">
+<a href="file:///specials/intelligence-cybersecurity/">Homeland &amp; Cybersecurity</a> </li> <li class="rm-manual">
+<a href="file:///specials/defense-aerospace/">Aerospace &amp; Defense</a> </li> <li class="rm-manual">
+<a href="file:///specials/taxes-budget/">Taxes &amp; Budget</a> </li> <li class="rm-manual">
+<a href="file:///specials/law-enforcement-intelligence/">Law Enforcement &amp; Intelligence</a> </li> <li class="rm-manual">
+<a href="file:///specials/transportation-infrastructure/">Transportation &amp; Infrastructure</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///opinion/">Commentary</a> <ul class="rm-manual"> <li class="rm-manual">
+<a href="file:///opinion/">Commentary Main</a> </li> <li class="rm-manual">
+<a href="file:///opinion/editorials/">Editorials</a> </li> <li class="rm-manual">
+<a href="file:///opinion/letters/">Letters</a> </li> <li class="rm-manual">
+<a href="file:///opinion/pruden-on-politics/">Pruden on Politics</a> </li> <li class="rm-manual">
+<a href="file:///staff/charles-hurt/">Charles Hurt</a> </li> <li class="rm-manual">
+<a href="file:///staff/david-keene/">David Keene</a> </li> <li class="rm-manual">
+<a href="file:///staff/tammy-bruce/">Tammy Bruce</a> </li> <li class="rm-manual">
+<a href="file:///staff/ralph-z-hallow/">Ralph Z. Hallow</a> </li> <li class="rm-manual">
+<a href="file:///staff/scott-walker/">Scott Walker</a> </li> <li class="rm-manual">
+<a href="file:///staff/michael-mckenna/">Michael McKenna</a> </li> <li class="rm-manual">
+<a href="file:///staff/cal-thomas/">Cal Thomas</a> </li> <li class="rm-manual">
+<a href="file:///staff/clifford-d-may/">Clifford D. May</a> </li> <li class="rm-manual">
+<a href="file:///staff/cheryl-k-chumley/">Cheryl K. Chumley</a> </li> <li class="rm-manual">
+<a href="file:///staff/joseph-curl/">Joseph Curl</a> </li> <li class="rm-manual">
+<a href="file:///staff/everett-piper/">Everett Piper</a> </li> <li class="rm-manual">
+<a href="file:///staff/daniel-n-hoffman/">Daniel N. Hoffman</a> </li> <li class="rm-manual">
+<a href="file:///staff/robert-knight/">Robert Knight</a> </li> <li class="rm-manual">
+<a href="file:///opinion/rapid-reactions/">Rapid Reactions</a> </li> <li class="rm-manual">
+<a href="file:///staff/tim-constantine/">Tim Constantine</a> </li> <li class="rm-manual">
+<a href="file:///books/">Books</a> </li> <li class="rm-manual">
+<a href="file:///cartoons/">Cartoons</a> </li> <li class="rm-manual">
+<a href="file:///opinion/us-russia-crosstalk/">U.S.-Russia Crosstalk</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///sports/">Sports</a> <ul class="rm-manual"> <li class="rm-manual">
+<a href="file:///sports/">Sports Main</a> </li> <li class="rm-manual">
+<a href="file:///specials/washington-redskins-season/">Redskins</a> </li> <li class="rm-manual">
+<a href="file:///sports/football/">Football</a> </li> <li class="rm-manual">
+<a href="file:///sports/baseball/">Baseball</a> </li> <li class="rm-manual">
+<a href="file:///sports/basketball/">Basketball</a> </li> <li class="rm-manual">
+<a href="file:///sports/ncaa/">NCAA</a> </li> <li class="rm-manual">
+<a href="file:///staff/thom-loverro/">Thom Loverro</a> </li> <li class="rm-manual">
+<a href="file:///sports/tennis/">Tennis</a> </li> <li class="rm-manual">
+<a href="file:///sports/golf/">Golf</a> </li> <li class="rm-manual">
+<a href="file:///sports/hockey/">Hockey</a> </li> <li class="rm-manual">
+<a href="file:///sports/soccer/">Soccer</a> </li> <li class="rm-manual">
+<a href="file:///sports/horse-racing/">Horse Racing</a> </li> <li class="rm-manual">
+<a href="file:///sports/racing/">NASCAR &amp; Racing</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///specials/">Special Reports</a> <ul class="rm-manual"> <li class="rm-manual">
+<a href="file:///specials/">Special Reports Main</a> </li> <li class="rm-manual">
+<a href="file:///specials/coronavirus-covid-19-pandemic-updates/">COVID-19 Updates </a> </li> <li class="rm-manual">
+<a href="file:///specials/losing-our-religion-fall-faith-threatens-america/">Losing our religion</a> </li> <li class="rm-manual">
+<a href="file:///specials/greaterkarachi/">#GreaterKarachi</a> </li> <li class="rm-manual">
+<a href="file:///specials/new-africa/">New Africa</a> </li> <li class="rm-manual">
+<a href="file:///specials/rolling-thunder-holds-32nd-ride/">Rolling Thunder XXXII</a> </li> <li class="rm-manual">
+<a href="file:///specials/qatar-what-makes-americas-great-ally-special/">Qatar</a> </li> <li class="rm-manual">
+<a href="file:///specials/free-iran-rally-2019-washington-dc/">Free Iran Rally 2019</a> </li> <li class="rm-manual">
+<a href="file:///specials/energy-2019/">Energy 2019</a> </li> <li class="rm-manual">
+<a href="file:///specials/infrastructure-2019/">Infrastructure 2019</a> </li> <li class="rm-manual">
+<a href="file:///specials/faith-and-family/">Faith &amp; Family</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///washington-times-podcasts/">Podcasts</a> <ul class="rm-manual"> <li class="rm-manual">
+<a href="file:///washington-times-podcasts/">Podcasts Main</a> </li> <li class="rm-manual">
+<a href="file:///specials/front-page-podcast/">Front Page Podcast</a> </li> <li class="rm-manual">
+<a href="file:///specials/politically-unstable-podcast/">Politically Unstable</a> </li> <li class="rm-manual">
+<a href="file:///specials/andy-parks-podcast/">Andy Parks</a> </li> <li class="rm-manual">
+<a href="file:///specials/campaign-2020-podcast/">Campaign 2020</a> </li> <li class="rm-manual">
+<a href="file:///specials/bold-blunt-podcast/">Bold &amp; Blunt</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///puzzles/games/">Games</a> <ul class="rm-manual"> <li class="rm-manual">
+<a href="file:///puzzles/games/">Games Main</a> </li> <li class="rm-manual">
+<a href="file:///puzzles/sudoku/">Play Sudoku</a> </li> <li class="rm-manual">
+<a href="file:///puzzles/crossword/">Crossword Puzzle</a> </li> <li class="rm-manual">
+<a href="file:///puzzles/word-search/">Word Search</a> </li> <li class="rm-manual">
+<a href="file:///quiz/">Quizzes</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///subscribe/?subscribe-button-scroll">Subscribe</a> </li> <li class="rm-manual"> <a href="file:///piano-sign-in">Sign In</a> </li> </ul>
+<p class="rm-manual">TRENDING:</p>
+<p class="rm-manual"><a href="file:///topics/george-floyd/">George Floyd</a></p>
+<p class="rm-manual"><a href="file:///topics/donald-trump/">Donald Trump</a></p>
+<p class="rm-manual"><a href="file:///topics/national-guard/">National Guard</a></p>
+<p class="rm-manual"><a href="file:///topics/minneapolis/">Minneapolis</a></p>
+<p class="rm-manual"><a href="file:///topics/white-house/">White House</a></p>
+<p class="rm-manual"><a href="file:///topics/china/">China</a></p>
+<p class="rm-manual"><a href="file:///topics/washington/">Washington</a></p>
+<p class="rm-manual"><a href="file:///topics/russia/">Russia</a></p>
+<p class="rm-manual"><a href="file:///topics/nba/">Nba</a></p>
+<p class="rm-manual"><a href="file:///topics/twitter/">Twitter</a></p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///">Home</a></li> <li class="rm-manual">
+<a href="file:///news/">News</a> </li> <li class="rm-manual"><a href="file:///news/world/">World</a></li> </ul>
+<h1 class="rm-manual">Kim Jong Un's heart surgery report sparks flurry of speculation</h1>
+<p class="rm-manual"> Search Search Keyword: </p>
+<h2 class="rm-manual">Front Page Podcast</h2>
+<h2 class="rm-manual">Commentary</h2>
+<h3 class="rm-manual"><a href="file:///staff/joseph-curl/">Joseph Curl</a></h3>
+<p class="rm-manual"><a href="file:///news/2020/jun/2/from-impeachment-to-pandemic-to-riots-wildfires-an/">From impeachment, to pandemic, to riots, wildfires and killer hornets, 2020 is proving to be a doozy</a></p>
+<h3 class="rm-manual"><a href="file:///staff/clifford-d-may/">Clifford D. May</a></h3>
+<p class="rm-manual"><a href="file:///news/2020/jun/2/did-chinese-communist-party-intend-for-covid-19-to/">Did Chinese Communist Party intend for COVID-19 to destabilize a disunited America?</a></p>
+<h3 class="rm-manual"><a href="file:///staff/charles-hurt/">Charles Hurt</a></h3>
+<p class="rm-manual"><a href="file:///news/2020/jun/1/democrats-rioters-dont-care-about-george-floyd-the/">Democrats, rioters don’t care about George Floyd — they’re just using him</a></p>
+<p class="rm-manual"><span><a href="file:///opinion/">View all </a></span> </p>
+<h2 class="rm-manual">Question of the Day</h2>
+<h3 class="rm-manual">Should police do more to curtail rioting?</h3>
+<p class="rm-manual"> Question of the Day </p>
+<p class="rm-manual"> Yes </p>
+<p class="rm-manual"> No </p>
+<p class="rm-manual"> Not sure </p>
+<p class="rm-manual"><a href="file:///polls/2020/jun/1/should-police-do-more-curtail-rioting/results/">View results</a> </p>
+<h2 class="rm-manual">Story TOpics</h2>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///topics/politics/">Politics</a></li> <li class="rm-manual"><a href="file:///topics/kim-jong-un/">Kim Jong-Un</a></li> <li class="rm-manual"><a href="file:///topics/south-korea/">South Korea</a></li> <li class="rm-manual"><a href="file:///topics/north-korea/">North Korea</a></li> </ul>
+<figcaption class="rm-manual"> North Korean leader Kim Jong-un speaks 
+during a ruling Workers’ Party’s meeting in North Korea. (Korean Central
+ News Agency/Korea News Service via AP) <a href="file:///multimedia/image/ap_virus_outbreak_north_korea_58196jpg/">more &gt;</a> </figcaption><p class="rm-manual"> <span> By <a href="https://www.washingtontimes.com/staff/guy-taylor/">Guy Taylor</a> </span> <span> - The Washington Times - Tuesday, April 21, 2020 </span> </p>
+<p>Rumors continued to swirl Tuesday about North Korean leader <a href="file:///topics/kim-jong-un/">Kim Jong-un</a>’s health, even as South Korean and Chinese officials said they saw no evidence to back reports that claimed the secretive Mr. <a href="file:///topics/kim-jong-un/">Kim</a> was gravely ill following emergency heart surgery.</p>
+<p>Trump administration officials said only that Washington was 
+monitoring the reports, while analysts noted that speculation tends to 
+swirl about <a href="file:///topics/north-korea/">North Korea</a> because of its notoriously authoritarian controls on information — especially regarding the ruling <a href="file:///topics/kim-jong-un/">Kim</a> family.</p>
+<p>Mr. <a href="file:///topics/kim-jong-un/">Kim</a> himself is critical
+ to President Trump’s high-stakes nuclear diplomacy, with Mr. Trump 
+saying the two have forged a relationship that could break through 
+decades of diplomatic stalemate and military tensions.</p>
+<p class="rm-manual">TOP STORIES</p>
+<p class="rm-manual"> <a href="file:///news/2020/jun/2/will-smith-va-police-chief-says-rioters-blocked-fi/">Richmond police chief says rioters blocked firefighters from burning home with child inside</a></p>
+<p class="rm-manual"> <a href="file:///news/2020/jan/25/george-soros-89-still-quest-destroy-america/">George Soros, 89, is still on a quest to destroy America</a></p>
+<p class="rm-manual"> <a href="file:///news/2020/may/29/david-roddy-chattanooga-police-chief-tells-officer/">Chattanooga police chief tells officers OK with George Floyd death to turn in badges</a> </p>
+<p>“The truth is no one has the information. <a href="file:///topics/south-korea/">South Korea</a>
+ doesn’t have the information, China doesn’t have the information 
+either,” said Frank Aum, a former U.S. negotiator with the North Koreans
+ now with the U.S. Institute of Peace.</p>
+<p>Asked about the status of Mr. Kim, Mr. Trump told reporters Tuesday 
+night: “We don’t know. We don’t know. I’ve had a very good relationship 
+with him. I can only say I wish him well.”</p>
+<p>Officials in <a href="file:///topics/south-korea/">South Korea</a>, which closely monitors it neighbor, were circumspect Tuesday in response to a CNN report Monday night about Mr. Kim’s health.</p>
+<p>A senior official told <a href="file:///topics/south-korea/">South Korea</a>’s
+ Yonhap news agency the report was simply “not true,” and Kang Min-seok,
+ a spokesman for South Korean President Moon Jae-in, said there had been
+ “no unusual signs have been identified inside <a href="file:///topics/north-korea/">North Korea</a>.”</p>
+<p>National Security Adviser Robert C. O’Brien told Fox News that U.S. 
+officials were monitoring reports “very closely,” but administration 
+officials otherwise dodged questions on the matter throughout the day 
+Tuesday.</p>
+<p>The South Korean internet news outlet Daily NK, which focuses on news about <a href="file:///topics/north-korea/">North Korea</a>,
+ first reported that Mr. Kim had undergone surgery at Hyangsan Medical 
+Center, said to be an exclusive hospital for the Kim family. The surgery
+ was performed by a team of the country’s top doctors, who had traveled 
+to Pyongyang for the procedure, the outlet said, citing only an unnamed 
+source inside <a href="file:///topics/north-korea/">North Korea</a>.</p>
+<p>A U.S. official told The Associated Press the White House was aware 
+before those reports appeared that Mr. Kim’s health might be precarious.</p>
+<p>Mr. Kim may have undergone surgery and that complications may have 
+rendered him “incapacitated or worse.” But the official stressed that 
+the U.S. had nothing to confirm the reports.</p>
+<p>Officials in China, which is a close ally to <a href="file:///topics/north-korea/">North Korea</a>,
+ also downplayed rumors about Mr. Kim. An official with the Chinese 
+Communist Party’s International Liaison Department told Reuters they do 
+not believe the North Korean leader is “critically ill.”</p>
+<p>But analysts also noted Mr. Kim’s unusual absence from the April 15 
+festivities celebrating the birthday of his grandfather, Kim Il-sung, 
+founder of the family’s Communist dynasty. It was the first time Mr. Kim
+ had missed the ceremony since taking power in 2012. Analysts also note 
+that the 36-year-old leader is overweight, smokes heavily, and has a 
+family history of heart disease.</p>
+<p>Mr. Aum told The Washington Times in an interview that speculation 
+about Mr. Kim’s health is also fueled by the “lack of clarity about the 
+line of succession” in the regime should the North Korean leader die 
+suddenly.</p>
+<p>“Right now there really isn’t a clear successor,” said Mr. Aum, who 
+suggested the most likely candidate may be Mr. Kim’s younger sister Kim 
+Yo-jong.</p>
+<p>Mr. Kim’s known appearance came when he presided over a meeting on 
+April 11, discussing coronavirus prevention and endorsing the election 
+of his sister as an alternate member of the political bureau of the 
+ruling Workers’ Party, according to North Korean state media reports.</p>
+<p>“[She] has gained authority and exposure in recent months and years, perhaps sufficient to be the next leader to maintain the <a href="file:///topics/kim-jong-un/">Kim</a> bloodline. But nothing is certain,” former CIA Korea official Bruce Klingner said Tuesday.</p>
+<p>“If <a href="file:///topics/kim-jong-un/">Kim</a> were sick, he may 
+have designated her since she is likely the only person he trusts,” Mr. 
+Klingner, a senior fellow with the Heritage Foundation, said in 
+statement circulated by email.</p>
+<p>“Some will speculate that <a href="file:///topics/kim-jong-un/">Kim Jong-un</a>’s death could lead to an explosion (lashing out at <a href="file:///topics/south-korea/">South Korea</a>)
+ or implosion (regime collapse, internal civil war, and potential loss 
+of control of nuclear weapons),” Mr. Klingner said. “But the regime will
+ instead likely have an orderly transition of power.”</p>
+<p>He added that the “U.S. should be closely consulting with its allies <a href="file:///topics/south-korea/">South Korea</a> and Japan to pool intelligence to monitor developments in <a href="file:///topics/north-korea/">North Korea</a> as well as plan common policy responses while maintaining military vigilance.”</p>
+<p>Unsurprisingly, the official North Korean state press carried no hints of any troubles for Mr. <a href="file:///topics/kim-jong-un/">Kim</a>. The top news stories in Pyongyang Tuesday, according to KCNA Watch, which tracks the <a href="file:///topics/north-korea/">North Korea</a>
+ press included a call to implement the state budget, an update on 
+anti-COVID-19 efforts, and a congratulatory message sent by Mr. <a href="file:///topics/kim-jong-un/">Kim</a> to the president of Cuba on his 60th birthday.</p>
+<h3 class="rm-manual">Sign up for Daily Newsletters</h3>
+<p class="rm-manual"><a href="file:///newsletters/manage/?news">Manage Newsletters</a> </p>
+<p class="rm-manual">Copyright © 2020 The Washington Times, LLC. <a href="https://goo.gl/forms/xGjXcUKYsKxMeCUl1">Click here for reprint permission</a>.</p>
+<h4 class="rm-manual">Please read our <a href="https://www.washingtontimes.com/comment-policy/">comment policy</a> before commenting.</h4>
+<p class="rm-manual"> Click to Read More and View Comments </p>
+<p class="rm-manual"> Click to Hide </p>
+<h2 class="rm-manual">Top Stories</h2>
+<h3 class="rm-manual"> <a href="file:///news/2020/may/31/robert-obrien-no-systemic-racism-us-police-forces/">National Security Adviser Robert O’Brien: No ‘systemic racism’ in U.S. police forces</a> </h3>
+<h3 class="rm-manual"> <a href="file:///news/2020/may/31/us-health-experts-who-differ-over-coronavirus-prot/">U.S. health experts, WHO differ over coronavirus protocols</a> </h3>
+<h3 class="rm-manual"> <a href="file:///quiz/2015/feb/11/us-citizenship-test-could-you-pass/">Quiz: US Citizenship Test - Could You Pass?</a> </h3>
+<h3 class="rm-manual"> <a href="file:///news/2020/may/31/nancy-pelosi-wont-take-bait-donald-trump-george-fl/">Nancy Pelosi won’t ‘take the bait’ on riots: ‘I kind of ignore what President Trump says’</a> </h3>
+<h3 class="rm-manual"> <a href="file:///news/2020/may/31/maine-ban-out-state-residents-using-camping-ground/">Maine ban on out-of-state residents using camping grounds faces legal challenge</a> </h3>
+<h3 class="rm-manual"> <a href="file:///multimedia/collection/honor-courage-commitment-us-naval-special-warfare-/">Honor, courage, commitment: US Naval Special Warfare Group</a> </h3>
+<h3 class="rm-manual"> <a href="file:///news/2020/may/31/ilhan-omar-george-floyd-protesters-terrorized-nati/">Rep. Ilhan Omar: Protesters feeling ‘terrorized’ by National Guard troops, ‘militarized police’</a> </h3>
+<h3 class="rm-manual"> <a href="file:///news/2020/may/31/inside-beltway-journalists-riot-duty/">Interest group calls for protection of journalists on riot duty</a> </h3>
+<h3 class="rm-manual"> <a href="http://beverlyhillsmd.com/cmd.php?ad=954236">Doctor: “Doing This Every Morning Can Snap Back Sagging Skin (No Creams Needed)”</a> <span>Sponsored Content</span> </h3>
+<h3 class="rm-manual"> <a href="file:///news/2020/may/31/spacex-capsule-reaches-international-space-station/">‘We’re just happy to be here’: SpaceX capsule docks with International Space Station</a> </h3>
+<h3 class="rm-manual"> <a href="file:///news/2020/may/30/oj-simpson-takes-aim-at-fox-news-for-interviewing-/">O.J. Simpson takes aim at Fox News for interviewing Mark Fuhrman about George Floyd protests</a> </h3>
+<h3 class="rm-manual"> <a href="file:///quiz/2020/mar/5/do-you-remember-popular-tv-couples/">Quiz: Do you remember these popular TV couples?</a> </h3>
+<h3 class="rm-manual"> <a href="file:///news/2020/may/29/valerie-jarrett-tips-covid-19-crisis-end-game-nati/">Valerie Jarrett tips COVID-19 crisis end game as nationwide ‘vote-by-mail’</a> </h3>
+<h3 class="rm-manual"> <a href="file:///news/2020/may/29/lori-lightfoot-chicago-mayor-trump-f-u/">Chicago mayor to Trump: ‘F … U’</a> </h3>
+<h3 class="rm-manual"> <a href="file:///multimedia/collection/conservative-stars-actors-who-are-republicans/">Conservative stars: actors who are Republicans</a> </h3>
+<h3 class="rm-manual"> <a href="file:///news/2020/may/29/michael-moore-hails-good-citizens-burning-down-the/">Michael Moore hails ‘good citizens burning down the evil police precinct’ in Minneapolis</a> </h3>
+<h3 class="rm-manual"> <a href="file:///news/2020/may/29/van-jones-forget-the-kkk-its-the-white-liberal-hil/">Van Jones: Forget the KKK, it’s the ‘white, liberal Hillary Clinton supporter’ we should worry about</a> </h3>
+<h3 class="rm-manual"> <a href="file:///quiz/2018/sep/27/only-true-baby-boomer-can-beat-test/">Quiz: Only a true baby boomer can beat this test</a> </h3>
+<h3 class="rm-manual">Find us on Facebook</h3>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.facebook.com/TheWashingtonTimes">The Washington Times</a></li> <li class="rm-manual"><a href="https://www.facebook.com/WashingtonTimesOpinion/">Opinion</a></li> <li class="rm-manual"><a href="https://www.facebook.com/WashingtonTimesLocal/">Local</a></li> <li class="rm-manual"><a href="https://www.facebook.com/WashingtonTimesSports/">Sports</a></li> </ul>
+<h3 class="rm-manual">Find us on Twitter</h3>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://twitter.com/WashTimes">The Washington Times</a></li> <li class="rm-manual"><a href="https://twitter.com/WashTimesOpEd">Opinion</a></li> <li class="rm-manual"><a href="https://twitter.com/WashTimesLocal">Local</a></li> <li class="rm-manual"><a href="https://twitter.com/WashTimesSports">Sports</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///subscribe/?subscribe-link-footer">Subscribe</a></li> <li class="rm-manual"><a href="http://classified.washingtontimes.com/">Classifieds</a></li> <li class="rm-manual"><a href="https://washingtontimes-dc.newsmemory.com/?utm_source=washingtontimes&amp;utm_medium=footer">E-edition</a></li> <li class="rm-manual"><a href="file:///customer-service/">Customer Service</a></li> <li class="rm-manual"><a href="file:///about/jobs/">Careers</a></li> <li class="rm-manual"><a href="file:///terms-of-use/">Terms</a></li> <li class="rm-manual"><a href="file:///privacy/">Privacy</a></li> <li class="rm-manual"><a href="file:///feeds/">RSS</a></li> <li class="rm-manual"><a href="file:///advertise/">Advertise</a></li> <li class="rm-manual"><a href="file:///faq/">FAQ</a></li> <li class="rm-manual"><a href="file:///about/">About</a></li> <li class="rm-manual"><a href="file:///contact-us/">Contact</a></li> </ul>
+<h6 class="rm-manual">
+<span>All site contents <span>©</span> Copyright <span>2020</span> <span>The Washington Times, LLC</span> <span>|</span></span> <span>3600 New York Avenue NE <span>|</span> Washington, DC 20002 <span>|</span> <span>202-636-3000</span></span>
+</h6></article>
+</body></html>

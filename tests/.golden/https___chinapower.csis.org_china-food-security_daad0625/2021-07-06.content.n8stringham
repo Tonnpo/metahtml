@@ -1,0 +1,287 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual">How is China Feeding its Population of 1.4 Billion?</h1>
+<p class="rm-manual">How is China Feeding its Population of 1.4 Billion?</p>
+<p class="rm-manual"> <span>How is China Feeding its Population of 1.4 Billion?</span> <span><a href="#page">Top </a></span> </p>
+<p class="rm-manual"><a href="https://chinapower.csis.org/china-food-security/?lang=zh-hans">简体</a> / <a href="https://chinapower.csis.org/china-food-security/?lang=zh-hant">繁體</a></p>
+<ul class="rm-manual"> <li class="rm-manual"><a>Share</a></li> <li class="rm-manual"><a>Jump to</a></li> <li class="rm-manual"><a>中文</a></li> </ul>
+<p>Food security is critical to the well-being of all countries. Fragile
+ states are often those that are the most food insecure, as limited 
+access to basic staples can undermine a country’s social and economic 
+stability. Decades of economic growth have enabled China’s leaders to 
+make considerable strides in increasing food access across the country, 
+but China’s economic boom has generated a new set of demographic demands
+ and environmental strains.</p>
+<h2>China’s Food Trade with the World</h2>
+<p>China’s Food Trade with the World</p>
+<h2>The Changing Dietary Landscape</h2>
+<p>Rapid economic growth has fueled dramatic reductions in China’s undernourished population. Undernourishment is <a href="http://www.fao.org/hunger/en/" rel="nofollow">defined</a>
+ by the Food and Agriculture Organization (FAO) as the condition of an 
+individual not acquiring enough food to meet the minimum dietary energy 
+requirements for a year, and is a key indicator of <a href="http://www.fao.org/fileadmin/templates/ess/ess_test_folder/Workshops_Events/Food_Security_for_All_FEB2011/Background_paper.pdf" rel="nofollow">chronic hunger</a>.</p>
+<p>According to the FAO, China’s undernourished population rate fell from <a href="https://data.worldbank.org/indicator/SN.ITK.DEFC.ZS?locations=CN-IN-BR-RU-ZA" rel="nofollow">16.2 percent</a> in 2000 to 8.6 percent in 2017. This decline has taken place alongside a rise in annual <a href="https://chinapower.csis.org/china-development-tracker/" rel="nofollow">per capita income</a>
+ from just $330 to $9,460 over the same period, and enabled China to 
+reach United Nations targets aimed at cutting world hunger rates in half
+ by 2015. China was one of just 29 countries that met its respective 
+goals, and it accounted for two-thirds of the total reduction in 
+undernourished people among Asian countries from 2010 to 2017.</p>
+<p>Prevalence of Undernourishment (% of population)</p>
+<p>China has historically strived for self-sufficiency in domestic food production. In 1996, the government issued a <a href="http://www.china.org.cn/e-white/grainissue/index.htm" rel="nofollow">white paper</a>
+ that established a 95 percent self-sufficiency target for grains 
+including rice, wheat, and corn. China’s domestic production has for the
+ most part risen to meet the country’s growing demand.</p>
+<p>Over the past several decades, China’s grain consumption has more 
+than tripled from 125 million metric tons (tonnes, t) in 1975 to 420 
+million tonnes in 2018.<span><a href="#easy-footnote-bottom-1-1050">1</a></span>
+ Considerable investments in agriculture have enabled China’s farmers to
+ produce high volumes of staple crops, allowing the country to achieve a
+ roughly <a href="https://apps.fas.usda.gov/psdonline/app/index.html" rel="nofollow">one-to-one</a>
+ ratio of production and consumption of grains. India has achieved a 
+similar one-to-one ratio of grain production and consumption, but it has
+ also positioned itself as the world’s leading exporter of rice. In 
+2018-2019, India <a href="https://apps.fas.usda.gov/psdonline/app/index.html#/app/downloads" rel="nofollow">exported</a>
+ nearly 9.8 million tonnes of rice – roughly 22.5 percent of the global 
+total. China by comparison was the sixth-largest exporter over the same 
+period, accounting for just 6.3 percent of global exports.</p>
+<p>Agricultural leaders like the US and Australia have a higher grain 
+production-consumption ratio. The US on average produces roughly 1.4 
+times more grain than it consumes. Australia, which boasts the most 
+arable land per capita in the world, produces more than three times as 
+much wheat as it consumes. </p>
+<p>Meat Consumption in China, USA, and EU</p>
+<p>With regard to meat products, China has witnessed an astronomical 
+increase in consumption. In 1975, China consumed a mere 7 million tonnes
+ of meat.<span><a href="#easy-footnote-bottom-2-1050">2</a></span> That 
+figure had grown to 86.5 million tonnes by 2018, making it the largest 
+meat consumer in the world At 55.2 million tonnes consumed, pork was 
+China’s top meat source in 2018 by a wide margin. On a per capita basis,
+ China consumed <a href="https://data.oecd.org/agroutput/meat-consumption.htm" rel="nofollow">48.9 kilograms (kg)</a>
+ of meat per person in 2018 – roughly half as much as the US (99 kg per 
+capita) and Australia (93 kg), but slightly higher than Japan (43 kg).</p>
+<p>This exploding demand for meat in China can be largely attributed to changing demographics. The emergence of China’s urban <a href="https://chinapower.csis.org/china-middle-class/" rel="nofollow">middle class</a>
+ has corresponded with a shift away from a grain-oriented diet to an 
+increasingly meat-heavy intake. More affluent urban residents have 
+likewise developed an appetite for other resource-intensive foods, such 
+as <a href="https://www.theguardian.com/environment/2019/mar/29/can-the-world-quench-chinas-bottomless-thirst-for-milk" rel="nofollow">dairy products</a>.</p>
+<p>China has become increasingly reliant on imports to account for 
+changing consumption habits. Between 2003 and 2017, China’s food imports
+ grew from just $14 billion to $104.6 billion. While food exports nearly
+ tripled from $20.2 billion to $59.6 billion over the same period, China
+ increasingly finds itself running a food trade deficit.</p>
+<p>This has prompted Beijing to openly reframe its food self-sufficiency
+ strategy. At the Annual Central Rural Work Conference in 2013, Chinese 
+leaders <a href="https://books.google.com/books/about/China_s_Global_Quest_for_Resources.html?id=DJ3mjgEACAAJ" rel="nofollow">acknowledged</a> that the country would have to supplement its domestic supply with “moderate imports” in order to meet food security needs.</p>
+<h2>Threats to China’s Food Security</h2>
+<p>While economic development has allowed China to make enormous strides
+ toward feeding its population, serious challenges remain. Chinese 
+leaders faces the dual challenge of maintaining economic growth while 
+feeding the country’s growing urban population with a countryside that 
+features only <a href="https://data.worldbank.org/indicator/AG.LND.ARBL.HA.PC?locations=CN" rel="nofollow">0.21 acres</a> of arable land per capita.</p>
+<aside><a href="https://chinapower.csis.org/china-water-security/" rel="nofollow"><span>Learn More</span><span>"How Does Water Security Affect China’s Development?"</span></a></aside><p>A
+ lack of arable land is further complicated by the reality that poor 
+regulation has caused significant environmental damage, which greatly 
+limits domestic production capacity. In 2018, <a href="https://chinapower.csis.org/china-water-security/" rel="nofollow">15.5 percent </a>of
+ China’s groundwater was labeled “Grade V,” meaning it was so polluted 
+that it was unsuitable for any use. Widespread soil contamination, 
+especially in southern areas like Henan province, prompted the 
+government to prohibit the farming of <a href="http://www.reuters.com/article/china-environment-farmland-idUSL3N0K90OY20131230" rel="nofollow">8 million acres</a> of contaminated agricultural land until it can be rehabilitated.</p>
+<p><span>A considerable increase in the number of groundwater monitoring
+ stations likely contributed to the significant shift in groundwater 
+quality in 2018.</span></p>
+<p>These issues weighed down China’s standing in the 2018 <a href="https://foodsustainability.eiu.com/heat-map/" rel="nofollow">Food Sustainability Index</a>
+ (FSI), which ranked China 23rd out of 67 countries in overall food 
+sustainability, alongside South Korea (22nd) and the UK (24th). In the 
+agricultural sustainability category, however, China wasclose to the 
+bottom of the index at 57th, between Indonesia (56th) and Sudan (58th).</p>
+<p>Major food safety scandals have also rocked the country. In 2008, 
+tainted baby formula killed six infants and sickened more than 300,000. 
+Additional scandals have included the seizure of <a href="https://www.nytimes.com/2015/06/25/world/in-china-stomachs-turn-at-news-of-traders-peddling-40-year-old-meat.html" rel="nofollow">$483 million</a>
+ worth of illegally smuggled meat in 2015 – some of which was found to 
+be more than 40 years old – and numerous instances of the use of illegal
+ “<a href="https://www.theatlantic.com/china/archive/2013/10/chinas-frightening-unpleasant-cooking-oil-scandal/281000/" rel="nofollow">gutter oil</a>”
+ in restaurants. These scandals have eroded consumer confidence in many 
+Chinese-made food products, and have compelled Chinese consumers to seek
+ products made outside of China. A 2016 survey found that roughly <a href="https://qz.com/1323471/ten-years-after-chinas-melamine-laced-infant-milk-tragedy-deep-distrust-remains/" rel="nofollow">40 percent</a> of Chinese consumers considered food safety to be “a very big problem,” up from just 12 percent in 2008.</p>
+<table> <thead> <tr> <th> Agricultural Sustainability in Selected Countries (2018)</th> </tr> <tr> <th>Country</th> <th> FSI Agricultural Sustainability Ranking (out of 67)</th> <th> Arable Land (acres per person in 2016)</th> </tr> </thead> <tbody> <tr> <td>Austria</td> <td>1</td> <td>0.38</td> </tr> <tr> <td>Japan</td> <td>15</td> <td>0.082</td> </tr> <tr> <td>United States</td> <td>33</td> <td>1.16</td> </tr> <tr> <td>India</td> <td>47 </td>
+<td>0.29</td> </tr> <tr> <td>China</td> <td>57</td> <td>0.21</td> </tr> </tbody> <tfoot> <tr><td>Source: <a href="https://foodsustainability.eiu.com/heat-map/" rel="nofollow">Food Sustainability Index (FSI)</a>; <a href="https://data.worldbank.org/indicator/AG.LND.ARBL.HA.PC" rel="nofollow">World Bank</a>
+</td> </tr></tfoot> </table>
+<p>The Chinese central government made major <a href="https://www.forbes.com/sites/johnbalzano/2015/05/03/revised-food-safety-law-in-china-signals-many-changes-and-some-surprises/#677c69a76e59" rel="nofollow">revisions</a> to the national Food Safety Law in 2015 to tighten food safety regulations and strengthen enforcement, but <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/fsn3.1281" rel="nofollow">challenges</a> persist. The 2019 <a href="https://foodsecurityindex.eiu.com/Index" rel="nofollow">Global Food Security Index</a>
+ ranked China 38th out of 113 countries in terms of food quality and 
+safety. China not only placed behind wealthy European and North American
+ countries (which occupy the top 10 spots), but also came in sixth among
+ middle income countries, after Brazil, Belarus, Argentina, Costa Rica, 
+and Mexico. </p>
+<p>China is also heavily reliant on food imports from other countries. 
+China’s demand for soybeans has skyrocketed in recent years, in large 
+part because the crop is an important source of <a href="https://www.usda.gov/documents/coexistence-soybeans-factsheet.pdf" rel="nofollow">animal feed</a> for livestock. From 2000 to 2018, Chinese soybean imports grew from $2.3 billion to nearly $38.1 billion,<span><a href="#easy-footnote-bottom-3-1050">3</a></span> leaving China as the world’s largest importer of the legume, by a wide margin. </p>
+<p>As US-China trade tensions escalated in 2018, Chinese imports of US 
+soybeans nearly halved from $13.9 billion in 2017 to just $7.1 billion 
+in 2018. China turned to Brazil in response, expanding soybean imports 
+from the South American agricultural giant by 37.9 percent to $28.8 
+billion in 2018. Nevertheless, China’s appetite for soybeans <a href="https://www.scmp.com/news/china/diplomacy-defence/article/2152109/why-china-cant-count-brazil-fill-soybean-gap-its-trade" rel="nofollow">exceeds</a> the production capacity of Brazil and most of the world combined, leaving the US to fill the gap.</p>
+<p>China’s Soybean Imports</p>
+<p>China’s primary meat source, pork, has also faced threats in recent 
+years. In August 2018, China experienced its first outbreak of African 
+swine fever. China was forced to limit the transport and selling of hogs
+ at live markets to curb the spread of the virus, and it also culled 
+more than one million pigs. Domestic pork production plummeted <a href="https://www.reuters.com/article/us-china-economy-output-pork/chinas-2019-pork-output-plunges-to-16-year-low-as-disease-culls-herd-idUSKBN1ZG08H" rel="nofollow">21.3 percent</a> in 2019, and pork imports from the US swelled by <a href="https://www.caixinglobal.com/2020-04-17/chart-of-the-day-chinas-record-shattering-pork-imports-101544043.html" rel="nofollow">258 percent</a> that year. The outbreak of the disease proved costly for Chinese consumers. Domestic pork <a href="https://www.wsj.com/articles/china-said-african-swine-fever-was-stable-then-cases-climbed-again-11588071602" rel="nofollow">prices</a> more than doubled from about $2.6 per kg in January 2019 to nearly $7 per kg in February 2020.</p>
+<h2>Shoring Up China’s Food Security</h2>
+<p>Both the Chinese government and Chinese companies have worked to 
+accommodate the country’s changing appetite and respond to food security
+ shortcomings. Beijing provides massive subsidies to its agricultural 
+industry. In 2018, China <a href="https://data.oecd.org/agrpolicy/agricultural-support.htm" rel="nofollow">paid out $206 billion</a>
+ in agricultural subsidies – nearly twice as much as the EU ($110 
+billion) and nearly five times as much as the US ($44 billion).</p>
+<p>From a policy standpoint, the Chinese central government has put in 
+place several measures designed to address the multifaceted challenges 
+of food security and sustainable development.</p>
+<p>Expand for a list of major policy measures</p>
+<ul>
+<li>China’s <a href="https://www.chinabusinessreview.com/13th-five-year-plan-stresses-economic-restructuring/" rel="nofollow">Thirteenth Five-Year Plan</a>
+ (2016-2020) emphasized improvements to efficiency and quality for 
+modernizing the agricultural sector, as well as greater openness to 
+imports and overseas food processing.</li>
+<li>The Ministry of Ecology and Environment issued a <a href="http://www.gov.cn/gongbao/content/2012/content_2121713.htm" rel="nofollow">plan</a> to cut underground water resource pollution by 2020.</li>
+<li>The Ministry of Agriculture and the National Development and Reform Commission announced <a href="http://www.reuters.com/article/china-farm-funding-idUSL4N1EE319?feedType=RSS&amp;feedName=rbssFinancialServicesAndRealEstateNews" rel="nofollow">plans</a> for a capital-based push for public-private partnerships in agriculture in December 2016.</li>
+<li>The Ministry of Health released new dietary <a href="http://dg.cnsoc.org/article/04/8a2389fd575f695101577a35d9b602d6.html" rel="nofollow">guidelines</a> in May 2016 that recommended significant reduction in the consumption of meat.</li>
+<li>The State Council issued new <a href="https://www.ft.com/content/6025b7c8-92ff-11e3-8ea7-00144feab7de" rel="nofollow">guidelines</a>
+ on stabilizing grain production at 550 million tonnes by 2020, while 
+placing greater emphasis on non-grain food quality rather than quantity.</li>
+<li>The <a href="http://www.gov.cn/zhengce/content/2017-07/13/content_5210134.htm" rel="nofollow">State Council</a> issued the National Nutrition Plan (2017-2030) in June 2017 to improve the nutrition and health standards.</li>
+<li>The State Council released a <a href="http://www.scio.gov.cn/zfbps/32832/Document/1666228/1666228.htm" rel="nofollow">white paper</a>
+ on food security in 2019, setting goals on enhancing food production, 
+improving emergency grain reserves management, and building a modern 
+grain circulation system.</li>
+</ul>
+<p>Chinese leaders also appear increasingly open to boosting the 
+country’s agricultural production through genetically modified (GM) 
+crops. GM corn and soybean species passed Chinese biosafety evaluations 
+in January 2020 – a major step toward commercializing GM crops in China.
+ Yet development of GM products has repeatedly faced public pushback, 
+which has complicated efforts to ramp up the country’s use of GM foods.</p>
+<p>Chinese companies have endeavored to counter domestic production 
+difficulties through major investments in agriculture-based assets 
+abroad. Between 2000 and 2018, China purchased an estimated 3.2 million 
+hectares of land abroad, making it the fourth largest buyer in the 
+world, behind the US, the Democratic Republic of Congo, and Malaysia. In
+ Australia, China was the <a href="https://cdn.tspace.gov.au/uploads/sites/79/2018/12/Register_of_Foreign_Ownership_of_Agr.pdf" rel="nofollow">second-largest</a> foreign landholder in 2018, after the UK and ahead of the US.</p>
+<p class="rm-manual">Australia is one of the top global destinations for Chinese FDI. Where else is China investing abroad? <a href="file:///china-foreign-direct-investment/"> Learn more</a>.</p>
+<p class="rm-manual"><a href="file:///china-foreign-direct-investment/">Explore More</a></p>
+<p>China’s efforts to capitalize on Australia’s available land have, 
+however, faced resistance. In 2015 and 2016, two Chinese companies were <a href="http://fortune.com/2015/11/19/australia-just-stopped-china-buying-a-farm-the-size-of-kentucky/" rel="nofollow">blocked</a>
+ from purchasing Australia’s largest cattle business, S. Kidman and Co.,
+ whose holdings comprise 2.5 percent of total Australian land area – 
+roughly <a href="http://www.reuters.com/article/us-australia-china-landsale-idUSKCN0XQ0KR" rel="nofollow">the size of South Korea</a>.
+ In both cases, then-Treasurer Scott Morrison cited national interest as
+ grounds for the decision. China’s investment in Australian agribusiness
+ plummeted accordingly from a record high of <a href="https://assets.kpmg/content/dam/kpmg/au/pdf/2017/demystifying-chinese-investment-in-australia-may-2017.pdf" rel="nofollow">$857.1 million</a> in 2016 to <a href="http://demystifyingchina.com.au/reports/demystifying-chinese-investment-in-australia-april-2019.pdf" rel="nofollow">$63.5 million</a> in 2018.</p>
+<p>Chinese investments in food production have also extended to the US. 
+In 2013, China’s largest meat processor Shuanghui International <a href="https://www.uscc.gov/sites/default/files/Testimony_Slane2013.pdf" rel="nofollow">acquired</a> American Smithfield Foods for $7.1 billion, marking the second-largest Chinese acquisition of a U.S. company in history.</p>
+<h2>Fishing Waters Near and Far</h2>
+<p>Seafood has long been an important staple of the Chinese diet. China consumed <a href="http://www.fao.org/3/ca9229en/CA9229EN.pdf" rel="nofollow">55.2 million tonnes</a>
+ of fish in 2017 – about 36 percent of the global total – making it the 
+largest fish consumer in the world. In per capita terms, China consumed 
+roughly 39 kg of fish per person in 2017, more than double the average 
+of the rest of the world (15.5 kg).</p>
+<p>Global Fishery Production</p>
+<p>To keep up with domestic demand, China’s global fishing activities have increased dramatically in recent decades. China’s total <a href="http://www.fao.org/fishery/facp/CHN/en" rel="nofollow">aquatic food production</a>
+ jumped from 15.1 tonnes in 1990 to 81 million tonnes in 2018, which 
+accounted for just over 38 percent of global production. Aquaculture 
+production is a particular strength for China. At more than 66.1 million
+ tonnes in 2018, China’s aquaculture production accounted for an 
+impressive 58 percent of global output.</p>
+<p>In 2017, China supplied the rest of the world with over $20 billion 
+worth of fish, roughly twice the amount of Norway, the world’s second 
+largest fish exporter. China nonetheless still imported $11 billion 
+worth of fish in 2017, making it the world’s third-largest fish 
+importer, behind the US ($22 billion) and Japan ($15 billion).</p>
+<table> <thead> <tr> <th>Global Fishery Production (2018)</th> </tr> <tr> <th> Metric tons (t)</th> </tr> <tr> <th>Country</th> <th>Capture</th> <th>Aquaculture</th> <th>Total</th> </tr> </thead> <tbody> <tr> <td>China</td> <td>14,831,310</td> <td>66,135,059</td> <td>80,966,369</td> </tr> <tr> <td>Indonesia</td> <td>7,260,640</td> <td>14,772,104</td> <td>22,032,744</td> </tr> <tr> <td>India</td> <td>5,342,888</td> <td>7,071,302</td> <td>12,414,190</td> </tr> <tr> <td>Vietnam</td> <td>3,347,039 </td>
+<td>4,153,323</td> <td>7,500,362</td> </tr> <tr> <td>Rest of World</td> <td>66,616,454</td> <td>22,376,254</td> <td>88,992,708</td> </tr> </tbody> <tfoot> <tr><td>Source: <a href="http://www.fao.org/fishery/topic/16140/en" rel="nofollow"> FAO</a>
+</td> </tr></tfoot> </table>
+<p>A substantial amount of Chinese fishing occurs in waters far from China. According to the Stimson Center, China accounted for <a href="https://www.stimson.org/wp-content/files/file-attachments/Stimson%20Distant%20Water%20Fishing%20Report.pdf" rel="nofollow">38 percent</a> of all distant-water fishing (DWF) from 2016 to 2017. The average number of Chinese vessels engaging in DWF activity rose from <a href="https://www.theguardian.com/world/2016/aug/09/greenpeace-sounds-alarm-over-chinas-long-distance-fishing-fleet" rel="nofollow">1,830</a> in 2012 to at least <a href="https://www.stimson.org/wp-content/files/file-attachments/Stimson%20Distant%20Water%20Fishing%20Report.pdf" rel="nofollow">3,000</a> in 2019. In 2017, Beijing released a <a href="http://www.gov.cn/xinwen/2017-12/08/content_5245275.htm" rel="nofollow">plan</a>
+ to cap the number of DWF vessels at 3,000 by 2020, but it remains to be
+ seen whether the measures will be effective, or properly enforced.</p>
+<p>Some Chinese DWF vessels have engaged in illegal, unreported, and 
+unregulated (IUU) fishing. According to a two-year investigation by <a href="https://www.greenpeace.org/international/press-release/7253/new-evidence-shows-chinese-west-african-governments-must-rein-in-rogue-fishing-fleet/" rel="nofollow">Green Peace</a>,
+ Chinese boats have been found fishing illegally and falsifying their 
+catch tonnage in the prohibited waters of Senegal, Mauritania, Guinea 
+Bissau and other countries. In March 2016, the Argentina Coast Guard <a href="https://www.theguardian.com/world/2016/mar/16/argentina-sinks-chinese-trawler-during-pursuit-for-illegal-fishing" rel="nofollow">sank</a> a Chinese trawler that was reportedly fishing illegally in its waters.</p>
+<p>Closer to China’s shores, overfishing has contributed to the severe depletion of fishery resources. The <a href="http://www.globaltimes.cn/content/1000683.shtml" rel="nofollow">Chinese Ministry of Agriculture</a>
+ has stated there are “practically no fish” in the East China Sea. In 
+the South China Sea, Chinese poachers have devastated the delicate 
+ecosystem. At Scarborough Shoal, fishermen intentionally destroyed 
+roughly <a href="https://amti.csis.org/china-scarborough-fishing/" rel="nofollow">half the total reef surface</a> (approximately 58 square kilometers) in their efforts to harvest giant clams.</p>
+<p>Rough Waters in the South China Sea: A Conversation with Greg Poling</p>
+<p>In response to heightened pressure from the international community, 
+the Chinese government has instituted several policy changes to protect 
+the environment and stop IUU fishing. In January 2017, Hainan province <a href="http://news.nationalgeographic.com/2017/01/wildlife-watch-giant-clam-regulations-china/" rel="nofollow">amended its Coral Reef Protection Act</a> to ban the processing and trade of giant clams. To limit IUU fishing, China’s Ministry of Agriculture <a href="http://english.agri.gov.cn/news/dqnf/201901/t20190110_296194.htm" rel="nofollow">pledged</a>
+ in January 2019 to deny known IUU fishing vessels access to Chinese 
+ports. China’s fisheries law was also amended to include stricter 
+regulations on IUU fishing, including the ability to <a href="https://chinadialogueocean.net/12714-china-fisheries-law-distant-water-fishing/" rel="nofollow">blacklist</a> offenders.</p>
+<p>Nevertheless, Chinese vessels continue to pose problems for other countries. In October 2016, a Chinese fishing boat <a href="http://www.koreatimes.co.kr/www/news/biz/2016/12/123_221165.html" rel="nofollow">rammed and sank</a> a South Korean Coast Guard boat, causing a diplomatic row that stalled bilateral efforts to crackdown on illegal fishing.</p>
+<aside class="rm-manual"><a href="https://chinapower.csis.org/maritime-forces-destabilizing-asia/" rel="nofollow"><span>Learn More</span><span>"Are Maritime Law Enforcement Forces Destabilizing Asia?"</span></a></aside><p>In
+ the disputed waters of the South China Sea, China has used its coast 
+guard and maritime militia to intimidate foreign fishers and defend 
+Chinese fishing vessels operating in contested waters. In June 2019, for
+ example, a suspected Chinese maritime militia vessel <a href="https://amti.csis.org/incident-at-reed-bank-a-crisis-in-the-philippines-china-policy/" rel="nofollow">rammed and partially sank</a>
+ a Philippine fishing boat in the South China Sea. Philippine 
+authorities stated that the incident was part of an operation by the 
+Chinese maritime militia designed to expel Philippine fishing boats from
+ the Spratly Islands. </p>
+<p class="rm-manual">Photo Credit: Getty Images AsiaPac</p>
+<p class="rm-manual"> <span>Keywords</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://chinapower.csis.org/tag/agriculture/" rel="tag">agriculture</a></li>
+<li class="rm-manual"><a href="https://chinapower.csis.org/tag/environment/" rel="tag">environment</a></li>
+<li class="rm-manual"><a href="https://chinapower.csis.org/tag/fishing/" rel="tag">fishing</a></li>
+<li class="rm-manual"><a href="https://chinapower.csis.org/tag/food-security/" rel="tag">food security</a></li>
+<li class="rm-manual"><a href="https://chinapower.csis.org/tag/pollution/" rel="tag">pollution</a></li>
+</ul>
+<h5 class="rm-manual">Data Sources</h5>
+<p class="rm-manual">China’s Food Trade with the World, 2003-2017. <span><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/chinas-food-trade-2003-2017">View</a></span></p>
+<p class="rm-manual">China Power Team. "How is China Feeding its 
+Population of 1.4 Billion?" China Power. January 25, 2017. Updated 
+August 26, 2020. Accessed July 7, 2021. 
+https://chinapower.csis.org/china-food-security/</p>
+<h5 class="rm-manual"> Further Reading</h5>
+<ul class="rm-manual"> <li class="rm-manual">“<a href="https://www.fas.usda.gov/data">Data and Analysis</a>,” U.S. Department of Agriculture, Foreign Agricultural Service.</li> <li class="rm-manual">Environmental Security Program, “<a href="https://www.stimson.org/wp-content/files/file-attachments/Stimson%20Distant%20Water%20Fishing%20Report.pdf">Shining a Light: The Need for Transparency across Distant Water Fishing</a>,” Stimson, November 1, 2019.</li> <li class="rm-manual">FAO, IFAD, UNICEF, WFP and WHO, <a href="https://docs.wfp.org/api/documents/WFP-0000106760/download/?_ga=2.265842445.382221389.1591897065-319285267.1591897065">The State of Food Security and Nutrition in the World 2019: Safeguarding against Economic Slowdowns and Downturns</a>, Rome: FAO, 2019.</li> <li class="rm-manual">“<a href="http://www.fao.org/3/ca9229en/CA9229EN.pdf">The State of World Fisheries and Aquaculture 2020</a>,” Food and Agriculture Organization of the United Nations, 2020.</li> <li class="rm-manual">“<a href="https://www.wto.org/english/res_e/statis_e/wts2019_e/wts2019_e.pdf">World Trade Statistical Review, 2019</a>,” World Trade Organization, 2019.</li> </ul>
+<h6 class="rm-manual">Related Content</h6>
+<p class="rm-manual"><span><a href="https://chinapower.csis.org/category/social/" rel="category tag">Social</a></span><span><a href="https://chinapower.csis.org/china-water-security/">How Does Water Security Affect China’s Development?</a></span></p>
+<p class="rm-manual"><span><a href="https://chinapower.csis.org/category/social/" rel="category tag">Social</a></span><span><a href="https://chinapower.csis.org/china-middle-class/">How Well-off is China’s Middle Class?</a></span></p>
+<p class="rm-manual"><span><a href="https://chinapower.csis.org/category/economics/" rel="category tag">Economics</a></span><span><a href="https://chinapower.csis.org/trade-partner/">Is China the World’s Top Trader?</a></span></p></article>
+</body></html>

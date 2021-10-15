@@ -1,0 +1,221 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Wait…How Many Stories Did CNN Peddle About Brett Kavanaugh in 19 Days? </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///columnists/">Columnists</a></li> <li class="rm-manual"><a href="file:///tipsheet/">Tipsheet</a></li> <li class="rm-manual"><a href="file:///political-cartoons">Cartoons</a></li> <li class="rm-manual"><a href="file:///podcasts/">Podcasts</a></li> <li class="rm-manual"> <a href="#">Sections </a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///newsletter/">Newsletters</a></li> <li class="rm-manual"><a href="file:///podcasts/">Podcasts</a></li> <li class="rm-manual"><a href="file:///tv/">Townhall TV</a></li> <li class="rm-manual"><a href="file:///election/">Election</a></li> <li class="rm-manual"><a href="file:///capitol-voices/">Capitol Voices</a></li> <li class="rm-manual"><a href="file:///entertainment/">Entertainment</a></li> <li class="rm-manual"><a href="file:///news/">Radio News</a></li> <li class="rm-manual"><a href="file:///liveblog/">Live Blog</a></li> <li class="rm-manual"><a href="file:///tags/">Topics</a></li> </ul> </li> <li class="rm-manual"> <a href="#">Sites </a> <ul class="rm-manual"> <li class="rm-manual"><a href="http://hotair.com/">Hot Air</a></li> <li class="rm-manual"><a href="http://pjmedia.com/">PJ Media</a></li> <li class="rm-manual"><a href="http://bearingarms.com/">Bearing Arms</a></li> <li class="rm-manual"><a href="http://twitchy.com/">Twitchy</a></li> <li class="rm-manual"><a href="http://redstate.com/">RedState</a></li> <li class="rm-manual"><a href="http://finance.townhall.com/">Townhall Finance</a></li> <li class="rm-manual"><a href="http://www.conservativeradio.com/">Conservative Radio</a></li> </ul> </li> <li class="rm-manual"><a href="file:///subscribe?tpcc=home_button">JOIN VIP</a></li> <li class="rm-manual"><a>LOGIN</a></li> <li class="rm-manual"> <p class="rm-manual"> </p><ul class="rm-manual"> <li class="rm-manual"><a href="file:///account/">Account Settings</a></li> <li class="rm-manual"><a href="file:///newsletter/">Newsletter Subscriptions</a></li> <li class="rm-manual"><a href="#">Log Out</a></li> </ul> <p class="rm-manual"></p> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual">Wait…How Many Stories Did CNN Peddle About Brett Kavanaugh in 19 Days?</li> </ul>
+<p class="rm-manual"> <a href="file:///tipsheet/katiepavlich/2020/06/02/barr-applauds-law-and-order-returning-to-washington-dc-n2569919">Barr Applauds Law and Order Returning to Washington D.C. </a> </p>
+<p class="rm-manual"> <a href="file:///tipsheet/mattvespa/2020/06/02/four-cops-shot-in-st-louis-n2569887">Four Cops Were Shot During a George Floyd Protest in St. Louis, But They're Not The Only Victims</a> </p>
+<p class="rm-manual"> <a href="file:///tipsheet/mattvespa/2020/06/02/graphic-video-rioters-brutally-beat-man-in-portland-kick-him-so-hard-teeth-are-n2569812">Graphic Video: Rioters Brutally Beat Man in Portland, Kick Him So Hard Teeth Are Left on the Road</a> </p>
+<p class="rm-manual"> <a href="file:///tipsheet/katiepavlich/2020/06/02/heart-wrenching-minneapolis-woman-details-how-rioters-have-completely-destroyed-her-life-n2569909">Heart Wrenching: Minneapolis Woman Details How Rioters Have Completely Destroyed Her Life</a> </p>
+<p class="rm-manual"> <a href="file:///tipsheet/mattvespa/2020/06/02/liberal-reporter-calls-out-media-again-you-know-obama-called-riots-thugs-and-deployed-the-national-guard-too-n2569899">Liberal Reporter Silences the Meltdown over Trump's Law and Order Declaration with One Tweet</a> </p>
+<p class="rm-manual"> <a href="file:///tipsheet/mattvespa/2020/06/02/that-white-nationalists-causing-george-floyd-riot-chaos-talking-point-took-anothe-n2569882">That 'White Nationalists Causing George Floyd Riot Chaos' Talking Point Took Another Devastating Blow </a> </p>
+<p class="rm-manual"> <a href="file:///columnists/mattvespa/2020/06/02/the-death-of-george-floyd-should-have-been-a-moment-of-unified-outrage-then-someone-threw-a-molotov-cocktail-n2569886">The Death of George Floyd Should Have Been a Moment of Unified Outrage, Then Someone Threw a Molotov Cocktail</a> </p>
+<p class="rm-manual"> <a href="file:///tipsheet/katiepavlich/2020/06/02/trump-campaign-buries-biden-on-race-by-pointing-to-his-record-n2569930">Trump Campaign Buries Biden on Race By Pointing to His Record</a> </p>
+<p class="rm-manual"> <a href="file:///tipsheet/cortneyobrien/2020/06/02/de-blasio-infuriates-new-yorkers-when-he-explains-why-protests-are-allowed-but-pr-n2569924">De Blasio Infuriates New Yorkers When He Explains Why Protests Are Allowed But Prayer Services Aren't</a> </p>
+<p class="rm-manual"> <a href="file:///tipsheet/cortneyobrien/2020/06/02/fox-news-reporter-protests-in-dc-monday-were-night-and-day-n2569912">Fox News's Kevin Corke Explains the Starkly Different Tone in DC Monday Night</a> </p>
+<p class="rm-manual"> <a href="file:///tipsheet/leahbarkoukis/2020/06/02/grenell-tweet-to-cnn-political-analyst-n2569889">Grenell Corrects CNN Analyst For Reporting on DC Protests: 'You Watched It on TV and Think You Saw Everything?'</a> </p>
+<p class="rm-manual"> <a href="file:///tipsheet/cortneyobrien/2020/06/02/richmond-police-chief-chokes-up-explaining-how-protesters-blocked-burning-house-with-child-inside-n2569895">Richmond Police Chief Chokes Up Explaining How Rioters Set Fire to Building With Child Inside</a> </p>
+<p class="rm-manual"> <a href="file:///tipsheet/leahbarkoukis/2020/06/02/why-liberals-are-outraged-over-nyt-headline-n2569892">The NYT Headline That Has Liberals Outraged</a> </p>
+<p class="rm-manual"> <a href="file:///tipsheet/cortneyobrien/2020/06/02/tim-scott-val-demingss-response-was-not-helpful-n2569865">Tim Scott Responds to Rep Val Demings' Incendiary Comments About Trump</a> </p>
+<p class="rm-manual"> <a href="file:///tipsheet/cortneyobrien/2020/06/02/washington-mayor-white-people-carry-a-disease--and-its-not-covid-n2569782">Washington Mayor: White People Carry a Disease - and it's Not COVID</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///">Townhall</a></li> <li class="rm-manual"><a href="file:///tipsheet/">tipsheet</a></li> <li class="rm-manual"> <a href="file:///tipsheet/mattvespa/">Matt Vespa</a> </li> </ul>
+<p class="rm-manual"> <a href="file:///tags/cnn">CNN</a> </p>
+<h1 class="rm-manual">Wait…How Many Stories Did CNN Peddle About Brett Kavanaugh in 19 Days?</h1>
+<p class="rm-manual"> <a href="file:///tipsheet/mattvespa/">Matt Vespa</a> </p>
+<p class="rm-manual">|</p>
+<p class="rm-manual"> <a href="https://twitter.com/mvespa1">@mvespa1</a> </p>
+<p class="rm-manual">|</p>
+<p class="rm-manual">Posted: Apr 21, 2020 6:00 PM</p>
+<p class="rm-manual">Source: AP Photo/Andrew Harnik</p>
+<p>Do you hear that? It’s the silence of the liberal news media not covering Joe Biden’s <a href="https://townhall.com/columnists/mattvespa/2020/03/31/well-after-reading-his-accusers-account-of-what-sounds-like-rape-joe-biden-2020-is-canceled-n2566037">sexual assault claim from 1993</a>.
+ A former staffer, Tara Reade, alleges that then-Sen. Joe Biden (D-DE) 
+penetrated her with his fingers. It goes beyond the other creepiness the
+ surrounds the former vice president. The touching, the smelling of 
+women’s hair, and the overall handsy aspect of this man would have had 
+him fired for sexual harassment at any other place of employment. Joe, 
+you just can’t touch people and what Reade describes is quite horrific. 
+Yet, Joe is a Democrat and the preemptive 2020 Democratic nominee. He’s 
+already losing, needing his wife, Jill, to keep those senior moments at a
+ minimum. You can’t have a credible sexual assault allegation further 
+hamstring this guy. So, the liberal media is doing what they do best: 
+deep-sixing the story. It’s trying to suffocate it with a pillow. Let’s 
+pick on our favorite culprit, CNN. The anti-Trump network has just been 
+kicked in the teeth again, totally screwing up a story about North 
+Korean dictator Kim Jong-un’s health. And they’re doing the same with 
+this story. </p>
+<p>I know, no shocker, but Supreme Court Justice Brett Kavanaugh was 
+subjected to a coordinated political hit job, a character assassination 
+effort not seen since Clarence Thomas. Democrats were looking to shame 
+the GOP into caving on this guy. We didn’t. They wanted revenge for 
+Merrick Garland, the Obama nominee that Senate Majority Leader Mitch 
+McConnell blocked. He was out for revenge after the failed Robert Bork 
+nomination. Kavanaugh was subjected to multiple allegations of sexual 
+misconduct that could not be corroborated in any way. Doofus Christine 
+Blasey Ford helmed a total clown show that ended with Julie Swetnick 
+alleging that Kavanaugh was part of a gang-rape ring in high school. It 
+was an overreach. It was unbelievable. And Swetnick pretty much recanted
+ her entire allegation. It was a train wreck, but do you want to guess 
+how many stories CNN has doled out on this story? How many they peddled 
+about Kavanaugh? Well, The Daily Wire’s Ashe Schow, who reports on these
+ stories, crunched the numbers and it’s staggering. We have some Grade-A
+ <a href="https://www.dailywire.com/news/cnn-finally-covers-sexual-assault-allegations-against-biden-had-nearly-700-articles-on-kavanaugh-accusations">liberal media bias here</a>:</p>
+<p>Tara Reade publicly stated on March 25 that presumptive Democratic 
+presidential nominee Joe Bide sexually assaulted her in 1993. She said 
+Biden once “pinned her to a wall in a Senate building, reached under her
+ clothing and penetrated her with his fingers,” according to an account 
+in The New York Times</p>
+<p>The Times took 19 days to report the allegations, even though the 
+outlet immediately reported allegations against then-Supreme Court 
+nominee Brett Kavanaugh, a Republican.</p>
+<p>CNN waited an additional five days to finally publish something about
+ the allegations, meaning the outlet waited a whopping 24 days to cover 
+serious allegations against a prominent politician. In contrast, CNN 
+published nearly 700 articles about the Kavanaugh allegations in the 
+span of 19 days between the time the allegations against Kavanaugh were 
+made public and the Senate confirmed him.</p>
+<p>CNN has now published something about Reade’s allegations that Biden 
+sexually assaulted her nearly three decades ago while she worked for his
+ Senate office, but the story written by CNN has less to do with the 
+allegations and more about how other Democrats are “grappling” with 
+them.</p>
+<p>Remember the press spent a month essentially arguing that underage 
+drinking was evidence that Kavanaugh committed sexual assault, but a 
+long pattern of "hugs, kisses, and touching that women previously said 
+made them uncomfortable" proves Biden's innocence. <a href="https://t.co/CPGr48o8nK">pic.twitter.com/CPGr48o8nK</a></p>
+<p>— (((AG))) (@AGHamilton29) </p>
+<p><a href="https://twitter.com/AGHamilton29/status/1249364556058591233?ref_src=twsrc%5Etfw">April 12, 2020</a></p>
+<p>I don't know whether Ms. Reade is telling the truth, and the 
+presumption of innocence is a vital pillar of our justice system. But 
+this detail alone presents more contemporaneous evidence against Biden 
+than was ever presented against Kavanaugh: <a href="https://t.co/wag0IZGF0k">pic.twitter.com/wag0IZGF0k</a></p>
+<p>— Guy Benson (@guypbenson) </p>
+<p><a href="https://twitter.com/guypbenson/status/1249376816818782215?ref_src=twsrc%5Etfw">April 12, 2020</a></p>
+<p>The New York Times <a href="https://townhall.com/columnists/mattvespa/2020/04/14/after-this-biden-story-edit-is-it-unfair-to-label-the-new-york-times-a-rape-apologist-publication-n2566863">did a stealth edit</a>
+ in their story saying they found no pattern of sexual misconduct by 
+Biden beyond “hugs, kisses, and touching that women previously said made
+ them uncomfortable.” And Kavanaugh was guilty because he drank beer. 
+Truly remarkable. And these clowns wonder why we hate them so much.</p>
+<p>Also, here’s Reade’s allegation, <a href="https://thefederalist.com/2020/03/27/read-biden-accusers-account-of-his-alleged-sexual-assault/">transcribed</a> by The Federalist’s Emily Jashinsky:</p>
+<p>[She] called me in and said, ‘I want you to take this to Joe. He 
+wants it. He wants you to bring it, hurry.’ And I said, ‘Okay,’ and it 
+was a gym bag. She said ‘take the gym bag.’ She called it athletic bag. 
+And she said he was down towards the Capitol and he’ll meet you. So I 
+went down, and I was heading down towards there. And he was at first 
+talking to someone, I could see him at a different distance and then 
+they went away. And then we were in like this side area. And he just 
+said, ‘Hey, come here, Tara.’ And then I handed him the thing and he 
+greeted me, he remembered my name.</p>
+<p>And then we were alone, and it was the strangest thing. There was no 
+exchange really. He just had me up against the wall. And I was wearing a
+ skirt and, you know, business skirt, but I wasn’t wearing stockings. It
+ was kind of a hot day that day and I was wearing heels. And I remember 
+my legs had been hurting from the marble, you know of the Capitol, like 
+walking. So I remember that kind of stuff. I remember I was wearing a 
+blouse and he just had me up against the wall. And the wall was cold. It
+ happened all at once. The gym bag, I don’t know where it went. I handed
+ it to him, was gone. And then his hands were on me and underneath my 
+clothes.</p>
+<p>He went down my skirt, but then up inside it, and he penetrated me 
+with his fingers. He was kissing me at the same time and he was saying 
+something to me. He said several things, and I can’t remember 
+everything. I remember a couple of things. I remember him saying first 
+before, like, as he was doing it, ‘Do you want to go somewhere else?’ 
+And then him saying to me when I pulled away, he got finished doing what
+ he was doing, and I kind of was pulled back and he said, he said, ‘Come
+ on, man. I heard you liked me.’ And that phrase stayed with me because I
+ kept thinking, what I might have said, and I can’t remember exactly if 
+he said ‘I thought ‘or if ‘I heard’ but it’s like he implied like that I
+ had done this like, I don’t know.</p>
+<p>And for me, it was like everything shattered in that moment because I
+ knew we alone. It was over, right? He wasn’t trying to do anything 
+more. But I looked up to him. He was like my father’s age. He was this 
+champion of women’s rights in my eyes, and I couldn’t believe what was 
+happening. It seemed surreal. I just felt sick because he, when he 
+pulled back, he looked annoyed. And he said, something else to me that I
+ don’t want to say.* And then he said, I must have looked shocked, and 
+he grabbed me by the shoulders. I don’t know how I looked, but I must 
+have looked something because he grabbed me by the shoulders and he 
+said, ‘You’re okay, you’re fine. You’re okay, you’re fine. ‘ And then he
+ walked away and he went on with his day.</p>
+<p>And what I remember next is being in the Russell building, like where
+ the big windows are, in the stairs by myself. My body, I was shaking 
+everywhere because, it was cold all of a sudden, I was, I don’t know, I 
+felt like I was shaking just everywhere, and I was trying to grasp what 
+had just happened and what I should do, or what I should say. But I knew
+ it was bad because he was so angry. Like when he left, I could feel, 
+you know how when you know someone’s angry, they don’t necessarily say 
+anything. Like he smiles when he’s angry. And you can just feel it 
+emanating from him.</p>
+<p>'Believe All Women,' right Democrats? Why are you not helping Reade tell her story?</p>
+<p class="rm-manual">Recommended</p>
+<p class="rm-manual"><a href="file:///columnists/larryoconnor/2020/06/02/decades-of-california-democrats-ignoring-laws-has-led-to-this-n2569906?utm_campaign=inarticle"> <span>Decades of California Democrats Defying Laws Has Led to This</span> </a> </p>
+<p class="rm-manual"> Larry O'Connor </p>
+<ul class="rm-manual"> <li class="rm-manual">Tags: </li> <li class="rm-manual"><a href="file:///tags/cnn">CNN</a></li> <li class="rm-manual"><a href="file:///tags/liberal-media">Liberal Media</a></li> <li class="rm-manual"><a href="file:///tags/joe-biden">Joe Biden</a></li> <li class="rm-manual"><a href="file:///tags/liberal-media-bias">liberal media bias</a></li> <li class="rm-manual"><a href="file:///tags/2020-election">2020 Election</a></li> <li class="rm-manual"><a href="file:///tags/brett-kavanaugh">Brett Kavanaugh</a></li> </ul>
+<p class="rm-manual"> <a href="https://townhall.com/tipsheet/mattvespa/2020/06/02/graphic-video-rioters-brutally-beat-man-in-portland-kick-him-so-hard-teeth-are-n2569812"></a></p><p class="rm-manual"><a href="https://townhall.com/tipsheet/mattvespa/2020/06/02/graphic-video-rioters-brutally-beat-man-in-portland-kick-him-so-hard-teeth-are-n2569812"><span>Graphic Video</span>: Rioters Brutally Beat Man in Portland, Kick Him So Hard Teeth Are Left on the Road</a></p> <p class="rm-manual"></p>
+<p class="rm-manual"> Matt Vespa </p>
+<p class="rm-manual"> <a href="https://townhall.com/tipsheet/mattvespa/2020/06/02/liberal-reporter-calls-out-media-again-you-know-obama-called-riots-thugs-and-deployed-the-national-guard-too-n2569899">Liberal Reporter Silences the Meltdown over Trump's Law and Order Declaration with One Tweet</a> </p>
+<p class="rm-manual"> Matt Vespa </p>
+<p class="rm-manual"> <a href="https://townhall.com/tipsheet/katiepavlich/2020/06/02/trump-campaign-buries-biden-on-race-by-pointing-to-his-record-n2569930">Trump Campaign Buries Biden on Race By Pointing to His Record</a> </p>
+<p class="rm-manual"> Katie Pavlich </p>
+<p class="rm-manual"> <a href="https://townhall.com/tipsheet/cortneyobrien/2020/06/02/de-blasio-infuriates-new-yorkers-when-he-explains-why-protests-are-allowed-but-pr-n2569924">De Blasio Infuriates New Yorkers When He Explains Why Protests Are Allowed But Prayer Services Aren't</a> </p>
+<p class="rm-manual"> Cortney O'Brien </p>
+<p class="rm-manual"> <a href="https://townhall.com/tipsheet/katiepavlich/2020/06/02/barr-applauds-law-and-order-returning-to-washington-dc-n2569919">Barr Applauds Law and Order Returning to Washington D.C. </a> </p>
+<p class="rm-manual"> Katie Pavlich </p>
+<p class="rm-manual"> <a href="https://townhall.com/tipsheet/reaganmccarthy/2020/06/02/stefanik-opponent-n2569914">Rep. Stefanik's Challenger Tweets Vile Message in the Wake of Nationwide Riots</a> </p>
+<p class="rm-manual"> Reagan McCarthy </p>
+<p class="rm-manual"><a href="file:///political-cartoons">CARTOONS</a> | <a href="file:///political-cartoons/algoodwyn/">Al Goodwyn</a></p>
+<p class="rm-manual"><a href="file:///political-cartoons/2020/06/02/174238?hpnl=true"> View Cartoon </a></p>
+<p class="rm-manual">Most Popular</p>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///tipsheet/mattvespa/2020/06/02/graphic-video-rioters-brutally-beat-man-in-portland-kick-him-so-hard-teeth-are-n2569812"> <span>Graphic Video: Rioters Brutally Beat Man in Portland, Kick Him So Hard Teeth Are Left on the Road</span> </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///tipsheet/mattvespa/2020/06/02/that-white-nationalists-causing-george-floyd-riot-chaos-talking-point-took-anothe-n2569882"> <span>That 'White Nationalists Causing George Floyd Riot Chaos' Talking Point Took Another Devastating Blow </span> </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///tipsheet/leahbarkoukis/2020/06/02/why-liberals-are-outraged-over-nyt-headline-n2569892"> <span>The NYT Headline That Has Liberals Outraged</span> </a> </p> </li> </ul>
+<h1 class="rm-manual">Trending on Townhall Media</h1>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://bearingarms.com/tom-k/2020/06/01/savage-beating-during-riots-2a/"> <span>Savage Beating During Dallas Riot Illustrates Why We Defend Second Amendment</span> </a> <p class="rm-manual"> Bearing Arms </p> </li> <li class="rm-manual"> <a href="https://pjmedia.com/news-and-politics/rick-moran/2020/06/02/random-piles-of-bricks-magically-appearing-at-protests-while-agitators-hands-out-cash-to-rioters-n482983"> <span>'Random Piles of Bricks' Magically Appearing at Protests While Agitators Hand Out Cash to Rioters</span> </a> <p class="rm-manual"> PJ Media </p> </li> <li class="rm-manual"> <a href="https://twitchy.com/dougp-3137/2020/06/02/guy-gives-rock-wielding-rioters-thumbs-up-from-window-to-let-them-know-hes-on-their-side-guess-what-happens-next-video/"> <span>Guy gives rock-wielding rioters 'thumbs-up' from window to let them know he's on their side (guess what happens next) [video]</span> </a> <p class="rm-manual"> Twitchy </p> </li> </ul>
+<h1 class="rm-manual"> <a href="https://townhall.com/tipsheet/mattvespa/2020/06/02/graphic-video-rioters-brutally-beat-man-in-portland-kick-him-so-hard-teeth-are-n2569812">Graphic Video: Rioters Brutally Beat Man in Portland, Kick Him So Hard Teeth Are Left on the Road</a> </h1>
+<h5 class="rm-manual">Townhall</h5>
+<p class="rm-manual"> <a href="https://hotair.com/archives/ed-morrissey/2020/06/02/non-sequitur-floyd-autopsy-shows-evidence-drug-use/">Non-sequitur? Floyd autopsy shows evidence of drug use, but …</a> </p>
+<p class="rm-manual">Hotair</p>
+<p class="rm-manual"> <a href="https://www.redstate.com/shipwreckedcrew/2020/06/02/846660/">The Filing by Judge Sullivan With The Circuit Court Is A Joke.</a> </p>
+<p class="rm-manual">Redstate</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///columnists">Columnists</a></li> <li class="rm-manual"><a href="file:///political-cartoons">Political Cartoons</a></li> <li class="rm-manual">
+<a href="file:///tipsheet">Tipsheet</a> </li> <li class="rm-manual">
+<a href="file:///tv">Townhall TV</a> </li> <li class="rm-manual">
+<a href="file:///podcasts">Podcasts</a> </li> <li class="rm-manual"><a href="file:///news">Radio News</a></li> <li class="rm-manual"><a href="file:///video">Video</a></li> <li class="rm-manual"><a href="file:///entertainment">Entertainment</a></li> <li class="rm-manual"><a href="file:///vip">VIP</a></li> <li class="rm-manual"><a href="file:///capitol-voices">Capitol Voices</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///election">Election Results</a></li> <li class="rm-manual"><a href="file:///tags/">Tags</a></li> <li class="rm-manual"><a href="http://finance.townhall.com/">Finance</a></li> <li class="rm-manual"><a href="#">Townhall Radio</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///aboutus">About Townhall</a></li> <li class="rm-manual"><a href="http://townhallmedia.com/">Advertise</a></li> <li class="rm-manual"><a href="https://townhall.com/tags/gift-guides/">Gift Guides</a></li> <li class="rm-manual"><a href="https://media.townhall.com/townhall/privacypolicy/privacypolicy.htm">Privacy Policy</a></li> <li class="rm-manual"><a href="https://media.townhall.com/townhall/privacypolicy/TermsofUse.htm">Terms of Use</a></li> <li class="rm-manual"><span><a href="file:///donotsell" rel="nofollow">California - Do Not Sell My Personal Information</a></span></li> <li class="rm-manual"><a href="http://www.conservativeradio.com/">Radio Stations</a></li> <li class="rm-manual"><a href="file:///sitemap.htm">Sitemap</a></li> <li class="rm-manual"><a href="file:///pages/townhall_jobs">Jobs </a></li> <li class="rm-manual"><a href="file:///contact-us/">Contact Us</a></li> <li class="rm-manual"><a href="file:///newslettersignup/">Newsletters</a></li> <li class="rm-manual"><a href="file:///mobile-apps">iPhone/Android Apps</a></li> </ul>
+<p class="rm-manual"> Townhall.com is the leading source for conservative news and political commentary and analysis.</p>
+<p class="rm-manual"> Copyright © Townhall.com/Salem Media. All Rights Reserved. <a href="https://media.townhall.com/townhall/privacypolicy/TermsofUse.htm">Terms</a> under which this service is provided to you </p></article>
+</body></html>

@@ -1,0 +1,217 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><ul class="rm-manual"> <li class="rm-manual"> <a href="file:///cdn-cgi/l/email-protection#516e253e6c77303c216a2224333b3432256c710523243c217126303f252271253e7125303d3a7f711823303f7138223fb3d1c82571383f25342334222534357f77303c216a333e35286c39252521226b7e7e2626267f213e3d382538323e7f323e3c7e22253e23287e636160687e61667e61667e2523243c217c3823303f7c3f24323d3430237c3f3e2325397c3a3e2334307c60626868656167"> <span>Email</span> </a> </li> <li class="rm-manual"> <a href="#superComments"> <span>Comment</span> </a> </li> <li class="rm-manual"> <a href="#"> <span>Print</span> </a> </li> </ul>
+<p class="rm-manual"><a>Continue to article content</a> </p>
+<p class="rm-manual"> “We are fully prepared to enrich uranium at any 
+level and with any amount,” said Behrouz Kamalvandi, spokesman for 
+Iran’s Atomic Energy Organization, according to media reports. | Ebrahim
+ Noroozi/AP Photo</p>
+<p class="rm-manual"> <a href="https://www.politico.com/tag/defense">Defense</a></p>
+<h1 class="rm-manual"> <span> Trump wants to talk. Iran isn’t interested.</span> </h1>
+<p class="rm-manual"> When it comes to nuclear negotiations, Iran is not North Korea.</p>
+<p class="rm-manual"> By <a href="https://www.politico.com/staff/nahal-toosi" rel="author">NAHAL TOOSI</a></p>
+<p class="rm-manual">07/07/2019 03:49 PM EDT</p>
+<p>President Donald Trump wants to sit down with Iranian leaders — but 
+they don’t share his eagerness to talk, revealing the limits of the 
+president’s personal diplomatic overtures. </p>
+<p>While another adversary, North Korea, has come to the table for 
+one-on-ones with Trump, Tehran on Sunday responded to Trump’s 
+combination of pleas and economic sanctions with provocation. </p>
+<p>Advertisement</p>
+<p>Iranian officials said they would, within hours, start enriching 
+uranium above the limits set under a 2015 international nuclear deal, 
+the latest in a series of potentially fatal stab-wounds in the 
+agreement. They also said Iran would keep reducing its compliance with 
+the deal every 60 days unless world powers shield it from the sanctions 
+that Trump reimposed after quitting the agreement last year. </p>
+<p>“We are fully prepared to enrich uranium at any level and with any 
+amount,” said Behrouz Kamalvandi, spokesman for Iran’s Atomic Energy 
+Organization, according to media reports.</p>
+<p>It’s an approach that has left the two countries at risk of an eventual military confrontation. </p>
+<p>But Iran’s moves are a calculated gamble, officials and analysts said
+ — an attempt to both rebuke Trump and pressure European leaders, who 
+are trying to salvage the nuclear deal, to stand up to the United 
+States. The Iranians also may be betting that Trump, who has shown 
+little appetite for war, will fold first, lifting sanctions in exchange 
+for talks.</p>
+<p>Iran is “testing limits to gauge the response of the U.S. and the 
+other key stakeholders,” said Suzanne Maloney, an Iran scholar at the 
+Brookings Institution. “It's a very effective way to try to read a 
+mercurial U.S. administration and inject some greater urgency among the 
+other parties to the deal.”</p>
+<p>A U.S. official familiar with the issue told POLITICO on Sunday that 
+the Trump team hopes for three things: that Europe imposes some 
+sanctions on Iran to keep it from further violating the deal; that a 
+financial mechanism the Europeans have set up to help Iran obtain 
+nonsanctioned goods succeeds; and that recent U.S. military maneuvers in
+ the Middle East are enough to deter Iran from further military 
+escalation.</p>
+<p>“Fundamentally, we want them to stay in the deal,” the U.S. official 
+said, when asked why the Trump administration wants the European 
+financial mechanism, known as INSTEX, to work. There’s no desire to 
+engage in an all-out war with Iran or see it build a nuclear weapon, the
+ official said.</p>
+<p>Both Iran and North Korea have faced Trump’s fury over their nuclear 
+programs, including his imposition of severe sanctions. But while North 
+Korean dictator Kim Jong Un, who already possesses nuclear weapons, has 
+accepted talks, Iran’s Islamist rulers, who lack nukes, remain unwilling
+ to talk to Trump. </p>
+<p>The reasons are many. Iran has an anti-U.S. ideology forged during a 
+revolution 40 years ago — its leaders rarely respond well to insults and
+ threats from a country they call the “Great Satan.” And unlike North 
+Korea, where Kim rules with an iron fist, Iran has competing political 
+power centers, even if Supreme Leader Ali Khamenei technically has the 
+final say. </p>
+<p>Additionally, Tehran is still smarting from Trump’s decision to pull 
+the U.S. out of the 2015 nuclear deal. There’s also lingering suspicion 
+in Tehran that the Trump administration really wants to oust the Iranian
+ regime — not just change its behavior. </p>
+<p>Kim, on the other hand, may see more use in talking to Trump than 
+goading him, even if the pair traded heated rhetorical barbs in 2017. 
+The 30-something dictator may be willing to try the negotiations route 
+because he already has built a nuclear arsenal and is less worried about
+ a U.S. attack. </p>
+<p>Kim’s goal, some analysts say, is to improve his country’s economy, 
+and bolster his rule, by persuading Trump to remove sanctions. Kim may 
+be betting that he can persuade Trump to at least offer some sanctions 
+relief for limited nuclear-related promises on his part.</p>
+<p>Iran, meanwhile, insists it has no desire to build a nuclear weapon. 
+The oil-rich country has always said its nuclear program is for peaceful
+ purposes, such as generating energy. But there’s always the possibility
+ that Trump’s willingness to sit down with Kim could lead Iran to decide
+ that it needs to have a nuclear weapon for more long-term leverage.</p>
+<p>Any such move by Iran, however, could have immediate consequences, 
+including spurring a new Middle East war or a nuclear arms race. U.S. 
+allies in the Middle East — notably Israel, Saudi Arabia and the United 
+Arab Emirates — are loath to see Iran become a nuclear state. Israel has
+ even suggested in the past it would launch a preventive strike to keep 
+Iran from developing a nuclear weapon.</p>
+<p>The possibility of a military confrontation is already high in the 
+Middle East following a series of attacks on international oil tankers 
+that the U.S. has blamed on Iran. The U.S. has sent hundreds more troops
+ to the region as a hedge against Tehran.</p>
+<p>To some Iran watchers, Tehran is erring by not talking to Trump now.</p>
+<p>“Iran’s Supreme Leader Ali Khamenei would be smart to follow Kim’s 
+approach,” said Mark Dubowitz of the hawkish Foundation for Defense of 
+Democracies, which generally supports Trump’s tough policies toward 
+Iran. “The deal of the century could await him if he put aside decades 
+of anti-Americanism and met Trump at a summit.” </p>
+<p>But to others, Iran’s reluctance is predictable. “You can’t overcome 
+some aspects of the revolutionary ideology still in Iran today,” Maloney
+ said. Unlike North Korea’s Kim, “Iranians complicate their own path by 
+being incapable of that kind of heroic flexibility.”</p>
+<p>In any case, comparisons between the two countries can only go so 
+far. “They’re suis generis. They’re extremely different,” a former top 
+Obama administration official said. “They do watch each other, though, 
+they do.” </p>
+<p>Trump has repeatedly made it clear that he would rather talk to Iran than fight. </p>
+<p>He called off a military strike on Iran at the last minute last month
+ after it shot down a U.S. drone, has promised the country economic 
+riches if it bends to his demands and has quite literally urged Iran to 
+“call me.” The president and Secretary of State Mike Pompeo have even 
+said the U.S. is willing to talk to Iran without any preconditions.</p>
+<p>It’s also clear that Trump worries that a war with Iran would hurt 
+him with his Republican electoral base during the 2020 election. He ran 
+for office promising to pull the U.S. out of Middle East entanglements.</p>
+<p>But as he often does, Trump has undermined himself by being 
+inconsistent. He has threatened to “obliterate” Iran, beefed up 
+America’s troop presence in the Middle East and sanctioned Khamenei. The
+ Trump administration has also threatened to sanction Iran’s foreign 
+minister, a move that would further undermine a shot at diplomacy. </p>
+<p>Last week, as it became clear Iran would move toward greater 
+enrichment of uranium, Trump tweeted: “Be careful with the threats, 
+Iran. They can come back to bite you like nobody has been bitten 
+before!"</p>
+<p>Trump has said the 2015 nuclear deal wasn’t long-lasting enough and 
+that it should have covered Iran’s many troubling non-nuclear 
+activities. In recent months, however, he’s further confused the 
+situation by saying he simply<a href="https://twitter.com/realDonaldTrump/status/1143128646162493441?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1143128646162493441&amp;ref_url=https%3A%2F%2Fwww.timesofisrael.com%2Fliveblog_entry%2Ftrump-us-demands-for-iran-are-no-nuclear-weapons-no-terror-funding%2F"> wants</a> Iran to give up any path to nuclear weapons. At other times, he has said he also wants Iran to stop funding “terror” groups.</p>
+<p>Khamenei, the Iranian supreme leader, has repeatedly dismissed the 
+possibility of talking to Trump. The country’s foreign minister, Javad 
+Zarif, recently said Iran won’t bow to threats from anyone.</p>
+<p>“We will not give in to international pressure and along with the 
+people of the world,” he said, according to media reports. “We will make
+ them talk to the people of Iran with language of respect and never 
+threaten an Iranian.” </p>
+<p>Trump initially pursued a tough approach with North Korea before 
+turning to personal diplomacy. He threatened Kim with “fire and fury,” 
+heaped sanctions on his regime and boasted that his nuclear button was 
+“bigger” than the autocrat’s. Kim responded with insults, too, calling 
+Trump a “dotard.” </p>
+<p>Eventually, however, Kim and Trump met and have since showered each 
+other with praise. At their first summit, in 2018 in Singapore, the pair
+ signed a vague joint declaration saying they were committed to the path
+ of denuclearization. </p>
+<p>A second summit, in Vietnam earlier this year, ended early as neither
+ side would agree to the other’s terms for a more substantive nuclear 
+agreement. The two met in late June at the Demilitarized Zone that 
+separates North and South Korea.</p>
+<p>It’s too soon to tell whether the diplomacy at the DMZ will 
+jump-start the stalled nuclear negotiations, and to date Kim has taken 
+no serious step toward reducing his nuclear arsenal. But if Kim walks 
+away with a good deal, Iranian leaders may reconsider talking to Trump. </p>
+<p>The odds are, though, that Iran’s government would prefer to wait, 
+hoping that Trump will not get reelected in 2020. It would be easier for
+ Khamenei to agree to talk with a new U.S. president than deal with a 
+man who tore up the last deal the Iranian leader struck with America. </p>
+<p>Given the damage done to the Iranian economy by Trump-imposed 
+sanctions, however, Iran may have little choice but to talk to him if he
+ is reelected. Still, the Iranians may insist that the U.S. offer some 
+sort of limited concession before negotiations can take place, such as 
+partial sanctions relief.</p>
+<p>"To risk meeting Trump now, while being pretty sure nothing 
+substantive would come of it, is to make yourself look small at home in 
+front of your own people when you have said this man is not worth 
+talking to," said Alex Vatanka, an Iran specialist and senior fellow 
+with the Middle East Institute.</p>
+<h6 class="rm-manual">This article tagged under:</h6>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.politico.com/news/nuclear-weapons">Nuclear Weapons</a>
+</li> <li class="rm-manual"> <a href="https://www.politico.com/news/iran">Iran</a>
+</li> <li class="rm-manual"> <a href="https://www.politico.com/news/north-korea">North Korea</a>
+</li> <li class="rm-manual"> <a href="https://www.politico.com/news/donald-trump">Donald Trump</a>
+</li> <li class="rm-manual"> <a href="https://www.politico.com/news/trump-2020-presidential-election">Donald Trump 2020</a>
+</li> <li class="rm-manual"> <a href="https://www.politico.com/news/kim-jong-un">Kim Jong Un</a>
+</li> <li class="rm-manual"> <a href="https://www.politico.com/tag/iran-nuclear-agreement">Iran Nuclear Agreement</a>
+</li> <li class="rm-manual"> <a href="https://www.politico.com/tag/trump-korea-nuclear-summit">Trump Korea nuclear summits</a>
+</li> <li class="rm-manual"> <a href="https://www.politico.com/latest-news-updates/trump-kim-jong-un-meeting-us-north-korea-summit-2018">U.S.-North Korea Summit</a>
+</li> </ul>
+<p class="rm-manual">Missing out on the latest scoops? Sign up for <a href="http://www.politico.com/subscribe/playbook?cid=su_stft_pb">POLITICO Playbook</a> and get the latest news, every morning — in your inbox.</p>
+<aside class="rm-manual"> <a href="#superComments">Show Comments</a> </aside><ul class="rm-manual"> <li class="rm-manual"> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/tmp6ybxf8qj.html?tab=most-read"> <h2 class="rm-manual"> Most Read</h2> </a> </li> </ul>
+<ol class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.politico.com/news/2020/05/30/trump-twitter-fight-silicon-valley-290759">The Trump-Twitter fight ropes in the rest of Silicon Valley</a></h3> <p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.politico.com/news/2020/05/30/trump-rocket-launch-country-in-chaos-290915">Trump exults in rocket launch as chaos unfolds around the country</a></h3> <p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.politico.com/news/2020/05/30/william-barr-george-floyd-protests-290792">Barr threatens to bust 'far-left extremist groups' in Floyd unrest</a></h3> <p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.politico.com/news/2020/05/30/joyce-beatty-pepper-sprayed-racism-protests-290931">African-American congresswoman pepper-sprayed during racism protest</a></h3> <p class="rm-manual"></p> </article> </li> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"><a href="https://www.politico.com/news/2020/05/30/spacex-second-attempt-to-launch-290646">SpaceX makes history with launch of astronauts</a></h3> <p class="rm-manual"></p> </article> </li> </ol>
+<p class="rm-manual"><a>Jump to sidebar section</a> </p></article>
+</body></html>

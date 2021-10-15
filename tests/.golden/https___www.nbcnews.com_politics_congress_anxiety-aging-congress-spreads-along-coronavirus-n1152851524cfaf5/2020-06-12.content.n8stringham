@@ -1,0 +1,213 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">Anxiety in an aging Congress as coronavirus marches across U.S.</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.nbcnews.com/"><span>News</span></a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/now"><span>NBC News NOW</span></a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/nightly-news"><span>Nightly News</span></a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/meet-the-press"><span>Meet the Press</span></a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/dateline"><span>Dateline</span></a></li>
+<li class="rm-manual"><a href="https://www.msnbc.com/"><span>MSNBC</span></a></li>
+<li class="rm-manual"><a href="https://www.today.com/"><span>TODAY</span></a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.nbcnews.com/george-floyd-death">George Floyd</a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/health/coronavirus">Coronavirus</a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/politics">Politics</a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/think">OPINION</a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/us-news">U.S. News</a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/business">Business</a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/world">World</a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/feature/nbc-out/pride-2020">Pride 2020</a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/podcasts">Podcasts</a></li>
+</ul>
+<p class="rm-manual">Search</p>
+<p class="rm-manual">Sections</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.nbcnews.com/health/coronavirus"><span>CORONAVIRUS</span></a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/us-news"><span>U.S. News</span></a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/politics"><span>Politics</span></a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/news/world"><span>World</span></a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/local"><span>Local</span></a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/business"><span>Business</span></a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/health"><span>Health</span></a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/investigations"><span>Investigations</span></a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/culture-matters"><span>Culture Matters</span></a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/science"><span>Science</span></a></li>
+<li class="rm-manual"><a href="https://www.nbcsports.com/?cid=eref:nbcnews:text"><span>Sports</span></a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/tech-media"><span>Tech &amp; Media</span></a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/politics/2020-presidential-election"><span>Decision 2020</span></a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/in-focus"><span>In Focus</span></a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/photos"><span>Photos</span></a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/weather"><span>Weather</span></a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/shopping"><span>Shopping</span></a></li>
+</ul>
+<p class="rm-manual">TV</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.today.com/"><span>Today</span></a></li>
+<li class="rm-manual"><a href="https://www.msnbc.com/"><span>MSNBC</span></a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/nightly-news"><span>Nightly News</span></a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/meet-the-press"><span>Meet The Press</span></a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/dateline"><span>Dateline</span></a></li>
+</ul>
+<p class="rm-manual">Featured</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.nbcnews.com/now"><span>NBC NEWS NOW</span></a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/think"><span>THINK</span></a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/better"><span>BETTER</span></a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/nightly-films"><span>NIGHTLY FILMS</span></a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/leftfield"><span>NBC LEFT FIELD</span></a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/news/asian-america"><span>ASIAN AMERICA</span></a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/news/latino"><span>NBC LATINO</span></a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/news/nbcblk"><span>NBCBLK</span></a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/feature/nbc-out"><span>NBC OUT</span></a></li>
+<li class="rm-manual"><a href="https://www.snapchat.com/add/Stay-Tuned/8367265869"><span>STAY TUNED</span></a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/specials"><span>SPECIAL FEATURES</span></a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/newsletters"><span>NEWSLETTERS</span></a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/podcasts"><span>PODCASTS</span></a></li>
+</ul>
+<p class="rm-manual">More from NBC</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.cnbc.com/"><span>CNBC</span></a></li>
+<li class="rm-manual"><a href="https://www.nbc.com/"><span>NBC.COM</span></a></li>
+<li class="rm-manual"><a href="https://www.nbclearn.com/"><span>NBC LEARN</span></a></li>
+<li class="rm-manual"><a href="http://www.nbcpeacockproductions.com/"><span>Peacock Productions</span></a></li>
+<li class="rm-manual"><a href="https://veterans.nbcnews.com/"><span>Next Steps for Vets</span></a></li>
+<li class="rm-manual"><a href="https://www.parenttoolkit.com/"><span>Parent Toolkit</span></a></li>
+<li class="rm-manual"><a href="https://www.nbcnewsarchivesxpress.com/"><span>NBC Archives</span></a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/know-your-value"><span>Know Your Value</span></a></li>
+<li class="rm-manual"><a href="https://coupons.today.com/"><span>COUPONS</span></a></li>
+</ul>
+<p class="rm-manual"> Follow NBC News </p>
+<p class="rm-manual">Search</p>
+<p class="rm-manual"><a href="https://www.nbcnews.com/health/coronavirus"><span>Coronavirus</span></a></p>
+<h1 class="rm-manual">Anxiety in an aging Congress as coronavirus marches across U.S.</h1>
+<p class="rm-manual">"There's a lot of concern that members could bring 
+it home," a senior Democratic leadership aide says as offices discuss 
+recessing Congress.</p>
+<figcaption class="rm-manual"><span>Sen. Ted Cruz, R-Texas, listens during a subcommittee hearing on Capitol Hill on April 10, 2019.</span><span>Anna Moneymaker / Bloomberg via Getty Images</span></figcaption><h2 class="rm-manual">Breaking News Emails</h2>
+<p class="rm-manual">Get breaking news alerts and special reports. The news and stories that matter, delivered weekday mornings.</p>
+<p class="rm-manual"><a href="https://www.nbcnews.com/newsletters/breakingnews">SUBSCRIBE</a></p>
+<p class="rm-manual">March 9, 2020, 3:01 AM UTC<span> / </span>Updated March 9, 2020, 8:16 PM UTC</p>
+<p class="rm-manual">By Kasie Hunt and Alex Moe</p>
+<p>WASHINGTON — Members of Congress are becoming increasingly anxious about <a href="https://www.nbcnews.com/health/health-news/live-blog/coronavirus-updates-live-northern-italy-lockdown-anxiety-grows-d-c-n1152886">coronavirus</a>,
+ and there is growing pressure on leadership to take steps to protect 
+lawmakers — even potentially recessing for a period of weeks — two 
+Democratic congressional sources said Sunday.</p>
+<p>Multiple sources said anxiety was on the rise among lawmakers as more cases are reported and the virus spreads.</p>
+<p>Several Republican lawmakers self-quarantined after discovering they 
+came in contact with a person who is hospitalized with COVID-19, the 
+disease caused by the virus, while attending the Conservative Political 
+Action Conference in Oxon Hill, Maryland.</p>
+<p>Rep. Paul Gosar of Arizona, Rep. Matt Gaetz of Florida, Rep. Doug 
+Collins of Georgia and Sen. Ted Cruz of Texas are among those affected. 
+Both Gaetz and Gosar closed their Washington offices. An aide for 
+Collins told NBC News that in addition to the congressman, two staffers 
+from his office are also self-quarantining.</p>
+<p>Collins met with President Donald Trump last week during a visit to 
+the CDC headquarters in Atlanta and Gaetz was on Air Force One with 
+Trump on Monday. All four lawmakers said they are not experiencing 
+symptoms but are acting out of caution.</p>
+<p>"Members are very nervous," a senior Democratic leadership aide said.
+ "There's a lot of concern that members could bring it home."</p>
+<p class="rm-manual"><a href="https://www.nbcnews.com/health/coronavirus">Full coverage of the coronavirus outbreak</a></p>
+<p>Let our news meet your inbox. The news and stories that matters, delivered weekday mornings.</p>
+<p class="rm-manual">This site is protected by recaptcha <span><a href="https://policies.google.com/privacy" rel="noopener noreferrer">Privacy Policy</a> | <a href="https://policies.google.com/terms" rel="noopener noreferrer">Terms of Service</a></span></p>
+<p>Another source said members from districts and states where the virus
+ is spreading are also concerned about being able to remain at home to 
+help handle the crisis.</p>
+<p>Members plan to raise concerns with House Speaker Nancy Pelosi, 
+D-Calif., at their weekly leadership meeting Monday afternoon, two 
+sources said. It's Pelosi's decision whether to keep the House in 
+session or make changes in the schedule.</p>
+<p>A spokesman for Pelosi's office didn't respond to requests for comment Sunday night.</p>
+<p>The House is scheduled to resume meeting this week after a weekend at
+ home. Several offices said that by Sunday evening, there were no 
+changes to the schedule. Members are expecting an update on the 
+coronavirus at their usual caucus meeting Tuesday morning at the 
+Capitol.</p>
+<h2 class="rm-manual"><a href="https://www.nbcnews.com/nightly-news/video/white-house-gives-mixed-messages-on-coronavirus-response-80288837522">White House gives mixed messages on coronavirus response</a></h2>
+<p class="rm-manual"><span><span>March 8, 2020</span><span>01:54</span></span></p>
+<p>And some members were urging Congress to stay the course to "show 
+leadership in a time of great anxiety" and conduct oversight of the 
+Trump administration's response.</p>
+<p>Members should "follow the very advice we're giving the country: Wash
+ our hands, avoid contact with anyone exhibiting symptoms, stay home if 
+we're sick and ensure our staffs are doing the same," one lawmaker told 
+NBC News.</p>
+<p>But the virus is spreading rapidly, and the first case in Washington was announced Saturday night.</p>
+<p>The Capitol building is open to scheduled public tours — tourists 
+travel from all over the world to visit, and the Capitol Hill office 
+buildings are open to members of the public, who can freely walk the 
+hallways as long as they pass through a basic magnetometer screening.</p>
+<p class="rm-manual">Download the <a href="https://apps.nbcnews.com/mobile/">NBC News app</a> for full coverage of the coronavirus outbreak</p>
+<p>Pelosi so far has been careful not to sound alarmist and has 
+continued to rely on the advice of the Capitol physician in making 
+decisions about the grounds. The top four congressional leaders in both 
+parties — Sens. Mitch McConnell, R-Ky., and Chuck Schumer, D-N.Y., 
+Pelosi and Rep. Kevin McCarthy, R-Calif. — met with top Capitol building
+ staff to discuss the coronavirus last week.</p>
+<p>"You cannot test everybody who comes in the front door of the Capitol," Pelosi told reporters Thursday.</p>
+<p>"It is unreasonable and probably in some ways not focused enough on 
+what needs to be focused on," she said, adding that the office of the 
+Capitol physician would be making the decisions on protocols.</p>
+<p>Congress as a whole could be more susceptible to dangerous symptoms 
+of the coronavirus than the public in general. Sixty-six senators are 
+over 60 — two-thirds of the body — with more than a quarter over 70. The
+ average age of House members is 57.6 years, according to the 
+Congressional Research Service.</p>
+<p>Many members "are concerned, particularly older members and a number 
+who have conditions that make them more susceptible," a source said.</p>
+<p class="rm-manual"><span>Kasie Hunt</span></p>
+<p class="rm-manual">Kasie Hunt, the host of MSNBC's "Kasie DC," is a Capitol Hill correspondent for NBC News.</p>
+<p class="rm-manual"><span>Alex Moe</span></p>
+<p class="rm-manual">Alex Moe is a Capitol Hill producer for NBC News covering the House of Representatives. </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.nbcnews.com/pages/about-nbc-news-digital">About</a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/pages/contact-us">Contact</a></li>
+<li class="rm-manual"><a href="https://www.nbcunicareers.com/">Careers</a></li>
+<li class="rm-manual"><a href="https://coupons.today.com/">Coupons</a></li>
+<li class="rm-manual"><a href="https://www.nbcuniversal.com/privacy/?brandA=NBC_News&amp;intake=NBC_News">Privacy policy</a></li>
+<li class="rm-manual"><a href="https://www.nbcuniversal.com/privacy/notrtoo/?brandA=NBC_News&amp;intake=NBC_News">Do Not Sell My Personal Information</a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/pages/terms-of-service">Terms of Service</a></li>
+<li class="rm-manual"><a href="https://www.nbcnews.com/pages/sitemap">NBCNews.COM Site Map</a></li>
+<li class="rm-manual"><a href="https://together.nbcuni.com/">Advertise</a></li>
+<li class="rm-manual"><a href="https://www.nbcuniversal.com/privacy/cookies#cookie_management">Ad Choices</a></li>
+</ul>
+<p class="rm-manual">© 2020 NBC UNIVERSAL</p></article>
+</body></html>

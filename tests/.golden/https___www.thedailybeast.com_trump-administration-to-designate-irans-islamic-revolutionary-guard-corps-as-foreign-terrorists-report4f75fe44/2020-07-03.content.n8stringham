@@ -1,0 +1,156 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"><a href="https://www.thedailybeast.com/crossword-puzzles?tdb_source=crosswords&amp;tdb_medium=nav_button_cheat">Crossword</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.thedailybeast.com/keyword/coronavirus">Coronavirus</a></li>
+<li class="rm-manual"><a href="https://www.thedailybeast.com/cheat-sheet">Cheat Sheet</a></li>
+<li class="rm-manual"><a href="https://www.thedailybeast.com/category/politics">Politics</a></li>
+<li class="rm-manual"><a href="https://www.thedailybeast.com/category/entertainment">Entertainment</a></li>
+<li class="rm-manual"><a href="https://www.thedailybeast.com/category/world">World News</a></li>
+<li class="rm-manual"><a href="https://www.thedailybeast.com/category/half-full">Half Full</a></li>
+<li class="rm-manual"><a href="https://www.thedailybeast.com/category/arts-and-culture">Culture</a></li>
+<li class="rm-manual"><a href="https://www.thedailybeast.com/category/us-news">U.S. News</a></li>
+<li class="rm-manual"><a href="https://www.thedailybeast.com/category/scouted">Scouted</a></li>
+<li class="rm-manual"><a href="https://www.thedailybeast.com/category/travel">Travel</a></li>
+</ul>
+<p class="rm-manual">CHEAT SHEET</p>
+<p class="rm-manual">TOP 10 RIGHT NOW</p>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"><a href="file:///woman-claims-jeffrey-epsteins-madam-ghislaine-maxwell-raped-her-20-or-30-times-as-a-teenager"></a></p><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///woman-claims-jeffrey-epsteins-madam-ghislaine-maxwell-raped-her-20-or-30-times-as-a-teenager">1 .</a></h3><h3 class="rm-manual"><a href="file:///woman-claims-jeffrey-epsteins-madam-ghislaine-maxwell-raped-her-20-or-30-times-as-a-teenager">Woman Claims Ghislaine Raped Her ‘20 or 30 Times’ as a Teen</a></h3><p class="rm-manual"></p><a href="file:///woman-claims-jeffrey-epsteins-madam-ghislaine-maxwell-raped-her-20-or-30-times-as-a-teenager">
+<p class="rm-manual">JANE DOE</p>
+<h4 class="rm-manual">The anonymous woman said Epstein and Maxwell only discarded her when she fell pregnant with the financier’s baby at 16.</h4>
+<p class="rm-manual"></p><p class="rm-manual">1 hr ago</p><p class="rm-manual"></p></a><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///fox-news-in-all-seriousness-debates-a-petition-to-rename-columbus-ohio-as-flavortown"></a></p><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///fox-news-in-all-seriousness-debates-a-petition-to-rename-columbus-ohio-as-flavortown">2 .</a></h3><h3 class="rm-manual"><a href="file:///fox-news-in-all-seriousness-debates-a-petition-to-rename-columbus-ohio-as-flavortown">Fox News Freaks Over Push to Name Columbus, OH ‘Flavortown’</a></h3><p class="rm-manual"></p><a href="file:///fox-news-in-all-seriousness-debates-a-petition-to-rename-columbus-ohio-as-flavortown">
+<p class="rm-manual">TASTY</p>
+<h4 class="rm-manual">They did not see the humor in a wildly popular petition to rename the midwestern city.</h4>
+<p class="rm-manual"></p><p class="rm-manual">17 mins ago</p><p class="rm-manual"></p></a><p class="rm-manual"></p></li>
+<li class="rm-manual">
+<h3 class="rm-manual">SHOP WITH SCOUTED</h3>
+<p class="rm-manual"><a href="file:///brooklinen-bath-towels-are-soft-absorbent-and-durable"></a></p><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///brooklinen-bath-towels-are-soft-absorbent-and-durable">3 .</a></h3><h3 class="rm-manual"><a href="file:///brooklinen-bath-towels-are-soft-absorbent-and-durable">These Brooklinen Towels Changed My Entire Shower Experience</a></h3><p class="rm-manual"></p><a href="file:///brooklinen-bath-towels-are-soft-absorbent-and-durable">
+<p class="rm-manual">HEY KID, CATCH!</p>
+<h4 class="rm-manual">They’re soft, durable, and absorbent. Even when you’re dry, you’ll want to keep it wrapped around you. </h4>
+<p class="rm-manual"></p><p class="rm-manual">26 days ago</p><p class="rm-manual"></p></a><p class="rm-manual"></p>
+</li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///at-least-105-students-in-university-of-washington-frat-houses-test-positive-for-coronavirus"></a></p><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///at-least-105-students-in-university-of-washington-frat-houses-test-positive-for-coronavirus">4 .</a></h3><h3 class="rm-manual"><a href="file:///at-least-105-students-in-university-of-washington-frat-houses-test-positive-for-coronavirus">105 Students in U.W. Frat Houses Test Positive for COVID-19</a></h3><p class="rm-manual"></p><a href="file:///at-least-105-students-in-university-of-washington-frat-houses-test-positive-for-coronavirus">
+<p class="rm-manual">SPRING BREAKDOWN</p>
+<h4 class="rm-manual">The number is likely to rise as more than 1,000 college students and their friends are tested.</h4>
+<p class="rm-manual"></p><p class="rm-manual">2 hrs ago</p><p class="rm-manual"></p></a><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///two-wilson-oklahoma-cops-charged-with-murder-for-tasing-naked-man-jared-lakey-50-times"></a></p><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///two-wilson-oklahoma-cops-charged-with-murder-for-tasing-naked-man-jared-lakey-50-times">5 .</a></h3><h3 class="rm-manual"><a href="file:///two-wilson-oklahoma-cops-charged-with-murder-for-tasing-naked-man-jared-lakey-50-times">Okla. Cops Charged With Murder for Tasing Naked Man 50 Times</a></h3><p class="rm-manual"></p><a href="file:///two-wilson-oklahoma-cops-charged-with-murder-for-tasing-naked-man-jared-lakey-50-times">
+<p class="rm-manual">HORRIFIC</p>
+<h4 class="rm-manual">Jared Lakey never made any aggressive moves 
+towards either officer and was not fully conscious during the attempted 
+arrest, an affidavit states.</h4>
+<p class="rm-manual"></p><p class="rm-manual">5 hrs ago</p><p class="rm-manual"></p></a><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///corey-hurren-armed-man-who-rammed-justin-trudeaus-home-is-a-qanon-fan-report-says"></a></p><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///corey-hurren-armed-man-who-rammed-justin-trudeaus-home-is-a-qanon-fan-report-says">6 .</a></h3><h3 class="rm-manual"><a href="file:///corey-hurren-armed-man-who-rammed-justin-trudeaus-home-is-a-qanon-fan-report-says">Armed Man Who Rammed Trudeau’s Home Is QAnon Fan: Report </a></h3><p class="rm-manual"></p><a href="file:///corey-hurren-armed-man-who-rammed-justin-trudeaus-home-is-a-qanon-fan-report-says">
+<p class="rm-manual">BRAINWASHED</p>
+<h4 class="rm-manual">Less than an hour before the bizarre incident, a 
+profile linked to Corey Hurren had a post about a conspiracy theory 
+about global elites creating COVID-19.</h4>
+<p class="rm-manual"></p><p class="rm-manual">2 hrs ago</p><p class="rm-manual"></p></a><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///portland-protesters-set-fire-to-federal-courthouse-cops-declare-demonstration-a-riot"></a></p><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///portland-protesters-set-fire-to-federal-courthouse-cops-declare-demonstration-a-riot">7 .</a></h3><h3 class="rm-manual"><a href="file:///portland-protesters-set-fire-to-federal-courthouse-cops-declare-demonstration-a-riot">Protesters Set Portland Courthouse Alight, Cops Declare Riot</a></h3><p class="rm-manual"></p><a href="file:///portland-protesters-set-fire-to-federal-courthouse-cops-declare-demonstration-a-riot">
+<p class="rm-manual">DESTRUCTION</p>
+<h4 class="rm-manual">Police said they declared a riot after protesters threw cans of food, rocks, fireworks and an open pocket knife at officers.</h4>
+<p class="rm-manual"></p><p class="rm-manual">3 hrs ago</p><p class="rm-manual"></p></a><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///george-floyd-protests-likely-to-be-largest-movement-in-us-history"></a></p><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///george-floyd-protests-likely-to-be-largest-movement-in-us-history">8 .</a></h3><h3 class="rm-manual"><a href="file:///george-floyd-protests-likely-to-be-largest-movement-in-us-history">Floyd Protests Likely to Be Largest Movement in U.S. History</a></h3><p class="rm-manual"></p><a href="file:///george-floyd-protests-likely-to-be-largest-movement-in-us-history">
+<p class="rm-manual">THE PEOPLE HAVE SPOKEN</p>
+<h4 class="rm-manual">Scholars and crowd-counting experts say that four recent polls show the protests constitute the largest civil movement ever.</h4>
+<p class="rm-manual"></p><p class="rm-manual">1 hr ago</p><p class="rm-manual"></p></a><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///cecily-aguilar-fort-hood-soldiers-girlfriend-helped-to-mutilate-and-bury-vanessa-guillens-body-feds-say"></a></p><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///cecily-aguilar-fort-hood-soldiers-girlfriend-helped-to-mutilate-and-bury-vanessa-guillens-body-feds-say">9 .</a></h3><h3 class="rm-manual"><a href="file:///cecily-aguilar-fort-hood-soldiers-girlfriend-helped-to-mutilate-and-bury-vanessa-guillens-body-feds-say">Fort Hood Soldier’s GF Helped Mutilate Guillen’s Body: Feds</a></h3><p class="rm-manual"></p><a href="file:///cecily-aguilar-fort-hood-soldiers-girlfriend-helped-to-mutilate-and-bury-vanessa-guillens-body-feds-say">
+<p class="rm-manual">CHARGED</p>
+<h4 class="rm-manual">Army Specialist Vanessa Guillen was killed by a fellow Fort Hood soldier and buried in a shallow river grave, authorities say.</h4>
+<p class="rm-manual"></p><p class="rm-manual">5 hrs ago</p><p class="rm-manual"></p></a><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"><a href="file:///trumps-july-4-party-at-mount-rushmore-will-be-met-with-protests-a-fire-threat-and-statue-debate"></a></p><p class="rm-manual"></p><h3 class="rm-manual"><a href="file:///trumps-july-4-party-at-mount-rushmore-will-be-met-with-protests-a-fire-threat-and-statue-debate">10 .</a></h3><h3 class="rm-manual"><a href="file:///trumps-july-4-party-at-mount-rushmore-will-be-met-with-protests-a-fire-threat-and-statue-debate">Trump’s July 4 Party to Be Met With Protests, Fire Threat</a></h3><p class="rm-manual"></p><a href="file:///trumps-july-4-party-at-mount-rushmore-will-be-met-with-protests-a-fire-threat-and-statue-debate">
+<p class="rm-manual">NOT INVITED</p>
+<h4 class="rm-manual">Trump’s non-socially distant celebration at Mount Rushmore has alarmed health experts, Native Americans and parks officials. </h4>
+<p class="rm-manual"></p><p class="rm-manual">4 hrs ago</p><p class="rm-manual"></p></a><p class="rm-manual"></p></li>
+</ul>
+<p class="rm-manual">CHEAT SHEET</p>
+<p class="rm-manual">TOP 10 RIGHT NOW</p>
+<p class="rm-manual"><span>SHOP WITH SCOUTED</span></p>
+<h1 class="rm-manual">Report: Trump Administration to Designate Iran’s Islamic Revolutionary Guard Corps as Foreign Terrorists</h1>
+<p class="rm-manual">BIG MOVE</p>
+<p class="rm-manual"><a href="file:///author/julia-arciga"></a></p><h4 class="rm-manual"><a href="file:///author/julia-arciga">Julia Arciga</a></h4><a href="file:///author/julia-arciga"><p class="rm-manual">Reporter</p></a><p class="rm-manual"></p>
+<p class="rm-manual"><span>Published </span><span>Apr. 05, 2019 </span><span>6:28PM ET </span></p>
+<h4 class="rm-manual">Raheb Homavandi/Reuters</h4>
+<p>The Trump administration is reportedly prepping to designate Iran’s 
+Islamic Revolutionary Guard Corps as a foreign terrorist organization, 
+the Wall Street Journal reports. The decision, backed by national 
+security adviser John Bolton and Secretary of State Mike Pompeo, could 
+reportedly be announced as soon as Monday and could help the 
+administration crack down on other global businesses controlled by the 
+IRGC. The U.S. Central Command will reportedly alert U.S. troops in the 
+Middle East about the move in case it “spurs Iran or the Shiite militias
+ it supports within the region to retaliate.” Sources told the newspaper
+ that some Defense Department officials warned against the terrorist 
+designation, believing it may lead to “backlash against U.S. forces in 
+the region without inflicting the intended damage to the Iranian 
+economy.” The CIA also reportedly had concerns about the move. </p>
+<p class="rm-manual"><a href="https://www.wsj.com/articles/u-s-to-designate-iranian-guard-corps-a-foreign-terrorist-organization-11554499401"><span>Read it at </span><span>Wall Street Journal</span></a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.thedailybeast.com/keyword/coronavirus">Coronavirus</a></li>
+<li class="rm-manual"><a href="https://www.thedailybeast.com/cheat-sheet">Cheat Sheet</a></li>
+<li class="rm-manual"><a href="https://www.thedailybeast.com/category/politics">Politics</a></li>
+<li class="rm-manual"><a href="https://www.thedailybeast.com/category/entertainment">Entertainment</a></li>
+<li class="rm-manual"><a href="https://www.thedailybeast.com/category/world">World News</a></li>
+<li class="rm-manual"><a href="https://www.thedailybeast.com/category/half-full">Half Full</a></li>
+<li class="rm-manual"><a href="https://www.thedailybeast.com/category/arts-and-culture">Culture</a></li>
+<li class="rm-manual"><a href="https://www.thedailybeast.com/category/us-news">U.S. News</a></li>
+<li class="rm-manual"><a href="https://www.thedailybeast.com/category/scouted">Scouted</a></li>
+<li class="rm-manual"><a href="https://www.thedailybeast.com/category/travel">Travel</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.thedailybeast.com/membership">Beast Inside</a></li>
+<li class="rm-manual"><a href="https://www.thedailybeast.com/crossword-puzzles">Crossword</a></li>
+<li class="rm-manual"><a href="https://www.thedailybeast.com/newsletters">Newsletters</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.thedailybeast.com/company/about-us">About</a></li>
+<li class="rm-manual"><a href="https://www.thedailybeast.com/company/contact-us">Contact</a></li>
+<li class="rm-manual"><a href="https://www.thedailybeast.com/tips">Tips</a></li>
+<li class="rm-manual"><a href="https://www.iac.com/careers/job-listings">Jobs</a></li>
+<li class="rm-manual"><a href="https://www.thedailybeast.com/company/help">Help</a></li>
+<li class="rm-manual"><a href="https://www.thedailybeast.com/company/privacy-policy">Privacy</a></li>
+<li class="rm-manual"><a href="https://www.thedailybeast.com/company/code-of-ethics">Code of Ethics &amp; Standards</a></li>
+<li class="rm-manual"><a href="https://www.thedailybeast.com/company/terms-of-use">Terms &amp; Conditions</a></li>
+<li class="rm-manual"><a href="https://www.thedailybeast.com/company/copyright-trademark">Copyright &amp; Trademark</a></li>
+<li class="rm-manual"><a href="https://www.thedailybeast.com/sitemap">Sitemap</a></li>
+<li class="rm-manual"><a href="https://coupons.thedailybeast.com/">Coupons</a></li>
+</ul>
+<p class="rm-manual">© 2020 The Daily Beast Company LLC</p>
+<p class="rm-manual"><a href="https://www.thedailybeast.com/advertising">Advertise With Us</a></p></article>
+</body></html>

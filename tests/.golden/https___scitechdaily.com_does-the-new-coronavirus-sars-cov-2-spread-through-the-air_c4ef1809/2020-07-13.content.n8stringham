@@ -1,0 +1,200 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Does the New Coronavirus SARS-CoV-2 Spread Through the Air? </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///">Home</a></li> <li class="rm-manual"><a href="https://scitechdaily.com/about-us/">About</a></li> <li class="rm-manual"><a href="https://scitechdaily.com/contact/">Contact</a></li> <li class="rm-manual"><a href="https://scitechdaily.com/newsletter/">Newsletter</a></li> <li class="rm-manual"><a href="https://scitechdaily.com/resources/">Resources</a></li> </ul>
+<ul class="rm-manual">
+<li><a href="https://scitechdaily.com/news/biology/">Biology</a></li> <li class="rm-manual"><a href="https://scitechdaily.com/news/chemistry/">Chemistry</a></li> <li class="rm-manual"><a href="https://scitechdaily.com/news/earth/">Earth</a></li> <li class="rm-manual"><a href="https://scitechdaily.com/news/health/">Health</a></li> <li class="rm-manual"><a href="https://scitechdaily.com/news/physics/">Physics</a></li> <li class="rm-manual"><a href="https://scitechdaily.com/news/science/">Science</a></li> <li class="rm-manual"><a href="https://scitechdaily.com/news/space/">Space</a></li> <li class="rm-manual"><a href="https://scitechdaily.com/news/technology/">Technology</a></li> </ul>
+<p class="rm-manual"> <span> Hot Topics </span> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://scitechdaily.com/scientists-home-in-on-pairs-of-atoms-that-boost-a-catalysts-activity/"> <span>July 13, 2020</span> <span>|</span> <span>Scientists Home In on Pairs of Atoms That Boost a Catalyst’s Activity</span> </a> </li> <li class="rm-manual"> <a href="https://scitechdaily.com/gall-fly-outmaneuvers-host-plant-in-evolutionary-game-of-spy-vs-spy/"> <span>July 13, 2020</span> <span>|</span> <span>Gall Fly Outmaneuvers Host Plant in Evolutionary Game of “Spy vs. Spy”</span> </a> </li> <li class="rm-manual"> <a href="https://scitechdaily.com/artificial-intelligence-predicts-which-planetary-systems-will-survive-100000-times-faster/"> <span>July 13, 2020</span> <span>|</span> <span>Artificial Intelligence Predicts Which Planetary Systems Will Survive 100,000 Times Faster</span> </a> </li> <li class="rm-manual"> <a href="https://scitechdaily.com/semiconducting-graphene-ribbons-developed-for-electronics-and-quantum-computing/"> <span>July 13, 2020</span> <span>|</span> <span>Semiconducting Graphene Ribbons Developed for Electronics and Quantum Computing</span> </a> </li> <li class="rm-manual"> <a href="https://scitechdaily.com/upgrades-to-nasas-massive-deep-space-station-in-australia-for-communications-with-robotic-spacecraft/"> <span>July 13, 2020</span> <span>|</span> <span>Upgrades to NASA’s Massive Deep Space Station in Australia for Communications With Robotic Spacecraft</span> </a> </li> </ul>
+<aside class="rm-manual"> <span>Search for:</span> </aside><p class="rm-manual"><span><a href="https://scitechdaily.com/"><span>Home</span></a></span> <span><a href="https://scitechdaily.com/news/health/"><span>Health News</span></a></span> </p>
+<h1 class="rm-manual"> Does the New Coronavirus SARS-CoV-2 Spread Through the Air? </h1>
+<p class="rm-manual"><span>TOPICS:</span><a href="https://scitechdaily.com/tag/covid-19/" rel="tag">COVID-19</a><a href="https://scitechdaily.com/tag/public-health/" rel="tag">Public Health</a><a href="https://scitechdaily.com/tag/the-conversation/" rel="tag">The Conversation</a><a href="https://scitechdaily.com/tag/university-of-queensland/" rel="tag">University of Queensland</a><a href="https://scitechdaily.com/tag/virology/" rel="tag">Virology</a></p>
+<p class="rm-manual"> <span>By</span> <span>The University of Queensland</span> <span>February 22, 2020</span> </p>
+<p>There’s no evidence yet that the new coronavirus spreads through the air – but it’s still possible.</p>
+<p>A recent announcement by a <a href="https://www.chinadaily.com.cn/a/202002/08/WS5e3e7d97a310128217275fc3.html">Chinese health official</a> suggested the new coronavirus might spread more easily than we thought, via an “airborne route.” The virus is now known as <a href="https://www.sciencemag.org/news/2020/02/bit-chaotic-christening-new-coronavirus-and-its-disease-name-create-confusion">severe acute respiratory syndrome coronavirus 2</a> (<span>SARS-CoV-2</span>), while the name of the disease it causes is now called <span>COVID-19</span>.</p>
+<p>The <a href="http://www.chinadaily.com.cn/a/202002/09/WS5e3fcfefa3101282172760f4.html">Chinese Center for Disease Control and Prevention</a> almost immediately corrected the announcement, noting SARS-CoV-2 was not known to be an airborne virus.</p>
+<p>The center confirmed the virus appears to spread via droplets, direct
+ contact and by coming into contact with contaminated surfaces and 
+objects. The World Health Organization agrees.</p>
+<p>So far no infectious virus has been recovered from captured air 
+samples. This would need to occur to demonstrate the virus was airborne.</p>
+<h4>What’s the difference between airborne and droplet spread?</h4>
+<p>When we sneeze, cough or talk, we expel particles in a range of sizes.</p>
+<p>The bigger, wet droplets larger than 5-10 millionths of a meter (µm 
+or micrometer) fall to the ground within seconds or land on another 
+surface.</p>
+<p>These wet droplets are currently considered to be the highest risk routes for the SARS-CoV-2.</p>
+<p>But smaller particles aren’t implicated in the spread of SARS-CoV-2.</p>
+<p>Smaller particles remain suspended in the air and evaporate very 
+quickly (at less than one-tenth of a second in dry air). They leave 
+behind gel-like particles made of proteins, salts and other things, 
+including viruses.</p>
+<p>When we cough, sneeze or talk, we expel particles in a range of sizes.</p>
+<p>These leftovers are called “droplet nuclei” and can be inhaled. They 
+may remain aloft for hours, riding the air currents through a hospital 
+corridor, shopping center or office block. This is what we mean when we 
+talk about something being airborne.</p>
+<p>But there’s more to airborne spread. To infect humans, the droplet 
+nuclei need to contain infectious virus. The virus must be able to land 
+on our mucous membranes – the soft lining of our ears, nose, conjunctiva
+ (eyelid), throat and digestive tract and it must be able to enter our 
+cells and replicate.</p>
+<p>There also needs to be enough virus to overcome our early immune responses to the invader and start an infection.</p>
+<p>So a few stars have to align for airborne infection to result.</p>
+<h4>But airborne transmission wouldn’t be a shock</h4>
+<p>We already know the measles virus can remain aloft in a room for up to 30 minutes after an infected person leaves it.</p>
+<p>Likewise, the MERS coronavirus has been captured in infectious form from hospital air samples and found to be infectious.</p>
+<p>So there is some precedent.</p>
+<p>Other viruses that can be infectious via an airborne route include 
+rhinoviruses (the main causes of the common cold) and flu viruses.</p>
+<p>The ability for common respiratory viruses to spread via airborne 
+particles means it wouldn’t be a shock to find SARS-CoV-2 also had this 
+capability.</p>
+<p>But there is no evidence this is currently occurring</p>
+<h4>Why would airborne spread be such a problem?</h4>
+<p>Airborne spread would mean the virus could travel further. It could 
+spread through unfiltered air conditioning ducting and reach people 
+further away from the infected person, despite them not being in their 
+direct line of sight.</p>
+<p>It would also affect how far away from the patient hard surfaces need
+ cleaning and whether airborne personal protective equipment (PPE) 
+precautions – such as P2 respirator masks – would need to be more widely
+ used.</p>
+<p>If we find out the new coronavirus spreads through the air, this might change the way we protect ourselves.</p>
+<p>Our definition of “sufficient contact” for someone to be a possible 
+new infection may broaden, which would mean more people need to be 
+monitored, tested and possibly quarantined for each known patient.</p>
+<p>But even if an airborne route is found in the future, it’s unlikely to be the major route of transmission.</p>
+<p>People who are ill and show symptoms such as coughing and sneezing 
+usually produce and expel viruses in greater amounts than those who show
+ fewer symptoms. These sicker people are more likely to spread the virus
+ via bigger wet droplets, physical contact and contamination of surfaces
+ and objects.</p>
+<h4>Do I need to worry?</h4>
+<p>No. SARS-CoV-2 has been spreading the whole time, regardless of our 
+understanding of how. That spread doesn’t look to be changing.</p>
+<p>Currently, relatively few people infected with SARS-CoV-2 are outside
+ of mainland China. Only 15 cases have been identified in Australia. 
+Those found are isolated quickly and are well cared for.</p>
+<p>The chances of catching SARS-CoV-2 outside of mainland China are, at 
+the moment, remote (provided you aren’t on a certain cruise ship).</p>
+<p>If the situation changes because infected travelers arrive in greater
+ numbers than we can contain, then our best tools to mitigate spread 
+remain the ones we already know:</p>
+<ul> <li>distancing ourselves from obviously ill people</li> <li>hand-washing</li> <li>cleaning surfaces</li> <li>good cough etiquette (coughing into a tissue or your elbow and washing your hands)</li> <li>keeping our hands away from our face.</li> </ul>
+<p>And if you are at risk, stay home and seek medical advice by phone.</p>
+<p class="rm-manual">Written by Ian M. Mackay (adjunct assistant 
+professor at The University of Queensland) and Katherine Arden 
+(Virologist at The University of Queensland).</p>
+<p class="rm-manual">Originally published on <a href="https://theconversation.com/">The Conversation</a>.</p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://scitechdaily.com/paleontologists-find-evidence-of-dog-domestication-during-last-ice-age-28500-years-ago/" rel="prev">Previous post</a>
+</li> <li class="rm-manual"> <a href="https://scitechdaily.com/nasa-is-designing-a-venus-rover-concept-and-wants-your-help/" rel="next">Next post</a>
+</li> </ul>
+<h4 class="rm-manual"> <span>More on SciTechDaily</span> </h4>
+<p class="rm-manual"> <span><a href="https://scitechdaily.com/news/biology/" rel="category tag">Biology</a></span> </p>
+<h3 class="rm-manual"> <a href="https://scitechdaily.com/coronavirus-sars-cov-2-infects-cells-of-the-intestine-and-multiplies-there/" rel="bookmark"> Bad News – Coronavirus SARS-CoV-2 Infects Cells of the Intestine and Multiplies There </a> </h3>
+<p class="rm-manual"> <span><a href="https://scitechdaily.com/news/science/" rel="category tag">Science</a></span> </p>
+<h3 class="rm-manual"> <a href="https://scitechdaily.com/mit-engineers-reveal-intricacies-of-splashing-droplet/" rel="bookmark"> MIT Engineers Reveal the Intricacies of a Splashing Droplet </a> </h3>
+<p class="rm-manual"> <span><a href="https://scitechdaily.com/news/health/" rel="category tag">Health</a></span> </p>
+<h3 class="rm-manual"> <a href="https://scitechdaily.com/new-biomimetic-nanosponges-could-soak-up-sars-cov-2-treating-covid-19/" rel="bookmark"> New Biomimetic Nanosponges Could Soak Up SARS-CoV-2, Treating COVID-19 </a> </h3>
+<p class="rm-manual"> <span><a href="https://scitechdaily.com/news/health/" rel="category tag">Health</a></span> </p>
+<h3 class="rm-manual"> <a href="https://scitechdaily.com/evidence-of-stray-dogs-as-possible-origin-of-covid-19-pandemic/" rel="bookmark"> Evidence of Stray Dogs as Possible Origin of COVID-19 Pandemic </a> </h3>
+<p class="rm-manual"> <span><a href="https://scitechdaily.com/news/technology/" rel="category tag">Technology</a></span> </p>
+<h3 class="rm-manual"> <a href="https://scitechdaily.com/engineers-produce-iridescent-colors-with-clear-water-droplets/" rel="bookmark"> Engineers Produce Iridescent Colors With Clear Water Droplets </a> </h3>
+<p class="rm-manual"> <span><a href="https://scitechdaily.com/news/health/" rel="category tag">Health</a></span> </p>
+<h3 class="rm-manual"> <a href="https://scitechdaily.com/no-evidence-covid-19-coronavirus-was-genetically-engineered-in-a-lab-epidemic-has-a-natural-origin/" rel="bookmark"> No Evidence COVID-19 Coronavirus Was Genetically Engineered in a Lab – Epidemic Has a Natural Origin </a> </h3>
+<p class="rm-manual"> <span><a href="https://scitechdaily.com/news/health/" rel="category tag">Health</a></span> </p>
+<h3 class="rm-manual"> <a href="https://scitechdaily.com/new-coronavirus-that-causes-covid-19-is-stable-for-hours-on-surfaces/" rel="bookmark"> New Coronavirus That Causes COVID-19 Is Stable for Hours on Surfaces </a> </h3>
+<p class="rm-manual"> <span><a href="https://scitechdaily.com/news/health/" rel="category tag">Health</a></span> </p>
+<h3 class="rm-manual"> <a href="https://scitechdaily.com/close-genetic-relative-of-sars-cov-2-found-in-bats-offers-more-evidence-it-evolved-naturally/" rel="bookmark"> Close Genetic Relative of SARS-CoV-2 Found in Bats Offers More Evidence It Evolved Naturally </a> </h3>
+<h4 class="rm-manual"> <span>1 Comment</span> <span>on "Does the New Coronavirus SARS-CoV-2 Spread Through the Air?"</span> </h4>
+<ol class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <span>Keely Causby</span> | <a href="https://scitechdaily.com/does-the-new-coronavirus-sars-cov-2-spread-through-the-air/#comment-513671">April 28, 2020 at 3:43 am</a> | <a rel="nofollow" href="#comment-513671">Reply</a> </p> <p class="rm-manual">Since
+ the outbreak of Coronavirus, we heard many rumors which has nothing to 
+do with real life. No doubt, the fear of Coronavirus is increasing with 
+time as it is spreading rapidly. Your analysis is pretty helpful to 
+understand factual objects. I am staying at home and researching on such
+ pandemic with the help of <a href="https://edubirdie.org/edubirdie-review-the-most-honest-and-reliable/" rel="nofollow ugc">edubirdie.org</a> source to complete my thesis. I read edubirdie review about these services which made it reliable for me.</p> </li> </ol>
+<h3 class="rm-manual">Leave a comment <a rel="nofollow" href="file:///does-the-new-coronavirus-sars-cov-2-spread-through-the-air/#respond">Cancel reply</a>
+</h3>
+<p class="rm-manual">Email address is optional. If provided, your email will not be published or shared.</p>
+<p class="rm-manual">Comment</p>
+<p class="rm-manual">Name </p>
+<p class="rm-manual">Email </p>
+<p class="rm-manual">Website</p>
+<p class="rm-manual"> you MUST enable javascript to be able to comment </p>
+<h4 class="rm-manual"><span>Subscribe</span></h4>
+<p class="rm-manual">SciTechDaily: Home of the best science and 
+technology news since 1998. Keep up with the latest scitech news via 
+email or social media.</p>
+<h4 class="rm-manual"><span>Popular Articles</span></h4>
+<p class="rm-manual"> <span>July 11, 2020</span> </p>
+<h3 class="rm-manual"> <a href="https://scitechdaily.com/citizen-scientists-help-discover-two-bizarre-brown-dwarfs-using-nasas-neowise/" rel="bookmark"> Citizen Scientists Help Discover Two Bizarre Brown Dwarfs Using NASA’s NEOWISE </a> </h3>
+<p class="rm-manual">Data from NASA’s NEOWISE mission, managed by the 
+agency’s Jet Propulsion Laboratory, fuels the search for these 
+not-quite-planets-but-not-quite-stars. With the help of citizen 
+scientists, astronomers…</p>
+<p class="rm-manual"><a href="https://scitechdaily.com/citizen-scientists-help-discover-two-bizarre-brown-dwarfs-using-nasas-neowise/"> <span>Read More</span> </a> </p>
+<p class="rm-manual"><span>July 10, 2020</span></p>
+<h3 class="rm-manual"> <a href="https://scitechdaily.com/ice-age-carbon-dioxide-puzzle-solved-by-marine-life-found-in-ancient-antarctic-ice/" rel="bookmark"> Ice Age Carbon Dioxide Puzzle Solved by Marine Life Found in Ancient Antarctic Ice </a> </h3>
+<p class="rm-manual"><span>July 10, 2020</span></p>
+<h3 class="rm-manual"> <a href="https://scitechdaily.com/ringing-of-the-global-atmosphere-detected-by-scientists/" rel="bookmark"> Ringing of the Global Atmosphere Detected by Scientists </a> </h3>
+<p class="rm-manual"><span>July 10, 2020</span></p>
+<h3 class="rm-manual"> <a href="https://scitechdaily.com/tracking-colossal-iceberg-larger-than-delaware-during-a-3-year-650-mile-journey/" rel="bookmark"> Tracking Colossal Iceberg – Larger Than Delaware – During a 3-Year, 650-Mile Journey </a> </h3>
+<p class="rm-manual"><span>July 9, 2020</span></p>
+<h3 class="rm-manual"> <a href="https://scitechdaily.com/veritas-exploring-the-deep-truths-of-venus-to-reveal-the-inner-workings-of-earths-mysterious-twin/" rel="bookmark"> VERITAS: Exploring the Deep Truths of Venus to Reveal the Inner Workings of Earth’s Mysterious “Twin” </a> </h3>
+<p class="rm-manual"><span>July 9, 2020</span></p>
+<h3 class="rm-manual"> <a href="https://scitechdaily.com/satellites-track-massive-godzilla-saharan-dust-plume/" rel="bookmark"> Satellites Track Massive “Godzilla” Saharan Dust Plume </a> </h3>
+<p class="rm-manual"><span>July 9, 2020</span></p>
+<h3 class="rm-manual"> <a href="https://scitechdaily.com/discovery-of-giant-15%e2%80%b2-extinct-dolphin-shows-surprising-parallel-evolution-with-whales/" rel="bookmark"> Discovery of Giant 15′ Extinct Dolphin Shows Surprising Parallel Evolution With Whales </a> </h3>
+<p class="rm-manual"><span>July 9, 2020</span></p>
+<h3 class="rm-manual"> <a href="https://scitechdaily.com/comet-neowise-sizzles-as-it-slides-by-the-sun-a-treat-for-observers-on-earth-and-in-space/" rel="bookmark"> Comet NEOWISE Sizzles As It Slides by the Sun – A Treat for Observers on Earth and in Space </a> </h3>
+<h4 class="rm-manual"><span>Tags</span></h4>
+<p class="rm-manual"><a href="https://scitechdaily.com/tag/astronomy/">Astronomy</a> <a href="https://scitechdaily.com/tag/astrophysics/">Astrophysics</a> <a href="https://scitechdaily.com/tag/behavioral-science/">Behavioral Science</a> <a href="https://scitechdaily.com/tag/biotechnology/">Biotechnology</a> <a href="https://scitechdaily.com/tag/black-hole/">Black Hole</a> <a href="https://scitechdaily.com/tag/cancer/">Cancer</a> <a href="https://scitechdaily.com/tag/cassini-huygens-mission/">Cassini-Huygens Mission</a> <a href="https://scitechdaily.com/tag/cell-biology/">Cell Biology</a> <a href="https://scitechdaily.com/tag/chandra-x-ray-observatory/">Chandra X-ray Observatory</a> <a href="https://scitechdaily.com/tag/climate-change/">Climate Change</a> <a href="https://scitechdaily.com/tag/cosmology/">Cosmology</a> <a href="https://scitechdaily.com/tag/covid-19/">COVID-19</a> <a href="https://scitechdaily.com/tag/disease/">Disease</a> <a href="https://scitechdaily.com/tag/earth-science/">Earth Science</a> <a href="https://scitechdaily.com/tag/ecology/">Ecology</a> <a href="https://scitechdaily.com/tag/environment/">Environment</a> <a href="https://scitechdaily.com/tag/european-southern-observatory/">European Southern Observatory</a> <a href="https://scitechdaily.com/tag/european-space-agency/">European Space Agency</a> <a href="https://scitechdaily.com/tag/evolution/">Evolution</a> <a href="https://scitechdaily.com/tag/exoplanet/">Exoplanet</a> <a href="https://scitechdaily.com/tag/genetics/">Genetics</a> <a href="https://scitechdaily.com/tag/geology/">Geology</a> <a href="https://scitechdaily.com/tag/harvard-smithsonian-center-for-astrophysics/">Harvard-Smithsonian Center for Astrophysics</a> <a href="https://scitechdaily.com/tag/harvard-university/">Harvard University</a> <a href="https://scitechdaily.com/tag/hubble-space-telescope/">Hubble Space Telescope</a> <a href="https://scitechdaily.com/tag/images/">Images</a> <a href="https://scitechdaily.com/tag/jpl/">JPL</a> <a href="https://scitechdaily.com/tag/mars/">Mars</a> <a href="https://scitechdaily.com/tag/materials-science/">Materials Science</a> <a href="https://scitechdaily.com/tag/max-planck-institute/">Max Planck Institute</a> <a href="https://scitechdaily.com/tag/medicine/">Medicine</a> <a href="https://scitechdaily.com/tag/mit/">MIT</a> <a href="https://scitechdaily.com/tag/nanoscience/">Nanoscience</a> <a href="https://scitechdaily.com/tag/nanotechnology/">Nanotechnology</a> <a href="https://scitechdaily.com/tag/nasa/">NASA</a> <a href="https://scitechdaily.com/tag/nasa-goddard-space-flight-center/">NASA Goddard Space Flight Center</a> <a href="https://scitechdaily.com/tag/neurology/">Neurology</a> <a href="https://scitechdaily.com/tag/neuroscience/">Neuroscience</a> <a href="https://scitechdaily.com/tag/paleontology/">Paleontology</a> <a href="https://scitechdaily.com/tag/particle-physics/">Particle Physics</a> <a href="https://scitechdaily.com/tag/planetary-science/">Planetary Science</a> <a href="https://scitechdaily.com/tag/popular/">Popular</a> <a href="https://scitechdaily.com/tag/public-health/">Public Health</a> <a href="https://scitechdaily.com/tag/quantum-physics/">Quantum Physics</a> <a href="https://scitechdaily.com/tag/yale-university/">Yale University</a></p>
+<h5 class="rm-manual">Follow SciTechDaily</h5>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.facebook.com/scitechdaily">Facebook</a></li> <li class="rm-manual"><a href="https://twitter.com/SciTechDaily1">Twitter</a></li> <li class="rm-manual"><a href="https://www.youtube.com/channel/UC6E1FUUq5SuMxIFndY0yUEg">YouTube</a></li> <li class="rm-manual"><a href="https://www.pinterest.com/scitechdaily/">Pinterest</a></li> <li class="rm-manual"><a href="https://feedburner.google.com/fb/a/mailverify?uri=scitechdaily">Newsletter</a></li> <li class="rm-manual"><a href="https://feeds.feedburner.com/scitechdaily">RSS</a></li> </ul>
+<h5 class="rm-manual">SciTech News</h5>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://scitechdaily.com/news/biology/">Biology News</a></li> <li class="rm-manual"><a href="https://scitechdaily.com/news/chemistry/">Chemistry News</a></li> <li class="rm-manual"><a href="https://scitechdaily.com/news/earth/">Earth News</a></li> <li class="rm-manual"><a href="https://scitechdaily.com/news/health/">Health News</a></li> <li class="rm-manual"><a href="https://scitechdaily.com/news/physics/">Physics News</a></li> <li class="rm-manual"><a href="https://scitechdaily.com/news/science/">Science News</a></li> <li class="rm-manual"><a href="https://scitechdaily.com/news/space/">Space News</a></li> <li class="rm-manual"><a href="https://scitechdaily.com/news/technology/">Technology News</a></li> </ul>
+<h5 class="rm-manual">Latest News</h5>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://scitechdaily.com/scientists-home-in-on-pairs-of-atoms-that-boost-a-catalysts-activity/" rel="bookmark"> Scientists Home In on Pairs of Atoms That Boost a Catalyst’s Activity </a> </li> <li class="rm-manual"> <a href="https://scitechdaily.com/gall-fly-outmaneuvers-host-plant-in-evolutionary-game-of-spy-vs-spy/" rel="bookmark"> Gall Fly Outmaneuvers Host Plant in Evolutionary Game of “Spy vs. Spy” </a> </li> <li class="rm-manual"> <a href="https://scitechdaily.com/artificial-intelligence-predicts-which-planetary-systems-will-survive-100000-times-faster/" rel="bookmark"> Artificial Intelligence Predicts Which Planetary Systems Will Survive 100,000 Times Faster </a> </li> <li class="rm-manual"> <a href="https://scitechdaily.com/semiconducting-graphene-ribbons-developed-for-electronics-and-quantum-computing/" rel="bookmark"> Semiconducting Graphene Ribbons Developed for Electronics and Quantum Computing </a> </li> <li class="rm-manual"> <a href="https://scitechdaily.com/upgrades-to-nasas-massive-deep-space-station-in-australia-for-communications-with-robotic-spacecraft/" rel="bookmark"> Upgrades to NASA’s Massive Deep Space Station in Australia for Communications With Robotic Spacecraft </a> </li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://scitechdaily.com/editorial-board/">Editorial Board</a></li> <li class="rm-manual"><a href="https://scitechdaily.com/breaking-science-and-technology-news/">Science News</a></li> <li class="rm-manual"><a href="file:///privacy-policy/">Privacy Policy</a></li> <li class="rm-manual"><a href="file:///terms/">Terms of Use</a></li> </ul>
+<p class="rm-manual"> Copyright © 1998 - 2020 SciTechDaily. All Rights Reserved. </p></article>
+</body></html>

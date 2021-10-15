@@ -1,0 +1,117 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"><a href="file:///">Vivaldi.com</a> « <a href="file:///blog/">Blog</a> « <a href="file:///blog/technology/">Technology</a></p>
+<h1 class="rm-manual">Open letter: Ban surveillance-based advertising</h1>
+<p class="rm-manual">This letter has been sent by the undersigned to EU 
+&amp; US regulators, to urge them to take action on banning 
+surveillance-based ads, as recommended by the Norwegian Consumer 
+Council.</p>
+<p class="rm-manual"> Published on July 7, 2021 <span> – By</span> <a href="https://vivaldi.com/author/jonvt/" rel="author">Jon von Tetzchner</a><span> – <span>860 views</span></span></p>
+<p class="rm-manual">Recently, the Norwegian Consumer Council published a
+ report calling for a ban on surveillance-based ads. In solidarity, we 
+the undersigned have sent the following letter on Wednesday, July 7th, 
+to EU and US regulators to encourage them to take action during 
+legislative sessions and any relevant privacy discussions.</p>
+<h2 class="rm-manual">TIME TO BAN SURVEILLANCE-BASED ADVERTISING</h2>
+<p>Surveillance-based advertising permeates the internet today, creating
+ a number of highly problematic issues for both consumers and 
+businesses.</p>
+<p><a rel="noreferrer noopener" href="https://www.forbrukerradet.no/wp-content/uploads/2021/06/20210622-final-report-time-to-ban-surveillance-based-advertising.pdf">On June 23, a broad coalition</a>
+ of consumer rights organizations, civil rights groups, NGOs, as well as
+ academics, researchers, privacy experts, and enthusiasts – all 
+concerned individuals – called on regulators to stop the invasive and 
+privacy-hostile practices related to surveillance-based advertising.</p>
+<p>In the EU, they urged regulators to consider a ban on 
+surveillance-based advertising as a part of the Digital Services Act. In
+ the U.S., they urged legislators to enact comprehensive privacy 
+legislation. We are a group of businesses who write to you today to show
+ our support to this initiative. We represent small, medium, and large 
+businesses who all believe – and demonstrate on a daily basis – that it 
+is possible to run profitable companies without exploiting the privacy 
+of individuals.</p>
+<p>In addition to the clear privacy issues caused by surveillance-based 
+advertising, it is also detrimental to the business landscape.</p>
+<p>In the surveillance-based advertising model, a few actors can obtain 
+competitive advantages by collecting data from across websites and 
+services and dominant platform actors can abuse their positions by 
+giving preference to their own services.</p>
+<p>These practices seriously undermine competition and take revenue away
+ from content creators. Anti-competitive behavior and effects serve to 
+entrench dominant actors’ positions while complex supply chains and 
+ineffective technologies lead to lost revenues for advertisers and 
+publishers.</p>
+<p>It is also difficult for consumers to distinguish between ‘good’ and 
+‘bad’ actors in the digital sphere, which means that legitimate actors, 
+amongst them many small and medium-sized enterprises, are directly 
+affected by the actions of unscrupulous companies.</p>
+<p>This harms consumers and businesses and can undermine the cornerstones of democracy.</p>
+<p>Although we recognize that advertising is an important source of 
+revenue for content creators and publishers online, this does not 
+justify the massive commercial surveillance systems set up in attempts 
+to “show the right ad to the right people”.</p>
+<p>Other forms of advertising technologies exist, which do not depend on
+ spying on consumers, and alternative models can be implemented without 
+significantly affecting revenue. On the contrary – and that we can 
+attest to – businesses can thrive without privacy-invasive practices.</p>
+<p>We encourage you to take a stand and ban surveillance-based advertising.</p>
+<p>With kind regards, </p>
+<ul>
+<li>Vivaldi Technologies, Jon von Tetzchner, CEO &amp; Tatsuki Tomita, COO</li>
+<li>Fastmail Pty Ltd, Bron Gondwana, CEO</li>
+<li>Conva Ventures Inc., dba. Fathom Analytics, Jack Ellis &amp; Paul Jarvis, Directors</li>
+<li>Proton Technologies AG, Dr. Andy Yen, CEO</li>
+<li>Tutao GmbH, dba. Tutanota, Matthias Pfau, Co-Founder and CEO</li>
+<li>DuckDuckGo, Inc., Gabriel Weinberg, Founder and CEO</li>
+<li>Disconnect Inc., Casey Oppenheim, Co-founder and CEO</li>
+<li>Mojeek Limited, Colin Hayhurst, CEO</li>
+<li>Ecosia GmbH, Christian Kroll, CEO</li>
+<li>Startpage &amp; StartMail, Robert E.G. Beens, Co-Founder and CEO</li>
+<li>Nextcloud GmbH, Frank Karlitschek, Founder and CEO</li>
+<li>Kobler, Erik Bugge, CEO</li>
+<li>Strossle International, H kon Tillier, CEO &amp; Rickard Lawson, CMO</li>
+<li>Mailfence, Patrick De Schutter, Co-Founder and Managing Director</li>
+</ul>
+<p class="rm-manual"><span>Written by <a href="https://vivaldi.com/author/jonvt/"><span>Jon von Tetzchner</span></a></span></p>
+<p class="rm-manual">Co-Founder/CEO. Been doing browser development 
+since 1994. When I’m not testing Vivaldi browser or reading Vivaldi 
+forums, I enjoy collecting and playing with vintage computers and arcade
+ games. Born in Iceland, with an Icelandic mother and Norwegian father, 
+lived in Norway for many years and currently reside near Boston, MA.</p>
+<p class="rm-manual"> <span> comments</span> </p>
+<p class="rm-manual"> Please enable JavaScript to view comments </p></article>
+</body></html>

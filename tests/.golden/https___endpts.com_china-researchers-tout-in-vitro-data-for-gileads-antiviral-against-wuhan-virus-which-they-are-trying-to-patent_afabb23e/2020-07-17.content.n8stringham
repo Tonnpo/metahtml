@@ -1,0 +1,346 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> China researchers 
+tout in vitro data for Gilead’s antiviral against Wuhan virus — which 
+they are trying to patent – Endpoints News </p>
+<ul class="rm-manual"> <li class="rm-manual"> <span>Channels</span> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///news/">All News</a></li> <li class="rm-manual"><a href="file:///premium">Premium Content</a></li> <li class="rm-manual"> <a href="https://endpts.com/channel/coronavirus/">Coronavirus</a> </li> <li class="rm-manual"> <a href="https://endpts.com/channel/rd/">R&amp;D</a> </li> <li class="rm-manual"> <a href="https://endpts.com/channel/pharma/">Pharma</a> </li> <li class="rm-manual"> <a href="https://endpts.com/channel/venture/">Venture</a> </li> <li class="rm-manual"> <a href="https://endpts.com/channel/people/">People</a> </li> <li class="rm-manual"> <a href="https://endpts.com/channel/startups/">Startups</a> </li> <li class="rm-manual"> <a href="https://endpts.com/channel/regulatory/">Regulatory</a> </li> <li class="rm-manual"> <a href="https://endpts.com/channel/deals/">Deals</a> </li> <li class="rm-manual"> <a href="https://endpts.com/channel/ipos/">IPOs</a> </li> <li class="rm-manual"> <a href="https://endpts.com/channel/china/">China</a> </li> <li class="rm-manual"> <a href="https://endpts.com/channel/cell-gene-tx/">Cell/Gene Tx</a> </li> <li class="rm-manual"> <a href="https://endpts.com/channel/bioregnum/">Bioregnum</a> </li> <li class="rm-manual"> <a href="https://endpts.com/channel/peer-review/">Peer Review</a> </li> <li class="rm-manual"> <a href="https://endpts.com/channel/discovery/">Discovery</a> </li> <li class="rm-manual"> <a href="https://endpts.com/channel/outsourcing/">Outsourcing</a> </li> <li class="rm-manual"> <a href="https://endpts.com/channel/in-focus/">In Focus</a> </li> <li class="rm-manual"> <a href="https://endpts.com/channel/ai/">AI</a> </li> <li class="rm-manual"> <a href="https://endpts.com/channel/special/">Special</a> </li> </ul> </li> <li class="rm-manual"> <a href="https://webinars.endpts.com/">Webinars</a> </li> <li class="rm-manual"> <a href="https://careers.endpts.com/">Biopharma Jobs</a> </li> <li class="rm-manual"> <span>More</span> <ul class="rm-manual"> <li class="rm-manual"><a href="https://webinars.endpts.com/">Webinars</a></li> <li class="rm-manual"><a href="https://mediakit.endpts.com/events">Events</a></li> <li class="rm-manual"><a href="https://endpts.com/sponsored/">Sponsored Posts</a></li> <li class="rm-manual"><a href="https://endpts.com/channel/biotech-voices/">Biotech Voices</a></li> <li class="rm-manual">
+<a href="https://mediakit.endpts.com/">Advertise</a> </li> <li class="rm-manual"> <a href="https://www.iubenda.com/privacy-policy/286978" rel="nofollow noopener">Privacy Policy</a> </li> <li class="rm-manual"><a href="https://endpts.com/about-endpoints-news/">About Us</a></li> <li class="rm-manual"><span>Help</span></li> </ul> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://endpts.com/subscribe/">SUBSCRIBE</a></li> </ul>
+<p class="rm-manual">February 5, 2020 07:28 AM EST<span>Updated 01:10 PM</span></p>
+<p class="rm-manual"><a href="https://endpts.com/channel/china/"><span>China</span></a></p>
+<h2 class="rm-manual">Chi­na re­searchers tout in vit­ro da­ta for Gilead­'s an­tivi­ral against Wuhan virus — which they are try­ing to patent</h2>
+<h3 class="rm-manual">Amber Tong</h3>
+<h4 class="rm-manual">Editor</h4>
+<p>There’s no de­fin­i­tive proof yet that <a href="https://endpts.com/gsk-pitches-in-on-the-global-rd-campaign-to-develop-a-vaccine-to-counter-a-likely-coronavirus-pandemic/">Gilead’s remde­sivir</a>
+ works as a treat­ment for 2019-nCov, but re­searchers in Chi­na 
+clear­ly con­sid­er it promis­ing enough to have ap­plied for a patent 
+on its use to com­bat the coro­n­avirus virus out­break stem­ming from 
+Wuhan.</p>
+<p>Amid world­wide vig­i­lance over what many fear is be­com­ing a 
+pan­dem­ic, sci­en­tists from the Wuhan In­sti­tute of Vi­rol­o­gy and 
+Na­tion­al En­gi­neer­ing Re­search Cen­ter for the Emer­gency Drug said
+ they have test­ed a to­tal of sev­en drugs in vit­ro — and found 
+remde­sivir and the malar­ia treat­ment chloro­quine most ef­fec­tive 
+against the nov­el coro­n­avirus.</p>
+<p>In a <a href="http://www.whiov.cas.cn/kyjz_105338/202002/t20200204_5497136.html" rel="nofollow noopener noreferrer">state­ment</a>,
+ the in­sti­tu­tions al­so dis­closed that they filed a patent 
+ap­pli­ca­tion on Jan­u­ary 21, days be­fore Gilead first an­nounced 
+it’s <a href="https://endpts.com/gilead-dusts-off-a-failed-ebola-drug-as-coronavirus-spreads-exelixis-boasts-positive-ph-i-ii-data/">dust­ing off</a> the nu­cle­o­side ana­log — which failed to make the cut as an Ebo­la drug — to test against the new virus.</p>
+<p>While ex­perts have in­di­cat­ed that a patent is un­like­ly to be 
+grant­ed, the move high­lights grow­ing con­fi­dence in remde­sivir in 
+the midst of a glob­al race to hunt an­ti­bod­ies and ther­a­pies for 
+2019-nCoV, for which there is no ap­proved treat­ment. The high­ly 
+con­ta­gious virus has killed more than 490, most­ly in Chi­na.</p>
+<p>The up­date al­so comes as the FDA <a href="https://www.fda.gov/news-events/press-announcements/fda-takes-significant-step-coronavirus-response-efforts-issues-emergency-use-authorization-first" rel="nofollow noopener noreferrer">is­sued</a>
+ its first Emer­gency Use Au­tho­riza­tion (EUA) since the De­part­ment 
+of Health and Hu­man Ser­vices de­clared a pub­lic health emer­gency in 
+the US on Jan­u­ary 31. The EUA means that the 2019-nCoV di­ag­nos­tic 
+pan­el that’s been in use at CDC labs can now be used at any 
+CDC-qual­i­fied lab across the coun­try.</p>
+<p>Gilead — which has been in a patent <a href="https://endpts.com/gilead-claims-truvada-patents-in-hhs-complaint-are-invalid/">dis­pute</a>
+ with the US gov­ern­ment over its HIV fran­chise — didn’t an­swer 
+di­rect­ly whether it knew about the patent fil­ing be­fore the 
+an­nounce­ment or what it thought about the Chi­nese re­searchers’ 
+grounds.</p>
+<p>Gilead in­vent­ed remde­sivir and has patent­ed it in Chi­na, 
+in­clud­ing fil­ing patent ap­pli­ca­tions for use on coro­n­avirus­es. 
+We are aware of re­ports of the Wuhan In­sti­tute for Vi­rol­o­gy’s 
+patent ap­pli­ca­tion. Our fo­cus at this time, is on rapid­ly 
+de­ter­min­ing the po­ten­tial for remde­sivir as a treat­ment for 
+2019-nCoV and ac­cel­er­at­ing man­u­fac­tur­ing in an­tic­i­pa­tion of 
+po­ten­tial fu­ture sup­ply needs.</p>
+<p>Af­ter US doc­tors <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2001191" rel="nofollow noopener noreferrer">re­port­ed</a>
+ us­ing remde­sivir as part of the reg­i­men for the first do­mes­tic 
+case of 2019-nCoV, Gilead said it’s work­ing with Chi­nese 
+au­thor­i­ties to start a ran­dom­ized con­trolled tri­al.</p>
+<p>Nine tri­als are al­ready un­der­way to eval­u­ate dif­fer­ent 
+com­bi­na­tions of al­ready ap­proved an­tivi­rals and 
+cor­ti­cos­teroids, Bio­Cen­tu­ry <a href="https://www.biocentury.com/article/304368" rel="nofollow noopener noreferrer">not­ed</a>, in­clud­ing HIV drugs such as <a href="https://endpts.com/abbvie-donates-1m-of-the-hiv-drug-that-china-is-now-using-to-contain-coronavirus-outbreak/">Ab­b­Vie’s</a> Kale­tra/Alu­via and Gilead’s De­scovy.</p>
+<p>Remde­sivir, on the oth­er hand, is an ex­per­i­men­tal com­pound 
+that’s been test­ed in hu­man tri­als. In a Q4 earn­ings call, Gilead 
+CEO Daniel O’Day in­di­cat­ed that it may be de­ployed as an emer­gency 
+treat­ment. In re­sponse to a ques­tion about man­u­fac­tur­ing 
+prepa­ra­tions in the event that they need to scale up pro­duc­tion 
+quick­ly, he had this to re­port:</p>
+<p>In terms of man­u­fac­tur­ing, our team has re­al­ly been work­ing 
+night and day, it’s been very im­pres­sive to watch this team over the 
+past cou­ple of weeks re­al­ly ramp up to the ex­tent that we can. Our 
+ca­pac­i­ty is go­ing up every day. We’re look­ing at all the op­tions 
+we have ex­pect­ing to be pre­pared for what may come.</p>
+<p>Ob­vi­ous­ly we are wait­ing for da­ta, both in vit­ro and then in 
+peo­ple to en­sure that the drug ac­tu­al­ly works. And it’s im­por­tant
+ just for every­one to keep that in mind that this is still 
+in­ves­ti­ga­tion­al and we are still wait­ing for more da­ta to know. 
+But at risk, we are in­vest­ing pret­ty heav­i­ly to make sure that 
+we’re pre­pared as best as we can.</p>
+<p>Around the same time, some in vit­ro da­ta were be­ing <a href="https://www.nature.com/articles/s41422-020-0282-0" rel="nofollow noopener noreferrer">pub­lished</a> on Na­ture as a let­ter to the ed­i­tor.</p>
+<p>“No­tably, two com­pounds remde­sivir (EC50 = 0.77 μM; CC50 &gt; 100 
+μM; SI &gt; 129.87) and chloro­quine (EC50 = 1.13 μM; CC50 &gt; 100 μM, 
+SI &gt; 88.50) po­tent­ly blocked virus in­fec­tion at low-mi­cro­mo­lar
+ con­cen­tra­tion and showed high SI,” they wrote.</p>
+<p>Giv­en its po­ten­tial, the Wuhan In­sti­tute of Vi­rol­o­gy said in a
+ state­ment, it’s ap­plied for a patent in Chi­na and plans to 
+dis­trib­ute to oth­er coun­tries via the Patent Co­op­er­a­tion Treaty.
+ But should “the rel­e­vant over­seas com­pa­ny” be will­ing to 
+con­tribute to the out­break con­trol, they would tem­porar­i­ly 
+sus­pend ex­er­cise of their patent rights.</p>
+<p>But ex­perts in­ter­viewed by <a href="https://m.21jingji.com/article/20200205/herald/5aff07af6c82edc3d81453b77f6fcae2.html" rel="nofollow noopener noreferrer">lo­cal me­dia</a>
+ point out that the ap­pli­ca­tion may not go through. Not on­ly does 
+Gilead hold the foun­da­tion­al patent to the drug, but it al­so 
+ap­plied for one to cov­er remde­sivir’s use in coro­n­avirus­es back in
+ 2016 — which didn’t spec­i­fy but could ar­guably in­clude this new 
+strain.</p>
+<h3 class="rm-manual">AUTHOR</h3>
+<h3 class="rm-manual"><a href="https://endpts.com/author/amber-tong/">Amber Tong</a></h3>
+<h4 class="rm-manual">Editor</h4>
+<p class="rm-manual"> <a href="mailto:amber@endpointsnews.com">amber@endpointsnews.com</a> <a href="https://twitter.com/AmberTongPW" rel="nofollow noopener">@AmberTongPW</a> </p>
+<p class="rm-manual"> <a href="https://www.linkedin.com/in/amber-pak-wei-tong-5aa385bb/" rel="nofollow noopener">Amber Tong on LinkedIn</a> </p>
+<p class="rm-manual"><span>Tal Zaks, Moderna CMO (Moderna via YouTube)</span></p>
+<p class="rm-manual">July 14, 2020 05:00 PM EDT<span>Updated July 15, 06:26 AM</span></p>
+<p class="rm-manual"><a href="https://endpts.com/channel/rd/"><span>R&amp;D</span></a></p>
+<p class="rm-manual"><a href="https://endpts.com/channel/coronavirus/"><span>Coronavirus</span></a></p>
+<h2 class="rm-manual">UP­DAT­ED: NI­AID and Mod­er­na spell out a 
+'ro­bust' im­mune re­sponse in PhI coro­n­avirus vac­cine test — but big
+ ques­tions re­main to be an­swered</h2>
+<h3 class="rm-manual">John Carroll</h3>
+<h4 class="rm-manual">Editor &amp; Founder</h4>
+<p class="rm-manual">The NIAID and Moderna have spelled out positive 
+Phase I safety and efficacy data for their Covid-19 vaccine mRNA-1273 — 
+highlighting the first full, clear sketch of evidence that back-to-back 
+jabs at the dose selected for <a href="https://endpts.com/moderna-burnishes-its-phiii-ready-covid-19-vaccine-with-promising-mouse-data-which-suggest-one-dose-might-be-enough-after-all/">Phase III</a>
+ routinely produced a swarm of antibodies to the virus that exceeded 
+levels seen in convalescent patients — typically in multiples indicating
+ a protective response.</p>
+<p class="rm-manual">Moderna execs say plainly that this first stage of research produced exactly the kind of efficacy they hoped to see <a href="https://endpts.com/breaking-moderna-posts-a-promising-snapshot-of-human-data-for-a-leading-covid-19-vaccine/">in humans</a>, with a manageable safety profile.</p>
+<h3 class="rm-manual">Keep reading Endpoints with a free subscription</h3>
+<p class="rm-manual"> Unlock this story instantly and join 85,400+ biopharma pros reading Endpoints daily — and it's free. </p>
+<p class="rm-manual"><span>Tillman Gerngross, Adagio Therapeutics CEO</span></p>
+<p class="rm-manual">July 16, 2020 08:00 AM EDT</p>
+<p class="rm-manual"><a href="https://endpts.com/channel/startups/"><span>Startups</span></a></p>
+<p class="rm-manual"><a href="https://endpts.com/channel/bioregnum/"><span>Bioregnum</span></a></p>
+<h2 class="rm-manual">An­ti­body leg­end Till­man Gern­gross is 
+el­bow­ing his way in­to the Covid-19 R&amp;D cru­sade: 'I don’t see 
+this end­ing any­time soon'</h2>
+<p class="rm-manual">One of the most influential — and outspoken — 
+scientists at work in the field of antibody discovery is jumping into 
+the frenzied race to create new therapeutics to treat and prevent 
+Covid-19. And he’s operating with the conviction that the current 
+outbreak now once again spreading like wildfire will create plenty of 
+demand for what he has in mind.</p>
+<p class="rm-manual">Dartmouth professor and Adimab CEO <a href="https://endpts.com/tillman-gerngross-isnt-out-to-impress-you-with-biobucks-but-here-are-3-partner-deals-that-should/">Tillman Gerngross</a>
+ tells me he’s raised $50 million from a group of close VCs to spin out a
+ new company — Adagio Therapeutics — with a full C-suite team assembled 
+to hire up a staff and keep rolling toward the clinic.</p>
+<h3 class="rm-manual">Premium subscription required</h3>
+<p class="rm-manual">Unlock this article along with other benefits by subscribing to one of our paid plans. </p>
+<p class="rm-manual">July 17, 2020 10:44 AM EDT</p>
+<p class="rm-manual"><a href="https://endpts.com/channel/ipos/"><span>IPOs</span></a></p>
+<p class="rm-manual"><a href="https://endpts.com/channel/china/"><span>China</span></a></p>
+<h2 class="rm-manual">Chi­na's CRO pow­er­house Tigermed to seek $1B IPO in Hong Kong — re­port</h2>
+<h3 class="rm-manual">Amber Tong</h3>
+<h4 class="rm-manual">Editor</h4>
+<p class="rm-manual">Hong Kong’s effervescent biopharma IPO market could see its biggest debut of the year yet.</p>
+<p class="rm-manual">Hangzhou Tigermed, a clinical research service 
+provider that also invests in biotech companies, has been approved for a
+ listing on the HKEX and is looking to raise about $1 billion, Bloomberg
+ <a href="https://www.bloomberg.com/news/articles/2020-07-17/tigermed-is-said-to-get-hkex-greenlight-for-1-billion-listing?sref=PaCdHFfq" rel="nofollow noopener noreferrer">reported</a>. It would be a dual listing for the Shenzhen-listed company.</p>
+<p class="rm-manual">Through its US-based subsidiary Frontage Holdings, 
+Tigermed has seen first-hand just how much appetite investors have for 
+HKEX healthcare stocks. The company, which began trading last July, is 
+now trading 39% above its debut price.</p>
+<p class="rm-manual"><span>ENDPOINTS CAREERS</span></p>
+<h3 class="rm-manual"><a href="https://careers.endpts.com/jobs/35986325-director-of-regulatory-affairs-at-recursion">Director of Regulatory Affairs</a></h3>
+<h4 class="rm-manual">Recursion Pharmaceuticals</h4>
+<h4 class="rm-manual">Salt Lake City, UT</h4>
+<p class="rm-manual"> <a href="https://careers.endpts.com/jobs/35986325-director-of-regulatory-affairs-at-recursion">view job offer</a> <a href="https://careers.endpts.com/products" rel="nofollow noopener">post your job now</a> </p>
+<p class="rm-manual"><span>Jennifer Doudna, AP Images</span></p>
+<p class="rm-manual">July 17, 2020 10:09 AM EDT<span>Updated 11:13 AM</span></p>
+<p class="rm-manual"><a href="https://endpts.com/channel/rd/"><span>R&amp;D</span></a></p>
+<h2 class="rm-manual">A Jen­nifer Doud­na-led team finds a new CRISPR en­zyme in the gi­ant virus­es of a Cal­i­for­nia mud bog</h2>
+<h3 class="rm-manual">Jason Mast</h3>
+<h4 class="rm-manual">Associate Editor</h4>
+<p class="rm-manual">A team led by UC Berkeley’s Jennifer Doudna has found a new CRISPR enzyme in an unlikely place: Viruses.</p>
+<p class="rm-manual">CRISPR, the gene-editing system that’s unleashed a 
+revolution in biomedical research, was first reverse-engineered from a 
+system bacteria evolved over eons to defend themselves from viruses. So 
+viruses may sound like a strange place for CRISPR to show up. But the 
+pathogens Doudna were studying belonged to a particular kind of viruses 
+that researchers are just uncovering: Huge phages – massive viruses that
+ feed on bacteria.</p>
+<h3 class="rm-manual">Keep reading Endpoints with a free subscription</h3>
+<p class="rm-manual"> Unlock this story instantly and join 85,400+ biopharma pros reading Endpoints daily — and it's free. </p>
+<p class="rm-manual">July 17, 2020 09:02 AM EDT<span>Updated 09:32 AM</span></p>
+<p class="rm-manual"><a href="https://endpts.com/channel/rd/"><span>R&amp;D</span></a></p>
+<h2 class="rm-manual">Eli Lil­ly’s mirik­izum­ab joins the club beat­ing
+ up on Cosen­tyx as an­oth­er head-to-head study leaves No­var­tis’ drug
+ in the dust</h2>
+<h3 class="rm-manual">John Carroll</h3>
+<h4 class="rm-manual">Editor &amp; Founder</h4>
+<p class="rm-manual">Eli Lilly’s high hopes for its IL-23 
+anti-inflammatory drug mirikizumab were borne out by a successful round 
+of Phase III data demonstrating its superiority to Novartis’ IL-17 drug 
+Cosentyx for psoriasis. But as is often the case, they’ve been beaten to
+ the punch by rivals that have even (slightly) better numbers to boast 
+about.</p>
+<p class="rm-manual">Looking at the PASI 90 score, a key measure on 
+improvement in skin clearance from baseline, the late-stage drug hit 
+PASI 90 scores of 81.4% and 82.4% at 52 weeks — compared to a mere 69.4%
+ for the Novartis drug.</p>
+<h3 class="rm-manual">Premium subscription required</h3>
+<p class="rm-manual">Unlock this article along with other benefits by subscribing to one of our paid plans. </p>
+<p class="rm-manual"><span>Paul Hudson, Sanofi CEO (Sipa via AP Images)</span></p>
+<p class="rm-manual">July 17, 2020 06:45 AM EDT<span>Updated 10:46 AM</span></p>
+<p class="rm-manual"><a href="https://endpts.com/channel/deals/"><span>Deals</span></a></p>
+<h2 class="rm-manual">UP­DAT­ED: Sug­gest­ed by Bloomberg, blessed by 
+an­a­lysts, could an M&amp;A match with a cer­tain MS play­er be far off
+ for block­buster-hun­gry Sanofi?</h2>
+<h3 class="rm-manual">John Carroll</h3>
+<h4 class="rm-manual">Editor &amp; Founder</h4>
+<p class="rm-manual">All the signs are right.</p>
+<p class="rm-manual">Sanofi CEO Paul Hudson has an <a href="https://endpts.com/sanofi-ceo-paul-hudson-has-23b-burning-a-hole-in-his-pocket-and-here-are-some-hints-on-how-he-plans-to-spend-that/">M&amp;A war chest</a>
+ set aside from the sale of their Regeneron stock. A few more strategic 
+deals would add considerable excitement to the late-stage pipeline — Job
+ 1 at a pharma giant that long ago drifted to the unimpressive side of 
+Big Pharma and desperately wants out. Bloomberg reports that MS and 
+immune disorders are in the crosshairs at the Paris-based multinational.</p>
+<h3 class="rm-manual">Keep reading Endpoints with a free subscription</h3>
+<p class="rm-manual"> Unlock this story instantly and join 85,400+ biopharma pros reading Endpoints daily — and it's free. </p>
+<p class="rm-manual"><span>Source: Shutterstock</span></p>
+<p class="rm-manual">July 15, 2020 09:47 AM EDT</p>
+<p class="rm-manual"><a href="https://endpts.com/channel/people/"><span>People</span></a></p>
+<p class="rm-manual"><a href="https://endpts.com/channel/editors-note/"><span>Editor's note</span></a></p>
+<h2 class="rm-manual">Who are the women blaz­ing trails in bio­phar­ma 
+R&amp;D and lead­ing the fight against Covid-19? Nom­i­nate them for 
+End­points' spe­cial re­port</h2>
+<h3 class="rm-manual">Amber Tong</h3>
+<h4 class="rm-manual">Editor</h4>
+<p class="rm-manual">One of the many inequalities the pandemic has laid 
+bare is the gender imbalance in biomedical research. A paper examining 
+Covid-19 research authorship wondered out loud: Where are the women?</p>
+<p class="rm-manual">It’s a question that echoes beyond our current 
+times. In the biopharma world, not only are women under-represented in 
+R&amp;D roles (particularly at higher levels), their achievements and 
+talents could also be undermined by stereotypes and norms of leadership 
+styles. The problem is even more dire for women of color.</p>
+<p class="rm-manual"><span>ENDPOINTS CAREERS</span></p>
+<h3 class="rm-manual"><a href="https://careers.endpts.com/jobs/35876394-head-of-biology-at-orum-therapeutics">Head of Biology</a></h3>
+<h4 class="rm-manual">Orum Therapeutics</h4>
+<h4 class="rm-manual">Cambridge, MA</h4>
+<p class="rm-manual"> <a href="https://careers.endpts.com/jobs/35876394-head-of-biology-at-orum-therapeutics">view job offer</a> <a href="https://careers.endpts.com/products" rel="nofollow noopener">post your job now</a> </p>
+<p class="rm-manual"><span>Jeff Albers, Blueprint CEO</span></p>
+<p class="rm-manual">July 14, 2020 06:01 AM EDT<span>Updated 07:09 AM</span></p>
+<p class="rm-manual"><a href="https://endpts.com/channel/deals/"><span>Deals</span></a></p>
+<h2 class="rm-manual">Di­ag­nos­tic champ Roche buys its way in­to the RET ti­tle fight with Eli Lil­ly, pay­ing $775M in cash to Blue­print</h2>
+<h3 class="rm-manual">Amber Tong</h3>
+<h4 class="rm-manual">Editor</h4>
+<p class="rm-manual">When Roche spelled out its original $1 billion deal
+ — $45 million of that upfront — with Blueprint to discover targeted 
+therapies against immunokinases, the biotech partner’s RET program was 
+still preclinical. Four years later, pralsetinib is on the cusp of 
+potential approval and the Swiss pharma giant is putting in much more to
+ get in on the commercial game.</p>
+<p class="rm-manual">Roche gains rights to co-develop and 
+co-commercialize the drug, with sole marketing responsibility for places
+ outside the US and China (where CStone has staked its claim).</p>
+<h3 class="rm-manual">Keep reading Endpoints with a free subscription</h3>
+<p class="rm-manual"> Unlock this story instantly and join 85,400+ biopharma pros reading Endpoints daily — and it's free. </p>
+<p class="rm-manual">July 17, 2020 11:00 AM EDT</p>
+<p class="rm-manual"><a href="https://endpts.com/channel/rd/"><span>R&amp;D</span></a></p>
+<p class="rm-manual"><a href="https://endpts.com/channel/cell-gene-tx/"><span>Cell/Gene Tx</span></a></p>
+<h2 class="rm-manual">J&amp;J-part­nered MeiraGTx aims at Bio­gen with new eye gene ther­a­py da­ta</h2>
+<h3 class="rm-manual">Jason Mast</h3>
+<h4 class="rm-manual">Associate Editor</h4>
+<p class="rm-manual">Several months after Biogen touted the first 
+proof-of-concept data from its $800 million eye gene therapy, MeiraGTx 
+and J&amp;J are out with their own early data for a rival treatment.</p>
+<p class="rm-manual">In a small Phase I/II trial for their gene therapy 
+for the degenerative eye disease x-linked retinitis pigmentosa, MeiraGTx
+ found that the 7 patients in the two lowest dose cohorts saw their 
+vision improve on multiple measures for 6 months. The study will provide
+ the basis for the New York biotech to move into a pivotal Phase III for
+ the gene therapy that J&amp;J paid $100 million <a href="https://endpts.com/jj-snags-rights-to-a-gene-therapy-portfolio-from-little-meiragtx-a-spinoff-from-sam-waksals-kadmon/">to get in on</a> last year.</p>
+<h3 class="rm-manual"> <a href="https://endpts.com/china-researchers-tout-in-vitro-data-for-gileads-antiviral-against-wuhan-virus-which-they-are-trying-to-patent/">Chi­na re­searchers tout in vit­ro da­ta for Gilead­'s an­tivi­ral against Wuhan virus — which they are try­ing to patent</a> </h3>
+<h3 class="rm-manual"> <a href="https://endpts.com/niaid-and-moderna-spell-out-a-robust-immune-response-in-phi-coronavirus-vaccine-test-but-big-questions-remain-to-be-answered/">UP­DAT­ED:
+ NI­AID and Mod­er­na spell out a 'ro­bust' im­mune re­sponse in PhI 
+coro­n­avirus vac­cine test — but big ques­tions re­main to be an­swered</a> </h3>
+<h3 class="rm-manual"> <a href="https://endpts.com/antibody-legend-tillman-gerngross-is-elbowing-his-way-into-the-covid-19-rd-crusade-i-dont-see-this-ending-anytime-soon/">An­ti­body
+ leg­end Till­man Gern­gross is el­bow­ing his way in­to the Covid-19 
+R&amp;D cru­sade: 'I don’t see this end­ing any­time soon'</a> </h3>
+<h3 class="rm-manual"> <a href="https://endpts.com/chinas-cro-powerhouse-tigermed-to-seek-1b-ipo-in-hong-kong-report/">Chi­na's CRO pow­er­house Tigermed to seek $1B IPO in Hong Kong — re­port</a> </h3>
+<h3 class="rm-manual"> <a href="https://endpts.com/a-jennifer-doudna-led-team-finds-a-new-crispr-enzyme-in-the-giant-viruses-of-a-california-mud-bog/">A Jen­nifer Doud­na-led team finds a new CRISPR en­zyme in the gi­ant virus­es of a Cal­i­for­nia mud bog</a> </h3>
+<h3 class="rm-manual"> <a href="https://endpts.com/eli-lillys-mirikizumab-joins-the-club-beating-up-on-cosentyx-as-another-head-to-head-study-leaves-novartis-drug-in-the-dust/">Eli
+ Lil­ly’s mirik­izum­ab joins the club beat­ing up on Cosen­tyx as 
+an­oth­er head-to-head study leaves No­var­tis’ drug in the dust</a> </h3>
+<h3 class="rm-manual"> <a href="https://endpts.com/suggested-by-bloomberg-blessed-by-analysts-could-an-ma-match-with-a-certain-ms-player-be-far-off-for-blockbuster-hungry-sanofi/">UP­DAT­ED:
+ Sug­gest­ed by Bloomberg, blessed by an­a­lysts, could an M&amp;A match
+ with a cer­tain MS play­er be far off for block­buster-hun­gry Sanofi?</a> </h3>
+<h3 class="rm-manual"> <a href="https://endpts.com/who-are-the-women-blazing-trails-in-biopharma-rd-and-leading-the-fight-against-covid-19-nominate-them-for-endpoints-special-report/">Who
+ are the women blaz­ing trails in bio­phar­ma R&amp;D and lead­ing the 
+fight against Covid-19? Nom­i­nate them for End­points' spe­cial re­port</a> </h3>
+<h3 class="rm-manual"> <a href="https://endpts.com/diagnostic-champ-roche-buys-its-way-into-the-ret-title-fight-with-eli-lilly-paying-775m-in-cash-to-blueprint/">Di­ag­nos­tic champ Roche buys its way in­to the RET ti­tle fight with Eli Lil­ly, pay­ing $775M in cash to Blue­print</a> </h3>
+<h3 class="rm-manual"> <a href="https://endpts.com/jj-partnered-meiragtx-aims-at-biogen-with-new-eye-gene-therapy-data/">J&amp;J-part­nered MeiraGTx aims at Bio­gen with new eye gene ther­a­py da­ta</a> </h3>
+<p class="rm-manual">Bioscience &amp; Technology Business Center</p>
+<p class="rm-manual">The University of Kansas</p>
+<p class="rm-manual">Lawrence, Kansas </p>
+<h3 class="rm-manual">Latest</h3>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://endpts.com/news/">All News</a></li> <li class="rm-manual"><a href="https://endpts.com/premium/">Premium Content</a></li> <li class="rm-manual"><a href="https://endpts.com/dont-miss/">Don't Miss</a></li> </ul>
+<h3 class="rm-manual">Channels</h3>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://endpts.com/channel/coronavirus/">Coronavirus</a> </li> <li class="rm-manual"> <a href="https://endpts.com/channel/rd/">R&amp;D</a> </li> <li class="rm-manual"> <a href="https://endpts.com/channel/pharma/">Pharma</a> </li> <li class="rm-manual"> <a href="https://endpts.com/channel/venture/">Venture</a> </li> <li class="rm-manual"> <a href="https://endpts.com/channel/people/">People</a> </li> <li class="rm-manual"> <a href="https://endpts.com/channel/startups/">Startups</a> </li> <li class="rm-manual"> <a href="https://endpts.com/channel/regulatory/">Regulatory</a> </li> <li class="rm-manual"> <a href="https://endpts.com/channel/deals/">Deals</a> </li> <li class="rm-manual"> <a href="https://endpts.com/channel/ipos/">IPOs</a> </li> <li class="rm-manual"> <a href="https://endpts.com/channel/china/">China</a> </li> <li class="rm-manual"> <a href="https://endpts.com/channel/cell-gene-tx/">Cell/Gene Tx</a> </li> <li class="rm-manual"> <a href="https://endpts.com/channel/bioregnum/">Bioregnum</a> </li> <li class="rm-manual"> <a href="https://endpts.com/channel/peer-review/">Peer Review</a> </li> <li class="rm-manual"> <a href="https://endpts.com/channel/discovery/">Discovery</a> </li> <li class="rm-manual"> <a href="https://endpts.com/channel/outsourcing/">Outsourcing</a> </li> <li class="rm-manual"> <a href="https://endpts.com/channel/in-focus/">In Focus</a> </li> <li class="rm-manual"> <a href="https://endpts.com/channel/ai/">AI</a> </li> <li class="rm-manual"> <a href="https://endpts.com/channel/special/">Special</a> </li> </ul>
+<h3 class="rm-manual">More</h3>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://mediakit.endpts.com/events">Events</a></li> <li class="rm-manual"><a href="https://webinars.endpts.com/">Webinars</a></li> <li class="rm-manual"><a href="https://endpts.com/sponsored/">Sponsored Posts</a></li> <li class="rm-manual"> <a href="https://endpts.com/channel/biotech-voices/">Biotech Voices</a> </li> <li class="rm-manual"> <a href="https://mediakit.endpts.com/">Advertise</a> </li> <li class="rm-manual"> <a href="https://endpts.com/about-endpoints-news/">About Us</a> </li> <li class="rm-manual"> <span>Help</span> </li> </ul>
+<h3 class="rm-manual">Work in biotech</h3>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://careers.endpts.com/">Endpoints Careers</a></li> </ul>
+<p class="rm-manual">© Endpoints Company 2020</p>
+<ul class="rm-manual"> <li class="rm-manual"> <span>Help</span> </li> <li class="rm-manual"> <a href="https://mediakit.endpts.com/">Advertise</a> </li> <li class="rm-manual"> <a href="https://www.iubenda.com/privacy-policy/286978" rel="nofollow noopener">Privacy Policy</a> </li> <li class="rm-manual"> <a href="https://endpts.com/an-update-on-the-endpoints-business-model-and-how-your-company-can-directly-support-it/">Business Model</a> </li> </ul>
+<h3 class="rm-manual"> <span>Sign in to your account</span> </h3>
+<h3 class="rm-manual"> <span>e-mail</span> </h3>
+<h3 class="rm-manual"> <span>password</span> </h3>
+<h3 class="rm-manual"> <span>request magic link</span> </h3>
+<p class="rm-manual">If you're already an Endpoints subscriber, enter 
+your email below for a magic link that lets you sign in quickly without 
+using a password. Please note the magic link is one-time use only and 
+expires after 24 hours.</p>
+<h3 class="rm-manual"> <span>email</span> </h3>
+<h3 class="rm-manual"> <span>reset password</span> </h3>
+<p class="rm-manual">We'll e-mail you a link to set a new password. Please note this link is one-time use only and is valid for only 24 hours.</p>
+<h3 class="rm-manual"> <span>email</span> </h3>
+<h3 class="rm-manual"> <span>About You</span> </h3>
+<h3 class="rm-manual"> <span>Subscriptions</span> </h3>
+<p class="rm-manual"> <span>ENDPOINTS </span><span>by John Carroll &amp; team — all the news at 11:30a ET</span> </p>
+<p class="rm-manual"> <span>EARLY EDITION</span><span>by Arsalan Arif — skimmable links and news at 7:15a ET </span> </p></article>
+</body></html>

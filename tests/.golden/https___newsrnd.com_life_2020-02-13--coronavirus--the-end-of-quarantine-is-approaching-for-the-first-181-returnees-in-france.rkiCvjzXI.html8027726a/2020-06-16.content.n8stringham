@@ -1,0 +1,150 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Coronavirus: the end of quarantine is approaching for the first 181 returnees in France - The Limited Times </p>
+<p class="rm-manual">The Limited Times</p>
+<p class="rm-manual">Now you can see non-English news...</p>
+<p class="rm-manual"> <a href="file:///">Home</a> <a href="file:///news">News</a> <a href="file:///business">Business</a> <a href="file:///sports">Sports</a> <a href="file:///life">Life</a> <a href="file:///tech">Tech</a> <a href="#top">↑↑</a> </p>
+<h1 class="rm-manual"> Coronavirus: the end of quarantine is approaching for the first 181 returnees in France</h1>
+<p class="rm-manual">2020-02-13T10:41:23.244Z</p>
+<p> Friday, these people having stayed in Wuhan will be able to leave 
+the holiday center of Carry-le-Rouet in which they were placed in </p>
+<p> <span> For 13 days, they have been waiting to be able to put their 
+noses out, far from the holiday center of Carry-le-Rouet 
+(Bouches-du-Rhône), in which they are forced to remain confined for two 
+weeks.</span> </p>
+<p> <span> As of Friday, the 181 travelers - mainly French, adults and 
+children, and their spouses - who have been repatriated from Wuhan will 
+be free.</span> <span> During this unprecedented scale operation, they 
+had landed at the Istres military airport on January 31, and had been 
+transferred by bus to this Côte Bleue holiday center, some 30 km from 
+Marseille.</span> </p>
+<p> <span> All had committed to enduring this period of confinement, so 
+that the authorities could determine with certainty that they had not 
+contracted the coronavirus Covid-19, including Wuhan, in China, where 
+they were until the end of January, is the epicenter.</span> <span> To 
+date, this virus, which is transmitted through the respiratory tract, 
+has made 60,000 infected cases and at least 1,355 deaths, mainly in 
+China.</span> </p>
+<h2> <span> Considered healthy</span> </h2>
+<p> <span> These 14 days, during which all were forced to wear a mask in
+ the common areas, correspond to the maximum duration of incubation 
+noted for the virus.</span> <span> If none of the occupants show symptoms (fever, cough, etc.) during this period of isolation, they are considered healthy.</span> </p>
+<p> <span> When they arrived in Istres, two of these passengers had also
+ been briefly hospitalized, as they presented symptoms deemed to be 
+similar to those of the coronavirus.</span> <span> Before tests prove they weren't contaminated.</span> </p>
+<p> <span> VIDEO.</span> <span> Coronavirus: the first French returnees from China have arrived</span> </p>
+<p> <span> The reception conditions in the center they occupy are 
+strict: they can receive parcels but no family visits, must be subject 
+to two daily temperature measurements and obviously do not have the 
+right to leave the center .</span> </p>
+<h2> <span> Sometimes fuzzy programs</span> </h2>
+<p> <span> The day of Thursday should be devoted to suitcases, because 
+the first departures will be early Friday, announced the authorities.</span> <span>
+ These French people have the choice between organizing their departure 
+on their own, if relatives come to pick them up, or using the shuttles 
+made available by the authorities to reach the station or airport.</span> </p>
+<p> <span> Newsletter - The essentials of the news</span> </p>
+<p><span> Every morning, the news seen by Le Parisien</span> </p>
+<p> <span> I'm registering</span> </p>
+<p> <span> Your email address is collected by Le Parisien to allow you to receive our news and commercial offers.</span> <span> Find out more</span> </p>
+<p> <span> According to an AFP journalist, also placed in quarantine in 
+this holiday center, near the departure, many people juggled between the
+ schedules of planes and trains, while some had no idea yet specify what
+ they were going to do once outside.</span> </p>
+<h2> <span> Some must remain confined until February 23</span> </h2>
+<p> <span> After their departure, 157 other people will remain in 
+quarantine: 44 in Carry-le-Rouet and 113 in Aix-en-Provence, on the 
+premises of the École nationale supérieure des officiers de pompiers 
+pompiers (Ensosp).</span> </p>
+<p> <span> VIDEO.</span> <span> Coronavirus: a waterfront club hotel to welcome returnees from Wuhan</span> </p>
+<p> <span> A part of these people who must remain in isolation arrived 
+on a second flight, on February 2, and their quarantine should end on 
+Sunday.</span> <span> The 35 others, who arrived on a third flight on February 9 via London, will have to wait until February 23.</span> </p>
+<p> <span> Outside China, including the autonomous regions of Macao and 
+Hong Kong, nearly 500 cases of contamination and two deaths have been 
+confirmed in around 30 countries and territories.</span> </p>
+<p class="rm-manual">Source: <a href="file:///go/-coronavirus--the-end-of-quarantine-is-approaching-for-the-first-181-returnees-in-france.rkiCvjzXI.html" rel="nofollow">leparis </a></p>
+<h4 class="rm-manual">Similar news:</h4>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///life/2020-02-14--coronavirus--end-of-quarantine-for-the-first-returnees-from-wuhan-to-carry-le-rouet.HJDhEa7mL.html"> Coronavirus: end of quarantine for the first returnees from Wuhan to Carry-le-Rouet</a><span> 4 months </span>
+</li> </ul>
+<h2 class="rm-manual">You may like</h2>
+<p class="rm-manual"> Life/Entertain 2020-02-13T10:41:23.244Z </p>
+<p class="rm-manual"> <a href="file:///life/2020-02-13--coronavirus--the-end-of-quarantine-is-approaching-for-the-first-181-returnees-in-france.rkiCvjzXI.html"></a></p><h5 class="rm-manual"><a href="file:///life/2020-02-13--coronavirus--the-end-of-quarantine-is-approaching-for-the-first-181-returnees-in-france.rkiCvjzXI.html"> Coronavirus: the end of quarantine is approaching for the first 181 returnees in France</a></h5> <p class="rm-manual"></p>
+<p class="rm-manual"> Life/Entertain 2020-02-14T06:56:46.798Z </p>
+<p class="rm-manual"> <a href="file:///life/2020-02-14--coronavirus--end-of-quarantine-for-the-first-returnees-from-wuhan-to-carry-le-rouet.HJDhEa7mL.html"></a></p><h5 class="rm-manual"><a href="file:///life/2020-02-14--coronavirus--end-of-quarantine-for-the-first-returnees-from-wuhan-to-carry-le-rouet.HJDhEa7mL.html"> Coronavirus: end of quarantine for the first returnees from Wuhan to Carry-le-Rouet</a></h5> <p class="rm-manual"></p>
+<p class="rm-manual"> Life/Entertain 2020-02-14T06:29:46.526Z </p>
+<p class="rm-manual"> <a href="file:///life/2020-02-14--coronavirus--the-new-assessment-of-the-epidemic-in-china-amounts-to-1380-dead.r1XPA2XQU.html"></a></p><h5 class="rm-manual"><a href="file:///life/2020-02-14--coronavirus--the-new-assessment-of-the-epidemic-in-china-amounts-to-1380-dead.r1XPA2XQU.html"> Coronavirus: the new assessment of the epidemic in China amounts to 1380 dead</a></h5> <p class="rm-manual"></p>
+<p class="rm-manual"> News/Politics 2020-02-23T09:48:22.351Z </p>
+<p class="rm-manual"> <a href="file:///news/2020-02-23--coronavirus--end-of-quarantine-for-the-last-returnees-in-the-south-of-france.S1CvcT1NU.html"></a></p><h5 class="rm-manual"><a href="file:///news/2020-02-23--coronavirus--end-of-quarantine-for-the-last-returnees-in-the-south-of-france.S1CvcT1NU.html"> Coronavirus: end of quarantine for the last returnees in the south of France</a></h5> <p class="rm-manual"></p>
+<p class="rm-manual"> Tech/Game 2020-02-14T18:06:04.014Z </p>
+<p class="rm-manual"> <a href="file:///tech/2020-02-14--coronavirus--end-of-quarantine-for-the-first-french-returnees-from-wuhan.ryNqWvNm8.html"></a></p><h5 class="rm-manual"><a href="file:///tech/2020-02-14--coronavirus--end-of-quarantine-for-the-first-french-returnees-from-wuhan.ryNqWvNm8.html"> Coronavirus: end of quarantine for the first French returnees from Wuhan</a></h5> <p class="rm-manual"></p>
+<p class="rm-manual"> News/Politics 2020-02-16T08:09:12.096Z </p>
+<p class="rm-manual"> <a href="file:///news/2020-02-16--coronavirus--end-of-quarantine-for-a-second-group-of-returnees-from-wuhan-in-france.SJlhOOIQL.html"></a></p><h5 class="rm-manual"><a href="file:///news/2020-02-16--coronavirus--end-of-quarantine-for-a-second-group-of-returnees-from-wuhan-in-france.SJlhOOIQL.html"> Coronavirus: end of quarantine for a second group of returnees from Wuhan in France</a></h5> <p class="rm-manual"></p>
+<p class="rm-manual"> News/Politics 2020-02-16T07:51:00.523Z </p>
+<p class="rm-manual"> <a href="file:///news/2020-02-16--coronavirus--diamond-princess-evacuation-organized.HJaw4_UQL.html"></a></p><h5 class="rm-manual"><a href="file:///news/2020-02-16--coronavirus--diamond-princess-evacuation-organized.HJaw4_UQL.html"> Coronavirus: Diamond Princess evacuation organized</a></h5> <p class="rm-manual"></p>
+<p class="rm-manual"> Life/Entertain 2020-02-16T09:12:35.093Z </p>
+<p class="rm-manual"> <a href="file:///life/2020-02-16--coronavirus--the-last-returnees-from-wuhan-leave-carry-le-rouet-this-sunday.SkxoFDKLm8.html"></a></p><h5 class="rm-manual"><a href="file:///life/2020-02-16--coronavirus--the-last-returnees-from-wuhan-leave-carry-le-rouet-this-sunday.SkxoFDKLm8.html"> Coronavirus: the last returnees from Wuhan leave Carry-le-Rouet this Sunday</a></h5> <p class="rm-manual"></p>
+<h2 class="rm-manual">Trends 24h</h2>
+<p class="rm-manual"> Life/Entertain 2020-06-16T06:49:21.313Z </p>
+<p class="rm-manual"> <a href="file:///life/2020-06-16-video--tribute-to-johnny-hallyday--200-bikers-fans-of-the-rocker-climb-the-tourmalet.S1Fusy8a8.html"></a></p><h5 class="rm-manual"><a href="file:///life/2020-06-16-video--tribute-to-johnny-hallyday--200-bikers-fans-of-the-rocker-climb-the-tourmalet.S1Fusy8a8.html"> VIDEO. Tribute to Johnny Hallyday: 200 bikers fans of the rocker climb the Tourmalet</a></h5> <p class="rm-manual"></p>
+<p class="rm-manual"> Life/Entertain 2020-06-16T07:22:47.181Z </p>
+<p class="rm-manual"> <a href="file:///life/2020-06-16-swimming-pool--barbecue------up-to--60%25-on-outdoor-items-at-cdiscount.r1yL7xL6I.html"></a></p><h5 class="rm-manual"><a href="file:///life/2020-06-16-swimming-pool--barbecue------up-to--60%25-on-outdoor-items-at-cdiscount.r1yL7xL6I.html"> Swimming pool, barbecue .... up to -60% on outdoor items at Cdiscount</a></h5> <p class="rm-manual"></p>
+<p class="rm-manual"> Life/Entertain 2020-06-16T08:22:36.021Z </p>
+<p class="rm-manual"> <a href="file:///life/2020-06-16-%22dead-girls-don-t-lie%22--netflix-series-ends-tragically---and-fans-are-disappointed.B1WVL-bU68.html"></a></p><h5 class="rm-manual"><a href="file:///life/2020-06-16-%22dead-girls-don-t-lie%22--netflix-series-ends-tragically---and-fans-are-disappointed.B1WVL-bU68.html"> "Dead girls don't lie": Netflix series ends tragically - and fans are disappointed</a></h5> <p class="rm-manual"></p>
+<p class="rm-manual"> Life/Entertain 2020-06-16T08:41:21.682Z </p>
+<p class="rm-manual"> <a href="file:///life/2020-06-16-pope--appoints-a-lay-apsa-secretary.H1q2BbLTL.html"></a></p><h5 class="rm-manual"><a href="file:///life/2020-06-16-pope--appoints-a-lay-apsa-secretary.H1q2BbLTL.html"> Pope: appoints a lay APSA secretary</a></h5> <p class="rm-manual"></p>
+<p class="rm-manual"> Life/Entertain 2020-06-16T06:30:36.986Z </p>
+<p class="rm-manual"> <a href="file:///life/2020-06-16-farewell-to-luigi-spagnol--the-publisher-who-discovered-bestsellers.SylBfD1UaI.html"></a></p><h5 class="rm-manual"><a href="file:///life/2020-06-16-farewell-to-luigi-spagnol--the-publisher-who-discovered-bestsellers.SylBfD1UaI.html"> Farewell to Luigi Spagnol, the publisher who discovered bestsellers</a></h5> <p class="rm-manual"></p>
+<p class="rm-manual"> Life/Entertain 2020-06-16T12:06:15.457Z </p>
+<p class="rm-manual"> <a href="file:///life/2020-06-16-board-games-for-the-whole-family.HJW1TSE868.html"></a></p><h5 class="rm-manual"><a href="file:///life/2020-06-16-board-games-for-the-whole-family.HJW1TSE868.html"> Board games for the whole family</a></h5> <p class="rm-manual"></p>
+<h2 class="rm-manual">Latest</h2>
+<p class="rm-manual"> <a href="file:///life/2020-06-16-expert-warns-of-the-danger-of-ticks--will-2020-be-a-record-year-.HJef_EIUpU.html"> </a></p><p class="rm-manual"><a href="file:///life/2020-06-16-expert-warns-of-the-danger-of-ticks--will-2020-be-a-record-year-.HJef_EIUpU.html"> Expert warns of the danger of ticks: will 2020 be a record year? </a></p><p class="rm-manual"><a href="file:///life/2020-06-16-expert-warns-of-the-danger-of-ticks--will-2020-be-a-record-year-.HJef_EIUpU.html">2020-06-16T14:17:13.585Z </a></p><p class="rm-manual"></p><a href="file:///life/2020-06-16-expert-warns-of-the-danger-of-ticks--will-2020-be-a-record-year-.HJef_EIUpU.html"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///life/2020-06-16-coronavirus-latest-news--live-%7C-spike-in-infections-in-portugal-with-346-new-cases--87%25-in-the-lisbon-region.SkgmsmIIa8.html"> </a></p><p class="rm-manual"><a href="file:///life/2020-06-16-coronavirus-latest-news--live-%7C-spike-in-infections-in-portugal-with-346-new-cases--87%25-in-the-lisbon-region.SkgmsmIIa8.html"> Coronavirus latest news, live | Spike in infections in Portugal with 346 new cases, 87% in the Lisbon region </a></p><p class="rm-manual"><a href="file:///life/2020-06-16-coronavirus-latest-news--live-%7C-spike-in-infections-in-portugal-with-346-new-cases--87%25-in-the-lisbon-region.SkgmsmIIa8.html">2020-06-16T14:13:47.487Z </a></p><p class="rm-manual"></p><a href="file:///life/2020-06-16-coronavirus-latest-news--live-%7C-spike-in-infections-in-portugal-with-346-new-cases--87%25-in-the-lisbon-region.SkgmsmIIa8.html"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///life/2020-06-16-you-can-t-win-the-%22winning-kitchen%22-israel-today.B1bzc7UUTI.html"> </a></p><p class="rm-manual"><a href="file:///life/2020-06-16-you-can-t-win-the-%22winning-kitchen%22-israel-today.B1bzc7UUTI.html"> You can't win the "winning kitchen" Israel today </a></p><p class="rm-manual"><a href="file:///life/2020-06-16-you-can-t-win-the-%22winning-kitchen%22-israel-today.B1bzc7UUTI.html">2020-06-16T14:13:30.375Z </a></p><p class="rm-manual"></p><a href="file:///life/2020-06-16-you-can-t-win-the-%22winning-kitchen%22-israel-today.B1bzc7UUTI.html"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///life/2020-06-16-the-new-nora-jones--a-journey-to-a-broken-heart-%7C-israel-today.BkDtmLL68.html"> </a></p><p class="rm-manual"><a href="file:///life/2020-06-16-the-new-nora-jones--a-journey-to-a-broken-heart-%7C-israel-today.BkDtmLL68.html"> The New Nora Jones: A Journey To A Broken Heart | Israel today </a></p><p class="rm-manual"><a href="file:///life/2020-06-16-the-new-nora-jones--a-journey-to-a-broken-heart-%7C-israel-today.BkDtmLL68.html">2020-06-16T14:13:19.097Z </a></p><p class="rm-manual"></p><a href="file:///life/2020-06-16-the-new-nora-jones--a-journey-to-a-broken-heart-%7C-israel-today.BkDtmLL68.html"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///life/2020-06-16-%22we-asked-to-open-the-country-for-those-coming-from-the-us-and-italy%22-%7C-israel-today.H1W-KQL86I.html"> </a></p><p class="rm-manual"><a href="file:///life/2020-06-16-%22we-asked-to-open-the-country-for-those-coming-from-the-us-and-italy%22-%7C-israel-today.H1W-KQL86I.html"> "We asked to open the country for those coming from the US and Italy" | Israel today </a></p><p class="rm-manual"><a href="file:///life/2020-06-16-%22we-asked-to-open-the-country-for-those-coming-from-the-us-and-italy%22-%7C-israel-today.H1W-KQL86I.html">2020-06-16T14:13:13.491Z </a></p><p class="rm-manual"></p><a href="file:///life/2020-06-16-%22we-asked-to-open-the-country-for-those-coming-from-the-us-and-italy%22-%7C-israel-today.H1W-KQL86I.html"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///life/2020-06-16-%22star-wars-squadrons%22--here-is-the-reveal-trailer-in-the-livestream.SJV0zI8aL.html"> </a></p><p class="rm-manual"><a href="file:///life/2020-06-16-%22star-wars-squadrons%22--here-is-the-reveal-trailer-in-the-livestream.SJV0zI8aL.html"> "Star Wars Squadrons": Here is the Reveal trailer in the livestream </a></p><p class="rm-manual"><a href="file:///life/2020-06-16-%22star-wars-squadrons%22--here-is-the-reveal-trailer-in-the-livestream.SJV0zI8aL.html">2020-06-16T14:10:20.482Z </a></p><p class="rm-manual"></p><a href="file:///life/2020-06-16-%22star-wars-squadrons%22--here-is-the-reveal-trailer-in-the-livestream.SJV0zI8aL.html"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///life/2020-06-16-%22space-force%22--netflix-series-confuses-viewers-with-this-great-mystery.B1lEaM8UpU.html"> </a></p><p class="rm-manual"><a href="file:///life/2020-06-16-%22space-force%22--netflix-series-confuses-viewers-with-this-great-mystery.B1lEaM8UpU.html"> "Space Force": Netflix series confuses viewers with this great mystery </a></p><p class="rm-manual"><a href="file:///life/2020-06-16-%22space-force%22--netflix-series-confuses-viewers-with-this-great-mystery.B1lEaM8UpU.html">2020-06-16T14:10:03.806Z </a></p><p class="rm-manual"></p><a href="file:///life/2020-06-16-%22space-force%22--netflix-series-confuses-viewers-with-this-great-mystery.B1lEaM8UpU.html"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///life/2020-06-16-azzolina--%22schools-repopulate-themselves--they-mature-in-presence%22---italy.ByOiz886L.html"> </a></p><p class="rm-manual"><a href="file:///life/2020-06-16-azzolina--%22schools-repopulate-themselves--they-mature-in-presence%22---italy.ByOiz886L.html"> Azzolina: "Schools repopulate themselves, they mature in presence" - Italy </a></p><p class="rm-manual"><a href="file:///life/2020-06-16-azzolina--%22schools-repopulate-themselves--they-mature-in-presence%22---italy.ByOiz886L.html">2020-06-16T14:09:35.740Z </a></p><p class="rm-manual"></p><a href="file:///life/2020-06-16-azzolina--%22schools-repopulate-themselves--they-mature-in-presence%22---italy.ByOiz886L.html"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///life/2020-06-16-m5s--venezuela-console--all-false.SyMoz8UaL.html"> </a></p><p class="rm-manual"><a href="file:///life/2020-06-16-m5s--venezuela-console--all-false.SyMoz8UaL.html"> M5S: Venezuela console, all false </a></p><p class="rm-manual"><a href="file:///life/2020-06-16-m5s--venezuela-console--all-false.SyMoz8UaL.html">2020-06-16T14:09:30.183Z </a></p><p class="rm-manual"></p><a href="file:///life/2020-06-16-m5s--venezuela-console--all-false.SyMoz8UaL.html"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///life/2020-06-16-brexit--downing-st---we-aim-to-deal.rJx65z8LpU.html"> </a></p><p class="rm-manual"><a href="file:///life/2020-06-16-brexit--downing-st---we-aim-to-deal.rJx65z8LpU.html"> Brexit: Downing St., we aim to deal </a></p><p class="rm-manual"><a href="file:///life/2020-06-16-brexit--downing-st---we-aim-to-deal.rJx65z8LpU.html">2020-06-16T14:09:24.585Z </a></p><p class="rm-manual"></p><a href="file:///life/2020-06-16-brexit--downing-st---we-aim-to-deal.rJx65z8LpU.html"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///life/2020-06-16-resilient-and-multidevice--a-golden-season-for-tv.BkTReU8aL.html"> </a></p><p class="rm-manual"><a href="file:///life/2020-06-16-resilient-and-multidevice--a-golden-season-for-tv.BkTReU8aL.html"> Resilient and multidevice, a golden season for TV </a></p><p class="rm-manual"><a href="file:///life/2020-06-16-resilient-and-multidevice--a-golden-season-for-tv.BkTReU8aL.html">2020-06-16T14:01:56.589Z </a></p><p class="rm-manual"></p><a href="file:///life/2020-06-16-resilient-and-multidevice--a-golden-season-for-tv.BkTReU8aL.html"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///life/2020-06-16-whatsapp--update-is-celebrated---but-experts-warn-about-a-feature---%22achilles--heel%22.ryeSEx886I.html"> </a></p><p class="rm-manual"><a href="file:///life/2020-06-16-whatsapp--update-is-celebrated---but-experts-warn-about-a-feature---%22achilles--heel%22.ryeSEx886I.html"> WhatsApp: Update is celebrated - but experts warn about a feature - "Achilles' heel" </a></p><p class="rm-manual"><a href="file:///life/2020-06-16-whatsapp--update-is-celebrated---but-experts-warn-about-a-feature---%22achilles--heel%22.ryeSEx886I.html">2020-06-16T13:59:08.817Z </a></p><p class="rm-manual"></p><a href="file:///life/2020-06-16-whatsapp--update-is-celebrated---but-experts-warn-about-a-feature---%22achilles--heel%22.ryeSEx886I.html"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///life/2020/06/16"> life 2020/06/16</a> </p>
+<p class="rm-manual">© Communities 2019 - <a href="file:///privacy">Privacy</a></p></article>
+</body></html>

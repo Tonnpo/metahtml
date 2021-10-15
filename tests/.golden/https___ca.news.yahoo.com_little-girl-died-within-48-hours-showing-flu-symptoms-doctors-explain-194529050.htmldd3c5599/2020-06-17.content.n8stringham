@@ -1,0 +1,153 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">Girl dies within 48 hours of showing flu symptoms</p>
+<p class="rm-manual"><a href="https://ca.news.yahoo.com/">Yahoo</a></p>
+<p class="rm-manual">Search</p>
+<ul class="rm-manual"><li class="rm-manual"><a href="https://mail.yahoo.com/?.intl=ca&amp;.lang=en-CA&amp;.partner=none&amp;.src=news">Mail</a></li></ul>
+<p class="rm-manual"><a href="https://ca.news.yahoo.com/"> News</a></p>
+<p class="rm-manual"><span>Follow Us</span></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://ca.news.yahoo.com/tagged/coronavirus"> Coronavirus</a></li>
+<li class="rm-manual"><a href="https://ca.news.yahoo.com/tagged/pollca"> Vote 'n' Vent</a></li>
+<li class="rm-manual"><a href="https://ca.news.yahoo.com/blogs/"> Originals</a></li>
+<li class="rm-manual"><a href="https://ca.news.yahoo.com/canada/"> Canada</a></li>
+<li class="rm-manual"><a href="https://ca.news.yahoo.com/world/"> World</a></li>
+<li class="rm-manual"><a href="https://ca.finance.yahoo.com/"> Business</a></li>
+<li class="rm-manual"><a href="https://ca.news.yahoo.com/celebrity"> Entertainment</a></li>
+<li class="rm-manual"><a href="https://ca.sports.yahoo.com/"> Sports</a></li>
+<li class="rm-manual"><a href="https://ca.news.yahoo.com/science-tech/"> Science &amp; Tech</a></li>
+<li class="rm-manual"><a href="https://ca.weather.yahoo.com/"> Weather</a></li>
+</ul>
+<h1 class="rm-manual">This little girl died within 48 hours of showing flu symptoms — doctors explain why</h1>
+<p class="rm-manual">Korin Miller</p>
+<p class="rm-manual">Writer</p>
+<p class="rm-manual"><span><span><a href="https://www.yahoo.com/lifestyle/wellness/">Yahoo Lifestyle</a></span></span>January 7, 2019</p>
+<p>A family is mourning the loss of a 6-year-old, who died just 48 hours
+ after contracting influenza. Here’s what might have happened. (Photo: 
+GoFundMe).</p>
+<p>Flu season is well underway in the U.S., and the virus has already 
+claimed the lives of 13 children so far, according to recently released 
+data from the <a href="https://www.cdc.gov/flu/weekly/index.htm#S3" rel="nofollow noopener">Centers for Disease Control and Prevention</a>. Among them is 6-year-old Allison Eaglespeaker, who died of the flu on Dec. 1</p>
+<p>Eaglespeaker’s mother, Crystal White Shield, told <a href="https://www.wcvb.com/article/as-flu-is-on-the-rise-mom-says-i-didn-t-know-i-was-going-to-lose-my-baby-to-the-flu/25749201" rel="nofollow noopener">WCVB5</a>
+ that her daughter — who suffered from mild asthma — first showed signs 
+of being sick just 48 hours before she died. “This illness hit her 
+really hard and really fast,” Shield said. “I didn’t know I was going to
+ lose my baby.” Eaglespeaker’s aunt reportedly set up a <a href="https://www.gofundme.com/funeral-expenses-for-allison" rel="nofollow noopener">GoFundMe</a> for her niece’s family, calling her their “beautiful baby girl.”</p>
+<p>It seems shocking that someone could die that quickly from the flu, 
+but it happens, Gina Posner, MD, a pediatrician at MemorialCare Orange 
+Coast Medical Center in Fountain Valley, Calif., tells Yahoo Lifestyle. 
+“The flu can move super quickly in children and adults,” she says. “The 
+flu can come and just overwhelm the system. That’s why we always tell 
+people to get their flu shot.”</p>
+<p>Having an underlying condition like asthma, being immunocompromised, 
+and not getting a flu shot increase the chances that someone will have a
+ serious, rapidly progressing case of the flu, infectious disease expert
+ Amesh A. Adalja, MD, senior scholar at the John’s Hopkins Center for 
+Health Security, tells Yahoo Lifestyle. In general, “to die that fast 
+from flu likely means that it caused a primary viral pneumonia, which 
+can interfere with oxygen function,” he says. But overall, “there’s a 
+lot of mystery in understanding who dies from flu and who doesn’t die 
+from flu,” Adalja says. “There may be some genetic variation in the 
+immune system of some people that allows the flu to progress rapidly.”</p>
+<p>If your child becomes sick with an upper respiratory infection, it 
+can be tough to know whether it’s due to something like a cold, general 
+cough, or the flu, Posner says. “Typically the fever is higher and more 
+persistent with the flu, but not always,” she says.</p>
+<p>If your child has any kind of underlying medical issue, Adalja 
+recommends taking them to the doctor ASAP to be tested for the flu and 
+potentially put on an anti-viral drug like Tamiflu, which can shorten 
+the duration of the flu and lower the odds that your child will 
+experience serious complications from the illness. “Also, if they don’t 
+have any medical problems but are short of breath, have uncontrollable 
+fever, are lethargic, or have a change in behavior, that should prompt 
+you to see a doctor,” Adalja says.</p>
+<p>You’ll also want to provide lots of comfort care, including pushing 
+fluids, having your child rest, and giving them ibuprofen or 
+acetaminophen if they’re uncomfortable and feverish, Posner says. “Keep 
+an eye on them and call your doctor if they seem to get worse,” she 
+adds.</p>
+<p>Overall, experts stress that prevention is crucial. “The most 
+important thing that anyone can do is the flu shot,” Posner says. “Even 
+if the shot does not prevent your child from getting the flu, at least 
+it can help prevent your child from dying from the flu.”</p>
+<p class="rm-manual">Read more from Yahoo Lifestyle:</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.yahoo.com/lifestyle/doctors-flabbergasted-half-parents-think-flu-shot-causes-flu-impossible-173146594.html">Doctors ‘flabbergasted’ that half of parents think flu shot causes the flu: ‘It’s impossible’</a></li>
+<li class="rm-manual"><a>This 11-year-old boy reportedly died of an allergic reaction after smelling fish</a></li>
+<li class="rm-manual"><a href="https://www.yahoo.com/lifestyle/22-year-old-suddenly-paralyzed-teaching-thailand-heres-mysterious-illness-behind-175905745.html">22-year-old suddenly paralyzed while teaching in Thailand — here’s the mysterious illness behind it</a></li>
+</ul>
+<p class="rm-manual">Follow us on <a href="https://instagram.com/yahoolifestyle/" rel="nofollow noopener">Instagram</a>, <a href="https://www.facebook.com/yahoolifestyle" rel="nofollow noopener">Facebook</a>, and <a href="https://twitter.com/yahoolifestyle" rel="nofollow noopener">Twitter</a> for nonstop inspiration delivered fresh to your feed, every day.</p>
+<h2 class="rm-manual">What to Read Next</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.style.yahoo.com/fantastic-bang-for-your-buck-amazon-25-bike-shorts-185629064.html"><span>'Fantastic bang for your buck': These $25 bike shorts are an affordable take on the hottest trend of the season</span></a></h3><p class="rm-manual">Yahoo Canada Style</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://uk.style.yahoo.com/fathers-day-gift-uk-2020-164626281.html"><span>Father's Day UK: The one gift your dad is bound to love</span></a></h3><p class="rm-manual">Yahoo Style UK</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://sports.yahoo.com/without-more-from-baker-mayfield-browns-will-waste-odell-beckham-jr-talented-offense-162446545.html"><span>Without more from Baker Mayfield, Browns will waste Odell Beckham Jr., talented offense</span></a></h3><p class="rm-manual">Yahoo Sports</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.style.yahoo.com/kate-middleton-superga-cotu-sneakers-nordstrom-sale-162254530.html"><span>Kate Middleton's favourite sneakers are perfect for summer — and Nordstrom just slashed the price to 46% off</span></a></h3><p class="rm-manual">Yahoo Canada Style</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.style.yahoo.com/todays-the-last-day-to-save-up-to-100-on-running-shoes-at-sport-chek-154942090.html"><span>Today's the last day to save up to $100 on running shoes at Sport Chek</span></a></h3><p class="rm-manual">Yahoo Canada Style</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/coronavirus-covid19-canada-latest-updates-190048955.html"><span>COVID-19 in Canada: U.S. spikes are 'warning signal' for Canada, Ontario urges border stays closed</span></a></h3><p class="rm-manual">Yahoo News Canada</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/video/wildfires-burn-arizona-national-forests-204533319.html"><span>Wildfires burn in Arizona national forests</span></a></h3><p class="rm-manual">Canadian Press Videos</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/reportedly-caused-kelly-clarkson-brandon-153054370.html"><span>This Is Reportedly What Caused Kelly Clarkson and Brandon Blackstock's Divorce</span></a></h3><p class="rm-manual">Glamour</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/greens-elizabeth-may-wants-inquiry-155149964.html"><span>Singh removed from Commons after calling BQ MP racist over blocked RCMP motion</span></a></h3><p class="rm-manual">The Canadian Press</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/video/senate-gop-unveil-police-reform-183503317.html"><span>Senate GOP unveil police reform bill</span></a></h3><p class="rm-manual">Reuters Videos</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://www.goodhousekeeping.com/health/wellness/a32885884/coronavirus-pandemic-depression-tips/"><span>6 Ways to Help Yourself Overcome Feelings of Depression During the Pandemic</span></a></h3><p class="rm-manual">Good Housekeeping</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/hooray-cra-cerb-extended-changes-163056199.html"><span>Hooray! CRA’s CERB Will Be Extended — But There Will Be Changes</span></a></h3><p class="rm-manual">The Motley Fool</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/todays-parent-breastfeeding-baby-cover-213143253.html"><span>Amazing Cover Shot Challenges The Biggest Taboo For New Moms</span></a></h3><p class="rm-manual">HuffPost Canada</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/apartment-comes-fridge-painted-look-145553078.html"><span>Man uncovers bizarre kitchen feature in apartment listing: 'I'm furious about this'</span></a></h3><p class="rm-manual">In The Know</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/video/ava-duvernay-astounded-huge-spike-161725056.html"><span>Ava Duvernay astounded by huge spike in viewership of '13th'</span></a></h3><p class="rm-manual">Reuters Videos</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/un-security-council-vote-canada-133840871.html"><span>Canada's UN Security Council Bid Fails After 4-Year Campaign</span></a></h3><p class="rm-manual">HuffPost Canada</p><p class="rm-manual"></p></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/report-60-beijing-flights-cancelled-034050829.html"><span>US coronavirus outbreaks spur debate over personal freedoms</span></a></h3><p class="rm-manual">The Canadian Press</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/amanda-kloots-laments-nick-cordero-112830845.html"><span>Amanda Kloots laments Nick Cordero missing son Elvis' first steps while he remains hospitalized</span></a></h3><p class="rm-manual">USA TODAY Entertainment</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/video/know-cerb-extension-150555965.html"><span>What you need to know about CERB’s extension</span></a></h3><p class="rm-manual">Global News</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://news.yahoo.com/wife-u-rep-andy-barr-080650903.html"><span>Wife of U.S. Rep. Andy Barr dies unexpectedly at age 39</span></a></h3><p class="rm-manual">Associated Press</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/voice-just-announced-nick-jonas-174800971.html"><span>'The Voice' Just Announced Nick Jonas' Replacement and His Fans Are Not Happy</span></a></h3><p class="rm-manual">Good Housekeeping</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/matt-gaetz-shouts-down-democratic-202123380.html"><span>Matt Gaetz Shouts Down Democratic Rep. Cedric Richmond: ‘Who the Hell Do You Think You Are?!’</span></a></h3><p class="rm-manual">The Daily Beast</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/video/flash-floods-cause-traffic-jams-140000805.html"><span>Flash floods cause traffic jams in Cheltenham, South West England</span></a></h3><p class="rm-manual">Newsflare</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/gop-cowards-meidas-touch-ad-122404692.html"><span>GOP Cowardice On Trump Takes Center Stage In Scathing New Supercut</span></a></h3><p class="rm-manual">HuffPost</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/jagmeet-singh-bloc-racist-apology-205236121.html"><span>Jagmeet Singh Ejected From House of Commons After Calling Bloc MP A ‘Racist’</span></a></h3><p class="rm-manual">HuffPost Canada</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/craig-melvin-well-behaved-children-190353898.html"><span>TODAY show host Craig Melvin addresses comments about his 'well-behaved' children</span></a></h3><p class="rm-manual">Yahoo Canada Style</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/video/giant-tortoises-home-saving-species-053254522.html"><span>Giant tortoises go home after saving their species</span></a></h3><p class="rm-manual">Reuters Videos</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://www.instyle.com/celebrity/michael-strahan-live-with-kelly-couldnt-speak-up"><span>Michael Strahan Said He Couldn't "Speak Up" During His Time at Live With Kelly</span></a></h3><p class="rm-manual">InStyle</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/3-states-coronavirus-record-040155375.html"><span>3 States See Record High In Daily Coronavirus Infections After Reopening</span></a></h3><p class="rm-manual">HuffPost</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/video/u-border-officials-seize-2-220234508.html"><span>U.S. border officials seize 2.5 tonnes of pot worth over $10 million</span></a></h3><p class="rm-manual">Global News</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/lincoln-project-trump-health-034818887.html"><span>Republican Group Questions Trump’s Health: ‘It’s Time We Talk About This’</span></a></h3><p class="rm-manual">HuffPost</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/telus-has-fastest-internet-speed-in-2020-pc-mag-144717934.html"><span>Telus has fastest internet speed in 2020: PC Mag</span></a></h3><p class="rm-manual">Yahoo Finance Canada</p><p class="rm-manual"></p></li>
+<li class="rm-manual"><p class="rm-manual"></p><h3 class="rm-manual"><a href="https://ca.news.yahoo.com/mary-donald-fred-trump-alzheimers-075159266.html"><span>Book By Trump’s Niece To Reveal He ‘Derided’ Father’s Alzheimer’s Struggles</span></a></h3><p class="rm-manual">HuffPost</p><p></p></li>
+</ul></article>
+</body></html>

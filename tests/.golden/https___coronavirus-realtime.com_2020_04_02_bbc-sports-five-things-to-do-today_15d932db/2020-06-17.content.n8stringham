@@ -1,0 +1,66 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"><a href="https://coronavirus-realtime.com/category/bbc/" rel="category tag">BBC</a></p>
+<h1 class="rm-manual">BBC Sport’s five things to do today</h1>
+<p class="rm-manual"><a href="https://coronavirus-realtime.com/2020/04/02/bbc-sports-five-things-to-do-today/">April 2, 2020</a> </p>
+<p class="rm-manual"><a href="https://coronavirus-realtime.com/author/myadmin/">coronavirus update</a> </p>
+<p class="rm-manual"> <a href="https://coronavirus-realtime.com/2020/04/02/bbc-sports-five-things-to-do-today/#comments">1 Comment</a> </p>
+<p>Our team give you something to read, watch, try, listen and take – all in one place.<a href="https://www.bbc.com/sport/52130184" rel="noopener noreferrer">Read more</a></p>
+<h2 class="rm-manual">Post navigation</h2>
+<p class="rm-manual"><a href="https://coronavirus-realtime.com/2020/04/02/humans-are-terrible-at-being-apart-heres-why-and-what-to-do-about-it/" rel="prev">Humans are terrible at being apart. Here’s why and what to do about it</a></p>
+<p class="rm-manual"><a href="https://coronavirus-realtime.com/2020/04/02/trumps-covid-19-lapse-gives-china-an-opening/" rel="next">Trump’s Covid-19 lapse gives China an opening</a></p>
+<h2 class="rm-manual"> One thought on “<span>BBC Sport’s five things to do today</span>” </h2>
+<ol class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> <p class="rm-manual"> <a href="http://voice-truth.com/" rel="external nofollow ugc">Michelle B</a> <span>says:</span> </p> <p class="rm-manual"> <a href="https://coronavirus-realtime.com/2020/04/02/bbc-sports-five-things-to-do-today/#comment-26"> May 28, 2020 at 2:49 am </a> </p> <p class="rm-manual">Please take the time to read this article!</p> <p class="rm-manual">You
+ may have seen on NBC news concerning the implantable RFID microchip 
+that some people are getting put in their hand to make purchases more 
+convienent, but did you know this RFID chip matches perfectly with 
+prophecy in the Bible?</p> <p class="rm-manual">You may have heard of 
+the legendary number “666” that many have been wondering for possibly 
+thousands of years on what it means. This article shares something I 
+haven’t heard before, and I don’t think there could be any better 
+explanation for the hidden meaning behind the number 666. This isn’t a 
+joke. Very fascinating stuff!</p> <p class="rm-manual">Go to: wy.voice-truth.com</p> <p class="rm-manual"><a rel="nofollow" href="#comment-26">Reply</a></p> </article> </li> </ol>
+<h3 class="rm-manual">Leave a Reply <a rel="nofollow" href="file:///2020/04/02/bbc-sports-five-things-to-do-today/#respond">Cancel reply</a>
+</h3>
+<p class="rm-manual"><span>Your email address will not be published.</span></p>
+<p class="rm-manual">Comment </p>
+<p class="rm-manual">Name </p>
+<p class="rm-manual">Email </p>
+<p class="rm-manual">Website </p>
+<p class="rm-manual"> Save my name, email, and website in this browser for the next time I comment.</p></article>
+</body></html>

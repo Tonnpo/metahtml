@@ -1,0 +1,139 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual">Inside the Impossible Dream of the Nuclear-Powered 1958 Ford Nucleon</h1>
+<h2 class="rm-manual">Driving more than 5,000 miles without stopping to refuel sounds like a '50s fever dream—because it was.</h2>
+<p class="rm-manual"> By <a href="file:///author/james-gilboy">James Gilboy</a> <span>July 5, 2021</span> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///news">News</a></li> </ul>
+<figcaption class="rm-manual">Ford</figcaption><p class="rm-manual"> <span>James Gilboy</span> <a href="file:///author/james-gilboy">View James Gilboy's Articles</a> </p>
+<p>In 1958, Ford showed the world a car like it had never seen before, 
+one powered by a small nuclear reactor. The Ford Nucleon, as it was 
+christened, was envisioned as a car capable of driving more than 5,000 
+miles between fueling stops, appealing to a postwar fixation with 
+convenience that has dominated American consumerism since. Like <a href="https://www.thedrive.com/news/40221/that-time-the-united-states-almost-made-a-new-route-66-with-nuclear-bombs" rel="noreferrer noopener">some other midcentury nuclear fantasies</a>, though, the Nucleon never came to fruition, in part due to engineering problems we still struggle with to this day.</p>
+<p>Before we examine why the Nucleon could never be, let's get a better 
+grasp of the car itself, starting with its utterly comical dimensions. 
+Ford's press materials envisaged the Nucleon stretching 200.3 inches 
+long and 77.4 wide, making it as long as the new Ford Maverick compact 
+pickup, but slightly wider. Its roof was said to measure just 41.4 
+inches high, making it less than an inch taller than <a href="https://www.thedrive.com/news/38257/these-never-released-ford-gt40-development-docs-are-worth-geeking-out-over" rel="noreferrer noopener">the legendarily low-slung Ford GT40</a>.</p>
+<p class="rm-manual">Ford</p>
+<p class="rm-manual">1958 Ford Nucleon concept car</p>
+<p>By far its silliest proportion, though, would have been its 
+wheelbase, said to be just 69.4 inches, or almost a foot shorter than 
+the original Mini. Presumably, its wheels were so closely spaced and 
+mounted so far aft to support the weight of its onboard reactor, which 
+pushed the cabin out ahead of the front axle similar to <a href="https://www.thedrive.com/news/37033/no-this-mid-engine-semi-truck-fused-with-a-ford-station-wagon-isnt-photoshop" rel="noreferrer noopener">another mid-engined Ford oddity</a>.</p>
+<p>Ford called the Nucleon's reactor a "power capsule," which it 
+imagined having an easily serviced radioactive core. This would generate
+ power for "electronic torque converters," presumably an electric 
+motor-generator arrangement like that of a series hybrid.</p>
+<p class="rm-manual">Ford</p>
+<p class="rm-manual">1958 Ford Nucleon concept car</p>
+<p>To Americans in 1958, some of whose homes were powered by a nuclear 
+reactor for the first time that year, it must have seemed a matter of 
+time before browline glasses-wearing engineers worked out a way to 
+shrink the technology down to automotive scale. Then, they imagined, 
+cars like the Ford Nucleon could find their ways to dealerships.</p>
+<p>But the Ford Nucleon concept all but vanished after 1958, because 
+nuclear energy technology was—and still is—nowhere near ready to power a
+ mass-produced passenger car.</p>
+<p>As explained to The Drive by Professor &amp; Eminent Scholar in 
+Systems Engineering Dr. L. Dale Thomas, Deputy Director of the 
+Propulsion Research Center at the University of Alabama in Huntsville, 
+the problem with an automotive-scale reactor isn't with accommodating 
+the radioactive core, but with handling the energy it releases.</p>
+<p class="rm-manual">Ford</p>
+<p class="rm-manual">1958 Ford Nucleon concept car</p>
+<p>"The reactor core itself (including shielding) for a small nuclear 
+reactor could indeed fit into the engine compartment of a personal 
+vehicle, which would generate ample energy to power a personal vehicle,"
+ Dr. Thomas told us. "However, the difficulty arises from the energy 
+conversion problem. The nuclear reactor will generate thermal energy, 
+which needs to be converted to mechanical energy."</p>
+<p>See, in a car, both an internal combustion engine and <a href="https://www.thedrive.com/the-war-zone/41195/iranians-blame-technical-fault-for-emergency-shutdown-at-countrys-only-nuclear-power-plant" rel="noreferrer noopener">a nuclear reactor</a>
+ have the same job, that being to turn thermal energy into mechanical 
+force; into horsepower and torque. Reactors struggle to do this job 
+efficiently, as the heat they generate is often used to boil water into 
+steam, and spin a turbine attached to a generator that produces 
+electricity, in this case for motors powering the wheels. Because this 
+method involves a string of energy conversions, from thermal to 
+mechanical, then electric, and back into mechanical force, it introduces
+ extra inefficiencies.</p>
+<p>"Energy conversions are just like currency exchanges at the airport—you always lose," quipped Dr. Thomas.</p>
+<p>Even in a simpler system that trades a steam turbine for a simple 
+heat engine, excess thermal energy must still be shed, which a 
+combustion engine does as part of its normal operation.</p>
+<p>"For an ICE, much of the waste heat is disposed of via the exhaust 
+gas, and what is left is handled by the radiator," continued Dr. Thomas.
+ "Since the nuclear reactor's working fluid is not exhausted, but rather
+ recycled (think of your home or auto air conditioner), the waste heat 
+must be dumped via one or more radiators."</p>
+<p>"It is all these other elements of the system to handle the energy 
+conversion and dispose of waste heat, which present the challenges to 
+use of a nuclear reactor in a personal vehicle."</p>
+<p>For these reasons, nuclear power on the scale of a personal vehicle 
+simply wasn't possible back in the day, and at any scale of production 
+the likes of Ford entertain today, it still isn't.</p>
+<p>"Mobile nuclear power on such a small scale was not feasible in the 
+'50s," Dr. Thomas concluded. "And not due to the small reactor itself, 
+which we do now understand how to construct and control—refer to <a href="https://www.thedrive.com/the-war-zone/38687/white-house-accelerates-development-of-mini-nuclear-reactors-for-space-and-the-battlefield" rel="noreferrer noopener">NASA's KRUSTY project</a>—but
+ rather the thermal-to-mechanical energy conversion and disposal of 
+waste heat within the geometrical envelope of a personal vehicle. Also, 
+with <a href="https://www.thedrive.com/the-war-zone/40914/the-militarys-mobile-nuclear-reactor-prototype-is-set-to-begin-taking-shape" rel="noreferrer noopener">the Department of Energy</a>'s Small Modular Reactor Program, the nuclear industry is figuring out how to mass-produce nuclear reactors."</p>
+<p>"[Ford] likely optimistically assumed that energy conversion 
+technology would improve significantly (we're still chasing energy 
+conversion breakthroughs today), and the geometry of the concept vehicle
+ leads me to speculate that they [would have] had a lot of radiators 
+stashed under that sheet metal."</p>
+<p class="rm-manual"> <span>Ford</span> </p>
+<p class="rm-manual"> <span>Ford</span> </p>
+<p>But that sheet metal was never actually stamped out at full scale. A 
+Ford archivist told us the Nucleon only ever existed as 
+three-eighths-scale models, proving that Ford was more concerned with 
+answering the question of how a nuclear-powered car would look rather 
+than how it would work.</p>
+<p>It was, after all, just a concept car, one which viewed through the 
+lens of atomic energy-fascinated midcentury America would have seemed 
+reasonable. Of course, concept cars are (<a href="https://www.thedrive.com/tech/38694/sony-quietly-kept-developing-its-vision-s-concept-car-with-more-sensors-road-tests" rel="noreferrer noopener">usually</a>)
+ designed to appeal not to our senses of pragmatism, but our 
+imaginations, and it's the latter that makes us look to the future with 
+wonder.</p>
+<p class="rm-manual">Got a tip or question for the author? You can reach them here: james@thedrive.com</p>
+<p class="rm-manual">MORE TO READ</p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///news/40221/that-time-the-united-states-almost-made-a-new-route-66-with-nuclear-bombs"> <p class="rm-manual">RELATED</p> <p class="rm-manual">America Almost Made a New Route 66 With 22 Nuclear Bombs</p> <p class="rm-manual">Nukes were invented as weapons of war. But for a time, the U.S. government had another goal in mind: building highways.</p> <p class="rm-manual">READ NOW</p> </a> </li> <li class="rm-manual"> <a href="file:///news/40024/watch-this-unseen-4k-footage-of-fords-big-red-turbine-truck-from-the-1960s"> <p class="rm-manual">RELATED</p> <p class="rm-manual">Watch This Unseen 4K Footage of Ford's Big Red Turbine Truck From the 1960s</p> <p class="rm-manual">And there's at least one familiar face throughout most of the film.</p> <p class="rm-manual">READ NOW</p> </a> </li> <li class="rm-manual"> <a href="file:///news/38401/the-1955-gmc-luniverselle-was-a-front-wheel-drive-v8-van-ahead-of-its-time"> <p class="rm-manual">RELATED</p> <p class="rm-manual">The 1955 GMC L'Universelle Was a Front-Wheel-Drive V8 Van Ahead of Its Time</p> <p class="rm-manual">Some cars are just too forward-thinking to ever make production. This radical GMC van was one such vehicle.</p> <p class="rm-manual">READ NOW</p> </a> </li> </ul></article>
+</body></html>

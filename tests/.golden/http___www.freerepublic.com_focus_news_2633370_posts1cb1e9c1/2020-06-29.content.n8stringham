@@ -1,0 +1,220 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Stuxnet Knocks Natanz Out For a Week, Hits Iran's Air Defense (bug raiding all their military) </p>
+<table class="rm-manual"> <tbody><tr class="rm-manual"> <td class="rm-manual"> <a href="file:///home.htm">Free Republic</a> <a href="file:///tag/*/index">Browse</a> · <a href="file:///focus/search">Search</a>
+</td> <td class="rm-manual"> <a href="file:///tag/news-forum/index">News/Activism</a> <a href="file:///focus/f-news/topics">Topics</a> · <a href="file:///perl/post_article">Post Article</a>
+</td> </tr> </tbody></table>
+<p class="rm-manual"><a href="#comment">Skip to comments.</a></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/posts">Stuxnet Knocks Natanz Out For a Week, Hits Iran's Air Defense (bug raiding all their military)</a> </p>
+<p class="rm-manual"><a href="http://www.debka.com/article/9168/">Debkafiles ^</a> | November 24, 2010, 9:02 AM (GMT+02:00 </p>
+<p class="rm-manual">Posted on <span>11/26/2010 9:34:16 AM PST</span> by <a href="file:///~dselig/">dselig </a></p>
+<p>Despite Iranian claims in October that their nuclear systems were 
+cleansed of the Stuxnet virus, Iranian sources confirm that the invasive
+ malworm is still making trouble. It shut down uranium enrichment at 
+Natanz for a week from Nov. 16 to 22 over breakdowns caused by 
+mysterious power fluctuations in the operation of the centrifuge 
+machines enriching uranium at Natanz. The shutdown was reported by the 
+director of the International Atomic Energy Agency Yukiya Amano to the 
+IAEA board in Vienna on Tuesday, Nov. 23. </p>
+<p>Rapid changes in the spinning speed of the thousands of centrifuges 
+enriching uranium to weapons-grade can cause them to blow apart suddenly
+ without the monitors detecting any malfunction. The Iranian operators 
+first tried replacing the P1 and P2 centrifuges used at Natanz with the 
+more advanced IR1 type, but got the same effect. They finally decided to
+ shut the plant down until computer security experts purged it of the 
+malworm. </p>
+<p>But then, when work was resumed Monday, about 5,000 of the 8,000 
+machines were found to be out of commission and the remaining 
+2,500-3,000 partially on the blink. </p>
+<p>Tuesday, Ali Akbar Salehi, Director of Iran's Nuclear Energy 
+Commission tried to put a good face on the disaster. "Fortunately the 
+nuclear Stuxnet virus has faced a dead end," he said. However, the IAEA 
+report and Western intelligence confirm that the virus has gathered 
+itself for a fresh onslaught on Iran's vital facilities. </p>
+<p>According to an exclusive report, Stuxnet is also in the process of 
+raiding Iran's military systems, sowing damage and disorder in its wake.
+ </p>
+<p>On Nov. 17, in the middle of a massive air defense exercise, Iranian 
+military sources reported six foreign aircraft had intruded the airspace
+ over the practice sites and were put to flight by Iranian fighters. The
+ next day, a different set of military sources claimed a 
+misunderstanding; there had been no intrusions. Iranian fighters had 
+simulated an enemy raid which too had been repulsed. debkafile's 
+military sources disclose there was no "misunderstanding." The foreign 
+intruders had shown up on the exercise's radar screens, but when the 
+fighter jets scrambled to intercept them, they found empty sky, meaning 
+the radar instruments had lied. </p>
+<p>The military command accordingly decided to give up on using the 
+exercise as a stage for unveiling new and highly sophisticated weaponry,
+ including a homemade radar system, for fear that they too may have been
+ infected by the ubiquitous Stuxnet worm.</p>
+<p class="rm-manual"> TOPICS: </p>
+<p class="rm-manual"><a href="file:///tag/extended-news/index">Extended News</a>; </p>
+<p class="rm-manual"><a href="file:///tag/foreign-news/index">Foreign Affairs</a>; </p>
+<p class="rm-manual"><a href="file:///tag/news-news/index">News/Current Events</a>; </p>
+<p class="rm-manual"><a href="file:///tag/wot-news/index">War on Terror</a> KEYWORDS: </p>
+<p class="rm-manual"><a href="file:///tag/debkafiles/index">debkafiles</a>; </p>
+<p class="rm-manual"><a href="file:///tag/iran/index">iran</a>; </p>
+<p class="rm-manual"><a href="file:///tag/israel/index">israel</a>; </p>
+<p class="rm-manual"><a href="file:///tag/stuxnet/index">stuxnet</a>; </p>
+<p class="rm-manual"><a href="file:///tag/tech/index">tech</a>; </p>
+<p class="rm-manual"><a href="file:///tag/worm/index">worm</a>; </p>
+<p class="rm-manual"><a href="file:///tag/wot/index">wot</a> Navigation: use the links below to view more comments. </p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/posts?q=1&amp;;page=1#1">first</a> </p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/posts?q=1&amp;;page=1">1-20</a>, </p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/posts?q=1&amp;;page=21">21-40</a>, </p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/posts?q=1&amp;;page=41">41-51</a> </p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/posts?q=1&amp;;page=21">next</a> </p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/posts?q=1&amp;;page=51#51">last</a> </p>
+<p class="rm-manual"> Looks like the Mad Mullahs got their Thanskgiving card early this year! </p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/posts?page=1#1">1</a> posted on <span>11/26/2010 9:34:18 AM PST</span> by <a href="file:///~dselig/">dselig </a> </p>
+<p class="rm-manual">[ <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/reply?c=1">Post Reply</a> | <a href="file:///perl/mail-compose?refid=2633370.1;reftype=comment">Private Reply</a> | <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/replies?c=1">View Replies</a>]</p>
+<p class="rm-manual">To: rdb3; Calvinist_Dark_Lord; GodGunsandGuts; CyberCowboy777; Salo; Bobsat; JosephW; ...</p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/posts?page=2#2">2</a> posted on <span>11/26/2010 9:35:48 AM PST</span> by <a href="file:///~shadowace/">ShadowAce</a> (Linux -- The Ultimate Windows Service Pack) </p>
+<p class="rm-manual">[ <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/reply?c=2">Post Reply</a> | <a href="file:///perl/mail-compose?refid=2633370.2;reftype=comment">Private Reply</a> | <a href="#1">To 1</a> | <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/replies?c=2">View Replies</a>]</p>
+<p class="rm-manual">To: dselig</p>
+<p class="rm-manual">Wait ‘til they see their Christmas Present!</p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/posts?page=3#3">3</a> posted on <span>11/26/2010 9:38:00 AM PST</span> by <a href="file:///~ucansee2/">UCANSEE2</a> (Lame and ill-informed post) </p>
+<p class="rm-manual">[ <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/reply?c=3">Post Reply</a> | <a href="file:///perl/mail-compose?refid=2633370.3;reftype=comment">Private Reply</a> | <a href="#1">To 1</a> | <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/replies?c=3">View Replies</a>]</p>
+<p class="rm-manual">To: dselig</p>
+<p class="rm-manual">This is too funny</p>
+<p class="rm-manual">as a software enigneere it is nice to see something good done with computer viruses</p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/posts?page=4#4">4</a> posted on <span>11/26/2010 9:39:48 AM PST</span> by <a href="file:///~mrk/">Mr. K</a> (TSA: "Because 'profiling' is much more offensive than grabbing your balls") </p>
+<p class="rm-manual">[ <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/reply?c=4">Post Reply</a> | <a href="file:///perl/mail-compose?refid=2633370.4;reftype=comment">Private Reply</a> | <a href="#1">To 1</a> | <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/replies?c=4">View Replies</a>]</p>
+<p class="rm-manual">To: dselig</p>
+<p class="rm-manual">Damn clever those Israelis.</p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/posts?page=5#5">5</a> posted on <span>11/26/2010 9:41:07 AM PST</span> by <a href="file:///~xkaydet65/">xkaydet65</a> </p>
+<p class="rm-manual">[ <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/reply?c=5">Post Reply</a> | <a href="file:///perl/mail-compose?refid=2633370.5;reftype=comment">Private Reply</a> | <a href="#1">To 1</a> | <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/replies?c=5">View Replies</a>]</p>
+<p class="rm-manual">To: ShadowAce</p>
+<p class="rm-manual">You’d think they could boot up in safe mode and do a system restore. :)</p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/posts?page=6#6">6</a> posted on <span>11/26/2010 9:44:01 AM PST</span> by <a href="file:///~vinnie/">Vinnie</a> </p>
+<p class="rm-manual">[ <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/reply?c=6">Post Reply</a> | <a href="file:///perl/mail-compose?refid=2633370.6;reftype=comment">Private Reply</a> | <a href="#2">To 2</a> | <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/replies?c=6">View Replies</a>]</p>
+<p class="rm-manual">To: dselig</p>
+<p class="rm-manual">The enemy of my enemy is my friend. Keep up the good work, Stuxnet!</p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/posts?page=7#7">7</a> posted on <span>11/26/2010 9:44:43 AM PST</span> by <a href="file:///~bryanw92/">Bryanw92</a> (Obama is like a rocket scientist....who's trying to do brain surgery with a hammer.) </p>
+<p class="rm-manual">[ <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/reply?c=7">Post Reply</a> | <a href="file:///perl/mail-compose?refid=2633370.7;reftype=comment">Private Reply</a> | <a href="#1">To 1</a> | <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/replies?c=7">View Replies</a>]</p>
+<p class="rm-manual">To: Mr. K</p>
+<p class="rm-manual"> Let's hope it can differentiate friend from foe.</p>
+<p class="rm-manual">♫ We don't need another Skynet ... ♫ </p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/posts?page=8#8">8</a> posted on <span>11/26/2010 9:45:33 AM PST</span> by <a href="file:///~nonvalueadded/">NonValueAdded</a> (Palin 2012: don't retreat, just reload) </p>
+<p class="rm-manual">[ <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/reply?c=8">Post Reply</a> | <a href="file:///perl/mail-compose?refid=2633370.8;reftype=comment">Private Reply</a> | <a href="#4">To 4</a> | <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/replies?c=8">View Replies</a>]</p>
+<p class="rm-manual">To: Vinnie</p>
+<p class="rm-manual">That is not a feature of the Jihad2000 operating system. Your only choices are “Detonate, Retry, or Fail.”</p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/posts?page=9#9">9</a> posted on <span>11/26/2010 9:46:54 AM PST</span> by <a href="file:///~armyaircorps/">Army Air Corps</a> (Four fried chickens and a coke) </p>
+<p class="rm-manual">[ <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/reply?c=9">Post Reply</a> | <a href="file:///perl/mail-compose?refid=2633370.9;reftype=comment">Private Reply</a> | <a href="#6">To 6</a> | <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/replies?c=9">View Replies</a>]</p>
+<p class="rm-manual">To: xkaydet65</p>
+<p class="rm-manual"> Damn clever those Israelis.</p>
+<p class="rm-manual"> Agreed, but I'm wondering why it's taking 
+Obamolester so long to publicly point the finger at them and then 
+apologize profusely to Dinner-Jacket for the U.S. in being so evil for 
+supporting Israel during the Booooooooooooooooooooooosh years. </p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/posts?page=10#10">10</a> posted on <span>11/26/2010 9:46:54 AM PST</span> by <a href="file:///~kromike/">kromike</a> </p>
+<p class="rm-manual">[ <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/reply?c=10">Post Reply</a> | <a href="file:///perl/mail-compose?refid=2633370.10;reftype=comment">Private Reply</a> | <a href="#5">To 5</a> | <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/replies?c=10">View Replies</a>]</p>
+<p class="rm-manual">To: Mr. K</p>
+<p class="rm-manual">We should try it on North Korea.</p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/posts?page=11#11">11</a> posted on <span>11/26/2010 9:50:28 AM PST</span> by <a href="file:///~dselig/">dselig </a> </p>
+<p class="rm-manual">[ <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/reply?c=11">Post Reply</a> | <a href="file:///perl/mail-compose?refid=2633370.11;reftype=comment">Private Reply</a> | <a href="#4">To 4</a> | <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/replies?c=11">View Replies</a>]</p>
+<p class="rm-manual">To: kromike</p>
+<p class="rm-manual">Bet you they will do a WikiLeak on it next...</p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/posts?page=12#12">12</a> posted on <span>11/26/2010 9:52:22 AM PST</span> by <a href="file:///~battlecry/">battlecry</a> </p>
+<p class="rm-manual">[ <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/reply?c=12">Post Reply</a> | <a href="file:///perl/mail-compose?refid=2633370.12;reftype=comment">Private Reply</a> | <a href="#10">To 10</a> | <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/replies?c=12">View Replies</a>]</p>
+<p class="rm-manual">To: dselig</p>
+<p class="rm-manual"> Run into a dead end?</p>
+<p class="rm-manual"> Does that mean there are no more processors to infect? </p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/posts?page=13#13">13</a> posted on <span>11/26/2010 9:56:56 AM PST</span> by <a href="file:///~imjustanotherokie/">ImJustAnotherOkie</a> (zerogottago) </p>
+<p class="rm-manual">[ <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/reply?c=13">Post Reply</a> | <a href="file:///perl/mail-compose?refid=2633370.13;reftype=comment">Private Reply</a> | <a href="#1">To 1</a> | <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/replies?c=13">View Replies</a>]</p>
+<p class="rm-manual">To: kromike</p>
+<p class="rm-manual">He was waiting for the DEBKA report . Now he has 
+evidnce,yes it’s DEBKA but so what, that Israel is behind the worm. I 
+expect condemnation of Israel in 3,2,1...</p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/posts?page=14#14">14</a> posted on <span>11/26/2010 10:02:36 AM PST</span> by <a href="file:///~xkaydet65/">xkaydet65</a> </p>
+<p class="rm-manual">[ <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/reply?c=14">Post Reply</a> | <a href="file:///perl/mail-compose?refid=2633370.14;reftype=comment">Private Reply</a> | <a href="#10">To 10</a> | <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/replies?c=14">View Replies</a>]</p>
+<p class="rm-manual">To: xkaydet65</p>
+<p class="rm-manual">God bless and strengthen Israel! May all they put their hands to prosper, and their enemies become the trash-heaps of history!</p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/posts?page=15#15">15</a> posted on <span>11/26/2010 10:05:53 AM PST</span> by <a href="file:///~dubhghlase/">Dubh_Ghlase</a> (Therefore, send not to know For whom the bell tolls, It tolls for thee.) </p>
+<p class="rm-manual">[ <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/reply?c=15">Post Reply</a> | <a href="file:///perl/mail-compose?refid=2633370.15;reftype=comment">Private Reply</a> | <a href="#5">To 5</a> | <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/replies?c=15">View Replies</a>]</p>
+<p class="rm-manual">To: xkaydet65</p>
+<p class="rm-manual"> “Damn clever those Israelis.”</p>
+<p class="rm-manual"> OK, so even Freepers know the worm is an attack on Iran's nuclear program.</p>
+<p class="rm-manual"> Question: isn't a cyber attack on this scale an act of war?</p>
+<p class="rm-manual"> What if the Iranians did that to our military computers?</p>
+<p class="rm-manual"> Wouldn't it justify an attack? </p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/posts?page=16#16">16</a> posted on <span>11/26/2010 10:06:56 AM PST</span> by <a href="file:///~garjog/">garjog</a> </p>
+<p class="rm-manual">[ <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/reply?c=16">Post Reply</a> | <a href="file:///perl/mail-compose?refid=2633370.16;reftype=comment">Private Reply</a> | <a href="#5">To 5</a> | <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/replies?c=16">View Replies</a>]</p>
+<p class="rm-manual">To: dselig</p>
+<p class="rm-manual"> "Fortunately the nuclear Stuxnet virus has faced a dead end"</p>
+<p class="rm-manual">LOL, but the Stuxnet virus that takes over the radar outside the base is still a goer. </p>
+<p class="rm-manual">My money is on Stuxnet suppressing Iranian nuclear ambitions for decades. </p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/posts?page=17#17">17</a> posted on <span>11/26/2010 10:13:35 AM PST</span> by <a href="file:///~agerecontra/">agere_contra</a> (...what if we won't eat the dog food?) </p>
+<p class="rm-manual">[ <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/reply?c=17">Post Reply</a> | <a href="file:///perl/mail-compose?refid=2633370.17;reftype=comment">Private Reply</a> | <a href="#1">To 1</a> | <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/replies?c=17">View Replies</a>]</p>
+<p class="rm-manual">To: garjog</p>
+<p class="rm-manual">In a world where bombarding an South Korean island 
+isn’t an act of war, a fully deniable attack with a virus isn’t even on 
+the radar.</p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/posts?page=18#18">18</a> posted on <span>11/26/2010 10:15:55 AM PST</span> by <a href="file:///~agerecontra/">agere_contra</a> (...what if we won't eat the dog food?) </p>
+<p class="rm-manual">[ <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/reply?c=18">Post Reply</a> | <a href="file:///perl/mail-compose?refid=2633370.18;reftype=comment">Private Reply</a> | <a href="#16">To 16</a> | <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/replies?c=18">View Replies</a>]</p>
+<p class="rm-manual">To: dselig</p>
+<p class="rm-manual">Have BUG,</p>
+<p class="rm-manual"> Will Unravel</p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/posts?page=19#19">19</a> posted on <span>11/26/2010 10:16:09 AM PST</span> by <a href="file:///~bunkerhill7/">bunkerhill7</a> </p>
+<p class="rm-manual">[ <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/reply?c=19">Post Reply</a> | <a href="file:///perl/mail-compose?refid=2633370.19;reftype=comment">Private Reply</a> | <a href="#1">To 1</a> | <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/replies?c=19">View Replies</a>]</p>
+<p class="rm-manual">To: garjog</p>
+<p class="rm-manual">China’s already experimented with hacking our 
+computers. As for Israel, I don’t want to say rules dont apply. BUt for a
+ state the size of New Jersey that half the world iS bent on killing, 
+there’s only one rule. DON’T LOSE!!!</p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/posts?page=20#20">20</a> posted on <span>11/26/2010 10:27:49 AM PST</span> by <a href="file:///~xkaydet65/">xkaydet65</a> </p>
+<p class="rm-manual">[ <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/reply?c=20">Post Reply</a> | <a href="file:///perl/mail-compose?refid=2633370.20;reftype=comment">Private Reply</a> | <a href="#16">To 16</a> | <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/replies?c=20">View Replies</a>]</p>
+<p class="rm-manual"> Navigation: use the links below to view more comments. </p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/posts?q=1&amp;;page=1#1">first</a> </p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/posts?q=1&amp;;page=1">1-20</a>, </p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/posts?q=1&amp;;page=21">21-40</a>, </p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/posts?q=1&amp;;page=41">41-51</a> </p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/posts?q=1&amp;;page=21">next</a> </p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/posts?q=1&amp;;page=51#51">last</a> </p>
+<p class="rm-manual"> Disclaimer: Opinions posted on Free Republic are 
+those of the individual posters and do not necessarily represent the 
+opinion of Free Republic or its management. All materials posted herein 
+are protected by copyright law and the exemption for fair use of 
+copyrighted works. </p>
+<table class="rm-manual"> <tbody><tr class="rm-manual"> <td class="rm-manual"> <a href="file:///home.htm">Free Republic</a> <a href="file:///tag/*/index">Browse</a> · <a href="file:///focus/search">Search</a>
+</td> <td class="rm-manual"> <a href="file:///tag/news-forum/index">News/Activism</a> <a href="file:///focus/f-news/topics">Topics</a> · <a href="file:///perl/post_article">Post Article</a>
+</td> </tr> </tbody></table>
+<p class="rm-manual"> <a href="file:///">FreeRepublic</a>, LLC, PO BOX 9771, FRESNO, CA 93794 </p>
+<p class="rm-manual"> FreeRepublic.com is powered by software copyright 2000-2008 John Robinson </p></article>
+</body></html>

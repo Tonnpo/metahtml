@@ -1,0 +1,106 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> COVID-19 Drive-Thru 
+testing locations now open in Morgantown and Bridgeport | 104.5 FM &amp;
+ 1440 AM | The Voice of Morgantown | Morgantown, WV </p>
+<p class="rm-manual"> <span><a href="https://v7player.wostreaming.net/2594"> Clarksburg </a> | <a href="http://v6.player.abacast.net/2590"> Morgantown</a></span> </p>
+<p class="rm-manual">July 13, 2020</p>
+<h3 class="rm-manual">Menu</h3>
+<p class="rm-manual"><a href="#content">Skip to content</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///">Home</a></li> <li class="rm-manual"><a href="https://wajr.com/on-air/">Program Schedule</a></li> <li class="rm-manual">
+<a href="#">News &amp; More</a> <ul class="rm-manual"> <li class="rm-manual"><a href="http://wvrc.incentrev.com/deal/morgantown">50% Friday</a></li> <li class="rm-manual"><a href="https://wajr.com/category/ajr-news-network/">Clarksburg Local News</a></li> <li class="rm-manual"><a href="https://wajr.com/contest-rules/">Contest Rules</a></li> <li class="rm-manual"><a href="https://wajr.com/vip-hollywood-report/">Hollywood Report</a></li> <li class="rm-manual"><a href="https://wajr.com/state-news/">MetroNews</a></li> <li class="rm-manual"><a href="https://wajr.com/category/local-news/">Morgantown Local News</a></li> <li class="rm-manual"><a href="https://wajr.com/vip-sports-report/">Sports Report</a></li> </ul> </li> <li class="rm-manual">
+<a href="#">Connect</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://wajr.com/contact/">Contact</a></li> <li class="rm-manual"><a href="http://wvradio.com/careers/">Careers</a></li> <li class="rm-manual"><a href="https://publicfiles.fcc.gov/am-profile/wajr">FCC Public File</a></li> <li class="rm-manual">
+<a href="#">Submit</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://wajr.com/submit/">Submit A News Story</a></li> <li class="rm-manual"><a href="https://wajr.com/submit-a-psa/">Submit a PSA</a></li> </ul> </li> </ul> </li> <li class="rm-manual"><a href="https://wajr.com/community/">Community</a></li> <li class="rm-manual"><a href="https://wajr.com/app/">Get The App</a></li> </ul>
+<h1 class="rm-manual">COVID-19 Drive-Thru testing locations now open in Morgantown and Bridgeport</h1>
+<p class="rm-manual">Posted by <span><a rel="author" href="https://wajr.com/author/joenelson/">joenelson</a></span> on March 18, 2020 in <span><a href="https://wajr.com/category/local-news/" rel="tag">Local News</a></span> </p>
+<p class="">MORGANTOWN, W.Va. — WVU Medicine has established five points of collection for those needing to be tested for COVID-19.</p>
+<p>In response to the outbreak that has infected over 4,400 in the 
+United States and 184,000 people worldwide, WVU Medicine has setup five 
+drive-through collection points across West Virginia in Morgantown, 
+Parkersburg, Bridgeport, Wheeling, and Martinsburg.</p>
+<p>“The goal would be to both direct people away from hospitals, and 
+emergency rooms and clinics, where they could be potentially infectious 
+to other patients, or people or healthcare workers,” explained WVU 
+Medicine Vice President &amp; Dean of Health Sciences Dr. Clay Marsh. 
+“And make it convenient for people to drive up and drive through these 
+testing centers that would be in convenient areas,” he said. </p>
+<p>The testing, is being reserved for people who meet the screening 
+criterion in accordance to Centers for Disease Control and Prevention 
+recommendations. </p>
+<p>According to Dr. Marsh, those who are exhibiting symptoms consistent 
+with COVID-19 are asked to call a physician to see if a tested is 
+needed. If it is determined a test is necessary, the patient will be 
+directed to one of the five testing locations. </p>
+<p>“The idea would be that if your physician in consultation with our 
+state and local health departments feel that this is warranted, then we 
+would direct people to one of these five areas to be able to have the 
+sample acquired,” said Marsh. </p>
+<p>The test themselves, are being conducted by WVU Medicine with the 
+support of Quest Diagnostics and LabCorp which will be processing the 
+specimens collected at the locations and assisting state health 
+officials on producing results of the test. Once collected, results are 
+expected to return within one to three days depending on the location of
+ the specimen’s shipment.</p>
+<p>“So the idea is to batch the states, so within twenty-four hours,” 
+Marsh said in describing the timeline. “The privates are committed to 
+doing 24 hours as well, currently it’s about three days for private,” he
+ said.</p>
+<p>The establishing of the testing locations, comes less than 24 hours 
+before Governor Jim Justice confirmed the first case of COVID-19 in West
+ Virginia during an address Tuesday night. </p>
+<p>West Virginia was the last state to have any confirmed cases of 
+COVID-19 despite infection numbers rising in various parts of the 
+country. Government and health officials have taken the approach that it
+ has already arrived in West Virginia and are encouraging all hygenic 
+and social distancing habits to help prevent the spread. </p>
+<p>“And if we do that right, we will keep this virus, I am convinced, we
+ will keep this virus from overwhelming us and we’ll protect our people 
+and we’ll get through this in very great fashion.” </p>
+<p class="rm-manual"><span><span>Posted in </span><a href="https://wajr.com/category/local-news/" rel="tag">Local News</a></span> </p>
+<h2 class="rm-manual">Related Posts</h2>
+<h3 class="rm-manual"><a href="https://wvmetronews.com/2020/07/13/justice-shuts-bars-in-monongalia-county-restricts-crowd-sizes-across-the-state-again/">Justice shuts bars in Monongalia County, restricts crowd sizes across the state again<span>→</span></a></h3>
+<h3 class="rm-manual"><a href="https://wajr.com/preparations-continue-for-school-reopening-in-mon-county/">Preparations continue for school reopening in Mon County<span>→</span></a></h3>
+<h3 class="rm-manual"><a href="https://wajr.com/2020-grand-bash-goes-virtual/">2020 Grand Bash goes virtual<span>→</span></a></h3>
+<h3 class="rm-manual"><a href="https://wajr.com/justice-considering-closing-mon-county-bars/">Justice considering closing Mon. County bars<span>→</span></a></h3>
+<h1 class="rm-manual"><span>1440 WAJR on Facebook</span></h1>
+<p class="rm-manual">©2020 WAJR-AM | Powered By: <a href="http://www.vipology.com/">Vipology</a></p>
+<h1 class="rm-manual">Menu</h1>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://wvaq-fm.wvr.vipology.com/wp-content/uploads/sites/24/Morgantown-2020-EEO-Public-File-Report.pdf">EEO</a></li> <li class="rm-manual"><a href="http://wvradio.com/careers/">Employment</a></li> <li class="rm-manual"><a href="https://wajr.com/privacy-policy/">Privacy Policy</a></li> <li class="rm-manual"><a href="https://wajr.com/term-of-use/">Term of Use</a></li> <li class="rm-manual"><a rel="noopener noreferrer">West Virginia Radio Corp</a></li> <li class="rm-manual"><a href="https://publicfiles.fcc.gov/am-profile/wajr">FCC Public File</a></li> </ul></article>
+</body></html>

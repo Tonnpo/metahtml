@@ -1,0 +1,97 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Three Other People Die from COVID-19 in Kurdistan </p>
+<p class="rm-manual"> <a href="file:///en/"> English </a> <a href="file:///tr/"> Türkçe </a> <a href="file:///kr/"> Kurdî </a> </p>
+<p class="rm-manual"> <a href="file:///so/"> كوردی </a> <a href="file:///ar/"> عربي </a> <a href="file:///fa/"> فارسى </a> </p>
+<p class="rm-manual"> <span> <a> NEWS </a> </span> </p>
+<p class="rm-manual"> <a href="file:///en/bash/76"> Kurdistan </a> <a href="file:///en/bash/77"> Iraq </a> <a href="file:///en/bash/78"> Middle East </a> <a href="file:///en/bash/79"> Diaspora </a> <a href="file:///en/bash/86"> World </a> </p>
+<p class="rm-manual"><a href="file:///en/bash/71"> OPINION </a> </p>
+<p class="rm-manual"><a href="file:///en/bash/72"> REPORTS </a> </p>
+<p class="rm-manual"><a href="file:///en/bash/94"> INTERVIEWS </a> </p>
+<p class="rm-manual"><span> <a> ECONOMY </a> </span> </p>
+<p class="rm-manual"> <a href="file:///en/bash/74"> Kurdistan </a> <a href="file:///en/bash/93"> World </a> </p>
+<p class="rm-manual"><span> <a> MULTIMEDIA </a> </span> </p>
+<p class="rm-manual"> <a href="file:///en/bash/98"> Caricature </a> <a href="file:///en/bash/97"> Photo Gallery </a> <a href="file:///en/bash/99"> Video Gallery </a> </p>
+<p class="rm-manual"><span> <a> LIFESTYLE </a> </span> </p>
+<p class="rm-manual"> <a href="file:///en/bash/81"> Environment </a> <a href="file:///en/bash/82"> Health </a> <a href="file:///en/bash/83"> Magazine </a> <a href="file:///en/bash/84"> Sexual </a> <a href="file:///en/bash/85"> Technology </a> <a href="file:///en/bash/153"> Tourism </a> </p>
+<p class="rm-manual"><span> <a> CULTURE &amp; ARTS </a> </span> </p>
+<p class="rm-manual"> <a href="file:///en/bash/101"> Agenda </a> <a href="file:///en/bash/102"> Art </a> <a href="file:///en/bash/103"> Book </a> <a href="file:///en/bash/104"> Cinema </a> <a href="file:///en/bash/104"> Music </a> </p>
+<p class="rm-manual"> <a href="file:///en/"> English </a> <a href="file:///tr/"> Türkçe </a> <a href="file:///kr/"> Kurdî </a> <a href="file:///so/"> كوردى </a> <a href="file:///ar/"> عربى </a> <a href="file:///fa/"> فارسى </a> </p>
+<p class="rm-manual"> <span><a href="file:///en/bash/69"> NEWS </a> </span> </p>
+<p class="rm-manual"> <a href="file:///en/bash/76"> Kurdistan </a> <a href="file:///en/bash/77"> Iraq </a> <a href="file:///en/bash/78"> Middle East </a> <a href="file:///en/bash/79"> Diaspora </a> <a href="file:///en/bash/86"> World </a> </p>
+<p class="rm-manual"><a href="file:///en/bash/71"> OPINION </a> </p>
+<p class="rm-manual"><a href="file:///en/bash/72"> REPORTS </a> </p>
+<p class="rm-manual"><a href="file:///en/bash/94"> INTERVIEWS </a> </p>
+<p class="rm-manual"> <span><a href="file:///en/bash/73"> ECONOMY </a> </span> </p>
+<p class="rm-manual"> <a href="file:///en/bash/74"> Kurdistan </a> <a href="file:///en/bash/93"> World </a> </p>
+<p class="rm-manual"> <span><a href="file:///en/bash/75"> MULTIMEDIA </a> </span> </p>
+<p class="rm-manual"> <a href="file:///en/bash/98"> Caricature </a> <a href="file:///en/bash/97"> Photo Gallery </a> <a href="file:///en/bash/99"> Video Gallery </a> </p>
+<p class="rm-manual"> <span><a href="file:///en/bash/80"> LIFESTYLE </a> </span> </p>
+<p class="rm-manual"> <a href="file:///en/bash/81"> Environment </a> <a href="file:///en/bash/82"> Health </a> <a href="file:///en/bash/83"> Magazine </a> <a href="file:///en/bash/84"> Sexual </a> <a href="file:///en/bash/85"> Technology </a> <a href="file:///en/bash/153"> Tourism </a> </p>
+<p class="rm-manual"><a href=""> ☰ </a> </p>
+<p class="rm-manual"> <span>×</span> </p>
+<p class="rm-manual"> Latest News </p>
+<p class="rm-manual"> <a href="file:///en/babat/696715"> Three Other People Die from COVID-19 in Kurdistan </a> </p>
+<p class="rm-manual"> <a href="file:///en/babat/696705"> PM Barzani, UNFPA Delegation Discuss Cooperation to Advance Population Development </a> </p>
+<p class="rm-manual"> <a href="file:///en/babat/696689"> PKK Commander Surrendered to Peshmerga Reveals PKK’s Plots against Kurdistan </a> </p>
+<p class="rm-manual"> <a href="file:///en/babat/696660"> Media Advocacy Organizations Denounce Closure of K24 Office by PYD in Rojava </a> </p>
+<p class="rm-manual"> <a href="file:///en/babat/696656"> Iran’s President-Elect Says He Won’t Meet Joe Biden </a> </p>
+<p class="rm-manual"><a href="#"> ❮ </a></p>
+<p class="rm-manual"><a href="#"> ❯ </a></p>
+<h2 class="rm-manual">Three Other People Die from COVID-19 in Kurdistan</h2>
+<p class="rm-manual"> <span> <a href="#"> BasNews </a> </span> <span> <a> 2021/06/21 - 23:09 </a> </span> <span> Kurdistan </span> </p>
+<p><span>ERBIL - The coronavirus has claimed lives of three other people
+ in the Kurdistan Region within the past day, the Ministry of Health 
+reported on Monday.</span></p>
+<p><span>Out of 8,816 suspects who went through medical checks for the 
+coronavirus, 619 new cases were recorded across the Kurdistan Region 
+while 494 recoveries were confirmed, the ministry said in its daily 
+report.</span></p>
+<p><span>The coronavirus tally rose to 180,513, from which 169,066 
+individuals have so far recovered from the virus since it first appeared
+ in the Kurdistan Region.</span></p>
+<p><span>According to the latest updates by the health ministry, 4,415 
+people have lost their lives due to COVID-19 across the autonomous 
+region and there are currently 7,032 active cases.</span></p>
+<p> <a href="file:///en/babat/696715"> </a></p><h4 class="rm-manual"><a href="file:///en/babat/696715">Three Other People Die from COVID-19 in Kurdistan </a></h4><a href="file:///en/babat/696715"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///en/babat/696705"> </a></p><h4 class="rm-manual"><a href="file:///en/babat/696705">PM Barzani, UNFPA Delegation Discuss Cooperation to Advance Population Developme </a></h4><a href="file:///en/babat/696705"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///en/babat/696660"> </a></p><h4 class="rm-manual"><a href="file:///en/babat/696660">Media Advocacy Organizations Denounce Closure of K24 Office by PYD in Rojava </a></h4><a href="file:///en/babat/696660"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///en/babat/696656"> </a></p><h4 class="rm-manual"><a href="file:///en/babat/696656">Iran’s President-Elect Says He Won’t Meet Joe Biden </a></h4><a href="file:///en/babat/696656"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///en/babat/696636"> </a></p><h4 class="rm-manual"><a href="file:///en/babat/696636">Family of Slain Iraqi Activist Stage Strike Outside Karbala Court </a></h4><a href="file:///en/babat/696636"> </a> <p class="rm-manual"></p>
+<h5 class="rm-manual">Copyright ©2021 Basnews.com. All rights reserved</h5></article>
+</body></html>

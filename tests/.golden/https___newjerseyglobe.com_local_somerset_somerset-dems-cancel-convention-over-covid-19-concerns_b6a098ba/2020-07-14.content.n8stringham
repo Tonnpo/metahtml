@@ -1,0 +1,78 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"><span><a rel="v:url" href="https://newjerseyglobe.com/">Home</a></span>&gt;<span><a rel="v:url" href="https://newjerseyglobe.com/topics/fr/">Highlight</a></span>&gt;<span>Somerset Dems cancel convention over COVID-19 concerns</span></p>
+<figure class="rm-manual"> <span> Somerset County Democratic Chair Peg Schaffer. Photo courtesy of the New Jersey Democratic State Committee. </span> </figure><h1 class="rm-manual">Somerset Dems cancel convention over COVID-19 concerns</h1>
+<p class="rm-manual">Voting to take place via online survey in coming days</p>
+<p class="rm-manual">By <a href="https://newjerseyglobe.com/author/nikita-biryukov/">Nikita Biryukov</a>, <span>March 11 2020</span> <span>5:27 pm</span></p>
+<p>Somerset County Democratic Committee leadership cancelled Wednesday 
+night’s county convention over concerns about COVID-19, according to an 
+email obtained by the Ne Jersey Globe.</p>
+<p>“Out of an abundance of caution and with your and the public’s health
+ in mind, the SCDC Executive Committee has decided to cancel tonight’s 
+county convention out of concern over COVID-19,” SCDC Chairwoman Peg 
+Schaffer said. “We regret the lost opportunity to meet our candidates 
+and gather together, but the widespread medical advice of experts made 
+it clear that it was a necessary choice to reduce the risk to our 
+members, candidates, and the public at large.”</p>
+<p>The committee will send out an online survey asking their delegates to select their favored candidates.</p>
+<p>The county’s Democratic screening committee has endorsed candidates 
+in the race, and no others have sought nominations at the party’s 
+convention, though delegates will be able to vote for write-in 
+candidates.</p>
+<p>The county is holding an open primary for president.</p>
+<p class="rm-manual"><span>Tagged <a href="https://newjerseyglobe.com/tag/peg-schaffer/" rel="tag">Peg Schaffer</a></span> </p>
+<p class="rm-manual"> RELATED ARTICLES </p>
+<p class="rm-manual"> Filter by </p>
+<p class="rm-manual"> <span>Post</span> <span>Page</span> </p>
+<p class="rm-manual"> <span>Local</span> <span>Somerset</span> <span>Campaigns</span> <span>Highlight</span> </p>
+<p class="rm-manual"> Sort by </p>
+<p class="rm-manual"> <a href="https://newjerseyglobe.com/local/bridgewater-gop-backs-howes-for-somerset-county-chairman/"> Bridgewater GOP backs Howes for Somerset county chairman </a> </p>
+<p class="rm-manual"> July 3, 2020 2:02 pm </p>
+<p class="rm-manual">18</p>
+<p class="rm-manual"> <a href="https://newjerseyglobe.com/campaigns/gaburo-stepping-down-as-somerset-gop-chairman/"> Gaburo stepping down as Somerset GOP chairman </a> </p>
+<p class="rm-manual"> Howes emerges as successor </p>
+<p class="rm-manual"> July 2, 2020 5:53 pm </p>
+<p class="rm-manual">18</p>
+<p class="rm-manual"> <a href="https://newjerseyglobe.com/local/somerset/somerset-republicans-raise-alarms-over-hiring-of-politically-connected-communications-staffer/"> Somerset Republicans raise alarms over hiring of politically-connected communications staffer </a> </p>
+<p class="rm-manual"> Somerset County Democratic Committee digital media chair hired for county job without </p>
+<p class="rm-manual"> April 22, 2020 12:01 am </p>
+<p class="rm-manual">18</p>
+<h2 class="rm-manual">Post navigation</h2>
+<p class="rm-manual"><a href="https://newjerseyglobe.com/congress/oceans-countywide-republicans-back-singh/" rel="prev">Ocean’s countywide Republicans back Singh</a></p>
+<p class="rm-manual"><a href="https://newjerseyglobe.com/legislature/dark-money-law-officially-dead/" rel="next">Dark money law officially dead</a></p></article>
+</body></html>

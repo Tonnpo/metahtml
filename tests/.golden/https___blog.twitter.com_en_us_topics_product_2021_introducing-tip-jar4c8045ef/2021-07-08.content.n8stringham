@@ -1,0 +1,149 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Introducing Tip Jar </p>
+<p class="rm-manual"> <a href="file:///"> <span>Blog</span> </a> <a href="#"> <span>Back</span> </a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///">Blog</a> </li> <li class="rm-manual"> <a href="file:///en_us/topics/events"> <span>Events</span> </a> </li> <li class="rm-manual"> <a href="file:///en_us/topics/product"> <span>Product</span> </a> </li> <li class="rm-manual"> <a href="file:///en_us/topics/insights"> <span>Insights</span> </a> </li> <li class="rm-manual"> <a href="file:///en_us/topics/company"> <span>Company</span> </a> </li> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///en_us/topics/other-blogs"> <span>Other blogs</span> </a> </li> <li class="rm-manual"> <a href="file:///en_us/topics/other-blogs/business"> <span>Business</span> </a> </li> <li class="rm-manual"> <a href="file:///en_us/topics/other-blogs/developer"> <span>Developer</span> </a> </li> <li class="rm-manual"> <a href="file:///en_us/topics/other-blogs/engineering"> <span>Engineering</span> </a> </li> <li class="rm-manual"> <a href="file:///en_us/topics/other-blogs/investor-relations"> <span>Investor Relations</span> </a> </li> </ul> </li> </ul>
+<p class="rm-manual"> <a href="https://twitter.com/signup">Sign Up</a> </p>
+<p class="rm-manual"> <a href="file:///"> â€ŽEnglish (US)â€Ž </a> <a href="file:///en_gb"> â€ŽEnglish (UK)â€Ž </a> <a href="file:///en_au"> â€ŽEnglish (Australia)â€Ž </a> <a href="file:///en_ca"> â€ŽEnglish (Canada)â€Ž </a> <a href="file:///en_in"> â€ŽEnglish (India)â€Ž </a> <a href="file:///ja_jp"> â€Žæ—¥æœ¬èªžâ€Ž </a> <a href="file:///fr_fr"> â€ŽFranÃ§aisâ€Ž </a> <a href="file:///pt_br"> â€ŽPortuguÃªsâ€Ž </a> <a href="file:///ko_kr"> â€Ží•œêµ­ì–´â€Ž </a> <a href="file:///in_id"> â€ŽBahasa Indonesiaâ€Ž </a> <a href="file:///es_es"> â€ŽEspaÃ±ol - EspaÃ±aâ€Ž </a> <a href="file:///es_la"> â€ŽEspaÃ±ol - AmÃ©rica Latinaâ€Ž </a> <a href="file:///ar"> Ø§Ù„Ø¹Ø±Ø¨ÙŠÙ‘Ø© </a> <a href="file:///en_me"> â€ŽEnglish (MENA)â€Ž </a> <a href="file:///en_sea"> â€ŽEnglish (Southeast Asia)â€Ž </a> </p>
+<p class="rm-manual"> <a href="file:///"> â€ŽEnglish (US)â€Ž </a> <a href="file:///en_gb"> â€ŽEnglish (UK)â€Ž </a> <a href="file:///en_au"> â€ŽEnglish (Australia)â€Ž </a> <a href="file:///en_ca"> â€ŽEnglish (Canada)â€Ž </a> <a href="file:///en_in"> â€ŽEnglish (India)â€Ž </a> <a href="file:///ja_jp"> â€Žæ—¥æœ¬èªžâ€Ž </a> <a href="file:///fr_fr"> â€ŽFranÃ§aisâ€Ž </a> <a href="file:///pt_br"> â€ŽPortuguÃªsâ€Ž </a> <a href="file:///ko_kr"> â€Ží•œêµ­ì–´â€Ž </a> <a href="file:///in_id"> â€ŽBahasa Indonesiaâ€Ž </a> <a href="file:///es_es"> â€ŽEspaÃ±ol - EspaÃ±aâ€Ž </a> <a href="file:///es_la"> â€ŽEspaÃ±ol - AmÃ©rica Latinaâ€Ž </a> <a href="file:///ar"> Ø§Ù„Ø¹Ø±Ø¨ÙŠÙ‘Ø© </a> <a href="file:///en_me"> â€ŽEnglish (MENA)â€Ž </a> <a href="file:///en_sea"> â€ŽEnglish (Southeast Asia)â€Ž </a> </p>
+<p class="rm-manual"> <a href="https://twitter.com/signup">Sign Up</a> </p>
+<h4 class="rm-manual">Product</h4>
+<h1 class="rm-manual">Introducing Tip Jar</h1>
+<p class="rm-manual">By <a href="file:///en_us/authors.esthercrawford">Esther Crawford</a> </p>
+<p class="rm-manual"> <span>Thursday, 6 May 2021</span> </p>
+<p class="rm-manual"> <a href="#"> </a></p><p class="rm-manual"><a href="#"> <span>Link copied successfully</span> </a></p><a href="#"> </a> <p></p>
+<p>We $ee you â€“ sharing your PayPal link after your Tweet goes viral, 
+adding your $Cashtag to your profile so people can support your work, 
+dropping your Venmo handle on your birthday or if you just need some 
+extra help. You drive the conversation on Twitter and we want to make it
+ easier for you to support each other beyond Follows, Retweets, and 
+Likes. Today, we're introducing Tip Jar â€“ a new way for people to send
+ and receive tips.Â </p>
+<p>Youâ€™ll know an accountâ€™s Tip Jar is enabled if you see a Tip Jar 
+icon next to the Follow button on their profile page. Tap the icon, and 
+youâ€™ll see a list of payment services or platforms that the account 
+has enabled. Select whichever payment service or platform you prefer and
+ youâ€™ll be taken off Twitter to the selected app where you can show 
+your support in the amount you choose. The services* you can add today 
+include Bandcamp, Cash App, Patreon, PayPal and Venmo. Twitter takes no 
+cut. On Android, tips can also be sent within Spaces.</p>
+<p>This Tweet is unavailable</p>
+<p> This Tweet is unavailable. </p>
+<p> <span> How to send a tip </span> </p>
+<p> <span> How to set up Tip Jar, if you have access </span> </p>
+<p>Tip Jar is an easy way to support the incredible voices that make up 
+the conversation on Twitter. This is a first step in our work to create 
+new ways for people to receive and show support on Twitter â€“ with 
+money.Â </p>
+<p>Starting today, everyone using Twitter in English can send tips to 
+applicable accounts on Twitter for iOS and Android. For now, a limited 
+group of people around the world who use Twitter in English can add Tip 
+Jar to their profile and accept tips. This group includes creators, 
+journalists, experts, and nonprofits. Soon, more people will be able to 
+add Tip Jar to their profile and weâ€™ll expand to more languages.Â </p>
+<p>Weâ€™re always looking for feedback and ways to improve updates like Tip Jar â€“ let us know what you think.</p>
+<p>*Payment service availability and features vary by region</p>
+<p>This Tweet is unavailable</p>
+<p> This Tweet is unavailable. </p>
+<p class="rm-manual">Esther Crawford</p>
+<p class="rm-manual"> <a href="https://www.twitter.com/esthercrawford">â€Ž@esthercrawfordâ€Ž</a> </p>
+<p class="rm-manual">Senior Product Manager</p>
+<p class="rm-manual"> <a href="https://twitter.com/intent/tweet?text=&amp;url=https://blog.twitter.com/en_us/topics/product/2021/introducing-tip-jar"> </a></p><p class="rm-manual"><a href="https://twitter.com/intent/tweet?text=&amp;url=https://blog.twitter.com/en_us/topics/product/2021/introducing-tip-jar"> <span>Tweet</span> <span>Twitter logo icon</span> </a></p><a href="https://twitter.com/intent/tweet?text=&amp;url=https://blog.twitter.com/en_us/topics/product/2021/introducing-tip-jar"> </a> <p class="rm-manual"></p>
+<p class="rm-manual">Tags:</p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///en_us/tags.blog--product">product</a> </li> </ul>
+<p class="rm-manual"> <a href="#"> </a></p><p class="rm-manual"><a href="#"> <span>Link copied successfully</span> </a></p><a href="#"> </a> <p class="rm-manual"></p>
+<p class="rm-manual">More from Product</p>
+<p class="rm-manual"> <a href="file:///en_us/topics/product/2020/How-it-started-how-its-going-Performance-advertising-on-Twitter" rel="noopener">How it started, how itâ€™s going: Performance advertising on Twitter</a> </p>
+<p class="rm-manual"> By <a rel="noopener" href="file:///en_us/authors.@interjl">â€Ž@@interjlâ€Ž</a> on Wednesday, 11 November 2020 </p>
+<p class="rm-manual"> <a href="file:///en_us/topics/product/2020/adding-more-context-to-trends" rel="noopener">Adding more context to Trends</a> </p>
+<p class="rm-manual"> By <a rel="noopener" href="file:///en_us/authors.Wanderwonderful">Liz Lee</a> and <a rel="noopener" href="file:///en_us/authors.frankiedabull">Frank Oppong</a> on Tuesday, 1 September 2020 </p>
+<p class="rm-manual"> <a href="file:///en_us/topics/product/2020/new-conversation-settings-coming-to-a-tweet-near-you" rel="noopener">New conversation settings, coming to a Tweet near you</a> </p>
+<p class="rm-manual"> By <a rel="noopener" href="file:///en_us/authors.suzannexie">Suzanne Xie</a> on Tuesday, 11 August 2020 </p>
+<p class="rm-manual"> <a href="file:///en_us/topics/product/2020/new-labels-for-government-and-state-affiliated-media-accounts" rel="noopener">New labels for government and state-affiliated media accounts</a> </p>
+<p class="rm-manual"> By <a rel="noopener" href="file:///en_us/authors.TwitterSupport%20">â€Ž@TwitterSupport â€Ž</a> on Thursday, 6 August 2020 </p>
+<p class="rm-manual">See what's happening</p>
+<p class="rm-manual"> <a href="https://twitter.com/intent/follow?screen_name=Twitter" rel="noopener"> â€Ž@Twitterâ€Ž</a> </p>
+<p class="rm-manual"> <a href="#"> Twitter platform </a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://twitter.com/">Twitter.com</a>
+</li> <li class="rm-manual"> <a href="https://status.twitterstat.us/">Status</a>
+</li> <li class="rm-manual"> <a href="https://cards-dev.twitter.com/validator">Card validator</a>
+</li> <li class="rm-manual"> <a href="https://privacy.twitter.com/">Privacy Center</a>
+</li> <li class="rm-manual"> <a href="https://transparency.twitter.com/">Transparency Center</a>
+</li> </ul>
+<p class="rm-manual"> <a href="#"> Twitter, Inc. </a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://about.twitter.com/en/who-we-are/our-company.html">About the company</a>
+</li> <li class="rm-manual"> <a href="https://about.twitter.com/en/who-we-are/twitter-for-good.html">Twitter for Good</a>
+</li> <li class="rm-manual"> <a href="https://blog.twitter.com/">Company news</a>
+</li> <li class="rm-manual"> <a href="https://about.twitter.com/en/who-we-are/brand-toolkit.html">Brand toolkit</a>
+</li> <li class="rm-manual"> <a href="https://careers.twitter.com/">Jobs and internships</a>
+</li> <li class="rm-manual"> <a href="https://investor.twitterinc.com/">Investors</a>
+</li> </ul>
+<p class="rm-manual"> <a href="#"> Help </a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://help.twitter.com/">Help Center</a>
+</li> <li class="rm-manual"> <a href="https://help.twitter.com/en/using-twitter">Using Twitter</a>
+</li> <li class="rm-manual"> <a href="https://media.twitter.com/">Twitter Media</a>
+</li> <li class="rm-manual"> <a href="https://business.twitter.com/en/help.html">Ads Help Center</a>
+</li> <li class="rm-manual"> <a href="https://help.twitter.com/en/managing-your-account">Managing your account</a>
+</li> <li class="rm-manual"> <a href="https://help.twitter.com/en/safety-and-security">Safety and security</a>
+</li> <li class="rm-manual"> <a href="https://help.twitter.com/en/rules-and-policies">Rules and policies</a>
+</li> <li class="rm-manual"> <a href="https://help.twitter.com/en/forms">Contact us</a>
+</li> </ul>
+<p class="rm-manual"> <a href="#"> Developer resources </a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://developer.twitter.com/en">Developer home</a>
+</li> <li class="rm-manual"> <a href="https://developer.twitter.com/en/docs">Documentation</a>
+</li> <li class="rm-manual"> <a href="https://twittercommunity.com/">Forums</a>
+</li> <li class="rm-manual"> <a href="https://developer.twitter.com/en/community">Communities</a>
+</li> <li class="rm-manual"> <a href="https://blog.twitter.com/developer/">Developer blog</a>
+</li> <li class="rm-manual"> <a href="https://blog.twitter.com/engineering/en_us.html">Engineering blog</a>
+</li> <li class="rm-manual"> <a href="https://developer.twitter.com/en/more/developer-terms">Developer terms</a>
+</li> </ul>
+<p class="rm-manual"> <a href="#"> Business resources </a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://business.twitter.com/en/advertising.html">Advertise</a>
+</li> <li class="rm-manual"> <a href="https://business.twitter.com/">Twitter for business</a>
+</li> <li class="rm-manual"> <a href="https://business.twitter.com/en/resources.html">Resources and guides</a>
+</li> <li class="rm-manual"> <a href="https://marketing.twitter.com/">Twitter for marketers</a>
+</li> <li class="rm-manual"> <a href="https://marketing.twitter.com/en/insights">Marketing insights</a>
+</li> <li class="rm-manual"> <a href="https://marketing.twitter.com/en/success-stories">Brand inspiration</a>
+</li> <li class="rm-manual"> <a href="https://data.twitter.com/">Twitter Data</a>
+</li> <li class="rm-manual"> <a href="https://www.twitterflightschool.com/sl/382652bc">Twitter Flight School</a>
+</li> </ul>
+<p class="rm-manual">‎© 2021 Twitter, Inc.‎</p>
+<p class="rm-manual"> <a href="https://help.twitter.com/rules-and-policies/twitter-cookies">Cookies</a> </p>
+<p class="rm-manual"> <a href="https://twitter.com/privacy">Privacy</a> </p>
+<p class="rm-manual"> <a href="https://twitter.com/tos">Terms and conditions</a> </p></article>
+</body></html>

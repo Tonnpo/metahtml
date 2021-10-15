@@ -1,0 +1,61 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual">Abbott launches antibody test for coronavirus, plans to deliver 20 million tests by June</h1>
+<article class="rm-manual"> <span> World</span> </article><h1 class="rm-manual">Abbott launches antibody test for coronavirus, plans to deliver 20 million tests by June</h1>
+<figcaption class="rm-manual"> FILE PHOTO: Traders gather at the booth 
+that trades Abbott Laboratories on the floor of the New York Stock 
+Exchange, December 10, 2012. REUTERS/Brendan McDermid</figcaption><p class="rm-manual"> <span> 15 Apr 2020 10:05PM </span> </p>
+<h2 class="rm-manual"> Share this content</h2>
+<h2 class="rm-manual">Bookmark</h2>
+<p>REUTERS: Abbott on Wednesday (Apr 15) launched a coronavirus blood 
+test that could show whether a person has been infected and plans to 
+ramp up manufacturing to produce 20 million tests in June.</p>
+<p>The test helps identify disease-fighting antibodies in people who 
+have been infected but may have had mild symptoms or none at all, making
+ it different from the current diagnostic tests that require nasal swabs
+ to confirm active infection.</p>
+<p>Abbott has previously won US authorization for two coronavirus 
+testing kits: an automated test that can be used in labs and a test that
+ can deliver results within minutes and be used in physicians' offices, 
+clinics and hospitals.</p>
+<p class="rm-manual"><span>Source: Reuters/nh</span> </p>
+<h2 class="rm-manual">Tagged Topics</h2>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.channelnewsasia.com/news/topic/abbott">Abbott</a> </li> </ul>
+<h2 class="rm-manual"> Share this content</h2>
+<h2 class="rm-manual">Bookmark</h2></article>
+</body></html>

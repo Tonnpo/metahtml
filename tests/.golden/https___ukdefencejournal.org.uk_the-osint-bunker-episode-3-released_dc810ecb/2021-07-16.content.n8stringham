@@ -1,0 +1,229 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> ‘The OSINT Bunker’ – Episode 3 released </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://ukdefencejournal.org.uk/">Home</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/air/">Air</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/sea/">Sea</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/land/">Land</a></li> <li class="rm-manual">
+<a href="https://ukdefencejournal.org.uk/news/international/">International</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/international/europe/">Europe</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/international/north-america/">North America</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/international/pacific/">Pacific</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/international/africa/">Africa</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/international/south-america/">South America</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/international/asia/">Asia</a></li> </ul> </li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/analysis/">Analysis</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/fact-check/">Fact Check</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/the-osint-bunker/">The OSINT Bunker</a></li> <li class="rm-manual">
+<a href="https://ukdefencejournal.org.uk/about-us/">About Us</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/our-team">Our Team</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/about-us/contact-us/">Contact Us</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/about-us/submission-guidelines/">Submission Guidelines</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/correction-policy/">Correction Policy</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/about-us/social-media-and-comment-moderation-policy/">Social Media and Comment Moderation Policy</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/privacy/">Privacy Policy</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/cookies/">Cookie Policy</a></li> </ul> </li> </ul>
+<p class="rm-manual">Sign in</p>
+<p class="rm-manual"><span>Welcome!</span>Log into your account</p>
+<p class="rm-manual">your username</p>
+<p class="rm-manual">your password</p>
+<p class="rm-manual"><a href="#">Forgot your password?</a></p>
+<p class="rm-manual"><a href="https://ukdefencejournal.org.uk/privacy/">Privacy Policy</a></p>
+<p class="rm-manual">Password recovery</p>
+<p class="rm-manual">Recover your password</p>
+<p class="rm-manual">your email</p>
+<p class="rm-manual"> <span>Search</span> </p>
+<p class="rm-manual">Sign in</p>
+<p class="rm-manual">Welcome! Log into your account</p>
+<p class="rm-manual">your username</p>
+<p class="rm-manual">your password</p>
+<p class="rm-manual"><a href="#">Forgot your password? Get help</a></p>
+<p class="rm-manual"><a href="https://ukdefencejournal.org.uk/privacy/">Privacy Policy</a></p>
+<p class="rm-manual">Password recovery</p>
+<p class="rm-manual">Recover your password</p>
+<p class="rm-manual">your email</p>
+<p class="rm-manual">A password will be e-mailed to you.</p>
+<p class="rm-manual"> <a href="https://ukdefencejournal.org.uk/"> <span>UK Defence Journal</span> </a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://ukdefencejournal.org.uk/">Home</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/air/">Air</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/sea/">Sea</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/land/">Land</a></li> <li class="rm-manual">
+<a href="https://ukdefencejournal.org.uk/news/international/">International</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/international/europe/">Europe</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/international/north-america/">North America</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/international/pacific/">Pacific</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/international/africa/">Africa</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/international/south-america/">South America</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/international/asia/">Asia</a></li> </ul> </li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/analysis/">Analysis</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/fact-check/">Fact Check</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/the-osint-bunker/">The OSINT Bunker</a></li> <li class="rm-manual">
+<a href="https://ukdefencejournal.org.uk/about-us/">About Us</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/our-team">Our Team</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/about-us/contact-us/">Contact Us</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/about-us/submission-guidelines/">Submission Guidelines</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/correction-policy/">Correction Policy</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/about-us/social-media-and-comment-moderation-policy/">Social Media and Comment Moderation Policy</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/privacy/">Privacy Policy</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/cookies/">Cookie Policy</a></li> </ul> </li> </ul>
+<p class="rm-manual"><span><a href="https://ukdefencejournal.org.uk/">Home</a></span> <span><a href="https://ukdefencejournal.org.uk/news/news/the-osint-bunker/">The OSINT Bunker</a></span> <span>‘The OSINT Bunker’ – Episode 3 released</span></p>
+<figcaption class="rm-manual">Royal Air Force Hercules C-130J aircraft.</figcaption><ul class="rm-manual">
+<li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/news/">News</a></li>
+<li class="rm-manual"><a href="https://ukdefencejournal.org.uk/news/news/the-osint-bunker/">The OSINT Bunker</a></li>
+</ul>
+<h1 class="rm-manual">‘The OSINT Bunker’ – Episode 3 released</h1>
+<p class="rm-manual">By</p>
+<p class="rm-manual"><a href="https://ukdefencejournal.org.uk/author/george-allison/">George Allison</a></p>
+<p class="rm-manual"> - </p>
+<p class="rm-manual"><span>March 23, 2021</span> </p>
+<p class="rm-manual"><a href="https://ukdefencejournal.org.uk/the-osint-bunker-episode-3-released/#comments">7</a></p>
+<h3>The latest episode of the popular defence podcast covers Russia-NATO
+ tensions, the future of the UK armed forces and a discussion on the 
+recently released Defence Command Paper.</h3>
+<p>The podcast is hosted by <a href="https://twitter.com/Osinttechnical">@Osinttechnical</a>, <a href="https://twitter.com/skywatcherintel">@skywatcherintel </a>and <a href="https://twitter.com/DefenceGeek">@DefenceGeek</a>.</p>
+<p>If you enjoy the above, please subscribe to the podcast above.</p>
+<p class="rm-manual">If the above link doesn’t work, <a href="https://www.youtube.com/watch?v=fYrVgP30oBE&amp;ab_channel=OsintBunker">click this one</a>.</p>
+<p class="rm-manual"><span><a href="https://ukdefencejournal.org.uk/author/george-allison/">George Allison</a></span></p>
+<p class="rm-manual">George has a degree in Cyber Security from Glasgow 
+Caledonian University and has a keen interest in naval defence 
+technology and cyber security matters. George also works for NHS Greater
+ Glasgow &amp; Clyde in a role unrelated to this one.</p>
+<h4 class="rm-manual">
+<a href="#">RELATED ARTICLES</a><a href="#">MORE FROM AUTHOR</a>
+</h4>
+<p class="rm-manual"> <a href="https://ukdefencejournal.org.uk/news/news/the-osint-bunker/">The OSINT Bunker</a> </p>
+<h3 class="rm-manual"><a href="https://ukdefencejournal.org.uk/the-osint-bunker-episode-8-released/" rel="bookmark">‘The OSINT Bunker’ – Episode 8 released</a></h3>
+<p class="rm-manual"> <a href="https://ukdefencejournal.org.uk/news/analysis/opinion/">Opinion</a> </p>
+<h3 class="rm-manual"><a href="https://ukdefencejournal.org.uk/everyones-favourite-defence-podcast-now-on-spotify/" rel="bookmark">Everyone’s favourite defence podcast now on Spotify</a></h3>
+<p class="rm-manual"> <a href="https://ukdefencejournal.org.uk/news/news/the-osint-bunker/">The OSINT Bunker</a> </p>
+<h3 class="rm-manual"><a href="https://ukdefencejournal.org.uk/the-osint-bunker-episode-7-released/" rel="bookmark">‘The OSINT Bunker’ – Episode 7 released</a></h3>
+<p class="rm-manual"> <a href="https://ukdefencejournal.org.uk/news/news/the-osint-bunker/">The OSINT Bunker</a> </p>
+<h3 class="rm-manual"><a href="https://ukdefencejournal.org.uk/the-osint-bunker-episode-6-released/" rel="bookmark">‘The OSINT Bunker’ – Episode 6 released</a></h3>
+<p class="rm-manual"> <a href="https://ukdefencejournal.org.uk/news/news/the-osint-bunker/">The OSINT Bunker</a> </p>
+<h3 class="rm-manual"><a href="https://ukdefencejournal.org.uk/the-osint-bunker-episode-5-released/" rel="bookmark">‘The OSINT Bunker’ – Episode 5 released</a></h3>
+<p class="rm-manual"> <a href="https://ukdefencejournal.org.uk/news/news/the-osint-bunker/">The OSINT Bunker</a> </p>
+<h3 class="rm-manual"><a href="https://ukdefencejournal.org.uk/the-osint-bunker-episode-4-released/" rel="bookmark">‘The OSINT Bunker’ – Episode 4 released</a></h3>
+<p class="rm-manual"> <span>Subscribe</span> </p>
+<p class="rm-manual">Notify of </p>
+<p class="rm-manual"> Label </p>
+<p class="rm-manual"> Comments may automatically be held for moderation 
+by our team, they will be approved as soon as possible in accordance 
+with our <a href="https://ukdefencejournal.org.uk/about-us/social-media-and-comment-moderation-policy/">Comment Moderation Policy</a>.
+ Please do not e-mail the team in order to speed this process up. If you
+ have any concerns about comment moderation or any general questions 
+relating to our comment section please send an e-mail to <a href="file:///cdn-cgi/l/email-protection#fd91948e9cd38a988e89bd889699989b98939e989792888f939c91d3928f9ad38896c28e889f97989e89ddc0ddbe9290909893898edb9f929984ddc0ddb0988e8e9c9a98"><span>[email protected]</span></a>. For corrections, please see our <a href="https://ukdefencejournal.org.uk/correction-policy/">Correction Policy</a>. </p>
+<p class="rm-manual"> Name* </p>
+<p class="rm-manual"> Email* </p>
+<p class="rm-manual"> Label </p>
+<p class="rm-manual"> Comments may automatically be held for moderation 
+by our team, they will be approved as soon as possible in accordance 
+with our <a href="https://ukdefencejournal.org.uk/about-us/social-media-and-comment-moderation-policy/">Comment Moderation Policy</a>.
+ Please do not e-mail the team in order to speed this process up. If you
+ have any concerns about comment moderation or any general questions 
+relating to our comment section please send an e-mail to <a href="file:///cdn-cgi/l/email-protection#7f13160c1e51081a0c0b3f0a141b1a191a111c1a15100a0d111e1351100d18510a14400c0a1d151a1c0b5f425f3c1012121a110b0c591d101b065f425f321a0c0c1e181a"><span>[email protected]</span></a>. For corrections, please see our <a href="https://ukdefencejournal.org.uk/correction-policy/">Correction Policy</a>. </p>
+<p class="rm-manual"> Name* </p>
+<p class="rm-manual"> Email* </p>
+<p class="rm-manual"> <span>7</span> Comments </p>
+<p class="rm-manual"> <span>oldest</span> </p>
+<p class="rm-manual"> <span>newest</span> </p>
+<p class="rm-manual"> Inline Feedbacks</p>
+<p class="rm-manual">View all comments</p>
+<p class="rm-manual"> Fedaykin </p>
+<p class="rm-manual"> 3 months ago </p>
+<p class="rm-manual">Good episode but they completely forgot to mention 
+the retiral of Warrior and the scrapping of the WCSP upgrade programme! 
+That truly was the Nimrod moment of this defence review considering 
+since inception over 20 years ago £430+ million has been spent on a 
+programme that managed to deliver some prototypes and yet fail to 
+actually even enter a full production phase makes it arguably a 
+procurement scandal that really deserves some form of public enquiry 
+rather than a quiet cancellation in the White Paper. It is far more 
+significant that the retiral of a couple of frigates that were<span><span>… </span><span>Read more »</span></span></p>
+<p class="rm-manual">Last edited 3 months ago by Fedaykin</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> <a href="https://ukdefencejournal.org.uk/" rel="noreferrer ugc nofollow">Herodotus</a> </p>
+<p class="rm-manual"> 3 months ago </p>
+<p class="rm-manual"> Reply to <a href="#comment-547486"> Fedaykin </a> </p>
+<p class="rm-manual">The MOD, its secretary of state and ministers are Teflon coated. They are licenced to squander money!</p>
+<p class="rm-manual"> Why did the C-130Js receive new wing box sections if they were to be scrapped?</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> Fedaykin </p>
+<p class="rm-manual"> 3 months ago </p>
+<p class="rm-manual"> Reply to <a href="#comment-547591"> Herodotus </a> </p>
+<p class="rm-manual">Because the RAF were expecting to operate them into
+ the 2030s, cutting a whole fleet saves significant money even if it 
+happens just after sustainment work like new wing box sections. There is
+ a good chance that the retiring airframes will find a new home so there
+ will be some financial return on investment unlike Warrior CSP.</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> Ron </p>
+<p class="rm-manual"> 3 months ago </p>
+<p class="rm-manual"> Reply to <a href="#comment-547602"> Fedaykin </a> </p>
+<p class="rm-manual">When it comes to the Hercs, there could be some 
+creative thinking, for example rather than getting rid of them 
+altogether why not sell them to the Internatonal aid deprtment. One they
+ could be painted white, two the RAF would not need to use its limited 
+airferames for international aid and three it is a good use of existing 
+material for soft power. If in a crisis they could always be returned to
+ RAF duties.</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> Fedaykin </p>
+<p class="rm-manual"> 3 months ago </p>
+<p class="rm-manual"> Reply to <a href="#comment-547829"> Ron </a> </p>
+<p class="rm-manual">It wouldn’t be a good use of the Aid budget, if 
+something needs to be transported somewhere it is far better to charter a
+ flight when it is needed. The Aid budget should not be spent keeping 
+aging ex RAF aircraft flying.</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> Something different </p>
+<p class="rm-manual"> 3 months ago </p>
+<p class="rm-manual"> Reply to <a href="#comment-547486"> Fedaykin </a> </p>
+<p class="rm-manual">Continued business justification in play, better to
+ cut your loses than fall for the sink loss fallacy. That said I’m not 
+sure if Boxer will cut it as a IFV substitute but that could be 
+mitigated if firepower could be found from other platforms. The IFV has 
+always been an odd concept in my eyes, lose 2-4 dismounts for not much 
+more armour compared to an APC and a cannon that doesn’t provide the 
+firepower of a MBT. Pentagon wars summed it up quite well.</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> Mike </p>
+<p class="rm-manual"> 3 months ago </p>
+<p class="rm-manual">The photo shows planes which are headed for the scrap heap!</p>
+<p class="rm-manual"> <span>Reply</span> </p>
+<p class="rm-manual"> <a href="https://wpdiscuz.com/" rel="noreferrer">wpDiscuz</a> </p>
+<h4 class="rm-manual"><span>Other News</span></h4>
+<p class="rm-manual"> <a href="https://ukdefencejournal.org.uk/news/air/">Air</a> </p>
+<h3 class="rm-manual"><a href="https://ukdefencejournal.org.uk/mbdas-camm-er-missile-completes-major-milestone/" rel="bookmark">MBDA’s CAMM-ER missile completes major milestone</a></h3>
+<p class="rm-manual"> <span>June 29, 2021</span> </p>
+<p class="rm-manual"> MBDA has completed a test firing of the CAMM-ER extended range air defence missile against a manoeuvring target. </p>
+<h3 class="rm-manual"><a href="https://ukdefencejournal.org.uk/royal-navy-evaluating-designs-for-new-type-83-destroyer/" rel="bookmark">Royal Navy evaluating designs for new Type 83 Destroyer</a></h3>
+<p class="rm-manual"> <span>July 2, 2021</span> </p>
+<h3 class="rm-manual"><a href="https://ukdefencejournal.org.uk/raf-and-luftwaffe-team-up-over-romania/" rel="bookmark">RAF and Luftwaffe team up over Romania</a></h3>
+<p class="rm-manual"> <span>June 26, 2021</span> </p>
+<h3 class="rm-manual"><a href="https://ukdefencejournal.org.uk/wfel-to-supply-dry-support-bridges-to-philippines/" rel="bookmark">WFEL to supply Dry Support Bridges to Philippines</a></h3>
+<p class="rm-manual"> <span>June 29, 2021</span> </p>
+<h3 class="rm-manual"><a href="https://ukdefencejournal.org.uk/prince-william-opens-submarine-training-facility/" rel="bookmark">Prince William opens submarine training facility</a></h3>
+<p class="rm-manual"> <span>July 1, 2021</span> </p>
+<h3 class="rm-manual"><a href="https://ukdefencejournal.org.uk/f-35-electronic-warfare-system-production/" rel="bookmark">F-35 electronic warfare system production</a></h3>
+<p class="rm-manual"> <span>June 29, 2021</span> </p>
+<h3 class="rm-manual"><a href="https://ukdefencejournal.org.uk/british-american-and-israeli-f-35s-exercise-over-israel/" rel="bookmark">British, American and Israeli F-35s exercise over Israel</a></h3>
+<p class="rm-manual"> <span>June 30, 2021</span> </p>
+<h3 class="rm-manual"><a href="https://ukdefencejournal.org.uk/ajax-armoured-vehicle-trials-halted-again/" rel="bookmark">Ajax armoured vehicle trials halted again</a></h3>
+<p class="rm-manual"> <span>June 29, 2021</span> </p>
+<h3 class="rm-manual"><a href="https://ukdefencejournal.org.uk/british-warship-visits-israel/" rel="bookmark">British warship visits Israel</a></h3>
+<p class="rm-manual"> <span>June 30, 2021</span> </p>
+<h3 class="rm-manual"><a href="https://ukdefencejournal.org.uk/mp-publishes-paper-on-improving-life-for-service-personnel/" rel="bookmark">MP publishes paper on improving life for service personnel</a></h3>
+<p class="rm-manual"> <span>June 29, 2021</span> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://ukdefencejournal.org.uk/about-us/">About Us</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/about-us/contact-us/">Contact Us</a></li> <li class="rm-manual"><a href="https://ukdefencejournal.org.uk/privacy/">Privacy Policy</a></li> </ul>
+<p class="rm-manual"> © 2014-2021 UK Defence Journal, all rights reserved. </p>
+<p class="rm-manual"><a href="" rel="#wpdUserContentInfo">wpDiscuz</a></p>
+<p class="rm-manual"><span>7</span></p>
+<p class="rm-manual"><span>0</span></p>
+<p class="rm-manual">Would love your thoughts, please comment.<span><a href="#">x</a></span></p>
+<p class="rm-manual"><span>( )</span></p>
+<p class="rm-manual"><span><a href="#">x</a></span></p>
+<p class="rm-manual"><span>| <a href="#">Reply</a></span></p>
+<p class="rm-manual"><a rel="#wcaiInfo">Comment Author Info</a> </p>
+<p class="rm-manual"><span>You are going to send email to </span></p>
+<p class="rm-manual"><span>Move Comment</span></p></article>
+</body></html>

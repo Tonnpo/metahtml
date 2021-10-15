@@ -1,0 +1,155 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Why North Korean prosperity would be the ruin of Kim Jong Un </p>
+<h3 class="rm-manual">Editions</h3>
+<h3 class="rm-manual">Sections</h3>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///us">Home</a> </li> <li class="rm-manual"> <a href="file:///us/covid-19">COVID-19</a> </li> <li class="rm-manual"> <a href="file:///us/arts">Arts <span><span>+</span> Culture</span></a> </li> <li class="rm-manual"> <a href="file:///us/business">Economy <span><span>+</span> Business</span></a> </li> <li class="rm-manual"> <a href="file:///us/education">Education</a> </li> <li class="rm-manual"> <a href="file:///us/environment">Environment <span><span>+</span> Energy</span></a> </li> <li class="rm-manual"> <a href="file:///us/ethics">Ethics <span><span>+</span> Religion</span></a> </li> <li class="rm-manual"> <a href="file:///us/health">Health</a> </li> <li class="rm-manual"> <a href="file:///us/politics">Politics <span><span>+</span> Society</span></a> </li> <li class="rm-manual"> <a href="file:///us/technology">Science <span><span>+</span> Technology</span></a> </li> <li class="rm-manual"><a href="file:///us/espanol"><span>En Español</span></a></li> </ul>
+<h3 class="rm-manual">Search</h3>
+<h3 class="rm-manual">Services</h3>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///us/newsletters"> Newsletter </a> </li> <li class="rm-manual"> <a href="http://google.com/newsstand/s/CBIwr8WNoC4">Read on Play Newsstand</a> </li> <li class="rm-manual"> <a href="https://apple.news/TwTJF4g8lTJGKVT-OWib5Tw">Read on Apple News</a> </li> <li class="rm-manual"> <a href="https://flipboard.com/@ConversationUS">Read on Flipboard</a> </li> </ul>
+<h3 class="rm-manual">Information</h3>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///us/who-we-are"><span>Who we are</span></a></li> <li class="rm-manual"><a href="file:///us/charter"><span>Our charter</span></a></li> <li class="rm-manual"><a href="file:///us/team"><span>Our team</span></a></li> <li class="rm-manual"><a href="file:///us/partners"><span>Partners and funders</span></a></li> <li class="rm-manual"><a href="file:///us/republishing-guidelines"><span>Republishing guidelines</span></a></li> <li class="rm-manual"><a href="file:///us/contact-us"><span>Contact us</span></a></li> <li class="rm-manual"> <a href="https://donate.theconversation.com/us?utm_source=theconversation.com&amp;utm_medium=website&amp;utm_campaign=mobile-sidebar"><span>Donate</span></a> </li> <li class="rm-manual"><a href="file:///us/friends"><span>Friends of The Conversation</span></a></li> <li class="rm-manual"><a href="file:///us/privacy-policy"><span>Privacy policy</span></a></li> <li class="rm-manual"><a href="file:///us/terms-and-conditions"><span>Terms and conditions</span></a></li> <li class="rm-manual"><a href="file:///us/corrections"><span>Corrections</span></a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual">Edition:</li> </ul>
+<p class="rm-manual"><a href="file:///us">Available editions</a> </p>
+<p class="rm-manual"> <span> <span>United States</span> </span> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///africa">Africa</a> </li> <li class="rm-manual"> <a href="file:///au">Australia</a> </li> <li class="rm-manual"> <a href="file:///ca">Canada</a> </li> <li class="rm-manual"> <a href="file:///ca-fr">Canada (français)</a> </li> <li class="rm-manual"> <a href="file:///es">España</a> </li> <li class="rm-manual"> <a href="file:///fr">France</a> </li> <li class="rm-manual"> <a href="file:///global">Global Perspectives</a> </li> <li class="rm-manual"> <a href="file:///id">Indonesia</a> </li> <li class="rm-manual"> <a href="file:///nz">New Zealand</a> </li> <li class="rm-manual"> <a href="file:///uk">United Kingdom</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://donate.theconversation.com/us?utm_source=theconversation.com&amp;utm_medium=website&amp;utm_campaign=topbar">Donate</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///become-an-author">Become an author</a> </li> <li class="rm-manual"> <a href="file:///sign_up?return_to=%2Fwhy-north-korean-prosperity-would-be-the-ruin-of-kim-jong-un-113236">Sign up as a reader</a> </li> <li class="rm-manual"> <a href="file:///sign_in?return_to=%2Fwhy-north-korean-prosperity-would-be-the-ruin-of-kim-jong-un-113236">Sign in</a> </li> </ul>
+<p class="rm-manual"> Search </p>
+<p class="rm-manual"> Academic rigor, journalistic flair </p>
+<ol class="rm-manual"> <li class="rm-manual"> <a href="file:///us/covid-19">COVID-19</a> </li> <li class="rm-manual"> <a href="file:///us/arts">Arts <span><span>+</span> Culture</span></a> </li> <li class="rm-manual"> <a href="file:///us/business">Economy <span><span>+</span> Business</span></a> </li> <li class="rm-manual"> <a href="file:///us/education">Education</a> </li> <li class="rm-manual"> <a href="file:///us/environment">Environment <span><span>+</span> Energy</span></a> </li> <li class="rm-manual"> <a href="file:///us/ethics">Ethics <span><span>+</span> Religion</span></a> </li> <li class="rm-manual"> <a href="file:///us/health">Health</a> </li> <li class="rm-manual"> <a href="file:///us/politics">Politics <span><span>+</span> Society</span></a> </li> <li class="rm-manual"> <a href="file:///us/technology">Science <span><span>+</span> Technology</span></a> </li> </ol>
+<figcaption class="rm-manual"> An employee watches a bank of TV’s 
+broadcasting a news report on a Hanoi summit between North Korean leader
+ Kim Jong Un and U.S. President Donald Trump, in Seoul, South Korea, 
+Feb. 28, 2019. <span><a href="https://pictures.reuters.com/CS.aspx?VP3=SearchResult&amp;VBID=2C0BXZSHJPHA1U&amp;SMLS=1&amp;RW=1264&amp;RH=744&amp;PN=3&amp;POPUPPN=125&amp;POPUPIID=2C0BF1QPBTOGB">Reuters/Kim Hong-Ji</a></span> </figcaption><h1 class="rm-manual"> Why North Korean prosperity would be the ruin of Kim Jong Un </h1>
+<p class="rm-manual"> March 13, 2019 6.41am EDT </p>
+<p class="rm-manual"> <a href="#"> <span>Thomas Adam</span>, University of Texas Arlington </a> </p>
+<h3 class="rm-manual">Author</h3>
+<ol class="rm-manual"> <li class="rm-manual"> <a rel="author" href="file:///profiles/thomas-adam-180228"> <span> Thomas Adam </span> </a> <p class="rm-manual"> Professor of Transnational History, University of Texas Arlington </p> </li> </ol>
+<h3 class="rm-manual">Disclosure statement</h3>
+<p class="rm-manual"><span>Thomas Adam does not work for, consult, own 
+shares in or receive funding from any company or organization that would
+ benefit from this article, and has disclosed no relevant affiliations 
+beyond their academic appointment.</span></p>
+<h3 class="rm-manual">Partners</h3>
+<p class="rm-manual"><a href="file:///us/partners">View all partners</a></p>
+<p>Vietnam seemed like the perfect place for Donald Trump and North Korean dictator Kim Jong Un to <a href="https://www.cnn.com/2019/02/26/politics/vietnam-summit-donald-trump-kim-jong-un/index.html">meet in late February for their latest summit</a>
+ on denuclearization. At Hanoi’s posh Metropole Hotel, Trump hoped to 
+convince Kim to abandon nuclear weapons in exchange for lifting U.S. 
+sanctions against North Korea, which would <a href="https://slate.com/news-and-politics/2019/02/trump-north-korea-economic-rocket-kim-jong-un.html">spur needed economic development</a> in that country. </p>
+<p>North Korea’s economy has been in dire straits since the Soviet Union
+ – which had propped up its communist regime – collapsed in the early 
+1990s. Starvation remains common in North Korea, where 10.5 of its 25 
+million people <a href="https://borgenproject.org/tag/poverty-in-north-korea/">are undernourished</a>. </p>
+<p>Meanwhile, Vietnam – once <a href="https://www.worldbank.org/en/country/vietnam/overview">one of the world’s poorest countries</a> – has prospered. Its communist government <a href="http://www.nira.or.jp/past/publ/review/2000spring/06thang.pdf">introduced free-market reforms</a> in the late 1980s after the <a href="http://www.nira.or.jp/past/publ/review/2000spring/06thang.pdf">failure</a> of its Soviet-style <a href="https://www.investopedia.com/terms/c/centrally-planned-economy.asp">planned economy</a>, permitting the private ownership of businesses and farms after years of controlling all markets.</p>
+<p>Referencing Vietnam’s economic success story, President Trump <a href="https://twitter.com/realdonaldtrump/status/1100012620441100290?lang=en">wrote on Twitter</a> on February 8: “With complete Denuclearization, North Korea will rapidly become an Economic Powerhouse” too.</p>
+<h2>The communist divide</h2>
+<p>As a historian, I disagree with Trump’s view that Vietnam <a href="https://www.washingtonpost.com/world/asia_pacific/the-us-wants-north-korea-to-follow-the-miracle-of-vietnams-path-it-might-be-disappointed/2019/02/24/be77f83c-352e-11e9-8375-e3dcf6b68558_story.html?utm_term=.1ff8b4e6c37d">is the blueprint</a> for North Korea.</p>
+<p>I am currently writing a college textbook on the history of Germany, 
+my country of birth. The Vietnam summit came while I was focused on the 
+chapter about <a href="http://tadamtransnationalhistory.com/Welcome.html">East Germany’s transition</a>, in the 1990s, from a Soviet-style socialist economy to a more free-market economy.</p>
+<p>In my assessment, North Korea is much more similar to Cold War-era East Germany than it is to modern Vietnam.</p>
+<p>Both North Korea and East Germany were separated by communism from 
+the other half of their once-unified nation. They are countries founded 
+entirely on the rejection of their capitalist brothers.</p>
+<p>The Korean peninsula has been split in two since 1945, when Soviet 
+and American troops liberated it from Japan at the end of World War II. 
+The Allies divided the peninsula along the 38th parallel, with the 
+Soviets occupying the North and the Americans occupying the South.</p>
+<p>This split deepened in June 1950, when the communist North tried to unify the country under its rule, <a href="https://www.nytimes.com/2018/01/01/world/asia/korean-war-history.html">invading the South</a>. Korea’s <a href="https://www.history.com/topics/korea/korean-war">civil war</a> turned into a proxy Cold War as communist China aided North Korea and the U.S. <a href="https://www.archives.gov/education/lessons/korean-conflict">sent troops to defend the South Koreans</a>. A 1953 armistice has divided the Korean peninsula ever since.</p>
+<figcaption> <span>A South Korean army soldier stands guard at the 
+South’s dismantled guard post inside the Demilitarized Zone in the 
+central section of the inter-Korean border in Cheorwon, Dec. 12, 2018.</span> <span><a href="https://pictures.reuters.com/CS.aspx?VP3=SearchResult&amp;VBID=2C0BXZSHJP3DSO&amp;SMLS=1&amp;RW=1264&amp;RH=744&amp;POPUPPN=53&amp;POPUPIID=2C0BF1Q1EVR_J">Reuters/Ahn Young-joon</a></span> </figcaption><p>Like Korea, Germany was also <a href="https://www.independent.co.uk/life-style/history/berlin-wall-what-you-need-to-know-about-the-barrier-that-divided-east-and-west-9847347.html">split into two competing states</a>. Capitalist West Germany and communist East Germany existed side by side, divided by the Berlin Wall, from 1945 to 1990.</p>
+<p>Initially, East Germany’s centralized, planned economy was quite 
+successful in rebuilding the country after the war. But by the 
+mid-1960s, economic growth had slowed, resulting in a shortage of 
+consumer and industrial products.</p>
+<p>To reinvigorate the economy, East German leader Walter Ulbricht began <a href="https://www.persee.fr/doc/htn_0018-439x_2002_num_4_1_2826">relaxing the government’s grip on the economy</a>.
+ Managers of state-run enterprises were given decision-making power over
+ what goods to produce, a role previously retained by the government, 
+and allowed to keep some of their profits. Banks got permission to 
+extend loans to the businesses of their choice, helping them grow and 
+invest. </p>
+<p>Even though productivity, wages and availability of consumer goods 
+all increased, East Germany abruptly abandoned these reforms in the 
+early 1970s. </p>
+<p>It was not because they did not work. Rather, according to my research and the historian <a href="https://www.bpb.de/160233">Joerg Roesler</a>, East Germany began to fear that its liberal economy was starting to make it look dangerously similar to West Germany.</p>
+<p>In 1968, the Soviets had <a href="https://history.state.gov/milestones/1961-1968/soviet-invasion-czechoslavkia">invaded neighboring Czechoslovakia</a>,
+ terminating its experimentation with both economic and political 
+liberalization. The East German government worried that its economy had 
+become a little too liberal, too.</p>
+<figcaption> <span>West Berlin citizens atop the Berlin Wall in 1989.</span> <span><a href="https://pictures.reuters.com/CS.aspx?VP3=SearchResult&amp;VBID=2C0BXZSHJUPEM5&amp;SMLS=1&amp;RW=1264&amp;RH=744&amp;PN=66&amp;POPUPPN=3908&amp;POPUPIID=2C0408Z806P4">Reuters/Str Old</a></span> </figcaption><p>East
+ Germany’s attempt to preserve communist rule by maintaining authority 
+over its faltering economy proved futile. On Oct. 3, 1990, Germany was <a href="https://www.politico.com/story/2012/10/this-day-in-politics-081922">reunified under West German control</a>.</p>
+<h2>Reunification</h2>
+<p>The economy has always been at the heart of communism. A planned 
+economy is what set countries like the Soviet Union, Cuba, and Vietnam 
+apart from capitalist democracies. For <a href="https://www.marxists.org/history/erol/ncm-7/lenin-socialism.htm">communist leaders</a> like Vladimir Lenin and Fidel Castro, it’s what made them superior.</p>
+<p>Plenty of communist governments have managed to mix some free-market 
+capitalism into their socialist economies without endangering the 
+Communist Party’s monopoly on power – Vietnam, <a href="https://theconversation.com/castros-conundrum-finding-a-post-communist-model-cuba-can-follow-81242">Cuba</a> and <a href="https://www.business-standard.com/article/international/china-lifting-800-million-people-out-of-poverty-is-historic-world-bank-117101300027_1.html">China</a> top among them.</p>
+<p>The transition toward capitalism in those countries has come at the cost of <a href="https://www.bbc.com/news/business-13945072">social inequalities</a>. Freer markets have created a growing class of wealthy entrepreneurs, while some more marginal populations have remained <a href="https://www.nytimes.com/2015/02/25/world/americas/as-cuba-shifts-toward-capitalism-inequality-grows-more-visible.html">excluded from these new riches</a>.</p>
+<p>Still, vastly improved living conditions have actually <a href="https://theconversation.com/in-cuba-the-post-fidel-era-began-ten-years-ago-71720">boosted the legitimacy of communist governments</a> in Vietnam, Cuba and China. </p>
+<p>East Germany and North Korea differ from these examples. They are halves of a whole. </p>
+<p>The planned economy doesn’t just inform their political system – it 
+is the sole reason for their existence. East Germany and North Korea 
+were born to offer an economic alternative from their capitalist 
+compatriots.</p>
+<p>If these countries cease to present a clear economic alternative that
+ distinguishes them from their capitalist brother-country, history 
+shows, they are absorbed by them. </p>
+<p>My research suggests that <a href="https://www.cnn.com/2013/10/29/world/asia/north-korea-nuclear-timeline---fast-facts/index.html">denuclearization</a>, the lifting of U.S. <a href="https://www.cfr.org/backgrounder/what-know-about-sanctions-north-korea">sanctions</a>
+ and a transition into market socialism would trigger an East 
+Germany-style existential crisis for North Korea. That’s because a 
+prospering economy would eliminate the very reason for North Korean 
+existence, obviating the rationale for Kim’s totalitarian policies, 
+anti-American rhetoric and isolation. </p>
+<p>For North Korea’s all-powerful leader, a failing centralized economy and a grip on power that’s <a href="https://www.bloomberg.com/opinion/articles/2019-01-02/north-korea-nukes-dapper-new-kim-jong-un-is-playing-an-old-game">guaranteed by the threat of nuclear warfare</a> is better than a vibrant capitalist economy. </p>
+<p>Kim <a href="https://www.nytimes.com/2018/09/21/opinion/kim-jong-un-moon-economic-development-north-korea-denuclearization.html">promised North Koreans better living conditions</a>
+ after succeeding his father, dictator Kim Jong Il, in 2011. But what he
+ really needs are economic reforms that boost the economy without <a href="https://theconversation.com/castros-conundrum-finding-a-post-communist-model-cuba-can-follow-81242">threatening the communist character</a> of North Korea’s economy. </p>
+<p>No post-Cold War country has managed it yet.</p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///topics/soviet-union-868">Soviet Union</a> </li> <li class="rm-manual"> <a href="file:///topics/asia-1576">Asia</a> </li> <li class="rm-manual"> <a href="file:///topics/world-war-ii-1678">World War II</a> </li> <li class="rm-manual"> <a href="file:///topics/north-korea-2060">North Korea</a> </li> <li class="rm-manual"> <a href="file:///topics/south-korea-2712">South Korea</a> </li> <li class="rm-manual"> <a href="file:///topics/vietnam-3205">Vietnam</a> </li> <li class="rm-manual"> <a href="file:///topics/communism-4088">Communism</a> </li> <li class="rm-manual"> <a href="file:///topics/berlin-wall-6599">Berlin Wall</a> </li> <li class="rm-manual"> <a href="file:///topics/east-germany-24081">East Germany</a> </li> <li class="rm-manual"> <a href="file:///topics/west-germany-28315">West Germany</a> </li> <li class="rm-manual"> <a href="file:///topics/kim-jong-un-31448">Kim Jong-Un</a> </li> <li class="rm-manual"> <a href="file:///topics/korean-war-34041">Korean War</a> </li> <li class="rm-manual"> <a href="file:///topics/korean-peninsula-38181">Korean peninsula</a> </li> <li class="rm-manual"> <a href="file:///topics/north-korea-missiles-52308">North Korea missiles</a> </li> <li class="rm-manual"> <a href="file:///topics/us-north-korea-summit-54226">US-North Korea summit</a> </li> </ul>
+<h3 class="rm-manual">Want to write?</h3>
+<p class="rm-manual"> Write an article and join a growing community of more than 108,000 academics and researchers from 3,546 institutions. </p>
+<p class="rm-manual"> <a href="file:///become-an-author">Register now</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///us/community-standards">Community standards</a> </li> <li class="rm-manual"> <a href="file:///us/republishing-guidelines">Republishing guidelines</a> </li> <li class="rm-manual"> <a href="file:///us/friends">Friends of The Conversation</a> </li> <li class="rm-manual"> <a href="https://analytics.theconversation.com/us">Analytics</a> </li> <li class="rm-manual"> <a href="file:///us/feeds">Our feeds</a> </li> <li class="rm-manual"> <a href="https://donate.theconversation.com/us?utm_source=theconversation.com&amp;utm_medium=website&amp;utm_campaign=footer">Donate</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///us/who-we-are">Who we are</a> </li> <li class="rm-manual"> <a href="file:///us/charter">Our charter</a> </li> <li class="rm-manual"> <a href="file:///us/team">Our team</a> </li> <li class="rm-manual"> <a href="file:///us/partners">Partners and funders</a> </li> <li class="rm-manual"> <a href="file:///us/resources-for-media">Resource for media</a> </li> <li class="rm-manual"> <a href="file:///us/contact-us">Contact us</a> </li> <li class="rm-manual"> <a href="file:///us/espanol">En Español</a> </li> </ul>
+<p class="rm-manual"> <a href="file:///us/privacy-policy">Privacy policy</a> <a href="file:///us/terms-and-conditions">Terms and conditions</a> <a href="file:///us/corrections">Corrections</a> </p>
+<p class="rm-manual"> <span>Copyright © 2010–2020</span><span>, </span><span><a href="file:///us/who-we-are">The Conversation US, Inc.</a></span> </p></article>
+</body></html>

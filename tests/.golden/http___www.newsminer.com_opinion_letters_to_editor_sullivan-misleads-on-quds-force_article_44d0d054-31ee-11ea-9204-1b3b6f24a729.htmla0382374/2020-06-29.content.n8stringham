@@ -1,0 +1,410 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Sullivan misleads on Quds Force | Letters To Editor | newsminer.com </p>
+<ul class="rm-manual">
+<li class="rm-manual"> <a rel="nofollow"> Log In </a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.newsminer.com/users/admin/">Dashboard</a></li> <li class="rm-manual"> <a rel="nofollow"> Logout</a>
+</li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual">My Account</li> <li class="rm-manual"><a href="https://www.newsminer.com/users/admin/" rel="nofollow"> Dashboard</a></li> <li class="rm-manual"><a href=""> Profile</a></li> <li class="rm-manual"><a href="https://www.newsminer.com/users/admin/list/" rel="nofollow"> Saved items</a></li> <li class="rm-manual"><a rel="nofollow"> Logout</a></li> </ul> </li> </ul>
+<p class="rm-manual">E-Edition</p>
+<p class="rm-manual"><a href="file:///">Home</a> </p>
+<p class="rm-manual"><a href="file:///arctic_cam/">Arctic Cam</a> </p>
+<p class="rm-manual"><a href="file:///news/politics/">Politics</a> </p>
+<p class="rm-manual"><a href="file:///calendar/">Calendar</a> </p>
+<ul class="rm-manual"><li class="rm-manual"> <a href="https://www.newsminer.com/users/admin/calendar/event/" rel="noopener">Post an event</a> </li></ul>
+<p class="rm-manual"><a href="file:///news/">News</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///news/public_safety_report/">Public Safety Report</a> </li>
+<li class="rm-manual"> <a href="file:///news/local_news/">Local News</a> </li>
+<li class="rm-manual"> <a href="file:///news/alaska_news/">Alaska News</a> </li>
+<li class="rm-manual"> <a href="file:///news/kris_capps/">Kris Capps</a> </li>
+</ul>
+<p class="rm-manual"><a href="file:///obituaries/">Obituaries</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///obituary_forms/obit_guidelines/">Obituary guidelines</a> </li>
+<li class="rm-manual"> <a href="file:///site/forms/announcements/death_notice/">Submit Death Notice</a> </li>
+<li class="rm-manual"> <a href="file:///site/forms/announcements/obituary/">Submit an Obituary</a> </li>
+</ul>
+<p class="rm-manual"><a href="file:///opinion/">Opinion</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///opinion/community_perspectives/">Community Perspectives</a> </li>
+<li class="rm-manual"> <a href="file:///opinion/editorials/">Editorials</a> </li>
+<li class="rm-manual"> <a href="file:///opinion/letters_to_editor/">Letters to the Editor</a> </li>
+<li class="rm-manual"> <a href="file:///site/forms/online_services/letter/">Submit a Letter to the Editor</a> </li>
+<li class="rm-manual"> <a href="file:///news/dermot_cole/">Dermot Cole</a> </li>
+<li class="rm-manual"> <a href="file:///opinion/columnists/">Columnists</a> </li>
+</ul>
+<p class="rm-manual"><a href="file:///gallery/">Photos</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///gallery/photo_of_the_day/">Photo of the day</a> </li>
+<li class="rm-manual"> <a href="file:///gallery/">Photo Galleries</a> </li>
+<li class="rm-manual"> <a href="file:///gallery/photo_archives/">Photo Archives</a> </li>
+<li class="rm-manual"> <a href="https://%20newsminer.mycapture.com/mycapture/index.php" rel="noopener">Photo Reprints</a> </li>
+</ul>
+<p class="rm-manual"><a href="file:///features/">Features</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///announcements/">Announcements</a> </li>
+<li class="rm-manual"> <a href="file:///features/applause/">Applause</a> </li>
+<li class="rm-manual"> <a href="file:///features/food/">Food</a> </li>
+<li class="rm-manual"> <a href="file:///features/latitude_65/">Latitude 65</a> </li>
+<li class="rm-manual"> <a href="file:///features/our_town/">Our Town</a> </li>
+<li class="rm-manual"> <a href="file:///features/outdoors/">Outdoors</a> </li>
+<li class="rm-manual"> <a href="file:///features/sundays/">Sundays</a> </li>
+</ul>
+<p class="rm-manual"><a href="file:///classifieds/">Classifieds</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///classifieds/job/">Jobs</a> </li>
+<li class="rm-manual"> <a href="file:///classifieds/vehicle/">Automotive</a> </li>
+<li class="rm-manual"> <a href="file:///classifieds/sale/pet/">Pet</a> </li>
+<li class="rm-manual"> <a href="file:///classifieds/housing/">Real Estate</a> </li>
+<li class="rm-manual"> <a href="file:///classifieds/sale/">Merchandise</a> </li>
+<li class="rm-manual"> <a href="file:///classifieds/community/announcements/">Legal</a> </li>
+<li class="rm-manual"> <a href="file:///classifieds/housing/sale/foreclosure">Foreclosures</a> </li>
+</ul>
+<p class="rm-manual"><a href="file:///extra/">Coronavirus disease (COVID-19)</a> </p>
+<p class="rm-manual"><a>More</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///extra/alaska_post/">Alaska Post (Fort Wainwright)</a> </li>
+<li class="rm-manual"> <a href="file:///extra/alaska_pulse/">Alaska Pulse</a> </li>
+<li class="rm-manual"> <a href="file:///contest/">Contest</a> </li>
+<li class="rm-manual"> <a href="file:///kodiak/">Kodiak</a> </li>
+<li class="rm-manual"> <a href="file:///northpole/">North Pole</a> </li>
+<li class="rm-manual"> <a href="https://www.newsminer.com/site/forms/announcements/submit_camp/camps_submit/" rel="noopener">Summer camps</a> </li>
+<li class="rm-manual"> <a href="file:///sports/">Sports</a> </li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"> <a rel="nofollow"> Log In </a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.newsminer.com/users/admin/">Dashboard</a></li> <li class="rm-manual"> <a rel="nofollow"> Logout</a>
+</li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual">My Account</li> <li class="rm-manual"><a href="https://www.newsminer.com/users/admin/" rel="nofollow"> Dashboard</a></li> <li class="rm-manual"><a href=""> Profile</a></li> <li class="rm-manual"><a href="https://www.newsminer.com/users/admin/list/" rel="nofollow"> Saved items</a></li> <li class="rm-manual"><a rel="nofollow"> Logout</a></li> </ul> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.facebook.com/fairbanksDNM" rel="noopener"> <span>Facebook</span> </a> </li> <li class="rm-manual"> <a href="http://twitter.com/newsminer/" rel="noopener"> <span>Twitter</span> </a> </li> <li class="rm-manual"> <a href="https://www.youtube.com/user/fairbanksnewsminer" rel="noopener"> <span>YouTube</span> </a> </li> <li class="rm-manual"> <a href="https://www.instagram.com/fairbanksdnm/" rel="noopener"> <span>Instagram</span> </a> </li> </ul>
+<p class="rm-manual"><a href="https://secure.tecnavia.com/ak_payments/fairbanksdailynews/"> </a></p><p class="rm-manual"><a href="https://secure.tecnavia.com/ak_payments/fairbanksdailynews/">Subscribe</a></p><a href="https://secure.tecnavia.com/ak_payments/fairbanksdailynews/"> </a><p class="rm-manual"></p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///weather/?weather_zip=99707"> <span> <span>64°</span> </span> </a> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> </p><h4 class="rm-manual"> Fairbanks, AK (99707) </h4> <h5 class="rm-manual">Today</h5> <p class="rm-manual">Cloudy with occasional rain showers. High near 65F. Winds WSW at 10 to 15 mph. Chance of rain 40%..</p> <h5 class="rm-manual">Tonight</h5> <p class="rm-manual">Cloudy. Periods of light rain early. Low 46F. Winds WSW at 10 to 15 mph. Chance of rain 80%.</p> <p class="rm-manual"> Updated: June 29, 2020 @ 1:24 pm</p> <p class="rm-manual"></p> </li> <li class="rm-manual"><a href="file:///weather/?weather_zip=99707"> Full Forecast</a></li> </ul> </li> </ul>
+<ul class="rm-manual"><li class="rm-manual"> <a> <span>Subscriber Services</span> </a><ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///site/forms/subscription_services/contact_circulation/"> <span>Contact Circulation</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///site/forms/subscription_services/paybill/"> <span>Pay your bill</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///site/forms/subscription_services/vacation/"> <span>Vacation hold</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///site/forms/subscription_services/cancellation/"> <span>Cancel service</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///newsletters/"> <span>Newsletter signups</span> </a>
+</li>
+</ul>
+</li></ul>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///"> <span>Home</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///arctic_cam/"> <span>Arctic Cam</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///news/politics/"> <span>Politics</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///calendar/"> <span>Calendar</span> </a><ul class="rm-manual"><li class="rm-manual"> <a href="https://www.newsminer.com/users/admin/calendar/event/" rel="noopener"> <span>Post an event</span> </a>
+</li></ul>
+</li>
+<li class="rm-manual"> <a href="file:///news/"> <span>News</span> </a><ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///news/public_safety_report/"> <span>Public Safety Report</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///news/local_news/"> <span>Local News</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///news/alaska_news/"> <span>Alaska News</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///news/kris_capps/"> <span>Kris Capps</span> </a>
+</li>
+</ul>
+</li>
+<li class="rm-manual"> <a href="file:///obituaries/"> <span>Obituaries</span> </a><ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///obituary_forms/obit_guidelines/"> <span>Obituary guidelines</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///site/forms/announcements/death_notice/"> <span>Submit Death Notice</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///site/forms/announcements/obituary/"> <span>Submit an Obituary</span> </a>
+</li>
+</ul>
+</li>
+<li class="rm-manual"> <a href="file:///opinion/"> <span>Opinion</span> </a><ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///opinion/community_perspectives/"> <span>Community Perspectives</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///opinion/editorials/"> <span>Editorials</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///opinion/letters_to_editor/"> <span>Letters to the Editor</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///site/forms/online_services/letter/"> <span>Submit a Letter to the Editor</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///news/dermot_cole/"> <span>Dermot Cole</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///opinion/columnists/"> <span>Columnists</span> </a>
+</li>
+</ul>
+</li>
+<li class="rm-manual"> <a href="file:///gallery/"> <span>Photos</span> </a><ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///gallery/photo_of_the_day/"> <span>Photo of the day</span> </a><ul class="rm-manual">
+<li class="rm-manual"> <a> <span>More</span> </a>
+</li>
+<li class="rm-manual"> <a> <span>More</span> </a>
+</li>
+</ul>
+</li>
+<li class="rm-manual"> <a href="file:///gallery/"> <span>Photo Galleries</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///gallery/photo_archives/"> <span>Photo Archives</span> </a>
+</li>
+<li class="rm-manual"> <a href="https://%20newsminer.mycapture.com/mycapture/index.php" rel="noopener"> <span>Photo Reprints</span> </a>
+</li>
+</ul>
+</li>
+<li class="rm-manual"> <a href="file:///features/"> <span>Features</span> </a><ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///announcements/"> <span>Announcements</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///features/applause/"> <span>Applause</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///features/food/"> <span>Food</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///features/latitude_65/"> <span>Latitude 65</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///features/our_town/"> <span>Our Town</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///features/outdoors/"> <span>Outdoors</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///features/sundays/"> <span>Sundays</span> </a>
+</li>
+</ul>
+</li>
+<li class="rm-manual"> <a href="file:///classifieds/"> <span>Classifieds</span> </a><ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///classifieds/job/"> <span>Jobs</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///classifieds/vehicle/"> <span>Automotive</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///classifieds/sale/pet/"> <span>Pet</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///classifieds/housing/"> <span>Real Estate</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///classifieds/sale/"> <span>Merchandise</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///classifieds/community/announcements/"> <span>Legal</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///classifieds/housing/sale/foreclosure"> <span>Foreclosures</span> </a>
+</li>
+</ul>
+</li>
+<li class="rm-manual"> <a href="file:///extra/"> <span>Coronavirus disease (COVID-19)</span> </a>
+</li>
+<li class="rm-manual"> <a> <span>More</span> </a><ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///extra/alaska_post/"> <span>Alaska Post (Fort Wainwright)</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///extra/alaska_pulse/"> <span>Alaska Pulse</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///contest/"> <span>Contest</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///kodiak/"> <span>Kodiak</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///northpole/"> <span>North Pole</span> </a>
+</li>
+<li class="rm-manual"> <a href="https://www.newsminer.com/site/forms/announcements/submit_camp/camps_submit/" rel="noopener"> <span>Summer camps</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///sports/"> <span>Sports</span> </a><ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///sports/high_school/"> <span>High School</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///sports/local_community/"> <span>Local Sports</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///sports/ice_dogs/"> <span>Ice Dogs</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///sports/iditarod/"> <span>Iditarod</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///sports/uaf_nanooks/"> <span>UAF Nanooks</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///mushing/yukon_quest/"> <span>Yukon Quest</span> </a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="rm-manual"> <span>Share This </span> </p>
+<p class="rm-manual">Letter to the Editor</p>
+<h1 class="rm-manual"> <span> Sullivan misleads on Quds Force </span> </h1>
+<ul class="rm-manual"> <li class="rm-manual"><span>Michael J. Walleri Fairbanks</span></li> <li class="rm-manual"> Jan 8, 2020 </li> <li class="rm-manual"> Jan 8, 2020</li> </ul>
+<p>To the editor: Sen. Sullivan’s claim that “General Soleimani and the 
+Iranian Quds Force ... have been responsible for the killing and 
+wounding of thousands of U.S. service members” is a profound 
+over-simplification and misleading. Quds Force military operations were 
+allied with U.S. forces in the Liberation of Tikrit, Battle of Baiji, 
+Liberation of Jurf Al Sakahar, Siege of Amirli, 2014 Northern Iraq 
+Offensive and 2001 Battle of Herat. Sullivan is confusing and conflating
+ the Quds forces with Hezbollah, which was led by Abu Mahdi al-Muhandis 
+and who was killed with Soleimani. Al-Muhandis was responsible for many 
+American deaths. But al-Muhandis also led the Popular Mobilization 
+Forces, an arm of the Iraqi government supported by the United States. 
+Both the CIA and the Department of Defense opposed Trump designating the
+ Quds Force a terrorist organization.</p>
+<p>Hezbollah — supported by Shia Iran — is battling Saudi (Sunni)-backed
+ terrorist groups such as ISIS, the Taliban, al Qaida, Hamas, etc. These
+ Saudi-backed Sunni terrorist groups were responsible for 9/11 and 
+continue to attack American military personnel. It would be very 
+difficult to determine whether more American military personnel have 
+been killed by Iranian-backed Shia terrorist groups or Saudi-backed 
+Sunni terrorist groups. The death of Al-Muhandis may have been a 
+legitimate target of American forces in Iraq. However, killing Soleimani
+ would be more akin to killing Khalid bin Ali Al Humaidan, the director 
+general of Saudi Arabia’s General Intelligence Directorate. Both are 
+equally responsible for the death of American military personnel, in 
+roughly the same manner: i.e. support for terrorist groups that actually
+ do the killing of American military personnel.</p>
+<p>The real winners in these developments are Russia and Saudi Arabia, 
+which are competing with Iran in a three-way multidimensional war for 
+Middle East hegemony since the U.S. drawdown in Syria and Kurdish Iraq. 
+While alignments in this area shift, Trump continues to direct America 
+to do Russian and Saudi bidding. America doesn’t have an existential 
+interest in this conflict. Sullivan’s lock-step recitation of Trump’s 
+misleading talking points subvert America’s interests to Russian and 
+Saudi Arabia’s interest and places American military lives at risk to do
+ so.</p>
+<h4 class="rm-manual">Locations</h4>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///search/?g=fairbanks">Fairbanks</a> </li> <li class="rm-manual"> <a href="file:///search/?g=north_pole">North Pole</a> </li> <li class="rm-manual"> <a href="file:///search/?g=university_of_alaska">University Of Alaska</a> </li> </ul>
+<h3 class="rm-manual"> <a href="https://newsminer-dot-com.bloxcms-ny1.com/site/forms/online_services/letter/letter_editor/"> How to get into print </a> </h3>
+<h1 class="rm-manual">Guidelines</h1>
+<p class="rm-manual">The Daily News-Miner encourages residents to make 
+themselves heard through the Opinion pages. Readers' letters and columns
+ also appear online at <a href="http://newsminer.com/">newsminer.com</a>. Contact the editor with questions at <a href="mailto:letters@newsminer.com">letters@newsminer.com</a> or call 459-7574.</p>
+<p class="rm-manual">Community Perspective</p>
+<p class="rm-manual">Send Community Perspective submissions by mail 
+(P.O. Box 70710, Fairbanks AK 99707) or via email 
+(letters@newsminer.com). Submissions must be 500 to 750 words. Columns 
+are welcome on a wide range of issues and should be well-written and 
+well-researched with attribution of sources. Include a full name, email 
+address, daytime telephone number and headshot photograph suitable for 
+publication (email jpg or tiff files at 150 dpi.) You may also schedule a
+ photo to be taken at the News-Miner office. The News-Miner reserves the
+ right to edit submissions or to reject those of poor quality or taste 
+without consulting the writer.</p>
+<p class="rm-manual">Letters to the editor</p>
+<p class="rm-manual">Send letters to the editor by mail (P.O. Box 70710,
+ Fairbanks AK 99707), by fax (907-452-7917) or via email 
+(letters@newsminer.com). Writers are limited to one letter every two 
+weeks (14 days.) All letters must contain no more than 350 words and 
+include a full name (no abbreviation), daytime and evening phone numbers
+ and physical address. (If no phone, then provide a mailing address or 
+email address.) The Daily News-Miner reserves the right to edit or 
+reject letters without consulting the writer.</p>
+<h3 class="rm-manual"> Most Popular </h3>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="#articles-404791"><span> Articles</span></a> </li> <li class="rm-manual"> <a href="#images-404791"><span> Images</span></a> </li> <li class="rm-manual"> <a href="#collections-404791"><span> Collections</span></a> </li> </ul>
+<h4 class="rm-manual">Articles</h4>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///news/local_news/man-likely-killed-by-downed-fairbanks-power-line/article_f6ba3058-b5ba-11ea-a59b-dbef052f1188.html">Man likely killed by downed Fairbanks power line</a></li>
+<li class="rm-manual"><a href="file:///news/local_news/alaska-air-to-introduce-76-passenger-aircraft-to-supply-flights-to-alaska-communities/article_f129aca8-b8e0-11ea-a00e-e727bdc75283.html">Alaska Air to introduce 76-passenger aircraft to supply flights to Alaska communities</a></li>
+<li class="rm-manual"><a href="file:///alerts/denali-borough-sees-first-covid-19-case-as-patient-count-rises-across-alaska/article_74272f94-b720-11ea-a537-b76044e36426.html">Denali Borough sees first COVID-19 case as patient count rises across Alaska</a></li>
+<li class="rm-manual"><a href="file:///alerts/flood-warnings-issued-for-fairbanks/article_83d214da-b68b-11ea-b5fb-733e81699659.html">Flood warnings issued for Fairbanks</a></li>
+<li class="rm-manual"><a href="file:///alerts/seward-musicians-test-positive-for-virus-after-fairbanks-show-last-weekend/article_cab7ea96-b825-11ea-b06c-b387cd648e89.html">Seward musicians test positive for virus after Fairbanks show last weekend</a></li>
+<li class="rm-manual"><a href="file:///news/local_news/fairbanks-man-arrested-for-allegedly-stealing-heavy-equipment-roller-compactor/article_0b70798e-b98b-11ea-9b0f-c7de794fc096.html">Fairbanks man arrested for allegedly stealing heavy equipment roller compactor</a></li>
+<li class="rm-manual"><a href="file:///alerts/state-announces-16-resident-19-nonresident-covid-19-cases/article_460222ce-b5b1-11ea-b4ce-97cc600ce234.html">State announces 16 resident, 19 nonresident COVID-19 cases</a></li>
+<li class="rm-manual"><a href="file:///alerts/state-two-more-alaskans-die-of-covid-19-in-lower-48-30-new-cases/article_2efdac7c-b7e8-11ea-9866-fb9db5785925.html">State: Two more Alaskans die of COVID-19 in Lower 48; 30 new cases</a></li>
+<li class="rm-manual"><a href="file:///alerts/house-members-express-concern-over-absent-mask-mandate-in-alaska-state-reported-21-new-cases/article_972bc354-b687-11ea-b5c4-5750a03f33ee.html">House members express concern over absent mask mandate in Alaska; state reported 21 new cases in residents, nonresidents</a></li>
+<li class="rm-manual"><a href="file:///alerts/free-covid-19-testing-site-slated-to-open-in-fairbanks/article_33818858-b75d-11ea-9f70-37ba3021a7fc.html">Free COVID-19 testing site slated to open in Fairbanks</a></li>
+</ul>
+<h4 class="rm-manual">Images</h4>
+<h4 class="rm-manual">Collections</h4>
+<p class="rm-manual">Sorry, there are no recent results for popular collections.</p>
+<h3 class="rm-manual"> <a href="file:///site/forms/online_services/submit_news/"> Submit your news &amp; photos </a> </h3>
+<p class="rm-manual">Let us know what you're seeing and hearing around the community. </p>
+<h4 class="rm-manual"> Sections </h4>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="file:///arctic_cam/"> <span>Arctic Cam</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///business/"> <span>Business</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///calendar/"> <span>Calendar</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///classifieds/"> <span>Classifieds</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///features/"> <span>Features</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///marijuana/"> <span>Marijuana</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///news/"> <span>News</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///obituaries/"> <span>Obituaries</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///opinion/"> <span>Opinion</span> </a>
+</li>
+<li class="rm-manual"> <a href="http://newsminer.mycapture.com/mycapture/index.asp" rel="noopener"> <span>Photo Reprints</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///sports/"> <span>Sports</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///weather/"> <span>Weather</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///mushing/yukon_quest/"> <span>Yukon Quest</span> </a>
+</li>
+</ul>
+<h4 class="rm-manual"> Services </h4>
+<ul class="rm-manual">
+<li class="rm-manual"> <a href="https://fairbanks-daily-news-miner.newspaperarchive.com/" rel="noopener"> <span>Full-page archives - 1906 to 2017</span> </a>
+</li>
+<li class="rm-manual"> <a href="http://nl.newsbank.com/nl-search/we/Archives/?p_action=keyword&amp;s_search_type=keyword&amp;p_product=NewsLibrary&amp;p_theme=newslibrary2&amp;d_sources=location&amp;d_place=FDNB&amp;p_nbid=&amp;" rel="noopener"> <span>Story archives 2001-present</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///subscriber_services/change_address/"> <span>Change Address</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///subscriber_services/contact_circulation/"> <span>Contact Circulation</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///subscriber_services/pay_bill/"> <span>Pay Bill</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///search/"> <span>Search the Website</span> </a>
+</li>
+<li class="rm-manual"> <a href="http://issuu.com/newsminer" rel="noopener"> <span>Special Sections</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///site/forms/"> <span>Submissions</span> </a>
+</li>
+<li class="rm-manual"> <a href="https://secure.tecnavia.com/ak_payments/fairbanksdailynews/" rel="noopener"> <span>Subscribe</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///summer_camps/"> <span>Summer Camps</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///visitors_guide/"> <span>Visitors Guide</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///arctic_cam/about_news_miner/"> <span>About Us</span> </a>
+</li>
+<li class="rm-manual"> <a href="file:///staff_directory/"> <span>Staff Directory</span> </a>
+</li>
+</ul>
+<h4 class="rm-manual"> Contact Information </h4>
+<address class="rm-manual"> newsminer.com 200 N. Cushman St. Fairbanks, AK 99707 Phone: 907-456-6661 Email: <a href="mailto:digital@newsminer.com">digital@newsminer.com </a> </address>
+<h4 class="rm-manual"> Follow Us </h4>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.facebook.com/fairbanksDNM" rel="noopener"> <span>Facebook</span> </a> </li> <li class="rm-manual"> <a href="http://twitter.com/newsminer/" rel="noopener"> <span>Twitter</span> </a> </li> </ul>
+<p class="rm-manual">© Copyright 2020 <a href="file:///">newsminer.com</a>, 200 N. Cushman St. Fairbanks, AK | <a href="file:///site/terms.html">Terms of Use</a> | <a href="file:///site/privacy.html">Privacy Policy</a></p>
+<p class="rm-manual">Powered by <a href="https://bloxcms.com/" rel="noopener">BLOX Content Management System</a> from <a href="https://townnews.com/" rel="noopener">TownNews.com</a>.</p></article>
+</body></html>

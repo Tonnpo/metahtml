@@ -1,0 +1,67 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Incredible Video of U.S. Air Force HH-60G Aircrew Competing During Gun Smoke 2021 | Defense Media Network </p>
+<h1 class="rm-manual">Defense Media Network</h1>
+<h2 class="rm-manual">Auxiliary Navigation</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.defensemedianetwork.com/free-military-aerospace-veteran-special-operations-online-magazines/">Online Magazines</a></li> <li class="rm-manual"><a href="https://www.defensemedianetwork.com/about/">About</a></li> <li class="rm-manual"><a href="https://www.defensemedianetwork.com/contact/">Contact</a></li> <li class="rm-manual"><a href="https://www.defensemedianetwork.com/advertise/">Advertise</a></li> </ul>
+<h2 class="rm-manual">Mobile Navigation</h2>
+<p class="rm-manual"> // </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="#"><h2 class="rm-manual">X</h2></a></li> <li class="rm-manual"><a href="file:///topics/defense-wide/">Defense Wide</a></li> <li class="rm-manual"><a href="file:///topics/special-ops/">Special Operations</a></li> <li class="rm-manual"><a href="file:///topics/naval-forces/">Naval Forces</a></li> <li class="rm-manual"><a href="file:///topics/aerospace">Aerospace</a></li> <li class="rm-manual"><a href="file:///topics/land-forces/">Land Forces</a></li> <li class="rm-manual"><a href="file:///topics/military-engineering/">Military Engineering</a></li> <li class="rm-manual"><a href="file:///topics/va-military-medicine/">VA &amp; Military Medicine</a></li> <li class="rm-manual"><a href="file:///topics/homeland-security/">Homeland Security</a></li> <li class="rm-manual"><a href="file:///topics/defense-r-d/">Defense R&amp;D</a></li> <li class="rm-manual"><a href="file:///free-military-aerospace-veteran-special-operations-online-magazines/">Magazines</a></li> <li class="rm-manual"><a href="file:///contact/">Contact</a></li> </ul>
+<p class="rm-manual">Subscribe</p>
+<h2 class="rm-manual">Site Wide Navigation</h2>
+<p class="rm-manual"> <a href="file:///topics/defense-wide/">Defense Wide</a> <a href="file:///topics/special-ops/">Special Operations</a> <a href="file:///topics/naval-forces/">Naval Forces</a> <a href="file:///topics/aerospace">Aerospace</a> <a href="file:///topics/land-forces/">Land Forces</a> <a href="file:///topics/military-engineering/">Military Engineering</a> <a href="file:///topics/va-military-medicine/">VA &amp; Military Medicine</a> <a href="file:///topics/homeland-security/">Homeland Security</a> <a href="file:///topics/defense-r-d/">Defense R&amp;D</a> <a href="file:///free-military-aerospace-veteran-special-operations-online-magazines/">Magazines</a> </p>
+<h1 class="rm-manual">Incredible Video of U.S. Air Force HH-60G Aircrew Competing During Gun Smoke 2021</h1>
+<p class="rm-manual">By <a href="https://www.defensemedianetwork.com/author/u-s-air-force/" rel="author">U.S. Air Force</a> <span>- June 9, 2021</span> </p>
+<p>This video by Airman 1st Class Zachary Rufus, U.S. Air Force, 34th 
+Weapons Squadron features a USAF HH-60G and aircrew competing during Gun
+ Smoke 2021 at Nellis AFB. The competition gave each unit an opportunity
+ to shine in their everyday operations. The purpose of the competition 
+was to demonstrate the capabilities of both jet and conventional fighter
+ aircraft accuracy in bombing and gunnery. (U.S. Air Force video)</p>
+<p class="rm-manual">By <a href="https://www.defensemedianetwork.com/author/u-s-air-force/" rel="author">U.S. Air Force</a></p>
+<ul class="rm-manual"> <li class="rm-manual">
+<span>Facebook</span> Comments</li> </ul>
+<h2 class="rm-manual">Sidebar</h2>
+<h3 class="rm-manual">Popular Articles</h3>
+<h4 class="rm-manual"><a href="https://www.defensemedianetwork.com/stories/take-charge-prostate-health-today-exodx-prostate-test/">Take Charge of Your Prostate Health Today with the ExoDx™ Prostate Test </a></h4>
+<h4 class="rm-manual"><a href="https://www.defensemedianetwork.com/stories/curtain-falls-asg-qatar-three-decades-supporting-readiness-resilience/">Curtain Falls on ASG-Qatar After Three Decades Supporting Readiness, Resilience</a></h4>
+<h4 class="rm-manual"><a href="https://www.defensemedianetwork.com/stories/henry-j-kaiser-and-the-liberty-ships/">Henry J. Kaiser and the Liberty Ships</a></h4>
+<h4 class="rm-manual"><a href="https://www.defensemedianetwork.com/stories/adm-linda-fagan-becomes-uscgs-first-female-four-star-admiral/">Adm. Linda Fagan Becomes USCG’s First Female Four-Star Admiral</a></h4>
+<h4 class="rm-manual"><a href="https://www.defensemedianetwork.com/stories/u-s-coast-guard-decommissions-bahrain-based-cutters-uscgc-aquidneck-uscgc-adak/">U.S. Coast Guard Decommissions Bahrain-Based Cutters USCGC Aquidneck, USCGC Adak</a></h4></article>
+</body></html>

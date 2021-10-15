@@ -1,0 +1,256 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Thanks to Trump's Travel Ban, Iranian Families Have Been Separated and Isolated For Years </p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/"> <span>Foreign Policy Magazine</span> </a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="#">Sign In</a> </li> <li class="rm-manual"> <a href="file:///subscribe"> <span>Subscribe</span> </a> <a href="file:///subscribe"> <span>Upgrade to Insider</span> </a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///category/latest/">Latest</a> </li> <li class="rm-manual"> <a href="file:///channel/news/">News</a> </li> <li class="rm-manual"> <a href="file:///channel/analysis/">Analysis</a> </li> <li class="rm-manual"> <a href="file:///podcasts/">Podcasts</a> </li> <li class="rm-manual"> <a href="file:///the-magazine/">The Magazine</a> </li> <li class="rm-manual"> <a>Channels</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///channel/economics/">Economics</a></li> <li class="rm-manual"><a href="file:///channel/security-2/">Security</a></li> <li class="rm-manual"><a href="file:///category/elephants-in-the-room/">Elephants in the Room</a></li> <li class="rm-manual"><a href="file:///category/shadow-government/">Shadow Government</a></li> <li class="rm-manual"><a href="file:///channel/her-power/">Her Power</a></li> </ul> <span> Close </span> </li> <li class="rm-manual"> <a href="file:///newsletters/">Newsletters</a> </li> </ul>
+<p class="rm-manual"><a href="file:///fpinsider/"><span>Your </span>FP Insider Access:</a></p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///power-maps">Power Maps</a></li> <li class="rm-manual"><a href="file:///conference-calls">Conference Calls</a></li> <li class="rm-manual"><a href="file:///special-reports">Special Reports</a></li> <li class="rm-manual"><a href="file:///podcasts/ispy">I Spy Plus</a></li> </ul>
+<p class="rm-manual"> Search </p>
+<h2 class="rm-manual">latest</h2>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/06/china-united-states-george-floyd-protests/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/06/china-united-states-george-floyd-protests/">Our Top Weekend Reads</a></h3><a href="https://foreignpolicy.com/2020/06/06/china-united-states-george-floyd-protests/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual">China condemns America's human rights record, the 
+United States is sliding into illiberalism, and workers will be the most
+ vulnerable when businesses reopen.</p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/category/five-reads/"> 5 Top Reads </a> <span>|</span> </p>
+<address class="rm-manual"> <a href="https://foreignpolicy.com/author/dan-haverty/" rel="author"> Dan Haverty</a>
+</address>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/05/india-police-brutality-george-floyd-protests-united-states/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/05/india-police-brutality-george-floyd-protests-united-states/">Indians Are Supporting George Floyd—and Ignoring Police Brutality in Their Own Country</a></h3><a href="https://foreignpolicy.com/2020/06/05/india-police-brutality-george-floyd-protests-united-states/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual">There are no protests to mark the systematic 
+mistreatment of the country’s poor, lower-caste communities, or other 
+minority groups.</p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/category/analysis/argument/"> Argument </a> <span>|</span> </p>
+<address class="rm-manual"> <a href="https://foreignpolicy.com/author/raksha-kumar/" rel="author"> Raksha Kumar</a>
+</address>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/05/nypd-sees-coordination-protests-counterintelligence-police-brutality/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/05/nypd-sees-coordination-protests-counterintelligence-police-brutality/">The NYPD Sees Coordination in Protests. It’s Incentivized To.</a></h3><a href="https://foreignpolicy.com/2020/06/05/nypd-sees-coordination-protests-counterintelligence-police-brutality/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual">Since 9/11, federal funding for counterintelligence has shifted the way New York and other cities are policed.</p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/category/analysis/argument/"> Argument </a> <span>|</span> </p>
+<address class="rm-manual"> <a href="https://foreignpolicy.com/author/jake-bittle/" rel="author"> Jake Bittle</a>
+</address>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/2020/06/05/coronavirus-vladimir-putin-russia/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/2020/06/05/coronavirus-vladimir-putin-russia/">The Coronavirus Could Hit Putin Most of All</a></h3><a href="https://foreignpolicy.com/2020/06/05/coronavirus-vladimir-putin-russia/"> </a> <p class="rm-manual"></p>
+<p class="rm-manual">New surveys show a surprising decline in the 
+Russian president’s popularity. The pandemic will accelerate a trend of 
+mistrust in the Kremlin.</p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/category/analysis/argument/"> Argument </a> <span>|</span> </p>
+<address class="rm-manual"> <a href="https://foreignpolicy.com/author/maria-snegovaya/" rel="author"> Maria Snegovaya</a><span>,</span> <a href="https://foreignpolicy.com/author/denis-volkov/" rel="author"> Denis Volkov</a><span>,</span> <a href="https://foreignpolicy.com/author/stepan-goncharov/" rel="author"> Stepan Goncharov</a>
+</address>
+<p class="rm-manual"> <a href="file:///category/latest/">See All Stories</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://foreignpolicy.com/staff/">Meet the Staff</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/events">FP Events</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/fp-analytics/">FP Analytics</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/fp-peacegames/">FP PeaceGames</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://foreignpolicy.com/subscription-services/">Subscription Services</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/reprint-permissions/">Reprint Permissions</a></li> <li class="rm-manual"><a href="https://foreignpolicy.submittable.com/submit">Writer’s Guidelines</a></li> <li class="rm-manual"><a href="file:///employment-opportunities/">Work at FP</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://fpguide.foreignpolicy.com/2020-career">FP Guides – Graduate Education</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/fp-for-education/">FP For Education</a></li> <li class="rm-manual"><a href="file:///magazine">FP Archive</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/buy-back-issues/">Buy Back Issues</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://foreignpolicy.com/advertise-with-foreign-policy/">Advertise with FP</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/privacy/">Privacy Policy</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/contact-us/">Contact Us</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="#">Sign In</a> </li> <li class="rm-manual"> <a href="file:///subscribe"> <span>Subscribe</span> </a> <a href="file:///subscribe"> <span>Upgrade</span> </a> </li> </ul>
+<p class="rm-manual"> Search </p>
+<p class="rm-manual"> <span> Photo Essay: </span> <span> Separated Iranian Families Have Been In Self-Isolation For Years </span> <span> Separated Iranian Families Have Been In... </span> </p>
+<p class="rm-manual">DON'T LOSE ACCESS: Your IP access to ForeignPolicy.com will expire on June 15.</p>
+<p class="rm-manual">To ensure uninterrupted reading, please contact Rachel Mines, sales director, at <a href="mailto:rachel.mines@foreignpolicy.com">rachel.mines@foreignpolicy.com</a>.</p>
+<p class="rm-manual"> Sara wears a U.S. flag hair clip Dec. 7, 2018—a gift from her husband in their last meeting before the travel ban. </p>
+<p class="rm-manual"> <a href="https://foreignpolicy.com/category/photo-essay/"> </a></p><h3 class="rm-manual"><a href="https://foreignpolicy.com/category/photo-essay/">Photo Essay</a></h3> <p class="rm-manual"></p>
+<h1 class="rm-manual">Separated Iranian Families Have Been In Self-Isolation For Years</h1>
+<h2 class="rm-manual">Since U.S President Donald Trump's 2017 travel ban
+ went into effect, thousands of Iranians have been separated from their 
+families in the United States.</h2>
+<address class="rm-manual"> <span>By</span> <a href="https://foreignpolicy.com/author/saeed-jalili/" rel="author"> Saeed Jalili</a><span>,</span> <a href="https://foreignpolicy.com/author/forough-alaei/" rel="author"> Forough Alaei</a>
+</address>
+<p class="rm-manual"><span>|</span> </p>
+<p class="rm-manual"> Photos by Forough Alaei for Foreign Policy </p>
+<p class="rm-manual"> April 6, 2020, 5:50 AM </p>
+<p>When Peyman celebrated his wife’s birthday in his apartment in Tehran
+ on Nov. 13, 2018, he was the only family member in the room. There were
+ two balloons, a plate of fruit, a small birthday cake with candles, and
+ a photo of his wife holding their two young daughters projected on a 
+curtain behind an empty sofa.</p>
+<p>This has become a ritual since 2016, when his family moved to the 
+United States to seek medical treatment for their then-2-year-old 
+daughter, Arena.</p>
+<p>When Arena showed symptoms of an illness at an early age, it took 
+little time for Peyman, who is a radiologist, to notice they were signs 
+of a genetic disease. Arena was later diagnosed with Niemann-Pick—a 
+disease that gradually leads to the failure of the nervous system, 
+lungs, and brain. It’s a rare condition affecting 1 in 10 million 
+people, for which the potential treatment can be found in only a few 
+countries—and the United States is one of them.</p>
+<p>Soon, the decision was made, and his family settled in a new home 
+across the globe. Peyman, however, was denied a U.S. visa as President 
+Donald Trump’s immigration ban gradually took effect.</p>
+<p>Peyman celebrates his wife’s birthday on Nov. 13, 2018, in Tehran while separated from his family in the United States. </p>
+<p>In his first week in office, Trump ordered the implementation of a 
+travel ban—a policy to impose harsh restrictions on immigrants from 
+several Muslim-majority countries. It was later upheld by the U.S. 
+Supreme Court, requiring that applicants apply for waivers.</p>
+<p>The travel ban has affected the lives of more than 30,000 Iranians, 
+whose visitor and permanent visas to the United States have been denied 
+since 2017. Nearly a third of them seek waivers, hoping the indefinite 
+procedure will eventually bear fruit.</p>
+<p><span>The travel ban has affected the lives of more than 30,000 
+Iranians, whose visitor and permanent visas to the United States have 
+been denied since 2017.</span></p>
+<p>In 2018, when Peyman’s family came back to Iran for a short visit, he
+ realized that a sense of detachment was pushing Arena away from him.</p>
+<p>“My daughter hardly recognizes me anymore,” he said.</p>
+<p>For Iranians, Trump’s anti-immigration policy was later coupled with 
+economic pressure as the U.S. government pulled out of the nuclear deal 
+that Iran had signed with world powers in 2015.</p>
+<p>Washington then gradually imposed sanctions on various Iranian 
+industries and blocked financial channels. As a result, the Iranian 
+currency lost almost two-thirds of its value against the dollar and 
+other major international currencies.</p>
+<p>This created an extra financial burden for Peyman, who has been supporting his family from Tehran.</p>
+<p>“We used to live like a rich family,” he said. “I had to sell our 
+apartment and buy a smaller one to be able to pay for my family’s 
+expenses, including my daughter’s medical costs.”</p>
+<p>Passports like this one remind Iranians of their difficulties getting travel visas. </p>
+<p>Sara married her Iranian-American husband in Turkey in 2016. After 
+the wedding, they flew in opposite directions, living their lives apart 
+in the U.S. immigration limbo.</p>
+<p>They both assumed it would take no more than a few weeks for Sara to 
+receive a spouse visa and join her husband in the United States, but 
+soon it became an unending administrative process.</p>
+<p>“My marriage might fall apart,” the 32-year-old resident of Tehran 
+said. “As my age goes up, I keep asking myself, when will I be able to 
+have kids?”</p>
+<p><span>“It is difficult to explain that I live apart from my husband due to legal issues,” she said.</span></p>
+<p>For Sara, the yearslong waiting game has led to severe mental 
+anguish. Her future plans hang in the balance as she spends countless 
+days waiting for news that she and her husband can eventually start a 
+life together.</p>
+<p>“I’m not sure if I should quit my job,” in Iran she said. “If I don’t get a visa, I might lose my job.”</p>
+<p>Then there’s the stigma of living without her husband beside her.</p>
+<p>Her relatives don’t seem convinced that she is not living with her spouse purely because of the U.S government’s red tape.</p>
+<p>“It is difficult to explain that I live apart from my husband due to 
+legal issues,” she said. “I usually hear people saying behind my back, 
+‘He doesn’t want to take her [to the U.S.]’”</p>
+<p>Akram sits in her son’s room in Tehran on Dec. 12, 2018. </p>
+<p>Akram has kept her son’s room tidy and clean since he flew to the 
+United States in 2015 to study for a Ph.D. in mechanical engineering at 
+Northeastern University in Boston.</p>
+<p>So much has changed in the old high-rise neighborhood in western 
+Tehran since Akram’s only child, Mehdi, left in pursuit of success. But 
+his room looks exactly the same.</p>
+<p>“Since he left Iran, I have slept on his bed every night,” she said. 
+“There, I am able to smell his scent. It keeps his memory alive.”</p>
+<p><span>“I need to see his face every day, even if it is just for one minute.”</span></p>
+<p>Akram’s hopes of visiting her son vanished in 2018, when she was 
+denied a visa due to Trump’s immigration policy. But the forced 
+separation has failed to break their strong bond.</p>
+<p>“We speak on Skype every night, even though I know he is busy and our
+ waking hours hardly overlap,” she said. “I need to see his face every 
+day, even if it is just for one minute.”</p>
+<p>For now, Akram finds solace in wishing her son well. She keeps a 
+small photo of Mehdi on her prayer rug and glances at it each time she 
+unfolds the rug to say prayers.</p>
+<p>“He left to pursue his dreams,” she said. “Despite us being apart, I still want him to be happy and successful.”</p>
+<p>Farshad, seen at his home in Dec. 8, 2018, talks with his family every night via Skype. </p>
+<p>Farshad has been living apart from his family ever since his wife 
+took their children to the United States to start a life there.</p>
+<p>In 2015, he abandoned a business he had run for 15 years in Dubai to 
+come back to Iran as the U.S. State Department’s Diversity Visa Lottery 
+program gave his family an opportunity to come to America.</p>
+<p>Farshad, however, has been waiting for a U.S. visa ever since; when 
+he finally got a lottery-visa appointment, the travel ban had gone into 
+effect.</p>
+<p>“As a businessman … right now, it bothers me the most that I can’t have a specific plan for my future,” he said.</p>
+<p>A video call every night does little to alleviate the pressure that 
+all family members feel as tensions between Iran and the United States 
+escalate and Farshad’s hopes of getting a visa fade.</p>
+<p><span>A video call every night does little to alleviate the pressure 
+that all family members feel as tensions between Iran and the United 
+States escalate.</span></p>
+<p>Trump’s so-called maximum pressure policy has led to the escalation 
+of tensions, as opposed to paving a path for dialogue between Washington
+ and Tehran.</p>
+<p>In early January, the United States killed Qassem Suleimani, a top 
+Iranian commander of the Islamic Revolutionary Guard Corps’ Quds Force, 
+in a missile strike at the Baghdad airport. A few days later, Iran 
+struck back in revenge. It fired dozens of missiles from Iranian soil to
+ the Ain al-Asad air base in Iraq, leading to brain injuries in more 
+than 100 U.S. service members based there.</p>
+<p>The soaring tensions brought additional distress to many families 
+that have relatives living separately in both countries. The pressure 
+was felt especially by Farshad’s 14-year-old daughter and 11-year-old 
+son, who have been waiting four years for their father.</p>
+<p>Farshad, however, hopes that the separation will soon come to an end.</p>
+<p>“I’m happy that I’ve taught my children to be strong in the face of 
+the hardship,” he said. “I know they will be able to get past these 
+difficult times.”</p>
+<p>Parsa—with his father, Behzad—Skypes with his mother in the United States from Behzad’s apartment in Tehran on Aug. 9, 2019. </p>
+<p>Behzad’s apartment in Tehran is filled with photos of his wife and young son, Parsa.</p>
+<p>The two immigrated to the United States in 2015, waiting for Behzad 
+to deal with their financial affairs before he joined them. Two 
+interviews, however, have failed to provide him a visa to America, where
+ 8-year-old Parsa and his mother have settled.</p>
+<p>Deep in thought, Behzad seems more concerned about his son’s mental 
+health and his relationship with him than the financial burden he 
+endures while supporting his family in a distant country.</p>
+<p>“My son doesn’t talk to me,” he said. “He avoids looking directly into my face.”</p>
+<p>Parsa and his father wait at the airport in Tehran on Aug. 13, 2019, 
+as the boy prepares to leave Iran for the United States, where he lives 
+with his mother. </p>
+<p>When Parsa came to Iran for a visit in the summer of 2019, he spent 
+most of his time playing video games on his tablet to avoid direct 
+contact with Behzad.</p>
+<p>The visit brought more distress than comfort for Behzad, who now is 
+preoccupied with concerns about behavioral issues that Parsa is 
+developing while living apart from his father for a fifth consecutive 
+year.</p>
+<p>“His mother tried to explain to him why I can’t come to the U.S. with him, but Parsa blames me for my absence,” he said. </p>
+<p>The individuals involved in this project were photographed and 
+interviewed between 2018 and 2019. Some of the interviewees have been 
+granted U.S. visas in recent months. Names have been changed because of 
+the individuals’ personal concerns.</p>
+<p class="rm-manual">Saeed Jalili is a Tehran-based independent 
+journalist. He has written for a variety of Iranian and international 
+publications. Twitter: <a href="http://www.twitter.com/sjalilis">@sjalilis</a></p>
+<p class="rm-manual">Forough Alaei is a photojournalist based in Tehran, Iran. She's participated in VII Mentor Program since 2019. Twitter: <a href="http://www.twitter.com/foroughalaei">@foroughalaei</a> Instagram: <a href="http://instagram.com/foroughalaei">@foroughalaei</a></p>
+<p class="rm-manual"> <a href="file:///comments_view/?view_post_comments=https%3A%2F%2Fforeignpolicy.com%2F2020%2F04%2F06%2Ftrump-travel-muslim-ban-separated-iranian-families-have-self-isolation-for-years%2F">View Comments</a> </p>
+<p class="rm-manual"> <span>Tags:</span> <a href="https://foreignpolicy.com/tag/iran/"> Iran</a><span>,</span><a href="https://foreignpolicy.com/tag/migrationimmigration/"> Migration/Immigration</a><span>,</span><a href="https://foreignpolicy.com/tag/trump/"> Trump</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://foreignpolicy.com/staff/">Meet the Staff</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/events">FP Events</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/fp-analytics/">FP Analytics</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/fp-peacegames/">FP PeaceGames</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://foreignpolicy.com/subscription-services/">Subscription Services</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/reprint-permissions/">Reprint Permissions</a></li> <li class="rm-manual"><a href="https://foreignpolicy.submittable.com/submit">Writer’s Guidelines</a></li> <li class="rm-manual"><a href="file:///employment-opportunities/">Work at FP</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://fpguide.foreignpolicy.com/2020-career">FP Guides – Graduate Education</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/fp-for-education/">FP For Education</a></li> <li class="rm-manual"><a href="file:///magazine">FP Archive</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/buy-back-issues/">Buy Back Issues</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://foreignpolicy.com/advertise-with-foreign-policy/">Advertise with FP</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/privacy/">Privacy Policy</a></li> <li class="rm-manual"><a href="https://foreignpolicy.com/contact-us/">Contact Us</a></li> </ul>
+<p class="rm-manual">Powered by <a href="https://wpvip.com/?utm_source=vip_powered_wpcom&amp;utm_medium=web&amp;utm_campaign=VIP%20Footer%20Credit&amp;utm_term=foreignpolicy.com" rel="generator nofollow">WordPress.com VIP</a></p>
+<p class="rm-manual">© 2020, The Slate Group</p></article>
+</body></html>

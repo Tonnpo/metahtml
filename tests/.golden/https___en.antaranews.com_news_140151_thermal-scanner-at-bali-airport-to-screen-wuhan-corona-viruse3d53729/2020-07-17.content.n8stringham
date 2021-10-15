@@ -1,0 +1,171 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Thermal scanner at Bali airport to screen Wuhan corona virus - ANTARA News </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://en.antaranews.com/top-news">Top News</a></li> <li class="rm-manual"><a href="https://en.antaranews.com/latest-news">Latest News</a></li> <li class="rm-manual"><a href="https://en.antaranews.com/press-release">Press Release</a></li> </ul>
+<p class="rm-manual"> <a href="https://en.antaranews.com/">Antaranews.com</a> </p>
+<p class="rm-manual"> <a href="https://en.antaranews.com/about-us">About Us</a> </p>
+<p class="rm-manual">Saturday, 18th July 2020</p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://en.antaranews.com/">Home</a>
+</li> <li class="rm-manual"> <a href="https://en.antaranews.com/current-issue">Current Issue</a><ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> </p><h4 class="rm-manual"> <a href="https://en.antaranews.com/news/152606/indonesia-france-discuss-digital-transformation">Indonesia, France discuss digital transformation</a> </h4> <p class="rm-manual"></p> <p class="rm-manual"> </p><h4 class="rm-manual"> <a href="https://en.antaranews.com/news/152586/government-targets-output-of-49-products-in-prn-2020-2024">Government targets output of 49 products in PRN 2020-2024</a> </h4> <p class="rm-manual"></p> <p class="rm-manual"> </p><h4 class="rm-manual"> <a href="https://en.antaranews.com/news/152582/government-to-fund-305-researches-clearing-selection-of-2020-2024-prn">Government to fund 305 researches clearing selection of 2020-2024 PRN</a> </h4> <p class="rm-manual"></p> <p class="rm-manual"> </p><h4 class="rm-manual"> <a href="https://en.antaranews.com/news/152566/minister-brodjonegoro-underscores-need-for-research-targeting-4-areas">Minister Brodjonegoro underscores need for research targeting 4 areas</a> </h4> <p class="rm-manual"></p> <p class="rm-manual"> </p><h4 class="rm-manual"> <a href="https://en.antaranews.com/news/152562/jokowi-instructs-ministry-to-restore-normalcy-in-flood-hit-north-luwu">Jokowi instructs ministry to restore normalcy in flood-hit North Luwu</a> </h4> <p class="rm-manual"></p> </li> </ul>
+</li>
+<li class="rm-manual"> <a href="https://en.antaranews.com/world">World</a><ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> </p><h4 class="rm-manual"> <a href="https://en.antaranews.com/news/150416/indonesia-to-attend-oic-meeting-on-israeli-annexation-of-palestine">Indonesia to attend OIC meeting on Israeli annexation of Palestine</a> </h4> <p class="rm-manual"></p> <p class="rm-manual"> </p><h4 class="rm-manual"> <a href="https://en.antaranews.com/news/145318/xi-vows-to-assist-indonesia-to-tackle-covid-19-outbreak">Xi vows to assist Indonesia to tackle COVID-19 outbreak</a> </h4> <p class="rm-manual"></p> <p class="rm-manual"> </p><h4 class="rm-manual"> <a href="https://en.antaranews.com/news/140259/hrw-urges-un-agencies-to-ensure-icjs-rohingya-decision-enforced">HRW urges UN agencies to ensure ICJ's Rohingya decision enforced</a> </h4> <p class="rm-manual"></p> <p class="rm-manual"> </p><h4 class="rm-manual"> <a href="https://en.antaranews.com/news/138508/indonesia-gives-grant-of-rp75-billion-to-help-myanmar-refugees">Indonesia gives grant of Rp7.5 billion to help Myanmar refugees</a> </h4> <p class="rm-manual"></p> <p class="rm-manual"> </p><h4 class="rm-manual"> <a href="https://en.antaranews.com/news/138500/indonesia-seeks-clarification-on-latest-situation-in-xinjiang">Indonesia seeks clarification on latest situation in Xinjiang</a> </h4> <p class="rm-manual"></p> </li> </ul>
+</li>
+<li class="rm-manual"> <a href="https://en.antaranews.com/business-investment">Business &amp; Investment</a><ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> </p><h4 class="rm-manual"> <a href="https://en.antaranews.com/news/152602/ministry-holds-business-matching-event-to-boost-exports-to-canada">Ministry holds business-matching event to boost exports to Canada</a> </h4> <p class="rm-manual"></p> <p class="rm-manual"> </p><h4 class="rm-manual"> <a href="https://en.antaranews.com/news/152598/fsa-ensuring-safety-of-digital-transactions-amid-covid-19">FSA: Ensuring safety of digital transactions amid COVID-19</a> </h4> <p class="rm-manual"></p> <p class="rm-manual"> </p><h4 class="rm-manual"> <a href="https://en.antaranews.com/news/152594/smes-invested-significantly-during-covid-19-pandemic-bkpm-spokesman">SMEs invested significantly during COVID-19 pandemic: BKPM spokesman</a> </h4> <p class="rm-manual"></p> <p class="rm-manual"> </p><h4 class="rm-manual"> <a href="https://en.antaranews.com/news/152590/foreign-soes-ministries-ready-to-collaborate-in-energy-sector">Foreign, SOEs ministries ready to collaborate in energy sector</a> </h4> <p class="rm-manual"></p> <p class="rm-manual"> </p><h4 class="rm-manual"> <a href="https://en.antaranews.com/news/152574/govt-prioritizes-4-sectors-for-guaranteed-energy-supply-amid-pandemic">Govt prioritizes 4 sectors for guaranteed energy supply amid pandemic</a> </h4> <p class="rm-manual"></p> </li> </ul>
+</li>
+<li class="rm-manual"> <a href="https://en.antaranews.com/explore-indonesia">Explore Indonesia</a><ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> </p><h4 class="rm-manual"> <a href="https://en.antaranews.com/news/151978/toba-caldera-inscribed-on-list-of-unesco-global-geoparks">Toba Caldera inscribed on List of UNESCO Global Geoparks</a> </h4> <p class="rm-manual"></p> <p class="rm-manual"> </p><h4 class="rm-manual"> <a href="https://en.antaranews.com/news/150928/national-gallery-of-indonesia-in-jakarta-reopened-to-public">National Gallery of Indonesia in Jakarta reopened to public</a> </h4> <p class="rm-manual"></p> <p class="rm-manual"> </p><h4 class="rm-manual"> <a href="https://en.antaranews.com/news/150400/indonesian-regions-brace-for-reopening-of-tourism-attractions">Indonesian regions brace for reopening of tourism attractions</a> </h4> <p class="rm-manual"></p> <p class="rm-manual"> </p><h4 class="rm-manual"> <a href="https://en.antaranews.com/news/149856/ragunan-zoos-virtual-tour-features-sumatran-orangutans">Ragunan Zoo's virtual tour features Sumatran orangutans</a> </h4> <p class="rm-manual"></p> <p class="rm-manual"> </p><h4 class="rm-manual"> <a href="https://en.antaranews.com/news/148888/seunicah-oen-popular-vegetable-salad-from-aceh-sold-during-ramadhan">Seunicah Oen, popular vegetable salad from Aceh, sold during Ramadhan</a> </h4> <p class="rm-manual"></p> </li> </ul>
+</li>
+<li class="rm-manual"> <a href="https://en.antaranews.com/multimedia">Multimedia</a>
+</li>
+<li class="rm-manual"> <a href="https://en.antaranews.com/antaras-choice">Antara's Choice</a><ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> </p><h4 class="rm-manual"> <a href="https://en.antaranews.com/news/151224/wuhan-to-natuna-journalists-take-on-covering-repatriated-indonesians">Wuhan to Natuna: Journalists' take on covering repatriated Indonesians</a> </h4> <p class="rm-manual"></p> <p class="rm-manual"> </p><h4 class="rm-manual"> <a href="https://en.antaranews.com/news/151212/covering-a-covid-19-burial-the-photojournalists-stories">Covering a COVID-19 burial: The photojournalists' stories</a> </h4> <p class="rm-manual"></p> <p class="rm-manual"> </p><h4 class="rm-manual"> <a href="https://en.antaranews.com/news/151160/reporting-on-covid-19-mass-quarantine-500-meters-from-sebaru-kecil">Reporting on COVID-19 mass quarantine 500 meters from Sebaru Kecil</a> </h4> <p class="rm-manual"></p> <p class="rm-manual"> </p><h4 class="rm-manual"> <a href="https://en.antaranews.com/news/148316/martabak-bangka-set-for-may-16-release-on-youtube">'Martabak Bangka' set for May 16 release on YouTube</a> </h4> <p class="rm-manual"></p> <p class="rm-manual"> </p><h4 class="rm-manual"> <a href="https://en.antaranews.com/news/146644/antaras-top-10-medical-dramas-that-will-intrigue-audiences">ANTARA's Top 10 medical dramas that will intrigue audiences</a> </h4> <p class="rm-manual"></p> </li> </ul>
+</li>
+<li class="rm-manual"> <a href="https://en.antaranews.com/opinion">Opinion</a><ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> </p><h4 class="rm-manual"> <a href="https://en.antaranews.com/news/151450/ukraine-marks-the-anniversary-of-the-adoption-of-its-constitution">Ukraine marks the anniversary of the adoption of its Constitution</a> </h4> <p class="rm-manual"></p> <p class="rm-manual"> </p><h4 class="rm-manual"> <a href="https://en.antaranews.com/news/149605/covid-19-strategy-for-generating-revenue-by-hospitality-operators">COVID-19: Strategy for generating revenue by hospitality operators</a> </h4> <p class="rm-manual"></p> <p class="rm-manual"> </p><h4 class="rm-manual"> <a href="https://en.antaranews.com/news/146448/stranded-far-from-home-the-protection-of-indonesian-migrant-workers">Stranded far from home: the protection of Indonesian migrant workers</a> </h4> <p class="rm-manual"></p> <p class="rm-manual"> </p><h4 class="rm-manual"> <a href="https://en.antaranews.com/news/146364/media-and-politicians-lust-fuel-of-outrages-on-pandemic-stage">Media and politicians' lust: fuel of outrages on pandemic stage</a> </h4> <p class="rm-manual"></p> <p class="rm-manual"> </p><h4 class="rm-manual"> <a href="https://en.antaranews.com/news/132380/indonesian-coast-guard-will-it-surface-or-sink">Indonesian Coast Guard: Will It surface or sink?</a> </h4> <p class="rm-manual"></p> </li> </ul>
+</li>
+<li class="rm-manual"> <a href="https://en.antaranews.com/press-release">Press Release</a><ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> </p><h4 class="rm-manual"> <a href="https://en.antaranews.com/news/152578/mary-kay-inc-expands-partnership-with-the-nature-conservancy-to-protect-waterways-across-the-globe">Mary Kay Inc. expands partnership with The Nature Conservancy to protect waterways across the globe</a> </h4> <p class="rm-manual"></p> <p class="rm-manual"> </p><h4 class="rm-manual"> <a href="https://en.antaranews.com/news/152570/pg-embraces-natural-climate-solutions-to-accelerate-progress-on-climate-change-and-will-make-operations-carbon-neutral-for-the-decade">P&amp;G
+ embraces natural climate solutions to accelerate progress on climate 
+change and will make operations carbon neutral for the decade</a> </h4> <p class="rm-manual"></p> <p class="rm-manual"> </p><h4 class="rm-manual"> <a href="https://en.antaranews.com/news/152534/toshiba-launches-constant-current-2-phase-stepping-motor-driver-for-automotive-applications">Toshiba launches constant-current 2-phase stepping motor driver for automotive applications</a> </h4> <p class="rm-manual"></p> <p class="rm-manual"> </p><h4 class="rm-manual"> <a href="https://en.antaranews.com/news/152510/lintonpharm-announces-authorization-from-china-health-authority-to-proceed-with-a-global-phase-3-trial-evaluating-catumaxomab-in-advanced-gastric-cancer">LintonPharm
+ announces authorization from China health authority to proceed with a 
+global Phase 3 trial evaluating Catumaxomab in advanced gastric cancer</a> </h4> <p class="rm-manual"></p> <p class="rm-manual"> </p><h4 class="rm-manual"> <a href="https://en.antaranews.com/news/152426/spotify-launches-in-russia-and-12-additional-european-markets">Spotify launches in Russia and 12 additional European markets</a> </h4> <p class="rm-manual"></p> </li> </ul>
+</li> <li class="rm-manual"><a href="https://www.antaranews.com/">Bahasa</a></li> </ul>
+<h1 class="rm-manual">Thermal scanner at Bali airport to screen Wuhan corona virus</h1>
+<p>Officials monitor passengers' body temperature at the arrival 
+terminal of I Gusti Ngurah Rai International Airport in Bali on 
+Wednesday (Jan 22, 2020), ANTARA/Fikri Yusuf/sh</p>
+<p>We are ready to monitor all passengers as a precautionary measure 
+against the spread of the virus that originated from Wuhan, China</p>
+<p> Badung, Bali (ANTARA) - A thermal scanner has been installed at Bali
+ airport’s arrival terminal as a precautionary measure against the novel
+ corona virus (2019-nCoV), originating in Wuhan City, China, that 
+claimed 17 lives and infected over 540.</p>
+<p> "We are ready to monitor all passengers as a precautionary measure 
+against the spread of the virus that originated from Wuhan, China. We 
+install this since January 4 and worked closely with all stakeholders in
+ the airport," an official of the Port Health Office (KKP) Denpasar Putu
+ Alit Sudarma stated here on Thursday.</p>
+<p> All passengers at the arrival terminal of I Gusti Ngurah Rai 
+International Airport in Bali will undergo thermal scans to enable 
+officials to monitor their body temperature.</p>
+<p> "High fever is among the symptoms of the virus infection. This can be detected with this device," he pointed out.</p>
+<p> The authority will take precautionary measures and conduct further 
+health checks if they find passengers with body temperature recorded 
+above 38 degrees Celsius.</p>
+<p> "Passengers exhibiting symptom indicative of the virus infection 
+will be directly brought to Sanglah Hospital in Denpasar for further 
+treatment," he noted.</p>
+<p> The coronavirus outbreak that originated in Wuhan, China, has killed
+ 17 people and infected more than 540 as of Wednesday (Jan 22).</p>
+<p> The virus has spread to at least six other countries.</p>
+<p> On Wednesday, the local authorities had announced that the entire 
+city of Wuhan will be quarantined, with all means of transportation 
+halted.</p>
+<p> The virus can spread from human to human, and experts are fighting 
+to understand it and stop it from spreading further, as millions begin 
+to travel for the upcoming Chinese New Year.</p>
+<p> The disease is part of the larger coronavirus family, which 
+typically infect the nose, throat, or sinuses. This one has symptoms 
+akin to pneumonia. <span>Related news: <a href="https://en.antaranews.com/news/140100/surabaya-health-office-increases-supervision-of-passengers-from-abroad">Surabaya Health Office increases supervision of passengers from abroad</a> Related news: <a href="https://en.antaranews.com/news/140117/health-checks-increased-in-batams-ports">Health checks increased in Batam's ports</a></span></p>
+<p class="rm-manual"> EDITED BY INE</p>
+<p class="rm-manual">Reporter: Naufal Fikri, Sri Haryati</p>
+<p class="rm-manual">Editor: Fardah Assegaf</p>
+<p class="rm-manual"> COPYRIGHT © ANTARA 2020</p>
+<p class="rm-manual"> Prev News </p>
+<p class="rm-manual"><a href="https://en.antaranews.com/news/140147/no-increase-in-volcanic-activity-at-dieng-plateaus-crater-authority">No increase in volcanic activity at Dieng plateau's crater: authority</a> </p>
+<p class="rm-manual"> Next News </p>
+<p class="rm-manual"><a href="https://en.antaranews.com/news/152606/indonesia-france-discuss-digital-transformation">Indonesia, France discuss digital transformation</a> </p>
+<h3 class="rm-manual"><span>Related News</span></h3>
+<h3 class="rm-manual">
+<a href="https://en.antaranews.com/news/145174/us-extends-prompt-support-to-asean-in-fighting-covid-19-pandemic?utm_source=antaranews&amp;utm_medium=related&amp;utm_campaign=related_news">US extends prompt support to ASEAN in fighting COVID-19 pandemic</a> </h3>
+<h3 class="rm-manual">
+<a href="https://en.antaranews.com/news/145102/covid-19-wedding-parties-dispersed-in-south-sulawesi?utm_source=antaranews&amp;utm_medium=related&amp;utm_campaign=related_news">COVID-19: Wedding parties dispersed in South Sulawesi</a> </h3>
+<h3 class="rm-manual">
+<a href="https://en.antaranews.com/news/144762/baswedan-mulls-legal-measures-to-keep-jakartans-from-leaving-city?utm_source=antaranews&amp;utm_medium=related&amp;utm_campaign=related_news">Baswedan mulls legal measures to keep Jakartans from leaving city</a> </h3>
+<h3 class="rm-manual">
+<a href="https://en.antaranews.com/news/144422/13-indonesians-in-malaysia-test-positive-for-covid-19?utm_source=antaranews&amp;utm_medium=related&amp;utm_campaign=related_news">13 Indonesians in Malaysia test positive for COVID-19</a> </h3>
+<h3 class="rm-manual">
+<a href="https://en.antaranews.com/news/144398/disinfectant-fluid-sprayed-on-indonesias-c-130-carrying-medical-cargo?utm_source=antaranews&amp;utm_medium=related&amp;utm_campaign=related_news">Disinfectant fluid sprayed on Indonesia's C-130 carrying medical cargo</a> </h3>
+<h3 class="rm-manual">
+<a href="https://en.antaranews.com/news/144338/some-top-officials-inspect-emergency-hospital-for-covid-19-patients?utm_source=antaranews&amp;utm_medium=related&amp;utm_campaign=related_news">Some top officials inspect emergency hospital for COVID-19 patients</a> </h3>
+<h3 class="rm-manual">
+<a href="https://en.antaranews.com/news/144334/indonesian-air-force-plane-carries-9-tons-of-medical-aid-from-china?utm_source=antaranews&amp;utm_medium=related&amp;utm_campaign=related_news">Indonesian Air Force plane carries 9 tons of medical aid from China</a> </h3>
+<h3 class="rm-manual">
+<a href="https://en.antaranews.com/news/144098/president-orders-immediate-rapid-tests-on-individuals-over-covid-19?utm_source=antaranews&amp;utm_medium=related&amp;utm_campaign=related_news">President orders immediate rapid tests on individuals over COVID-19</a> </h3>
+<h3 class="rm-manual">
+<a href="https://en.antaranews.com/news/144078/public-urged-to-lower-medical-workers-burden-to-contain-covid-19?utm_source=antaranews&amp;utm_medium=related&amp;utm_campaign=related_news">Public urged to lower medical workers' burden to contain COVID-19</a> </h3>
+<h3 class="rm-manual">
+<a href="https://en.antaranews.com/news/143986/indef-lays-greater-weightage-to-social-distancing-over-lockdown?utm_source=antaranews&amp;utm_medium=related&amp;utm_campaign=related_news">Indef lays greater weightage to social distancing over lockdown</a> </h3>
+<h3 class="rm-manual">
+<a href="https://en.antaranews.com/news/143982/central-javas-police-pledge-to-trace-those-spreading-covid-19-hoaxes?utm_source=antaranews&amp;utm_medium=related&amp;utm_campaign=related_news">Central Java's police pledge to trace those spreading COVID-19 hoaxes</a> </h3>
+<h3 class="rm-manual">
+<a href="https://en.antaranews.com/news/143946/state-private-hospitals-ready-to-contain-covid-19-government?utm_source=antaranews&amp;utm_medium=related&amp;utm_campaign=related_news">State, private hospitals ready to contain COVID-19: Government</a> </h3>
+<h3 class="rm-manual"><span>Comments</span></h3>
+<h4 class="rm-manual">Login</h4>
+<p class="rm-manual"> Username </p>
+<p class="rm-manual"> Password </p>
+<p class="rm-manual"> Tetap masuk </p>
+<p class="rm-manual"> Belum Daftar? <a href="file:///user/register">Registrasi</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="#tab-popular"> Popular</a></li> </ul>
+<h3 class="rm-manual"><a href="https://en.antaranews.com/news/152510/lintonpharm-announces-authorization-from-china-health-authority-to-proceed-with-a-global-phase-3-trial-evaluating-catumaxomab-in-advanced-gastric-cancer">LintonPharm
+ announces authorization from China health authority to proceed with a 
+global Phase 3 trial evaluating Catumaxomab in advanced gastric cancer</a></h3>
+<h3 class="rm-manual"><a href="https://en.antaranews.com/news/152194/indonesian-navy-air-force-conduct-exercise-near-malaysia-border-area">Indonesian Navy, Air Force conduct exercise near Malaysia border area</a></h3>
+<h3 class="rm-manual"><a href="https://en.antaranews.com/news/152462/intl-collaboration-will-accelerate-covid-19-vaccine-development">Int'l collaboration will accelerate COVID-19 vaccine development</a></h3>
+<h3 class="rm-manual"><a href="https://en.antaranews.com/news/152486/full-economic-recovery-in-indonesia-in-august-2020-world-bank">Full economic recovery in Indonesia in August 2020: World Bank</a></h3>
+<h3 class="rm-manual"><a href="https://en.antaranews.com/news/152454/indonesian-firms-becoming-more-aware-of-cyber-security-survey">Indonesian firms becoming more aware of cyber security: survey</a></h3>
+<h3 class="rm-manual"><span><a href="https://en.antaranews.com/world">World</a></span></h3>
+<h3 class="rm-manual"><a href="https://en.antaranews.com/news/150416/indonesia-to-attend-oic-meeting-on-israeli-annexation-of-palestine">Indonesia to attend OIC meeting on Israeli annexation of Palestine</a></h3>
+<h3 class="rm-manual"><span><a href="https://en.antaranews.com/business-investment">Business &amp; Investment</a></span></h3>
+<h3 class="rm-manual"><a href="https://en.antaranews.com/news/152602/ministry-holds-business-matching-event-to-boost-exports-to-canada">Ministry holds business-matching event to boost exports to Canada</a></h3>
+<h3 class="rm-manual"><a href="https://en.antaranews.com/news/122729/governor-plans-to-build-railroad-in-south-sulawesi">Governor plans to build railroad in South Sulawesi</a></h3>
+<h3 class="rm-manual"><span><a href="https://en.antaranews.com/explore-indonesia">Explore Indonesia</a></span></h3>
+<h3 class="rm-manual"><a href="https://en.antaranews.com/news/151978/toba-caldera-inscribed-on-list-of-unesco-global-geoparks">Toba Caldera inscribed on List of UNESCO Global Geoparks</a></h3>
+<h3 class="rm-manual"><span><a href="https://en.antaranews.com/antaras-choice">Antara's Choice</a></span></h3>
+<h3 class="rm-manual"><a href="https://en.antaranews.com/news/151224/wuhan-to-natuna-journalists-take-on-covering-repatriated-indonesians">Wuhan to Natuna: Journalists' take on covering repatriated Indonesians</a></h3>
+<h3 class="rm-manual"><span><a href="https://en.antaranews.com/opinion">Opinion</a></span></h3>
+<h3 class="rm-manual"><a href="https://en.antaranews.com/news/151450/ukraine-marks-the-anniversary-of-the-adoption-of-its-constitution">Ukraine marks the anniversary of the adoption of its Constitution</a></h3>
+<h3 class="rm-manual"><span><a href="https://en.antaranews.com/press-release">Press Release</a></span></h3>
+<h3 class="rm-manual"><a href="https://en.antaranews.com/news/152578/mary-kay-inc-expands-partnership-with-the-nature-conservancy-to-protect-waterways-across-the-globe">Mary Kay Inc. expands partnership with The Nature Conservancy to protect waterways across the globe</a></h3>
+<h3 class="rm-manual"><a href="https://en.antaranews.com/news/121921/south-coast-of-yogyakarta-not-significantly-impacted-by-supermoon">South Coast of Yogyakarta not significantly impacted by supermoon</a></h3>
+<h4 class="rm-manual">Right Sidebar</h4>
+<p class="rm-manual"> www.antaranews.com </p>
+<p class="rm-manual"> Copyright © 2020 </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://en.antaranews.com/top-news">Top News</a></li> <li class="rm-manual"><a href="https://en.antaranews.com/latest-news">Latest News</a></li> <li class="rm-manual"><a href="https://en.antaranews.com/current-issue">Current Issue</a></li>
+<li class="rm-manual"><a href="https://en.antaranews.com/world">World</a></li>
+<li class="rm-manual"><a href="https://en.antaranews.com/business-investment">Business &amp; Investment</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://en.antaranews.com/multimedia">Multimedia</a></li>
+<li class="rm-manual"><a href="https://en.antaranews.com/antaras-choice">Antara's Choice</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://en.antaranews.com/network">Networks</a></li> <li class="rm-manual"><a href="https://en.antaranews.com/term-of-use">Term of Use</a></li> <li class="rm-manual"><a href="https://en.antaranews.com/privacy-policy">Privacy Policy</a></li> <li class="rm-manual"><a href="https://en.antaranews.com/about-us">About Us</a></li> <li class="rm-manual"><a href="https://en.antaranews.com/cyber-media-guidelines">Cyber Media Guidelines</a></li> <li class="rm-manual"><a href="https://en.antaranews.com/rss">RSS</a></li> </ul></article>
+</body></html>

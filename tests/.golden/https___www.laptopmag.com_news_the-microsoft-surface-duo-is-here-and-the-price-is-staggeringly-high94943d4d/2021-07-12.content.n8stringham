@@ -1,0 +1,182 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> The Microsoft Surface Duo is here — and the price is staggeringly high! | Laptop Mag </p>
+<p class="rm-manual"><a href="#main">Skip to main content</a> </p>
+<p class="rm-manual"> <a href="https://www.laptopmag.com/"> <span>Laptop Mag</span> </a> </p>
+<p class="rm-manual"><span>Search</span> </p>
+<p class="rm-manual"> <a href="https://www.laptopmag.com/feeds/all"> RSS </a> </p>
+<p class="rm-manual"><a></a></p><p class="rm-manual"><a><span>US</span></a></p><a><p class="rm-manual"><span>Canada</span></p></a><a><p class="rm-manual"><span>UK</span></p></a><a><p class="rm-manual"><span>Australia</span></p></a><p class="rm-manual"></p>
+<p class="rm-manual">Please deactivate your ad blocker in order to see our subscription offer</p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.laptopmag.com/news"> <span>News</span> </a> </li> <li class="rm-manual"> <a href="https://www.laptopmag.com/reviews"> <span>Reviews</span> </a> </li> <li class="rm-manual"> <a href="https://www.laptopmag.com/best-picks"> <span>Best Picks</span> </a> </li> <li class="rm-manual"> <a href="https://www.laptopmag.com/laptops"> <span>Laptops</span> </a> </li> <li class="rm-manual"> <a href="https://www.laptopmag.com/tablets"> <span>Tablets</span> </a> </li> <li class="rm-manual"> <a href="https://www.laptopmag.com/tag/headphones"> <span>Headphones</span> </a> </li> <li class="rm-manual"> More <ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.laptopmag.com/articles/laptop-buying-guide">Laptop Buying Guide</a> </li> <li class="rm-manual"> <a href="https://www.laptopmag.com/articles/laptop-brand-ratings">Laptop Brands</a> </li> <li class="rm-manual"> <a href="https://www.laptopmag.com/benchmarks/cpu-performance">CPU Performance</a> </li> <li class="rm-manual"> <a href="https://www.laptopmag.com/articles/best-laptops-for-college">College Laptops</a> </li> <li class="rm-manual"> <a href="https://www.laptopmag.com/articles/best-gaming-laptops">Gaming Laptops</a> </li> <li class="rm-manual"> <a href="https://www.laptopmag.com/articles/best-laptops-for-video-editing">Video Editing Laptops</a> </li> <li class="rm-manual"> <a href="https://www.laptopmag.com/reviews/best-chromebooks-5">Chromebooks</a> </li> <li class="rm-manual"> <a href="https://www.laptopmag.com/articles/best-apple-laptops">Apple Laptops</a> </li> </ul> </li> </ul>
+<p class="rm-manual"> <a href="https://forums.tomsguide.com/">Forums</a> </p>
+<p class="rm-manual"> Trending </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.laptopmag.com/reviews/best-laptops-1">Best laptops</a>
+</li> <li class="rm-manual"> <a href="https://www.laptopmag.com/news/microsoft-surface-pro-8-rumors-release-date-price-and-what-we-want">Surface Pro 8 </a>
+</li> <li class="rm-manual"> <a href="https://www.laptopmag.com/news/nvidia-unveils-geforce-rtx-3050-and-rtx-3050-ti-gpus-what-you-need-to-know">Nvidia RTX 3050 Ti</a>
+</li> <li class="rm-manual"> <a href="https://laptopmag.com/news/razer-sliced-open-the-blade-advanced-15-and-added-11th-gen-intel-h-series-cpus">New Razer Blade Advanced 15</a>
+</li> </ul>
+<p class="rm-manual">LaptopMag is supported by its audience. When you purchase through links on our site, we may earn an affiliate commission. <a href="https://www.futureplc.com/terms-conditions/">Learn more</a></p>
+<ol class="rm-manual"> <li class="rm-manual"><a href="https://www.laptopmag.com/">Home</a></li> <li class="rm-manual"><a href="https://www.laptopmag.com/news">News</a></li> </ol>
+<h1 class="rm-manual">The Microsoft Surface Duo is here — and the price is staggeringly high!</h1>
+<p class="rm-manual"> By <span><a href="https://www.laptopmag.com/author/kimberly-gedeon" rel="author"><span>Kimberly Gedeon</span></a></span> 12 August 2020 </p>
+<p>The world's thinnest folding device</p>
+<figcaption> <span>(Image credit: Microsoft)</span> </figcaption><p>The 
+price of Microsoft Surface Duo — one of the "sexiest" devices the tech 
+giant has built — will knock you off your feet. Get your arm and leg 
+ready because this dual-screen device will set you back a whopping 
+$1,399!</p>
+<p>You may be wondering, "What intriguing features does the highly 
+anticipated Surface Duo offer to command such a sky-high price tag?" 
+Let's dive into some of the amazing facets of the luxury Android 
+phablet.</p>
+<ul>
+<li class="rm-manual"><a href="https://www.laptopmag.com/news/microsoft-pauses-surface-neo-development-surface-duo-to-arrive-on-time">Microsoft pauses Surface Neo development — Surface Duo to arrive on time</a></li>
+<li class="rm-manual"><a href="https://www.laptopmag.com/news/microsoft-surface-duo-spotted-in-the-wild-and-we-thought-it-was-a-tiny-white-purse">Microsoft Surface Duo spotted in the wild — and we thought it was a tiny white purse</a></li>
+<li class="rm-manual"><a href="https://www.laptopmag.com/news/microsofts-surface-duo-flipping-in-this-video-tickles-my-toddler-like-attention-span">Microsoft’s Surface Duo flipping in this video tickles my toddler-like attention span</a></li>
+</ul>
+<h2>The Microsoft Surface Duo ticks off a lot of "firsts"</h2>
+<figcaption><span>Microsoft Surface Duo, 0.2 inches thick </span><span>(Image credit: Microsoft)</span></figcaption><p>Not
+ only is the Duo Microsoft's thinnest Surface device, but it's also the 
+world's thinnest folding device at 0.2 inches of thickness.</p>
+<p>Microsoft also developed its smallest 360-degree custom hinge to 
+support a myriad of folding possibilities and stationary postures such 
+as tent mode and clamshell mode.</p>
+<figcaption><span>Microsoft Surface Duo: Clamshell mode </span><span>(Image credit: Microsoft)</span></figcaption><h2>Mind-blowing Microsoft Surface Duo features</h2>
+<p>Microsoft Chief Product Officer, Panos Panay, made it clear that with
+ the Surface Duo, Microsoft doesn't intend to reinvent the phone. The 
+Surface Duo, instead, is meant to challenge our way of thinking about 
+boosting mobile productivity — and the Surface Duo does just that as an 
+activity-boosting device that can easily fit inside one's pockets.</p>
+<figcaption><span>Microsoft Surface Duo </span><span>(Image credit: Microsoft Surface Duo)</span></figcaption><p>With
+ AMOLED 5.6-inch dual displays that can expand into a vibrant 8.1-inch 
+screen, the Surface Duo will provide a life-changing experience for 
+mobile multitaskers who are fed up with the inconvenience of using a 
+single-screen device to engage with two applications.</p>
+<p>Engage with two apps simultaneously</p>
+<p>One of the biggest selling points of the Microsoft Surface Duo is its
+ ability to interact with two apps at the same time. At yesterday's 
+Surface Duo briefing, Panay demonstrated the many ways the Duo's dual 
+screens can be used to boost multitasking productivity.</p>
+<figcaption><span>(Image credit: Microsoft)</span></figcaption><p>In one
+ use case, Panay explained that one can read their favorite Kindle book 
+on the right side of the screen while taking notes on the left side. In 
+another presentation, Panay rotated the Duo into a horizontal position 
+and demonstrated the device's ability to take video calls on the top 
+screen while playing a YouTube video on the bottom display.</p>
+<p>App grouping</p>
+<p>You can also combine two apps together for easy access in a process 
+called "app grouping." In the Surface Duo briefing, Panay combined the 
+Instagram and Twitter apps into one "group." And with one tap of his 
+finger, the Duo speedily displayed Instagram on the left screen and 
+Twitter on the right screen, which allows users to interact with two 
+social-media feeds simultaneously.</p>
+<figcaption><span>(Image credit: Microsoft)</span></figcaption><p>Spanning</p>
+<p>Surface Duo users can take advantage of the device's 8.1-inch display
+ by "spanning" one app across the whole screen. Spanning allows viewers 
+to get more screen real estate with their favorite apps (as opposed to 
+the narrow visual perspective one typically gets on single-screen 
+phones).</p>
+<p>The Surface Duo can be displayed on other Windows-compatible devices</p>
+<p>Using the Your Phone app, one can display the contents of their 
+Surface Duo's screen on any Windows-compatible device. "Surface Duo and 
+Windows are always in sync, allowing you to to effortlessly move between
+ your devices," a Microsoft spokesperson said. The Your Phone app also 
+allows Surface Duo users to access their calls and texts right on their 
+laptop.</p>
+<p>Microsoft Surface Pen support </p>
+<figcaption><span>(Image credit: Microsoft Surface Duo)</span></figcaption><p>The
+ Surface Duo also supports Microsoft's Surface Pen, which will be 
+perfect for users who enjoy note taking and casual sketching.</p>
+<h2>What about the Microsoft Surface Duo camera?</h2>
+<p>Panay didn't delve into the Microsoft Surface Duo's 11-megapixel 
+camera during yesterday's briefing until a viewer brought it up during a
+ Q&amp;A session. The viewer asked what kind of camera experience one 
+could expect with the Surface Duo.</p>
+<figcaption><span>(Image credit: Microsoft)</span></figcaption><p>In 
+response, Panay said, "You've got front-facing cameras, and you can also
+ fold the screen back and take a photo. It has portrait mode, video and 
+many other elements. It also has some incredible AI that we've brought 
+into the camera because we wanted to keep it thin."</p>
+<p>Additionally, the camera supports 4K and 1080p recording at 30 frames
+ per second and 60 frames per second with electronic image 
+stabilization.</p>
+<p>Panay noted that while the dual-screen device will be great for 
+photos, it is not the primary focus of the Surface Duo experience. The 
+foldable Microsoft device is meant to help multitasking masters reach 
+productivity nirvana with the elegance of a thin-and-light, 0.5 pound 
+dual-screen machine.</p>
+<h2>How can I buy the Microsoft Surface Duo?</h2>
+<p>The Surface Duo is now available for pre-orders at Microsoft, 
+AT&amp;T and Best Buy. The premium device will be available in-hand on 
+Sept. 10. </p>
+<p>As aforementioned, the Surface Duo will set you back $1,399. The Duo 
+comes equipped with a Qualcomm Snapdragon 855 processor, 6GB of RAM, up 
+to 256GB of storage, AMOLED displays and 2700 x 1800-pixel resolution 
+(when unfolded).</p>
+<p>Today's best Microsoft Surface Pen deals</p>
+<p>Reduced Price</p>
+<p><a href="https://shop-links.co/link/?publisher_slug=future&amp;u1=laptopmag-us-1682169950245120500&amp;exclusive=1&amp;url=https%3A%2F%2Fbestbuy.7tiv.net%2Fc%2F376373%2F633495%2F10014%3Fprodsku%3D6449587%26u%3Dhttp%253A%252F%252Fwww.bestbuy.com%252Fsite%252F-%252F6449587.p%253Fcmp%253DRMX&amp;article_name=The%20Microsoft%20Surface%20Duo%20is%20here%20%E2%80%94%20and%20the%20price%20is%20staggeringly%20high!&amp;article_url=https%3A%2F%2Fwww.laptopmag.com%2Fnews%2Fthe-microsoft-surface-duo-is-here-and-the-price-is-staggeringly-high" rel="nofollow noopener"></a></p><p><a href="https://shop-links.co/link/?publisher_slug=future&amp;u1=laptopmag-us-1682169950245120500&amp;exclusive=1&amp;url=https%3A%2F%2Fbestbuy.7tiv.net%2Fc%2F376373%2F633495%2F10014%3Fprodsku%3D6449587%26u%3Dhttp%253A%252F%252Fwww.bestbuy.com%252Fsite%252F-%252F6449587.p%253Fcmp%253DRMX&amp;article_name=The%20Microsoft%20Surface%20Duo%20is%20here%20%E2%80%94%20and%20the%20price%20is%20staggeringly%20high!&amp;article_url=https%3A%2F%2Fwww.laptopmag.com%2Fnews%2Fthe-microsoft-surface-duo-is-here-and-the-price-is-staggeringly-high" rel="nofollow noopener">Microsoft - Geek Squad...</a></p><p></p>
+<p><a href="https://shop-links.co/link/?publisher_slug=future&amp;u1=laptopmag-us-1682169950245120500&amp;exclusive=1&amp;url=https%3A%2F%2Fbestbuy.7tiv.net%2Fc%2F376373%2F633495%2F10014%3Fprodsku%3D6449587%26u%3Dhttp%253A%252F%252Fwww.bestbuy.com%252Fsite%252F-%252F6449587.p%253Fcmp%253DRMX&amp;article_name=The%20Microsoft%20Surface%20Duo%20is%20here%20%E2%80%94%20and%20the%20price%20is%20staggeringly%20high!&amp;article_url=https%3A%2F%2Fwww.laptopmag.com%2Fnews%2Fthe-microsoft-surface-duo-is-here-and-the-price-is-staggeringly-high" rel="nofollow noopener"></a></p><p><a href="https://shop-links.co/link/?publisher_slug=future&amp;u1=laptopmag-us-1682169950245120500&amp;exclusive=1&amp;url=https%3A%2F%2Fbestbuy.7tiv.net%2Fc%2F376373%2F633495%2F10014%3Fprodsku%3D6449587%26u%3Dhttp%253A%252F%252Fwww.bestbuy.com%252Fsite%252F-%252F6449587.p%253Fcmp%253DRMX&amp;article_name=The%20Microsoft%20Surface%20Duo%20is%20here%20%E2%80%94%20and%20the%20price%20is%20staggeringly%20high!&amp;article_url=https%3A%2F%2Fwww.laptopmag.com%2Fnews%2Fthe-microsoft-surface-duo-is-here-and-the-price-is-staggeringly-high" rel="nofollow noopener">Best Buy</a></p><p></p>
+<p><a href="https://shop-links.co/link/?publisher_slug=future&amp;u1=laptopmag-us-1682169950245120500&amp;exclusive=1&amp;url=https%3A%2F%2Fbestbuy.7tiv.net%2Fc%2F376373%2F633495%2F10014%3Fprodsku%3D6449587%26u%3Dhttp%253A%252F%252Fwww.bestbuy.com%252Fsite%252F-%252F6449587.p%253Fcmp%253DRMX&amp;article_name=The%20Microsoft%20Surface%20Duo%20is%20here%20%E2%80%94%20and%20the%20price%20is%20staggeringly%20high!&amp;article_url=https%3A%2F%2Fwww.laptopmag.com%2Fnews%2Fthe-microsoft-surface-duo-is-here-and-the-price-is-staggeringly-high" rel="nofollow noopener"></a></p><p><a href="https://shop-links.co/link/?publisher_slug=future&amp;u1=laptopmag-us-1682169950245120500&amp;exclusive=1&amp;url=https%3A%2F%2Fbestbuy.7tiv.net%2Fc%2F376373%2F633495%2F10014%3Fprodsku%3D6449587%26u%3Dhttp%253A%252F%252Fwww.bestbuy.com%252Fsite%252F-%252F6449587.p%253Fcmp%253DRMX&amp;article_name=The%20Microsoft%20Surface%20Duo%20is%20here%20%E2%80%94%20and%20the%20price%20is%20staggeringly%20high!&amp;article_url=https%3A%2F%2Fwww.laptopmag.com%2Fnews%2Fthe-microsoft-surface-duo-is-here-and-the-price-is-staggeringly-high" rel="nofollow noopener"><span>$99.99</span></a></p><p></p>
+<p><a href="https://shop-links.co/link/?publisher_slug=future&amp;u1=laptopmag-us-1682169950245120500&amp;exclusive=1&amp;url=https%3A%2F%2Fbestbuy.7tiv.net%2Fc%2F376373%2F633495%2F10014%3Fprodsku%3D6449587%26u%3Dhttp%253A%252F%252Fwww.bestbuy.com%252Fsite%252F-%252F6449587.p%253Fcmp%253DRMX&amp;article_name=The%20Microsoft%20Surface%20Duo%20is%20here%20%E2%80%94%20and%20the%20price%20is%20staggeringly%20high!&amp;article_url=https%3A%2F%2Fwww.laptopmag.com%2Fnews%2Fthe-microsoft-surface-duo-is-here-and-the-price-is-staggeringly-high" rel="nofollow noopener"></a></p><p><a href="https://shop-links.co/link/?publisher_slug=future&amp;u1=laptopmag-us-1682169950245120500&amp;exclusive=1&amp;url=https%3A%2F%2Fbestbuy.7tiv.net%2Fc%2F376373%2F633495%2F10014%3Fprodsku%3D6449587%26u%3Dhttp%253A%252F%252Fwww.bestbuy.com%252Fsite%252F-%252F6449587.p%253Fcmp%253DRMX&amp;article_name=The%20Microsoft%20Surface%20Duo%20is%20here%20%E2%80%94%20and%20the%20price%20is%20staggeringly%20high!&amp;article_url=https%3A%2F%2Fwww.laptopmag.com%2Fnews%2Fthe-microsoft-surface-duo-is-here-and-the-price-is-staggeringly-high" rel="nofollow noopener"><span>$62.99</span></a></p><p></p>
+<p><a href="https://shop-links.co/link/?publisher_slug=future&amp;u1=laptopmag-us-1682169950245120500&amp;exclusive=1&amp;url=https%3A%2F%2Fbestbuy.7tiv.net%2Fc%2F376373%2F633495%2F10014%3Fprodsku%3D6449587%26u%3Dhttp%253A%252F%252Fwww.bestbuy.com%252Fsite%252F-%252F6449587.p%253Fcmp%253DRMX&amp;article_name=The%20Microsoft%20Surface%20Duo%20is%20here%20%E2%80%94%20and%20the%20price%20is%20staggeringly%20high!&amp;article_url=https%3A%2F%2Fwww.laptopmag.com%2Fnews%2Fthe-microsoft-surface-duo-is-here-and-the-price-is-staggeringly-high" rel="nofollow noopener">View</a></p>
+<p>Reduced Price</p>
+<p><a href="https://target.georiot.com/Proxy.ashx?tsid=45727&amp;GR_URL=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB07YNKFC3R%3Ftag%3Dhawk-future-20%26linkCode%3Dogi%26th%3D1%26psc%3D1%26ascsubtag%3Dlaptopmag-us-8556110507022720000-20" rel="nofollow noopener"></a></p><p><a href="https://target.georiot.com/Proxy.ashx?tsid=45727&amp;GR_URL=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB07YNKFC3R%3Ftag%3Dhawk-future-20%26linkCode%3Dogi%26th%3D1%26psc%3D1%26ascsubtag%3Dlaptopmag-us-8556110507022720000-20" rel="nofollow noopener">Microsoft Surface Pen – Poppy...</a></p><p></p>
+<p><a href="https://target.georiot.com/Proxy.ashx?tsid=45727&amp;GR_URL=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB07YNKFC3R%3Ftag%3Dhawk-future-20%26linkCode%3Dogi%26th%3D1%26psc%3D1%26ascsubtag%3Dlaptopmag-us-8556110507022720000-20" rel="nofollow noopener"></a></p><p><a href="https://target.georiot.com/Proxy.ashx?tsid=45727&amp;GR_URL=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB07YNKFC3R%3Ftag%3Dhawk-future-20%26linkCode%3Dogi%26th%3D1%26psc%3D1%26ascsubtag%3Dlaptopmag-us-8556110507022720000-20" rel="nofollow noopener">Amazon</a></p><p></p>
+<p>Prime</p>
+<p><a href="https://target.georiot.com/Proxy.ashx?tsid=45727&amp;GR_URL=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB07YNKFC3R%3Ftag%3Dhawk-future-20%26linkCode%3Dogi%26th%3D1%26psc%3D1%26ascsubtag%3Dlaptopmag-us-8556110507022720000-20" rel="nofollow noopener"></a></p><p><a href="https://target.georiot.com/Proxy.ashx?tsid=45727&amp;GR_URL=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB07YNKFC3R%3Ftag%3Dhawk-future-20%26linkCode%3Dogi%26th%3D1%26psc%3D1%26ascsubtag%3Dlaptopmag-us-8556110507022720000-20" rel="nofollow noopener"><span>$99.99</span></a></p><p></p>
+<p><a href="https://target.georiot.com/Proxy.ashx?tsid=45727&amp;GR_URL=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB07YNKFC3R%3Ftag%3Dhawk-future-20%26linkCode%3Dogi%26th%3D1%26psc%3D1%26ascsubtag%3Dlaptopmag-us-8556110507022720000-20" rel="nofollow noopener"></a></p><p><a href="https://target.georiot.com/Proxy.ashx?tsid=45727&amp;GR_URL=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB07YNKFC3R%3Ftag%3Dhawk-future-20%26linkCode%3Dogi%26th%3D1%26psc%3D1%26ascsubtag%3Dlaptopmag-us-8556110507022720000-20" rel="nofollow noopener"><span>$65</span></a></p><p></p>
+<p><a href="https://target.georiot.com/Proxy.ashx?tsid=45727&amp;GR_URL=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB07YNKFC3R%3Ftag%3Dhawk-future-20%26linkCode%3Dogi%26th%3D1%26psc%3D1%26ascsubtag%3Dlaptopmag-us-8556110507022720000-20" rel="nofollow noopener">View</a></p>
+<p>Reduced Price</p>
+<p><a href="https://goto.walmart.com/c/1943169/568844/9383?veh=aff&amp;sourceid=imp_000011112222333344&amp;u=https%3A%2F%2Fwww.walmart.com%2Fip%2F949953683&amp;subId1=laptopmag-us-1064321840669248000" rel="nofollow noopener"></a></p><p><a href="https://goto.walmart.com/c/1943169/568844/9383?veh=aff&amp;sourceid=imp_000011112222333344&amp;u=https%3A%2F%2Fwww.walmart.com%2Fip%2F949953683&amp;subId1=laptopmag-us-1064321840669248000" rel="nofollow noopener">Microsoft Surface Pen, Poppy...</a></p><p></p>
+<p><a href="https://goto.walmart.com/c/1943169/568844/9383?veh=aff&amp;sourceid=imp_000011112222333344&amp;u=https%3A%2F%2Fwww.walmart.com%2Fip%2F949953683&amp;subId1=laptopmag-us-1064321840669248000" rel="nofollow noopener"></a></p><p><a href="https://goto.walmart.com/c/1943169/568844/9383?veh=aff&amp;sourceid=imp_000011112222333344&amp;u=https%3A%2F%2Fwww.walmart.com%2Fip%2F949953683&amp;subId1=laptopmag-us-1064321840669248000" rel="nofollow noopener">Walmart</a></p><p></p>
+<p><a href="https://goto.walmart.com/c/1943169/568844/9383?veh=aff&amp;sourceid=imp_000011112222333344&amp;u=https%3A%2F%2Fwww.walmart.com%2Fip%2F949953683&amp;subId1=laptopmag-us-1064321840669248000" rel="nofollow noopener"></a></p><p><a href="https://goto.walmart.com/c/1943169/568844/9383?veh=aff&amp;sourceid=imp_000011112222333344&amp;u=https%3A%2F%2Fwww.walmart.com%2Fip%2F949953683&amp;subId1=laptopmag-us-1064321840669248000" rel="nofollow noopener"><span>$99.99</span></a></p><p></p>
+<p><a href="https://goto.walmart.com/c/1943169/568844/9383?veh=aff&amp;sourceid=imp_000011112222333344&amp;u=https%3A%2F%2Fwww.walmart.com%2Fip%2F949953683&amp;subId1=laptopmag-us-1064321840669248000" rel="nofollow noopener"></a></p><p><a href="https://goto.walmart.com/c/1943169/568844/9383?veh=aff&amp;sourceid=imp_000011112222333344&amp;u=https%3A%2F%2Fwww.walmart.com%2Fip%2F949953683&amp;subId1=laptopmag-us-1064321840669248000" rel="nofollow noopener"><span>$65</span></a></p><p></p>
+<p><a href="https://goto.walmart.com/c/1943169/568844/9383?veh=aff&amp;sourceid=imp_000011112222333344&amp;u=https%3A%2F%2Fwww.walmart.com%2Fip%2F949953683&amp;subId1=laptopmag-us-1064321840669248000" rel="nofollow noopener">View</a></p>
+<p><a href="https://qvc.uikc.net/c/221109/600918/9368?prodsku=E293523&amp;u=https%3A%2F%2Fwww.qvc.com%2Fqvc.product.E293523.html&amp;intsrc=CATF_4578&amp;subId1=laptopmag-us-8309396599677261000" rel="nofollow noopener"></a></p><p><a href="https://qvc.uikc.net/c/221109/600918/9368?prodsku=E293523&amp;u=https%3A%2F%2Fwww.qvc.com%2Fqvc.product.E293523.html&amp;intsrc=CATF_4578&amp;subId1=laptopmag-us-8309396599677261000" rel="nofollow noopener">Microsoft Surface Pen</a></p><p></p>
+<p><a href="https://qvc.uikc.net/c/221109/600918/9368?prodsku=E293523&amp;u=https%3A%2F%2Fwww.qvc.com%2Fqvc.product.E293523.html&amp;intsrc=CATF_4578&amp;subId1=laptopmag-us-8309396599677261000" rel="nofollow noopener"></a></p><p><a href="https://qvc.uikc.net/c/221109/600918/9368?prodsku=E293523&amp;u=https%3A%2F%2Fwww.qvc.com%2Fqvc.product.E293523.html&amp;intsrc=CATF_4578&amp;subId1=laptopmag-us-8309396599677261000" rel="nofollow noopener">QVC</a></p><p></p>
+<p><a href="https://qvc.uikc.net/c/221109/600918/9368?prodsku=E293523&amp;u=https%3A%2F%2Fwww.qvc.com%2Fqvc.product.E293523.html&amp;intsrc=CATF_4578&amp;subId1=laptopmag-us-8309396599677261000" rel="nofollow noopener"></a></p><p><a href="https://qvc.uikc.net/c/221109/600918/9368?prodsku=E293523&amp;u=https%3A%2F%2Fwww.qvc.com%2Fqvc.product.E293523.html&amp;intsrc=CATF_4578&amp;subId1=laptopmag-us-8309396599677261000" rel="nofollow noopener"><span>$99.96</span></a></p><p></p>
+<p><a href="https://qvc.uikc.net/c/221109/600918/9368?prodsku=E293523&amp;u=https%3A%2F%2Fwww.qvc.com%2Fqvc.product.E293523.html&amp;intsrc=CATF_4578&amp;subId1=laptopmag-us-8309396599677261000" rel="nofollow noopener">View</a></p>
+<p><span>Show More Deals</span></p>
+<p>We check over 250 million products every day for the best prices</p>
+<p class="rm-manual"> <span>More from Laptop Mag...</span> </p>
+<ol class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> </p><p class="rm-manual"> <span>1</span></p><p class="rm-manual"><a href="https://www.laptopmag.com/news/gigabytes-new-gaming-box-for-gpus-brings-nvidia-rtx-3080-ti-power-to-your-laptop">Gigabyte's new Gaming Box for GPUs brings Nvidia RTX 3080 Ti power to your laptop</a></p> <p class="rm-manual"></p> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> </p><p class="rm-manual"> <span>2</span></p><p class="rm-manual"><a href="https://www.laptopmag.com/reviews/plugable-7-in-1-usb-charging-hub-review">Plugable 7-in-1 USB Charging Hub review: Stacked with power</a></p> <p class="rm-manual"></p> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> </p><p class="rm-manual"> <span>3</span></p><p class="rm-manual"><a href="https://www.laptopmag.com/news/amd-ceo-says-chip-shortages-will-continue-through-2021">AMD CEO says chip shortages will continue through 2021</a></p> <p class="rm-manual"></p> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> </p><p class="rm-manual"> <span>4</span></p><p class="rm-manual"><a href="https://www.laptopmag.com/articles/best-chromebook-deals-2">The best cheap Chromebook deals in July 2021</a></p> <p class="rm-manual"></p> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> </p><p class="rm-manual"> <span>5</span></p><p class="rm-manual"><a href="https://www.laptopmag.com/news/best-laptop-deals">The best laptop deals in July 2021</a></p> <p class="rm-manual"></p> <p class="rm-manual"></p> </li> </ol>
+<p class="rm-manual">Laptop Mag is part of Future US Inc, an international media group and leading digital publisher. <a href="http://www.futureplc.com/">Visit our corporate site</a>.</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://www.futureplc.com/terms-conditions/">Terms and conditions</a></li> <li class="rm-manual"><a href="http://www.futureplc.com/privacy-policy/">Privacy policy</a></li> <li class="rm-manual"><a href="http://www.futureplc.com/cookies-policy/">Cookies policy</a></li> <li class="rm-manual"><a href="https://www.futureplc.com/accessibility-statement/">Accessibility Statement</a></li> <li class="rm-manual"><a href="https://www.laptopmag.com/articles/about-us">About us</a></li> <li class="rm-manual"><a href="https://www.laptopmag.com/archive">Archive</a></li> </ul>
+<p class="rm-manual">© Future US, Inc. 11 West 42nd Street, 15th Floor, New York, NY 10036. </p></article>
+</body></html>

@@ -1,0 +1,337 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Thread by 
+@NAChristakis: If we want to understand how powerful an opponent 
+SARS-CoV-2 (COVID-19) is, letâ€™s take a look what has been required to 
+stop it in China. Thâ€¦ </p>
+<p class="rm-manual"><a href="file:///"> Thread Reader </a> </p>
+<p class="rm-manual"><span>12,399 views</span> </p>
+<div class="rm-manual"> <a href="#"> Nicholas A. Christakis </a> </div>
+<p class="rm-manual"> <a href="https://twitter.com/NAChristakis"> Twitter Profile</a> <a href="https://threadreaderapp.com/user/NAChristakis"> Read all threads</a> </p>
+<p class="rm-manual"> <span><a href="https://twitter.com/NAChristakis">@NAChristakis</a></span> </p>
+<p class="rm-manual"> <span> , <span> 34 tweets, 15 min read </span> </span> </p>
+<p class="rm-manual"> <a href="#"> My Authors</a> </p>
+<p class="rm-manual"> <a href="https://threadreaderapp.com/user/NAChristakis"> Read all threads</a> </p>
+<p> If we want to understand how powerful an opponent SARS-CoV-2 
+(COVID-19) is, letâ€™s take a look what has been required to stop it in 
+China. The Chinese government has essentially used a social nuclear 
+weapon in its efforts. Letâ€™s talk about this, to understand what US is
+ facing. <span> 1/</span> </p>
+<p> The Chinese have had the most COVID19 cases so far (80,859), but the
+ number of new cases has dropped from 100's per day a month ago to ~46 
+per day now â€” in a country of 1.4B people. This is an astonishing 
+achievement from a public health point of view. <a href="https://www.who.int/docs/default-source/coronaviruse/situation-reports/20200308-sitrep-48-covid-19.pdf?sfvrsn=16f7ccef_4">who.int/docs/default-sâ€¦</a> <span> 2/</span> </p>
+<p> We can get a sense of how strong something is by getting a sense of 
+what sort of force is required to stop it, to borrow a Newtonian physics
+ metaphor. COVID-19 requires a powerful force to stop. This is clear 
+from the Chinese response. <span> 3/</span> </p>
+<p> Of course, China has a collectivist culture and an authoritarian 
+government, both of which have allowed this enormous, widespread 
+response. It is well suited to fight a pandemic, if it indeed takes in 
+factual information and responds rationally. (Evokes Chernobyl <a href="https://twitter.com/clmazin">@clmazin</a>) <span> 4/</span> </p>
+<p> Ably assisted by some Chinese students in my lab <a href="file:///hashtag/HNL">#HNL</a>,
+ we quantified what Chinese government has been able to achieve. 
+Beginning January 23, they imposed movement restrictions (typically with
+ people staying at home, leaving just once a week) on provinces with 
+&gt;930M people! <span> 5/</span> </p>
+<p> The imposition of such public health measures on such a scale for 
+such a duration has never been seen before. Here are links to the 
+websites for many of the provinces into which China is divided, 
+indicating what the rules for movement, imposed on 930M people, have 
+been. 6/ </p>
+<p> Most Chinese cities are still implementing these types of quarantine
+ at the community-level, now over *six weeks* in, depending on the 
+severity level of the situation in their cities. This is called 
+"closed-off management" å°é—­ç®¡ç† by the government and media). <span> 7/</span> </p>
+<p> Common features of "closed-off managementâ€ include: movement of 
+people &amp; vehicles is checked with an exit-entrance permit; body 
+temperature at entrance of community is checked; disinfection of 
+vehicles; food delivery; permits for only one person per household to go
+ out. <span> 8/</span> </p>
+<p> The licenses for personal travel in China, being used by many 
+millions of people, look like this. Some of them have a slogan â€œIt is 
+everyoneâ€™s responsibility to fight the virus.â€ 10/ </p>
+<p> In many cities, workers have been organized on a vast scale to 
+deliver food to homes; residents can only go out to shop if they have a 
+permit; &amp; shops are open at limited times. In Chongqing, for 
+example, only one person per household can go out shopping, only 
+occasionally. <span> 11/</span> </p>
+<p> Schools have moved online. Jokes circulate: Parents complain to 
+upstairs neighbors: "Could you please have your kids stop jumping? It is
+ too noisy and our kids are taking an online math class now.â€ The 
+neighbors reply: "Oh sorry! But my kids are taking a sports class 
+now.â€ <span> 12/</span> </p>
+<p> As a result, the Chinese have dropped the Re (the Effective 
+Reproductive Rate) of COVID19 from ~3.8 new cases per extant case to 
+~0.32. When this number is below 1.0, the epidemic extinguishes (at 
+least it will, for a while, within China). <a href="https://www.medrxiv.org/content/10.1101/2020.03.03.20030593v1">medrxiv.org/content/10.110â€¦</a> <span> 13/</span> </p>
+<p> My lab, <a href="file:///hashtag/HNL">#HNL</a>, has been studying this topic in another way, along with Chinese collaborators. We are also developing forecasting tools. NB <a href="https://twitter.com/BillGates">@BillGates</a> <a href="https://twitter.com/niranjanbose">@niranjanbose</a> (with gratitude). More about that in a future thread. <span> 14/</span> </p>
+<p> The Chinese government is slowly beginning to lift restrictions, but
+ it is continuing to implement many quite inventive procedures, on a 
+large scale. For instance, elevators in a Beijing building only allow 
+four people at a time, as marked by tape on the floor. 15/ </p>
+<p> The sign in the elevator says: "No more than four people in the 
+elevator. Please be patient and wait for the next elevator.â€ Below, it
+ says "Let's unite together to fight the virus in this special period." 
+This type of collectivist slogan is very common throughout China now. 
+16/ </p>
+<p> Currently, some provinces are adjusting their emergency level 
+downwards according to their risk-level evaluations. As of March 2, 7 
+provinces adjusted to second-level, 9 provinces to third-level, 4 
+provinces to just the within-province emergency level. <a href="http://www.bjnews.com.cn/news/2020/03/02/697916.html">bjnews.com.cn/news/2020/03/0â€¦</a> <span> 17/</span> </p>
+<p> China has a collectivist culture and an authoritarian government, so
+ its success fighting COVID-19, while deeply impressive, will not be 
+easy to reproduce elsewhere. The USA must prepare to combat the virus 
+using tools at its disposal. It will not be easy. <span> 18/</span> </p>
+<p> Here is a map and a timeline describing the imposition of "closed 
+off management" restrictions at the provincial level across China as 
+part of the effort to cope with <a href="file:///hashtag/COVID19">#COVID19</a>. 19/ </p>
+<p> Another example of social distancing, widely employed in China, thanks to <a href="https://twitter.com/aoziparis">@aoziparis</a>.
+ This is a photo from Henan province, just to the north of Hubei, one 
+month ago. Shoppers, when they are allowed out, wait in a line, 1.5m 
+away from each other, before entering grocery store. 20/ </p>
+<p> More examples of line-forming with social distancing in China via <a href="https://twitter.com/ECtHRwatch">@ECtHRwatch</a> 21/ </p>
+<p> Working with industry, Chinese authorities encouraged delivery 
+companies to distribute goods, and the companies vouched that their 
+drivers were wearing masks and did not have a fever. The app used noted 
+such details as the driver approach. 22/ </p>
+<p> This article <a href="http://news.cctv.com/2020/02/20/ARTIqdzcHtncA8Vphq0nnAII200220.shtml">news.cctv.com/2020/02/20/ARTâ€¦</a>
+ says that, as of late February, in low risk locales, delivery companies
+ should resume service but minimize risk during the whole delivery 
+process -- by wearing face masks, disinfecting vehicles, &amp; checking 
+body temperature daily. <span> 23/</span> </p>
+<p> As workers in China return to offices, many systems are being put 
+into place, such as at restaurants and cafeterias, to maintain social 
+distancing. These include rules to eat fast, one-person-to-a-table, 
+cardboard dividers, and admonitions not to talk to each other. 24/ </p>
+<p> Gallows humor prevails among Chinese coping w COVID19. Re procedures
+ now in use for eating out, many are saying "This one table per person 
+experience reminds me of my old school days while taking exams." "I feel
+ like I was taking exams in my high school while having lunch." <span> 25/</span> </p>
+<p> Fabulous detailed description of the Chinese system of dealing with 
+COVID-19 suspected cases, with testing facilities, isolation, and 
+treatment. Down to a science. Via <a href="https://twitter.com/maddow">@maddow</a> h/t <a href="https://twitter.com/mqdicer">@mqdicer</a> <span> 26/</span> </p>
+<p> I will continue to add to this thread as I get more photos from my 
+Chinese students and colleagues about how China experienced and coped 
+with COVID-19. Many of these anecdotes are useful, amazing, and even 
+amusing. Here goes: <span> 27/</span> </p>
+<p> People use small sticks to push the elevator button (the text reads 
+"The elevator has been disinfected. Please use the stick to push the 
+button. Please discard the stick in the box below after you have used 
+it." 28/ </p>
+<p> Interrupting my narrative about China, here are similar photos in Korea (<a href="https://attracttour.com/2020/02/hotel-in-seoul-south-korea-use-toothpick-when-pressing-elevator-in-attempt-to-contain-coronavirus/">attracttour.com/2020/02/hotel-â€¦</a>) and Iran (<a href="https://english.alarabiya.net/en/News/middle-east/2020/03/05/Over-3-500-coronavirus-cases-in-Iran-107-deaths-Health-ministry.html">english.alarabiya.net/en/News/middleâ€¦</a>). I think the USA should start doing this. <a href="file:///hashtag/elevatorsticks">#elevatorsticks</a> <a href="file:///hashtag/fomites">#fomites</a> /29 </p>
+<p> In China, apparently the young were more concerned initially about 
+COVID19 than the old, who were nonchalant. Images like this circulated. 
+It's good not to panic or be alarmist; but it's also good not to be 
+complacent. <a href="file:///hashtag/gallowshumor">#gallowshumor</a> 30/ </p>
+<p> This image became a meme, and was transformed. This made me laugh 
+out loud, as it reflects a bit the transition in my own family and 
+friends. More <a href="file:///hashtag/gallowshumor">#gallowshumor</a> related to COVID19 in China. 31/ </p>
+<p> Religion and the Buddhist tradition were enlisted, too, emphasizing 
+civic duty. This article was forwarded hundreds of thousands of times. <a href="https://mp.weixin.qq.com/s/e4ruQmt91sQ46BR65OH4og">mp.weixin.qq.com/s/e4ruQmt91sQ4â€¦</a> "Buddha teaches us that we should create good karma. Preventing disease is also creating good karma." 32/ </p>
+<p> Many millions of Chinese have not forgotten Dr. Li Wenliang who 
+first sounded the alarm and was ignored and called before the police to 
+be accused of "rumor mongering" (lest we forget the authoritarianism of 
+China). He ultimately died of COVID19. <a href="https://www.bbc.com/news/world-asia-china-51403795">bbc.com/news/world-asiâ€¦</a> <span> 32/</span> </p>
+<p> Thousands still comment on Wenliang's social media every day (<a href="https://www.weibo.com/u/1139098205?is_hot=1">weibo.com/u/1139098205?iâ€¦</a>).
+ His last message was that he tested positive for COVID19. People share 
+what they are doing, as if Wenliang were still alive; they say good 
+night/good morning to Wenliang every day. <span> 33/</span> </p>
+<p> How Beijing reframed the coronavirus narrative. Iâ€™ve been very 
+clear re Chinaâ€™s government being authoritarian and its failings. But 
+COVID19 control was dramatic. <a href="https://twitter.com/gideonrachman">@gideonrachman</a> doesnâ€™t spare our political leaders either. <a href="https://www.ft.com/content/20ab52d8-676a-11ea-800d-da70cff6e4d3?campaign=march20&amp;segmentID=09d3ed8b-33db-132b-eb60-c9f2617cc2e5">ft.com/content/20ab52â€¦</a> | <a href="https://twitter.com/FinancialTimes">@financialtimes</a> (not 34:) <span> /35</span> </p>
+<p class="rm-manual"> <span> Missing some Tweet in this thread? You can try to <a href="#">force a refresh</a>. </span> </p>
+<p class="rm-manual"> <a href="#popup1"> <span>Embed</span> </a> </p>
+<h1 class="rm-manual">Enjoying this thread?</h1>
+<p class="rm-manual"> Keep Current with <a href="https://threadreaderapp.com/user/NAChristakis">Nicholas A. Christakis</a> </p>
+<p class="rm-manual">Stay in touch and get notified when new unrolls are available from this author!</p>
+<p class="rm-manual"><a href="https://threadreaderapp.com/user/NAChristakis"> Read all threads</a> </p>
+<p class="rm-manual"> This Thread may be Removed Anytime!</p>
+<p class="rm-manual">Twitter may remove this content at anytime, convert it as a PDF, save and print for later use!</p>
+<h1 class="rm-manual">Try unrolling a thread yourself!</h1>
+<p class="rm-manual">1) Follow <a href="https://twitter.com/threadreaderapp">Thread Reader App on Twitter</a> so you can easily mention us!</p>
+<p class="rm-manual">2) Go to a Twitter thread (series of Tweets by the same owner) and mention us with a keyword "unroll" </p>
+<code class="rm-manual">@threadreaderapp unroll</code><p class="rm-manual">You can <a href="https://twitter.com/threadreaderapp/status/1054877865362112513">practice here</a> first or read more on our <a href="https://threadreaderapp.com/help#bot">help page</a>!</p>
+<h1 class="rm-manual">Related hashtags</h1>
+<p class="rm-manual"> <a href="https://threadreaderapp.com/hashtag/hnl">#HNL</a> <a href="https://threadreaderapp.com/hashtag/covid19">#COVID19</a> <a href="https://threadreaderapp.com/hashtag/elevatorsticks">#elevatorsticks</a> <a href="https://threadreaderapp.com/hashtag/fomites">#fomites</a> <a href="https://threadreaderapp.com/hashtag/gallowshumor">#gallowshumor</a> </p>
+<h1 class="rm-manual">More from @NAChristakis <a href="https://threadreaderapp.com/user/NAChristakis">see all</a>
+</h1>
+<p class="rm-manual"> <a href="https://threadreaderapp.com/user/NAChristakis">Nicholas A. Christakis</a> </p>
+<p class="rm-manual"> <span><a href="https://threadreaderapp.com/user/NAChristakis">@NAChristakis</a></span> </p>
+<p class="rm-manual">For a contrarian take on the worldwide response to COVID19 by a very smart scientist, John Ioannidis <a href="https://twitter.com/Stanford">@Stanford</a>, who argues we may be (and perhaps are) over-reacting, see: <a href="https://www.statnews.com/2020/03/17/a-fiasco-in-the-making-as-the-coronavirus-pandemic-takes-hold-we-are-making-decisions-without-reliable-data/">statnews.com/2020/03/17/a-fâ€¦</a> via <a href="https://twitter.com/jflier">@jflier</a> <span> 1/</span></p>
+<p class="rm-manual">He rightly points out that we are making huge 
+decisions with crappy data, and he is right that we should (immediately)
+ put into place surveillance for COVID19. Many smart scientists are 
+working full time to assemble such data and fill in holes in data we 
+have. <span> 2/</span></p>
+<p class="rm-manual">Given all the data uncertainties, reasonable 
+estimates for the case fatality ratio (CFR) of COVID19 in the general 
+U.S. population could be between 0.05% (half as deadly as the flu) to 1%
+ (ten times as deadly as the flu), according to Ioannidis! That's a huge
+ range. <span> 3/</span></p>
+<p class="rm-manual"><a href="https://threadreaderapp.com/thread/1239969799981002755.html">Read 9 tweets</a> </p>
+<p class="rm-manual"> <a href="https://threadreaderapp.com/user/NAChristakis">Nicholas A. Christakis</a> </p>
+<p class="rm-manual"> <span><a href="https://threadreaderapp.com/user/NAChristakis">@NAChristakis</a></span> </p>
+<p class="rm-manual">In this thread, I collect the threads about <a href="file:///hashtag/COVID19">#COVID19</a> <a href="file:///hashtag/SARSCoV2">#SARSCoV2</a>
+ that I have prepared on various aspects of the coronavirus pandemic. 
+Please note that the situation is fluid and knowledge may change and be 
+updated. Feel free to suggest topics in response to this tweet. <span> 1/</span></p>
+<p class="rm-manual">On the need for Americans to practice social 
+distancing, and why this helps in the case of pandemic disease, by 
+"flattening the curve" and allowing our health care system and supply 
+chains to work â€” March 3. <span> 2/</span></p>
+<blockquote class="rm-manual"><a href="https://twitter.com/NAChristakis/status/1234815826345197568">https://twitter.com/NAChristakis/status/1234815826345197568</a></blockquote>
+<p class="rm-manual">On the reasons for, and benefits of, reactive, and,
+ even more important, proactive, school closure, even if kids do not 
+often get sick with COVID19 â€” March 4. <span> 3/</span></p>
+<blockquote class="rm-manual"><a href="https://twitter.com/NAChristakis/status/1235204443362205699">https://twitter.com/NAChristakis/status/1235204443362205699</a></blockquote>
+<p class="rm-manual"><a href="https://threadreaderapp.com/thread/1239204599959093250.html">Read 10 tweets</a> </p>
+<p class="rm-manual"> <a href="https://threadreaderapp.com/user/NAChristakis">Nicholas A. Christakis</a> </p>
+<p class="rm-manual"> <span><a href="https://threadreaderapp.com/user/NAChristakis">@NAChristakis</a></span> </p>
+<p class="rm-manual">Flu pandemics recur reliably but unpredictably 
+every decade or so, and their extent and intensity varies. With COVID19,
+ we may be in midst of a once-every-50-years event, perhaps similar to 
+1957 pandemic, but not as bad as the 1918 pandemic. Letâ€™s talk about 
+the 1957 pandemic. <span> 1/</span></p>
+<p class="rm-manual">Pandemics result from emergence of viral strains 
+that are novel, often from genetic recombination in animal reservoirs. 
+The 1957 pandemic was due to influenza A (H2N2). <a href="https://www.cdc.gov/flu/about/viruses/types.htm">cdc.gov/flu/about/viruâ€¦</a> "Serological archeology" suggests it resembled 1889 strain. <a href="https://www.ncbi.nlm.nih.gov/pubmed/8877331">ncbi.nlm.nih.gov/pubmed/8877331</a> <span> 2/</span></p>
+<p class="rm-manual">The virus that caused the 1957 pandemic is a 
+different from the coronavirus causing COVID19. Both are rhinoviruses, 
+but from different phyla. <a href="https://www.statnews.com/2020/03/03/who-coronavirus-different-than-influenza-can-be-contained/">statnews.com/2020/03/03/whoâ€¦</a> Despite the different pathogens, we can still understand what is happening by studying past pandemics. <span> 3/</span></p>
+<p class="rm-manual"><a href="https://threadreaderapp.com/thread/1238934000187707400.html">Read 23 tweets</a> </p>
+<h1 class="rm-manual">Related threads</h1>
+<p class="rm-manual"> <a href="https://threadreaderapp.com/user/JMRothberg">Jonathan Rothberg ðŸ§¬ðŸ§ª</a> </p>
+<p class="rm-manual"> <span><a href="https://threadreaderapp.com/user/JMRothberg">@JMRothberg</a></span> </p>
+<p class="rm-manual">Reporting progress on <a href="file:///hashtag/coronavirus">#coronavirus</a> Home Test from our teams internal email: Just wanted to give a brief update from the <a href="file:///hashtag/molbio">#molbio</a> team as we build momentum towards delivering an at-home, user-friendly, rapid <a href="file:///hashtag/COVID19">#COVID19</a> test...We are actually detecting Covid19 <a href="file:///hashtag/RNA">#RNA</a> in solution now! 1/ </p>
+<p class="rm-manual">... we got early proof today that we can do reactions from RNA (the genetics code of <a href="file:///hashtag/SARS%E3%83%BCCoV%E3%83%BC2">#SARSãƒ¼CoVãƒ¼2</a> not DNA so itâ€™s more insidious). Our method (which amplified the RNA without a machine) is very tolerant of <a href="file:///hashtag/saliva">#saliva</a> - (we still have to crack open the virus RNA for full proof) <span> 2/</span></p>
+<p class="rm-manual">The parenthesis in the above tweets are my 
+commentary and I also edited out jargon. But wanted to share our 
+internal optimism. We now know, except for breaking the <a href="file:///hashtag/virus">#virus</a> open to expose its <a href="file:///hashtag/RNA">#RNA</a> we should be able to do a <a href="file:///hashtag/COVID19">#COVID19</a> test without a <a href="file:///hashtag/PCR">#PCR</a> machine <a href="https://twitter.com/Yale">@yale</a> and <a href="https://twitter.com/Penn">@Penn</a> <span> 3/</span></p>
+<p class="rm-manual"><a href="https://threadreaderapp.com/thread/1239888678954176513.html">Read 11 tweets</a> </p>
+<p class="rm-manual"> <a href="https://threadreaderapp.com/user/IlindelatorreMD">Dr. Ilin Gilberto dlT</a> </p>
+<p class="rm-manual"> <span><a href="https://threadreaderapp.com/user/IlindelatorreMD">@IlindelatorreMD</a></span> </p>
+<p class="rm-manual"><a href="file:///hashtag/SARS">#SARS</a>-CoV-2 </p>
+<p class="rm-manual"> Â¿CuÃ¡l es el perÃ­odo de incubaciÃ³n?</p>
+<p class="rm-manual"> â€¢ 2 a 14 dÃ­as; mediana 4-5 dÃ­as.</p>
+<p class="rm-manual"> Â¿CÃ³mo se transmite COVID-19?</p>
+<p class="rm-manual"> â€¢ Gotitas respiratorias (CDC)</p>
+<p class="rm-manual"> â€¢ SARS y MERS pueden vivir en la superficie durante dÃ­as. Es probable que el SARS-CoV-2 se comporte de manera similar.</p>
+<p class="rm-manual">Â¿Si estoy infectado, Â¿puedo volver a infectarme?</p>
+<p class="rm-manual"> â€¢ AÃºn no se sabe con exactitud, pero parece probable que asÃ­ sea. </p>
+<p class="rm-manual"> Â¿CuÃ¡l es la tasa de letalidad de COVID-19?</p>
+<p class="rm-manual"> â€¢ Depende de la edad del paciente.</p>
+<p class="rm-manual"> Hubo 0% de mortalidad en niÃ±os de 0 a 9 aÃ±os y 14.8% de mortalidad sobre los 80 a.</p>
+<p class="rm-manual">â€¢ Tasa de letalidad aumentÃ³ constantemente con la edad mayor de â‰¥40.</p>
+<p class="rm-manual"> â€¢ Tasa de letalidad en proveedores de salud: 0.3 por ciento.</p>
+<p class="rm-manual"><a href="https://threadreaderapp.com/thread/1239714587227889666.html">Read 19 tweets</a> </p>
+<p class="rm-manual"> <a href="https://threadreaderapp.com/user/AngelinaNic6">Angelina Nic</a> </p>
+<p class="rm-manual"> <span><a href="https://threadreaderapp.com/user/AngelinaNic6">@AngelinaNic6</a></span> </p>
+<p class="rm-manual">Concerning the CARONAVIRUS -</p>
+<p class="rm-manual"> Someone got Busy , In The Lab .... If you don t 
+know The virus , How can You Give It A Name , No Cure .... Brilliant 
+timing ! Do you Want The Antidote of This Bug ?</p>
+<p class="rm-manual"> The following information was provided by Timothy Webster</p>
+<p class="rm-manual"><a href="file:///hashtag/Coronavirus">#Coronavirus</a> <a href="file:///hashtag/US">#US</a> <a href="file:///hashtag/Patent">#Patent</a> Number <a href="file:///hashtag/US7220852B1">#US7220852B1</a>
+ Synthesized &amp; Registered/Patented in 2015 [In development since 
+2003 {This application claims the benefit of U.S. Provisional Patent 
+Application No. 60/465,927 filed Apr. 25, 2003,</p>
+<p class="rm-manual">which is incorporated herein by reference in its entirety.}] </p>
+<p class="rm-manual"> <a href="https://patents.google.com/patent/US7220852">patents.google.com/patent/US72208â€¦</a></p>
+<p class="rm-manual"> The US Coronavirus Patent <a href="file:///hashtag/expired">#expired</a> today 01/21/2020, the sameday the first case was announced in the U.S.</p>
+<p class="rm-manual"><a href="https://threadreaderapp.com/thread/1219924194302943234.html">Read 19 tweets</a> </p>
+<p class="rm-manual"> <a href="https://threadreaderapp.com/user/IndoPac_Info">IndoPacific_SCS_Info</a> </p>
+<p class="rm-manual"> <span><a href="https://threadreaderapp.com/user/IndoPac_Info">@IndoPac_Info</a></span> </p>
+<p class="rm-manual"><a href="file:///hashtag/China">#China</a> could cut off vital supply of drugs to <a href="file:///hashtag/America">#America</a>
+ and even add lethal contaminants if trade war escalates, defense 
+experts warn - "Basically we've outsourced our entire industry to China"
+ <a href="https://www.dailymail.co.uk/news/article-7461085/China-cut-supply-drugs-add-lethal-contaminants-defense-experts-claim.html?ito=social-twitter_mailonline">dailymail.co.uk/news/article-7â€¦</a></p>
+<p class="rm-manual">China dominates the global pharmaceuticals market &amp; could monopolize it</p>
+<p class="rm-manual"> China could 'weaponize' and hold drugs ransom </p>
+<p class="rm-manual"> Not only that but it is feared Beijing could add lethal contaminants to supplies</p>
+<p class="rm-manual"> US hospitals and military hospitals could shutdown within months, experts claim</p>
+<p class="rm-manual">China could cut off America's drugs supply and hold lives ransom if the trade war escalates, defense experts warn.</p>
+<p class="rm-manual"> Decades ago penicillin, vitamin C, and many other medicines were made in the US. Now they are made in the Far East.</p>
+<p class="rm-manual"><a href="https://threadreaderapp.com/thread/1172887687730098176.html">Read 12 tweets</a> </p>
+<p class="rm-manual"> <a href="https://threadreaderapp.com/user/TXTrumpette89">Lola Netty</a> </p>
+<p class="rm-manual"> <span><a href="https://threadreaderapp.com/user/TXTrumpette89">@TXTrumpette89</a></span> </p>
+<p class="rm-manual">China's Ministry of State Security successfully 
+obtained State Department internal documents from an embassy office 
+manager who was paid in cash and gifts, according to court documents in 
+the case of Candace Claiborne, a spy for China since 2007. <a href="https://freebeacon.com/national-security/former-state-department-official-spied-for-china-since-2007/">freebeacon.com/national-securâ€¦</a></p>
+<p class="rm-manual">State Dept employee w Top Secret clearance, she 
+rec'd training &amp; briefing abt need for caution &amp; 
+transparency..case demonstrates govt emps will be held accountable for 
+failing to honor the trust placed in them when they take on such 
+sensitive assignmentsâ€</p>
+<p class="rm-manual"> <a href="https://www.justice.gov/opa/pr/state-department-employee-arrested-and-charged-concealing-extensive-contacts-foreign-agents">justice.gov/opa/pr/state-dâ€¦</a></p>
+<p class="rm-manual">[Mar 29, 2017] US state dept official charged with 
+accepting bribes from Chinese spies. Candace Claiborne faces prison time
+ for lying to FBI about receiving thousands of dollars in gifts and cash
+ in exchange for information she claims was â€˜unclassifiedâ€™</p>
+<p class="rm-manual"> <a href="https://www.theguardian.com/world/2017/mar/29/us-state-department-bribes-china-spies-candace-claiborne">theguardian.com/world/2017/marâ€¦</a></p>
+<p class="rm-manual"><a href="https://threadreaderapp.com/thread/1121951514753425408.html">Read 8 tweets</a> </p>
+<p class="rm-manual"> <a href="https://threadreaderapp.com/user/C_Barraud">Christophe BarraudðŸ›¢</a> </p>
+<p class="rm-manual"> <span><a href="https://threadreaderapp.com/user/C_Barraud">@C_Barraud</a></span> </p>
+<p class="rm-manual">ðŸ‡¨ðŸ‡³ <a href="file:///hashtag/CHINA">#CHINA</a> Q3 GDP Y/Y: 6.5% V 6.6%E (slowest growth since Q1 2009) </p>
+<p class="rm-manual"> *NBS spokesman Mao Shengyong said that the international situation was bringing â€œdownward pressureâ€ on China.</p>
+<p class="rm-manual"> *Link: <a href="https://bloom.bg/2RVX1ZA">bloom.bg/2RVX1ZA</a> </p>
+<p class="rm-manual">ðŸ‡«ðŸ‡· ðŸ‡ªðŸ‡º ðŸ‡¨ðŸ‡³ French tire maker Michelin warned of declining sales in Europe and <a href="file:///hashtag/China">#China</a> in the second half of the year, dragging down shares of its competitors in the U.S. and Europe - Bloomberg</p>
+<p class="rm-manual"> *Statement: <a href="https://bit.ly/2EujhqH">bit.ly/2EujhqH</a></p>
+<p class="rm-manual">ðŸ‡ºðŸ‡¸ðŸ‡¨ðŸ‡³ðŸ‡ªðŸ‡º In a volley of filings, the EU, <a href="file:///hashtag/China">#China</a>
+ and the U.S. this week escalated disputes over new U.S. metals tariffs,
+ the European response to those levies, and Chinese intellectual 
+property practices - Bloomberg</p>
+<p class="rm-manual"> <a href="https://www.bloomberg.com/news/articles/2018-10-20/major-wto-showdown-looks-harder-to-avoid-as-u-s-china-eu-spar">bloomberg.com/news/articles/â€¦</a></p>
+<p class="rm-manual"><a href="https://threadreaderapp.com/thread/1053187108054224896.html">Read 634 tweets</a> </p>
+<h1 class="rm-manual">Trending hashtags</h1>
+<p class="rm-manual"> <a href="https://threadreaderapp.com/hashtag/turkey">#Turkey</a> <a href="https://threadreaderapp.com/hashtag/imf">#IMF</a> <a href="https://threadreaderapp.com/hashtag/china">#China</a> <a href="https://threadreaderapp.com/hashtag/xinjiang">#Xinjiang</a> <a href="https://threadreaderapp.com/hashtag/covid%E3%83%BC19">#COVIDãƒ¼19</a> <a href="https://threadreaderapp.com/hashtag/espionage">#espionage</a> <a href="https://threadreaderapp.com/hashtag/top50">#Top50</a> <a href="https://threadreaderapp.com/hashtag/tiananmen30">#Tiananmen30</a> <a href="https://threadreaderapp.com/hashtag/semiconductor">#semiconductor</a> <a href="https://threadreaderapp.com/hashtag/vietnam">#VIETNAM</a> <a href="https://threadreaderapp.com/hashtag/austria">#Austria</a> <a href="https://threadreaderapp.com/hashtag/france">#France</a> <a href="https://threadreaderapp.com/hashtag/wisconsin">#Wisconsin</a> <a href="https://threadreaderapp.com/hashtag/hongkong">#HongKong</a> <a href="https://threadreaderapp.com/hashtag/anonymity">#anonymity</a> <a href="https://threadreaderapp.com/hashtag/cars">#Cars</a> <a href="https://threadreaderapp.com/hashtag/coronavirus">#Coronavirus</a> <a href="https://threadreaderapp.com/hashtag/world">#world</a> <a href="https://threadreaderapp.com/hashtag/tariff">#tariff</a> <a href="https://threadreaderapp.com/hashtag/kospi">#KOSPI</a> <a href="https://threadreaderapp.com/hashtag/pork">#Pork</a> <a href="https://threadreaderapp.com/hashtag/asia">#Asia</a> <a href="https://threadreaderapp.com/hashtag/mof">#MOF</a> <a href="https://threadreaderapp.com/hashtag/rareearths">#RareEarths</a> <a href="https://threadreaderapp.com/hashtag/drones">#drones</a> </p>
+<h2 class="rm-manual">Embed code for your website</h2>
+<p class="rm-manual"><a href="#">×</a> </p>
+<h2 class="rm-manual">Did Thread Reader help you today?</h2>
+<p class="rm-manual">Support us! We are indie developers!</p>
+<p class="rm-manual">This site is made by just three indie developers on a laptop doing marketing, support and development! <a href="https://threadreaderapp.com/help/about#team">Read more about the story</a>.</p>
+<p class="rm-manual">Become a Premium Member ($3.00/month or $30.00/year) and get exclusive features!</p>
+<p class="rm-manual"><a href="https://threadreaderapp.com/account/premium"> Become Premium </a></p>
+<p class="rm-manual">Too expensive? Make a small donation by buying us coffee ($5) or help with server cost ($10)</p>
+<p class="rm-manual"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=donate%40threadreaderapp.com&amp;lc=USD&amp;item_name=Thread%20Reader%20donation&amp;no_note=0&amp;cn=Say%20Hello%20or%20give%20some%20feedback%3a&amp;no_shipping=1&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted"> Donate via Paypal</a> </p>
+<p class="rm-manual"><a href="https://www.patreon.com/bePatron?u=8298707"> Become our Patreon</a> </p>
+<p class="rm-manual"> Thank you for your support! </p>
+<h5 class="rm-manual">Share this page!</h5>
+<p class="rm-manual"> <a href="https://threadreaderapp.com/help">Help</a> | <a href="https://threadreaderapp.com/help/about">About</a> | <a href="https://threadreaderapp.com/help/terms">TOS</a> | <a href="https://threadreaderapp.com/help/privacy">Privacy</a> </p></article>
+</body></html>

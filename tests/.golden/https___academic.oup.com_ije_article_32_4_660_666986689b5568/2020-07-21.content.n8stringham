@@ -1,0 +1,282 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article class=""><p class="rm-manual"> Biological 
+warfare and the people of Iraq | International Journal of Epidemiology |
+ Oxford Academic We use cookies to enhance your experience on our 
+website.By continuing to use our website, you are agreeing to our use of
+ cookies. You can change your cookie settings at any time. </p>
+<p class="rm-manual"><a href="https://global.oup.com/cookiepolicy/"> Find out more</a> </p>
+<p class="rm-manual"><a href="#skipNav">Skip to Main Content</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href=""> <span>Search Menu</span> </a> </li> <li class="rm-manual"> <a href=""> <span>Account Menu</span> </a> </li> <li class="rm-manual"> <a href=""> <span>Menu</span> </a> </li> <li class="rm-manual"> <a href=""> Sign In </a> </li> <li class="rm-manual"><a href="file:///my-account/register?siteId=5299&amp;returnUrl=%2fije%2farticle%2f32%2f4%2f660%2f666986">Register</a></li> </ul>
+<p class="rm-manual"> Navbar Search Filter Mobile Microsite Search Term <a href=""><span>Search</span></a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href=""> Sign In </a> </li> <li class="rm-manual"> <a href="file:///my-account/register?siteId=5299&amp;returnUrl=%2fije%2farticle%2f32%2f4%2f660%2f666986">Register</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///ije/issue">Issues</a> </li> <li class="rm-manual"> <a href="file:///ije/advance-articles">Advance articles</a> </li> <li class="rm-manual"> <a href="file:///ije/#">Submit</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///ije/pages/General_Instructions">Author Guidelines</a> </li> <li class="rm-manual"> <a href="http://mc.manuscriptcentral.com/ije">Submission Site</a> </li> <li class="rm-manual"> <a href="file:///ije/pages/General_Instructions">Open Access</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///ije/subscribe">Purchase</a> </li> <li class="rm-manual"> <a href="file:///my-account/email-alerts">Alerts</a> </li> <li class="rm-manual"> <a href="file:///ije/#">About</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///ije/pages/About">About International Journal of Epidemiology</a> </li> <li class="rm-manual"> <a href="http://ieaweb.org/">About the International Epidemiological Association</a> </li> <li class="rm-manual"> <a href="file:///ije/pages/Editorial_Board">Editorial Board</a> </li> <li class="rm-manual"> <a href="http://www.oupmediainfo.com/#!/mediakit/international-journal-epidemiology">Advertising and Corporate Services</a> </li> <li class="rm-manual"> <a href="http://medicine-and-health-careernetwork.oxfordjournals.org/jobseeker/search/results/?keywords=&amp;t732=486220&amp;t731=&amp;t733=&amp;t735=&amp;t737=&amp;max=25&amp;site_id=20102&amp;search=">Journals Career Network</a> </li> <li class="rm-manual"> <a href="https://academic.oup.com/journals/pages/access_purchase/rights_and_permissions/self_archiving_policy_b">Self-Archiving Policy</a> </li> <li class="rm-manual"> <a href="http://www.oxfordjournals.org/en/access-purchase/dispatch-dates.html">Dispatch Dates</a> </li> <li class="rm-manual"> <a href="http://ieaweb.org/contact/">Contact the IEA</a> </li> </ul> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///ije/issue">Issues</a> </li> <li class="rm-manual"> <a href="file:///ije/advance-articles">Advance articles</a> </li> <li class="rm-manual"> <a href="file:///ije/#">Submit</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///ije/pages/General_Instructions">Author Guidelines</a> </li> <li class="rm-manual"> <a href="http://mc.manuscriptcentral.com/ije">Submission Site</a> </li> <li class="rm-manual"> <a href="file:///ije/pages/General_Instructions">Open Access</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///ije/subscribe">Purchase</a> </li> <li class="rm-manual"> <a href="file:///my-account/email-alerts">Alerts</a> </li> <li class="rm-manual"> <a href="file:///ije/#">About</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///ije/pages/About">About International Journal of Epidemiology</a> </li> <li class="rm-manual"> <a href="http://ieaweb.org/">About the International Epidemiological Association</a> </li> <li class="rm-manual"> <a href="file:///ije/pages/Editorial_Board">Editorial Board</a> </li> <li class="rm-manual"> <a href="http://www.oupmediainfo.com/#!/mediakit/international-journal-epidemiology">Advertising and Corporate Services</a> </li> <li class="rm-manual"> <a href="http://medicine-and-health-careernetwork.oxfordjournals.org/jobseeker/search/results/?keywords=&amp;t732=486220&amp;t731=&amp;t733=&amp;t735=&amp;t737=&amp;max=25&amp;site_id=20102&amp;search=">Journals Career Network</a> </li> <li class="rm-manual"> <a href="https://academic.oup.com/journals/pages/access_purchase/rights_and_permissions/self_archiving_policy_b">Self-Archiving Policy</a> </li> <li class="rm-manual"> <a href="http://www.oxfordjournals.org/en/access-purchase/dispatch-dates.html">Dispatch Dates</a> </li> <li class="rm-manual"> <a href="http://ieaweb.org/contact/">Contact the IEA</a> </li> </ul> </li> </ul>
+<p class="rm-manual"> <a href="">Close</a> </p>
+<p class="rm-manual"> search filter search input <a href=""><span>Search</span></a> </p>
+<p class="rm-manual"><a href="file:///ije/advanced-search">Advanced Search</a></p>
+<p class="rm-manual"><a href=""><span>Search Menu</span></a></p>
+<p class="rm-manual">Article Navigation</p>
+<p class="rm-manual"> <a href="file:///ije/issue/32/4"> </a></p><p class="rm-manual"><a href="file:///ije/issue/32/4">Volume 32</a></p><a href="file:///ije/issue/32/4"> <p class="rm-manual">Issue 4</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> August 2003 </p>
+<h3 class="rm-manual">Article Contents</h3>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <a href="#66385493">References</a> </p> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///ije/article/32/4/658/666985">&lt; Previous</a> </li> <li class="rm-manual"> <a href="file:///ije/article/32/4/661/666987">Next &gt;</a> </li> </ul>
+<h1 class="rm-manual"> Biological warfare and the people of Iraq </h1>
+<div> <a href="">Ian Roberts</a> </div>
+<p class="rm-manual"> Ian Roberts </p>
+<p class="rm-manual"> Search for other works by this author on: </p>
+<p class="rm-manual"> <a href="file:///ije/search-results?f_Authors=Ian+Roberts">Oxford Academic</a> </p>
+<p class="rm-manual"> <a href="http://www.ncbi.nlm.nih.gov/pubmed?cmd=search&amp;term=Roberts%20I">PubMed</a> </p>
+<p class="rm-manual"> <a href="http://scholar.google.com/scholar?q=author:%22Roberts%20Ian%22">Google Scholar</a> </p>
+<p class="rm-manual">International Journal of Epidemiology, Volume 32, Issue 4, August 2003, Pages 660–661, <a href="https://doi.org/10.1093/ije/dyg226">https://doi.org/10.1093/ije/dyg226</a></p>
+<p class="rm-manual">Published:</p>
+<p class="rm-manual">01 August 2003</p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///ije/article-pdf/32/4/660/11434638/0320660.pdf"> <span>PDF</span> </a> </li> <li class="rm-manual"> <a href=""> Split View </a> </li> <li class="rm-manual"> <a href=""> <p class="rm-manual"> </p><p class="rm-manual">Views</p> <p class="rm-manual"></p> </a> <ul class="rm-manual"> <li class="rm-manual"> <a href=""><span>Article contents</span></a> </li> <li class="rm-manual"> <a href=""><span>Figures &amp; tables</span></a> </li> <li class="rm-manual"> <a href=""><span>Video</span></a> </li> <li class="rm-manual"> <a href=""><span>Audio</span></a> </li> <li class="rm-manual"> <a href=""><span>Supplementary Data</span></a> </li> </ul> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="#"><span>Cite</span></a> </p><p class="rm-manual"> </p><h3 class="rm-manual">Cite</h3> <p class="rm-manual">Ian
+ Roberts, Biological warfare and the people of Iraq, International 
+Journal of Epidemiology, Volume 32, Issue 4, August 2003, Pages 660–661,
+ <a href="https://doi.org/10.1093/ije/dyg226">https://doi.org/10.1093/ije/dyg226</a></p> <p class="rm-manual"> Select Format </p> <a href=""><span>Close</span></a> <p class="rm-manual"></p> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="https://s100.copyright.com/AppDispatchServlet?publisherName=OUP&amp;publication=1464-3685&amp;title=Biological%20warfare%20and%20the%20people%20of%20Iraq&amp;publicationDate=2003-08-01&amp;volumeNum=32&amp;issueNum=4&amp;author=Roberts%2C%20Ian&amp;startPage=660&amp;endPage=661&amp;contentId=10.1093%2Fije%2Fdyg226&amp;oa=&amp;copyright=Oxford%20University%20Press&amp;orderBeanReset=True"> <span>Permissions Icon</span> Permissions </a> </p> </li> </ul>
+<p class="rm-manual"> Navbar Search Filter Mobile Microsite Search Term <a href=""><span>Search</span></a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href=""> Sign In </a> </li> <li class="rm-manual"> <a href="file:///my-account/register?siteId=5299&amp;returnUrl=%2fije%2farticle%2f32%2f4%2f660%2f666986">Register</a> </li> </ul>
+<p class="rm-manual"> <a href="">Close</a> </p>
+<p class="rm-manual"> search filter search input <a href=""><span>Search</span></a> </p>
+<p class="rm-manual"><a href="file:///ije/advanced-search">Advanced Search</a></p>
+<p class="rm-manual"><a href=""><span>Search Menu</span></a></p>
+<p>Sirs—The only property of micro-organisms that enables them to be 
+used as biological weapons is their capacity to cause infectious 
+disease. People may be deliberately exposed to pathogenic 
+micro-organisms in a variety of ways but it is the fact of exposure 
+rather than the method of delivery that determines whether disease will 
+result. Because the ability to cause infection is the defining aspect of
+ a biological weapon, then any malevolent intervention that causes 
+infection in the civilian population constitutes an attack with a 
+biological weapon.</p>
+<p> Micro-organisms are necessary but not sufficient in the causation of
+ infectious disease and other causal factors are required for infection 
+to occur.<a href="">1</a> Host resistance is an important factor in the chain of causation leading to clinical infection.<a href="">2</a>
+ Whether or not exposure to a micro-organism causes disease depends on 
+whether or not the exposed individual is susceptible or immune. Dietary 
+deficiency of key vitamins and micronutrients increases susceptibility 
+to a number of infectious agents and also increases the likelihood that 
+infectious disease will result in severe illness and death. Vitamin A 
+and zinc deficiency impair the ability of the immune system to fight 
+infection and the ability of mucous membranes to resist infection.<a href="">2,</a><a href="">3</a>
+ Indeed, the decline in infectious diseases in high-income countries is 
+more readily attributed to increased host resistance from better 
+nutrition than to a reduction in the virulence of the relevant 
+micro-organisms. It follows that any malevolent intervention that 
+impairs the ability of a civilian population to resist infection 
+constitutes biological warfare.</p>
+<p> In public health practice, prevention involves removing one or more 
+of the components in the chain of causation leading to disease. From an 
+epidemiological perspective, causation and prevention are two sides of 
+the same coin.<a href="">1</a> For this reason, a consideration of the 
+actions that can prevent infectious disease from occurring after 
+exposure to a biological agent can help to identify the other components
+ in the causal chain. For example, following an attack with anthrax, 
+spores can be washed off with soap and water and oral antibiotics can be
+ given to prevent infection from developing.<a href="">4</a> If an 
+anthrax attack occurred in situations where antibiotics were unavailable
+ then some cases of anthrax infection would be attributable to their 
+absence. Consequently, any malevolent intervention that destroys a 
+population’s ability to respond effectively to infectious diseases 
+constitutes a biological attack.</p>
+<p> These rather mundane scientific considerations have important 
+implications for how biological warfare is defined in the context of the
+ current conflict in Iraq. First, it implies that the Anglo-American 
+bombing of water supplies, sanitation plants, and the power plants that 
+are necessary for their functioning, constitutes a biological attack. 
+Standard texts on biological weapons point out that three factors must 
+be taken into account in selecting a biological agent for a biological 
+attack: ease of manufacture, stability, and lethality. Despite 
+widespread public concern about the use of anthrax, smallpox, and 
+plague, all three are difficult to manufacture and disseminate. Anthrax 
+requires sophisticated methods of manufacture and virulent stock is hard
+ to find. The only confirmed sources of smallpox are in the US and 
+Russia, and plague is both difficult to obtain and difficult to 
+weaponize.<a href="">4</a> On the other hand, the microbial agents that 
+can cause devastating epidemics of diarrhoea are ubiquitous, lethal, and
+ are readily disseminated by destroying the civilian sanitation 
+infrastructure by bombing or otherwise destroying water sanitation and 
+sewage disposal systems. These actions will ensure that food and water 
+supplies to the civilian population will quickly become contaminated. 
+Because the faeces of infected people will further contaminate the water
+ supply and because there will be extensive person-to-person 
+transmission this strategy has the potential to result in extensive, 
+population-wide, and self-propagating epidemics. The scope for civilian 
+casualties with such an approach is massive in comparison with the use 
+of agents such as anthrax for which there is no evidence of 
+person-to-person transmission. Declassified documents from the American 
+Defense Intelligence Agency show that during the 1991 Gulf War, the 
+‘Allies’ deliberately targeted Iraq’s water supply. Twelve years later, 
+half the water treatment plants are still out of action.<a href="">5</a></p>
+<p> Second, the economic sanctions imposed by the United Nations 
+Security Council that have caused widespread dietary deficiencies 
+throughout the civilian population, seriously reducing the ability of 
+the population to resist infection, constitute a form of biological 
+warfare. Micro-organisms that pose little threat to those with intact 
+immune systems can be highly lethal to those with impaired immunity as a
+ result of micronutrient deficiency and malnutrition. For example, 
+life-threatening diarrhoea can be caused by ubiquitous microbes such as 
+Escherichia coli that reside in the gastrointestinal tract and common 
+respiratory viruses can cause highly lethal pneumonia. As a result of 
+the sanctions against Iraq there has been a more than doubling of the 
+infant and under-5 mortality rates, with most of the excess child deaths
+ being due to diarrhoea and pneumonia exacerbated by malnutrition.<a href="">6</a>
+ The imposition of economic sanctions in Iraq is as much a form of 
+biological attack as was the distribution of anthrax in the US mail 
+system.</p>
+<p> Third, the destruction of the Iraqi population’s ability to respond 
+to outbreaks of infectious disease by restricting the import of 
+essential medicines and medical equipment, by destroying the public 
+health infrastructure, and by overwhelming the capacity of the 
+healthcare system to respond effectively constitutes a further 
+biological attack.</p>
+<p> Fourth, having destroyed Iraq’s water and sanitation systems, 
+leaving the civilian population highly vulnerable to major epidemics of 
+infectious disease, the failure to restore the public health 
+infrastructure and provide safe water supplies to homes and hospitals 
+constitutes a biological attack. In this context, recent reports that 
+reconstruction contracts may be awarded to the US company Bechtel are a 
+particular cause for concern. In 1999, a Bechtel subsidiary took over 
+the control of the public water system in Cochabamba in Bolivia and 
+within weeks doubled and tripled the water rates for some of the poorest
+ families in South America resulting in massive public demonstrations.<a href="">7</a>
+ Also, we must not forget that in the case of Afghanistan, despite the 
+Bush administration’s claim that ‘the US will not walk away from the 
+Afghan people’, the administration subsequently forgot to ask for any 
+money for humanitarian and reconstruction costs in its 2003 budget.</p>
+<p> The full extent of civilian casualties resulting from the war on 
+Iraq will become clear in the coming weeks and months. An effective 
+humanitarian response must be mounted urgently to reduce the death toll 
+from this appalling episode in the history of biological warfare.</p>
+<h2 class="rm-manual">References</h2>
+<p class="rm-manual"><span>1</span></p>
+<p class="rm-manual"> Rothman KJ. Modern Epidemiology. Boston: Little, Brown and Company, 1986.</p>
+<p class="rm-manual"><span>2</span></p>
+<p class="rm-manual"> Stephensen CB. Vitamin A, infection and immune function. </p>
+<p class="rm-manual">Annu Rev Nutr</p>
+<p class="rm-manual">2001</p>
+<p class="rm-manual">;</p>
+<p class="rm-manual">21</p>
+<p class="rm-manual"> : </p>
+<p class="rm-manual">167</p>
+<p class="rm-manual">–92.</p>
+<p class="rm-manual"><span>3</span></p>
+<p class="rm-manual"> Berger A. What does zinc do? </p>
+<p class="rm-manual">BMJ</p>
+<p class="rm-manual">2002</p>
+<p class="rm-manual">;</p>
+<p class="rm-manual">325</p>
+<p class="rm-manual"> : </p>
+<p class="rm-manual">1062</p>
+<p class="rm-manual">.</p>
+<p class="rm-manual"><span>4</span></p>
+<p class="rm-manual"> Levy BS, Sidel VW (eds). Terrorism and Public Health. New York: Oxford University Press, 2002.</p>
+<p class="rm-manual"><span>5</span></p>
+<p class="rm-manual"> Sengupta K. The Independent. Saturday 19 April 2003.</p>
+<p class="rm-manual"><span>6</span></p>
+<p class="rm-manual"> Arnove A (ed.). Iraq under Siege: The Deadly Impact of Sanctions and War. London: Pluto Press, 2003.</p>
+<p class="rm-manual"><span>7</span></p>
+<p class="rm-manual"> Palast G. New British Empire of the Dammed. The Observer. Sunday 23 April 2000.</p>
+<p class="rm-manual">© International Epidemiological Association 2003</p>
+<p class="rm-manual">Issue Section:</p>
+<p class="rm-manual"><a href="file:///ije/search-results?f_TocHeadingTitle=Letters%20to%20the%20Editor">Letters to the Editor</a> </p>
+<p class="rm-manual"> <a href="file:///DownloadFile/DownloadImage.aspx?image=&amp;PPTtype=SlideSet&amp;ar=666986&amp;xsltPath=~/UI/app/XSLT&amp;siteId=5299">Download all slides</a> </p>
+<p class="rm-manual"> <span>519</span> <span>Views</span> </p>
+<p class="rm-manual"> <span> 0 </span> <span>Citations</span> </p>
+<p class="rm-manual"> <a><span>View Metrics</span></a> </p>
+<p class="rm-manual"> <a>×</a> </p>
+<h3 class="rm-manual">Email alerts</h3>
+<p class="rm-manual"> <a href="">Article activity alert</a> </p>
+<p class="rm-manual"> <a href="">Advance article alerts</a> </p>
+<p class="rm-manual"> <a href="">New issue alert</a> </p>
+<p class="rm-manual"> <a href="">Receive exclusive offers and updates from Oxford Academic</a> </p>
+<h3 class="rm-manual">Related articles in</h3>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://scholar.google.com/scholar?q=related:https%3a%2f%2facademic.oup.com%2fije%2farticle%2f32%2f4%2f660%2f666986">Google Scholar</a> </li> </ul>
+<h3 class="rm-manual">Citing articles via</h3>
+<p class="rm-manual"> <a href="http://scholar.google.com/scholar?q=link:https%3A%2F%2Facademic.oup.com%2Fije%2Farticle%2F32%2F4%2F660%2F666986">Google Scholar</a> </p>
+<p class="rm-manual"> <a href="https://academic.oup.com/ije/crossref-citedby/666986">Crossref</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <h3 class="rm-manual"> <a href="">Latest</a> </h3> </li> <li class="rm-manual"> <h3 class="rm-manual"> <a href="">Most Read</a> </h3> </li> <li class="rm-manual"> <h3 class="rm-manual"> <a href="">Most Cited</a> </h3> </li> </ul>
+<p class="rm-manual"> <a href="file:///ije/article/doi/10.1093/ije/dyaa085/5871506?searchresult=1"> </a></p><p class="rm-manual"><a href="file:///ije/article/doi/10.1093/ije/dyaa085/5871506?searchresult=1"> Parental occupational exposure pre- and post-conception and development of asthma in offspring </a></p><a href="file:///ije/article/doi/10.1093/ije/dyaa085/5871506?searchresult=1"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///ije/article/doi/10.1093/ije/dyaa098/5870408?searchresult=1"> </a></p><p class="rm-manual"><a href="file:///ije/article/doi/10.1093/ije/dyaa098/5870408?searchresult=1">
+ Consequences of access to water from managed aquifer recharge systems 
+for blood pressure and proteinuria in south-west coastal Bangladesh: a 
+stepped-wedge cluster-randomized trial </a></p><a href="file:///ije/article/doi/10.1093/ije/dyaa098/5870408?searchresult=1"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///ije/article/doi/10.1093/ije/dyaa048/5869066?searchresult=1"> </a></p><p class="rm-manual"><a href="file:///ije/article/doi/10.1093/ije/dyaa048/5869066?searchresult=1"> Data Resource Profile: The French Childhood Cancer Observation Platform (CCOP) </a></p><a href="file:///ije/article/doi/10.1093/ije/dyaa048/5869066?searchresult=1"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///ije/article/doi/10.1093/ije/dyaa068/5868583?searchresult=1"> </a></p><p class="rm-manual"><a href="file:///ije/article/doi/10.1093/ije/dyaa068/5868583?searchresult=1"> Cohort Profile Update: The Isle of Wight Whole Population Birth Cohort (IOWBC) </a></p><a href="file:///ije/article/doi/10.1093/ije/dyaa068/5868583?searchresult=1"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///ije/article/doi/10.1093/ije/dyaa067/5867731?searchresult=1"> </a></p><p class="rm-manual"><a href="file:///ije/article/doi/10.1093/ije/dyaa067/5867731?searchresult=1">
+ Cross-sectional and prospective relationship between occupational and 
+leisure-time inactivity and cognitive function in an ageing population: 
+the European Prospective Investigation into Cancer and Nutrition in 
+Norfolk (EPIC-Norfolk) study </a></p><a href="file:///ije/article/doi/10.1093/ije/dyaa067/5867731?searchresult=1"> </a> <p class="rm-manual"></p>
+<h3 class="rm-manual"> <a href="http://medicine-and-health-careernetwork.oxfordjournals.org/jobseeker/search/results/">Looking for your next opportunity?</a> </h3>
+<p class="rm-manual"><a href="https://medicine-and-health-careernetwork.oxfordjournals.org/job/open-rank-faculty-positions-in-biomedical-informatics/54323507/20102/">Open-Rank Faculty Positions in Biomedical Informatics</a></p>
+<p class="rm-manual"> Columbus, Ohio </p>
+<p class="rm-manual"><a href="https://medicine-and-health-careernetwork.oxfordjournals.org/job/open-rank-faculty-opportunities-at-the-department-of-biomedical-informatics/54323499/20102/">Open-Rank Faculty Opportunities at the Department of Biomedical Informatics</a></p>
+<p class="rm-manual"> Columbus, Ohio </p>
+<p class="rm-manual"><a href="https://medicine-and-health-careernetwork.oxfordjournals.org/job/full-time-interventional-physiatrist/54280235/20102/">Full-Time Interventional Physiatrist</a></p>
+<p class="rm-manual"> Virginia Beach, Virginia </p>
+<p class="rm-manual"><a href="https://medicine-and-health-careernetwork.oxfordjournals.org/job/postdoctoral-fellowship-in-environmental-epidemiology/54242943/20102/">Postdoctoral Fellowship in Environmental Epidemiology</a></p>
+<p class="rm-manual"> Baltimore, Maryland </p>
+<p class="rm-manual"><a href="http://medicine-and-health-careernetwork.oxfordjournals.org/jobseeker/search/results/">View all jobs</a></p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///ije/pages/About">About International Journal of Epidemiology</a> </li> <li class="rm-manual"> <a href="file:///ije/pages/Editorial_Board">Editorial Board</a> </li> <li class="rm-manual"> <a href="file:///ije/pages/General_Instructions">Author Guidelines</a> </li> <li class="rm-manual"> <a href="http://ieaweb.org/">Contact the IEA</a> </li> <li class="rm-manual"> <a href="https://www.facebook.com/OUPMedicine/">Facebook</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://twitter.com/IJEeditorial">Twitter</a> </li> <li class="rm-manual"> <a href="file:///ije/subscribe">Purchase</a> </li> <li class="rm-manual"> <a href="http://www.oxfordjournals.org/en/library-recommendation-form.html">Recommend to your Library</a> </li> <li class="rm-manual"> <a href="http://www.oupmediainfo.com/#!/mediakit/international-journal-epidemiology">Advertising and Corporate Services</a> </li> <li class="rm-manual"> <a href="http://medicine-and-health-careernetwork.oxfordjournals.org/jobseeker/search/results/?keywords=&amp;t732=486220&amp;t731=&amp;t733=&amp;t735=&amp;t737=&amp;max=25&amp;site_id=20102&amp;search=">Journals Career Network</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual">Online ISSN 1464-3685</li> <li class="rm-manual">Print ISSN 0300-5771</li> <li class="rm-manual">Copyright © 2020 International Epidemiological Association</li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///journals/pages/about_us">About Us</a> </li> <li class="rm-manual"> <a href="file:///journals/pages/contact_us">Contact Us</a> </li> <li class="rm-manual"> <a href="http://global.oup.com/jobs">Careers</a> </li> <li class="rm-manual"> <a href="file:///journals/pages/help">Help</a> </li> <li class="rm-manual"> <a href="file:///journals/pages/access_purchase">Access &amp; Purchase</a>
+</li> <li class="rm-manual"> <a href="file:///journals/pages/access_purchase/rights_and_permissions">Rights &amp; Permissions</a> </li> <li class="rm-manual"> <a href="file:///journals/pages/open_access">Open Access</a> </li> </ul>
+<h4 class="rm-manual">Connect</h4>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///my-account/communication-preferences">Join Our Mailing List</a> </li> <li class="rm-manual"> <a href="http://blog.oup.com/">OUPblog</a> </li> <li class="rm-manual"> <a href="http://twitter.com/oupacademic">Twitter</a> </li> <li class="rm-manual"> <a href="https://www.facebook.com/OUPAcademic">Facebook</a> </li> <li class="rm-manual"> <a href="http://www.youtube.com/playlist?list=PL3MAPgqN8JWioLLTkU4mlFM4-SNt-f1Xs">YouTube</a> </li> <li class="rm-manual"> <a href="http://oupacademic.tumblr.com/">Tumblr</a> </li> </ul>
+<h4 class="rm-manual">Resources</h4>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///journals/pages/authors">Authors</a></li> <li class="rm-manual"><a href="file:///journals/pages/librarians">Librarians</a></li> <li class="rm-manual"><a href="file:///journals/pages/societies">Societies</a></li> <li class="rm-manual"><a href="https://academic.oup.com/journals/pages/sponsorship_and_advertising">Sponsors &amp; Advertisers</a></li> <li class="rm-manual"><a href="file:///journals/pages/press">Press &amp; Media</a></li> <li class="rm-manual"><a href="file:///journals/pages/agents">Agents</a></li> </ul>
+<h4 class="rm-manual">Explore</h4>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://global.oup.com/academic">Shop OUP Academic</a></li> <li class="rm-manual"><a href="http://www.oxforddictionaries.com/">Oxford Dictionaries</a></li> <li class="rm-manual"><a href="https://www.epigeum.com/">Epigeum</a></li> <li class="rm-manual"><a href="http://global.oup.com/">OUP Worldwide</a></li> <li class="rm-manual"><a href="http://www.ox.ac.uk/">University of Oxford</a></li> </ul>
+<p class="rm-manual">Oxford University Press is a department of the 
+University of Oxford. It furthers the University's objective of 
+excellence in research, scholarship, and education by publishing 
+worldwide</p>
+<ul class="rm-manual"> <li class="rm-manual">Copyright © 2020 Oxford University Press</li> <li class="rm-manual"><a href="https://global.oup.com/cookiepolicy/">Cookie Policy</a></li> <li class="rm-manual"><a href="https://global.oup.com/privacy">Privacy Policy</a></li> <li class="rm-manual"><a href="file:///journals/pages/about_us/legal/notices">Legal Notice</a></li> <li class="rm-manual"><a href="file:///journals/pages/sitemap">Site Map</a></li> <li class="rm-manual"><a href="file:///journals/pages/about_us/legal/accessibility">Accessibility</a></li> <li class="rm-manual"><a href="https://get.adobe.com/reader/">Get Adobe Reader</a></li> </ul>
+<p class="rm-manual"> <a href=""><span>Close</span></a> </p>
+<h5 class="rm-manual">This Feature Is Available To Subscribers Only</h5>
+<p class="rm-manual"><a href="file:///sign-in">Sign In</a> or <a href="file:///my-account/register?siteId=5299&amp;returnUrl=%2fije%2farticle%2f32%2f4%2f660%2f666986">Create an Account</a></p>
+<p class="rm-manual"><a href=""><span>Close</span></a> </p>
+<p class="rm-manual">This PDF is available to Subscribers Only</p>
+<p class="rm-manual"><a><span>View Article Abstract &amp; Purchase Options</span></a> </p>
+<p class="rm-manual">For full access to this pdf, sign in to an existing account, or purchase an annual subscription.</p>
+<p class="rm-manual"><a href=""><span>Close</span></a> </p></article>
+</body></html>

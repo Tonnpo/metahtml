@@ -1,0 +1,98 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> 156 Chinese tourists returned to virus-stricken Wuhan: official | ABS-CBN News </p>
+<p class="rm-manual"> <a href="file:///"> <span>News</span> </a> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.facebook.com/abscbnNEWS/" rel="noopener noreferrer"> <span>facebook</span></a></li> <li class="rm-manual"><a href="https://twitter.com/ABSCBNNews" rel="noopener noreferrer"> <span>twitter</span></a></li> <li class="rm-manual"><a href="https://www.youtube.com/user/TheABSCBNNews" rel="noopener noreferrer"> <span>youtube</span></a></li> <li class="rm-manual"><a href=""> <span>login</span></a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///">Home</a></li> <li class="rm-manual"><a href="file:///news">News</a></li> <li class="rm-manual"><a href="file:///business">Business</a></li> <li class="rm-manual"><a href="file:///entertainment">Entertainment</a></li> <li class="rm-manual"><a href="file:///life">Life</a></li> <li class="rm-manual"><a href="file:///sports">Sports</a></li> <li class="rm-manual"><a href="file:///overseas">Overseas</a></li> <li class="rm-manual"><a href="file:///spotlight">Spotlight</a></li> <li class="rm-manual"><a href="file:///weather">Weather</a></li> <li class="rm-manual"><a href="file:///tv-patrol">TV Patrol</a></li> <li class="rm-manual"><a href="file:///dzmm">DZMM</a></li> <li class="rm-manual"><a href="file:///anc">ANC</a></li> <li class="rm-manual"><a href="file:///ancx">ANCX</a></li> </ul>
+<p class="rm-manual">156 Chinese tourists returned to virus-stricken Wuhan: official </p>
+<p class="rm-manual"> <a href="file:///">Home</a> <span> &gt; </span> <a href="file:///News">News</a> </p>
+<h1 class="rm-manual">156 Chinese tourists returned to virus-stricken Wuhan: official</h1>
+<h5 class="rm-manual"><span>ABS-CBN News</span></h5>
+<p class="rm-manual">Posted at <span>Jan 26 2020 12:52 PM</span> | Updated as of <span>Jan 26 2020 04:36 PM</span></p>
+<figcaption>Passengers at the Ninoy Aquino International Airport 
+Terminal 1 pass in front of a thermal imaging machine used to look for 
+possible signs of illness on January 23, 2020, as the country raises the
+ alert to prevent the spread of an undetermined strain of the 
+coronavirus originating from Wuhan, China. Mark Demayo, ABS-CBN News</figcaption><p>MANILA
+ - A total of 156 Chinese tourists were flown back to Wuhan, China from 
+Kalibo, Aklan on Saturday evening, Philippine authorities said, as the 
+new coronavirus continued to claim lives and infect thousands across the
+ world.</p>
+<p>The tourists returned to the epicenter of the new strain of virus on a
+ flight that left around 10 p.m., Kalibo airport area manager Efren 
+Nagrama said.</p>
+<p>Some 150 others are also set to fly out back to Wuhan on Monday 
+evening, according to the Civil Aviation Authority of the Philippines.</p>
+<p>The Chinese tourists arrived from Wuhan before the Philippines halted
+ its flights to and from Wuhan on Thursday as precautionary measure 
+against the spread of the 2019 Novel Coronavirus (2019-nCov).</p>
+<ul> <li class="rm-manual"><a href="https://news.abs-cbn.com/business/01/23/20/philippine-aviation-authorities-ban-flights-to-wuhan">Philippine aviation authorities ban flights to Wuhan</a></li> </ul>
+<p>The respiratory contagion, which has so far claimed 56 lives and 
+sickened nearly 1,600, have been reported in Beijing, Shanghai, Macau, 
+Hong Kong and Taiwan, and has reached other countries like Japan, South 
+Korea, Thailand, Singapore, Vietnam, the United States and Canada.</p>
+<ul> <li class="rm-manual"><a href="https://news.abs-cbn.com/overseas/01/25/20/with-wuhan-virus-genetic-code-in-hand-scientists-begin-work-on-a-vaccine">With Wuhan virus genetic code in hand, scientists begin work on a vaccine</a></li> </ul>
+<p>--Reports from Jekki Pascual, Isay Reyes, and Cherry Palma, ABS-CBN News</p>
+<p>Regional news, China, Wuhan, Kalibo, Aklan, new coronavirus, novel coronavirus, 2019 nCoV </p>
+<p class="rm-manual"> Read More: <a href="file:///list/tag/Regional-news">Regional news </a> <a href="file:///list/tag/China">China </a> <a href="file:///list/tag/Wuhan">Wuhan </a> <a href="file:///list/tag/Kalibo">Kalibo </a> <a href="file:///list/tag/Aklan">Aklan </a> <a href="file:///list/tag/new-coronavirus">new coronavirus </a> <a href="file:///list/tag/novel-coronavirus">novel coronavirus </a> <a href="file:///list/tag/2019-nCoV">2019 nCoV </a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <h2 class="rm-manual"><a href="#tabs-latest">LATEST NEWS</a></h2> </li> <li class="rm-manual"> <h2 class="rm-manual"><a href="#tabs-most">MOST READ</a></h2> </li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"> <p class="rm-manual"><a href="file:///overseas/07/15/20/moderna-vaccine-induced-antibodies-in-all-trial-participants-paper">Moderna vaccine induced antibodies in all trial participants: paper</a></p> <p class="rm-manual">July 15, 2020</p> </li>
+<li class="rm-manual"> <p class="rm-manual"><a href="file:///news/07/15/20/the-anc-brief-duterte-vs-oligarchs">The ANC Brief: Duterte vs 'oligarchs'</a></p> <p class="rm-manual">July 15, 2020</p> </li>
+<li class="rm-manual"> <p class="rm-manual"><a href="file:///overseas/07/15/20/nasas-perseverance-rover-will-scour-mars-for-signs-of-life">NASA's Perseverance rover will scour Mars for signs of life</a></p> <p class="rm-manual">July 15, 2020</p> </li>
+<li class="rm-manual"> <p class="rm-manual"><a href="file:///news/07/15/20/alamin-mga-lugar-sa-malabon-na-isasailalim-sa-special-concern-lockdown">ALAMIN: Mga lugar sa Malabon na isasailalim sa 'special concern' lockdown</a></p> <p class="rm-manual">July 15, 2020</p> </li>
+<li class="rm-manual"> <p class="rm-manual"><a href="file:///entertainment/07/15/20/what-jinri-park-tells-those-looking-down-on-her-work-as-a-waitress">What Jinri Park tells those looking down on her work as a waitress</a></p> <p class="rm-manual">July 15, 2020</p> </li>
+<li class="rm-manual"> <p class="rm-manual"><a href="file:///business/07/15/20/britain-bans-chinas-huawei-handing-us-big-win">Britain bans China's Huawei, handing US big win</a></p> <p class="rm-manual">July 15, 2020</p> </li>
+<li class="rm-manual"> <p class="rm-manual"><a href="file:///overseas/07/15/20/baby-infected-with-covid-19-in-the-womb-study">Baby infected with COVID-19 in the womb: study</a></p> <p class="rm-manual">July 15, 2020</p> </li>
+<li class="rm-manual"> <p class="rm-manual"><a href="file:///overseas/07/15/20/us-calls-china-the-new-east-india-company-at-sea">US calls China the new East India Company at sea</a></p> <p class="rm-manual">July 15, 2020</p> </li>
+<li class="rm-manual"> <p class="rm-manual"><a href="file:///overseas/07/15/20/china-says-hong-kong-democracy-activists-trying-to-launch-revolution">China says Hong Kong democracy activists trying to launch 'revolution'</a></p> <p class="rm-manual">July 15, 2020</p> </li>
+<li class="rm-manual"> <p class="rm-manual"><a href="file:///overseas/07/15/20/masks-prevented-major-coronavirus-outbreak-at-hair-salon-study">Masks prevented major coronavirus outbreak at hair salon: study</a></p> <p class="rm-manual">July 15, 2020</p> </li>
+<li class="rm-manual"> <p class="rm-manual"><a href="file:///overseas/07/15/20/china-encroached-into-malaysian-waters-89-times-in-4-years-report">China encroached into Malaysian waters 89 times in 4 years: report</a></p> <p class="rm-manual">July 15, 2020</p> </li>
+<li class="rm-manual"> <p class="rm-manual"><a href="file:///overseas/07/15/20/10-killed-46-missing-as-flashfloods-hit-central-indonesia">10 killed, 46 missing as flashfloods hit central Indonesia</a></p> <p class="rm-manual">July 15, 2020</p> </li>
+<li class="rm-manual"> <p class="rm-manual"><a href="file:///spotlight/07/15/20/experts-question-dutertes-claim-he-dismantled-oligarchy-in-ph">Experts question Duterte's claim he 'dismantled' oligarchy in PH</a></p> <p class="rm-manual">July 15, 2020</p> </li>
+<li class="rm-manual"> <p class="rm-manual"><a href="file:///news/07/15/20/local-transmission-ng-covid-19-naitala-sa-2-bayan-sa-davao-de-oro">Local transmission ng COVID-19, naitala sa 2 bayan sa Davao de Oro</a></p> <p class="rm-manual">July 15, 2020</p> </li>
+<li class="rm-manual"> <p class="rm-manual"><a href="file:///news/07/15/20/batangas-solons-na-bumoto-para-sa-balik-ere-ng-abs-cbn-pinuri">Batangas solons na bumoto para sa balik-ere ng ABS-CBN, pinuri</a></p> <p class="rm-manual">July 15, 2020</p> </li>
+<li class="rm-manual"> <p class="rm-manual"><a href="file:///sports/07/15/20/basketball-how-jack-animam-got-the-offer-to-play-in-taiwan">Basketball: How Jack Animam got the offer to play in Taiwan</a></p> <p class="rm-manual">July 15, 2020</p> </li>
+<li class="rm-manual"> <p class="rm-manual"><a href="file:///news/07/15/20/groups-sound-alarm-on-police-house-to-house-search-for-covid-19-patients">Groups sound alarm on police house-to-house search for COVID-19 patients</a></p> <p class="rm-manual">July 15, 2020</p> </li>
+<li class="rm-manual"> <p class="rm-manual"><a href="file:///sports/07/15/20/softball-game-isinagawa-sa-lipa-sa-kabila-ng-covid-19-restrictions">Softball game isinagawa sa Lipa sa kabila ng COVID-19 restrictions</a></p> <p class="rm-manual">July 15, 2020</p> </li>
+<li class="rm-manual"> <p class="rm-manual"><a href="file:///news/07/15/20/carina-dissolves-into-low-pressure-area-pagasa">Carina dissolves into low pressure area: PAGASA</a></p> <p class="rm-manual">July 15, 2020</p> </li>
+<li class="rm-manual"> <p class="rm-manual"><a href="file:///business/07/15/20/dti-chief-personal-barter-transactions-allowed">DTI chief: Personal barter transactions allowed</a></p> <p class="rm-manual">July 15, 2020</p> </li> </ul>
+<p class="rm-manual"><a href="">next</a> </p>
+<p class="rm-manual">© 2020 ABS-CBN Corporation. All Rights Reserved.</p>
+<p class="rm-manual"><a href="https://www.abs-cbn.com/corporate" rel="noopener noreferrer">About</a><a href="https://www.abs-cbn.com/corporate" rel="noopener noreferrer">Careers</a><a href="https://www.abs-cbn.com/privacy?screen=privacy" rel="noopener noreferrer">Privacy</a><a href="https://www.abs-cbn.com/privacy?screen=terms" rel="noopener noreferrer">Terms</a><a href="https://www.abs-cbn.com/corporate" rel="noopener noreferrer">Contact Us</a><a href="https://advertise.abs-cbn.com/" rel="noopener noreferrer">Advertise With Us</a></p></article>
+</body></html>

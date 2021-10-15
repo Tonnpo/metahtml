@@ -1,0 +1,77 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><ul class="rm-manual"><li class="rm-manual"> <a href="https://newsx.tv/channel/asia/cgtn/"> CGTN </a> </li></ul>
+<h1 class="rm-manual">G7 rejects push by U.S. to refer to coronavirus as 'Wuhan virus'</h1>
+<p class="rm-manual"><span> <span> 4 months ago </span> </span> </p>
+<p>A German news magazine reports that the G-7 has rejected a push by 
+the U.S. to include the phrase “Wuhan virus” in a joint statement. Der 
+Spiegel reported that ministers drafted a statement after holding a 
+video conference on the outbreak. But, U.S. Secretary of State Mike 
+Pompeo reportedly wanted the statement to refer to coronavirus as the 
+“Wuhan virus.” It was reportedly taken out after being met with 
+disapproval by other member countries. The WHO advises against naming 
+infectious diseases after places over fears it could lead to stigma and 
+prejudice.</p>
+<p class="rm-manual">Subscribe to us on YouTube: <a href="https://goo.gl/lP12gA" rel="noopener noreferrer">https://goo.gl/lP12gA</a></p>
+<p class="rm-manual"> Download our APP on Apple Store (iOS): <a href="https://itunes.apple.com/us/app/cctvnews-app/id922456579?l=zh&amp;ls=1&amp;mt=8" rel="noopener noreferrer">https://itunes.apple.com/us/app/cctvnews-app/id922456579?l=zh&amp;ls=1&amp;mt=8</a></p>
+<p class="rm-manual"> Download our APP on Google Play (Android): <a href="https://play.google.com/store/apps/details?id=com.imib.cctv" rel="noopener noreferrer">https://play.google.com/store/apps/details?id=com.imib.cctv</a></p>
+<p class="rm-manual">Follow us on:</p>
+<p class="rm-manual"> Website: <a href="https://www.cgtn.com/" rel="noopener noreferrer">https://www.cgtn.com/</a></p>
+<p class="rm-manual"> Facebook: <a href="https://www.facebook.com/ChinaGlobalTVNetwork/" rel="noopener noreferrer">https://www.facebook.com/ChinaGlobalTVNetwork/</a></p>
+<p class="rm-manual"> Instagram: <a href="https://www.instagram.com/cgtn/?hl=zh-cn" rel="noopener noreferrer">https://www.instagram.com/cgtn/?hl=zh-cn</a></p>
+<p class="rm-manual"> Twitter: <a href="https://twitter.com/CGTNOfficial" rel="noopener noreferrer">https://twitter.com/CGTNOfficial</a></p>
+<p class="rm-manual"> Pinterest: <a href="https://www.pinterest.com/CGTNOfficial/" rel="noopener noreferrer">https://www.pinterest.com/CGTNOfficial/</a></p>
+<p class="rm-manual"> Tumblr: <a href="http://cctvnews.tumblr.com/" rel="noopener noreferrer">http://cctvnews.tumblr.com/</a></p>
+<p class="rm-manual"> Weibo: <a href="https://weibo.com/cctvnewsbeijing" rel="noopener noreferrer">http://weibo.com/cctvnewsbeijing</a></p>
+<p class="rm-manual"> Douyin: <a href="http://v.douyin.com/aBbmNQ/" rel="noopener noreferrer">http://v.douyin.com/aBbmNQ/</a></p>
+<p class="rm-manual"><a href="https://www.youtube.com/watch?v=iVP52WI6eA4">source</a></p>
+<p class="rm-manual"> <span>Tags: <a href="https://newsx.tv/tag/cctv/" rel="tag">CCTV</a>, <a href="https://newsx.tv/tag/cctvnews/" rel="tag">CCTVNews</a>, <a href="https://newsx.tv/tag/cgtn/" rel="tag">CGTN</a>, <a href="https://newsx.tv/tag/chinanews/" rel="tag">ChinaNews</a>, <a href="https://newsx.tv/tag/coronavirus/" rel="tag">coronavirus</a>, <a href="https://newsx.tv/tag/g7/" rel="tag">G7</a>, <a href="https://newsx.tv/tag/news/" rel="tag">news</a>, <a href="https://newsx.tv/tag/worldnews/" rel="tag">WorldNews</a></span> </p>
+<h2 class="rm-manual">Continue Reading</h2>
+<p class="rm-manual"><a href="https://newsx.tv/2020/03/26/china-has-made-sacrifices-to-buy-time-for-international-response/" rel="prev"><span>Previous</span> China has made sacrifices to buy time for international response</a></p>
+<p class="rm-manual"><a href="https://newsx.tv/2020/03/26/spains-outbreak-becomes-worlds-second-deadliest/" rel="next"><span>Next</span> Spain's outbreak becomes world's second deadliest</a></p>
+<h3 class="rm-manual"> More Stories </h3>
+<ul class="rm-manual"><li class="rm-manual"> <a href="https://newsx.tv/channel/asia/cgtn/"> CGTN </a> </li></ul>
+<h3 class="rm-manual"> <a href="https://newsx.tv/2020/07/14/huawei-alstom-a-tale-of-two-companies/"> Huawei &amp; Alstom: A tale of two companies </a> </h3>
+<p class="rm-manual"> <span> <span> 5 hours ago </span> </span> </p>
+<ul class="rm-manual"><li class="rm-manual"> <a href="https://newsx.tv/channel/asia/cgtn/"> CGTN </a> </li></ul>
+<h3 class="rm-manual"> <a href="https://newsx.tv/2020/07/14/experts-at-un-human-rights-council-meeting-cite-social-progress-milestones-in-tibet/"> Experts at UN Human Rights Council meeting cite social progress milestones in Tibet </a> </h3>
+<p class="rm-manual"> <span> <span> 8 hours ago </span> </span> </p>
+<ul class="rm-manual"><li class="rm-manual"> <a href="https://newsx.tv/channel/asia/cgtn/"> CGTN </a> </li></ul>
+<h3 class="rm-manual"> <a href="https://newsx.tv/2020/07/14/britain-orders-telecom-companies-to-remove-huawei-equipment-by-2027-2/"> Britain orders telecom companies to remove Huawei equipment by 2027 </a> </h3>
+<p class="rm-manual"> <span> <span> 8 hours ago </span> </span> </p></article>
+</body></html>

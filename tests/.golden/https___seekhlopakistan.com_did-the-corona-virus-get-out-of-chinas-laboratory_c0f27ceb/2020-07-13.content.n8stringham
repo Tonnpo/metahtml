@@ -1,0 +1,81 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"><a href="https://seekhlopakistan.com/news/technologynews/" rel="category tag">Technology News</a></p>
+<h1 class="rm-manual">Did the Corona Virus Get Out of China’s Laboratory?</h1>
+<p class="rm-manual"> <span><a href="https://seekhlopakistan.com/did-the-corona-virus-get-out-of-chinas-laboratory/" rel="bookmark">February 29, 2020</a></span><span> - </span><span> by <span><a href="https://seekhlopakistan.com/author/saddamkhakwani/">SaDaM Khakwani</a></span></span><span> - </span><span><a href="https://seekhlopakistan.com/did-the-corona-virus-get-out-of-chinas-laboratory/#respond">Leave a Comment</a></span> </p>
+<h5 class="rm-manual"><span>Did the Corona Virus Get Out of China’s 
+Laboratory? Coronavirus has now spread from China to at least 40 
+countries, and the number of its new patients has grown in China to the 
+outside world. </span></h5>
+<p><span>If the virus enters the poorer and poorer countries where health care is nominal, the death toll may rise sharply. </span></p>
+<p><span>With the spread of the virus, the question now arises that it was not recovered from any bio-lab.</span></p>
+<p><span>Concerns about the Coronavirus are also increasing because 
+there have been people who have traveled to China and have not come in 
+contact with anyone coming from China. The mattress is still unclear 
+about how they got the disease.</span></p>
+<p><span>Some such people are from Italy, where 400 people have been 
+confirmed with the virus and 12 deaths have been confirmed. This is a 
+25% increase over the last 24 hours, which has increased Europe’s 
+anxiety.</span></p>
+<p><span>The World Health Organization said Wednesday that the number of
+ new Coronavirus patients has increased in China for the first time in 
+other countries of the world. The number of patients in Italy, Iran, and
+ Korea have suddenly increased significantly, which the World Health 
+Organization has raised concerns.</span></p>
+<p class="rm-manual"> <span>Post Views: </span> <span>282</span> </p>
+<h4 class="rm-manual">Related Posts</h4>
+<h3 class="rm-manual"> <a href="https://seekhlopakistan.com/amazon-shares-soar-bezoss-ex-wife-is-expected/" rel="bookmark"> Amazon Shares Soar Bezos’s Ex-Wife is Expected to Become the World’s Richest Woman </a> </h3>
+<p class="rm-manual">July 11, 2020</p>
+<h3 class="rm-manual"> <a href="https://seekhlopakistan.com/apple-blocking-laptop-cameras/" rel="bookmark"> Apple Blocking Laptop Cameras is Very Popular But This Damages the Device </a> </h3>
+<p class="rm-manual">July 11, 2020</p>
+<h3 class="rm-manual"> <a href="https://seekhlopakistan.com/google-promises-not-to-use-fitbit-data-for-advertising-to-circumvent/" rel="bookmark"> Google Promises Not to Use Fitbit Data For Advertising to Circumvent EU Antitrust Review </a> </h3>
+<p class="rm-manual">July 10, 2020</p>
+<h2 class="rm-manual">Post navigation</h2>
+<p class="rm-manual"><a href="https://seekhlopakistan.com/the-biggest-explosion-since-the-big-bang/" rel="prev"><span>Previous Article</span> <span>The Biggest Explosion Since the Big Bang</span></a></p>
+<p class="rm-manual"><a href="https://seekhlopakistan.com/over-40-of-americans-are-obese-sufferers-in-2020/" rel="next"><span>Next Article</span> <span>Over 40% of Americans are Obese Sufferers in 2020</span></a></p>
+<h4 class="rm-manual">About SaDaM Khakwani</h4>
+<p class="rm-manual"><a href="https://seekhlopakistan.com/author/saddamkhakwani/"> View all posts by SaDaM Khakwani → </a> </p>
+<h3 class="rm-manual">Leave a Reply <a rel="nofollow" href="file:///did-the-corona-virus-get-out-of-chinas-laboratory/#respond">Cancel reply</a>
+</h3>
+<p class="rm-manual"><span>Your email address will not be published.</span> Required fields are marked <span>*</span></p>
+<p class="rm-manual">Comment </p>
+<p class="rm-manual">Name <span>*</span> </p>
+<p class="rm-manual">Email <span>*</span> </p>
+<p class="rm-manual">Website </p>
+<p class="rm-manual"> Save my name, email, and website in this browser for the next time I comment.</p></article>
+</body></html>

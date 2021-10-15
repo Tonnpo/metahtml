@@ -1,0 +1,107 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual">Wyoming Lawmaker Chuck Gray Gets Crucial Tea Party Endorsement to Unseat Liz Cheney for Congress</h1>
+<p class="rm-manual">Jun 23, 2021</p>
+<p>Wyoming state representative Chuck Gray has secured the crucial tea 
+party endorsement of renowned political advisor Dick Morris in his bid 
+to unseat Rep. Liz Cheney from office.</p>
+<p>Morris became a popular pundit after dishing the dirt on the Clintons
+ in books and media appearances. He believes that Gray is the best shot 
+for conservatives to unseat Cheney after betraying her nation by voting 
+for the Democrats’ blatantly unconstitutional impeachment of Donald 
+Trump.</p>
+<p>“If you are like me, your blood boiled when Congresswoman Liz Cheney 
+threw President Trump under the bus by voting for his impeachment after 
+he had left office… Fortunately, a great candidate has emerged in 
+Wyoming to oppose her in next year’s election and everyone knows who he 
+is: Chuck Gray,” Morris announced.</p>
+<p>“I first met Chuck when I invited him to be my guest on my new TV 
+show on NewsMax, Dick Morris’ Democracy. He is a true conservative and a
+ devoted supporter of President Trump. As a Wyoming Republican State 
+Rep, he has amassed quite a record of conservative action,” he added.</p>
+<p>Morris explained that Gray has the bonafides to be a worthwhile 
+replacement for Cheney, who was removed from her position of power 
+within House GOP leadership due to her disreputable and disloyal 
+actions.</p>
+<p>“Pro-choice radicals, climate change militants, and those bent on 
+winning elections through voter fraud do not intimidate Chuck. He has 
+gotten awards from the American Conservative Union and Wyoming Right to 
+Life for his service as a state legislator. He is just the kind of 
+pro-Trump conservative we can rally behind to send Liz Cheney back to 
+her Virginia home,” Morris said.</p>
+<p>“I am beyond honored to have received Dick’s support in my campaign 
+for Congress,” Gray said on Wednesday in response to Morris’ effusive 
+praise.</p>
+<p>Political consultant Rory McShane, who is working as a campaign 
+strategist for Gray, believes that this news makes his candidate the 
+presumptive frontrunner among the grassroots to unseat Cheney.</p>
+<p>“At this point between leading cash on hand, leading in endorsements,
+ leading in press coverage, and now the endorsement of Dick Morris, 
+Chuck Gray has demonstrated he’s the only proven conservative who can 
+take on Liz Cheney and win,” McShane said.</p>
+<p>Big League Politics <a href="https://bigleaguepolitics.com/traitor-liz-cheney-argues-for-endless-war-in-the-middle-east-in-shameful-house-speech/">has reported</a>
+ on how Cheney continues to lead the GOP astray with support for endless
+ wars that put the troops in harm’s way for the prestige and profit of 
+defense contractors, Pentagon brass, and other loyal servants of the 
+military-industrial complex:</p>
+<p>“Rep. Liz Cheney (R-WY) <a href="https://thefederalist.com/2021/06/17/liz-cheney-puts-the-forever-in-forever-war/#.YMvABhcZuvw.twitter">argued for endless war in a Congressional speech</a>
+ on Thursday calling for a reauthorization for the Authorization for Use
+ of Military Force, which was used by former president George W. Bush as
+ a pretense to invade Iraq.</p>
+<p>“AUMF repeal without comprehensive replacement is dangerous, 
+misguided, and ignores the security challenges facing our nation. This 
+legislation removes a critical tool used by previous administrations – 
+Republican and Democrat – to defeat terrorist threats originating in 
+Iraq,” she said.</p>
+<p>“This repeal would send a message of weakness to our adversaries and 
+allies alike. Repealing this AUMF could prevent the U.S. from taking 
+necessary action to counter Iranian proxies’ malign behavior, eliminate 
+dangerous terrorists like Qassem Soleimani, and counter ISIS,” Cheney 
+added…</p>
+<p>The Cheney political dynasty is destined for disgrace, but that is 
+too good for them. For their extensive war crimes, they should face 
+tribunals as well.”</p>
+<p>Additionally, Gray has received endorsements from over half a dozen 
+current and former members of the Wyoming state legislature, showing 
+that is he is revered by his colleagues. He has also earned Wyoming 
+Right to Life’s highest honor for his legislative achievements on behalf
+ of the unborn and has been rated the most conservative candidate for 
+Congress in Wyoming by the American Conservative Union Foundation as 
+well.</p>
+<p class="rm-manual">Share:</p></article>
+</body></html>

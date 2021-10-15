@@ -1,0 +1,202 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Working with the 
+Wesley College Cannon Scholar Program: Improving Retention, Persistence,
+ and Success, (Journal Article) | DOE PAGES </p>
+<p class="rm-manual"><a href="#main_content">skip to main content</a></p>
+<p class="rm-manual"> <a href="https://par.nsf.gov/">NSF PAR Home</a> <a href="https://par.nsf.gov/contact">Contact</a> <a href="https://par.nsf.gov/faq">FAQ</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://par.nsf.gov/">NSF PAR Home</a></li> <li class="rm-manual"><a href="https://par.nsf.gov/contact">Contact</a></li> <li class="rm-manual"><a href="https://par.nsf.gov/faq">FAQ</a></li> </ul>
+<p class="rm-manual"> <span>Explore scholarly publications in the NSF Public Access Repository </span></p>
+<p class="rm-manual"> Search For Terms: </p>
+<p class="rm-manual"> <a href="#advfilters">+ Advanced Search</a> </p>
+<h4 class="rm-manual">Advanced Search</h4>
+<p class="rm-manual"> All Fields: </p>
+<p class="rm-manual">Title: </p>
+<p class="rm-manual"> Full Text: </p>
+<p class="rm-manual"> Bibliographic Data: </p>
+<p class="rm-manual"> Creator / Author: </p>
+<p class="rm-manual"> Editor: </p>
+<p class="rm-manual"> Journal Name: </p>
+<p class="rm-manual"> Award Id: </p>
+<p class="rm-manual"> Identifier Numbers: </p>
+<p class="rm-manual"> Publication Date: </p>
+<p class="rm-manual"> to </p>
+<p class="rm-manual"> Update Date: </p>
+<p class="rm-manual"> to </p>
+<p class="rm-manual"> Sort: </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://par.nsf.gov/">NSF Public Access</a></li> <li class="rm-manual"><a href="#1">Search Results</a></li> <li class="rm-manual"> Accepted Manuscript: Working with the Wesley College Cannon Scholar Program: Improving Retention, Persistence, and Success, </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="#tab-citation-details"> Citation Details</a>
+</li> </ul>
+<h3 class="rm-manual"> <span>Title: </span><span>Working with the Wesley College Cannon Scholar Program: Improving Retention, Persistence, and Success,</span> </h3>
+<p> <span> Wesley College secured a five-year National Science 
+Foundation (NSF) S-STEM (scholarships in science, technology, 
+engineering, and mathematics) grant (1355554) to provide affordability 
+and access to its robust STEM programs. With these funds, the college 
+initiated a freshman to senior level, mixed-cohort, Cannon Scholar (CS) 
+learning community (LC). Around the proven high-impact practice of 
+multi-tiered mentoring, this LC is designed for greater commitment to 
+participating STEM undergraduates. It truly is a collaborative effort 
+between faculty and administrators. For Scholars interested in mentored 
+research, existing NSF Experimental Program to Stimulate Competitive 
+Research, and National Institutes of Health, National Institute of 
+General Medical Sciences-IDeA Networks of Biomedical Research Excellence
+ funding, complement the innovation and cross-disciplinary 
+collaborations in the CS programming. This enriches and further supports
+ the CS LC. Throughout the 2014-2016 program duration, there were 66 
+unique scholarship recipients and 82% participated in directed research.
+ Fifty-nine percent were from underrepresented minority populations and 
+65% were female. Ninety-five percent of these Scholars were retained and
+ 100% of the graduates (n = 21) entered STEM fields. Analyses controlled
+ for population similarity proves that with an intensive focus on 
+academic support, high-impact uplifting practices were implemented 
+through a framework of comprehensive student engagement activities. Such
+ strategic <a href="#">more »</a><span> interactions resulted in higher overall GPAs and significantly improved Scholar retention rates. </span><a href="#">« less</a> </span> </p>
+<dl class="rm-manual"> <dt class="rm-manual">Authors:</dt>
+<dd> <a href="https://par.nsf.gov/search/author:%22D%E2%80%99Souza,%20M.%20J.%22"><span>D’Souza, M. J.</span></a> <span>; </span><a href="https://par.nsf.gov/search/author:%22Shuman,%20K.%20E.%22"><span>Shuman, K. E.</span></a> <span>; </span><a href="https://par.nsf.gov/search/author:%22Wentzien,%20D.%20E.%22"><span>Wentzien, D. E.</span></a> <span>; </span><a href="https://par.nsf.gov/search/author:%22Roeske,%20K.%20P.%22"><span>Roeske, K. P.</span></a> </dd> </dl>
+<dl class="rm-manual">
+<dt class="rm-manual">Award ID's:</dt>
+<dd><span>1757353</span></dd>
+</dl>
+<dl class="rm-manual">
+<dt class="rm-manual">Publication Date:</dt>
+<dd>2018-04-01</dd>
+</dl>
+<dl class="rm-manual">
+<dt class="rm-manual">NSF-PAR ID:</dt>
+<dd>10100282</dd>
+</dl>
+<dl class="rm-manual">
+<dt class="rm-manual">Journal Name:</dt>
+<dd>Journal of STEM education</dd>
+</dl>
+<dl class="rm-manual">
+<dt class="rm-manual">Volume:</dt>
+<dd>19</dd>
+</dl>
+<dl class="rm-manual">
+<dt class="rm-manual">Page Range or eLocation-ID:</dt>
+<dd>31-40</dd>
+</dl>
+<dl class="rm-manual">
+<dt class="rm-manual">ISSN:</dt>
+<dd>1557-5276</dd>
+</dl>
+<dl class="rm-manual">
+<dt class="rm-manual">Sponsoring Org:</dt>
+<dd>National Science Foundation</dd>
+</dl>
+<ul class="rm-manual"> <li class="rm-manual"><a href="#tab-wc"> Word Cloud</a></li> <li class="rm-manual"><a href="#tab-mlt"> More Like This</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual">Free Publicly Accessible Full Text</li> <li class="rm-manual"> <a href="https://par.nsf.gov/servlets/purl/10100282">Accepted Manuscript1.0</a> </li> <li class="rm-manual">Publisher's Version of Record</li> <li class="rm-manual"> The DOI is not currently available </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> Have feedback or suggestions for a way to improve these results?</p><p class="rm-manual"> <span> !</span> </p><p class="rm-manual"></p> <ul class="rm-manual"> <li class="rm-manual">Citation Formats</li> <li class="rm-manual">
+<a href="#cite-mla">MLA</a> <p class="rm-manual"> </p><h4 class="rm-manual">Cite: MLA Format</h4> <p class="rm-manual"></p> <p class="rm-manual">D’Souza,
+ M. J., Shuman, K. E., Wentzien, D. E., and Roeske, K. P.. Working with 
+the Wesley College Cannon Scholar Program: Improving Retention, 
+Persistence, and Success,. Retrieved from 
+https://par.nsf.gov/biblio/10100282. Journal of STEM education 19. </p> </li> <li class="rm-manual">
+<a href="#cite-apa">APA</a> <p class="rm-manual"> </p><h4 class="rm-manual">Cite: APA Format</h4> <p class="rm-manual"></p> <p class="rm-manual">D’Souza,
+ M. J., Shuman, K. E., Wentzien, D. E., &amp; Roeske, K. P... Working 
+with the Wesley College Cannon Scholar Program: Improving Retention, 
+Persistence, and Success,. Journal of STEM education, 19 (). Retrieved 
+from https://par.nsf.gov/biblio/10100282. </p> </li> <li class="rm-manual">
+<a href="#cite-chi">Chicago</a> <p class="rm-manual"> </p><h4 class="rm-manual">Cite: Chicago Format</h4> <p class="rm-manual"></p> <p class="rm-manual">D’Souza,
+ M. J., Shuman, K. E., Wentzien, D. E., and Roeske, K. P... "Working 
+with the Wesley College Cannon Scholar Program: Improving Retention, 
+Persistence, and Success,". Journal of STEM education 19 (). Country 
+unknown/Code not available. <a href="https://par.nsf.gov/biblio/10100282">https://par.nsf.gov/biblio/10100282</a>. </p> </li> <li class="rm-manual">
+<a href="#cite-bib">BibTeX</a> <p class="rm-manual"> </p><h4 class="rm-manual">Cite: BibTeX Format</h4> <p class="rm-manual"></p> <p class="rm-manual"> @article{osti_10100282,</p><p class="rm-manual">
+ place = {Country unknown/Code not available}, title = {Working with the
+ Wesley College Cannon Scholar Program: Improving Retention, 
+Persistence, and Success,}, url = {https://par.nsf.gov/biblio/10100282},
+ abstractNote = {Wesley College secured a five-year National Science 
+Foundation (NSF) S-STEM (scholarships in science, technology, 
+engineering, and mathematics) grant (1355554) to provide affordability 
+and access to its robust STEM programs. With these funds, the college 
+initiated a freshman to senior level, mixed-cohort, Cannon Scholar (CS) 
+learning community (LC). Around the proven high-impact practice of 
+multi-tiered mentoring, this LC is designed for greater commitment to 
+participating STEM undergraduates. It truly is a collaborative effort 
+between faculty and administrators. For Scholars interested in mentored 
+research, existing NSF Experimental Program to Stimulate Competitive 
+Research, and National Institutes of Health, National Institute of 
+General Medical Sciences-IDeA Networks of Biomedical Research Excellence
+ funding, complement the innovation and cross-disciplinary 
+collaborations in the CS programming. This enriches and further supports
+ the CS LC. Throughout the 2014-2016 program duration, there were 66 
+unique scholarship recipients and 82% participated in directed research.
+ Fifty-nine percent were from underrepresented minority populations and 
+65% were female. Ninety-five percent of these Scholars were retained and
+ 100% of the graduates (n = 21) entered STEM fields. Analyses controlled
+ for population similarity proves that with an intensive focus on 
+academic support, high-impact uplifting practices were implemented 
+through a framework of comprehensive student engagement activities. Such
+ strategic interactions resulted in higher overall GPAs and 
+significantly improved Scholar retention rates.}, journal = {Journal of 
+STEM education}, volume = {19}, author = {D’Souza, M. J. and Shuman, K. 
+E. and Wentzien, D. E. and Roeske, K. P.}, }</p><p class="rm-manual"></p> </li> </ul> <ul class="rm-manual"> <li class="rm-manual">Export Metadata</li> <li class="rm-manual"><a href="https://par.nsf.gov/endnote?osti_id=10100282">EndNote</a></li> <li class="rm-manual"><a href="https://par.nsf.gov/export/format:excel/osti-id:10100282">Excel</a></li> <li class="rm-manual"><a href="https://par.nsf.gov/export/format:csv/osti-id:10100282">CSV</a></li> <li class="rm-manual"><a href="https://par.nsf.gov/export/format:xml/osti-id:10100282">XML</a></li> </ul> <ul class="rm-manual"> <li class="rm-manual">Save / Share this Record</li> <li class="rm-manual">
+<a href="#shareemail">Send to Email</a> <p class="rm-manual"> </p><p class="rm-manual"> </p><h5 class="rm-manual">Send to Email</h5> <p class="rm-manual"></p> <p class="rm-manual"> Email address:</p><p class="rm-manual"> </p><p class="rm-manual">Content:</p> <p class="rm-manual"></p><p class="rm-manual"></p> <p class="rm-manual"></p> </li> </ul> </li>
+</ul>
+<ul class="rm-manual"> <li class="rm-manual">
+<a rel="noreferrer" href="http://www.nsf.gov/policies/">Website Policies</a> | <a rel="noreferrer" href="http://www.nsf.gov/about/performance/">Budget and Performance</a> | <a rel="noreferrer" href="http://www.nsf.gov/oig/">Inspector General</a> | <a rel="noreferrer" href="http://www.nsf.gov/policies/privacy.jsp">Privacy</a> | <a rel="noreferrer" href="http://www.nsf.gov/policies/foia.jsp">FOIA</a> | <a rel="noreferrer" href="http://www.nsf.gov/od/odi/notice.jsp">No FEAR Act</a> | <a rel="noreferrer" href="http://usa.gov/">USA.gov</a> | <a rel="noreferrer" href="http://www.nsf.gov/policies/access.jsp">Accessibility</a> | <a rel="noreferrer" href="http://www.nsf.gov/policies/nsf_plain_language.jsp">Plain Language</a> | <a rel="noreferrer" href="http://www.nsf.gov/help/contact.jsp">Contact</a> | <a rel="noreferrer" href="https://nsf.gov/help/">Help</a> </li> </ul>
+<p class="rm-manual"> The National Science Foundation, 2415 Eisenhower 
+Avenue, Alexandria, Virginia 22314, USA Tel: (703) 292-5111, FIRS: (800)
+ 877-8339 | TDD: (800) 281-8749 </p>
+<p class="rm-manual">Author Select</p>
+<p class="rm-manual"> Last Name:</p>
+<p class="rm-manual"> First Name:</p>
+<p class="rm-manual"> <a href="#"><span>Search</span></a> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="#authorselect-tab-res">Search Results</a></li> <li class="rm-manual"><a href="#authorselect-tab-sel">Selected Authors</a></li> </ul>
+<p class="rm-manual">Type in a name, or the first few letters of a name,
+ in one or both of appropriate search boxes above and select the search 
+button. An attempt will be made to match authors that most closely 
+relate to the text you typed.</p>
+<p class="rm-manual">No authors are currently selected. Choosing "Select
+ These Authors" will enter a blank value for author search in the parent
+ form.</p>
+<p class="rm-manual">Editor Select</p>
+<p class="rm-manual"> Last Name:</p>
+<p class="rm-manual"> First Name:</p>
+<p class="rm-manual"> <a href="#"><span>Search</span></a> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="#editorselect-tab-res">Search Results</a></li> <li class="rm-manual"><a href="#editorselect-tab-sel">Selected Editors</a></li> </ul>
+<p class="rm-manual">Type in a name, or the first few letters of a name,
+ in one or both of appropriate search boxes above and select the search 
+button. An attempt will be made to match editors that most closely 
+relate to the text you typed.</p>
+<p class="rm-manual">No editors are currently selected. Choosing "Select
+ These Editors" will enter a blank value for editor search in the parent
+ form.</p></article>
+</body></html>

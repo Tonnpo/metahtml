@@ -1,0 +1,187 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> South Korea says 'no
+ unusual signs' detected about Kim Jong Un's health - Local News 8 
+circle-arrow Play Button Stop Button chevron-right chevron-left 
+chevron-up search warning chevron-left-skinny chevron-right-skinny x 
+clock calendar play-button cancel-circle user email linkedin </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://localnews8.com/">Home</a></li> <li class="rm-manual">
+<a href="https://localnews8.com/news/">News</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://localnews8.com/news/local-news/">Local News</a></li> <li class="rm-manual"><a href="https://localnews8.com/coronavirus-coverage/">Coronavirus Coverage</a></li> <li class="rm-manual"><a href="https://localnews8.com/coronavirus-coverage/resources/">COVID-19 Resources</a></li> <li class="rm-manual"><a href="https://localnews8.com/category/news/crime-tracker/">Crime Tracker</a></li> <li class="rm-manual"><a href="https://localnews8.com/category/news/idaho/">Idaho</a></li> <li class="rm-manual"><a href="https://localnews8.com/news/pay-it-forward/">Pay It Forward</a></li> <li class="rm-manual"><a href="https://localnews8.com/prevent-child-abuse/">Prevent Child Abuse</a></li> <li class="rm-manual"><a href="https://localnews8.com/category/news/scam-alerts/">Scam Alerts</a></li> <li class="rm-manual"><a href="https://localnews8.com/category/news/national-world/">US/World</a></li> <li class="rm-manual"><a href="https://localnews8.com/category/news/utah/">Utah</a></li> <li class="rm-manual"><a href="https://localnews8.com/category/news/wyoming/">Wyoming</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://localnews8.com/weather/">Weather</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://localnews8.com/category/weather/alerts-weather/">Alerts</a></li> <li class="rm-manual"><a href="https://localnews8.com/weather/first-alert-vipir-radar/">First Alert VIPIR Radar</a></li> <li class="rm-manual"><a href="https://localnews8.com/category/weather/local-forecast/">Local Forecast</a></li> <li class="rm-manual"><a href="https://localnews8.com/weather/8-day-forecasts/">8-Day Forecasts</a></li> <li class="rm-manual"><a href="https://localnews8.com/weather/road-report/">Road Report</a></li> <li class="rm-manual"><a href="https://localnews8.com/weather/ski-report/">Ski Report</a></li> <li class="rm-manual"><a href="https://localnews8.com/weather/sky-cams/">Sky Cams</a></li> <li class="rm-manual"><a href="https://localnews8.com/weather/spirit-of-idaho/">Spirit of Idaho</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://localnews8.com/sports/">Sports</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://localnews8.com/category/sports/athlete-of-the-week/">Athlete of the Week</a></li> <li class="rm-manual"><a href="https://localnews8.com/sports/bleacher-feature/">Bleacher Feature</a></li> <li class="rm-manual"><a href="https://localnews8.com/category/sports/high-school/">High School Athletics</a></li> <li class="rm-manual"><a href="https://localnews8.com/sports/east-idaho-game-night/">East Idaho Game Night</a></li> <li class="rm-manual"><a href="https://localnews8.com/category/sports/boise-state-athletics/">Boise State Athletics</a></li> <li class="rm-manual"><a href="https://localnews8.com/category/sports/idaho-state-athletics/">Idaho State Athletics</a></li> <li class="rm-manual"><a href="https://localnews8.com/category/sports/byu-athletics/">BYU Athletics</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://localnews8.com/election-2020/">Election 2020</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://localnews8.com/election-2020/election-results/">Election Results</a></li> <li class="rm-manual"><a href="https://localnews8.com/category/news/politics/idaho-politics/">Idaho Politics</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://localnews8.com/videos-and-galleries/">Videos and Galleries</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://localnews8.com/livestream/">Livestream KIFI</a></li> <li class="rm-manual"><a href="https://localnews8.com/livestream-kidk/">Livestream KIDK</a></li> <li class="rm-manual"><a href="https://localnews8.com/livestream-events/">Livestream Events</a></li> <li class="rm-manual"><a href="https://localnews8.com/category/videos/">Must See Videos</a></li> <li class="rm-manual"><a href="https://localnews8.com/category/news/galleries/">Must See Galleries</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://localnews8.com/life/">Life</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://localnews8.com/business-matters/">Business Matters</a></li> <li class="rm-manual"><a href="https://localnews8.com/house-home/">House &amp; Home</a></li> <li class="rm-manual"><a href="https://localnews8.com/your-money/">Your Money</a></li> <li class="rm-manual"><a href="https://localnews8.com/safe-at-home/">Safe at Home</a></li> <li class="rm-manual"><a href="https://localnews8.com/category/entertainment/">Entertainment</a></li> <li class="rm-manual"><a href="https://events.localnews8.com/">Events</a></li> <li class="rm-manual"><a href="https://localnews8.com/life/gas-prices/">Gas Prices</a></li> <li class="rm-manual"><a href="https://jobs.localnews8.com/">Hire Idaho</a></li> <li class="rm-manual"><a href="https://localnews8.com/life/obituaries/">Obituaries</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://localnews8.com/shop/">Shop</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://kifi.tvdealclub.com/deals-detail/4911197-kifi-kidk-kxpi/11e9978c4df8569683724ff6428982cf">Idaho Falls Meal Deal Card</a></li> <li class="rm-manual"><a href="https://idahofalls.open4biz.us/">Open4Biz</a></li> <li class="rm-manual"><a href="https://localnews8-kidk-htpros-kifi-kidk-htpros.npgdigitalservices.com/">Hometown Professionals</a></li> <li class="rm-manual"><a href="https://kifi.tvdealclub.com/deals-detail/4911196-kifi-kidk-kxpi/11e9978c4df8569683724ff6428982cf">Ultimate Golf Card</a></li> <li class="rm-manual"><a href="https://localnews8.com/shop/weekly-deals/">Weekly Deals</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://localnews8.com/play/">Play</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://localnews8.com/graduate-gallery/">Graduate Gallery</a></li> <li class="rm-manual"><a href="https://localnews8.com/play/">Contests</a></li> <li class="rm-manual"><a href="https://localnews8.com/weather/spirit-of-idaho/">Spirit of Idaho</a></li> <li class="rm-manual"><a href="http://kidk.profootball.upickem.net/#/registration/login">Pro Football Pickoff</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://localnews8.com/share/">Share</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://localnews8.com/share/">Submit Tips, Pics and Video</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://localnews8.com/about-us/">About Us</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://localnews8.com/about-us/meet-the-team/">Meet the Team</a></li> <li class="rm-manual"><a href="https://localnews8.com/about-us/contact-us/">Contact Us</a></li> <li class="rm-manual"><a href="https://localnews8.com/about-us/advertise-with-us/">Advertise With Us</a></li> <li class="rm-manual"><a href="https://localnews8.com/about-us/closed-captioning/">Closed Captioning</a></li> <li class="rm-manual"><a href="https://localnews8.com/about-us/download-our-apps/">Download Our Apps</a></li> <li class="rm-manual"><a href="https://publicfiles.fcc.gov/tv-profile/kifi-tv">FCC Public File KIFI</a></li> <li class="rm-manual"><a href="https://publicfiles.fcc.gov/tv-profile/kidk">FCC Public File KIDK</a></li> <li class="rm-manual"><a href="https://publicfiles.fcc.gov/tv-profile/k49nd-d">FCC Public File K49ND-D</a></li> <li class="rm-manual"><a href="file:///wp-content/uploads/2019/10/2018-19-EEO_1559588412785_38570467_ver1.0.pdf">EEO Form</a></li> <li class="rm-manual"><a href="https://localnews8.com/cw-east-idaho/">CW East Idaho</a></li> <li class="rm-manual"><a href="https://localnews8.com/telemundo/">Telemundo East Idaho</a></li> <li class="rm-manual"><a href="https://recruiting.adp.com/srccar/public/RTI.home?c=1059541&amp;d=External-Corporate&amp;city=%22Idaho%20Falls%22">Jobs and Internships</a></li> <li class="rm-manual"><a href="http://www.idahobroadcasters.org/index.php/scholarships">Scholarships</a></li> <li class="rm-manual"><a href="https://localnews8.com/about-us/translator-information/">Translator Information</a></li> <li class="rm-manual"><a href="https://localnews8.com/about-us/tv-listings/">TV Listings</a></li> </ul> </li> </ul>
+<p class="rm-manual"><a href="#primary">Skip to Content</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://localnews8.com/news/">News</a></li> <li class="rm-manual"><a href="https://localnews8.com/weather/">Weather</a></li> <li class="rm-manual"><a href="https://idahofalls.open4biz.us/">Open4Biz</a></li> <li class="rm-manual"><a href="https://localnews8.com/life/">Life</a></li> <li class="rm-manual"><a href="https://localnews8.com/shop/">Shop</a></li> <li class="rm-manual"><a href="https://localnews8.com/play/">Play</a></li> <li class="rm-manual"><a href="https://localnews8.com/share/">Share</a></li> <li class="rm-manual"> <a href="https://localnews8.com/livestream/">Watch</a> </li>
+</ul>
+<p class="rm-manual"> <a href="https://localnews8.com/weather"> </a></p><p class="rm-manual"><a href="https://localnews8.com/weather"> Idaho Falls </a></p><a href="https://localnews8.com/weather"> <p class="rm-manual"> 57° </p> </a> <p class="rm-manual"></p>
+<h3 class="rm-manual"> <a href="https://localnews8.com/share"> Share with us </a> </h3>
+<h3 class="rm-manual">Top Local Stories</h3>
+<h3 class="rm-manual"> <a href="https://localnews8.com/health/coronavirus/2020/05/30/36-new-idaho-covid-19-cases/" rel="bookmark"> 36 new Idaho COVID-19 cases </a> </h3>
+<h3 class="rm-manual"> <a href="https://localnews8.com/entertainment/2020/05/31/idaho-movie-theaters-now-open/" rel="bookmark"> Idaho movie theaters now open </a> </h3>
+<h3 class="rm-manual"> <a href="https://localnews8.com/money/2020/05/30/everything-you-need-to-know-about-nasa-and-spacexs-historic-astronaut-launch-round-two/" rel="bookmark"> Watch SpaceX-NASA launch here </a> </h3>
+<h3 class="rm-manual"> <a href="https://localnews8.com/news/2020/05/30/utah-governor-activates-national-guard-to-control-protestors/" rel="bookmark"> Utah Governor activates National Guard to control protestors </a> </h3>
+<h3 class="rm-manual">Must-See Video</h3>
+<p class="rm-manual"> National-World </p>
+<p class="rm-manual"> By <a href="https://localnews8.com/author/cnn/" rel="author">CNN</a> </p>
+<p class="rm-manual"> <span>Published</span> <span> <a href="https://localnews8.com/2020/04/"> April 21, 2020 </a> </span> <span> 4:30 am </span> </p>
+<h1 class="rm-manual">South Korea says ‘no unusual signs’ detected about Kim Jong Un’s health</h1>
+<p>South Korea says it can’t corroborate reports that North Korean 
+leader Kim Jong Un is gravely ill, with an official in the presidential 
+office saying Seoul believes he is with officials traveling outside the 
+capital, Pyongyang.</p>
+<p>The official said that “no unusual signs supporting reports about his
+ health conditions have been detected.” They also cast doubt on a report
+ by a South Korean-based newspaper that Kim was recovering from surgery 
+in the Mount Myohyang area, saying the leader was not believed to be in 
+that part of the country.</p>
+<p>Earlier, a US official with direct knowledge told CNN that Washington
+ was monitoring intelligence which suggested Kim was in grave danger 
+after undergoing a previous surgery. A second source familiar with the 
+intelligence told CNN that the US has been closely monitoring reports on
+ Kim’s health.</p>
+<p>Kim <a href="https://edition.cnn.com/2020/04/17/asia/north-korea-kim-jong-un-intl-hnk/index.html" rel="noopener noreferrer">recently missed the celebration</a>
+ of his grandfather’s birthday on April 15, which raised speculation 
+about his well-being. He had been seen four days before that at a 
+government meeting.</p>
+<p>Another US official told CNN Monday that concerns about Kim’s health were credible — but the severity is hard to assess.</p>
+<h3>Unconfirmed rumors</h3>
+<p>The most extensive reports on Kim’s alleged surgery and poor health 
+came from Daily NK, an online publication based in South Korea staffed 
+in part by defectors from the north. It has a mixed reputation among 
+North Korea watchers, and has published stories about the country which 
+have later been debunked.</p>
+<p>According to Daily NK, Kim reportedly received a cardiovascular 
+system procedure on April 12 because of “excessive smoking, obesity, and
+ overwork,” and is now receiving treatment in a villa in Hyangsan County
+ following his procedure.</p>
+<p>Daily NK reported that after assessing Kim’s condition had improved, 
+most of the medical team treating him returned to Pyongyang on April 19 
+and only part of them remained to oversee his recovery. CNN is unable to
+ independently confirm the report.</p>
+<p>A South Korean source told CNN Monday that the country’s top leaders 
+are aware of reports about Kim’s health status but cannot independently 
+verify details published by Daily NK. The source acknowledged that Kim’s
+ issues related to weight and smoking are well known but made clear they
+ are waiting for more information.</p>
+<p>South Korea’s presidential Blue House said in a media statement that 
+it had nothing to confirm on reports about Kim’s health and “no unusual 
+signs” had been detected inside North Korea.</p>
+<p>South Korea’s Unification Ministry and Defense Ministry declined to comment on speculations about Kim’s health.</p>
+<p>The National Security Council and Office of the Director of National 
+Intelligence declined to comment when contacted by CNN on Monday. CNN 
+has also reached out to the CIA and the State Department for comment.</p>
+<h3>Succession uncertainty</h3>
+<p>Speculation over Kim’s health has raised concerns over the succession
+ plan in North Korea and possible instability should the country’s young
+ leader die.</p>
+<p>US officials have been reaching out to North Korean experts — 
+particularly those who have studied the Kim regime — to talk about 
+contingency planning, a source familiar with the communications told 
+CNN.</p>
+<p>Still, the situation remains murky as gathering intelligence out of 
+North Korea is notoriously difficult — one of the most challenging 
+targets for US intelligence.</p>
+<p>North Korea tightly controls any information surrounding its leader, 
+who is treated almost like a deity within the country. His absences from
+ official state media often spark speculation and rumors about his 
+health.</p>
+<p>North Korea has no free press and is often a black hole when it comes
+ to the country’s leadership. Analysts are heavily reliant on scanning 
+state media dispatches and watching propaganda videos for clues.</p>
+<p>Kim last appeared in North Korean state media on April 11. The 
+country’s most important holiday, the Day of the Sun, on April 15 — the 
+anniversary of the birth of the country’s founding father, Kim Il Sung —
+ came and went without any official mention of Kim Jong Un’s movements.</p>
+<p>Thae Yong-ho, a former North Korean diplomat who defected and made 
+history last week after being elected to South Korea’s parliament, said 
+it was unprecedented for Kim not to attend.</p>
+<p>“We will have to calmly monitor this issue and the South Korean 
+government needs to monitor situations closely and better be in full 
+preparation for any possible emergency situations in the North,” he 
+added.</p>
+<p>Experts are unsure of what to make of Kim’s absence from any 
+festivities celebrating his grandfather. When North Korean leaders have 
+not shown up to these important celebrations in the past, it has 
+portended major developments. But it has also turned out to be nothing.</p>
+<p>“There have been a number of recent rumors about Kim’s health. If Kim
+ is hospitalized, it would explain why he wasn’t present on the 
+important April 15th celebrations,” said Bruce Klingner, a senior 
+research fellow at the Heritage Foundation and former CIA deputy 
+division chief for North Korea. “But, over the years, there have been a 
+number of false health rumors about Kim Jong-un or his father. We’ll 
+have to wait and see.”</p>
+<p>Kim Jong Il’s absence from a parade celebrating North Korea’s 60th 
+anniversary in 2008 was followed by rumblings that he was in poor 
+health. It was later revealed he had a stroke, after which his health 
+continued to decline until his death in 2011.</p>
+<p>Thae said news of Kim Jong Il’s death took more than 51 hours to 
+become public. “On that day, at the foreign affairs department in North 
+Korea, it was business as usual until we were told at 11 a.m. to gather 
+at a hall by noon,” he said.</p>
+<p>The late leader’s son also disappeared from the public eye for more 
+than a month in 2014, which prompted speculation about the younger Kim’s
+ health. Kim Jong Un returned sporting a cane, and days later South 
+Korean intelligence said that he had a cyst removed from his ankle.</p>
+<p>“It’s easy to be wrong on this one,” said John Delury, a professor of international relations at Yonsei University in Seoul.</p>
+<p class="rm-manual">News / Top Stories</p>
+<h3 class="rm-manual">CNN</h3>
+<h2 class="rm-manual">Related Articles</h2>
+<h3 class="rm-manual"> <a href="https://localnews8.com/news/2020/05/31/new-york-city-mayors-daughter-arrested-alongside-protesters-for-unlawful-assembly-sources-say/" rel="bookmark"> New York City mayor’s daughter arrested alongside protesters for ‘unlawful assembly,’ sources say </a> </h3>
+<h3 class="rm-manual"> <a href="https://localnews8.com/news/2020/05/31/insecure-star-kendrick-sampson-says-he-was-shot-with-rubber-bullets-7-times-during-george-floyd-protest/" rel="bookmark"> ‘Insecure’ star Kendrick Sampson says he was shot with rubber bullets 7 times during George Floyd protest </a> </h3>
+<h3 class="rm-manual"> <a href="https://localnews8.com/news/2020/05/31/george-floyd-protests-spread-nationwide/" rel="bookmark"> George Floyd protests spread nationwide </a> </h3>
+<h3 class="rm-manual"> <a href="https://localnews8.com/news/2020/05/31/minneapolis-police-chief-says-all-four-officers-involved-in-george-floyds-death-bear-responsibility/" rel="bookmark"> Minneapolis police chief says all four officers involved in George Floyd’s death bear responsibility </a> </h3>
+<h2 class="rm-manual">Comments</h2>
+<h3 class="rm-manual">Leave a Reply <a rel="nofollow" href="file:///news/2020/04/21/south-korea-says-no-unusual-signs-detected-about-kim-jong-uns-health-2/#respond">Cancel reply</a>
+</h3>
+<p class="rm-manual">You must be <a href="https://localnews8.com/wp-login.php?redirect_to=https%3A%2F%2Flocalnews8.com%2Fnews%2F2020%2F04%2F21%2Fsouth-korea-says-no-unusual-signs-detected-about-kim-jong-uns-health-2%2F">logged in</a> to post a comment.</p>
+<p class="rm-manual"><a href="file:///wp-content/uploads/2019/10/2018-19-EEO_1559588412785_38570467_ver1.0.pdf" rel="noopener noreferrer">EEO Report</a> | <a href="file:///terms-of-use/">Terms of Use</a> | <a href="file:///privacy-policy/">Privacy Policy</a> | <a href="https://localnews8.com/about-us/">About Us</a> |</p>
+<p class="rm-manual"><a href="https://donotsell.npg.digital/">Do Not Sell My Personal Information</a></p>
+<h3 class="rm-manual">Subscribe to Our Email Newsletters</h3>
+<p class="rm-manual"><a href="https://localnews8.com/newsletter-signup/">Daily News Update Breaking News Alert Daily Weather Forecast Severe Weather Alert Contests and Promotions</a></p>
+<h3 class="rm-manual">Download Our Apps</h3>
+<p class="rm-manual"> Available for iOS and Android </p>
+<p class="rm-manual"> © 2020, NPG of Idaho, Inc. Idaho Falls, ID USA </p></article>
+</body></html>

@@ -1,0 +1,172 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Emergency | OSAKA-INFO </p>
+<p class="rm-manual"> <a href="file:///en/"> </a></p><h1 class="rm-manual"><a href="file:///en/">Osaka Convention &amp; Tourism Bureau</a></h1><a href="file:///en/"> </a> <p class="rm-manual"></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///en/page/emergency">English</a></li>
+<li class="rm-manual"><a href="file:///page/emergency">日本語</a></li>
+<li class="rm-manual"><a href="file:///zh-CN/page/emergency">简体中文</a></li>
+<li class="rm-manual"><a href="file:///zh-TW/page/emergency">繁体中文</a></li>
+<li class="rm-manual"><a href="file:///ko/page/emergency">한국어</a></li>
+<li class="rm-manual"><a href="file:///th/page/emergency">ไทย</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <span> <span>MENU</span> </span> <ul class="rm-manual"> <li class="rm-manual"> <a href=""> For tourist company</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///en/page/octb-top">Information</a></li> <li class="rm-manual"><a href="file:///en/page/lgbt">Efforts of the Osaka Convention &amp; Tourism Board</a></li> <li class="rm-manual"><a href="https://www.osaka-fc.jp/en/">Osaka Film Council</a></li> <li class="rm-manual"><a href="file:///en/page/photo-library-top">Photo Library</a></li> <li class="rm-manual"><a href="file:///en/page/octb-downloads">DOWNLOAD PDF</a></li> </ul> </li> <li class="rm-manual"> <a href=""> For school-related</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///en/page/learning-trip-to-japan">Educational Travel to Japan</a></li> </ul> </li> <li class="rm-manual"> <a href=""> Convenient</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.osp.osaka-info.jp/en/">Osaka AMAZING PASS</a></li> <li class="rm-manual"><a href="file:///en/map">Map</a></li> </ul> </li> <li class="rm-manual"><a href="file:///en/page/emergency"> Emergency</a></li> </ul> </li> <li class="rm-manual"><a href="file:///en/">MICE</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> </p><p class="rm-manual"> <span>Access your account</span> </p> <p class="rm-manual"> Username/E-Mail Address </p> <p class="rm-manual"> Password </p> <p class="rm-manual"> <a href="file:///en/resetting/request">Forgot your password?</a> </p> <p class="rm-manual"> </p><p class="rm-manual"> </p><p class="rm-manual">or login with</p> <p class="rm-manual"></p> <p class="rm-manual"></p> <p class="rm-manual"> </p><p class="rm-manual">Get started today</p> <a href="file:///en/register/">Create an Account</a> <p class="rm-manual"></p> <p class="rm-manual"></p> </li> <li class="rm-manual"> <span> <span>Language</span> </span> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///en/page/emergency">English</a></li> <li class="rm-manual"><a href="file:///page/emergency">日本語</a></li> <li class="rm-manual"><a href="file:///zh-CN/page/emergency">简体中文</a></li> <li class="rm-manual"><a href="file:///zh-TW/page/emergency">繁体中文</a></li> <li class="rm-manual"><a href="file:///ko/page/emergency">한국어</a></li> <li class="rm-manual"><a href="file:///th/page/emergency">ไทย</a></li> </ul> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><h2 class="rm-manual">MENU</h2></li> <li class="rm-manual"> <a href=""> For tourist company</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///en/page/octb-top">Information</a></li> <li class="rm-manual"><a href="file:///en/page/lgbt">Efforts of the Osaka Convention &amp; Tourism Board</a></li> <li class="rm-manual"><a href="https://www.osaka-fc.jp/en/">Osaka Film Council</a></li> <li class="rm-manual"><a href="file:///en/page/photo-library-top">Photo Library</a></li> <li class="rm-manual"><a href="file:///en/page/octb-downloads">DOWNLOAD PDF</a></li> </ul> </li> <li class="rm-manual"> <a href=""> For school-related</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///en/page/learning-trip-to-japan">Educational Travel to Japan</a></li> </ul> </li> <li class="rm-manual"> <a href=""> Convenient</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.osp.osaka-info.jp/en/">Osaka AMAZING PASS</a></li> <li class="rm-manual"><a href="file:///en/map">Map</a></li> </ul> </li> <li class="rm-manual"><a href="file:///en/page/emergency"> Emergency</a></li> <li class="rm-manual"><a href="file:///en/">MICE</a></li> <li class="rm-manual"> <p class="rm-manual"> </p><h2 class="rm-manual"> Sign In</h2> <p></p> </li> </ul>
+<h1>Emergency </h1>
+<ul>
+<li><a href="file:///en/search/t/592"> Emergency </a></li>
+<li><a href="file:///en/search/t/595"> COVID-19 </a></li>
+</ul>
+<h2><span> Information Regarding the COVID-19</span></h2>
+<p><span><span>■Osaka Prefecture Coronavirus Emergency Measures (Outline) ・<a href="http://www.pref.osaka.lg.jp.e.agb.hp.transer.com/iryo/osakakansensho/corona.html">About new coronavirus infectious disease </a></span></span></p>
+<p><span><span>■</span></span><a href="https://s3-ap-northeast-1.amazonaws.com/content.osaka-info.jp/octb/emergency/Information_regarding_temporary_closures_and_schedule.pdf" rel="noreferrer noopener">Information
+ regarding temporary closures and schedule changes in order to minimise 
+the spread of the novel coronavirus (COVID-19), updated as of July 17th.
+ </a></p>
+<p> ■Notice from Immigration Services Agency of Japan</p>
+<p><span> Due to the spread of the new coronavirus infection, the target
+ of foreigners who cannot enter Japan has been expanded. It will be as 
+follows from midnight on July 1, 2020. 1. Foreign nationals holding a 
+Chinese passport issued at Hubei or Zhejiang of the People's Republic of
+ China</span><span> 2. Foreigners who have stayed in the areas in Table 
+within 14 days prior their arrival in Japan Table Iceland, Ireland, 
+Azerbaijan, Afghanistan, United Arab Emirates, Algeria, Argentina, 
+Albania, Armenia, Antigua/Barbuda, Andorra, Israel, Italy, Iraq, Iran, 
+India, Indonesia, Ukraine, Uruguay, United Kingdom, Ecuador, Egypt, 
+Estonia, Eswatini, El Salvador, Australia, Austria, Oman, Netherlands, 
+Guyana, Kazakhstan, Qatar, Canada, Ghana, Cape Verde, Gabon, Cameroon, 
+South Korea, North Macedonia, Guinea, Guinea-Bissau, Cyprus, Cuba, 
+Greece, Kyrgyzstan, Guatemala, Kuwait, Granada, Croatia, Costa Rica, 
+Kosovo, Columbia, Democratic Republic of Congo, Cote d'Ivoire, Saudi 
+Arabia, Sao Tome and Principe, San Marino, Djibouti, Jamaica, Georgia, 
+Singapore, Switzerland, Sweden, Spain, Slovakia, Slovenia, Equatorial 
+Guinea, Senegal, Serbia, Saint Kitts and Nevis, Saint Vincent and the 
+Grenadines, Tajikistan, Thailand, Taiwan, Czech Republic, China, Chile, 
+Central Africa, Denmark, Germany, Commonwealth of Dominica, Dominican 
+Republic, Turkey, Nicaragua, New Zealand, Norway, Haiti, Pakistan, 
+Vatican, Panama, Bahamas, Hungary, Bahrain, Barbados, Bangladesh, 
+Philippines, Finland, Brazil, France, Bulgaria, Brunei, USA, Vietnam, 
+Belarus, Belgium, Peru, Bosnia and Herzegovina, Poland, Bolivia, 
+Portugal, Honduras, Malta, Malaysia, South Africa, Mexico, Monaco, 
+Mauritania, Maldives, Moldova, Morocco, Montenegro, Mauritius, Latvia, 
+Lithuania, Liechtenstein, Luxembourg, Romania, Lebanon, Russia </span></p>
+<p> ■Visa Restrictions</p>
+<p><span> Ministry of Foreign Affairs of Japan <a href="https://www.mofa.go.jp/index.html">（Official website ）</a> Ministry of Justice <a href="http://www.moj.go.jp/EN/nyuukokukanri/kouhou/m_nyuukokukanri01_00003.html"> （Official website ）</a></span><span> Kansai International Airoport （<a href="https://www.kansai-airport.or.jp/en/notices/3040">Official website </a> ) ■</span><a href="https://www.mofa.go.jp/region/index.html"><span>Embassies and Consulate Generals （Ministry of Foreign Affairs of Japan website)</span></a></p>
+<p><span><span>We at the Osaka Convention and Tourism Bureau are working
+ closely alongside as well as both the Osaka City and Osaka Prefectural 
+governments in order to provide up-to-date information to all visitors. 
+We are currently operating the following consultation and advice 
+services.</span></span></p>
+<p><span><span><span><span>■Consultation Services for Residets in Osaka</span><a href="https://www.ofix.or.jp/life/index_e.html"><span> ・</span></a><a href="https://www.ofix.or.jp/english/index.html"><span>Osaka Foundation of International Exchange (OFIX) </span></a></span><span>
+ Tel : 06-6941-2297 Open: Mon. &amp; Fri 9:00 -20:00 (except national 
+holidays), Tues., Wed. &amp; Thurs. 9:00- 17:30 (except national 
+holidays) 2nd &amp; 4th Sun. of each month 13:00-17:00 
+Languages:English, Chinese, Korean, Portuguese, Spanish, Vietnamese, 
+Filipino, Thai, Indonesian, Nepali, Japanese</span></span></span></p>
+<p><span><span> ・<a href="https://www.ih-osaka.or.jp/english/information_center/">Osaka International House of Osaka </a></span><span>
+ Tel : 06-6773-6533 Open: Mon. &amp; Fri 9:00 -20:00 (except national 
+holidays), Tues., Wed. &amp; Thurs. 9:00-17:30 (except national 
+holidays) 2nd &amp; 4th Sun. of each month 13:00-17:00 
+Languages:English, Chinese, Korean, Portuguese, Spanish, Vietnamese, 
+Filipino, Thai, Indonesian, Nepali, Japanese</span></span></p>
+<p><span>■Consultation Services for Visitors to Osaka from Abroad.<span>【Telephone Consultation Services and Inquiry Counters】</span><span> ・ We at the Osaka Convention and Tourism Bureau have opened the following telephone consultation services and inquiry counters.</span><span><a href="http://ofw-oer.com/call/en/">Osaka Call Center </a> Tourist Information Centres </span></span><span>(<a href="https://osaka-info.jp/en/page/tourist-information-shin-osaka">Shin-Osaka </a> , <a href="https://osaka-info.jp/en/page/tourist-information-osaka">Osaka </a>,<a href="https://osaka-info.jp/en/page/tourist-information-namba"> Namba </a>).</span></p>
+<p><span><span>・The Japan National Tourism Association (JNTO) operates a
+ 24-hour Japan Visitor Hotline. This multilingual hotline can be used 
+for accident and emergency situations as well as for general tourist 
+information. If you require emergency support or advice, please contact 
+the following number. <a href="https://www.japan.travel/en/plan/hotline/">Japan Visitor Hotline </a> Tel 050-3816-2787</span></span></p>
+<p><span><span>【Online Information Regarding Medical Facilities】 For 
+additional information regarding medical facilities with multilingual 
+support: ・Osaka Prefectural Government Homepage “Osaka Medical Net for 
+Foreigners”: <a href="https://www.mfis.pref.osaka.jp/omfo/">https://www.mfis.pref.osaka.jp/omfo/ </a> ・<a href="https://www.osakasafetravels.com/en/">Osaka Safe Travels </a>
+ To ensure the safety of overseas travelers, provides disaster-related 
+information such as emergency shelters and transportation. Must-visit 
+website while traveling in Osaka. ・The Japan National Tourism 
+Association Homepage <a href="https://www.jnto.go.jp/emergency/eng/mi_guide.html">https://www.jnto.go.jp/emergency/eng/mi_guide.html </a></span></span></p>
+<p><span>We wish a safe and enjoyable stay to all of those visiting Osaka at this present time.</span></p>
+<p><span>Telephone numbers in case of emergency</span></p>
+<p>This is a list of contact information which you need to know in case 
+of emergency such as accidents, natural disasters or injuries, etc. for 
+notification and information gathering.It is effective that you confirm 
+the contact information in advance so as to stay calm and act properly 
+in case of emergency.</p>
+<p>Crime/ Accident</p>
+<p>Please call the emergency number of the police " 110".</p>
+<p><a href="https://www.police.pref.osaka.lg.jp/foreign_languag_selection/english/3/1/1/3954.html" rel="noreferrer noopener">How to call Dial 110</a> (Website of the Osaka Prefectural Police Department）</p>
+<p>【Reference】</p>
+<p><a href="https://www.police.pref.osaka.lg.jp/foreign_languag_selection/english/2/index.html" rel="noreferrer noopener">The Police Box ("Koban") at Minami and Kita area</a> （Website of the Osaka Prefectural Police Department）</p>
+<p><a href="https://www.police.pref.osaka.lg.jp/foreign_languag_selection/english/3/2/3958.html" rel="noreferrer noopener">Information about police stations in Osaka city</a> （Website of the Osaka Prefectural Police Department）</p>
+<p><a href="https://www.police.pref.osaka.lg.jp/foreign_languag_selection/english/3/2/3957.html" rel="noreferrer noopener">Information about police stations outside Osaka city</a> （Website of the Osaka Prefectural Police Department）</p>
+<p>Fire / Ambulance</p>
+<p>Please call the emergency number of the fire department " 119".</p>
+<p><a href="http://www.city.osaka.lg.jp/contents/wdu020/shobo/english/e03/if_02.html" rel="noreferrer noopener">How to call Dial 119</a> （Website of the Osaka Municipal Fire Department）</p>
+<h3>Disasters</h3>
+<p><a href="http://www.jnto.go.jp/safety-tips/pc/index.html" rel="noreferrer noopener">Safety tips for travelers</a> (Website of the Japan Tourism Agency)</p>
+<p>The purpose of this website is to provide information to ensure safe travel for foreign tourists visiting Japan.</p>
+<p><a href="http://www.jnto.go.jp/eng/arrange/essential/emergency/safety_tips.html" rel="noreferrer noopener">Application"Safety tips"</a> (Website of JNTO)</p>
+<p>"Safety tips" is a push-enabled app for Earthquake Early Warning and Tsunami Warning within Japan</p>
+<p><a href="http://www.osaka-bousai.net.e.add.hp.transer.com/pref/index.html" rel="noreferrer noopener">Osaka disaster prevention net</a> （Website of Osaka Prefecture）</p>
+<p><a href="http://www.mlit.go.jp/river/bousai/olympic/en/index.html" rel="noreferrer noopener">Disaster Prevention Portal</a><span> (Website of the Ministry of Land, Infrastructure, Transport and Tourism)</span><span>This
+ portal site provides information related to disasters that may occur in
+ Tokyo as well as useful disaster prevention information. This is a 
+precautionary measure taken in case the Tokyo metropolitan area is 
+directly affected by harmful seismic activity. In particular, it has 
+been set up in preparation for the 2020 Olympic and Paralympic games in 
+Tokyo. </span></p>
+<h3 class="rm-manual">Others</h3>
+<p class="rm-manual"><a href="http://www.mofa.go.jp/about/emb_cons/protocol/index.html" rel="noreferrer noopener">Embassies and Consulates in Japan</a> (Website of the Ministry of Foreign Affairs of Japan）</p>
+<p class="rm-manual"><a href="http://www.ofix.or.jp/english/index.html" rel="noreferrer noopener">Osaka Information Service for Foreign Residents</a> (Website of the Osaka Foundation of International Exchange(OFIX))</p>
+<p class="rm-manual"><a href="http://www.ofw-oer.com/en/" rel="noreferrer noopener">Osaka Free WiFi</a> （Website of the Osaka Convention &amp; Tourism Bureau）</p>
+<p class="rm-manual"><a href="https://www.japan.travel/en/plan/#search" rel="noreferrer noopener">Helping You Plan</a> （Website of the Japan National Tourism Organization(JNTO)）</p>
+<h4 class="rm-manual">Octb information</h4>
+<p class="rm-manual"><a href="file:///en/page/octb-top">TOP</a><a href="file:///en/page/octb-topic">TOPIC &amp; News</a><a href="file:///en/page/octb-for-tourist">Tourism Information</a><a href="file:///en/page/octb-overview">About OCTB</a><a href="file:///en/page/octb-movie-downloads"> Download PDF,Movies</a></p>
+<h3 class="rm-manual">Partners</h3>
+<h2 class="rm-manual">Osaka Convention &amp; Tourism Bureau</h2>
+<p class="rm-manual">5F TODA BUILDING SHINSAIBASHI, 4-4-21, Minamisemba, Chuo-ku, Osaka 542-0081, Japan</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///en/page/octb-top">About Us</a></li> <li class="rm-manual"><a href="file:///en/page/octb-privacy-policy">Privacy Policy</a></li> <li class="rm-manual"><a href="file:///en/page/octb-site-policy">Site Policy</a></li> <li class="rm-manual"><a href="file:///en/page/emergency">Emergency</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://osaka-info.jp/en/page/lgbt" rel="noopener noreferrer"> <span>Proud Member</span> <span>of IGLTA</span> </a> </li> </ul>
+<p class="rm-manual"> ©OSAKA CONVENTION &amp; TOURISM BUREAU </p>
+<h4 class="rm-manual">Report problems on this page</h4>
+<p class="rm-manual"> The information will be send to the system administrator and will be evaluated.</p>
+<p class="rm-manual"> Thank you for your cooperation. </p>
+<p class="rm-manual">Your name</p>
+<p class="rm-manual">Subject</p>
+<p class="rm-manual">Your email address</p>
+<p class="rm-manual">Your message here</p>
+<p class="rm-manual"> &gt; </p></article>
+</body></html>

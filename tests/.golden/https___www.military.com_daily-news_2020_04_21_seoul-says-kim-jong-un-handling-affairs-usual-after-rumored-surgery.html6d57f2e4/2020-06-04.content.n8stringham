@@ -1,0 +1,206 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><ol class="rm-manual"> <li class="rm-manual"> <a href="file:///daily-news">Military News</a> </li> </ol>
+<h1 class="rm-manual">
+<span>Seoul Says Kim Jong Un Handling Affairs as Usual After Rumored Surgery</span> </h1>
+<figcaption class="rm-manual">People watch a TV screen showing a news 
+program reporting about North Korean leader Kim Jong Un with a file 
+image at the Seoul Railway Station in Seoul, South Korea, Tuesday, April
+ 21, 2020. (AP Photo/Lee Jin-man)</figcaption><p class="rm-manual"><span>21 Apr 2020</span></p>
+<p class="rm-manual"> <span>The Canadian Press</span> </p>
+<p>SEOUL, South Korea — North Korean leader Kim Jong Un appeared to be 
+handling state affairs as usual, South Korea's government said Tuesday 
+after unconfirmed rumors described him as in fragile condition after 
+surgery.</p>
+<p>The presidential Blue House said no unusual activity has been 
+detected in North Korea and it had no information about the rumors on 
+Kim’s health. Speculation often surfaces about North Korea’s leadership 
+based on attendance at important state events. Kim, who is in his 
+mid-30s, missed the celebration of his late grandfather and state 
+founder Kim Il Sung on April 15, the country’s most important holiday.</p>
+<p>But he had presided over a meeting April 11, discussing coronavirus 
+prevention and electing his sister as an alternate member of the 
+political bureau of the ruling Workers’ Party. And state media have 
+since reported Kim sent greetings to Syrian President Bashar Assad and 
+Cuban President Miguel Díaz-Canel as well as “birthday spreads” to two 
+North Korean officials and a new centenarian.</p>
+<p>“We have no information to confirm regarding rumors about Chairman 
+Kim Jong Un’s health issue that have been reported by some media 
+outlets. Also, no unusual developments have been detected inside North 
+Korea,” Blue House spokesman Kang Min-seok said in the statement.</p>
+<p>The Blue House later said Kim was believed to be staying at an 
+unspecified location outside of Pyongyang with some of his close 
+confidants. The office said Kim appeared to be normally engaged with 
+state affairs and there weren't any unusual movement or emergency 
+reaction from the North’s ruling party, military or cabinet.</p>
+<p>A U.S. official said the White House was aware before the reports 
+appeared late Monday that Kim’s health might be precarious. The official
+ said the U.S. had information that Kim may have undergone surgery and 
+that complications may have rendered him “incapacitated or worse.” But, 
+the official stressed that the U.S. had nothing to confirm the surgery 
+had taken place or that any complications had occurred.</p>
+<p>The U.S. official, who was not authorized to discuss the matter 
+publicly and spoke on condition of anonymity, would not elaborate on 
+where the information came from or when it had been received. The White 
+House and State Department had no comment.</p>
+<p>Conservative South Korean lawmaker Yoon Sang-hyun, chairman of the 
+National Assembly’s foreign affairs and unification committee, said he 
+was told by unspecified non-government sources that Kim had surgery over
+ cardiovascular problems. But an official from Seoul’s National 
+Intelligence Service, who didn’t want to be named, citing office rules, 
+said the spy agency couldn’t confirm whether Kim had surgery.</p>
+<p>Kim In-chul, spokesman of South Korea’s Foreign Ministry, said Seoul 
+and Washington are maintaining close communication but didn’t provide a 
+direct answer when asked whether the allies exchanged any meaningful 
+intelligence about Kim’s health.</p>
+<p>Japanese Chief Cabinet Secretary Yoshihide Suga said his government was monitoring the situation.</p>
+<p>A political upheaval in North Korea would be unlikely even if Kim 
+became sidelined by health problems, according to analyst Cheong 
+Seong-Chang at the private Sejong Institute in South Korea.</p>
+<p>Cheong said Kim’s sister, Kim Yo Jong, is already exercising 
+significant influence within the government and that most members of 
+Pyongyang’s leadership share an interest with the Kim family in 
+maintaining the North’s system.</p>
+<p>Outside governments and media have a mixed record on tracking 
+developments among North Korea’s ruling elite, made difficult by 
+Pyongyang’s stringent control of information about them.</p>
+<p>In 2016, South Korea media quoted intelligence officials as saying 
+Kim Jong Un had had a former military chief executed for corruption and 
+other charges. But North Korea’s state media months later showed Ri Yong
+ Gil alive and serving in new senior posts.</p>
+<p>Kim’s absence from state media often triggers speculation. In 2014, 
+Kim vanished from the public eye for nearly six weeks before reappearing
+ with a cane. South Korea’s spy agency said days later that he had a 
+cyst removed from his ankle.</p>
+<p>Kim, believed to be 36, took power upon his father’s death in 
+December 2011 and is the third generation of his family to rule the 
+nuclear-armed country.</p>
+<p>Kim met President Donald Trump three times in 2018 and 2019 and had 
+summits with other Asian leaders as he pursued diplomacy in hopes of 
+ending crippling sanctions and getting security guarantees. But he 
+maintained his right to a nuclear arsenal and most diplomacy has 
+stalemated since.</p>
+<p class="rm-manual">___</p>
+<p class="rm-manual">AP Diplomatic Writer Matthew Lee in Washington contributed to this report.</p>
+<p class="rm-manual">This article was from <a href="http://syndication.thecanadianpress.com/rss/875896a9-086c-489a-8a04-7bd10831c73d/f477033c-5883-c24d-3583-ad1fe8824e52" rel="nofollow noopener">The Canadian Press</a> and was legally licensed through the <a href="https://www.newscred.com/" rel="noopener">NewsCred</a> publisher network. Please direct all licensing questions to <a href="mailto:legal@newscred.com">legal@newscred.com</a>.</p>
+<p class="rm-manual">Read more: <a href="https://www.military.com/daily-news/2020/04/20/these-are-travel-exemptions-pentagons-new-stop-movement-order.html">These Are the Travel Exemptions in the Pentagon's New Stop-Movement Order</a></p>
+<p class="rm-manual"><a href="">Show Full Article</a> </p>
+<h4 class="rm-manual">Related Topics</h4>
+<p class="rm-manual"><a href="file:///topics/headlines">Military Headlines</a> </p>
+<p class="rm-manual"><a href="file:///topics/north-korea">North Korea</a> </p>
+<p class="rm-manual"><a href="file:///topics/kim-jong-un">Kim Jong-un</a> </p>
+<p class="rm-manual"><a href="file:///topics/global-hot-spots">Global Hot Spots</a> </p>
+<p class="rm-manual"> © Copyright 2020 The Canadian Press. All rights 
+reserved. This material may not be published, broadcast, rewritten or 
+redistributed.</p>
+<h2 class="rm-manual">You May Also Like</h2>
+<p class="rm-manual"> <a href="file:///daily-news/2020/06/04/errors-military-health-overhaul-plan-could-result-some-losing-care-gao-finds.html"><span>Errors in Military Health Overhaul Plan Could Result in Some Losing Care, GAO Finds</span> </a> </p>
+<p class="rm-manual">A look at the DoD's assessment of health care services in 11 communities shows gaps in availability and quality of care.</p>
+<p class="rm-manual"> <a href="file:///daily-news/2020/06/04/82nd-airborne-soldiers-deployed-dc-region-start-leave.html"><span>82nd Airborne Soldiers Deployed to DC Region Start to Leave</span> </a> </p>
+<p class="rm-manual">The soldiers with the 82nd Airborne Division have been kept at bases outside the city, and will now return to Fort Bragg.</p>
+<p class="rm-manual"> <a href="file:///daily-news/2020/06/04/air-force-begins-search-next-hunter-killer-drone.html"><span>Air Force Begins Search for Next Hunter-Killer Drone</span> </a> </p>
+<p class="rm-manual">The U.S. Air Force is asking companies to submit ideas for a next-generation hunter-killer drone to replace the MQ-9 Reaper</p>
+<p class="rm-manual"> <a href="file:///daily-news/2020/06/04/nearly-200-air-force-pilots-opt-stay-longer-airlines-cut-back-service.html"><span>Air Force Preparing for Furloughed Commercial Pilots to Request Return to Duty</span> </a> </p>
+<p class="rm-manual">200 pilots have chosen to stay in the Air Force as major airlines operate in a limited capacity during the COVID-19 outbreak</p>
+<h2 class="rm-manual"> Military News </h2>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///us-military-coronavirus-response">The US Military Coronavirus Response</a></li> <li class="rm-manual"><a href="file:///daily-news/opinion">Military Opinion</a></li> <li class="rm-manual"><a href="file:///daily-news/events">Military Events</a></li> <li class="rm-manual"><a href="file:///army">Army</a></li> <li class="rm-manual"><a href="file:///navy">Navy</a></li> <li class="rm-manual"><a href="file:///air-force">Air Force</a></li> <li class="rm-manual"><a href="file:///marine-corps">Marine Corps</a></li> <li class="rm-manual"><a href="file:///coast-guard">Coast Guard</a></li> <li class="rm-manual"><a href="file:///space-force">United States Space Force</a></li> </ul>
+<h2 class="rm-manual">Select Service</h2>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.military.com/newmembers/army"><span>Army</span></a></li> <li class="rm-manual"><a href="https://www.military.com/newmembers/marines"><span>Marines</span></a></li> <li class="rm-manual"><a href="https://www.military.com/newmembers/navy"><span>Navy</span></a></li> <li class="rm-manual"><a href="https://www.military.com/newmembers/airforce"><span>Air Force</span></a></li> <li class="rm-manual"><a href="https://www.military.com/newmembers/guard"><span>National Guard</span></a></li> <li class="rm-manual"><a href="https://www.military.com/newmembers/coastguard"><span>Coast Guard</span></a></li> <li class="rm-manual"><a href="https://www.military.com/newmembers/spouse"><span>Spouse</span></a></li> <li class="rm-manual"><a href="https://www.military.com/member-reg/login.html"><span>Login</span></a></li> </ul>
+<p class="rm-manual"> <a href="https://www.military.com/army"><span>army</span></a> </p>
+<p class="rm-manual"> <a href="https://www.military.com/profile/member-profile.html">My Profile</a> <a href="https://www.military.com/army">Army Home Page</a> </p>
+<p class="rm-manual"> <a href="https://www.military.com/navy"><span>navy</span></a> </p>
+<p class="rm-manual"> <a href="https://www.military.com/profile/member-profile.html">My Profile</a> <a href="https://www.military.com/navy">Navy Home Page</a> </p>
+<p class="rm-manual"> <a href="https://www.military.com/air-force"><span>air force</span></a> </p>
+<p class="rm-manual"> <a href="https://www.military.com/profile/member-profile.html">My Profile</a> <a href="https://www.military.com/air-force">Air Force Home Page</a> </p>
+<p class="rm-manual"> <a href="https://www.military.com/marine-corps"><span>marines</span></a> </p>
+<p class="rm-manual"> <a href="https://www.military.com/profile/member-profile.html">My Profile</a> <a href="https://www.military.com/marine-corps">Marines Home Page</a> </p>
+<p class="rm-manual"> <a href="https://www.military.com/coast-guard"><span>coast guard</span></a> </p>
+<p class="rm-manual"> <a href="https://www.military.com/profile/member-profile.html">My Profile</a> <a href="https://www.military.com/coast-guard">Coast Guard Home Page</a> </p>
+<p class="rm-manual"> <a href="https://www.military.com/national-guard"><span>national guard</span></a> </p>
+<p class="rm-manual"> <a href="https://www.military.com/profile/member-profile.html">My Profile</a> <a href="https://www.military.com/national-guard">National Guard Home Page</a> </p>
+<p class="rm-manual"> <a href="https://www.military.com/spouse"><span>Spouse</span></a> </p>
+<p class="rm-manual"> <a href="https://www.military.com/profile/member-profile.html">My Profile</a> <a href="https://www.military.com/spouse">Spouse Home Page</a> </p>
+<p class="rm-manual"> <a href="https://www.military.com/profile/member-profile.html">My Profile</a> <a href="https://www.military.com/daily-news">News Home Page</a> </p>
+<h2 class="rm-manual"> Most Popular Military News </h2>
+<p class="rm-manual"> <a href="file:///daily-news/2020/06/02/heres-what-you-need-know-about-pentagons-riot-response-and-martial-law.html"><span>Here's What You Need to Know About The Pentagon's Riot Response and Martial Law</span> </a> </p>
+<p class="rm-manual">Currently, about 20,400 Guard troops have been activated in 28 states and the District of Columbia.</p>
+<p class="rm-manual"> <a href="file:///daily-news/2020/06/03/patrick-tadina-vietnam-wars-longest-continuously-serving-ranger-dies-77.html"><span>Patrick Tadina, Vietnam War's Longest Continuously Serving Ranger, Dies at 77</span> </a> </p>
+<p class="rm-manual">Patrick Gavin Tadina served in Vietnam for over five years straight between 1965 and 1970.</p>
+<p class="rm-manual"> <a href="file:///daily-news/2020/06/02/bills-would-ban-sale-military-weapons-police-bar-deployment-troops-protests.html"><span>Bills Would Ban Sale of Military Weapons to Police, Bar Deployment of Troops to Protests</span> </a> </p>
+<p class="rm-manual">Future amendments to the NDAA could put a stop to what some have called the militarization of police forces.</p>
+<p class="rm-manual"> <a href="file:///daily-news/2020/06/02/these-are-active-duty-units-deployed-dc-region-protests.html"><span>These Are the Active-Duty Units Deployed to DC Region for Protests</span> </a> </p>
+<p class="rm-manual">Some 1,600 active-duty soldiers are now staged just outside Washington, D.C. awaiting possible orders to support protest...</p>
+<p class="rm-manual"> <a href="file:///daily-news/2020/05/29/cola-increase-veterans-benefits-passes-house.html"><span>COLA Increase for Veterans Benefits Passes House</span> </a> </p>
+<p class="rm-manual">The House passed a bill on cost-of-living increases in veterans benefits for 2021.</p>
+<h2 class="rm-manual"> Latest Benefits Info </h2>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///benefits/veterans-health-care/tbi-rehabilitation.html">Traumatic Brain Injury Rehabilitation</a></li> <li class="rm-manual"><a href="file:///benefits/military-legal-matters/streamlined-citizenship-for-servicemembers-and-veterans.html">US Citizenship for Military, Veterans, and Dependents</a></li> <li class="rm-manual"><a href="file:///benefits/military-legal-matters/military-political-activity-restrictions.html">Military Political Activity Restrictions</a></li> <li class="rm-manual"><a href="file:///benefits/military-legal-matters/pre-trial-confinement-and-restriction-explained.html">Pre Trial Confinement and Restriction Explained</a></li> <li class="rm-manual"><a href="file:///benefits/military-legal-matters/military-law-overview.html">Military Law Overview</a></li> </ul>
+<p class="rm-manual"><a href="file:///topics/benefits">View more</a> </p>
+<h2 class="rm-manual"> More Military Headlines </h2>
+<p class="rm-manual"> <a href="file:///daily-news/2020/06/04/errors-military-health-overhaul-plan-could-result-some-losing-care-gao-finds.html"><span>Errors in Military Health Overhaul Plan Could Result in Some Losing Care, GAO Finds</span> </a> </p>
+<p class="rm-manual">A look at the DoD's assessment of health care services in 11 communities shows gaps in availability and quality of care.</p>
+<p class="rm-manual"> <a href="file:///daily-news/2020/06/04/82nd-airborne-soldiers-deployed-dc-region-start-leave.html"><span>82nd Airborne Soldiers Deployed to DC Region Start to Leave</span> </a> </p>
+<p class="rm-manual">The soldiers with the 82nd Airborne Division have been kept at bases outside the city, and will now return to Fort Bragg.</p>
+<p class="rm-manual"> <a href="file:///daily-news/2020/06/04/air-force-begins-search-next-hunter-killer-drone.html"><span>Air Force Begins Search for Next Hunter-Killer Drone</span> </a> </p>
+<p class="rm-manual">The U.S. Air Force is asking companies to submit ideas for a next-generation hunter-killer drone to replace the MQ-9 Reaper</p>
+<p class="rm-manual"> <a href="file:///daily-news/2020/06/04/utah-guard-sends-green-berets-dc-assist-civil-unrest-response.html"><span>Utah Guard Sends Green Berets to DC to Assist in Civil Unrest Response</span> </a> </p>
+<p class="rm-manual">So far, about 32,400 Guard troops have been activated in 32 states and in D.C. to support the civil unrest response.</p>
+<p class="rm-manual"> <a href="file:///daily-news/2020/06/04/pentagon-trump-clash-breaks-open-over-military-and-protests.html"><span>Pentagon-Trump Clash Breaks Open over Military and Protests</span> </a> </p>
+<p class="rm-manual">Retired four-star Gen. John Allen joined the chorus of former military leaders going after the president.</p>
+<p class="rm-manual"><a href="file:///topics/headlines">View more</a> </p>
+<h2 class="rm-manual"> Army </h2>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///daily-news/2020/06/04/82nd-airborne-soldiers-deployed-dc-region-start-leave.html">82nd Airborne Soldiers Deployed to DC Region Start to Leave</a></li> <li class="rm-manual"><a href="file:///daily-news/2020/06/04/utah-guard-sends-green-berets-dc-assist-civil-unrest-response.html">Utah Guard Sends Green Berets to DC to Assist in Civil Unrest Response</a></li> <li class="rm-manual"><a href="file:///daily-news/2020/06/04/army-general-germany-suspended-pending-investigation.html">Army General in Germany Suspended Pending Investigation</a></li> </ul>
+<p class="rm-manual"><a href="file:///topics/army">View more</a> </p>
+<h2 class="rm-manual"> Air Force </h2>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///daily-news/2020/06/04/air-force-begins-search-next-hunter-killer-drone.html">Air Force Begins Search for Next Hunter-Killer Drone</a></li> <li class="rm-manual"><a href="file:///daily-news/2020/06/04/nearly-200-air-force-pilots-opt-stay-longer-airlines-cut-back-service.html">Air Force Preparing for Furloughed Commercial Pilots to Request Return to Duty</a></li> <li class="rm-manual"><a href="file:///daily-news/2020/06/04/airmen-killed-shooting-grand-forks-air-force-base-identified.html">Airmen Killed in Shooting at Grand Forks Air Force Base Identified</a></li> </ul>
+<p class="rm-manual"><a href="file:///topics/air-force">View more</a> </p>
+<h2 class="rm-manual"> Navy </h2>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///daily-news/2020/06/04/detained-us-navy-veteran-freed-iran-en-route-home.html">Detained US Navy Veteran Freed by Iran, En Route Home</a></li> <li class="rm-manual"><a href="file:///daily-news/2020/06/04/navy-wants-designate-safe-haven-ports-where-ships-can-stop-during-pandemic.html">Navy Wants to Designate 'Safe Haven' Ports Where Ships Can Stop During Pandemic</a></li> <li class="rm-manual"><a href="file:///daily-news/2020/06/02/military-service-academies-plan-students-return-fall.html">Military Service Academies Plan for Students' Return in Fall</a></li> </ul>
+<p class="rm-manual"><a href="file:///topics/navy">View more</a> </p>
+<h2 class="rm-manual"> Military Benefits Updates </h2>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///daily-news/2020/05/28/vas-high-tech-training-program-runs-out-money-now.html">VA's High Tech Training Program Runs Out of Money -- For Now</a></li> <li class="rm-manual"><a href="file:///daily-news/2020/05/27/support-grows-secure-federal-benefits-activated-national-guard-members.html">Support Grows to Secure Federal Benefits for Activated National Guard Members</a></li> <li class="rm-manual"><a href="file:///us-military-coronavirus-response/what-veterans-need-know-about-federal-debts-during-coronavirus-pandemic.html">What Veterans Need to Know About Federal Debts During the Coronavirus Pandemic</a></li> </ul>
+<p class="rm-manual"><a href="file:///topics/benefits">View more</a> </p>
+<h2 class="rm-manual"> Marine Corps </h2>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///daily-news/2020/06/02/2000-marines-southern-california-deploy-middle-east-crisis-response-force.html">2,000 Marines from Southern California Deploy to the Middle East as Crisis Response Force</a></li> <li class="rm-manual"><a href="file:///daily-news/2020/06/02/marine-3-star-hits-back-claims-corps-future-design-too-china-focused.html">Marine 3-Star Hits Back at Claims that Corps' Future Design Is Too China-Focused</a></li> <li class="rm-manual"><a href="file:///daily-news/2020/06/01/they-called-him-meatball-high-school-now-hes-training-be-marine-grunt.html">They Called Him 'Meatball' In High School. Now, He's Training to Be a Marine Grunt</a></li> </ul>
+<p class="rm-manual"><a href="file:///topics/marine-corps">View more</a> </p>
+<h2 class="rm-manual"> Coast Guard </h2>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///daily-news/2020/05/25/coast-guard-crew-tests-negative-after-cocaine-bust-suspected-smugglers-covid-positive.html">Coast Guard Crew Tests Negative After Cocaine Bust; Suspected Smugglers COVID Positive</a></li> <li class="rm-manual"><a href="file:///daily-news/2020/05/22/autopsies-34-who-died-conception-boat-fire-offer-grim-new-details.html">Autopsies of 34 who Died in Conception Boat Fire Offer Grim New Details</a></li> <li class="rm-manual"><a href="file:///daily-news/2020/05/21/coast-guard-cutter-brings-ton-seized-cocaine-san-diego.html">Coast Guard Cutter Brings Ton of Seized Cocaine to San Diego</a></li> </ul>
+<p class="rm-manual"><a href="file:///topics/coast-guard">View more</a> </p>
+<h2 class="rm-manual"> Entertainment </h2>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///off-duty/2020/06/03/john-lewis-documentary-good-trouble-offers-historical-context-current-crisis.html">John Lewis Documentary 'Good Trouble' Offers Historical Context for Current Crisis</a></li> <li class="rm-manual"><a href="file:///off-duty/2020/06/02/read-free-graphic-novel-honoring-medal-honor-recipient-sen-daniel-inouye.html">Read a Free Graphic Novel Honoring Medal of Honor Recipient Sen. Daniel Inouye</a></li> <li class="rm-manual"><a href="file:///off-duty/2020/06/02/war-worlds-and-shadow-9-11.html">'War of the Worlds' and the Shadow of 9/11</a></li> </ul>
+<p class="rm-manual"><a href="file:///topics/undertheradar">View more</a> </p></article>
+</body></html>

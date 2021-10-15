@@ -1,0 +1,219 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Information Warfare: Pyongyang Automation University Versus The World </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///default.aspx">Home</a> </li> <li class="rm-manual"> <a href="file:///aboutus/default.aspx">About</a> </li> <li class="rm-manual"> <a href="file:///feedback/feedback.aspx">Contact</a> </li> <li class="rm-manual"> <a href="https://www.strategypage.com/accounts/contribute.aspx">Contribute</a> </li> <li class="rm-manual"> <a href="https://www.strategypage.com/accounts/subscribe.aspx">Subscribe</a> </li> <li class="rm-manual"> <a href="https://www.strategypage.com/accounts/login.aspx">Login</a> </li> <li class="rm-manual"> <a href="https://www.strategypage.com/accounts/manage.aspx">Account</a> </li> </ul>
+<p class="rm-manual"> <a href="file:///"> StrategyPage<span>The News as History</span></a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="">News</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///htmw/default.aspx">How To Make War</a> </li> <li class="rm-manual"> <a href="file:///qnd/default.aspx">Wars Around the World</a> </li> <li class="rm-manual"> <a href="file:///strategytalk/default.aspx">StrategyTalk</a> </li> <li class="rm-manual"> <a href="file:///on_point/index/current.aspx">Austin Bay's On Point</a> </li> </ul> </li> <li class="rm-manual"> <a href="#">Features</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///wargames/cwir/index/current.aspx">Chiefs's Wargames In Review</a> </li> <li class="rm-manual"> <a href="file:///cic/default.asp">Al Nofi's CIC</a> </li> <li class="rm-manual"> <a href="file:///bookreviews/index/current.aspx">Military Book Reviews</a> </li> <li class="rm-manual"> <a href="file:///humor/default.asp">Military Jokes</a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///military_photos/index/current.aspx">Photos</a> </li> <li class="rm-manual"> <a href="#">Other</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///today-in-military-history.aspx">Today in Military History</a> </li> <li class="rm-manual"> <a href="file:///messageboards/default.asp">Discussion Boards</a> </li> </ul> </li> <li class="rm-manual"> <a href="#">Resources</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.strategypage.com/accounts/manage.aspx">Account</a> </li> <li class="rm-manual"> <a href="https://www.strategypage.com/accounts/login.aspx">Login</a> </li> <li class="rm-manual"> <a href="file:///feedback/feedback.aspx">Feedback</a> </li> <li class="rm-manual"> <a href="file:///aboutus/default.aspx">About</a> </li> <li class="rm-manual"> <a href="file:///mediakit.aspx">Advertise with Us</a> </li> </ul> </li> </ul>
+<p class="rm-manual"> ﻿ </p>
+<h2 class="rm-manual">News Categories</h2>
+<p> <a href="#collapseOne"></a></p><p></p><h4 class="rm-manual"><a href="#collapseOne"> Ground Combat </a></h4><p class="rm-manual"></p> <p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///htmw/htinf/default.aspx">Infantry</a> <a href="file:///htmw/htarm/default.aspx">Armor</a> <a href="file:///htmw/htart/default.aspx">Artillery</a> <a href="file:///htmw/htcbtsp/default.aspx">Support</a> <a href="file:///htmw/htpara/default.aspx">Paramilitary</a> <a href="file:///htmw/htpara/default.aspx">Reserves</a> </p>
+<p class="rm-manual"> <a href="#collapseTwo"></a></p><p class="rm-manual"></p><h4 class="rm-manual"><a href="#collapseTwo">Air Combat </a></h4><p class="rm-manual"></p> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///htmw/htairfo/default.aspx">Warplanes</a> <a href="file:///htmw/htairw/default.aspx">Air Weapons</a> <a href="file:///htmw/htada/default.aspx">Air Defense</a></p>
+<p class="rm-manual"> <a href="#collapseThree"></a></p><p class="rm-manual"></p><h4 class="rm-manual"><a href="#collapseThree">Naval Operations </a></h4><p class="rm-manual"></p> <p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///htmw/htsurf/default.aspx">Surface Forces</a><a href="file:///htmw/htsub/default.aspx">Submarines</a><a href="file:///htmw/htnavai/default.aspx">Naval Air</a><a href="file:///htmw/htamph/default.aspx">Marines</a></p>
+<p class="rm-manual"> <a href="#collapseFour"></a></p><p class="rm-manual"></p><h4 class="rm-manual"><a href="#collapseFour">Special Operations </a></h4><p class="rm-manual"></p> <p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///htmw/htterr/default.aspx">Counter-Terrorism</a><a href="file:///htmw/htsf/default.aspx">Special Operations</a><a href="file:///htmw/htiw/default.aspx">Information Warfare</a><a href="file:///htmw/htun/default.aspx">Peacekeeping</a></p>
+<p class="rm-manual"> <a href="#collapseFive"></a></p><p class="rm-manual"></p><h4 class="rm-manual"><a href="#collapseFive">Human Factors </a></h4><p class="rm-manual"></p> <p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///htmw/htmoral/default.aspx">Morale</a><a href="file:///htmw/htlead/default.aspx">Leadership</a><a href="file:///htmw/htintel/default.aspx">Intelligence</a><a href="file:///htmw/htmurph/default.aspx">Murphy's Law</a><a href="file:///htmw/htwin/default.aspx">Winning</a><a href="file:///htmw/htpeace/default.aspx">Peace Time</a></p>
+<p class="rm-manual"> <a href="#collapseSix"></a></p><p class="rm-manual"></p><h4 class="rm-manual"><a href="#collapseSix">Special Weapons</a></h4><p class="rm-manual"></p> <p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///htmw/htecm/default.aspx">Electronic Weapons</a><a href="file:///htmw/htspace/default.aspx">Space</a><a href="file:///htmw/htchem/default.aspx">NBC Weapons</a><a href="file:///htmw/hticbm/default.aspx">Strategic Weapons</a></p>
+<p class="rm-manual"> <a href="#collapseSeven"></a></p><p class="rm-manual"></p><h4 class="rm-manual"><a href="#collapseSeven">Warfare by Numbers </a></h4><p class="rm-manual"></p> <p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///htmw/htlog/default.aspx">Logistics</a><a href="file:///htmw/htatrit/default.aspx">Attrition</a><a href="file:///htmw/htproc/default.aspx">Procurement</a> </p>
+<p class="rm-manual"> <a href="#collapseEight"></a></p><p class="rm-manual"></p><h4 class="rm-manual"><a href="#collapseEight">Logistics </a></h4><p class="rm-manual"></p> <p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///htmw/htseamo/default.aspx">Sea Transportation</a><a href="file:///htmw/htairmo/default.aspx">Air Transportation</a></p>
+<p class="rm-manual"> <a href="#collapseNine"></a></p><p class="rm-manual"></p><h4 class="rm-manual"><a href="#collapseNine">Tools </a></h4><p class="rm-manual"></p> <p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///htmw/htworld/default.aspx">Forces</a><a href="file:///htmw/htweap/default.aspx">Weapons</a></p>
+<p class="rm-manual">Books of Interest</p>
+<p class="rm-manual"> <a href="https://www.amazon.com/dp/0316296619?tag=thehundredyearsw&amp;linkCode=osi&amp;th=1&amp;psc=1%20%20target="> The Bomber Mafia: A Dream, a Temptation, and the Longest Night of the Second World War</a></p>
+<p class="rm-manual"> <a href="https://www.amazon.com/dp/0393540812?tag=thehundredyearsw&amp;linkCode=osi&amp;th=1&amp;psc=1%20%20target="> Nuclear Folly: A History of the Cuban Missile Crisis</a></p>
+<p class="rm-manual"> <a href="https://www.amazon.com/dp/1682616614?tag=thehundredyearsw&amp;linkCode=osi&amp;th=1&amp;psc=1%20%20target="> Cocktails from Hell: Five Complex Wars Shaping the 21st Century</a></p>
+<p class="rm-manual"> <a href="https://www.amazon.com/dp/B08VJLBJR8?tag=thehundredyearsw&amp;linkCode=osi&amp;th=1&amp;psc=1%20%20target="> Countdown bin Laden: The Untold Story of the 247-Day Hunt to Bring the Mastermind of 9/11 to Justice</a></p>
+<p class="rm-manual"> From Amazon</p>
+<p class="rm-manual">As an Amazon Associate I earn from qualifying purchases</p>
+<p class="rm-manual"> <a href="file:///htmw/htintel/20110509.aspx"> </a></p><p class="rm-manual"><a href="file:///htmw/htintel/20110509.aspx"><span>Next:</span>INTELLIGENCE: Down And Out In Holland</a></p><a href="file:///htmw/htintel/20110509.aspx"> </a> <p class="rm-manual"></p>
+<h2 class="rm-manual"> Information Warfare: Pyongyang Automation University Versus The World</h2>
+<p class="rm-manual"> <a href="#article-archive">Archives</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="#New">Latest</a> </li> <li class="rm-manual"> <a href="#HotTopics">Most Read</a> </li> </ul>
+<ul class="rm-manual"> <span><li class="rm-manual"><a href="file:///bookreviews/2195">BOOK REVIEW: The First and Second Italian Wars 1494–1504: Fearless Knights, Ruthless Princes and the Coming of Gunpowder Armies</a></li>
+<li class="rm-manual"><a href="file:///qnd/china/articles/20210716.aspx">CHINA: Taliban Welcome Their New Chinese Overlords</a></li>
+<li class="rm-manual"><a href="file:///htmw/htairw/articles/20210716.aspx">AIR WEAPONS: Cheap, Slow And Out Of Control</a></li>
+<li class="rm-manual"><a href="file:///military_photos/military_photos_20210715214213.aspx">PHOTO: "Surge"</a></li>
+<li class="rm-manual"><a href="file:///qnd/turkey/articles/20210715.aspx">TURKEY: Desperately Seeking Solutions</a></li>
+<li class="rm-manual"><a href="file:///htmw/htsub/articles/20210715.aspx">SUBMARINES: Titanium Farewell</a></li>
+<li class="rm-manual"><a href="file:///on_point/2021071420125.aspx">ON POINT: Cuban Freedom Rebellion Shakes Cuban, Chinese and American Socialist Elites</a></li>
+<li class="rm-manual"><a href="file:///military_photos/military_photos_20210714195937.aspx">PHOTO: Mustang And Lightning II In Tight Formation</a></li>
+<li class="rm-manual"><a href="file:///qnd/somalia/articles/20210714.aspx">SOMALIA: Election Miracle</a></li>
+<li class="rm-manual"><a href="file:///htmw/htintel/articles/20210714.aspx">INTELLIGENCE: Lost In Translators</a></li>
+<li class="rm-manual"><a href="file:///military_photos/military_photos_20210713204048.aspx">PHOTO: USS Vicksburg Ready To Go Back To Work</a></li></span> </ul>
+<ul class="rm-manual"> <span><li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%5Cqnd%5Cchina%5Carticles%5C20210716.aspx">WARS China: Taliban Welcome Their New Chinese Overlords </a></li>
+<li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%5Chtmw%5Chtairw%5Carticles%5C20210716.aspx">Air Weapons: Cheap, Slow And Out Of Control </a></li>
+<li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%5Cqnd%5Cturkey%5Carticles%5C20210715.aspx">WARS Turkey: Desperately Seeking Solutions </a></li>
+<li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%5Chtmw%5Chtsub%5Carticles%5C20210715.aspx">Submarines: Titanium Farewell </a></li>
+<li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%5Cqnd%5Ciran%5Carticles%5C20210713.aspx">WARS Iran: Losing Control </a></li>
+<li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%5Chtmw%5Chtmoral%5Carticles%5C20210713.aspx">Morale: Russian Reparations </a></li>
+<li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%5Chtmw%5Chtintel%5Carticles%5C20210714.aspx">Intelligence: Lost In Translators </a></li>
+<li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%5Cqnd%5Csomalia%5Carticles%5C20210714.aspx">WARS Somalia: Election Miracle </a></li>
+<li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%5Chtmw%5C%5Carticles%5C2021071420125.aspx"> On PointCuban Freedom Rebellion Shakes Cuban, Chinese and American Socialist Elites </a></li>
+<li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%5Chtmw%5Chtecm%5Carticles%5C20210711.aspx">Electronic Weapons: Invisibility Cloak </a></li>
+<li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%5Chtmw%5Chtpeace%5Carticles%5C20210712.aspx">Peace Time: The UN Problem </a></li>
+<li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%5Chtmw%5Chtwin%5Carticles%5C20210712.aspx">Winning: Dam War With Ethiopia </a></li>
+<li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%5Chtmw%5Chtsurf%5Carticles%5C20210710.aspx">Surface Forces: Robots Prowl The Seas </a></li>
+<li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%5Cqnd%5Cyemen%5Carticles%5C20210709.aspx">WARS Yemen: Some Retreat, No Surrender </a></li>
+<li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%5Chtmw%5Chtintel%5Carticles%5C20210709.aspx">Intelligence: What Is Old Is New Again </a></li>
+<li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/%5Cqnd%5Crussia%5Carticles%5C20210708.aspx">WARS Russia: Retaliation Against Cyber Cossacks </a></li></span> </ul>
+<p> ﻿ </p>
+<p><span>May 9, 2011:</span> South Korea has obtained first-hand 
+information about the North Korea Cyber War efforts from North Korean 
+Cyber Warriors who have fled south. The defectors report that, in the 
+last few years, there have been a lot of changes in the North Korean 
+Cyber War community. There are now two "hacker brigades" in the North 
+Korean electronic warfare section of the armed forces. Each brigade 
+contains about 600 Internet experts. These hackers have been trained at 
+Pyongyang Automation University, Amrokgang College of Military 
+Engineering, the National Defense University, the Air Force Academy and 
+the Naval Academy. But the Pyongyang Automation University has been the 
+main source of expert hackers. Until recently this place was known as 
+Mirim University (and, not long ago, Mirim College). But the success of 
+Mirim kept the money, expansions and name changes coming. </p>
+<p>The North Korean hackers have been increasingly busy, and effective. 
+Earlier this year, South Korean network security and intelligence 
+officials revealed that North Korea has been seeking details of how 
+computer systems in key South Korean industries work. Particularly 
+alarming was the effort to find out about the systems that run South 
+Korea's nuclear power plants (which produce over a third of the nation's
+ electricity). These systems are not connected to the Internet, but the 
+North Koreans are apparently planning to get an agent working inside a 
+plant, and use a USB stick to plant a damaging bit of software. The 
+North Koreans have also been seeking details about software that runs 
+the stock markets, high-speed rail trains, air traffic control and 
+natural gas distribution systems. Air traffic control is also not 
+connected to the Internet, but its software and facilities are also 
+getting scrutinized by North Korean agents. Defectors have revealed that
+ North Korean officials are obsessed with making a network attack on the
+ South Korean stock markets, to create financial chaos. If that doesn't 
+work, they are also trying to get into banks and other financial 
+institutions, but these commercial operations tend to be much better 
+protected than government or quasi-government organizations.</p>
+<p>All this North Korean espionage activity in the south is nothing new.
+ But South Korean Cyber War officials have put all the current pieces 
+together and realized that the northerners are concentrating on hitting 
+key economic targets via the Internet or just software (carried in by an
+ agent armed with a USB stick.) Same old goals, some of the same old 
+targets, but new tactics and weapons.</p>
+<p>Long believed to be nonexistent, North Korean cyberwarriors do exist,
+ and are not the creation of South Korean intelligence agencies trying 
+to obtain more money to upgrade government Information War defenses. We 
+know that North Korea has a lot of military units that are competent, in
+ the same way robots are. The North Koreans picked this technique up 
+from their Soviet teachers back in the 1950s. North Korea is something 
+of a museum of Stalinist techniques. It was long believed that their 
+Internet experts were not flexible and innovative enough to be a major 
+threat. But now the thinking is that North Korea may have hired foreign 
+experts (gangsters, or other outlaw types) to obtain the needed skills. 
+These mercs never had to even visit North Korea (and most preferred not 
+to), all they had to do is what the normally do, and collect their pay.</p>
+<p class="rm-manual">South Korea has to be wary because they have become
+ more dependent on the web than any other nation on the planet, with 
+exception of the United States. As in the past, if the north is to start
+ any new kind of mischief, they will work it on South Korea first. While
+ many of the recent attacks were more annoying than anything else, they 
+revealed that there's a new threat out there, and one that is probably 
+going to get worse.</p>
+<p class="rm-manual"> <a href="#">Make A Comment</a> </p>
+<h4 class="rm-manual">Leave a Comment:</h4>
+<p class="rm-manual"> In Order Make a Comment You need to login. </p>
+<p class="rm-manual">Incorrect Login Credentials</p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.strategypage.com/accounts/forgot.aspx">Forgot Password?</a>
+</li>
+<li class="rm-manual"> <a href="https://www.strategypage.com/accounts/createMsgAccount.aspx">Create an account</a>
+</li>
+</ul>
+<p class="rm-manual">Logging In</p>
+<p class="rm-manual"> <a href="file:///htmw/htchem/20110509.aspx"> </a></p><p class="rm-manual"><a href="file:///htmw/htchem/20110509.aspx"> </a></p><p class="rm-manual"><a href="file:///htmw/htchem/20110509.aspx">Previous Post</a></p><a href="file:///htmw/htchem/20110509.aspx"> <h5 class="rm-manual"> NBC WEAPONS: Israel Unmasked</h5> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///htmw/htintel/20110509.aspx"> </a></p><p class="rm-manual"><a href="file:///htmw/htintel/20110509.aspx"> </a></p><p class="rm-manual"><a href="file:///htmw/htintel/20110509.aspx">Next Post</a></p><a href="file:///htmw/htintel/20110509.aspx"> <h5 class="rm-manual"> INTELLIGENCE: Down And Out In Holland</h5> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> ﻿ </p>
+<h2 class="rm-manual">Article Archive </h2>
+<p class="rm-manual"> Information Warfare: </p>
+<p class="rm-manual"><a href="file:///htmw/htiw/default.aspx">Current</a> </p>
+<p class="rm-manual"><a href="file:///htmw/htiw/2020.aspx">2020</a> </p>
+<p class="rm-manual"><a href="file:///htmw/htiw/2019.aspx">2019</a> </p>
+<p class="rm-manual"><a href="file:///htmw/htiw/2018.aspx">2018</a> </p>
+<p class="rm-manual"><a href="file:///htmw/htiw/2017.aspx">2017</a> </p>
+<p class="rm-manual"><a href="file:///htmw/htiw/2016.aspx">2016</a> </p>
+<p class="rm-manual"><a href="file:///htmw/htiw/2015.aspx">2015</a> </p>
+<p class="rm-manual"><a href="file:///htmw/htiw/2014.aspx">2014</a> </p>
+<p class="rm-manual"><a href="file:///htmw/htiw/2013.aspx">2013</a> </p>
+<p class="rm-manual"><a href="file:///htmw/htiw/2012.aspx">2012</a> </p>
+<p class="rm-manual"><a href="file:///htmw/htiw/2011.aspx">2011</a> </p>
+<p class="rm-manual"><a href="file:///htmw/htiw/2010.aspx">2010</a> </p>
+<p class="rm-manual"><a href="file:///htmw/htiw/2009.aspx">2009</a> </p>
+<p class="rm-manual"><a href="file:///htmw/htiw/2008.aspx">2008</a> </p>
+<p class="rm-manual"><a href="file:///htmw/htiw/2007.aspx">2007</a> </p>
+<p class="rm-manual"><a href="file:///htmw/htiw/2006.aspx">2006</a> </p>
+<p class="rm-manual"><a href="file:///htmw/htiw/2005.aspx">2005</a> </p>
+<p class="rm-manual"><a href="file:///htmw/htiw/2004.aspx">2004</a> </p>
+<p class="rm-manual"><a href="file:///htmw/htiw/2003.aspx">2003</a> </p>
+<p class="rm-manual"><a href="file:///htmw/htiw/2002.aspx">2002</a> </p>
+<p class="rm-manual"><a href="file:///htmw/htiw/2001.aspx">2001</a> </p>
+<p class="rm-manual"><a href="file:///htmw/htiw/2000.aspx">2000</a> </p>
+<p class="rm-manual"><a href="file:///htmw/htiw/1999.aspx">1999</a> ﻿ </p>
+<p class="rm-manual"> ﻿ </p>
+<p class="rm-manual"> Copyright © 2018 <a href="file:///">StrategyPage</a>.
+ All Rights Reserved. StrategyWorld.com 1998 - 2018 StrategyWorld.com. 
+All rights Reserved. StrategyWorld.com, StrategyPage.com, FYEO, For Your
+ Eyes Only and Al Nofi's CIC are all trademarks of StrategyWorld.com </p>
+<p class="rm-manual"> X </p>
+<p class="rm-manual">0</p>
+<p class="rm-manual">20</p>
+<p class="rm-manual"> Help Keep Us Soaring</p>
+<p class="rm-manual">We need your help! Our <a href="https://www.strategypage.com/accounts/subscribe.aspx">subscription</a> base has slowly been dwindling. We need your help in reversing that trend. We would like to add 20 new <a href="https://www.strategypage.com/accounts/subscribe.aspx">subscribers</a> this month. </p>
+<p class="rm-manual">Each month we count on your <a href="https://www.strategypage.com/accounts/subscribe.aspx">subscriptions</a> or <a href="https://www.strategypage.com/accounts/contribute.aspx">contributions</a>. You can support us in the following ways: </p>
+<ol class="rm-manual"> <li class="rm-manual">Make sure you spread the word about us. Two ways to do that are to like us on <a href="https://www.facebook.com/Strategypage">Facebook</a> and follow us on <a href="https://twitter.com/strategypage">Twitter.</a>
+</li> <li class="rm-manual">
+<a href="https://www.strategypage.com/accounts/subscribe.aspx">Subscribe</a>
+ to our daily newsletter. We’ll send the news to your email box, and you
+ don’t have to come to the site unless you want to read columns or see 
+photos.</li> <li class="rm-manual">You can <a href="https://www.strategypage.com/accounts/contribute.aspx">contribute</a>
+ to the health of StrategyPage. A contribution is not a donation that 
+you can deduct at tax time, but a form of crowdfunding. We store none of
+ your information when you <a href="https://www.strategypage.com/accounts/contribute.aspx">contribute.</a>.</li> </ol>
+<p class="rm-manual"><a href="https://www.strategypage.com/accounts/subscribe.aspx">Subscribe</a> </p>
+<p class="rm-manual"><a href="https://www.strategypage.com/accounts/contribute.aspx">Contribute</a> </p>
+<p class="rm-manual"><a href="#foo">Close</a> </p></article>
+</body></html>

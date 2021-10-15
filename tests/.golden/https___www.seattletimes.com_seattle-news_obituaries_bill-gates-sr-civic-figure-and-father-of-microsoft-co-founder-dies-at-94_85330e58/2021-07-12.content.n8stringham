@@ -1,0 +1,212 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Bill Gates Sr., civic leader and father of Microsoft co-founder, dies at 94 | The Seattle Times </p>
+<p class="rm-manual"><a href="#content">Skip to content</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.seattletimes.com/tag/coronavirus/">Coronavirus</a></li> <li class="rm-manual">
+<a href="file:///seattle-news/">Local News</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///seattle-news/transportation/">Traffic Lab</a></li> <li class="rm-manual"><a href="file:///seattle-news/crime/">Crime</a></li> <li class="rm-manual"><a href="file:///seattle-news/politics/">Local Politics</a></li> <li class="rm-manual"><a href="file:///seattle-news/education/">Education</a></li> <li class="rm-manual"><a href="file:///education-lab/">Education Lab</a></li> <li class="rm-manual"><a href="file:///seattle-news/eastside/">Eastside</a></li> <li class="rm-manual"><a href="file:///seattle-news/health/">Health</a></li> <li class="rm-manual"><a href="file:///seattle-news/data/">Data</a></li> <li class="rm-manual"><a href="file:///seattle-news/homeless/">Project Homeless</a></li> <li class="rm-manual"><a href="file:///seattle-news/times-watchdog/">Times Watchdog</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///business/">Business &amp; Tech</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///business/boeing-aerospace/">Boeing &amp; Aerospace</a></li> <li class="rm-manual"><a href="file:///business/amazon/">Amazon</a></li> <li class="rm-manual"><a href="file:///business/microsoft/">Microsoft</a></li> <li class="rm-manual"><a href="file:///business/technology/">Technology</a></li> <li class="rm-manual"><a href="file:///business/real-estate/">Real Estate</a></li> <li class="rm-manual"><a href="file:///business/economy/">Economy</a></li> <li class="rm-manual"><a href="file:///tag/artificial-intelligence/">Artificial Intelligence</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///nation-world/">Nation &amp; World</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///nation-world/nation-politics/">Nation &amp; World Politics</a></li> <li class="rm-manual"><a href="file:///nation-world/oddities/">Oddities</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///sports/">Sports</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///sports/seahawks/">Seahawks</a></li> <li class="rm-manual"><a href="file:///sports/uw-huskies/">Huskies</a></li> <li class="rm-manual"><a href="file:///sports/wsu-cougars/">Cougars</a></li> <li class="rm-manual"><a href="file:///sports/mariners/">Mariners</a></li> <li class="rm-manual"><a href="file:///sports/sounders/">Sounders</a></li> <li class="rm-manual"><a href="file:///sports/storm/">Storm</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/sports/kraken/">Kraken</a></li> <li class="rm-manual"><a href="file:///sports/high-school/">High School Sports</a></li> <li class="rm-manual"><a href="file:///sports/sports-on-tv-radio-2/">On TV/Radio</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///entertainment/">Entertainment</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///entertainment/movies/">Movies</a></li> <li class="rm-manual"><a href="file:///entertainment/books/">Books</a></li> <li class="rm-manual"><a href="file:///entertainment/music/">Music</a></li> <li class="rm-manual"><a href="file:///entertainment/theater/">Theater</a></li> <li class="rm-manual"><a href="file:///entertainment/classical-music/">Classical Music</a></li> <li class="rm-manual"><a href="file:///entertainment/tv/">TV/Streaming</a></li> <li class="rm-manual"><a href="file:///entertainment/comics/">Comics</a></li> <li class="rm-manual"><a href="file:///entertainment/games/">Games &amp; Puzzles</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/horoscopes/">Horoscopes</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///life/">Life</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///life/food-drink/">Food &amp; Drink</a></li> <li class="rm-manual"><a href="file:///life/travel/">Travel &amp; Outdoors</a></li> <li class="rm-manual"><a href="file:///life/wellness/">Wellness</a></li> <li class="rm-manual"><a href="file:///life/pets/">Pets</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/category/rant-and-rave/">Rant &amp; Rave</a></li> </ul> </li> <li class="rm-manual"><a href="file:///pacific-nw-magazine/">Pacific NW Magazine</a></li> <li class="rm-manual"><a href="file:///homes-real-estate">Homes &amp; Real Estate</a></li> <li class="rm-manual">
+<a href="file:///opinion/">Opinion</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///opinion/editorials/">Editorials</a></li> <li class="rm-manual"><a href="file:///opinion/letters-to-the-editor/">Letters to the Editor</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/author/david-horsey/">David Horsey</a></li> <li class="rm-manual"><a href="file:///tag/free-press/">Free Press</a></li> </ul> </li> <li class="rm-manual"><a href="file:///video/">Video</a></li> <li class="rm-manual"><a href="file:///photo-video/">Photography</a></li> <li class="rm-manual">
+<a href="https://obituaries.seattletimes.com/">Obituaries</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///obituaries/">News Obituaries</a></li> <li class="rm-manual"><a href="https://obituaries.seattletimes.com/">Paid Obituaries</a></li> </ul> </li> <li class="rm-manual"><a href="http://seattletimes.com/newsletters/">Newsletters</a></li> <li class="rm-manual"><a href="https://replica.seattletimes.com/">Print Replica</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/todays-times/">Today’s Times</a></li> <li class="rm-manual"><a href="http://www.seattletimes.com/tag/inside-the-times/">Inside The Times</a></li> <li class="rm-manual"><a href="file:///explore/">Explore</a></li> <li class="rm-manual"><a href="http://jobs.seattletimes.com/">Jobs</a></li> <li class="rm-manual"><a href="http://autos.seattletimes.com/">Autos</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://secure.seattletimes.com/accountcenter/">Log In</a></li> <li class="rm-manual"><a href="file:///subscribe/signup-offers?subsource=voluntary">Subscribe</a></li> </ul>
+<p class="rm-manual"> <a href="file:///seattle-news/obituaries/">Obituaries</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.seattletimes.com/tag/coronavirus/">Coronavirus</a></li> <li class="rm-manual"><a href="file:///seattle-news/">Local</a></li> <li class="rm-manual"><a href="file:///business/">Biz</a></li> <li class="rm-manual"><a href="file:///sports/">Sports</a></li> <li class="rm-manual"><a href="file:///entertainment/">Entertainment</a></li> <li class="rm-manual"><a href="file:///life/">Life</a></li> <li class="rm-manual"><a href="file:///homes-real-estate/">Homes</a></li> <li class="rm-manual"><a href="file:///opinion/">Opinion</a></li> <li class="rm-manual"><span>|</span></li> <li class="rm-manual"><a href="http://jobs.seattletimes.com/">Jobs</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/sponsored/shop/">Shop</a></li> <li class="rm-manual"><a href="file:///explore/">Explore</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://obituaries.seattletimes.com/">Paid death notices</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="file:///seattle-news/">Local</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///tag/coronavirus/">Coronavirus</a></li> <li class="rm-manual"><a href="file:///seattle-news/transportation/">Traffic Lab</a></li> <li class="rm-manual"><a href="file:///seattle-news/homeless/">Project Homeless</a></li> <li class="rm-manual"><a href="file:///seattle-news/crime/">Crime</a></li> <li class="rm-manual"><a href="file:///seattle-news/politics/">Local Politics</a></li> <li class="rm-manual"><a href="file:///seattle-news/education/">Education</a></li> <li class="rm-manual"><a href="file:///education-lab/">Education Lab</a></li> <li class="rm-manual"><a href="file:///seattle-news/eastside/">Eastside</a></li> <li class="rm-manual"><a href="file:///seattle-news/northwest/">Northwest</a></li> <li class="rm-manual"><a href="file:///seattle-news/data/">Data</a></li> <li class="rm-manual"><a href="file:///seattle-news/health/">Health</a></li> <li class="rm-manual"><a href="file:///seattle-news/times-watchdog/">Times Watchdog</a></li> <li class="rm-manual"><a href="http://www.seattletimes.com/tag/inside-the-times/">Inside The Times</a></li> <li class="rm-manual"><a href="file:///obituaries/">News Obituaries</a></li> <li class="rm-manual"><a href="file:///photo-video/">Photo &amp; Video</a></li> <li class="rm-manual"><a href="file:///nation-world/">Nation &amp; World</a></li> <li class="rm-manual"><a href="file:///nation-world/nation-politics/">Politics</a></li> <li class="rm-manual"><a href="file:///nation-world/oddities/">Oddities</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///business/">Business</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///business/boeing-aerospace/">Boeing</a></li> <li class="rm-manual"><a href="file:///business/amazon/">Amazon</a></li> <li class="rm-manual"><a href="file:///tag/artificial-intelligence/">Artificial Intelligence</a></li> <li class="rm-manual"><a href="file:///business/microsoft/">Microsoft</a></li> <li class="rm-manual"><a href="file:///business/technology/">Technology</a></li> <li class="rm-manual"><a href="file:///business/economy/">Economy</a></li> <li class="rm-manual"><a href="file:///business/real-estate/">Real Estate</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///sports/">Sports</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///sports/seahawks/">Seahawks</a></li> <li class="rm-manual"><a href="file:///sports/uw-huskies/">Huskies</a></li> <li class="rm-manual"><a href="file:///sports/wsu-cougars/">Cougars</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/sports/kraken/">Kraken</a></li> <li class="rm-manual"><a href="file:///sports/high-school/">High Schools</a></li> <li class="rm-manual"><a href="file:///sports/mariners/">Mariners</a></li> <li class="rm-manual"><a href="file:///sports/sounders/">Sounders</a></li> <li class="rm-manual"><a href="file:///sports/snow-sports/">Snow Sports</a></li> <li class="rm-manual"><a href="file:///author/geoff-baker">Geoff Baker</a></li> <li class="rm-manual"><a href="file:///author/matt-calkins">Matt Calkins</a></li> <li class="rm-manual"><a href="file:///author/larry-stone">Larry Stone</a></li> <li class="rm-manual"><a href="file:///author/bob-condotta">Bob Condotta</a></li> <li class="rm-manual"><a href="file:///sports/sports-on-tv-radio-2/">On TV/Radio</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///entertainment/">Entertainment</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///entertainment/movies/">Movies</a></li> <li class="rm-manual"><a href="file:///entertainment/books/">Books</a></li> <li class="rm-manual"><a href="file:///entertainment/music/">Music</a></li> <li class="rm-manual"><a href="file:///entertainment/theater/">Theater</a></li> <li class="rm-manual"><a href="file:///entertainment/classical-music/">Classical Music</a></li> <li class="rm-manual"><a href="file:///entertainment/tv/">TV/Streaming</a></li> <li class="rm-manual"><a href="file:///entertainment/comics/">Comics</a></li> <li class="rm-manual"><a href="file:///entertainment/games/">Games &amp; Puzzles</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/horoscopes/">Horoscopes</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///life/">Life</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///pacific-nw-magazine/">Pacific NW Magazine</a></li> <li class="rm-manual"><a href="file:///life/food-drink/">Food &amp; Drink</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/category/seattle-happy-hours/">Happy Hour</a></li> <li class="rm-manual"><a href="file:///life/wellness/">Wellness</a></li> <li class="rm-manual"><a href="file:///life/home-decor/">Home &amp; Decor</a></li> <li class="rm-manual"><a href="file:///life/pets/">Pets</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/category/rant-and-rave/">Rant &amp; Rave</a></li> <li class="rm-manual"><a href="file:///author/bethany-jean-clement">Bethany Jean Clement</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///life/travel/">Travel</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///life/outdoors/">Outdoors</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/category/northwest-hikes/">Northwest Hikes</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/category/travel-in-washington-state/">Washington</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/category/travel-to-oregon/">Oregon</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/category/travel-to-british-columbia/">B.C.</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/category/travel-to-hawaii/">Hawaii</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///opinion/">Opinion</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///opinion/editorials/">Editorials</a></li> <li class="rm-manual"><a href="file:///opinion/letters-to-the-editor/">Letters</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/category/op-eds/">Op-Eds</a></li> <li class="rm-manual"><a href="file:///author/david-horsey/">David Horsey</a></li> <li class="rm-manual"><a href="file:///author/kate-riley/">Kate Riley</a></li> <li class="rm-manual"><a href="file:///author/mark-higgins/">Mark Higgins</a></li> <li class="rm-manual"><a href="file:///author/brier-dudley/">Brier Dudley</a></li> <li class="rm-manual"><a href="file:///author/jennifer-hemmingsen/">Jennifer Hemmingsen</a></li> <li class="rm-manual"><a href="file:///author/derrick-nunnally/">Derrick Nunnally</a></li> <li class="rm-manual"><a href="file:///tag/free-press/">Free Press</a></li> </ul> </li> <li class="rm-manual">
+<a href="file:///newsroom-staff/#news-columnists">Columnists</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///author/gene-balk-fyi-guy">FYI Guy</a></li> <li class="rm-manual"><a href="file:///author/gabriel-campanario-seattle-sketcher/">Seattle Sketcher</a></li> <li class="rm-manual"><a href="file:///author/danny-westneat/">Danny Westneat</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/author/naomi-ishisaka/">Naomi Ishisaka</a></li> <li class="rm-manual"><a href="file:///author/jon-talton/">Jon Talton</a></li> </ul> </li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="http://jobs.seattletimes.com/">Jobs</a></li> <li class="rm-manual"><a href="http://autos.seattletimes.com/">Autos</a></li> <li class="rm-manual"><a href="file:///explore/nwhomes/">Homes Listings</a></li> <li class="rm-manual"><a href="http://classifieds.seattletimes.com/">Classifieds</a></li> <li class="rm-manual"><a href="https://obituaries.seattletimes.com/">Paid Obituaries</a></li> <li class="rm-manual"><a href="file:///explore/">Explore</a></li> <li class="rm-manual"><a href="file:///sponsored/">Sponsored Posts</a></li> <li class="rm-manual"><a href="http://company.seattletimes.com/store/">Seattle Times Store</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.seattletimes.com/contact/">Contact</a></li> <li class="rm-manual"><a href="file:///help/">FAQs</a></li> <li class="rm-manual"><a href="https://secure.seattletimes.com/accountcenter/managesubscriptions">Subscriber Services</a></li> <li class="rm-manual"><a href="https://secure.seattletimes.com/accountcenter/replica">Print Replica</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/todays-times/">Today’s Times</a></li> <li class="rm-manual"><a href="https://itunes.apple.com/us/app/seattle-times-mobile/id329502124">iOS App</a></li> <li class="rm-manual"><a href="https://play.google.com/store/apps/details?id=com.seattletimes.android.SeattleTimesMobileNews">Android App</a></li> </ul>
+<p class="rm-manual"> <span>Obituaries</span> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://obituaries.seattletimes.com/">Paid death notices</a></li> </ul>
+<p class="rm-manual"> <a href="file:///seattle-news/obituaries/">Obituaries</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://secure.seattletimes.com/accountcenter/">Log In</a></li> <li class="rm-manual"><a href="file:///subscribe/signup-offers?subsource=voluntary">Subscribe</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///seattle-news/" rel="tag">Local News</a></li>
+<li class="rm-manual"><a href="file:///seattle-news/obituaries/" rel="tag">Obituaries</a></li> </ul>
+<h1 class="rm-manual"> Bill Gates Sr., civic leader and father of Microsoft co-founder, dies at 94 </h1>
+<p class="rm-manual"> Sep. 15, 2020 at 3:38 pm Updated Sep. 16, 2020 at 7:31 am </p>
+<p class="rm-manual"> <span>By </span> </p>
+<p class="rm-manual"><a href="file:///author/katherine-long/" rel="author"><span><span>Katherine Long</span></span></a> </p>
+<p class="rm-manual"><span> and </span></p>
+<p class="rm-manual"><a href="file:///author/cap-paul-roberts/" rel="author"><span><span>Paul Roberts</span></span></a> </p>
+<p>William Gates Sr., the father of Microsoft co-founder Bill Gates and a
+ towering figure in civic life as well as local and global philanthropy,
+ has died at 94, the family said Tuesday. He died Monday at his beach 
+home on Hood Canal, from Alzheimer’s disease.</p>
+<p>Gates was a prominent Seattle attorney and the founding partner of 
+one of the region’s best-known law firms, as well as a leading figure in
+ civic and social causes. But it was his son’s revolutionary success in 
+the tech field that made the name “Bill Gates” known the world over. And
+ it launched <a href="https://archive.seattletimes.com/archive/?date=20030126&amp;slug=pbigbill26">an entirely different path for the elder Gates</a> when he was nearly 70.</p>
+<p>That’s when he became one of the guiding forces behind the William H.
+ Gates Foundation — which later became the Bill &amp; Melinda Gates 
+Foundation, after his son and daughter-in-law. It is one of the largest 
+private foundations in the world, and has taken a leading role in 
+addressing some of the planet’s biggest challenges, including reducing 
+infant mortality, stamping out polio, and finding an AIDS vaccine.</p>
+<p>“Dad lived a long and enormously meaningful life. I never stopped 
+learning from his wisdom, kindness, and humility. Melinda and I owe him a
+ special debt because his commitment to serving the community and the 
+world helped inspire our own philanthropy,” Bill Gates Jr. said in a 
+statement Tuesday. “Although he would be the last person to say it, my 
+father’s compassion and generosity will live on in the foundation he 
+helped build. As I’ve said many times before, my dad was the real Bill 
+Gates. He was all the things I strive to be.”</p>
+<p>Those sentiments were echoed by dozens of local civic, political and 
+business leaders who recalled the influential role the elder Gates 
+played in progressive causes that ranged from supporting greater 
+diversity in law schools to fighting against income inequality. </p>
+<p>“He represented progress,” said fellow attorney Llewelyn Pritchard, 
+who met Gates in the early 1970s. “In these days of billable hours and 
+sophisticated marketing, what he emphasized was one’s obligation to … 
+the public.”</p>
+<p>But Gates was also warmly recalled for other things: his imposing 
+height–6 feet, 7 inches–and his gentle nature; his optimism and humor; 
+his natural curiosity about the world, and his deep, instinctive respect
+ for everyone he met, no matter where they came from. </p>
+<p>He believed “that everybody in the world is equal and deserves your 
+compassion and attention,” recalled Seattle attorney Marty Smith, who 
+met Bill Gates Sr. in 1981 at Gates’ firm, then called Shidler McBroom 
+Gates and Baldwin. “He actually knew all the names of the parking 
+attendants in the garage.” </p>
+<p>In 1998, Gates Sr. retired from the firm — by then known as Preston 
+Gates &amp; Ellis –but his second career was only getting started. </p>
+<p>Four years earlier, the elder Gates had stepped in to help his son 
+manage a growing flood of philanthropic requests. The result was the 
+William H. Gates Foundation, established in 1994. In 2000, it merged 
+with the Gates Learning Foundation to create the Bill &amp; Melinda 
+Gates Foundation. </p>
+<p>On the website of the foundation, the elder Gates described how he 
+and Bill Gates Jr. got involved in global health initiatives: “After 
+reading an article that explained that millions of children were dying 
+in poor countries from preventable diseases, my son, Bill, sent me a 
+copy of it with a note that said: ‘Dad, maybe we can do something about 
+this,'” <a href="https://www.impatientoptimists.org/Posts/2014/06/A-Very-Special-Fathers-Day-Gift#.W3De485Kipo">Gates Sr. wrote</a>. “Since then, I have dedicated my life to global issues I spent most of my career knowing nothing about.”</p>
+<p>Colleagues and philanthropy experts say Gates Sr. played a critical 
+role both in expanding the foundation’s scale and scope, and in refining
+ the model of expert-led philanthropy. </p>
+<p>“I consider Bill Gates Sr. the conscience of the Gates family,” Pablo
+ Eisenberg, a columnist for The Chronicle of Philanthropy, told The New 
+York Times. “He was instrumental in not only starting the foundation but
+ growing it, and his motive was that with all that money, you ought to 
+do good.” </p>
+<p>Long before he became co-chair of the Gates Foundation, the elder Gates was known for championing the disadvantaged. </p>
+<p>As president of both the Seattle/King County and the Washington State
+ Bar associations, he helped guide the group to a goal of equal justice 
+for the poor and disadvantaged. The University of Washington law school 
+—the place where he earned his law degree — has embraced a social 
+justice mission. Its building is named after Gates.</p>
+<p>“Bill Gates, Sr., was once quoted as saying, ‘Law is human service of
+ the highest order. Our role as lawyers is to make it possible for 
+people to survive — and thrive — in an extraordinarily complex world,’” 
+said Mario Barnes, the Toni Rembe dean and professor of law at the UW 
+School of Law, in a statement.</p>
+<p>Central to his philosophy was the idea that no one is successful on 
+their own, and that a person’s physical comfort and opportunity have 
+almost everything to do with the society into which a person is born. An
+ ardent supporter of greater diversity, Gates Sr. helped create law 
+school scholarships for students of color and raised funds for legal 
+services for the poor.</p>
+<p>“Bill Gates Sr. was a champion for our region, and for the things 
+that make this corner of the world so special,” said King County 
+Executive Dow Constantine in a statement Tuesday. “He was towering, both
+ figuratively and literally, and leaves behind a legacy of philanthropy,
+ advocacy for higher education and progressive tax reform that can serve
+ as inspiration for our entire region.” </p>
+<p>Gates traveled extensively on behalf of the foundation. In 2002, to 
+learn more about the AIDS epidemic, he toured brothels and AIDS clinics 
+in Africa with former President Jimmy Carter and his wife, Rosalynn.</p>
+<p>William Gates Sr. was born in Bremerton in 1925, the son of a 
+furniture store owner. He graduated from Bremerton High School, earned 
+an Eagle Scout badge and joined the U.S. Army to fight in World War II. 
+He returned to Seattle after the war to earn an undergraduate and law 
+degree at UW, and was a founding partner of the Seattle law firm that 
+after several permutations still bears his name.</p>
+<p>At the UW, Gates met his future wife, college classmate Mary Maxwell.
+ The couple had three children, Kristianne, Bill and Libby, and raised 
+them in Seattle’s Laurelhurst neighborhood.</p>
+<p>Mary Gates died in 1994. In 1996, the elder Gates married Mimi Gardner, then director of the Seattle Art Museum.</p>
+<p>He served from 1997 to 2012 on the UW’s governing body, the Board of 
+Regents, where he was known for asking staffers sharp, perceptive 
+questions. It was a job his wife, Mary, held from 1975 to 1993. </p>
+<p>Gates was also known for a dogged work ethic. UW President Ana Mari 
+Cauce, who regarded Gates as a mentor, recalled an early-morning trip to
+ Olympia in 2005 to testify before a legislative committee. “Maybe I 
+shouldn’t admit this, but I was feeling a little grumpy about how early I
+ had to arrive and be prepared and ready,” Cauce said. But as she 
+arrived at the Capitol, Cauce said, “who was coming out of chambers – 
+having already testified and having arrived even earlier? Bill Gates, 
+Sr.” </p>
+<p>Gates lent his name and financial support to an unsuccessful state 
+ballot initiative in 2010 that would have levied an income tax on the 
+state’s richest citizens to support education and health care services. 
+The initiative was defeated by 65% of voters.</p>
+<p>In 1998, he helped start the Washington News Council, a nonprofit 
+with a mission of promoting fairness, accuracy and ethics in the news 
+media in the state. He joined the volunteer board and <a href="https://www.seattletimes.com/opinion/happy-birthday-bill-gates-sr-thank-you-for-the-many-life-lessons/">gave a generous startup grant</a>.</p>
+<p>Gates published a book in 2009, “<a href="https://www.gatesnotes.com/Books/Showing-Up-for-Life">Showing up for Life: Thoughts on the Gifts of a Lifetime</a>.”</p>
+<p>In January 2018, on NBC’s “Today” show, Bill Gates Jr. <a href="https://www.today.com/health/bill-gates-reveals-personal-reason-he-s-helping-fight-alzheimer-t121865">revealed that his father had Alzheimer’s disease</a>. The younger Gates said he was investing $100 million into Alzheimer’s research to look for treatments and a cure.</p>
+<p class="rm-manual"><span>Katherine Long:</span> <span>206-464-2219</span> or <span><a href="mailto:klong@seattletimes.com">klong@seattletimes.com</a>;</span> <span>on Twitter: <a href="https://www.twitter.com/katherinelong">@katherinelong</a>.</span> </p>
+<p class="rm-manual"><span>Paul Roberts:</span> <span><a href="mailto:proberts@seattletimes.com">proberts@seattletimes.com</a>;</span> <span>on Twitter: <a href="https://www.twitter.com/Pauledroberts">@Pauledroberts</a>.</span> </p>
+<p class="rm-manual">The Seattle Times closes comments on particularly 
+sensitive stories. If you would like to share your thoughts or 
+experiences in relation to this story, please email the reporter or <a href="https://www.seattletimes.com/help/#how-to-submit-a-letter-to-the-editor">submit a letter</a> to be considered for publication in our Opinion section. You can read more about our <a href="https://www.seattletimes.com/help/#commenting-on-articles-on-seattletimes-com">community policies here</a>.</p>
+<ul class="rm-manual"> <li class="rm-manual">
+<a href="https://www.seattletimes.com/type/link/">COMPANY</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://company.seattletimes.com/who-we-are/">About</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/contact/">Contact</a></li> <li class="rm-manual"><a href="https://company.seattletimes.com/careers/">Careers</a></li> <li class="rm-manual"><a href="https://stux.wufoo.com/forms/permissions-and-licensing-request/">Permissions</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/newsroom-staff/">Newsroom Staff</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://www.seattletimes.com/type/link/">COMMUNITY</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://nie.seattletimes.com/">Newspapers in Education</a></li> <li class="rm-manual"><a href="https://ffn.seattletimes.com/">Fund for the Needy</a></li> <li class="rm-manual"><a href="https://company.seattletimes.com/investigativefund/">Investigative Journalism Fund</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://www.seattletimes.com/type/link/">Advertise</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://mediasolutions.seattletimes.com/">Media Solutions</a></li> <li class="rm-manual"><a href="https://contentstudio.seattletimes.com/">ST Content Studio</a></li> <li class="rm-manual"><a href="https://classifieds.seattletimes.com/">Classifieds</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/explore-category/at-home/">Homes</a></li> <li class="rm-manual"><a href="https://jobs.seattletimes.com/employer-home">Jobs</a></li> <li class="rm-manual"><a href="https://obituaries.seattletimes.com/select-notice-type">Obituaries</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://www.seattletimes.com/type/link/">SUBSCRIPTION</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///subscribe/signup-offers/?subsource=voluntary">Subscribe</a></li> <li class="rm-manual"><a href="https://secure.seattletimes.com/accountcenter/">My Account</a></li> <li class="rm-manual"><a href="https://replica.seattletimes.com/">Print Replica Login</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/todays-times/">Today’s Times</a></li> <li class="rm-manual"><a href="https://company.seattletimes.com/mobile/">Mobile Apps</a></li> <li class="rm-manual"><a href="https://nl.newsbank.com/nl-search/we/Archives/?p_product=HA-SE&amp;p_theme=histpaper&amp;p_action=keyword">Newspaper Archive</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/help/">Help/FAQ</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://www.seattletimes.com/type/link/">CONNECT</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.seattletimes.com/newsletters/">Manage Newsletters</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="https://www.facebook.com/seattletimes">Facebook</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="https://twitter.com/seattletimes">Twitter</a></li> <li class="rm-manual"><a href="file:///inside-the-times/listen-to-the-seattle-times-on-smart-speakers-and-podcast-apps/">Audio &amp; Voice</a></li> <li class="rm-manual"><a href="https://www.seattletimes.com/rss-feeds/">RSS</a></li> </ul> </li> </ul>
+<section class="rm-manual"> <a href="file:///notices/copyright.html">Copyright © 2021 The Seattle Times</a> | <a href="file:///notices/privacy.html">Privacy Statement</a> | <a href="file:///notices/privacy.html#california">Notice At Collection</a> | <a href="#">Do Not Sell My Information</a> | <a href="file:///notices/terms.html">Terms of Service</a> </section></article>
+</body></html>

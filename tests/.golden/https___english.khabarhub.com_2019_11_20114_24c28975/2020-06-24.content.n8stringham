@@ -1,0 +1,56 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h2 class="rm-manual"> 10 hilarious facts about Kim Jong-un </h2>
+<h3 class="rm-manual"><a href="https://english.khabarhub.com/author/newsadmin/"> Khabarhub </a></h3>
+<p class="rm-manual">May 11, 2019</p>
+<p class="rm-manual"> <span> <span> 2</span> <span>MIN READ</span></span> </p>
+<p class="rm-manual"> Photo: Reuters</p>
+<p>Kim Jong-un is the supreme leader of North Korea. Kim is the second 
+child of Kim Jong-il (1941–2011) and Ko Yong-hui. Many of the activities
+ of Kim and his government remain unknown. Here are the lists of 10 
+unknown facts of Kim Jong Un.</p>
+<ol> <li> <h5>He attended school in Switzerland secretly as “Pak Un”.</h5> </li> <li> <h5>He never passed any exams and stayed fascinated with basketball and computer games.</h5> </li> <li> <h5>He is to this day, a huge basketball fan.</h5> </li> <li> <h5>He was once caught with a bondage magazine in his school bag and he’s a ladies’ man.</h5> </li> <li> <h5>At 27, he underwent plastic surgery to allegedly resemble his grandfather Kim Il Sung.</h5> </li> <li> <h5>At 29 years of age, The Onion newspaper announced him as the “Sexiest Man Alive” for the year 2012.</h5> </li> <li> <h5>He has a severe addiction to Swiss cheese.</h5> </li> <li> <h5>He cuts his hair by himself and travels with his own toilet.</h5> </li> <li> <h5>His best friends is NBA-star Dennis Rodman.</h5> </li> <li> <h5>Those who didn’t go to his father mourning events were reportedly being sentenced to labor camps for six months. (Agencies)</h5> </li> </ol>
+<h4 class="rm-manual">Just In</h4>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://english.khabarhub.com/2020/25/107127/"> <h3 class="rm-manual">APF BOP to be establised at Pancheshwor</h3> </a> <p class="rm-manual">BAITADI: The Nepal government is preparing to establish a Border Out Post (BOP)</p> </li> <li class="rm-manual"> <a href="https://english.khabarhub.com/2020/25/107116/"> <h3 class="rm-manual">Over 500 manpower companies on verge of scrapping</h3> </a> <p class="rm-manual">KATHMANDU: With the coronavirus pandemic taking a toll on people’s health</p> </li> <li class="rm-manual"> <a href="https://english.khabarhub.com/2020/25/107120/"> <h3 class="rm-manual">COVID-19 death toll reaches 25 in Nepal as 55-yr-old dies in Pokhara</h3> </a> <p class="rm-manual">KATHMANDU: The death toll from coronavirus pandemic in Nepal has reached 25</p> </li> <li class="rm-manual"> <a href="https://english.khabarhub.com/2020/25/106923/"> <h3 class="rm-manual">Hoteliers in favor of resuming business by taking safety measures</h3> </a> <p class="rm-manual">KATHMANDU: The Federation of Hotel Entrepreneurs has demanded that hoteliers</p> </li> <li class="rm-manual"> <a href="https://english.khabarhub.com/2020/25/107110/"> <h3 class="rm-manual">Two fugitives held for bomb explosion after 10 yrs</h3> </a> <p class="rm-manual">KATHMANDU: Police have arrested two individuals who had absconded after</p> </li> <li class="rm-manual"> <a href="https://english.khabarhub.com/2020/25/106950/"> <h3 class="rm-manual">Popular film-maker Schumacher passes away</h3> </a> <p class="rm-manual">KATHMANDU: Popular Film Director Joel Schumacher has died at the age of</p> </li> <li class="rm-manual"> <a href="https://english.khabarhub.com/2020/24/106953/"> <h3 class="rm-manual">Sudurpaschim State Assembly meeting postponed</h3> </a> <p class="rm-manual">DHANGADHI: The Sudurpaschim State Assembly meeting has been adjourned on</p> </li> <li class="rm-manual"> <a href="https://english.khabarhub.com/2020/24/106933/"> <h3 class="rm-manual">Google says news publishers retain 95% of revenue with its Ad Manager</h3> </a> <p class="rm-manual">SAN FRANCISCO: As traditional media outlets ask social media giants to give</p> </li> <li class="rm-manual"> <a href="https://english.khabarhub.com/2020/24/106935/"> <h3 class="rm-manual">COVID-19: New Delhi revises coronavirus response plan</h3> </a> <p class="rm-manual">NEW DELHI: The New Delhi government has revised its Covid response plan in an</p> </li> <li class="rm-manual"> <a href="https://english.khabarhub.com/2020/24/107096/"> <h3 class="rm-manual">Consensus shown during hard times praiseworthy: President tells parties</h3> </a> <p class="rm-manual">KATHMANDU: President Bidhya Devi Bhandari congratulated all political parties</p> </li> </ul>
+<h2 class="rm-manual">Related News</h2>
+<p class="rm-manual"> <a href="https://english.khabarhub.com/2020/23/106707/"> </a></p><p class="rm-manual"><a href="https://english.khabarhub.com/2020/23/106707/"> </a></p><h2 class="rm-manual"><a href="https://english.khabarhub.com/2020/23/106707/">India, China agree to ‘disengage’ in Eastern Ladakh</a></h2><a href="https://english.khabarhub.com/2020/23/106707/"> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://english.khabarhub.com/2020/21/106141/"> </a></p><p class="rm-manual"><a href="https://english.khabarhub.com/2020/21/106141/"> </a></p><h2 class="rm-manual"><a href="https://english.khabarhub.com/2020/21/106141/">India changes RoE across LAC, says firearms can be used in ‘extraordinary situations’</a></h2><a href="https://english.khabarhub.com/2020/21/106141/"> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://english.khabarhub.com/2020/20/106040/"> </a></p><p class="rm-manual"><a href="https://english.khabarhub.com/2020/20/106040/"> </a></p><h2 class="rm-manual"><a href="https://english.khabarhub.com/2020/20/106040/">Nepal confident India and China will resolve dispute peacefully</a></h2><a href="https://english.khabarhub.com/2020/20/106040/"> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://english.khabarhub.com/2020/18/105608/"> </a></p><p class="rm-manual"><a href="https://english.khabarhub.com/2020/18/105608/"> </a></p><h2 class="rm-manual"><a href="https://english.khabarhub.com/2020/18/105608/">No soldiers missing after Galwan Valley clash: Indian Army</a></h2><a href="https://english.khabarhub.com/2020/18/105608/"> <p class="rm-manual"></p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="https://english.khabarhub.com/2020/16/105090/"> </a></p><p class="rm-manual"><a href="https://english.khabarhub.com/2020/16/105090/"> </a></p><h2 class="rm-manual"><a href="https://english.khabarhub.com/2020/16/105090/">Chinese side tried to unilaterally change the status quo, says India</a></h2><a href="https://english.khabarhub.com/2020/16/105090/"> <p></p> </a> <p></p></article>
+</body></html>

@@ -1,0 +1,329 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">Charges, sanctions for North Korean Sony, Wannacry hackers</p>
+<p class="rm-manual"><a href="#">×</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="#">LOG IN</a></li>
+<li class="rm-manual"><a href="#">SIGN UP</a></li>
+</ul>
+<p class="rm-manual">Keep Me Logged In</p>
+<p class="rm-manual"><a href="#MainContent">Skip Navigation</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="#">SIGN IN</a></li>
+<li class="rm-manual"><a href="file:///pro/">Pro</a></li>
+<li class="rm-manual"><a href="file:///watchlist/">Watchlist</a></li>
+<li class="rm-manual"><a href="file:///make-it/">Make It</a></li>
+<li class="rm-manual"><a href="file:///select/">Select</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///?region=usa">USA</a></li>
+<li class="rm-manual"><a href="file:///world/">INTL</a></li>
+</ul>
+<p class="rm-manual"><a href="https://www.cnbc.com/markets/"><span>Markets</span></a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.cnbc.com/pre-markets/">Pre-Markets</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/us-markets/">U.S. Markets</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/currencies/">Currencies</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/cryptocurrency/">Cryptocurrency</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/futures-and-commodities/">Futures &amp; Commodities</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/bonds/">Bonds</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/funds-and-etfs/">Funds &amp; ETFs</a></li>
+</ul>
+<p class="rm-manual"><a href="file:///watchlist/"><span>Watchlist</span></a></p>
+<p class="rm-manual"><a href="https://www.cnbc.com/business/"><span>Business</span></a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.cnbc.com/economy/">Economy</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/finance/">Finance</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/health-and-science/">Health &amp; Science</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/media/">Media</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/real-estate/">Real Estate</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/energy/">Energy</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/transportation/">Transportation</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/industrials/">Industrials</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/retail/">Retail</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/wealth/">Wealth</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/small-business/">Small Business</a></li>
+</ul>
+<p class="rm-manual"><a href="https://www.cnbc.com/investing/"><span>Investing</span></a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.cnbc.com/invest-in-you/">Invest In You</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/personal-finance/">Personal Finance</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/financial-advisors/">Financial Advisors</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/trading-nation/">Trading Nation</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/options-action/">Options Action</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/etf-street/">ETF Street</a></li>
+<li class="rm-manual"><a href="https://buffett.cnbc.com/">Buffett Archive</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/earnings/">Earnings</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/trader-talk/">Trader Talk</a></li>
+</ul>
+<p class="rm-manual"><a href="https://www.cnbc.com/technology/"><span>Tech</span></a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.cnbc.com/cybersecurity/">Cybersecurity</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/enterprise/">Enterprise</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/internet/">Internet</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/media/">Media</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/mobile/">Mobile</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/social-media/">Social Media</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/venture-capital/">Venture Capital</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/tech-guide/">Tech Guide</a></li>
+</ul>
+<p class="rm-manual"><a href="https://www.cnbc.com/politics/"><span>Politics</span></a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.cnbc.com/white-house/">White House</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/policy/">Policy</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/defense/">Defense</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/congress/">Congress</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/2020-elections/">2020 Elections</a></li>
+</ul>
+<p class="rm-manual"><a href="https://www.cnbc.com/tv/"><span>CNBC TV</span></a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="http://www.cnbc.com/live-tv/?trknav=navigation:shows:watchlive:46">Live TV</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/live-audio/">Live Audio</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/video/">Latest Video</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/top-video/">Top Video</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/video-ceo-interviews/">CEO Interviews</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/business-day/">Business Day Shows</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/primetime-shows/">Primetime Shows</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/features/">CNBC World</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/digital-original/">Digital Originals</a></li>
+<li class="rm-manual"><a href="http://www.cnbc.com/live-tv/?trknav=navigation:more:fullepisodes:100746233">Full Episodes</a></li>
+</ul>
+<p class="rm-manual"><a href="https://www.cnbc.com/markets/"><span>Markets</span></a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.cnbc.com/pre-markets/">Pre-Markets</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/us-markets/">U.S. Markets</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/currencies/">Currencies</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/cryptocurrency/">Cryptocurrency</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/futures-and-commodities/">Futures &amp; Commodities</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/bonds/">Bonds</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/funds-and-etfs/">Funds &amp; ETFs</a></li>
+</ul>
+<p class="rm-manual"><a href="file:///watchlist/"><span>Watchlist</span></a></p>
+<p class="rm-manual"><a href="https://www.cnbc.com/business/"><span>Business</span></a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.cnbc.com/economy/">Economy</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/finance/">Finance</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/health-and-science/">Health &amp; Science</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/media/">Media</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/real-estate/">Real Estate</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/energy/">Energy</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/transportation/">Transportation</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/industrials/">Industrials</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/retail/">Retail</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/wealth/">Wealth</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/small-business/">Small Business</a></li>
+</ul>
+<p class="rm-manual"><a href="https://www.cnbc.com/investing/"><span>Investing</span></a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.cnbc.com/invest-in-you/">Invest In You</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/personal-finance/">Personal Finance</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/financial-advisors/">Financial Advisors</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/trading-nation/">Trading Nation</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/options-action/">Options Action</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/etf-street/">ETF Street</a></li>
+<li class="rm-manual"><a href="https://buffett.cnbc.com/">Buffett Archive</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/earnings/">Earnings</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/trader-talk/">Trader Talk</a></li>
+</ul>
+<p class="rm-manual"><a href="https://www.cnbc.com/technology/"><span>Tech</span></a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.cnbc.com/cybersecurity/">Cybersecurity</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/enterprise/">Enterprise</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/internet/">Internet</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/media/">Media</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/mobile/">Mobile</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/social-media/">Social Media</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/venture-capital/">Venture Capital</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/tech-guide/">Tech Guide</a></li>
+</ul>
+<p class="rm-manual"><a href="https://www.cnbc.com/politics/"><span>Politics</span></a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.cnbc.com/white-house/">White House</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/policy/">Policy</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/defense/">Defense</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/congress/">Congress</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/2020-elections/">2020 Elections</a></li>
+</ul>
+<p class="rm-manual"><a href="https://www.cnbc.com/tv/"><span>CNBC TV</span></a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="http://www.cnbc.com/live-tv/?trknav=navigation:shows:watchlive:46">Live TV</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/live-audio/">Live Audio</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/video/">Latest Video</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/top-video/">Top Video</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/video-ceo-interviews/">CEO Interviews</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/business-day/">Business Day Shows</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/primetime-shows/">Primetime Shows</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/features/">CNBC World</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/digital-original/">Digital Originals</a></li>
+<li class="rm-manual"><a href="http://www.cnbc.com/live-tv/?trknav=navigation:more:fullepisodes:100746233">Full Episodes</a></li>
+</ul>
+<p class="rm-manual"><a href="https://www.cnbc.com/politics/">Politics</a></p>
+<h1 class="rm-manual">North Korean hackers sanctioned, facing charges for Sony hack, Wannacry ransomware attack</h1>
+<p class="rm-manual">Published Thu, Sep 6 2018 10:34 AM EDT Updated Thu, Sep 6 2018 2:10 PM EDT</p>
+<p class="rm-manual"><a href="https://www.cnbc.com/dan-mangan/">Dan Mangan</a><a href="https://twitter.com/_DanMangan">@_DanMangan</a></p>
+<p class="rm-manual"><a href="https://www.cnbc.com/kate-fazzini/">Kate Fazzini</a><a href="https://twitter.com/@KateFazzini">@KateFazzini</a></p>
+<p class="rm-manual">Key Points</p>
+<ul class="rm-manual">
+<li class="rm-manual">A North Korean hacker suspected of both the 
+cyberattack on Sony Pictures in 2014 and the Wannacry ransomware attack 
+in 2017 was criminally charged Thursday, as the Treasury Department 
+sanctioned both the hacker and the North Korea entity he worked for.</li>
+<li class="rm-manual">The hacker, Park Jin Hyok, is suspected of working for North Korea's Reconnaissance General Bureau.</li>
+<li class="rm-manual">The hack on Sony Pictures came as a result of 
+anger over the studio's film "The Interview," a comedy about a 
+harebrained scheme to assassinate Kim Jong Un, the North Korean 
+dictator.</li>
+</ul>
+<p class="rm-manual">Park Jin Hyok</p>
+<p class="rm-manual">Source: Justice Department</p>
+<p><a href="https://www.cnbc.com/id/10000169">A North Korean</a> hacker suspected of the cyberattack on <a href="file:///quotes/?symbol=6758.T-JP">Sony</a>
+ Pictures, the Wannacry ransomware attack and the brazen cyberheist of 
+Bangladesh Bank was named in a criminal complaint revealed Thursday, as 
+the Treasury Department sanctioned that man and a North Korea entity 
+that employed him.</p>
+<p>The hacker, Park Jin Hyok, is also suspected of trying to hack into <a href="file:///quotes/?symbol=LMT">Lockheed Martin</a>'s
+ THAAD Missile defense system project currently deployed in South Korea.
+ Park is suspected of working for North Korea's Reconnaissance General 
+Bureau, a leading intelligence agency of that country.</p>
+<p>The complaint against Park describes a "wide-ranging, multi-year 
+conspiracy to conduct computer intrusions and commit wire fraud by 
+co-conspirators working on behalf of the government of the Democratic 
+People's Republic of Korea, commonly known as North Korea."</p>
+<p>The one-two punch against North Korea came hours after President <a href="https://www.cnbc.com/donald-trump/">Donald Trump</a> warmly thanked <a href="https://www.cnbc.com/id/10001299">Kim Jong Un</a>,
+ the North Korean dictator, after Kim reportedly told representatives of
+ South Korea that he still has faith in Trump and in their commitment to
+ denuclearize the Korean Peninsula.</p>
+<p>But the <a href="https://www.cnbc.com/id/10000894">Treasury Department</a>'s
+ statement announcing the actions Thursday said they were in direct 
+response to "the Government of North Korea's malign cyber activities." 
+The Treasury said the sanctions were being unveiled in conjunction with 
+federal criminal charges for the hackers.</p>
+<p>Park, who is a computer programmer, and the Chosun Expo Joint Venture both were hit with sanctions by the Treasury Department.</p>
+<p>The Treasury said the joint venture, also known as Korea Expo Joint 
+Venture, is "a front for the North Korean government," according to the <a href="https://www.cnbc.com/id/10000892">Justice Department</a>.</p>
+<p>"The scale and scope of the cyber-crimes alleged by the complaint is 
+staggering and offensive to all who respect the rule of law and the 
+cyber norms accepted by responsible nations," said Assistant Attorney 
+General for National Security John C. Demers.</p>
+<p>"The complaint alleges that the North Korean government, through a 
+state-sponsored group, robbed a central bank and citizens of other 
+nations, retaliated against free speech in order to chill it half a 
+world away, and created disruptive malware that indiscriminately 
+affected victims in more than 150 other countries, causing hundreds of 
+millions, if not billions, of dollars' worth of damage."</p>
+<p>Park, who is not in custody, was charged with conspiracy and conspiracy to commit wire fraud by federal prosecutors.</p>
+<p>The department said Park is part of the conspiracy responsible for 
+the Wannacry and Sony attacks, as well as the February 2016 fraudulent 
+transfer of $81 million from Bangladesh Bank.</p>
+<p>Park and his unidentified co-conspirators "operated from North Korea,
+ China, and elsewhere to perpetrate these malicious activities," 
+according to the Treasury Department. The sanctions will bar Americans 
+from dealing with Park or the joint venture. The sanctions also will 
+lock up any property or interests held by the the targets of the 
+sanctions.</p>
+<p>Treasury Secretary <a href="https://www.cnbc.com/steven-mnuchin/">Steven Mnuchin</a>
+ said, "We will not allow North Korea to undermine global cybersecurity 
+to advance its interests and generate illicit revenues in violation of 
+our sanctions."</p>
+<p>Pedestrians walk past Sony Pictures Studios in Los Angeles, Dec. 4, 2014.</p>
+<p>Frederic J. Brown | AFP | Getty Images</p>
+<p>"The United States is committed to holding the regime accountable for
+ its cyber-attacks and other crimes and destabilizing activities," 
+Mnuchin said.</p>
+<p>The 2014 hack on Sony Pictures came as a result of anger over the 
+studio's film "The Interview," a comedy about a harebrained scheme to 
+assassinate Kim Jong Un.</p>
+<p>The attack led to the release of thousands of emails and documents, 
+and to the resignation of Sony Pictures Co-chair Amy Pascal, who had 
+joked in emails about asking President Barack Obama about black-themed 
+films.</p>
+<p>Last December, then White House homeland security advisor Tom Bossert
+ said North Korea was "directly responsible" for the Wannacry attack, 
+which in May 2017 infected up to 300,000 computers in 150 countries with
+ a virus. Among the victims were Britain's National Health Service, 
+which had to close emergency rooms in a number of hospitals as a result.</p>
+<p>The Treasury Department, in a press release, said, "North Korea has 
+demonstrated a pattern of disruptive and harmful cyber activity that is 
+inconsistent with the growing consensus on what constitutes responsible 
+state behavior in cyberspace."</p>
+<p>"Our policy is to hold North Korea accountable and demonstrate to the
+ regime that there is a cost to its provocative and irresponsible 
+actions."</p>
+<p class="">North Korea has denied the allegations of hacking.</p>
+<p class="rm-manual">Correction: Sony Pictures was hacked in 2014. An earlier version misstated the year.</p>
+<p class="rm-manual">Related Tags</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.cnbc.com/id/10000894">U.S. Department of the Treasury</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/quotes?symbol=LMT">Lockheed Martin Corp</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/steven-mnuchin/">Steven Mnuchin</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/id/10000892">Justice Department</a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/id/10000169">North Korea</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.cnbc.com/application/pro/?__source=pro%7Cdisplay%7Ccnbc%7Chouse%7CPRO_Footer_MktgPg/"><p class="rm-manual">Subscribe to CNBC PRO</p></a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/cnbc-reprints/"><p class="rm-manual">Licensing &amp; Reprints</p></a></li>
+<li class="rm-manual"><a href="https://www.cnbccouncils.com/"><p class="rm-manual">CNBC Councils</p></a></li>
+<li class="rm-manual"><a href="https://corporate.comcast.com/values/integrity"><p class="rm-manual">Supply Chain Values</p></a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/advertising-and-partnerships/"><p class="rm-manual">Advertise With Us</p></a></li>
+<li class="rm-manual"><a href="https://www.cnbcinsights.com/c/a/5bz17E1ICrI1gVk4ZBAbCA"><p class="rm-manual">Join the CNBC Panel</p></a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/digital-products/"><p class="rm-manual">Digital Products</p></a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/cnbc-news-releases/"><p class="rm-manual">News Releases</p></a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/closed-captioning/"><p class="rm-manual">Closed Captioning</p></a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/corrections/"><p class="rm-manual">Corrections</p></a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/about/"><p class="rm-manual">About CNBC</p></a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/cnbc-internship-program/"><p class="rm-manual">Internships</p></a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/site-map/"><p class="rm-manual">Site Map</p></a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/podcasts/"><p class="rm-manual">Podcasts</p></a></li>
+<li class="rm-manual"><a href="https://info.evidon.com/pub_info/16924?v=1"><p class="rm-manual">AdChoices</p></a></li>
+<li class="rm-manual"><a href="https://www.cnbc.com/cnbc-careers-and-employment/"><p class="rm-manual">Careers</p></a></li>
+<li class="rm-manual"><a href="https://help.cnbc.com/"><p class="rm-manual">Help</p></a></li>
+<li class="rm-manual"><a href="https://help.cnbc.com/contact/"><p class="rm-manual">Contact</p></a></li>
+</ul>
+<h4 class="rm-manual">News Tips</h4>
+<p class="rm-manual">Got a confidential news tip? We want to hear from you.</p>
+<p class="rm-manual">CNBC Newsletters</p>
+<p class="rm-manual">Sign up for free newsletters and get more CNBC delivered to your inbox</p>
+<p class="rm-manual">Get this delivered to your inbox, and more info about our products and services. </p>
+<p class="rm-manual"><a href="https://www.nbcuniversal.com/privacy?brandA=CNBC&amp;intake=CNBC">Privacy Policy</a><span>|</span><a href="https://www.nbcuniversal.com/privacy/notrtoo?brandA=CNBC&amp;intake=CNBC">Do Not Sell My Personal Information</a><span>|</span><a href="https://www.cnbc.com/nbcuniversal-terms-of-service/">Terms of Service</a></p>
+<p class="rm-manual">© 2020 CNBC LLC. All Rights Reserved. <a href="http://www.nbcuni.com/">A Division of NBCUniversal</a></p>
+<p class="rm-manual">Data is a real-time snapshot *Data is delayed at 
+least 15 minutes. Global Business and Financial News, Stock Quotes, and 
+Market Data and Analysis.</p>
+<p class="rm-manual"><a href="https://www.cnbc.com/market-data-terms-of-service/">Market Data Terms of Use and Disclaimers</a></p>
+<p class="rm-manual">Data also provided by </p></article>
+</body></html>

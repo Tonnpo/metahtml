@@ -1,0 +1,106 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Reward offer for information on the financial mechanisms of Iran’s Islamic Revolutionary Guard Corps </p>
+<p class="rm-manual"><span>Voltaire Network</span></p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.voltairenet.org/ar">عربي</a></li> <li class="rm-manual"><a href="https://www.voltairenet.org/cs">čeština</a></li> <li class="rm-manual"><a href="https://www.voltairenet.org/de">Deutsch</a></li> <li class="rm-manual"><a href="https://www.voltairenet.org/el">ελληνικά</a></li> <li class="rm-manual"><a href="https://www.voltairenet.org/en">English</a></li> <li class="rm-manual"><a href="https://www.voltairenet.org/es">Español</a></li> <li class="rm-manual"><a href="https://www.voltairenet.org/fa">فارسى</a></li> <li class="rm-manual"><a href="https://www.voltairenet.org/fi">suomi</a></li> <li class="rm-manual"><a href="https://www.voltairenet.org/fr">français</a></li> <li class="rm-manual"><a href="https://www.voltairenet.org/it">italiano</a></li> <li class="rm-manual"><a href="https://www.voltairenet.org/nl">Nederlands</a></li> <li class="rm-manual"><a href="https://www.voltairenet.org/no">norsk</a></li> <li class="rm-manual"><a href="https://www.voltairenet.org/pl">polski</a></li> <li class="rm-manual"><a href="https://www.voltairenet.org/pt">Português</a></li> <li class="rm-manual"><a href="https://www.voltairenet.org/ro">română</a></li> <li class="rm-manual"><a href="https://www.voltairenet.org/ru">русский</a></li> <li class="rm-manual"><a href="https://www.voltairenet.org/tr">Türkçe</a></li> <li class="rm-manual"><a href="https://www.voltairenet.org/zh">中文</a></li> </ul>
+<p class="rm-manual"> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article150341.html">About the Network</a> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article161186.html">How to participate?</a> <a href="https://www.voltairenet.org/spip.php?page=backend&amp;id_secteur=1110&amp;lang=en">RSS</a> </p>
+<p class="rm-manual"><span>Voltaire Network</span></p>
+<ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.voltairenet.org/en">Front Page </a></li> <li class="rm-manual">
+<a>Sections </a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/rubrique30002.html?lang=en">Focus</a></li> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/rubrique120359.html?lang=en">News in Brief</a></li> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/rubrique120361.html?lang=en">Controversies</a></li> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/rubrique120921.html?lang=en">Diplomatic Wire</a></li> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/rubrique120360.html?lang=en">Documentary Watch</a></li> </ul> </li> <li class="rm-manual">
+<a>Dossiers </a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/spip.php?page=mot-groupe&amp;id_groupe=13&amp;lang=en">Themes</a></li>
+<li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/spip.php?page=mot-groupe&amp;id_groupe=19&amp;lang=en">States</a></li>
+<li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/spip.php?page=mot-groupe&amp;id_groupe=28&amp;lang=en">Biographies</a></li>
+<li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/spip.php?page=mot-groupe&amp;id_groupe=31&amp;lang=en">Corporations</a></li>
+<li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/spip.php?page=mot-groupe&amp;id_groupe=32&amp;lang=en">NGO</a></li> </ul> </li> <li class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/rubrique1.html?lang=en">Archives</a></li> </ul> </li> </ul>
+<h1 class="rm-manual">Reward offer for information on the financial mechanisms of Iran’s Islamic Revolutionary Guard Corps</h1>
+<p class="rm-manual"> <span><span>Voltaire Network</span></span> | <span>Washington D. C. (États-Unis)</span> | <span>4 September 2019</span> </p>
+<p class="rm-manual"> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article207555.html" rel="alternate">Deutsch</a> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article207626.html" rel="alternate">Español</a> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article207553.html" rel="alternate">français</a> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article207554.html" rel="alternate">русский</a> </p>
+<p>The U.S. Department of State’s Rewards for Justice (RFJ) is offering a
+ reward of up to $15 million for information leading to the disruption 
+of the financial mechanisms of Iran’s Islamic Revolutionary Guard Corps 
+(IRGC) and its branches, including the IRGC-Qods Force (IRGC-QF). This 
+includes seeking information on the IRGC’s illicit oil sales, including 
+via oil tankers like the Adrian Darya.</p>
+<p>The department is offering rewards for information related to:</p>
+<p> Sources of revenue for the IRGC and its branches, to include IRGC-QF, or their key financial mechanisms; </p>
+<p> IRGC illicit financial schemes, including the oil-for-money scheme; </p>
+<p> Front companies tied to the IRGC that are engaged in international activity on IRGC’s behalf; </p>
+<p> Entities or individuals assisting the IRGC in evading U.S. and international sanctions; </p>
+<p> Formal financial institutions doing business with the IRGC; </p>
+<p> How the IRGC is transferring funding and material to its terrorist and military proxies and partners; </p>
+<p> IRGC donors or financial facilitators; </p>
+<p> Financial institutions or exchange houses facilitating IRGC transactions; </p>
+<p> Businesses or investments owned or controlled by IRGC or its financiers; </p>
+<p> Front companies engaged in international procurement of dual-use technology on behalf of the IRGC; and </p>
+<p> Criminal schemes involving IRGC members and supporters, which are financially benefiting the organization.</p>
+<p>More information about this reward offer is located on the Rewards for Justice website at <a href="http://www.rewardsforjustice.net/" rel="nofollow external">www.rewardsforjustice.net</a>. We encourage anyone with information on the financial mechanisms of the IRGC to contact RFJ via the website, e-mail at <a href="file:///cdn-cgi/l/email-protection">[email protected]</a>, or the Regional Security Officer at the nearest U.S. embassy or consulate. All information will be kept strictly confidential.</p>
+<p>RFJ is administered by the U.S. Department of State’s Diplomatic 
+Security Service. Since its inception in 1984, the program has paid in 
+excess of $150 million to more than 100 people who provided actionable 
+information that helped bring terrorists to justice or prevented acts of
+ international terrorism worldwide. Follow us on Twitter at <a href="https://twitter.com/Rewards4Justice" rel="nofollow external">https://twitter.com/Rewards4Justice</a>.</p>
+<h4 class="rm-manual">Voltaire Network</h4>
+<p class="rm-manual">Voltaire, international edition</p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/rubrique30002.html?lang=en">Focus</a> </p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/rubrique120359.html?lang=en">News in Brief</a> </p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/rubrique120361.html?lang=en">Controversies</a> </p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/rubrique120921.html?lang=en">Diplomatic Wire</a> </p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/rubrique120360.html?lang=en">Documentary Watch</a> </p>
+<h4 class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/mot108.html?lang=en">Islamic Republic of Iran</a></h4>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article210253.html"> </a></p><p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article210253.html">Iran openly backs NATO in Lybia</a></p><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article210253.html"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article210341.html"> </a></p><p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article210341.html">Interpretation of resolution 2231</a></p><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article210341.html"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article210350.html"> </a></p><p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article210350.html">China’s position on Iranian nuclear</a></p><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article210350.html"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article210148.html"> </a></p><p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article210148.html">Prisoner swap deal between US and Iran moves ahead</a></p><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article210148.html"> </a> <p class="rm-manual"></p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/mot108.html?lang=en">continue</a> </p>
+<h4 class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article135459.html">Article licensed under Creative Commons</a></h4>
+<p class="rm-manual">The articles on Voltaire Network may be freely 
+reproduced provided the source is cited, their integrity is respected 
+and they are not used for commercial purposes (license <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" rel="external">CC BY-NC-ND</a>). </p>
+<p class="rm-manual">Source: “Reward offer for information on the financial mechanisms of Iran’s Islamic Revolutionary Guard Corps”, <span>Voltaire Network</span>, 4 September 2019, <a href="https://www.voltairenet.org/article207552.html">www.voltairenet.org/article207552.html</a></p>
+<h4 class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article169976.html">Support Voltaire Network</a></h4>
+<p class="rm-manual">You visit this website to seek quality analysis 
+that enables you to forge your own understanding of today’s world. In 
+order to continue our work, we need you to support our efforts. </p>
+<p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article169832.html">Help us by making a contribution</a>. </p>
+<h4 class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article161186.html">How to participate in Voltaire Network?</a></h4>
+<p class="rm-manual">The members of our team are all volunteers. </p>
+<p class="rm-manual"> Professional-level mother-tongue translators: you can help us by <a href="https://www.voltairenet.org/email120805.html?lang=en" rel="external">translating our articles</a>. </p>
+<p class="rm-manual"> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article210406.html"> </a></p><h4 class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article210406.html">How the Big Two can establish peace in the Greater Middle East</a></h4><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article210406.html"> <p class="rm-manual">by Thierry Meyssan</p> </a> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article210291.html"> <h5 class="rm-manual">How Washington intends to triumph</h5> <p class="rm-manual">by Thierry Meyssan</p> </a> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article210278.html"> <h5 class="rm-manual">Racism and anti-racism as lies</h5> <p class="rm-manual">by Thierry Meyssan</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article210337.html"> </a></p><p class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article210337.html">French spies detained in Turkey</a></p><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article210337.html"> </a> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article210332.html"> <p class="rm-manual">The left teams up with Muslim Brotherhood in 4th largest city in France</p> </a> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article210330.html"> <p class="rm-manual">Israel bombs Arab Syrian Army</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article210411.html"> </a></p><h5 class="rm-manual"><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article210411.html">European Union sanctions Chavista and Venezuelan opposition leaders</a></h5><a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article210411.html"> <p class="rm-manual"> Voltaire Network </p> </a> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article210384.html"> <h5 class="rm-manual">NATO at the Helm of European Foreign Policy</h5> <p class="rm-manual">by Manlio Dinucci, Voltaire Network </p> </a> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article210314.html"> <h5 class="rm-manual">Italians support EU exit and alliance with China</h5> <p class="rm-manual"> Voltaire Network </p> </a> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article210313.html"> <h5 class="rm-manual">Secret US-Syria negotiations</h5> <p class="rm-manual"> Voltaire Network </p> </a> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article210298.html"> <h5 class="rm-manual">Trump open to meeting with Nicolás Maduro</h5> <p class="rm-manual"> Voltaire Network </p> </a> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article210285.html"> <h5 class="rm-manual">Egypt threatens to intervene militarily in Libya</h5> <p class="rm-manual"> Voltaire Network </p> </a> <a href="file:///var/folders/lb/079mfb713g110mtzhlw_xwjw0000gn/T/article210268.html"> <h5 class="rm-manual">Washington ready to release Hezbollah hostages</h5> <p class="rm-manual"> Voltaire Network </p> </a> <p></p></article>
+</body></html>

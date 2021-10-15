@@ -1,0 +1,97 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Kim seen for first time in 40 days - BT </p>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <span>Latest</span> </p><p class="rm-manual"> <span>World</span> </p> <p class="rm-manual"></p> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///news-01363796671918"> <span>Latest</span> </a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///news/uk-news-01363796671919"> <span>UK</span></a> </li> <li class="rm-manual"> <a href="file:///news/world-news-01363796671929"> <span>World</span> </a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///headlines-01364076921672"> <span>News Headlines</span></a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///news/showbiz-01363796671949"> <span>Showbiz</span></a> </li> <li class="rm-manual"> <a href="file:///news/science-01400813480061"> <span>Science</span></a> </li> <li class="rm-manual"> <a href="file:///news/on-this-day-01364182498774"> <span>On This Day</span> </a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///news/on-this-day/january-01364143042743"> <span>Jan</span></a> </li> <li class="rm-manual"> <a href="file:///news/on-this-day/february-01364145305407"> <span>Feb</span></a> </li> <li class="rm-manual"> <a href="file:///news/on-this-day/march-01364158124065"> <span>March</span></a> </li> <li class="rm-manual"> <a href="file:///news/on-this-day/april-01364170427260"> <span>April</span></a> </li> <li class="rm-manual"> <a href="file:///news/on-this-day/may-01364172728537"> <span>May</span></a> </li> <li class="rm-manual"> <a href="file:///news/on-this-day/june-01364175827629"> <span>June</span></a> </li> <li class="rm-manual"> <a href="file:///news/on-this-day/july-01364176216617"> <span>July</span></a> </li> <li class="rm-manual"> <a href="file:///news/on-this-day/august-01364176414649"> <span>August </span></a> </li> <li class="rm-manual"> <a href="file:///news/on-this-day/september-01364177430538"> <span>Sept</span></a> </li> <li class="rm-manual"> <a href="file:///news/on-this-day/october-01364178426438"> <span>Oct</span></a> </li> <li class="rm-manual"> <a href="file:///news/on-this-day/november-01364180580920"> <span>Nov</span></a> </li> <li class="rm-manual"> <a href="file:///news/on-this-day/december-01364180582017"> <span>Dec</span></a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///news/bt-life-01363796671959"> <span>BT Life</span> </a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///news/bt-life/purposeful-business-01364077222463"> <span>Purposeful Business</span></a> </li> <li class="rm-manual"> <a href="file:///news/bt-life/bt-newsdesk-01364077680037"> <span>BT Newsdesk</span></a> </li> <li class="rm-manual"> <a href="file:///news/bt-life/more-bt-news-01364077678622"> <span>More from BT Life</span></a> </li> <li class="rm-manual"> <a href="file:///news/bt-life/history-of-bt-01389830205943"> <span>History of BT</span></a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///news/puzzles-01400811028135"> <span>Quizzes</span></a> </li> <li class="rm-manual"> <a href="file:///news/in-pictures-01364253508482"> <span>In Pictures</span></a> </li> <li class="rm-manual"> <a href="file:///videos/news-61363796671917"> <span>Videos</span></a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///lifestyle-01363796671428"> <span>Lifestyle</span> </a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///lifestyle/travel/travel-01364015955030"> <span>Travel</span></a> </li> <li class="rm-manual"> <a href="file:///lifestyle/home-life-01363796671523"> <span>Home Life</span></a> </li> <li class="rm-manual"> <a href="file:///lifestyle/food-01364172735774"> <span>Food</span></a> </li> <li class="rm-manual"> <a href="file:///lifestyle/money-01409785241021"> <span>Money</span> </a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///lifestyle/money/insurance-01409785512413"> <span>Insurance</span></a> </li> <li class="rm-manual"> <a href="file:///lifestyle/money/savings-banking-01409785638613"> <span>Savings &amp; Banking</span></a> </li> <li class="rm-manual"> <a href="file:///lifestyle/money/investing-pensions-01409785713787"> <span>Investing &amp; Pensions</span></a> </li> <li class="rm-manual"> <a href="file:///lifestyle/money/mortgages-bills-01409785778726"> <span>Mortgages &amp; Bills</span></a> </li> <li class="rm-manual"> <a href="file:///lifestyle/money/money-tips-01409785830130"> <span>Money Tips</span></a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///pictures/lifestyle-51363796671406"> <span>Pictures</span></a> </li> <li class="rm-manual"> <a href="file:///videos/lifestyle-61363796671406"> <span>Videos</span></a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///tech-gadgets-01363796672063"> <span>Tech &amp; Gadgets</span> </a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///tech-gadgets/computing-01398835177105"> <span>Computing</span> </a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///tech-gadgets/computing/windows10-01363994385712"> <span>Windows 10</span></a> </li> <li class="rm-manual"> <a href="file:///tech-gadgets/computing/windows-7-01364141937895"> <span>Windows 7</span></a> </li> <li class="rm-manual"> <a href="file:///tech-gadgets/computing/laptops-01364135914207"> <span>Laptops</span></a> </li> <li class="rm-manual"> <a href="file:///tech-gadgets/computing/cloud-01364135418979"> <span>Cloud</span></a> </li> <li class="rm-manual"> <a href="file:///tech-gadgets/computing/security-01364141584409"> <span>Security</span></a> </li> <li class="rm-manual"> <a href="file:///tech-gadgets/computing/software-01364141583433"> <span>Software</span></a> </li> <li class="rm-manual"> <a href="file:///tech-gadgets/computing/printing-01364140884234"> <span>Printing</span></a> </li> <li class="rm-manual"> <a href="file:///tech-gadgets/computing/pc-accessories-01364135421619"> <span>PC extras</span></a> </li> <li class="rm-manual"> <a href="file:///tech-gadgets/computing/gaming-01364115923864"> <span>Games</span></a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///tech-gadgets/internet-01398835143403"> <span>Internet</span> </a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///tech-gadgets/internet/broadband-01364181317216"> <span>Broadband and Wi-fi</span></a> </li> <li class="rm-manual"> <a href="file:///tech-gadgets/internet/broadband-01364241852874"> <span> Ultrafast Fibre</span></a> </li> <li class="rm-manual"> <a href="file:///tech-gadgets/internet/social-media-01364181316414"> <span>Social Media</span></a> </li> <li class="rm-manual"> <a href="file:///tech-gadgets/internet/connected-home-01364266439415"> <span>Connected Home</span></a> </li> <li class="rm-manual"> <a href="file:///tech-gadgets/internet/mobile-data-01364181316998"> <span>Mobile Data</span></a> </li> <li class="rm-manual"> <a href="file:///tech-gadgets/internet/browsers-01364181317102"> <span>Browsers</span></a> </li> <li class="rm-manual"> <a href="https://techliteracy.co.uk/"> <span>Tech Literacy</span></a> </li> <li class="rm-manual"> <a href="file:///tech-gadgets/internet/bt-smart-hub-01364071703291"> <span>BT Smart Hub</span></a> </li> <li class="rm-manual"> <a href="file:///tech-gadgets/internet/internet-matters-01364001134455"> <span>Internet Matters</span></a> </li> <li class="rm-manual"> <a href="file:///tech-gadgets/internet/broadband-01364285890922"> <span>Websites</span></a> </li> <li class="rm-manual"> <a href="file:///tech-gadgets/more-01400796221243"> <span>More</span></a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///tech-gadgets/phones-tablets-01398835188516"> <span>Phones &amp; tablets</span> </a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///tech-gadgets/phones-tablets/kindle-01364115330471"> <span>Kindle</span></a> </li> <li class="rm-manual"> <a href="file:///tech-gadgets/phones-tablets/bt-mobile-01363969730939"> <span>BT Mobile</span></a> </li> <li class="rm-manual"> <a href="file:///tech-gadgets/what-to-do-with-your-new-tablet-01418249414477"> <span>What to do with your new tablet</span></a> </li> <li class="rm-manual"> <a href="file:///tech-gadgets/phones-tablets/hudl-01363994808712"> <span>Hudl</span></a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///tech-gadgets/future-tech-01398835201258"> <span>Future Tech</span></a> </li> <li class="rm-manual"> <a href="file:///tech-gadgets/tv-01364158720590"> <span>TV </span> </a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///tech-gadgets/tv/tv-home-cinema-01364160865679"> <span>Home Cinema &amp; Speakers</span></a> </li> </ul> </li> <li class="rm-manual"> <a href="file:///tech-gadgets/photography-01364181307722"> <span>Photography</span></a> </li> <li class="rm-manual"> <a href="file:///videos/tech-gadgets-61363796672062"> <span>Videos</span></a> </li> <li class="rm-manual"> <a href="http://www.shop.bt.com/"> <span>BT Shop</span></a> </li> <li class="rm-manual"> <a href="file:///tech-gadgets/bt-extras-01364079911429"> <span>BT Extras</span></a> </li> <li class="rm-manual"> <a href="file:///tech-gadgets/bt-devices-01364101294033"> <span>BT Devices</span></a> </li> </ul> </li> </ul> </li> </ul>
+<h1 class="rm-manual"> Kim Jong Un seen for first time in 40 days </h1>
+<h2 class="rm-manual"> He's alive! He doesn't appear to have been 
+overthrown! North Korean leader Kim Jong Un has appeared in public for 
+the first time in five weeks. </h2>
+<ul> <li> <section> <p class="rm-manual"> <span>Last updated: 14 October 2014, 12:07 BST</span> </p> <p class="rm-manual"> <a href="#">Print this story</a> </p> </section> <p>
+ North Korean leader Kim Jong Un has made his first public appearance in
+ five weeks, the country's official news agency reported.</p> <p> It ended an absence that fuelled global speculation that something was amiss with the country's most powerful person.</p> <p>
+ Resuming what had been a regular practice before he stopped showing up 
+in media reports for 40 days, Kim "gave field guidance" at the newly 
+built Wisong scientists residential district, according to the Korean 
+Central News Agency.</p> <p> The agency did not say when the visit 
+happened, but added that Kim made another visit the same day to a newly 
+built natural energy institute.</p> <p> These kinds of inspection tours 
+had been typical of Kim, thought to be 31 and the third generation of 
+his family to rule, until he began laying low after last appearing on 
+September 3 at a concert.</p> <p> As the weeks passed, the apparent 
+vanishing act of a man long caricatured in foreign media as an 
+all-powerful overlord sitting on a nuclear arsenal while his people 
+starved proved endlessly fascinating.</p> <p> And while there was plenty
+ of informed analysis from experts and frequent visitors to Pyongyang 
+that said it probably was not anything that serious, there seemed to be 
+even more thinly sourced speculation.</p> <p> Kim was, by turns, 
+reported to be suffering from gout, from diabetes, from a brain 
+haemorrhage, from a heart ailment, from a leg injury that required 
+surgery from a French doctor, from mental illness or, according to a 
+head-turning British report, from a cheese addiction. There were rumours
+ of coups.</p> <p> The KCNA report made no mention of Kim's health, only detailing his routine comments about the construction projects.</p> <p>
+ The speculation during his absence was fed by Kim missing several 
+high-profile events that he normally attends and his description in an 
+official documentary last month as experiencing "discomfort". Archive 
+footage from August showed him overweight and limping.</p> <p> At a 
+South Korean parliamentary hearing yesterday, Choi Yoon-hee, head of the
+ joint chiefs of staff, said that whatever health problems Kim might 
+have, they "are not severe enough to disrupt his status as the ruler of 
+the country".</p> <p> Analysts pointed out there were no signs to indicate any major problems.</p> <p>
+ No unusual troop movements or other signs of a possible coup emerged. 
+Diplomacy at the highest level continued, and three members of his inner
+ circle made a surprise visit to the South, something analysts say would
+ be impossible without the leader's blessing.</p> <p> Foreign tourists 
+and aid workers still travelled to the North, and there were no reports 
+of new restrictions or warnings for diplomats.</p> <p> There is also 
+nothing particularly unusual about North Korean leaders laying low for 
+extended periods. Kim's late father, Kim Jong Il, no fan of the 
+limelight in his later years, would disappear at times.</p> <p> And Kim Jong Un, who seems to genuinely like being at the centre of things, took off without a word for three weeks in 2012.</p> <p>
+ Kim Jong Un emerged as the anointed successor after his father 
+disappeared from public view in 2008 - by most accounts because of a 
+stroke. The elder Kim died in late 2011.</p> </li> </ul>
+<p class="rm-manual"> <span>Last updated: 14 October 2014, 12:07 BST</span> </p>
+<h2 class="rm-manual">On This Day </h2>
+<h3 class="rm-manual"><a href="http://home.bt.com/news/on-this-day-01364182498774">On this day in history...</a></h3>
+<p class="rm-manual">Famous events and memorable moments through the years in words, pictures and video.</p>
+<p class="rm-manual"><span>Latest news videos</span></p>
+<h2 class="rm-manual"><a href="http://www.productsandservices.bt.com/mobile/phones/index.html?s_intcid=con_intban_dmedia_content_btmobile_rhr_promo">BT Mobile</a></h2>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"><a href="http://www.productsandservices.bt.com/mobile/phones/index.html?s_intcid=con_intban_dmedia_content_btmobile_rhr_promo">Get great deals on new smartphones when you have BT Broadband</a></p> </li> </ul>
+<h2 class="rm-manual">Most Popular</h2>
+<ul class="rm-manual"> <li class="rm-manual"><a href="#tabs-1">Most read</a></li> <li class="rm-manual"><a href="#tabs-2">Most shared</a></li> </ul>
+<ol class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///tech-gadgets/internet/social-media/how-to-change-name-facebook-nickname-married-name-rules-11364204842382"> <span>1</span> </a> </p> <p class="rm-manual"><a href="file:///tech-gadgets/internet/social-media/how-to-change-name-facebook-nickname-married-name-rules-11364204842382">Changing your name on Facebook: We show you how to do it</a></p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///tech-gadgets/internet/social-media/whatsapp-messages-explained-ticks-message-delivery-read-receipts-11364178107998"> <span>2</span> </a> </p> <p class="rm-manual"><a href="file:///tech-gadgets/internet/social-media/whatsapp-messages-explained-ticks-message-delivery-read-receipts-11364178107998">WhatsApp: We explain what the symbols with the app actually mean</a></p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///news/uk-news/suspect-held-after-man-stabbed-to-death-on-train-in-front-of-teenage-son-11364322640157"> <span>3</span> </a> </p> <p class="rm-manual"><a href="file:///news/uk-news/suspect-held-after-man-stabbed-to-death-on-train-in-front-of-teenage-son-11364322640157">Suspect held after man stabbed to death on train as he travelled with teenage son</a></p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///tv/amazon-prime-video-on-bt-tv/grand-tour-series-3-episode-6-china-chogqing-mercedes-bmw-cadillac-nio-ep9-richard-hammond-crash-11364336552120"> <span>4</span> </a> </p> <p class="rm-manual"><a href="file:///tv/amazon-prime-video-on-bt-tv/grand-tour-series-3-episode-6-china-chogqing-mercedes-bmw-cadillac-nio-ep9-richard-hammond-crash-11364336552120">The Grand Tour in China review: Hammond car crashes, bad suits and Chinese saunas</a></p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///lifestyle/health/health-concerns/5-surprising-ways-to-tackle-the-agony-of-toothache-11363960678494"> <span>5</span> </a> </p> <p class="rm-manual"><a href="file:///lifestyle/health/health-concerns/5-surprising-ways-to-tackle-the-agony-of-toothache-11363960678494">5 surprising ways to tackle the agony of toothache</a></p> </li> </ol></article>
+</body></html>

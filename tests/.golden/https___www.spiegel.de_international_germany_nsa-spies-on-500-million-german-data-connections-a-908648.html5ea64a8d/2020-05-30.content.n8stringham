@@ -1,0 +1,102 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h2 class="rm-manual"> <span> Partner and Target </span> <span><span>NSA Snoops on 500 Million German Data Connections</span> </span> </h2>
+<p class="rm-manual"> NSA spying is targeting Germany more intensely 
+than previously believed. Secret documents viewed by SPIEGEL reveal that
+ the American intelligence service monitors around half a billion 
+telephone calls, emails and text messages in the country every month. </p>
+<p class="rm-manual"> Von <span> Laura Poitras</span><span>, </span> <a href="https://www.spiegel.de/impressum/autor-6f31c6ab-0001-0003-0000-000000000793"> Marcel Rosenbach</a><span> und </span> <a href="https://www.spiegel.de/impressum/autor-144d86e6-0001-0003-0000-000000001195"> Holger Stark</a></p>
+<p class="rm-manual"> 30.06.2013, 19.19 Uhr </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.spiegel.de/"> <span>Home</span>Icon: Startseite </a> </li> <li class="rm-manual"> <a href="#">Icon: Kommentare </a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.facebook.com/share.php?u=https%3A%2F%2Fwww.spiegel.de%2Finternational%2Fgermany%2Fnsa-spies-on-500-million-german-data-connections-a-908648.html&amp;t=Partner+and+Target%3A+NSA+Snoops+on+500+Million+German+Data+Connections" rel="nofollow">Icon: Facebook </a> </li> <li class="rm-manual"> <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.spiegel.de%2Finternational%2Fgermany%2Fnsa-spies-on-500-million-german-data-connections-a-908648.html&amp;text=Partner+and+Target%3A+NSA+Snoops+on+500+Million+German+Data+Connections&amp;via=derspiegel&amp;lang=en" rel="nofollow">Icon: Twitter </a> </li> <li class="rm-manual"> <a href="mailto:?subject=Partner%20and%20Target:%20NSA%20Snoops%20on%20500%20Million%20German%20Data%20Connections%20%28DER%20SPIEGEL%29&amp;body=https%3A%2F%2Fwww.spiegel.de%2Finternational%2Fgermany%2Fnsa-spies-on-500-million-german-data-connections-a-908648.html" rel="nofollow">Icon: Mail </a> </li> <li class="rm-manual"> <a href="fb-messenger://share?link=https%3A%2F%2Fwww.spiegel.de%2Finternational%2Fgermany%2Fnsa-spies-on-500-million-german-data-connections-a-908648.html&amp;app_id=2309869772" rel="nofollow">Icon: Messenger </a> </li> <li class="rm-manual"> <a href="whatsapp://send?text=Partner+and+Target%3A+NSA+Snoops+on+500+Million+German+Data+Connections+%28DER+SPIEGEL%29+https%3A%2F%2Fwww.spiegel.de%2Finternational%2Fgermany%2Fnsa-spies-on-500-million-german-data-connections-a-908648.html" rel="nofollow">Icon: Whatsapp </a> </li> <li class="rm-manual"> <a href="#" rel="nofollow">Icon: Link </a> </li> <li class="rm-manual"> <a href="#" rel="nofollow">Icon: teilen </a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="mailto:?subject=Partner%20and%20Target:%20NSA%20Snoops%20on%20500%20Million%20German%20Data%20Connections%20%28DER%20SPIEGEL%29&amp;body=https%3A%2F%2Fwww.spiegel.de%2Finternational%2Fgermany%2Fnsa-spies-on-500-million-german-data-connections-a-908648.html" rel="nofollow"> <span> <span>Icon: Mail </span> <span>E-Mail</span> </span> </a> </li> <li class="rm-manual"> <a href="fb-messenger://share?link=https%3A%2F%2Fwww.spiegel.de%2Finternational%2Fgermany%2Fnsa-spies-on-500-million-german-data-connections-a-908648.html&amp;app_id=2309869772" rel="nofollow"> <span> <span>Icon: Messenger </span> <span>Messenger</span> </span> </a> </li> <li class="rm-manual"> <a href="whatsapp://send?text=Partner+and+Target%3A+NSA+Snoops+on+500+Million+German+Data+Connections+%28DER+SPIEGEL%29+https%3A%2F%2Fwww.spiegel.de%2Finternational%2Fgermany%2Fnsa-spies-on-500-million-german-data-connections-a-908648.html" rel="nofollow"> <span> <span>Icon: Whatsapp </span> <span>WhatsApp</span> </span> </a> </li> <li class="rm-manual"> <a href="#" rel="nofollow"> <span> <span>Icon: Link </span> <span>Link kopieren</span> </span> </a> </li> </ul>
+<p class="rm-manual">A former NSA monitoring base in Bad Aibling, Germany: Only now is the scope of spying becoming clear.</p>
+<p class="rm-manual"><span>MICHAELA REHLE/ REUTERS</span> </p>
+<p>America's National Security Agency (NSA) is apparently spying on 
+Germany more than previously believed. Secret documents from the US 
+intelligence service, which have been viewed by SPIEGEL journalists, 
+reveal that the NSA systematically monitors and stores a large share of 
+the country's telephone and Internet connection data.</p>
+<p>Internal NSA statistics indicate that the agency stores data from 
+around half a billion communications connections in Germany each month. 
+This data includes telephone calls, emails, mobile-phone text messages 
+and chat transcripts. The <a href="http://www.guardian.co.uk/technology/interactive/2013/jun/12/what-is-metadata-nsa-surveillance#meta=0000000">metadata</a>
+ -- or information about which call or data connections were made and 
+when -- is then stored at the NSA's headquarters in Fort Meade, near 
+Washington, DC.</p>
+<p>The documents show for the first time the scope of American 
+surveillance in Germany. Previously, it had only been clear that Germany
+ had been one of the major targets of NSA spying. A map published by the
+ Guardian shows that Germany is on a par with targets such as China, 
+Iraq and Saudi Arabia in terms of the intensity of electronic snooping. 
+For weeks now, new details have emerged from documents collected by 
+whistleblower Edward Snowden about the NSA's Prism and Britain's Tempora
+ digital spying programs. </p>
+<p>The statistics, which SPIEGEL has also seen, show that data is 
+collected from Germany on normal days for up to 20 million telephone 
+calls and 10 million Internet data exchanges. Last Christmas Eve, it 
+collected data on around 13 million phone calls and about half as many 
+online exchanges. On the busiest days, such as January 7 of this year, 
+the information gathered spiked to nearly 60 million communication 
+connections under surveillance. </p>
+<p>The NSA, it turns out, is more active in Germany than in any other of
+ the EU's 27 member states. By comparison, during the same time frame, 
+the Americans only recorded data on an average of 2 million connections 
+in France each day. The documents also show that the NSA is primarily 
+interested in important Internet hubs in southern and western Germany. 
+Frankfurt, for example, plays an important role in the global Internet 
+infrastructure, and the city is listed as a central base for the 
+country. </p>
+<p>One top secret document also states that while Germany may be a 
+partner, it is still also a target of the NSA's electronic snooping. 
+According to the document, Germany is a so-called "3rd party foreign 
+partner." The only countries that are explicitly excluded from spying 
+attacks are Australia, Canada, New Zealand and the UK. "We can, and 
+often do, target the signals of most 3d party foreign partners," a slide
+ from an internal presentation states. </p>
+<p>In its current issue, SPIEGEL also reports that the NSA targeted <a href="https://www.spiegel.de/international/europe/nsa-spied-on-european-union-offices-a-908590.html">European Union diplomatic offices</a> in Washington and New York, placing bugs in offices as well as infiltrating computer networks. </p>
+<p class="rm-manual"><span>Icon: Der Spiegel </span> </p>
+<p class="rm-manual">SPIEGEL ONLINE International will publish the report in its entirety on Monday.</p>
+<p class="rm-manual"> <a href="https://www.spiegel.de/kontakt?betreff=NSA+Snoops+on+500+Million+German+Data+Connections&amp;channel=International&amp;id=b5c74d45-0001-0001-0000-000000908648" rel="nofollow"> Feedback </a> </p>
+<p class="rm-manual"> <span>Mehr lesen über</span> </p>
+<p class="rm-manual"> <span> <span>Pfeil nach links </span> </span> </p>
+<p class="rm-manual"> <a href="https://www.spiegel.de/thema/united_states_en/"> <span>United States</span> </a> </p>
+<p class="rm-manual"> <span> <span>Pfeil nach rechts </span> </span> </p>
+<p class="rm-manual"><span>Verwandte Artikel</span> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.spiegel.de/international/europe/nsa-spied-on-european-union-offices-a-908590.html"> <span>•</span> <span> <span> Attacks from America: NSA Spied on European Union Offices </span> </span> </a> </li> </ul></article>
+</body></html>

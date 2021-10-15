@@ -1,0 +1,437 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><ul> <li class="rm-manual">Article</li> <li class="rm-manual"><a href="#article-info">Published: 23 June 2021</a></li> </ul>
+<h1 class="rm-manual">Past, present and future stars that can see Earth as a transiting exoplanet</h1>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="#auth-L_-Kaltenegger">L. Kaltenegger</a><span> <a href="http://orcid.org/0000-0002-0436-1802"><span>ORCID: </span>orcid.org/0000-0002-0436-1802</a></span><a href="#Aff1">1</a>,<a href="#Aff2">2</a> &amp; </li>
+<li class="rm-manual">
+<a href="#auth-J__K_-Faherty">J. K. Faherty</a><a href="#Aff3">3</a> </li>
+</ul>
+<p class="rm-manual"> <a href="file:///">Nature</a> <span>volume</span> 594, <span>pages </span>505–507 (<span>2021</span>)<a href="#citeas">Cite this article</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual">1876 <span>Altmetric</span></p> </li> <li class="rm-manual"> <p class="rm-manual"><a href="file:///articles/s41586-021-03596-y/metrics" rel="nofollow">Metrics <span>details</span></a></p> </li> </ul>
+<h3 class="rm-manual">Subjects</h3>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///subjects/astrobiology">Astrobiology</a></li>
+<li class="rm-manual"><a href="file:///subjects/communication">Communication</a></li>
+<li class="rm-manual"><a href="file:///subjects/exoplanets">Exoplanets</a></li>
+<li class="rm-manual"><a href="file:///subjects/science-in-culture">Science in culture</a></li> </ul>
+<h2 class="rm-manual">Abstract</h2>
+<p>In the search for life in the cosmos, transiting exoplanets are 
+currently our best targets. With thousands already detected, our search 
+is entering a new era of discovery with upcoming large telescopes that 
+will look for signs of ‘life’ in the atmospheres of transiting worlds. 
+Previous work has explored the zone from which Earth would be visible 
+while transiting the Sun<a href="#ref-CR1">1</a>,<a href="#ref-CR2">2</a>,<a href="#ref-CR3">3</a>,<a href="file:///articles/s41586-021-03596-y#ref-CR4">4</a>.
+ However, these studies considered only the current position of stars, 
+and did not include their changing vantage point over time. Here we 
+report that 1,715 stars within 100 parsecs from the Sun are in the right
+ position to have spotted life on a transiting Earth since early human 
+civilization (about 5,000 years ago), with an additional 319 stars 
+entering this special vantage point in the next 5,000 years. Among these
+ stars are seven known exoplanet hosts, including Ross-128, which saw 
+Earth transit the Sun in the past, and Teegarden’s Star and Trappist-1, 
+which will start to see it in 29 and 1,642 years, respectively. We found
+ that human-made radio waves have already swept over 75 of the closest 
+stars on our list.</p>
+<p class="rm-manual"> <a href="https://wayf.springernature.com/?redirect_uri=https%3A%2F%2Fwww.nature.com%2Farticles%2Fs41586-021-03596-y"> <span>Access through your institution</span> </a> </p>
+<p class="rm-manual"> <a href="#access-options"> <span>Buy or subscribe</span> </a> </p>
+<h2 class="rm-manual">Access options</h2>
+<p class="rm-manual">Subscribe to Journal</p>
+<p class="rm-manual">Get full journal access for 1 year</p>
+<p class="rm-manual">$199.00</p>
+<p class="rm-manual">only $3.90 per issue</p>
+<p class="rm-manual"><a href="file:///nature/subscribe"><span>Subscribe</span></a></p>
+<p class="rm-manual">All prices are NET prices.</p>
+<p class="rm-manual"> VAT will be added later in the checkout.</p>
+<p class="rm-manual">Tax calculation will be finalised during checkout.</p>
+<p class="rm-manual">Rent or Buy article</p>
+<p class="rm-manual">Get time limited or full article access on ReadCube.</p>
+<p class="rm-manual"><span>from</span>$8.99</p>
+<p class="rm-manual"><a href="file:///articles/s41586-021-03596-y.epdf?no_publisher_access=1&amp;r3_referer=nature"><span>Rent or Buy</span></a></p>
+<p class="rm-manual">All prices are NET prices.</p>
+<h3 class="rm-manual">Additional access options:</h3>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://idp.nature.com/authorize/natureuser?client_id=grover&amp;redirect_uri=https%3A%2F%2Fwww.nature.com%2Farticles%2Fs41586-021-03596-y">Log in</a> </li> <li class="rm-manual"> <a href="https://wayf.springernature.com/?redirect_uri=https%3A%2F%2Fwww.nature.com%2Farticles%2Fs41586-021-03596-y">Access through your institution</a> </li> <li class="rm-manual"> <a href="https://www.springernature.com/gp/librarians/licensing/license-options">Learn about institutional subscriptions</a> </li> </ul>
+<figcaption class="rm-manual">Fig. 1: Stars that can see Earth transit since early human civilization.</figcaption><h2 class="rm-manual">Data availability</h2>
+<p class="rm-manual">All data are available in the <a href="file:///articles/s41586-021-03596-y#MOESM1">Supplementary Information</a> and at <a href="https://github.com/jfaherty17/ETZ">https://github.com/jfaherty17/ETZ</a>.</p>
+<h2 class="rm-manual">Code availability</h2>
+<p class="rm-manual">Code used in the analysis is available at <a href="https://github.com/jfaherty17/ETZ">https://github.com/jfaherty17/ETZ</a>.</p>
+<h2 class="rm-manual">References</h2>
+<ol class="rm-manual">
+<li class="rm-manual">
+<span>1.</span><p class="rm-manual">Shostak, S. &amp; Villard, R. A 
+Scheme for Targeting Optical SETI Observations. In Symp. Int. Astron. 
+Union Vol. 213, 409–414 (Cambridge Univ. Press, 2004).</p>
+</li>
+<li class="rm-manual">
+<span>2.</span><p class="rm-manual">Filippova, L. N., Kardashev, N. S., 
+Likhachev, S. F. &amp; Strelnitskj, V. S. in Bioastronomy: The Search 
+for Extraterrestial Life — The Exploration Broadens 254–258 (Springer, 
+2008).</p>
+</li>
+<li class="rm-manual">
+<span>3.</span><p class="rm-manual">Heller, R. &amp; Pudritz, R. E. The 
+search for extraterrestrial intelligence in Earth’s solar transit zone. 
+Astrobiology 16, 259–270 (2016).</p>
+<p class="rm-manual"><a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?link_type=ABSTRACT&amp;bibcode=2016AsBio..16..259H">ADS</a> <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;dopt=Abstract&amp;list_uids=26967201" rel="nofollow">PubMed</a> <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC26967201" rel="nofollow">PubMed Central</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=The%20search%20for%20extraterrestrial%20intelligence%20in%20Earth%E2%80%99s%20solar%20transit%20zone&amp;journal=Astrobiology&amp;volume=16&amp;pages=259-270&amp;publication_year=2016&amp;author=Heller%2CR&amp;author=Pudritz%2CRE"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>4.</span><p class="rm-manual">Kaltenegger, L. &amp; Pepper, J. 
+Which stars can see Earth as a transiting exoplanet? Mon. Not. R. 
+Astron. Soc. Lett. 499, L111–L115 (2020).</p>
+<p class="rm-manual"><a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?link_type=ABSTRACT&amp;bibcode=2020MNRAS.499L.111K">ADS</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=Which%20stars%20can%20see%20Earth%20as%20a%20transiting%20exoplanet%3F&amp;journal=Mon.%20Not.%20R.%20Astron.%20Soc.%20Lett.&amp;volume=499&amp;pages=L111-L115&amp;publication_year=2020&amp;author=Kaltenegger%2CL&amp;author=Pepper%2CJ"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>5.</span><p class="rm-manual">Gaia Collaboration. Gaia Early Data Release 3. Summary of the contents and survey properties. Astron. Astrophys. 649, 61 (2020).</p>
+<p class="rm-manual"><a href="http://scholar.google.com/scholar_lookup?&amp;title=Gaia%20Early%20Data%20Release%203.%20Summary%20of%20the%20contents%20and%20survey%20properties&amp;journal=Astron.%20Astrophys.&amp;volume=649&amp;publication_year=2020"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>6.</span><p class="rm-manual">Gaia Collaboration. Gaia Early Data Release 3. The Gaia catalogue of nearby stars. Astron. Astrophys. 41, 10 (2020).</p>
+<p class="rm-manual"><a href="http://scholar.google.com/scholar_lookup?&amp;title=Gaia%20Early%20Data%20Release%203.%20The%20Gaia%20catalogue%20of%20nearby%20stars&amp;journal=Astron.%20Astrophys.&amp;volume=41&amp;publication_year=2020"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>7.</span><p class="rm-manual">Marconi, S. G. Radio telegraphy. J. Am. Inst. Electr. Eng. 41, 561–570 (1922).</p>
+<p class="rm-manual"><a href="http://scholar.google.com/scholar_lookup?&amp;title=Radio%20telegraphy&amp;journal=J.%20Am.%20Inst.%20Electr.%20Eng.&amp;volume=41&amp;pages=561-570&amp;publication_year=1922&amp;author=Marconi%2CSG"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>8.</span><p class="rm-manual">Gaia Collaboration. Gaia Data Release 2. Astron. Astrophys. 616, A10 (2018).</p>
+<p class="rm-manual"><a href="http://scholar.google.com/scholar_lookup?&amp;title=Gaia%20Data%20Release%202&amp;journal=Astron.%20Astrophys.&amp;volume=616&amp;publication_year=2018"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>9.</span><p class="rm-manual">Kiman, R. et al. Exploring the age-dependent properties of M and L dwarfs using Gaia and SDSS. Astron. J. 157, 231 (2019).</p>
+<p class="rm-manual"><a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?link_type=ABSTRACT&amp;bibcode=2019AJ....157..231K">ADS</a> <a href="file:///articles/cas-redirect/1%3ACAS%3A528%3ADC%252BC1MXit1OntL3N">CAS</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=Exploring%20the%20age-dependent%20properties%20of%20M%20and%20L%20dwarfs%20using%20Gaia%20and%20SDSS&amp;journal=Astron.%20J.&amp;volume=157&amp;publication_year=2019&amp;author=Kiman%2CR"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>10.</span><p class="rm-manual">Bochanski, J. J. et al. The 
+luminosity and mass functions of low-mass stars in the galactic disk II.
+ The field. Astron. J. 139, 2679–2699 (2010).</p>
+<p class="rm-manual"><a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?link_type=ABSTRACT&amp;bibcode=2010AJ....139.2679B">ADS</a> <a href="file:///articles/cas-redirect/1%3ACAS%3A528%3ADC%252BC3cXotVaksLk%253D">CAS</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=The%20luminosity%20and%20mass%20functions%20of%20low-mass%20stars%20in%20the%20galactic%20disk%20II.%20The%20field&amp;journal=Astron.%20J.&amp;volume=139&amp;pages=2679-2699&amp;publication_year=2010&amp;author=Bochanski%2CJJ"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>11.</span><p class="rm-manual">Sheikh, S. Z. et al. The 
+breakthrough listen search for intelligent life: a 3.95–8.00 GHz search 
+for radio technosignatures in the restricted Earth transit zone. Astron.
+ J. 160, 29 (2020).</p>
+<p class="rm-manual"><a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?link_type=ABSTRACT&amp;bibcode=2020AJ....160...29S">ADS</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=The%20breakthrough%20listen%20search%20for%20intelligent%20life%3A%20a%203.95%E2%80%938.00%20GHz%20search%20for%20radio%20technosignatures%20in%20the%20restricted%20Earth%20transit%20zone&amp;journal=Astron.%20J.&amp;volume=160&amp;publication_year=2020&amp;author=Sheikh%2CSZ"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>12.</span><p class="rm-manual">Zhang, Z.-S. et al. First SETI 
+observations with China’s Five-hundred-meter Aperture Spherical Radio 
+Telescope (FAST). Astrophys. J. 891, 174 (2020).</p>
+<p class="rm-manual"><a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?link_type=ABSTRACT&amp;bibcode=2020ApJ...891..174Z">ADS</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=First%20SETI%20observations%20with%20China%E2%80%99s%20Five-hundred-meter%20Aperture%20Spherical%20Radio%20Telescope%20%28FAST%29&amp;journal=Astrophys.%20J.&amp;volume=891&amp;publication_year=2020&amp;author=Zhang%2CZ-S"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>13.</span><p class="rm-manual">Zahnle, K. et al. Emergence of a habitable planet. Space Sci. Rev. 129, 35–78 (2007).</p>
+<p class="rm-manual"><a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?link_type=ABSTRACT&amp;bibcode=2007SSRv..129...35Z">ADS</a> <a href="file:///articles/cas-redirect/1%3ACAS%3A528%3ADC%252BD2sXptFyntLg%253D">CAS</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=Emergence%20of%20a%20habitable%20planet&amp;journal=Space%20Sci.%20Rev.&amp;volume=129&amp;pages=35-78&amp;publication_year=2007&amp;author=Zahnle%2CK"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>14.</span><p class="rm-manual">Lyons, T. W., Reinhard, C. T. &amp;
+ Planavsky, N. J. The rise of oxygen in Earth’s early ocean and 
+atmosphere. Nature 506, 307–315 (2014).</p>
+<p class="rm-manual"><a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?link_type=ABSTRACT&amp;bibcode=2014Natur.506..307L">ADS</a> <a href="file:///articles/cas-redirect/1%3ACAS%3A528%3ADC%252BC2cXivVels78%253D">CAS</a> <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;dopt=Abstract&amp;list_uids=24553238" rel="nofollow">PubMed</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=The%20rise%20of%20oxygen%20in%20Earth%E2%80%99s%20early%20ocean%20and%20atmosphere&amp;journal=Nature&amp;volume=506&amp;pages=307-315&amp;publication_year=2014&amp;author=Lyons%2CTW&amp;author=Reinhard%2CCT&amp;author=Planavsky%2CNJ"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>15.</span><p class="rm-manual">Mojzsis, S. J. et al. Evidence for 
+life on Earth before 3,800 million years ago. Nature 384, 55–59 (1996); 
+correction 386, 738 (1997).</p>
+<p class="rm-manual"><a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?link_type=ABSTRACT&amp;bibcode=1996Natur.384...55M">ADS</a> <a href="file:///articles/cas-redirect/1%3ACAS%3A528%3ADyaK28XmvVWrtbg%253D">CAS</a> <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;dopt=Abstract&amp;list_uids=8900275" rel="nofollow">PubMed</a> <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC8900275" rel="nofollow">PubMed Central</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=Evidence%20for%20life%20on%20Earth%20before%203%2C800%20million%20years%20ago&amp;journal=Nature&amp;volume=384&amp;pages=55-59&amp;publication_year=1996&amp;author=Mojzsis%2CSJ"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>16.</span><p class="rm-manual">Agol, E. Transit survey for Earths in the habitable zone of white dwarfs. Astrophys. J. 731, L31 (2011).</p>
+<p class="rm-manual"><a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?link_type=ABSTRACT&amp;bibcode=2011ApJ...731L..31A">ADS</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=Transit%20survey%20for%20Earths%20in%20the%20habitable%20zone%20of%20white%20dwarfs&amp;journal=Astrophys.%20J.&amp;volume=731&amp;publication_year=2011&amp;author=Agol%2CE"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>17.</span><p class="rm-manual">Ramirez, R. M. &amp; Kaltenegger, L. Habitable zone of post-main sequence stars. Astrophys. J. 823, 6 (2016).</p>
+<p class="rm-manual"><a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?link_type=ABSTRACT&amp;bibcode=2016ApJ...823....6R">ADS</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=Habitable%20zone%20of%20post-main%20sequence%20stars&amp;journal=Astrophys.%20J.&amp;volume=823&amp;publication_year=2016&amp;author=Ramirez%2CRM&amp;author=Kaltenegger%2CL"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>18.</span><p class="rm-manual">Kozakis, T. &amp; Kaltenegger, L. 
+Atmospheres and UV environments of Earth-like planets throughout 
+post-main-sequence evolution. Astrophys. J. 875, 99 (2019).</p>
+<p class="rm-manual"><a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?link_type=ABSTRACT&amp;bibcode=2019ApJ...875...99K">ADS</a> <a href="file:///articles/cas-redirect/1%3ACAS%3A528%3ADC%252BC1MXhvVaru77F">CAS</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=Atmospheres%20and%20UV%20environments%20of%20Earth-like%20planets%20throughout%20post-main-sequence%20evolution&amp;journal=Astrophys.%20J.&amp;volume=875&amp;publication_year=2019&amp;author=Kozakis%2CT&amp;author=Kaltenegger%2CL"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>19.</span><p class="rm-manual">Vanderburg, A. et al. A giant planet candidate transiting a white dwarf. Nature 585, 363–367 (2020).</p>
+<p class="rm-manual"><a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?link_type=ABSTRACT&amp;bibcode=2020Natur.585..363V">ADS</a> <a href="file:///articles/cas-redirect/1%3ACAS%3A528%3ADC%252BB3MXjsFKhtbY%253D">CAS</a> <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;dopt=Abstract&amp;list_uids=32939071" rel="nofollow">PubMed</a> <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC32939071" rel="nofollow">PubMed Central</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=A%20giant%20planet%20candidate%20transiting%20a%20white%20dwarf&amp;journal=Nature&amp;volume=585&amp;pages=363-367&amp;publication_year=2020&amp;author=Vanderburg%2CA"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>20.</span><p class="rm-manual">Kaltenegger, L. et al. The white 
+dwarf opportunity: robust detections of molecules in Earth-like 
+exoplanet atmospheres with the James Webb space telescope. Astrophys. J.
+ 901, L1 (2020).</p>
+<p class="rm-manual"><a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?link_type=ABSTRACT&amp;bibcode=2020ApJ...901L...1K">ADS</a> <a href="file:///articles/cas-redirect/1%3ACAS%3A528%3ADC%252BB3cXitFequ7fF">CAS</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=The%20white%20dwarf%20opportunity%3A%20robust%20detections%20of%20molecules%20in%20Earth-like%20exoplanet%20atmospheres%20with%20the%20James%20Webb%20space%20telescope&amp;journal=Astrophys.%20J.&amp;volume=901&amp;publication_year=2020&amp;author=Kaltenegger%2CL"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>21.</span><p class="rm-manual">Zechmeister, M. et al. The CARMENES search for exoplanets around M dwarfs. Astron. Astrophys. 627, A49 (2019).</p>
+<p class="rm-manual"><a href="file:///articles/cas-redirect/1%3ACAS%3A528%3ADC%252BC1MXisVSjs77F">CAS</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=The%20CARMENES%20search%20for%20exoplanets%20around%20M%20dwarfs&amp;journal=Astron.%20Astrophys.&amp;volume=627&amp;publication_year=2019&amp;author=Zechmeister%2CM"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>22.</span><p class="rm-manual">Kasting, J. F., Whitmire, D. P. &amp; Reynolds, R. T. Habitable zones around main sequence stars. Icarus 101, 108–128 (1993).</p>
+<p class="rm-manual"><a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?link_type=ABSTRACT&amp;bibcode=1993Icar..101..108K">ADS</a> <a href="file:///articles/cas-redirect/1%3ASTN%3A280%3ADC%252BD3MnlsFCltQ%253D%253D">CAS</a> <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;dopt=Abstract&amp;list_uids=11536936" rel="nofollow">PubMed</a> <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC11536936" rel="nofollow">PubMed Central</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=Habitable%20zones%20around%20main%20sequence%20stars&amp;journal=Icarus&amp;volume=101&amp;pages=108-128&amp;publication_year=1993&amp;author=Kasting%2CJF&amp;author=Whitmire%2CDP&amp;author=Reynolds%2CRT"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>23.</span><p class="rm-manual">Kaltenegger, L. How to characterize habitable worlds and signs of life. Annu. Rev. Astron. Astrophys. 55, 433–485 (2017).</p>
+<p class="rm-manual"><a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?link_type=ABSTRACT&amp;bibcode=2017ARA%26A..55..433K">ADS</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=How%20to%20characterize%20habitable%20worlds%20and%20signs%20of%20life&amp;journal=Annu.%20Rev.%20Astron.%20Astrophys.&amp;volume=55&amp;pages=433-485&amp;publication_year=2017&amp;author=Kaltenegger%2CL"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>24.</span><p class="rm-manual">Bryson, S. et al. A probabilistic 
+approach to Kepler completeness and reliability for exoplanet occurrence
+ rates. Astron. J. 159, 279 (2020).</p>
+<p class="rm-manual"><a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?link_type=ABSTRACT&amp;bibcode=2020AJ....159..279B">ADS</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=A%20probabilistic%20approach%20to%20Kepler%20completeness%20and%20reliability%20for%20exoplanet%20occurrence%20rates&amp;journal=Astron.%20J.&amp;volume=159&amp;publication_year=2020&amp;author=Bryson%2CS"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>25.</span><p class="rm-manual">Crutzen, P. J. The “anthropocene”. J. Phys. IV 12, 1–5 (2002).</p>
+<p class="rm-manual"><a href="http://scholar.google.com/scholar_lookup?&amp;title=The%20%E2%80%9Canthropocene%E2%80%9D&amp;journal=J.%20Phys.%20IV&amp;volume=12&amp;pages=1-5&amp;publication_year=2002&amp;author=Crutzen%2CPJ"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>26.</span><p class="rm-manual">Frank, A., Carroll-Nellenback, J., 
+Alberti, M. &amp; Kleidon, A. The Anthropocene generalized: evolution of
+ exo-civilizations and their planetary feedback. Astrobiology 18, 
+503–518 (2018).</p>
+<p class="rm-manual"><a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?link_type=ABSTRACT&amp;bibcode=2018AsBio..18..503F">ADS</a> <a href="file:///articles/cas-redirect/1%3ASTN%3A280%3ADC%252BC1Mfmt1aisA%253D%253D">CAS</a> <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;dopt=Abstract&amp;list_uids=29791236" rel="nofollow">PubMed</a> <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC29791236" rel="nofollow">PubMed Central</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=The%20Anthropocene%20generalized%3A%20evolution%20of%20exo-civilizations%20and%20their%20planetary%20feedback&amp;journal=Astrobiology&amp;volume=18&amp;pages=503-518&amp;publication_year=2018&amp;author=Frank%2CA&amp;author=Carroll-Nellenback%2CJ&amp;author=Alberti%2CM&amp;author=Kleidon%2CA"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>27.</span><p class="rm-manual">Kipping, D. M. &amp; Teachey, A. A cloaking device for transiting planets. Mon. Not. R. Astron. Soc. 459, 1233–1241 (2016).</p>
+<p class="rm-manual"><a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?link_type=ABSTRACT&amp;bibcode=2016MNRAS.459.1233K">ADS</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=A%20cloaking%20device%20for%20transiting%20planets&amp;journal=Mon.%20Not.%20R.%20Astron.%20Soc.&amp;volume=459&amp;pages=1233-1241&amp;publication_year=2016&amp;author=Kipping%2CDM&amp;author=Teachey%2CA"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>28.</span><p class="rm-manual">Kerins, E. Mutual detectability: a targeted SETI strategy that avoids the SETI paradox. Astron. J. 161, 39 (2020).</p>
+<p class="rm-manual"><a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?link_type=ABSTRACT&amp;bibcode=2021AJ....161...39K">ADS</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=Mutual%20detectability%3A%20a%20targeted%20SETI%20strategy%20that%20avoids%20the%20SETI%20paradox&amp;journal=Astron.%20J.&amp;volume=161&amp;publication_year=2020&amp;author=Kerins%2CE"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>29.</span><p class="rm-manual">Kaltenegger, L., Traub, W. A. &amp; Jucks, K. W. Spectral evolution of an Earth-like planet. Astron. J. 658, 598–616 (2007).</p>
+<p class="rm-manual"><a href="file:///articles/cas-redirect/1%3ACAS%3A528%3ADC%252BD2sXksVyktbY%253D">CAS</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=Spectral%20evolution%20of%20an%20Earth-like%20planet&amp;journal=Astron.%20J.&amp;volume=658&amp;pages=598-616&amp;publication_year=2007&amp;author=Kaltenegger%2CL&amp;author=Traub%2CWA&amp;author=Jucks%2CKW"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>30.</span><p class="rm-manual">Kaltenegger, L., Lin, Z. &amp; 
+Madden, J. High-resolution transmission spectra of Earth through 
+geological time. Astrophys. J. Lett. 892, 17 (2020).</p>
+<p class="rm-manual"><a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?link_type=ABSTRACT&amp;bibcode=2020ApJ...892L..17K">ADS</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=High-resolution%20transmission%20spectra%20of%20Earth%20through%20geological%20time&amp;journal=Astrophys.%20J.%20Lett.&amp;volume=892&amp;publication_year=2020&amp;author=Kaltenegger%2CL&amp;author=Lin%2CZ&amp;author=Madden%2CJ"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>31.</span><p class="rm-manual">Kaltenegger, L., Lin, Z. &amp; 
+Rugheimer, S. Finding signs of life on transiting Earth-like planets: 
+high-resolution transmission spectra of Earth through time around FGKM 
+host stars. Astrophys. J. 904, 10 (2020).</p>
+<p class="rm-manual"><a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?link_type=ABSTRACT&amp;bibcode=2020ApJ...904...10K">ADS</a> <a href="file:///articles/cas-redirect/1%3ACAS%3A528%3ADC%252BB3cXisV2rsb7E">CAS</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=Finding%20signs%20of%20life%20on%20transiting%20Earth-like%20planets%3A%20high-resolution%20transmission%20spectra%20of%20Earth%20through%20time%20around%20FGKM%20host%20stars&amp;journal=Astrophys.%20J.&amp;volume=904&amp;publication_year=2020&amp;author=Kaltenegger%2CL&amp;author=Lin%2CZ&amp;author=Rugheimer%2CS"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>32.</span><p class="rm-manual">Lovelock, J. E. A physical basis for life detection experiments. Nature 207, 568–570 (1965).</p>
+<p class="rm-manual"><a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?link_type=ABSTRACT&amp;bibcode=1965Natur.207..568L">ADS</a> <a href="file:///articles/cas-redirect/1%3ASTN%3A280%3ADyaF287jslWgtw%253D%253D">CAS</a> <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;dopt=Abstract&amp;list_uids=5883628" rel="nofollow">PubMed</a> <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC5883628" rel="nofollow">PubMed Central</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=A%20physical%20basis%20for%20life%20detection%20experiments&amp;journal=Nature&amp;volume=207&amp;pages=568-570&amp;publication_year=1965&amp;author=Lovelock%2CJE"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>33.</span><p class="rm-manual">Lederberg, J. Signs of life: criterion-system of exobiology. Nature 207, 9–13 (1965).</p>
+<p class="rm-manual"><a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?link_type=ABSTRACT&amp;bibcode=1965Natur.207....9L">ADS</a> <a href="file:///articles/cas-redirect/1%3ASTN%3A280%3ADyaF287gvFSqsA%253D%253D">CAS</a> <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;dopt=Abstract&amp;list_uids=5866540" rel="nofollow">PubMed</a> <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC5866540" rel="nofollow">PubMed Central</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=Signs%20of%20life%3A%20criterion-system%20of%20exobiology&amp;journal=Nature&amp;volume=207&amp;pages=9-13&amp;publication_year=1965&amp;author=Lederberg%2CJ"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>34.</span><p class="rm-manual">Fujii, Y. et al. Exoplanet biosignatures: observational prospects. Astrobiology 18, 739–778 (2018).</p>
+<p class="rm-manual"><a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?link_type=ABSTRACT&amp;bibcode=2018AsBio..18..739F">ADS</a> <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;dopt=Abstract&amp;list_uids=29938537" rel="nofollow">PubMed</a> <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC29938537" rel="nofollow">PubMed Central</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=Exoplanet%20biosignatures%3A%20observational%20prospects&amp;journal=Astrobiology&amp;volume=18&amp;pages=739-778&amp;publication_year=2018&amp;author=Fujii%2CY"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>35.</span><p class="rm-manual">Catling, D. C. et al. Exoplanet biosignatures: a framework for their assessment. Astrobiology 18, 709–738 (2018).</p>
+<p class="rm-manual"><a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?link_type=ABSTRACT&amp;bibcode=2018AsBio..18..709C">ADS</a> <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;dopt=Abstract&amp;list_uids=29676932" rel="nofollow">PubMed</a> <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC29676932" rel="nofollow">PubMed Central</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=Exoplanet%20biosignatures%3A%20a%20framework%20for%20their%20assessment&amp;journal=Astrobiology&amp;volume=18&amp;pages=709-738&amp;publication_year=2018&amp;author=Catling%2CDC"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>36.</span><p class="rm-manual">Kasting, J. F., Kopparapu, R., 
+Ramirez, R. M. &amp; Harman, C. E. Remote life-detection criteria, 
+habitable zone boundaries, and the frequency of Earth-like planets 
+around M and late K stars. Proc. Natl Acad. Sci. USA 111, 12641–12646 
+(2014).</p>
+<p class="rm-manual"><a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?link_type=ABSTRACT&amp;bibcode=2014PNAS..11112641K">ADS</a> <a href="file:///articles/cas-redirect/1%3ACAS%3A528%3ADC%252BC2cXjtl2ktLY%253D">CAS</a> <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;dopt=Abstract&amp;list_uids=24277805" rel="nofollow">PubMed</a> <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC24277805" rel="nofollow">PubMed Central</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=Remote%20life-detection%20criteria%2C%20habitable%20zone%20boundaries%2C%20and%20the%20frequency%20of%20Earth-like%20planets%20around%20M%20and%20late%20K%20stars&amp;journal=Proc.%20Natl%20Acad.%20Sci.%20USA&amp;volume=111&amp;pages=12641-12646&amp;publication_year=2014&amp;author=Kasting%2CJF&amp;author=Kopparapu%2CR&amp;author=Ramirez%2CRM&amp;author=Harman%2CCE"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>37.</span><p class="rm-manual">Tarter, J. The search for extraterrestrial intelligence (SETI). Annu. Rev. Astron. Astrophys. 39, 511–548 (2001).</p>
+<p class="rm-manual"><a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?link_type=ABSTRACT&amp;bibcode=2001ARA%26A..39..511T">ADS</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=The%20search%20for%20extraterrestrial%20intelligence%20%28SETI%29&amp;journal=Annu.%20Rev.%20Astron.%20Astrophys.&amp;volume=39&amp;pages=511-548&amp;publication_year=2001&amp;author=Tarter%2CJ"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>38.</span><p class="rm-manual">Ricker, G. R. et al. Transiting 
+Exoplanet Survey Satellite (TESS). In Proc. SPIE, Space Telescopes and 
+Instrumentation 2014: Optical, Infrared, and Millimeter Wave Vol. 9143 
+(eds Oschmann Jr, J. M. et al.) 914320 (SPIE, 2014).</p>
+</li>
+<li class="rm-manual">
+<span>39.</span><p class="rm-manual">Stassun, K. G. et al. The revised TESS input catalog and candidate target list. Astron. J. 158, 138 (2019).</p>
+<p class="rm-manual"><a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?link_type=ABSTRACT&amp;bibcode=2019AJ....158..138S">ADS</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=The%20revised%20TESS%20input%20catalog%20and%20candidate%20target%20list&amp;journal=Astron.%20J.&amp;volume=158&amp;publication_year=2019&amp;author=Stassun%2CKG"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>40.</span><p class="rm-manual">Faherty, J. K. et al. A late-type L
+ dwarf at 11 pc hiding in the Galactic plane characterized using Gaia 
+DR2. Astrophys. J. 868, 44 (2018).</p>
+<p class="rm-manual"><a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?link_type=ABSTRACT&amp;bibcode=2018ApJ...868...44F">ADS</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=A%20late-type%20L%20dwarf%20at%2011%20pc%20hiding%20in%20the%20Galactic%20plane%20characterized%20using%20Gaia%20DR2&amp;journal=Astrophys.%20J.&amp;volume=868&amp;publication_year=2018&amp;author=Faherty%2CJK"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>41.</span><p class="rm-manual">Caselden, D. et al. WiseView: visualizing motion and variability of faint WISE sources. Astrophysics Source Code Library <a href="https://ascl.net/1806.004">https://ascl.net/1806.004</a> (2018).</p>
+</li>
+<li class="rm-manual">
+<span>42.</span><p class="rm-manual">Gagné, J. &amp; Faherty, J. K. 
+BANYAN. XIII. A first look at nearby young associations with Gaia Data 
+Release 2. Astrophys. J. 862, 138 (2018).</p>
+<p class="rm-manual"><a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?link_type=ABSTRACT&amp;bibcode=2018ApJ...862..138G">ADS</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=BANYAN.%20XIII.%20A%20first%20look%20at%20nearby%20young%20associations%20with%20Gaia%20Data%20Release%202&amp;journal=Astrophys.%20J.&amp;volume=862&amp;publication_year=2018&amp;author=Gagn%C3%A9%2CJ&amp;author=Faherty%2CJK"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>43.</span><p class="rm-manual">Smart, R. L. et al. The Gaia 
+ultracool dwarf sample – II. Structure at the end of the main sequence. 
+Mon. Not. R. Astron. Soc. 485, 4423–4440 (2019).</p>
+<p class="rm-manual"><a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?link_type=ABSTRACT&amp;bibcode=2019MNRAS.485.4423S">ADS</a> <a href="file:///articles/cas-redirect/1%3ACAS%3A528%3ADC%252BB3cXitF2ksLw%253D">CAS</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=The%20Gaia%20ultracool%20dwarf%20sample%20%E2%80%93%20II.%20Structure%20at%20the%20end%20of%20the%20main%20sequence&amp;journal=Mon.%20Not.%20R.%20Astron.%20Soc.&amp;volume=485&amp;pages=4423-4440&amp;publication_year=2019&amp;author=Smart%2CRL"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>44.</span><p class="rm-manual">Muirhead, P. S. et al. A catalog of
+ cool dwarf targets for the transiting exoplanet survey satellite. 
+Astron. J. 155, 180 (2018).</p>
+<p class="rm-manual"><a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?link_type=ABSTRACT&amp;bibcode=2018AJ....155..180M">ADS</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=A%20catalog%20of%20cool%20dwarf%20targets%20for%20the%20transiting%20exoplanet%20survey%20satellite&amp;journal=Astron.%20J.&amp;volume=155&amp;publication_year=2018&amp;author=Muirhead%2CPS"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>45.</span><p class="rm-manual">Anders, F. et al. Photo-astrometric
+ distances, extinctions, and astrophysical parameters for Gaia DR2 stars
+ brighter than G = 18. Astron. Astrophys. 628, A94 (2019).</p>
+<p class="rm-manual"><a href="http://scholar.google.com/scholar_lookup?&amp;title=Photo-astrometric%20distances%2C%20extinctions%2C%20and%20astrophysical%20parameters%20for%20Gaia%20DR2%20stars%20brighter%20than%20G%20%3D%2018&amp;journal=Astron.%20Astrophys.&amp;volume=628&amp;publication_year=2019&amp;author=Anders%2CF"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>46.</span><p class="rm-manual">Cifuentes, C. et al. CARMENES input catalogue of M dwarfs. Astron. Astrophys. 642, A115 (2020).</p>
+<p class="rm-manual"><a href="http://scholar.google.com/scholar_lookup?&amp;title=CARMENES%20input%20catalogue%20of%20M%20dwarfs&amp;journal=Astron.%20Astrophys.&amp;volume=642&amp;publication_year=2020&amp;author=Cifuentes%2CC"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>47.</span><p class="rm-manual">Malo, L. et al. Bayesian analysis 
+to identify new star candidates in nearby young stellar kinematic 
+groups. Astrophys. J. 762, 88 (2013).</p>
+<p class="rm-manual"><a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?link_type=ABSTRACT&amp;bibcode=2013ApJ...762...88M">ADS</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=Bayesian%20analysis%20to%20identify%20new%20star%20candidates%20in%20nearby%20young%20stellar%20kinematic%20groups&amp;journal=Astrophys.%20J.&amp;volume=762&amp;publication_year=2013&amp;author=Malo%2CL"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>48.</span><p class="rm-manual">Bock, A. et al. OpenSpace: a system for astrographics. IEEE Trans. Vis. Comput. Graph. 26, 633–642 (2019).</p>
+<p class="rm-manual"><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;dopt=Abstract&amp;list_uids=31425082" rel="nofollow">PubMed</a> <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC31425082" rel="nofollow">PubMed Central</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=OpenSpace%3A%20a%20system%20for%20astrographics&amp;journal=IEEE%20Trans.%20Vis.%20Comput.%20Graph.&amp;volume=26&amp;pages=633-642&amp;publication_year=2019&amp;author=Bock%2CA"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>49.</span><p class="rm-manual">Kozakis, T. &amp; Kaltenegger, L. 
+High-resolution spectra of Earth-like planets orbiting red giant host 
+stars. Astrophys. J. 160, 225 (2020).</p>
+<p class="rm-manual"><a href="file:///articles/cas-redirect/1%3ACAS%3A528%3ADC%252BB3cXisFanurvE">CAS</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=High-resolution%20spectra%20of%20Earth-like%20planets%20orbiting%20red%20giant%20host%20stars&amp;journal=Astrophys.%20J.&amp;volume=160&amp;publication_year=2020&amp;author=Kozakis%2CT&amp;author=Kaltenegger%2CL"> Google Scholar</a> </p>
+</li>
+<li class="rm-manual">
+<span>50.</span><p class="rm-manual">O’Malley-James, J. T., Cockell, C. 
+S., Greaves, J. S. &amp; Raven, J. A. Swansong biospheres II: the final 
+signs of life on terrestrial planets near the end of their habitable 
+lifetimes. Int. J. Astrobiol. 13, 229–243 (2014).</p>
+<p class="rm-manual"><a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?link_type=ABSTRACT&amp;bibcode=2014IJAsB..13..229O">ADS</a> <a href="http://scholar.google.com/scholar_lookup?&amp;title=Swansong%20biospheres%20II%3A%20the%20final%20signs%20of%20life%20on%20terrestrial%20planets%20near%20the%20end%20of%20their%20habitable%20lifetimes&amp;journal=Int.%20J.%20Astrobiol.&amp;volume=13&amp;pages=229-243&amp;publication_year=2014&amp;author=O%E2%80%99Malley-James%2CJT&amp;author=Cockell%2CCS&amp;author=Greaves%2CJS&amp;author=Raven%2CJA"> Google Scholar</a> </p>
+</li>
+</ol>
+<p class="rm-manual"><a href="https://citation-needed.springer.com/v2/references/10.1038/s41586-021-03596-y?format=refman&amp;flavour=references">Download references</a></p>
+<h2 class="rm-manual">Acknowledgements</h2>
+<p class="rm-manual">L.K. acknowledges support from the Carl Sagan 
+Institute at Cornell and the Breakthrough Initiative. J.K.F. 
+acknowledges support from the Heising Simons Foundation and the Research
+ Corporation for Science Advancement (award 2019-1488). This work has 
+made use of data from the European Space Agency (ESA) mission Gaia, 
+processed by the Gaia Data Processing and Analysis Consortium DPAC20 (<a href="https://www.cosmos.esa.int/gaia">https://www.cosmos.esa.int/gaia</a>, <a href="https://www.cosmos.esa.int/web/gaia/dpac/consortium">https://www.cosmos.esa.int/web/gaia/dpac/consortium</a>).
+ Funding for DPAC has been provided by national institutions, in 
+particular the institutions participating in the Gaia Multilateral 
+Agreement. This research also used NASA’s Astrophysics Data System and 
+the VizieR and SIMBAD databases operated at CDS, Strasbourg, France.</p>
+<h2 class="rm-manual">Author information</h2>
+<h3 class="rm-manual">Affiliations</h3>
+<ol class="rm-manual">
+<li class="rm-manual">
+<p class="rm-manual">Carl Sagan Institute, Cornell University, Ithaca, NY, USA</p>
+<p class="rm-manual">L. Kaltenegger</p>
+</li>
+<li class="rm-manual">
+<p class="rm-manual">Astronomy Department, Cornell University, Ithaca, NY, USA</p>
+<p class="rm-manual">L. Kaltenegger</p>
+</li>
+<li class="rm-manual">
+<p class="rm-manual">Department of Astrophysics, American Museum of Natural History, New York, NY, USA</p>
+<p class="rm-manual">J. K. Faherty</p>
+</li>
+</ol>
+<p class="rm-manual"><span>Authors</span></p>
+<ol class="rm-manual">
+<li class="rm-manual">
+<span>L. Kaltenegger</span><p class="rm-manual"><a href="file:///search?author=%22L.+Kaltenegger%22">View author publications</a></p>
+<p class="rm-manual">You can also search for this author in <span><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=L.+Kaltenegger">PubMed</a><a href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22L.+Kaltenegger%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en">Google Scholar</a></span></p>
+</li>
+<li class="rm-manual">
+<span>J. K. Faherty</span><p class="rm-manual"><a href="file:///search?author=%22J.%20K.+Faherty%22">View author publications</a></p>
+<p class="rm-manual">You can also search for this author in <span><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=J.%20K.+Faherty">PubMed</a><a href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=%22J.%20K.+Faherty%22&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en">Google Scholar</a></span></p>
+</li>
+</ol>
+<h3 class="rm-manual">Contributions</h3>
+<p class="rm-manual">L.K. conceived the idea of the study and J.K.F 
+identified the ETZ stars. L.K. and J.K.F composed the manuscript, 
+undertook the analysis and discussed the content of this manuscript.</p>
+<h3 class="rm-manual">Corresponding author</h3>
+<p class="rm-manual">Correspondence to <a rel="nofollow" href="file:///articles/s41586-021-03596-y/email/correspondent/c1/new">L. Kaltenegger</a>.</p>
+<h2 class="rm-manual">Ethics declarations</h2>
+<h3 class="rm-manual">Competing interests</h3>
+<p class="rm-manual">The authors declare no competing interests.</p>
+<h2 class="rm-manual">Additional information</h2>
+<p class="rm-manual">Peer review information Nature thanks the anonymous reviewer(s) for their contribution to the peer review of this work.</p>
+<p class="rm-manual">Publisher’s note Springer Nature remains neutral 
+with regard to jurisdictional claims in published maps and institutional
+ affiliations.</p>
+<h2 class="rm-manual">Supplementary information</h2>
+<h3 class="rm-manual"><a href="https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-021-03596-y/MediaObjects/41586_2021_3596_MOESM1_ESM.pdf">Supplementary Information</a></h3>
+<p class="rm-manual">A guide to Supplementary Tables 1 and 2.</p>
+<h3 class="rm-manual"><a href="https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-021-03596-y/MediaObjects/41586_2021_3596_MOESM2_ESM.txt">Supplementary Table 1</a></h3>
+<p class="rm-manual">Stars that can see Earth transit in the 
++/-5000-year period. This Table lists all characteristics for stars that
+ can see Earth transit in the +/-5000-year period, sorted by distance 
+from the Sun. The authors cross-matched their full sample against 
+literature estimates of mass, effective temperature, radii, bolometric 
+luminosity, metallicity, and log g for Gaia sources. Respective 
+catalogue references for the parameter are noted in Table 1 and Table 2.</p>
+<h3 class="rm-manual"><a href="https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-021-03596-y/MediaObjects/41586_2021_3596_MOESM3_ESM.txt">Supplementary Table 2</a></h3>
+<p class="rm-manual">Exoplanet host stars that can see Earth transit in 
+the +/-5000-year period. This table lists the characteristics of the 
+seven known stars that can see Earth transit in the +/-5000-year period,
+ that are known exoplanet host stars, sorted by distance from the Sun.</p>
+<h2 class="rm-manual">Rights and permissions</h2>
+<p class="rm-manual"><a href="https://s100.copyright.com/AppDispatchServlet?title=Past%2C%20present%20and%20future%20stars%20that%20can%20see%20Earth%20as%20a%20transiting%20exoplanet&amp;author=L.%20Kaltenegger%20et%20al&amp;contentID=10.1038%2Fs41586-021-03596-y&amp;copyright=The%20Author%28s%29%2C%20under%20exclusive%20licence%20to%20Springer%20Nature%20Limited&amp;publication=0028-0836&amp;publicationDate=2021-06-23&amp;publisherName=SpringerNature&amp;orderBeanReset=true">Reprints and Permissions</a></p>
+<h2 class="rm-manual">About this article</h2>
+<h3 class="rm-manual">Cite this article</h3>
+<p class="rm-manual">Kaltenegger, L., Faherty, J.K. Past, present and 
+future stars that can see Earth as a transiting exoplanet. Nature 594, 
+505–507 (2021). https://doi.org/10.1038/s41586-021-03596-y</p>
+<p class="rm-manual"><a href="https://citation-needed.springer.com/v2/references/10.1038/s41586-021-03596-y?format=refman&amp;flavour=citation">Download citation</a></p>
+<ul class="rm-manual">
+<li class="rm-manual"><p class="rm-manual">Received<span>: </span><span>17 February 2021</span></p></li>
+<li class="rm-manual"><p class="rm-manual">Accepted<span>: </span><span>29 April 2021</span></p></li>
+<li class="rm-manual"><p class="rm-manual">Published<span>: </span><span>23 June 2021</span></p></li>
+<li class="rm-manual"><p class="rm-manual">Issue Date<span>: </span><span>24 June 2021</span></p></li>
+<li class="rm-manual"><p class="rm-manual">DOI<span>: </span><span><a href="https://doi.org/10.1038/s41586-021-03596-y">https://doi.org/10.1038/s41586-021-03596-y</a></span></p></li>
+</ul>
+<h2 class="rm-manual">Comments</h2>
+<p class="rm-manual">By submitting a comment you agree to abide by our <a href="file:///info/tandc.html">Terms</a> and <a href="file:///info/community-guidelines.html">Community Guidelines</a>. If you find something abusive or that does not comply with our terms or guidelines please flag it as inappropriate.</p></article>
+</body></html>

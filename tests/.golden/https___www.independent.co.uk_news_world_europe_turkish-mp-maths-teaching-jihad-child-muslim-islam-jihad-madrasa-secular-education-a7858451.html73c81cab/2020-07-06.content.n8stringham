@@ -1,0 +1,422 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">Turkish MP says 'no use in teaching maths to a child who doesn't know jihad' | The Independent </p>
+<p class="rm-manual"> <a href="file:///subscribe?itm_channel=native&amp;itm_campaign=top_right_subscribe&amp;itm_audience=prospecting&amp;itm_content=anonymous">Subscribe now</a> </p>
+<p class="rm-manual"> <a href="">Login</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <span>Support us</span> </li> <li class="rm-manual"> <span> <a href="file:///donations?itm_channel=native&amp;itm_campaign=top_right_contribute&amp;itm_audience=prospecting&amp;regSourceMethod=Head+and+Shoulders-Contribution">Contribute</a> </span> </li> <li class="rm-manual"> <span> <a href="file:///subscribe?itm_channel=native&amp;itm_campaign=top_right_subscribe&amp;itm_audience=prospecting&amp;itm_content=anonymous&amp;regSourceMethod=Head+and+Shoulders+%E2%80%93+Subs">Subscribe</a> </span> </li> <li class="rm-manual"> <span> <a href="">Login</a> </span> </li> <li class="rm-manual"> <p class="rm-manual">Please wait....</p> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///us"> News </a> </p> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///news/uk"> UK </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///news/world"> World </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///news/world/europe"> Europe </a> </p> </li> </ul> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///news/world/americas/us-politics"> Politics </a> </p> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///us-election-2020"> 2020 Election </a> </p> </li> </ul> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///us/voices"> Voices </a> </p> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///author/robert-fisk"> Robert Fisk </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///author/mary-dejevsky"> Mary Dejevsky </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///author/mark-steel"> Mark Steel </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///author/john-rentoul"> John Rentoul </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///author/bel-trew"> Bel Trew </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///author/patrick-cockburn"> Patrick Cockburn </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///author/holly-baxter"> Holly Baxter </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///author/ben-chu"> Ben Chu </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///author/shappi-khorsandi"> Shappi Khorsandi </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///voices/editorials"> Editorials </a> </p> </li> </ul> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///sport"> Sport </a> </p> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///sport/us-sport"> US sports </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///sport/football"> Soccer </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///sport/tennis"> Tennis </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///sport/general/boxing"> Boxing </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///sport/motor-racing"> Formula 1 </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///sport/general/wwe-mma-wrestling"> WWE </a> </p> </li> </ul> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///arts-entertainment"> Culture </a> </p> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///arts-entertainment/films"> Film </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///arts-entertainment/tv"> TV </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///arts-entertainment/music"> Music </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///arts-entertainment/books"> Books </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="https://puzzles.independent.co.uk/?utm_campaign=navbar&amp;utm_medium=nav&amp;utm_source=navpuzzles"> Crosswords &amp; puzzles </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="https://www.independent.co.uk/author/ed-cumming"> Ed Cumming </a> </p> </li> </ul> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///life-style"> <span>Indy/</span>Life </a> </p> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///life-style/fashion"> Fashion &amp; beauty </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///life-style/gadgets-and-tech"> Tech </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///life-style/food-and-drink"> Food &amp; drink </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///travel"> Travel </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///life-style/health-and-families"> Health &amp; fitness </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///life-style/love-sex"> Love &amp; relationships </a> </p> </li> </ul> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///extras/indybest/us"> IndyBest </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///video"> Video </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="http://www.independentsubscriptions.co.uk/"> Daily Edition </a> </p> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <a href="http://www.independentsubscriptions.co.uk/"> Subscribe for a free trial </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="http://edition.independent.co.uk/"> Read Now </a> </p> </li> </ul> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual">Please wait....</p> </li> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///"> UK Edition</a> </li> <li class="rm-manual"> <a href="file:///us"> US Edition</a> </li> </ul> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///us"> News </a> </p> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///news/world"> World </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///news/world/americas"> US </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///news/uk"> UK </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///news/world/europe"> Europe </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///news/people"> People </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///news/science"> Science </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///life-style/health-and-families/health-news"> Health </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///news/business"> Business </a> </p> </li> </ul> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///news/world/americas/us-politics"> Politics </a> </p> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///us-election-2020"> 2020 Election </a> </p> </li> </ul> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///voices"> Voices </a> </p> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///author/robert-fisk"> Robert Fisk </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///author/mark-steel"> Mark Steel </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///author/holly-baxter"> Holly Baxter </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///voices/campaigns"> Campaigns </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///voices/editorials"> Editorials </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///voices/letters/letters-9626866.html"> Letters </a> </p> </li> </ul> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///sport"> Sports </a> </p> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///sport/motor-racing/formula1"> Formula 1 </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///sport/the-movers-list"> Movers List </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///sport/us-sport"> US sports </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///sport/football"> Soccer </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///sport/cricket"> Cricket </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///sport/tennis"> Tennis </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///sport/general/boxing"> Boxing </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///sport/motor-racing"> Formula 1 </a> </p> </li> </ul> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///arts-entertainment"> Culture </a> </p> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///arts-entertainment/books"> Books </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///arts-entertainment/films"> Film </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///arts-entertainment/tv"> TV </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///arts-entertainment/music"> Music </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///arts-entertainment/art"> Art </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///arts-entertainment/theatre-dance"> Theatre &amp; Dance </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///arts-entertainment/comedy"> Comedy </a> </p> </li> </ul> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///life-style"> Indy/life </a> </p> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///life-style/food-and-drink"> Food &amp; drink </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///life-style/health-and-families"> Health &amp; families </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///life-style/love-sex"> Love &amp; sex </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///life-style/motoring"> Motoring </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///student"> Student </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///travel"> Travel </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///life-style/fashion"> Fashion </a> </p> </li> </ul> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///life-style/gadgets-and-tech"> Tech </a> </p> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///life-style/gadgets-and-tech/gaming"> Gaming </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///life-style/gadgets-and-tech/features"> Tech culture </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///life-style/gadgets-and-tech/news"> Tech news </a> </p> </li> </ul> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///video"> Video </a> </p> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///video/Explainers"> Explainer videos </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///video/News"> News videos </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///video/People-and-culture"> People &amp; culture videos </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///video/Sport"> Sport videos </a> </p> </li> </ul> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///extras/indybest"> IndyBest </a> </p> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///extras/indybest/fashion-beauty"> Fashion &amp; Beauty </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///extras/indybest/house-garden"> Homes &amp; Design </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///extras/indybest/food-drink"> Food &amp; Drink </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///extras/indybest/gadgets-tech"> Gadgets &amp; Tech </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///extras/indybest/outdoor-activity"> Outdoor &amp; Activity </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///extras/indybest/books"> Arts &amp; Books </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///extras/indybest/travel-outdoors"> Travel </a> </p> </li> </ul> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///money"> Money </a> </p> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <a href="http://www.independent.co.uk/money/health-insurance?icn=axa_nav"> Health insurance </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="http://www.independent.co.uk/money/investments/"> Investments </a> </p> </li> </ul> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///extras"> Extras </a> </p> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///independentbooks"> The Independent Books </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="http://puzzles.independent.co.uk/"> Puzzles </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="https://www.indy100.com/"> indy100 </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///marketing/apps"> Apps </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///ebooks"> Ebooks </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="http://ijobs.independent.co.uk/"> iJobs </a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="http://dating.independent.co.uk/"> Dating </a> </p> </li> </ul> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="#"> US Edition </a> </p> <ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///">UK Edition</a> </p> </li> <li class="rm-manual"> <p class="rm-manual"> <a href="file:///us">US Edition</a> </p> </li> </ul> </li> </ul>
+<p class="rm-manual">Please wait....</p>
+<p class="rm-manual">Log in using your social </p>
+<p class="rm-manual">network account</p>
+<p class="rm-manual"><span>OR</span></p>
+<p class="rm-manual">Log in directly with </p>
+<p class="rm-manual">The Independent</p>
+<p class="rm-manual"> {{message}} </p>
+<p class="rm-manual"><span>Please enter an email address</span> </p>
+<p class="rm-manual"><span>Please enter a valid email address </span> </p>
+<p class="rm-manual"><span>Please enter a valid email address </span> </p>
+<p class="rm-manual"> <span>Please enter a valid password</span> </p>
+<p class="rm-manual"> Keep me logged in </p>
+<p class="rm-manual"> <a href="file:///forgotten-password">Forgotten your password?</a> </p>
+<p class="rm-manual">Want an ad-free experience?</p>
+<p class="rm-manual">Subscribe to Independent Premium.</p>
+<p class="rm-manual"><a href="file:///subscribe?itm_channel=native&amp;itm_campaign=login_overlay&amp;itm_audience=prospecting">View offers</a> </p>
+<p class="rm-manual">Hi {{fullName}}</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///independent-premium">My Independent Premium</a></li> <li class="rm-manual"><a href="file:///profile">Account details</a></li> <li class="rm-manual"><a href="https://independentnews.zendesk.com/hc/en-us">Help centre</a></li> <li class="rm-manual"><a href="file:///logout">Logout</a></li> </ul>
+<p class="rm-manual"> <a href="file:///news">News</a> <span>&gt;</span> <a href="file:///news/world">World</a> <span>&gt;</span> <a href="file:///news/world/europe">Europe</a> </p>
+<h1 class="rm-manual"><span>Turkish MP says 'no use in teaching maths to a child who doesn't know jihad'</span></h1>
+<p class="rm-manual">'Jihad comes before prayer'</p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///author/samuel-osborne">Samuel Osborne</a> <span> <a href="https://twitter.com/SamuelOsborne93">@SamuelOsborne93</a> </span> </li> <li class="rm-manual"> Tuesday 25 July 2017 08:20 </li> {{^moreThanTen}} <li class="rm-manual"> <a href="#comments">{{total}} comments</a> </li> {{/moreThanTen}} </ul>
+<figcaption> Students at one of Turkey's growing number of 'Imam Hatip' 
+religious schools walk past a statue of Mustafa Kemal Ataturk, founder 
+of secular Turkey, in Ankara (file image) <span> ( REUTERS/Umit Bektas/File Photo ) </span> </figcaption><p>A member of the <a href="file:///topic/Turkey">Turkish</a> parliament's national education commission has said there is no use teaching maths to students who don't know <a href="file:///topic/jihad">jihad</a>.</p>
+<p>Ahmet Hamdi Camli, a member of the ruling Justice and Development Party (AKP), praised the education ministry for <a href="file:///news/world/europe/turkey-school-curriculum-teach-jihad-concept-drop-evolution-science-muslim-islam-a7848176.html">including teaching the concept of jihad in the school curriculum</a>.</p>
+<p>Mr Camli said "jihad is Islam's most prior element," Turkish daily newspaper Haberturk reported.</p>
+<h3 class="rm-manual">Download the new Independent Premium app</h3>
+<p>Sharing the full story, not just the headlines</p>
+<p>“Jihad comes before prayer," he said. "When we look at Ottoman 
+sultans, nearly all of them didn’t even go to hajj in order not to 
+abandon jihad."</p>
+<figcaption> Turkey's president <span>Recep</span> <span>Erdogan</span> wins referendum to greatly expand powers </figcaption><p>Turkey's new school curriculum dropped <a href="file:///topic/CharlesDarwin">Charles Darwin</a>'s theory of evolution and added the concept of jihad as patriotic in spirit.</p>
+<h2 class="rm-manual">Read more</h2>
+<ul> <li class="rm-manual"> <a href="file:///news/world/europe/turkey-school-curriculum-teach-jihad-concept-drop-evolution-science-muslim-islam-a7848176.html">Turkey's new school curriculum drops evolution and will teach jihad</a>
+</li> </ul>
+<p>The theory of evolution is rejected by both Christian and Muslim 
+creationists, who believe God created the world as described in the 
+Bible and the Koran, making the universe and all living things in six 
+days.</p>
+<p>Mr Camli added: “Our ministry made a very on-point decision. If 
+prayers are the pillars of the religion, jihad is the tent. Without the 
+pillars the tent is useless.</p>
+<p>"There’s no use in teaching mathematics to a child who doesn’t know jihad."</p>
+<p>Jihad is often translated as "holy war" in the context of fighters 
+waging war against enemies of Islam; but Muslim scholars stress that it 
+also refers to a personal, spiritual struggle against sin.</p>
+<h2 class="rm-manual">
+<span> Shape Created with Sketch. </span>In pictures: Turkey coup attempt</h2>
+<p class="rm-manual"> Show all 17</p>
+<p class="rm-manual"> <span> left Created with Sketch. </span> <span> right Created with Sketch. </span> </p>
+<h1 class="rm-manual">
+<span> Shape Created with Sketch. </span>In pictures: Turkey coup attempt</h1>
+<h2 class="rm-manual">
+<span>1/17</span> </h2>
+<p class="rm-manual">Turkish President Erdogan attends the funeral 
+service for victims of the thwarted coup in Istanbul at Fatih mosque on 
+July 17, 2016 in Istanbul, Turkey</p>
+<p class="rm-manual">Burak Kara/Getty Images</p>
+<h2 class="rm-manual">
+<span>2/17</span> </h2>
+<p class="rm-manual">Soldiers involved in the coup attempt surrender on Bosphorus bridge with their hands raised in Istanbul on 16 July, 2016</p>
+<p class="rm-manual">Gokhan Tan/Getty</p>
+<h2 class="rm-manual">
+<span>3/17</span> </h2>
+<p class="rm-manual">A civilian beats a soldier after troops involved in
+ the coup surrendered on the Bosphorus Bridge in Istanbul, Turkey, 16 
+July, 2016</p>
+<p class="rm-manual">REUTERS/Murad Sezer</p>
+<h2 class="rm-manual">
+<span>4/17</span> </h2>
+<p class="rm-manual">Surrendered Turkish soldiers who were involved in the coup are beaten by a civilian</p>
+<p class="rm-manual">Reuters</p>
+<h2 class="rm-manual">
+<span>5/17</span> </h2>
+<p class="rm-manual">Soliders involved in the coup attempt surrender on Bosphorus bridge</p>
+<p class="rm-manual">Getty</p>
+<h2 class="rm-manual">
+<span>6/17</span> </h2>
+<p class="rm-manual">Supporters of Turkish President Recep Tayyip Erdogan wave flags as they capture a Turkish Army vehicle</p>
+<p class="rm-manual">Getty</p>
+<h2 class="rm-manual">
+<span>7/17</span> </h2>
+<p class="rm-manual">People pose near a tank after troops involved in the coup surrendered on the Bosphorus Bridge in Istanbul, Turkey, 16 July, 2016</p>
+<p class="rm-manual">Reuters</p>
+<h2 class="rm-manual">
+<span>8/17</span> </h2>
+<p class="rm-manual">Turkish soldiers block Istanbul's Bosphorus Brigde</p>
+<p class="rm-manual">Getty</p>
+<h2 class="rm-manual">
+<span>9/17</span> </h2>
+<p class="rm-manual">A Turkish military stands guard near the Taksim Square in Istanbul</p>
+<p class="rm-manual">Reuters</p>
+<h2 class="rm-manual">
+<span>10/17</span> </h2>
+<p class="rm-manual">Pierre Crom/Twitter</p>
+<h2 class="rm-manual">
+<span>11/17</span> </h2>
+<p class="rm-manual">Turkish soldiers secure the area as supporters of Recep Tayyip Erdogan protest in Istanbul's Taksim square</p>
+<p class="rm-manual">AP</p>
+<h2 class="rm-manual">
+<span>12/17</span> </h2>
+<p class="rm-manual">Murad Sezer/Reuters</p>
+<h2 class="rm-manual">
+<span>13/17</span> </h2>
+<p class="rm-manual">Turkish soldiers detain police officers during a security shutdown of the Bosphorus Bridge</p>
+<p class="rm-manual">Reuters</p>
+<h2 class="rm-manual">
+<span>14/17</span> </h2>
+<p class="rm-manual">Turkish Army armoured personnel carriers in the main streets of Istanbul</p>
+<p class="rm-manual">Getty</p>
+<h2 class="rm-manual">
+<span>15/17</span> </h2>
+<p class="rm-manual">Chaos reigned in Istanbul as tanks drove through the streets</p>
+<p class="rm-manual">EPA/TOLGA BOZOGLU</p>
+<h2 class="rm-manual">
+<span>16/17</span> </h2>
+<p class="rm-manual">Turkish President Tayyip Erdogan speaks to media in the resort town of Marmaris</p>
+<p class="rm-manual">Reuters</p>
+<h2 class="rm-manual">
+<span>17/17</span> </h2>
+<p class="rm-manual">Supporters of President Erdogan celebrate in Ankara following the suppression of the attempted coup</p>
+<p class="rm-manual">Reuters</p>
+<h2 class="rm-manual">
+<span>1/17</span> </h2>
+<p class="rm-manual">Turkish President Erdogan attends the funeral 
+service for victims of the thwarted coup in Istanbul at Fatih mosque on 
+July 17, 2016 in Istanbul, Turkey</p>
+<p class="rm-manual">Burak Kara/Getty Images</p>
+<h2 class="rm-manual">
+<span>2/17</span> </h2>
+<p class="rm-manual">Soldiers involved in the coup attempt surrender on Bosphorus bridge with their hands raised in Istanbul on 16 July, 2016</p>
+<p class="rm-manual">Gokhan Tan/Getty</p>
+<h2 class="rm-manual">
+<span>3/17</span> </h2>
+<p class="rm-manual">A civilian beats a soldier after troops involved in
+ the coup surrendered on the Bosphorus Bridge in Istanbul, Turkey, 16 
+July, 2016</p>
+<p class="rm-manual">REUTERS/Murad Sezer</p>
+<h2 class="rm-manual">
+<span>4/17</span> </h2>
+<p class="rm-manual">Surrendered Turkish soldiers who were involved in the coup are beaten by a civilian</p>
+<p class="rm-manual">Reuters</p>
+<h2 class="rm-manual">
+<span>5/17</span> </h2>
+<p class="rm-manual">Soliders involved in the coup attempt surrender on Bosphorus bridge</p>
+<p class="rm-manual">Getty</p>
+<h2 class="rm-manual">
+<span>6/17</span> </h2>
+<p class="rm-manual">Supporters of Turkish President Recep Tayyip Erdogan wave flags as they capture a Turkish Army vehicle</p>
+<p class="rm-manual">Getty</p>
+<h2 class="rm-manual">
+<span>7/17</span> </h2>
+<p class="rm-manual">People pose near a tank after troops involved in the coup surrendered on the Bosphorus Bridge in Istanbul, Turkey, 16 July, 2016</p>
+<p class="rm-manual">Reuters</p>
+<h2 class="rm-manual">
+<span>8/17</span> </h2>
+<p class="rm-manual">Turkish soldiers block Istanbul's Bosphorus Brigde</p>
+<p class="rm-manual">Getty</p>
+<h2 class="rm-manual">
+<span>9/17</span> </h2>
+<p class="rm-manual">A Turkish military stands guard near the Taksim Square in Istanbul</p>
+<p class="rm-manual">Reuters</p>
+<h2 class="rm-manual">
+<span>10/17</span> </h2>
+<p class="rm-manual">Pierre Crom/Twitter</p>
+<h2 class="rm-manual">
+<span>11/17</span> </h2>
+<p class="rm-manual">Turkish soldiers secure the area as supporters of Recep Tayyip Erdogan protest in Istanbul's Taksim square</p>
+<p class="rm-manual">AP</p>
+<h2 class="rm-manual">
+<span>12/17</span> </h2>
+<p class="rm-manual">Murad Sezer/Reuters</p>
+<h2 class="rm-manual">
+<span>13/17</span> </h2>
+<p class="rm-manual">Turkish soldiers detain police officers during a security shutdown of the Bosphorus Bridge</p>
+<p class="rm-manual">Reuters</p>
+<h2 class="rm-manual">
+<span>14/17</span> </h2>
+<p class="rm-manual">Turkish Army armoured personnel carriers in the main streets of Istanbul</p>
+<p class="rm-manual">Getty</p>
+<h2 class="rm-manual">
+<span>15/17</span> </h2>
+<p class="rm-manual">Chaos reigned in Istanbul as tanks drove through the streets</p>
+<p class="rm-manual">EPA/TOLGA BOZOGLU</p>
+<h2 class="rm-manual">
+<span>16/17</span> </h2>
+<p class="rm-manual">Turkish President Tayyip Erdogan speaks to media in the resort town of Marmaris</p>
+<p class="rm-manual">Reuters</p>
+<h2 class="rm-manual">
+<span>17/17</span> </h2>
+<p class="rm-manual">Supporters of President Erdogan celebrate in Ankara following the suppression of the attempted coup</p>
+<p class="rm-manual">Reuters</p>
+<p class="rm-manual">The move has proven highly controversial, further fuelling fears President <a href="file:///topic/recep-tayyip-erdogan">Recep Tayyip Erdogan</a> is subverting the republic's secular foundations.</p>
+<h2 class="rm-manual">Read more</h2>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///news/world/europe/turkey-erdogan-vows-to-behead-traitors-anniversary-coup-rally-speech-president-a7843321.html">Erdogan vows to behead 'traitors' on anniversary of failed coup</a>
+</li> <li class="rm-manual"> <a href="file:///news/world/europe/turkey-coup-attempt-one-year-anniversary-president-erdogan-arrests-a7843001.html">Erdogan celebrates grip on power as Turkey marks coup anniversary</a>
+</li> <li class="rm-manual"> <a href="file:///news/world/europe/turkey-coup-attempt-recep-tayyip-erdogan-one-year-anniversary-7400-dismissed-gulen-purge-latest-a7842606.html">Turkey dismisses 7,400 public sector workers a year after coup attempt</a>
+</li> <li class="rm-manual"> <a href="file:///news/world/europe/turkey-coup-anniversary-recep-tayyip-erdogan-president-istanbul-ankara-fethullah-gulen-a7839881.html">Erdogan: Turkey will end emergency rule when there's no more terrorism</a>
+</li> </ul>
+<p class="">Mr Erdogan, accused by critics of crushing democratic 
+freedoms with tens of thousands of arrests and a clampdown on media 
+since a failed coup last July, has in the past spoken of raising a 
+"pious generation".</p>
+<p class="">The chairman of a teachers' union described the changes as a huge step in the wrong direction.</p>
+<p class="">Mehhmet Balik, chairman of the Union of Education and 
+Science Workers (Egitim-Is) said it was an attempt to avoid raising 
+"generations who ask questions".</p>
+<aside class="rm-manual"> <span>More about:</span> </aside><p class="rm-manual"> <a href="file:///topic/Turkey">Turkey<span> | </span></a> <a href="file:///topic/recep-tayyip-erdogan">Recep Tayyip Erdogan<span> | </span></a> <a href="file:///topic/jihad">jihad<span> | </span></a> <a href="file:///topic/theory-of-evolution">Theory of evolution<span> | </span></a> <a href="file:///topic/CharlesDarwin">Charles Darwin<span> | </span></a> <a href="file:///topic/mehhmet-balik">Mehhmet Balik<span> | </span></a> </p>
+<p class="rm-manual"><a>Show{{#moreThan3_total}} {{value_total}} {{/moreThan3_total}} comments</a> </p>
+<h2 class="rm-manual">Comments</h2>
+<h2 class="rm-manual">Share your thoughts and debate the big issues</h2>
+<p class="rm-manual"><a>Learn more</a> </p>
+<p class="rm-manual"> Open Comments </p>
+<p class="rm-manual"> <a>Join the discussion</a> </p>
+<h5 class="rm-manual">Please be respectful when making a comment and adhere to our <span>Community Guidelines.</span>
+</h5>
+<ul class="rm-manual"> <li class="rm-manual">You may not agree with our views, or other users’, but please respond to them respectfully</li> <li class="rm-manual">Swearing, personal abuse, racism, sexism, homophobia and other discriminatory or inciteful language is not acceptable</li> <li class="rm-manual">Do not impersonate other users or reveal private information about third parties</li> <li class="rm-manual">We reserve the right to delete inappropriate posts and ban offending users without notification</li> </ul>
+<p class="rm-manual">You can find our Community Guidelines in full <a href="https://www.independent.co.uk/service/community-guidelines-9487166.html">here.</a></p>
+<p class="rm-manual">Create a commenting name to join the debate</p>
+<p class="rm-manual"> <span>Please try again, the name must be unique</span> <span>Only letters and numbers accepted</span> </p>
+<section class="rm-manual"> {{#moreThanOne}} </section><ul class="rm-manual"> <li class="rm-manual"> -1) ? 'active' : ''"&gt; Newest first</li> <li class="rm-manual"> -1) ? 'active' : ''"&gt; Oldest first</li> <li class="rm-manual"> -1) ? 'active' : ''"&gt; Most liked</li> </ul>
+<p class="rm-manual"> {{/moreThanOne}} </p>
+<p class="rm-manual">Loading comments...</p>
+<p class="rm-manual"> {{^comments}} </p>
+<p class="rm-manual">There are no comments yet - be the first to add your thoughts</p>
+<p class="rm-manual"> {{/comments}} {{#comments}} </p>
+<p class="rm-manual"> <span>{{sender.name}}</span> <span> {{dateTime}} </span> </p>
+<p class="rm-manual">{{{commentText}}}</p>
+<p class="rm-manual"> <a>Reply</a> {{#sender.isSelf}} <a>Delete</a> {{/sender.isSelf}} </p>
+<p class="rm-manual"> <span>{{posVotes}}</span> <span>{{negVotes}}</span> <a> -1"&gt; </a> <a> -1)"&gt; </a> </p>
+<p class="rm-manual"> {{#replies}} </p>
+<p class="rm-manual"> <span>{{sender.name}}</span> <span> {{dateTime}} </span> </p>
+<p class="rm-manual">{{{commentText}}}</p>
+<p class="rm-manual"> <a>Reply</a> {{#sender.isSelf}} <a>Delete</a> {{/sender.isSelf}} </p>
+<p class="rm-manual"> <span>{{posVotes}}</span> <span>{{negVotes}}</span> <a> -1"&gt; </a> <a> -1)"&gt; </a> </p>
+<p class="rm-manual"> {{#replies}} </p>
+<p class="rm-manual"> <span>{{sender.name}}</span> <span> {{dateTime}} </span> </p>
+<p class="rm-manual">{{{commentText}}}</p>
+<p class="rm-manual"> {{#sender.isSelf}} <a>Delete</a> {{/sender.isSelf}} </p>
+<p class="rm-manual"> <span>{{posVotes}}</span> <span>{{negVotes}}</span> <a> -1"&gt; </a> <a> -1)"&gt; </a> </p>
+<p class="rm-manual"> {{/replies}} </p>
+<p class="rm-manual"> {{/replies}} </p>
+<p class="rm-manual"> {{/comments}} </p>
+<p class="rm-manual">Loading comments...</p>
+<p class="rm-manual"> {{^comments}} </p>
+<p class="rm-manual">There are no comments yet - be the first to add your thoughts</p>
+<p class="rm-manual"> {{/comments}} {{#comments}} </p>
+<p class="rm-manual"> <span>{{sender.name}}</span> <span> {{dateTime}} </span> </p>
+<p class="rm-manual">{{{commentText}}}</p>
+<p class="rm-manual"> <a>Reply</a> {{#sender.isSelf}} <a>Delete</a> {{/sender.isSelf}} </p>
+<p class="rm-manual"> <span>{{posVotes}}</span> <span>{{negVotes}}</span> </p>
+<p class="rm-manual">Create a commenting name to join the debate</p>
+<p class="rm-manual"> <span>Please try again, the name must be unique</span> </p>
+<p class="rm-manual"> {{#replies}} </p>
+<p class="rm-manual"> <span>{{sender.name}}</span> <span> {{dateTime}} </span> </p>
+<p class="rm-manual">{{{commentText}}}</p>
+<p class="rm-manual"> <a>Reply</a> {{#sender.isSelf}} <a>Delete</a> {{/sender.isSelf}} </p>
+<p class="rm-manual"> <span>{{posVotes}}</span> <span>{{negVotes}}</span> </p>
+<p class="rm-manual">Create a commenting name to join the debate</p>
+<p class="rm-manual"> <span>Please try again, the name must be unique</span> </p>
+<p class="rm-manual"> {{#replies}} </p>
+<p class="rm-manual"> <span>{{sender.name}}</span> <span> {{dateTime}} </span> </p>
+<p class="rm-manual">{{{commentText}}}</p>
+<p class="rm-manual"> {{#sender.isSelf}} <a>Delete</a> {{/sender.isSelf}} </p>
+<p class="rm-manual"> <span>{{posVotes}}</span> <span>{{negVotes}}</span> </p>
+<p class="rm-manual"> {{/replies}} </p>
+<p class="rm-manual"> {{/replies}} </p>
+<p class="rm-manual"> {{/comments}} </p>
+<p class="rm-manual"> {{#showMore}} {{/showMore}} </p>
+<p class="rm-manual"> Minds Comments </p>
+<p class="rm-manual"> <a>Join the discussion</a> </p>
+<h5 class="rm-manual">Please be respectful when making a comment and adhere to our <span>Community Guidelines.</span>
+</h5>
+<ul class="rm-manual"> <li class="rm-manual">You may not agree with our views, or other users’, but please respond to them respectfully</li> <li class="rm-manual">Swearing, personal abuse, racism, sexism, homophobia and other discriminatory or inciteful language is not acceptable</li> <li class="rm-manual">Do not impersonate other users or reveal private information about third parties</li> <li class="rm-manual">We reserve the right to delete inappropriate posts and ban offending users without notification</li> </ul>
+<p class="rm-manual">You can find our Community Guidelines in full <a href="https://www.independent.co.uk/service/community-guidelines-9487166.html">here.</a></p>
+<p class="rm-manual"> {{^nickname}} </p>
+<p class="rm-manual">Create a commenting name to join the debate</p>
+<p class="rm-manual"> <span>Please try again, the name must be unique</span> </p>
+<p class="rm-manual"> {{/nickname}} </p>
+<section class="rm-manual"> {{#moreThanOne_p}} </section><ul class="rm-manual"> <li class="rm-manual"> -1) ? 'active' : ''"&gt; Newest first</li> <li class="rm-manual"> -1) ? 'active' : ''"&gt; Oldest first</li> <li class="rm-manual"> -1) ? 'active' : ''"&gt; Most liked</li> </ul>
+<p class="rm-manual"> {{/moreThanOne_p}} </p>
+<p class="rm-manual">Loading comments...</p>
+<p class="rm-manual"> {{^comments}} </p>
+<p class="rm-manual">There are no Independent Premium comments yet - be the first to add your thoughts</p>
+<p class="rm-manual"> {{/comments}} {{#comments}} </p>
+<p class="rm-manual"> <span>{{sender.name}}</span> <span> {{dateTime}} </span> </p>
+<p class="rm-manual">{{{commentText}}}</p>
+<p class="rm-manual"> <a>Reply</a> {{#sender.isSelf}} <a>Delete</a> {{/sender.isSelf}} </p>
+<p class="rm-manual"> <span>{{posVotes}}</span> <span>{{negVotes}}</span> <a> -1"&gt; </a> <a> -1)"&gt; </a> </p>
+<p class="rm-manual"> {{#replies}} </p>
+<p class="rm-manual"> <span>{{sender.name}}</span> <span> {{dateTime}} </span> </p>
+<p class="rm-manual">{{{commentText}}}</p>
+<p class="rm-manual"> <a>Reply</a> {{#sender.isSelf}} <a>Delete</a> {{/sender.isSelf}} </p>
+<p class="rm-manual"> <span>{{posVotes}}</span> <span>{{negVotes}}</span> <a> -1"&gt; </a> <a> -1)"&gt; </a> </p>
+<p class="rm-manual"> {{#replies}} </p>
+<p class="rm-manual"> <span>{{sender.name}}</span> <span> {{dateTime}} </span> </p>
+<p class="rm-manual">{{{commentText}}}</p>
+<p class="rm-manual"> {{#sender.isSelf}} <a>Delete</a> {{/sender.isSelf}} </p>
+<p class="rm-manual"> <span>{{posVotes}}</span> <span>{{negVotes}}</span> <a> -1"&gt; </a> <a> -1)"&gt; </a> </p>
+<p class="rm-manual"> {{/replies}} </p>
+<p class="rm-manual"> {{/replies}} </p>
+<p class="rm-manual"> {{/comments}} </p>
+<p class="rm-manual">Loading comments...</p>
+<p class="rm-manual"> {{^comments}} </p>
+<p class="rm-manual">There are no Independent Premium comments yet - be the first to add your thoughts</p>
+<p class="rm-manual"> {{/comments}} {{#comments}} </p>
+<p class="rm-manual"> <span>{{sender.name}}</span> <span> {{dateTime}} </span> </p>
+<p class="rm-manual">{{{commentText}}}</p>
+<p class="rm-manual"> <a>Reply</a> {{#sender.isSelf}} <a>Delete</a> {{/sender.isSelf}} </p>
+<p class="rm-manual"> <span>{{posVotes}}</span> <span>{{negVotes}}</span> </p>
+<p class="rm-manual">Create a commenting name to join the debate</p>
+<p class="rm-manual"> <span>Please try again, the name must be unique</span> </p>
+<p class="rm-manual"> {{#replies}} </p>
+<p class="rm-manual"> <span>{{sender.name}}</span> <span> {{dateTime}} </span> </p>
+<p class="rm-manual">{{{commentText}}}</p>
+<p class="rm-manual"> <a>Reply</a> {{#sender.isSelf}} <a>Delete</a> {{/sender.isSelf}} </p>
+<p class="rm-manual"> <span>{{posVotes}}</span> <span>{{negVotes}}</span> </p>
+<p class="rm-manual">Create a commenting name to join the debate</p>
+<p class="rm-manual"> <span>Please try again, the name must be unique</span> </p>
+<p class="rm-manual"> {{#replies}} </p>
+<p class="rm-manual"> <span>{{sender.name}}</span> <span> {{dateTime}} </span> </p>
+<p class="rm-manual">{{{commentText}}}</p>
+<p class="rm-manual"> {{#sender.isSelf}} <a>Delete</a> {{/sender.isSelf}} </p>
+<p class="rm-manual"> <span>{{posVotes}}</span> <span>{{negVotes}}</span> </p>
+<p class="rm-manual"> {{/replies}} </p>
+<p class="rm-manual"> {{/replies}} </p>
+<p class="rm-manual"> {{/comments}} </p>
+<p class="rm-manual"> {{#showMore_p}} {{/showMore_p}} </p>
+<h3 class="rm-manual">Follow comments</h3>
+<p class="rm-manual">Enter your email to follow new comments on this article.</p>
+<p class="rm-manual"> Thanks for subscribing! </p>
+<p class="rm-manual"> {{errorMessage}} </p>
+<h3 class="rm-manual">Vote</h3>
+<p class="rm-manual">Are you sure you want to submit this vote?</p>
+<p class="rm-manual"> You must be logged in to vote. </p>
+<h3 class="rm-manual">Report Comment</h3>
+<p class="rm-manual">Are you sure you want to mark this comment as inappropriate?</p>
+<p class="rm-manual"> This comment has been flagged. </p>
+<h3 class="rm-manual">Subscribe to Independent Premium to debate the big issues </h3>
+<p class="rm-manual">Want to discuss real-world problems, be involved in
+ the most engaging discussions and hear from the journalists? Start your
+ Independent Premium subscription today.</p>
+<p class="rm-manual"><span>Already registered? <a>Log in</a></span> </p>
+<h3 class="rm-manual">Report Comment</h3>
+<p class="rm-manual">Are you sure you want to mark this comment as inappropriate?</p>
+<p class="rm-manual"> This comment has been flagged. </p>
+<h3 class="rm-manual">Delete Comment</h3>
+<p class="rm-manual">Are you sure you want to delete this comment?</p>
+<p class="rm-manual"> Deleting comment... </p>
+<p class="rm-manual"> This comment has been deleted. </p>
+<p class="rm-manual"> This comment has been deleted. </p>
+<h3 class="rm-manual">About The Independent commenting</h3>
+<p class="rm-manual">Independent Premium Comments can be posted by 
+members of our membership scheme, Independent Premium. It allows our 
+most engaged readers to debate the big issues, share their own 
+experiences, discuss real-world solutions, and more. Our journalists 
+will try to respond by joining the threads when they can to create a 
+true meeting of independent Premium. The most insightful comments on all
+ subjects will be published daily in dedicated articles. You can also 
+choose to be emailed when someone replies to your comment. </p>
+<p class="rm-manual"> The existing Open Comments threads will continue 
+to exist for those who do not subscribe to Independent Premium. Due to 
+the sheer scale of this comment community, we are not able to give each 
+post the same level of attention, but we have preserved this area in the
+ interests of open debate. Please continue to respect all commenters and
+ create constructive debates. </p>
+<p class="rm-manual"> <span>Already registered? <a>Log in</a></span> </p>
+<h3 class="rm-manual">Subscribe to Independent Premium to bookmark this article</h3>
+<p class="rm-manual">Want to bookmark your favourite articles and 
+stories to read or reference later? Start your Independent Premium 
+subscription today.</p>
+<p class="rm-manual"> <span>Already registered? <a>Log in</a></span> </p>
+<h4 class="rm-manual">Article bookmarked</h4>
+<p class="rm-manual">Find your bookmarks in your <a href="file:///independent-premium#bookmarks">Independent Premium</a> section, under my profile</p>
+<p class="rm-manual"> Don't show me this message again </p>
+<ul class="rm-manual"> <li class="rm-manual"> <h4 class="rm-manual">Get in touch</h4> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///service/contact-us-759589.html">Contact us</a></li> <li class="rm-manual"><a href="http://independentjobs.independent.co.uk/">Jobs</a></li> </ul> </li> <li class="rm-manual"> <h4 class="rm-manual">Our products</h4> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.independent.co.uk/subscribe?itm_channel=native&amp;itm_campaign=footer&amp;itm_audience=prospecting&amp;itm_content=subscribe">Subscriptions</a></li> <li class="rm-manual"><a href="https://www.independent.co.uk/donations?itm_channel=native&amp;itm_campaign=footer&amp;itm_audience=prospecting&amp;itm_content=donate">Donations</a></li> <li class="rm-manual"><a href="https://www.independent.co.uk/subscribe/app?itm_channel=native&amp;itm_campaign=app_selling_page&amp;itm_audience=prospecting&amp;itm_content=footer">Install our apps</a></li> <li class="rm-manual"><a href="file:///archive">Archive</a></li> </ul> </li> <li class="rm-manual"> <h4 class="rm-manual">Other publications</h4> <ul class="rm-manual"> <li class="rm-manual"><a href="https://www.standard.co.uk/">Evening Standard</a></li> <li class="rm-manual"><a href="http://en.novayagazeta.ru/">Novaya Gazeta</a></li> </ul> </li> <li class="rm-manual"> <h4 class="rm-manual">Extras</h4> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///topics-list">All topics</a></li> <li class="rm-manual"><a href="file:///vouchercodes">Voucher codes</a></li> <li class="rm-manual"><a href="http://esimedia.co.uk/">Advertising guide</a></li> <li class="rm-manual"><a href="https://www.esimedia.co.uk/syndication">Syndication</a></li> </ul> </li> <li class="rm-manual"> <h4 class="rm-manual">Legal</h4> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///service/code-of-conduct-a6184241.html">Code of conduct and complaints</a></li> <li class="rm-manual"><a href="file:///service/external-contributors-policy-7905982.html">Contributors</a></li> <li class="rm-manual"><a href="file:///service/cookie-policy-a6184186.html">Cookie policy</a></li> <li class="rm-manual"><a href="file:///service/donations-terms-and-conditions-a9308071.html">Donations Terms &amp; Conditions</a></li> <li class="rm-manual"><a href="file:///service/privacy-policy-a6184181.html">Privacy notice</a></li> <li class="rm-manual"><a href="file:///service/user-policies-a6184151.html">User policies</a></li> </ul> </li> </ul></article>
+</body></html>

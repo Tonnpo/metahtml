@@ -1,0 +1,113 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> A Few Thoughts on Krebs’ View of What Business Leaders Should Know About the Value of Hacked Companies </p>
+<p class="rm-manual"> <a href="https://www.paloaltonetworks.com/blog">Blog</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://www.paloaltonetworks.com/blog">Palo Alto Networks</a></li> <li class="rm-manual"> <a href="https://www.paloaltonetworks.com/blog/network-security/">Network Security</a> </li> <li class="rm-manual"> <a href="https://www.paloaltonetworks.com/blog/sase/">SASE</a> </li> <li class="rm-manual"> <a href="https://www.paloaltonetworks.com/blog/prisma-cloud/">Cloud Native Security</a> </li> <li class="rm-manual"> <a href="https://www.paloaltonetworks.com/blog/security-operations/">Security Operations</a> </li> </ul>
+<h1 class="rm-manual">A Few Thoughts on Krebs’ View of What Business Leaders Should Know About the Value of Hacked Companies</h1>
+<p class="rm-manual"> <a href="https://www.paloaltonetworks.com/blog/category/cybersecurity-2/">Cybersecurity</a> <a href="https://www.paloaltonetworks.com/blog/tag/brian-krebs/" rel="tag">Brian Krebs</a><a href="https://www.paloaltonetworks.com/blog/tag/krebs-on-security/" rel="tag">Krebs on Security</a><a href="https://www.paloaltonetworks.com/blog/tag/securityroundtable-org/" rel="tag">SecurityRoundtable.org</a><a href="https://www.paloaltonetworks.com/blog/tag/us-cybersecurity-framework/" rel="tag">US Cybersecurity Framework</a> </p>
+<ol class="rm-manual"> <li class="rm-manual">
+<span>...</span> people reacted</li> <li class="rm-manual"> <p class="rm-manual"> <span>...</span> </p> </li> </ol>
+<p class="rm-manual"> <span>By <a href="https://www.paloaltonetworks.com/blog/author/davis-hake/" rel="author">Davis Hake</a></span></p>
+<p class="rm-manual"> July 19, 2016 at 5:00 AM</p>
+<p class="rm-manual"> 4 min. read </p>
+<p>Over the past several years, we have seen cybersecurity increasingly become a boardroom issue. A report sponsored by <a href="https://www.paloaltonetworks.com/blog/2015/10/all-eyes-on-the-boardroom/">Palo Alto Networks, Forbes, Financial Services Roundtable and Georgia Tech</a>
+ in 2015 showed that the number of boards paying attention to 
+cybersecurity has risen 33 percent since 2012. But, as Brian Krebs 
+recently noted in his interesting blog post on <a href="http://krebsonsecurity.com/2016/07/the-value-of-a-hacked-company/" rel="nofollow,noopener">The Value of a Hacked Company</a>, senior execs should think a little deeper about the business impact of cyber incidents.</p>
+<p>To highlight his point, Krebs turns the classic, "damage to business 
+reputation” argument on its head and has built a helpful diagram showing
+ how an attacker would look at the value of a company’s data. Economic 
+motivation can be a powerful incentive for criminal hackers, and the 
+thinking is that senior leaders should know what an attacker is most 
+interested in as this is the same data that they likely value and should
+ focus on protecting. However, one key aspect that Krebs’ model can dig 
+deeper into is the externality costs from attackers looking to swim 
+upstream into a company to achieve broader downstream effects. Think 
+targeting one company in order to hit their clients. This style of 
+attack has been a concern for<a href="http://www.americanbar.org/news/abanews/aba-news-archives/2014/08/law_firms_not_doing.html" rel="nofollow,noopener"> law firms</a> worried about protecting their clients’ sensitive files; the <a href="https://www.opm.gov/cybersecurity/cybersecurity-incidents/" rel="nofollow,noopener">government protecting employee records</a>; and, for industrial control systems and the internet of things <a href="https://ics-cert.us-cert.gov/sites/default/files/Monitors/ICS-CERT_Monitor_May-Jun2016_S508C.pdf" rel="nofollow,noopener">vendors attached to critical infrastructure</a>.</p>
+<p>As we have seen with <a href="https://www.paloaltonetworks.com/solutions/initiatives/ransomware">ransomware</a>, criminal attackers are becoming much more efficient with their economic models for making serious cash. With last year’s <a href="http://cyberthreatalliance.org/cryptowall-report.pdf" rel="nofollow,noopener">takedown of CryptoWall v3</a>, members of the <a href="http://cyberthreatalliance.org/" rel="nofollow,noopener">Cyber Threat Alliance</a> discovered over $325 million in damages from this one campaign. Attackers are also highly sensitive to their profit model. A <a href="https://www.paloaltonetworks.com/blog/2016/02/for-cyberattackers-time-is-the-enemy/">recent Ponemon survey</a>
+ noted that not only are a majority of attackers financially motivated, 
+but also that a two-day increase in their workload is enough to dissuade
+ them from continuing an attack.</p>
+<p>What does all this mean for CEOs and board members? Unfortunately, to
+ Krebs' point, it shows that adversaries likely understand the value of 
+your data and how to access it better than you do. It also shows that 
+business-savvy attackers driven by profit motive will look for 
+opportunities to strike once and reap the benefits from large amounts of
+ data. For a company, this generally means attackers will target data 
+that you are holding on behalf of someone else or systems that are 
+connected to many other targets. From a business risk standpoint, this 
+blows your externality cost models out of the water.</p>
+<p>The recent attacks utilizing the SWIFT global payment system are 
+another excellent example. In this case, attackers appeared to be 
+leveraging the trust in the SWIFT network not to take it down or gain 
+sensitive IP but to use it as a conduit for perpetrating fraudulent 
+transactions against other users. This hammers home that, even if you 
+are the first victim of an attack, you may not be the primary victim but
+ could still be potentially responsible. This has been a major concern 
+in the cyber insurance market as well, where the complexity of these 
+types of externality costs make it difficult to write policies that 
+cover the full cost of major cyber incidents.</p>
+<p>With all this being said, there is hope! Krebs ends with a pitch for 
+an effort that is near and dear to my heart: the Cybersecurity Framework
+ that was launched in a public-private partnership by the U.S. 
+government and private sector in 2014. The Framework emphasizes that 
+investments made against your specific business risks can have a huge 
+effect on increasing your cybersecurity. From a Palo Alto Networks 
+perspective, we speak about this as focusing on preventing successful 
+attacks by matching your investments to the right personnel training, 
+proper security processes, and next-generation technology, in order to 
+raise the cost for attackers at every step in the attack lifecycle. This
+ strategic level of planning for prevention rests largely in the hands 
+of senior leaders, and oversight of these risk reduction measures is 
+becoming a key board responsibility as well.</p>
+<p>Kudos to Krebs for helping to generate discussion and build out more 
+data around bringing cyber to the boardroom. For more information on how
+ to plan for, prevent and respond to cyberattacks, check out some of the
+ great articles from our partners at the <a href="https://www.securityroundtable.org/" rel="nofollow,noopener">SecurityRoundtable.org</a>.</p>
+<h2 class="rm-manual">Get updates!</h2>
+<p class="rm-manual">Sign up to receive the latest news</p>
+<p class="rm-manual">Popular Resources</p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.paloaltonetworks.com/blog/">Blog</a> </li> <li class="rm-manual"> <a href="https://jobs.paloaltonetworks.com/">Careers</a> </li> <li class="rm-manual"> <a href="https://www.paloaltonetworks.com/communities">Communities</a> </li> <li class="rm-manual"> <a href="https://www.paloaltonetworks.com/resources">Content Library</a> </li> <li class="rm-manual"> <a href="https://www.paloaltonetworks.com/cyberpedia">Cyberpedia</a> </li> <li class="rm-manual"> <a href="https://events.paloaltonetworks.com/">Event Center</a> </li> <li class="rm-manual"> <a href="https://investors.paloaltonetworks.com/investor-relations/overview/default.aspx">Investors</a> </li> <li class="rm-manual"> <a href="https://docs.paloaltonetworks.com/">Tech Docs</a> </li> <li class="rm-manual"> <a href="https://unit42.paloaltonetworks.com/">Unit 42</a> </li> <li class="rm-manual"> <a href="https://www.paloaltonetworks.com/sitemap">Sitemap</a> </li> </ul>
+<p class="rm-manual">Legal Notices</p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://www.paloaltonetworks.com/legal-notices/privacy">Privacy</a> </li> <li class="rm-manual"> <a href="https://www.paloaltonetworks.com/legal-notices/trust-center">Trust Center</a> </li> <li class="rm-manual"> <a href="https://www.paloaltonetworks.com/legal-notices/terms-of-use">Terms of Use</a> </li> <li class="rm-manual"> <a href="https://www.paloaltonetworks.com/legal">Documents</a> </li> </ul>
+<p class="rm-manual">Account</p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://start.paloaltonetworks.com/preference-center">Manage Subscriptions</a> </li> </ul>
+<p class="rm-manual"> <a href="https://www.paloaltonetworks.com/security-disclosure">Report a Vulnerability</a> </p>
+<p class="rm-manual">© 2021 Palo Alto Networks, Inc. All rights reserved.</p></article>
+</body></html>

@@ -1,0 +1,188 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual">China, Russia Forge Closer Ties on North Korea, Iran As U.S. Policy Brings Uncertainty to New Year </p>
+<p class="rm-manual"> Sun, May 31, 2020</p>
+<p class="rm-manual">Search </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.newsweek.com/us">U.S.</a></li>
+<li class="rm-manual"><a href="https://www.newsweek.com/world">World</a></li>
+<li class="rm-manual"><a href="https://www.newsweek.com/business">Business</a></li>
+<li class="rm-manual"><a href="https://www.newsweek.com/tech-science">Tech &amp; Science</a></li>
+<li class="rm-manual"><a href="https://www.newsweek.com/culture">Culture</a></li>
+<li class="rm-manual"><a href="https://www.newsweek.com/newsgeek">Newsgeek</a></li>
+<li class="rm-manual"><a href="https://www.newsweek.com/sports">Sports</a></li>
+<li class="rm-manual"><a href="https://www.newsweek.com/health">Health</a></li>
+<li class="rm-manual"><a href="https://www.newsweek.com/the-debate">The Debate</a></li>
+<li class="rm-manual"><a href="https://www.newsweek.com/vantage">Vantage</a></li>
+<li class="rm-manual"><a href="https://www.newsweek.com/weather">Weather</a></li>
+</ul>
+<p class="rm-manual"><a href="file:///world">World</a></p>
+<h1 class="rm-manual">China, Russia Forge Closer Ties on North Korea, Iran As U.S. Policy Brings Uncertainty to New Year</h1>
+<p class="rm-manual"> By <span> <span> <a href="file:///authors/tom-oconnor" rel="author"> <span>Tom O'Connor</span></a> </span> </span> On 12/30/19 at 12:31 PM EST </p>
+<p class="rm-manual"><a href="file:///world">World</a> <a href="file:///topic/international-affairs"><span>International Affairs</span></a> <a href="file:///topic/china"><span>China</span></a> <a href="file:///topic/russia"><span>Russia</span></a> <a href="file:///topic/iran"><span>Iran</span></a></p>
+<p>China and Russia have <a href="https://www.newsweek.com/russia-china-no-alliance-powerful-partnership-1478556">accelerated their coordination</a>
+ on international issues involving Iran and North Korea in the final 
+weeks of this year as the United States' own hard-line approaches were 
+met with increasing difficulties.</p>
+<p>Threats of an undesirable "Christmas gift" teased by North Korea 
+never came to fruition as the U.S. allowed the holiday to pass with no 
+new plan to move forward with their denuclearization-for-peace process, 
+but China and Russia have sought to avoid a new crisis in the region by 
+going their own route. The two powers <a href="https://www.newsweek.com/us-north-korea-deal-china-russia-team-1477822">introduced a United Nations Security Council draft resolution</a> that would give supreme leader Kim Jong Un something he wanted: partial sanctions relief.</p>
+<p>Chinese Foreign Ministry spokesperson Geng Shuang told a press 
+briefing Monday in Beijing that the two countries' efforts were meant 
+"to maintain peace and stability on the Peninsula, stick to dialogue and
+ consultation to resolve disputes, and advance the establishment of a 
+permanent peace regime and complete denuclearization on the Peninsula in
+ parallel."</p>
+<p>"Our proposal to adjust some of the sanctions on the DPRK is to meet 
+the reasonable humanitarian and livelihood needs of the DPRK people in 
+support of the process of political dialogue," Geng said, using an 
+acronym for the official name of North Korea.</p>
+<p>"China and Russia are now in contact with other Security Council 
+members and relevant parties of the Peninsula issue on the content of 
+the draft resolution," he added. "We expect members of the Security 
+Council to shoulder their responsibility and take active moves to 
+support political settlement, encourage talks and safeguard peace and 
+stability on the Peninsula."</p>
+<figcaption> <span>Russian First Deputy Prime Minister and Finance 
+Minister Anton Siluanov attends a meeting with Chinese Vice Premier Han 
+Zheng at the Great Hall of the People in Beijing, November 26. The two 
+powers have been coordinating on international affairs more closely than
+ ever, a worrying trend for the U.S. as it tries to assert its own 
+interests.</span> <span>FLORENCE LO/AFP/Getty Images</span> </figcaption><p>France,
+ the United Kingdom and the U.S., however, have argued that the lifting 
+of international sanctions targeting North Korea should first require 
+the elusive, militarized state to shutter its nuclear weapons program. 
+China and Russia's joint proposal would need to not be vetoed by these 
+three fellow permanent U.N. Security Council members and receive nine 
+votes of approval in all.</p>
+<p>Beijing and Moscow have so far backed President Donald Trump's 
+historic efforts to make peace with Kim but have tried to encourage him 
+to be more forthcoming with suspending economic restrictions and joint 
+U.S.-South Korean military exercises viewed as provocative by North 
+Korea. The White House, however, has largely stuck to its "maximum 
+pressure" strategy, an approach that also came at odds with Russia and 
+China's stance toward another longtime U.S. adversary, Iran.</p>
+<p>Trump, Kim Jong Un Face Year-End Deal Pressure, But Head Toward Crisis</p>
+<p>Read more </p>
+<p>Both countries joined the U.S., as well as the European Union, 
+France, Germany and the U.K. to sign the 2015 nuclear deal with Iran, 
+but Trump left the deal last year unilaterally imposing its own 
+sanctions on the Islamic Republic. Since then, Washington and Tehran 
+have blamed one another for destabilizing the Persian Gulf region and 
+potentially threatening the flow of international oil. Here too, Geng 
+told reporters Monday that "China and Russia have been in close 
+communication and coordination."</p>
+<p>Geng said Iranian Foreign Minister Mohammad Javad Zarif recently 
+spoke by telephone with his Chinese counterpart Wang Yi and was set to 
+visit Beijing on Tuesday. First, however, Zarif traveled to the Russian 
+capital and discussed the Iranian nuclear deal with his Russian Foreign 
+Minister Sergey Lavrov in Moscow, whose top diplomat "spoke about the 
+serious efforts that we are making to maintain this important 
+international agreement that the United States is trying to undermine as
+ a result of the destructive line that Washington continues."</p>
+<p>"We discussed the situation in the Persian Gulf," Lavrov added, 
+touting both Russian and Iranian initiatives to create an international 
+coalition rivaling a U.S.-led maritime unit currently patrolling the 
+restive Persian Gulf. "Russia and Iran advocate pooling the efforts of 
+all interested states to ensure security and stability in this region."</p>
+<figcaption> <span>Iraqis burn U.S. flags in the southern city of Basra 
+on December 30, during a demonstration to denounce the previous night's 
+attacks by U.S. planes on several bases belonging to the Iran-backed 
+Kataib Hezbollah, or Hezbollah Brigades, near Al-Qaim, an Iraqi district
+ bordering Syria. The strikes, which killed up to 25 fighters, were met 
+with outrage by Baghdad, a close partner of both Washington and Tehran. </span> <span>HUSSEIN FALEH/AFP/Getty Images</span> </figcaption><p>Unrest
+ in this energy-critical region has only worsened, however, as 
+Washington blamed Tehran for attacks on tanker vessels, Saudi oil 
+facilities and military installations associated with U.S. military 
+presence in Iraq. In an unprecedented move, the Pentagon conducted what 
+it called "defensive strikes" Sunday against Iraqi militia Kataib 
+Hezbollah, a close partner of Iran, in Iraq and Syria after <a href="https://www.newsweek.com/rocket-attack-iraq-kills-us-citizen-1479430">a rocket attack</a> killed one Pentagon contractor and injured several U.S. and Iraqi personnel Thursday in northern Iraq.</p>
+<p>New Report Predicts 2020 Conflicts in Middle East, Pacific, U.S. and More</p>
+<p>Read more </p>
+<p>Iranian officials, including President Hassan Rouhani, strongly 
+denied having ordered the attack on U.S. personnel and condemned the 
+U.S. operation. Even top officials in Baghdad, a close partner of 
+Washington and Tehran, criticized the U.S. move as a violation of Iraqi 
+sovereignty.</p>
+<p>In a statement published Monday, the Russian Foreign Ministry said it
+ "took with serious concern the exchange of attacks" between the U.S. 
+and Iraq militias and that it found "such actions unacceptable and 
+counterproductive." During his press conference that same day, Geng said
+ that "China has always opposed the use of force in international 
+relations and advocates that all parties should abide by the purposes 
+and principles of the U.N. Charter and the basic principles of 
+international relations."</p>
+<p>The latest escalations came after Russian, Chinese and Iranian forces launched their <a href="https://www.newsweek.com/iran-warns-us-middle-east-dominance-over-naval-drills-russia-china-1479628">first-ever joint naval exercises</a>
+ in the Indian Ocean and the Gulf of Oman, further sign of Beijing and 
+Moscow's willingness to counter Washington's efforts to isolate Tehran 
+internationally.</p>
+<p class="rm-manual"> <a href="https://newsweeklicensing.com/">Request Reprint &amp; Licensing</a>, <span><a href="#">Submit Correction</a></span> or <a href="file:///editorial-guidelines">view Editorial Guidelines</a></p>
+<p class="rm-manual">China, Russia Forge Closer Ties on North Korea, Iran As U.S. Policy Brings Uncertainty to New Year | World</p>
+<p class="rm-manual">You have <span>4</span> free articles remaining this month</p>
+<p class="rm-manual">Sign-up to our daily newsletter for more articles like this + access to 5 extra articles</p>
+<p class="rm-manual"> Choose your subscription</p>
+<p class="rm-manual"> Newsletter</p>
+<h3 class="rm-manual">The Starting 5</h3>
+<p class="rm-manual">See why nearly a quarter of a million subscribers begin their day with the Starting 5.</p>
+<p class="rm-manual">© 2020 Newsweek</p>
+<p class="rm-manual"> Editions:</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.newsweek.com/">U.S. Edition</a></li>
+<li class="rm-manual"><a href="https://www.newsweekjapan.jp/">日本</a></li>
+<li class="rm-manual"><a href="http://newsweekpakistan.com/">Pakistan</a></li>
+<li class="rm-manual"><a href="https://www.newsweek.pl/">Polska</a></li>
+<li class="rm-manual"><a href="https://newsweek.ro/">România</a></li>
+</ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.newsweek.com/about-newsweek">About Us</a></li>
+<li class="rm-manual"><a href="https://www.newsweek.com/corrections">Corrections</a></li>
+<li class="rm-manual"><a href="https://www.newsweek.com/contact">Contact Us</a></li>
+<li class="rm-manual"><a href="https://www.newsweek.com/editorial-guidelines">Editorial Guidelines</a></li>
+<li class="rm-manual"><a href="https://www.newsweek.com/advertise">Advertise</a></li>
+<li class="rm-manual"><a href="https://www.newsweek.com/copyright">Copyright</a></li>
+<li class="rm-manual"><a href="https://www.newsweek.com/terms-service">Terms &amp; Conditions</a></li>
+<li class="rm-manual"><a href="https://www.newsweek.com/privacy-policy">Privacy Policy</a></li>
+<li class="rm-manual"><a href="https://www.newsweek.com/cookie-policy">Cookie Policy</a></li>
+<li class="rm-manual"><a href="https://www.newsweek.com/terms-sale">Terms of Sale</a></li>
+<li class="rm-manual"><a href="https://www.newsweek.com/archive">Archive</a></li>
+<li class="rm-manual"><a href="https://www.newsweek.com/announcements">Announcements</a></li>
+<li class="rm-manual"><a href="">Consent preferences</a></li>
+</ul></article>
+</body></html>

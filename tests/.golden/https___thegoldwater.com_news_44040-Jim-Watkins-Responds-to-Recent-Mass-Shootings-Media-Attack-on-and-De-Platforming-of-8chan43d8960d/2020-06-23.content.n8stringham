@@ -1,0 +1,266 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Jim Watkins Responds to Recent Mass Shootings, Media Attack on and De-Platforming of 8chan </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///category/bodycount">Body Count</a> </li> <li class="rm-manual"> <a href="file:///category/pedo">PedoGate</a> </li> <li class="rm-manual"> <a href="file:///category/crypto">Crypto</a> </li> <li class="rm-manual"> <a href="file:///category/2020">2020</a> </li> <li class="rm-manual"> <a href="file:///category/science">Science</a> </li> <li class="rm-manual"> <a href="file:///category/weird">Weird</a> </li> <li class="rm-manual"> <a href="file:///category/opinion">Opinion</a> </li> <li class="rm-manual"> <a href="file:///category/studio">Studio</a> </li> <li class="rm-manual"> <a href="file:///forum">Forum</a> </li> <li class="rm-manual"> <a href="https://www.zazzle.com/the_goldwater">Shop</a> </li> </ul>
+<p class="rm-manual"> <span>By: <a href="file:///author-post/Major-Burdock">Major Burdock</a></span> | <span>08-06-2019 | <a href="https://thegoldwater.com/category/news">News</a></span> </p>
+<p class="rm-manual">Photo credit: thegoldwater.com</p>
+<h1 class="rm-manual">Jim Watkins Responds to Recent Mass Shootings, Media Attack on and De-Platforming of 8chan</h1>
+<p class="rm-manual">Jim Watkins, the owner of 8chan, responded on 
+Tuesday afternoon PHT to allegations that he and his now de-platformed 
+imageboard 8ch.net were the cause of recent mass shootings. </p>
+<p>What a sad weekend. I just finished watching the President of the 
+United States give his condolences to the families of the victims of the
+ El Paso Walmart Shooting, and the Dayton Ohio Shooting. It is a tragedy
+ for those families. It is a tragedy for Mexico and the United States of
+ America. It is indeed such a sad day, and time in the history of the 
+world. The worst sort of monster shoots up random people, that it is the
+ fact that insanity is obviously involved. One of these shooters even 
+shot his own sister. It is terribly sad. We are lucky that at least he 
+was not able to continue shooting because quick-acting law enforcement 
+was able to kill him within a minute of his attack in Dayton. The 
+President has asked tech companies to work with law enforcement to help 
+solve these problems. My company takes a firm stand on helping law 
+enforcement, and within minutes of these two tragedies, we were working 
+with FBI agents to find out what information we could to help in their 
+investigations. Our company has always worked with law enforcement to 
+help them with their investigations. We have never protected illegal 
+speech, as it seems that we have been accused of by some less than 
+credible journalists. We have responded with both vigor and integrity 
+every single time that a thread of violence has been posted and 
+information for it has been requested by law enforcement. I am aware 
+this is not protected speech, and I employ fulltime staff that have a 
+sole responsibility to service these requests made by law enforcement. 
+In May, my company was mentioned in Congressional testimony. We are not 
+such a large company, and the Assistant Director of the FBI Michael 
+McGarrity had not heard of us. So he was unable to respond to questions 
+about us. However, we did immediately compile all FBI requests and 
+dispositions of them and make that available to him. Immediately after 
+that request was made. So it needs to be stated that not only are we in 
+compliance with the law. We have always been aggressively forthcoming, 
+to help enforcement of it. There are about one million daily users of 
+8chan. 8chan is an empty piece of paper for writing on. It is disturbing
+ to me that it can be so easily shut down. Over the weekend the domain 
+name service for 8chan was abruptly terminated by the provider 
+Cloudflare. Some people may applaud that decision. It was made by one of
+ their founders. According to his Twitter profile, he is a “recovering 
+lawyer.” They are a private company, and of course, have a right to stop
+ doing business with me. Likely this is because of their intended and 
+soon to happen IPO. Calling “8ch.net lawless by design.” He decided to 
+terminate us. This is, of course, an untrue statement. He did terminate 
+us though. So it becomes time to find a new home. Think of 8chan as a 
+large community of one million people that are now looking for a home. 
+First of all, the El Paso shooter posted on Instagram, not 8chan. Later 
+someone uploaded a “manifesto.” However, that manifesto was not uploaded
+ by the Walmart shooter. I don’t know if he wrote it or not, but it was 
+not uploaded by the murderer. That is clear, and law enforcement was 
+made aware of this before most people had even heard the horrific news. 
+The spirit and letter of the law have always been faithfully fulfilled 
+and my company has always made certain of that. It is unfortunate that 
+this place of free speech has temporarily been removed. We are working 
+to restore service. Thank you! To the incredible people and companies 
+that are helping with this task. It is clearly a political move to 
+remove 8chan from Cloudflare. It has forced a lot of people to find 
+other places to talk. It has disbursed a peacefully assembled group of 
+people talking. This silenced them effectively. The spirit of what the 
+President of the United States asked Tech companies to do has been 
+violated. It is effective to silence these people by removing the pen 
+and ink that they write with. Let's look at the deflection that took 
+place here. Public companies casting the blame for MURDER on to smaller 
+private companies. Law-abiding companies. With some hard work by my 
+engineers, we were able to move 8chan to a new network. This was a 
+smaller company after our move was complete. Their upstream provider, a 
+public company shut off service to them. Their company suffers as well 
+for taking on the responsibility of running a network that my company 
+has touched. It is actually sinister behavior. Ours is one of the last 
+independent companies that offer a place you may write down your 
+thoughts. Free from having to worry about whether they are offensive to 
+one group or another. Power consolidation of the media beginning as TV 
+and radio stations were gobbled up by a few strong, and rich companies 
+is now moving at a breakneck pace through the Internet. It will 
+effectively silence the masses, and leave them with no place to voice 
+their messages. I want to say again that contrary to the unfounded claim
+ by Mr. Prince of Cloudflare. 8chan is a lawful community, abiding by 
+the laws of the United States, and enforced in the 9th circuit court, 
+where he resides and does business. His accusation has caused me 
+tremendous damage. In the meantime, I wish his company the best and hold
+ no animosity towards him, or his cowardly and not thought out actions 
+against 8chan. Hopefully, the service will be restored shortly. Again my
+ thoughts and prayers are for the victims of violence everywhere. </p>
+<p class="rm-manual">Alternative Video Source: http://video1.thegoldwater.com/api/player.php?id=qCMVNapUF0i</p>
+<p class="rm-manual"><span>Share this article</span> </p>
+<p class="rm-manual"> <span>Thoughts on the above story? Comment below!</span> </p>
+<p class="rm-manual"><span>10 Comment/s</span> </p>
+<p class="rm-manual"> <span>johnny neptune No. <a href="#94616">94616</a></span> <span>2019-08-06 : 19:37</span> </p>
+<p class="rm-manual">Will you be making the El Paso shooter's manifesto available as an audiobook?</p>
+<p class="rm-manual"> <span>Anonymous No. <a href="#94621">94621</a></span> <span>2019-08-07 : 21:29</span> </p>
+<p class="rm-manual">well, at least you FINALLY got to type something since May 22nd, James.</p>
+<p class="rm-manual"> <span>Anonymous No. <a href="#94622">94622</a></span> <span>2019-08-07 : 21:31</span> </p>
+<p class="rm-manual">Based Matthew Prince</p>
+<p class="rm-manual"> <span>Anonymous No. <a href="#94623">94623</a></span> <span>2019-08-07 : 21:32</span> </p>
+<p class="rm-manual">Manilla VICE</p>
+<p class="rm-manual"> <span>Kenneth Colakakovic No. <a href="#94631">94631</a></span> <span>2019-08-09 : 16:55</span> </p>
+<p class="rm-manual">they hate us because of our freedom let us not 
+forget Wounded Knee and My Lai massacres happened before when a tragedy 
+unfolds remember "By Deception Thou Shall Wage War" "All war is 
+deception" Lavon Affair Operation Susannah false flag masters of 
+deception want to remove our freedoms to have total control of their 
+narrative and agenda agent provacuteurs attempt to discredit opposition </p>
+<p class="rm-manual"> <span>Kenneth Colakovic No. <a href="#94634">94634</a></span> <span>2019-08-09 : 19:44</span> </p>
+<p class="rm-manual">I notice that when shooting tragedies occur make 
+around the clock headline news with experts panel discussions on "who is
+ to blame game" while at the same time getting to the truth on Little 
+St.James island Greater St.James island New Mexico Zorro ranch Manhatten
+ estate the inner circle of Jeffrey Epstein scandals does not get 
+reported</p>
+<p class="rm-manual"> <span>Kenneth Colakovic Idiot No. <a href="#94654">94654</a></span> <span>2019-08-12 : 13:29</span> </p>
+<p class="rm-manual">stfu, Kenneth... you're a faggot.</p>
+<p class="rm-manual"> <span>Kenneth Colakovic No. <a href="#94705">94705</a></span> <span>2019-08-29 : 23:02</span> </p>
+<p class="rm-manual">I remember at the height of the Kosovo war 
+Operation Allied Force two boys made total war on Columbine Highschool 
+that schocked the nation as a totally senseless act of violance Senator 
+Joseph Lieberman made artist shock performer known as Marilyn Manson the
+ SCAPEGOAT for the carnage in Colarado</p>
+<p class="rm-manual"> <span>Anonymous No. <a href="#94727">94727</a></span> <span>2019-09-05 : 18:13</span> </p>
+<p class="rm-manual">Maybe if you didn’t allow your /pol/ to post 
+accelerationist pro violence and banned mods for allowing it like 4chan 
+did... ex 4chan mods ran your /pol/. What’s more you encouraged 
+conspiracy theories such as "Qanon" and even specifically tailored to Q 
+in an effort to gain more traffic. </p>
+<p class="rm-manual">Your site was the worst of the worst. </p>
+<p class="rm-manual">P.S. Goldwater was a Jewish man who’d want nothing to do with your new Nazi haven. </p>
+<p class="rm-manual"> <span>Curt Lennix No. <a href="#95108">95108</a></span> <span>2020-06-09 : 02:37</span> </p>
+<p class="rm-manual">✅BINARY SCAM RECOVERY </p>
+<p class="rm-manual">❌ Binary Option, Forex and their likes are a means 
+of making money but it’s more like gambling. There are no sure means to 
+guarantee that a person could make profit with them and that’s why it 
+can also be reasoned to be scam. Let’s not forget that some individuals 
+even give you 💯 % guarantee of making profits and end up running away 
+with your money. The internet today is full of Binary Option Recovery 
+Scam, you see so much testimonies been shared about how a firm or 
+Company helped them recover what they lost to Binary Options. But 
+believe it, it’s just a way to lure more people and end up scamming 
+them. </p>
+<p class="rm-manual">❌ You might have also come across some individuals 
+that say they will give you guarantee on successful trades but they only
+ end up as SCAMMERS as well. You here them say stuffs like 200% 
+guaranteed in just 2 weeks and when you go into trade with them, they 
+start telling you to pay profits percentage before you can get your 
+income. These are all liars please avoid them. But if you have been a 
+victim of this guys, then you should contact PYTHONAX now‼️ </p>
+<p class="rm-manual">✳️The big Question is “Can someone Recover their money lost to Binary Option and Scam⁉️ </p>
+<p class="rm-manual">I will say yes, and will tell you how. </p>
+<p class="rm-manual">The only way to Recovery your money back is by 
+hiring HACKERS to help you break into the Firms Database Security System
+ using the information you provide them with, Extract your file and get 
+back your money. It seems like a really impossible thing to do, I will 
+tell you, it should be impossible, but with the use of specially 
+designed softwares known to HACKERS and Authorities (such as The FBI, 
+CIA e.t.c) it is possible and the only way to recover your money. </p>
+<p class="rm-manual">✅ PYTHONAX are a group of hackers who use their 
+hacking skill to hunt down SCAMMERS and help individuals recovery their 
+money from Internet SCAMMERS. </p>
+<p class="rm-manual"> We just need the contact details of the SCAMMERS and Paymnet Info and within 4-8 hours your money will be return to you. </p>
+<p class="rm-manual">✳️ You can contact us via the emails below-: </p>
+<p class="rm-manual"><a href="file:///cdn-cgi/l/email-protection">[email protected]</a> </p>
+<p class="rm-manual">We also provide Legit Hacking Services such as-: </p>
+<p class="rm-manual">🔸Phone Hacking/Cloning </p>
+<p class="rm-manual">🔸Email Hacking &amp; Password Recovery </p>
+<p class="rm-manual">🔸Social Media Hacking &amp; Passowrd Recovery </p>
+<p class="rm-manual">🔸Deleted Files Recovery 🔸Mobil Tracking </p>
+<p class="rm-manual">🔸Virus detection &amp; Elimination. </p>
+<p class="rm-manual">Email-: <a href="file:///cdn-cgi/l/email-protection">[email protected]</a> </p>
+<p class="rm-manual">Pythonax. </p>
+<p class="rm-manual">2020 © All Right Reserved.</p>
+<h6 class="rm-manual">What do you think about this article?</h6>
+<table class="rm-manual"> <tbody> <tr class="rm-manual"> <td class="rm-manual">Name</td> </tr> <tr class="rm-manual"> <td class="rm-manual">Comment <span>*</span>
+</td> </tr> <tr class="rm-manual"> <td class="rm-manual">Image</td> </tr> </tbody> </table>
+<h4 class="rm-manual">More from <a href="file:///category/news/">News</a>
+</h4>
+<p class="rm-manual"> <span>08-06-2019 <a href="https://thegoldwater.com/category/news">News</a></span> </p>
+<h4 class="rm-manual"><a href="https://thegoldwater.com/news/44040-Jim-Watkins-Responds-to-Recent-Mass-Shootings-Media-Attack-on-and-De-Platforming-of-8chan">Jim Watkins Responds to Recent Mass Shootings, Media Attack on and De-Platforming of 8chan</a></h4>
+<p class="rm-manual"> <span>05-22-2019 <a href="https://thegoldwater.com/category/news">News</a></span> </p>
+<h4 class="rm-manual"><a href="https://thegoldwater.com/news/44039-Statement-Regarding-the-Smears-Against-Books-audio-8chan-and-Jim-Watkins">Statement Regarding the Smears Against Books.audio, 8chan and Jim Watkins</a></h4>
+<p class="rm-manual"> <span>04-21-2019 <a href="https://thegoldwater.com/category/news">News</a></span> </p>
+<h4 class="rm-manual"><a href="https://thegoldwater.com/news/44038-Palo-Alto-Woman-Who-Harassed-Man-in-MAGA-Hat-is-Reported-as-Missing">Palo Alto Woman Who Harassed Man in MAGA Hat is Reported as Missing</a></h4>
+<p class="rm-manual"> <span>04-21-2019 <a href="https://thegoldwater.com/category/news">News</a></span> </p>
+<h4 class="rm-manual"><a href="https://thegoldwater.com/news/44037-Comedian-Who-Plays-President-on-TV-Likely-to-Win-Ukrainian-Presidency">Comedian Who Plays President on TV Likely to Win Ukrainian Presidency</a></h4>
+<p class="rm-manual"> <span>04-21-2019 <a href="https://thegoldwater.com/category/news">News</a></span> </p>
+<h4 class="rm-manual"><a href="https://thegoldwater.com/news/44036-RAW-VIDEO-Bodycam-Shows-Moment-Cop-Shot-Man-That-Charged-Him-With-a-Crowbar">RAW VIDEO: Bodycam Shows Moment Cop Shot Man That Charged Him With a Crowbar</a></h4>
+<h3 class="rm-manual">Recent News</h3>
+<p class="rm-manual">08-06-2019 <a href="https://thegoldwater.com/category/news">News</a></p>
+<p class="rm-manual"><span>10 Comment/s</span> </p>
+<h4 class="rm-manual"> <a href="https://thegoldwater.com/news/44040-Jim-Watkins-Responds-to-Recent-Mass-Shootings-Media-Attack-on-and-De-Platforming-of-8chan">Jim Watkins Responds to Recent Mass Shootings, Media Attack on and De-Platforming of 8chan</a> </h4>
+<p class="rm-manual">05-22-2019 <a href="https://thegoldwater.com/category/news">News</a></p>
+<p class="rm-manual"><span>17 Comment/s</span> </p>
+<h4 class="rm-manual"> <a href="https://thegoldwater.com/news/44039-Statement-Regarding-the-Smears-Against-Books-audio-8chan-and-Jim-Watkins">Statement Regarding the Smears Against Books.audio, 8chan and Jim Watkins</a> </h4>
+<p class="rm-manual">04-21-2019 <a href="https://thegoldwater.com/category/news">News</a></p>
+<p class="rm-manual"><span>20 Comment/s</span> </p>
+<h4 class="rm-manual"> <a href="https://thegoldwater.com/news/44038-Palo-Alto-Woman-Who-Harassed-Man-in-MAGA-Hat-is-Reported-as-Missing">Palo Alto Woman Who Harassed Man in MAGA Hat is Reported as Missing</a> </h4>
+<p class="rm-manual">04-21-2019 <a href="https://thegoldwater.com/category/news">News</a></p>
+<p class="rm-manual"><span>2 Comment/s</span> </p>
+<h4 class="rm-manual"> <a href="https://thegoldwater.com/news/44037-Comedian-Who-Plays-President-on-TV-Likely-to-Win-Ukrainian-Presidency">Comedian Who Plays President on TV Likely to Win Ukrainian Presidency</a> </h4>
+<p class="rm-manual">04-21-2019 <a href="https://thegoldwater.com/category/news">News</a></p>
+<p class="rm-manual"><span>9 Comment/s</span> </p>
+<h4 class="rm-manual"> <a href="https://thegoldwater.com/news/44036-RAW-VIDEO-Bodycam-Shows-Moment-Cop-Shot-Man-That-Charged-Him-With-a-Crowbar">RAW VIDEO: Bodycam Shows Moment Cop Shot Man That Charged Him With a Crowbar</a> </h4>
+<p class="rm-manual">04-21-2019 <a href="https://thegoldwater.com/category/news">News</a></p>
+<p class="rm-manual"><span>4 Comment/s</span> </p>
+<h4 class="rm-manual"> <a href="https://thegoldwater.com/news/44035-Sri-Lanka-6-Easter-Bombings-at-Churches-and-Hotels-Kill-at-Least-137">Sri Lanka: 6 Easter Bombings at Churches and Hotels Kill at Least 137</a> </h4>
+<p class="rm-manual">04-21-2019 <a href="https://thegoldwater.com/category/news">News</a></p>
+<p class="rm-manual"><span>2 Comment/s</span> </p>
+<h4 class="rm-manual"> <a href="https://thegoldwater.com/news/44034-Mueller-Report-Drives-a-250-Percent-Increase-in-Trump-Campaign-Fundraising">Mueller Report Drives a 250 Percent Increase in Trump Campaign Fundraising</a> </h4>
+<p class="rm-manual">04-21-2019 <a href="https://thegoldwater.com/category/news">News</a></p>
+<p class="rm-manual"><span>3 Comment/s</span> </p>
+<h4 class="rm-manual"> <a href="https://thegoldwater.com/news/44033-Black-Oregon-County-Employee-Scores-100K-Settlement-Over-Racist-Blue-Lives-Matter-Flag">Black Oregon County Employee Scores $100K Settlement Over 'Racist' Blue Lives Matter Flag</a> </h4>
+<p class="rm-manual">04-20-2019 <a href="https://thegoldwater.com/category/news">News</a></p>
+<p class="rm-manual"><span>2 Comment/s</span> </p>
+<h4 class="rm-manual"> <a href="https://thegoldwater.com/news/44032-Fires-Tear-Gas-Amid-Paris-Yellow-Vest-Protests">Fires, Tear Gas Amid Paris Yellow Vest Protests</a> </h4>
+<p class="rm-manual"> <a href="file:///category/news"></a></p><h2 class="rm-manual"><a href="file:///category/news">more news </a></h2> <p class="rm-manual"></p>
+<h3 class="rm-manual">Popular Stories</h3>
+<p class="rm-manual">MOBILE &amp; APPS</p>
+<p class="rm-manual"><a href="https://itunes.apple.com/us/app/the-goldwater/id1170406188?mt=8">Download for IOS</a></p>
+<p class="rm-manual"><a href="https://play.google.com/store/apps/details?id=com.thegoldwater&amp;hl=en">Download for Android</a></p>
+<p class="rm-manual">FOLLOW US</p>
+<p class="rm-manual"> <a href="https://shitposter.club/thegoldwater">Shitposter</a> </p>
+<p class="rm-manual"> <a href="https://gs.smuglo.li/jimcherney/">Smuglo</a> </p>
+<p class="rm-manual"> <a href="https://wrongthink.net/TheGoldwater">Wrongthink</a> </p>
+<p class="rm-manual">EMAIL US</p>
+<p class="rm-manual"><a href="file:///cdn-cgi/l/email-protection#650c0b030a25110d00020a090112041100174b060a08"><span>[email protected]</span></a></p>
+<p class="rm-manual">FEED</p>
+<p class="rm-manual"><a href="file:///static/tgw.xml">RSS</a></p>
+<p class="rm-manual"><a href="#top-page">Back to the top </a></p></article>
+</body></html>

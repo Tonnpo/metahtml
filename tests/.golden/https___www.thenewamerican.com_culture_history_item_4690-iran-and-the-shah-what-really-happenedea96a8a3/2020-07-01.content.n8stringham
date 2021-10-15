@@ -1,0 +1,129 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Iran and the Shah: What Really Happened </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///"><span><span>Home</span></span></a></li>
+<li class="rm-manual">
+<a href="file:///usnews"><span><span>U.S.</span></span></a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///usnews/politics"><span><span>Politics</span></span></a></li>
+<li class="rm-manual"><a href="file:///usnews/immigration"><span><span>Immigration</span></span></a></li>
+<li class="rm-manual"><a href="file:///usnews/constitution"><span><span>Constitution</span></span></a></li>
+<li class="rm-manual"><a href="file:///usnews/congress"><span><span>Congress</span></span></a></li>
+<li class="rm-manual"><a href="file:///usnews/crime"><span><span>Crime</span></span></a></li>
+<li class="rm-manual"><a href="file:///usnews/health-care"><span><span>Healthcare</span></span></a></li>
+<li class="rm-manual"><a href="file:///usnews/foreign-policy"><span><span>Foreign Policy</span></span></a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="file:///world-news"><span><span>World</span></span></a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///world-news/europe"><span><span>Europe</span></span></a></li>
+<li class="rm-manual"><a href="file:///world-news/north-america"><span><span>North America</span></span></a></li>
+<li class="rm-manual"><a href="file:///world-news/asia"><span><span>Asia</span></span></a></li>
+<li class="rm-manual"><a href="file:///world-news/africa"><span><span>Africa</span></span></a></li>
+<li class="rm-manual"><a href="file:///world-news/australia"><span><span>Australia</span></span></a></li>
+<li class="rm-manual"><a href="file:///world-news/south-america"><span><span>South America</span></span></a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="file:///economy"><span><span>Economy</span></span></a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///economy/commentary"><span><span>Commentary</span></span></a></li>
+<li class="rm-manual"><a href="file:///economy/markets"><span><span>Markets</span></span></a></li>
+<li class="rm-manual"><a href="file:///economy/sectors"><span><span>Sectors</span></span></a></li>
+<li class="rm-manual"><a href="file:///economy/economics"><span><span>Economics</span></span></a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="file:///tech"><span><span>Sci/Tech</span></span></a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///tech/climate-conference"><span><span>UN Climate Conference 2019</span></span></a></li>
+<li class="rm-manual"><a href="file:///tech/energy"><span><span>Energy</span></span></a></li>
+<li class="rm-manual"><a href="file:///tech/environment"><span><span>Environment</span></span></a></li>
+<li class="rm-manual"><a href="file:///tech/computers"><span><span>Computers</span></span></a></li>
+<li class="rm-manual"><a href="file:///tech/space"><span><span>Space</span></span></a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="file:///culture"><span><span>Culture</span></span></a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///culture/faith-and-morals"><span><span>Faith and Morals</span></span></a></li>
+<li class="rm-manual"><a href="file:///culture/family"><span><span>Family</span></span></a></li>
+<li class="rm-manual"><a href="file:///culture/education"><span><span>Education</span></span></a></li>
+<li class="rm-manual"><a href="file:///culture/biography"><span><span>Biography</span></span></a></li>
+<li class="rm-manual"><a href="file:///culture/history"><span><span>History</span></span></a></li>
+</ul>
+</li>
+<li class="rm-manual">
+<a href="file:///reviews"><span><span>Opinion</span></span></a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///reviews/movies"><span><span>Movies</span></span></a></li>
+<li class="rm-manual"><a href="file:///reviews/books"><span><span>Books</span></span></a></li>
+<li class="rm-manual"><a href="file:///reviews/opinion"><span><span>Opinion</span></span></a></li>
+<li class="rm-manual"><a href="file:///reviews/american-principles"><span><span>American Principles</span></span></a></li>
+</ul>
+</li>
+<li class="rm-manual"><a href="file:///freedom-index"><span><span>Freedom Index</span></span></a></li>
+<li class="rm-manual">
+<a href="file:///print-magazine"><span><span>Print Magazine </span></span></a><ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.jbs.org/store/shoptna/tna-back-issues/tna-2020-back-issues/the-new-american-july-06-2020-2"><span><span>Current Issue</span></span></a></li>
+<li class="rm-manual"><a href="https://www.jbs.org/store/shoptna/subscribe"><span><span>Subscribe</span></span></a></li>
+<li class="rm-manual"><a href="https://www.jbs.org/store/shoptna/1-year-gift-subscription-print"><span><span>Give a Gift Sub</span></span></a></li>
+</ul>
+</li>
+<li class="rm-manual"><a href="https://www.jbs.org/store/shoptna/donation"><span><span>Donate</span></span></a></li>
+<li class="rm-manual"><a href="http://www.thenewamerican.com/tech/computers/itemlist/user/15475-tnavideo"><span><span>Videos</span></span></a></li>
+<li class="rm-manual"><a href="https://www.thenewamerican.com/podcasts"><span><span>PODCAST</span></span></a></li>
+</ul>
+<p class="rm-manual"> <span> Tuesday, 12 May 2009 </span> </p>
+<h2 class="rm-manual"> Iran and the Shah: What Really Happened </h2>
+<p class="rm-manual"><span> Written by James Perloff </span> </p>
+<p class="rm-manual"> <span>More in this category:</span> <a href="file:///culture/history/item/4691-china-betrayed-into-communism"> « China Betrayed Into Communism </a> <a href="file:///culture/history/item/24233-dictators-dictating-elections"> Dictators Dictating Elections » </a> </p>
+<h2 class="rm-manual">Whatfinger Featured Videos:</h2>
+<h3 class="rm-manual"> <span>Affiliates</span> and Friends </h3>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://www.jbs.org/">The John Birch Society</a></li> <li class="rm-manual"><a href="http://www.freedomproject.com/">FreedomProject Media</a></li> <li class="rm-manual"><a href="https://www.fpeusa.org/">FreedomProject Academy</a></li> <li class="rm-manual"><a href="http://www.americanopinionfoundation.org/">American Opinion Foundation</a></li> <li class="rm-manual"><a href="http://www.characterfirst.com/">Character First</a></li> </ul>
+<h3 class="rm-manual"> <span>Social</span> Media </h3>
+<p class="rm-manual"><a href="https://twitter.com/NewAmericanMag">Twitter</a> <a href="http://www.facebook.com/TheNewAmerican">Facebook</a> <a href="https://www.youtube.com/user/TheNewAmericanVideo">YouTube</a> <a href="file:///component/obrss/rss">RSS-Feed</a></p>
+<h3 class="rm-manual"> <span>About</span> TNA </h3>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///about">About</a></li>
+<li class="rm-manual"><a href="file:///staff">Staff</a></li>
+<li class="rm-manual"><a href="file:///contributors">Contributors</a></li>
+<li class="rm-manual"><a href="https://www.jbs.org/store/shoptna">Shop</a></li>
+<li class="rm-manual"><a href="http://www.jbs.org/join-jbs/join-jbs">Get Involved</a></li>
+<li class="rm-manual"><a href="file:///advertise">Advertise</a></li>
+<li class="rm-manual"><a href="file:///contact-us">Contact Us</a></li>
+</ul>
+<p class="rm-manual"> <a href="http://helix.joomshaper.com/">Helix Framework</a> </p>
+<p class="rm-manual"> Copyright © 2019 The New American </p>
+<p class="rm-manual"><a href="#" rel="nofollow">Scroll to Top</a> </p></article>
+</body></html>

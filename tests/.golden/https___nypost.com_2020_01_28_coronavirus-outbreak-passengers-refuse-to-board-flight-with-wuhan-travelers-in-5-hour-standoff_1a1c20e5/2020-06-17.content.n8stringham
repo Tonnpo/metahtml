@@ -1,0 +1,127 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Coronavirus outbreak: Fliers refuse to board plane with Wuhan travelers </p>
+<p class="rm-manual"><a href="#content-wrapper">Skip to main content</a> </p>
+<p class="rm-manual">Thanks for contacting us. We've received your submission.</p>
+<p class="rm-manual"><a href="#">Back to Reading</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///news/">News</a></li> <li class="rm-manual"><a href="file:///metro/">Metro</a></li> <li class="rm-manual"><a href="https://pagesix.com/">Page Six</a></li> <li class="rm-manual"><a href="file:///sports/">Sports</a></li> <li class="rm-manual"><a href="file:///business/">Business</a></li> <li class="rm-manual"><a href="file:///opinion/">Opinion</a></li> <li class="rm-manual"><a href="file:///entertainment/">Entertainment</a></li> <li class="rm-manual"><a href="file:///fashion/">Fashion</a></li> <li class="rm-manual"><a href="https://nypost.com/shopping/">NY Post Shopping</a></li> <li class="rm-manual"><a href="file:///living/">Living</a></li> <li class="rm-manual"><a href="file:///media/">Media</a></li> <li class="rm-manual"><a href="file:///tech/">Tech</a></li> <li class="rm-manual"><a href="file:///real-estate/">Real Estate</a></li> <li class="rm-manual"><a href="file:///video/">Video</a></li> <li class="rm-manual"><a href="file:///photos/">Photos</a></li> <li class="rm-manual">
+<a href="#">Sub Menu 1</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://nypost.com/covers/">Covers</a></li> <li class="rm-manual"><a href="https://nypost.com/columnists/">Columnists</a></li> <li class="rm-manual"><a href="https://nypost.com/horoscopes/">Horoscopes</a></li> <li class="rm-manual"><a href="https://nypost.com/odds/">Sports Odds</a></li> <li class="rm-manual"><a href="https://email.nypost.com/">Email Newsletters</a></li> <li class="rm-manual"><a href="https://store.nypost.com/">Store</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="https://subscribe.nypost.com/">Home Delivery</a></li> </ul> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="#">Sign in</a></li> </ul>
+<p class="rm-manual"><a href="https://nypost.com/search/"> <span>Search</span> </a> </p>
+<p class="rm-manual"> Type to Search </p>
+<p class="rm-manual"> <a href="https://nypost.com/tips/"> <span>Tips</span> </a> <a href="https://email.nypost.com/"> <span>Sign Up</span> </a> </p>
+<p class="rm-manual"> <a href="https://nypost.com/"> New York Post <span>New York Post</span> </a> </p>
+<p class="rm-manual"> <a href="file:///news/">News</a> </p>
+<h1 class="rm-manual"> Coronavirus outbreak: Passengers refuse to board flight with Wuhan travelers in 5-hour standoff </h1>
+<p class="rm-manual">By <a href="https://nypost.com/author/jackie-salo/"><span>Jackie Salo</span></a></p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://nypost.com/author/jackie-salo/"> <span>View author archive</span> </a> </li> <li class="rm-manual"> <a href="https://nypost.com/author/jackie-salo/feed/"> <span>Get author RSS feed</span> </a> </li> </ul>
+<h4 class="rm-manual"> <span>Most Popular Today</span> </h4>
+<p class="rm-manual"><a href="https://nypost.com/2020/06/16/florida-healthcare-worker-15-friends-catch-covid-19-at-bar/"> <span>1</span> <span>Health care worker, 15 friends infected at Florida bar with different kind of Corona...</span> </a> </p>
+<p class="rm-manual"><a href="https://nypost.com/2020/06/17/brute-accused-of-slugging-elderly-bronx-woman-has-been-arrested-over-100-times/"> <span>2</span> <span>Brute accused of shoving elderly NYC woman is no stranger to jail</span> </a> </p>
+<p class="rm-manual"><a href="https://nypost.com/2020/06/15/man-knocks-down-elderly-woman-in-random-nyc-attack/"> <span>3</span> <span>Brute ruthlessly knocks down elderly woman in random attack: video</span> </a> </p>
+<p class="rm-manual"><a href="https://nypost.com/2020/06/16/police-bust-man-who-shoved-elderly-woman-to-ground-in-nyc/"> <span>4</span> <span>Cops bust suspect who shoved elderly woman on NYC sidewalk</span> </a> </p>
+<p class="rm-manual"><a href="https://nypost.com/2020/06/16/enraged-texan-shoots-at-man-who-entered-his-driveway-video/"> <span>5</span> <span>Motorist's wrong turn into enraged man's driveway nearly kills him</span> </a> </p>
+<p class="rm-manual"> Name<span>(required)</span> </p>
+<p class="rm-manual"> Email<span>(required)</span> </p>
+<p class="rm-manual"> Comment<span>(required)</span> </p>
+<p class="rm-manual"> January 28, 2020 <span>|</span> 2:19pm <span>|</span> <a href="#">Updated <span>January 28, 2020 | 8:31pm</span></a> </p>
+<p class="rm-manual"> <a href="#">Enlarge Image</a> </p>
+<p class="rm-manual"> <span>REUTERS</span> </p>
+<h4 class="rm-manual">More On:</h4>
+<h3 class="rm-manual"><a href="file:///coronavirus/">Coronavirus</a></h3>
+<h2 class="rm-manual"><a href="https://nypost.com/2020/06/17/biden-rips-trumps-coronavirus-response-with-few-solutions/">Biden rips Trump’s coronavirus response — but offers few solutions</a></h2>
+<h2 class="rm-manual"><a href="https://nypost.com/2020/06/17/meet-the-brave-souls-psyched-to-move-to-nyc-right-now/">Meet the brave souls psyched to move to NYC right now</a></h2>
+<h2 class="rm-manual"><a href="https://nypost.com/2020/06/17/zoom-vows-to-upgrade-cybersecurity-with-end-to-end-encryption/">Zoom vows to protect user privacy with end-to-end encryption</a></h2>
+<h2 class="rm-manual"><a href="https://nypost.com/2020/06/17/coronavirus-racial-injustice-donations-could-sustain-charities/">Donations to fight coronavirus, racial injustice could sustain charities</a></h2>
+<p>Passengers refused to board a plane to China Tuesday after realizing 
+people from the city at the center of the coronavirus outbreak were also
+ booked on the flight — leading to an hours-long standoff, according to 
+reports.</p>
+<p>More than 70 passengers refused to board the Chinese Southern 
+Airlines plane in Nagoya, Japan, after recognizing the accents of 16 
+fellow travelers meant they came from Wuhan, where the deadly virus 
+originated, <a href="https://www.thesun.co.uk/news/10835094/coronavirus-passengers-refuse-plane-people-from-wuhan/">the Sun reported</a>, citing the Asian News Agency.</p>
+<p>Wuhan has been on lockdown following the emergence of the mysterious illness last month, but <a href="https://nypost.com/2020/01/27/half-of-wuhans-population-fled-town-before-lockdown-raising-risk-of-spread/">millions of people</a> had left the city before the quarantine began.</p>
+<p>The passengers demanded the Wuhan travelers be barred from the flight
+ to Shanghai — but eventually relented once staff from the Chinese 
+consulate in Nagoya stepped in to mediate, <a href="https://www.dailymail.co.uk/news/article-7937943/Air-passengers-refuse-board-plane-16-tourists-Wuhan.html">the Daily Mail reported</a>.</p>
+<p>All of the passengers eventually boarded the plane, which landed five
+ hours later than scheduled at Shanghai Pudong International Airport, 
+the Sun reported.</p>
+<p class="rm-manual"> <span>Filed under</span> <a href="https://nypost.com/tag/china/" rel="tag">china</a> <span>, </span> <a href="file:///coronavirus/" rel="tag">Coronavirus</a> <span>, </span> <a href="https://nypost.com/tag/japan/" rel="tag">japan</a> <span>, </span> <a href="https://nypost.com/2020/01/28/">1/28/20</a> </p>
+<p class="rm-manual"> <a href="https://nypost.com/2020/01/28/kobe-bryants-sister-posts-touching-photo-tribute-to-late-brother/">Read Next</a> </p>
+<p class="rm-manual"> <a href="https://nypost.com/2020/01/28/kobe-bryants-sister-posts-touching-photo-tribute-to-late-brother/"> Kobe Bryant's sister posts touching photo tribute to late ... </a> </p>
+<h4 class="rm-manual">Coronavirus</h4>
+<p class="rm-manual">Stay informed with our <a href="https://email.nypost.com/?newsletter=coronavirus-updates" rel="noopener noreferrer">Coronavirus Daily Update</a> newsletter.</p>
+<p class="rm-manual"><a href="https://email.nypost.com/?newsletter=coronavirus-updates" rel="noopener noreferrer">SUBSCRIBE NOW</a></p>
+<p class="rm-manual"><a href="https://nypost.com/coronavirus/">Read Latest Updates</a></p>
+<h4 class="rm-manual"> <span>Trending Now</span> </h4>
+<ol class="rm-manual"> <li class="rm-manual"> <a href="https://nypost.com/2020/06/16/florida-healthcare-worker-15-friends-catch-covid-19-at-bar/"> <span>Health care worker, 15 friends infected at Florida bar with different kind of Corona on tap</span> </a> </li> <li class="rm-manual"> <a href="https://nypost.com/2020/06/17/brute-accused-of-slugging-elderly-bronx-woman-has-been-arrested-over-100-times/"> Brute accused of shoving elderly NYC woman is no stranger to jail </a> </li> <li class="rm-manual"> <a href="https://nypost.com/2020/06/17/officer-karen-video-goes-viral-after-cop-breaks-down-over-mcmuffin/"> Veteran cop breaks down in tears over McDonald's order in viral video </a> </li> <li class="rm-manual"> <a href="https://nypost.com/2020/06/17/fbi-nabbed-accused-cop-car-arsonist-by-tracing-t-shirt-to-etsy/"> FBI nabbed accused cop car arsonist by tracing her T-shirt to Etsy </a> </li> </ol>
+<h4 class="rm-manual"> <span>Video</span> </h4>
+<p class="rm-manual"> <a href="https://nypost.com/video/standoff-with-a-staring-cowboy-creeps-out-airline-passenger/"> <span> <span> Video length 33 seconds </span> <span>:33</span> </span> </a> </p>
+<h5 class="rm-manual"> <a href="https://nypost.com/video/standoff-with-a-staring-cowboy-creeps-out-airline-passenger/"> Standoff with a ‘staring’ cowboy creeps out airline passenger </a> </h5>
+<h4 class="rm-manual">More Stories</h4>
+<h4 class="rm-manual"> page six </h4>
+<h5 class="rm-manual"><a href="https://pagesix.com/2020/06/15/michael-strahan-felt-he-couldnt-speak-up-backstage-on-live-with-kelly/">Michael Strahan felt he couldn't 'speak up' backstage on 'Live with Kelly'</a></h5>
+<h4 class="rm-manual"> nypost </h4>
+<h5 class="rm-manual"><a href="https://nypost.com/2020/06/16/florida-healthcare-worker-15-friends-catch-covid-19-at-bar/">Health care worker, 15 friends infected at Florida bar with different kind of Corona on tap</a></h5>
+<p class="rm-manual"> <a href="https://nypost.com/"> <span>New York Post</span> </a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://email.nypost.com/">Email Newsletters</a></li> <li class="rm-manual"><a href="https://nypost.com/mobile-apps/">Mobile Apps</a></li> <li class="rm-manual"><a href="https://nypost.com/contact/">Contact Us</a></li> <li class="rm-manual"><a href="https://nypost.com/tips/">Tips</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a href="#">Sections &amp; Features</a> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///news/">News</a></li> <li class="rm-manual"><a href="file:///tech/">Tech</a></li> <li class="rm-manual"><a href="file:///metro/">Metro</a></li> <li class="rm-manual"><a href="file:///real-estate/">Real Estate</a></li> <li class="rm-manual"><a href="https://pagesix.com/">Page Six</a></li> <li class="rm-manual"><a href="file:///video/">Video</a></li> <li class="rm-manual"><a href="file:///sports/">Sports</a></li> <li class="rm-manual"><a href="file:///photos/">Photos</a></li> <li class="rm-manual"><a href="file:///business/">Business</a></li> <li class="rm-manual"><a href="file:///alexa/">Alexa</a></li> <li class="rm-manual"><a href="file:///opinion/">Opinion</a></li> <li class="rm-manual"><a href="file:///covers/">Covers</a></li> <li class="rm-manual"><a href="file:///entertainment/">Entertainment</a></li> <li class="rm-manual"><a href="file:///horoscopes/">Horoscopes</a></li> <li class="rm-manual"><a href="file:///fashion/">Fashion</a></li> <li class="rm-manual"><a href="https://nypost.com/shopping/">NY Post Shopping</a></li> <li class="rm-manual"><a href="https://nypost.com/odds/">Sports Odds</a></li> <li class="rm-manual"><a href="file:///living/">Living</a></li> <li class="rm-manual"><a href="file:///classifieds/">Classifieds</a></li> <li class="rm-manual"><a href="file:///media/">Media</a></li> </ul> </li> <li class="rm-manual">
+<a href="#">Newsletters &amp; More</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://email.nypost.com/">Email Newsletters</a></li> <li class="rm-manual"><a href="https://nypost.com/rssfeeds/">RSS Feeds</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="https://store.nypost.com/">Store</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="https://goo.gl/5X7xvh">Post Headliners</a></li> <li class="rm-manual">
+<a href="#">Home Delivery</a> <ul class="rm-manual"> <li class="rm-manual"><a rel="noopener noreferrer" href="https://subscribe.nypost.com/">Subscribe</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="https://my.nypost.com/account/">Manage Subscription</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="https://nypost.com/home-delivery/">Delivery Help</a></li> </ul> </li> </ul> </li> <li class="rm-manual">
+<a href="#">Help/Support</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://nypost.com/customer-service/">Customer Service</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="http://nypost.help/">App FAQ &amp; Help</a></li> <li class="rm-manual">
+<a href="#">Contact Us</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://nypost.com/tips/">Tips</a></li> <li class="rm-manual"><a href="https://nypost.com/contact/">Newsroom</a></li> <li class="rm-manual"><a href="https://nypost.com/contact/">Letters to the Editor</a></li> <li class="rm-manual"><a href="http://www.nypostreprints.com/">Reprints</a></li> <li class="rm-manual"><a href="file:///careers/">Careers</a></li> </ul> </li> </ul> </li> <li class="rm-manual">
+<a href="#">Apps</a> <ul class="rm-manual"> <li class="rm-manual"><a rel="noopener noreferrer" href="https://itunes.apple.com/us/app/new-york-post-iphone-edition/id410094240?mt=8">iPhone App</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="https://itunes.apple.com/us/app/new-york-post-ipad-edition/id378590820?mt=8">iPad App</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=br.com.golmobile.nypost&amp;hl=en">Android Phone</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.nypost.tablet&amp;hl=en">Android Tablet</a></li> <li class="rm-manual">
+<a href="#">Advertise</a> <ul class="rm-manual"> <li class="rm-manual"><a rel="noopener noreferrer" href="http://advertising.nypost.com/">Media Kit</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="http://advertising.nypost.com/#contact">Contact</a></li> </ul> </li> </ul> </li> </ul>
+<h2 class="rm-manual">Post Digital Network</h2>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="https://pagesix.com/"> Page Six </a> </li> <li class="rm-manual"> <a href="https://pagesix.com/style"> Page Six Style </a> </li> <li class="rm-manual"> <a href="https://decider.com/"> Decider </a> </li> </ul>
+<p class="rm-manual"> <span>© 2020 NYP Holdings, Inc. All Rights Reserved</span> <a href="https://nypost.com/terms/">Terms of Use</a> <a href="https://nypost.com/privacy/">Privacy Notice</a> <a href="https://nypost.com/privacy/#adchoices">Your Ad Choices</a> <a href="https://nypost.com/sitemap/">Sitemap</a> </p>
+<p class="rm-manual"> <a href="https://nypost.com/ca-privacy-rights/">Your California Privacy Rights</a> </p>
+<p class="rm-manual"> New York Post </p>
+<p class="rm-manual"> Would you like to receive desktop browser notifications about breaking news and other major stories? </p>
+<p class="rm-manual"> Send to Email Address Your Name Your Email Address <a rel="nofollow" href="#cancel">Cancel</a> </p>
+<p class="rm-manual"> Post was not sent - check your email addresses! </p>
+<p class="rm-manual"> Email check failed, please try again </p>
+<p class="rm-manual"> Sorry, your blog cannot share posts by email. </p>
+<p class="rm-manual"> <span>click to copy</span> </p></article>
+</body></html>

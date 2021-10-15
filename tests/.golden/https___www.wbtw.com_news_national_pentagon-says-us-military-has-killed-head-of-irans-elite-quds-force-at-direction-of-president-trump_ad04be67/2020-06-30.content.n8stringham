@@ -1,0 +1,163 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual"> Pentagon says US military has killed head of Iran’s elite Quds Force at direction of President Trump </h1>
+<p class="rm-manual"> <a href="https://www.wbtw.com/news/national/">National</a> </p>
+<p class="rm-manual"> Posted: Jan 2, 2020 / 10:05 PM EST <span> / </span>Updated: Jan 3, 2020 / 06:11 AM EST </p>
+<p>BAGHDAD (AP) Pentagon says the US military has killed Qassem 
+Soleimani, head of Iran’s elite Quds Force, at the direction of 
+President Trump.</p>
+<p>Gen. Qassim Soleimani, the head of Iran’s elite Quds Force, was 
+killed in an airstrike at Baghdad’s international airport Friday, Iraqi 
+television and three Iraqi officials said.</p>
+<p>The strike also killed Abu Mahdi al-Muhandis, the deputy commander of
+ Iran-backed militias known as the Popular Mobilization Forces, or PMF, 
+the officials said.</p>
+<p>Their deaths are a potential turning point in the Middle East and are
+ expected to draw severe retaliation from Iran and the forces it backs 
+in the Middle East against Israel and American interests.</p>
+<p>The PMF blamed the United States for an attack at Baghdad International Airport Friday.</p>
+<p>There was no immediate comment from the U.S. or Iran.</p>
+<p>The Defense Department says Soleimani “was actively developing plans 
+to attack American diplomats and service members in Iraq and throughout 
+the region.” </p>
+<p>A senior Iraqi politician and a high-level security official 
+confirmed to the Associated Press that Soleimani and al-Muhandis were 
+among those killed in the attack. Two militia leaders loyal to Iran also
+ confirmed the deaths, including an official with the Kataeb Hezbollah, 
+which was involved in the attack on the U.S. Embassy this week.</p>
+<p>The official, speaking on condition of anonymity, said al-Muhandis 
+had arrived to the airport in a convoy to receive Soleimani whose plane 
+had arrived from either Lebanon or Syria. The airstrike occurred as soon
+ as he descended from the plane to be greeted by al-Muhandis and his 
+companions, killing them all.</p>
+<p>The officials spoke on condition of anonymity because of the 
+sensitivity of the subject and because they were not authorized to give 
+official statements.</p>
+<p>The senior politician said Soleimani’s body was identified by the ring he wore.</p>
+<p>Soleimani had been rumored dead several times, including in a 2006 
+airplane crash that killed other military officials in northwestern Iran
+ and following a 2012 bombing in Damascus that killed top aides of 
+embattled Syrian President Bashar Assad. More recently, rumors 
+circulated in November 2015 that Soleimani was killed or seriously 
+wounded leading forces loyal to Assad as they fought around Syria’s 
+Aleppo.</p>
+<p>Earlier Friday, an official with an Iran-backed paramilitary force 
+said that seven people were killed by a missile fired at Baghdad 
+International Airport, blaming the United States.</p>
+<p>The official with the group known as the Popular Mobilization Forces 
+said the dead included its airport protocol officer, identifying him as 
+Mohammed Reda.</p>
+<p>A security official confirmed that seven people were killed in the 
+attack on the airport, describing it as an airstrike. Earlier, Iraq’s 
+Security Media Cell, which releases information regarding Iraqi 
+security, said Katyusha rockets landed near the airport’s cargo hall, 
+killing several people and setting two cars on fire.</p>
+<p>It was not immediately clear who fired the missile or rockets or who was targeted. There was no immediate comment from the U.S.</p>
+<p>The attack came amid tensions with the United States after a New 
+Year’s Eve attack by Iran-backed militias on the U.S. Embassy in 
+Baghdad. The two-day embassy attack which ended Wednesday prompted 
+President Donald Trump to order about 750 U.S. soldiers deployed to the 
+Middle East.</p>
+<p>The breach at the embassy followed U.S. airstrikes on Sunday that 
+killed 25 fighters of the Iran-backed militia in Iraq, the Kataeb 
+Hezbollah. The U.S. military said the strikes were in retaliation for 
+last week’s killing of an American contractor in a rocket attack on an 
+Iraqi military base that the U.S. blamed on the militia.</p>
+<p>U.S. officials have suggested they were prepared to engage in further retaliatory attacks in Iraq.</p>
+<p>“The game has changed,” Defense Secretary Mark Esper said Thursday, 
+telling reporters that violent acts by Iran-backed Shiite militias in 
+Iraq — including the rocket attack on Dec. 27 that killed one American —
+ will be met with U.S. military force.</p>
+<p>He said the Iraqi government has fallen short of its obligation to 
+defend its American partner in the attack on the U.S. embassy.</p>
+<p>The developments also represent a major downturn in Iraq-U.S. 
+relations that could further undermine U.S. influence in the region and 
+American troops in Iraq and weaken Washington’s hand in its pressure 
+campaign against Iran.</p>
+<p class="rm-manual">LATEST HEADLINES:</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://www.wbtw.com/news/marion-county-to-require-masks-in-county-owned-buildings/">Marion County to require masks in county owned buildings</a></li> <li class="rm-manual"><a href="https://www.wbtw.com/news/grand-strand/myrtle-beach-pelicans-cancel-july-3-fireworks/">Myrtle Beach Pelicans cancel July 3 fireworks</a></li> <li class="rm-manual"><a href="https://www.wbtw.com/weather/weather-forecasts/heat-index-approaching-100-today-with-afternoon-and-evening-storms/">Heat index approaching 100 today with afternoon and evening storms</a></li> <li class="rm-manual"><a href="https://www.wbtw.com/local-news/hartsville-city-council-votes-unanimously-in-favor-of-mask-mandate-effective-immediately/">Hartsville City Council votes unanimously in favor of mask ordinance, effective immediately</a></li> <li class="rm-manual"><a href="https://www.wbtw.com/news/pee-dee/local-teacher-receives-10000-award-named-inspiring-teacher/">Local teacher receives $10,000 award; named inspiring teacher</a></li> </ul>
+<h2 class="rm-manual">RELATED</h2>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"> <a href="https://www.wbtw.com/news/state-regional-news/he-had-american-blood-on-his-hands-sc-senator-lindsey-graham-weighs-in-on-soleimani-killing/"> ‘He had American blood on his hands’: SC Senator Lindsey Graham weighs in on Soleimani killing </a> </h3> <span> <span>Video</span> </span> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"> <a href="https://www.wbtw.com/news/world/baghdad-embassy-attack-prompts-pompeo-to-delay-ukraine-visit/"> Baghdad embassy attack prompts Pompeo to delay Ukraine visit </a> </h3> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"> <a href="https://www.wbtw.com/news/national/president-trump-deploys-more-troops-to-mideast-after-us-embassy-attack/"> President Trump deploys more troops to Mideast after US embassy attack </a> </h3> <span> <span>Video</span> </span> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"> <a href="https://www.wbtw.com/news/world/state-dept-says-all-us-personnel-safe-at-iraq-embassy-no-plans-to-evacuate/"> State Dept says all US personnel safe at Iraq embassy, no plans to evacuate </a> </h3> <p class="rm-manual"></p> </li> </ul>
+<p class="rm-manual">Copyright 2020 Nexstar Broadcasting, Inc. All 
+rights reserved. This material may not be published, broadcast, 
+rewritten, or redistributed.</p>
+<h2 class="rm-manual">Share this story</h2>
+<h2 class="rm-manual"> More National Stories </h2>
+<p class="rm-manual"> <a href="https://www.wbtw.com/news/nyc-budget-vote-looms-as-protests-push-for-cuts-to-police/"> </a></p><article class="rm-manual"><a href="https://www.wbtw.com/news/nyc-budget-vote-looms-as-protests-push-for-cuts-to-police/"> <p class="rm-manual"> </p><h3 class="rm-manual"> NYC budget vote looms as protests push for cuts to police </h3> Jun 30, 2020 <p class="rm-manual">NEW
+ YORK (AP) — New York City lawmakers are holding a high-stakes debate on
+ the city budget as activists demand a $1 billion shift from policing to
+ social services and the city grapples with multibillion-dollar losses 
+because of the coronavirus pandemic.</p> <p class="rm-manual">The City Council was meeting Tuesday, with a midnight deadline to pass a budget ahead of the fiscal year that begins Wednesday.</p> <p class="rm-manual"> <span> Read the Full Article </span> </p> <p class="rm-manual"></p> </a></article><a href="https://www.wbtw.com/news/nyc-budget-vote-looms-as-protests-push-for-cuts-to-police/"> </a> <a href="https://www.wbtw.com/news/national/mcgrath-wins-primary-to-set-up-showdown-with-mcconnell/"> <article class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"> McGrath wins Kentucky Dem primary; McConnell showdown awaits </h3> by BRUCE SCHREINER, Associated Press <span>/</span> Jun 30, 2020 <p class="rm-manual">LOUISVILLE,
+ Ky. (AP) — Former Marine pilot Amy McGrath overcame a 
+bumpier-than-expected Kentucky primary to win the Democratic U.S. Senate
+ nomination Tuesday, fending off progressive Charles Booker to set up a 
+bruising, big-spending showdown with Republican Senate Majority Leader 
+Mitch McConnell.</p> <p class="rm-manual">Voting ended June 23, but it 
+took a week until McGrath could be declared the winner due to the race’s
+ tight margins and a deluge of mail-in ballots. The outcome seemed a 
+certainty early in the campaign but became tenuous as Booker’s profile 
+surged as the Black state lawmaker highlighted protests against the 
+deaths of African Americans in encounters with police.</p> <p class="rm-manual"> <span> Read the Full Article </span> </p> <p class="rm-manual"></p> </article> </a> <a href="https://www.wbtw.com/news/national/governor-to-retire-mississippis-confederate-themed-flag/"> <article class="rm-manual"> <p class="rm-manual"> </p><h3 class="rm-manual"> Governor to retire Mississippi’s Confederate-themed flag </h3> by EMILY WAGSTER PETTUS, Associated Press <span>/</span> Jun 30, 2020 <p class="rm-manual">JACKSON,
+ Miss. (AP) — Mississippi Gov. Tate Reeves will sign a bill Tuesday 
+evening to retire the last state flag in the U.S. that includes the 
+Confederate battle emblem.</p> <p class="rm-manual">His office announced
+ a signing ceremony at the Governor's Mansion, two days after a broad 
+coalition of legislators passed the landmark measure to change the flag.
+ </p> <p class="rm-manual"> <span> Read the Full Article </span> </p> <p class="rm-manual"></p> </article> </a> <p class="rm-manual"></p>
+<h2 class="rm-manual"> Top Stories </h2>
+<h3 class="rm-manual"> <a href="https://www.wbtw.com/news/marion-county-to-require-masks-in-county-owned-buildings/"> Marion County to require masks in county owned buildings </a> </h3>
+<h3 class="rm-manual"> <a href="https://www.wbtw.com/news/grand-strand/myrtle-beach-pelicans-cancel-july-3-fireworks/"> Myrtle Beach Pelicans cancel July 3 fireworks </a> </h3>
+<h3 class="rm-manual"> <a href="https://www.wbtw.com/local-news/hartsville-city-council-votes-unanimously-in-favor-of-mask-mandate-effective-immediately/"> Hartsville City Council votes unanimously in favor of mask ordinance, effective immediately </a> </h3>
+<figure class="rm-manual"> <a href="https://www.wbtw.com/local-news/hartsville-city-council-votes-unanimously-in-favor-of-mask-mandate-effective-immediately/"> <p class="rm-manual"> <span> <span>Gallery</span> </span> </p> </a> </figure><h3 class="rm-manual"> <a href="https://www.wbtw.com/news/pee-dee/local-teacher-receives-10000-award-named-inspiring-teacher/"> Local teacher receives $10,000 award; named inspiring teacher </a> </h3>
+<h3 class="rm-manual"> <a href="https://www.wbtw.com/news/national/72-year-old-woman-gored-multiple-times-by-yellowstone-bison/"> 72-year-old woman gored multiple times by Yellowstone bison </a> </h3>
+<h3 class="rm-manual"> <a href="https://www.wbtw.com/news/state-regional-news/dhec-recommends-residents-stay-safer-at-home-for-fourth-of-july/"> DHEC recommends residents stay safer at home for Fourth of July </a> </h3>
+<h2 class="rm-manual"> <a href="https://www.wbtw.com/health/coronavirus/100-virginia-teens-test-positive-for-covid-19-after-trip-to-myrtle-beach-health-director-says/"> 100 Virginia teens test positive for COVID-19 after trip to Myrtle Beach, health director says </a> </h2>
+<h2 class="rm-manual"> <a href="https://www.wbtw.com/local-news/deputies-one-person-shot-sunday-in-latta/"> Deputies: One person shot Sunday in Latta area </a> </h2>
+<h2 class="rm-manual"> <a href="https://www.wbtw.com/news/blood-donors-to-receive-free-covid-19-antibody-test-during-upcoming-tidelands-health-blood-drives/"> Blood donors to receive free COVID-19 antibody test during upcoming Tidelands Health blood drives </a> </h2>
+<h2 class="rm-manual"> <a href="https://www.wbtw.com/home/overnight-shooting-leaves-one-injured-in-myrtle-beach/"> Overnight shooting leaves one injured in Myrtle Beach </a> </h2>
+<h2 class="rm-manual"> <a href="https://www.wbtw.com/news/hcs-suspends-hs-football-conditioning/"> HCS suspends HS football conditioning </a> </h2>
+<h2 class="rm-manual"> <a href="https://www.wbtw.com/news/walmart-to-stop-selling-all-lives-matter-merchandise/"> Walmart to stop selling ‘All Lives Matter’ merchandise </a> </h2>
+<p class="rm-manual"> <a href="file:///news/"> Read more stories </a> </p>
+<h2 class="rm-manual"> More Stories </h2>
+<h3 class="rm-manual"> <a href="https://www.wbtw.com/news/national/golden-state-killer-admits-to-dozens-of-rapes-13-murders/"> Golden State Killer admits to dozens of rapes, 13 murders </a> </h3>
+<h3 class="rm-manual"> <a href="https://www.wbtw.com/news/hollywood-entertainer-carl-reiner-dies-at-98/"> Hollywood entertainer Carl Reiner dies at 98 </a> </h3>
+<figure class="rm-manual"> <a href="https://www.wbtw.com/news/hollywood-entertainer-carl-reiner-dies-at-98/"> <p class="rm-manual"> <span> <span>Video</span> </span> </p> </a> </figure><h3 class="rm-manual"> <a href="https://www.wbtw.com/news/state-regional-news/gov-mcmaster-state-fiscal-accountability-authority-to-hold-meeting-at-10-am/"> Gov. McMaster, State Fiscal Accountability Authority to hold meeting at 10 AM </a> </h3>
+<figure class="rm-manual"> <a href="https://www.wbtw.com/news/state-regional-news/gov-mcmaster-state-fiscal-accountability-authority-to-hold-meeting-at-10-am/"> <p class="rm-manual"> <span> <span>Live</span> </span> </p> </a> </figure><h3 class="rm-manual"> <a href="https://www.wbtw.com/news/state-regional-news/it-was-surreal-savannah-man-questioned-by-tybee-island-police-for-allegedly-cursing/"> ‘It was surreal’: Savannah man questioned by Tybee Island police for allegedly cursing </a> </h3>
+<p class="rm-manual"> <a href="file:///news/"> Read more stories </a> </p></article>
+</body></html>

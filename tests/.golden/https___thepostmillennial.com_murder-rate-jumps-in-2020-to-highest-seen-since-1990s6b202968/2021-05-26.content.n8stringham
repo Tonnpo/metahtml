@@ -1,0 +1,109 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> US murder rate jumps in 2020 to highest seen since 1990s | The Post Millennial </p>
+<p class="rm-manual"><span>American News</span> <span>Apr 7, 2021 3:31 PM EST</span></p>
+<h1 class="rm-manual">US murder rate jumps in 2020 to highest seen since 1990s</h1>
+<p class="rm-manual">Murder rates in nearly every city across much of 
+the United States jumped last year to the highest rates since the 1990s,
+ data from a new crime reporting system from the FBI shows.</p>
+<p class="rm-manual"><a href="file:///author/hannah-nightingale"> </a></p><p class="rm-manual"><a href="file:///author/hannah-nightingale"><span>Hannah Nightingale </span> <span>The Post Millennial</span></a></p> <p class="rm-manual"></p>
+<p class="rm-manual">April 7, 2021 3:31 PM <span><span>2 mins reading</span></span></p>
+<p class="rm-manual">Join the ranks of independent, free thinkers by supporting us today for as little as $1.</p>
+<p class="rm-manual"><a href="file:///contribute">Support The Post Millennial</a></p>
+<p>Murder rates in nearly every city across much of the United States 
+jumped last year to the highest rates since the 1990s, data from a <a href="https://crime-data-explorer.fr.cloud.gov/explorer/national/united-states/prelim-quarter">new crime reporting system</a> from the FBI shows.</p>
+<p>2020 saw the country's largest number of homicides in any year since 
+1998. 20,000 recorded homicides resulted in the US largest one-year 
+increase in the country's history. A 20-25 percent increase was recorded
+ in every city that reported quarterly data.</p>
+<p>Data was gathered from quarterly data in just over 12,000 agencies in
+ numerous cities and states, and the conclusion made from there.</p>
+<p>"We’ve never seen an increase like that. Previously the biggest 
+one-year increase in murder was a 12.5 percent increase in the 1960s. 
+We’re really talking about unprecedented increases in murder," 
+statistician and crime analyst Jeff Asher told the <a href="https://www.washingtonexaminer.com/news/murder-rate-jumps-back-1990s-levels-fbi-data">Washington Examiner</a>.</p>
+<p>The murder rate for 2020, according to Asher, was at 6.22 per 100,000
+ people. Comparatively, the rate was 5 per 100,000 people in 2019, 
+slightly down from the the year before.</p>
+<p>Although some larger like New York, Chicago, and Los Angeles haven't 
+reported all their quarterly homicide data to the FBI yet, data from 
+local law enforcement there highlights a match with trends around the 
+country.</p>
+<p>New York saw murders rise around 41 percent in 2020 over 2019. 
+Chicago increased by over 50 percent, while Los Angeles increased by 
+around 20 percent.</p>
+<p>One thing that is difficult to mark, says Charles Lehman, a fellow at
+ the Manhattan Institute who researches crime and policing, is where 
+these trends came from.</p>
+<p>"One thing is that this past year was exceptional and that it’s hard 
+to make a claim about general trends in a lot of jurisdictions. In New 
+York City, this trend began before lockdowns. On the other hand, it’s 
+impossible to dissociate these trends that are associated with protests 
+against the police and city governments defunding their law enforcement.
+ It’s worth noting that the last time we saw these jumps in murder was 
+after the Ferguson protests," said Lehman.</p>
+<p>In the new year, 37 cities that have begun reporting are seeing an 
+increase of 18 percent over the same time last year. Some experts are 
+finding a correlation between a rise in homicides and the beginning of 
+pandemic-related lockdowns last year. But others are surmising that the 
+increase is related to the increase in hostility towards police that 
+happened last year.</p>
+<p>"I don’t have data to draw enough conclusions because it’s early, 
+[But] I would not be surprised to see an increase in murder through the 
+rest of the year," said Asher.</p>
+<p>"These spikes in murder are unsurprisingly associated with hostility 
+towards the police and a retreat of police from public life," said 
+Lehman. "When that happens, unsurprisingly, crime goes up."</p>
+<h2 class="rm-manual">Join and support independent free thinkers!</h2>
+<p class="rm-manual"> We’re independent and can’t be cancelled. The 
+establishment media is increasingly dedicated to divisive cancel 
+culture, corporate wokeism, and political correctness, all while 
+covering up corruption from the corridors of power. The need for 
+fact-based journalism and thoughtful analysis has never been greater. 
+When you support The Post Millennial, you support freedom of the press 
+at a time when it's under direct attack. Join the ranks of independent, 
+free thinkers by supporting us today for as little as $1.</p>
+<p class="rm-manual"><a href="file:///contribute">Support The Post Millennial</a> </p>
+<p class="rm-manual">Join the ranks of independent, free thinkers by supporting us today for as little as $1.</p>
+<p class="rm-manual"><a href="file:///contribute">Support The Post Millennial</a></p>
+<p class="rm-manual"><span>Term of Use</span> <a href="file:///page/term-of-service">Terms of Service</a> <a href="file:///page/contribution-terms-and-conditions">Terms of Contribution</a> <a href="file:///page/privacy-policy">Privacy Policy</a> <a href="file:///page/ad-choice">Ad Choices</a></p>
+<p class="rm-manual"><span>Content &amp; Advertising Partnerships</span> <a href="file:///mediakit">2020 TPM Media Kit</a> <a href="file:///audience/analytics">TPM Audience Analytics Snapshot</a> <a href="mailto:it@thepm.news">Experiencing Tech Issue</a> <a href="mailto:admin@thepm.news">Need Other Help</a></p>
+<p class="rm-manual"><span>Company</span> <a href="https://www.linkedin.com/company/the-post-millennial/jobs/">Careers</a> <a href="file:///about">About Us</a> <a href="file:///page/ethical-journalism-policy-and-mission-statement">Ethical Journalism Policy</a> <a href="file:///page/ethical-journalism-policy-and-mission-statement">Mission Statement</a></p>
+<p class="rm-manual"><span> Copyright ©2021 The Post Millennial All Rights Reserved. </span></p>
+<p class="rm-manual"><span>CLOSE</span></p></article>
+</body></html>

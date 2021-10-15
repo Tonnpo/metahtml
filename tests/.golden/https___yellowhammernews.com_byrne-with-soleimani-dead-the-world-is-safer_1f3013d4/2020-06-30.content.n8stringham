@@ -1,0 +1,389 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Byrne: With Soleimani dead, the world is safer - Yellowhammer News | Yellowhammer News </p>
+<ul class="rm-manual">
+<li class="rm-manual">
+<a>About</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://yellowhammernews.com/about/">About Us</a></li> <li class="rm-manual"><a href="https://yellowhammernews.com/team/">Team</a></li> <li class="rm-manual"><a href="https://yellowhammernews.com/yellowhammer-events/">Events</a></li> <li class="rm-manual"><a href="https://yellowhammernews.com/news-network/">News Network</a></li> </ul> </li> <li class="rm-manual">
+<a href="#">More</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://yellowhammernews.com/the-yellowhammer-podcast-network/">Yellowhammer Podcast Network</a></li> <li class="rm-manual"><a href="mailto:editor@yellowhammernews.com">Contact Editors</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="https://mailchi.mp/yellowhammernews.com/signup">Sign up for our Newsletters</a></li> <li class="rm-manual"><a href="https://yellowhammernews.com/advertise-with-us/">Advertise with Us</a></li> <li class="rm-manual"><a rel="noopener noreferrer" href="https://yellowhammersupply.com/">YH Supply Co.</a></li> <li class="rm-manual"><a href="https://yellowhammernews.com/privacy-policy/">Privacy Policy</a></li> </ul> </li> </ul>
+<h2 class="rm-manual">Newest Stories</h2>
+<p class="rm-manual"> <a href="https://yellowhammernews.com/auburn-college-of-veterinary-medicine-partners-with-humane-genomics-inc-on-covid-19-vaccine-development/">Auburn College of Veterinary Medicine partners with Humane Genomics Inc. on COVID-19 vaccine development</a> <span>10 hours ago / <a href="https://yellowhammernews.com/category/news/"> News </a></span> </p>
+<p class="rm-manual"> <a href="https://yellowhammernews.com/mobile-area-chamber-of-commerce-will-hold-virtual-military-appreciation-day-event-july-2/">Mobile Area Chamber of Commerce will hold virtual Military Appreciation Day event July 2</a> <span>11 hours ago / <a href="https://yellowhammernews.com/category/news/"> News </a></span> </p>
+<p class="rm-manual"> <a href="https://yellowhammernews.com/ala-dept-of-labor-to-begin-offering-extended-unemployment-benefits-to-eligible-citizens/">Ala. Dept. of Labor to begin offering extended unemployment benefits to eligible citizens</a> <span>11 hours ago / <a href="https://yellowhammernews.com/category/news/"> News </a></span> </p>
+<p class="rm-manual"> <a href="https://yellowhammernews.com/law-and-order-shelby-county-sheriff-backs-russell-bedsole-in-alabamas-hd-49-special-election/">‘Law and order’: Shelby County sheriff backs Russell Bedsole in Alabama’s HD 49 special election</a> <span>12 hours ago / <a href="https://yellowhammernews.com/category/news/"> News </a></span> </p>
+<p class="rm-manual"> <a href="https://yellowhammernews.com/state-reps-daniels-dismukes-show-some-in-the-alabama-legislature-can-be-open-to-compromises-on-confederate-memorial-park/">State Reps. Daniels, Dismukes show some in the Alabama legislature can be open to compromises on Confederate Memorial Park</a> <span>12 hours ago / <a href="https://yellowhammernews.com/category/opinion/"> Opinion </a></span> </p>
+<p class="rm-manual"> <a href="https://yellowhammernews.com/u-s-armys-black-daggers-parachute-demonstration-team-to-land-at-uab-on-tuesday/">U.S. Army’s ‘Black Daggers’ parachute demonstration team to land at UAB on Tuesday</a> <span>13 hours ago / <a href="https://yellowhammernews.com/category/news/"> News </a></span> </p>
+<p class="rm-manual"> <a href="https://yellowhammernews.com/alabamas-austal-usa-delivers-second-lcs-to-navy-in-2020-nothing-short-of-world-class/">Alabama’s Austal USA delivers second LCS to Navy in 2020 — ‘Nothing short of world class’</a> <span>13 hours ago / <a href="https://yellowhammernews.com/category/news/"> News </a></span> </p>
+<p class="rm-manual"> <a href="https://yellowhammernews.com/uab-state-of-alabama-partner-on-two-programs-helping-students-safely-return-to-campuses-statewide/">UAB, State of Alabama partner on two programs helping students safely return to campuses statewide</a> <span>15 hours ago / <a href="https://yellowhammernews.com/category/news/"> News </a></span> </p>
+<p class="rm-manual"> <a href="https://yellowhammernews.com/deadline-for-alabama-business-owners-to-fill-out-survey-extended-until-friday/">Deadline for Alabama business owners to fill out survey extended until Friday</a> <span>17 hours ago / <a href="https://yellowhammernews.com/category/news/"> News </a></span> </p>
+<p class="rm-manual"> <a href="https://yellowhammernews.com/club-for-growth-to-launch-pro-tuberville-tv-spot-on-tuesday-alabama-wants-winners-not-recusers/">Club for Growth to launch pro-Tuberville TV spot on Tuesday — ‘Alabama wants winners, not recusers’</a> <span>18 hours ago / <a href="https://yellowhammernews.com/category/news/"> News </a></span> </p>
+<p class="rm-manual"> <a href="https://yellowhammernews.com/7-things-alabama-municipalities-ready-to-mask-up-schools-will-offer-in-classroom-learning-cdc-in-alabama-to-help-with-covid-19-outbreak-and-more/">7
+ Things: Alabama municipalities ready to mask up, schools will offer 
+in-classroom learning, CDC in Alabama to help with COVID-19 outbreak and
+ more …</a> <span>19 hours ago / <a href="https://yellowhammernews.com/category/analysis/"> Analysis </a></span> </p>
+<p class="rm-manual"> <a href="https://yellowhammernews.com/alabama-power-partners-with-chorus-smartsecure-for-smart-neighborhood-builder-program/">Alabama Power partners with Chorus SmartSecure for Smart Neighborhood Builder program</a> <span>21 hours ago / <a href="https://yellowhammernews.com/category/news/"> News </a></span> </p>
+<p class="rm-manual"> <a href="https://yellowhammernews.com/defund-the-cdc/">Defund the CDC</a> <span>1 day ago / <a href="https://yellowhammernews.com/category/guest-opinion/"> Guest Opinion </a></span> </p>
+<p class="rm-manual"> <a href="https://yellowhammernews.com/video-alabamas-covid-19-problem-grows-masks-become-a-flashpoint-as-cities-discuss-a-mandate-obama-and-biden-knew-more-about-flynn-then-they-let-on-and-more-on-alabama-politics-this-week/">VIDEO:
+ Alabama’s COVID-19 problem grows, masks become a flashpoint as cities 
+discuss a mandate, Obama and Biden knew more about Flynn than they let 
+on and more on Alabama Politics This Week …</a> <span>1 day ago / <a href="https://yellowhammernews.com/category/analysis/"> Analysis </a></span> </p>
+<p class="rm-manual"> <a href="https://yellowhammernews.com/responsible-recreation-how-sportsmen-and-women-continue-to-set-an-example-in-the-age-of-social-distancing/">Responsible recreation: How sportsmen and women continue to set an example in the age of social distancing</a> <span>2 days ago / <a href="https://yellowhammernews.com/category/guest-opinion/"> Guest Opinion </a></span> </p>
+<p class="rm-manual"> <a href="https://yellowhammernews.com/alabama-powers-bonnie-george-is-an-unsung-hero-feeding-others-with-food-and-love/">Alabama Power’s Bonnie George is an unsung hero feeding others with food and love</a> <span>2 days ago / <a href="https://yellowhammernews.com/category/faithandculture/"> Faith and Culture </a></span> </p>
+<p class="rm-manual"> <a href="https://yellowhammernews.com/signs-countdown-clocks-reflect-new-dates-for-birmingham-world-games/">Signs, countdown clocks reflect new dates for Birmingham World Games</a> <span>2 days ago / <a href="https://yellowhammernews.com/category/sports/"> Sports </a></span> </p>
+<p class="rm-manual"> <a href="https://yellowhammernews.com/retiree-finds-joy-noodling-for-catfish-on-alabama-waterways/">Retiree finds joy noodling for catfish on Alabama waterways</a> <span>2 days ago / <a href="https://yellowhammernews.com/category/outdoors/"> Outdoors </a></span> </p>
+<p class="rm-manual"> <a href="https://yellowhammernews.com/dauphin-island-sea-lab-restoring-aquatic-grass-along-alabama-coast/">Dauphin Island Sea Lab restoring aquatic grass along Alabama coast</a> <span>2 days ago / <a href="https://yellowhammernews.com/category/news/"> News </a></span> </p>
+<p class="rm-manual"> <a href="https://yellowhammernews.com/roby-protecting-our-alabama-communities/">Roby: Protecting our Alabama communities</a> <span>2 days ago / <a href="https://yellowhammernews.com/category/guest-opinion/"> Guest Opinion </a></span> </p>
+<p class="rm-manual"> <a href="https://yellowhammernews.com/author/bradley/" rel="author">U.S. Rep. Bradley Byrne</a> <span>6 months ago</span> </p>
+<h2 class="rm-manual">Byrne: With Soleimani dead, the world is safer</h2>
+<p>You may not have known his name, but the most dangerous man in the 
+Middle East has finally received justice for a lifetime of brutality.</p>
+<p>Before being taken out by an American airstrike, Iranian General 
+Qasem Soleimani was a major general in Iran’s Islamic Revolutionary 
+Guard Corps and commander of its extra-military, clandestine Quds Force.
+ He left his stain on this world by organizing, training and leading 
+terrorist groups across the Middle East and beyond.</p>
+<p>The blood on his hands included that of at least 600 Americans and thousands more.</p>
+<p>Consider the scope of his activities. Soleimani attacked Americans in
+ Afghanistan. His forces were active throughout Iraq. He armed Hezbollah
+ with rockets that have indiscriminately killed women and children in 
+Israel. He attempted attacks in Europe against our allies. He even 
+planned at least one failed bombing in our nation’s capital.</p>
+<p>To put it simply, he was a terror mastermind. Taking Soleimani off 
+the battlefield leaves a gaping hole in the Iranian regime’s ability to 
+orchestrate terrorist activities throughout the Middle East. Make no 
+mistake, the Middle East, and the entire world, is safer without him.</p>
+<p>We can’t be naive. The evil Iranian regime’s goal is to destroy the 
+West and its way of life, no matter the cost. Soleimani and the 
+government of Iran have never had any intention of adhering to any 
+global norms or abiding by any treaties.</p>
+<p>That’s why policies of appeasement towards Iran are misguided and 
+dangerous. The Obama-era Iranian deal was, at best, an empty public 
+relations victory for the Obama administration that did little to slow 
+down Iran’s public support for global terrorism and quest towards its 
+goal of securing nuclear capabilities. In reality, as we pumped up their
+ economy with billions in cash and sanctions relief, Iran never wavered.
+ With international scrutiny relaxed, Iran successfully took their 
+operations underground. Iran continued and even escalated its proxy 
+support of terrorist groups while the Iranian deal was in place. And 
+Soleimani was the unquestioned leader.</p>
+<p>Unlike the previous President who drew a “red line” regarding Assad’s
+ evil Syrian regime’s use of chemical weapons, President Trump means 
+what he says. He made clear that any Iranian attack on Americans would 
+be punished. The killing of Soleimani came just days after his proxies 
+attacked our embassy in Baghdad and a military base in Kenya that 
+resulted in the loss of an American life.</p>
+<p>President Obama may have capitulated in Syria, but global terrorists 
+and the regimes who support them now know with certainty that President 
+Trump does not make idle threats. He will act decisively to defend 
+Americans and our interests around the world. After two face-saving 
+attacks from Iran in the region that took no American lives, the Iranian
+ regime appears to be wisely deescalating their aggression.</p>
+<p>Last week, House Democrats introduced a War Powers Resolution 
+designed to discredit President Trump for using his constitutional 
+powers to eliminate Soleimani. It is disappointing that when Congress 
+should be showing national resolve and unity against an evil Iranian 
+regime, Democrats are playing politics. Last week, I received a 
+classified briefing from national security officials that made clear the
+ continued threat Soleimani posed to Americans. We should be thanking 
+the president and the brave men and women who successfully carried out 
+this attack, not engaging in political grandstanding.</p>
+<p>The evil Iranian regime is growing weaker at home. President Trump’s 
+sanctions are continuing to damage Iran’s economy. Iranians are 
+protesting in the streets, shouting “death to the dictator!” After 
+President Trump’s show of American strength, the Iranian government 
+can’t risk further antagonizing the United States. Their leaders would 
+be wise to continue their de-escalation.</p>
+<p class="rm-manual">U.S. Rep. Bradley Byrne is a Republican from Fairhope. He is a 2020 candidate for the U.S. Senate.</p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://yellowhammernews.com/category/guest-opinion/"> Guest Opinion </a></li> </ul>
+<p class="rm-manual"> <a href="https://yellowhammernews.com/author/mike-jernigan/" rel="author">Mike Jernigan</a> <span>10 hours ago</span> </p>
+<h2 class="rm-manual">Auburn College of Veterinary Medicine partners with Humane Genomics Inc. on COVID-19 vaccine development</h2>
+<p class="rm-manual">AUBURN, Ala. — Researchers from the Auburn 
+University College of Veterinary Medicine are partnering with Humane 
+Genomics Inc. to develop a potential vaccine for the COVID-19 virus 
+currently at the heart of the ongoing global pandemic.</p>
+<p class="rm-manual">According to Dr. Bruce Smith, director of the 
+Auburn University Research Initiative in Cancer, professor in the 
+Department of Pathobiology and scientist in the college’s Scott-Ritchey 
+Research Center, the collaboration between Auburn and Humane Genomics is
+ an outgrowth of cooperation between the two in the field of cancer 
+research. Much of the science used in this particular vaccine 
+development is adapted from the company’s cutting-edge research into 
+precision virus-based cancer therapies.</p>
+<p class="rm-manual"> 445</p>
+<p class="rm-manual"> <a href=""> <span>Keep reading</span> <span>445 WORDS</span> </a> </p>
+<p class="rm-manual"> <a href="https://yellowhammernews.com/auburn-college-of-veterinary-medicine-partners-with-humane-genomics-inc-on-covid-19-vaccine-development/"> <span>Keep reading</span> <span>445 WORDS</span> </a> </p>
+<p class="rm-manual">“We had previously worked with Humane Genomics in 
+the area of cancer treatment,” said Smith, “specifically an attempt to 
+custom synthesize viruses to target tumors. The same basic concept can 
+also be used to develop a vaccine. All that is necessary is to have the 
+virus’ genome—a genetic map of its DNA—in order to create a vaccine to 
+target it.”</p>
+<p class="rm-manual">The COVID-19 genome is available, so the custom 
+development of a vaccine tailored to its specific vulnerabilities, a 
+so-called “synthetic vectored vaccine,” was a relatively rapid process. 
+In this case, that process involved genetically synthesizing via 
+computer modeling a harmless virus called vesicular stomatitis virus, or
+ VSV, and giving it the same “spike” protein characteristic of COVID-19.
+ This spike protein binds with so-called ACE2 receptors on human lung 
+cells to allow the harmful virus to infect them. But if the vaccine 
+functions as hoped, the immune system would be triggered to produce 
+antibodies to recognize this spike protein and block infection, but in a
+ harmless virus. That same triggered immune reaction—in theory—would 
+then protect against COVID-19.</p>
+<p class="rm-manual">“The idea of developing vectored vaccines by 
+‘cutting and pasting’ virus DNA to alter its characteristics is a proven
+ method of vaccine development and has been in use for more than a 
+decade,” Smith said. “In the case of animals, vectored vaccines have 
+been successfully developed for rabies and fowl pox. In human medicine, a
+ vaccine approved in 2019 for the deadly Ebola virus was developed using
+ the same technique.</p>
+<p class="rm-manual">“What makes the Humane Genomics approach unusual,” 
+added Smith, “is that they are skipping the traditional cutting and 
+pasting process of removing and substituting DNA and instead 
+synthesizing their targeted viruses using computer modeling. It allows 
+for a much quicker process. If they have the target’s genome, they can 
+develop a vaccine in about a week.”</p>
+<p class="rm-manual">It is the testing phase that takes time, and 
+currently the company’s COVID-19 vaccine is in the safety testing phase,
+ which is where Auburn’s contribution comes in. The Auburn College of 
+Veterinary Medicine is testing the vaccine on rats to see if they 
+develop the proper antibodies or become ill due to unforeseen side 
+effects. Later, another vaccine partner will perform similar tests with 
+guinea pigs, and if all goes well, the vaccine can then move on to human
+ testing.</p>
+<p class="rm-manual">Smith says that, while he is cautiously optimistic a
+ working vaccine will eventually be developed, there is still a long 
+road ahead despite the urgent need.</p>
+<p class="rm-manual">“With a tremendous amount of luck, we could have a 
+vaccine by the end of the year,” he said, “but more likely, we won’t 
+know for sure if a vaccine is going to be successful until some time in 
+2021.”</p>
+<p class="rm-manual">(Courtesy of Auburn University)</p>
+<p class="rm-manual"> <a href=""> <span>Show less</span> </a> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://yellowhammernews.com/category/news/"> News </a></li> </ul>
+<p class="rm-manual"> <a href="https://yellowhammernews.com/author/newscenter/" rel="author">Alabama NewsCenter</a> <span>11 hours ago</span> </p>
+<h2 class="rm-manual">Mobile Area Chamber of Commerce will hold virtual Military Appreciation Day event July 2</h2>
+<p class="rm-manual">The <a href="https://mobilechamber.com/">Mobile Area Chamber of Commerce</a>
+ will host this year’s Military Appreciation Day luncheon virtually due 
+to COVID-19 precautions. The Zoom event will be held July 2, from noon 
+to 1:30 p.m.</p>
+<p class="rm-manual">The luncheon and awards presentation will pay 
+tribute to the military and recognize several individuals, including 
+JROTC cadets, for their contribution and service.</p>
+<p class="rm-manual">The awards presentation will include:</p>
+<p class="rm-manual"> 137</p>
+<p class="rm-manual"> <a href=""> <span>Keep reading</span> <span>137 WORDS</span> </a> </p>
+<p class="rm-manual"> <a href="https://yellowhammernews.com/mobile-area-chamber-of-commerce-will-hold-virtual-military-appreciation-day-event-july-2/"> <span>Keep reading</span> <span>137 WORDS</span> </a> </p>
+<ul class="rm-manual"> <li class="rm-manual">Honoring Army Lt. Col. Louis J. Lartigue Sr. (Ret.) with the Maj. Gen. Gary Cooper Outstanding Service Award.</li> <li class="rm-manual">Recognizing Mobile County High School JROTC Cadets.</li> <li class="rm-manual">Additional
+ recognitions by the U.S. Coast Guard ATC, Spouse of the Year; and the 
+U.S. Navy League presenting the Hugh M. Casteix and Rear Adm. J. Lloyd 
+Abbot awards.</li> </ul>
+<p class="rm-manual">Gov. Kay Ivey will provide the keynote address at 12:30 p.m. with the awards presentation to follow.</p>
+<p class="rm-manual">The cost for virtual attendance is $20, and ticket 
+holders will receive a $15 gift card to one of seven restaurants to 
+cover their lunch: Briquettes Steakhouse, Chicken Salad Chick, 
+Foosackley’s, Lucky Irish Pub and Grill, Simple Greek, Sonny’s BBQ or 
+Taco Mama.</p>
+<p class="rm-manual">To register for the event, visit the <a href="https://web.mobilechamber.com/events">Mobile Area Chamber of Commerce</a>, or for additional information contact <a href="mailto:mtyson@mobilechamber.com">Mallory Tyson</a>.</p>
+<p class="rm-manual">(Courtesy of <a href="https://www.alabamanewscenter.com/2020/06/27/mobile-area-chamber-of-commerce-will-hold-virtual-military-appreciation-day-event-july-2/">Alabama NewsCenter)</a></p>
+<p class="rm-manual"> <a href=""> <span>Show less</span> </a> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://yellowhammernews.com/category/news/"> News </a></li> </ul>
+<p class="rm-manual"> <a href="https://yellowhammernews.com/author/henry-thornton/" rel="author">Henry Thornton</a> <span>11 hours ago</span> </p>
+<h2 class="rm-manual">Ala. Dept. of Labor to begin offering extended unemployment benefits to eligible citizens</h2>
+<p class="rm-manual">The Alabama Department of Labor announced Monday 
+that Alabamians who have exhausted all other unemployment benefits will 
+be eligible for the Extended Benefits (EB) program.</p>
+<p class="rm-manual">To qualify for the Extended Benefits program an 
+individual must have gone through both the normal 14 weeks of 
+unemployment provided for by the State of Alabama and the additional 13 
+weeks provided by the federal government as part of the CARES Act in 
+March.</p>
+<p class="rm-manual">All recipients of the EB program in July will be 
+paid the extra $600 per week the federal government began attaching to 
+unemployment claims as part of the CARES Act; however that additional 
+amount is <a href="https://www.cnbc.com/2020/06/26/the-extra-600-unemployment-benefits-will-end-before-july-31.html">scheduled to cease</a> by July 31.</p>
+<p class="rm-manual"> 334</p>
+<p class="rm-manual"> <a href=""> <span>Keep reading</span> <span>334 WORDS</span> </a> </p>
+<p class="rm-manual"> <a href="https://yellowhammernews.com/ala-dept-of-labor-to-begin-offering-extended-unemployment-benefits-to-eligible-citizens/"> <span>Keep reading</span> <span>334 WORDS</span> </a> </p>
+<p class="rm-manual">The Extended Benefits program is a federal project 
+offered only when a state’s insured unemployment rate goes over 5.9%. 
+The last time it was offered in Alabama was during the Great Recession 
+of 2008.</p>
+<p class="rm-manual">The 13-week extension of normal unemployment paid 
+for by the federal government is called the Federal Pandemic 
+Unemployment Compensation program.</p>
+<p class="rm-manual">EB will start being available to eligible unemployed Alabamians on July 5.</p>
+<p class="rm-manual">Once the extra $600 from the federal government 
+stops being added the EB program will pay the standard unemployment 
+benefit amount for Alabama, which is $275 per week.</p>
+<p class="rm-manual">Per the Department of Labor, “Claimants must not be
+ eligible for unemployment compensation benefits in another state or 
+Canada, must have no disqualifications, have qualifying wages, and must 
+have at least one week in the benefit year that begins in an EB 
+eligibility period.”</p>
+<p class="rm-manual">ADOL will notify those eligible for EB benefits via
+ the online UI Claims Tracker and by mail. Claimants will not have to 
+apply for these benefits but should continue to file weekly 
+certifications, per the department.</p>
+<p class="rm-manual">The department added, “Individuals are only 
+entitled to benefits if they are no longer working through no fault of 
+their own and they MUST be able and available for work. The EB program 
+has more stringent work search requirements and requires claimants to 
+engage in a ‘systematic and sustained’ effort to obtain work during each
+ week and to provide evidence of efforts. Due to the pandemic, the 
+submission of required work search contacts has been TEMPORARILY waived 
+due to Covid-19 restrictions. However, claimants should continue to look
+ for work where possible, and maintain a record of their efforts on a 
+weekly basis. This waiver may end at any time. Once this waiver ends, 
+claimants will be required to provide a minimum of three (3) work search
+ contacts each week during the weekly certification process.”</p>
+<p class="rm-manual">A detailed information sheet on who can received Extended Benefits can be <a href="https://wdr.doleta.gov/directives/attach/UIPL/UIPL_24-20.pdf">accessed here</a>.</p>
+<p class="rm-manual">Henry Thornton is a staff writer for Yellowhammer News. You can contact him by email: <a href="mailto:henry@yellowhammernews.com">henry@yellowhammernews.com</a> or on Twitter <a href="https://twitter.com/HenryThornton95">@HenryThornton95</a></p>
+<p class="rm-manual"> <a href=""> <span>Show less</span> </a> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://yellowhammernews.com/category/news/"> News </a></li> </ul>
+<p class="rm-manual"> <a href="https://yellowhammernews.com/author/sean-ross/" rel="author">Sean Ross</a> <span>12 hours ago</span> </p>
+<h2 class="rm-manual">‘Law and order’: Shelby County sheriff backs Russell Bedsole in Alabama’s HD 49 special election</h2>
+<p class="rm-manual">Shelby County Sheriff John Samaniego on Monday announced his endorsement of Russell Bedsole in the <a href="https://yellowhammernews.com/ivey-sets-hd-49-election-dates-to-replace-former-state-rep-april-weaver/">special election</a> for Alabama House of Representatives District 49.</p>
+<p class="rm-manual">A longtime public servant, Bedsole has 21 years of experience with the Shelby County Sheriff’s Office.</p>
+<p class="rm-manual">“As a longtime member of the Shelby County 
+Sheriff’s Office, Bedsole knows firsthand how crucial law and order are 
+to our nation,” Samaniego said in a statement. “Bedsole will be a 
+powerful voice in the Alabama House of Representatives. He will fight 
+for the hardworking law enforcement officers and first responders 
+serving our communities.”</p>
+<p class="rm-manual">Bedsole is running in the Republican primary for 
+the seat vacated by former State Rep. April Weaver (R-Brierfield) 
+resigning to join the Trump administration. Bedsole announced his 
+candidacy for the open District 49 seat on June 2.</p>
+<p class="rm-manual"> 238</p>
+<p class="rm-manual"> <a href=""> <span>Keep reading</span> <span>238 WORDS</span> </a> </p>
+<p class="rm-manual"> <a href="https://yellowhammernews.com/law-and-order-shelby-county-sheriff-backs-russell-bedsole-in-alabamas-hd-49-special-election/"> <span>Keep reading</span> <span>238 WORDS</span> </a> </p>
+<p class="rm-manual">RELATED: <a href="https://yellowhammernews.com/here-are-the-republican-candidates-for-alabama-house-district-49/">Here are the Republican candidates for Alabama House District 49</a></p>
+<p class="rm-manual">He has also been elected twice previously by the 
+citizens of Alabaster to the city council. Bedsole has already received 
+an endorsement from the Shelby County Fraternal Order of Police in the 
+HD 49 race.</p>
+<p class="rm-manual">“I have spent many successful years with my family 
+by my side serving my community and demonstrating the type of leadership
+ the people of District 49 will appreciate,” Bedsole stated when 
+announcing his candidacy. “I am patient enough to listen to those who 
+have something to say, but bold enough to speak up for those who feel 
+like they do not have a voice.”</p>
+<p class="rm-manual">“I believe that life starts at conception, that the
+ 2nd amendment should be protected, that our taxes need to be low and 
+fair, and that our cities and counties need their fair share of 
+infrastructure support,” he added.</p>
+<p class="rm-manual">A release from Bedsole’s campaign advised that he 
+“will work to improve District 49’s infrastructure and traffic flow, 
+increase economic development, and advance school systems” if elected to
+ the House.</p>
+<p class="rm-manual">The special primary election will be held on August
+ 4. If a run-off election is needed, it will be held on September 1. The
+ special general election will be held on November 17.</p>
+<p class="rm-manual">“I humbly ask for your vote on August 4th to allow me to serve District 49,” Bedsole said.</p>
+<p class="rm-manual">Sean Ross is the editor of Yellowhammer News. You can follow him on Twitter <a href="https://twitter.com/sean_yhn">@sean_yhn</a></p>
+<p class="rm-manual"> <a href=""> <span>Show less</span> </a> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://yellowhammernews.com/category/news/"> News </a></li> <li class="rm-manual"><a href="https://yellowhammernews.com/category/politics-2/"> Politics </a></li> </ul>
+<p class="rm-manual"> <a href="https://yellowhammernews.com/author/dale-jackson/" rel="author">Dale Jackson</a> <span>12 hours ago</span> </p>
+<h2 class="rm-manual">State Reps. Daniels, Dismukes show some in the Alabama legislature can be open to compromises on Confederate Memorial Park</h2>
+<p class="rm-manual">As a movement of racial justice sweeps across the 
+nation, the media finds itself distracted by patently absurd issues like
+ cartoon voices, 80s TV shows and other trivial issues.</p>
+<p class="rm-manual">Most people, however, seem interested in hearing 
+out the legitimate gripes people may have about depictions of history 
+and how power operates in this country.</p>
+<p class="rm-manual">Riots and protests at unrelated monuments to 
+American history (Columbus, Washington, Lincoln and Grant) have the 
+potential to derail the movement, as do the equally absurd cries to 
+“Defund The Police” — and white liberals’ attempts to explain what that 
+“actually” means while those saying it in the Black Lives Matter 
+movement are pretty clear.</p>
+<p class="rm-manual">In Alabama, with its troubling racial past, there 
+are leaders like House Minority Leader Anthony Daniels (D-Huntsville) 
+who have laid out a few real changes they would like to see while 
+showing an openness to compromise on issues down the road.</p>
+<p class="rm-manual"> 450</p>
+<p class="rm-manual"> <a href=""> <span>Keep reading</span> <span>450 WORDS</span> </a> </p>
+<p class="rm-manual"> <a href="https://yellowhammernews.com/state-reps-daniels-dismukes-show-some-in-the-alabama-legislature-can-be-open-to-compromises-on-confederate-memorial-park/"> <span>Keep reading</span> <span>450 WORDS</span> </a> </p>
+<p class="rm-manual">First, and reasonably so, Daniels wants the 
+Confederate flag removed from Alabama State Trooper uniforms. This is 
+such a non-issue, that should be resolved quickly, that State Senator 
+Artur Orr (R-Decatur) said during a radio appearance on Friday that he 
+didn’t even know they had the Confederate flag on them.</p>
+<p class="rm-manual">Daniels also wants a monument to the “Confederate 
+Cause” that is placed near the steps of the Madison County Courthouse 
+removed. This is happening, slowly, but the statue put up in 1905 will 
+be moved from the courthouse to the Confederate section of Maple Hill 
+Cemetery in Huntsville.</p>
+<p class="rm-manual">Those issues are almost no-brainers. They may take 
+time, but they will probably happen as soon as the slow gears of 
+government turn and make it so.</p>
+<p class="rm-manual">Of the more contentious discussions we will see in 
+Alabama over this topic will be the attempted defunding of Confederate 
+Memorial Park and the potential end of the Alabama Memorial Preservation
+ Act.</p>
+<p class="rm-manual">Daniels has taken issue with the $600,000 budget 
+allotment to this park, and Alabama Democratic Party spokesman Wade 
+Perry accused State Rep. Will Dismukes (R-Prattville), who opposes this 
+defunding idea, of disloyalty to the United States and called for him to
+ resign.</p>
+<p class="rm-manual">My take: Perry is a clown. He is just using this to
+ get attention, meanwhile the elected leaders are using his outlandish 
+behavior to show that they are being more reasonable by contrast. They 
+are right.</p>
+<p class="rm-manual">Daniels believes some local municipalities will 
+want to keep their statues local, saying it is “so that they can have 
+discussions about history locally.”</p>
+<p class="rm-manual">But last week, both Daniels and Dismukes appeared 
+on WVNN’s “The Dale Jackson Show,” and a compromise may have emerged. 
+Both agreed that Confederate Memorial Park could continue to exist, 
+potentially as a stopping point for removed monuments, with Daniels 
+noting, “I’m not against moving them to the Confederate park, but I 
+think that if we’re going to have a park it should talk about all of 
+Alabama history park, not just Confederate history. I think that 
+Confederate history is certainly a part of Alabama history.”</p>
+<p class="rm-manual">Daniels called this a “good compromise.”</p>
+<p class="rm-manual">With both Dismukes and Daniels, two very different 
+leaders from two very different parties, open to the idea of compromise,
+ we may be nearing an amicable solution for the continued operation of 
+Confederate Memorial Park in some form.</p>
+<p class="rm-manual">If Alabama’s leaders could settle this issue and help us all move on, we will all be far better off.</p>
+<p class="rm-manual">Listen:</p>
+<p class="rm-manual"><a href="https://twitter.com/TheDaleJackson">Dale Jackson</a> is a contributing writer to Yellowhammer News and hosts a talk show from 7-11 AM weekdays on <a href="https://wvnn.com/">WVNN</a>.</p>
+<p class="rm-manual"> <a href=""> <span>Show less</span> </a> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://yellowhammernews.com/category/opinion/"> Opinion </a></li> </ul></article>
+</body></html>

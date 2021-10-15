@@ -1,0 +1,172 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> China and the “Malacca Dilemma” | Warsaw Institute </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://warsawinstitute.org/support/">Support us</a></li> <li class="rm-manual">
+<a href="https://warsawinstitute.org/about-us/">About us</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://warsawinstitute.org/news/">News</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/about-us/team/">Team</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/about-us/experts/">Experts</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/about-us/media/">Media</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/about-us/partners/">Partners</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/about-us/branding/">Branding</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://warsawinstitute.org/programs/">Programs</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://warsawinstitute.org/programs/opinions/">Opinions</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/programs/special-reports/">Special Reports</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/programs/russia-monitor/russia-monitor-articles/">Russia Monitor</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/programs/china-monitor/china-monitor-articles/">China Monitor</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/programs/mena-monitor/mena-monitor-articles/">MENA Monitor</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/programs/u-s-weekly/u-s-weekly-articles/">U.S. Weekly</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/programs/ukraine-monitor/ukraine-monitor-articles/">Ukraine Monitor</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/programs/baltic-rim-monitor/baltic-rim-monitor-articles/">Baltic Rim Monitor</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/pl/programy/romania-monitor-pl/artykuly-romania-monitor/">Romania Monitor</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/disinformation/">Disinformation</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/programs/china-v4-countries/china-v4-countries-articles/">China and V4 countries</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/programs/belarusalert/belarusalert-articles/">BelarusAlert</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/programs/our-projects/">Our projects</a></li> </ul> </li> <li class="rm-manual">
+<a href="https://warsawinstitute.review/">WIR MAGAZINE</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://warsawinstitute.org/the-warsaw-institute-review/">ABOUT WIR MAGAZINE</a></li> <li class="rm-manual"><a href="https://warsawinstitute.review/authors/">AUTHORS</a></li> <li class="rm-manual"><a href="https://warsawinstitute.review/editorial-office/">EDITORIAL OFFICE</a></li> <li class="rm-manual"><a href="https://warsawinstitute.review/partners-2/">PARTNERS</a></li> <li class="rm-manual"><a href="https://warsawinstitute.review/subscribe/">SUBSCRIBE</a></li> </ul> </li> <li class="rm-manual"><a href="https://warsawinstitute.org/events-en/">Events</a></li> <li class="rm-manual">
+<a href="#">Multimedia</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://warsawinstitute.org/warsaw-institute-maps/">Maps</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/about-us/video/">Video</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/podcasts/">Podcasts</a></li> </ul> </li> <li class="rm-manual"><a href="https://store.warsawinstitute.org/en/">Store</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/contact/">Contact</a></li> <li class="rm-manual"><a href="file:///cdn-cgi/l/email-protection#cea1a8a8a7adab8eb9afbcbdafb9a7a0bdbaa7babbbaabe0a1bca9">Message us</a></li> <li class="rm-manual"><a href="https://www.facebook.com/WarsawInstitute/">Facebook</a></li> <li class="rm-manual"><a href="https://twitter.com/WarsawInstitute">Twitter</a></li> <li class="rm-manual"><a href="https://www.instagram.com/warsawinstitute/">Instagram</a></li> <li class="rm-manual"><a href="https://www.youtube.com/channel/UC32_jJptcOl8J6bMpVnNENA?view_as=subscriber">Youtube</a></li> </ul>
+<p class="rm-manual"> <span>Select Page</span> </p>
+<p class="rm-manual">China Monitor is our brand-new program that 
+analyses China’s economic and foreign policies. It also aims to predict 
+the consequences of Beijing’s policy for the global economy, the EU as 
+well as Central and Eastern European countries such as Poland.</p>
+<p class="rm-manual">Date: 28 February 2021</p>
+<p class="rm-manual"> Author: Paweł Paszak</p>
+<h1 class="rm-manual">China and the “Malacca Dilemma”</h1>
+<p>The Strait of Malacca is the shortest sea route between the Middle 
+East and East Asia, helping to reduce the time and cost of 
+transportation among Asia, the Middle East and Europe. Its strategic 
+location makes it a vital waterway for hydrocarbon, container and bulk 
+cargo shipment. According to the US Energy Information Agency (EIA), in 
+2016, approximately 16 million barrels of crude oil and 3.2 million 
+barrels of liquefied natural gas (LNG) were transported daily through 
+the Strait. This is the second largest volume in the world after the 
+Strait of Hormuz, connecting the Persian Gulf and the Indian Ocean. </p>
+<p>SOURCE: FLICKR / COREY SEEMAN</p>
+<p>Like most Asian countries, China is heavily dependent on hydrocarbon 
+imports. Apart from its main supplier and partner, Russia, other 
+significant sellers are located in the Middle East or Africa. 
+Consequently, more than 70% of the PRC’s petroleum and LNG exports is 
+shipped through the Strait of Malacca, which makes it a crucial route 
+from the standpoint of the China’s energy security policy. However, its 
+importance is not limited to the transport of raw materials. According 
+to calculations by the Center for Strategic and International Studies 
+(CSIS), about 20% of global maritime trade and 60% of China’s trade 
+flows are moved through the Strait and the South China Sea, making it 
+the most important sea line of communication for the Chinese economy.</p>
+<p>In November 2003, President Hu Jintao described China’s situation as 
+the “Malacca Dilemma,” referring to the lack of alternatives and 
+vulnerability to a naval blockade. The President suggested that “certain
+ powers have all along encroached on and tried to control navigation 
+through the [Malacca] Strait.” It is clear that the term “certain 
+powers” refers to the United States and the ability of the US Navy to 
+control the communication routes. This issue has been debated for years 
+both in China and abroad, while authorities in Beijing have long sought 
+to diversify energy sources and increase the share of renewable energy. 
+An additional factor which worsens the situation of China is its 
+deteriorating relationship with India as well as its ambitious naval 
+modernization and development program. India’s location at the 
+crossroads of the most important transport routes in the Indian Ocean is
+ a strong asset in case of an armed conflict. The PRC’s dependence on 
+maritime trade hinders a potential naval blockade of Taiwan. Cutting off
+ the island from goods could be a prelude to an amphibious operation or a
+ tool of political pressure on the authorities in Taipei. 
+Simultaneously, however, undertaking such actions might lead to 
+analogous ones by the US forces and their allies aimed against China.</p>
+<p>Over the past two decades, the issue of sea lines of communication 
+(SLOCs) has been gaining importance in the strategic discourse of the 
+Middle Kingdom. China’s 2015 military strategy stated that “the security
+ of overseas interests concerning energy and resources, strategic SLOCs,
+ as well as institutions, personnel and assets abroad, has become an 
+imminent issue.” Moreover, the document stressed that “the traditional 
+mentality that land outweighs sea must be abandoned, and great 
+importance has to be attached to managing the seas and oceans and 
+protecting maritime rights and interests.” Such declarations confirm 
+that China’s military and political elites realize that the maritime 
+domain will be crucial in the pursuit of Chinese security and superpower
+ status. Operations of China, deprived of control over SLOCs and 
+strategic depth, when compared to the US forces, will remain severely 
+constrained. Overcoming the existing encirclement is a sine qua non 
+condition for China if it wants to abandon the “partial” superpower 
+status and become a full-fledged one. </p>
+<h4 class="rm-manual">Support Us</h4>
+<p class="rm-manual">If content prepared by Warsaw Institute team is 
+useful for you, please support our actions. Donations from private 
+persons are necessary for the continuation of our mission.</p>
+<p class="rm-manual"><a href="https://warsawinstitute.org/support/" rel="noopener">Support</a></p>
+<p>Beijing’s concerns associated with the Malacca Strait and the South 
+China Sea stem from the fact that the US Navy (7th and 5th Fleets), 
+which operates in the Indo-Pacific and the Middle East, is the only 
+force capable of ensuring the security of SLOCs stretching from the 
+coast of Africa to East Asia. Since the time of Deng Xiaoping, China has
+ been a “stowaway,” which benefited from America’s continued commitment 
+to ensuring free navigation and security in Asian waters. As long as 
+China focused on economic modernization and its military remained 
+relatively weak, the role of the US Navy was seen as a constructive 
+contribution to a positive international environment. This “strategic 
+window of opportunity” allowed Chinese companies to achieve a remarkable
+ commercial success and unprecedented integration into the global 
+economy.</p>
+<p>Chinese authorities are trying to mitigate the Malacca Dilemma by 
+reducing dependence on energy imports from the Middle East. Beijing is 
+trying to establish alternative land links and energy cooperation with 
+Russia, Central Asia, Myanmar, Pakistan, and (still hypothetically) Iran
+ and Turkey. Cooperation with Pakistan through the China-Pakistan 
+Economic Corridor (CPEC) was perceived as an opportunity to gain an 
+additional access point to the Indian Ocean through the construction of a
+ new gas pipeline. However, the challenging topography of the Himalayan 
+region and high transit costs make such investment unprofitable. 
+Additionally, it is located in an unstable region, which is vulnerable 
+to a potential attack in the event of a conflict with India. For years, 
+the Chinese authorities have also been exploring the possibility of 
+using the Northern Sea Route (NSR) to diversify trade routes, mainly 
+with Europe and Russia. Yet, as a result of shipping restrictions 
+associated with the ice cover, it still plays a marginal role and cannot
+ be an alternative to the Indo-Pacific routes. The measures taken by the
+ Chinese authorities are insufficient to drastically reduce the level of
+ dependence on transport through the Malacca Strait. A potential 
+solution to dependence on crude oil imports from the Persian Gulf would 
+be to develop the renewable energy and electric-powered vehicles 
+sectors. However, this process will require at least a few decades, 
+which means that shipment through the Malacca Strait will remain a 
+source of concern for Beijing and an instrument of informal US pressure 
+for many years to come.</p>
+<p class="rm-manual">All texts published by the Warsaw Institute 
+Foundation may be disseminated on the condition that their origin is 
+credited. Images may not be used without permission.</p>
+<p class="rm-manual">TAGS: <a href="https://warsawinstitute.org/tag/china/" rel="tag">China</a><a href="https://warsawinstitute.org/tag/choke-point/" rel="tag">choke point</a><a href="https://warsawinstitute.org/tag/crude-oil/" rel="tag">crude oil</a><a href="https://warsawinstitute.org/tag/malacca/" rel="tag">Malacca</a><a href="https://warsawinstitute.org/tag/malacca-dilemma/" rel="tag">Malacca Dilemma</a><a href="https://warsawinstitute.org/tag/natural-gas/" rel="tag">natural gas</a><a href="https://warsawinstitute.org/tag/petroleum/" rel="tag">petroleum</a><a href="https://warsawinstitute.org/tag/strait/" rel="tag">Strait</a><a href="https://warsawinstitute.org/tag/us/" rel="tag">US</a><a href="https://warsawinstitute.org/tag/us-navy-en/" rel="tag">US Navy</a><a href="https://warsawinstitute.org/tag/usa-en/" rel="tag">USA</a> </p>
+<h6 class="rm-manual">Related posts</h6>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <a href="https://warsawinstitute.org/first-quad-meeting-2021/">The First Quad Meeting in 2021</a></p> </li> </ul>
+<h6 class="rm-manual">Programs</h6>
+<h3 class="rm-manual">Warsaw Institute</h3>
+<p class="rm-manual">Office: Wilcza St. 9, 00-538 Warsaw, Poland</p>
+<p class="rm-manual">Telephone: +48 22 417 63 15</p>
+<p class="rm-manual">E-mail: <a href="file:///cdn-cgi/l/email-protection">[email protected]</a></p>
+<p class="rm-manual">Warsaw Institute new idea for the region</p>
+<p class="rm-manual"><a href="http://balticfund.org/" rel="noopener">www.balticfund.org</a></p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://warsawinstitute.org/about-us/">About us</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/news/">News</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/about-us/team/">Team</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/about-us/experts/">Experts</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/about-us/media/">Media</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/about-us/video/">Video</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/about-us/partners/">Partners</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/about-us/branding/">Branding</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://warsawinstitute.org/programs/">Programs</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/programs/opinions/">OPINIONS</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/programs/special-reports/">SPECIAL REPORTS</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/programs/russia-monitor/russia-monitor-articles/">RUSSIA MONITOR</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/programs/china-monitor/china-monitor-articles/">CHINA MONITOR</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/programs/mena-monitor/mena-monitor-articles/">MENA MONITOR</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/programs/u-s-weekly/u-s-weekly-articles/">U.S. WEEKLY</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/programs/info-check-ukraine/ukraine-monitor-articles/">UKRAINE MONITOR</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/programs/baltic-rim-monitor/baltic-rim-monitor-articles/">BALTIC RIM MONITOR</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/programs/romania-monitor/romania-monitor-articles/">ROMANIA MONITOR</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/disinformation/">DISINFORMATION</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/programs/china-v4-countries/china-v4-countries-articles/">CHINA AND V4 COUNTRIES</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/programs/belarusalert/belarusalert-articles/">BELARUSALERT</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/programs/our-projects/">OUR PROJECTS</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://warsawinstitute.org/the-warsaw-institute-review/">WIR Magazine</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/the-warsaw-institute-review/issues/">Issues</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/the-warsaw-institute-review/authors/">Authors</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/the-warsaw-institute-review/editorial-office/">Editorial Office</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/the-warsaw-institute-review/partners/">Partners</a></li> <li class="rm-manual"><a href="https://warsawinstitute.org/subscribe-magazine/">Subscribe</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://warsawinstitute.org/events-en/">Events</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://warsawinstitute.org/warsaw-institute-maps/">Maps</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://store.warsawinstitute.org/" rel="noopener">Store</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="https://warsawinstitute.org/contact/">Contact</a></li> </ul>
+<p class="rm-manual">© 2019 Warsaw Institute | All rights reserved.</p></article>
+</body></html>

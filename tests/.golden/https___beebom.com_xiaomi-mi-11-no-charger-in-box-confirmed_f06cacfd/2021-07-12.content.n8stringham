@@ -1,0 +1,125 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Xiaomi Confirms Mi 11 Will Not Come with a Charger in the Box | Beebom </p>
+<p class="rm-manual"> <a href="https://beebom.com/"> <span>Beebom</span> </a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://beebom.com/category/news/">News</a></li> <li class="rm-manual"><a href="https://beebom.com/category/reviews/">Reviews</a></li> <li class="rm-manual"><a href="https://beebom.com/category/how-to/">How To</a></li> <li class="rm-manual">
+<a href="https://beebom.com/best-of/">Best Of</a> <ul class="rm-manual"> <li class="rm-manual">
+<a href="https://beebom.com/category/mobile-2/">Mobile</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://beebom.com/category/mobile-2/android-apps/">Android</a></li> <li class="rm-manual"><a href="https://beebom.com/category/mobile-2/iphone-apps/">iPhone</a></li> </ul> </li> <li class="rm-manual"><a href="https://beebom.com/category/internet/">Internet</a></li> <li class="rm-manual"><a href="https://beebom.com/category/alternative/">Alternative</a></li> <li class="rm-manual">
+<a href="https://beebom.com/category/tech/">PC</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://beebom.com/category/pc/linux/">Linux</a></li> <li class="rm-manual"><a href="https://beebom.com/category/pc/mac/">Mac</a></li> <li class="rm-manual"><a href="https://beebom.com/category/windows-apps/">Windows</a></li> </ul> </li> </ul> </li> <li class="rm-manual"><a href="https://beebom.com/videos/">Videos</a></li> <li class="rm-manual">
+<a>More</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://beebom.com/about-us/">About Us</a></li> <li class="rm-manual"><a href="https://beebom.com/contact-us/">Contact us</a></li> <li class="rm-manual"><a href="https://beebom.com/we-are-hiring/">We are Hiring</a></li> <li class="rm-manual"><a href="https://beebom.com/advertise/">Advertise</a></li> <li class="rm-manual"><a href="https://beebom.com/privacy-policy/">Privacy Policy and Disclaimer</a></li> </ul> </li> </ul>
+<p class="rm-manual"> <a href="https://beebom.com/"> <span>Beebom</span> </a> </p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///category/mobile-2/android-apps/">Android</a></li> <li class="rm-manual"><a href="file:///category/mobile-2/iphone-apps/">iOS</a></li> <li class="rm-manual"><a href="file:///category/pc/mac/">Mac</a></li> <li class="rm-manual"><a href="file:///category/pc/windows-tech/">Windows</a></li> <li class="rm-manual"><a href="file:///category/pc/linux/">Linux</a></li> <li class="rm-manual"><a href="file:///category/cool-gadgets/">Smart Gadgets</a></li> <li class="rm-manual"><a href="file:///category/games/">Gaming</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a>LOG IN</a></li> </ul>
+<p class="rm-manual">Welcome! Log into your account</p>
+<p class="rm-manual"><a href="#">Forgot your password?</a></p>
+<p class="rm-manual">Recover your password</p>
+<p class="rm-manual"> <a href="https://beebom.com/"> <span>Beebom</span> </a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://beebom.com/category/news/">News</a></li> <li class="rm-manual"><a href="https://beebom.com/category/reviews/">Reviews</a></li> <li class="rm-manual"><a href="https://beebom.com/category/how-to/">How To</a></li> <li class="rm-manual">
+<a href="https://beebom.com/best-of/">Best Of</a> <ul class="rm-manual"> <li class="rm-manual">
+<a href="https://beebom.com/category/mobile-2/">Mobile</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://beebom.com/category/mobile-2/android-apps/">Android</a></li> <li class="rm-manual"><a href="https://beebom.com/category/mobile-2/iphone-apps/">iPhone</a></li> </ul> </li> <li class="rm-manual"><a href="https://beebom.com/category/internet/">Internet</a></li> <li class="rm-manual"><a href="https://beebom.com/category/alternative/">Alternative</a></li> <li class="rm-manual">
+<a href="https://beebom.com/category/tech/">PC</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://beebom.com/category/pc/linux/">Linux</a></li> <li class="rm-manual"><a href="https://beebom.com/category/pc/mac/">Mac</a></li> <li class="rm-manual"><a href="https://beebom.com/category/windows-apps/">Windows</a></li> </ul> </li> </ul> </li> <li class="rm-manual"><a href="https://beebom.com/videos/">Videos</a></li> <li class="rm-manual">
+<a>More</a> <ul class="rm-manual"> <li class="rm-manual"><a href="https://beebom.com/about-us/">About Us</a></li> <li class="rm-manual"><a href="https://beebom.com/contact-us/">Contact us</a></li> <li class="rm-manual"><a href="https://beebom.com/we-are-hiring/">We are Hiring</a></li> <li class="rm-manual"><a href="https://beebom.com/advertise/">Advertise</a></li> <li class="rm-manual"><a href="https://beebom.com/privacy-policy/">Privacy Policy and Disclaimer</a></li> </ul> </li> </ul>
+<p class="rm-manual"><span><a href="https://beebom.com/">Home</a></span> <span><a href="https://beebom.com/category/news/">News</a></span> <span>Xiaomi Confirms Mi 11 Series Will Not Come with a Charger in...</span></p>
+<h1 class="rm-manual">Xiaomi Confirms Mi 11 Series Will Not Come with a Charger in the Box</h1>
+<p class="rm-manual"><a href="https://beebom.com/author/anmol/">Anmol Sachdeva</a> - </p>
+<p class="rm-manual"><span><a href="https://beebom.com/author/anmol/"> Anmol Sachdeva </a> </span></p>
+<p class="rm-manual">Last Updated: <span>December 26, 2020 1:19 pm</span></p>
+<p>Though Xiaomi may have <a href="https://twitter.com/Xiaomi/status/1316299756260352006" rel="noopener nofollow">mocked Apple for removing the charger</a>
+ from the iPhone 12 retail box, the Chinese giant is now ready to follow
+ in its footsteps. Xiaomi confirmed today that its upcoming flagship <a href="https://beebom.com/xiaomi-mi-11-series-first-snapdragon-888-smartphone/">Mi 11 series</a> will not include a charger in the box. </p>
+<h2>Xiaomi Removes Charger from Mi 11 Box: Why?</h2>
+<p>In an <a href="http://weibointl.api.weibo.com/share/192181134.html?weibo_id=4586341567045565" rel="noopener nofollow">official Weibo post</a>,
+ Xiaomi co-founder and CEO Lei Jun confirmed that the Mi 11 box will not
+ come with a charging brick. That sounds surprising, right? Why would 
+you mock a competitor and then follow its lead? Well, Jun exclaims 
+(translated from Chinese to English) that this move is in ‘response to 
+the call of technology and environmental protection.’ </p>
+<figcaption> Xiaomi mocks Apple for removing charger in box </figcaption><figcaption> Xiaomi itself removes charger in Mi 11 box </figcaption><p>Attached
+ above, we have Xiaomi’s official post mocking Apple on Twitter and Lei 
+Jun’s official Weibo post revealing that the Mi 11 retail box will not 
+include a charger. What do you think about Xiaomi’s decision? Will 
+Xiaomi reduce the price tag to compensate for the removed charger? Let 
+us know your opinion in the comments below. </p>
+<h2>Is There A Better Solution?</h2>
+<p>In the Weibo post, Jun says that Xiaomi will reveal a ‘better 
+solution between industry practice and environmental protection’ at the <a href="https://beebom.com/xiaomi-mi-11-series-launch-date/">launch event on Monday</a>.
+ Xiaomi will be the first Android phone maker to not offer a charger in 
+the box. Samsung will follow right after, as per leaks, and the Galaxy 
+S21 retail box will not include a charging brick either. </p>
+<p>Here you can see the thin new Mi 11 retail box and the in-depth 
+explanation behind the company’s decision to exclude the charging brick:</p>
+<p>Apart from the missing charger in the box, Xiaomi has confirmed some 
+of the key new features of the Mi 11 series. It will include a curved 
+AMOLED display with <a href="https://beebom.com/corning-gorilla-glass-victus-announced/">Gorilla Glass Victus</a> (or Gorilla Glass 7), speakers tuned by Harmon Kardon, the<a href="https://beebom.com/qualcomm-snapdragon-888-benchmark-scores-revealed-heres-how-powerful-it-is/"> latest Snapdragon 888 chipset</a>, and a lot more. So yeah, stay tuned for more official information. </p>
+<ul class="rm-manual">
+<li class="rm-manual"><span>TAGS</span></li>
+<li class="rm-manual"><a href="https://beebom.com/tag/featured/">featured</a></li>
+<li class="rm-manual"><a href="https://beebom.com/tag/mi-11/">Mi 11</a></li>
+<li class="rm-manual"><a href="https://beebom.com/tag/xiaomi/">Xiaomi</a></li>
+</ul>
+<h4 class="rm-manual"><span>1 COMMENT</span></h4>
+<ol class="rm-manual"> <li class="rm-manual"> <article class="rm-manual"> Raven Riggenbach <a href="#comment-252476"> Feb 9, 2021 At 4:25 am </a> <p class="rm-manual">best blonde bleach hair dye</p> <p class="rm-manual"> <a rel="nofollow" href="#comment-252476">Reply</a> </p> </article> </li> </ol>
+<h3 class="rm-manual">LEAVE A REPLY <a rel="nofollow" href="file:///xiaomi-mi-11-no-charger-in-box-confirmed/#respond">Cancel reply</a>
+</h3>
+<p class="rm-manual"> Your Comment </p>
+<p class="rm-manual">Please enter your comment!</p>
+<p class="rm-manual"> Your Name </p>
+<p class="rm-manual">Please enter your name here</p>
+<p class="rm-manual"> Your Email </p>
+<p class="rm-manual">You have entered an incorrect email address!</p>
+<p class="rm-manual">Please enter your email address here</p>
+<p class="rm-manual">You Might Like</p>
+<p class="rm-manual">How To</p>
+<p class="rm-manual"><a href="https://beebom.com/how-get-windows-11-features-in-windows-10/">How to Get Windows 11 Features in Windows 10 Right Now!</a></p>
+<p class="rm-manual">Gaming</p>
+<p class="rm-manual"><a href="https://beebom.com/how-install-play-battlegrounds-mobile-india-bgmi-pc-laptop/">How to Install and Play Battlegrounds Mobile India (BGMI) on PC and Laptop</a></p>
+<p class="rm-manual">How To</p>
+<p class="rm-manual"><a href="https://beebom.com/how-install-android-app-bundles/">How to Install Android App Bundles (AAB) on Your Phone</a></p>
+<p class="rm-manual">Android</p>
+<p class="rm-manual"><a href="https://beebom.com/apk-vs-aab/">APK vs AAB (Android App Bundles): Everything You Need to Know!</a></p>
+<p class="rm-manual">How To</p>
+<p class="rm-manual"><a href="https://beebom.com/how-download-install-ios-15-public-beta/">How to Download and Install iOS 15 Public Beta on iPhone</a></p>
+<h5 class="rm-manual">Recently Updated: </h5>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://beebom.com/contact-us/">Contact us</a></li> <li class="rm-manual"><a href="https://beebom.com/advertise/">Advertise</a></li> <li class="rm-manual"><a href="https://beebom.com/about-us/">About Us</a></li> </ul>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="https://beebom.com/contact-us/">Contact us</a></li> <li class="rm-manual"><a href="https://beebom.com/advertise/">Advertise</a></li> <li class="rm-manual"><a href="https://beebom.com/about-us/">About Us</a></li> </ul>
+<p class="rm-manual"> © Beebom Media Private Limited </p></article>
+</body></html>

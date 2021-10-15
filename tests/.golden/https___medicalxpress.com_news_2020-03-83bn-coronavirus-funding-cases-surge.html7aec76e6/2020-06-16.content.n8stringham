@@ -1,0 +1,170 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual">share this!</p> </li> </ul>
+<ol class="rm-manual"> <li class="rm-manual"> <a href="file:///" rel="home"> <span>Home</span> </a> </li> <li class="rm-manual"> <a href="https://medicalxpress.com/diseases-news/"> <span>Diseases, Conditions, Syndromes</span> </a> </li> </ol>
+<p class="rm-manual"> March 5, 2020 </p>
+<h1 class="rm-manual">US announces $8.3bn in coronavirus funding as cases surge</h1>
+<figcaption class="rm-manual"> Credit: CC0 Public Domain </figcaption><p>
+ US lawmakers passed an emergency $8.3 billion spending bill to combat 
+the coronavirus on Thursday as the number of cases surged in the 
+country's northwest and deaths reached 12. </p>
+<p>The Senate gave sweeping bipartisan support to the funding one day 
+after the House passed the bill, so that it could be quickly sent to the
+ White House for President Donald Trump's signature.</p>
+<p>"The American people are looking for leadership, they want assurance 
+their government is up to the task of protecting their health and 
+safety," said Democratic Senator Patrick Leahy.</p>
+<p>The amount is significantly above the $2.5 billion President Donald 
+Trump had initially requested, but he later said he was happy to accept 
+more.</p>
+<p>The US reported its first case of the disease in January and its 
+first death on February 29—both in the state of Washington in the 
+country's Pacific Northwest.</p>
+<p>Since then the toll has risen to 12 and the virus has spread to at 
+least 15 states—the latest being Maryland adjacent to the nation's 
+capital Washington.</p>
+<p>More than 180 people are infected, according to an AFP tally.</p>
+<p>On Thursday, Washington state officials announced a jump in cases, 
+from 39 to more than 70. Eleven of the 12 deaths have been reported 
+there, with the other in California.</p>
+<p>Tech firms in Seattle like Amazon, Facebook and Google were telling 
+employees to work remotely, as was Microsoft in nearby Redmond.</p>
+<p>Some schools in the state have also decided to close for a couple weeks and hold classes online.</p>
+<p>Vice President Mike Pence, the White House pointman on the crisis, visited the state later in the day.</p>
+<p>He greeted Governor Jay Inslee and other officials with an "elbow 
+bump," intended to avoid the germ transmission of a traditional 
+handshake.</p>
+<p>Some 1.2 million tests would be distributed nationwide in "a few 
+days," followed by another four million by the end of next week, said 
+Pence.</p>
+<p>Earlier Thursday in Minnesota, Pence had told reporters that "we 
+don't have enough tests today to meet what we anticipate will be the 
+demand going forward."</p>
+<p>Meanwhile a cruise ship with 21 people who have symptoms was being 
+held off the coast of San Francisco, California. The state has the 
+second highest number of cases and has declared an emergency.</p>
+<p>Thousands of people are traveling aboard the Grand Princess, the same
+ cruise ship on which California's first victim was thought to have 
+contracted the virus.</p>
+<p>The Grand Princess belongs to Princess Cruises, the company that 
+operated the coronavirus-stricken ship held off Japan last month on 
+which more than 700 people tested positive.</p>
+<p>Carolyn Wright, a passenger, told AFP that the captain announced 
+Thursday evening there were "no confirmed cases of coronavirus on the 
+ship" so far, echoing a tweet from Princess Cruises earlier in the day.</p>
+<p>Nursing union slams preparation</p>
+<p>US officials continue to stress that the overall risk to the public 
+remains low and are urging people not to panic or buy masks—which could 
+create a shortage for those who require them.</p>
+<p>Scientific research so far shows that elderly people and those with 
+underlying conditions are most at risk of a serious illness, and the 
+majority of US deaths so far have occurred in a Seattle-area nursing 
+home.</p>
+<p>But the largest nursing union in the US denounced Thursday the "disturbing" lack of preparation at many hospitals.</p>
+<p>Nurses are working without necessary personal protective equipment 
+and lack education and training for handling the disease, said National 
+Nurses United director Bonnie Castillo.</p>
+<p>"As of today more than 80 of our nurse members have been in 
+quarantine," she said at a press conference in California held by the 
+union, which claims 150,000 members.</p>
+<p>"It is not a successful strategy to leave nurses and other health workers unprotected."</p>
+<p>Revised mortality rate</p>
+<p>Earlier, a top federal health official said the overall mortality 
+rate for the novel coronavirus was estimated at one percent or less, 
+lower than previously thought.</p>
+<p>"The best estimates now of the overall mortality rate for COVID-19 is
+ somewhere between 0.1 percent and one percent," Admiral Brett Giroir, 
+the assistant secretary of health, said at a news briefing.</p>
+<p>"That's... because many people don't get sick and don't get tested—this reflects the overseas experience.</p>
+<p>"It certainly could be higher than normal flu, it probably is, but it's not likely in the range of two to three percent." </p>
+<p class="rm-manual">Explore further</p>
+<p class="rm-manual"><a href="https://medicalxpress.com/coronavirus/">Follow the latest news on the coronavirus (COVID-19) outbreak</a> </p>
+<p class="rm-manual"> © 2020 AFP </p>
+<p class="rm-manual"> Citation: US announces $8.3bn in coronavirus 
+funding as cases surge (2020, March 5) retrieved 16 June 2020 from 
+https://medicalxpress.com/news/2020-03-83bn-coronavirus-funding-cases-surge.html
+ </p>
+<p class="rm-manual"> This document is subject to copyright. Apart from 
+any fair dealing for the purpose of private study or research, no part 
+may be reproduced without the written permission. The content is 
+provided for information purposes only. </p>
+<p class="rm-manual"> <a href=""><span>1</span> shares</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href=""> <p class="rm-manual">Facebook</p> </a> </li> <li class="rm-manual"> <a href="#"> <p class="rm-manual">Twitter</p> </a> </li> <li class="rm-manual"> <a href="#"> <p class="rm-manual">Email</p> </a> </li> </ul>
+<p class="rm-manual"><a href="#"> </a></p><p class="rm-manual"><a href="#"> Feedback to editors</a></p><a href="#"> </a> <p class="rm-manual"></p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="#nav-featured">Featured</a> </li> <li class="rm-manual"> <a href="#nav-commented">Last Comments</a> </li> <li class="rm-manual"> <a href="#nav-popular">Popular</a> </li> </ul>
+<h4 class="rm-manual"><a href="https://medicalxpress.com/news/2020-06-socioeconomic-status-people-declines-age-related.html">Study shows low socioeconomic status people experience more declines in age-related functions</a></h4>
+<p class="rm-manual">6 hours ago</p>
+<p class="rm-manual"><span>0</span></p>
+<h4 class="rm-manual"><a href="https://medicalxpress.com/news/2020-06-oral-polio-vaccine-sars-cov-.html">Researchers suggest oral polio vaccine be tested to see if it might help against SARS-CoV-2</a></h4>
+<p class="rm-manual">Jun 12, 2020</p>
+<p class="rm-manual"><span>0</span></p>
+<h4 class="rm-manual"><a href="https://medicalxpress.com/news/2020-06-spleens-liver-like-mice.html">Transforming spleens into liver-like organs in mice</a></h4>
+<p class="rm-manual">Jun 11, 2020</p>
+<p class="rm-manual"><span>0</span></p>
+<h4 class="rm-manual"><a href="https://medicalxpress.com/news/2020-06-person-sick.html">Research shows you can't tell if a person is sick by the sound of their cough</a></h4>
+<p class="rm-manual">Jun 10, 2020</p>
+<p class="rm-manual"><span>1</span></p>
+<h4 class="rm-manual"><a href="https://medicalxpress.com/news/2020-06-23andme-people-blood-covid-.html">23andME reports people with type O blood less likely to get COVID-19</a></h4>
+<p class="rm-manual">Jun 10, 2020</p>
+<p class="rm-manual"><span>0</span></p>
+<p class="rm-manual"> <a href="https://medicalxpress.com/news/2020-06-primitive-stem-cells-bone-grafts.html"> </a></p><article class="rm-manual"><a href="https://medicalxpress.com/news/2020-06-primitive-stem-cells-bone-grafts.html"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">Primitive stem cells point to new bone grafts for stubborn-to-heal fractures</h5> <p class="rm-manual"> </p><p class="rm-manual">20 minutes ago</p> <p class="rm-manual"></p> </figcaption> </figure> </a></article><a href="https://medicalxpress.com/news/2020-06-primitive-stem-cells-bone-grafts.html"> </a> <a href="https://medicalxpress.com/news/2020-06-experts-options-multiple-sclerosis-related-cognitive.html"> <article class="rm-manual"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">Experts analyze options for treating multiple sclerosis-related cognitive impairment</h5> <p class="rm-manual"> </p><p class="rm-manual">21 minutes ago</p> <p class="rm-manual"></p> </figcaption> </figure> </article> </a> <a href="https://medicalxpress.com/news/2020-06-depression-greater-cardiovascular-disease.html"> <article class="rm-manual"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">Study finds depression associated with greater risk of cardiovascular disease</h5> <p class="rm-manual"> </p><p class="rm-manual">42 minutes ago</p> <p class="rm-manual"></p> </figcaption> </figure> </article> </a> <a href="https://medicalxpress.com/news/2020-06-off-the-shelf-tool-mouse-covid-.html"> <article class="rm-manual"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">Off-the-shelf tool for making mouse models of COVID-19</h5> <p class="rm-manual"> </p><p class="rm-manual">42 minutes ago</p> <p class="rm-manual"></p> </figcaption> </figure> </article> </a> <a href="https://medicalxpress.com/news/2020-06-potent-antibody-cocktail-potential-covid-.html"> <article class="rm-manual"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">Researchers identify potent antibody cocktail with potential to treat COVID-19</h5> <p class="rm-manual"> </p><p class="rm-manual">44 minutes ago</p> <p class="rm-manual"></p> </figcaption> </figure> </article> </a> <a href="https://medicalxpress.com/news/2020-06-glucose-hypoglycemia-older-adults-diabetes.html"> <article class="rm-manual"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">Continuous glucose monitoring reduces hypoglycemia in older adults with type 1 diabetes</h5> <p class="rm-manual"> </p><p class="rm-manual">46 minutes ago</p> <p class="rm-manual"></p> </figcaption> </figure> </article> </a> <a href="https://medicalxpress.com/news/2020-06-premature-epigenomic-aging-sleeper-cell.html"> <article class="rm-manual"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">Premature epigenomic aging acts like a 'sleeper cell' that is awakened by Western-style diet</h5> <p class="rm-manual"> </p><p class="rm-manual">1 hour ago</p> <p class="rm-manual"></p> </figcaption> </figure> </article> </a> <a href="https://medicalxpress.com/news/2020-06-antisense-drug-fatty-liver-disease.html"> <article class="rm-manual"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">Novel antisense drug shows promise in slowing fatty liver disease</h5> <p class="rm-manual"> </p><p class="rm-manual">1 hour ago</p> <p class="rm-manual"></p> </figcaption> </figure> </article> </a> <a href="https://medicalxpress.com/news/2020-06-trigger-good.html"> <article class="rm-manual"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">'Trigger warnings' may do more harm than good, study finds</h5> <p class="rm-manual"> </p><p class="rm-manual">2 hours ago</p> <p class="rm-manual"></p> </figcaption> </figure> </article> </a> <a href="https://medicalxpress.com/news/2020-06-technique-quickly-accurately-effective-therapies.html"> <article class="rm-manual"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">New technique may quickly and accurately predict effective therapies in solid tumors</h5> <p class="rm-manual"> </p><p class="rm-manual">2 hours ago</p> <p class="rm-manual"></p> </figcaption> </figure> </article> </a> <p class="rm-manual"></p>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> </p><h2 class="rm-manual">Related Stories</h2> <p class="rm-manual"></p> <p class="rm-manual"> <a href="https://medicalxpress.com/news/2020-03-coronavirus-mortality-percent.html"> </a></p><article class="rm-manual"><a href="https://medicalxpress.com/news/2020-03-coronavirus-mortality-percent.html"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">Coronavirus mortality rate 1 percent or less: US</h5> <p class="rm-manual"> </p><p class="rm-manual">Mar 05, 2020</p> <p class="rm-manual"></p> </figcaption> </figure> </a></article><a href="https://medicalxpress.com/news/2020-03-coronavirus-mortality-percent.html"> </a> <a href="https://medicalxpress.com/news/2020-03-california-virus-crisis-cruise-ship.html"> <article class="rm-manual"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">California virus crisis as cruise ship held, funding deal struck</h5> <p class="rm-manual"> </p><p class="rm-manual">Mar 05, 2020</p> <p class="rm-manual"></p> </figcaption> </figure> </article> </a> <a href="https://medicalxpress.com/news/2020-03-coronavirus-cases-la-york-lawmakers.html"> <article class="rm-manual"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">New coronavirus deaths in US as lawmakers reach funding deal</h5> <p class="rm-manual"> </p><p class="rm-manual">Mar 04, 2020</p> <p class="rm-manual"></p> </figcaption> </figure> </article> </a> <p class="rm-manual"></p> <p class="rm-manual"> <a href="https://medicalxpress.com/news/2020-03-thousands-held-cruise-ship-california.html"> </a></p><article class="rm-manual"><a href="https://medicalxpress.com/news/2020-03-thousands-held-cruise-ship-california.html"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">Thousands held on cruise ship off California over coronavirus fears</h5> <p class="rm-manual"> </p><p class="rm-manual">Mar 05, 2020</p> <p class="rm-manual"></p> </figcaption> </figure> </a></article><a href="https://medicalxpress.com/news/2020-03-thousands-held-cruise-ship-california.html"> </a> <a href="https://medicalxpress.com/news/2020-03-china-virus-cases-trump-urges.html"> <article class="rm-manual"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">China virus cases rise again, Trump urges calm after US death</h5> <p class="rm-manual"> </p><p class="rm-manual">Mar 01, 2020</p> <p class="rm-manual"></p> </figcaption> </figure> </article> </a> <a href="https://medicalxpress.com/news/2020-02-trump-mulls-italy-korea-coronavirus.html"> <article class="rm-manual"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">Trump mulls travel bans on Italy, S. Korea over coronavirus</h5> <p class="rm-manual"> </p><p class="rm-manual">Feb 27, 2020</p> <p class="rm-manual"></p> </figcaption> </figure> </article> </a> <p class="rm-manual"></p> </li> <li class="rm-manual"> <p class="rm-manual"> </p><h2 class="rm-manual">Recommended for you</h2> <p class="rm-manual"></p> <p class="rm-manual"> <a href="https://medicalxpress.com/news/2020-06-potent-antibody-cocktail-potential-covid-.html"> </a></p><article class="rm-manual"><a href="https://medicalxpress.com/news/2020-06-potent-antibody-cocktail-potential-covid-.html"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">Researchers identify potent antibody cocktail with potential to treat COVID-19</h5> <p class="rm-manual"> </p><p class="rm-manual">44 minutes ago</p> <p class="rm-manual"></p> </figcaption> </figure> </a></article><a href="https://medicalxpress.com/news/2020-06-potent-antibody-cocktail-potential-covid-.html"> </a> <a href="https://medicalxpress.com/news/2020-06-off-the-shelf-tool-mouse-covid-.html"> <article class="rm-manual"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">Off-the-shelf tool for making mouse models of COVID-19</h5> <p class="rm-manual"> </p><p class="rm-manual">42 minutes ago</p> <p class="rm-manual"></p> </figcaption> </figure> </article> </a> <a href="https://medicalxpress.com/news/2020-06-antisense-drug-fatty-liver-disease.html"> <article class="rm-manual"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">Novel antisense drug shows promise in slowing fatty liver disease</h5> <p class="rm-manual"> </p><p class="rm-manual">1 hour ago</p> <p class="rm-manual"></p> </figcaption> </figure> </article> </a> <p class="rm-manual"></p> <p class="rm-manual"> <a href="https://medicalxpress.com/news/2020-06-under-20s-coronavirus.html"> </a></p><article class="rm-manual"><a href="https://medicalxpress.com/news/2020-06-under-20s-coronavirus.html"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">Under-20s half as likely to contract coronavirus: study</h5> <p class="rm-manual"> </p><p class="rm-manual">8 hours ago</p> <p class="rm-manual"></p> </figcaption> </figure> </a></article><a href="https://medicalxpress.com/news/2020-06-under-20s-coronavirus.html"> </a> <a href="https://medicalxpress.com/news/2020-06-ibd-mouth.html"> <article class="rm-manual"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">Could the cure for IBD be inside your mouth?</h5> <p class="rm-manual"> </p><p class="rm-manual">5 hours ago</p> <p class="rm-manual"></p> </figcaption> </figure> </article> </a> <a href="https://medicalxpress.com/news/2020-06-degrades-mask-efficiency.html"> <article class="rm-manual"> <figure class="rm-manual"> <figcaption class="rm-manual"> <h5 class="rm-manual">Repeated coughing seriously degrades face mask efficiency</h5> <p class="rm-manual"> </p><p class="rm-manual">5 hours ago</p> <p class="rm-manual"></p> </figcaption> </figure> </article> </a> <p class="rm-manual"></p> </li> </ul>
+<h2 class="rm-manual">User comments</h2>
+<h5 class="rm-manual">What do you think about this particular story?</h5>
+<p class="rm-manual">Your feedback will go directly to Science X editors.</p>
+<p class="rm-manual"> Your message to the editors </p>
+<p class="rm-manual"> Your email (only if you want to be contacted back) </p>
+<p class="rm-manual">Thank you for taking your time to send in your valued opinion to Science X editors. </p>
+<p class="rm-manual">You can be assured our editors closely monitor 
+every feedback sent and will take appropriate actions. Your opinions are
+ important to us. </p>
+<p class="rm-manual">We do not guarantee individual replies due to extremely high volume of correspondence. </p>
+<h6 class="rm-manual">E-mail the story</h6>
+<h5 class="rm-manual">US announces $8.3bn in coronavirus funding as cases surge</h5>
+<p class="rm-manual"> Your friend's email </p>
+<p class="rm-manual"> Your email </p>
+<p class="rm-manual"> I would like to subscribe to Science X Newsletter. <a href="https://sciencex.com/help/newsletter/">Learn more</a> </p>
+<p class="rm-manual"> Your name </p>
+<h6 class="rm-manual">Note</h6>
+<p class="rm-manual"> Your email address is used only to let the 
+recipient know who sent the email. Neither your address nor the 
+recipient's address will be used for any other purpose. The information 
+you enter will appear in your e-mail message and is not retained by 
+Medical Xpress in any form. </p>
+<p class="rm-manual"> Your message </p></article>
+</body></html>

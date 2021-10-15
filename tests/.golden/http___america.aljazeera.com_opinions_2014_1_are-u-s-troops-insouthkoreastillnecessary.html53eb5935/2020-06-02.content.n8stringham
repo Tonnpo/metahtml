@@ -1,0 +1,213 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Are U.S. troops in South Korea still necessary? | Al Jazeera America </p>
+<p class="rm-manual"> <span>Dismiss</span> </p>
+<h4 class="rm-manual">Attention</h4>
+<p class="rm-manual">The browser or device you are using is out of date.
+ It has known security flaws and a limited feature set. You will not see
+ all the features of some websites. Please update your browser. <span>A list of the most popular browsers can be found below.</span></p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="http://www.firefox.com/">Firefox</a></li> <li class="rm-manual"><a href="http://windows.microsoft.com/ie">IE</a></li> <li class="rm-manual"><a href="http://www.google.com/chrome">Chrome</a></li> <li class="rm-manual"><a href="http://www.apple.com/safari">Safari</a></li> <li class="rm-manual"><a href="http://www.opera.com/">Opera</a></li> </ul>
+<p class="rm-manual"> <a href="#">Visit Al Jazeera English</a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="http://www.aljazeera.com/">Al Jazeera English</a> </li> <li class="rm-manual"> <a href="http://www.aljazeera.net/">Al Jazeera Arabic</a> </li> <li class="rm-manual"> <a href="http://balkans.aljazeera.com/">Al Jazeera Balkans</a> </li> <li class="rm-manual"> <a href="http://mubasher.aljazeera.net/">Al Jazeera Mubasher</a> </li> <li class="rm-manual"> <a href="http://aljazeera.com.tr/">Al Jazeera Turk</a> </li> </ul>
+<p class="rm-manual"> <a><span>Display mobile navigation</span></a> <a><span>Display mobile search bar</span></a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///">News</a> </li> <li class="rm-manual"> <a href="file:///opinions.html">Opinion</a> </li> <li class="rm-manual"> <a href="file:///watch.html">Video</a> </li> <li class="rm-manual"> <a href="file:///watch/shows.html">Shows</a> </li> <li class="rm-manual"> <a href="file:///watch/schedule.html">Schedule</a> </li> <li class="rm-manual"> <a href="#">More</a> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///opinions.html">Opinion</a> </li> <li class="rm-manual"> <a href="file:///watch/shows.html">Shows</a> </li> </ul> </li> </ul>
+<p class="rm-manual">Sections</p>
+<p class="rm-manual"> <a href="file:///topics/topic/categories/us.html">U.S.</a> <a href="file:///topics/topic/categories/international.html">International</a> <a href="file:///topics/topic/categories/economy.html">Economy</a> <a href="file:///topics/topic/categories/technology.html">Technology</a> <a href="file:///topics/topic/categories/science.html">Science</a> <a href="file:///topics/topic/categories/environment.html">Environment</a> <a href="file:///topics/topic/categories/sports.html">Sports</a> <a href="file:///topics/topic/categories/culture.html">Culture</a> <a href="file:///topics/topic/issue/human-rights.html">Human Rights</a> </p>
+<p class="rm-manual">Trending</p>
+<p class="rm-manual"> <a href="file:///topics/topic/event/election-2016.html">Election 2016</a> <a href="file:///topics/topic/issue/immigration.html">Immigration</a> <a href="file:///topics/topic/issue/drugs.html">Drugs</a> <a href="file:///topics.html">Special Coverage</a> </p>
+<p class="rm-manual"> Search Form </p>
+<p class="rm-manual"> <a href="file:///opinions.html">Opinion</a> </p>
+<h1 class="rm-manual">Are U.S. troops in South Korea still necessary? </h1>
+<h2 class="rm-manual">Continued American presence on the peninsula only eggs on North Korea (and China) </h2>
+<p class="rm-manual"> <span>January 22, 2014</span> <span>8:45AM ET</span> </p>
+<p class="rm-manual"> <span> by <a href="file:///profiles/g/john-glaser.html">John Glaser</a> </span> </p>
+<figcaption>U.S. soldiers during a live fire training exercise in the 
+South Korean border county of Cheorwon on September 13, 2012. Some 
+28,500 U.S. troops are based in South Korea under a mutual defense pact 
+to deter against the North Korean threat. Secretary of State John Kerry 
+announced in January that the U.S. will be sending another 800 troops.</figcaption><p><span>Jung Yeon-Je/AFP/Getty Images</span> </p>
+<p>After meeting with South Korean Foreign Minister Yun Byung-se, U.S. Secretary of State John Kerry <a href="http://www.channelnewsasia.com/news/asiapacific/worried-us-warns-north/946442.html">announced</a>
+ on Jan. 7 that the United States would send an additional 800 troops to
+ join the nearly 30,000 American service members already stationed in 
+South Korea.</p>
+<p>â€œWe remain fully committed to the defense of the Republic of 
+Korea,â€ Kerry explained, â€œincluding through extended deterrence and 
+putting the full range of U.S. military capabilities in place.â€</p>
+<p>A day earlier, U.S. Secretary of Defense Chuck Hagel <a href="http://www.defense.gov/releases/release.aspx?releaseid=16464">discussed</a>
+ with Yun â€œthe importance of maintaining a robust combined defense of 
+the Korean Peninsula as a strong deterrent against provocations from 
+North Korea.â€</p>
+<p>But how necessary is it, really, to continue to fight on one side of a
+ stalemated civil war that has lasted for more than 60 years? 
+Politicians in Washington insist it is in our vital national interest, 
+but that is far from the truth.Â </p>
+<p>The Korean War erupted after World War II, when the defeated Japanese
+ empire, which had occupied the Korean Peninsula since 1895 (and fully 
+annexed it in 1910), retreated. The United States and the thenâ€“Soviet 
+Union divided the peninsula in half, and two hostile states emerged. 
+U.S. President Harry Truman intervened, without the consent of Congress,
+ to try to defeat the northern communists. More than 2 million deaths 
+later, an armistice agreement was signed in 1953, neither side the 
+winner.Â </p>
+<p>To this day, the U.S. backs South Korea. Washington has security 
+guarantees with Seoul obligating the U.S to go to war against South 
+Koreaâ€™s enemies in the event conflict breaks out. Americans are told 
+they must spend taxpayer money providing military aid and paying 
+expensive operating costs for tens of thousands of U.S. troops so that 
+South Korea is properly defended.</p>
+<p>But Seoul can easily defend itself. South Koreaâ€™s GDP is <a href="http://data.worldbank.org/country/korea-republic">$1.13 trillion</a>, versus North Koreaâ€™s paltry <a href="https://www.cia.gov/library/publications/the-world-factbook/geos/kn.html">$40 billion</a>, with similar disparities in the sizes of their respective defense budgets.</p>
+<p>The brutal authoritarian regime of North Korea is made out to be a 
+major threat to its neighbors, but it is comparatively weak, lacking the
+ kind of advanced industrial and technological military capacity of its 
+southern neighbor and, certainly, the U.S. Experts consider Pyongyang <a href="http://america.aljazeera.com/articles/2013/10/7/north-korea-warnsusofdisastrousconsequencesaftermilitaryexercise.html">unfit to fight an extended modern battle</a>.</p>
+<p>Contrary to the rhetoric that justifies continued U.S. meddling in a 
+civil war that is none of our business, the U.S. military presence in 
+South Korea is not about deterring North Korea. More accurately, it is 
+about maintaining U.S. military dominance in the Asia-Pacific region.</p>
+<p>As a January 2013 Congressional Research Service <a href="http://www.fas.org/sgp/crs/natsec/R42077.pdf">report</a>
+ (PDF) explained, the U.S. has sought â€œto have a world-wide, 
+continuous global military presence,â€ in order to preserve the 
+extraordinary military and economic superiority it had at the end of 
+World War II.</p>
+<p>Throughout the postwar period, Washington has maintained a constant 
+naval presence throughout the Asia-Pacific region as well as military 
+bases in Japan, South Korea, the Philippines, Singapore, Thailand, Guam 
+and, as of 2011, Australia. Washington even backed dictators in 
+Indonesia and fought a disastrous war in Vietnam to help demonstrate its
+ projection of power in the region.</p>
+<p> The U.S.â€™s continued military presence in South Korea engenders 
+geopolitical calculations by regional powers like China to prop up the 
+North Korean regime. </p>
+<p>As in the case of South Korea, these military postures came with 
+their own specific justifications. But the real goal has always been to 
+maintain military dominance and prevent the rise of so-called peer 
+competitors, or great power rivals that would undermine U.S. hegemony in
+ the region.Â </p>
+<p>Ironically, the U.S.â€™s continued military presence and defense 
+treaty with South Korea does nothing to weaken Pyongyang. Instead, it 
+engenders geopolitical calculations on the part of regional great powers
+ like China to prop up the North Korean regime.Â </p>
+<p>China â€œhas helped sustain what is now Kim Jong Unâ€™s regime and 
+has historically opposed harsh international sanctions in the hope of 
+avoiding regime collapse,â€ wrote Jayshree Bajoria and Beina Xu in a 
+2013 report for the Council on Foreign Relations. But, it suggested, 
+â€œChinaâ€™s patience with its ally may be wearing thin.â€ Indeed, <a href="http://america.aljazeera.com/articles/2013/12/12/north-korea-executeskimjongununcle.html">the execution of Kim Jung Unâ€™s uncle</a>
+ Jang Song Thaek was thought to be triggered in part by his involvement 
+with alleged plans to push domestic reforms that China has long 
+encouraged.</p>
+<p>To Beijing, Pyongyang is something of a nuisance â€” a perpetually 
+erratic regime with a hellish human rights record that is a constant 
+source of aggravation to China, which is trying to avoid such negative 
+attention from the international community.</p>
+<p>China nevertheless endures this embarrassment and continues to 
+safeguard the survival of the North Korean regime because it â€œis 
+important to Beijing as a bulwark against U.S. military dominance of the
+ region,â€ according to Bajoria and Xu.Â </p>
+<p>â€œChina has long feared that the United States and its allies seek 
+to encircle or contain China and therefore wants to ensure the continued
+ viability of the North Korean regime,â€ Julia Famularo, a research 
+affiliate at the Project 2049 Institute, <a href="http://thediplomat.com/2013/04/a-complex-calculus-chinas-north-korea-dilemma/?all=true">wrote</a> in April for The Diplomat.</p>
+<p>Indirectly then, Washingtonâ€™s insistence that South Koreaâ€™s 
+problems become our own is part of the reason the North Korean regime 
+has lasted so long, despite seeming perpetually on the verge of 
+collapse.</p>
+<p>But there are other dangerous consequences of the U.S.â€™s 
+interventionist policies on the Korean Peninsula. If a North-South 
+conflict does break out or if, for example, North Korea finally 
+collapses, the U.S. would inevitably be sucked into a potentially major 
+war that would otherwise be of little consequence to Americans.</p>
+<p>According to the Cato Instituteâ€™s <a href="http://www.cato.org/blog/japan-south-korea-other-worrisome-spat-east-asia">Ted Galen Carpenter</a>,
+ â€œthe current tensions underscore the pitfalls of Washingtonâ€™s 
+tendency to acquire allies or security clients in a promiscuous manner. 
+At a minimum, such ties cause diplomatic headaches; at worst, they can 
+entangle the United States in unwanted, even irrelevant, conflicts.â€</p>
+<p>If the recent history of U.S. foreign policy demonstrates anything, 
+it is that its military and diplomatic postures are overstretched, in 
+part because of a whole system of entangling alliances.</p>
+<p>â€œAmericaâ€™s national-security elites act on the assumption that 
+every nook and cranny of the globe is of great strategic significance 
+and that there are threats to U.S. interests everywhere,â€ the 
+international-relations theorist John Mearsheimer <a href="http://nationalinterest.org/article/america-unhinged-9639">wrote</a> earlier this month.</p>
+<p>Contrary to what politicians in Washington persistently claim, 
+Mearsheimer added, what happens in most of the countries the U.S. is 
+allied with â€œis of little importance for American security.â€</p>
+<p>Instead of boosting our military presence in South Korea, the U.S. 
+should bring the troops home and nullify the security treaty that says 
+Koreaâ€™s disputes will be the United Statesâ€™ war.</p>
+<p class="rm-manual">John Glaser is based in Washington, DC. He has been
+ published in CNN, Newsweek, The National Interest, Reason, and the 
+Washington Times, among others.</p>
+<p class="rm-manual">Â </p>
+<p class="rm-manual"> The views expressed in this article are the author's own and do not necessarily reflect Al Jazeera America's editorial policy. </p>
+<h3 class="rm-manual">Related News</h3>
+<dl class="rm-manual"> <dt class="rm-manual">Places</dt> <dd> <a href="file:///topics/topic/international-location/asia-pacific.html">Asia-Pacific</a>, <a href="file:///topics/topic/international-location/asia-pacific/north-korea.html">North Korea</a>, <a href="file:///topics/topic/international-location/asia-pacific/south-korea.html">South Korea</a> </dd> </dl>
+<dl class="rm-manual"> <dt class="rm-manual">Topics</dt> <dd> <a href="file:///topics/topic/issue/military.html">Military</a> </dd> </dl>
+<dl class="rm-manual"> <dt class="rm-manual">People</dt> <dd> <a href="file:///topics/topic/people/john-kerry.html">John Kerry</a> </dd> </dl>
+<h4 class="rm-manual">Find Al Jazeera America on your TV</h4>
+<h3 class="rm-manual">Editor's Picks</h3>
+<p class="rm-manual"> <a href="file:///articles/2016/2/25/as-thousands-enter-europe-eu-flails-in-anti-smuggling-efforts1.html"> <span>As thousands enter Europe, EU flails in anti-smuggling efforts </span></a> <a href="http://projects.aljazeera.com/2016/02/pine-ridge-teen-suicide/"> <span>Gone Girl </span></a> <a href="file:///articles/2016/2/25/small-businesses-for-trump-just-get-somebody-different-in-there.html"> <span>Small businesses for Trump: â€˜Just get somebody different in thereâ€™ </span></a> <a href="file:///articles/2016/2/25/new-orleanians-see-tourism-bias-in-post-katrina-public-transport.html"> <span>New Orleanians see tourism bias in post-Katrina public transport </span></a> <a href="file:///opinions/2016/2/six-hot-media-startups-to-watch-in-2016.html"> <span>Six hot media startups to watch in 2016 </span></a> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="#mostActive-discussed"> <span>Most</span><span>Discussed</span> </a> </li> <li class="rm-manual"> <a href="#mostActive-shared"> <span>Most</span><span>Shared</span> </a> </li> <li class="rm-manual"> <a href="#mostActive-viewed"> <span>Most</span><span>Viewed</span> </a> </li> </ul>
+<h3 class="rm-manual"> <span>More From </span><span>John Glaser</span> </h3>
+<p class="rm-manual"> <a href="file:///opinions/2015/7/critics-of-the-iranian-nuclear-deal-protest-too-much.html">Critics of the Iranian nuclear deal protest too much</a> </p>
+<p class="rm-manual"> <a href="file:///opinions/2014/3/cia-torture-feinsteininterrogationimpunity.html">The CIA impunity challenge</a> </p>
+<p class="rm-manual"> <a href="file:///opinions/2013/12/should-palestineseekjusticeinthehague.html">Should Palestinians seek justice at The Hague? </a> </p>
+<p class="rm-manual"> <a href="file:///opinions.html">Opinions</a> </p>
+<p class="rm-manual"> <a href="file:///opinions/2016/2/the-way-news-should-be-done.html">The way news should be done</a> <span> by <span><a href="file:///profiles/j/david-cay-johnston.html">David Cay Johnston</a></span> </span> </p>
+<p class="rm-manual"> <a href="file:///opinions/2016/2/al-jazeera-america-allowed-me-to-speak-whatever-must-be-said.html">Al Jazeera America allowed me to â€˜speak whatever must be saidâ€™</a> <span> by <span><a href="file:///profiles/z/rafia-zakaria.html">Rafia Zakaria</a></span> </span> </p>
+<p class="rm-manual"> <a href="file:///opinions/2016/2/requiem-for-a-media-pioneer.html">Requiem for a media pioneer</a> <span> by <span><a href="file:///profiles/c/lauren-carasik.html">Lauren Carasik</a></span> </span> </p>
+<p class="rm-manual"> <a href="file:///opinions/2016/2/we-need-labor-journalism-now-more-than-ever.html">We need labor journalism now more than ever</a> <span> by <span><a href="file:///profiles/d/amy-b-dean.html">Amy B. Dean</a></span> </span> </p>
+<p class="rm-manual"> <a href="file:///opinions/2016/2/how-the-rich-control-policymaking.html">How the rich control policymaking</a> <span> by <span><a href="file:///profiles/m/sean-mcelwee.html">Sean McElwee</a></span> </span> </p>
+<h3 class="rm-manual">Â </h3>
+<p class="rm-manual"> <span>Dismiss</span> </p>
+<h3 class="rm-manual">Error</h3>
+<p class="rm-manual">Sorry, your comment was not saved due to a technical problem. Please try again later or using a different browser.</p>
+<h4 class="rm-manual">BEST OF VIDEO</h4>
+<h5 class="rm-manual"> <a href="file:///watch/shows/live-news.html">Al Jazeera America News</a> </h5>
+<p class="rm-manual"><a href="file:///watch/shows/live-news/2015/9/miss-japan-challenges-the-norm.html">Miss Japan challenges the norm</a></p>
+<h5 class="rm-manual"> <a href="file:///watch/shows/america-tonight.html">America Tonight</a> </h5>
+<p class="rm-manual"><a href="file:///watch/shows/america-tonight/2015/11/tiny-homes-provide-shelter-for-nashvilles-homeless.html">Tiny homes provide shelter for Nashvilleâ€™s homeless</a></p>
+<h5 class="rm-manual"> <a href="file:///watch/shows/live-news.html">Al Jazeera America News</a> </h5>
+<p class="rm-manual"><a href="file:///watch/shows/live-news/2015/1/flint-water-crisis-how-al-jazeera-america-reported-it-a-year-ago-today.html">Flint water crisis: How Al Jazeera America reported it a year ago today</a></p>
+<h5 class="rm-manual"> <a href="file:///watch/shows/Ali-Velshi-On-Target.html">Ali Velshi On Target</a> </h5>
+<p class="rm-manual"><a href="file:///watch/shows/Ali-Velshi-On-Target/2015/11/investigations-into-chicagos-red-light-traffic-cameras.html">Investigations into Chicagoâ€™s red light traffic cameras</a></p>
+<h5 class="rm-manual"> <a href="file:///watch/shows/live-news.html">Al Jazeera America News</a> </h5>
+<p class="rm-manual"><a href="file:///watch/shows/live-news/2015/8/calls-for-the-us-mexican-border-wall.html">Questions abound over a proposed US-Mexico border wall</a></p>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///">NEWS</a></li> <li class="rm-manual"><a href="file:///opinions.html">OPINION</a></li> <li class="rm-manual"><a href="file:///watch.html">VIDEO</a></li> <li class="rm-manual"><a href="file:///watch/shows.html">SHOWS</a></li> <li class="rm-manual"><a href="file:///watch/schedule.html">SCHEDULE</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///tools/about.html">About </a></li> <li class="rm-manual"><a href="file:///tools/vision-mission-values.html">Our Mission, Vision and Values</a></li> <li class="rm-manual"><a href="file:///tools/code-of-ethics.html">Code of Ethics</a></li> <li class="rm-manual"><a href="file:///tools/social-media-policy.html">Social Media Policy</a></li> </ul> </li> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///tools/leadership.html">Leadership</a></li> <li class="rm-manual"><a href="file:///tools/contact.html">Contact Us</a></li> <li class="rm-manual"><a href="file:///tools/pressreleases.html">Press Releases</a></li> <li class="rm-manual"><a href="file:///tools/awards.html">Awards and Accomplishments</a></li> </ul> </li> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"><a href="http://www.aljazeera.com/">Visit Al Jazeera English</a></li> <li class="rm-manual"><a href="file:///tools/mobile.html">Mobile</a></li> <li class="rm-manual"><a href="file:///tools/newsletter.html">Newsletter</a></li> <li class="rm-manual"><a href="http://america.aljazeera.com/content/ajam/articles.rss">RSS</a></li> </ul> </li> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///tools/html-site-map.html">Site Map</a></li> <li class="rm-manual"><a href="file:///tools/privacy.html">Privacy Policy</a></li> <li class="rm-manual"><a href="file:///tools/terms.html">Terms of Use</a></li> <li class="rm-manual"><a href="http://www.youtube.com/aljazeeraamerica">Subscribe to YouTube Channel</a></li> </ul> </li> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///tools/faq.html">FAQ</a></li> <li class="rm-manual"><a href="file:///tools/community-guidelines.html">Community Guidelines</a></li> <li class="rm-manual"><a href="file:///tools/sitemap.html">Site Index</a></li> </ul> </li> </ul>
+<p class="rm-manual">Â© 2016 Al Jazeera America, LLC. All rights reserved.</p></article>
+</body></html>

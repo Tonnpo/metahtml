@@ -1,0 +1,75 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual">Coronavirus death toll live</h1>
+<p class="rm-manual"> <span><span>Posted by</span><span><a href="https://ogutamuko.wordpress.com/author/ogutamuko/">ogutamuko</a></span></span><span><a href="https://ogutamuko.wordpress.com/2020/03/26/coronavirus-death-toll-live/" rel="bookmark">March 26, 2020</a></span><span><span>Posted in</span><a href="https://ogutamuko.wordpress.com/category/data/" rel="category tag">data</a>, <a href="https://ogutamuko.wordpress.com/category/statement/" rel="category tag">statement</a></span><span><span>Tags:</span><a href="https://ogutamuko.wordpress.com/tag/coronavirus/" rel="tag">coronavirus</a>, <a href="https://ogutamuko.wordpress.com/tag/death/" rel="tag">death</a>, <a href="https://ogutamuko.wordpress.com/tag/live/" rel="tag">live</a>, <a href="https://ogutamuko.wordpress.com/tag/toll/" rel="tag">toll</a></span> </p>
+<p class="rm-manual"><a href="http://lusta.pw/news?keyword=coronavirus+death+toll+live&amp;charset=utf-8&amp;source=lusta.pw">Coronavirus death toll live</a></p>
+<p>Streamed live on Jan 30, 2020 Live figures from the rapidly spreading
+ coronavirus outbreak in China that has been declared a global health 
+emergency. Category Coronavirus live updates: China’s death toll, 
+confirmed cases China’s National Health Commission said there have been 
+an additional 46 deaths and 2,102 new confirmed cases, as of the end of 
+Friday. Streamed live on Jan 29, 2020 Live figures from the rapidly 
+spreading coronavirus outbreak in China that has already killed more 
+than 150 people on the mainland. Category —About 64,456 confirmed 
+coronavirus cases (primarily in mainland China), according to the Johns 
+Hopkins virus dashboard. — 1,384 deaths linked to the virus. Deaths 
+worldwide exceed those from The novel coronavirus outbreak has now 
+killed 1,107 people worldwide, of which all but two were in mainland 
+China. The global number of confirmed coronavirus cases has now exceeded
+ 44,138. </p>
+<p>Wednesday’s coronavirus live updates The deadly new coronavirus 
+continued to spread Tuesday, with more than 24,000 cases and at least 
+492 deaths confirmed worldwide. The virus: The Wuhan coronavirus has 
+killed 910 people globally, the vast majority in mainland China, and 
+infected more than 40,000 people. As of the end of Jan. 28, the province
+ said that brings cases in the region to 3,554 and its death toll to 
+125, with the majority of those located in Hubei’s capital city, Wuhan. 
+Hubei also said At least 908 people have died and more than 40,000 been 
+infected with the new coronavirus, including almost two dozen Americans 
+on a quarantined cruise ship. Coronavirus death toll rises Two more 
+charter flights carrying about 300 American evacuees from the city at 
+the center of the coronavirus outbreak were headed to the United States 
+Friday morning,</p>
+<p class="rm-manual"><span><span>Posted by</span><span><a href="https://ogutamuko.wordpress.com/author/ogutamuko/">ogutamuko</a></span></span></p>
+<p class="rm-manual"><span><a href="https://ogutamuko.wordpress.com/2020/03/26/coronavirus-death-toll-live/" rel="bookmark">March 26, 2020</a></span></p>
+<p class="rm-manual"><span><span>Posted in</span><a href="https://ogutamuko.wordpress.com/category/data/" rel="category tag">data</a>, <a href="https://ogutamuko.wordpress.com/category/statement/" rel="category tag">statement</a></span></p>
+<p class="rm-manual"><span><span>Tags:</span><a href="https://ogutamuko.wordpress.com/tag/coronavirus/" rel="tag">coronavirus</a>, <a href="https://ogutamuko.wordpress.com/tag/death/" rel="tag">death</a>, <a href="https://ogutamuko.wordpress.com/tag/live/" rel="tag">live</a>, <a href="https://ogutamuko.wordpress.com/tag/toll/" rel="tag">toll</a></span> </p>
+<h2 class="rm-manual">Post navigation</h2>
+<p class="rm-manual"><a href="https://ogutamuko.wordpress.com/2020/03/26/coronavirus-london-stansted/" rel="prev"><span>Previous Post</span> <span>Previous post:</span> <span>Coronavirus london stansted</span></a></p>
+<p class="rm-manual"><a href="https://ogutamuko.wordpress.com/2020/03/26/coronavirus-deutschland-chinesin/" rel="next"><span>Next Post</span> <span>Next post:</span> <span>Coronavirus deutschland chinesin</span></a></p></article>
+</body></html>

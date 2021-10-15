@@ -1,0 +1,97 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><h1 class="rm-manual">CNN Averaged 4 Minutes Per Day on Biden's Gaffe, Then Stopped Covering it</h1>
+<p class="rm-manual"> <a href="file:///author/bill-dagostino">Bill D'Agostino</a> </p>
+<p class="rm-manual"> May 25th, 2020 1:37 PM </p>
+<p class="rm-manual">Text to Speech</p>
+<p class="rm-manual"> 00:00 00:00 </p>
+<p class="rm-manual"> Font Size </p>
+<p>As <a href="https://www.foxnews.com/media/cnn-downplays-biden-controversy">Fox News</a>
+ noted on Friday, it took CNN 12 hours to cover Biden’s latest gaffe: 
+asserting on a radio show Friday morning that if you aren’t a Biden 
+supporter, “You ain’t black.” CNN's disinterest in the controversy has 
+continued; after spending average of less than four minutes per day on 
+it over the weekend, CNN appears to have stopped covering it entirely.</p>
+<p>MRC analysts reviewed 76 hours of programming on CNN from 8:00 am EST
+ on Friday through noon on Monday morning, and found that the network 
+spared a meager 11 minutes and 34 seconds to discuss Biden’s racist 
+gaffe. The last show even to mention it was the 9:00 am EST hour of 
+State of the Union (as of noon EST on Monday, May 25).</p>
+<p>During that same span of time, the network aired 15 minutes and 34 
+seconds of Biden talk that was unrelated to his Friday morning 
+interview. That means that less than half (42%) of CNN’s Biden coverage 
+even included a mention of the controversy.</p>
+<p>Four hours after Biden’s interview on Friday morning, CNN host John 
+King ran a segment during the noon EST hour about Biden’s potential 
+running mate picks. At the time, CNN still had yet to mention Biden’s 
+latest blunder.</p>
+<p>Amazingly, King even referred to Biden’s relationship with 
+“communities of color” during the segment, but still somehow managed to 
+forget what the individual in question had just said about one such 
+community just hours earlier.</p>
+<p>By Sunday, shows were routinely covering other Biden news as though 
+the gaffe had never occurred. For example, both the 6:00 and 7:00 am EST
+ hours of New Day, co-host Christi Paul reported on a tweet sent by 
+Biden’s twitter account which mocked President Trump.</p>
+<p>From their initial 12 hours of silence, to their meager coverage, to 
+their focus on other Biden-related news, CNN’s programming since Friday 
+betrays a desire to move past Biden's devastating blunder as quickly as 
+possible.</p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///journalists/erin-burnett">Erin Burnett</a></li>
+<li class="rm-manual"><a href="file:///journalists/john-king">John King</a></li>
+<li class="rm-manual"><a href="file:///division/nb">NB</a></li>
+<li class="rm-manual"><a href="file:///issues-events-groups/2020-presidential">2020 Presidential</a></li>
+<li class="rm-manual"><a href="file:///administrative/research">Research</a></li>
+<li class="rm-manual"><a href="file:///issues-events-groups/racism">Racism</a></li>
+<li class="rm-manual"><a href="file:///administrative/nb-daily">NB Daily</a></li>
+<li class="rm-manual"><a href="file:///administrative/bias-minute">Bias by the Minute</a></li>
+<li class="rm-manual"><a href="file:///media-and-places/cnn">CNN</a></li>
+<li class="rm-manual"><a href="file:///issues-events-groups/race-issues">Race Issues</a></li>
+</ul>
+<h1 class="rm-manual"> Read More </h1>
+<p class="rm-manual"> <a href="file:///blogs/nb/scott-whitlock/2020/05/26/nbc-gently-describes-biden-rusty-you-aint-black-gaffe"> </a></p><h3 class="rm-manual"><a href="file:///blogs/nb/scott-whitlock/2020/05/26/nbc-gently-describes-biden-rusty-you-aint-black-gaffe"> <p class="rm-manual">NBC Gently Describes Biden as ‘Rusty’ for ‘You Ain’t Black’ Gaffe </p> </a></h3><a href="file:///blogs/nb/scott-whitlock/2020/05/26/nbc-gently-describes-biden-rusty-you-aint-black-gaffe"> <p class="rm-manual">Scott Whitlock</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///blogs/nb/kyle-drennen/2020/06/02/nets-more-outraged-trump-church-visit-rioters-setting-it-ablaze"> </a></p><h3 class="rm-manual"><a href="file:///blogs/nb/kyle-drennen/2020/06/02/nets-more-outraged-trump-church-visit-rioters-setting-it-ablaze"> <p class="rm-manual">Nets More ‘Outraged’ by Trump Church Visit Than Rioters Burning It</p> </a></h3><a href="file:///blogs/nb/kyle-drennen/2020/06/02/nets-more-outraged-trump-church-visit-rioters-setting-it-ablaze"> <p class="rm-manual">Kyle Drennen</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///blogs/nb/curtis-houck/2020/05/27/excellent-interview-cnns-blitzer-marvels-bashs-soft-biden"> </a></p><h3 class="rm-manual"><a href="file:///blogs/nb/curtis-houck/2020/05/27/excellent-interview-cnns-blitzer-marvels-bashs-soft-biden"> <p class="rm-manual">Blitzer Marvels at Bash’s ‘Excellent,’ Social Distance Biden Interview</p> </a></h3><a href="file:///blogs/nb/curtis-houck/2020/05/27/excellent-interview-cnns-blitzer-marvels-bashs-soft-biden"> <p class="rm-manual">Curtis Houck</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///blogs/nb/bill-dagostino/2020/06/04/study-993-percent-broadcast-networks-protest-coverage-ignores"> </a></p><h3 class="rm-manual"><a href="file:///blogs/nb/bill-dagostino/2020/06/04/study-993-percent-broadcast-networks-protest-coverage-ignores"> <p class="rm-manual">STUDY: 99.3 % of TV's Protest Coverage Ignores Mob's Murder Victims</p> </a></h3><a href="file:///blogs/nb/bill-dagostino/2020/06/04/study-993-percent-broadcast-networks-protest-coverage-ignores"> <p class="rm-manual">Bill D'Agostino</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///blogs/nb/alex-christy/2020/05/29/cnns-john-king-assigns-blame-100000-devastating-piece-trump-legacy"> </a></p><h3 class="rm-manual"><a href="file:///blogs/nb/alex-christy/2020/05/29/cnns-john-king-assigns-blame-100000-devastating-piece-trump-legacy"> <p class="rm-manual">King Assigns Blame: '100,000 Is a Devastating Piece of Trump Legacy' </p> </a></h3><a href="file:///blogs/nb/alex-christy/2020/05/29/cnns-john-king-assigns-blame-100000-devastating-piece-trump-legacy"> <p class="rm-manual">Alex Christy</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///blogs/nb/curtis-houck/2020/06/04/cnn-gave-over-90-minutes-one-day-now-retracted-hydroxychloroquine"> </a></p><h3 class="rm-manual"><a href="file:///blogs/nb/curtis-houck/2020/06/04/cnn-gave-over-90-minutes-one-day-now-retracted-hydroxychloroquine"> <p class="rm-manual">CNN Spent Over 90 Minutes Hyping Now-Retracted Coronavirus Study</p> </a></h3><a href="file:///blogs/nb/curtis-houck/2020/06/04/cnn-gave-over-90-minutes-one-day-now-retracted-hydroxychloroquine"> <p class="rm-manual">Curtis Houck</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///blogs/culture/jay-maxson/2020/06/09/espn-giving-license-sports-media-veer-far-out-their-lane"> </a></p><h3 class="rm-manual"><a href="file:///blogs/culture/jay-maxson/2020/06/09/espn-giving-license-sports-media-veer-far-out-their-lane"> <span> Culture </span> <p class="rm-manual">Sports Media Veering Deeply Into Social Justice</p> </a></h3><a href="file:///blogs/culture/jay-maxson/2020/06/09/espn-giving-license-sports-media-veer-far-out-their-lane"> <p class="rm-manual"> Culture </p> <p class="rm-manual">Jay Maxson</p> </a> <p class="rm-manual"></p>
+<p class="rm-manual"> <a href="file:///blogs/nb/kyle-drennen/2020/06/02/cbs-lectures-nypd-chief-demands-he-admit-police-racism"> </a></p><h3 class="rm-manual"><a href="file:///blogs/nb/kyle-drennen/2020/06/02/cbs-lectures-nypd-chief-demands-he-admit-police-racism"> <p class="rm-manual">CBS Lectures NYPD Chief, Demands He Admit Police Racism </p> </a></h3><a href="file:///blogs/nb/kyle-drennen/2020/06/02/cbs-lectures-nypd-chief-demands-he-admit-police-racism"> <p class="rm-manual">Kyle Drennen</p> </a> <p class="rm-manual"></p>
+<h1 class="rm-manual">MRC Merch</h1></article>
+</body></html>

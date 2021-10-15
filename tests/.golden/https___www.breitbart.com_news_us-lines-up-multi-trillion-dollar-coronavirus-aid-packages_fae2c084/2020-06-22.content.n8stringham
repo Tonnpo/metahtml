@@ -1,0 +1,203 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> U.S. Lines Up Multi-Trillion Dollar Coronavirus Aid Packages - Breitbart </p>
+<p class="rm-manual"><a href="#ContainerW">Skip to content</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///politics/">Politics</a></li>
+<li class="rm-manual"><a href="file:///entertainment/">Entertainment</a></li>
+<li class="rm-manual"><a href="file:///the-media/">Media</a></li>
+<li class="rm-manual"><a href="file:///economy/">Economy</a></li>
+<li class="rm-manual">
+<a>World</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///europe/">London / Europe</a></li>
+<li class="rm-manual"><a href="file:///border/">Border / Cartel Chronicles</a></li>
+<li class="rm-manual"><a href="file:///middle-east/">Israel / Middle East</a></li>
+<li class="rm-manual"><a href="file:///africa/">Africa</a></li>
+<li class="rm-manual"><a href="file:///asia/">Asia</a></li>
+<li class="rm-manual"><a href="file:///latin-america/">Latin America</a></li>
+<li class="rm-manual"><a href="file:///world-news/">All World</a></li>
+</ul>
+</li>
+<li class="rm-manual"><a href="file:///video/">Video</a></li>
+<li class="rm-manual"><a href="file:///tech/">Tech</a></li>
+<li class="rm-manual"><a href="file:///sports/">Sports</a></li>
+<li class="rm-manual"><a href="file:///tag/on-the-hill/">On the Hill</a></li>
+<li class="rm-manual"><a href="file:///news/">Wires</a></li>
+<li class="rm-manual"><a href="file:///tag/b-inspired-news/">B Inspired</a></li>
+</ul>
+<p class="rm-manual"><a rel="index" href="https://www.breitbart.com/">BREITBART</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///politics/">Politics</a></li>
+<li class="rm-manual"><a href="file:///entertainment/">Entertainment</a></li>
+<li class="rm-manual"><a href="file:///the-media/">Media</a></li>
+<li class="rm-manual"><a href="file:///economy/">Economy</a></li>
+<li class="rm-manual">
+<a>World</a><ul class="rm-manual">
+<li class="rm-manual"><a href="file:///europe/">London / Europe</a></li>
+<li class="rm-manual"><a href="file:///border/">Border / Cartel Chronicles</a></li>
+<li class="rm-manual"><a href="file:///middle-east/">Israel / Middle East</a></li>
+<li class="rm-manual"><a href="file:///africa/">Africa</a></li>
+<li class="rm-manual"><a href="file:///asia/">Asia</a></li>
+<li class="rm-manual"><a href="file:///latin-america/">Latin America</a></li>
+<li class="rm-manual"><a href="file:///world-news/">World News</a></li>
+</ul>
+</li>
+<li class="rm-manual"><a href="file:///video/">Video</a></li>
+<li class="rm-manual"><a href="file:///tech/">Tech</a></li>
+<li class="rm-manual"><a href="file:///sports/">Sports</a></li>
+<li class="rm-manual"><a href="file:///tag/on-the-hill/">On the Hill</a></li>
+<li class="rm-manual"><a href="file:///news/">Wires</a></li>
+<li class="rm-manual"><a href="file:///tag/b-inspired-news/">B Inspired</a></li>
+<li class="rm-manual"><a href="https://media.breitbart.com/media/2019/11/about-breitbart-news.pdf">About Us</a></li>
+<li class="rm-manual"><a rel="nofollow" href="file:///people/">People</a></li>
+</ul>
+<p class="rm-manual"> <a href="file:///">BREITBART</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///tag/monuments/">Statues Under Siege</a></li>
+<li class="rm-manual"><a href="file:///tag/seattle/">Seattle CHOP</a></li>
+<li class="rm-manual"><a href="file:///tag/vote-by-mail/">Cheat-by-Mail</a></li>
+<li class="rm-manual"><a href="file:///immigration/2020/06/22/insiders-u-s-white-collars-helped-win-white-house-h-1b-visa-worker-halt/">Worker Visa Halt</a></li>
+<li class="rm-manual"><a href="file:///tag/masters-of-the-universe/">Masters of the Universe</a></li>
+<li class="rm-manual"><a href="file:///tag/coronavirus/">Coronavirus</a></li>
+</ul>
+<h1 class="rm-manual">U.S. Lines Up Multi-Trillion Dollar Coronavirus Aid Packages</h1>
+<address class="rm-manual"><a href="file:///author/breitbart-news/">Breitbart News</a></address>
+<p class="rm-manual">22 Mar 2020</p>
+<p>Washington (AFP) – Congress and the US government were working 
+furiously on Sunday to provide trillions of dollars in rescue money 
+aimed at cushioning both businesses and ordinary Americans from the 
+devastating impact of the coronavirus pandemic.</p>
+<p>Lawmakers on Capitol Hill were nearing a deal to inject roughly $1.6 
+trillion into businesses and the pockets of millions of workers laid off
+ as the Covid-19 virus continues to spread. A separate package would 
+provide a stunning $4 trillion in liquidity to juice up the economy.</p>
+<p>A procedural vote in the Senate on the smaller package was set for 3:00pm (1900 GMT) Sunday.</p>
+<p>“We look forward to wrapping it up today,” Treasury Secretary Steven Mnuchin told “Fox News Sunday.”</p>
+<p>Senate Republican leader Mitch McConnell said late Saturday that the 
+deal was “very close.” His Democratic counterpart, Chuck Schumer, said 
+that “to my delight and surprise there has been a great deal of 
+bipartisan cooperation thus far.”</p>
+<p>Mnuchin, who for days has been locked in intensive negotiations over 
+virus-related rescue measures, also detailed a separate massive relief 
+package being worked on to support hard-hit businesses.</p>
+<p>Under one part of that plan a “significant package working with the 
+Federal Reserve will have up to $4 trillion of liquidity that we can use
+ to support the economy,” Mnuchin told “Fox News Sunday.”</p>
+<p>Together, the urgent measures represented one of the most dramatic 
+governmental rescue efforts outside time of war, with millions of people
+ thrown out of work, thousands of businesses shuttered or badly 
+suffering, travel severely curtailed and no certainty as to when things 
+might improve.</p>
+<p>They also came as the death toll from the pandemic continued to rise —
+ especially in hotspots like New York City — and as local and state 
+officials across the country warned of dire consequences in the absence 
+of more aggressive federal action.</p>
+<h3>‘Worse is yet to come’</h3>
+<p>“The worse is yet to come,” New York Mayor Bill De Blasio said on 
+CNN, predicting hospitals in the city would face serious shortages of 
+protective equipment within days unless drastic action is taken.</p>
+<p>“We expect April will be a lot worse than March and I fear May could be worse than April,” he said.</p>
+<p>Illinois Governor J.B. Pritzker said he had seen some improvement in 
+the flow of medical supplies, but he still had sharply critical words 
+for the federal government’s approach.</p>
+<p>“It is better,” he said, but hospitals were still receiving “just a fraction” of what they had requested.</p>
+<p>Pritzker blamed in part the administration’s decision to leave the 
+supply chain up to private companies and not intervene to take control —
+ as US President Donald Trump has the authority to do under the federal 
+Defense Production Act.</p>
+<p>“Yes, we’re competing against each other” for supplies, the governor said, referring to the different states.</p>
+<p>“You know, it’s a Wild West, I would say, out there.”</p>
+<p>New York congresswoman Alexandria Ocasio-Cortez, an outspoken liberal, was also sharply critical of the federal response.</p>
+<p>“The fact that the president has not really invoked the Defense 
+Production Act for the purpose of emergency manufacture is going to cost
+ lives,” she told CNN.</p>
+<p>“We cannot wait until people start really dying in large numbers to start production,” she said.</p>
+<p>Mnuchin said the relief package being voted on Sunday had three 
+parts: it would give small businesses enough cash to pay laid-off 
+workers for two weeks; it would provide direct cash payments to 
+Americans (about $3,000 for a family of four, he said); and it would 
+enhance unemployment insurance for those laid off.</p>
+<p>It would also provide funds to support hard-pressed hospitals and medical professionals.</p>
+<p> .</p>
+<p class="rm-manual">Please <a href="file:///contact-us/comment-feedback/" rel="nofollow">let us know</a> if you're having issues with commenting.</p>
+<h2 class="rm-manual">MOST POPULAR</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///politics/2020/06/21/brad-parscale-campaign-not-duped-media-scared-supporters-tulsa-rally/">Brad Parscale: Campaign Was Not Duped, Media Scared Supporters</a></li>
+<li class="rm-manual"><a href="file:///clips/2020/06/22/we-need-to-uproot-u-s-s-racist-foundation-going-to-make-a-lot-of-people-uncomfortable/">Rye: We Need to 'Uproot' U.S.'s Racist Foundation</a></li>
+<li class="rm-manual"><a href="file:///politics/2020/06/21/aoc-praises-teens-korean-pop-fans-allegedly-using-chinese-app-meddle-trump-rally/">AOC Praises Teens, Allies for Using Chinese App to Meddle in Election</a></li>
+<li class="rm-manual"><a href="file:///politics/2020/06/21/teddy-roosevelt-statue-to-be-removed-from-museum-of-natural-history/">Teddy Roosevelt Statue to be Removed from Museum of Natural History</a></li>
+<li class="rm-manual"><a href="file:///politics/2020/06/22/sarah-sanders-john-bolton-drunk-power-pushed-agenda-contrary-president-trumps/">Sarah Sanders: John Bolton 'Drunk on Power'</a></li>
+<li class="rm-manual"><a href="file:///europe/2020/06/22/cultural-revolution-lenin-statue-goes-up-washington-jefferson-more-fall/">Lenin Statue Goes Up as Washington, Jefferson, and More Fall</a></li>
+<li class="rm-manual"><a href="file:///2020-election/2020/06/20/live-updates-trump-in-tulsa-oklahoma-great-american-comeback-rallies-begin/">***Live Updates*** Trump in Tulsa: 'Great American Comeback’ Rally</a></li>
+<li class="rm-manual"><a href="file:///clips/2020/06/21/bolton-hope-history-remembers-trump-as-one-term-president-who-didnt-plunge-the-country-irretrievably-into-a-downward-spiral/">Bolton: 'Hope' History Remembers Trump as a 'One-Term President'</a></li>
+<li class="rm-manual"><a href="file:///2020-election/2020/06/20/trump-foes-celebrate-zoomers-on-tiktok-pranking-campaign-with-fake-rsvps-tulsa/">Trump Foes Celebrate 'Zoomers' on TikTok Pranking Campaign</a></li>
+<li class="rm-manual"><a href="file:///politics/2020/06/22/at-least-100-shot-over-fathers-day-weekend-in-mayor-lightfoots-chicago/">At Least 100 Shot On Father's Day Weekend in Mayor Lightfoot's Chicago</a></li>
+</ul>
+<h2 class="rm-manual">FROM THE HOMEPAGE</h2>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///politics/2020/06/22/never-trumper-george-conway-trying-sabotage-trumps-next-event/">Never Trumper George Conway Trying to Sabotage Trump’s Next Event</a></li>
+<li class="rm-manual"><a href="file:///tech/2020/06/22/fortnite-removes-police-cars-from-game/">‘Fortnite’ Removes Police Cars from Game</a></li>
+<li class="rm-manual"><a href="file:///the-media/2020/06/22/nolte-new-york-times-1619-project-author-honored-to-call-these-the-1619-riots/">Nolte: New York Times 1619 Project Author ‘Honored’ to Call These the ‘1619 Riots’</a></li>
+<li class="rm-manual"><a href="file:///politics/2020/06/22/u-s-coronavirus-deaths-remain-downward-trajectory-cases-rise/">U.S. Coronavirus Deaths Remain on Downward Trajectory as Cases Rise</a></li>
+<li class="rm-manual"><a href="file:///news/virus-cases-top-nine-million-as-who-says-pandemic-accelerating/">Virus cases top nine million as WHO says pandemic ‘accelerating’</a></li>
+<li class="rm-manual"><a href="file:///sports/2020/06/22/watch-sports-figures-demand-athletes-media-rally-social-justice-the-time-is-now/">WATCH: Sports Figures Demand Athletes, Media Rally for Social Justice: ‘The Time is Now’</a></li>
+<li class="rm-manual"><a href="file:///politics/2020/06/22/watch-live-kayleigh-mcenany-holds-white-house-press-briefing-5/">Watch Live: Kayleigh McEnany Holds White House Press Briefing</a></li>
+<li class="rm-manual"><a href="file:///clips/2020/06/22/we-need-to-uproot-u-s-s-racist-foundation-going-to-make-a-lot-of-people-uncomfortable/">CNN’s Angela Rye: We Need to ‘Uproot’ U.S.’s Racist Foundation — ‘Going to Make a Lot of People Uncomfortable’</a></li>
+<li class="rm-manual"><a href="file:///entertainment/2020/06/22/joel-schumacher-director-of-batman-forever-the-lost-boys-dies-at-80/">Joel Schumacher, Director of ‘Batman Forever,’ ‘The Lost Boys,’ Dies at 80</a></li>
+<li class="rm-manual"><a href="file:///news/nascar-noose-found-in-bubba-wallace-garage-at-alabama-race/">FBI investigating noose left in NASCAR stall of Black driver</a></li>
+<li class="rm-manual"><a href="file:///politics/2020/06/22/sarah-sanders-john-bolton-drunk-power-pushed-agenda-contrary-president-trumps/">Sarah Sanders: John Bolton ‘Drunk on Power,’ Pushed Agenda ‘Contrary to President Trump’s’</a></li>
+<li class="rm-manual"><a href="file:///clips/2020/06/22/kudlow-there-is-no-second-wave-coming/">Kudlow: ‘There Is no Second Wave Coming’</a></li>
+</ul>
+<p class="rm-manual"> <a href="file:///">BREITBART NEWS</a> </p>
+<ul class="rm-manual">
+<li class="rm-manual"><a href="file:///masthead/">Masthead</a></li>
+<li class="rm-manual"><a href="https://media.breitbart.com/media/2019/11/about-breitbart-news.pdf">About Us</a></li>
+<li class="rm-manual"><a href="file:///policy-information/">Policy Info</a></li>
+<li class="rm-manual"><a rel="nofollow" href="file:///terms-of-use/">Terms of Use</a></li>
+<li class="rm-manual"><a rel="nofollow" href="file:///privacy-policy/">Privacy Policy</a></li>
+<li class="rm-manual"><a rel="nofollow" href="https://mediakit.breitbart.com/">Advertise</a></li>
+<li class="rm-manual"><a href="file:///news/">Wires</a></li>
+<li class="rm-manual"><a rel="nofollow" href="file:///contact-us/">Contact Us</a></li>
+<li class="rm-manual"><a rel="nofollow" href="file:///jobs/">Careers</a></li>
+<li class="rm-manual"><a rel="nofollow" href="https://store.breitbart.com/">Store</a></li>
+<li class="rm-manual"><a href="file:///newsletter/">Newsletter</a></li>
+<li class="rm-manual"><a rel="nofollow" href="file:///send-a-tip/">Send A Tip</a></li>
+<li class="rm-manual"><a href="file:///navigational-sitemap/">Sitemap</a></li>
+</ul>
+<p class="rm-manual">Copyright © 2020 Breitbart</p></article>
+</body></html>

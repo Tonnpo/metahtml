@@ -1,0 +1,154 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> Ubuntu 21.04 is here | Ubuntu </p>
+<h5 class="rm-manual"> <a href="file:///blog"> Blog </a> </h5>
+<p class="rm-manual"><span> <a href="#main-content">Jump to main content</a> </span> </p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="#enterprise-content">Enterprise</a> </li> <li class="rm-manual"> <a href="#developer-content">Developer</a> </li> <li class="rm-manual"> <a href="#community-content">Community</a> </li> <li class="rm-manual"> <a href="#download-content">Download</a> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"><a href="file:///openstack">OpenStack</a></li> <li class="rm-manual"><a href="file:///kubernetes">Kubernetes</a></li> <li class="rm-manual"><a href="file:///desktop">Desktop</a></li> <li class="rm-manual"><a href="file:///internet-of-things">IoT</a></li> <li class="rm-manual"><a href="file:///support">Support</a></li> <li class="rm-manual"><a href="file:///download">Downloads</a></li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///search"> <span>Search</span> </a> </li> </ul>
+<p class="rm-manual"> <a href="file:///blog"> </a></p><h5 class="rm-manual"><a href="file:///blog"> Blog </a></h5><a href="file:///blog"> </a> <p class="rm-manual"></p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///blog">Overview</a> </li> <li class="rm-manual"> <a href="file:///blog/internet-of-things">Internet of Things</a> </li> <li class="rm-manual"> <a href="file:///blog/desktop">Desktop</a> </li> <li class="rm-manual"> <a href="file:///blog/cloud-and-server">Cloud and Server</a> </li> <li class="rm-manual"> <a href="#">Topics</a> <span> <span> <a href="file:///blog/topics/design">Design</a> <a href="file:///blog/topics/juju">Juju</a> <a href="file:///blog/topics/maas">MAAS</a> <a href="file:///blog/topics/robotics">Robotics</a> <a href="file:///blog/topics/snapcraft">Snapcraft</a> </span> </span> </li> <li class="rm-manual"> <a href="file:///blog/press-centre">Press centre</a> </li> <li class="rm-manual"> <a href="file:///blog/topics/design">Design</a> </li> <li class="rm-manual"> <a href="file:///blog/topics/juju">Juju</a> </li> <li class="rm-manual"> <a href="file:///blog/topics/maas">MAAS</a> </li> <li class="rm-manual"> <a href="file:///blog/topics/robotics">Robotics</a> </li> <li class="rm-manual"> <a href="file:///blog/topics/snapcraft">Snapcraft</a> </li> </ul>
+<h1 class="rm-manual">Ubuntu 21.04 is here</h1>
+<h3 class="rm-manual"> <a href="file:///blog/author/canonical">Canonical</a> </h3>
+<p class="rm-manual">on 22 April 2021</p>
+<ul class="rm-manual"> <li class="rm-manual"> Share on: </li> <li class="rm-manual"> <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.ubuntu.com/blog/ubuntu-21-04-is-here"> Facebook </a> </li> <li class="rm-manual"> <a href="https://twitter.com/share?text=Ubuntu%2021.04%20is%20here&amp;url=https://www.ubuntu.com/blog/ubuntu-21-04-is-here&amp;hashtags=ubuntu"> Twitter </a> </li> <li class="rm-manual"> <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.ubuntu.com/blog/ubuntu-21-04-is-here&amp;title=Ubuntu%2021.04%20is%20here"> LinkedIn </a> </li> </ul>
+<p class="rm-manual"> Tags: <a href="file:///blog/tag/21-04"> 21.04 </a>, <a href="file:///blog/tag/ubuntu"> Ubuntu </a> </p>
+<p>22 April 2021: Today, Canonical released Ubuntu 21.04 with native 
+Microsoft Active Directory integration, Wayland graphics by default, and
+ a Flutter application development SDK. Separately, Canonical and 
+Microsoft announced performance optimization and joint support for 
+Microsoft SQL Server on Ubuntu.</p>
+<p>“Native Active Directory integration and certified Microsoft SQL 
+Server on Ubuntu are top priorities for our enterprise customers.” said 
+Mark Shuttleworth, CEO of Canonical. “For developers and innovators, 
+Ubuntu 21.04 delivers Wayland and Flutter for smoother graphics and 
+clean, beautiful, design-led cross-platform development.”</p>
+<p>Ubuntu has established itself as the enterprise engineering platform 
+of choice, from the desktop to public cloud and microservices, with a 
+wide range of corporate adopters in the finance, automotive, tech and 
+government sectors.</p>
+<p>“Canonical’s desktop solutions are cost-effective, easy to manage at 
+scale, and simple to integrate with enterprise systems. For our 100,000 
+police officers, Ubuntu is user-friendly, reliable, and delivers the 
+requisite privacy and security without additional third-party solutions.
+ Ubuntu is our operating system of choice” said Lt-Colonel Stéphane 
+Dumond, French Gendarmerie Nationale.</p>
+<p>Microsoft SQL Server on Ubuntu delivers an optimised, cost-effective database platform</p>
+<p>Enterprise performance and scalability work from this release have 
+been backported to Ubuntu 20.04.2 LTS, in support of Microsoft SQL 
+Server. The database management system (DBMS) and its command-line 
+interface (CLI) are now available on optimised Ubuntu images on Azure, 
+providing a production-grade, highly available database platform with 
+ten years of security maintenance. </p>
+<p>Canonical and Microsoft will provide integrated support for Ubuntu 
+with Microsoft SQL Server deployed on-prem or through the Azure 
+Marketplace, for mission-critical workloads.</p>
+<p>The joint solution comes with performance enhancements, like Force 
+Unit Access (FUA) on XFS filesystems for data durability. Persistent 
+memory (PMEM) offers high-performance data storage without any 
+additional configuration. Finally, the entire platform is highly 
+available, backed by Corosync and Pacemaker, to ensure resilience.</p>
+<p>Active Directory: Bridging the gap between system administrators and Linux developers</p>
+<p>Ubuntu machines can join an Active Directory (AD) domain at 
+installation for central configuration. AD administrators can now manage
+ Ubuntu workstations, which simplifies compliance with company policies.</p>
+<p>Ubuntu 21.04 adds the ability to configure system settings from an AD
+ domain controller. Using a Group Policy Client, system administrators 
+can specify security policies on all connected clients, such as password
+ policies and user access control, and Desktop environment settings, 
+such as login screen, background and favourite apps.</p>
+<p>Flutter and Wayland: a smoother graphics experience</p>
+<p>Ubuntu 21.04 uses Wayland by default, a significant leap forward in 
+security. Firefox, OBS Studio and many applications built with Electron 
+and Flutter take advantage of Wayland automatically, for smoother 
+graphics and better fractional scaling.</p>
+<p>Flutter SDK snap build integration makes it easy to publish your 
+multi-platform Flutter app for one-click install by millions of Linux 
+desktop users.</p>
+<p>“Canonical has been a fantastic contributor to Flutter, enabling 
+Linux desktop support in Flutter and opening up the opportunity to bring
+ high-quality Flutter apps to Linux. We look forward to our continued 
+partnership in making Flutter the best choice for app developers, no 
+matter which platform they target,” shared Chris Sells, Product Manager,
+ Flutter. </p>
+<p>New dark theme provides a refreshed user experience</p>
+<p>21.04 includes a redesigned dark theme, Yaru, with accessibility 
+improvements in navigation, and new file icons. Yaru is maintained by 
+the community, backed by Canonical.</p>
+<p>Ubuntu 21.04 is available to <a href="https://ubuntu.com/download">download</a>.</p>
+<p>To celebrate this release, we will be hosting an Indaba tomorrow – <a href="https://ubuntu.com/blog/community-ama-indaba-21-04">get involved and learn more</a>.</p>
+<p>To learn more about new features in Ubuntu Server 21.04, <a href="https://ubuntu.com/engage/ubuntu-21.04-release-webinar">register for the webinar</a> on May 26th 2021.</p>
+<p class="rm-manual">Canonical is the publisher of Ubuntu, the 
+open-source operating system for most public cloud workloads and 
+emerging categories of intelligent gateways, self-driving cars and 
+advanced robots. Canonical provides enterprise security, support and 
+services to commercial users of Ubuntu. Established in 2004, Canonical 
+is a privately held company.</p>
+<h3 class="rm-manual"> <a href="file:///about/contact-us/form"> Talk to us today </a> </h3>
+<p class="rm-manual"> Interested in running Ubuntu in your organisation? </p>
+<h5 class="rm-manual">Newsletter signup</h5>
+<h3 class="rm-manual">Select topics you're interested in</h3>
+<ul class="rm-manual"> <li class="rm-manual"> Cloud and Server </li> <li class="rm-manual"> Desktop </li> <li class="rm-manual"> Internet of Things </li> <li class="rm-manual"> Robotics </li> <li class="rm-manual"> Tutorials </li> </ul>
+<p class="rm-manual"> <span>Work email: <span>*</span></span> </p>
+<p class="rm-manual"> <span> I agree to receive information about Canonical's products and services. </span> </p>
+<p class="rm-manual"> In submitting this form, I confirm that I have read and agree to <a href="file:///legal/data-privacy/newsletter">Canonical's Privacy Notice</a> and <a href="file:///legal/data-privacy">Privacy Policy</a>. </p>
+<h3 class="rm-manual">Related posts</h3>
+<h4 class="rm-manual"> <a href="file:///blog/ubuntu-in-the-wild-11"> Ubuntu in the wild – 06th of July </a> </h4>
+<p class="rm-manual">The Ubuntu in the wild blog post ropes in the 
+latest highlights about Ubuntu and Canonical around the world on a 
+bi-weekly basis. </p>
+<h4 class="rm-manual"> <a href="file:///blog/ubuntu-in-the-wild-10"> Ubuntu in the wild – 22nd of June </a> </h4>
+<p class="rm-manual">The Ubuntu in the wild blog post ropes in the 
+latest highlights about Ubuntu and Canonical around the world on a 
+bi-weekly basis. </p>
+<h4 class="rm-manual"> <a href="file:///blog/how-to-run-ecs-anywhere-workloads-using-ubuntu"> How to run ECS Anywhere workloads using Ubuntu on any infrastructure </a> </h4>
+<p class="rm-manual">Using Ubuntu for your ECS clusters on-prem or 
+elsewhere will allow you to run your ECS Anywhere workloads with optimal
+ performance everywhere you need it. </p>
+<p class="rm-manual"><a href="#">Back to top</a></p>
+<ul class="rm-manual"> <li class="rm-manual"> <h2 class="rm-manual"> <a href="file:///openstack">OpenStack</a> </h2> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///openstack/what-is-openstack">What is OpenStack</a></li> <li class="rm-manual"><a href="file:///openstack/features">Features</a></li> <li class="rm-manual"><a href="file:///openstack/managed">Managed</a></li> <li class="rm-manual"><a href="file:///openstack/consulting">Consulting</a></li> <li class="rm-manual"><a href="file:///openstack/compare">Compare</a></li> <li class="rm-manual"><a href="file:///openstack/tco-calculator">TCO calculator</a></li> <li class="rm-manual"><a href="file:///openstack/install">Install</a></li> <li class="rm-manual"><a href="file:///openstack/docs">Docs</a></li> </ul> </li> <li class="rm-manual"> <h2 class="rm-manual"> <a href="file:///ceph">Ceph</a> </h2> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///ceph/what-is-ceph">What is Ceph</a></li> <li class="rm-manual"><a href="file:///ceph/docs">Docs</a></li> <li class="rm-manual"><a href="file:///ceph/install">Install</a></li> </ul> </li> <li class="rm-manual"> <h2 class="rm-manual"> <a href="file:///managed">Managed</a> </h2> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///managed/kafka">Kafka</a></li> <li class="rm-manual"><a href="file:///managed/cassandra">Cassandra</a></li> </ul> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <h2 class="rm-manual"> <a href="file:///kubernetes">Kubernetes</a> </h2> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///kubernetes/what-is-kubernetes">What is Kubernetes</a></li> <li class="rm-manual"><a href="file:///kubernetes/features">Features</a></li> <li class="rm-manual"><a href="file:///kubernetes/managed">Managed</a></li> <li class="rm-manual"><a href="file:///kubernetes/compare">Compare</a></li> <li class="rm-manual"><a href="file:///kubernetes/install">Install</a></li> <li class="rm-manual"><a href="file:///kubernetes/docs">Docs</a></li> </ul> </li> <li class="rm-manual"> <h2 class="rm-manual"> <a href="file:///ai">AI / ML</a> </h2> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///ai/what-is-kubeflow">What is Kubeflow</a></li> <li class="rm-manual"><a href="file:///ai/services">Services</a></li> </ul> </li> <li class="rm-manual"> <h2 class="rm-manual"> <a href="file:///robotics">Robotics</a> </h2> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///robotics/ros-esm">ROS ESM</a></li> <li class="rm-manual"><a href="file:///robotics/what-is-ros">What is ROS</a></li> <li class="rm-manual"><a href="file:///robotics/community">Community</a></li> </ul> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <h2 class="rm-manual"> <a href="file:///internet-of-things">IoT</a> </h2> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///internet-of-things/digital-signage">Digital signage</a></li> <li class="rm-manual"><a href="file:///robotics">Robotics</a></li> <li class="rm-manual"><a href="file:///internet-of-things/gateways">Gateways</a></li> <li class="rm-manual"><a href="file:///internet-of-things/appstore">App store</a></li> <li class="rm-manual"><a href="file:///embedded">Embedded Linux</a></li> <li class="rm-manual"><a href="file:///automotive">Automotive</a></li> <li class="rm-manual"><a href="file:///internet-of-things/edgex">EdgeX</a></li> <li class="rm-manual"><a href="file:///internet-of-things/networking">Networking</a></li> </ul> </li> <li class="rm-manual"> <h2 class="rm-manual"> <a href="file:///raspberry-pi">Raspberry Pi</a> </h2> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///raspberry-pi/desktop">Desktop</a></li> <li class="rm-manual"><a href="file:///raspberry-pi/server">Server</a></li> </ul> </li> <li class="rm-manual"> <h2 class="rm-manual"> <a href="file:///core">Core</a> </h2> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///core/docs">Docs</a></li> <li class="rm-manual"><a href="file:///tutorials?q=core">Tutorials</a></li> <li class="rm-manual"><a href="file:///core/features">Features</a></li> <li class="rm-manual"><a href="file:///core/stories">Success stories</a></li> <li class="rm-manual"><a href="file:///core/smartstart">Consulting</a></li> </ul> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <h2 class="rm-manual"> <a href="file:///desktop">Desktop</a> </h2> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///desktop/features">Features</a></li> <li class="rm-manual"><a href="file:///desktop/organisations">Organisations</a></li> <li class="rm-manual"><a href="file:///desktop/developers">Developers</a></li> <li class="rm-manual"><a href="file:///desktop/partners">Partners</a></li> <li class="rm-manual"><a href="file:///desktop/statistics">Statistics</a></li> </ul> </li> <li class="rm-manual"> <h2 class="rm-manual"> <a href="file:///server">Server</a> </h2> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///server/hyperscale">Hyperscale</a></li> <li class="rm-manual"><a href="file:///server/docs">Docs</a></li> </ul> </li> <li class="rm-manual"> <h2 class="rm-manual"> <a href="file:///security">Security</a> </h2> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///security/esm">ESM</a></li> <li class="rm-manual"><a href="file:///security/livepatch">Livepatch</a></li> <li class="rm-manual"><a href="file:///security/certifications#fips">FIPS</a></li> <li class="rm-manual"><a href="file:///security/certifications#cis">Hardening</a></li> <li class="rm-manual"><a href="file:///security/certifications">Certifications</a></li> <li class="rm-manual"><a href="file:///security/cve">CVEs</a></li> <li class="rm-manual"><a href="file:///security/notices">Notices</a></li> <li class="rm-manual"><a href="file:///security/oval">OVAL</a></li> <li class="rm-manual"><a href="file:///security/docker-images">Docker Images</a></li> </ul> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <h2 class="rm-manual"> <a href="file:///download">Downloads</a> </h2> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///download/cloud">Cloud</a></li> <li class="rm-manual"><a href="file:///download/iot">IoT</a></li> <li class="rm-manual"><a href="file:///download/raspberry-pi">Raspberry Pi</a></li> <li class="rm-manual"><a href="file:///download/server">Server</a></li> <li class="rm-manual"><a href="file:///download/desktop">Desktop</a></li> <li class="rm-manual"><a href="file:///download/alternative-downloads">Alternative downloads</a></li> <li class="rm-manual"><a href="file:///download/flavours">Ubuntu flavours</a></li> </ul> </li> <li class="rm-manual"> <h2 class="rm-manual"> <a href="file:///appliance">Appliance</a> </h2> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///appliance/about">About</a></li> <li class="rm-manual"><a href="file:///appliance/portfolio">Portfolio</a></li> <li class="rm-manual"><a href="file:///appliance/community">Community</a></li> <li class="rm-manual"><a href="file:///appliance/hardware">Hardware</a></li> <li class="rm-manual"><a href="file:///appliance/vm">Virtual machines</a></li> </ul> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <h2 class="rm-manual"> <a href="file:///support">Support</a> </h2> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///advantage">Your subscriptions</a></li> <li class="rm-manual"><a href="file:///support/community-support">Community support</a></li> </ul> </li> <li class="rm-manual"> <h2 class="rm-manual"> <a href="file:///pricing">Pricing</a> </h2> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///pricing/infra">Support</a></li> <li class="rm-manual"><a href="file:///pricing/consulting">Consulting</a></li> <li class="rm-manual"><a href="file:///pricing/devices">Devices</a></li> </ul> </li> <li class="rm-manual"> <h2 class="rm-manual"> <span>Sectors</span> </h2> <ul class="rm-manual"> <li class="rm-manual"><a href="file:///industrial">Industrial</a></li> <li class="rm-manual"><a href="file:///gov">Government</a></li> <li class="rm-manual"><a href="file:///telco">Telco</a></li> <li class="rm-manual"><a href="file:///financial-services">Finance</a></li> </ul> </li> <li class="rm-manual"> <ul class="rm-manual"> <li class="rm-manual"> <a href="file:///public-cloud">Public cloud</a> </li> <li class="rm-manual"> <a href="file:///cloud">Cloud</a> </li> <li class="rm-manual"> <a href="file:///containers">Containers</a> </li> <li class="rm-manual"> <a href="file:///tutorials">Tutorials</a> </li> <li class="rm-manual"> <a href="file:///16-04">16-04</a> </li> </ul> </li> </ul>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///contact-us">Contact us</a> </li> <li class="rm-manual"> <a href="file:///contact-us">Contact us</a> </li> <li class="rm-manual"> <a href="file:///about">About us</a> </li> <li class="rm-manual"> <a href="file:///community">Community</a> </li> <li class="rm-manual"> <a href="http://www.canonical.com/careers">Careers</a> </li> <li class="rm-manual"> <a href="file:///blog">Blog</a> </li> <li class="rm-manual"> <a href="file:///engage">Resources</a> </li> <li class="rm-manual"> <a href="file:///blog/press-centre">Press centre</a> </li> </ul>
+<p class="rm-manual">© 2021 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+<ul class="rm-manual"> <li class="rm-manual"> <a href="file:///legal">Legal information</a> </li> <li class="rm-manual"> <a href="file:///legal/data-privacy">Data privacy</a> </li> <li class="rm-manual"> <a href="">Manage your tracker settings</a> </li> <li class="rm-manual"> <a href="https://github.com/canonical-websites/www.ubuntu.com/issues/new"> Report a bug on this site </a> </li> </ul>
+<p class="rm-manual"><span><a href="#">Go to the top of the page</a></span> </p></article>
+</body></html>

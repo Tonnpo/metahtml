@@ -1,0 +1,149 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script>
+function toggleSelectedText(e) {
+    if (e.shiftKey) {
+        var selection = window.getSelection();
+        var range = selection.getRangeAt(0);
+        var tags = "p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,table,tr,td,th,article,main,section,figure,figcaption,aside,section,address,blockquote,code";
+        if (range.commonAncestorContainer.getElementsByTagName) {
+            var allWithinRangeParent = range.commonAncestorContainer.querySelectorAll(tags);
+        }
+        else {
+            //var allWithinRangeParent = [range.commonAncestorContainer.closest(tags)];
+            var allWithinRangeParent = [range.commonAncestorContainer.parentNode.closest(tags)];
+        }
+
+        for (var i=0, el; el = allWithinRangeParent[i]; i++) {
+          // The second parameter says to include the element
+          // even if it's not fully selected
+          if (selection.containsNode(el, true) ) {
+              el.classList.toggle('rm-manual');
+          }
+        }
+        window.getSelection().removeAllRanges();
+    }
+};
+
+//var article = document.body.querySelector('article');
+document.onmouseup = toggleSelectedText;
+document.captureEvents(Event.MOUSEUP);
+</script>
+
+<style>
+.rm-manual {
+    text-decoration: line-through;
+    background-color: #faa;
+}
+</style>
+        </head><body><article><p class="rm-manual"> North Korea’s Latest Missile Test - Union of Concerned Scientists </p>
+<p class="rm-manual"> About <a href="https://secure.ucsusa.org/onlineactions/UTzgs8R_NUmst2iZobkSmg2?MS=ucsblog">Join</a> <a href="https://secure.ucsusa.org/onlineactions/dR5QqmX2uUCLCFD1KkVEzg2?MS=ucsblog">Donate</a> <a href="#">Search</a> </p>
+<ul class="rm-manual"> <li class="rm-manual">
+<a href="https://allthingsnuclear.org/category/nuclear-energy-activist-toolkit-neat">Activist Toolkit</a> </li> <li class="rm-manual">
+<a href="https://allthingsnuclear.org/category/china">China</a> </li> <li class="rm-manual">
+<a href="https://allthingsnuclear.org/category/disaster-by-design-series">Disaster by Design</a> </li> <li class="rm-manual">
+<a href="https://allthingsnuclear.org/category/fission-stories">Fission Stories</a> </li> <li class="rm-manual">
+<a href="https://allthingsnuclear.org/category/foreign-policy">Foreign Policy</a> </li> <li class="rm-manual">
+<a href="https://allthingsnuclear.org/category/japan-nuclear">Japan</a> </li> <li class="rm-manual">
+<a href="https://allthingsnuclear.org/category/missiles-missile-defense">Missiles and Missile Defense</a> </li> <li class="rm-manual">
+<a href="https://allthingsnuclear.org/category/nuclear-power-safety-2">Nuclear Power Safety</a> </li> <li class="rm-manual">
+<a href="https://allthingsnuclear.org/category/nuclear-terrorism-2">Nuclear Terrorism</a> </li> <li class="rm-manual">
+<a href="https://allthingsnuclear.org/category/nuclear-weapon-2">Nuclear Weapons</a> </li> <li class="rm-manual">
+<a href="https://allthingsnuclear.org/category/satellites-2">Space and Satellites</a> </li> <li class="rm-manual">
+<a href="https://allthingsnuclear.org/category/space-security-2">Space Security</a> </li> </ul>
+<p class="rm-manual"> <a href="https://allthingsnuclear.org/"></a></p><h1 class="rm-manual"><a href="https://allthingsnuclear.org/">[ Blog ] All Things Nuclear</a></h1> <p class="rm-manual"></p>
+<h1 class="rm-manual">North Korea’s Latest Missile Test</h1>
+<p class="rm-manual"> <span> <a href="https://allthingsnuclear.org/author/dwright" rel="author">David Wright</a> ,</span> co-director and senior scientist | October 1, 2019, 10:19 pm EDT </p>
+<p>Various <a href="https://twitter.com/nktpnd/status/1179215094179336192">sources</a> are reporting that North Korea test-launched two ballistic missiles tonight on lofted trajectories.</p>
+<p>One of the missiles is reported to have reached a maximum altitude of
+ 910 km (570 miles) and splashed down at a range of 450 km (280 miles) 
+from the launch point. This missile would have had a burnout speed of 
+about 3.74 km/s with a loft angle of 81.5 degrees, and a flight time of 
+about 17 minutes.</p>
+<p>If flown on a standard trajectory with the same payload, that missile
+ would have a maximum range of about 1,900 km (1,200 miles).</p>
+<p>This would classify the missile as medium range (1,000 to 3,500 km).</p>
+<p class="rm-manual">Posted in: <a href="https://allthingsnuclear.org/category/missiles-missile-defense" rel="category tag">Missiles and Missile Defense</a> Tags: <a href="https://allthingsnuclear.org/tag/missile" rel="tag">missile</a>, <a href="https://allthingsnuclear.org/tag/north-korea" rel="tag">North Korea</a></p>
+<p class="rm-manual">Support from UCS members make work like this possible. <a href="https://secure.ucsusa.org/onlineactions/5WsPdhRNl0KNw4k74H9EPg2?MS=blogartcl">Will you join us?</a> Help UCS advance independent science for a healthy environment and a safer world.</p>
+<p class="rm-manual">Show Comments</p>
+<p class="rm-manual">Comment Policy</p>
+<p class="rm-manual">UCS welcomes comments that foster civil 
+conversation and debate. To help maintain a healthy, respectful 
+discussion, please focus comments on the issues, topics, and facts at 
+hand, and refrain from personal attacks. Posts that are commercial, 
+self-promotional, obscene, rude, or disruptive will be removed.</p>
+<p class="rm-manual">Please note that comments are open for two weeks 
+following each blog post. UCS respects your privacy and will not 
+display, lend, or sell your email address for any reason.</p>
+<ul class="rm-manual"> <li class="rm-manual"> <p class="rm-manual"> <span>Tin Eng</span> </p> <p class="rm-manual">I would fact check that 570 miles altitude.</p> </li> </ul>
+<h2 class="rm-manual">Support Our Work</h2>
+<p class="rm-manual"><a href="https://secure.ucsusa.org/onlineactions/5WsPdhRNl0KNw4k74H9EPg2?MS=ucsblog"> </a></p><p class="rm-manual"><a href="https://secure.ucsusa.org/onlineactions/5WsPdhRNl0KNw4k74H9EPg2?MS=ucsblog">Donate</a></p><a href="https://secure.ucsusa.org/onlineactions/5WsPdhRNl0KNw4k74H9EPg2?MS=ucsblog"> </a><p class="rm-manual"></p>
+<h2 class="rm-manual">Stay Informed via email from <a href="https://www.ucsusa.org/contact-us-full">UCS</a>
+</h2>
+<p class="rm-manual"><a href="file:///author/dwright">David Wright</a>, 
+physicist and co-director of the UCS Global Security Program, is an 
+established expert on the technical aspects of arms control, 
+particularly those related to missile defense systems, missile 
+proliferation, and space weapons.</p>
+<p class="rm-manual"> <a href="https://allthingsnuclear.org/author/dwright">Read David's posts &gt;</a> </p>
+<p class="rm-manual"> <a href="https://allthingsnuclear.org/meet-our-authors">Meet our other bloggers &gt;</a> </p>
+<h3 class="rm-manual">[ TOPICS ]</h3>
+<li class="rm-manual">
+<a href="https://allthingsnuclear.org/category/nuclear-energy-activist-toolkit-neat">Activist Toolkit</a> </li>
+<li class="rm-manual">
+<a href="https://allthingsnuclear.org/category/china">China</a> </li>
+<li class="rm-manual">
+<a href="https://allthingsnuclear.org/category/disaster-by-design-series">Disaster by Design</a> </li>
+<li class="rm-manual">
+<a href="https://allthingsnuclear.org/category/fission-stories">Fission Stories</a> </li>
+<li class="rm-manual">
+<a href="https://allthingsnuclear.org/category/foreign-policy">Foreign Policy</a> </li>
+<li class="rm-manual">
+<a href="https://allthingsnuclear.org/category/japan-nuclear">Japan</a> </li>
+<li class="rm-manual">
+<a href="https://allthingsnuclear.org/category/missiles-missile-defense">Missiles and Missile Defense</a> </li>
+<li class="rm-manual">
+<a href="https://allthingsnuclear.org/category/nuclear-power-safety-2">Nuclear Power Safety</a> </li>
+<li class="rm-manual">
+<a href="https://allthingsnuclear.org/category/nuclear-terrorism-2">Nuclear Terrorism</a> </li>
+<li class="rm-manual">
+<a href="https://allthingsnuclear.org/category/nuclear-weapon-2">Nuclear Weapons</a> </li>
+<li class="rm-manual">
+<a href="https://allthingsnuclear.org/category/satellites-2">Space and Satellites</a> </li>
+<li class="rm-manual">
+<a href="https://allthingsnuclear.org/category/space-security-2">Space Security</a> </li>
+<h2 class="rm-manual">Science for a healthy planet and safer world</h2>
+<p class="rm-manual">About Us</p>
+<p class="rm-manual"><a href="http://www.ucsusa.org/about/leadership-experts">UCS Leadership &amp; Experts</a> </p>
+<p class="rm-manual"> <a href="http://www.ucsusa.org/about/funding.html">Funding &amp; Financials</a> </p>
+<p class="rm-manual"> <a href="http://www.ucsusa.org/about/history-of-accomplishments.html">History &amp; Accomplishments</a> </p>
+<p class="rm-manual"> <a href="http://www.ucsusa.org/about/jobs-ucs">Jobs &amp; Internships</a> </p>
+<p class="rm-manual"> <a href="http://www.ucsusa.org/about/news-center">News</a> </p>
+<p class="rm-manual"><a href="http://www.ucsusa.org/our-work/center-science-and-democracy">Center for Science and Democracy</a></p>
+<p class="rm-manual">Issues</p>
+<p class="rm-manual"><a href="http://www.ucsusa.org/clean_energy">Clean Energy</a> </p>
+<p class="rm-manual"> <a href="http://www.ucsusa.org/our-work/clean-vehicles">Clean Vehicles</a> </p>
+<p class="rm-manual"> <a href="http://www.ucsusa.org/food_and_agriculture">Food &amp; Agriculture</a> </p>
+<p class="rm-manual"> <a href="http://www.ucsusa.org/global_warming">Global Warming</a> </p>
+<p class="rm-manual"> <a href="http://www.ucsusa.org/our-work/nuclear-power">Nuclear Power</a> </p>
+<p class="rm-manual"> <a href="http://www.ucsusa.org/our-work/nuclear-weapons">Nuclear Weapons</a> </p>
+<p class="rm-manual"><a href="http://www.ucsusa.org/action-center">Action Center</a></p>
+<p class="rm-manual"><a href="http://www.ucsusa.org/science-network">Science Network</a></p>
+<p class="rm-manual">Our Blogs</p>
+<p class="rm-manual"><a href="file:///">The Equation</a> </p>
+<p class="rm-manual"> <a href="file:///">All Things Nuclear</a> </p>
+<p class="rm-manual">Our Podcast</p>
+<p class="rm-manual"><a href="http://www.ucsusa.org/got-science-podcast">Got Science?</a> </p>
+<p class="rm-manual"><a href="http://www.ucsusa.org/publications">Publications</a></p>
+<p class="rm-manual"><a href="http://www.ucsusa.org/search/reports">Reports &amp; Analysis</a></p>
+<p class="rm-manual"><a href="http://www.ucsusa.org/about/ucs-privacy-statement.html">Privacy Policy</a></p>
+<p class="rm-manual"><a href="http://www.ucsusa.org/about/site-map.html">Site Map</a></p>
+<p class="rm-manual"><a href="http://www.ucsusa.org/contact-us-full">Contact Us</a></p>
+<p class="rm-manual"><a href="http://www.ucsusa.org/about/ways-give">Ways to Give</a></p>
+<p class="rm-manual"><a href="https://secure.ucsusa.org/onlineactions/5WsPdhRNl0KNw4k74H9EPg2?MS=blogfooter">Donate</a> </p>
+<p class="rm-manual"> <a href="https://partners.ucsusa.org/donation.php">Give Monthly</a> </p>
+<p class="rm-manual"> <a href="http://ucsusa.giftplans.org/">Planned Gifts</a> </p>
+<p class="rm-manual">How to Help</p>
+<p class="rm-manual"><a href="https://secure.ucsusa.org/onlineactions/UTzgs8R_NUmst2iZobkSmg2?MS=blogfooter">Become a Member</a> </p>
+<p class="rm-manual"> <a href="http://www.ucsusa.org/action-center">Take Action</a> </p>
+<p class="rm-manual"> <a href="https://secure.ucsusa.org/onlineactions/qwrm-C-G0kylfhrYozBh1w2?MS=blogfooter">Subscribe</a> </p></article>
+</body></html>
