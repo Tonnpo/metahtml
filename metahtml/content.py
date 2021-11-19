@@ -4,7 +4,7 @@ import lxml.cssselect
 import lxml.etree
 import lxml.html.clean
 import itertools
-
+import lxml.html
 
 badtags = [
     'head',
@@ -110,6 +110,8 @@ class ExtractorConfig:
     flatten_html = True
     rm_whitespace = True
 
+    a_in_p_threshold = 10
+
 ExtractorConfig_recall = ExtractorConfig()
 ExtractorConfig_recall.rm_figure = False 
 ExtractorConfig_recall.rm_aside = False 
@@ -125,7 +127,7 @@ def extract_content(parser, pretty_html=False, config=ExtractorConfig()):
     which defines the input parser parameter appropriately.
     '''
     doc = parser.doc
-    url_parsed = parser.url_parsed
+    # url_parsed = parser.url_parsed
     filters = []
 
     # delete nodes that never contain content
@@ -286,6 +288,12 @@ def extract_content(parser, pretty_html=False, config=ExtractorConfig()):
     # recursively remove empty nodes
     if config.rm_empty_tags:
         doc = go_rm_empty(doc)
+
+
+    # Check a tag inside p tag
+    if config.a_in_p_threshold:
+        pass
+            
 
     # lists that don't come after content are probably header info
     # FIXME: removes too much
@@ -812,3 +820,10 @@ def strip_excess_whitespace(doc):
         if node.tail:
             node.tail = _RE_WHITESPACE.sub(' ', node.tail)
     go(doc)
+
+
+import bunch
+html = '<html><div><h1>This is a test</h1></div><div>Test 2</div></html>'
+parser = bunch.Bunch()
+parser.doc = lxml.html.fromstring(html)
+extract_content(parser, pretty_html=False, config=ExtractorConfig())
