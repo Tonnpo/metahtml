@@ -576,9 +576,13 @@ def evaluation_inner_agreement(common_dataset, latex_file=None):
             avg = (total / n_files) * 100
             results[annotator][other_annotator] =  avg
     sorted_agreement = sorted(agreement, key=lambda res: res['similarity'], reverse=True)
+    for ag in sorted_agreement:
+        if ag['similarity'] < 0.9:
+            print('file=',ag['file'])
+            print('similarity', ag['similarity'])
     percentile = 90
     rough_pos = (len(sorted_agreement)*percentile) // 100
-    print("sorted_agreement[rough_pos]=",sorted_agreement[rough_pos])
+    print("sorted_agreement[rough_pos:]=",sorted_agreement[rough_pos])
     if latex_file:
         with open(latex_file, 'w') as f:
             f.writelines([ r'\begin{tabular}{ |c|'] + [r'c|']*len(common_dataset) + [ r'}\hline', '\n', 'annotators' ])
@@ -696,8 +700,8 @@ def __cleaning_annotated(annotated_html):
 if __name__ == '__main__':
     from clize import run
     load_unannotated_metahtml()
-    #common_dataset = get_metahtml_common()
-    #evaluation_inner_agreement(common_dataset)
+    common_dataset = get_metahtml_common()
+    evaluation_inner_agreement(common_dataset)
     #dataset = load_metahtml_annotated()
     #evaluation_inner_agreement(common_dataset, 'paper/fig/annotator.tex')
     #evaluation(dataset, [ clean_none, clean_metahtml, clean_trafilatura_no_fallback, clean_trafilatura_with_fallback, clean_newspaper3k ], do_cleaneval, latex_file='paper/fig/results.tex')
